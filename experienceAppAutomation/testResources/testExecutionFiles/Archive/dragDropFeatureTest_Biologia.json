@@ -1,0 +1,731 @@
+{ 
+  "Suite1": {
+    "Name": "Validation of DND onto Image for correct scenario in Quiz1 Ques1 using drag and drop",
+    "TestCaseRepo": "EngageTCRepository.json",
+    "Before": [
+      {
+        "id": "launchUrl",
+        "description": "",
+        "testFile": "launchUrl.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_LAND_TC_3",
+        "description": "",
+        "testFile": "landing.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_IDEN_TC_4",
+        "description": "",
+        "testFile": "login.test.js",
+        "testData": [
+          {
+            "dataFile": "logindata.json",
+            "jsonPath": "engage.login.user.validUser1"
+          }
+        ]
+      },
+      {
+        "id": "ENG_DASH_TC_1",
+        "description": "",
+        "testFile": "dashboard.test.js",
+        "testData": [
+          {
+            "dataFile": "tocData.json",
+            "jsonPath": "engage.books.book1"
+          }
+        ]
+      },
+      {
+        "id": "ENG_TOCL_TC_3",
+        "description": "",
+        "testFile": "toc.test.js",
+        "testData": [
+          {
+            "dataFile": "tocData.json",
+            "jsonPath": "engage.books.book1.practice.chapter[0].section"
+          }
+        ]
+      },
+      {
+        "id": "ENG_LQUI_TC_3",
+        "description": "",
+        "testFile": "launchQuiz.test.js",
+        "testData": [
+          {
+            "dataFile": "tocData.json",
+            "jsonPath": [
+              "engage.books.book1.practice.chapter[0].section[0]",
+              "engage.books.book1.practice.chapter[0].section[0].resource[0]"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ENG_LQUI_TC_11",
+        "description": "",
+        "testFile": "launchQuiz.test.js",
+        "testData": [
+          {
+            "dataFile": "quizData.json",
+            "jsonPath": "engage.quiz.ch1_sec1_quiz1"
+          }
+        ]
+      }
+    ],
+    "BeforeEach": [],
+    "Test": [
+      {
+        "id": "ENG_ITEM_DND_TC_20",
+        "description": "",
+        "testFile": "dragDrop.test.js",
+        "testData": [
+          {
+            "dataFile": "quizData.json",
+            "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[0]"
+          }
+        ]
+      },
+      {
+        "id": "ENG_ITEM_DND_TC_17",
+        "description": "",
+        "testFile": "dragDrop.test.js",
+        "testData": [
+          {
+            "dataFile": "quizData.json",
+            "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[0].answerKey"
+          }
+        ]
+      },
+      {
+        "id": "ENG_QUIZ_TC_13",
+        "description": "",
+        "testFile": "testPlayer.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_ITEM_DND_TC_1",
+        "description": "",
+        "testFile": "dragDrop.test.js",
+        "testData": [
+          {
+            "dataFile": "quizData.json",
+            "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[0].answerKey"
+          }
+        ]
+      }
+    ],
+    "AfterEach": [],
+    "After": [
+      {
+        "id": "completerQuiz",
+        "description": "",
+        "testFile": "common.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_FOOT_TC_1",
+        "description": "",
+        "testFile": "common.test.js",
+        "testData": []
+      }
+    ]
+  },
+  "Suite2": {
+    "Name": "Validation of DND onto Image for partial scenario in Quiz1 Ques3 using drag and drop",
+    "TestCaseRepo": "EngageTCRepository.json",
+    "Before": [
+      {
+        "id": "launchUrl",
+        "description": "",
+        "testFile": "launchUrl.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_LAND_TC_3",
+        "description": "",
+        "testFile": "landing.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_IDEN_TC_4",
+        "description": "",
+        "testFile": "login.test.js",
+        "testData": [
+          {
+            "dataFile": "logindata.json",
+            "jsonPath": "engage.login.user.validUser1"
+          }
+        ]
+      },
+      {
+        "id": "ENG_DASH_TC_1",
+        "description": "",
+        "testFile": "dashboard.test.js",
+        "testData": [
+          {
+            "dataFile": "tocData.json",
+            "jsonPath": "engage.books.book1"
+          }
+        ]
+      },
+      {
+        "id": "ENG_TOCL_TC_3",
+        "description": "",
+        "testFile": "toc.test.js",
+        "testData": [
+          {
+            "dataFile": "tocData.json",
+            "jsonPath": "engage.books.book1.practice.chapter[0].section"
+          }
+        ]
+      },
+      {
+        "id": "ENG_LQUI_TC_3",
+        "description": "",
+        "testFile": "launchQuiz.test.js",
+        "testData": [
+          {
+            "dataFile": "tocData.json",
+            "jsonPath": [
+              "engage.books.book1.practice.chapter[0].section[0]",
+              "engage.books.book1.practice.chapter[0].section[0].resource[0]"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ENG_LQUI_TC_11",
+        "description": "",
+        "testFile": "launchQuiz.test.js",
+        "testData": [
+          {
+            "dataFile": "quizData.json",
+            "jsonPath": "engage.quiz.ch1_sec1_quiz1"
+          }
+        ]
+      },
+      {
+        "id": "ENG_QUIZ_TC_7",
+        "description": "",
+        "testFile": "testPlayer.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_QUIZ_TC_7",
+        "description": "",
+        "testFile": "testPlayer.test.js",
+        "testData": []
+      }
+    ],
+    "BeforeEach": [],
+    "Test": [
+      {
+        "id": "ENG_ITEM_DND_TC_20",
+        "description": "",
+        "testFile": "dragDrop.test.js",
+        "testData": [
+          {
+            "dataFile": "quizData.json",
+            "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[2]"
+          }
+        ]
+      },
+      {
+        "id": "ENG_ITEM_DND_TC_17",
+        "description": "",
+        "testFile": "dragDrop.test.js",
+        "testData": [
+          {
+            "dataFile": "quizData.json",
+            "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[2].scenarios.scenario2"
+          }
+        ]
+      },
+      {
+        "id": "ENG_QUIZ_TC_10",
+        "description": "",
+        "testFile": "testPlayer.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_ITEM_DND_TC_2",
+        "description": "",
+        "testFile": "dragDrop.test.js",
+        "testData": [
+          {
+            "dataFile": "quizData.json",
+            "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[2].scenarios.scenario2"
+          }
+        ]
+      }
+    ],
+    "AfterEach": [],
+    "After": [
+      {
+        "id": "completerQuiz",
+        "description": "",
+        "testFile": "common.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_FOOT_TC_1",
+        "description": "",
+        "testFile": "common.test.js",
+        "testData": []
+      }
+    ]
+  },
+  "Suite3": {
+    "Name": "Validation of DND onto Image for incorrect scenario in Quiz2 Ques3 using click",
+    "TestCaseRepo": "EngageTCRepository.json",
+    "Before": [
+      {
+        "id": "launchUrl",
+        "description": "",
+        "testFile": "launchUrl.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_LAND_TC_3",
+        "description": "",
+        "testFile": "landing.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_IDEN_TC_4",
+        "description": "",
+        "testFile": "login.test.js",
+        "testData": [
+          {
+            "dataFile": "logindata.json",
+            "jsonPath": "engage.login.user.validUser1"
+          }
+        ]
+      },
+      {
+        "id": "ENG_DASH_TC_1",
+        "description": "",
+        "testFile": "dashboard.test.js",
+        "testData": [
+          {
+            "dataFile": "tocData.json",
+            "jsonPath": "engage.books.book1"
+          }
+        ]
+      },
+      {
+        "id": "ENG_TOCL_TC_3",
+        "description": "",
+        "testFile": "toc.test.js",
+        "testData": [
+          {
+            "dataFile": "tocData.json",
+            "jsonPath": "engage.books.book1.practice.chapter[0].section"
+          }
+        ]
+      },
+      {
+        "id": "ENG_LQUI_TC_3",
+        "description": "",
+        "testFile": "launchQuiz.test.js",
+        "testData": [
+          {
+            "dataFile": "tocData.json",
+            "jsonPath": [
+              "engage.books.book1.practice.chapter[0].section[0]",
+              "engage.books.book1.practice.chapter[0].section[0].resource[1]"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ENG_LQUI_TC_11",
+        "description": "",
+        "testFile": "launchQuiz.test.js",
+        "testData": [
+          {
+            "dataFile": "quiz2Data.json",
+            "jsonPath": "engage.quiz.ch1_sec1_quiz2"
+          }
+        ]
+      },
+      {
+        "id": "ENG_QUIZ_TC_7",
+        "description": "",
+        "testFile": "testPlayer.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_QUIZ_TC_7",
+        "description": "",
+        "testFile": "testPlayer.test.js",
+        "testData": []
+      }
+    ],
+    "BeforeEach": [],
+    "Test": [
+      {
+        "id": "ENG_ITEM_DND_TC_20",
+        "description": "",
+        "testFile": "dragDrop.test.js",
+        "testData": [
+          {
+            "dataFile": "quiz2Data.json",
+            "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[2]"
+          }
+        ]
+      },
+      {
+        "id": "ENG_ITEM_DND_TC_7",
+        "description": "",
+        "testFile": "dragDrop.test.js",
+        "testData": [
+          {
+            "dataFile": "quiz2Data.json",
+            "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[2].scenarios.scenario1"
+          }
+        ]
+      },
+      {
+        "id": "ENG_QUIZ_TC_10",
+        "description": "",
+        "testFile": "testPlayer.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_ITEM_DND_TC_3",
+        "description": "",
+        "testFile": "dragDrop.test.js",
+        "testData": [
+          {
+            "dataFile": "quiz2Data.json",
+            "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[2].scenarios.scenario1"
+          }
+        ]
+      }
+    ],
+    "AfterEach": [],
+    "After": [
+      {
+        "id": "completerQuiz",
+        "description": "",
+        "testFile": "common.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_FOOT_TC_1",
+        "description": "",
+        "testFile": "common.test.js",
+        "testData": []
+      }
+    ]
+  },
+  "Suite4": {
+    "Name": "Validation of DND onto Image for try again scenario in Quiz1 Ques1 using drag and drop",
+    "TestCaseRepo": "EngageTCRepository.json",
+    "Before": [
+      {
+        "id": "launchUrl",
+        "description": "",
+        "testFile": "launchUrl.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_LAND_TC_3",
+        "description": "",
+        "testFile": "landing.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_IDEN_TC_4",
+        "description": "",
+        "testFile": "login.test.js",
+        "testData": [
+          {
+            "dataFile": "logindata.json",
+            "jsonPath": "engage.login.user.validUser1"
+          }
+        ]
+      },
+      {
+        "id": "ENG_DASH_TC_1",
+        "description": "",
+        "testFile": "dashboard.test.js",
+        "testData": [
+          {
+            "dataFile": "tocData.json",
+            "jsonPath": "engage.books.book1"
+          }
+        ]
+      },
+      {
+        "id": "ENG_TOCL_TC_3",
+        "description": "",
+        "testFile": "toc.test.js",
+        "testData": [
+          {
+            "dataFile": "tocData.json",
+            "jsonPath": "engage.books.book1.practice.chapter[0].section"
+          }
+        ]
+      },
+      {
+        "id": "ENG_LQUI_TC_3",
+        "description": "",
+        "testFile": "launchQuiz.test.js",
+        "testData": [
+          {
+            "dataFile": "tocData.json",
+            "jsonPath": [
+              "engage.books.book1.practice.chapter[0].section[0]",
+              "engage.books.book1.practice.chapter[0].section[0].resource[0]"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ENG_LQUI_TC_11",
+        "description": "",
+        "testFile": "launchQuiz.test.js",
+        "testData": [
+          {
+            "dataFile": "quizData.json",
+            "jsonPath": "engage.quiz.ch1_sec1_quiz1"
+          }
+        ]
+      },
+      {
+        "id": "ENG_ITEM_DND_TC_20",
+        "description": "",
+        "testFile": "dragDrop.test.js",
+        "testData": [
+          {
+            "dataFile": "quizData.json",
+            "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[0]"
+          }
+        ]
+      },
+      {
+        "id": "ENG_ITEM_DND_TC_17",
+        "description": "",
+        "testFile": "dragDrop.test.js",
+        "testData": [
+          {
+            "dataFile": "quizData.json",
+            "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[0].answerKey"
+          }
+        ]
+      },
+      {
+        "id": "ENG_QUIZ_TC_13",
+        "description": "",
+        "testFile": "testPlayer.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_ITEM_DND_TC_1",
+        "description": "",
+        "testFile": "dragDrop.test.js",
+        "testData": [
+          {
+            "dataFile": "quizData.json",
+            "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[0].answerKey"
+          }
+        ]
+      }
+    ],
+    "BeforeEach": [],
+    "Test": [
+      {
+        "id": "ENG_QUIZ_TC_15",
+        "description": "",
+        "testFile": "testPlayer.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_ITEM_DND_TC_19",
+        "description": "",
+        "testFile": "dragDrop.test.js",
+        "testData": [
+          {
+            "dataFile": "quizData.json",
+            "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[0].answerKey"
+          }
+        ]
+      }
+    ],
+    "AfterEach": [],
+    "After": [
+      {
+        "id": "completerQuiz",
+        "description": "",
+        "testFile": "common.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_FOOT_TC_1",
+        "description": "",
+        "testFile": "common.test.js",
+        "testData": []
+      }
+    ]
+  },
+  "Suite5": {
+    "Name": "Validation of DND onto Image for correct scenario in Quiz1 Ques1 using zoom feature and drop down",
+    "TestCaseRepo": "EngageTCRepository.json",
+    "Before": [
+      {
+        "id": "launchUrl",
+        "description": "",
+        "testFile": "launchUrl.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_LAND_TC_3",
+        "description": "",
+        "testFile": "landing.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_IDEN_TC_4",
+        "description": "",
+        "testFile": "login.test.js",
+        "testData": [
+          {
+            "dataFile": "logindata.json",
+            "jsonPath": "engage.login.user.validUser1"
+          }
+        ]
+      },
+      {
+        "id": "ENG_DASH_TC_1",
+        "description": "",
+        "testFile": "dashboard.test.js",
+        "testData": [
+          {
+            "dataFile": "tocData.json",
+            "jsonPath": "engage.books.book1"
+          }
+        ]
+      },
+      {
+        "id": "ENG_TOCL_TC_3",
+        "description": "",
+        "testFile": "toc.test.js",
+        "testData": [
+          {
+            "dataFile": "tocData.json",
+            "jsonPath": "engage.books.book1.practice.chapter[0].section"
+          }
+        ]
+      },
+      {
+        "id": "ENG_LQUI_TC_3",
+        "description": "",
+        "testFile": "launchQuiz.test.js",
+        "testData": [
+          {
+            "dataFile": "tocData.json",
+            "jsonPath": [
+              "engage.books.book1.practice.chapter[0].section[0]",
+              "engage.books.book1.practice.chapter[0].section[0].resource[0]"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ENG_LQUI_TC_11",
+        "description": "",
+        "testFile": "launchQuiz.test.js",
+        "testData": [
+          {
+            "dataFile": "quizData.json",
+            "jsonPath": "engage.quiz.ch1_sec1_quiz1"
+          }
+        ]
+      },
+      {
+        "id": "ENG_ITEM_DND_TC_20",
+        "description": "",
+        "testFile": "dragDrop.test.js",
+        "testData": [
+          {
+            "dataFile": "quizData.json",
+            "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[0]"
+          }
+        ]
+      }
+    ],
+    "BeforeEach": [],
+    "Test": [
+      {
+        "id": "ENG_ITEM_DND_TC_21",
+        "description": "",
+        "testFile": "dragDrop.test.js",
+        "testData": [
+          {
+            "dataFile": "quizData.json",
+            "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[0].answerKey"
+          }
+        ]
+      },
+      {
+        "id": "ENG_ITEM_DND_TC_22",
+        "description": "",
+        "testFile": "dragDrop.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_ITEM_DND_TC_25",
+        "description": "",
+        "testFile": "dragDrop.test.js",
+        "testData": [
+          {
+            "dataFile": "quizData.json",
+            "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[0].answerKey"
+          }
+        ]
+      },
+      {
+        "id": "ENG_ITEM_DND_TC_23",
+        "description": "",
+        "testFile": "dragDrop.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_QUIZ_TC_13",
+        "description": "",
+        "testFile": "testPlayer.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_ITEM_DND_TC_1",
+        "description": "",
+        "testFile": "dragDrop.test.js",
+        "testData": [
+          {
+            "dataFile": "quizData.json",
+            "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[0].answerKey"
+          }
+        ]
+      }
+    ],
+    "AfterEach": [],
+    "After": [
+      {
+        "id": "completerQuiz",
+        "description": "",
+        "testFile": "common.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_FOOT_TC_1",
+        "description": "",
+        "testFile": "common.test.js",
+        "testData": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+{
+	"engage": {
+		"courses": {
+			"onboardingCourse":{
+				"name": "Successful Onboard",
+				"key": "3793-wf78",
+				"startDate": "Apr 13, 2021",
+				"endDate": "Apr 13, 2022",
+				"instructor": {
+					"name": "difusionqa.teach8",
+					"email": "difusionqa.teach8@yopmail.com"
+				},
+				"bookName": "Proyectos",
+				"schoolName": "Mount Allison School",
+				"status": "Active",
+				"studentCount": 0,
+				"info": "Course for SuccessfulOnboarding Scenario"
+			},
+			"JoinCourse":{
+				"name": "JoinClass",
+				"key": "wXui-yM9K",
+				"startDate": "Apr 15, 2021",
+				"endDate": "Apr 15, 2022",
+				"instructor": {
+					"name": "difusionqa.teach8",
+					"email": "difusionqa.teach8@yopmail.com"
+				},
+				"bookName": "Proyectos",
+				"schoolName": "Mount Allison School",
+				"status": "Active",
+				"studentCount": 0,
+				"info": "Course for Successful JoinCourse Scenario"
+			},
+			"JoinCourseBook2":{
+				"name": "Intro To Biology",
+				"key": "hg67-ngQB",
+				"startDate": "Apr 16, 2021",
+				"endDate": "Apr 16, 2022",
+				"instructor": {
+					"name": "onboard.teach15",
+					"email": "onboard.teach15@yopmail.com"
+				},
+				"bookName": "Introduction to Biology",
+				"schoolName": "",
+				"status": "Active",
+				"studentCount": 0,
+				"info": "Course for Successful Book2-JoinCourse Scenario"
+			}
+		}
+	}
+}

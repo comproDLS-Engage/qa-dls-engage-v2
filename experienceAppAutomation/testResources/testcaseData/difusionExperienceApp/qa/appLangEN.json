@@ -1,0 +1,371 @@
+{
+    "engage": {
+        "appContent": {
+            "language": "EN - English (UK)",
+            "theme": [
+                {
+                    "name": "Theme 1",
+                    "primary": "#c8d200",
+                    "secondary": "#e85181"
+                },
+                {
+                    "name": "Theme 2",
+                    "primary": "#f08500",
+                    "secondary": "#00bcd4"
+                },
+                {
+                    "name": "Theme 3",
+                    "primary": "#4c2490",
+                    "secondary": ""
+                },
+                {
+                    "name": "Theme 4",
+                    "primary": "#ffde03",
+                    "secondary": ""
+                }
+            ],
+            "landing": {
+                "headingText": "One space for all your learning.",
+                "subheadingText": "Learn from anywhere, anytime. Instant access to all courses and activities.",
+                "signup_btnText": "Sign Up & Start Learning Today",
+                "login_btnText": "Log in",
+                "login_lblText": "Have an Account?",
+                "footerLabel": "powered by"
+            },
+            "login": {
+                "loginPage_title": "Log in",
+                "email_tbox_lbl": "Email",
+                "userName_tbox_placeholder": "Enter Email",
+                "pswrd_tbox_lbl": "Password",
+                "password_tbox_placeholder": "Enter Password",
+                "google_btn": "Google",
+                "facebook_btn": "Facebook",
+                "login_btn": "Log in with Email",
+                "forgotPassword": "Forgot Password?",
+                "signup": "Sign Up",
+                "dontHaveAccount_txt": "Don't have an account?",
+                "loginoption_txt": "Or continue with:",
+                "footerLabel": "powered by",
+                "invalidEmail_txt": "Invalid Email Address.",
+                "notRegisterUser_alert": "The email you provided does not exist in our records. In case you have previously signed up using your social account, try logging in via the same provider.",
+                "invalidEmail_alert": "Incorrect username or password."
+            },
+            "resetPasswordSendOTP": {
+                "resetPassword_title": "Reset Password",
+                "resetPassword_subHeading": "Enter your email to send a OTP (one-time password) to access your account.",
+                "cancelandGoBackbtn_txt": "Cancel & Go Back to Log in",
+                "sendOTPToResetbtn_txt": "Send OTP to Reset Password",
+                "forgotPassword_Email_lbl": "Email"
+            },
+            "changePassword": {
+                "checkEmailForCode_txt": "Check your Email for Code",
+                "resetPassword_title": "Reset Password",
+                "resetPassword_subHeading2": "One Time Password(OTP) has been sent to your registered Email, please enter OTP and New Password to reset the Password",
+                "email_tbox_lbl": "Email",
+                "verificationCode_lbl": "Verification Code",
+                "newPassword_lbl": "New Password",
+                "confirmPassword_lbl": "Confirm New Password",
+                "resendOTP_btn": "Resend OTP",
+                "changePassword": "Change Password",
+                "cancelandGoBackbtn_txt": "Cancel & Go Back to Log in",
+                "resendOTP_msg": "OTP has been resent successfully",
+                "invalid_OTP": "Please enter a valid 6 digit code",
+                "password_rules": "Password must meet the following criteria: Atleast 8 characters. Atleast 1 lowercase character. Atleast 1 uppercase character.Atleast 1 number. Atleast 1 special character",
+                "password_mismatch": "Password and Confirm password don't match",
+                "invalid_VerificationCode2": "Invalid verification code provided, please try again."
+            },
+            "studentDashboard": {
+                "classTeacherLbl": "Class Teacher:",
+                "classDates_lbl": "Class Dates",
+                "openFlipbook_txt": "Open Flipbook",
+                "whereYouLeftOffLbl": "Continue where you left off:",
+                "lastAccessedActivityDismiss_Btn": "Dismiss",
+                "lastAccessedActivityContinueBtn": "Continue",
+                "productList": [
+                    "Study and Learn",
+                    "Practice",
+                    "Grammar Tutorial",
+                    "Resources",
+                    "Practice Extra"
+                ],
+                "product1_btn_txt": "Study and Learn",
+                "product2_btn_txt": "Practice",
+                "product3_btn_txt": "Grammar Tutorial",
+                "product4_btn_txt": "Resources",
+                "product5_btn_txt": "Practice Extra",
+                "contentsHeading": "Contents",
+                "folderText": "Folder",
+                "activityText": "Activities",
+                "progressHeading": "Progress",
+                "viewAllProgress_btn": "View All",
+                "bookMaterial_lbl": "Book Material",
+                "progressCompleted_lbl": "Completed",
+                "progressTime": "sec",
+                "assignmentsHeading": "Assignments",
+                "viewAllAssignments_btn": "View All",
+                "assignmentCompleted_txt": "Completed",
+                "noAssignments_txt": "No Assignments",
+                "noAssignmentsDescription_txt": "There is no assignment pending in your class",
+                "assignmentTitle_lbl": null,
+                "assignmentDue_lbl": null,
+                "assignmentActivities_lbl": null,
+                "archivedMessage": "This course has been archived by your instructor. You still have access to the course materials and your progress.",
+                "archivedDismiss": "Dismiss"
+            },
+            "onboarding": {
+                "welcomePage": {
+                    "welcome_heading": "Welcome, Onboarding User",
+                    "userName": "Onboarding User",
+                    "welcome_msg": "Let's get started. Select the role that best describes you.",
+                    "continuebtn": "Continue",
+                    "rolePage_heading": "Select your role",
+                    "studentBtn": "I'm a student",
+                    "teacherBtn": "I'm a teacher",
+                    "signOut": "Logout",
+                    "comproDLSFooter": "powered by"
+                },
+                "studentOptionsPage": {
+                    "pageHeading": "Select your learning method",
+                    "subHeading": "Tell us, how will you be using the content?",
+                    "heading1": "In a class with a teacher",
+                    "option1": "I have a class key",
+                    "option2": "I have an invite link",
+                    "heading2": "As self study",
+                    "option4": "I have an activation key",
+                    "continuebtn": "Continue",
+                    "back_button": "Back to Account Roles",
+                    "comproDLSFooter": "powered by"
+                },
+                "courseKeyPage": {
+                    "pageHeading": "Enter your class key",
+                    "subHeading": "Use the class key provided by your teacher.",
+                    "message": "Class key",
+                    "submitBtn": "Continue",
+                    "back_button": "Back to Learning Methods",
+                    "invalidKeyMessage": "Invalid class key",
+                    "comproDLSFooter": "powered by"
+                },
+                "activationCodePage": {
+                    "pageHeading": "Enter your activation key",
+                    "pageSubHeading": "Use the activation key provided by your school or as available in the book to get started.",
+                    "heading1": "Activation key",
+                    "submitBtn": "Continue",
+                    "back_button": "Back to Class Key",
+                    "invalidAccessCodeMsg": "Invalid activation key",
+                    "comproDLSFooter": "powered by"
+                },
+                "intructorOptionsPage": {
+                    "pageHeading": "Select your teaching method",
+                    "subHeading": "Tell us, how you will set up your classes? Are you...",
+                    "heading1": "Associated with a school",
+                    "option1": "Use school key",
+                    "option2": "Use school name",
+                    "heading2": "In private teaching",
+                    "option3": "Use activation key",
+                    "continuebtn": "Continue",
+                    "back_button": "Back to Account Roles",
+                    "comproDLSFooter": "powered by"
+                },
+                "schoolKeyPage": {
+                    "pageHeading": "Enter your school key",
+                    "subHeading": "Use the school key provided by your school.",
+                    "message": "School key",
+                    "submitBtn": "Continue",
+                    "back_button": "Back to Teaching Methods",
+                    "invalidKeyMessage": "Invalid school key",
+                    "comproDLSFooter": "powered by"
+                },
+                "intructorSuccessPage": {
+                    "pageHeading": "You're All Set!",
+                    "message1": "You have successfully joined your school.",
+                    "teacherTitle": "Teacher",
+                    "proceedBtn": "Continue",
+                    "signOut": "Logout",
+                    "comproDLSFooter": "powered by"
+                },
+                "studentSuccessPage": {
+                    "pageHeading": "You're Enrolled!",
+                    "pageSubHeading1": "You have successfully enrolled in your class.",
+                    "startLearning": "Continue",
+                    "signOut": "Logout",
+                    "comproDLSFooter": "powered by"
+                },
+                "expiredClassSuccessPage": {
+                    "pageHeading": "Class Expired!",
+                    "pageSubHeading1": "We were unable to enroll you into ",
+                    "pageSubHeading2": " class since this class is expired.Don't worry, you can still access the content activated via the access code in the books section.",
+                    "startLearning": "Continue",
+                    "signOut": "Logout",
+                    "comproDLSFooter": "powered by"
+                },
+                "productMismatchSuccessPage": {
+                    "pageHeading": "You're Enrolled!",
+                    "pageSubHeading1": "You are enrolled into ",
+                    "pageSubHeading2": "class but the learning material activated is mismatched.",
+                    "courseName": "",
+                    "classDates": "",
+                    "startLearning": "Continue",
+                    "continuebtnIsEnabled": "",
+                    "schoolName": "",
+                    "message": "You can activate the material required for this class from the Class Dashboard. The mismatched material which you have activated will be available on the books page.",
+                    "signOut": "Logout",
+                    "comproDLSFooter": "powered by"
+                }
+            },
+            "joinCourse": {
+                "studentOptionsPage": {
+                    "pageHeading": "Select your learning method",
+                    "subHeading": "Tell us, how will you be using the content?",
+                    "heading1": "In a class with a teacher",
+                    "option1": "I have a class key",
+                    "option2": "I have an invite link",
+                    "heading2": "As self study",
+                    "option4": "I have an activation key",
+                    "continuebtn": "Continue",
+                    "back_button": "Back to Classes",
+                    "comproDLSFooter": "powered by"
+                },
+                "courseKeyPage": {
+                    "pageHeading": "Enter your class key",
+                    "subHeading": "Use the class key provided by your teacher.",
+                    "message": "Class key",
+                    "submitBtn": "Continue",
+                    "back_button": "Back to Learning Methods",
+                    "invalidKeyMessage": "Invalid class key",
+                    "alreadyEnrolledMsg": "You are already enrolled in this class.",
+                    "clickToExitMsg": "Please enter a different class key or click here to exit.",
+                    "comproDLSFooter": "powered by"
+                },
+                "studentSuccessPage": {
+                    "pageHeading": "You're Enrolled!",
+                    "pageSubHeading1": "You have successfully enrolled in your class.",
+                    "startLearning": "Continue",
+                    "signOut": "Close",
+                    "comproDLSFooter": "powered by"
+                }
+            },
+            "createClassPage": {
+                "pageTitle": "Create a new Class",
+                "pageSubTitle": "Create a class to invite and view your students, see their progress, and assign materials",
+                "classHeader": "Class Details",
+                "classSubHeader": "Name your class and assign the start and end dates",
+                "title_lbl": "Name",
+                "startDate_lbl": "Start Date",
+                "endDate_lbl": "End Date",
+                "selectBook_lbl": "Select Book",
+                "selectBook_txt": "Assign a book to your class or add a new one.",
+                "bookTitle": "PROYECTOS",
+                "createBtn_txt": "Create",
+                "cancelBtn_txt": "Cancel & Go Back",
+                "notitleErrorMsg": "Name is required.",
+                "titleErrorMsg": "Name should be less than 50 characters.",
+                "bookErrorMsg": "No book selected",
+                "endDateErrorMsg": "End Date cannot be less than today's date"
+            },
+            "editClassPage": {
+                "pageTitle": "Edit Class",
+                "pageSubTitle": "Edit the Class Name, duration or associated books",
+                "classHeader": "Class Details",
+                "classSubHeader": "Name your class and assign the start and end dates",
+                "title_lbl": "Name",
+                "startDate_lbl": "Start Date",
+                "endDate_lbl": "End Date",
+                "selectBook_lbl": "Select Book",
+                "selectBook_txt": "Assign a book to your class or add a new one.",
+                "bookTitle": "PROYECTOS",
+                "cancelBtn_txt": "Cancel & Go Back",
+                "notitleErrorMsg": "Name is required.",
+                "titleErrorMsg": "Name should be less than 50 characters.",
+                "bookErrorMsg": "No book selected",
+                "saveBtn_txt": "Save",
+                "endDateErrorMsg": "End Date cannot be less than today's date"
+            },
+            "restoreClassPage": {
+                "pageTitle": "Restore Class",
+                "pageSubTitle": "Restore your archived class by extending the End Date",
+                "classHeader": "Class Details",
+                "classSubHeader": "Name your class and assign the start and end dates",
+                "title_lbl": "Name",
+                "startDate_lbl": "Start Date",
+                "endDate_lbl": "End Date",
+                "selectBook_lbl": "Select Book",
+                "selectBook_txt": "Assign a book to your class or add a new one.",
+                "bookTitle": "PROYECTOS",
+                "cancelBtn_txt": "Cancel & Go Back",
+                "notitleErrorMsg": "Name is required.",
+                "titleErrorMsg": "Name should be less than 50 characters.",
+                "bookErrorMsg": "No book selected",
+                "restoreBtn_txt": "Restore",
+                "endDateErrorMsg": "End Date cannot be less than today's date"
+            },
+            "successClassPage": {
+                "pageTitle": "New class created",
+                "pageSubTitle": "Your class has been added!",
+                "viewClassbtn": "View Class",
+                "backToHomeBtn_txt": "Back to all Classes",
+                "className_txt": "Added:",
+                "successCaption_txt": "Your class has been added! Share the class key below to let your students join",
+                "copy_txt": "Copy Code"
+            },
+            "myClassPage": {
+                "classHeading": "Classes",
+                "classSubHeading": "Your current, upcoming, and past classes",
+                "pageTitleNoClassArchived":"See your list of archived classes here",
+                "pageSubTitleNoClassArchived":"Any class you have archived will appear here. Once archived, you can still view class details. You may restore the class to allow students to rejoin.",
+                "noClassTitle": "Create a class to get started.",
+                "noClassSubtitle": "Create a class and access them from here to invite and view your students, see their progress, and assign materials",
+                "myClassesTab": "Active",
+                "addClassBtn": "Create Class",
+                "applyBtn_txt": "Apply",
+                "cancelBtn_txt": "Cancel",
+                "archivedTab": "Archived",
+                "viewClassText": "View Class",
+                "editMsgBar_txt": "Class Updated!",
+                "editOption_txt": "Edit Class",
+                "archievedOption_txt": "Archive Class",
+                "restoreOption_txt": "Restore Class",
+                "addStudentsOption": "Invite Students",
+                "archieveMsgBar_txtPart1": "The class '",
+                "archieveMsgBar_txtPart2": "' has been archived successfully",
+                "restoreMsgBar_txtPart1": "The class '",
+                "restoreMsgBar_txtPart2": "' has been restored successfully!",
+                "classLimitDialog_header_txt": "Class Limit Exceeded",
+                "classLimitDialog_okBtn_txt": "Okay",
+                "classLimitDialog_txt": "You have reached the maximum class limit of 20."
+            },
+            "archieveClassPage": {
+                "headerTitle_txt": "Archive Course",
+                "headerSubtitle_txt": "My Courses",
+                "archieveBtn_txt": "Archive This Class",
+                "cancelBtn_txt": "Cancel",
+                "studentCount_txtPart1": "There is ",
+                "studentCount_txtPart2": " student enrolled in this class.",
+                "note_lbl": "Notes:",
+                "note1": "1. Once archived, the students will not be able to access the class features. They will continue to have access to the class materials as per their purchased license. This action will also set the end date of class to today.",
+                "note2": "2. Archiving will not impact class data. All progress, assignments, and analytics will be available under “archived” classes. However, any student progress made post archival will not reflect in the class progress.",
+                "note3": "3. You can restore archived classes at any time from the “archived” tab view. This action will also synchronize the latest student progress with the class progress.",
+                "note4": "4. This action will set the class start date to today."
+            },
+            "studentClassPage": {
+                "classHeading": "Classes",
+                "classSubHeading": "Your current, upcoming, and past classes",
+                "pageTitleNoClassArchived": "See your list of archived classes here",
+                "pageSubTitleNoClassArchived": "You don't have any archived class yet!",
+                "noClassTitle": "Join a class to get started.",
+                "noClassSubtitle": "Enter class code from your instructor to view your class.",
+                "myClassesTab": "Active",
+                "joinClassBtn": "Join Class",
+                "archivedTab": "Archived",
+                "viewClassText": "View Class",
+                "classLimitDialog_header_txt": "Class Limit Exceeded",
+                "classLimitDialog_okBtn_txt": "Okay",
+                "classLimitDialog_txt": "You have reached the maximum class limit of 20.",
+                "futurebutton_txt":"Class Starts ",
+                "notStartedtxt":"Not Started"
+            },
+            "toasters": {
+                "featurecomingsoon": "Feature coming soon"
+            }
+        }
+    }
+}

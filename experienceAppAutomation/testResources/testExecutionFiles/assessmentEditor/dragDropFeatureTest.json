@@ -1,0 +1,53 @@
+{
+	"Suite_1": {
+		"Name": "Validation of Drag and Drop features",
+		"TestCaseRepo": "EngageTCRepository.json",
+		"Before": [],
+		"BeforeEach": [{
+			"jsFile": "launchUrl.js",
+			"DataFile": "",
+			"FunctionName": [
+			  {
+				"id": "launchUrl",
+				"data": ""
+			  }
+			]
+		  }
+		],
+		"Test": [
+			{
+				"TestFile": "dragDrop.test.js",
+				"TestDataFile": "quizData.json",
+				"TestCases": [
+					{
+						"id": "ENG_ITEM_DND_TC_3",
+						"data": "engage.quiz.ch1_sec1_quiz1.question[0]"
+					},
+					{
+						"id": "ENG_ITEM_DND_TC_2",
+						"data": "engage.quiz.ch1_sec1_quiz1.question[0]"
+					},
+					{
+						"id": "ENG_ITEM_DND_TC_1",
+						"data": "engage.quiz.ch1_sec1_quiz1.question[0]"
+					},
+				
+					{
+						"id": "ENG_ITEM_DND_TC_7",
+						"data": "engage.quiz.ch1_sec1_quiz1.question[0]"
+					},
+					{
+						"id": "ENG_ITEM_DND_TC_8",
+						"data": "engage.quiz.ch1_sec1_quiz1.question[0]"
+					}
+				]
+			}
+		],
+		"AfterEach": [
+			
+		  ],
+		  "After": [
+			]
+	  
+	  }
+	  }

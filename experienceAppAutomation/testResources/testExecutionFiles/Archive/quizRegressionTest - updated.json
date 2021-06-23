@@ -1,0 +1,5586 @@
+{
+    "Suite1":
+    {
+        "Name": "Validation of Quiz 1 attempted correctly and then Review the Quiz from Summary Page",
+        "TestCaseRepo": "EngageTCRepository.json",
+        "Before": [
+        {
+            "id": "launchUrl",
+            "description": "",
+            "testFile": "launchUrl.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_LAND_TC_3",
+            "description": "",
+            "testFile": "landing.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_IDEN_TC_4",
+            "description": "",
+            "testFile": "login.test.js",
+            "testData": [
+            {
+                "dataFile": "logindata.json",
+                "jsonPath": "engage.login.user.validUser1"
+            }]
+        },
+        {
+            "id": "ENG_DASH_TC_1",
+            "description": "",
+            "testFile": "dashboard.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": "engage.books.book1"
+            }]
+        },
+        {
+            "id": "ENG_TOCL_TC_3",
+            "description": "",
+            "testFile": "toc.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": [
+                    "engage.books.book1.chapter[0]",
+                    "engage.books.book1.chapter[0].practise.section"
+                ]
+            }]
+        },
+        {
+            "id": "ENG_LQUI_TC_3",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": [
+                    "engage.books.book1.chapter[0].practise.section[0]",
+                    "engage.books.book1.chapter[0].practise.section[0].resource[0]"
+                ]
+            }]
+        }],
+        "BeforeEach": [],
+        "Test": [
+        {
+            "id": "ENG_LQUI_TC_11",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_2",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[0].text"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_DND_TC_20",
+            "description": "",
+            "testFile": "dragDrop.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[0]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_DND_TC_17",
+            "description": "",
+            "testFile": "dragDrop.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[0].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_13",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_41",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_6",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[1]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_MCQR_TC_1",
+            "description": "",
+            "testFile": "mcqRadio.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[1].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_MCQR_TC_8",
+            "description": "",
+            "testFile": "mcqRadio.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[1].answerKey[0][0]"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_10",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_41",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_6",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[2]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_DND_TC_20",
+            "description": "",
+            "testFile": "dragDrop.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[2]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_DND_TC_17",
+            "description": "",
+            "testFile": "dragDrop.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[2].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_10",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_6",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[3]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_FIB_TC_20",
+            "description": "",
+            "testFile": "FIB.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[3]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_FIB_TC_3",
+            "description": "",
+            "testFile": "FIB.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[3].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_10",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_17",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[4]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_OLI_TC_1",
+            "description": "",
+            "testFile": "orderlist.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[4].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_OLI_TC_9",
+            "description": "",
+            "testFile": "orderlist.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[4].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_4",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_11",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_SUMM_TC_1",
+            "description": "",
+            "testFile": "summary.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1"
+            }]
+        },
+        {
+            "id": "ENG_SUMM_TC_7",
+            "description": "",
+            "testFile": "summary.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_26",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_27",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_27",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_27",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_29",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_30",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        }],
+        "AfterEach": [],
+        "After": [
+        {
+            "id": "completerQuiz",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_FOOT_TC_1",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+        }]
+    },
+    "Suite2":
+    {
+        "Name": "Review the Quiz 1 from Start Quiz page which was performed correctly",
+        "TestCaseRepo": "EngageTCRepository.json",
+        "Before": [
+        {
+            "id": "launchUrl",
+            "description": "",
+            "testFile": "launchUrl.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_LAND_TC_3",
+            "description": "",
+            "testFile": "landing.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_IDEN_TC_4",
+            "description": "",
+            "testFile": "login.test.js",
+            "testData": [
+            {
+                "dataFile": "logindata.json",
+                "jsonPath": "engage.login.user.validUser1"
+            }]
+        },
+        {
+            "id": "ENG_DASH_TC_1",
+            "description": "",
+            "testFile": "dashboard.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": "engage.books.book1"
+            }]
+        },
+        {
+            "id": "ENG_TOCL_TC_3",
+            "description": "",
+            "testFile": "toc.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": [
+                    "engage.books.book1.chapter[0]",
+                    "engage.books.book1.chapter[0].practise.section"
+                ]
+            }]
+        },
+        {
+            "id": "ENG_LQUI_TC_3",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": [
+                    "engage.books.book1.chapter[0].practise.section[0]",
+                    "engage.books.book1.chapter[0].practise.section[0].resource[0]"
+                ]
+            }]
+        }],
+        "BeforeEach": [],
+        "Test": [
+        {
+            "id": "ENG_LQUI_TC_7",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_26",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_27",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_27",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_27",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_29",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_31",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        }],
+        "AfterEach": [],
+        "After": [
+        {
+            "id": "completerQuiz",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_FOOT_TC_1",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+        }]
+    },
+    "Suite3":
+    {
+        "Name": "Validation of Quiz 2 attempted correctly (with click)",
+        "TestCaseRepo": "EngageTCRepository.json",
+        "Before": [
+        {
+            "id": "launchUrl",
+            "description": "",
+            "testFile": "launchUrl.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_LAND_TC_3",
+            "description": "",
+            "testFile": "landing.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_IDEN_TC_4",
+            "description": "",
+            "testFile": "login.test.js",
+            "testData": [
+            {
+                "dataFile": "logindata.json",
+                "jsonPath": "engage.login.user.validUser1"
+            }]
+        },
+        {
+            "id": "ENG_DASH_TC_1",
+            "description": "",
+            "testFile": "dashboard.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": "engage.books.book1"
+            }]
+        },
+        {
+            "id": "ENG_TOCL_TC_3",
+            "description": "",
+            "testFile": "toc.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": [
+                    "engage.books.book1.chapter[0]",
+                    "engage.books.book1.chapter[0].practise.section"
+                ]
+            }]
+        },
+        {
+            "id": "ENG_LQUI_TC_3",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": [
+                    "engage.books.book1.chapter[0].practise.section[0]",
+                    "engage.books.book1.chapter[0].practise.section[0].resource[1]"
+                ]
+            }]
+        }],
+        "BeforeEach": [],
+        "Test": [
+        {
+            "id": "ENG_LQUI_TC_11",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_2",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[0].text"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_MCQB_TC_1",
+            "description": "",
+            "testFile": "mcqBlock.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[0].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_MCQB_TC_8",
+            "description": "",
+            "testFile": "mcqBlock.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[0].answerKey[0][0]"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_13",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_ITEM_MCQB_TC_5",
+            "description": "",
+            "testFile": "mcqBlock.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[0].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_41",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_6",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[1]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_MCQB_TC_1",
+            "description": "",
+            "testFile": "mcqBlock.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[1].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_MCQB_TC_8",
+            "description": "",
+            "testFile": "mcqBlock.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[1].answerKey[0][0]"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_10",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_ITEM_MCQB_TC_5",
+            "description": "",
+            "testFile": "mcqBlock.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[1].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_41",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_6",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[2]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_DND_TC_20",
+            "description": "",
+            "testFile": "dragDrop.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[2]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_DND_TC_7",
+            "description": "",
+            "testFile": "dragDrop.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[2].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_10",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_41",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_6",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[3]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_FIB_TC_20",
+            "description": "",
+            "testFile": "FIB.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[3]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_FIB_TC_13",
+            "description": "",
+            "testFile": "FIB.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[3].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_10",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_17",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[4]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_OLI_TC_1",
+            "description": "",
+            "testFile": "orderlist.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[4].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_OLI_TC_9",
+            "description": "",
+            "testFile": "orderlist.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[4].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_4",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_11",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_SUMM_TC_1",
+            "description": "",
+            "testFile": "summary.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2"
+            }]
+        }],
+        "AfterEach": [],
+        "After": [
+        {
+            "id": "completerQuiz",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_FOOT_TC_1",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+        }]
+    },
+    "Suite4":
+    {
+        "Name": "Validation of Quiz 1 attempted incorrectly (with click)",
+        "TestCaseRepo": "EngageTCRepository.json",
+        "Before": [
+        {
+            "id": "launchUrl",
+            "description": "",
+            "testFile": "launchUrl.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_LAND_TC_3",
+            "description": "",
+            "testFile": "landing.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_IDEN_TC_4",
+            "description": "",
+            "testFile": "login.test.js",
+            "testData": [
+            {
+                "dataFile": "logindata.json",
+                "jsonPath": "engage.login.user.validUser1"
+            }]
+        },
+        {
+            "id": "ENG_DASH_TC_1",
+            "description": "",
+            "testFile": "dashboard.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": "engage.books.book1"
+            }]
+        },
+        {
+            "id": "ENG_TOCL_TC_3",
+            "description": "",
+            "testFile": "toc.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": [
+                    "engage.books.book1.chapter[0]",
+                    "engage.books.book1.chapter[0].practise.section"
+                ]
+            }]
+        },
+        {
+            "id": "ENG_LQUI_TC_3",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": [
+                    "engage.books.book1.chapter[0].practise.section[0]",
+                    "engage.books.book1.chapter[0].practise.section[0].resource[0]"
+                ]
+            }]
+        }],
+        "BeforeEach": [],
+        "Test": [
+        {
+            "id": "ENG_LQUI_TC_11",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_2",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[0].text"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_DND_TC_20",
+            "description": "",
+            "testFile": "dragDrop.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[0]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_DND_TC_7",
+            "description": "",
+            "testFile": "dragDrop.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[0].scenarios.scenario1"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_13",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_42",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_44",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_6",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[1]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_MCQR_TC_1",
+            "description": "",
+            "testFile": "mcqRadio.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[1].scenario1"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_MCQR_TC_8",
+            "description": "",
+            "testFile": "mcqRadio.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[1].answerKey[1][0]"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_10",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_46",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_6",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[2]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_DND_TC_20",
+            "description": "",
+            "testFile": "dragDrop.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[2]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_DND_TC_7",
+            "description": "",
+            "testFile": "dragDrop.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[2].scenarios.scenario1"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_10",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_42",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_44",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_6",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[3]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_FIB_TC_20",
+            "description": "",
+            "testFile": "FIB.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[3]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_FIB_TC_13",
+            "description": "",
+            "testFile": "FIB.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[3].scenarios.scenario1"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_10",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_42",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_44",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_17",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[4]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_OLI_TC_1",
+            "description": "",
+            "testFile": "orderlist.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[4].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_OLI_TC_9",
+            "description": "",
+            "testFile": "orderlist.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[4].scenarios.scenario1"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_4",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_42",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_44",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_11",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_SUMM_TC_2",
+            "description": "",
+            "testFile": "summary.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1"
+            }]
+        }],
+        "AfterEach": [],
+        "After": [
+        {
+            "id": "completerQuiz",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_FOOT_TC_1",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+        }]
+    },
+    "Suite5":
+    {
+        "Name": "Validation of Quiz 2 attempted incorrectly and then Review the Quiz from Summary Page",
+        "TestCaseRepo": "EngageTCRepository.json",
+        "Before": [
+        {
+            "id": "launchUrl",
+            "description": "",
+            "testFile": "launchUrl.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_LAND_TC_3",
+            "description": "",
+            "testFile": "landing.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_IDEN_TC_4",
+            "description": "",
+            "testFile": "login.test.js",
+            "testData": [
+            {
+                "dataFile": "logindata.json",
+                "jsonPath": "engage.login.user.validUser1"
+            }]
+        },
+        {
+            "id": "ENG_DASH_TC_1",
+            "description": "",
+            "testFile": "dashboard.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": "engage.books.book1"
+            }]
+        },
+        {
+            "id": "ENG_TOCL_TC_3",
+            "description": "",
+            "testFile": "toc.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": [
+                    "engage.books.book1.chapter[0]",
+                    "engage.books.book1.chapter[0].practise.section"
+                ]
+            }]
+        },
+        {
+            "id": "ENG_LQUI_TC_3",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": [
+                    "engage.books.book1.chapter[0].practise.section[0]",
+                    "engage.books.book1.chapter[0].practise.section[0].resource[1]"
+                ]
+            }]
+        }],
+        "BeforeEach": [],
+        "Test": [
+        {
+            "id": "ENG_LQUI_TC_11",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_2",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[0].text"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_MCQB_TC_1",
+            "description": "",
+            "testFile": "mcqBlock.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[0].scenario1"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_MCQB_TC_8",
+            "description": "",
+            "testFile": "mcqBlock.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[0].answerKey[3][0]"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_13",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_ITEM_MCQB_TC_6",
+            "description": "",
+            "testFile": "mcqBlock.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[0].scenario1"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_6",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[1]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_MCQB_TC_1",
+            "description": "",
+            "testFile": "mcqBlock.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[1].scenario1"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_MCQB_TC_8",
+            "description": "",
+            "testFile": "mcqBlock.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[1].answerKey[1][0]"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_10",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_ITEM_MCQB_TC_6",
+            "description": "",
+            "testFile": "mcqBlock.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[1].scenario1"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_6",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[2]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_DND_TC_20",
+            "description": "",
+            "testFile": "dragDrop.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[2]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_DND_TC_17",
+            "description": "",
+            "testFile": "dragDrop.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[2].scenarios.scenario1"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_10",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_42",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_6",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[3]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_FIB_TC_20",
+            "description": "",
+            "testFile": "FIB.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[3]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_FIB_TC_3",
+            "description": "",
+            "testFile": "FIB.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[3].scenarios.scenario1"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_10",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_17",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[4]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_OLI_TC_1",
+            "description": "",
+            "testFile": "orderlist.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[4].scenarios.scenario1"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_OLI_TC_9",
+            "description": "",
+            "testFile": "orderlist.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[4].scenarios.scenario1"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_4",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_42",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_11",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_SUMM_TC_2",
+            "description": "",
+            "testFile": "summary.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2"
+            }]
+        },
+        {
+            "id": "ENG_SUMM_TC_7",
+            "description": "",
+            "testFile": "summary.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_26",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_27",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_27",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_27",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_29",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_30",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        }],
+        "AfterEach": [],
+        "After": [
+        {
+            "id": "completerQuiz",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_FOOT_TC_1",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+        }]
+    },
+    "Suite6":
+    {
+        "Name": "Review the Quiz 2 from Start Quiz page which was performed incorrectly",
+        "TestCaseRepo": "EngageTCRepository.json",
+        "Before": [
+        {
+            "id": "launchUrl",
+            "description": "",
+            "testFile": "launchUrl.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_LAND_TC_3",
+            "description": "",
+            "testFile": "landing.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_IDEN_TC_4",
+            "description": "",
+            "testFile": "login.test.js",
+            "testData": [
+            {
+                "dataFile": "logindata.json",
+                "jsonPath": "engage.login.user.validUser1"
+            }]
+        },
+        {
+            "id": "ENG_DASH_TC_1",
+            "description": "",
+            "testFile": "dashboard.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": "engage.books.book1"
+            }]
+        },
+        {
+            "id": "ENG_TOCL_TC_3",
+            "description": "",
+            "testFile": "toc.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": [
+                    "engage.books.book1.chapter[0]",
+                    "engage.books.book1.chapter[0].practise.section"
+                ]
+            }]
+        },
+        {
+            "id": "ENG_LQUI_TC_3",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": [
+                    "engage.books.book1.chapter[0].practise.section[0]",
+                    "engage.books.book1.chapter[0].practise.section[0].resource[1]"
+                ]
+            }]
+        }],
+        "BeforeEach": [],
+        "Test": [
+        {
+            "id": "ENG_LQUI_TC_7",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_26",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_27",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_27",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_45",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_27",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_45",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_29",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_31",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        }],
+        "AfterEach": [],
+        "After": [
+        {
+            "id": "completerQuiz",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_FOOT_TC_1",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+        }]
+    },
+    "Suite7":
+    {
+        "Name": "Validation of Quiz 1 attempted correctly (with checkmywork and tryagain)",
+        "TestCaseRepo": "EngageTCRepository.json",
+        "Before": [
+        {
+            "id": "launchUrl",
+            "description": "",
+            "testFile": "launchUrl.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_LAND_TC_3",
+            "description": "",
+            "testFile": "landing.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_IDEN_TC_4",
+            "description": "",
+            "testFile": "login.test.js",
+            "testData": [
+            {
+                "dataFile": "logindata.json",
+                "jsonPath": "engage.login.user.validUser1"
+            }]
+        },
+        {
+            "id": "ENG_DASH_TC_1",
+            "description": "",
+            "testFile": "dashboard.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": "engage.books.book1"
+            }]
+        },
+        {
+            "id": "ENG_TOCL_TC_3",
+            "description": "",
+            "testFile": "toc.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": [
+                    "engage.books.book1.chapter[0]",
+                    "engage.books.book1.chapter[0].practise.section"
+                ]
+            }]
+        },
+        {
+            "id": "ENG_LQUI_TC_3",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": [
+                    "engage.books.book1.chapter[0].practise.section[0]",
+                    "engage.books.book1.chapter[0].practise.section[0].resource[0]"
+                ]
+            }]
+        }],
+        "BeforeEach": [],
+        "Test": [
+        {
+            "id": "ENG_LQUI_TC_11",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_2",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[0].text"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_DND_TC_20",
+            "description": "",
+            "testFile": "dragDrop.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[0]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_DND_TC_17",
+            "description": "",
+            "testFile": "dragDrop.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[0].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_13",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_15",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_13",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_6",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[1]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_MCQR_TC_1",
+            "description": "",
+            "testFile": "mcqRadio.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[1].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_MCQR_TC_8",
+            "description": "",
+            "testFile": "mcqRadio.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[1].answerKey[0][0]"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_10",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_14",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_10",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_6",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[2]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_DND_TC_20",
+            "description": "",
+            "testFile": "dragDrop.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[2]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_DND_TC_17",
+            "description": "",
+            "testFile": "dragDrop.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[2].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_10",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_14",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_10",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_6",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[3]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_FIB_TC_20",
+            "description": "",
+            "testFile": "FIB.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[3]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_FIB_TC_3",
+            "description": "",
+            "testFile": "FIB.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[3].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_10",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_14",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_10",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_17",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[4]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_OLI_TC_1",
+            "description": "",
+            "testFile": "orderlist.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[4].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_OLI_TC_9",
+            "description": "",
+            "testFile": "orderlist.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[4].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_4",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_5",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_4",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_11",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_SUMM_TC_1",
+            "description": "",
+            "testFile": "summary.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1"
+            }]
+        },
+        {
+            "id": "ENG_SUMM_TC_15",
+            "description": "",
+            "testFile": "summary.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": [
+                    "engage.books.book1.chapter[0]"
+                ]
+            }]
+        }],
+        "AfterEach": [],
+        "After": [
+        {
+            "id": "ENG_FOOT_TC_1",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+        }]
+    },
+    "Suite8":
+    {
+        "Name": "Validation of Quiz 2 attempted correctly (with checkmywork and tryagain)",
+        "TestCaseRepo": "EngageTCRepository.json",
+        "Before": [
+        {
+            "id": "launchUrl",
+            "description": "",
+            "testFile": "launchUrl.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_LAND_TC_3",
+            "description": "",
+            "testFile": "landing.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_IDEN_TC_4",
+            "description": "",
+            "testFile": "login.test.js",
+            "testData": [
+            {
+                "dataFile": "logindata.json",
+                "jsonPath": "engage.login.user.validUser1"
+            }]
+        },
+        {
+            "id": "ENG_DASH_TC_1",
+            "description": "",
+            "testFile": "dashboard.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": "engage.books.book1"
+            }]
+        },
+        {
+            "id": "ENG_TOCL_TC_3",
+            "description": "",
+            "testFile": "toc.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": [
+                    "engage.books.book1.chapter[0]",
+                    "engage.books.book1.chapter[0].practise.section"
+                ]
+            }]
+        },
+        {
+            "id": "ENG_LQUI_TC_3",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": [
+                    "engage.books.book1.chapter[0].practise.section[0]",
+                    "engage.books.book1.chapter[0].practise.section[0].resource[1]"
+                ]
+            }]
+        }],
+        "BeforeEach": [],
+        "Test": [
+        {
+            "id": "ENG_LQUI_TC_11",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_2",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[0].text"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_MCQB_TC_1",
+            "description": "",
+            "testFile": "mcqBlock.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[0].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_MCQB_TC_8",
+            "description": "",
+            "testFile": "mcqBlock.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[0].answerKey[0][0]"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_13",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_15",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_13",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_ITEM_MCQB_TC_5",
+            "description": "",
+            "testFile": "mcqBlock.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[0].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_41",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_6",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[1]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_MCQB_TC_1",
+            "description": "",
+            "testFile": "mcqBlock.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[1].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_MCQB_TC_8",
+            "description": "",
+            "testFile": "mcqBlock.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[1].answerKey[0][0]"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_10",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_14",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_10",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_ITEM_MCQB_TC_5",
+            "description": "",
+            "testFile": "mcqBlock.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[1].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_41",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_6",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[2]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_DND_TC_20",
+            "description": "",
+            "testFile": "dragDrop.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[2]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_DND_TC_17",
+            "description": "",
+            "testFile": "dragDrop.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[2].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_10",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_14",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_10",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_41",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_6",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[3]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_FIB_TC_20",
+            "description": "",
+            "testFile": "FIB.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[3]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_FIB_TC_3",
+            "description": "",
+            "testFile": "FIB.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[3].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_10",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_14",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_10",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_17",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[4]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_OLI_TC_1",
+            "description": "",
+            "testFile": "orderlist.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[4].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_OLI_TC_9",
+            "description": "",
+            "testFile": "orderlist.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[4].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_4",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_5",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_4",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_11",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_SUMM_TC_1",
+            "description": "",
+            "testFile": "summary.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2"
+            }]
+        }],
+        "AfterEach": [],
+        "After": [
+        {
+            "id": "completerQuiz",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_FOOT_TC_1",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+        }]
+    },
+    "Suite9":
+    {
+        "Name": "Validation of Quiz 1 attempted incorrectly (without check my work)",
+        "TestCaseRepo": "EngageTCRepository.json",
+        "Before": [
+        {
+            "id": "launchUrl",
+            "description": "",
+            "testFile": "launchUrl.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_LAND_TC_3",
+            "description": "",
+            "testFile": "landing.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_IDEN_TC_4",
+            "description": "",
+            "testFile": "login.test.js",
+            "testData": [
+            {
+                "dataFile": "logindata.json",
+                "jsonPath": "engage.login.user.validUser1"
+            }]
+        },
+        {
+            "id": "ENG_DASH_TC_1",
+            "description": "",
+            "testFile": "dashboard.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": "engage.books.book1"
+            }]
+        },
+        {
+            "id": "ENG_TOCL_TC_3",
+            "description": "",
+            "testFile": "toc.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": [
+                    "engage.books.book1.chapter[0]",
+                    "engage.books.book1.chapter[0].practise.section"
+                ]
+            }]
+        },
+        {
+            "id": "ENG_LQUI_TC_3",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": [
+                    "engage.books.book1.chapter[0].practise.section[0]",
+                    "engage.books.book1.chapter[0].practise.section[0].resource[0]"
+                ]
+            }]
+        }],
+        "BeforeEach": [],
+        "Test": [
+        {
+            "id": "ENG_LQUI_TC_11",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_2",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[0].text"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_DND_TC_20",
+            "description": "",
+            "testFile": "dragDrop.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[0]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_DND_TC_17",
+            "description": "",
+            "testFile": "dragDrop.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[0].scenarios.scenario1"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_7",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_ITEM_MCQR_TC_1",
+            "description": "",
+            "testFile": "mcqRadio.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[1].scenario1"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_MCQR_TC_8",
+            "description": "",
+            "testFile": "mcqRadio.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[1].answerKey[1][0]"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_7",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_ITEM_DND_TC_20",
+            "description": "",
+            "testFile": "dragDrop.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[2]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_DND_TC_17",
+            "description": "",
+            "testFile": "dragDrop.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[2].scenarios.scenario1"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_7",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_ITEM_FIB_TC_20",
+            "description": "",
+            "testFile": "FIB.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[3]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_FIB_TC_3",
+            "description": "",
+            "testFile": "FIB.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[3].scenarios.scenario1"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_17",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[4]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_OLI_TC_1",
+            "description": "",
+            "testFile": "orderlist.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[4].scenarios.scenario1"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_OLI_TC_9",
+            "description": "",
+            "testFile": "orderlist.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[4].scenarios.scenario1"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_4",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_11",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_SUMM_TC_2",
+            "description": "",
+            "testFile": "summary.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1"
+            }]
+        }],
+        "AfterEach": [],
+        "After": [
+        {
+            "id": "completerQuiz",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_FOOT_TC_1",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+        }]
+    },
+    "Suite10":
+    {
+        "Name": "Validation of Quiz 2 attempted incorrectly (without check my work)",
+        "TestCaseRepo": "EngageTCRepository.json",
+        "Before": [
+        {
+            "id": "launchUrl",
+            "description": "",
+            "testFile": "launchUrl.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_LAND_TC_3",
+            "description": "",
+            "testFile": "landing.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_IDEN_TC_4",
+            "description": "",
+            "testFile": "login.test.js",
+            "testData": [
+            {
+                "dataFile": "logindata.json",
+                "jsonPath": "engage.login.user.validUser1"
+            }]
+        },
+        {
+            "id": "ENG_DASH_TC_1",
+            "description": "",
+            "testFile": "dashboard.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": "engage.books.book1"
+            }]
+        },
+        {
+            "id": "ENG_TOCL_TC_3",
+            "description": "",
+            "testFile": "toc.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": [
+                    "engage.books.book1.chapter[0]",
+                    "engage.books.book1.chapter[0].practise.section"
+                ]
+            }]
+        },
+        {
+            "id": "ENG_LQUI_TC_3",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": [
+                    "engage.books.book1.chapter[0].practise.section[0]",
+                    "engage.books.book1.chapter[0].practise.section[0].resource[1]"
+                ]
+            }]
+        }],
+        "BeforeEach": [],
+        "Test": [
+        {
+            "id": "ENG_LQUI_TC_11",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_2",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[0].text"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_MCQB_TC_1",
+            "description": "",
+            "testFile": "mcqBlock.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[0].scenario1"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_MCQB_TC_8",
+            "description": "",
+            "testFile": "mcqBlock.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[0].answerKey[3][0]"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_7",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_ITEM_MCQB_TC_1",
+            "description": "",
+            "testFile": "mcqBlock.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[1].scenario1"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_MCQB_TC_8",
+            "description": "",
+            "testFile": "mcqBlock.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[1].answerKey[1][0]"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_7",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_ITEM_DND_TC_20",
+            "description": "",
+            "testFile": "dragDrop.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[2]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_DND_TC_17",
+            "description": "",
+            "testFile": "dragDrop.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[2].scenarios.scenario1"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_7",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_ITEM_FIB_TC_20",
+            "description": "",
+            "testFile": "FIB.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[3]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_FIB_TC_3",
+            "description": "",
+            "testFile": "FIB.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[3].scenarios.scenario1"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_17",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[4]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_OLI_TC_1",
+            "description": "",
+            "testFile": "orderlist.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[4].scenarios.scenario1"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_OLI_TC_9",
+            "description": "",
+            "testFile": "orderlist.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[4].scenarios.scenario1"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_4",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_42",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_11",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_SUMM_TC_2",
+            "description": "",
+            "testFile": "summary.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2"
+            }]
+        }],
+        "AfterEach": [],
+        "After": [
+        {
+            "id": "completerQuiz",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_FOOT_TC_1",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+        }]
+    },
+    "Suite11":
+    {
+        "Name": "Validation of Quiz 1 without attempting any question",
+        "TestCaseRepo": "EngageTCRepository.json",
+        "Before": [
+        {
+            "id": "launchUrl",
+            "description": "",
+            "testFile": "launchUrl.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_LAND_TC_3",
+            "description": "",
+            "testFile": "landing.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_IDEN_TC_4",
+            "description": "",
+            "testFile": "login.test.js",
+            "testData": [
+            {
+                "dataFile": "logindata.json",
+                "jsonPath": "engage.login.user.validUser1"
+            }]
+        },
+        {
+            "id": "ENG_DASH_TC_1",
+            "description": "",
+            "testFile": "dashboard.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": "engage.books.book1"
+            }]
+        },
+        {
+            "id": "ENG_TOCL_TC_3",
+            "description": "",
+            "testFile": "toc.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": [
+                    "engage.books.book1.chapter[0]",
+                    "engage.books.book1.chapter[0].practise.section"
+                ]
+            }]
+        },
+        {
+            "id": "ENG_LQUI_TC_3",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": [
+                    "engage.books.book1.chapter[0].practise.section[0]",
+                    "engage.books.book1.chapter[0].practise.section[0].resource[0]"
+                ]
+            }]
+        }],
+        "BeforeEach": [],
+        "Test": [
+        {
+            "id": "ENG_LQUI_TC_11",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_2",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[0].text"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_DND_TC_20",
+            "description": "",
+            "testFile": "dragDrop.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[0]"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_7",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_ITEM_MCQR_TC_1",
+            "description": "",
+            "testFile": "mcqRadio.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[1].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_7",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_ITEM_DND_TC_20",
+            "description": "",
+            "testFile": "dragDrop.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[2]"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_7",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_ITEM_FIB_TC_20",
+            "description": "",
+            "testFile": "FIB.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[3]"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_19",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_ITEM_OLI_TC_1",
+            "description": "",
+            "testFile": "orderlist.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[4].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_12",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_SUMM_TC_5",
+            "description": "",
+            "testFile": "summary.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1"
+            }]
+        },
+        {
+            "id": "ENG_SUMM_TC_6",
+            "description": "",
+            "testFile": "summary.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1"
+            }]
+        }],
+        "AfterEach": [],
+        "After": [
+        {
+            "id": "completerQuiz",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_FOOT_TC_1",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+        }]
+    },
+    "Suite12":
+    {
+        "Name": "Validation of Quiz 2 without attempting any question",
+        "TestCaseRepo": "EngageTCRepository.json",
+        "Before": [
+        {
+            "id": "launchUrl",
+            "description": "",
+            "testFile": "launchUrl.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_LAND_TC_3",
+            "description": "",
+            "testFile": "landing.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_IDEN_TC_4",
+            "description": "",
+            "testFile": "login.test.js",
+            "testData": [
+            {
+                "dataFile": "logindata.json",
+                "jsonPath": "engage.login.user.validUser1"
+            }]
+        },
+        {
+            "id": "ENG_DASH_TC_1",
+            "description": "",
+            "testFile": "dashboard.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": "engage.books.book1"
+            }]
+        },
+        {
+            "id": "ENG_TOCL_TC_3",
+            "description": "",
+            "testFile": "toc.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": [
+                    "engage.books.book1.chapter[0]",
+                    "engage.books.book1.chapter[0].practise.section"
+                ]
+            }]
+        },
+        {
+            "id": "ENG_LQUI_TC_3",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": [
+                    "engage.books.book1.chapter[0].practise.section[0]",
+                    "engage.books.book1.chapter[0].practise.section[0].resource[1]"
+                ]
+            }]
+        }],
+        "BeforeEach": [],
+        "Test": [
+        {
+            "id": "ENG_LQUI_TC_11",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_2",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[0].text"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_MCQB_TC_1",
+            "description": "",
+            "testFile": "mcqBlock.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[0].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_7",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_ITEM_MCQB_TC_1",
+            "description": "",
+            "testFile": "mcqBlock.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[1].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_7",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_ITEM_DND_TC_20",
+            "description": "",
+            "testFile": "dragDrop.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[2]"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_7",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_ITEM_FIB_TC_20",
+            "description": "",
+            "testFile": "FIB.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[3]"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_19",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_ITEM_OLI_TC_1",
+            "description": "",
+            "testFile": "orderlist.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[4].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_12",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_SUMM_TC_5",
+            "description": "",
+            "testFile": "summary.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2"
+            }]
+        }],
+        "AfterEach": [],
+        "After": [
+        {
+            "id": "completerQuiz",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_FOOT_TC_1",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+        }]
+    },
+    "Suite13":
+    {
+        "Name": "Validation of Quiz 1 attempted partially and score below cut-off marks",
+        "TestCaseRepo": "EngageTCRepository.json",
+        "Before": [
+        {
+            "id": "launchUrl",
+            "description": "",
+            "testFile": "launchUrl.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_LAND_TC_3",
+            "description": "",
+            "testFile": "landing.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_IDEN_TC_4",
+            "description": "",
+            "testFile": "login.test.js",
+            "testData": [
+            {
+                "dataFile": "logindata.json",
+                "jsonPath": "engage.login.user.validUser1"
+            }]
+        },
+        {
+            "id": "ENG_DASH_TC_1",
+            "description": "",
+            "testFile": "dashboard.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": "engage.books.book1"
+            }]
+        },
+        {
+            "id": "ENG_TOCL_TC_3",
+            "description": "",
+            "testFile": "toc.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": [
+                    "engage.books.book1.chapter[0]",
+                    "engage.books.book1.chapter[0].practise.section"
+                ]
+            }]
+        },
+        {
+            "id": "ENG_LQUI_TC_3",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": [
+                    "engage.books.book1.chapter[0].practise.section[0]",
+                    "engage.books.book1.chapter[0].practise.section[0].resource[0]"
+                ]
+            }]
+        }],
+        "BeforeEach": [],
+        "Test": [
+        {
+            "id": "ENG_LQUI_TC_11",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_2",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[0].text"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_DND_TC_20",
+            "description": "",
+            "testFile": "dragDrop.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[0]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_DND_TC_17",
+            "description": "",
+            "testFile": "dragDrop.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[0].scenarios.scenario2"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_13",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_42",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_6",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[1]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_MCQR_TC_1",
+            "description": "",
+            "testFile": "mcqRadio.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[1].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_MCQR_TC_8",
+            "description": "",
+            "testFile": "mcqRadio.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[1].answerKey[1][0]"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_10",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_6",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[2]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_DND_TC_20",
+            "description": "",
+            "testFile": "dragDrop.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[2]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_DND_TC_17",
+            "description": "",
+            "testFile": "dragDrop.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[2].scenarios.scenario2"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_10",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_6",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[3]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_FIB_TC_20",
+            "description": "",
+            "testFile": "FIB.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[3]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_FIB_TC_3",
+            "description": "",
+            "testFile": "FIB.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[3].scenarios.scenario2"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_10",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_17",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[4]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_OLI_TC_1",
+            "description": "",
+            "testFile": "orderlist.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[4].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_OLI_TC_9",
+            "description": "",
+            "testFile": "orderlist.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[4].scenarios.scenario2"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_4",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_11",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_SUMM_TC_8",
+            "description": "",
+            "testFile": "summary.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1"
+            }]
+        }],
+        "AfterEach": [],
+        "After": [
+        {
+            "id": "completerQuiz",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_FOOT_TC_1",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+        }]
+    },
+    "Suite14":
+    {
+        "Name": "Validation of Quiz 1 attempted partially and score above cut-off marks",
+        "TestCaseRepo": "EngageTCRepository.json",
+        "Before": [
+        {
+            "id": "launchUrl",
+            "description": "",
+            "testFile": "launchUrl.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_LAND_TC_3",
+            "description": "",
+            "testFile": "landing.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_IDEN_TC_4",
+            "description": "",
+            "testFile": "login.test.js",
+            "testData": [
+            {
+                "dataFile": "logindata.json",
+                "jsonPath": "engage.login.user.validUser1"
+            }]
+        },
+        {
+            "id": "ENG_DASH_TC_1",
+            "description": "",
+            "testFile": "dashboard.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": "engage.books.book1"
+            }]
+        },
+        {
+            "id": "ENG_TOCL_TC_3",
+            "description": "",
+            "testFile": "toc.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": [
+                    "engage.books.book1.chapter[0]",
+                    "engage.books.book1.chapter[0].practise.section"
+                ]
+            }]
+        },
+        {
+            "id": "ENG_LQUI_TC_3",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": [
+                    "engage.books.book1.chapter[0].practise.section[0]",
+                    "engage.books.book1.chapter[0].practise.section[0].resource[0]"
+                ]
+            }]
+        }],
+        "BeforeEach": [],
+        "Test": [
+        {
+            "id": "ENG_LQUI_TC_11",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_2",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[0].text"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_DND_TC_20",
+            "description": "",
+            "testFile": "dragDrop.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[0]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_DND_TC_17",
+            "description": "",
+            "testFile": "dragDrop.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[0].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_13",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_41",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_6",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[1]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_MCQR_TC_1",
+            "description": "",
+            "testFile": "mcqRadio.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[1].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_MCQR_TC_8",
+            "description": "",
+            "testFile": "mcqRadio.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[1].answerKey[1][0]"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_10",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_6",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[2]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_DND_TC_20",
+            "description": "",
+            "testFile": "dragDrop.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[2]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_DND_TC_17",
+            "description": "",
+            "testFile": "dragDrop.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[2].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_10",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_41",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_6",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[3]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_FIB_TC_20",
+            "description": "",
+            "testFile": "FIB.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[3]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_FIB_TC_3",
+            "description": "",
+            "testFile": "FIB.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[3].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_10",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_41",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_17",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[4]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_OLI_TC_1",
+            "description": "",
+            "testFile": "orderlist.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[4].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_OLI_TC_9",
+            "description": "",
+            "testFile": "orderlist.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[4].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_4",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_41",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_11",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_SUMM_TC_9",
+            "description": "",
+            "testFile": "summary.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1"
+            }]
+        }],
+        "AfterEach": [],
+        "After": [
+        {
+            "id": "completerQuiz",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_FOOT_TC_1",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+        }]
+    },
+    "Suite15":
+    {
+        "Name": "Validation of Quiz 1 attempted partially and score exact cut-off marks",
+        "TestCaseRepo": "EngageTCRepository.json",
+        "Before": [
+        {
+            "id": "launchUrl",
+            "description": "",
+            "testFile": "launchUrl.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_LAND_TC_3",
+            "description": "",
+            "testFile": "landing.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_IDEN_TC_4",
+            "description": "",
+            "testFile": "login.test.js",
+            "testData": [
+            {
+                "dataFile": "logindata.json",
+                "jsonPath": "engage.login.user.validUser1"
+            }]
+        },
+        {
+            "id": "ENG_DASH_TC_1",
+            "description": "",
+            "testFile": "dashboard.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": "engage.books.book1"
+            }]
+        },
+        {
+            "id": "ENG_TOCL_TC_3",
+            "description": "",
+            "testFile": "toc.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": [
+                    "engage.books.book1.chapter[0]",
+                    "engage.books.book1.chapter[0].practise.section"
+                ]
+            }]
+        },
+        {
+            "id": "ENG_LQUI_TC_3",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": [
+                    "engage.books.book1.chapter[0].practise.section[0]",
+                    "engage.books.book1.chapter[0].practise.section[0].resource[0]"
+                ]
+            }]
+        }],
+        "BeforeEach": [],
+        "Test": [
+        {
+            "id": "ENG_LQUI_TC_11",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_2",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[0].text"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_DND_TC_20",
+            "description": "",
+            "testFile": "dragDrop.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[0]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_DND_TC_17",
+            "description": "",
+            "testFile": "dragDrop.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[0].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_13",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_41",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_6",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[1]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_MCQR_TC_1",
+            "description": "",
+            "testFile": "mcqRadio.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[1].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_MCQR_TC_8",
+            "description": "",
+            "testFile": "mcqRadio.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[1].answerKey[1][0]"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_10",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_6",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[2]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_DND_TC_20",
+            "description": "",
+            "testFile": "dragDrop.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[2]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_DND_TC_17",
+            "description": "",
+            "testFile": "dragDrop.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[2].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_10",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_41",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_6",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[3]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_FIB_TC_20",
+            "description": "",
+            "testFile": "FIB.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[3]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_FIB_TC_3",
+            "description": "",
+            "testFile": "FIB.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[3].scenarios.scenario2"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_10",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_42",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_17",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[4]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_OLI_TC_1",
+            "description": "",
+            "testFile": "orderlist.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[4].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_OLI_TC_9",
+            "description": "",
+            "testFile": "orderlist.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[4].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_4",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_41",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_11",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_SUMM_TC_10",
+            "description": "",
+            "testFile": "summary.test.js",
+            "testData": [
+            {
+                "dataFile": "quizData.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz1"
+            }]
+        }],
+        "AfterEach": [],
+        "After": [
+        {
+            "id": "completerQuiz",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_FOOT_TC_1",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+        }]
+    },
+    "Suite16":
+    {
+        "Name": "Validation of Quiz 2 attempted partially and score below cut-off marks",
+        "TestCaseRepo": "EngageTCRepository.json",
+        "Before": [
+        {
+            "id": "launchUrl",
+            "description": "",
+            "testFile": "launchUrl.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_LAND_TC_3",
+            "description": "",
+            "testFile": "landing.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_IDEN_TC_4",
+            "description": "",
+            "testFile": "login.test.js",
+            "testData": [
+            {
+                "dataFile": "logindata.json",
+                "jsonPath": "engage.login.user.validUser1"
+            }]
+        },
+        {
+            "id": "ENG_DASH_TC_1",
+            "description": "",
+            "testFile": "dashboard.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": "engage.books.book1"
+            }]
+        },
+        {
+            "id": "ENG_TOCL_TC_3",
+            "description": "",
+            "testFile": "toc.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": [
+                    "engage.books.book1.chapter[0]",
+                    "engage.books.book1.chapter[0].practise.section"
+                ]
+            }]
+        },
+        {
+            "id": "ENG_LQUI_TC_3",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": [
+                    "engage.books.book1.chapter[0].practise.section[0]",
+                    "engage.books.book1.chapter[0].practise.section[0].resource[1]"
+                ]
+            }]
+        }],
+        "BeforeEach": [],
+        "Test": [
+        {
+            "id": "ENG_LQUI_TC_11",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_2",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[0].text"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_MCQB_TC_1",
+            "description": "",
+            "testFile": "mcqBlock.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[0].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_MCQB_TC_8",
+            "description": "",
+            "testFile": "mcqBlock.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[0].answerKey[3][0]"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_13",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_ITEM_MCQB_TC_6",
+            "description": "",
+            "testFile": "mcqBlock.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[0].scenario1"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_6",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[1]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_MCQB_TC_1",
+            "description": "",
+            "testFile": "mcqBlock.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[1].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_MCQB_TC_8",
+            "description": "",
+            "testFile": "mcqBlock.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[1].answerKey[1][0]"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_10",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_ITEM_MCQB_TC_6",
+            "description": "",
+            "testFile": "mcqBlock.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[1].scenario1"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_6",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[2]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_DND_TC_20",
+            "description": "",
+            "testFile": "dragDrop.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[2]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_DND_TC_17",
+            "description": "",
+            "testFile": "dragDrop.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[2].scenarios.scenario2"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_10",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_42",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_6",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[3]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_FIB_TC_20",
+            "description": "",
+            "testFile": "FIB.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[3]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_FIB_TC_3",
+            "description": "",
+            "testFile": "FIB.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[3].scenarios.scenario2"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_10",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_17",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[4]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_OLI_TC_1",
+            "description": "",
+            "testFile": "orderlist.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[4].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_OLI_TC_9",
+            "description": "",
+            "testFile": "orderlist.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[4].scenarios.scenario2"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_4",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_11",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_SUMM_TC_8",
+            "description": "",
+            "testFile": "summary.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2"
+            }]
+        }],
+        "AfterEach": [],
+        "After": [
+        {
+            "id": "completerQuiz",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_FOOT_TC_1",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+        }]
+    },
+    "Suite17":
+    {
+        "Name": "Validation of Quiz 2 attempted partially and score above cut-off marks",
+        "TestCaseRepo": "EngageTCRepository.json",
+        "Before": [
+        {
+            "id": "launchUrl",
+            "description": "",
+            "testFile": "launchUrl.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_LAND_TC_3",
+            "description": "",
+            "testFile": "landing.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_IDEN_TC_4",
+            "description": "",
+            "testFile": "login.test.js",
+            "testData": [
+            {
+                "dataFile": "logindata.json",
+                "jsonPath": "engage.login.user.validUser1"
+            }]
+        },
+        {
+            "id": "ENG_DASH_TC_1",
+            "description": "",
+            "testFile": "dashboard.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": "engage.books.book1"
+            }]
+        },
+        {
+            "id": "ENG_TOCL_TC_3",
+            "description": "",
+            "testFile": "toc.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": [
+                    "engage.books.book1.chapter[0]",
+                    "engage.books.book1.chapter[0].practise.section"
+                ]
+            }]
+        },
+        {
+            "id": "ENG_LQUI_TC_3",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": [
+                    "engage.books.book1.chapter[0].practise.section[0]",
+                    "engage.books.book1.chapter[0].practise.section[0].resource[1]"
+                ]
+            }]
+        }],
+        "BeforeEach": [],
+        "Test": [
+        {
+            "id": "ENG_LQUI_TC_11",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_2",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[0].text"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_MCQB_TC_1",
+            "description": "",
+            "testFile": "mcqBlock.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[0].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_MCQB_TC_8",
+            "description": "",
+            "testFile": "mcqBlock.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[0].answerKey[0][0]"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_13",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_ITEM_MCQB_TC_5",
+            "description": "",
+            "testFile": "mcqBlock.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[0].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_41",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_6",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[1]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_MCQB_TC_1",
+            "description": "",
+            "testFile": "mcqBlock.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[1].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_MCQB_TC_8",
+            "description": "",
+            "testFile": "mcqBlock.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[1].answerKey[0][0]"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_10",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_ITEM_MCQB_TC_5",
+            "description": "",
+            "testFile": "mcqBlock.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[1].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_41",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_6",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[2]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_DND_TC_20",
+            "description": "",
+            "testFile": "dragDrop.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[2]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_DND_TC_17",
+            "description": "",
+            "testFile": "dragDrop.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[2].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_10",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_41",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_6",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[3]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_FIB_TC_20",
+            "description": "",
+            "testFile": "FIB.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[3]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_FIB_TC_3",
+            "description": "",
+            "testFile": "FIB.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[3].scenarios.scenario2"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_10",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_42",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_17",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[4]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_OLI_TC_1",
+            "description": "",
+            "testFile": "orderlist.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[4].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_OLI_TC_9",
+            "description": "",
+            "testFile": "orderlist.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[4].scenarios.scenario2"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_4",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_42",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_11",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_SUMM_TC_9",
+            "description": "",
+            "testFile": "summary.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2"
+            }]
+        }],
+        "AfterEach": [],
+        "After": [
+        {
+            "id": "completerQuiz",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_FOOT_TC_1",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+        }]
+    },
+    "Suite18":
+    {
+        "Name": "Validation of Quiz 2 attempted partially and score exact cut-off marks",
+        "TestCaseRepo": "EngageTCRepository.json",
+        "Before": [
+        {
+            "id": "launchUrl",
+            "description": "",
+            "testFile": "launchUrl.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_LAND_TC_3",
+            "description": "",
+            "testFile": "landing.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_IDEN_TC_4",
+            "description": "",
+            "testFile": "login.test.js",
+            "testData": [
+            {
+                "dataFile": "logindata.json",
+                "jsonPath": "engage.login.user.validUser1"
+            }]
+        },
+        {
+            "id": "ENG_DASH_TC_1",
+            "description": "",
+            "testFile": "dashboard.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": "engage.books.book1"
+            }]
+        },
+        {
+            "id": "ENG_TOCL_TC_3",
+            "description": "",
+            "testFile": "toc.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": [
+                    "engage.books.book1.chapter[0]",
+                    "engage.books.book1.chapter[0].practise.section"
+                ]
+            }]
+        },
+        {
+            "id": "ENG_LQUI_TC_3",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+            {
+                "dataFile": "tocData.json",
+                "jsonPath": [
+                    "engage.books.book1.chapter[0].practise.section[0]",
+                    "engage.books.book1.chapter[0].practise.section[0].resource[1]"
+                ]
+            }]
+        }],
+        "BeforeEach": [],
+        "Test": [
+        {
+            "id": "ENG_LQUI_TC_11",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_2",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[0].text"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_MCQB_TC_1",
+            "description": "",
+            "testFile": "mcqBlock.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[0].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_MCQB_TC_8",
+            "description": "",
+            "testFile": "mcqBlock.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[0].answerKey[0][0]"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_13",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_ITEM_MCQB_TC_5",
+            "description": "",
+            "testFile": "mcqBlock.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[0].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_41",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_6",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[1]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_MCQB_TC_1",
+            "description": "",
+            "testFile": "mcqBlock.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[1].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_MCQB_TC_8",
+            "description": "",
+            "testFile": "mcqBlock.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[1].answerKey[0][0]"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_10",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_ITEM_MCQB_TC_5",
+            "description": "",
+            "testFile": "mcqBlock.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[1].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_41",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_6",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[2]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_DND_TC_20",
+            "description": "",
+            "testFile": "dragDrop.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[2]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_DND_TC_17",
+            "description": "",
+            "testFile": "dragDrop.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[2].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_10",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_41",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_6",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[3]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_FIB_TC_20",
+            "description": "",
+            "testFile": "FIB.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[3]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_FIB_TC_3",
+            "description": "",
+            "testFile": "FIB.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[3].scenarios.scenario2"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_10",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_42",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_17",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[4]"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_OLI_TC_1",
+            "description": "",
+            "testFile": "orderlist.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[4].answerKey"
+            }]
+        },
+        {
+            "id": "ENG_ITEM_OLI_TC_9",
+            "description": "",
+            "testFile": "orderlist.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2.question[4].scenarios.scenario1"
+            }]
+        },
+        {
+            "id": "ENG_QUIZ_TC_9",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_4",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_42",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_QUIZ_TC_11",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_SUMM_TC_10",
+            "description": "",
+            "testFile": "summary.test.js",
+            "testData": [
+            {
+                "dataFile": "quiz2Data.json",
+                "jsonPath": "engage.quiz.ch1_sec1_quiz2"
+            }]
+        }],
+        "AfterEach": [],
+        "After": [
+        {
+            "id": "completerQuiz",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+        },
+        {
+            "id": "ENG_FOOT_TC_1",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+        }]
+    }
+}

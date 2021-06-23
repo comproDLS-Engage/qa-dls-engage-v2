@@ -1,0 +1,1718 @@
+{
+  "Suite_1": {
+    "Name": "Validation of Student List Page - English",
+    "TestCaseRepo": [
+      "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
+    ],
+    "Before": [
+      {
+        "id": "launchUrl",
+        "description": "",
+        "testFile": "./engageQAAutomation/core/launchUrl.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_LAND_TC_3",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/landing.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_IDEN_TC_4",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/login.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "jsonPath": "engage.login.user.studentMgmtInstructorUser"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_MYCO_TC_26",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/instructorMyCourses.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "jsonPath": "engage.login.user.studentMgmtInstructorUser.courses[0]"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "jsonPath": "engage.login.user.studentMgmtInstructorUser"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_DASH_TC_9",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/instructorDashboard.test.js",
+        "testData": []
+      }
+    ],
+    "BeforeEach": [],
+    "Test": [
+      {
+        "id": "ENG_INS_SMW_TC_2",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/courseData.json",
+            "jsonPath": "engage.courses.studentMgmtCourse"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_117",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/instructorAppContentEnglish.json",
+            "jsonPath": "engage.appContent.studentListPage"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "jsonPath": "engage.login.user.studentMgmtInstructorUser.courses[0]"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/courseData.json",
+            "jsonPath": "engage.courses.studentMgmtCourse"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_112",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_SMW_TC_115",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/instructorAppContentEnglish.json",
+            "jsonPath": "engage.appContent.studentListPage"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_6",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_SMW_TC_14",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/studentMgmtData.json",
+            "jsonPath": "engage.studentMgmt.courseWithStudents.searchStudentScenarios"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/instructorAppContentEnglish.json",
+            "jsonPath": "engage.appContent.studentListPage"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_17",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/courseData.json",
+            "jsonPath": "engage.courses.studentMgmtCourse"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_113",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/studentMgmtData.json",
+            "jsonPath": "engage.studentMgmt.courseWithStudents.studentList[0]"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_116",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/instructorAppContentEnglish.json",
+            "jsonPath": "engage.appContent.studentListPage"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_21",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_SMW_TC_23",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/instructorAppContentEnglish.json",
+            "jsonPath": "engage.appContent.studentListPage"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/studentMgmtData.json",
+            "jsonPath": "engage.studentMgmt.courseWithStudents.studentList[0]"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "jsonPath": "engage.login.user.studentMgmtInstructorUser"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_25",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/studentMgmtData.json",
+            "jsonPath": "engage.studentMgmt.courseWithStudents.studentList[0]"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_113",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/studentMgmtData.json",
+            "jsonPath": "engage.studentMgmt.courseWithStudents.studentList[0]"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_21",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_SMW_TC_26",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/studentMgmtData.json",
+            "jsonPath": "engage.studentMgmt.courseWithStudents.studentList[0]"
+          }
+        ]
+      }
+    ],
+    "AfterEach": [],
+    "After": [
+      {
+        "id": "ENG_FOOT_TC_1",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/common.test.js",
+        "testData": []
+      }
+    ]
+  },
+  "Suite_2": {
+    "Name": "Validation of Search Student Feature - English",
+    "TestCaseRepo": [
+      "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
+    ],
+    "Before": [
+      {
+        "id": "launchUrl",
+        "description": "",
+        "testFile": "./engageQAAutomation/core/launchUrl.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_LAND_TC_3",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/landing.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_IDEN_TC_4",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/login.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "jsonPath": "engage.login.user.studentMgmtInstructorUser"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_MYCO_TC_26",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/instructorMyCourses.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "jsonPath": "engage.login.user.studentMgmtInstructorUser.courses[0]"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "jsonPath": "engage.login.user.studentMgmtInstructorUser"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_DASH_TC_9",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/instructorDashboard.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_SMW_TC_112",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_SMW_TC_6",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": []
+      }
+    ],
+    "BeforeEach": [],
+    "Test": [
+      {
+        "id": "ENG_INS_SMW_TC_8",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/studentMgmtData.json",
+            "jsonPath": "engage.studentMgmt.courseWithStudents.searchStudentScenarios"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_9",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/studentMgmtData.json",
+            "jsonPath": "engage.studentMgmt.courseWithStudents.searchStudentScenarios"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_10",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/studentMgmtData.json",
+            "jsonPath": "engage.studentMgmt.courseWithStudents.searchStudentScenarios"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_11",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/studentMgmtData.json",
+            "jsonPath": "engage.studentMgmt.courseWithStudents.searchStudentScenarios"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_12",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/studentMgmtData.json",
+            "jsonPath": "engage.studentMgmt.courseWithStudents.searchStudentScenarios"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_13",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/studentMgmtData.json",
+            "jsonPath": "engage.studentMgmt.courseWithStudents.searchStudentScenarios"
+          }
+        ]
+      }
+    ],
+    "AfterEach": [],
+    "After": [
+      {
+        "id": "ENG_FOOT_TC_1",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/common.test.js",
+        "testData": []
+      }
+    ]
+  },
+  "Suite_3": {
+    "Name": "Validation of Registered user workflow and then Delete the User - English",
+    "TestCaseRepo": [
+      "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
+    ],
+    "Before": [
+      {
+        "id": "launchUrl",
+        "description": "",
+        "testFile": "./engageQAAutomation/core/launchUrl.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_LAND_TC_3",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/landing.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_IDEN_TC_4",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/login.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "jsonPath": "engage.login.user.studentMgmtInstructorUser"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_MYCO_TC_26",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/instructorMyCourses.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "jsonPath": "engage.login.user.studentMgmtInstructorUser.courses[1]"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "jsonPath": "engage.login.user.studentMgmtInstructorUser"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_DASH_TC_9",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/instructorDashboard.test.js",
+        "testData": []
+      }
+    ],
+    "BeforeEach": [],
+    "Test": [
+      {
+        "id": "ENG_INS_SMW_TC_120",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/instructorAppContentEnglish.json",
+            "jsonPath": "engage.appContent.studentListPage"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_32",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_SMW_TC_50",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_SMW_TC_112",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_SMW_TC_32",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_SMW_TC_114",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/instructorAppContentEnglish.json",
+            "jsonPath": "engage.appContent.addStudentPage"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_33",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/instructorAppContentEnglish.json",
+            "jsonPath": "engage.appContent.addStudentPage"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_118",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/instructorAppContentEnglish.json",
+            "jsonPath": "engage.appContent.addStudentPage"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_36",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/engageExperienceApp/qa/studentMgmtData.json",
+            "jsonPath": "engage.studentMgmt.courseWithStudents.addStudentScenarios.registeredStudent"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_35",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_SMW_TC_38",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/instructorAppContentEnglish.json",
+            "jsonPath": "engage.appContent.invitationPreviewPage"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/studentMgmtData.json",
+            "jsonPath": "engage.studentMgmt.courseWithStudents.addStudentScenarios.registeredStudent"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "jsonPath": "engage.login.user.studentMgmtInstructorUser"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_40",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_SMW_TC_37",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/studentMgmtData.json",
+            "jsonPath": "engage.studentMgmt.courseWithStudents.addStudentScenarios.registeredStudent"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_35",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_SMW_TC_39",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/instructorAppContentEnglish.json",
+            "jsonPath": "engage.appContent.invitationPreviewPage"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/studentMgmtData.json",
+            "jsonPath": "engage.studentMgmt.courseWithStudents.addStudentScenarios.registeredStudent"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "jsonPath": "engage.login.user.studentMgmtInstructorUser"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_43",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_SMW_TC_44",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_SMW_TC_46",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/instructorAppContentEnglish.json",
+            "jsonPath": "engage.appContent.addStudentPage"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_48",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/studentMgmtData.json",
+            "jsonPath": "engage.studentMgmt.courseWithStudents.addStudentScenarios.registeredStudent"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_113",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/studentMgmtData.json",
+            "jsonPath": "engage.studentMgmt.courseWithStudents.addStudentScenarios.registeredStudent"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_21",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_SMW_TC_27",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/courseData.json",
+            "jsonPath": "engage.courses.studentMgmtCourse1"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_28",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/instructorAppContentEnglish.json",
+            "jsonPath": "engage.appContent.studentListPage"
+          }
+        ]
+      }
+    ],
+    "AfterEach": [],
+    "After": [
+      {
+        "id": "ENG_FOOT_TC_1",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/common.test.js",
+        "testData": []
+      }
+    ]
+  },
+  "Suite_4": {
+    "Name": "Validation of UnRegistered Add Student workflow - English",
+    "TestCaseRepo": [
+      "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
+    ],
+    "Before": [
+      {
+        "id": "launchUrl",
+        "description": "",
+        "testFile": "./engageQAAutomation/core/launchUrl.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_LAND_TC_3",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/landing.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_IDEN_TC_4",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/login.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "jsonPath": "engage.login.user.studentMgmtInstructorUser"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_MYCO_TC_26",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/instructorMyCourses.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "jsonPath": "engage.login.user.studentMgmtInstructorUser.courses[0]"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "jsonPath": "engage.login.user.studentMgmtInstructorUser"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_DASH_TC_9",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/instructorDashboard.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_SMW_TC_112",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_SMW_TC_32",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": []
+      }
+    ],
+    "BeforeEach": [],
+    "Test": [
+      {
+        "id": "ENG_INS_SMW_TC_51",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/studentMgmtData.json",
+            "jsonPath": "engage.studentMgmt.courseWithStudents.addStudentScenarios.unRegisteredStudent"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_52",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/studentMgmtData.json",
+            "jsonPath": "engage.studentMgmt.courseWithStudents.addStudentScenarios.unRegisteredStudent"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_54",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_SMW_TC_55",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/instructorAppContentEnglish.json",
+            "jsonPath": "engage.appContent.invitationPreviewPage"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/studentMgmtData.json",
+            "jsonPath": "engage.studentMgmt.courseWithStudents.addStudentScenarios.unRegisteredStudent"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "jsonPath": "engage.login.user.studentMgmtInstructorUser"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_40",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_SMW_TC_53",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/studentMgmtData.json",
+            "jsonPath": "engage.studentMgmt.courseWithStudents.addStudentScenarios.unRegisteredStudent"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_54",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_SMW_TC_56",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/instructorAppContentEnglish.json",
+            "jsonPath": "engage.appContent.invitationPreviewPage"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/studentMgmtData.json",
+            "jsonPath": "engage.studentMgmt.courseWithStudents.addStudentScenarios.unRegisteredStudent"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "jsonPath": "engage.login.user.studentMgmtInstructorUser"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_43",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_SMW_TC_58",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_SMW_TC_59",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/instructorAppContentEnglish.json",
+            "jsonPath": "engage.appContent.addStudentPage"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_61",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": []
+      }
+    ],
+    "AfterEach": [],
+    "After": [
+      {
+        "id": "ENG_FOOT_TC_1",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/common.test.js",
+        "testData": []
+      }
+    ]
+  },
+  "Suite_5": {
+    "Name": "Validation of Add Student Workflow Error Scenarios - English",
+    "TestCaseRepo": [
+      "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
+    ],
+    "Before": [
+      {
+        "id": "launchUrl",
+        "description": "",
+        "testFile": "./engageQAAutomation/core/launchUrl.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_LAND_TC_3",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/landing.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_IDEN_TC_4",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/login.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "jsonPath": "engage.login.user.studentMgmtInstructorUser"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_MYCO_TC_26",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/instructorMyCourses.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "jsonPath": "engage.login.user.studentMgmtInstructorUser.courses[0]"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "jsonPath": "engage.login.user.studentMgmtInstructorUser"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_DASH_TC_9",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/instructorDashboard.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_SMW_TC_112",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_SMW_TC_32",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": []
+      }
+    ],
+    "BeforeEach": [],
+    "Test": [
+      {
+        "id": "ENG_INS_SMW_TC_65",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/studentMgmtData.json",
+            "jsonPath": "engage.studentMgmt.courseWithStudents.addStudentScenarios.alreadyEnrolledStudent"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/instructorAppContentEnglish.json",
+            "jsonPath": "engage.appContent.addStudentPage"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_87",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/studentMgmtData.json",
+            "jsonPath": "engage.studentMgmt.courseWithStudents.addStudentScenarios.alreadyEnrolledStudent"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/instructorAppContentEnglish.json",
+            "jsonPath": "engage.appContent.addStudentPage"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_66",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/instructorAppContentEnglish.json",
+            "jsonPath": "engage.appContent.addStudentPage"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_67",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/studentMgmtData.json",
+            "jsonPath": "engage.studentMgmt.courseWithStudents.addStudentScenarios.invalidStudent"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/instructorAppContentEnglish.json",
+            "jsonPath": "engage.appContent.addStudentPage"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_68",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "jsonPath": "engage.login.user.validInstructorUser1"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/instructorAppContentEnglish.json",
+            "jsonPath": "engage.appContent.addStudentPage"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_51",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/studentMgmtData.json",
+            "jsonPath": "engage.studentMgmt.courseWithStudents.addStudentScenarios.unRegisteredStudent"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_73",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/instructorAppContentEnglish.json",
+            "jsonPath": "engage.appContent.addStudentPage"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_74",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/instructorAppContentEnglish.json",
+            "jsonPath": "engage.appContent.addStudentPage"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_72",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/instructorAppContentEnglish.json",
+            "jsonPath": "engage.appContent.addStudentPage"
+          }
+        ]
+      }
+    ],
+    "AfterEach": [],
+    "After": [
+      {
+        "id": "ENG_FOOT_TC_1",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/common.test.js",
+        "testData": []
+      }
+    ]
+  },
+  "Suite_6": {
+    "Name": "Validation of Multiple Registered User Invite - English",
+    "TestCaseRepo": [
+      "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
+    ],
+    "Before": [
+      {
+        "id": "launchUrl",
+        "description": "",
+        "testFile": "./engageQAAutomation/core/launchUrl.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_LAND_TC_3",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/landing.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_IDEN_TC_4",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/login.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "jsonPath": "engage.login.user.studentMgmtInstructorUser"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_MYCO_TC_26",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/instructorMyCourses.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "jsonPath": "engage.login.user.studentMgmtInstructorUser.courses[0]"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "jsonPath": "engage.login.user.studentMgmtInstructorUser"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_DASH_TC_9",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/instructorDashboard.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_SMW_TC_112",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_SMW_TC_32",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": []
+      }
+    ],
+    "BeforeEach": [],
+    "Test": [
+      {
+        "id": "ENG_INS_SMW_TC_88",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_SMW_TC_119",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/instructorAppContentEnglish.json",
+            "jsonPath": "engage.appContent.addStudentPage"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_91",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/studentMgmtData.json",
+            "jsonPath": "engage.studentMgmt.courseWithStudents.addStudentScenarios.registeredStudent"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_100",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/instructorAppContentEnglish.json",
+            "jsonPath": "engage.appContent.invitationPreviewPage"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/studentMgmtData.json",
+            "jsonPath": "engage.studentMgmt.courseWithStudents.addStudentScenarios.registeredStudent"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "jsonPath": "engage.login.user.studentMgmtInstructorUser"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_102",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_SMW_TC_92",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/studentMgmtData.json",
+            "jsonPath": "engage.studentMgmt.courseWithStudents.addStudentScenarios.registeredStudent"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/instructorAppContentEnglish.json",
+            "jsonPath": "engage.appContent.addStudentPage"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_93",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/studentMgmtData.json",
+            "jsonPath": "engage.studentMgmt.courseWithStudents.addStudentScenarios.registeredStudent"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/instructorAppContentEnglish.json",
+            "jsonPath": "engage.appContent.addStudentPage"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_95",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/studentMgmtData.json",
+            "jsonPath": "engage.studentMgmt.courseWithStudents.addStudentScenarios.registeredStudent"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_109",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_SMW_TC_96",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_SMW_TC_107",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/instructorAppContentEnglish.json",
+            "jsonPath": "engage.appContent.addStudentPage"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_110",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_SMW_TC_96",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_SMW_TC_111",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_SMW_TC_92",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/studentMgmtData.json",
+            "jsonPath": "engage.studentMgmt.courseWithStudents.addStudentScenarios.registeredStudent"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/instructorAppContentEnglish.json",
+            "jsonPath": "engage.appContent.addStudentPage"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_93",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/studentMgmtData.json",
+            "jsonPath": "engage.studentMgmt.courseWithStudents.addStudentScenarios.registeredStudent"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/instructorAppContentEnglish.json",
+            "jsonPath": "engage.appContent.addStudentPage"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_94",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/studentMgmtData.json",
+            "jsonPath": "engage.studentMgmt.courseWithStudents.addStudentScenarios.registeredStudent1"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/studentMgmtData.json",
+            "jsonPath": "engage.studentMgmt.courseWithStudents.addStudentScenarios.registeredStudent"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_97",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/studentMgmtData.json",
+            "jsonPath": "engage.studentMgmt.courseWithStudents.addStudentScenarios.registeredStudent"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/studentMgmtData.json",
+            "jsonPath": "engage.studentMgmt.courseWithStudents.addStudentScenarios.registeredStudent2"
+          }
+        ]
+      }
+    ],
+    "AfterEach": [],
+    "After": [
+      {
+        "id": "ENG_FOOT_TC_1",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/common.test.js",
+        "testData": []
+      }
+    ]
+  },
+  "Suite_7": {
+    "Name": "Validation of Multiple UnRegistered User Invite - English",
+    "TestCaseRepo": [
+      "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
+    ],
+    "Before": [
+      {
+        "id": "launchUrl",
+        "description": "",
+        "testFile": "./engageQAAutomation/core/launchUrl.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_LAND_TC_3",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/landing.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_IDEN_TC_4",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/login.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "jsonPath": "engage.login.user.studentMgmtInstructorUser"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_MYCO_TC_26",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/instructorMyCourses.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "jsonPath": "engage.login.user.studentMgmtInstructorUser.courses[0]"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "jsonPath": "engage.login.user.studentMgmtInstructorUser"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_DASH_TC_9",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/instructorDashboard.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_SMW_TC_112",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_SMW_TC_32",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_SMW_TC_88",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_SMW_TC_51",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/studentMgmtData.json",
+            "jsonPath": "engage.studentMgmt.courseWithStudents.addStudentScenarios.unRegisteredStudent"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_52",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/studentMgmtData.json",
+            "jsonPath": "engage.studentMgmt.courseWithStudents.addStudentScenarios.unRegisteredStudent"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_92",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/studentMgmtData.json",
+            "jsonPath": "engage.studentMgmt.courseWithStudents.addStudentScenarios.unRegisteredStudent"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/instructorAppContentEnglish.json",
+            "jsonPath": "engage.appContent.addStudentPage"
+          }
+        ]
+      }
+    ],
+    "BeforeEach": [],
+    "Test": [
+      {
+        "id": "ENG_INS_SMW_TC_101",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/instructorAppContentEnglish.json",
+            "jsonPath": "engage.appContent.invitationPreviewPage"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/studentMgmtData.json",
+            "jsonPath": "engage.studentMgmt.courseWithStudents.addStudentScenarios.unRegisteredStudent"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "jsonPath": "engage.login.user.studentMgmtInstructorUser"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_102",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_SMW_TC_98",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/studentMgmtData.json",
+            "jsonPath": "engage.studentMgmt.courseWithStudents.addStudentScenarios.unRegisteredStudent1"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/studentMgmtData.json",
+            "jsonPath": "engage.studentMgmt.courseWithStudents.addStudentScenarios.unRegisteredStudent2"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_104",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": []
+      }
+    ],
+    "AfterEach": [],
+    "After": [
+      {
+        "id": "ENG_FOOT_TC_1",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/common.test.js",
+        "testData": []
+      }
+    ]
+  },
+  "Suite_8": {
+    "Name": "Validation of Multiple Mix User Invite - English",
+    "TestCaseRepo": [
+      "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
+    ],
+    "Before": [
+      {
+        "id": "launchUrl",
+        "description": "",
+        "testFile": "./engageQAAutomation/core/launchUrl.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_LAND_TC_3",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/landing.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_IDEN_TC_4",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/login.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "jsonPath": "engage.login.user.studentMgmtInstructorUser"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_MYCO_TC_26",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/instructorMyCourses.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "jsonPath": "engage.login.user.studentMgmtInstructorUser.courses[0]"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "jsonPath": "engage.login.user.studentMgmtInstructorUser"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_DASH_TC_9",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/instructorDashboard.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_SMW_TC_112",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_SMW_TC_32",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_SMW_TC_88",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": []
+      }
+    ],
+    "BeforeEach": [],
+    "Test": [
+      {
+        "id": "ENG_INS_SMW_TC_103",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_SMW_TC_112",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_SMW_TC_32",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_SMW_TC_88",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_SMW_TC_99",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/studentMgmtData.json",
+            "jsonPath": "engage.studentMgmt.courseWithStudents.addStudentScenarios.registeredStudent1"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/studentMgmtData.json",
+            "jsonPath": "engage.studentMgmt.courseWithStudents.addStudentScenarios.unRegisteredStudent"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/studentMgmtData.json",
+            "jsonPath": "engage.studentMgmt.courseWithStudents.addStudentScenarios.unRegisteredStudent1"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_105",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": []
+      }
+    ],
+    "AfterEach": [],
+    "After": [
+      {
+        "id": "ENG_FOOT_TC_1",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/common.test.js",
+        "testData": []
+      }
+    ]
+  },
+  "Suite_9": {
+    "Name": "Validation of Send Another Invite workflow - English",
+    "TestCaseRepo": [
+      "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
+    ],
+    "Before": [
+      {
+        "id": "launchUrl",
+        "description": "",
+        "testFile": "./engageQAAutomation/core/launchUrl.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_LAND_TC_3",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/landing.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_IDEN_TC_4",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/login.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "jsonPath": "engage.login.user.studentMgmtInstructorUser"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_MYCO_TC_26",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/instructorMyCourses.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "jsonPath": "engage.login.user.studentMgmtInstructorUser.courses[0]"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "jsonPath": "engage.login.user.studentMgmtInstructorUser"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_DASH_TC_9",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/instructorDashboard.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_SMW_TC_112",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_SMW_TC_32",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_SMW_TC_51",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/studentMgmtData.json",
+            "jsonPath": "engage.studentMgmt.courseWithStudents.addStudentScenarios.unRegisteredStudent"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_52",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/studentMgmtData.json",
+            "jsonPath": "engage.studentMgmt.courseWithStudents.addStudentScenarios.unRegisteredStudent"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_SMW_TC_58",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": []
+      }
+    ],
+    "BeforeEach": [],
+    "Test": [
+      {
+        "id": "ENG_INS_SMW_TC_49",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/studentManagement.test.js",
+        "testData": []
+      }
+    ],
+    "AfterEach": [],
+    "After": [
+      {
+        "id": "ENG_FOOT_TC_1",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/common.test.js",
+        "testData": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,284 @@
+{
+    "Suite_1": {
+        "Name": "Validation of Student Dashboard Content (English)",
+        "TestCaseRepo": [
+            "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
+        ],
+        "Before": [
+            {
+                "id": "launchUrl",
+                "description": "",
+                "testFile": "./engageQAAutomation/core/launchUrl.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_LAND_TC_3",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/landing.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_IDEN_TC_4",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/login.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+                        "jsonPath": "engage.login.user.validStudent1"
+                    }
+                ]
+            }
+        ],
+        "BeforeEach": [],
+        "Test": [
+            {
+                "id": "ENG_DASH_TC_1",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/studentDashboard.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                        "jsonPath": "engage.appContent.studentDashboard"
+                    },
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/courseData.json",
+                        "jsonPath": "engage.courses.genericCourse"
+                    },
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/bookData.json",
+                        "jsonPath": "engage.books.book1.studyLearn"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_DASH_TC_5",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/studentDashboard.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_DASH_TC_6",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/studentDashboard.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_DASH_TC_7",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/studentDashboard.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/bookData.json",
+                        "jsonPath": "engage.books.book1.studyLearn"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_DASH_TC_8",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/studentDashboard.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/bookData.json",
+                        "jsonPath": "engage.books.book1.practice"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_DASH_TC_9",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/studentDashboard.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/bookData.json",
+                        "jsonPath": "engage.books.book1.grammarTutorial"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_DASH_TC_10",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/studentDashboard.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/bookData.json",
+                        "jsonPath": "engage.books.book1.resources"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_DASH_TC_11",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/studentDashboard.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/bookData.json",
+                        "jsonPath": "engage.books.book1.practiceExtra"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_DASH_TC_15",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/studentDashboard.test.js",
+                "testData": []
+            }
+        ],
+        "AfterEach": [],
+        "After": [
+            {
+                "id": "ENG_HEAD_TC_27",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/header.test.js",
+                "testData": []
+            }
+        ]
+    },
+    "Suite_2": {
+        "Name": "Validation of Student Dashboard Features",
+        "TestCaseRepo": [
+            "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
+        ],
+        "Before": [
+            {
+                "id": "launchUrl",
+                "description": "",
+                "testFile": "./engageQAAutomation/core/launchUrl.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_LAND_TC_3",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/landing.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_IDEN_TC_4",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/login.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+                        "jsonPath": "engage.login.user.validStudent1"
+                    }
+                ]
+            }
+        ],
+        "BeforeEach": [],
+        "Test": [
+            {
+                "id": "ENG_DASH_TC_12",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/studentDashboard.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/bookData.json",
+                        "jsonPath": "engage.books.book1.studyLearn.chapter[0].index"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_DASH_TC_14",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/studentDashboard.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_DASH_TC_19",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/studentDashboard.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_DASH_TC_20",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/studentDashboard.test.js",
+                "testData": []
+            }
+        ],
+        "AfterEach": [
+            {
+                "id": "click_CourseName_onHeader",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/common.test.js",
+                "testData": []
+            }
+        ],
+        "After": [
+            {
+                "id": "ENG_HEAD_TC_27",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/header.test.js",
+                "testData": []
+            }
+        ]
+    },
+    "Suite_3": {
+        "Name": "Validation of Student Dashboard Content in Archived Class (English)",
+        "TestCaseRepo": [
+            "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
+        ],
+        "Before": [
+            {
+                "id": "launchUrl",
+                "description": "",
+                "testFile": "./engageQAAutomation/core/launchUrl.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_LAND_TC_3",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/landing.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_IDEN_TC_4",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/login.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+                        "jsonPath": "engage.login.user.studentdashboardUser"
+                    }
+                ]
+            }
+        ],
+        "BeforeEach": [],
+        "Test": [
+            {
+                "id": "ENG_DASH_TC_3",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/studentDashboard.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                        "jsonPath": "engage.appContent.studentDashboard"
+                    },
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/courseData.json",
+                        "jsonPath": "engage.courses.genericCourse"
+                    },
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/bookData.json",
+                        "jsonPath": "engage.books.book1.studyLearn"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_DASH_TC_25",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/studentDashboard.test.js",
+                "testData": []
+            }
+        ],
+        "AfterEach": [],
+        "After": [
+            {
+                "id": "ENG_HEAD_TC_27",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/header.test.js",
+                "testData": []
+            }
+        ]
+    }
+}

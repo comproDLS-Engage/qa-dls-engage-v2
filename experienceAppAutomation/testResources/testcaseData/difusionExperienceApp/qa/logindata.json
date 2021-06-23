@@ -1,0 +1,364 @@
+{
+    "engage": {
+        "login": {
+            "user": {
+                "validStudent1": {
+                    "email": "etirrase-9139@yopmail.com",
+                    "password": "hfcghgufyhW#2",
+                    "role": "student",
+                    "name": "etirrase-9139",
+                    "class": [
+                        {
+                            "key": "AEYP-p9hk",
+                            "name": "future Class"
+                        },
+                        {
+                            "key": "9q6x-QzFe",
+                            "name": "course1"
+                        },
+                        {
+                            "key": "Cw32-FLZ7",
+                            "name": "Archive Class"
+                        }
+                    ],
+                    "info": {}
+                },
+                "validStudent2": {
+                    "email": "difusion.qa.student1@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "student",
+                    "name": "etirrase-9139",
+                    "class": [
+                    ],
+                    "info": {}
+                },
+                "resetPasswordUser": {
+                    "email": "difusionqa.stud47@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "student",
+                    "name": "difusionqa.stud66",
+                    "courses": [
+                        "course1"
+                    ],
+                    "info": {}
+                },
+                "invalidUser1": {
+                    "email": "etirrase@yopmail",
+                    "password": "hfcghgufyhW#2",
+                    "role": "student",
+                    "name": "etirrase-9139",
+                    "courses": [
+                        "course1"
+                    ],
+                    "info": {}
+                },
+                "invalidUser2": {
+                    "email": "etirrase@yopm.in",
+                    "password": "Compro1234",
+                    "role": "student",
+                    "name": "etirrase-9139",
+                    "courses": [
+                        "course1"
+                    ],
+                    "info": {}
+                },
+                "invalidUser3": {
+                    "email": "etirrase-9139@yopmail.com",
+                    "password": "h@@hW#2",
+                    "role": "student",
+                    "name": "etirrase-9139",
+                    "courses": [
+                        "course1"
+                    ],
+                    "info": {}
+                },
+                "validInstructorUser1": {
+                    "email": "kulujaco-1294@yopmail.com",
+                    "password": "gwahgjdhFtyy$4",
+                    "role": "instructor",
+                    "name": "kulujaco-1294",
+                    "courses": [
+                        {
+                            "key": "VYd6-QDXo",
+                            "name": "course1"
+                        }
+                    ],
+                    "info": {}
+                },
+                "validInstructorUser2": {
+                    "email": "teacher3@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "instructor",
+                    "name": "teacher 3",
+                    "courses": [],
+                    "info": "freash user without books or classes"
+                },
+                "onboardingUser": {
+                    "email": "everexezu-6426@yopmail.com",
+                    "password": "Compro@1234",
+                    "name": "Onboarding User",
+                    "role": "new User",
+                    "courses": [],
+                    "info": {}
+                },
+                "joinCourseStudent": {
+                    "email": "ravelladditt-4110@yopmail.com",
+                    "password": "Compro@1234",
+                    "name": "JoinCourse Student",
+                    "role": "student",
+                    "courses": [
+                        "JoinCourse"
+                    ],
+                    "info": {}
+                },
+                "NoClassInstructor": {
+                    "email": "noclassinstructornew@yopmail.com",
+                    "password": "Compro@1234",
+                    "name": "noclassinstructor",
+                    "role": "instructor",
+                    "class": [],
+                    "info": {}
+                },
+                "classInstructorUser1": {
+                    "email": "classinstructor1@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "instructor",
+                    "name": "classinstructortest",
+                    "class": [
+                        {
+                            "key": "AEYP-p9hk",
+                            "name": "future Class"
+                        },
+                        {
+                            "key": "9q6x-QzFe",
+                            "name": "Active Class"
+                        },
+                        {
+                            "key": "Cw32-FLZ7",
+                            "name": "Archive Class"
+                        }
+                    ],
+                    "info": {}
+                },
+                "instructor1_20activeclass": {
+                    "email": "classinstructorlimit@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "instructor",
+                    "name": "classinstructorlimit",
+                    "class": [
+                        {
+                            "key": "Cw32-FLZ7",
+                            "name": "ClassActive1"
+                        },
+                        {
+                            "key": "Cw32-FLZ7",
+                            "name": "ClassActive2"
+                        },
+                        {
+                            "key": "Cw32-FLZ7",
+                            "name": "ClassActive3"
+                        },
+                        {
+                            "key": "Cw32-FLZ7",
+                            "name": "ClassActive4"
+                        },
+                        {
+                            "key": "Cw32-FLZ7",
+                            "name": "ClassActive5"
+                        },
+                        {
+                            "key": "Cw32-FLZ7",
+                            "name": "ClassActive6"
+                        },
+                        {
+                            "key": "Cw32-FLZ7",
+                            "name": "ClassActive7"
+                        },
+                        {
+                            "key": "Cw32-FLZ7",
+                            "name": "ClassActive8"
+                        },
+                        {
+                            "key": "Cw32-FLZ7",
+                            "name": "ClassActive9"
+                        },
+                        {
+                            "key": "Cw32-FLZ7",
+                            "name": "ClassActive10"
+                        },
+                        {
+                            "key": "Cw32-FLZ7",
+                            "name": "ClassActive11"
+                        },
+                        {
+                            "key": "Cw32-FLZ7",
+                            "name": "ClassActive12"
+                        },
+                        {
+                            "key": "Cw32-FLZ7",
+                            "name": "ClassActive13"
+                        },
+                        {
+                            "key": "Cw32-FLZ7",
+                            "name": "ClassActive14"
+                        },
+                        {
+                            "key": "Cw32-FLZ7",
+                            "name": "ClassActive15"
+                        },
+                        {
+                            "key": "Cw32-FLZ7",
+                            "name": "ClassActive16"
+                        },
+                        {
+                            "key": "Cw32-FLZ7",
+                            "name": "ClassActive17"
+                        },
+                        {
+                            "key": "Cw32-FLZ7",
+                            "name": "ClassActive18"
+                        },
+                        {
+                            "key": "Cw32-FLZ7",
+                            "name": "ClassActive19"
+                        },
+                        {
+                            "key": "Cw32-FLZ7",
+                            "name": "ClassActive20"
+                        }
+                    ],
+                    "info": {}
+                },
+                "instructor1_20activeArchievedclass": {
+                    "email": "20activearchievedcourses@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "instructor",
+                    "name": "instructor1_20activeArchievedcourses",
+                    "class": [
+                        {
+                            "key": "Cw32-FLZ7",
+                            "name": "ClassActive1"
+                        },
+                        {
+                            "key": "Cw32-FLZ7",
+                            "name": "ClassActive2"
+                        },
+                        {
+                            "key": "Cw32-FLZ7",
+                            "name": "ClassActive3"
+                        },
+                        {
+                            "key": "Cw32-FLZ7",
+                            "name": "ClassActive4"
+                        },
+                        {
+                            "key": "Cw32-FLZ7",
+                            "name": "ClassActive5"
+                        },
+                        {
+                            "key": "Cw32-FLZ7",
+                            "name": "ClassActive6"
+                        },
+                        {
+                            "key": "Cw32-FLZ7",
+                            "name": "ClassActive7"
+                        },
+                        {
+                            "key": "Cw32-FLZ7",
+                            "name": "ClassActive8"
+                        },
+                        {
+                            "key": "Cw32-FLZ7",
+                            "name": "ClassActive9"
+                        },
+                        {
+                            "key": "Cw32-FLZ7",
+                            "name": "ClassActive10"
+                        },
+                        {
+                            "key": "Cw32-FLZ7",
+                            "name": "ClassActive11"
+                        },
+                        {
+                            "key": "Cw32-FLZ7",
+                            "name": "ClassActive12"
+                        },
+                        {
+                            "key": "Cw32-FLZ7",
+                            "name": "ClassActive13"
+                        },
+                        {
+                            "key": "Cw32-FLZ7",
+                            "name": "ClassActive14"
+                        },
+                        {
+                            "key": "Cw32-FLZ7",
+                            "name": "ClassActive15"
+                        },
+                        {
+                            "key": "Cw32-FLZ7",
+                            "name": "ClassActive16"
+                        },
+                        {
+                            "key": "Cw32-FLZ7",
+                            "name": "ClassActive17"
+                        },
+                        {
+                            "key": "Cw32-FLZ7",
+                            "name": "ClassActive18"
+                        },
+                        {
+                            "key": "Cw32-FLZ7",
+                            "name": "ClassActive19"
+                        }
+                    ],
+                    "info": {}
+                },
+                "classInstructorUser3": {
+                    "email": "InstructorBlankUser@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "instructor",
+                    "name": "classinstructortestuser",
+                    "class": [],
+                    "info": {}
+                },
+                "studentMgmtInstructorUser": {
+                    "email": "olowaca-3116@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "instructor",
+                    "name": "olowaca-3116",
+                    "courses": [
+                        {
+                            "key": "VYv9-4C38",
+                            "name": "courseWithStudents"
+                        },
+                        {
+                            "key": "iK2t-3TLy",
+                            "name": "courseWithoutStudents"
+                        },
+                        {
+                            "key": "WdTp-4Q47",
+                            "name": "archievedCourseWithStudents"
+                        }
+                    ],
+                    "info": {}
+                }
+            }
+        },
+        "codesAndKeys": {
+            "schoolName": "Mount Allison School",
+            "invalid_OTP":["12046","000000"],
+            "validSchoolKey": "NGL-FUW-GQL",
+            "invalidSchoolKey": "NGL-FUW-123",
+            "invalidClassKey": [
+                "HJ2y-1234"
+            ],
+            "bookName1": "INTRODUCTION TO BIOLOGY",
+            "validAccessCodes1": [],
+            "invalidAccessCodes": [
+                "PT12-1111-7777-0000",
+                "PTH3-R79A-76DE-Y9RE"
+            ]
+        }
+    }
+}

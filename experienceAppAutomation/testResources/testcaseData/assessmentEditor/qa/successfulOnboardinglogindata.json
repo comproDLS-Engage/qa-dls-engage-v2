@@ -1,0 +1,59 @@
+{
+    "engage":
+    {
+        "login":
+        {
+            "user":
+            {
+                "successfulStudentUser":
+                {
+                    "email": "etirrase-9139@yopmail.com",
+                    "password": "hfcghgufyhW#2",
+                    "role": "student",
+                    "name": "etirrase-9139",
+                    "courses": [],
+                    "info":
+                    {}
+                },
+                "successfulInstructorUser":
+                {
+                    "email": "kulujaco-1294@yopmail.com",
+                    "password": "gwahgjdhFtyy$4",
+                    "role": "instructor",
+                    "name": "kulujaco-1294",
+                    "courses": [],
+                    "info":
+                    {}
+                },
+                "joinCourseUser":
+                {
+                    "email": "everexezu-6426@yopmail.com",
+                    "password": "Compro@1234",
+                    "name": "Onboarding User",
+                    "role": "student",
+                    "courses": [],
+                    "info":
+                    {}
+                },
+                "addBookUser":
+                {
+                    "email": "everexezu-6426@yopmail.com",
+                    "password": "Compro@1234",
+                    "name": "Onboarding User",
+                    "role": "instructor",
+                    "courses": [],
+                    "info":
+                    {}
+                }
+            }
+        },
+        "codesAndKeys":
+        {
+            "schoolName": "Mount Allison School",
+            "validSchoolKey": "NGL-FUW-GQL",
+            "invalidClassKey": ["HJ2y-1234"],
+            "bookName1": "Proyectos",
+            "validAccessCodes1": [],
+        }
+    }
+}

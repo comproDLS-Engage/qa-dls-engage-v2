@@ -1,0 +1,548 @@
+{
+    "engage": {
+        "books": {
+            "book1": {
+                "title": "PROYECTOS",
+                "subtitle": "An introductory and intermediate Spanish course",
+                "isbn": "978-84-177-1000-2",
+                "studyLearn": {
+                    "chapter": [
+                        {
+                            "index": 0,
+                            "id": "chapter1",
+                            "number": "01",
+                            "title": "PERSONAS",
+                            "thumbnailImage": "",
+                            "folders": "",
+                            "activities": "8"
+                        },
+                        {
+                            "index": 1,
+                            "id": "chapter2",
+                            "number": "02",
+                            "title": "IDENTIDADES",
+                            "thumbnailImage": "",
+                            "folders": "",
+                            "activities": "0"
+                        },
+                        {
+                            "index": 2,
+                            "id": "chapter3",
+                            "number": "03",
+                            "title": "MI ENTORNO",
+                            "thumbnailImage": "",
+                            "folders": "",
+                            "activities": "0"
+                        },
+                        {
+                            "index": 3,
+                            "id": "chapter4",
+                            "number": "04",
+                            "title": "LUGARES",
+                            "thumbnailImage": "",
+                            "folders": "",
+                            "activities": "0"
+                        },
+                        {
+                            "index": 4,
+                            "id": "chapter5",
+                            "number": "05",
+                            "title": "IMÁGENES DEL MUNDO HISPANO",
+                            "thumbnailImage": "",
+                            "folders": "",
+                            "activities": "0"
+                        },
+                        {
+                            "index": 5,
+                            "id": "chapter6",
+                            "number": "06",
+                            "title": "VIAJES",
+                            "thumbnailImage": "",
+                            "folders": "",
+                            "activities": "0"
+                        },
+                        {
+                            "index": 6,
+                            "id": "chapter7",
+                            "number": "07",
+                            "title": "GENERACIONES",
+                            "thumbnailImage": "",
+                            "folders": "",
+                            "activities": "0"
+                        },
+						{
+                            "index": 7,
+                            "id": "chapter8",
+                            "number": "08",
+                            "title": "RELACIONES",
+                            "thumbnailImage": "",
+                            "folders": "",
+                            "activities": "0"
+                        },
+						{
+                            "index": 8,
+                            "id": "chapter9",
+                            "number": "09",
+                            "title": "MODA Y CUERPO",
+                            "thumbnailImage": "",
+                            "folders": "",
+                            "activities": "1"
+                        },
+						{
+                            "index": 9,
+                            "id": "chapter10",
+                            "number": "10",
+                            "title": "COMIDA Y SALUD",
+                            "thumbnailImage": "",
+                            "folders": "",
+                            "activities": "0"
+                        },
+                        {
+                            "index": 10,
+                            "id": "chapter11",
+                            "number": "11",
+                            "title": "EXPERIENCIAS",
+                            "thumbnailImage": "",
+                            "folders": "",
+                            "activities": "0"
+                        },
+                        {
+                            "index": 11,
+                            "id": "chapter12",
+                            "number": "12",
+                            "title": "EDUCACIÓN Y FUTURO",
+                            "thumbnailImage": "",
+                            "folders": "",
+                            "activities": "0"
+                        },
+                        {
+                            "index": 12,
+                            "id": "chapter3",
+                            "number": "13",
+                            "title": "ORGANIZACIÓN Y TIEMPO",
+                            "thumbnailImage": "",
+                            "folders": "",
+                            "activities": "0"
+                        },
+                        {
+                            "index": 13,
+                            "id": "chapter14",
+                            "number": "14",
+                            "title": "CONSUMO Y MEDIOAMBIENTE",
+                            "thumbnailImage": "",
+                            "folders": "",
+                            "activities": "0"
+                        },
+                        {
+                            "index": 14,
+                            "id": "chapter15",
+                            "number": "15",
+                            "title": "MERCADOTECNIA Y PUBLICIDAD",
+                            "thumbnailImage": "",
+                            "folders": "",
+                            "activities": "0"
+                        },
+                        {
+                            "index": 15,
+                            "id": "chapter16",
+                            "number": "16",
+                            "title": "HISTORIAS Y DESAFÍOS",
+                            "thumbnailImage": "",
+                            "folders": "",
+                            "activities": "0"
+                        },
+                        {
+                            "index": 16,
+                            "id": "chapter17",
+                            "number": "17",
+                            "title": "REDES",
+                            "thumbnailImage": "",
+                            "folders": "",
+                            "activities": "0"
+                        },
+						{
+                            "index": 17,
+                            "id": "chapter18",
+                            "number": "18",
+                            "title": "TRADICIONES",
+                            "thumbnailImage": "",
+                            "folders": "",
+                            "activities": "0"
+                        },
+						{
+                            "index": 18,
+                            "id": "chapter19",
+                            "number": "19",
+                            "title": "EMOCIONES",
+                            "thumbnailImage": "",
+                            "folders": "",
+                            "activities": "0"
+                        },
+						{
+                            "index": 19,
+                            "id": "chapter20",
+                            "number": "20",
+                            "title": "MUJERES Y PODER",
+                            "thumbnailImage": "",
+                            "folders": "",
+                            "activities": "0"
+                        }
+                    ]
+                },
+                "practice": {
+                    "chapter": [
+                        {
+                            "index": 0,
+                            "id": "chapter1",
+                            "number": "01",
+                            "title": "Introduction to Biology",
+                            "thumbnailImage": "",
+                            "section": [
+                                {
+                                    "index": 0,
+                                    "name": "PRACTICE",
+                                    "resource": [
+                                        {
+                                            "index": 0,
+                                            "id": "ch1_sec1_quiz1",
+                                            "name": "Practice Exercise - 1",
+                                            "type": "quiz"
+                                        },
+                                        {
+                                            "index": 1,
+                                            "id": "ch1_sec1_quiz2",
+                                            "name": "Practice Exercise - 2",
+                                            "type": "quiz"
+                                        },
+                                        {
+                                            "index": 2,
+                                            "id": "ch1_sec1_quiz3",
+                                            "name": "Practice Exercise - 3",
+                                            "type": "quiz"
+                                        },
+                                        {
+                                            "index": 3,
+                                            "id": "ch1_sec1_quiz4",
+                                            "name": "Quiz 1",
+                                            "type": "quiz"
+                                        },
+                                        {
+                                            "index": 4,
+                                            "id": "ch1_sec1_quiz5",
+                                            "name": "Quiz 2",
+                                            "type": "quiz"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 1,
+                                    "name": "ASSESSMENT",
+                                    "resource": []
+                                }
+                            ]
+                        },
+                        {
+                            "index": 1,
+                            "id": "chapter2",
+                            "number": "02",
+                            "title": "Cell, Their Structure and Functions",
+                            "thumbnailImage": ""
+                        },
+                        {
+                            "index": 2,
+                            "id": "chapter3",
+                            "number": "03",
+                            "title": "DNA",
+                            "thumbnailImage": ""
+                        },
+                        {
+                            "index": 3,
+                            "id": "chapter4",
+                            "number": "04",
+                            "title": "Photosynthesis in Plants",
+                            "thumbnailImage": ""
+                        },
+                        {
+                            "index": 4,
+                            "id": "chapter5",
+                            "number": "05",
+                            "title": "Evolution of Life on Earth",
+                            "thumbnailImage": ""
+                        },
+                        {
+                            "index": 5,
+                            "id": "chapter6",
+                            "number": "06",
+                            "title": "Ecology",
+                            "thumbnailImage": ""
+                        },
+                        {
+                            "index": 6,
+                            "id": "chapter7",
+                            "number": "07",
+                            "title": "Organs and Systems of the Human Organism",
+                            "thumbnailImage": ""
+                        },
+                        {
+                            "index": 7,
+                            "id": "chapter8",
+                            "number": "08",
+                            "title": "Test_SG",
+                            "thumbnailImage": ""
+                        },
+                        {
+                            "index": 8,
+                            "id": "chapter9",
+                            "number": "09",
+                            "title": "Test_Akhil",
+                            "thumbnailImage": ""
+                        },
+                        {
+                            "index": 9,
+                            "id": "chapter10",
+                            "number": "10",
+                            "title": "Chapter 11",
+                            "thumbnailImage": ""
+                        },
+                        {
+                            "index": 10,
+                            "id": "chapter1",
+                            "number": "11",
+                            "title": "Chapter 12",
+                            "thumbnailImage": ""
+                        },
+                        {
+                            "index": 11,
+                            "id": "chapter12",
+                            "number": "12",
+                            "title": "Blank Folder",
+                            "thumbnailImage": ""
+                        },
+                        {
+                            "index": 12,
+                            "id": "chapter3",
+                            "number": "13",
+                            "title": "MI ENTORNO",
+                            "thumbnailImage": ""
+                        },
+                        {
+                            "index": 13,
+                            "id": "chapter14",
+                            "number": "14",
+                            "title": "LUGARES",
+                            "thumbnailImage": ""
+                        },
+                        {
+                            "index": 14,
+                            "id": "chapter15",
+                            "number": "15",
+                            "title": "IMÁGENES DEL MUNDO HISPANO",
+                            "thumbnailImage": ""
+                        },
+                        {
+                            "index": 15,
+                            "id": "chapter16",
+                            "number": "16",
+                            "title": "VIAJES",
+                            "thumbnailImage": ""
+                        },
+                        {
+                            "index": 16,
+                            "id": "chapter17",
+                            "number": "17",
+                            "title": "GENERACIONES",
+                            "thumbnailImage": ""
+                        },
+						{
+                            "index": 17,
+                            "id": "chapter18",
+                            "number": "18",
+                            "title": "RELACIONES",
+                            "thumbnailImage": ""
+                        },
+						{
+                            "index": 18,
+                            "id": "chapter19",
+                            "number": "19",
+                            "title": "MODA Y CUERPO",
+                            "thumbnailImage": ""
+                        }
+                    ]
+                },
+                "grammarTutorial": {
+                    "chapter": [
+                        {
+                            "index": 0,
+                            "id": "chapter1",
+                            "number": "01",
+                            "title": "PERSONAS",
+                            "thumbnailImage": ""
+                        },
+                        {
+                            "index": 1,
+                            "id": "chapter2",
+                            "number": "02",
+                            "title": "IDENTIDADES",
+                            "thumbnailImage": ""
+                        },
+                        {
+                            "index": 2,
+                            "id": "chapter3",
+                            "number": "03",
+                            "title": "MI ENTORNO",
+                            "thumbnailImage": ""
+                        },
+                        {
+                            "index": 3,
+                            "id": "chapter4",
+                            "number": "04",
+                            "title": "LUGARES",
+                            "thumbnailImage": ""
+                        },
+                        {
+                            "index": 4,
+                            "id": "chapter5",
+                            "number": "05",
+                            "title": "IMÁGENES DEL MUNDO HISPANO",
+                            "thumbnailImage": ""
+                        },
+                        {
+                            "index": 5,
+                            "id": "chapter6",
+                            "number": "06",
+                            "title": "VIAJES",
+                            "thumbnailImage": ""
+                        },
+                        {
+                            "index": 6,
+                            "id": "chapter7",
+                            "number": "07",
+                            "title": "GENERACIONES",
+                            "thumbnailImage": ""
+                        },
+						{
+                            "index": 7,
+                            "id": "chapter8",
+                            "number": "08",
+                            "title": "RELACIONES",
+                            "thumbnailImage": ""
+                        },
+						{
+                            "index": 8,
+                            "id": "chapter9",
+                            "number": "09",
+                            "title": "MODA Y CUERPO",
+                            "thumbnailImage": ""
+                        },
+						{
+                            "index": 9,
+                            "id": "chapter10",
+                            "number": "10",
+                            "title": "COMIDA Y SALUD",
+                            "thumbnailImage": ""
+                        },
+                        {
+                            "index": 10,
+                            "id": "chapter11",
+                            "number": "11",
+                            "title": "PERSONAS",
+                            "thumbnailImage": ""
+                        },
+                        {
+                            "index": 11,
+                            "id": "chapter12",
+                            "number": "12",
+                            "title": "IDENTIDADES",
+                            "thumbnailImage": ""
+                        },
+                        {
+                            "index": 12,
+                            "id": "chapter3",
+                            "number": "13",
+                            "title": "MI ENTORNO",
+                            "thumbnailImage": ""
+                        },
+                        {
+                            "index": 13,
+                            "id": "chapter14",
+                            "number": "14",
+                            "title": "LUGARES",
+                            "thumbnailImage": ""
+                        },
+                        {
+                            "index": 14,
+                            "id": "chapter15",
+                            "number": "15",
+                            "title": "IMÁGENES DEL MUNDO HISPANO",
+                            "thumbnailImage": ""
+                        },
+                        {
+                            "index": 15,
+                            "id": "chapter16",
+                            "number": "16",
+                            "title": "VIAJES",
+                            "thumbnailImage": ""
+                        },
+                        {
+                            "index": 16,
+                            "id": "chapter17",
+                            "number": "17",
+                            "title": "GENERACIONES",
+                            "thumbnailImage": ""
+                        },
+						{
+                            "index": 17,
+                            "id": "chapter18",
+                            "number": "18",
+                            "title": "RELACIONES",
+                            "thumbnailImage": ""
+                        },
+						{
+                            "index": 18,
+                            "id": "chapter19",
+                            "number": "19",
+                            "title": "MODA Y CUERPO",
+                            "thumbnailImage": ""
+                        },
+						{
+                            "index": 19,
+                            "id": "chapter20",
+                            "number": "20",
+                            "title": "COMIDA Y SALUD",
+                            "thumbnailImage": ""
+                        }
+                    ]
+                },
+                "resources": {
+                    "chapter": [
+                        {
+                            "index": 0,
+                            "id": "chapter1",
+                            "number": "01",
+                            "title": "PERSONAS",
+                            "thumbnailImage": ""
+                        },
+                        {
+                            "index": 1,
+                            "id": "chapter2",
+                            "number": "02",
+                            "title": "IDENTIDADES",
+                            "thumbnailImage": ""
+                        }
+                    ]
+                },
+                "practiceExtra": {
+                    "chapter": [
+                        {
+                            "index": 0,
+                            "id": "chapter1",
+                            "number": "01",
+                            "title": "PERSONAS",
+                            "thumbnailImage": ""
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,393 @@
+{
+    "engage": {
+        "appContent": {
+            "language": "English (UK)",
+            "theme": [
+                {
+                    "name": "Theme 1",
+                    "primary": "#c8d200",
+                    "secondary": "#e85181"
+                },
+                {
+                    "name": "Theme 2",
+                    "primary": "#f08500",
+                    "secondary": "#00bcd4"
+                },
+                {
+                    "name": "Theme 3",
+                    "primary": "#4c2490",
+                    "secondary": ""
+                },
+                {
+                    "name": "Theme 4",
+                    "primary": "#ffde03",
+                    "secondary": ""
+                }
+            ],
+            "dashboard": {
+                "product1_btn_txt": "Study and Learn",
+                "product2_btn_txt": "Practice",
+                "product3_btn_txt": null,
+                "product4_btn_txt": null,
+                "myAssignments_btn": "My Assignments",
+                "myProgress_btn": "My Progress",
+                "moreOptions1_btn_txt": "Announcements",
+                "moreOptions2_btn_txt": "Messages",
+                "moreOptions3_btn_txt": "Help",
+                "categoryTitle1_txt": "Course Materials",
+                "categoryTitle2_txt": "Course Activity",
+                "moreOptionsTitle_txt": "More Options",
+                "bookPanel_startDate_lbl": "Start Date: ",
+                "bookPanel_endDate_lbl": "End Date: ",
+                "bookPanel_class_lbl": "Course: ",
+                "bookPanel_instructor_lbl": "Instructor: ",
+                "archivedMessage": "This course has been archived by your instructor. You still have access to the course materials and your progress.",
+                "projects_btn": null,
+                "insights_btn": null,
+                "archive_moreOptions1_btn_txt": "Book Site",
+                "archive_moreOptions2_btn_txt": "Contact Support"
+            },
+            "footerMenu": {
+                "help_btn": "Help",
+                "themeSettings_btn": "Theme Settings",
+                "signOut_btn": "Sign Out",
+                "myCourses_btn": "My Courses",
+                "studyLearn_btn": "Study and Learn",
+                "practise_btn": "Practice",
+                "myassignments_btn": "My Assignments",
+                "projects_btn": "Projects",
+                "myProgress_btn": "My Progress",
+                "insights_btn": "Insights",
+                "additionalInfo_btn": "Additional Info",
+                "settings_btn": "Settings",
+                "courseFeed_btn": "Announcements",
+                "contactInstructor_btn": "Messages"
+            },
+            "headerMenu": {
+                "resourcesMenu": [
+                    "Study and Learn",
+                    "Practice",
+                    "My Assignments",
+                    "My Progress",
+                    "Announcements",
+                    "Messages",
+                    "Contact Instructor"
+                ],
+                "profileMenu": [
+                    "Profile",
+                    "Language Settings",
+                    "Theme Settings",
+                    "Sign Out"
+                ]
+            },
+            "summary": {
+                "yourScore_txt": "Your Score",
+                "congratulations_txt": "Congratulations!",
+                "tryAgain_txt": "Try Again!",
+                "keepStudying_txt": "Keep Studying!",
+                "successulCaption": "Your have completed the quiz successfully",
+                "unSuccessulCaption": "Try again to improve your score.",
+                "retakeQuiz_btn": "Retake Quiz",
+                "reviewQuiz_btn": "Review Quiz",
+                "next_btn": "Proceed To",
+                "scoreneeded_txt_part1": "You should have scored at least ",
+                "scoreneeded_txt_part2": " in this quiz.",
+                "previousBtn_txt": "Previous",
+                "nextBtn_txt": "Next"
+            },
+            "landing": {
+                "mainHeading_txt": "One space for all of your content.",
+                "signup_btnText": "Sign Up & Start Learning Today",
+                "login_btnText": "Log In",
+                "login_lblText":""
+            },
+            "login": {
+                "dontHaveAccount": "Don't have an account?",
+                "facebook_btn": "Facebook",
+                "forgotPassword": "Forgot Password?",
+                "google_btn": "Google",
+                "login_tbox_lbl": "Email*",
+                "pswrd_tbox_lbl": "Password*"
+            },
+            "launchQuiz": {
+                "heading_txt": "Test Your Knowledge",
+                "Retake_heading_txt_part1": "Test Attempted: ",
+                "Retake_heading_txt_part2": " times",
+                "startQuiz_msg1": "You have not started this activity yet.",
+                "startQuiz_msg2_part1": "In this activity, you have ",
+                "startQuiz_msg2_part2": " questions of total ",
+                "startQuiz_msg2_part3": " marks.",
+                "startQuiz_btnInfo": "To start the activity, click the Start Quiz button.",
+                "retakeQuiz_msg1_part1": "You have taken this activity ",
+                "retakeQuiz_msg1_part2": "times and your best score is ",
+                "retakeQuiz_msg2_part1": "You scored ",
+                "retakeQuiz_msg2_part2": " in your last attempt on ",
+                "retakeQuiz_msg2_part3": " at ",
+                "retakeQuiz_btnInfo": "In case you wish to try again, click the Retake Quiz button.",
+                "continueQuiz_msg1_part1": "You have started this activity on ",
+                "continueQuiz_msg1_part2": " at ",
+                "continueQuiz_msg1_part3": ", but have not completed it yet.",
+                "continueQuiz_btnInfo": "To complete your previous attempt, click the Resume Quiz button.",
+                "reviewlastAttemptBtn_txt": "Review Quiz",
+                "startQuizBtn_txt": "Start Quiz",
+                "continueQuizBtn_txt": "Resume Quiz",
+                "retakeQuizBtn_txt": "Retake Quiz",
+                "previousBtn_txt": "Previous",
+                "nextBtn_txt": "Next"
+            },
+            "TestPlayer": {
+                "question_txt": "Question",
+                "checkMyWork_txt": "Check My Work",
+                "previous_txt": "Previous",
+                "skip_txt": "Skip",
+                "finish_txt": "Finish",
+                "tryAgain_txt": "Try Again!",
+                "nextQuestion_txt": "Next Question",
+                "closeReview_btn": "Close Review",
+                "correctFeedback_txt": "Well done",
+                "incorrectFeedback_txt": "Oops! Not quite correct.",
+                "showAnswer_txt": "Show Answer",
+                "yourResponse_txt": "Your Response",
+                "showingAnswer_txt": "Showing correct answer"
+            },
+            "languageSwitcher": {
+                "changeLanguage_txt": "Change Language",
+                "cancelBtn_txt": "Cancel",
+                "okBtn_txt": "OK"
+            },
+            "futureContent": {
+                "futureContentMessage": "Coming soon",
+                "gobackBtn_txt": "Go back"
+            },
+            "myAssignmentPage": {
+                "myAssignments_Header": "My Assignments",
+                "pending_lbl": "Pending",
+                "completed_lbl": "Completed",
+                "overdue_lbl": "Overdue by a week",
+                "showAll_lbl": "Show All",
+                "view_Details":"View details",
+                "start_btn":"Start",
+                "resume_btn":"Resume",
+                "retake_btn":"Retake",
+                "Activity_txt":"Activities completed",
+                "noAssignmentpending_lbl":"No pending assignments",
+                "noAssignmentcompleted_lbl":"No completed assignments",
+                "myassignmentActivityattempts_lbl":"Attempts",
+                "assignedActivities_lbl": "Assigned Activities",
+				"myassignmentactivity_title": "My Assignments",
+                "resume_btn_launchquiz":"Resume Quiz",
+                "retake_btn_launchquiz":"Retake Quiz"
+            },
+            "onboarding": {
+                "welcomePage": {
+                    "pageHeading": "Welcome, Onboarding User",
+                    "userName": "Onboarding User",
+                    "message": "Before you begin, we need to identify the learning experience that suits you best.Please answer the next few questions to get started.",
+                    "continueBtn": "Continue",
+                    "signOut": "Signout and do this later"
+                },
+                "rolePage": {
+                    "pageHeading": "Which of these describe you best?",
+                    "role1": "Student",
+                    "role2": "Instructor"
+                },
+                "studentOptionsPage": {
+                    "pageHeading": "Choose one of the options below to start learning",
+                    "heading1": "Instructor Led",
+                    "option1": "I have a course key provided by my instructor.",
+                    "option2": "I have been invited by my instructor to join a course.",
+                    "heading2": "Self Study",
+                    "option4": "I want to study on my own using self study materials."
+                },
+                "courseKeyPage": {
+                    "pageHeading": "Course Key",
+                    "message": "Please enter the course key that you have received from your instructor:",
+                    "textboxMessage": "Enter course key here",
+                    "submitBtn": "Go",
+                    "invalidKeyMessage": "Invalid course key",
+                    "alreadyEnrolledMsg": "You are already enrolled in this course",
+                    "clickToExitMsg": "Please enter a different course key or click here to exit."
+                },
+                "activationCodePage": {
+                    "pageHeading": "Almost Done!",
+                    "pageSubHeading": "Use any of the options below to get access to materials",
+                    "heading1": "Activation Code",
+                    "activationCodeMessage": "If you have obtained the activation code from your school or the book, please enter it below:",
+                    "submitBtn": "Go",
+                    "heading2": "Purchase Access",
+                    "purchaseAccessMessage": "You can purchase full access to all the materials by choosing one of the following:",
+                    "invalidAccessCodeMsg": "Invalid access code"
+                },
+                "intructorOptionsPage": {
+                    "pageHeading": "Choose one of the options below to proceed",
+                    "heading1": "Associated with School",
+                    "option1": "I have a school key.",
+                    "option2": "I want to join my school.",
+                    "heading2": "Private Teaching",
+                    "option3": "I have an activation code."
+                },
+                "schoolKeyPage": {
+                    "pageHeading": "School Key",
+                    "message": "Please enter a school key below:",
+                    "textboxMessage": "Enter school key here",
+                    "submitBtn": "Go",
+                    "invalidKeyMessage": "Invalid school key"
+                },
+                "intructorSuccessPage": {
+                    "pageHeading": "Success!",
+                    "message1": "Your instructor account is successfully created with school",
+                    "message2": "You can create courses and track your students' progress.",
+                    "proceedBtn": "Proceed"
+                },
+                "studentSuccessPage": {
+                    "pageHeading": "Success!",
+                    "pageSubHeading1": "You are enrolled into",
+                    "pageSubHeading2": "course.",
+                    "labelISBN": "ISBN:",
+                    "startDate_txt": "Start Date:",
+                    "endDate_txt": "End Date:",
+                    "instructor_txt": "Instructor:",
+                    "startLearning": "Start Learning"
+                }
+            },
+            "joinCourse": {
+                "almostDone": {
+                    "pageHeading": "Almost Done!",
+                    "message": "You already have access to the materials required for this course. Click Next to proceed.",
+                    "next_btn": "Next"
+                }
+            },
+            "createCoursePage": {
+                "headerTitle_txt": "Create Course",
+                "headerSubtitle_txt": "My Courses",
+                "title_lbl": "Name",
+                "startDate_lbl": "Start Date",
+                "endDate_lbl": "End Date",
+                "selectBook_lbl": "Select Book",
+                "createBtn_txt": "Create",
+                "cancelBtn_txt": "Cancel",
+                "notitleErrorMsg": "Name is required",
+                "titleErrorMsg": "Name should be less than 50 characters"
+            },
+            "successCoursePage": {
+                "headerTitle_txt": "Create Course",
+                "headerSubtitle_txt": "My Courses",
+                "proceedBtn_txt": "Proceed to Course",
+                "backToHomeBtn_txt": "Return",
+                "successCaption_txt": "You have successfully created a course",
+                "courseKey_lbl": "Course Key",
+                "inviteStudents_txt": "Share this key with your students to join the course"
+            },
+            "myCoursesPage": {
+                "headerTitle_txt": "My Courses",
+                "noCourseFound_txt": "No courses found.",
+                "filterDialog_header_txt": "View Options",
+                "applyBtn_txt": "Apply",
+                "cancelBtn_txt": "Cancel",
+                "filterDialog_subHeading_txt": "Archived Courses",
+                "dontShowArchivedCourses_optiontxt": "Don't Show Archived Courses",
+                "showArchivedCourses_optiontxt": "Show Archived Courses",
+                "archived_txt": "Archived",
+                "editMsgBar_txt": "Course Updated",
+                "archieveMsgBar_txtPart1": "The course \"",
+                "archieveMsgBar_txtPart2": "\" has been archived successfully!",
+                "restoreMsgBar_txtPart1": "The course \"",
+                "restoreMsgBar_txtPart2": "\" has been restored successfully!",
+				"courseLimitDialog_header_txt":"Course Limit Exceeded",
+				"courseLimitDialog_okBtn_txt":"OK",
+				"courseLimitDialog_txt":"You have reached the maximum course limit of 20."
+				 
+            },
+            "editCoursePage": {
+                "headerTitle_txt": "Edit Course",
+                "headerSubtitle_txt": "My Courses",
+                "title_lbl": "Name",
+                "startDate_lbl": "Start Date",
+                "endDate_lbl": "End Date",
+                "selectBook_lbl": "Select Book",
+                "saveBtn_txt": "Save",
+                "cancelBtn_txt": "Cancel",
+                "notitleErrorMsg": "Name is required",
+                "titleErrorMsg": "Name should be less than 50 characters"
+            },
+            "archieveCoursePage": {
+                "headerTitle_txt": "Archive Course",
+                "headerSubtitle_txt": "My Courses",
+                "archieveBtn_txt": "Archive",
+                "cancelBtn_txt": "Cancel",
+                "studentCount_txtPart1": "There is ",
+                "studentCount_txtPart2": " student enrolled in this course.",
+                "note_lbl": "Note:",
+                "note1": "1. Once archived, the students will not be able to access the course features. They will continue to have access to the course materials as per their purchased license. This action will also set the end date of course to today.",
+                "note2": "2. Archiving the course will have no impact on the course data view. Assignments, student progress, class analytics, etc. will all remain accessible for teacher review via the “Archived Courses”. However, any student progress made post archival will not reflect in the course progress.",
+                "note3": "3. If you wish to restore the archived course at any point in time, you can do so by viewing the list of archived courses using filter options and choosing to restore it. This action will also synchronize the latest student progress with the course progress."
+            },
+            "eText": {
+                "next_btn": "Next",
+                "previous_btn": "Previous",
+                "markAsComplete_btn": "Mark as Complete",
+                "completed_lbl": "Completed",
+                "proceedTo_btn": "Proceed To"
+            },
+            "toasters": {
+                "featurecomingsoon": "Feature coming soon"
+            },
+            "themeSwitcher": {
+                "changeTheme_txt": "Change Theme",
+                "cancelBtn_txt": "Cancel",
+                "okBtn_txt": "OK"
+            },
+            "myProgress": {
+                "gradesSummary_txt": "Grades Summary",
+                "quizCompleted_txt": "Quiz Completed",
+                "averageScore_txt": "Average Score",
+                "progressSummary_txt": "Progress Summary",
+                "overallCompletion_txt": "Overall Completion",
+                "reading_txt": "Reading",
+                "of_txt": "of",
+                "activities_txt": "activities",
+                "quiz_txt": "Quiz",
+                "studyAndLearn_txt": "Study and Learn",
+                "timeSpent_txt": "Time Spent",
+                "completion_txt": "Completion",
+                "viewDetails_txt": "View Details",
+                "practice_txt": "Practice",
+                "achievement_txt": "Achievement",
+                "overview_txt": "Overview",
+                "daysElapsed_txt": "Days Elapsed",
+                "productDetail_Practice": {
+                    "header_txt": "My Progress",
+                    "header_subTitle_txt": "Practice",
+                    "productTitle_txt": "Practice",
+                    "totalActivities": "Activities",
+                    "timeSpent_txt": "Time Spent",
+                    "completed_txt": "Completed",
+                    "averageScore_txt": "Average Score",
+                    "averageScoreDesc_txt1": "The average score is ",
+                    "averageScoreDesc_txt2": " across ",
+                    "averageScoreDesc_txt3": " scored activities",
+                    "scoredActivities_txt": "Scored Activities",
+                    "otherActivities_txt": "Other Activities",
+                    "attempts": "Attempts"
+                },
+                "productDetail_studyAndLearn": {
+                    "header_txt": "My Progress",
+                    "header_subTitle_txt": "Study and Learn",
+                    "productTitle_txt": "Study and Learn",
+                    "totalActivities": "Activities",
+                    "timeSpent_txt": "Time Spent",
+                    "completed_txt": "Completed"
+                },
+                "contactInstructor":{
+                    "titleText":"Contact Instructor",
+                    "to_lbl":"To",
+                    "subject_lbl":"Subject",
+                    "message_lbl":"Message",
+                    "sendBtn_txt":"Send",
+                    "blankError_txt":"Required"
+                    
+                }
+            }
+        }
+    }
+}

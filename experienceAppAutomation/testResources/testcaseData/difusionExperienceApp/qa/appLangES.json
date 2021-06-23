@@ -1,0 +1,93 @@
+{
+    "engage": {
+        "appContent": {
+            "language": "ES - Español",
+            "theme": [
+                {
+                    "name": "Theme 1",
+                    "primary": "#c8d200",
+                    "secondary": "#e85181"
+                },
+                {
+                    "name": "Theme 2",
+                    "primary": "#f08500",
+                    "secondary": "#00bcd4"
+                },
+                {
+                    "name": "Theme 3",
+                    "primary": "#4c2490",
+                    "secondary": ""
+                },
+                {
+                    "name": "Theme 4",
+                    "primary": "#ffde03",
+                    "secondary": ""
+                }
+            ],
+            "landing": {
+                "headingText": "Un espacio para todo tu aprendizaje.",
+                "subheadingText": "Aprenda desde cualquier lugar y en cualquier momento. Acceso instantáneo a todos los cursos y actividades.",
+                "signup_btnText": "Regístrese y comience a aprender hoy mismo",
+                "login_btnText": "Iniciar sesión",
+                "login_lblText": "¿Tener una cuenta?",
+                "footerLabel": "powered by"
+            },
+            "login": {
+                "loginPage_title": "Iniciar sesión",
+                "email_tbox_lbl": "Correo electrónico",
+                "userName_tbox_placeholder": "Ingrese correo electrónico",
+                "pswrd_tbox_lbl": "Contraseña",
+                "password_tbox_placeholder": "Introducir la contraseña",
+                "google_btn": "Google",
+                "facebook_btn": "Facebook",
+                "login_btn": "Iniciar sesión con correo electrónico",
+                "forgotPassword": "¿Has olvidado tu contraseña?",
+                "signup": "Regístrese",
+                "dontHaveAccount_txt": "¿No tienes una cuenta?",
+                "loginoption_txt": "O continúe con:",
+                "footerLabel": "powered by",
+                "invalidEmail_txt": "Dirección de correo electrónico no válida.",
+                "notRegisterUser_alert": "El correo electrónico que proporcionó no existe en nuestros registros. En caso de que se haya registrado anteriormente con su cuenta social, intente iniciar sesión a través del mismo proveedor.\nCerca",
+                "invalidEmail_alert": "Nombre de usuario o contraseña incorrecta.\nClose"
+            },
+            "studentDashboard": {
+                "classTeacherLbl": "Class Teacher:",
+                "classDates_lbl": "Class Dates",
+                "openFlipbook_txt": "Open Flipbook",
+                "whereYouLeftOffLbl": "Continue where you left off:",
+                "lastAccessedActivityDismiss_Btn": "Dismiss",
+                "lastAccessedActivityContinueBtn": "Continue",
+                "productList": [
+                    "Study and Learn",
+                    "Practice",
+                    "Grammar Tutorial",
+                    "Resources",
+                    "Practice Extra"
+                ],
+                "product1_btn_txt": "Study and Learn",
+                "product2_btn_txt": "Practice",
+                "product3_btn_txt": "Grammar Tutorial",
+                "product4_btn_txt": "Resources",
+                "product5_btn_txt": "Practice Extra",
+                "contentsHeading": "Contents",
+                "folderText": "Folder",
+                "activityText": "Activities",
+                "progressHeading": "Progress",
+                "viewAllProgress_btn": "View All",
+                "bookMaterial_lbl": "Book Material",
+                "progressCompleted_lbl": "Completed",
+                "progressTime": "sec",
+                "assignmentsHeading": "Assignments",
+                "viewAllAssignments_btn": "View All",
+                "assignmentCompleted_txt": "Completed",
+                "noAssignments_txt": "No Assignments",
+                "noAssignmentsDescription_txt": "There is no assignment pending in your class",
+                "assignmentTitle_lbl": null,
+                "assignmentDue_lbl": null,
+                "assignmentActivities_lbl": null,
+                "archivedMessage": "This course has been archived by your instructor. You still have access to the course materials and your progress.",
+                "archivedDismiss": "Dismiss"
+            }
+        }
+    }
+}

@@ -1,0 +1,506 @@
+{
+   "Suite1": {
+      "Name": "Validate Student should be able to launch etext, review the quiz1 performed correctly",
+      "TestCaseRepo": "EngageTCRepository.json",
+      "Before": [
+         {
+            "id": "launchUrl",
+            "description": "",
+            "testFile": "launchUrl.js",
+            "testData": []
+         }
+      ],
+      "BeforeEach": [],
+      "Test": [
+         {
+            "id": "ENG_LAND_TC_1",
+            "description": "",
+            "testFile": "landing.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentEnglish.json",
+                  "jsonPath": "engage.appContent.landing"
+               }
+            ]
+         },
+         {
+            "id": "ENG_LAND_TC_3",
+            "description": "",
+			"skipVisualTest": true,
+            "testFile": "landing.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_IDEN_TC_4",
+            "description": "",
+			"skipVisualTest": true,
+            "testFile": "login.test.js",
+            "testData": [
+               {
+                  "dataFile": "logindata.json",
+                  "jsonPath": "engage.login.user.validUser1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_STU_MYCO_TC_2",
+            "description": "",
+			"skipVisualTest": true,
+            "testFile": "studentMyCourses.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_DASH_TC_3",
+            "description": "",
+            "testFile": "dashboard.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": [
+                     "engage.books.book1"
+                  ]
+               },
+               {
+                  "dataFile": "courseData.json",
+                  "jsonPath": [
+                     "engage.courses.course2"
+                  ]
+               }
+            ]
+         },
+         {
+            "id": "ENG_DASH_TC_7",
+            "description": "",
+            "testFile": "dashboard.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": "engage.books.book1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_TOCL_TC_3",
+            "description": "",
+            "testFile": "toc.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": [
+                     "engage.books.book1.chapter[0]",
+                     "engage.books.book1.studyLearn.chapter[0].section"
+                  ]
+               }
+            ]
+         },
+         {
+            "id": "ENG_ETXT_TC_1",
+            "description": "",
+            "testFile": "eText.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": [
+                     "engage.books.book1.studyLearn.chapter[0].section[0]",
+                     "engage.books.book1.studyLearn.chapter[0].section[0].resource[0]"
+                  ]
+               }
+            ]
+         },
+         {
+            "id": "ENG_ETXT_TC_2",
+            "description": "",
+            "testFile": "eText.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": "engage.books.book1.studyLearn.chapter[0].section[0].resource[1].title"
+               }
+            ]
+         },
+         {
+            "id": "ENG_FOOT_TC_6",
+            "description": "",
+            "testFile": "footer.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": "engage.books.book1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_TOCL_TC_3",
+            "description": "",
+            "testFile": "toc.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": [
+                     "engage.books.book1.chapter[0]",
+                     "engage.books.book1.practice.chapter[0].section"
+                  ]
+               }
+            ]
+         },
+         {
+            "id": "ENG_LQUI_TC_3",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": [
+                     "engage.books.book1.practice.chapter[0].section[0]",
+                     "engage.books.book1.practice.chapter[0].section[0].resource[0]"
+                  ]
+               },
+               {
+                  "dataFile": "appContentEnglish.json",
+                  "jsonPath": "engage.appContent.launchQuiz"
+               }
+            ]
+         },
+         {
+            "id": "ENG_LQUI_TC_7",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+               {
+                  "dataFile": "quizData.json",
+                  "jsonPath": "engage.quiz.ch1_sec1_quiz1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_QUIZ_TC_27",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_QUIZ_TC_27",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_QUIZ_TC_27",
+            "description": "",
+            "skipVisualTest": false,
+            "visualTolerance": 2,
+            "testFile": "testPlayer.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_QUIZ_TC_29",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_QUIZ_TC_31",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_FOOT_TC_1",
+            "description": "",
+            "testFile": "footer.test.js",
+            "testData": []
+         }
+      ],
+      "AfterEach": [],
+      "After": []
+   },
+   "Suite2": {
+      "Name": "Validate Student should be able to view list of courses, launch join course workflow, assignment and my progress",
+      "TestCaseRepo": "EngageTCRepository.json",
+      "Before": [
+         {
+            "id": "launchUrl",
+            "description": "",
+            "testFile": "launchUrl.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_LAND_TC_1",
+            "description": "",
+            "testFile": "landing.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentEnglish.json",
+                  "jsonPath": "engage.appContent.landing"
+               }
+            ]
+         },
+         {
+            "id": "ENG_LAND_TC_3",
+            "description": "",
+            "testFile": "landing.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_IDEN_TC_4",
+            "description": "",
+            "testFile": "login.test.js",
+            "testData": [
+               {
+                  "dataFile": "logindata.json",
+                  "jsonPath": "engage.login.user.myuser1"
+               }
+            ]
+         }
+      ],
+      "BeforeEach": [],
+      "Test": [
+         {
+            "id": "ENG_STU_MYCO_TC_1",
+            "description": "",
+            "testFile": "studentMyCourses.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_STU_MYCO_TC_4",
+            "description": "",
+            "testFile": "studentMyCourses.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_STU_MYCO_TC_5",
+            "description": "",
+			"skipVisualTest": true,
+            "testFile": "studentMyCourses.test.js",
+            "testData": [
+               {
+                  "dataFile": "courseData.json",
+                  "jsonPath": "engage.courses.course2"
+               }
+            ]
+         },
+         {
+            "id": "ENG_DASH_TC_8",
+            "description": "",
+            "testFile": "dashboard.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_FOOT_TC_20",
+            "description": "",
+            "testFile": "footer.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_FOOT_TC_7",
+            "description": "",
+            "testFile": "footer.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_ONBO_TC_49",
+            "description": "",
+            "testFile": "userOnboarding.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentEnglish.json",
+                  "jsonPath": "engage.appContent.onboarding.studentOptionsPage"
+               }
+            ]
+         },
+         {
+            "id": "ENG_ONBO_TC_5",
+            "description": "",
+            "testFile": "userOnboarding.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentEnglish.json",
+                  "jsonPath": "engage.appContent.onboarding.courseKeyPage"
+               }
+            ]
+         },
+         {
+            "id": "ENG_ONBO_TC_53",
+            "description": "",
+            "testFile": "userOnboarding.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentEnglish.json",
+                  "jsonPath": "engage.appContent.onboarding.courseKeyPage"
+               },
+               {
+                  "dataFile": "logindata.json",
+                  "jsonPath": "engage.login.user.myuser1.courses[0].key"
+               }
+            ]
+         },
+         {
+            "id": "ENG_ONBO_TC_60",
+            "description": "",
+            "testFile": "userOnboarding.test.js",
+            "testData": []
+         }
+      ],
+      "AfterEach": [],
+      "After": [
+         {
+            "id": "ENG_FOOT_TC_1",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+         }
+      ]
+   },
+   "Suite3": {
+      "Name": "Validate Instructor should be able to view the student list, complete etext",
+      "TestCaseRepo": "EngageTCRepository.json",
+      "BeforeEach": [],
+      "Before": [
+         {
+            "id": "launchUrl",
+            "description": "",
+            "testFile": "launchUrl.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_LAND_TC_1",
+            "description": "",
+            "testFile": "landing.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentEnglish.json",
+                  "jsonPath": "engage.appContent.landing"
+               }
+            ]
+         },
+         {
+            "id": "ENG_LAND_TC_3",
+            "description": "",
+            "testFile": "landing.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_IDEN_TC_4",
+            "description": "",
+            "testFile": "login.test.js",
+            "testData": [
+               {
+                  "dataFile": "logindata.json",
+                  "jsonPath": "engage.login.user.studentMgmtInstructorUser"
+               }
+            ]
+         }
+      ],
+      "Test": [
+         {
+            "id": "ENG_INS_MYCO_TC_3",
+            "description": "",
+            "testFile": "instructorMyCourses.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_INS_MYCO_TC_26",
+            "description": "",
+			"skipVisualTest": true,
+            "testFile": "instructorMyCourses.test.js",
+            "testData": [
+               {
+                  "dataFile": "logindata.json",
+                  "jsonPath": "engage.login.user.studentMgmtInstructorUser.courses[0]"
+               }
+            ]
+         },
+         {
+            "id": "ENG_INS_DASH_TC_9",
+            "description": "",
+            "testFile": "instructorDashboard.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_FOOT_TC_5",
+            "description": "",
+            "testFile": "footer.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": "engage.books.book1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_TOCL_TC_3",
+            "description": "",
+            "testFile": "toc.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": [
+                     "engage.books.book1.chapter[0]",
+                     "engage.books.book1.studyLearn.chapter[0].section"
+                  ]
+               }
+            ]
+         },
+         {
+            "id": "ENG_ETXT_TC_1",
+            "description": "",
+            "testFile": "eText.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": [
+                     "engage.books.book1.studyLearn.chapter[0].section[0]",
+                     "engage.books.book1.studyLearn.chapter[0].section[0].resource[0]"
+                  ]
+               }
+            ]
+         },
+         {
+            "id": "ENG_ETXT_TC_4",
+            "description": "",
+            "skipVisualTest": true,
+            "testFile": "eText.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_FOOT_TC_6",
+            "description": "",
+            "testFile": "footer.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": "engage.books.book1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_TOCL_TC_3",
+            "description": "",
+            "testFile": "toc.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": [
+                     "engage.books.book1.chapter[0]",
+                     "engage.books.book1.practice.chapter[0].section"
+                  ]
+               }
+            ]
+         }
+      ],
+      "AfterEach": [],
+      "After": [
+         {
+            "id": "ENG_FOOT_TC_1",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentEnglish.json",
+                  "jsonPath": "engage.appContent.landing"
+               }
+            ]
+         }
+      ]
+   }
+}

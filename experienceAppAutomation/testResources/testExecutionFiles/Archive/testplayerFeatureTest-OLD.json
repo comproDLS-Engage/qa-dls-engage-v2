@@ -1,0 +1,2846 @@
+{
+   "Suite 1": {
+      "Name": "Validation of TestPlayer Features |English Language - Part 1",
+      "TestCaseRepo": "EngageTCRepository.json",
+      "Before": [
+         {
+            "id": "launchUrl",
+            "description": "",
+            "testFile": "launchUrl.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_LAND_TC_3",
+            "description": "",
+            "testFile": "landing.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_IDEN_TC_4",
+            "description": "",
+            "testFile": "login.test.js",
+            "testData": [
+               {
+                  "dataFile": "logindata.json",
+                  "jsonPath": "engage.login.user.validUser1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_FOOT_TC_13",
+            "description": "",
+            "testFile": "footer.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentEnglish.json",
+                  "jsonPath": "engage.appContent.language"
+               }
+            ]
+         },
+         {
+            "id": "ENG_DASH_TC_1",
+            "description": "",
+            "testFile": "dashboard.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": "engage.books.book1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_TOCL_TC_3",
+            "description": "",
+            "testFile": "toc.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": [
+                     "engage.books.book1.chapter[0]",
+                     "engage.books.book1.chapter[0].practise.section"
+                  ]
+               }
+            ]
+         },
+         {
+            "id": "ENG_LQUI_TC_3",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": [
+                     "engage.books.book1.chapter[0].practise.section[0]",
+                     "engage.books.book1.chapter[0].practise.section[0].resource[0]"
+                  ]
+               },
+               {
+                  "dataFile": "appContentEnglish.json",
+                  "jsonPath": "engage.appContent.launchQuiz"
+               }
+            ]
+         }
+      ],
+      "BeforeEach": [],
+      "Test": [
+         {
+            "id": "ENG_LQUI_TC_11",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+               {
+                  "dataFile": "quizData.json",
+                  "jsonPath": "engage.quiz.ch1_sec1_quiz1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_QUIZ_TC_28",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentEnglish.json",
+                  "jsonPath": [
+                     "engage.appContent.TestPlayer.question_txt",
+                     "engage.appContent.TestPlayer.checkMyWork_txt",
+                     "engage.appContent.TestPlayer.previous_txt",
+                     "engage.appContent.TestPlayer.skip_txt"
+                  ]
+               }
+            ]
+         },
+         {
+            "id": "ENG_QUIZ_TC_7",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_QUIZ_TC_28",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentEnglish.json",
+                  "jsonPath": [
+                     "engage.appContent.TestPlayer.question_txt",
+                     "engage.appContent.TestPlayer.checkMyWork_txt",
+                     "engage.appContent.TestPlayer.previous_txt",
+                     "engage.appContent.TestPlayer.skip_txt"
+                  ]
+               }
+            ]
+         }
+      ],
+      "AfterEach": [],
+      "After": [
+         {
+            "id": "completerQuiz",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_FOOT_TC_1",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+         }
+      ]
+   },
+   "Suite 2": {
+      "Name": "Validation of TestPlayer Features |English Language - Part 2",
+      "TestCaseRepo": "EngageTCRepository.json",
+      "Before": [
+         {
+            "id": "launchUrl",
+            "description": "",
+            "testFile": "launchUrl.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_LAND_TC_3",
+            "description": "",
+            "testFile": "landing.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_IDEN_TC_4",
+            "description": "",
+            "testFile": "login.test.js",
+            "testData": [
+               {
+                  "dataFile": "logindata.json",
+                  "jsonPath": "engage.login.user.validUser1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_FOOT_TC_13",
+            "description": "",
+            "testFile": "footer.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentEnglish.json",
+                  "jsonPath": "engage.appContent.language"
+               }
+            ]
+         },
+         {
+            "id": "ENG_DASH_TC_1",
+            "description": "",
+            "testFile": "dashboard.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": "engage.books.book1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_TOCL_TC_3",
+            "description": "",
+            "testFile": "toc.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": [
+                     "engage.books.book1.chapter[0]",
+                     "engage.books.book1.chapter[0].practise.section"
+                  ]
+               }
+            ]
+         },
+         {
+            "id": "ENG_LQUI_TC_3",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": [
+                     "engage.books.book1.chapter[0].practise.section[0]",
+                     "engage.books.book1.chapter[0].practise.section[0].resource[0]"
+                  ]
+               },
+               {
+                  "dataFile": "appContentEnglish.json",
+                  "jsonPath": "engage.appContent.launchQuiz"
+               }
+            ]
+         },
+         {
+            "id": "ENG_LQUI_TC_11",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+               {
+                  "dataFile": "quizData.json",
+                  "jsonPath": "engage.quiz.ch1_sec1_quiz1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_QUIZ_TC_7",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_ITEM_MCQR_TC_5",
+            "description": "",
+            "testFile": "mcqRadio.test.js",
+            "testData": [
+               {
+                  "dataFile": "quizData.json",
+                  "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[1]"
+               }
+            ]
+         }
+      ],
+      "BeforeEach": [],
+      "Test": [
+         {
+            "id": "ENG_QUIZ_TC_28",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentEnglish.json",
+                  "jsonPath": [
+                     "engage.appContent.TestPlayer.question_txt",
+                     "engage.appContent.TestPlayer.nextQuestion_txt",
+                     "engage.appContent.TestPlayer.previous_txt",
+                     "engage.appContent.TestPlayer.tryAgain_txt"
+                  ]
+               }
+            ]
+         },
+         {
+            "id": "ENG_QUIZ_TC_6",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_QUIZ_TC_28",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentEnglish.json",
+                  "jsonPath": [
+                     "engage.appContent.TestPlayer.question_txt",
+                     "engage.appContent.TestPlayer.checkMyWork_txt",
+                     "engage.appContent.TestPlayer.previous_txt",
+                     "engage.appContent.TestPlayer.skip_txt"
+                  ]
+               }
+            ]
+         }
+      ],
+      "AfterEach": [],
+      "After": [
+         {
+            "id": "completerQuiz",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_FOOT_TC_1",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+         }
+      ]
+   },
+   "Suite 3": {
+      "Name": "Validation of TestPlayer Features |English Language - Part 3",
+      "TestCaseRepo": "EngageTCRepository.json",
+      "Before": [
+         {
+            "id": "launchUrl",
+            "description": "",
+            "testFile": "launchUrl.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_LAND_TC_3",
+            "description": "",
+            "testFile": "landing.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_IDEN_TC_4",
+            "description": "",
+            "testFile": "login.test.js",
+            "testData": [
+               {
+                  "dataFile": "logindata.json",
+                  "jsonPath": "engage.login.user.validUser1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_FOOT_TC_13",
+            "description": "",
+            "testFile": "footer.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentEnglish.json",
+                  "jsonPath": "engage.appContent.language"
+               }
+            ]
+         },
+         {
+            "id": "ENG_DASH_TC_1",
+            "description": "",
+            "testFile": "dashboard.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": "engage.books.book1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_TOCL_TC_3",
+            "description": "",
+            "testFile": "toc.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": [
+                     "engage.books.book1.chapter[0]",
+                     "engage.books.book1.chapter[0].practise.section"
+                  ]
+               }
+            ]
+         },
+         {
+            "id": "ENG_LQUI_TC_3",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": [
+                     "engage.books.book1.chapter[0].practise.section[0]",
+                     "engage.books.book1.chapter[0].practise.section[0].resource[0]"
+                  ]
+               },
+               {
+                  "dataFile": "appContentEnglish.json",
+                  "jsonPath": "engage.appContent.launchQuiz"
+               }
+            ]
+         },
+         {
+            "id": "ENG_LQUI_TC_11",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+               {
+                  "dataFile": "quizData.json",
+                  "jsonPath": "engage.quiz.ch1_sec1_quiz1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_QUIZ_TC_7",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_QUIZ_TC_7",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_QUIZ_TC_7",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_QUIZ_TC_7",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+         }
+      ],
+      "BeforeEach": [],
+      "Test": [
+         {
+            "id": "ENG_QUIZ_TC_28",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentEnglish.json",
+                  "jsonPath": [
+                     "engage.appContent.TestPlayer.question_txt",
+                     "engage.appContent.TestPlayer.checkMyWork_txt",
+                     "engage.appContent.TestPlayer.previous_txt",
+                     "engage.appContent.TestPlayer.finish_txt"
+                  ]
+               }
+            ]
+         },
+         {
+            "id": "ENG_QUIZ_TC_12",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+         }
+      ],
+      "AfterEach": [],
+      "After": [
+         {
+            "id": "ENG_FOOT_TC_1",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+         }
+      ]
+   },
+   "Suite 4": {
+      "Name": "Validation of TestPlayer Features |English Language - Part 4",
+      "TestCaseRepo": "EngageTCRepository.json",
+      "Before": [
+         {
+            "id": "launchUrl",
+            "description": "",
+            "testFile": "launchUrl.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_LAND_TC_3",
+            "description": "",
+            "testFile": "landing.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_IDEN_TC_4",
+            "description": "",
+            "testFile": "login.test.js",
+            "testData": [
+               {
+                  "dataFile": "logindata.json",
+                  "jsonPath": "engage.login.user.validUser1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_FOOT_TC_13",
+            "description": "",
+            "testFile": "footer.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentEnglish.json",
+                  "jsonPath": "engage.appContent.language"
+               }
+            ]
+         },
+         {
+            "id": "ENG_DASH_TC_1",
+            "description": "",
+            "testFile": "dashboard.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": "engage.books.book1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_TOCL_TC_3",
+            "description": "",
+            "testFile": "toc.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": [
+                     "engage.books.book1.chapter[0]",
+                     "engage.books.book1.chapter[0].practise.section"
+                  ]
+               }
+            ]
+         },
+         {
+            "id": "ENG_LQUI_TC_3",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": [
+                     "engage.books.book1.chapter[0].practise.section[0]",
+                     "engage.books.book1.chapter[0].practise.section[0].resource[0]"
+                  ]
+               },
+               {
+                  "dataFile": "appContentEnglish.json",
+                  "jsonPath": "engage.appContent.launchQuiz"
+               }
+            ]
+         },
+         {
+            "id": "ENG_LQUI_TC_11",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+               {
+                  "dataFile": "quizData.json",
+                  "jsonPath": "engage.quiz.ch1_sec1_quiz1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_QUIZ_TC_7",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_ITEM_MCQR_TC_5",
+            "description": "",
+            "testFile": "mcqRadio.test.js",
+            "testData": [
+               {
+                  "dataFile": "quizData.json",
+                  "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[1]"
+               }
+            ]
+         }
+      ],
+      "BeforeEach": [],
+      "Test": [
+         {
+            "id": "ENG_QUIZ_TC_28",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentEnglish.json",
+                  "jsonPath": [
+                     "engage.appContent.TestPlayer.question_txt",
+                     "engage.appContent.TestPlayer.nextQuestion_txt",
+                     "engage.appContent.TestPlayer.previous_txt",
+                     "engage.appContent.TestPlayer.tryAgain_txt"
+                  ]
+               }
+            ]
+         },
+         {
+            "id": "ENG_QUIZ_TC_5",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_QUIZ_TC_28",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentEnglish.json",
+                  "jsonPath": [
+                     "engage.appContent.TestPlayer.question_txt",
+                     "engage.appContent.TestPlayer.checkMyWork_txt",
+                     "engage.appContent.TestPlayer.previous_txt",
+                     "engage.appContent.TestPlayer.skip_txt"
+                  ]
+               }
+            ]
+         },
+         {
+            "id": "ENG_QUIZ_TC_4",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentEnglish.json",
+                  "jsonPath": "engage.appContent.TestPlayer.correctFeedback_txt"
+               }
+            ]
+         },
+         {
+            "id": "ENG_QUIZ_TC_28",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentEnglish.json",
+                  "jsonPath": [
+                     "engage.appContent.TestPlayer.question_txt",
+                     "engage.appContent.TestPlayer.nextQuestion_txt",
+                     "engage.appContent.TestPlayer.previous_txt",
+                     "engage.appContent.TestPlayer.tryAgain_txt"
+                  ]
+               }
+            ]
+         }
+      ],
+      "AfterEach": [],
+      "After": [
+         {
+            "id": "completerQuiz",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_FOOT_TC_1",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+         }
+      ]
+   },
+   "Suite 5": {
+      "Name": "Validation of TestPlayer Features | Spanish Language - Part 1",
+      "TestCaseRepo": "EngageTCRepository.json",
+      "Before": [
+         {
+            "id": "launchUrl",
+            "description": "",
+            "testFile": "launchUrl.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_LAND_TC_3",
+            "description": "",
+            "testFile": "landing.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_IDEN_TC_4",
+            "description": "",
+            "testFile": "login.test.js",
+            "testData": [
+               {
+                  "dataFile": "logindata.json",
+                  "jsonPath": "engage.login.user.validUser1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_FOOT_TC_13",
+            "description": "",
+            "testFile": "footer.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentSpanish.json",
+                  "jsonPath": "engage.appContent.language"
+               }
+            ]
+         },
+         {
+            "id": "ENG_DASH_TC_1",
+            "description": "",
+            "testFile": "dashboard.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": "engage.books.book1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_TOCL_TC_3",
+            "description": "",
+            "testFile": "toc.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": [
+                     "engage.books.book1.chapter[0]",
+                     "engage.books.book1.chapter[0].practise.section"
+                  ]
+               }
+            ]
+         },
+         {
+            "id": "ENG_LQUI_TC_3",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": [
+                     "engage.books.book1.chapter[0].practise.section[0]",
+                     "engage.books.book1.chapter[0].practise.section[0].resource[0]"
+                  ]
+               },
+               {
+                  "dataFile": "appContentSpanish.json",
+                  "jsonPath": "engage.appContent.launchQuiz"
+               }
+            ]
+         }
+      ],
+      "BeforeEach": [],
+      "Test": [
+         {
+            "id": "ENG_LQUI_TC_11",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+               {
+                  "dataFile": "quizData.json",
+                  "jsonPath": "engage.quiz.ch1_sec1_quiz1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_QUIZ_TC_28",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentSpanish.json",
+                  "jsonPath": [
+                     "engage.appContent.TestPlayer.question_txt",
+                     "engage.appContent.TestPlayer.checkMyWork_txt",
+                     "engage.appContent.TestPlayer.previous_txt",
+                     "engage.appContent.TestPlayer.skip_txt"
+                  ]
+               }
+            ]
+         },
+         {
+            "id": "ENG_QUIZ_TC_7",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_QUIZ_TC_28",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentSpanish.json",
+                  "jsonPath": [
+                     "engage.appContent.TestPlayer.question_txt",
+                     "engage.appContent.TestPlayer.checkMyWork_txt",
+                     "engage.appContent.TestPlayer.previous_txt",
+                     "engage.appContent.TestPlayer.skip_txt"
+                  ]
+               }
+            ]
+         }
+      ],
+      "AfterEach": [],
+      "After": [
+         {
+            "id": "completerQuiz",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_FOOT_TC_1",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+         }
+      ]
+   },
+   "Suite 6": {
+      "Name": "Validation of TestPlayer Features | Spanish Language - Part 2",
+      "TestCaseRepo": "EngageTCRepository.json",
+      "Before": [
+         {
+            "id": "launchUrl",
+            "description": "",
+            "testFile": "launchUrl.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_LAND_TC_3",
+            "description": "",
+            "testFile": "landing.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_IDEN_TC_4",
+            "description": "",
+            "testFile": "login.test.js",
+            "testData": [
+               {
+                  "dataFile": "logindata.json",
+                  "jsonPath": "engage.login.user.validUser1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_FOOT_TC_13",
+            "description": "",
+            "testFile": "footer.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentSpanish.json",
+                  "jsonPath": "engage.appContent.language"
+               }
+            ]
+         },
+         {
+            "id": "ENG_DASH_TC_1",
+            "description": "",
+            "testFile": "dashboard.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": "engage.books.book1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_TOCL_TC_3",
+            "description": "",
+            "testFile": "toc.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": [
+                     "engage.books.book1.chapter[0]",
+                     "engage.books.book1.chapter[0].practise.section"
+                  ]
+               }
+            ]
+         },
+         {
+            "id": "ENG_LQUI_TC_3",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": [
+                     "engage.books.book1.chapter[0].practise.section[0]",
+                     "engage.books.book1.chapter[0].practise.section[0].resource[0]"
+                  ]
+               },
+               {
+                  "dataFile": "appContentSpanish.json",
+                  "jsonPath": "engage.appContent.launchQuiz"
+               }
+            ]
+         },
+         {
+            "id": "ENG_LQUI_TC_11",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+               {
+                  "dataFile": "quizData.json",
+                  "jsonPath": "engage.quiz.ch1_sec1_quiz1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_QUIZ_TC_7",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_ITEM_MCQR_TC_5",
+            "description": "",
+            "testFile": "mcqRadio.test.js",
+            "testData": [
+               {
+                  "dataFile": "quizData.json",
+                  "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[1]"
+               }
+            ]
+         }
+      ],
+      "BeforeEach": [],
+      "Test": [
+         {
+            "id": "ENG_QUIZ_TC_28",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentSpanish.json",
+                  "jsonPath": [
+                     "engage.appContent.TestPlayer.question_txt",
+                     "engage.appContent.TestPlayer.nextQuestion_txt",
+                     "engage.appContent.TestPlayer.previous_txt",
+                     "engage.appContent.TestPlayer.tryAgain_txt"
+                  ]
+               }
+            ]
+         },
+         {
+            "id": "ENG_QUIZ_TC_6",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_QUIZ_TC_28",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentSpanish.json",
+                  "jsonPath": [
+                     "engage.appContent.TestPlayer.question_txt",
+                     "engage.appContent.TestPlayer.checkMyWork_txt",
+                     "engage.appContent.TestPlayer.previous_txt",
+                     "engage.appContent.TestPlayer.skip_txt"
+                  ]
+               }
+            ]
+         }
+      ],
+      "AfterEach": [],
+      "After": [
+         {
+            "id": "completerQuiz",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_FOOT_TC_1",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+         }
+      ]
+   },
+   "Suite 7": {
+      "Name": "Validation of TestPlayer Features | Spanish Language - Part 3",
+      "TestCaseRepo": "EngageTCRepository.json",
+      "Before": [
+         {
+            "id": "launchUrl",
+            "description": "",
+            "testFile": "launchUrl.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_LAND_TC_3",
+            "description": "",
+            "testFile": "landing.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_IDEN_TC_4",
+            "description": "",
+            "testFile": "login.test.js",
+            "testData": [
+               {
+                  "dataFile": "logindata.json",
+                  "jsonPath": "engage.login.user.validUser1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_FOOT_TC_13",
+            "description": "",
+            "testFile": "footer.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentSpanish.json",
+                  "jsonPath": "engage.appContent.language"
+               }
+            ]
+         },
+         {
+            "id": "ENG_DASH_TC_1",
+            "description": "",
+            "testFile": "dashboard.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": "engage.books.book1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_TOCL_TC_3",
+            "description": "",
+            "testFile": "toc.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": [
+                     "engage.books.book1.chapter[0]",
+                     "engage.books.book1.chapter[0].practise.section"
+                  ]
+               }
+            ]
+         },
+         {
+            "id": "ENG_LQUI_TC_3",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": [
+                     "engage.books.book1.chapter[0].practise.section[0]",
+                     "engage.books.book1.chapter[0].practise.section[0].resource[0]"
+                  ]
+               },
+               {
+                  "dataFile": "appContentSpanish.json",
+                  "jsonPath": "engage.appContent.launchQuiz"
+               }
+            ]
+         },
+         {
+            "id": "ENG_LQUI_TC_11",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+               {
+                  "dataFile": "quizData.json",
+                  "jsonPath": "engage.quiz.ch1_sec1_quiz1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_QUIZ_TC_7",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_QUIZ_TC_7",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_QUIZ_TC_7",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_QUIZ_TC_7",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+         }
+      ],
+      "BeforeEach": [],
+      "Test": [
+         {
+            "id": "ENG_QUIZ_TC_28",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentSpanish.json",
+                  "jsonPath": [
+                     "engage.appContent.TestPlayer.question_txt",
+                     "engage.appContent.TestPlayer.checkMyWork_txt",
+                     "engage.appContent.TestPlayer.previous_txt",
+                     "engage.appContent.TestPlayer.finish_txt"
+                  ]
+               }
+            ]
+         },
+         {
+            "id": "ENG_QUIZ_TC_12",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+         }
+      ],
+      "AfterEach": [],
+      "After": [
+         {
+            "id": "ENG_FOOT_TC_1",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+         }
+      ]
+   },
+   "Suite 8": {
+      "Name": "Validation of TestPlayer Features | Spanish Language - Part 4",
+      "TestCaseRepo": "EngageTCRepository.json",
+      "Before": [
+         {
+            "id": "launchUrl",
+            "description": "",
+            "testFile": "launchUrl.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_LAND_TC_3",
+            "description": "",
+            "testFile": "landing.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_IDEN_TC_4",
+            "description": "",
+            "testFile": "login.test.js",
+            "testData": [
+               {
+                  "dataFile": "logindata.json",
+                  "jsonPath": "engage.login.user.validUser1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_FOOT_TC_13",
+            "description": "",
+            "testFile": "footer.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentSpanish.json",
+                  "jsonPath": "engage.appContent.language"
+               }
+            ]
+         },
+         {
+            "id": "ENG_DASH_TC_1",
+            "description": "",
+            "testFile": "dashboard.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": "engage.books.book1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_TOCL_TC_3",
+            "description": "",
+            "testFile": "toc.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": [
+                     "engage.books.book1.chapter[0]",
+                     "engage.books.book1.chapter[0].practise.section"
+                  ]
+               }
+            ]
+         },
+         {
+            "id": "ENG_LQUI_TC_3",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": [
+                     "engage.books.book1.chapter[0].practise.section[0]",
+                     "engage.books.book1.chapter[0].practise.section[0].resource[0]"
+                  ]
+               },
+               {
+                  "dataFile": "appContentSpanish.json",
+                  "jsonPath": "engage.appContent.launchQuiz"
+               }
+            ]
+         },
+         {
+            "id": "ENG_LQUI_TC_11",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+               {
+                  "dataFile": "quizData.json",
+                  "jsonPath": "engage.quiz.ch1_sec1_quiz1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_QUIZ_TC_7",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_ITEM_MCQR_TC_5",
+            "description": "",
+            "testFile": "mcqRadio.test.js",
+            "testData": [
+               {
+                  "dataFile": "quizData.json",
+                  "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[1]"
+               }
+            ]
+         }
+      ],
+      "BeforeEach": [],
+      "Test": [
+         {
+            "id": "ENG_QUIZ_TC_28",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentSpanish.json",
+                  "jsonPath": [
+                     "engage.appContent.TestPlayer.question_txt",
+                     "engage.appContent.TestPlayer.nextQuestion_txt",
+                     "engage.appContent.TestPlayer.previous_txt",
+                     "engage.appContent.TestPlayer.tryAgain_txt"
+                  ]
+               }
+            ]
+         },
+         {
+            "id": "ENG_QUIZ_TC_5",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_QUIZ_TC_28",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentSpanish.json",
+                  "jsonPath": [
+                     "engage.appContent.TestPlayer.question_txt",
+                     "engage.appContent.TestPlayer.checkMyWork_txt",
+                     "engage.appContent.TestPlayer.previous_txt",
+                     "engage.appContent.TestPlayer.skip_txt"
+                  ]
+               }
+            ]
+         },
+         {
+            "id": "ENG_QUIZ_TC_4",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentSpanish.json",
+                  "jsonPath": "engage.appContent.TestPlayer.correctFeedback_txt"
+               }
+            ]
+         },
+         {
+            "id": "ENG_QUIZ_TC_28",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentSpanish.json",
+                  "jsonPath": [
+                     "engage.appContent.TestPlayer.question_txt",
+                     "engage.appContent.TestPlayer.nextQuestion_txt",
+                     "engage.appContent.TestPlayer.previous_txt",
+                     "engage.appContent.TestPlayer.tryAgain_txt"
+                  ]
+               }
+            ]
+         }
+      ],
+      "AfterEach": [],
+      "After": [
+         {
+            "id": "completerQuiz",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_FOOT_TC_1",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+         }
+      ]
+   },
+   "Suite 9": {
+      "Name": "Validation of TestPlayer Features | English Language - Part 5",
+      "TestCaseRepo": "EngageTCRepository.json",
+      "Before": [
+         {
+            "id": "launchUrl",
+            "description": "",
+            "testFile": "launchUrl.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_LAND_TC_3",
+            "description": "",
+            "testFile": "landing.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_IDEN_TC_4",
+            "description": "",
+            "testFile": "login.test.js",
+            "testData": [
+               {
+                  "dataFile": "logindata.json",
+                  "jsonPath": "engage.login.user.validUser1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_FOOT_TC_13",
+            "description": "",
+            "testFile": "footer.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentEnglish.json",
+                  "jsonPath": "engage.appContent.language"
+               }
+            ]
+         },
+         {
+            "id": "ENG_DASH_TC_1",
+            "description": "",
+            "testFile": "dashboard.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": "engage.books.book1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_TOCL_TC_3",
+            "description": "",
+            "testFile": "toc.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": [
+                     "engage.books.book1.chapter[0]",
+                     "engage.books.book1.chapter[0].practise.section"
+                  ]
+               }
+            ]
+         },
+         {
+            "id": "ENG_LQUI_TC_3",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": [
+                     "engage.books.book1.chapter[0].practise.section[0]",
+                     "engage.books.book1.chapter[0].practise.section[0].resource[0]"
+                  ]
+               },
+               {
+                  "dataFile": "appContentEnglish.json",
+                  "jsonPath": "engage.appContent.launchQuiz"
+               }
+            ]
+         },
+         {
+            "id": "ENG_LQUI_TC_11",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+               {
+                  "dataFile": "quizData.json",
+                  "jsonPath": "engage.quiz.ch1_sec1_quiz1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_QUIZ_TC_7",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+         }
+      ],
+      "BeforeEach": [],
+      "Test": [
+         {
+            "id": "ENG_QUIZ_TC_22",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentEnglish.json",
+                  "jsonPath": "engage.appContent.launchQuiz"
+               }
+            ]
+         },
+         
+         {
+            "id": "ENG_LQUI_TC_12",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+               {
+                  "dataFile": "quizData.json",
+                  "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[1]"
+               }
+            ]
+         }
+      ],
+      "AfterEach": [],
+      "After": [
+         {
+            "id": "completerQuiz",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_FOOT_TC_1",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+         }
+      ]
+   },
+   "Suite 10": {
+      "Name": "Validation of TestPlayer Features | English Language - Part 6",
+      "TestCaseRepo": "EngageTCRepository.json",
+      "Before": [
+         {
+            "id": "launchUrl",
+            "description": "",
+            "testFile": "launchUrl.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_LAND_TC_3",
+            "description": "",
+            "testFile": "landing.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_IDEN_TC_4",
+            "description": "",
+            "testFile": "login.test.js",
+            "testData": [
+               {
+                  "dataFile": "logindata.json",
+                  "jsonPath": "engage.login.user.validUser1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_FOOT_TC_13",
+            "description": "",
+            "testFile": "footer.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentEnglish.json",
+                  "jsonPath": "engage.appContent.language"
+               }
+            ]
+         },
+         {
+            "id": "ENG_DASH_TC_1",
+            "description": "",
+            "testFile": "dashboard.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": "engage.books.book1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_TOCL_TC_3",
+            "description": "",
+            "testFile": "toc.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": [
+                     "engage.books.book1.chapter[0]",
+                     "engage.books.book1.chapter[0].practise.section"
+                  ]
+               }
+            ]
+         },
+         {
+            "id": "ENG_LQUI_TC_3",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": [
+                     "engage.books.book1.chapter[0].practise.section[0]",
+                     "engage.books.book1.chapter[0].practise.section[0].resource[0]"
+                  ]
+               },
+               {
+                  "dataFile": "appContentEnglish.json",
+                  "jsonPath": "engage.appContent.launchQuiz"
+               }
+            ]
+         },
+         {
+            "id": "ENG_LQUI_TC_11",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+               {
+                  "dataFile": "quizData.json",
+                  "jsonPath": "engage.quiz.ch1_sec1_quiz1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_ITEM_DND_TC_8",
+            "description": "",
+            "testFile": "dragDrop.test.js",
+            "testData": [
+               {
+                  "dataFile": "quizData.json",
+                  "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[0]"
+               }
+            ]
+         }
+      ],
+      "BeforeEach": [],
+      "Test": [
+         {
+            "id": "ENG_QUIZ_TC_13",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentEnglish.json",
+                  "jsonPath": "engage.appContent.TestPlayer.correctFeedback_txt"
+               }
+            ]
+         }
+      ],
+      "AfterEach": [],
+      "After": [
+         {
+            "id": "completerQuiz",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_FOOT_TC_1",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+         }
+      ]
+   },
+   "Suite 11": {
+      "Name": "Validation of Test Player Shuffling Feature",
+      "TestCaseRepo": "EngageTCRepository.json",
+      "Before": [
+         {
+            "id": "launchUrl",
+            "description": "",
+            "testFile": "launchUrl.js",
+            "testData": []
+         }
+      ],
+      "BeforeEach": [
+         {
+            "id": "ENG_LAND_TC_3",
+            "description": "",
+            "testFile": "landing.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_IDEN_TC_4",
+            "description": "",
+            "testFile": "login.test.js",
+            "testData": [
+               {
+                  "dataFile": "logindata.json",
+                  "jsonPath": "engage.login.user.validUser1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_DASH_TC_1",
+            "description": "",
+            "testFile": "dashboard.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": "engage.books.book1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_TOCL_TC_3",
+            "description": "",
+            "testFile": "toc.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": [
+                     "engage.books.book1.chapter[0]",
+                     "engage.books.book1.chapter[0].practise.section"
+                  ]
+               }
+            ]
+         },
+         {
+            "id": "ENG_LQUI_TC_3",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": [
+                     "engage.books.book1.chapter[0].practise.section[0]",
+                     "engage.books.book1.chapter[0].practise.section[0].resource[0]"
+                  ]
+               },
+               {
+                  "dataFile": "appContentEnglish.json",
+                  "jsonPath": "engage.appContent.launchQuiz"
+               }
+            ]
+         },
+         {
+            "id": "ENG_LQUI_TC_11",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+               {
+                  "dataFile": "quizData.json",
+                  "jsonPath": "engage.quiz.ch1_sec1_quiz1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_QUIZ_TC_7",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_QUIZ_TC_7",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_QUIZ_TC_7",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_QUIZ_TC_7",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+         }
+      ],
+      "Test": [
+         {
+            "id": "ENG_QUIZ_TC_33",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_QUIZ_TC_34",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": [
+                     "engage.books.book1.chapter[0].practise.section[0]",
+                     "engage.books.book1.chapter[0].practise.section[0].resource[0]"
+                  ]
+               }
+            ]
+         },
+         {
+            "id": "ENG_QUIZ_TC_38",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_QUIZ_TC_39",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_QUIZ_TC_35",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+         }
+      ],
+      "AfterEach": [
+         {
+            "id": "completerQuiz",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_FOOT_TC_1",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+         }
+      ],
+      "After": []
+   },
+   "Suite 12": {
+      "Name": "Validate TestPlayer Show Answer Feature in English Language - Part 1",
+      "TestCaseRepo": "EngageTCRepository.json",
+      "Before": [
+         {
+            "id": "launchUrl",
+            "description": "",
+            "testFile": "launchUrl.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_LAND_TC_3",
+            "description": "",
+            "testFile": "landing.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_IDEN_TC_4",
+            "description": "",
+            "testFile": "login.test.js",
+            "testData": [
+               {
+                  "dataFile": "logindata.json",
+                  "jsonPath": "engage.login.user.validUser1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_FOOT_TC_13",
+            "description": "",
+            "testFile": "footer.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentEnglish.json",
+                  "jsonPath": "engage.appContent.language"
+               }
+            ]
+         },
+         {
+            "id": "ENG_DASH_TC_1",
+            "description": "",
+            "testFile": "dashboard.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": "engage.books.book1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_TOCL_TC_3",
+            "description": "",
+            "testFile": "toc.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": [
+                     "engage.books.book1.chapter[0]",
+                     "engage.books.book1.chapter[0].practise.section"
+                  ]
+               }
+            ]
+         },
+         {
+            "id": "ENG_LQUI_TC_3",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": [
+                     "engage.books.book1.chapter[0].practise.section[0]",
+                     "engage.books.book1.chapter[0].practise.section[0].resource[0]"
+                  ]
+               },
+               {
+                  "dataFile": "appContentEnglish.json",
+                  "jsonPath": "engage.appContent.launchQuiz"
+               }
+            ]
+         },
+         {
+            "id": "ENG_LQUI_TC_11",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+               {
+                  "dataFile": "quizData.json",
+                  "jsonPath": "engage.quiz.ch1_sec1_quiz1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_ITEM_DND_TC_1",
+            "description": "",
+            "testFile": "dragDrop.test.js",
+            "testData": [
+               {
+                  "dataFile": "quizData.json",
+                  "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[0]"
+               }
+            ]
+         }
+      ],
+      "BeforeEach": [],
+      "Test": [
+         {
+            "id": "ENG_QUIZ_TC_41",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentEnglish.json",
+                  "jsonPath": "engage.appContent.TestPlayer.correctFeedback_txt"
+               }
+            ]
+         }
+      ],
+      "AfterEach": [],
+      "After": [
+         {
+            "id": "completerQuiz",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_FOOT_TC_1",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+         }
+      ]
+   },
+   "Suite 13": {
+      "Name": "Validate TestPlayer Show Answer Feature in English Language - Part 2",
+      "TestCaseRepo": "EngageTCRepository.json",
+      "Before": [
+         {
+            "id": "launchUrl",
+            "description": "",
+            "testFile": "launchUrl.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_LAND_TC_3",
+            "description": "",
+            "testFile": "landing.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_IDEN_TC_4",
+            "description": "",
+            "testFile": "login.test.js",
+            "testData": [
+               {
+                  "dataFile": "logindata.json",
+                  "jsonPath": "engage.login.user.validUser1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_FOOT_TC_13",
+            "description": "",
+            "testFile": "footer.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentEnglish.json",
+                  "jsonPath": "engage.appContent.language"
+               }
+            ]
+         },
+         {
+            "id": "ENG_DASH_TC_1",
+            "description": "",
+            "testFile": "dashboard.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": "engage.books.book1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_TOCL_TC_3",
+            "description": "",
+            "testFile": "toc.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": [
+                     "engage.books.book1.chapter[0]",
+                     "engage.books.book1.chapter[0].practise.section"
+                  ]
+               }
+            ]
+         },
+         {
+            "id": "ENG_LQUI_TC_3",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": [
+                     "engage.books.book1.chapter[0].practise.section[0]",
+                     "engage.books.book1.chapter[0].practise.section[0].resource[0]"
+                  ]
+               },
+               {
+                  "dataFile": "appContentEnglish.json",
+                  "jsonPath": "engage.appContent.launchQuiz"
+               }
+            ]
+         },
+         {
+            "id": "ENG_LQUI_TC_11",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+               {
+                  "dataFile": "quizData.json",
+                  "jsonPath": "engage.quiz.ch1_sec1_quiz1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_ITEM_DND_TC_3",
+            "description": "",
+            "testFile": "dragDrop.test.js",
+            "testData": [
+               {
+                  "dataFile": "quizData.json",
+                  "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[0]"
+               }
+            ]
+         }
+      ],
+      "BeforeEach": [],
+      "Test": [
+         {
+            "id": "ENG_QUIZ_TC_42",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentEnglish.json",
+                  "jsonPath": [
+                     "engage.appContent.TestPlayer.incorrectFeedback_txt",
+                     "engage.appContent.TestPlayer.showAnswer_txt"
+                  ]
+               }
+            ]
+         },
+         {
+            "id": "ENG_QUIZ_TC_6",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_ITEM_MCQR_TC_6",
+            "description": "",
+            "testFile": "mcqRadio.test.js",
+            "testData": [
+               {
+                  "dataFile": "quizData.json",
+                  "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[1]"
+               }
+            ]
+         },
+         {
+            "id": "ENG_QUIZ_TC_46",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentEnglish.json",
+                  "jsonPath": "engage.appContent.TestPlayer.incorrectFeedback_txt"
+               }
+            ]
+         }
+      ],
+      "AfterEach": [],
+      "After": [
+         {
+            "id": "completerQuiz",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_FOOT_TC_1",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+         }
+      ]
+   },
+   "Suite 14": {
+      "Name": "Validate TestPlayer Show Answer Feature in English Language - Part 3",
+      "TestCaseRepo": "EngageTCRepository.json",
+      "Before": [
+         {
+            "id": "launchUrl",
+            "description": "",
+            "testFile": "launchUrl.js",
+            "testData": []
+         }
+      ],
+      "BeforeEach": [
+         {
+            "id": "ENG_LAND_TC_3",
+            "description": "",
+            "testFile": "landing.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_IDEN_TC_4",
+            "description": "",
+            "testFile": "login.test.js",
+            "testData": [
+               {
+                  "dataFile": "logindata.json",
+                  "jsonPath": "engage.login.user.validUser1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_FOOT_TC_13",
+            "description": "",
+            "testFile": "footer.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentEnglish.json",
+                  "jsonPath": "engage.appContent.language"
+               }
+            ]
+         },
+         {
+            "id": "ENG_DASH_TC_1",
+            "description": "",
+            "testFile": "dashboard.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": "engage.books.book1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_TOCL_TC_3",
+            "description": "",
+            "testFile": "toc.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": [
+                     "engage.books.book1.chapter[0]",
+                     "engage.books.book1.chapter[0].practise.section"
+                  ]
+               }
+            ]
+         },
+         {
+            "id": "ENG_LQUI_TC_3",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": [
+                     "engage.books.book1.chapter[0].practise.section[0]",
+                     "engage.books.book1.chapter[0].practise.section[0].resource[0]"
+                  ]
+               },
+               {
+                  "dataFile": "appContentEnglish.json",
+                  "jsonPath": "engage.appContent.launchQuiz"
+               }
+            ]
+         },
+         {
+            "id": "ENG_LQUI_TC_11",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+               {
+                  "dataFile": "quizData.json",
+                  "jsonPath": "engage.quiz.ch1_sec1_quiz1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_ITEM_DND_TC_3",
+            "description": "",
+            "testFile": "dragDrop.test.js",
+            "testData": [
+               {
+                  "dataFile": "quizData.json",
+                  "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[0]"
+               }
+            ]
+         }
+      ],
+      "Test": [
+         {
+            "id": "ENG_QUIZ_TC_43",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentEnglish.json",
+                  "jsonPath": [
+                     "engage.appContent.TestPlayer.incorrectFeedback_txt",
+                     "engage.appContent.TestPlayer.showAnswer_txt",
+                     "engage.appContent.TestPlayer.yourResponse_txt",
+                     "engage.appContent.TestPlayer.showingAnswer_txt"
+                  ]
+               },
+               {
+                  "dataFile": "quizData.json",
+                  "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[0].maxOptions"
+               }
+            ]
+         },
+         {
+            "id": "ENG_QUIZ_TC_44",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentEnglish.json",
+                  "jsonPath": [
+                     "engage.appContent.TestPlayer.incorrectFeedback_txt",
+                     "engage.appContent.TestPlayer.showAnswer_txt",
+                     "engage.appContent.TestPlayer.yourResponse_txt",
+                     "engage.appContent.TestPlayer.showingAnswer_txt"
+                  ]
+               },
+               {
+                  "dataFile": "quizData.json",
+                  "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[0].maxOptions"
+               }
+            ]
+         }
+      ],
+      "AfterEach": [
+         {
+            "id": "completerQuiz",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_FOOT_TC_1",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+         }
+      ],
+      "After": []
+   },
+   "Suite 15": {
+      "Name": "Validate TestPlayer Show Answer Feature in Spanish Language - Part 1",
+      "TestCaseRepo": "EngageTCRepository.json",
+      "Before": [
+         {
+            "id": "launchUrl",
+            "description": "",
+            "testFile": "launchUrl.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_LAND_TC_3",
+            "description": "",
+            "testFile": "landing.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_IDEN_TC_4",
+            "description": "",
+            "testFile": "login.test.js",
+            "testData": [
+               {
+                  "dataFile": "logindata.json",
+                  "jsonPath": "engage.login.user.validUser1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_FOOT_TC_13",
+            "description": "",
+            "testFile": "footer.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentSpanish.json",
+                  "jsonPath": "engage.appContent.language"
+               }
+            ]
+         },
+         {
+            "id": "ENG_DASH_TC_1",
+            "description": "",
+            "testFile": "dashboard.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": "engage.books.book1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_TOCL_TC_3",
+            "description": "",
+            "testFile": "toc.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": [
+                     "engage.books.book1.chapter[0]",
+                     "engage.books.book1.chapter[0].practise.section"
+                  ]
+               }
+            ]
+         },
+         {
+            "id": "ENG_LQUI_TC_3",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": [
+                     "engage.books.book1.chapter[0].practise.section[0]",
+                     "engage.books.book1.chapter[0].practise.section[0].resource[0]"
+                  ]
+               },
+               {
+                  "dataFile": "appContentSpanish.json",
+                  "jsonPath": "engage.appContent.launchQuiz"
+               }
+            ]
+         },
+         {
+            "id": "ENG_LQUI_TC_11",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+               {
+                  "dataFile": "quizData.json",
+                  "jsonPath": "engage.quiz.ch1_sec1_quiz1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_ITEM_DND_TC_1",
+            "description": "",
+            "testFile": "dragDrop.test.js",
+            "testData": [
+               {
+                  "dataFile": "quizData.json",
+                  "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[0]"
+               }
+            ]
+         }
+      ],
+      "BeforeEach": [],
+      "Test": [
+         {
+            "id": "ENG_QUIZ_TC_41",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentSpanish.json",
+                  "jsonPath": "engage.appContent.TestPlayer.correctFeedback_txt"
+               }
+            ]
+         }
+      ],
+      "AfterEach": [],
+      "After": [
+         {
+            "id": "completerQuiz",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_FOOT_TC_1",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+         }
+      ]
+   },
+   "Suite 16": {
+      "Name": "Validate TestPlayer Show Answer Feature in Spanish Language - Part 2",
+      "TestCaseRepo": "EngageTCRepository.json",
+      "Before": [
+         {
+            "id": "launchUrl",
+            "description": "",
+            "testFile": "launchUrl.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_LAND_TC_3",
+            "description": "",
+            "testFile": "landing.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_IDEN_TC_4",
+            "description": "",
+            "testFile": "login.test.js",
+            "testData": [
+               {
+                  "dataFile": "logindata.json",
+                  "jsonPath": "engage.login.user.validUser1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_FOOT_TC_13",
+            "description": "",
+            "testFile": "footer.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentSpanish.json",
+                  "jsonPath": "engage.appContent.language"
+               }
+            ]
+         },
+         {
+            "id": "ENG_DASH_TC_1",
+            "description": "",
+            "testFile": "dashboard.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": "engage.books.book1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_TOCL_TC_3",
+            "description": "",
+            "testFile": "toc.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": [
+                     "engage.books.book1.chapter[0]",
+                     "engage.books.book1.chapter[0].practise.section"
+                  ]
+               }
+            ]
+         },
+         {
+            "id": "ENG_LQUI_TC_3",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": [
+                     "engage.books.book1.chapter[0].practise.section[0]",
+                     "engage.books.book1.chapter[0].practise.section[0].resource[0]"
+                  ]
+               },
+               {
+                  "dataFile": "appContentSpanish.json",
+                  "jsonPath": "engage.appContent.launchQuiz"
+               }
+            ]
+         },
+         {
+            "id": "ENG_LQUI_TC_11",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+               {
+                  "dataFile": "quizData.json",
+                  "jsonPath": "engage.quiz.ch1_sec1_quiz1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_ITEM_DND_TC_3",
+            "description": "",
+            "testFile": "dragDrop.test.js",
+            "testData": [
+               {
+                  "dataFile": "quizData.json",
+                  "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[0]"
+               }
+            ]
+         }
+      ],
+      "BeforeEach": [],
+      "Test": [
+         {
+            "id": "ENG_QUIZ_TC_42",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentSpanish.json",
+                  "jsonPath": [
+                     "engage.appContent.TestPlayer.incorrectFeedback_txt",
+                     "engage.appContent.TestPlayer.showAnswer_txt"
+                  ]
+               }
+            ]
+         },
+         {
+            "id": "ENG_QUIZ_TC_6",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_ITEM_MCQR_TC_6",
+            "description": "",
+            "testFile": "mcqRadio.test.js",
+            "testData": [
+               {
+                  "dataFile": "quizData.json",
+                  "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[1]"
+               }
+            ]
+         },
+         {
+            "id": "ENG_QUIZ_TC_46",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentSpanish.json",
+                  "jsonPath": "engage.appContent.TestPlayer.incorrectFeedback_txt"
+               }
+            ]
+         }
+      ],
+      "AfterEach": [],
+      "After": [
+         {
+            "id": "completerQuiz",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_FOOT_TC_1",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+         }
+      ]
+   },
+   "Suite 17": {
+      "Name": "Validate TestPlayer Show Answer Feature in Spanish Language - Part 3",
+      "TestCaseRepo": "EngageTCRepository.json",
+      "Before": [
+         {
+            "id": "launchUrl",
+            "description": "",
+            "testFile": "launchUrl.js",
+            "testData": []
+         }
+      ],
+      "BeforeEach": [
+         {
+            "id": "ENG_LAND_TC_3",
+            "description": "",
+            "testFile": "landing.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_IDEN_TC_4",
+            "description": "",
+            "testFile": "login.test.js",
+            "testData": [
+               {
+                  "dataFile": "logindata.json",
+                  "jsonPath": "engage.login.user.validUser1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_FOOT_TC_13",
+            "description": "",
+            "testFile": "footer.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentSpanish.json",
+                  "jsonPath": "engage.appContent.language"
+               }
+            ]
+         },
+         {
+            "id": "ENG_DASH_TC_1",
+            "description": "",
+            "testFile": "dashboard.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": "engage.books.book1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_TOCL_TC_3",
+            "description": "",
+            "testFile": "toc.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": [
+                     "engage.books.book1.chapter[0]",
+                     "engage.books.book1.chapter[0].practise.section"
+                  ]
+               }
+            ]
+         },
+         {
+            "id": "ENG_LQUI_TC_3",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": [
+                     "engage.books.book1.chapter[0].practise.section[0]",
+                     "engage.books.book1.chapter[0].practise.section[0].resource[0]"
+                  ]
+               },
+               {
+                  "dataFile": "appContentSpanish.json",
+                  "jsonPath": "engage.appContent.launchQuiz"
+               }
+            ]
+         },
+         {
+            "id": "ENG_LQUI_TC_11",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+               {
+                  "dataFile": "quizData.json",
+                  "jsonPath": "engage.quiz.ch1_sec1_quiz1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_ITEM_DND_TC_3",
+            "description": "",
+            "testFile": "dragDrop.test.js",
+            "testData": [
+               {
+                  "dataFile": "quizData.json",
+                  "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[0]"
+               }
+            ]
+         }
+      ],
+      "Test": [
+         {
+            "id": "ENG_QUIZ_TC_43",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentSpanish.json",
+                  "jsonPath": [
+                     "engage.appContent.TestPlayer.incorrectFeedback_txt",
+                     "engage.appContent.TestPlayer.showAnswer_txt",
+                     "engage.appContent.TestPlayer.yourResponse_txt",
+                     "engage.appContent.TestPlayer.showingAnswer_txt"
+                  ]
+               },
+               {
+                  "dataFile": "quizData.json",
+                  "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[0].maxOptions"
+               }
+            ]
+         },
+         {
+            "id": "ENG_QUIZ_TC_44",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentSpanish.json",
+                  "jsonPath": [
+                     "engage.appContent.TestPlayer.incorrectFeedback_txt",
+                     "engage.appContent.TestPlayer.showAnswer_txt",
+                     "engage.appContent.TestPlayer.yourResponse_txt",
+                     "engage.appContent.TestPlayer.showingAnswer_txt"
+                  ]
+               },
+               {
+                  "dataFile": "quizData.json",
+                  "jsonPath": "engage.quiz.ch1_sec1_quiz1.question[0].maxOptions"
+               }
+            ]
+         }
+      ],
+      "AfterEach": [
+         {
+            "id": "completerQuiz",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_FOOT_TC_1",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+         }
+      ],
+      "After": []
+   },
+   "Suite 18": {
+      "Name": "Validation of TestPlayer Features in Review Mode",
+      "TestCaseRepo": "EngageTCRepository.json",
+      "Before": [
+         {
+            "id": "launchUrl",
+            "description": "",
+            "testFile": "launchUrl.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_LAND_TC_3",
+            "description": "",
+            "testFile": "landing.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_IDEN_TC_4",
+            "description": "",
+            "testFile": "login.test.js",
+            "testData": [
+               {
+                  "dataFile": "logindata.json",
+                  "jsonPath": "engage.login.user.validUser1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_FOOT_TC_13",
+            "description": "",
+            "testFile": "footer.test.js",
+            "testData": [
+               {
+                  "dataFile": "appContentEnglish.json",
+                  "jsonPath": "engage.appContent.language"
+               }
+            ]
+         },
+         {
+            "id": "ENG_DASH_TC_1",
+            "description": "",
+            "testFile": "dashboard.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": "engage.books.book1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_TOCL_TC_3",
+            "description": "",
+            "testFile": "toc.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": [
+                     "engage.books.book1.chapter[0]",
+                     "engage.books.book1.chapter[0].practise.section"
+                  ]
+               }
+            ]
+         },
+         {
+            "id": "ENG_LQUI_TC_3",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+               {
+                  "dataFile": "tocData.json",
+                  "jsonPath": [
+                     "engage.books.book1.chapter[0].practise.section[0]",
+                     "engage.books.book1.chapter[0].practise.section[0].resource[0]"
+                  ]
+               },
+               {
+                  "dataFile": "appContentEnglish.json",
+                  "jsonPath": "engage.appContent.launchQuiz"
+               }
+            ]
+         },
+         {
+            "id": "ENG_LQUI_TC_11",
+            "description": "",
+            "testFile": "launchQuiz.test.js",
+            "testData": [
+               {
+                  "dataFile": "quizData.json",
+                  "jsonPath": "engage.quiz.ch1_sec1_quiz1"
+               }
+            ]
+         },
+         {
+            "id": "completerQuiz",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_SUMM_TC_7",
+            "description": "",
+            "testFile": "summary.test.js",
+            "testData": [
+               {
+                  "dataFile": "quizData.json",
+                  "jsonPath": "engage.quiz.ch1_sec1_quiz1"
+               }
+            ]
+         }
+      ],
+      "BeforeEach": [],
+      "Test": [
+         {
+            "id": "ENG_QUIZ_TC_27",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_QUIZ_TC_27",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_QUIZ_TC_27",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_QUIZ_TC_27",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_QUIZ_TC_29",
+            "description": "",
+            "testFile": "testPlayer.test.js",
+            "testData": []
+         }
+      ],
+      "AfterEach": [],
+      "After": [
+         {
+            "id": "ENG_FOOT_TC_1",
+            "description": "",
+            "testFile": "common.test.js",
+            "testData": []
+         }
+      ]
+   }
+}
