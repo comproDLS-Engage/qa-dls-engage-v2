@@ -8,13 +8,14 @@
 				"loginBtn": "[data-tid=button-login]",
 				"landing_img": "img[data-tid='image-landing']",
 				"brandLogo_img": "[data-tid='image-brandlogo']",
-				"selectedLangImg": "[data-tid=dropdown-languageselector] svg",
-				"selectedLang": "[data-tid=dropdown-languageselector] p",
-				"languageSelector_dropdown": "[data-tid=dropdown-languageselector]",
+				"selectedLangImg": "[data-tid=dropdown-languageselector]",
+				"selectedLang": "[data-tid=dropdown-languageselector] span>span",
+				"languageSelector_dropdown": "[data-tid=dropdown-languageselector] button",
 				"languageSelector_dropdown_list": "[data-tid*=dropdownitem]",
 				"loginLbl": "[data-tid=text-haveanaccount]",
 				"footerLbl": "[data-tid=text-poweredby]",
-				"footerImg": "[data-tid=image-comprodls]"
+				"footerImg": "[data-tid=image-comprodls]",
+				"footerVersion":""
 			},
 			"loginPage": {
 				"userName_tbox": "#login-user",
@@ -55,7 +56,9 @@
 				"invalidEmail_txt": "//*[contains(text(),'Invalid')]",
 				"invalidVerificationCode_txt": "//*[contains(text(),'valid 6 digit')]",
 				"passwordRules_txt": "//*[contains(text(),'Password must meet')]",
-				"passwordMismatch": "//*[contains(text(),'match')]"
+				"passwordMismatch": "//*[contains(text(),'match')]",
+				"emailError":"[data-tid=text-erroremail]",
+				"emailPasswordError":"[data-tid=text-info]"
 			},
 			"SignUpPage": {
 				"signUp_btn": "#join-btn span",
@@ -94,6 +97,24 @@
 				"facebook_User_tbox_dsktop": "#email",
 				"facebook_Password_tbox_dsktop": "#pass",
 				"facebook_Login_btn_dsktop": "#loginbutton"
+			},
+			"dashboardPage": {
+				"pageTitle": "[data-tid=text-pageTitle]",
+				"myBooksLbl": "",
+				"addMoreBooksBtn": "",
+				"bookList": "",
+				"bookImg": "",
+				"viewBookBtn": "",
+				"moreOptionsBtn": "",
+				"myPlaylistLbl": "",
+				"createPlaylistBtn": "",
+				"exploreLbl": "[data-tid=text-explore]",
+				"browseAllBtn": "[data-tid=btn-label-browseall]",
+				"materialsTab": "",
+				"resourceList": "[data-tid*=item-globalresource]",
+				"resourceIcon": "[data-tid*=icon-globalresource]",
+				"resourceTitle": "",
+				"resourceSubtitle": ""
 			},
 			"widgets": {
 				"snackbarInfo_txt": "[data-tid=text-error], [data-tid=text-info], [data-tid=text-success]",

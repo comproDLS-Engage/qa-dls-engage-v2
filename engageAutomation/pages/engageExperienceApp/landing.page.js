@@ -80,10 +80,11 @@ module.exports = {
 			let list, i;
 			list = action.findElements(this.languageSelector_dropdown_list);
 			res = null;
-			for (i = 0; i < list.length; i++) {
-				if (lang == action.getText(list[i])) {
-					res = action.click(list[i]);
+			for (i = 1; i <= list.length; i++) {
+				if (lang == action.getText(this.languageSelector_dropdown_list + ":nth-child(" + i + ")")) {
+					res = action.click(this.languageSelector_dropdown_list + ":nth-child(" + i + ")");
 					logger.logInto(stackTrace.get(), "Value " + lang + " selected from the drop down");
+					break;
 				}
 			}
 			if (res == null) {

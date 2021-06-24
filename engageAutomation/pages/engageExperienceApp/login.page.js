@@ -118,6 +118,7 @@ module.exports = {
         res = action.click(this.login_btn);
         if (res == true) {
             logger.logInto(stackTrace.get(), " -- Login button is clicked");
+            
             //action.waitForDisplayed(this.loaderIcon);
         } else {
             res = res + " -- Login button is NOT clicked ";
