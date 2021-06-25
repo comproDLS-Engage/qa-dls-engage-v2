@@ -15,7 +15,7 @@
 				"loginLbl": "[data-tid=text-haveanaccount]",
 				"footerLbl": "[data-tid=text-poweredby]",
 				"footerImg": "[data-tid=image-comprodls]",
-				"footerVersion":""
+				"footerVersion": ""
 			},
 			"loginPage": {
 				"userName_tbox": "#login-user",
@@ -57,8 +57,8 @@
 				"invalidVerificationCode_txt": "//*[contains(text(),'valid 6 digit')]",
 				"passwordRules_txt": "//*[contains(text(),'Password must meet')]",
 				"passwordMismatch": "//*[contains(text(),'match')]",
-				"emailError":"[data-tid=text-erroremail]",
-				"emailPasswordError":"[data-tid=text-info]"
+				"emailError": "[data-tid=text-erroremail]",
+				"emailPasswordError": "[data-tid=text-info]"
 			},
 			"SignUpPage": {
 				"signUp_btn": "#join-btn span",
@@ -84,59 +84,8 @@
 				"phoneNumebr_lbl": "div.phone-with-country-code div.mdc-text-field label",
 				"verify_btn": ".std-button.js-verify"
 			},
-			"googlePage": {
-				"google_User_tbox": "#identifierId",
-				"google_User_Next_btn": "#identifierNext",
-				"google_Password_tbox": "#password  input",
-				"google_Pass_Next_btn": "#passwordNext"
-			},
-			"faceBookPage": {
-				"facebook_User_tbox": "#m_login_email",
-				"facebook_Password_tbox": "#m_login_password",
-				"facebook_Login_btn": "button[name=login]",
-				"facebook_User_tbox_dsktop": "#email",
-				"facebook_Password_tbox_dsktop": "#pass",
-				"facebook_Login_btn_dsktop": "#loginbutton"
-			},
-			"dashboardPage": {
-				"pageTitle": "[data-tid=text-pageTitle]",
-				"myBooksLbl": "",
-				"addMoreBooksBtn": "",
-				"bookList": "",
-				"bookImg": "",
-				"viewBookBtn": "",
-				"moreOptionsBtn": "",
-				"myPlaylistLbl": "",
-				"createPlaylistBtn": "",
-				"exploreLbl": "[data-tid=text-explore]",
-				"browseAllBtn": "[data-tid=btn-label-browseall]",
-				"materialsTab": "",
-				"resourceList": "[data-tid*=item-globalresource]",
-				"resourceIcon": "[data-tid*=icon-globalresource]",
-				"resourceTitle": "",
-				"resourceSubtitle": ""
-			},
 			"widgets": {
-				"snackbarInfo_txt": "[data-tid=text-error], [data-tid=text-info], [data-tid=text-success]",
-				"snackbarClose_btn": "[data-tid=text-close]",
-				"class_btn": "[data-tid=button-classes]",
-				"headerBack_btn": "svg[data-tid='button-goback']",
-				"headerOpenBookCard_btn": "div[data-tid='button-openbookcard']",
-				"headerCloseQuiz_btn": "button[data-tid='button-closetest']",
-				"menuBar_btn": "a[data-tid='button-navigationdrawer']",
-				"comproLogo_img": "[data-tid='image-comprodls']",
-				"logOut_btn": "div[data-tid=button-signout]",
-				"headerTitle_txt": "[data-tid='text-headertitle']",
-				"headerSubTitle_txt": "[data-tid='text-headersubtitle']",
-				"pageTitle_txt": "[data-tid='text-pagetitle']",
-				"pageSubTitle_txt": "[data-tid='text-pagesubtitle']",
-				"closeSummary_btn": "[data-tid='button-closesummary']",
-				"languageChanger": "",
-				"menuBarPractice": "",
-				"loaderIcon": "[data-tid=image-loader]",
-				"headerdiv": "[data-tid=container-header]",
-				"selectedLanguage": "[data-tid=container-languagesexpanded] [data-tid*=dropdownsubitem-language] [data-tid=icon-selectedoption]",
-				"selectedTheme": "[data-tid=container-themesexpanded] [data-tid*=dropdownsubitem-theme] [data-tid=icon-selectedoption]"
+				"loaderIcon": "[data-tid=image-loader]"
 			}
 		}
 	}

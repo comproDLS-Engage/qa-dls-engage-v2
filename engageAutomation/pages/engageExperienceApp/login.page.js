@@ -240,18 +240,6 @@ module.exports = {
         return res;
     },
 
-    /*snackBarAlert_Data: function () { // not clear on the requirement of this function - akhil 
-        //this is for capturing the text of snackbar alerts - akanksha
-        res = action.waitForDisplayed(this.snackbar_alert)
-        if (res == true) {
-            res = action.getText(this.snackbar_alert)
-            logger.logInto(stackTrace.get(), res);
-            action.click(this.close_snackBar)
-        } else
-            logger.logInto(stackTrace.get(), res + " -- Snackbar Alert Not displayed");
-        return res;
-    },*/
-
     change_Language: function (lang) {
         res = require('./landing.page.js').select_Language_from_dropdown(lang);
         return res;
@@ -389,33 +377,5 @@ module.exports = {
         return res;
     }
 
-    //TBD
-    // click_Google_btn: function () {
-    //     logger.logInto(stackTrace.get());
-    //     res = action.click(this.google_btn)
-    //     if (res == true) {
-    //         logger.logInto(stackTrace.get(), " -- Google button is clicked ");
-    //         googleLoginPage = require('./loginPage.google.js');
-    //         res = googleLoginPage.isInitialized();
-    //     } else {
-    //         res = res + " -- Google button is NOT clicked ";
-    //         logger.logInto(stackTrace.get(), res, 'error');
-    //     }
-    //     return res;
-    // },
-
-    //TBD
-    // click_facebook_btn: function () {
-    //     logger.logInto(stackTrace.get());
-    //     res = action.click(this.facebook_btn)
-    //     if (res == true) {
-    //         logger.logInto(stackTrace.get(), " -- Facebook button is clicked ");
-    //         facebookLoginPage = require('./loginPage.facebook.js');
-    //         res = facebookLoginPage.isInitialized();
-    //     } else {
-    //         res = res + " -- Facebook button is NOT clicked ";
-    //         logger.logInto(stackTrace.get(), res, 'error');
-    //     }
-    //     return res;
-    // }
+   
 }
