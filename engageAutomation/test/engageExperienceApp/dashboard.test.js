@@ -7,12 +7,12 @@ module.exports = {
 
     //Validate on clicking "Interactive Activities" resource in Explore menu, same tab is launched on Browse
     ENG_DASH_TC_1: function () {
-        sts = dashboardPage.clickResource("Interactive Activites");
+        sts = dashboardPage.clickResource("Interactive Activities");
         assertion.assertEqual(sts, true, "Dashboard page status mismatch");
         sts = browsePage.isInitialized();
         assertion.assertEqual(sts.pageStatus, true, "Browse page status mismatch");
         sts = browsePage.getActiveTabName();
-        assertion.assertEqual(sts, "Interactive Activites", "Active tab name status Mismatch");
+        assertion.assertEqual(sts, "Interactive Activities", "Active tab name status Mismatch");
     },
 
     //Validate on clicking "Videos" resource in Explore menu, same tab is launched on Browse
@@ -47,12 +47,12 @@ module.exports = {
 
     //Validate on clicking "Today in Class" resource in Explore menu, same tab is launched on Browse
     ENG_DASH_TC_5: function () {
-        sts = dashboardPage.clickResource("Toay in Class");
+        sts = dashboardPage.clickResource("Today in Class");
         assertion.assertEqual(sts, true, "Dashboard page status mismatch");
         sts = browsePage.isInitialized();
         assertion.assertEqual(sts.pageStatus, true, "Browse page status mismatch");
         sts = browsePage.getActiveTabName();
-        assertion.assertEqual(sts, "Toay in Class", "Active tab name status Mismatch");
+        assertion.assertEqual(sts, "Today in Class", "Active tab name status Mismatch");
     },
 
     //Validate on clicking "Projectable" resource in Explore menu, same tab is launched on Browse
