@@ -1,5 +1,5 @@
 {
-   "Suite1_AK": {
+   "Suite1": {
       "Name": "Engage Login Feature Validation | Successful Scenarios",
       "TestCaseRepo": [
          "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
