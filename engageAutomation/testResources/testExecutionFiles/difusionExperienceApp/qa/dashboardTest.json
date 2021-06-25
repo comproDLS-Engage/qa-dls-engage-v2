@@ -1,0 +1,93 @@
+{
+    "Suite1": {
+        "Name": "Validation of difusion teacher Explore Menu Resources",
+        "TestCaseRepo": [
+            "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
+        ],
+        "Before": [],
+        "BeforeEach": [
+            {
+                "id": "launchUrl",
+                "description": "",
+                "testFile": "./engageAutomation/core/launchUrl.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_LAND_TC_1",
+                "description": "Landing page",
+                "testFile": "./test/engageExperienceApp/landing.test.js",
+                "visualTest": true,
+                "visualTolerance": 0.07,
+                "testData": []
+            },
+            {
+                "id": "ENG_LAND_TC_3",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/landing.test.js",
+                "visualTest": true,
+                "visualTolerance": 0.07,
+                "testData": []
+            },
+            {
+                "id": "ENG_IDEN_TC_7",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/login.test.js",
+                "visualTest": true,
+                "visualTolerance": 0.07,
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+                        "jsonPath": "engage.login.user.validInstructorUser1"
+                    }
+                ]
+            }
+        ],
+        "Test": [
+            {
+                "id": "ENG_DASH_TC_1",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/dashboard.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_DASH_TC_2",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/dashboard.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_DASH_TC_3",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/dashboard.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_DASH_TC_4",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/dashboard.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_DASH_TC_5",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/dashboard.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_DASH_TC_6",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/dashboard.test.js",
+                "testData": []
+            }
+        ],
+        "AfterEach": [
+            {
+                "id": "logout_from_app",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/common.test.js",
+                "testData": []
+            }
+        ],
+        "After": []
+    }
+}

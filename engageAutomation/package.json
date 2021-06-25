@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "landingFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='landingTest.json' --windowWidth=1600 --windowHeight=900",
-    "loginFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='loginTest.json' --windowWidth=1600 --windowHeight=900"
- 
+    "loginFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='loginTest.json' --windowWidth=1600 --windowHeight=900",
+    "dashboardFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='dashboardTest.json' --windowWidth=1500 --windowHeight=800"
   },
   "keywords": [],
   "author": "",
