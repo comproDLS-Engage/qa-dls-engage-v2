@@ -1,0 +1,47 @@
+{
+    "backoffice": {
+        "book": [
+            {
+                "name": "QA Automation Test book",
+                "coverImage": "./testResources/testcaseData/backOffice/qa/book_cover_140_2.png",
+                "description": "QA test description"
+            }
+        ],
+        "component": [
+            {
+                "type": "Learning Path",
+                "category": "--none--",
+                "title": "QA Test Learning Path - none",
+                "folderLevel": "3",
+                "autonumbering": "1-based"
+            },
+            {
+                "type": "Bank",
+                "category": "Resources",
+                "title": "QA Test Bank - Resources",
+                "folderLevel": "2",
+                "autonumbering": "0-based"
+            }
+        ],
+        "folder": [
+            {
+                "name": "QA Test folder1",
+                "coverImage": ""
+            },
+            {
+                "name": "QA Test folder2",
+                "coverImage": ""
+            }
+        ],
+        "activity": [
+            {
+                "type": "Native Engage Learning Object",
+                "name": "QA Test LO1 - Native"
+            },
+            {
+                "type": "Close Ended Learning Object",
+                "name": "QA Test LO2 - Close Ended"
+            }
+        ]
+    }
+}

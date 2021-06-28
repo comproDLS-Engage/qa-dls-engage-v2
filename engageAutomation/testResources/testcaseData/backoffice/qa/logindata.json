@@ -1,0 +1,13 @@
+{
+    "engage": {
+        "user": {
+            "validUser1": {
+                "email": "aa1@yopmail.com",
+                "password": "Welcome@1",
+                "role": "",
+                "name": "Akhil Aggarwal",
+                "info": {}
+            }
+        }
+    }
+}

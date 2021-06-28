@@ -1,0 +1,106 @@
+{
+	"loginPage": {
+		"login_title": "[class*=c-login__form__title]",
+		"email_tbox": "[data-tid=input-email] input",
+		"password_tbox": "[data-tid=input-password] input",
+		"login_btn": "[data-tid=button-login]"
+	},
+	"common": {
+		"appLoader": "[class='c-app-loader js-app-loader']",
+		"menuBtn": "[id=menu-button]",
+		"signOutBtn": "[data-tid=button-signout",
+		"pageTitle": "[class*=c-page-header__title]",
+		"pageSubtitle": "[class*=c-page-header__sub-title]",
+		"pageHeaderImg": "[class*=c-page-header__icon] img",
+		"loadingContainer": "[class=c-progressbar-container]",
+		"formTitle": "[class*=c-form__title]",
+		"closeBtn": "[class=c-no-frame__close]",
+		"confirmDialog": "[class*=mdc-dialog--open] [data-mdc-dialog-action=yes]",
+		"cancelDialog": "[class*=mdc-dialog--open] [data-mdc-dialog-action=close]",
+		"dialogContent": "[class*=mdc-dialog--open] [id=my-dialog-content] div",
+		"snackbarLbl": "[class*='mdc-snackbar--open'] [class='mdc-snackbar__label']",
+		"snackbarBtn": "[class*=mdc-snackbar--open] button",
+		"breadcrumbLevel1": "[class=c-page-header__bread-crumbs] div:nth-child(1)",
+		"breadcrumbLevel2": "[class=c-page-header__bread-crumbs] div:nth-child(2)",
+		"breadcrumbLevel3": "[class=c-page-header__bread-crumbs] div:nth-child(3)",
+		"backBtn": "[data-tid=button-goback]",
+		"goBackBtn": "button[data-ng-click=closewindow()]",
+		"bannerText": "[class*=mdc-banner__text]"
+	},
+	"homePage": {
+		"userName": "[class*=c-user-name]",
+		"newTitleBtn": "[data-tid=button-newtitle]",
+		"bookCount": "[class*=book-count]",
+		"bookList": "[data-tid*=button-book-detail] [class*=c-card__title]",
+		"libraryBtn": "button[data-tid=button-library]",
+		"metadataBtn": "button[data-tid=button-metadata]",
+		"loadMoreBtn": "[data-tid=button-loadmoretitles]",
+		"viewCodesBtn": "[data-tid=button-view-and-export-codes] span",
+		"generateCodesBtn": "[data-tid=button-generate-access-codes] span",
+		"checkCodeBtn": "[data-tid=button-check-a-code] span",
+		"viewCodeBookDropdown": "[data-tid=input-title-for-access-code]",
+		"viewCodeBookList": "[class*=mdc-menu-surface--open] [class*=mdc-list-item__text]",
+		"viewCodeBatchDropdown": "[data-tid=input-batch-for-access-code]",
+		"viewCodeBatchList": "[class*=mdc-menu-surface--open] [class*=mdc-list-item__text]",
+		"viewCodeProceedBtn": "[data-tid=button-access-codes-launch]",
+		"accessCodeTxtbox": "[data-tid=input-access-code-for-check] input",
+		"checkCodeProceedBtn": "[data-tid=button-check-access-code]"
+	},
+	"viewBookPage": {
+		"componentList": "[data-tid*=button-component-detail] [class*=c-card__title]",
+		"addComponentBtn": "[data-tid='button-ADD COMPONENT']",
+		"componentTypeList": "[class=c-item-type-launcher] [class*=c-list-item__primary-text]"
+	},
+	"addTitlePage": {
+		"titleTypeDropdown": "[class=c-create-book__form__book-categories] [class*=mdc-select__anchor]",
+		"titleTypeList": "[class*=mdc-menu-surface--open] [class*=mdc-list-item__primary-text]",
+		"nameTxtbox": "[id=Name]",
+		"descriptionTxtbox": "[id=tf-Description]",
+		"imageUploadBtn": "[class=c-image-upload__file-input]",
+		"createTitleBtn": "[class*=c-create-book] button"
+	},
+	"addComponentPage": {
+		"titleTxtbox": "[id=Title]",
+		"categoryTypeDropdown": "[class*=c-create-component__form__category-types] [class*=mdc-select__anchor]",
+		"categoryTypeList": "[class*=mdc-menu-surface--open] [class*=mdc-list-item__text]",
+		"lpLevelsDropdown": "[class=c-form-section] > div:nth-child(3) > div",
+		"lpLevelsList": "[class*=mdc-menu-surface--open] [class*=mdc-list-item__text]",
+		"autonumberingDropdown": "[class=c-form-section] > div:nth-child(4) > div",
+		"autonumberingList": "[class*=mdc-menu-surface--open] [class*=mdc-list-item__text]",
+		"addBtn": "[class=c-form-section] button[class*=action-button-padding]"
+	},
+	"viewLearningPathPage": {
+		"emptyStateBtn": "[class*=c-empty-state-button]",
+		"folderList": "[data-tid*=button-folder-details] [class=c-list-item__primary-text]",
+		"activityList": "[class*='c-activity--title mdc-list-item__primary-text']",
+		"addFolderBtn": "button[data-tid=button-add-folder]",
+		"addActivityBtn": "[data-tid=button-add-activity]",
+		"publishBtn": "[data-tid=button-publish-book-component]",
+		"deleteComponentBtn": "[data-tid=button-delete-component]",
+		"activityTypeList": "[class=c-radio-label]",
+		"proceedBtn": "[data-tid=button-item-type-launch] div",
+		"activityMenuBtn": "[data-tid=button-display-activity-menu]",
+		"activityMenuDeleteBtn": "[class*=mdc-menu-surface--open] [data-tid=button-Delete]"
+	},
+	"addFolderPage": {
+		"nameTxtbox": "[id=Name]",
+		"addBtn": "[class=c-form-section] button[class*=action-button-padding]"
+	},
+	"addActivityPage": {},
+	"publishComponentPage": {
+		"snapshotBtn": "[data-tid*='button-Create New Snapshot']",
+		"previewBtn": "[data-tid*='button-Preview']",
+		"publishBtn": "[data-tid*='button-Publish']",
+		"lastPublishedVer": "div:nth-child(1)[class=c-publish-component-page__component__attribute] [class=c-publish-component-page__component__attribute_value__version]",
+		"lastSnapshotVer": "div:nth-child(2)[class=c-publish-component-page__component__attribute] [class=c-publish-component-page__component__attribute_value__version]"
+	},
+	"generateCodesPage": {
+		"bookDropdown": "[data-tid=input-title-for-generate-codes]",
+		"bookList": "[class*=mdc-menu-surface--open] [class*=mdc-list-item__text]",
+		"batchNameTxtbox": "[data-tid=input-batch-name-for-generate-codes] input",
+		"startDate": "[data-tid=input-start-date-for-generate-codes] input",
+		"endDate": "[data-tid=input-end-date-for-generate-codes] input",
+		"codeLimitTxtbox": "[data-tid=input-code-limit-for-generate-codes] input",
+		"generateBtn": "[class=c-form-section] button"
+	}
+}
