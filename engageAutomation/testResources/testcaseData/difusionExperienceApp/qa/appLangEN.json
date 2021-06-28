@@ -2,28 +2,7 @@
     "engage": {
         "appContent": {
             "language": "EN - English (UK)",
-            "theme": [
-                {
-                    "name": "Theme 1",
-                    "primary": "#c8d200",
-                    "secondary": "#e85181"
-                },
-                {
-                    "name": "Theme 2",
-                    "primary": "#f08500",
-                    "secondary": "#00bcd4"
-                },
-                {
-                    "name": "Theme 3",
-                    "primary": "#4c2490",
-                    "secondary": ""
-                },
-                {
-                    "name": "Theme 4",
-                    "primary": "#ffde03",
-                    "secondary": ""
-                }
-            ],
+       
             "landing": {
                 "headingText": "One space for all your learning.",
                 "subheadingText": "Learn from anywhere, anytime. Instant access to all courses and activities.",
@@ -49,30 +28,6 @@
                 "invalidEmail_txt": "Invalid Email Address.",
                 "notRegisterUser_alert": "The email you provided does not exist in our records. In case you have previously signed up using your social account, try logging in via the same provider.",
                 "invalidEmail_alert": "Incorrect username or password."
-            },
-            "resetPasswordSendOTP": {
-                "resetPassword_title": "Reset Password",
-                "resetPassword_subHeading": "Enter your email to send a OTP (one-time password) to access your account.",
-                "cancelandGoBackbtn_txt": "Cancel & Go Back to Log in",
-                "sendOTPToResetbtn_txt": "Send OTP to Reset Password",
-                "forgotPassword_Email_lbl": "Email"
-            },
-            "changePassword": {
-                "checkEmailForCode_txt": "Check your Email for Code",
-                "resetPassword_title": "Reset Password",
-                "resetPassword_subHeading2": "One Time Password(OTP) has been sent to your registered Email, please enter OTP and New Password to reset the Password",
-                "email_tbox_lbl": "Email",
-                "verificationCode_lbl": "Verification Code",
-                "newPassword_lbl": "New Password",
-                "confirmPassword_lbl": "Confirm New Password",
-                "resendOTP_btn": "Resend OTP",
-                "changePassword": "Change Password",
-                "cancelandGoBackbtn_txt": "Cancel & Go Back to Log in",
-                "resendOTP_msg": "OTP has been resent successfully",
-                "invalid_OTP": "Please enter a valid 6 digit code",
-                "password_rules": "Password must meet the following criteria: Atleast 8 characters. Atleast 1 lowercase character. Atleast 1 uppercase character.Atleast 1 number. Atleast 1 special character",
-                "password_mismatch": "Password and Confirm password don't match",
-                "invalid_VerificationCode2": "Invalid verification code provided, please try again."
             }
        
         }
