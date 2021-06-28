@@ -4,8 +4,211 @@
     "selectorFile": "./core/selectors/experienceApp/engageSelectors.json",
     "modules": [
         {
+            "modulename": "Difusion UI Temp",
+            "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+            "testcase": [
+                {
+                    "id": "ENG_DIF_TC_1",
+                    "description": "",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_DIF_TC_2",
+                    "description": "",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_DIF_TC_3",
+                    "description": "",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_DIF_TC_4",
+                    "description": "",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_DIF_TC_5",
+                    "description": "",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_DIF_TC_6",
+                    "description": "",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_DIF_TC_7",
+                    "description": "",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_DIF_TC_8",
+                    "description": "",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_DIF_TC_9",
+                    "description": "",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_DIF_TC_10",
+                    "description": "",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_DIF_TC_11",
+                    "description": "",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_DIF_TC_12",
+                    "description": "",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_DIF_TC_13",
+                    "description": "",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_DIF_TC_14",
+                    "description": "",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_DIF_TC_15",
+                    "description": "",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_DIF_TC_16",
+                    "description": "",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_DIF_TC_17",
+                    "description": "",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_DIF_TC_18",
+                    "description": "",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_DIF_TC_19",
+                    "description": "",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_DIF_TC_20",
+                    "description": "",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_DIF_TC_21",
+                    "description": "",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_DIF_TC_22",
+                    "description": "",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_DIF_TC_23",
+                    "description": "",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_DIF_TC_24",
+                    "description": "",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_DIF_TC_25",
+                    "description": "",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_DIF_TC_26",
+                    "description": "",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_DIF_TC_27",
+                    "description": "",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_DIF_TC_28",
+                    "description": "",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_DIF_TC_29",
+                    "description": "",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_DIF_TC_30",
+                    "description": "",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_DIF_TC_31",
+                    "description": "",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_DIF_TC_32",
+                    "description": "",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_DIF_TC_33",
+                    "description": "",
+                    "tags": "P1",
+                    "visualTest": true
+                }
+            ]
+        },
+        {
             "modulename": "Landing Page",
-            "moduledetails": "",
             "testFile": "./test/engageExperienceApp/landing.test.js",
             "testcase": [
                 {
@@ -43,7 +246,6 @@
         },
         {
             "modulename": "Login and Reset Password",
-            "moduledetails": "",
             "testFile": "./test/engageExperienceApp/login.test.js",
             "testcase": [
                 {
@@ -125,7 +327,7 @@
                     "id": "ENG_IDEN_TC_25",
                     "description": "Validate content on Reset Password Send OTP Page in English Language",
                     "tags": ""
-                }, 
+                },
                 {
                     "id": "ENG_IDEN_TC_26",
                     "description": "Validate content on Reset Password Send OTP Page in Spanish Language",
