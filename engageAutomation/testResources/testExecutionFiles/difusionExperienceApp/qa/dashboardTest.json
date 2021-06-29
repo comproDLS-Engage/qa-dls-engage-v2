@@ -9,7 +9,7 @@
             {
                 "id": "launchUrl",
                 "description": "",
-                "testFile": "./engageAutomation/core/launchUrl.js",
+                "testFile": "./engageAutomation/core/runner/launchUrl.js",
                 "testData": []
             },
             {
@@ -75,6 +75,12 @@
             },
             {
                 "id": "ENG_DASH_TC_6",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/dashboard.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_DASH_TC_8",
                 "description": "",
                 "testFile": "./test/engageExperienceApp/dashboard.test.js",
                 "testData": []
