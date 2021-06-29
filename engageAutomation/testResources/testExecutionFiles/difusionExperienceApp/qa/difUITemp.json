@@ -8,7 +8,7 @@
             {
                 "id": "launchUrl",
                 "description": "",
-                "testFile": "./engageQAAutomation/core/launchUrl.js",
+                "testFile": "./engageAutomation/core/runner/launchUrl.js",
                 "testData": []
             }
         ],
@@ -244,7 +244,7 @@
             {
                 "id": "launchUrl",
                 "description": "",
-                "testFile": "./engageQAAutomation/core/launchUrl.js",
+                "testFile": "./engageAutomation/core/runner/launchUrl.js",
                 "testData": []
             },
             {
@@ -344,7 +344,7 @@
             {
                 "id": "launchUrl",
                 "description": "",
-                "testFile": "./engageQAAutomation/core/launchUrl.js",
+                "testFile": "./engageAutomation/core/runner/launchUrl.js",
                 "testData": []
             },
             {
@@ -479,7 +479,7 @@
             {
                 "id": "launchUrl",
                 "description": "",
-                "testFile": "./engageQAAutomation/core/launchUrl.js",
+                "testFile": "./engageAutomation/core/runner/launchUrl.js",
                 "testData": []
             },
             {
