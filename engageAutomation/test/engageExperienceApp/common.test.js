@@ -22,5 +22,10 @@ module.exports = {
             logger.logInto(stackTrace.get(), res + " -- Snackbar Alert Not displayed");
         return res;
     },
+    clickMenuClass_btn: function () {
+        action.waitForDisplayed("[data-tid=button-classes]")
+        action.click("[data-tid=button-classes]")
+        //action.waitForDisplayed(this.myClassesTab);
+    },
     
 }

@@ -1,8 +1,5 @@
 node_modules
 package-lock.json
-engageQAAutomation/allure-results
-engageQAAutomation/logs
-engageQAAutomation/output/reports
 allure-results
 output
 logs
