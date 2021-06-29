@@ -9,7 +9,7 @@
             {
                 "id": "launchUrl",
                 "description": "",
-                "testFile": "./engageAutomation/core/launchUrl.js",
+                "testFile": "./engageAutomation/core/runner/launchUrl.js",
                 "testData": []
             }
         ],
@@ -56,7 +56,7 @@
             {
                 "id": "launchUrl",
                 "description": "",
-                "testFile": "./engageAutomation/core/launchUrl.js",
+                "testFile": "./engageAutomation/core/runner/launchUrl.js",
                 "testData": []
             }
         ],
