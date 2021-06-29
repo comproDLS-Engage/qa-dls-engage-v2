@@ -44,6 +44,13 @@
                 ]
             },
             {
+                "id": "ENG_DIF_TC_33",
+                "description": "Notifications pane",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.07,
+                "testData": []
+            },
+            {
                 "id": "ENG_DIF_TC_1",
                 "description": "View book page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
@@ -72,6 +79,13 @@
                 "testData": []
             },
             {
+                "id": "ENG_DIF_TC_31",
+                "description": "info popup on the Activity page",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.01,
+                "testData": []
+            },
+            {
                 "id": "ENG_DIF_TC_14",
                 "description": "Open classes sidebar on the view book page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
@@ -81,6 +95,13 @@
             {
                 "id": "ENG_DIF_TC_15",
                 "description": "Teacher view class page",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.07,
+                "testData": []
+            },
+            {
+                "id": "ENG_DIF_TC_32",
+                "description": "Assignment tab on teacher view class page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
                 "visualTolerance": 0.07,
                 "testData": []
@@ -96,6 +117,7 @@
                 "id": "ENG_DIF_TC_17",
                 "description": "Edit class page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.01,
                 "testData": []
             },
             {
@@ -282,6 +304,20 @@
                 "testData": []
             },
             {
+                "id": "ENG_DIF_TC_29",
+                "description": "Resource bank page",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.07,
+                "testData": []
+            },
+            {
+                "id": "ENG_DIF_TC_30",
+                "description": "Flipbook page",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.07,
+                "testData": []
+            },
+            {
                 "id": "ENG_DIF_TC_6",
                 "description": "Browse page with interactive activities tab",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
@@ -340,6 +376,13 @@
                 ]
             },
             {
+                "id": "ENG_DIF_TC_33",
+                "description": "Notifications pane",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.07,
+                "testData": []
+            },
+            {
                 "id": "ENG_DIF_TC_1",
                 "description": "View book page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
@@ -368,6 +411,13 @@
                 "testData": []
             },
             {
+                "id": "ENG_DIF_TC_31",
+                "description": "info popup on Activity page",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.01,
+                "testData": []
+            },
+            {
                 "id": "ENG_DIF_TC_14",
                 "description": "Open classes tab on the view book page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
@@ -384,13 +434,6 @@
             {
                 "id": "ENG_DIF_TC_4",
                 "description": "Browse page with books tab",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.07,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_5",
-                "description": "View book page (not added)",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
                 "visualTolerance": 0.07,
                 "testData": []
@@ -498,6 +541,20 @@
             {
                 "id": "ENG_DIF_TC_5",
                 "description": "View book page (not added)",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.07,
+                "testData": []
+            },
+            {
+                "id": "ENG_DIF_TC_29",
+                "description": "Resource bank page",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.07,
+                "testData": []
+            },
+            {
+                "id": "ENG_DIF_TC_30",
+                "description": "Flipbook page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
                 "visualTolerance": 0.07,
                 "testData": []

@@ -1,0 +1,141 @@
+{
+    "appname": "comproDLS Engage",
+    "appdetails": "",
+    "selectorFile": "./core/selectors/backOffice/backOfficeSelectors.json",
+    "modules": [
+        {
+            "modulename": "",
+            "moduledetails": "",
+            "testFile": "./test/backOffice/backOffice.test.js",
+            "testcase": [
+                {
+                    "id": "BK_TC_1",
+                    "description": "Validate that use is able to login to the back office application",
+                    "tags": "P1"
+                },
+                {
+                    "id": "BK_TC_2",
+                    "description": "Validate that add title page opens on clicking the add book button",
+                    "tags": "P1"
+                },
+                {
+                    "id": "BK_TC_3",
+                    "description": "Validate that new book is added on entering required details on the add title page",
+                    "tags": "P1"
+                },
+                {
+                    "id": "BK_TC_4",
+                    "description": "Validate that the components page is launched on clicking the book card on the home page",
+                    "tags": "P1"
+                },
+                {
+                    "id": "BK_TC_5",
+                    "description": "Validate that the delete book dialog box opens on clicking delete button on the components page",
+                    "tags": "P1"
+                },
+                {
+                    "id": "BK_TC_6",
+                    "description": "Validate that the book is deleted on clicking delete button in the dialog box",
+                    "tags": "P1"
+                },
+                {
+                    "id": "BK_TC_7",
+                    "description": "Validate that use is able to logout to the back office application",
+                    "tags": "P1"
+                },
+                {
+                    "id": "BK_TC_8",
+                    "description": "Validate that add component page opens on clicking the new component button",
+                    "tags": "P1"
+                },
+                {
+                    "id": "BK_TC_9",
+                    "description": "Validate that new component is added on entering required details on the add title page",
+                    "tags": "P1"
+                },
+                {
+                    "id": "BK_TC_10",
+                    "description": "Validate that the learning path page is launched on clicking the component card on the components page",
+                    "tags": "P1"
+                },
+                {
+                    "id": "BK_TC_11",
+                    "description": "Validate that add folder page opens on clicking the add folder button",
+                    "tags": "P1"
+                },
+                {
+                    "id": "BK_TC_12",
+                    "description": "Validate that new folder is added on entering required details on the add folder page",
+                    "tags": "P1"
+                },
+                {
+                    "id": "BK_TC_13",
+                    "description": "Validate that the sub-folder page is launched on clicking the folder on the learning path page",
+                    "tags": "P1"
+                },
+                {
+                    "id": "BK_TC_14",
+                    "description": "Validate that add learning objet page opens on clicking the add learning object button",
+                    "tags": "P1"
+                },
+                {
+                    "id": "BK_TC_15",
+                    "description": "Validate that new learning object is added on entering required details on the add learning object page",
+                    "tags": "P1"
+                },
+                {
+                    "id": "BK_TC_16",
+                    "description": "Validate that clicking on the Level 1 breadcrumb launches components page",
+                    "tags": "P1"
+                },
+                {
+                    "id": "BK_TC_17",
+                    "description": "Validate that the delete component dialog box opens on clicking delete button on the learning path page",
+                    "tags": "P1"
+                },
+                {
+                    "id": "BK_TC_18",
+                    "description": "Validate that the component is deleted on clicking delete button in the dialog box",
+                    "tags": "P1"
+                },
+                {
+                    "id": "BK_TC_19",
+                    "description": "Validate that the delete folder dialog box opens on clicking delete button on the sub-folder or activity page",
+                    "tags": "P1"
+                },
+                {
+                    "id": "BK_TC_20",
+                    "description": "Validate that the component is deleted on clicking delete button in the dialog box",
+                    "tags": "P1"
+                },
+                {
+                    "id": "BK_TC_21",
+                    "description": "Validate that the delete activity dialog box opens on clicking delete button in the activity menu",
+                    "tags": "P1"
+                },
+                {
+                    "id": "BK_TC_22",
+                    "description": "Validate that the activity is deleted on clicking delete button in the dialog box",
+                    "tags": "P1"
+                },
+                {
+                    "id": "BK_TC_23",
+                    "description": "Validate that clicking on the Level 3 breadcrumb launches learning path page",
+                    "tags": "P1"
+                }
+            ]
+        },
+        {
+            "modulename": "",
+            "moduledetails": "",
+            "testFile": "./test/backOffice/deleteLibraryAssets.js",
+            "testcase": [
+                {
+                    "id": "BK_DELETE_1",
+                    "description": "Delete LOs by 'External Tool paint'",
+                    "tags": "P1"
+                }
+            ]
+        }
+    ]
+}
