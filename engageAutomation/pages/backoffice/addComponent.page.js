@@ -14,6 +14,7 @@ module.exports = {
     categoryTypeList: selectorFile.addComponentPage.categoryTypeList,    
     addBtn: selectorFile.addComponentPage.addBtn,
     bannerText: selectorFile.common.bannerText,
+    bannerCloseBtn: selectorFile.common.bannerCloseBtn,
 
     isInitialized: function () {
         logger.logInto(stackTrace.get());
@@ -93,8 +94,7 @@ module.exports = {
             res = action.click(this.addBtn);
             if (res == true) {
                 action.waitForDisplayed(this.bannerText);
-                action.waitForDisplayed(this.bannerText, undefined, true);
-                action.waitForDisplayed(this.bannerText);
+                //action.click(this.bannerCloseBtn);
                 res = action.getText(this.bannerText);
             }
         }

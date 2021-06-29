@@ -49,6 +49,15 @@
 				"snackbarInfo_txt": "[data-tid=text-error], [data-tid=text-info], [data-tid=text-success]",
 				"snackbarClose_btn": "[data-tid=button-close]"
 			},
+			"dashboardPage": {
+				"pageTitle": "[data-tid=text-pageTitle]",
+				"resourceList": "[data-tid*=item-globalresource-",
+				"resourceTitle": "//div[@data-tid=\"item-globalresource-"
+			},
+			"browsePage":{
+				"pageTitle": "[data-tid=text-pageTitle]",
+				"tabList":"[data-tid*=button-product-"
+			},
 			"myClassPage": {
 				"pageTitle": "main h1",
 				"pageSubTitle": "main div>span",
@@ -124,5 +133,6 @@
 				"moreOption":"[data-tid=button-classOptions]"
 			}
 		}
+		
 	}
 }

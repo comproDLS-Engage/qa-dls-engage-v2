@@ -399,6 +399,49 @@
                     "tags": ""
                 }
             ]
+        },
+        {
+            "modulename": "Dashboard",
+            "moduledetails": "",
+            "testFile": "./test/engageExperienceApp/dashboard.test.js",
+            "testcase": [
+                {
+                    "id": "ENG_DASH_TC_1",
+                    "description": "Validate on clicking Interactive Activities resource in Explore menu, same tab is launched on Browse",
+                    "tags": "P2",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_DASH_TC_2",
+                    "description": "Validate on clicking Videos resource in Explore menu, same tab is launched on Browse",
+                    "tags": "P2",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_DASH_TC_3",
+                    "description": "Validate on clicking Online Classes resource in Explore menu, same tab is launched on Browse",
+                    "tags": "P2",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_DASH_TC_4",
+                    "description": "Validate on clicking Teacher Training resource in Explore menu, same tab is launched on Browse",
+                    "tags": "P2",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_DASH_TC_5",
+                    "description": "Validate on clicking Today In Class resource in Explore menu, same tab is launched on Browse",
+                    "tags": "P2",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_DASH_TC_6",
+                    "description": "Validate on clicking Projectable resource in Explore menu, same tab is launched on Browse",
+                    "tags": "P2",
+                    "visualTest": true
+                }
+            ]
         }
     ]
 }

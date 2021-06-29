@@ -1,12 +1,12 @@
 {
     "appname": "comproDLS Engage",
     "appdetails": "",
-    "selectorFile": "./core/selectors/backOffice/backOfficeSelectors.json",
+    "selectorFile": "./testResources/selectors/backoffice/backofficeSelectors.json",
     "modules": [
         {
             "modulename": "",
             "moduledetails": "",
-            "testFile": "./test/backOffice/backOffice.test.js",
+            "testFile": "./test/backoffice/backoffice.test.js",
             "testcase": [
                 {
                     "id": "BK_TC_1",
@@ -122,17 +122,10 @@
                     "id": "BK_TC_23",
                     "description": "Validate that clicking on the Level 3 breadcrumb launches learning path page",
                     "tags": "P1"
-                }
-            ]
-        },
-        {
-            "modulename": "",
-            "moduledetails": "",
-            "testFile": "./test/backOffice/deleteLibraryAssets.js",
-            "testcase": [
+                },
                 {
-                    "id": "BK_DELETE_1",
-                    "description": "Delete LOs by 'External Tool paint'",
+                    "id": "BK_TC_24",
+                    "description": "Validate that clicking on the back button moved to previous page",
                     "tags": "P1"
                 }
             ]

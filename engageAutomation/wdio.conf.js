@@ -6,19 +6,23 @@ const { TimelineService } = require('wdio-timeline-reporter/timeline-service');
 const specGenerator = require(process.cwd() + '/core/runner/specGenerator.js')
 const visualTimelineReportService = require('./core/utils/visual-report-utility/report-service').TimelineService;
 var visualReportService = new visualTimelineReportService();
-var WebDriverService = 'chromedriver';
-var portNumber = 4444;
-var webServicePath = '/';
 var retryTimes = 0;
 
-// setting some wdio parameters if device name is provided
-if (argv.deviceName) {
-    WebDriverService = 'appium';
-    portNumber = 4723;
-    webServicePath = '/wd/hub';
-}
 if (argv.retry)
     retryTimes = 1;
+
+var hostname = global.capabilitiesFile[argv.capability].hostname;
+var portNumber = global.capabilitiesFile[argv.capability].portNumber;
+var webServicePath = global.capabilitiesFile[argv.capability].webServicePath;
+var webDriverService = global.capabilitiesFile[argv.capability].webDriverService;
+var user = global.capabilitiesFile[argv.capability].user;
+var key = global.capabilitiesFile[argv.capability].key;
+
+if (argv.capability.includes("bstack")) { //setting wdio params for browserstack
+    var browserstack = require('browserstack-local');
+    var browserstackLocal = true;
+    var updateJob = false;
+}
 
 // setting parameters for novus service
 var NovusService = [
@@ -33,6 +37,7 @@ var NovusService = [
         })
     }
 ];
+
 function getScreenshotName(basePath) {
     return function (context) {
         if (context.test.file.indexOf("/") >= 0)
@@ -45,6 +50,7 @@ function getScreenshotName(basePath) {
     }
 };
 
+
 exports.config = {
     //
     // ====================
@@ -53,10 +59,30 @@ exports.config = {
     //
     // WebdriverIO allows it to run your tests in arbitrary locations (e.g. locally or
     // on a remote machine).
-    runner: 'local',
+    //runner: 'local',
+    //
+    // =====================
+    // Server Configurations
+    // =====================
+    // Host address of the running Selenium server. This information is usually obsolete, as
+    // WebdriverIO automatically connects to localhost. Also if you are using one of the
+    // supported cloud services like Sauce Labs, Browserstack, Testing Bot or LambdaTest, you also don't
+    // need to define host and port information (because WebdriverIO can figure that out
+    // from your user and key information). However, if you are using a private Selenium
+    // backend, you should define the `hostname`, `port`, and `path` here.
+    //
+    hostname: hostname,
+    port: portNumber,
+    path: webServicePath,
+    // Protocol: http | https
+    // protocol: 'http',
+    //
+    user: user,
+    key: key,
+    browserstackLocal: browserstackLocal,
+    updateJob: updateJob,
     //
     // Override default path ('/wd/hub') for chromedriver service.
-    path: webServicePath,
     //
     // ==================
     // Specify Test Files
@@ -149,7 +175,13 @@ exports.config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: [[TimelineService], NovusService, WebDriverService],
+    services: argv.capability ? [
+        [TimelineService], webDriverService, NovusService
+    ] : argv.deviceName ? [
+        [TimelineService], webDriverService, NovusService
+    ] : [
+        [TimelineService], 'chromedriver', NovusService, webDriverService
+    ],
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
     // see also: https://webdriver.io/docs/frameworks.html
@@ -218,8 +250,21 @@ exports.config = {
      */
     onPrepare: function (config, capabilities) {
         specGenerator.fileArrayGenerator(); //generating specs
-        if (argv.visual){
-             visualReportService.onPrepare();    //initiating visualReportService
+        if (argv.visual) {
+            visualReportService.onPrepare();    //initiating visualReportService
+        }
+
+        if (browserstackLocal == true) { //connecting to browserstack
+            console.log("Connecting local");
+            return new Promise(function (resolve, reject) {
+                exports.bs_local = new browserstack.Local();
+                //console.log(exports.config.key)
+                exports.bs_local.start({ 'key': exports.config.key }, function (error) {
+                    if (error) return reject(error);
+                    console.log('Connected. Now testing...');
+                    resolve();
+                });
+            })
         }
     },
     /**
@@ -318,10 +363,13 @@ exports.config = {
      */
     onComplete: function (exitCode, config, capabilities, results) {
         //require('./core/utils/reportUpdater.js').indexFileUpdate();
-        specGenerator.removingTempSpecs(); 
+        specGenerator.removingTempSpecs();
         if (argv.visual) {
             visualReportService.onComplete();
         }
+
+        if (argv.capability.includes("bstack"))
+            exports.bs_local.stop();
     },
     /**
      * Gets executed when a refresh happens.

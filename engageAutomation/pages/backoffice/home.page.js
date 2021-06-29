@@ -28,8 +28,8 @@ module.exports = {
 
     isInitialized: function () {
         logger.logInto(stackTrace.get());
-        //action.waitForDocumentLoad();
-        action.waitForDisplayed(this.loadingContainer);
+        // /action.waitForDocumentLoad();
+        action.waitForDisplayed(this.userName);
         action.waitForDisplayed(this.loadingContainer, undefined, true);
         res = action.getText(this.userName);
         return res;
@@ -60,6 +60,7 @@ module.exports = {
         logger.logInto(stackTrace.get());
         res = null;
         let i, list;
+        action.waitForDisplayed(this.bookList);
         list = action.findElements(this.bookList);
         for (i = 0; i < list.length; i++) {
             if (action.getText(list[i]) == name) {

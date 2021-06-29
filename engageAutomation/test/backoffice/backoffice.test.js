@@ -22,7 +22,7 @@ module.exports = {
 		sts = loginPage.set_Password(testdata.password);
 		assertion.assertEqual(sts, true, "Password status mismatch");
 		sts = loginPage.click_Login_Button();
-		//assertion.assertEqual(sts, testdata.name, "Name mismatch");
+		assertion.assertEqual(sts, testdata.name, "Name mismatch");
 	},
 
 	// Validate that add title page opens on clicking the add book button
@@ -72,7 +72,7 @@ module.exports = {
 
 	// Validate that add component page opens on clicking the new component button and proceed button
 	BK_TC_8: function (testdata) {
-		sts = viewBookPage.click_NewComponent_Button();
+		sts = viewBookPage.click_AddComponent_Button();
 		assertion.assertEqual(sts, true, "Add component options status mismatch");
 		sts = viewBookPage.select_ComponentType_and_Proceed(testdata.type);
 		assertion.assertEqual(sts, true, "Add component page status mismatch");
@@ -89,8 +89,8 @@ module.exports = {
 		sts = addCompPage.select_CategoryType(testdata.category);
 		assertion.assertEqual(sts, true, "Category status mismatch");
 		sts = addCompPage.click_Add_Button();
-		assertion.assert((typeof sts === "string" && sts.includes("Component \"" + testdata.title + "\" is created")), "Banner messsage mismatch. " + sts);
-		//assertion.assert(sts.includes("Automation Test component"), "Snackbar messsage mismatch.");
+		//assertion.assert((typeof sts === "string" && sts.includes("Component \"" + testdata.title + "\" is created")), "Banner messsage mismatch. " + sts);
+		assertion.assert((typeof sts === "string" && sts.includes("Your new Component is being setup.")), "Banner messsage mismatch. " + sts);
 	},
 
 	// Validate that the learning path page is launched on clicking the component card
@@ -188,5 +188,10 @@ module.exports = {
 		assertion.assertEqual(sts.title, testdata.title, "Options title mismatch");
 		assertion.assertEqual(sts.description, testdata.description, "Options description mismatch");
 		assertion.assertEqual(sts.folderLevel, testdata.folderLevel, "Options learning path level mismatch");
+	},
+	// Validate that clicking on the back button moves to previous page
+	BK_TC_24: function (testdata) {
+		sts = common.click_Back_Button();
+		assertion.assertEqual(sts, true, "Move to previous page status mismatch");
 	},
 }
