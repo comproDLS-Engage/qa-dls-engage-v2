@@ -25,9 +25,8 @@
                 "dontHaveAccount_txt": "Don't have an account?",
                 "loginoption_txt": "Or continue with:",
                 "footerLabel": "powered by",
-                "invalidEmail_txt": "Invalid Email Address.",
-                "notRegisterUser_alert": "The email you provided does not exist in our records. In case you have previously signed up using your social account, try logging in via the same provider.",
-                "invalidEmail_alert": "Incorrect username or password."
+                "invalidEmail_txt": "Please check your email address and try again.",
+                "notRegisterUser_alert": "Please check your email address and password and try again."
             }
        
         }

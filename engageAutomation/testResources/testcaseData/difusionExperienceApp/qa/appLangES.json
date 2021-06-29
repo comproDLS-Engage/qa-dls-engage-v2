@@ -2,7 +2,6 @@
     "engage": {
         "appContent": {
             "language": "ES - Español",
-          
             "landing": {
                 "headingText": "Un espacio para todo tu aprendizaje.",
                 "subheadingText": "Aprenda desde cualquier lugar y en cualquier momento. Acceso instantáneo a todos los cursos y actividades.",
@@ -25,9 +24,8 @@
                 "dontHaveAccount_txt": "¿No tienes una cuenta?",
                 "loginoption_txt": "O continúe con:",
                 "footerLabel": "powered by",
-                "invalidEmail_txt": "Dirección de correo electrónico no válida.",
-                "notRegisterUser_alert": "El correo electrónico que proporcionó no existe en nuestros registros. En caso de que se haya registrado anteriormente con su cuenta social, intente iniciar sesión a través del mismo proveedor.\nCerca",
-                "invalidEmail_alert": "Nombre de usuario o contraseña incorrecta.\nClose"
+                "invalidEmail_txt": "Compruebe su dirección de correo electrónico y vuelva a intentarlo.",
+                "notRegisterUser_alert": "Verifique su dirección de correo electrónico y contraseña y vuelva a intentarlo."
             }
         }
     }
