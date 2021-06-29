@@ -26,28 +26,7 @@ module.exports = {
     languageSelector_image: selectorFile.css.ComproEngage.landingPage.selectedLangImg,
     languageSelector_dropdown: selectorFile.css.ComproEngage.landingPage.languageSelector_dropdown,
     invalidEmail_txt: selectorFile.css.ComproEngage.loginPage.invalidEmail_txt,
-    //otp
-    sendOTPToReset_btn: selectorFile.css.ComproEngage.loginPage.sendOTPToReset_btn,
-    cancelandGoBack_btn: selectorFile.css.ComproEngage.loginPage.cancelandGoBack_btn,
-    //Reset Password
-    resetPassword_title: selectorFile.css.ComproEngage.loginPage.resetPassword_Heading,
-    resetPassword_subHeading: selectorFile.css.ComproEngage.loginPage.resetPassword_subHeading,
-    resetPassword_subHeading2: selectorFile.css.ComproEngage.loginPage.resetPassword_subHeading2,
-    verificationCode_lbl: selectorFile.css.ComproEngage.loginPage.resetPassword_verificationCode_lbl,
-    verificationCode_txtBox: selectorFile.css.ComproEngage.loginPage.resetPassword_verificationCode_txtBox,
-    newPassword_lbl: selectorFile.css.ComproEngage.loginPage.resetPassword_newPassword_lbl,
-    newPassword_txtBox: selectorFile.css.ComproEngage.loginPage.resetPassword_newPassword_txtBox,
-    confirmPassword_lbl: selectorFile.css.ComproEngage.loginPage.confirmPassword_lbl,
-    confirmPassword_txtBox: selectorFile.css.ComproEngage.loginPage.confirmPassword_txtBox,
-    toggle_ConfirmPasswordVisibility_btn: selectorFile.css.ComproEngage.loginPage.toggle_ConfirmPasswordVisibility_btn,
-    changePassword: selectorFile.css.ComproEngage.loginPage.changePassword,
-    resendTimer: selectorFile.css.ComproEngage.loginPage.resendTimer,
-    resendOTP: selectorFile.css.ComproEngage.loginPage.resendOTP,
-    invalidVerificationCode_txt: selectorFile.css.ComproEngage.loginPage.invalidVerificationCode_txt,
-    passwordRules_txt: selectorFile.css.ComproEngage.loginPage.passwordRules_txt,
-    passwordMismatch: selectorFile.css.ComproEngage.loginPage.passwordMismatch,
-    snackbarInfo_txt: selectorFile.css.ComproEngage.widgets.snackbarInfo_txt,
-    snackbarClose_btn: selectorFile.css.ComproEngage.widgets.snackbarClose_btn,
+    loginbtnState:selectorFile.css.ComproEngage.loginPage.loginbtnState,
 
     isInitialized: function () {
         logger.logInto(stackTrace.get());
@@ -56,7 +35,6 @@ module.exports = {
         let pageStatus = action.waitForDisplayed(this.userName_tbox);
         res = this.login_PageData();
         res.pageStatus = pageStatus;
-        // console.log(res)
         return res;
     },
 
@@ -74,7 +52,7 @@ module.exports = {
             facebook_btn: (action.getElementCount(this.facebook_btn) > 0) ? action.getText(this.facebook_btn) : null,
             facebookbtn_icon: (action.getElementCount(this.facebookbtn_icon) > 0) ? action.waitForDisplayed(this.facebookbtn_icon) : false,
             login_btn: (action.getElementCount(this.login_btn) > 0) ? action.getText(this.login_btn) : null,
-            login_btn_Disabled: (action.getElementCount(this.login_btn) > 0) ? !(action.isEnabled(this.login_btn)) : null,
+            login_btn_Disabled: (action.getElementCount(this.login_btn)) ? (action.waitForExist(this.loginbtnState)) : false,
             forgotPassword: (action.getElementCount(this.forgotPassword) > 0) ? action.getText(this.forgotPassword) : null,
             signup: (action.getElementCount(this.signup) > 0) ? action.getText(this.signup) : null,
             dontHaveAccount_txt: (action.getElementCount(this.dontHaveAccount_txt) > 0) ? action.getText(this.dontHaveAccount_txt) : null,
