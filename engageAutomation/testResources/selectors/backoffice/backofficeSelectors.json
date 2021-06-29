@@ -24,8 +24,11 @@
 		"breadcrumbLevel2": "[class=c-page-header__bread-crumbs] div:nth-child(2)",
 		"breadcrumbLevel3": "[class=c-page-header__bread-crumbs] div:nth-child(3)",
 		"backBtn": "[data-tid=button-goback]",
+		"pageContent": "[class=c-page__content]",
 		"goBackBtn": "button[data-ng-click=closewindow()]",
-		"bannerText": "[class*=mdc-banner__text]"
+		"bannerText": "[class*=mdc-banner__text]",
+		"bannerCloseBtn": "[class=c-banner__close]",
+		"proceedBtn": "[data-tid=button-item-type-launch] div"
 	},
 	"homePage": {
 		"userName": "[class*=c-user-name]",
@@ -60,7 +63,7 @@
 		"createTitleBtn": "[class*=c-create-book] button"
 	},
 	"addComponentPage": {
-		"titleTxtbox": "[id=Title]",
+		"titleTxtbox": "[id=Name]",
 		"categoryTypeDropdown": "[class*=c-create-component__form__category-types] [class*=mdc-select__anchor]",
 		"categoryTypeList": "[class*=mdc-menu-surface--open] [class*=mdc-list-item__text]",
 		"lpLevelsDropdown": "[class=c-form-section] > div:nth-child(3) > div",
@@ -78,7 +81,6 @@
 		"publishBtn": "[data-tid=button-publish-book-component]",
 		"deleteComponentBtn": "[data-tid=button-delete-component]",
 		"activityTypeList": "[class=c-radio-label]",
-		"proceedBtn": "[data-tid=button-item-type-launch] div",
 		"activityMenuBtn": "[data-tid=button-display-activity-menu]",
 		"activityMenuDeleteBtn": "[class*=mdc-menu-surface--open] [data-tid=button-Delete]"
 	},
@@ -102,5 +104,9 @@
 		"endDate": "[data-tid=input-end-date-for-generate-codes] input",
 		"codeLimitTxtbox": "[data-tid=input-code-limit-for-generate-codes] input",
 		"generateBtn": "[class=c-form-section] button"
+	},
+	"assessmentAuthorApp": {
+		"saveAndReturnBtn": "[data-tid=button-saveandreturn]",
+		"mcqBtn": "[data-tid=button-mutiplechoice]"
 	}
 }

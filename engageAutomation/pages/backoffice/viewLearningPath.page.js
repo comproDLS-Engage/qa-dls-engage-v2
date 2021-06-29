@@ -12,9 +12,10 @@ module.exports = {
     dialogContent: selectorFile.common.dialogContent,
     deleteComponentBtn: selectorFile.viewLearningPathPage.deleteComponentBtn,
     activityTypeList: selectorFile.viewLearningPathPage.activityTypeList,
-    proceedBtn: selectorFile.viewLearningPathPage.proceedBtn,
+    proceedBtn: selectorFile.common.proceedBtn,
     activityMenuBtn: selectorFile.viewLearningPathPage.activityMenuBtn,
     activityMenuDeleteBtn: selectorFile.viewLearningPathPage.activityMenuDeleteBtn,
+    emptyStateBtn: selectorFile.viewLearningPathPage.emptyStateBtn,
 
     isInitialized: function () {
         logger.logInto(stackTrace.get());
@@ -27,7 +28,13 @@ module.exports = {
 
     click_AddFolder_Button: function () {
         logger.logInto(stackTrace.get());
-        let res = action.click(this.addFolderBtn);
+        let res;
+        if (action.isClickable(this.emptyStateBtn)) {
+            res = action.click(this.emptyStateBtn);
+        }
+        else {
+            res = action.click(this.addFolderBtn);
+        }
         if (res == true) {
             res = require('./addFolder.page.js').isInitialized();
         }
@@ -37,7 +44,13 @@ module.exports = {
 
     click_AddActivity_Button: function () {
         logger.logInto(stackTrace.get());
-        res = action.click(this.addActivityBtn);
+        let res;
+        if (action.isClickable(this.emptyStateBtn)) {
+            res = action.click(this.emptyStateBtn);
+        }
+        else {
+            res = action.click(this.addActivityBtn);
+        }
         if (res == true) {
             res = action.waitForDisplayed(this.proceedBtn);
         }
@@ -85,7 +98,7 @@ module.exports = {
 
     select_ActivityType_and_Proceed: function (type) {
         logger.logInto(stackTrace.get());
-        res = null;
+        let res = null;
         let i, list;
         list = action.findElements(this.activityTypeList);
         for (i = 0; i < list.length; i++) {

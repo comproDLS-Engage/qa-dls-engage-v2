@@ -122,6 +122,11 @@
                     "id": "BK_TC_23",
                     "description": "Validate that clicking on the Level 3 breadcrumb launches learning path page",
                     "tags": "P1"
+                },
+                {
+                    "id": "BK_TC_24",
+                    "description": "Validate that clicking on the back button moved to previous page",
+                    "tags": "P1"
                 }
             ]
         }

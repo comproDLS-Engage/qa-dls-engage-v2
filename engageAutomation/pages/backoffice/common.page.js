@@ -12,6 +12,10 @@ module.exports = {
     breadcrumbLevel1: selectorFile.common.breadcrumbLevel1,
     breadcrumbLevel2: selectorFile.common.breadcrumbLevel2,
     loadingContainer: selectorFile.common.loadingContainer,
+    backBtn: selectorFile.common.backBtn,
+    pageContent: selectorFile.common.pageContent,
+    menuBtn: selectorFile.common.menuBtn,
+    signOutBtn: selectorFile.common.signOutBtn,
 
     click_confirmDialog_Button: function () {
         logger.logInto(stackTrace.get());
@@ -20,6 +24,16 @@ module.exports = {
             res = action.waitForDisplayed(this.snackbarLbl);
             res = action.getText(this.snackbarLbl);
             action.click(this.snackbarBtn);
+        }
+        logger.logInto(stackTrace.get(), res);
+        return res;
+    },
+
+    click_Back_Button: function () {
+        logger.logInto(stackTrace.get());
+        res = action.click(this.backBtn);
+        if (res == true) {
+            res = action.waitForDisplayed(this.pageContent);
         }
         logger.logInto(stackTrace.get(), res);
         return res;

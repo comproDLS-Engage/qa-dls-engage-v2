@@ -8,7 +8,7 @@ module.exports = {
     addComponentBtn: selectorFile.viewBookPage.addComponentBtn,
     componentList: selectorFile.viewBookPage.componentList,
     componentTypeList: selectorFile.viewBookPage.componentTypeList,
-    proceedBtn: selectorFile.viewBookPage.proceedBtn,
+    proceedBtn: selectorFile.common.proceedBtn,
     loadingContainer: selectorFile.common.loadingContainer,
 
     isInitialized: function () {
