@@ -29,7 +29,6 @@
 				"forgotPassword": "[data-tid=anchor-forgotpassword]",
 				"signup": "[data-tid=anchor-signup]",
 				"loginPassword_eye": "[data-tid=button-togglepasswordvisibility] svg",
-
 				"login_tbox_lbl": "[data-tid=label-email]",
 				"pswrd_tbox_lbl": "[data-tid=label-password]",
 				"brandLogo": "[data-tid=image-brandlogo]",
@@ -41,9 +40,7 @@
 				"emailPasswordError": "[data-tid=text-info]",
 				"loginbtnState": "button[class*='TwtyK']"
 			},
-			"SignUpPage": {
-				
-			},
+			"SignUpPage": {},
 			"widgets": {
 				"loaderIcon": "[data-tid=image-loader]",
 				"snackbarInfo_txt": "[data-tid=text-error], [data-tid=text-info], [data-tid=text-success]",
@@ -52,11 +49,17 @@
 			"dashboardPage": {
 				"pageTitle": "[data-tid=text-pageTitle]",
 				"resourceList": "[data-tid*=item-globalresource-",
-				"resourceTitle": "//div[@data-tid=\"item-globalresource-"
+				"resourceTitle": "//div[@data-tid=\"item-globalresource-",
+				"bookTitle": "[data-tid*=text-bookTitle-",
+				"bookEllipses":"[data-tid*=button-contextMenu-",
+				"viewClass_menu":"[data-tid*=button-viewClass-",
+				"createClass_menu":"[data-tid*=button-createClass-",
+				"removeBook_menu":"[data-tid*=button-remove-",
+				"openFlipbook_menu":"[data-tid*=button-openFlipbook-"
 			},
-			"browsePage":{
+			"browsePage": {
 				"pageTitle": "[data-tid=text-pageTitle]",
-				"tabList":"[data-tid*=button-product-"
+				"tabList": "[data-tid*=button-product-"
 			}
 		}
 	}
