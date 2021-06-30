@@ -12,7 +12,10 @@ global.jsonParserUtil = require('./core/utils/jsonParser.js');
 global.assertion = require('./core/actionLibrary/baseAssertionLibrary.js');
 global.loadashget = require('lodash.get');
 global.stackTrace = require('stack-trace');
-global.resolution = undefined;
+global.resolution = {
+    width: undefined,
+    height: undefined
+};
 global.view = undefined;
 global.build = argv.buildNumber;
 global.jobName = argv.jobName;
@@ -77,12 +80,11 @@ else {
         process.exit(1);
     }
     global.capabilities = capabilitiesFile[argv.browserCapability].capabilities;
-    global.resolution = argv.browserCapability;
     global.resScreenshotDir = argv.browserCapability;
-    let browserWidth = argv.browserCapability.split("-")[2].trim();
-    //currently browserWidth is only used in visualTest.js to choose labels
-    if (parseInt(browserWidth, 10) > 1023)
-        global.view = 'desktop'; 
+    global.resolution.width = capabilitiesFile[argv.browserCapability].resolution.split("x")[0].trim();
+    global.resolution.height = capabilitiesFile[argv.browserCapability].resolution.split("x")[1].trim();
+    if (parseInt(global.resolution.width, 10) > 1023)
+        global.view = 'desktop';
     else
         global.view = 'mobile';
 }

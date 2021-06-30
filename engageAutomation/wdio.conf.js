@@ -248,20 +248,6 @@ exports.config = {
         if (argv.visual) {
             visualReportService.onPrepare();    //initiating visualReportService
         }
-
-        if (browserstackLocal == true) { //connecting to browserstack
-            console.log("Connecting local...");
-            var browserstack = require('browserstack-local');
-            return new Promise(function (resolve, reject) {
-                exports.bs_local = new browserstack.Local();
-                //console.log(exports.config.key)
-                exports.bs_local.start({ 'key': exports.config.key }, function (error) {
-                    if (error) return reject(error);
-                    console.log('Connected. Now testing...');
-                    resolve();
-                });
-            })
-        }
     },
     /**
      * Gets executed just before initialising the webdriver session and test framework. It allows you
@@ -363,9 +349,6 @@ exports.config = {
         if (argv.visual) {
             visualReportService.onComplete();
         }
-
-        if (argv.browserCapability.includes("bstack"))
-            exports.bs_local.stop();
     },
     /**
      * Gets executed when a refresh happens.
