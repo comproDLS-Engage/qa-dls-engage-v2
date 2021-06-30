@@ -2,7 +2,7 @@
     "backoffice": {
         "book": [
             {
-                "name": "QA Automation Test book",
+                "name": "Quality Test Book 5",
                 "coverImage": "./testResources/testcaseData/backOffice/qa/book_cover_140_2.png",
                 "description": "QA test description"
             }
@@ -18,7 +18,7 @@
             {
                 "type": "Bank",
                 "category": "Resources",
-                "title": "QA Test Bank - Resources",
+                "title": "QA Test Bank - resources",
                 "folderLevel": "2",
                 "autonumbering": "0-based"
             }
@@ -36,11 +36,11 @@
         "activity": [
             {
                 "type": "Native Engage Learning Object",
-                "name": "QA Test LO1 - Native"
+                "name": "QA Test LO1 - native"
             },
             {
                 "type": "Close Ended Learning Object",
-                "name": "QA Test LO2 - Close Ended"
+                "name": "QA Test LO2 - close ended"
             }
         ]
     }
