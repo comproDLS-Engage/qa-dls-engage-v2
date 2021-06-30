@@ -1,0 +1,91 @@
+{
+	"css": {
+		"quizpage": {
+			"setup_tab": "[data-tid=tab-setup]",
+			"nextbtn": "[data-tid='button-next']",
+			"questions_tab": "[data-tid=tab-questions]",
+			"editor_tab": "[data-tid=tab-editor]",
+			"previewPublish_tab": "[data-tid=tab-previewnpublish]",
+			"title_txtbox": "[data-tid=input-title] input",
+			"ok_btn": "[data-tid=button-ok]",
+			"itemPlayer_btn": "[data-tid=button-"
+		},
+		"editorTab": {
+			"questionHeader": "h5[class*=MuiTypography-noWrap]",
+			"panel1Name": "[data-tid=button-toggleansweraccordion] h6",
+			"quesTitleLbl": "[for=\"question-title-input\"]",
+			"quesTitleInput": "[data-tid=input-questiontitle] input",
+			"addInstructionBtn": "[data-tid=button-addinstruction]",
+			"instructionLbl": "[data-tid=button-addinstruction]",
+			"mediaLbl": "[for=\"question-media-input\"]",
+			"addVideoBtn": "[data-tid=button-addvideo]",
+			"addImageBtn": "[data-tid=button-addimage]",
+			"addAudioBtn": "[data-tid=button-addaudio]",
+			"quesTextTxtbox": "[class=DraftEditor-editorContainer] span span",
+			"panel2Name": "[data-tid=\"button-toggleansweraccordion\"]",
+			"option1": "[data-tid*=input-option-1]",
+			"option2": "[data-tid*=input-option-2]",
+			"option3": "[data-tid*=input-option-3]",
+			"addAnswerBtn": "[data-tid=button-addoption]",
+			"drawerQuestion": "[data-tid=drawer-question-",
+			"questionType_header": "header h5",
+			"questionAccordionText": "[data-tid=button-togglequestionaccordion] h6",
+			"answerAccordionText": "[data-tid=button-toggleansweraccordion] h6",
+			"scoringAccordionText": "[data-tid=button-togglescoringaccordion] h6",
+			"hintAccordionText": "[data-tid=button-togglehintsaccordion] h6",
+			"addQuestion_btn": "[data-tid=button-addquestion]",
+			"ok_btn": "[data-tid=button-ok]",
+			"itemPlayer_btn": "[data-tid=button-",
+			"addQuestionGrid": "div[class*=gridContainer] div div p",
+			"questionTitle_input": "[data-tid=input-questiontitle] input",
+			"addInstruction_btn": "[data-tid=button-addinstruction]",
+			"instruction_input": "[data-tid=input-instruction] input",
+			"addVideo_btn": "[data-tid=button-addvideo]",
+			"videoURL_input": "[data-tid=input-videourl] input",
+			"videoCredit_input": "[data-tid=input-videocredit] input",
+			"media_input": "[type=file]",
+			"addImage_btn": "[data-tid=button-addimage]",
+			"uploadedImage": "[data-tid=image-preview-container] img",
+			"imageCredit_input": "[data-tid=input-imagecredit] input",
+			"addAudio_btn": "[data-tid=button-addaudio]",
+			"uploadedAudio": "[data-tid=sliderContainer]",
+			"audioCredit_input": "[data-tid=input-audiocredit] input",
+			"questionInputField": "[class=DraftEditor-editorContainer] span span",
+			"addAnswer_btn": "[data-tid=button-addoption]",
+			"inputOptions": "[data-tid*=input-option-",
+			"optionStyle_radio": "[data-tid=radio-optionstyle-",
+			"preview_btn": "[data-tid=button-preview]",
+			"multipleResponse": {
+				"checkboxOption_input": "[data-tid=checkbox-option-"
+			},
+			"DND": {
+				"addLabel_btn": "[data-tid=button-addlabel]",
+				"addImage_btn": "[data-tid=button-browseimage]",
+				"container_labelA": "[data-tid=container-label-A]",
+				"container_labelB": "[data-tid=container-label-B]",
+				"container_labelC": "[data-tid=container-label-C]",
+				"container_labelD": "[data-tid=container-label-D]",
+				"container_labelE": "[data-tid=container-label-E]"
+			},
+			"DND_image": {
+				"addBlank_btn": "[data-tid=button-addblank]",
+				"questionText_input": "[data-tid=input-questiontext]"
+			},
+			"matching": {
+				"inputItem": "[data-tid=input-item-",
+				"inputMatchedItem": "[data-tid=input-matcheditem-",
+				"addPair": "[data-tid=button-add]"
+			},
+			"classify": {
+				"group_input": "[data-tid*=input-group-",
+				"options_input": "[data-tid*=input-option-",
+				"addGroup_btn": "[data-tid=button-addgroup]",
+				"addOption_btn": "[data-tid=button-addoption]",
+				"setGroup_dropdown": "[class=libs-classify-item-editor-MuiSelect-nativeInput]"
+			},
+			"fib": {
+				"fibAnswerOption": "[data-tid*=input-option-"
+			}
+		}
+	}
+}
