@@ -157,6 +157,29 @@
 				"copy_txt": "[data-tid='text-copy']",
 				"copy_btn": "[data-tid='button-copy']"
 			},
+			"teacherViewClassPage": {
+				"pageTitle": "[data-tid=text-pageTitle]",
+				"gradebookBtn": "[data-tid=button-gradebook]",
+				"classOptionsBtn": "[data-tid=button-classOptions]",
+				"dataSubtitle": "[data-tid=text-pageSubtitle]",
+				"productList": "[data-tid*=button-product-",
+				"inboxTab": "[data-tid=button-product-0]",
+				"assignmentsTab": "[data-tid=button-product-1]",
+				"studentsTab": "[data-tid=button-product-2]",
+				"bookCoverImg": "[data-tid=image-classBookCover]",
+				"bookTitleTxt": "[data-tid=text-classBookTitle]]",
+				"bookSubtitleTxt": "[data-tid=text-classBookSubtitle]",
+				"viewBookBtn": "[data-tid=button-classViewBook]",
+				"bookComponentNamesBtns": "[data-tid*=text-classBookProduct-",
+				"usingClasses_lbl": "[data-tid=MISSING]",
+				"usingClassesByline_lbl": "[data-tid=MISSING]",
+				"inviteStudents_btn": "[data-tid=MISSING]",
+				"createAssignments_btn": "[data-tid=MISSING]",
+				"createAssignment_lbl": "[data-tid=MISSING]",
+				"createAssignmentByline_lbl": "[data-tid=MISSING]",
+				"noInboxActivity_lbl": "[data-tid=MISSING]",
+				"noInboxActivityByline_lbl": "[data-tid=MISSING]"
+			},
 			"classDashboard":{
 				"moreOption":"[data-tid=button-classOptions]"
 			}
