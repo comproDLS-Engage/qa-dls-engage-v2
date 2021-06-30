@@ -7,11 +7,10 @@ module.exports = {
     pageTitle: selectorFile.css.ComproEngage.teacherViewClassPage.pageTitle,
     gradebookBtn: selectorFile.css.ComproEngage.teacherViewClassPage.gradebookBtn,
     classOptionsBtn: selectorFile.css.ComproEngage.teacherViewClassPage.classOptionsBtn,
+    editClassBtn: selectorFile.css.ComproEngage.teacherViewClassPage.editClassBtn,
+    addBooksBtn: selectorFile.css.ComproEngage.teacherViewClassPage.addBooksBtn,
     dataSubtitle: selectorFile.css.ComproEngage.teacherViewClassPage.dataSubtitle,
-    productList: selectorFile.css.ComproEngage.teacherViewClassPage.productList,
-    inboxTab: selectorFile.css.ComproEngage.teacherViewClassPage.inboxTab,
-    assignmentsTab: selectorFile.css.ComproEngage.teacherViewClassPage.assignmentsTab,
-    studentsTab: selectorFile.css.ComproEngage.teacherViewClassPage.studentsTab,
+    productTabBtns: selectorFile.css.ComproEngage.teacherViewClassPage.productTabBtns,
     bookCoverImg: selectorFile.css.ComproEngage.teacherViewClassPage.bookCoverImg,
     bookTitleTxt: selectorFile.css.ComproEngage.teacherViewClassPage.bookTitleTxt,
     bookSubtitleTxt: selectorFile.css.ComproEngage.teacherViewClassPage.bookSubtitleTxt,
@@ -32,58 +31,80 @@ module.exports = {
         logger.logInto(stackTrace.get());
         action.waitForDocumentLoad();
         let pageStatus = action.waitForDisplayed(this.pageTitle);
-        res = this.getClassDetailsPageData();
+        res = this.getViewClassPageData();
         res.pageStatus = pageStatus;
         return res;
     },
 
-    get_ViewClassPage_Data: function () {
+    getViewClassPageData: function () {
         logger.logInto(stackTrace.get());
         obj = {
             pageTitle: (action.getElementCount(this.pageTitle) > 0) ? action.getText(this.pageTitle) : null,
-            startDate: (action.getElementCount(this.startDate) > 0) ? action.getText(this.startDate) : null,
-            endDate: (action.getElementCount(this.endDate) > 0) ? action.getText(this.endDate) : null,
-            edit_btn: (action.getElementCount(this.edit_btn) > 0) ? action.waitForDisplayed(this.edit_btn) : null,
-            inboxTab: (action.getElementCount(this.inboxTab) > 0) ? action.getText(this.inboxTab) : null,
-            assignmentsTab: (action.getElementCount(this.assignmentsTab) > 0) ? action.getText(this.assignmentsTab) : null,
-            progressTab: (action.getElementCount(this.progressTab) > 0) ? action.getText(this.progressTab) : null,
-            usingClasses_lbl: (action.getElementCount(this.usingClasses_lbl) > 0) ? action.getText(this.usingClasses_lbl) : null,
-            usingClassesByline_lbl: (action.getElementCount(this.usingClassesByline_lbl) > 0) ? action.getText(this.usingClassesByline_lbl) : null,
-            facebookbtn_icon: (action.getElementCount(this.facebookbtn_icon) > 0) ? action.waitForDisplayed(this.facebookbtn_icon) : false,
-            createAssignment_lbl: (action.getElementCount(this.createAssignment_lbl) > 0) ? action.getText(this.createAssignment_lbl) : null,
-            createAssignmentByline_lbl: (action.getElementCount(this.createAssignmentByline_lbl) > 0) ? action.getText(this.createAssignmentByline_lbl) : null,
-            noInboxActivity_lbl: (action.getElementCount(this.noInboxActivity_lbl) > 0) ? action.getText(this.noInboxActivity_lbl) : null,
-            noInboxActivityByline_lbl: (action.getElementCount(this.noInboxActivityByline_lbl) > 0) ? action.getText(this.noInboxActivityByline_lbl) : null,
-            viewBook_btn: (action.getElementCount(this.viewBook_btn) > 0) ? action.getText(this.viewBook_btn) : null,
-            bookCover_img: (action.getElementCount(this.bookCover_img) > 0) ? action.waitForDisplayed(this.bookCover_img) : null,
-            bookTitle: (action.getElementCount(this.bookTitle) > 0) ? action.getText(this.bookTitle) : null,
-            bookSubtitle: (action.getElementCount(this.bookSubtitle) > 0) ? action.getText(this.bookSubtitle) : null,
-            bookComponents: null,
+            gradebookBtn: (action.getElementCount(this.gradebookBtn) > 0) ? action.getText(this.gradebookBtn) : null,
+            classOptionsBtn_exists: (action.getElementCount(this.classOptionsBtn) > 0) ? action.waitForDisplayed(this.classOptionsBtn) : false,
+            productList: (action.getElementCount(this.productList) > 0) ? action.waitForDisplayed(this.productList) : null,
+            //* *static data has been commented for now */
+            //usingClasses_lbl: (action.getElementCount(this.usingClasses_lbl) > 0) ? action.getText(this.usingClasses_lbl) : null,
+            //usingClassesByline_lbl: (action.getElementCount(this.usingClassesByline_lbl) > 0) ? action.getText(this.usingClassesByline_lbl) : null,
+            //facebookbtn_icon: (action.getElementCount(this.facebookbtn_icon) > 0) ? action.waitForDisplayed(this.facebookbtn_icon) : false,
+            //createAssignment_lbl: (action.getElementCount(this.createAssignment_lbl) > 0) ? action.getText(this.createAssignment_lbl) : null,
+            //createAssignmentByline_lbl: (action.getElementCount(this.createAssignmentByline_lbl) > 0) ? action.getText(this.createAssignmentByline_lbl) : null,
+            //noInboxActivity_lbl: (action.getElementCount(this.noInboxActivity_lbl) > 0) ? action.getText(this.noInboxActivity_lbl) : null,
+            //noInboxActivityByline_lbl: (action.getElementCount(this.noInboxActivityByline_lbl) > 0) ? action.getText(this.noInboxActivityByline_lbl) : null,
+            bookCoverImg: (action.getElementCount(this.bookCoverImg) > 0) ? action.getTwaitForDisplayedext(this.bookCoverImg) : false,
+            bookTitleTxt: (action.getElementCount(this.bookTitleTxt) > 0) ? action.getText(this.bookTitleTxt) : null,
+            bookSubtitleTxt: (action.getElementCount(this.bookSubtitleTxt) > 0) ? action.getText(this.bookSubtitleTxt) : null,
+            viewBookBtn: (action.getElementCount(this.viewBookBtn) > 0) ? action.getText(this.viewBookBtn) : null,
+            productList: null, //for the tabs (inbox, Assignments, Students)
+            bookComponentList: null, //for book components in the right pane
         }
-        let componentData = [];
-        let componentCount = action.getElementCount(this.bookComponentNames_btn);
-        for (i = 0; i < componentCount; i++) {
-            componentSelector = this.bookComponentNames_btn + i + "]";
-            componentData[i] = action.getText(componentSelector);
+
+        let productData = [], productSelector, isProductSelected, i;
+        let productCount = action.getElementCount(this.productTabBtns);
+        for (i = 0; i < productCount; i++) {
+            productSelector = this.productTabBtns + i + "]";
+            productData[i] = action.getText(productSelector);
+            isProductSelected = action.getAttribute(this.productSelector, 'aria-selected');
+            if (isProductSelected == true) {
+                obj.selectedProduct = productData[i];
+            }
         }
-        obj.bookComponents = componentData;
+        let bookComponentData = [];
+        let componentSelector, languageCount, i;
+        languageCount = action.getElementCount(this.bookComponentNamesBtns);
+        for (i = 0; i < languageCount; i++) {
+            componentSelector = this.bookComponentNamesBtns + i + "]";
+            bookComponentData[i] = action.getText(componentSelector);
+        }
+        
+        obj.productList = productData;
+        obj.bookComponentList = bookComponentData;
         return obj;
     },
 
-    //Clicking on 'View Book' launches Book Details Page 
-    click_ViewBook_Button: function () {
+    //Clicking on 'Class Options' button launches Class Options - Edit class, add books
+    clickClassOptionsButton: function () {
         logger.logInto(stackTrace.get());
-        res = action.click(this.viewBook_btn);
+        res = action.click(this.classOptionsBtn);
         if (res == true) {
-            logger.logInto(stackTrace.get(), "-- View Book button is clicked");
-            // let viewBook = require('./viewBook.page.js');
-            // res = viewBook.isInitialized();
+            logger.logInto(stackTrace.get(), "-- Class Options button is clicked");
+            res = this.getClassOptionsList();
         }
         else {
             res = res + "-- Error in clicking View Book button";
             logger.logInto(stackTrace.get(), res, 'error');
         }
         return res;
+    },
+
+    //class options list 
+    getClassOptionsList: function () {
+        logger.logInto(stackTrace.get());
+        obj = {
+            editClassBtn: (action.getElementCount(this.editClassBtn) > 0) ? action.getText(this.editClassBtn) : null,
+            addBooksBtn: (action.getElementCount(this.addBooksBtn) > 0) ? action.getText(this.addBooksBtn) : null
+        }
+        return obj;
     },
 
     //Clicking on any book component launches snackbar 'Feature Coming Soon'
@@ -113,7 +134,7 @@ module.exports = {
     },
 
     //clicking on Inbox Tab
-    click_Inbox_Tab: function () {
+    clickInboxTab: function () {
         logger.logInto(stackTrace.get());
         res = action.click(this.inboxTab);
         if (res == true) {
@@ -128,7 +149,7 @@ module.exports = {
     },
 
     //clicking on Assignment Tab
-    click_Assignments_Tab: function () { 
+    clickAssignmentsTab: function () { 
         logger.logInto(stackTrace.get());
         res = action.click(this.assignmentsTab);
         if (res == true) {
@@ -143,7 +164,7 @@ module.exports = {
     },
 
     //clicking on Progress Tab
-    click_Progress_Tab: function () { // this has changs from Progress to Students, lets wait for this
+    clickStudentsTab: function () { 
         logger.logInto(stackTrace.get());
         res = action.click(this.progressTab);
         if (res == true) {
@@ -158,7 +179,7 @@ module.exports = {
     },
 
     //Click Invite Students button
-    click_InviteStudents_Button: function () {
+    clickInviteStudentsButton: function () {
         logger.logInto(stackTrace.get());
         res = action.click(this.inviteStudents_btn);
         if (res == true) {
@@ -183,7 +204,7 @@ module.exports = {
     },
 
     //Click Create Assignments button
-    click_CreateAssignments_Button: function () {
+    clickCreateAssignmentsButton: function () {
         logger.logInto(stackTrace.get());
         res = action.click(this.createAssignments_btn);
         if (res == true) {
