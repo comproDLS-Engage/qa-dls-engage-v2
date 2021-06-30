@@ -1,4 +1,65 @@
 {
+    "desktop-chrome-1920": {
+        "resolution": "1920x1080",
+        "capabilities": [
+            {
+                "maxInstances": 5,
+                "browserName": "chrome",
+                "goog:chromeOptions": {
+                    "args": [
+                        "window-size=1920,1080",
+                        "--headless",
+                        "--disable-gpu",
+                        "--log-level=3"
+                    ]
+                }
+            }
+        ],
+        "hostname": "localhost",
+        "portNumber": 4444,
+        "webServicePath": "/",
+        "webDriverService": "chromedriver"
+    },
+    "desktop-chrome-1366": {
+        "resolution": "1366x768",
+        "capabilities": [
+            {
+                "maxInstances": 5,
+                "browserName": "chrome",
+                "goog:chromeOptions": {
+                    "args": [
+                        "window-size=1366,768"
+                    ]
+                }
+            }
+        ],
+        "hostname": "localhost",
+        "portNumber": 4444,
+        "webServicePath": "/",
+        "webDriverService": "chromedriver"
+    },
+    "desktop-chrome-360": {
+        "resolution": "360x640",
+        "capabilities": [
+            {
+                "maxInstances": 5,
+                "browserName": "chrome",
+                "goog:chromeOptions": {
+                    "mobileEmulation": {
+                        "deviceMetrics": {
+                            "width": 360,
+                            "height": 640
+                        },
+                        "userAgent": "Mozilla/5.0 (Linux; Android 10; Pixel 4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Mobile Safari/537.36"
+                    }
+                }
+            }
+        ],
+        "hostname": "localhost",
+        "portNumber": 4444,
+        "webServicePath": "/",
+        "webDriverService": "chromedriver"
+    },
     "bstack-chrome-1920": {
         "capabilities": [
             {
@@ -19,6 +80,8 @@
         "portNumber": 443,
         "webServicePath": "/wd/hub",
         "webDriverService": "appium",
+        "browserstackLocal": true,
+        "updateJob": false,
         "user": "akhilaggarwal2",
         "key": "68pvrJyFDPdqKSpBptpi"
     },
@@ -43,76 +106,17 @@
         "portNumber": 443,
         "webServicePath": "/wd/hub",
         "webDriverService": "appium",
+        "browserstackLocal": true,
+        "updateJob": false,
         "user": "akhilaggarwal2",
         "key": "68pvrJyFDPdqKSpBptpi"
     },
-    "local-chrome-1920": {
-        "resolution": "1920x1080",
-        "capabilities": [
-            {
-                "maxInstances": 5,
-                "browserName": "chrome",
-                "goog:chromeOptions": {
-                    "args": [
-                        "window-size=1920,1080",
-                        "--headless",
-                        "--disable-gpu",
-                        "--log-level=3"
-                    ]
-                }
-            }
-        ],
-        "hostname": "localhost",
-        "portNumber": 4444,
-        "webServicePath": "/",
-        "webDriverService": "chromedriver"
-    },
-    "local-chrome-1366": {
-        "resolution": "1366x768",
-        "capabilities": [
-            {
-                "maxInstances": 5,
-                "browserName": "chrome",
-                "goog:chromeOptions": {
-                    "args": [
-                        "window-size=1366,768"
-                    ]
-                }
-            }
-        ],
-        "hostname": "localhost",
-        "portNumber": 4444,
-        "webServicePath": "/",
-        "webDriverService": "chromedriver"
-    },
-    "local-chrome-360": {
-        "resolution": "360x640",
-        "capabilities": [
-            {
-                "maxInstances": 5,
-                "browserName": "chrome",
-                "goog:chromeOptions": {
-                    "mobileEmulation": {
-                        "deviceMetrics": {
-                            "width": 360,
-                            "height": 640
-                        },
-                        "userAgent": "Mozilla/5.0 (Linux; Android 10; Pixel 4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Mobile Safari/537.36"
-                    }
-                }
-            }
-        ],
-        "hostname": "localhost",
-        "portNumber": 4444,
-        "webServicePath": "/",
-        "webDriverService": "chromedriver"
-    },
-    "device-samsungS20-chrome": {
+    "device": {
         "capabilities": [
             {
                 "maxInstances": 2,
                 "browserName": "chrome",
-                "deviceName": "samsungS20",
+                "deviceName": "",
                 "platformName": "Android",
                 "chromedriverExecutable": "require('chromedriver').path",
                 "javascriptEnabled": true,
