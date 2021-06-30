@@ -2,7 +2,6 @@
     "engage": {
         "appContent": {
             "language": "EN - English (UK)",
-       
             "landing": {
                 "headingText": "One space for all your learning.",
                 "subheadingText": "Learn from anywhere, anytime. Instant access to all courses and activities.",
@@ -27,8 +26,55 @@
                 "footerLabel": "powered by",
                 "invalidEmail_txt": "Please check your email address and try again.",
                 "notRegisterUser_alert": "Please check your email address and password and try again."
+            },
+            "createClassPage": {
+                "pageTitle": "Create a new class",
+                "pageSubTitle": "Add your class details and start inviting students, creating assignments, and viewing progress.",
+                "classHeader": "Class Details",
+                "classSubHeader": "Name your class and assign the start and end dates.",
+                "title_lbl": "Name",
+                "startDate_lbl": "Start Date",
+                "endDate_lbl": "End Date",
+                "selectBook_lbl": "Class Books",
+                "selectBook_txt": "Assign a book to your class in order to view and assign materials.",
+                "bookTitle": "PROYECTOS",
+                "createBtn_txt": "Create",
+                "cancelBtn_txt": "Cancel & Go Back",
+                "notitleErrorMsg": "Name is required.",
+                "titleErrorMsg": "Name should be less than 50 characters.",
+                "bookErrorMsg": "No book selected",
+                "endDateErrorMsg": "End Date cannot be less than today's date"
+            },
+            "successClassPage": {
+                "pageTitle": "New class created",
+                "pageSubTitle": "Your class has been added!",
+                "viewClassbtn": "View Class",
+                "backToHomeBtn_txt": "Close",
+                "className_txt": "Added: ",
+                "successCaption_txt": "Your class has been added! Share the class key below to let your students join",
+                "copy_txt": "Copy Code"
+            },
+            "myClassPage": {
+                "classHeading": "Classes",
+                "classSubHeading": "You current, upcoming and past classes",
+                "pageTitleNoClassArchived": "See your list of archived classes here",
+                "pageSubTitleNoClassArchived": "Any class you have archived will appear here. Once archived, you can still view class details. You may restore the class to allow students to rejoin.",
+                "noClassTitle": "Create a class to get started",
+                "noClassSubtitle": "Add your classes to invite students and get to all of your class materials.",
+                "activeTab": "Active",
+                "addClassBtn": "Create Class",
+                "applyBtn_txt": "Apply",
+                "cancelBtn_txt": "Cancel",
+                "archivedTab": "Archived",
+                "viewClassText": "View Class",
+                "editMsgBar_txt": "Class Updated!",
+                "inboxOption_txt": "Inbox",
+                "assignmentsOption_txt": "Assignments",
+                "studentsOption_txt": "Students",
+                "gradeBookOption_txt": "Gradebook",
+                "materialsOption_txt": "Materials"
+              
             }
-       
         }
     }
 }

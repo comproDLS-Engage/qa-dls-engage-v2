@@ -46,6 +46,7 @@ module.exports = {
         sts = loginPage.set_UserName("")
         assertion.assertEqual(sts, true, "Email Not Entered");
         sts = loginPage.login_PageData();
+        //need to check button disable
         assertion.assertEqual(sts.login_btn_Disabled, true, "Login Button Not Disabled")
     },
 
@@ -54,6 +55,7 @@ module.exports = {
         sts = loginPage.set_Password("")
         assertion.assertEqual(sts, true, "Password Not Entered");
         sts = loginPage.login_PageData();
+        //need to check button disable
         assertion.assertEqual(sts.login_btn_Disabled, true, "Login Button Not Disabled")
     },
 
