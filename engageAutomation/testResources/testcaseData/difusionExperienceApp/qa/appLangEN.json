@@ -27,6 +27,26 @@
                 "invalidEmail_txt": "Please check your email address and try again.",
                 "notRegisterUser_alert": "Please check your email address and password and try again."
             },
+            "appShell": {
+                "dashboardTxt": "Dashboard",
+                "browseTxt": "Browse",
+                "classesTxt": "Classes",
+                "helpTxt": "Help",
+                "settingsTxt": "Settings",
+                "poweredByTxt": "powered by",
+                "engageTxt": "ENGAGE",
+                "technologyPreviewTxt": "Technology Preview",
+                "notificationHeader": "Notifcations",
+                "markAllAsRead": "Mark All as Read",
+                "languageList": ["EN - English (UK)", "ES - Español", "FR - Français"],
+                "profileUsername": "etirrase-9139",
+                "emailID": "etirrase-9139@yopmail.com",
+                "userProfileHelpBtn": "Help",
+                "userProfileSettingsBtn": "Settings",
+                "userProfileLogoutBtn": "Logout",
+                "invalidEmail_txt": "Please check your email address and try again.",
+                "notRegisterUser_alert": "Please check your email address and password and try again."
+            },
             "createClassPage": {
                 "pageTitle": "Create a new class",
                 "pageSubTitle": "Add your class details and start inviting students, creating assignments, and viewing progress.",
@@ -73,7 +93,6 @@
                 "studentsOption_txt": "Students",
                 "gradeBookOption_txt": "Gradebook",
                 "materialsOption_txt": "Materials"
-              
             }
         }
     }

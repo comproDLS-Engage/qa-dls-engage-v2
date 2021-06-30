@@ -442,6 +442,72 @@
                     "visualTest": true
                 }
             ]
+        },
+        {
+            "modulename": "App Shell",
+            "moduledetails": "",
+            "testFile": "./test/engageExperienceApp/appShell.test.js",
+            "testcase": [
+                {
+                    "id": "ENG_SHELL_TC_1",
+                    "description": "Validate that appShell is launched (Desktop)",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_SHELL_TC_2",
+                    "description": "Validate that clicking on the Dashboard button in left Navigation pane launches Dashboard page (Desktop)",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_SHELL_TC_3",
+                    "description": "Validate that clicking on the Browse button in left Navigation pane launches Browse page (Desktop)",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_SHELL_TC_4",
+                    "description": "Validate that clicking on the Classes button in left Navigation pane launches Classes page (Desktop)",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_SHELL_TC_5",
+                    "description": "Validate that clicking on the bell icon launches the notification drawer",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_SHELL_TC_6",
+                    "description": "Validate that clicking on cross icon closes the notification section",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_SHELL_TC_7",
+                    "description": "Validate that clicking on the language switcher launches the list of the supported languages",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_SHELL_TC_8",
+                    "description": "Validate that clicking on any language disappears the language drawer",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_SHELL_TC_9",
+                    "description": "Validate that clicking on the profile dropdown launches the dropdown of profile and other options",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_SHELL_TC_10",
+                    "description": "Validate that clicking on the Dashboard button in bottom Navigation pane launches Dashboard page (Mobile)",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_SHELL_TC_11",
+                    "description": "Validate that clicking on the Browse button in bottom Navigation pane launches Browse page (Mobile)",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_SHELL_TC_12",
+                    "description": "Validate that clicking on the Classes button in bottom Navigation pane launches Classes List page (Mobile)",
+                    "tags": "P1"
+                }]
         }
     ]
 }
