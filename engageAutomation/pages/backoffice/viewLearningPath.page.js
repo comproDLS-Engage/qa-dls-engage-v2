@@ -110,7 +110,7 @@ module.exports = {
                 }
                 break;
             }
-            res = "activity type not found ";
+            res = "activity type not found";
         }
         logger.logInto(stackTrace.get(), res);
         return res;

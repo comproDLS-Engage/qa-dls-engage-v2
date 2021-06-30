@@ -11,14 +11,14 @@
             {
                 "type": "Learning Path",
                 "category": "--none--",
-                "title": "QA Test Learning Path - none",
+                "title": "QA Test Learning Path - none [DO NOT PUBLISH]",
                 "folderLevel": "3",
                 "autonumbering": "1-based"
             },
             {
                 "type": "Bank",
                 "category": "Resources",
-                "title": "QA Test Bank - resources",
+                "title": "QA Test Bank - resources [DO NOT PUBLISH]",
                 "folderLevel": "2",
                 "autonumbering": "0-based"
             }

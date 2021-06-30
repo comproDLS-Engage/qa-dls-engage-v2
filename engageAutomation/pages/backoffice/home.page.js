@@ -63,7 +63,8 @@ module.exports = {
         action.waitForDisplayed(this.bookList);
         list = action.findElements(this.bookList);
         for (i = 0; i < list.length; i++) {
-            if (action.getText(list[i]) == name) {
+            //console.log(action.getText(list[i]))
+            if (action.getText(list[i]).includes(name)) {
                 res = action.click(list[i]);
                 if (res == true) {
                     res = require('./viewBook.page.js').isInitialized();
