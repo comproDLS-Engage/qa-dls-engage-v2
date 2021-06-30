@@ -52,7 +52,7 @@ module.exports = {
             facebook_btn: (action.getElementCount(this.facebook_btn) > 0) ? action.getText(this.facebook_btn) : null,
             facebookbtn_icon: (action.getElementCount(this.facebookbtn_icon) > 0) ? action.waitForDisplayed(this.facebookbtn_icon) : false,
             login_btn: (action.getElementCount(this.login_btn) > 0) ? action.getText(this.login_btn) : null,
-            login_btn_Disabled: (action.getElementCount(this.loginbtnState)) ? (action.waitForExist(this.loginbtnState)) : false,
+            login_btn_Disabled: (action.getElementCount(this.login_btn)) ? !(action.isClickable(this.login_btn)) : false,
             forgotPassword: (action.getElementCount(this.forgotPassword) > 0) ? action.getText(this.forgotPassword) : null,
             signup: (action.getElementCount(this.signup) > 0) ? action.getText(this.signup) : null,
             dontHaveAccount_txt: (action.getElementCount(this.dontHaveAccount_txt) > 0) ? action.getText(this.dontHaveAccount_txt) : null,
