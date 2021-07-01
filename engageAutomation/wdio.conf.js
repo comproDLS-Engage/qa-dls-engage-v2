@@ -75,7 +75,7 @@ exports.config = {
     user: user,
     key: key,
     browserstackLocal: browserstackLocal,
-    updateJob: updateJob,
+    //updateJob: updateJob,
     //
     // Override default path ('/wd/hub') for chromedriver service.
     //

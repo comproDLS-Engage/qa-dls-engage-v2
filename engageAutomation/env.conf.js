@@ -4,7 +4,7 @@ global.appUrl = undefined;
 // global.testRepoDir = undefined;
 global.testExecDir = undefined;
 global.selectorDir = undefined;
-// global.tcDataDir = undefined;
+global.tcDataDir = undefined;
 global.fs = require('fs');
 global.argv = require('yargs').argv;
 global.path = require('path');
@@ -50,7 +50,7 @@ else {
     //global.testJsDir = envData[argv.appType].testJsDir;
     // global.testRepoDir = envData[argv.appType].testRepoDir;
     global.testExecDir = envData[argv.appType].testExecDir;
-    //global.tcDataDir = envData[argv.appType].tcDataDir;
+    global.tcDataDir = envData[argv.appType].environments[argv.testEnv].tcDataDir;
     // global.tcDataDir = envData[argv.appType].environments[argv.testEnv].tcDataDir;
     // global.selectorDir = envData[argv.appType].selectorDir;
     global.appUrl = envData[argv.appType].environments[argv.testEnv].url;
@@ -61,7 +61,7 @@ else {
         //console.log("testJsDir = " + global.testJsDir);
         //console.log("testRepoDir = " + global.testRepoDir);
         console.log("testExecDir = " + global.testExecDir);
-        //console.log("tcDataDir = " + global.tcDataDir);
+        console.log("tcDataDir = " + global.tcDataDir);
         //console.log("selectorDir = " + global.selectorDir);
         console.log("!!!!! Exiting program... !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
         process.exit(1);

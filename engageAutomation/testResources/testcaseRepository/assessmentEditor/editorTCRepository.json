@@ -1,0 +1,156 @@
+{
+    "appname": "Assessment Editor",
+    "appdetails": "",
+    "selectorFile": "./core/selectors/assessmentEditor/editorSelectors.json",
+    "modules": [
+        {
+            "modulename": "Assessment Editor",
+            "moduledetails": "",
+            "testFile": "./test/assessmentEditor/editor.test.js",
+            "testcase": [
+                {
+                    "id": "EDIT_TC_1",
+                    "description": "TestBench Home page is initialised",
+                    "tags": "P1"
+                },
+                {
+                    "id": "EDIT_TC_2",
+                    "description": "Click on Launch Button",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_4",
+                    "description": "Validate that a new question is added by clicking on the 'Add new Question' button on the left pane",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_QUN_TC_5",
+                    "description": "Validate that alphanumeric text is supported in Question Title Text.",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_QUN_TC_17",
+                    "description": "Validate that the Next Button is enabled only after a question is added",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_MCQ_TC_14",
+                    "description": "Validate that Option is added in  questions",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_86",
+                    "description": "Validate that user is able to add Audio using Browse button",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_92",
+                    "description": "Validate that user is able to add 'Title/Credits' in Audio Media",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_120",
+                    "description": "Validate the editor is selected in question pane and displayed.",
+                    "tags": "P1"
+                },
+                
+                {
+                    "id": "ASE_QUN_TC_9",
+                    "description": "Validate that the Question can be added using Add Question button.",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_DND_TC_9",
+                    "description": "Validate that the user can add a label in the Response Template",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_15",
+                    "description": "Validate that the 'Video Player' in the media works fine",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_16",
+                    "description": "Validate that the 'Title/Credits' are working fine in Video media",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_MAT_TC_13",
+                    "description": "Validate tthe pair is added in player",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_MAT_TC_14",
+                    "description": "Validate the text is added in left itmes",
+                    "tags": "P1"
+                },
+
+                {
+                    "id": "ASE_MAT_TC_15",
+                    "description": "Validate the text is added in matched itmes",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_9",
+                    "description": "Validate that student can add instruction for each question under the 'Question' section",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_CLS_TC_2",
+                    "description": "Validate that user is able to add group if group count is less than 10",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_CLS_TC_13",
+                    "description": "Validate that user is able to add option if total option count is less than 15",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_CLS_TC_9",
+                    "description": "Validate that special characters are allowed in Group Name.",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_CLS_TC_21",
+                    "description": "Validate that alphanumeric characters are allowed in option Name.",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_CLS_TC_17",
+                    "description": "Validate that user should be able to select group for an option.",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_24",
+                    "description": "Validate that the default scoring for each question is 1",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_42",
+                    "description": "Validate if alpha-numeric text is allowed in the Question Text",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_43",
+                    "description": "Validate if alpha-numeric text is allowed in the Option Text",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_75",
+                    "description": "Validate that user is able to add image using Browse button",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_DND_TC_29",
+                    "description": "DND Editor - Insert Image from browse button",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_FIB_TC_1",
+                    "description": "Enter the Answer in FIB Value",
+                    "tags": "P1"
+                }
+            ]
+        }
+    ]
+}
