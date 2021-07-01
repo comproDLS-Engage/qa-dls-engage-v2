@@ -40,9 +40,18 @@ class specRunner {
 
                     //This is before hook of Mocha runner
                     before(function () {
-                        if (count != 0)
+                        if (count != 0) {
                             browser.reloadSession();
-                        //setBrowserwindow();
+                        }
+                        if (global.maximizeWindow == true && global.view == 'desktop') { //this will cause browser to maximize on the client screen resolution
+                            browser.maximizeWindow();
+                            global.resolution = browser.getWindowSize();
+                            //console.log(global.resolution)
+                        }
+                        else if (global.resolution.width != undefined && global.resolution.height != undefined) {
+                            browser.setWindowSize(parseInt(global.resolution.width), parseInt(global.resolution.height));
+                        }
+
                         console.log("====== Starting Test " + suiteIndex + ": " + execJsonData[suiteIndex].Name + " ======");
 
                         if (argv.visual == 'applitools')
