@@ -102,7 +102,7 @@
          {
             "id": "ENG_SHELL_TC_10",
             "description": "Validate that clicking on logout logs out from application",
-            "testFile": "./test/engageExperienceApp/common.test.js",
+            "testFile": "./test/engageExperienceApp/appShell.test.js",
             "testData": []
          }
       ],

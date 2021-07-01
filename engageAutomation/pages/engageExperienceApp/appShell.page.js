@@ -108,19 +108,18 @@ module.exports = {
 		logger.logInto(stackTrace.get());
 		res = action.click(this.notificationBtn);
 		if (true == res) {
-			action.waitForDisplayed(this.noNotificationImg_exists);
+			action.waitForDisplayed(this.noNotificationImg);
 			res = {
 				notificationTxt: (action.getElementCount(this.notificationTxt) > 0) ? action.getText(this.notificationTxt) : null,
 				notificationCloseBtn_exists: (action.getElementCount(this.notificationCloseBtn) > 0) ? action.waitForDisplayed(this.notificationCloseBtn) : false,
 				noNotificationImg_exists: (action.getElementCount(this.noNotificationImg) > 0) ? action.waitForDisplayed(this.noNotificationImg) : null,
-				//for now only 3 elements have been added, will add more once notification feature is activated
+				//for now image has been added, will create separate page object for notification feature once it is activated
 			};
 		}
 		else {
 			res = res + " -- Error in clicking Notification Button";
 			logger.logInto(stackTrace.get(), res, 'error');
 		}
-		console.log("**res -",res)
 		return res;
 	},
 
@@ -165,35 +164,40 @@ module.exports = {
 	},*/
 
 	selectLanguagefromLanguageSelector: function (langtoselect) {
-		console.log("*langtoselect",langtoselect)
 		logger.logInto(stackTrace.get());
-		res = action.waitForClickable(this.createTitleBtn);
+		res = action.waitForClickable(this.languageSwitcherBtn);
+		console.log("res",res)
 		if (res == true) {
+			logger.logInto(stackTrace.get());
 			res = action.click(this.languageSwitcherBtn);
 			console.log("*languageSwitcherBtn",this.languageSwitcherBtn)
 			if (res == true) {
-			let list, i;
-			list = action.findElements(this.languageList);
-			console.log("*list",list)
-			console.log("*list.length",list.length)
-			for (i = 0; i < list.length; i++) {
-				let languageListText;
-				languageListText = action.getText(list[i]);
-				console.log("*languageListText",languageListText)
-				if (languageListText == langtoselect) {
-					res = action.click(list[i]);
-					if (res == true) {
-						res = action.getText(this.selectedLanguage);
+				let list, i;
+				list = action.findElements(this.languageList);
+				console.log("*list",list)
+				console.log("*list.length",list.length)
+				for (i = 0; i < list.length; i++) {
+					let languageListText;
+					languageListText = action.getText(list[i]);
+					console.log("*languageListText",languageListText)
+					if (languageListText == langtoselect) {
+						res = action.click(list[i]);
+						if (res == true) {
+							res = action.getText(this.selectedLanguage);
+						}
+						break;
 					}
-					break;
 				}
-			}
-			res = "user provided language not found";
 			}
 			else {
 				res = res + " -- Error in clicking languageSwitcherBtn";
 				logger.logInto(stackTrace.get(), res, 'error');
 			}
+		}
+		else {
+			console.log("fat gya")
+			res = res + " -- Language Switcher Button is not clickable";
+			logger.logInto(stackTrace.get(), res, 'error');
 		}
 		return res;
 	},
