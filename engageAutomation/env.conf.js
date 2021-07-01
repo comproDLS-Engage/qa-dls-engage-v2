@@ -27,8 +27,9 @@ global.reportOutputDir = 'output/reports/' + (argv.reportdir ? argv.reportdir : 
 global.baseScreenshotDir = undefined;
 global.testScreenshotDir = undefined;
 global.diffScreenshotDir = undefined;
-global.capabilities = undefined;
 global.resScreenshotDir = undefined;
+global.capabilities = undefined;
+global.maximizeWindow - undefined;
 global.capabilitiesFile = global.jsonParserUtil.jsonParser(path.join(process.cwd() + '/capabilities.json'));
 //global.specs = require('./core/utils/memoryfs.js')
 
@@ -80,9 +81,12 @@ else {
         process.exit(1);
     }
     global.capabilities = capabilitiesFile[argv.browserCapability].capabilities;
+    global.maximizeWindow = capabilitiesFile[argv.browserCapability].maximizeWindow;
     global.resScreenshotDir = argv.browserCapability;
-    global.resolution.width = capabilitiesFile[argv.browserCapability].resolution.split("x")[0].trim();
-    global.resolution.height = capabilitiesFile[argv.browserCapability].resolution.split("x")[1].trim();
+    if (capabilitiesFile[argv.browserCapability].resolution != undefined) {
+        global.resolution.width = capabilitiesFile[argv.browserCapability].resolution.split("x")[0].trim();
+        global.resolution.height = capabilitiesFile[argv.browserCapability].resolution.split("x")[1].trim();
+    }
     if (parseInt(global.resolution.width, 10) > 1023)
         global.view = 'desktop';
     else

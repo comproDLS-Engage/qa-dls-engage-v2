@@ -5,13 +5,12 @@
                 "maxInstances": 5,
                 "browserName": "chrome",
                 "goog:chromeOptions": {
-                    "args": [
-                        "window-size=1920,1080"
-                    ]
+                    "args": []
                 }
             }
         ],
         "resolution": "1920x1080",
+        "maximizeWindow": false,
         "hostname": "localhost",
         "portNumber": 4444,
         "webServicePath": "/",
@@ -23,13 +22,12 @@
                 "maxInstances": 5,
                 "browserName": "chrome",
                 "goog:chromeOptions": {
-                    "args": [
-                        "window-size=1366,768"
-                    ]
+                    "args": []
                 }
             }
         ],
         "resolution": "1366x768",
+        "maximizeWindow": false,
         "hostname": "localhost",
         "portNumber": 4444,
         "webServicePath": "/",
@@ -52,6 +50,7 @@
             }
         ],
         "resolution": "360x640",
+        "maximizeWindow": false,
         "hostname": "localhost",
         "portNumber": 4444,
         "webServicePath": "/",
@@ -74,12 +73,13 @@
                 "browserVersion": "latest",
                 "goog:chromeOptions": {
                     "args": [
-                         "--start-maximized"
+                        "--start-maximized"
                     ]
                 }
             }
         ],
         "resolution": "1920x1080",
+        "maximizeWindow": true,
         "hostname": "hub.browserstack.com",
         "portNumber": 443,
         "webServicePath": "/wd/hub",
@@ -107,6 +107,7 @@
             }
         ],
         "resolution": "1920x1080",
+        "maximizeWindow": true,
         "hostname": "hub.browserstack.com",
         "portNumber": 443,
         "webServicePath": "/wd/hub",
@@ -132,5 +133,57 @@
         "portNumber": 4723,
         "webServicePath": "/wd/hub",
         "webDriverService": "appium"
+    },
+    "bstack-android-samsungS21": {
+        "capabilities": [
+            {
+                "bstack:options": {
+                    "osVersion": "11.0",
+                    "deviceName": "Samsung Galaxy S21",
+                    "realMobile": "true",
+                    "appiumVersion": "1.21.0",
+                    "local": "false",
+                    "debug": "true",
+                    "consoleLogs": "info",
+                    "networkLogs": "true"
+                },
+                "browserName": "Android"
+            }
+        ],
+        "maximizeWindow": false,
+        "hostname": "hub.browserstack.com",
+        "portNumber": 443,
+        "webServicePath": "/wd/hub",
+        "webDriverService": "appium",
+        "browserstackLocal": false,
+        "updateJob": false,
+        "user": "akhilaggarwal2",
+        "key": "68pvrJyFDPdqKSpBptpi"
+    },
+    "bstack-ios-iphone12pro": {
+        "capabilities": [
+            {
+                "bstack:options": {
+                    "osVersion": "14",
+                    "deviceName": "iPhone 12 Pro",
+                    "realMobile": "true",
+                    "appiumVersion": "1.21.0",
+                    "local": "false",
+                    "debug": "true",
+                    "consoleLogs": "info",
+                    "networkLogs": "true"
+                },
+                "browserName": "iPhone"
+            }
+        ],
+        "maximizeWindow": false,
+        "hostname": "hub.browserstack.com",
+        "portNumber": 443,
+        "webServicePath": "/wd/hub",
+        "webDriverService": "appium",
+        "browserstackLocal": false,
+        "updateJob": false,
+        "user": "akhilaggarwal2",
+        "key": "68pvrJyFDPdqKSpBptpi"
     }
 }
