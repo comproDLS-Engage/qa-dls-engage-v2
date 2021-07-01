@@ -37,17 +37,16 @@ module.exports = {
                 suiteindex++;
         }
 
-        let logDataobj = {}
+        let logDataobj = {};
         logDataobj.start = startTime,
             logDataobj.end = endTime,
-            logDataobj.duration = endTime - startTime
+            logDataobj.duration = endTime - startTime;
         logDataobj.capabilities = browser.capabilities;
         logDataobj.capabilities.sessionId = browser.sessionId;
         logDataobj.capabilities.screenResolution = {
-            width: browser.config.windowWidth,
-            height: browser.config.windowHeight
+            width: global.resolution.width,
+            height: global.resolution.height
         }
-
         logDataobj.specs = [testExecFile];
         logDataobj.suites = suites;
         logDataobj.state = {
