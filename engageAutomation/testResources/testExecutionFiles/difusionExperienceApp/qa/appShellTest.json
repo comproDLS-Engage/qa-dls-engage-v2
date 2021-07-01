@@ -93,7 +93,7 @@
             ]
          },
          {
-            "id": "ENG_SHELL_TC_9",
+            "id": "ENG_SHELL_TC_8",
             "description": "Validate that clicking on the profile dropdown launches the dropdown of profile and other options",
             "testFile": "./test/engageExperienceApp/appShell.test.js",
             "testData": [
@@ -104,7 +104,7 @@
             ]
          },
          {
-            "id": "ENG_SHELL_TC_10",
+            "id": "ENG_SHELL_TC_9",
             "description": "Validate that clicking on logout logs out from application",
             "testFile": "./test/engageExperienceApp/appShell.test.js",
             "testData": []

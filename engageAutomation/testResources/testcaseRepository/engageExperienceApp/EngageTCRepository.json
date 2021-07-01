@@ -480,34 +480,20 @@
                 },
                 {
                     "id": "ENG_SHELL_TC_7",
-                    "description": "Validate that clicking on the language switcher launches the list of the supported languages",
+                    "description": "Validate that user is able to change the app language using the language switcher on the header",
                     "tags": "P1"
                 },
                 {
                     "id": "ENG_SHELL_TC_8",
-                    "description": "Validate that clicking on any language disappears the language drawer",
-                    "tags": "P1"
-                },
-                {
-                    "id": "ENG_SHELL_TC_9",
                     "description": "Validate that clicking on the profile dropdown launches the dropdown of profile and other options",
                     "tags": "P1"
                 },
                 {
-                    "id": "ENG_SHELL_TC_10",
-                    "description": "Validate that clicking on the Dashboard button in bottom Navigation pane launches Dashboard page (Mobile)",
+                    "id": "ENG_SHELL_TC_9",
+                    "description": "Validate that clicking on logout logs out from application",
                     "tags": "P1"
-                },
-                {
-                    "id": "ENG_SHELL_TC_11",
-                    "description": "Validate that clicking on the Browse button in bottom Navigation pane launches Browse page (Mobile)",
-                    "tags": "P1"
-                },
-                {
-                    "id": "ENG_SHELL_TC_12",
-                    "description": "Validate that clicking on the Classes button in bottom Navigation pane launches Classes List page (Mobile)",
-                    "tags": "P1"
-                }]
+                }
+            ]
         }
     ]
 }

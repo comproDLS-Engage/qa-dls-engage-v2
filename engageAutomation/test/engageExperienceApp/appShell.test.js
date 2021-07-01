@@ -65,7 +65,7 @@ module.exports = {
 	},
 	
 	//Validate that clicking on the profile dropdown launches the dropdown of profile and other options
-	ENG_SHELL_TC_9: function (testdata) {
+	ENG_SHELL_TC_8: function (testdata) {
 		sts = appShell.clickProfileButton(testdata);
 		assertion.assertEqual(sts.userName,testdata.profileUsername, "User Name Text mismatch");
 		assertion.assertEqual(sts.emailID,testdata.emailID, "email ID Text mismatch");
@@ -75,7 +75,7 @@ module.exports = {
 	},
 
 	//Validate that clicking on logout logs out from application
-	ENG_SHELL_TC_10: function () {
+	ENG_SHELL_TC_9: function () {
 		sts = appShell.clickLogoutButton();
 		assertion.assertEqual(sts.pageStatus, true, "Landing page status mismatch");
 	},
