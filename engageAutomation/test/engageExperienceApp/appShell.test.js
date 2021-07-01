@@ -58,18 +58,11 @@ module.exports = {
 		//calling the isinitialised function will work the same way?
 	},
 
-	//Validate that clicking on the language switcher launches the list of the supported languages 
+	//Validate that user is able to change the app language using the language switcher on the header 
 	ENG_SHELL_TC_7: function (testdata) {
-		sts = appShell.selectLanguagefromLanguageSelector(testdata);
-		// assertion.assertEqual(sts[0],testdata[0], "English Text mismatch");
-		// assertion.assertEqual(sts[1],testdata[1], "Spanish Text mismatch");
-		// assertion.assertEqual(sts[2],testdata[2], "French Text mismatch");
+		sts = appShell.selectLanguagefromLanguageSelector(testdata[0]);
+		assertion.assertEqual(sts,testdata[1], "Selected Language Text mismatch");
 	},
-
-	//Validate that clicking on the language switcher launches the list of the supported languages 
-	// ENG_SHELL_TC_8: function (testdata) {
-	// 	sts = appShell.selectLanguage(testdata);
-	// },
 	
 	//Validate that clicking on the profile dropdown launches the dropdown of profile and other options
 	ENG_SHELL_TC_9: function (testdata) {

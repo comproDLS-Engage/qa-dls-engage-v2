@@ -1,4 +1,5 @@
 "use strict";
+const { Console } = require('winston/lib/winston/transports');
 var action = require('../../core/actionLibrary/baseActionLibrary.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
 var res;
@@ -163,40 +164,26 @@ module.exports = {
 		return res;
 	},*/
 
-	selectLanguagefromLanguageSelector: function (langtoselect) {
+	selectLanguagefromLanguageSelector: function (languageToSelect) {
 		logger.logInto(stackTrace.get());
-		res = action.waitForClickable(this.languageSwitcherBtn);
-		console.log("res",res)
+		res = action.click(this.languageSwitcherBtn);
 		if (res == true) {
-			logger.logInto(stackTrace.get());
-			res = action.click(this.languageSwitcherBtn);
-			console.log("*languageSwitcherBtn",this.languageSwitcherBtn)
-			if (res == true) {
-				let list, i;
-				list = action.findElements(this.languageList);
-				console.log("*list",list)
-				console.log("*list.length",list.length)
-				for (i = 0; i < list.length; i++) {
-					let languageListText;
-					languageListText = action.getText(list[i]);
-					console.log("*languageListText",languageListText)
-					if (languageListText == langtoselect) {
-						res = action.click(list[i]);
-						if (res == true) {
-							res = action.getText(this.selectedLanguage);
-						}
+			let list, i;
+			list = action.findElements(this.languageList);
+			for (i = 0; i < list.length; i++) {
+				let languageListText;
+				languageListText = action.getText(list[i]);
+				if (languageListText == languageToSelect) {
+					res = action.click(list[i]);
+					if (res == true) {
+						res = action.getText(this.selectedLanguage);
 						break;
 					}
 				}
 			}
-			else {
-				res = res + " -- Error in clicking languageSwitcherBtn";
-				logger.logInto(stackTrace.get(), res, 'error');
-			}
 		}
 		else {
-			console.log("fat gya")
-			res = res + " -- Language Switcher Button is not clickable";
+			res = res + " -- Error in clicking languageSwitcherBtn";
 			logger.logInto(stackTrace.get(), res, 'error');
 		}
 		return res;

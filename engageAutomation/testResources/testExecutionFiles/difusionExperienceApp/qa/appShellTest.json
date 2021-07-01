@@ -78,6 +78,21 @@
             "testData": []
          },
          {
+            "id": "ENG_SHELL_TC_7",
+            "description": "Validate that user is able to change the app language using the language switcher on the header",
+            "testFile": "./test/engageExperienceApp/appShell.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.appShell.languageToSelect"
+               },
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.appShell.selectedLanguage"
+               }
+            ]
+         },
+         {
             "id": "ENG_SHELL_TC_9",
             "description": "Validate that clicking on the profile dropdown launches the dropdown of profile and other options",
             "testFile": "./test/engageExperienceApp/appShell.test.js",
@@ -85,17 +100,6 @@
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
                   "jsonPath": "engage.appContent.appShell"
-               }
-            ]
-         },
-         {
-            "id": "ENG_SHELL_TC_7",
-            "description": "Validate that clicking on the language switcher launches the list of the supported languages",
-            "testFile": "./test/engageExperienceApp/appShell.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath": "engage.appContent.appShell.languageToSelect"
                }
             ]
          },
