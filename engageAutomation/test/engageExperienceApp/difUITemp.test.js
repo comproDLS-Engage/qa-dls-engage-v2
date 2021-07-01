@@ -227,7 +227,7 @@ module.exports = {
 		console.log(res)
 		res = action.waitForDocumentLoad();
 		console.log(res)
-		res = action.waitForDisplayed("[data-tid=img-bookCover]");
+		res = action.waitForDisplayed("[data-tid=image-bookCover]");
 		console.log(res)
 	},
 
@@ -298,13 +298,13 @@ module.exports = {
 
 	// Select book and add to class
 	ENG_DIF_TC_22: function () {
-		res = action.click("[id=checkbox-0]");
+		res = action.click("[data-tid=button-add-0]");
 		console.log(res)
 		res = action.click("[data-tid='button-Add to Class']");
 		console.log(res)
 		res = action.waitForDocumentLoad();
 		console.log(res)
-		res = action.waitForDisplayed("button img");
+		res = action.waitForDisplayed("[data-tid=image-bookCover]");
 		console.log(res)
 	},
 
