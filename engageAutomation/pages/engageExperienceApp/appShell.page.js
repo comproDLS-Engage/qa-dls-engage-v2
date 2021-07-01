@@ -5,7 +5,7 @@ var res;
 
 module.exports = {
 
-	toggleSidebarBtn: selectorFile.css.ComproEngage.appShell.toggleSidebarBtn, // added a selector for lower resolution - akhil
+	toggleSidebarBtn: selectorFile.css.ComproEngage.appShell.toggleSidebarBtn,
 	headerLogo: selectorFile.css.ComproEngage.appShell.headerLogo,
 	dashboardBtn: selectorFile.css.ComproEngage.appShell.dashboardBtn,
 	browseBtn: selectorFile.css.ComproEngage.appShell.browseBtn,
@@ -17,16 +17,16 @@ module.exports = {
 	comproLogo: selectorFile.css.ComproEngage.appShell.comproLogo,
 	versionTxt: selectorFile.css.ComproEngage.appShell.versionTxt,
 	notificationBtn: selectorFile.css.ComproEngage.appShell.notificationBtn,
-	//notificationCloseBtn: selectorFile.css.ComproEngage.appShell.notificationCloseBtn, // should be part of notifications.page.js - akhil
-	//notificationTxt: selectorFile.css.ComproEngage.appShell.notificationTxt, // should be part of notifications.page.js - akhil
-	//markAllAsReadTxt: selectorFile.css.ComproEngage.appShell.markAllAsReadTxt, // should be part of notifications.page.js - akhil
+	notificationCloseBtn: selectorFile.css.ComproEngage.appShell.notificationCloseBtn, 
+	notificationTxt: selectorFile.css.ComproEngage.appShell.notificationTxt, 
+	noNotificationImg: selectorFile.css.ComproEngage.appShell.noNotificationImg,
 	languageSwitcherBtn: selectorFile.css.ComproEngage.appShell.languageSwitcherBtn,
 	languageList: selectorFile.css.ComproEngage.appShell.languageList,
-	selectedLanguage: selectorFile.css.ComproEngage.appShell.selectedLanguage, // added a selector - akhil
+	selectedLanguage: selectorFile.css.ComproEngage.appShell.selectedLanguage,
 	userProfileBtn: selectorFile.css.ComproEngage.appShell.userProfileBtn,
 	userName: selectorFile.css.ComproEngage.appShell.userName,
 	emailID: selectorFile.css.ComproEngage.appShell.emailID,
-	userProfileOptionBtns: selectorFile.css.ComproEngage.appShell.userProfileOptionBtns,
+	//userProfileOptionBtns: selectorFile.css.ComproEngage.appShell.userProfileOptionBtns, //not used for now since each selector has been added individually - swati
 	userProfileHelpBtn: selectorFile.css.ComproEngage.appShell.userProfileHelpBtn,
 	userProfileSettingsBtn: selectorFile.css.ComproEngage.appShell.userProfileSettingsBtn,
 	userProfileLogoutBtn: selectorFile.css.ComproEngage.appShell.userProfileLogoutBtn,
@@ -53,9 +53,9 @@ module.exports = {
 			comproLogo_exists: (action.getElementCount(this.comproLogo) > 0) ? action.waitForDisplayed(this.comproLogo) : false,
 			versionTxt: (action.getElementCount(this.versionTxt) > 0) ? action.getText(this.versionTxt) : null,
 			notificationBtn_exists: (action.getElementCount(this.notificationBtn) > 0) ? action.waitForDisplayed(this.notificationBtn) : false,
-			//notificationTxt: (action.getElementCount(this.notificationTxt) > 0) ? action.getText(this.notificationTxt) : null,
-			//notificationCloseBtn: (action.getElementCount(this.notificationCloseBtn) > 0) ? action.getText(this.notificationCloseBtn) : null,
-			//markAllAsReadTxt: (action.getElementCount(this.markAllAsReadTxt) > 0) ? action.getText(this.markAllAsReadTxt) : null,
+			notificationTxt: (action.getElementCount(this.notificationTxt) > 0) ? action.getText(this.notificationTxt) : null,
+			notificationCloseBtn: (action.getElementCount(this.notificationCloseBtn) > 0) ? action.getText(this.notificationCloseBtn) : null,
+			noNotificationImg: (action.getElementCount(this.noNotificationImg) > 0) ? action.getText(this.noNotificationImg) : null,
 			selectedLanguage: (action.getElementCount(this.selectedLanguage) > 0) ? action.getText(this.selectedLanguage) : null,
 			userProfileBtn_exists: (action.getElementCount(this.userProfileBtn) > 0) ? action.waitForDisplayed(this.userProfileBtn) : false,
 		};
@@ -108,26 +108,23 @@ module.exports = {
 		logger.logInto(stackTrace.get());
 		res = action.click(this.notificationBtn);
 		if (true == res) {
-			res = this.getNotificationData(); // we will have a seperate page obj for notifications - akhil
+			action.waitForDisplayed(this.noNotificationImg_exists);
+			res = {
+				notificationTxt: (action.getElementCount(this.notificationTxt) > 0) ? action.getText(this.notificationTxt) : null,
+				notificationCloseBtn_exists: (action.getElementCount(this.notificationCloseBtn) > 0) ? action.waitForDisplayed(this.notificationCloseBtn) : false,
+				noNotificationImg_exists: (action.getElementCount(this.noNotificationImg) > 0) ? action.waitForDisplayed(this.noNotificationImg) : null,
+				//for now only 3 elements have been added, will add more once notification feature is activated
+			};
 		}
 		else {
 			res = res + " -- Error in clicking Notification Button";
 			logger.logInto(stackTrace.get(), res, 'error');
 		}
+		console.log("**res -",res)
 		return res;
 	},
 
-	getNotificationData: function () { // this should part of notifications.page.js - akhil
-		var obj = {
-			notificationTxt: (action.getElementCount(this.notificationTxt) > 0) ? action.getText(this.notificationTxt) : null,
-			notificationCloseBtn_exists: (action.getElementCount(this.notificationCloseBtn) > 0) ? action.waitForDisplayed(this.notificationCloseBtn) : false,
-			markAllAsReadTxt: (action.getElementCount(this.markAllAsReadTxt) > 0) ? action.getText(this.markAllAsReadTxt) : null,
-			//for now only 3 elements have been added, will add more
-		};
-		return obj;
-	},
-
-	clickNotificationCloseButton: function () { // this should part of notifications.page.js - akhil
+	clickNotificationCloseButton: function () {
 		logger.logInto(stackTrace.get());
 		res = action.click(this.notificationCloseBtn);
 		if (true == res) {
@@ -168,13 +165,22 @@ module.exports = {
 	},*/
 
 	selectLanguagefromLanguageSelector: function (langtoselect) {
+		console.log("*langtoselect",langtoselect)
 		logger.logInto(stackTrace.get());
-		res = action.click(this.languageSwitcherBtn);
+		res = action.waitForClickable(this.createTitleBtn);
 		if (res == true) {
+			res = action.click(this.languageSwitcherBtn);
+			console.log("*languageSwitcherBtn",this.languageSwitcherBtn)
+			if (res == true) {
 			let list, i;
 			list = action.findElements(this.languageList);
+			console.log("*list",list)
+			console.log("*list.length",list.length)
 			for (i = 0; i < list.length; i++) {
-				if (action.getText(list[i]) == langtoselect) {
+				let languageListText;
+				languageListText = action.getText(list[i]);
+				console.log("*languageListText",languageListText)
+				if (languageListText == langtoselect) {
 					res = action.click(list[i]);
 					if (res == true) {
 						res = action.getText(this.selectedLanguage);
@@ -183,13 +189,14 @@ module.exports = {
 				}
 			}
 			res = "user provided language not found";
+			}
+			else {
+				res = res + " -- Error in clicking languageSwitcherBtn";
+				logger.logInto(stackTrace.get(), res, 'error');
+			}
 		}
-		else {
-			res = res + " -- Error in clicking languageSwitcherBtn";
-			logger.logInto(stackTrace.get(), res, 'error');
-		}
+		return res;
 	},
-
 
 	clickProfileButton: function () {
 		logger.logInto(stackTrace.get());
@@ -204,18 +211,17 @@ module.exports = {
 		return res;
 	},
 
-	getProfileData: function () { // this function is not required...we should add 
+	getProfileData: function () {
 		logger.logInto(stackTrace.get());
 		var obj = {
 			userName: (action.getElementCount(this.userName) > 0) ? action.getText(this.userName) : null,
 			emailID: (action.getElementCount(this.emailID) > 0) ? action.getText(this.emailID) : null,
-			//add following:
-			//userProfileHelpBtn: ,
-			//userProfileSettingsBtn: ,
-			//userProfileLogoutBtn: ,
+			userProfileHelpBtn: (action.getElementCount(this.userProfileHelpBtn) > 0) ? action.getText(this.userProfileHelpBtn) : null,
+			userProfileSettingsBtn: (action.getElementCount(this.userProfileSettingsBtn) > 0) ? action.getText(this.userProfileSettingsBtn) : null,
+			userProfileLogoutBtn: (action.getElementCount(this.userProfileLogoutBtn) > 0) ? action.getText(this.userProfileLogoutBtn) : null,
 		}
-
 		//since we have already created selectors for each option, hence following logic is not required - akhil
+		//this commented piece of code can be deleted now after review - swati
 		/*let userProfileOptionData = [], i
 		let userProfileOptionCount = action.getElementCount(this.userProfileOptionBtns)
 		for (i = 0; i < userProfileOptionCount; i++) {
@@ -223,8 +229,22 @@ module.exports = {
 			userProfileOptionData[i] = action.getText(userProfileOptionSelector);
 		}
 		obj.options = userProfileOptionData;*/
-		return obj;
+		return obj; 
 	},
 
 	//add function for logout - akhil
+	//logout function added - swati
+	clickLogoutButton: function () {
+		logger.logInto(stackTrace.get());
+		res = action.click(this.userProfileLogoutBtn);
+		if (true == res) {
+			let landing = require('./landing.page.js');
+			res = landing.isInitialized();
+		}
+		else {
+			res = res + " -- Error in clicking Profile Button";
+			logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
 };

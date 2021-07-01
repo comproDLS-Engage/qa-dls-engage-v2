@@ -78,28 +78,6 @@
             "testData": []
          },
          {
-            "id": "ENG_SHELL_TC_7",
-            "description": "Validate that clicking on the language switcher launches the list of the supported languages",
-            "testFile": "./test/engageExperienceApp/appShell.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath": "engage.appContent.appShell.languageList"
-               }
-            ]
-         },
-         {
-            "id": "ENG_SHELL_TC_8",
-            "description": "Validate that clicking on any language disappears the language drawer",
-            "testFile": "./test/engageExperienceApp/appShell.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath": "engage.appContent.appShell.languageList"
-               }
-            ]
-         },
-         {
             "id": "ENG_SHELL_TC_9",
             "description": "Validate that clicking on the profile dropdown launches the dropdown of profile and other options",
             "testFile": "./test/engageExperienceApp/appShell.test.js",
@@ -109,16 +87,26 @@
                   "jsonPath": "engage.appContent.appShell"
                }
             ]
-         }
-      ],
-      "AfterEach": [],
-      "After": [
+         },
          {
-            "id": "logout_from_app",
-            "description": "",
+            "id": "ENG_SHELL_TC_7",
+            "description": "Validate that clicking on the language switcher launches the list of the supported languages",
+            "testFile": "./test/engageExperienceApp/appShell.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.appShell.languageToSelect"
+               }
+            ]
+         },
+         {
+            "id": "ENG_SHELL_TC_10",
+            "description": "Validate that clicking on logout logs out from application",
             "testFile": "./test/engageExperienceApp/common.test.js",
             "testData": []
          }
-      ]
+      ],
+      "AfterEach": [],
+      "After": []
    }
 }

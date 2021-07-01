@@ -8,19 +8,19 @@ module.exports = {
 	ENG_SHELL_TC_1: function (testdata) {
 		sts = appShell.isInitialized();
 		assertion.assertEqual(sts.pageStatus, true, "AppShell status mismatch");
-		assertion.assertEqual(sts.difusionLogo_exists, true, "Difusion logo does not exist");
+		assertion.assertEqual(sts.headerLogo_exists, true, "Difusion logo does not exist");
 		assertion.assertEqual(sts.dashboardBtn, testdata.dashboardTxt, "Dashboard text mismatch");
 		assertion.assertEqual(sts.browseBtn, testdata.browseTxt, "Browser text mismatch");
 		assertion.assertEqual(sts.classesBtn, testdata.classesTxt, "Classes text mismatch");
 		assertion.assertEqual(sts.helpBtn, testdata.helpTxt, "Help text mismatch");
 		assertion.assertEqual(sts.settingsBtn, testdata.settingsTxt, "Settings text mismatch");
-		assertion.assertEqual(sts.leftPaneImg_exists, true, "Left Pane Image does not exist");
-		assertion.assertEqual(sts.poweredByTxt, testdata.poweredByTxt, "Powered By text mismatch");
+		assertion.assertEqual(sts.sidebarImg_exists, true, "Left Pane Image does not exist");
+		assertion.assertEqual(sts.poweredbyTxt, testdata.poweredByTxt, "Powered By text mismatch");
 		assertion.assertEqual(sts.comproLogo_exists, true, "Compro logo does not exist");
 		assertion.assert(sts.versionTxt.includes(testdata.engageTxt), "Engage text mismatch");
 		assertion.assert(sts.versionTxt.includes(testdata.technologyPreviewTxt), "Technology Preview text mismatch");
 		assertion.assertEqual(sts.notificationBtn_exists, true, "Notification Button does not exist");
-		assertion.assertEqual(sts.languageSwitcherBtn_exists, true, "Language Button does not exist");
+		assertion.assertEqual(sts.selectedLanguage,testdata.selectedLanguage, "Language Button does not exist");
 		assertion.assertEqual(sts.userProfileBtn_exists, true, "User Profile Button does not exist");
 		},
 
@@ -47,7 +47,7 @@ module.exports = {
 		sts = appShell.clickNotificationButton(testdata);
 		assertion.assertEqual(sts.notificationTxt,testdata.notificationHeader, "Notification Header Text mismatch");
 		assertion.assertEqual(sts.notificationCloseBtn_exists, true, "Close icon does not exist");
-		assertion.assertEqual(sts.markAllAsReadTxt.trim(), testdata.markAllAsRead, "Mark as Read Text mismatch");
+		assertion.assertEqual(sts.noNotificationImg_exists, true, "No Notification Image does not exist");
 	},
 
 	//Validate that clicking on cross icon closes the notification section
@@ -60,26 +60,31 @@ module.exports = {
 
 	//Validate that clicking on the language switcher launches the list of the supported languages 
 	ENG_SHELL_TC_7: function (testdata) {
-		sts = appShell.getLanguageListFromDropdown();
-		assertion.assertEqual(sts[0],testdata[0], "English Text mismatch");
-		assertion.assertEqual(sts[1],testdata[1], "Spanish Text mismatch");
-		assertion.assertEqual(sts[2],testdata[2], "French Text mismatch");
+		sts = appShell.selectLanguagefromLanguageSelector(testdata);
+		// assertion.assertEqual(sts[0],testdata[0], "English Text mismatch");
+		// assertion.assertEqual(sts[1],testdata[1], "Spanish Text mismatch");
+		// assertion.assertEqual(sts[2],testdata[2], "French Text mismatch");
 	},
 
 	//Validate that clicking on the language switcher launches the list of the supported languages 
-	ENG_SHELL_TC_8: function (testdata) {
-		sts = appShell.selectLanguage(testdata);
-	},
+	// ENG_SHELL_TC_8: function (testdata) {
+	// 	sts = appShell.selectLanguage(testdata);
+	// },
 	
 	//Validate that clicking on the profile dropdown launches the dropdown of profile and other options
 	ENG_SHELL_TC_9: function (testdata) {
 		sts = appShell.clickProfileButton(testdata);
 		assertion.assertEqual(sts.userName,testdata.profileUsername, "User Name Text mismatch");
 		assertion.assertEqual(sts.emailID,testdata.emailID, "email ID Text mismatch");
-		assertion.assertEqual(sts.options[0],testdata.userProfileHelpBtn, "Help Text mismatch");
-		assertion.assertEqual(sts.options[1],testdata.userProfileSettingsBtn, "Settings Text mismatch");
-		assertion.assertEqual(sts.options[2],testdata.userProfileLogoutBtn, "Logout Text mismatch");
+		assertion.assertEqual(sts.userProfileHelpBtn,testdata.userProfileHelpBtn, "Help Text mismatch");
+		assertion.assertEqual(sts.userProfileSettingsBtn,testdata.userProfileSettingsBtn, "Settings Text mismatch");
+		assertion.assertEqual(sts.userProfileLogoutBtn,testdata.userProfileLogoutBtn, "Logout Text mismatch");
+	},
 
+	//Validate that clicking on logout logs out from application
+	ENG_SHELL_TC_10: function () {
+		sts = appShell.clickLogoutButton();
+		assertion.assertEqual(sts.pageStatus, true, "Landing page status mismatch");
 	},
 	
 }
