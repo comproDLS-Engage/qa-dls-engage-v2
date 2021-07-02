@@ -31,7 +31,7 @@
 		"proceedBtn": "[data-tid=button-item-type-launch] div"
 	},
 	"homePage": {
-		"userName": "[class*=c-user-name]",
+		"headingText": "[class*=c-nav__heading-text]",
 		"newTitleBtn": "[data-tid=button-newtitle]",
 		"bookCount": "[class*=book-count]",
 		"bookList": "[data-tid*=button-book-detail] [class*=c-card__title]",

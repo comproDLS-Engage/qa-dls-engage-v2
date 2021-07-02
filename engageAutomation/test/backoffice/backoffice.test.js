@@ -22,7 +22,8 @@ module.exports = {
 		sts = loginPage.set_Password(testdata.password);
 		assertion.assertEqual(sts, true, "Password status mismatch");
 		sts = loginPage.click_Login_Button();
-		assertion.assertEqual(sts, testdata.name, "Name mismatch");
+		//assertion.assertEqual(sts, testdata.name, "Name mismatch");
+		assertion.assertEqual(sts, true, "Home page status mismatch");
 	},
 
 	// Validate that add title page opens on clicking the add book button
@@ -134,8 +135,10 @@ module.exports = {
 		sts = addActivityPage.set_Name(testdata.name);
 		assertion.assertEqual(sts, true, "Name status mismatch");
 		sts = addActivityPage.click_Add_Button();
+		//browser.switchWindow('https://backoffice-difusion-dev1.comprodls.com/');
 		assertion.assert((typeof sts === "string" && sts.includes(testdata.name)), "Snackbar messsage mismatch. " + sts);
 		assertion.assert((typeof sts === "string" && sts.includes("created successfully")), "Snackbar messsage mismatch. " + sts);
+		//browser.switchWindow('https://qa-paint.backoffice.comprodls.com/');	
 	},
 
 	// Validate that clicking on the Level 1 breadcrumb launches components page

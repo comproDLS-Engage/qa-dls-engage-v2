@@ -5,7 +5,7 @@ var res;
 
 module.exports = {
 
-    userName: selectorFile.homePage.userName,
+    headingText: selectorFile.homePage.headingText,
     newTitleBtn: selectorFile.homePage.newTitleBtn,
     bookCount: selectorFile.homePage.bookCount,
     bookList: selectorFile.homePage.bookList,
@@ -29,9 +29,8 @@ module.exports = {
     isInitialized: function () {
         logger.logInto(stackTrace.get());
         // /action.waitForDocumentLoad();
-        action.waitForDisplayed(this.userName);
         action.waitForDisplayed(this.loadingContainer, undefined, true);
-        res = action.getText(this.userName);
+        res = action.waitForDisplayed(this.headingText);
         return res;
     },
 
