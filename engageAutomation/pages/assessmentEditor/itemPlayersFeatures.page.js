@@ -617,11 +617,10 @@ module.exports = {
 	imageUpload: function (imagePath) {
 		let filePath = path.join(tcDataDir, imagePath);
 		// use browser.uploadFile to upload the test file
-		let remoteFilePath = browser.uploadFile(filePath);
+		let remoteFilePath = browser.uploadFile(imagePath);
 		// set file path value in the input field
 		res = action.addValue(this.media_input, remoteFilePath);
 		action.waitForDisplayed(this.uploadedImage, 5000);
-		//rupsi: return audio file
 		return res;
 	},
 
@@ -653,10 +652,8 @@ module.exports = {
 	},
 
 	audioUpload: function (audioPath) { // this is duplicate, we should combine imageupload and audioupload - akhil
-		// store test file path
-		let filePath = path.join(tcDataDir, audioPath);
 		// use browser.uploadFile to upload the test file
-		let remoteFilePath = browser.uploadFile(filePath);
+		let remoteFilePath = browser.uploadFile(audioPath);
 		// set file path value in the input field
 		res = action.addValue(this.media_input, remoteFilePath);
 		action.waitForDisplayed(this.uploadedAudio, 5000);
