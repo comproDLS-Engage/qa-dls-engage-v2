@@ -131,6 +131,45 @@
 			},
 			"classDashboard":{
 				"moreOption":"[data-tid=button-classOptions]"
+			},
+			"bookView":{
+				"bookCover":"[data-tid=image-bookCover]",
+				"bookTitle":"[data-tid=text-bookTitle]",
+				"bookSubTitle":"[data-tid=text-bookSubtitle]",
+				"viewClass":"[data-tid=button-classes]",
+				"moreOptions":"[data-tid=band-moreOptions]",
+				"removeBook_btn":"[data-tid=button-removeBook]",
+				"viewBookDetails_btn":"[data-tid=button-viewBookDetails]",
+				"addBook_btn":"[data-tid=button-addMyBook]",
+				"myBooks_lbl":"[data-tid=pill-myBooks]",
+				"component":"[data-tid*=button-product-",
+				"openFlipbook_btn":"[data-tid=button-openFlipbook]",
+				"unit":"[data-tid=text-contents]",
+				"chapter":"[data-tid*=button-chapter-",
+				"chapter_bandColor":"[data-tid*=band-color-",
+				"chapterTitle":"[data-tid*=text-chapterTitle-",
+				"chapterPage":"[data-tid*=text-chapterPage-",
+				"chapterCoverImg":"[data-tid*=image-chapter-",
+				"chapterMoreOptions":"[data-tid*=button-moreOption-",
+				"activityIcon":"[data-tid=icon-lesson-index]",
+				"activityCount": "[data-tid=text-lesson-index]",
+				"folderIcon":"[data-tid=icon-lesson-index]",
+				"folderCount": "[data-tid=text-lesson-index]",
+				"unitThumbnail": "[data-tid=image-unit-thumbnail",
+				"unitChapterName": "[data-tid=text-chaptername]",
+				"unitNumber": "[data-tid=text-productname]",
+				"unitOpenFlipbook_btn": "[data-tid=btn-open-in-flipbook]",
+				"nextUnit_btn": "[data-tid=button-next-unit]",
+				"previousUnit_btn": "[data-tid=button-previous-unit]",
+				"activityTitle":"[data-tid*=text-title-",
+				"activityPageInfo":"[data-tid*=text-metaInfo-",
+				"activityMoreOptions":"[data-tid*=button-contextMenu-",
+				"activityCompletionCircle":"[data-tid*=chart-",
+				"openFlipbook_moreOptions":"[data-tid=*menu-open-in-flipbook-",
+				"viewActivity_moreOptions":"[data-tid=*menu-view-activity-"
+
+
+
 			}
 		}
 		
