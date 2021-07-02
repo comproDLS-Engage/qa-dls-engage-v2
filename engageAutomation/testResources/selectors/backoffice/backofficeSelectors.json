@@ -31,7 +31,7 @@
 		"proceedBtn": "[data-tid=button-item-type-launch] div"
 	},
 	"homePage": {
-		"userName": "[class*=c-user-name]",
+		"headingText": "[class*=c-nav__heading-text]",
 		"newTitleBtn": "[data-tid=button-newtitle]",
 		"bookCount": "[class*=book-count]",
 		"bookList": "[data-tid*=button-book-detail] [class*=c-card__title]",
@@ -75,7 +75,7 @@
 	"viewLearningPathPage": {
 		"emptyStateBtn": "[class*=c-empty-state-button]",
 		"folderList": "[data-tid*=button-folder-details] [class=c-list-item__primary-text]",
-		"activityList": "[class*='c-activity--title mdc-list-item__primary-text']",
+		"activityList": "[class='c-activity--title']",
 		"addFolderBtn": "button[data-tid=button-add-folder]",
 		"addActivityBtn": "[data-tid=button-add-activity]",
 		"publishBtn": "[data-tid=button-publish-book-component]",

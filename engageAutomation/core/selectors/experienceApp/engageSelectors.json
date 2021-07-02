@@ -67,6 +67,7 @@
 			"myClassPage": {
 				"pageTitle": "main h1",
 				"pageSubTitle": "main div>span",
+				"pageIconNoClassArchived": "[data-tid=image-noClasses]",
 				"pageTitleNoClassArchived": "[data-tid='text-title-noClasses']",
 				"pageSubTitleNoClassArchived": "[data-tid='text-subtitle-noClasses']",
 				"classHeading": "[data-tid='text-pageTitle']",
@@ -90,8 +91,8 @@
 				"gradeBookOption": "div[style*='opacity: 1'] li[data-tid*='button-gradebook']",
 				"materialsOption": "div[style*='opacity: 1'] li[data-tid*='button-material']",
 				"msgBar": "[data-tid='text-success']",
-				"msgBarClose": "[data-tid=text-close]",
-				"classCard": "[aria-label*=\"class card ",
+				"msgBarClose": "[data-tid=button-close]",
+				"classCard": "[data-tid=button-class-",
 				"futureTab": "[aria-label*=\"class card "
 			},
 			"createClassPage": {
@@ -137,6 +138,21 @@
 			},
 			"classDashboard":{
 				"moreOption":"[data-tid=button-classOptions]"
+			},
+			"teacherViewClassPage": {
+				"pageTitle": "[data-tid=text-pageTitle]",
+				"gradebookBtn": "[data-tid=button-gradebook]",
+				"classOptionsBtn": "[data-tid=button-classOptions]",
+				"editClassBtn": "[data-tid=button-editClass]",
+				"addBooksBtn": "[data-tid=button-addBooks]",
+				"dataSubtitle": "[data-tid=text-pageSubtitle]",
+				"productTabBtns": "[data-tid=button-product-",
+				"productTabBtn": "[data-tid=button-product-",
+				"bookCoverImg": "[data-tid=image-classBookCover]",
+				"bookTitleTxt": "[data-tid=text-classBookTitle]",
+				"bookSubtitleTxt": "[data-tid=text-classBookSubtitle]",
+				"viewBookBtn": "[data-tid=button-classViewBook]",
+				"bookComponentNamesBtns": "[data-tid*=text-classBookProduct-"
 			}
 		}
 		

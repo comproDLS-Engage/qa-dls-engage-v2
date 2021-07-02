@@ -9,6 +9,7 @@ const addCompPage = require('../../pages/backOffice/addComponent.page.js');
 const addFolderPage = require('../../pages/backOffice/addFolder.page.js');
 const addActivityPage = require('../../pages/backOffice/addActivity.page.js');
 const commonPage = require('../../pages/backOffice/common.page.js');
+const viewLearningPathPage = require('../../pages/backOffice/viewLearningPath.page.js');
 var sts;
 
 module.exports = {
@@ -22,7 +23,8 @@ module.exports = {
 		sts = loginPage.set_Password(testdata.password);
 		assertion.assertEqual(sts, true, "Password status mismatch");
 		sts = loginPage.click_Login_Button();
-		assertion.assertEqual(sts, testdata.name, "Name mismatch");
+		//assertion.assertEqual(sts, testdata.name, "Name mismatch");
+		assertion.assertEqual(sts, true, "Home page status mismatch");
 	},
 
 	// Validate that add title page opens on clicking the add book button
@@ -49,7 +51,8 @@ module.exports = {
 	// Validate that the view book page is launched on clicking the book card on the home page
 	BK_TC_4: function (testdata) {
 		sts = homePage.click_Book(testdata.name);
-		assertion.assertEqual(sts, testdata.name, "Book title mismatch");
+		assertion.assert(sts.includes(testdata.name), "Book title mismatch. " + sts);
+		//assertion.assertEqual(sts, testdata.name, "Book title mismatch");
 	},
 
 	// Validate that the delete book dialog box opens on clicking delete button on the components page
@@ -133,8 +136,10 @@ module.exports = {
 		sts = addActivityPage.set_Name(testdata.name);
 		assertion.assertEqual(sts, true, "Name status mismatch");
 		sts = addActivityPage.click_Add_Button();
+		//browser.switchWindow('https://backoffice-difusion-dev1.comprodls.com/');
 		assertion.assert((typeof sts === "string" && sts.includes(testdata.name)), "Snackbar messsage mismatch. " + sts);
 		assertion.assert((typeof sts === "string" && sts.includes("created successfully")), "Snackbar messsage mismatch. " + sts);
+		//browser.switchWindow('https://qa-paint.backoffice.comprodls.com/');	
 	},
 
 	// Validate that clicking on the Level 1 breadcrumb launches components page
@@ -189,9 +194,22 @@ module.exports = {
 		assertion.assertEqual(sts.description, testdata.description, "Options description mismatch");
 		assertion.assertEqual(sts.folderLevel, testdata.folderLevel, "Options learning path level mismatch");
 	},
+
 	// Validate that clicking on the back button moves to previous page
-	BK_TC_24: function (testdata) {
+	BK_TC_24: function () {
 		sts = common.click_Back_Button();
 		assertion.assertEqual(sts, true, "Move to previous page status mismatch");
+	},
+
+	// Validate that clicking on the activity launches the activity preview
+	BK_TC_25: function (testdata) {
+		sts = viewLearningPathPage.click_Activity(testdata.name);
+		assertion.assertEqual(sts, true, "Preview status mismatch");
+	},
+
+	// Validate that the form/preview is closed on clicking on the close button
+	BK_TC_26: function () {
+		sts = common.click_Close_Button();
+		assertion.assertEqual(sts, true, "Close form/preview status mismatch");
 	},
 }

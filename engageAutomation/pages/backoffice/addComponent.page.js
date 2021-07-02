@@ -11,7 +11,7 @@ module.exports = {
     autonumberingDropdown: selectorFile.addComponentPage.autonumberingDropdown,
     autonumberingList: selectorFile.addComponentPage.autonumberingList,
     categoryTypeDropdown: selectorFile.addComponentPage.categoryTypeDropdown,
-    categoryTypeList: selectorFile.addComponentPage.categoryTypeList,    
+    categoryTypeList: selectorFile.addComponentPage.categoryTypeList,
     addBtn: selectorFile.addComponentPage.addBtn,
     bannerText: selectorFile.common.bannerText,
     bannerCloseBtn: selectorFile.common.bannerCloseBtn,
@@ -38,7 +38,8 @@ module.exports = {
             let i, list;
             list = action.findElements(this.categoryTypeList);
             for (i = 0; i < list.length; i++) {
-                if (action.getText(list[i]) == name) {
+                //console.log(action.getText(list[i]))
+                if (action.getText(list[i]).includes(name)) {
                     res = action.click(action.parentElement(list[i]));
                     break;
                 }
@@ -57,7 +58,8 @@ module.exports = {
             let i, list;
             list = action.findElements(this.lpLevelsList);
             for (i = 0; i < list.length; i++) {
-                if (action.getText(list[i]) == value) {
+                //console.log(action.getText(list[i]))
+                if (action.getText(list[i]).includes(value)) {
                     res = action.click(action.parentElement(list[i]));
                     break;
                 }
@@ -76,7 +78,8 @@ module.exports = {
             let i, list;
             list = action.findElements(this.autonumberingList);
             for (i = 0; i < list.length; i++) {
-                if (action.getText(list[i]) == value) {
+                //console.log(action.getText(list[i]))
+                if (action.getText(list[i]).includes(value)) {
                     res = action.click(action.parentElement(list[i]));
                     break;
                 }
@@ -96,6 +99,7 @@ module.exports = {
                 action.waitForDisplayed(this.bannerText);
                 //action.click(this.bannerCloseBtn);
                 res = action.getText(this.bannerText);
+                action.waitForDisplayed(this.bannerText, undefined, true);
             }
         }
         logger.logInto(stackTrace.get(), res);

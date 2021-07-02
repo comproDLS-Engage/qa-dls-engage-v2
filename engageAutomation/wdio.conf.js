@@ -7,22 +7,17 @@ const specGenerator = require(process.cwd() + '/core/runner/specGenerator.js')
 const visualTimelineReportService = require('./core/utils/visual-report-utility/report-service').TimelineService;
 var visualReportService = new visualTimelineReportService();
 var retryTimes = 0;
-
 if (argv.retry)
     retryTimes = 1;
 
-var hostname = global.capabilitiesFile[argv.capability].hostname;
-var portNumber = global.capabilitiesFile[argv.capability].portNumber;
-var webServicePath = global.capabilitiesFile[argv.capability].webServicePath;
-var webDriverService = global.capabilitiesFile[argv.capability].webDriverService;
-var user = global.capabilitiesFile[argv.capability].user;
-var key = global.capabilitiesFile[argv.capability].key;
-
-if (argv.capability.includes("bstack")) { //setting wdio params for browserstack
-    var browserstack = require('browserstack-local');
-    var browserstackLocal = true;
-    var updateJob = false;
-}
+var hostname = global.capabilitiesFile[argv.browserCapability].hostname;
+var portNumber = global.capabilitiesFile[argv.browserCapability].portNumber;
+var webServicePath = global.capabilitiesFile[argv.browserCapability].webServicePath;
+var webDriverService = global.capabilitiesFile[argv.browserCapability].webDriverService;
+var user = global.capabilitiesFile[argv.browserCapability].user;
+var key = global.capabilitiesFile[argv.browserCapability].key;
+var browserstackLocal = global.capabilitiesFile[argv.browserCapability].browserstackLocal;
+var updateJob = global.capabilitiesFile[argv.browserCapability].updateJob;
 
 // setting parameters for novus service
 var NovusService = [
@@ -80,7 +75,7 @@ exports.config = {
     user: user,
     key: key,
     browserstackLocal: browserstackLocal,
-    updateJob: updateJob,
+    //updateJob: updateJob,
     //
     // Override default path ('/wd/hub') for chromedriver service.
     //
@@ -175,7 +170,7 @@ exports.config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: argv.capability ? [
+    services: argv.browserCapability ? [
         [TimelineService], webDriverService, NovusService
     ] : argv.deviceName ? [
         [TimelineService], webDriverService, NovusService
@@ -252,19 +247,6 @@ exports.config = {
         specGenerator.fileArrayGenerator(); //generating specs
         if (argv.visual) {
             visualReportService.onPrepare();    //initiating visualReportService
-        }
-
-        if (browserstackLocal == true) { //connecting to browserstack
-            console.log("Connecting local");
-            return new Promise(function (resolve, reject) {
-                exports.bs_local = new browserstack.Local();
-                //console.log(exports.config.key)
-                exports.bs_local.start({ 'key': exports.config.key }, function (error) {
-                    if (error) return reject(error);
-                    console.log('Connected. Now testing...');
-                    resolve();
-                });
-            })
         }
     },
     /**
@@ -367,9 +349,6 @@ exports.config = {
         if (argv.visual) {
             visualReportService.onComplete();
         }
-
-        if (argv.capability.includes("bstack"))
-            exports.bs_local.stop();
     },
     /**
      * Gets executed when a refresh happens.
