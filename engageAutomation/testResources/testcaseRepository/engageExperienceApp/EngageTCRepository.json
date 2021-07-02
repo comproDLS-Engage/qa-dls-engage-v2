@@ -526,6 +526,30 @@
                     "description": "Validate on clicking Projectable resource in Explore menu, same tab is launched on Browse",
                     "tags": "P2",
                     "visualTest": true
+                },
+                {
+                    "id": "ENG_DASH_TC_7",
+                    "description": "Validate on clicking View Classes from Book dropdown menu, class Pane is launched",
+                    "tags": "P2",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_DASH_TC_8",
+                    "description": "Validate on clicking Create Classes from Book dropdown menu, create class page is launched",
+                    "tags": "P2",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_DASH_TC_9",
+                    "description": "Validate on clicking Remove from My Books from Book dropdown menu, not active snackbar message is displayed",
+                    "tags": "P2",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_DASH_TC_10",
+                    "description": "Validate on clicking Open Flipbook from Book dropdown menu, flipbook page is launched",
+                    "tags": "P2",
+                    "visualTest": true
                 }
             ]
         }
