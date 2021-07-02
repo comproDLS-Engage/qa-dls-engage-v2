@@ -9,6 +9,7 @@ const addCompPage = require('../../pages/backOffice/addComponent.page.js');
 const addFolderPage = require('../../pages/backOffice/addFolder.page.js');
 const addActivityPage = require('../../pages/backOffice/addActivity.page.js');
 const commonPage = require('../../pages/backOffice/common.page.js');
+const viewLearningPathPage = require('../../pages/backOffice/viewLearningPath.page.js');
 var sts;
 
 module.exports = {
@@ -193,9 +194,22 @@ module.exports = {
 		assertion.assertEqual(sts.description, testdata.description, "Options description mismatch");
 		assertion.assertEqual(sts.folderLevel, testdata.folderLevel, "Options learning path level mismatch");
 	},
+
 	// Validate that clicking on the back button moves to previous page
-	BK_TC_24: function (testdata) {
+	BK_TC_24: function () {
 		sts = common.click_Back_Button();
 		assertion.assertEqual(sts, true, "Move to previous page status mismatch");
+	},
+
+	// Validate that clicking on the activity launches the activity preview
+	BK_TC_25: function (testdata) {
+		sts = viewLearningPathPage.click_Activity(testdata.name);
+		assertion.assertEqual(sts, true, "Preview status mismatch");
+	},
+
+	// Validate that the form/preview is closed on clicking on the close button
+	BK_TC_26: function () {
+		sts = common.click_Close_Button();
+		assertion.assertEqual(sts, true, "Close form/preview status mismatch");
 	},
 }

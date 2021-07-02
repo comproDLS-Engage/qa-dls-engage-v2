@@ -83,7 +83,7 @@ module.exports = {
         let i, list;
         list = action.findElements(this.activityList);
         for (i = 0; i < list.length; i++) {
-            if (action.getText(list[i]) == name) {
+            if (action.getText(list[i]).includes(name)) {
                 res = action.click(list[i]);
                 if (res == true) {
                     res = action.waitForDisplayed(this.loadingContainer, undefined, true);

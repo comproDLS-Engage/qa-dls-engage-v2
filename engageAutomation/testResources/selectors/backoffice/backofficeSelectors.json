@@ -75,7 +75,7 @@
 	"viewLearningPathPage": {
 		"emptyStateBtn": "[class*=c-empty-state-button]",
 		"folderList": "[data-tid*=button-folder-details] [class=c-list-item__primary-text]",
-		"activityList": "[class*='c-activity--title mdc-list-item__primary-text']",
+		"activityList": "[class='c-activity--title']",
 		"addFolderBtn": "button[data-tid=button-add-folder]",
 		"addActivityBtn": "[data-tid=button-add-activity]",
 		"publishBtn": "[data-tid=button-publish-book-component]",
