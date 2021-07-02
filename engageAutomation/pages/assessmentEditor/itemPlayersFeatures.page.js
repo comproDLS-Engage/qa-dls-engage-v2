@@ -1,15 +1,13 @@
 "use strict";
-const { getText } = require('../../core/actionLibrary/baseActionLibrary.js');
 var action = require('../../core/actionLibrary/baseActionLibrary.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
 const path = require('path');
-const { count, command } = require('yargs');
 var res, obj;
 
 // rename this file to itemEditor.page.js - akhil
 
 module.exports = {
-	
+
 	nextbtn: selectorFile.css.quizpage.nextbtn,
 	editor_tab: selectorFile.css.quizpage.editor_tab,
 	previewPublish_tab: selectorFile.css.quizpage.previewPublish_tab,
@@ -71,6 +69,23 @@ module.exports = {
 			}
 		}
 	},
+
+	clickSaveandReturnBtn: function () {
+		logger.logInto(stackTrace.get());
+		res = action.isClickable("[data-tid=button-saveandreturn]");
+		if (res == true) {
+			res = action.click("[data-tid=button-saveandreturn]");
+			if (res == true) {
+				res = action.waitForDisplayed("[class=MuiDialog-paper]", undefined, true);
+			}
+		}
+		else {
+			res = res + " -- saveandreturn button is not clickable";
+			logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
+
 	selectCorrectOptions: function (correctOptions) { // this function should be enhanced to support MCQ and True/False - akhil
 		logger.logInto(stackTrace.get());
 		res = action.click(this.checkboxOption_input + "1]");
@@ -78,7 +93,7 @@ module.exports = {
 		for (var i = 0; i < correctOptions.length; i++) {
 			var optionSelector = this.checkboxOption_input + correctOptions[i] + "] input";
 			res = action.click(optionSelector);
-			optionsarr[i] = getText(optionSelector)
+			optionsarr[i] = action.getText(optionSelector)
 		}
 		// return the options selected - akhil
 		// updated - Swati
@@ -721,7 +736,7 @@ module.exports = {
 		var optionsarr = [];
 		let getValueArray = []
 		var answerlength = action.findElements(this.fibAnswerOption)
-		
+
 		for (var i = 0; i < options.length; i++) {
 
 			var optionSelector = this.fibAnswerOption + options[i] + "] input";
