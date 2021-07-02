@@ -27,6 +27,8 @@ module.exports = {
     activityCount: selectorFile.css.ComproEngage.bookView.activityCount,
     folderIcon: selectorFile.css.ComproEngage.bookView.folderIcon, //duplicate Data-tids in engage ENG-6702
     folderCount: selectorFile.css.ComproEngage.bookView.folderCount,
+    chapterOpenFlipbook_btn : selectorFile.css.ComproEngage.bookView.chapterOpenFlipbook_btn,
+    chapterViewActivity_btn : selectorFile.css.ComproEngage.bookView.chapterViewActivity_btn, 
 
     isInitialized: function() {
         logger.logInto(stackTrace.get());
@@ -222,11 +224,27 @@ module.exports = {
     },
 
     clickChapterOpeninFlipbook: function(chapterName) {
+        this.clickChapterMoreOptions(chapterName)
+        if (res == true) {
+            res = action.click(this.openFlipbook_moreOptions)
+            logger.logInto(stackTrace.get(), "Open FlipBook in More Options Clicked");
+        } else
+            logger.logInto(stackTrace.get(), "Open FlipBook in More Options  Not Clicked", "error");
+
+        return res;
 
 
     },
 
     clickChapterViewActivities: function(chapterName) {
+        this.clickChapterMoreOptions(chapterName)
+        if (res == true) {
+            res = action.click(this.openFlipbook_moreOptions)
+            logger.logInto(stackTrace.get(), "Open FlipBook in More Options Clicked");
+        } else
+            logger.logInto(stackTrace.get(), "Open FlipBook in More Options  Not Clicked", "error");
+
+        return res;
 
     }
 }

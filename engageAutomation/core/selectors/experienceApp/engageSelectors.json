@@ -155,6 +155,8 @@
 				"activityCount": "[data-tid=text-lesson-index]",
 				"folderIcon":"[data-tid=icon-lesson-index]",
 				"folderCount": "[data-tid=text-lesson-index]",
+				"chapterOpenFlipbook_btn":"[data-tid*=button-flipbook-",
+				"chapterViewActivity_btn":"[data-tid*=button-open-",
 				"unitThumbnail": "[data-tid=image-unit-thumbnail",
 				"unitChapterName": "[data-tid=text-chaptername]",
 				"unitNumber": "[data-tid=text-productname]",
