@@ -72,11 +72,12 @@ module.exports = {
 
 	clickSaveandReturnBtn: function () {
 		logger.logInto(stackTrace.get());
-		res = action.isClickable("[data-tid=button-saveandreturn]");
+		res = action.waitForClickable("[data-tid=button-saveandreturn]");
 		if (res == true) {
 			res = action.click("[data-tid=button-saveandreturn]");
 			if (res == true) {
-				res = action.waitForDisplayed("[class=MuiDialog-paper]", undefined, true);
+				res = action.waitForDisplayed("[role=progressbar]", undefined, true);
+				browser.pause(5000)
 			}
 		}
 		else {

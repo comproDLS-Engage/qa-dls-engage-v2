@@ -136,10 +136,11 @@ module.exports = {
 		sts = addActivityPage.set_Name(testdata.name);
 		assertion.assertEqual(sts, true, "Name status mismatch");
 		sts = addActivityPage.click_Add_Button();
+		assertion.assertEqual(sts, true, "Add button status mismatch");
 		//browser.switchWindow('https://backoffice-difusion-dev1.comprodls.com/');
-		assertion.assert((typeof sts === "string" && sts.includes(testdata.name)), "Snackbar messsage mismatch. " + sts);
-		assertion.assert((typeof sts === "string" && sts.includes("created successfully")), "Snackbar messsage mismatch. " + sts);
-		//browser.switchWindow('https://qa-paint.backoffice.comprodls.com/');	
+		//assertion.assert((typeof sts === "string" && sts.includes(testdata.name)), "Snackbar messsage mismatch. " + sts);
+		//assertion.assert((typeof sts === "string" && sts.includes("created successfully")), "Snackbar messsage mismatch. " + sts);
+		browser.switchWindow('https://qa-paint.backoffice.comprodls.com/');	
 	},
 
 	// Validate that clicking on the Level 1 breadcrumb launches components page

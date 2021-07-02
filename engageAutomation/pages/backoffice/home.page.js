@@ -31,6 +31,7 @@ module.exports = {
         // /action.waitForDocumentLoad();
         action.waitForDisplayed(this.loadingContainer, undefined, true);
         res = action.waitForDisplayed(this.headingText);
+        browser.pause(5000)
         return res;
     },
 
@@ -66,6 +67,7 @@ module.exports = {
             if (action.getText(list[i]).includes(name)) {
                 res = action.click(list[i]);
                 if (res == true) {
+                    browser.pause(5000)
                     res = require('./viewBook.page.js').isInitialized();
                 }
                 break;
