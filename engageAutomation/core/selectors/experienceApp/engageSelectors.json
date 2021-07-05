@@ -136,9 +136,12 @@
 				"bookCover":"[data-tid=image-bookCover]",
 				"bookTitle":"[data-tid=text-bookTitle]",
 				"bookSubTitle":"[data-tid=text-bookSubtitle]",
-				"viewClass":"[data-tid=button-classes]",
+				"viewClass":"button[data-tid=button-classes]",
+				"closeClassDrawer":"[data-tid=button-close]",
 				"moreOptions":"[data-tid=band-moreOptions]",
 				"removeBook_btn":"[data-tid=button-removeBook]",
+				"removeBook_Dialog":"[role=dialog]",
+				"removeBookDialogCancel":"//span[text()='Cancel']",
 				"viewBookDetails_btn":"[data-tid=button-viewBookDetails]",
 				"addBook_btn":"[data-tid=button-addMyBook]",
 				"myBooks_lbl":"[data-tid=pill-myBooks]",
@@ -152,12 +155,12 @@
 				"chapterCoverImg":"[data-tid*=image-chapter-",
 				"chapterMoreOptions":"[data-tid*=button-moreOption-",
 				"activityIcon":"[data-tid=icon-lesson-index]",
-				"activityCount": "[data-tid=text-lesson-index]",
+				"activityCount": "//*[@data-tid='text-lesson-index' and contains(text(),'Activities')]",
 				"folderIcon":"[data-tid=icon-lesson-index]",
-				"folderCount": "[data-tid=text-lesson-index]",
-				"chapterOpenFlipbook_btn":"[data-tid*=button-flipbook-",
-				"chapterViewActivity_btn":"[data-tid*=button-open-",
-				"unitThumbnail": "[data-tid=image-unit-thumbnail",
+				"folderCount": "//*[@data-tid='text-lesson-index' and contains(text(),'Folder')]",
+				"unitOpenInFlipbook_btn":"[data-tid*=button-flipbook-",
+				"unitViewActivity_btn":"[data-tid*=button-open-",
+				"unitThumbnail": "[data-tid*=image-unit-thumbnail]",
 				"unitChapterName": "[data-tid=text-chaptername]",
 				"unitNumber": "[data-tid=text-productname]",
 				"unitOpenFlipbook_btn": "[data-tid=btn-open-in-flipbook]",
@@ -168,10 +171,8 @@
 				"activityMoreOptions":"[data-tid*=button-contextMenu-",
 				"activityCompletionCircle":"[data-tid*=chart-",
 				"openFlipbook_moreOptions":"[data-tid=*menu-open-in-flipbook-",
-				"viewActivity_moreOptions":"[data-tid=*menu-view-activity-"
-
-
-
+				"viewActivity_moreOptions":"[data-tid=*menu-view-activity-",
+				"breadcrumbFlipbook":"[data-tid=breadcrumb-flipbook]"
 			}
 		}
 		

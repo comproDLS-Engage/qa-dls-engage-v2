@@ -7,10 +7,7 @@
                 "browserName": "chrome",
                 "goog:chromeOptions": {
                     "args": [
-                        "window-size=1920,1080",
-                        "--headless",
-                        "--disable-gpu",
-                        "--log-level=3"
+                        "window-size=1920,1080"
                     ]
                 }
             }

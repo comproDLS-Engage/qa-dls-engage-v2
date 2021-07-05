@@ -6,8 +6,8 @@ module.exports = {
 
 	// View book page
 	ENG_DIF_TC_1: function () {
-		res = action.click("[class*=Drawer-paperAnchorRight] [class*=Button-edgeEnd]");
-		console.log(res)
+		// res = action.click("[class*=Drawer-paperAnchorRight] [class*=Button-edgeEnd]");
+		// console.log(res)
 		res = action.click("[data-tid=button-view-0]");
 		console.log(res)
 		//action.waitForDocumentLoad();

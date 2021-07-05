@@ -45,12 +45,12 @@ module.exports = {
 
     },
 
-    getComponentListData(): function() {
+    getComponentListData: function() {
         let i, list;
         let componentArr = [];
         list = action.findElements(this.component);
         for (i = 0; i < list.length; i++) {
-            componentArr[i] = acttion.getText(list[i])
+            componentArr[i] = action.getText(list[i])
         }
         logger.logInto(stackTrace.get(), componentArr);
         return componentArr;
@@ -88,8 +88,14 @@ module.exports = {
     },
 
     getActivityListData: function(componentName) {
+        var componentIndex;
         logger.logInto(stackTrace.get())
-        var componentIndex = require('./bookDetail.page.js').clickComponent(componentName);
+        if(componentName == undefined)
+            componentIndex = 0;
+        else 
+          componentIndex = require('./bookDetail.page.js').clickComponent(componentName);
+
+        console.log(componentIndex);
         let i, list;
         let activityArr = [];
         if (componentIndex >= 0) {
@@ -97,9 +103,9 @@ module.exports = {
             for (i = 0; i < list.length; i++) {
                 let obj;
                 obj = {
-                    activityTitle: action.getText(this.activityTitle + componentIndex + '- ' + i),
-                    activityPageInfo: action.getText(this.activityPageInfo + componentIndex + '- ' + i),
-                    activityCompletionCircle: action.waitForDisplayed(this.activityCompletionCircle + i)
+                    activityTitle: action.getText(this.activityTitle + componentIndex + '-' + i),
+                    activityPageInfo: action.getText(this.activityPageInfo + componentIndex + '-' + i),
+                    activityCompletionCircle: (action.getElementCount(this.activityCompletionCircle + i) > 0) ? action.waitForDisplayed(this.activityCompletionCircle + i) : null
                 }
                 activityArr[i] = obj;
             }

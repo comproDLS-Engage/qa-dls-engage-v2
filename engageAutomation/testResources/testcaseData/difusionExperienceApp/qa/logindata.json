@@ -93,6 +93,19 @@
                     "courses": [],
                     "info": "freash user without books or classes"
                 },
+                "validInstructorUser3": {
+                    "email": "difusionqa.teach1@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "instructor",
+                    "name": "difusionqa.teach1",
+                    "courses": [
+                        {
+                            "key": "VYd6-QDXo",
+                            "name": "course1"
+                        }
+                    ],
+                    "info": {}
+                },
                 "onboardingUser": {
                     "email": "everexezu-6426@yopmail.com",
                     "password": "Compro@1234",
