@@ -4,43 +4,43 @@
             {
                 "name": "Quality Test Book 5",
                 "coverImage": "./testResources/testcaseData/backOffice/qa/book_cover_140_2.png",
-                "description": "QA test description"
+                "description": "QA test automation description"
             }
         ],
         "component": [
             {
                 "type": "Learning Path",
                 "category": "--none--",
-                "title": "QA Test Learning Path - none",
+                "title": "QA Automation Test Learning Path - none [DO NOT PUBLISH]",
                 "folderLevel": "3",
                 "autonumbering": "1-based"
             },
             {
                 "type": "Bank",
                 "category": "Resources",
-                "title": "QA Test Bank - resources [DO NOT PUBLISH]",
+                "title": "QA Automation Test Bank - resources [DO NOT PUBLISH]",
                 "folderLevel": "2",
                 "autonumbering": "0-based"
             }
         ],
         "folder": [
             {
-                "name": "QA Test folder1",
+                "name": "QA Automation Test folder1",
                 "coverImage": ""
             },
             {
-                "name": "QA Test folder2",
+                "name": "QA Automation Test folder2",
                 "coverImage": ""
             }
         ],
         "activity": [
             {
                 "type": "Native Engage Learning Object",
-                "name": "QA Test LO1 - native"
+                "name": "QA Automation Test LO1 - native"
             },
             {
                 "type": "Close Ended Learning Object",
-                "name": "QA Test LO2 - close ended"
+                "name": "QA Automation Test LO2 - close ended"
             }
         ]
     }

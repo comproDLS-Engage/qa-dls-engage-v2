@@ -67,8 +67,8 @@ module.exports = {
             if (action.getText(list[i]).includes(name)) {
                 res = action.click(list[i]);
                 if (res == true) {
-                    browser.pause(5000)
                     res = require('./viewBook.page.js').isInitialized();
+                    browser.pause(5000);
                 }
                 break;
             }

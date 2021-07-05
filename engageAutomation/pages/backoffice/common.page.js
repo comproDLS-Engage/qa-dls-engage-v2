@@ -25,6 +25,7 @@ module.exports = {
             res = action.waitForDisplayed(this.snackbarLbl);
             res = action.getText(this.snackbarLbl);
             action.click(this.snackbarBtn);
+            browser.pause(5000);
         }
         logger.logInto(stackTrace.get(), res);
         return res;

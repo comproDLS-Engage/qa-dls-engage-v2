@@ -40,8 +40,8 @@ module.exports = {
             if (action.getText(list[i]).includes(name)) {
                 res = action.click(list[i]);
                 if (res == true) {
-                    browser.pause(5000)
                     res = require('./viewLearningPath.page.js').isInitialized();
+                    browser.pause(5000);
                 }
                 break;
             }
@@ -62,7 +62,10 @@ module.exports = {
                 res = action.click(list[i]);
                 if (res == true) {
                     res = action.click(this.proceedBtn);
-                    res = require('./addComponent.page.js').isInitialized();
+                    if (res == true) {
+                        res = require('./addComponent.page.js').isInitialized();
+                        browser.pause(5000);
+                    }
                 }
                 break;
             }

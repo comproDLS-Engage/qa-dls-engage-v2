@@ -158,25 +158,25 @@ module.exports = {
 	// Validate that the component is deleted on clicking delete button in the dialog box
 	BK_TC_18: function () {
 		sts = common.click_confirmDialog_Button();
-		assertion.assert((typeof sts === "string" && sts.includes("deletion request submitted successfully")), "Snackbar messsage mismatch. " + sts);
+		assertion.assert((typeof sts === "string" && sts.includes("is being deleted. This process can take a few seconds to complete.")), "Snackbar messsage mismatch. " + sts);
 	},
 
 	// Validate that the delete folder dialog box opens on clicking delete button on the activity page
 	BK_TC_19: function (testdata) {
-		sts = learningPathPage.click_DeleteFolder_Button();
-		assertion.assert((typeof sts === "string" && sts.includes(testdata.name)), "Dialog text mismatch. " + sts);
+		sts = learningPathPage.select_Item_and_Click_Delete(testdata.name);
+		assertion.assert((typeof sts === "string" && sts.includes("Are you sure, you want to delete the selected items?")), "Dialog text mismatch. " + sts);
 	},
 
 	// Validate that the folder is deleted on clicking delete button in the dialog box
 	BK_TC_20: function () {
 		sts = common.click_confirmDialog_Button();
-		assertion.assert((typeof sts === "string" && sts.includes("folder deleted successfully")), "Snackbar messsage mismatch. " + sts);
+		assertion.assert((typeof sts === "string" && sts.includes("Selected items deleted successfully.")), "Snackbar messsage mismatch. " + sts);
 	},
 
 	// Validate that the delete activity dialog box opens on clicking delete button in the activity menu
 	BK_TC_21: function (testdata) {
 		sts = learningPathPage.click_Delete_Button_in_ActivityMenu();
-		assertion.assert((typeof sts === "string" && sts.includes(testdata.name)), "Dialog text mismatch. " + sts);
+		assertion.assert((typeof sts === "string" && sts.includes("Are you sure, you want to delete the selected items?")), "Dialog text mismatch. " + sts);
 	},
 
 	// Validate that the activity is deleted on clicking delete button in the dialog box

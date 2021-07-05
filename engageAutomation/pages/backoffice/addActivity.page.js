@@ -23,7 +23,7 @@ module.exports = {
         if (res == true) {
             res = action.click(this.addBtn);
             if (res == true) {
-                browser.pause(5000);
+                browser.pause(10000);
             }
         }
         logger.logInto(stackTrace.get(), res);
