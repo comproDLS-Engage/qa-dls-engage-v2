@@ -1,5 +1,4 @@
 "use strict";
-const { Console } = require('winston/lib/winston/transports');
 var action = require('../../core/actionLibrary/baseActionLibrary.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
 var res;
@@ -168,12 +167,11 @@ module.exports = {
 		logger.logInto(stackTrace.get());
 		res = action.click(this.languageSwitcherBtn);
 		if (res == true) {
-			let list, i;
+			let list, i, languageListText;
 			list = action.findElements(this.languageList);
 			for (i = 0; i < list.length; i++) {
-				let languageListText;
 				languageListText = action.getText(list[i]);
-				if (languageListText == languageToSelect) {
+				if (languageListText.includes(languageToSelect)) {
 					res = action.click(list[i]);
 					if (res == true) {
 						res = action.getText(this.selectedLanguage);
@@ -223,8 +221,6 @@ module.exports = {
 		return obj; 
 	},
 
-	//add function for logout - akhil
-	//logout function added - swati
 	clickLogoutButton: function () {
 		logger.logInto(stackTrace.get());
 		res = action.click(this.userProfileLogoutBtn);
