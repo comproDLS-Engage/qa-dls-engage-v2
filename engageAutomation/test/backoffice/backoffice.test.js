@@ -49,7 +49,8 @@ module.exports = {
 	// Validate that the view book page is launched on clicking the book card on the home page
 	BK_TC_4: function (testdata) {
 		sts = homePage.click_Book(testdata.name);
-		assertion.assertEqual(sts, testdata.name, "Book title mismatch");
+		assertion.assert(sts.includes(testdata.name), "Book title mismatch. " + sts);
+		//assertion.assertEqual(sts, testdata.name, "Book title mismatch");
 	},
 
 	// Validate that the delete book dialog box opens on clicking delete button on the components page

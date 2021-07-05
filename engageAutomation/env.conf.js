@@ -40,7 +40,7 @@ if (!argv.appType || !argv.testEnv || !argv.testExecFile) {
     console.log("testExecFile = " + argv.testExecFile);
     console.log("!!!!! Exiting program... !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
     process.exit(1);
-} 
+}
 else {
     let envData = global.jsonParserUtil.jsonParser(process.cwd() + '/env.json');
     //global.testJsDir = envData[argv.appType].testJsDir;
@@ -66,28 +66,25 @@ else {
     // ============================
     // Setting browser capabilities
     // ============================
-    if (!argv.capability) {
-        argv.capability = "local-chrome-1920";
-        console.log("WARNING!! Capabilities not provided, using default capabilities (local-chrome-1920)...");
+    if (!argv.browserCapability || argv.browserCapability == "") {
+        argv.browserCapability = "desktop-chrome-1920";
+        console.log("WARNING!! Browser capability not provided, using default capabilities (" + argv.browserCapability + ")...");
     }
-    if (capabilitiesFile[argv.capability] == undefined) {
-        console.log("!!!!! ERROR: Capabilities not found in the capabilities.json !!!!!");
-        console.log("capability = " + argv.capability);
-        console.log("!!!!! Exiting program... !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+    if (capabilitiesFile[argv.browserCapability] == undefined) {
+        console.log("!!!!! ERROR: Browser capability not found in the capabilities.json !!!!!");
+        console.log("browserCapability = " + argv.browserCapability);
+        console.log("!!!!! Exiting program... !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
         process.exit(1);
     }
-    global.capabilities = capabilitiesFile[argv.capability].capabilities;
-    global.resolution = argv.capability;
-    global.resScreenshotDir = argv.capability;
-    let browserWidth = argv.capability.split("-")[2].trim();
-    if (parseInt(browserWidth, 10) > 1024)
-        global.view = 'desktop';
+    global.capabilities = capabilitiesFile[argv.browserCapability].capabilities;
+    global.resolution = argv.browserCapability;
+    global.resScreenshotDir = argv.browserCapability;
+    let browserWidth = argv.browserCapability.split("-")[2].trim();
+    //currently browserWidth is only used in visualTest.js to choose labels
+    if (parseInt(browserWidth, 10) > 1023)
+        global.view = 'desktop'; 
     else
         global.view = 'mobile';
-
-    //global.resScreenshotDir = capabilitiesFile[argv.capability].resolution;
-    //global.resolution.width = capabilitiesFile[argv.capability].resolution.split("x")[0].trim();
-    //global.resolution.height = capabilitiesFile[argv.capability].resolution.split("x")[1].trim();
 }
 
 global.baseScreenshotDir = path.join('screenshots/baseline/' + argv.appType, global.resScreenshotDir);
