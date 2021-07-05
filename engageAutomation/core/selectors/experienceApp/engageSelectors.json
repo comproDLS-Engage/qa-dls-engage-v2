@@ -65,6 +65,7 @@
 				"notificationTxt": "[data-tid=text-drawerHeaderTitle]",
 				"notificationCloseBtn": "[data-tid=button-close]",
 				"noNotificationImg": "[data-tid=image-noNotifications]",
+				"grayBackdrop": "[class*=MuiBackdrop]",
 				"languageSwitcherBtn": "[data-tid=dropdown-languageselector]",
 				"languageList": "[data-tid*=dropdownitem]",
 				"selectedLanguage": "[data-tid=dropdown-languageselector] p",

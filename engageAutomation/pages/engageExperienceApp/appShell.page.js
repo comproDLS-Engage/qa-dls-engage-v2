@@ -20,6 +20,7 @@ module.exports = {
 	notificationCloseBtn: selectorFile.css.ComproEngage.appShell.notificationCloseBtn, 
 	notificationTxt: selectorFile.css.ComproEngage.appShell.notificationTxt, 
 	noNotificationImg: selectorFile.css.ComproEngage.appShell.noNotificationImg,
+	grayBackdrop: selectorFile.css.ComproEngage.appShell.grayBackdrop,
 	languageSwitcherBtn: selectorFile.css.ComproEngage.appShell.languageSwitcherBtn,
 	languageList: selectorFile.css.ComproEngage.appShell.languageList,
 	selectedLanguage: selectorFile.css.ComproEngage.appShell.selectedLanguage,
@@ -127,7 +128,7 @@ module.exports = {
 		logger.logInto(stackTrace.get());
 		res = action.click(this.notificationCloseBtn);
 		if (true == res) {
-			res = this.getAppShellData();
+			res = action.waitForDisplayed(this.grayBackdrop, undefined, true);
 		}
 		else {
 			res = res + " -- Error in clicking Notification Close Button";
