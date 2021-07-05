@@ -69,6 +69,7 @@ module.exports = {
 
 	// Validate that user is able to logout of the back office application
 	BK_TC_7: function () {
+		browser.switchWindow('https://backoffice-difusion-dev1.comprodls.com/');
 		sts = commonPage.signout_from_app();
 		assertion.assertEqual(sts, true, "Login page status mismatch");
 	},
@@ -152,7 +153,7 @@ module.exports = {
 	// Validate that the delete component dialog box opens on clicking delete button on the learning path page
 	BK_TC_17: function (testdata) {
 		sts = learningPathPage.click_DeleteComponent_Button();
-		assertion.assert((typeof sts === "string" && sts.includes(testdata.title)), "Dialog text mismatch. " + sts);
+		assertion.assert((typeof sts === "string" && sts.includes("Are you sure, you want to delete component")), "Dialog text mismatch. " + sts);
 	},
 
 	// Validate that the component is deleted on clicking delete button in the dialog box

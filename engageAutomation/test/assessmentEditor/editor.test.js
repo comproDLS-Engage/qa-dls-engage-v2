@@ -184,6 +184,12 @@ module.exports = {
 		}
 	},
 
+	//click preview tab
+	ASE_COM_TC_998: function () {
+		sts = EditorPlayer.clickPreviewPublishTab();
+		assertion.assertEqual(sts, true, "Preview tab status mismatch");
+	},
+
 	//click save and return button
 	ASE_COM_TC_999: function () {
 		sts = EditorPlayer.clickSaveandReturnBtn();
