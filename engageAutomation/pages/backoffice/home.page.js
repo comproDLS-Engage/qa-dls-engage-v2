@@ -5,7 +5,7 @@ var res;
 
 module.exports = {
 
-    userName: selectorFile.homePage.userName,
+    headingText: selectorFile.homePage.headingText,
     newTitleBtn: selectorFile.homePage.newTitleBtn,
     bookCount: selectorFile.homePage.bookCount,
     bookList: selectorFile.homePage.bookList,
@@ -29,9 +29,9 @@ module.exports = {
     isInitialized: function () {
         logger.logInto(stackTrace.get());
         // /action.waitForDocumentLoad();
-        action.waitForDisplayed(this.userName);
         action.waitForDisplayed(this.loadingContainer, undefined, true);
-        res = action.getText(this.userName);
+        res = action.waitForDisplayed(this.headingText);
+        browser.pause(5000)
         return res;
     },
 
@@ -67,6 +67,7 @@ module.exports = {
             if (action.getText(list[i]).includes(name)) {
                 res = action.click(list[i]);
                 if (res == true) {
+                    browser.pause(5000)
                     res = require('./viewBook.page.js').isInitialized();
                 }
                 break;

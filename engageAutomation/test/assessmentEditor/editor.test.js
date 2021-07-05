@@ -184,10 +184,13 @@ module.exports = {
 		}
 	},
 
-
-
-
-
+	//click save and return button
+	ASE_COM_TC_999: function () {
+		sts = EditorPlayer.clickSaveandReturnBtn();
+		assertion.assertEqual(sts, true, "Error in save and return");
+		browser.switchWindow('https://backoffice-difusion-dev1.comprodls.com/');
+	},
+	
 	
 	//Click on Question Tab
 	/*ASE_SET_TC_15: function (testdata) {

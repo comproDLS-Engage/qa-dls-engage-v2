@@ -11,7 +11,7 @@ module.exports = {
     autonumberingDropdown: selectorFile.addComponentPage.autonumberingDropdown,
     autonumberingList: selectorFile.addComponentPage.autonumberingList,
     categoryTypeDropdown: selectorFile.addComponentPage.categoryTypeDropdown,
-    categoryTypeList: selectorFile.addComponentPage.categoryTypeList,    
+    categoryTypeList: selectorFile.addComponentPage.categoryTypeList,
     addBtn: selectorFile.addComponentPage.addBtn,
     bannerText: selectorFile.common.bannerText,
     bannerCloseBtn: selectorFile.common.bannerCloseBtn,
@@ -99,6 +99,8 @@ module.exports = {
                 action.waitForDisplayed(this.bannerText);
                 //action.click(this.bannerCloseBtn);
                 res = action.getText(this.bannerText);
+                action.waitForDisplayed(this.bannerText, undefined, true);
+                browser.pause(5000)
             }
         }
         logger.logInto(stackTrace.get(), res);

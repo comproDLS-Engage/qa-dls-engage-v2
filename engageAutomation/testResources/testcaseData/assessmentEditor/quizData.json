@@ -11,7 +11,7 @@
             "questionInstruction": "Watch the video carefully and choose the correct option of the given below question",
             "videoURL": "https://www.youtube.com/watch?v=mxbodI60OT4",
             "videoCredit": "mcq video #1",
-            "imagePath": "media/Cell.png",
+            "imagePath": "./testResources/testcaseData/assessmentEditor/media/Cell.png",
             "questionText": "Which organelle is called powerhouse of the cell?",
             "options": ["Mitochondria","Nucleus","Golgi Bodies","Ribosomes"],
             "optionStyle": "2"
@@ -21,7 +21,7 @@
             "buttonName": "mutiplechoice",
             "questionTitle": "Question 2",
             "questionInstruction": "See the diagram carefully and choose the correct option of the given below question",
-            "imagePath": "media/Cell.png",
+            "imagePath": "./testResources/testcaseData/assessmentEditor/media/Cell.png",
             "imageCredit": "Cell Diagram",
             "questionText": "Name the marked organelle which is also responsible for the formation of peptide bonds",
             "options": ["Ribosomes","RNA","DNA","Golgi Bodies"],
@@ -35,7 +35,7 @@
           "buttonName": "trueorfalse",
           "questionTitle": "Question 3",
           "questionInstruction": "Listen to the audio carefully and choose the correct option of the given below question",
-          "audioPath": "media/Ringtone.mp3",
+          "audioPath": "./testResources/testcaseData/assessmentEditor/media/Ringtone.mp3",
           "audioCredit": "Audio",
           "questionText": "This is an iphone original ringtone"
         }
@@ -46,7 +46,7 @@
           "buttonName": "multipleresponse",
           "questionTitle": "Question 4",
           "questionInstruction": "See the image carefully and choose the correct option(s) of the given below question",
-          "imagePath": "media/Plant.jpg",
+          "imagePath": "./testResources/testcaseData/assessmentEditor/media/Plant.jpg",
           "imageCredit": "Plant Diagram",
           "questionText": "Identify the parts of the plants in the given options:",
           "options": [
@@ -68,7 +68,7 @@
           "buttonName": "draganddropontoimage",
           "questionTitle": "Question 5",
           "questionText": "Drag the continents at their correct places on the world map",
-          "imagePath": "media/WorldMap.jpg",
+          "imagePath": "./testResources/testcaseData/assessmentEditor/media/WorldMap.jpg",
           "labelOptions": [
             "Asia", 
             "Africa", 
@@ -119,7 +119,7 @@
           "questionIndex": 8,
           "buttonName": "ordering",
           "questionTitle": "Question 8",
-          "imagePath": "media/WorldMap.jpg",
+          "imagePath": "./testResources/testcaseData/assessmentEditor/media/WorldMap.jpg",
           "questionInstruction": "Starting with the earliest, arrange these landmarks events in the order in which they took place in Mughal History",
           "questionText": "Identify the parts of the plants in the given options:",
           "options": [

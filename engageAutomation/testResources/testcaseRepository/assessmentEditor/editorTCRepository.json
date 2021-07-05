@@ -149,6 +149,11 @@
                     "id": "ASE_FIB_TC_1",
                     "description": "Enter the Answer in FIB Value",
                     "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_999",
+                    "description": "Click on save and return",
+                    "tags": "P1"
                 }
             ]
         }

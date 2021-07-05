@@ -127,6 +127,16 @@
                     "id": "BK_TC_24",
                     "description": "Validate that clicking on the back button moved to previous page",
                     "tags": "P1"
+                },
+                {
+                    "id": "BK_TC_25",
+                    "description": "Validate that clicking on the activity launches the activity preview",
+                    "tags": "P1"
+                },
+                {
+                    "id": "BK_TC_26",
+                    "description": "Validate that the form/preview is closed on clicking on the close button",
+                    "tags": "P1"
                 }
             ]
         }

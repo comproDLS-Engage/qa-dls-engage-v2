@@ -28,10 +28,11 @@
 		"goBackBtn": "button[data-ng-click=closewindow()]",
 		"bannerText": "[class*=mdc-banner__text]",
 		"bannerCloseBtn": "[class=c-banner__close]",
-		"proceedBtn": "[data-tid=button-item-type-launch] div"
+		"proceedBtn": "[data-tid=button-item-type-launch] div",
+		"buttonLoader": "[class=c-button__spinner]"
 	},
 	"homePage": {
-		"userName": "[class*=c-user-name]",
+		"headingText": "[class*=c-nav__heading-text]",
 		"newTitleBtn": "[data-tid=button-newtitle]",
 		"bookCount": "[class*=book-count]",
 		"bookList": "[data-tid*=button-book-detail] [class*=c-card__title]",
@@ -75,9 +76,9 @@
 	"viewLearningPathPage": {
 		"emptyStateBtn": "[class*=c-empty-state-button]",
 		"folderList": "[data-tid*=button-folder-details] [class=c-list-item__primary-text]",
-		"activityList": "[class*='c-activity--title mdc-list-item__primary-text']",
+		"activityList": "[class='c-activity--title']",
 		"addFolderBtn": "button[data-tid=button-add-folder]",
-		"addActivityBtn": "[data-tid=button-add-activity]",
+		"addActivityBtn": "[data-tid='button-ADD COMPONENT']",
 		"publishBtn": "[data-tid=button-publish-book-component]",
 		"deleteComponentBtn": "[data-tid=button-delete-component]",
 		"activityTypeList": "[class=c-radio-label]",

@@ -96,21 +96,21 @@
                 "id": "ENG_DIF_TC_15",
                 "description": "Teacher view class page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.07,
+                "visualTolerance": 0.1,
                 "testData": []
             },
             {
                 "id": "ENG_DIF_TC_32",
                 "description": "Assignment tab on teacher view class page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.07,
+                "visualTolerance": 0.1,
                 "testData": []
             },
             {
                 "id": "ENG_DIF_TC_16",
                 "description": "Student tab on teacher view class page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.07,
+                "visualTolerance": 0.1,
                 "testData": []
             },
             {
@@ -124,7 +124,7 @@
                 "id": "ENG_DIF_TC_18",
                 "description": "Edit and save class changes",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.07,
+                "visualTolerance": 0.1,
                 "testData": []
             },
             {
@@ -184,17 +184,10 @@
                 "testData": []
             },
             {
-                "id": "ENG_DIF_TC_13",
-                "description": "Filter button snackbar message",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.07,
-                "testData": []
-            },
-            {
                 "id": "ENG_DIF_TC_19",
                 "description": "Classes page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.07,
+                "visualTolerance": 0.1,
                 "testData": []
             },
             {
@@ -221,7 +214,7 @@
                 "id": "ENG_DIF_TC_23",
                 "description": "Cancel and go back to Classes page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.07,
+                "visualTolerance": 0.1,
                 "testData": []
             }
         ],
@@ -286,7 +279,7 @@
                 "id": "ENG_DIF_TC_19",
                 "description": "Classes page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.07,
+                "visualTolerance": 0.1,
                 "testData": []
             },
             {
@@ -428,7 +421,7 @@
                 "id": "ENG_DIF_TC_24",
                 "description": "Student view class page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.07,
+                "visualTolerance": 0.1,
                 "testData": []
             },
             {
@@ -448,13 +441,6 @@
             {
                 "id": "ENG_DIF_TC_7",
                 "description": "Browse page with videos tab",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.07,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_13",
-                "description": "Filter button snackbar message",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
                 "visualTolerance": 0.07,
                 "testData": []
@@ -521,7 +507,7 @@
                 "id": "ENG_DIF_TC_19",
                 "description": "Classes page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.07,
+                "visualTolerance": 0.1,
                 "testData": []
             },
             {

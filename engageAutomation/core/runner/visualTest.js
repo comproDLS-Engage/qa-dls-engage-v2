@@ -2,12 +2,13 @@
 var rootDir = process.cwd();
 var mergeImg = require(path.join(rootDir, '/core/utils/mergeImage.js'));
 var hideSelectors = [
-'h4[data-tid="title-analyticsbox-0-1"]', 
-'[data-tid*="button"] div div div:nth-of-type(4)', 
-'[data-tid*="button"] div div div:nth-of-type(5)'];
+    'h4[data-tid="title-analyticsbox-0-1"]',
+    '[data-tid*="button"] div div div:nth-of-type(4)',
+    '[data-tid*="button"] div div div:nth-of-type(5)'];
 const { Eyes, Target, ClassicRunner, By, Configuration, BatchInfo } = require('@applitools/eyes-webdriverio');
 var eyes = new Eyes();
 var action = require(rootDir + '/core/actionLibrary/baseActionLibrary');
+var labelsDir = '/screenshots/labels/' + global.view;
 
 module.exports = {
 
@@ -36,17 +37,16 @@ module.exports = {
                 suiteindex++;
         }
 
-        let logDataobj = {}
+        let logDataobj = {};
         logDataobj.start = startTime,
             logDataobj.end = endTime,
-            logDataobj.duration = endTime - startTime
+            logDataobj.duration = endTime - startTime;
         logDataobj.capabilities = browser.capabilities;
         logDataobj.capabilities.sessionId = browser.sessionId;
         logDataobj.capabilities.screenResolution = {
-            width: browser.config.windowWidth,
-            height: browser.config.windowHeight
+            width: global.resolution.width,
+            height: global.resolution.height
         }
-
         logDataobj.specs = [testExecFile];
         logDataobj.suites = suites;
         logDataobj.state = {
@@ -74,13 +74,13 @@ module.exports = {
 
         browser.call(() =>
             mergeImg.combineImages(
-                [path.join(rootDir, global.baseScreenshotDir, '/baselineLbl.png'),
+                [path.join(rootDir, labelsDir, '/baselineLbl.png'),
                 path.join(rootDir, global.baseScreenshotDir, global.testFileName, global.screenshotName)],
                 path.join(rootDir, global.reportOutputDir, '/visual/baseline-' + global.screenshotName), 'row'));
 
         browser.call(() =>
             mergeImg.combineImages(
-                [path.join(rootDir, global.baseScreenshotDir, '/testLbl.png'),
+                [path.join(rootDir, labelsDir, '/testLbl.png'),
                 path.join(rootDir, global.testScreenshotDir, global.testFileName, global.screenshotName)],
                 path.join(rootDir, global.reportOutputDir, '/visual/test-' + global.screenshotName), 'row'));
 
@@ -96,7 +96,7 @@ module.exports = {
             Arr[count].tests[testIndex].screenshots = [rootDir + global.reportOutputDir + '/visual/baseline-' + global.screenshotName, rootDir + global.reportOutputDir + '/visual/test-' + global.screenshotName, rootDir + global.reportOutputDir + '/visual/diff-' + global.screenshotName];
             browser.call(() =>
                 mergeImg.combineImages(
-                    [path.join(rootDir, global.baseScreenshotDir, '/diffLbl.png'),
+                    [path.join(rootDir, labelsDir, '/diffLbl.png'),
                     path.join(rootDir, global.diffScreenshotDir, global.testFileName, global.screenshotName)],
                     path.join(rootDir, global.reportOutputDir, '/visual/diff-' + global.screenshotName), 'row'))
         }
@@ -109,7 +109,7 @@ module.exports = {
                     path.join(rootDir, global.reportOutputDir, '/visual/test-' + global.screenshotName)],
                     path.join(rootDir, global.reportOutputDir, '/visual/merge-' + global.screenshotName), 'col'));
             Arr[count].tests[testIndex].screenshots = [rootDir + global.reportOutputDir + '/visual/merge-' + global.screenshotName];
-        } 
+        }
         else if (result[0].isWithinMisMatchTolerance == false && global.view == 'mobile') {
             browser.call(() =>
                 mergeImg.combineImages(

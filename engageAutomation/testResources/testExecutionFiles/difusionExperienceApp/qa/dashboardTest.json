@@ -78,6 +78,12 @@
                 "description": "",
                 "testFile": "./test/engageExperienceApp/dashboard.test.js",
                 "testData": []
+            },
+            {
+                "id": "ENG_DASH_TC_8",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/dashboard.test.js",
+                "testData": []
             }
         ],
         "AfterEach": [

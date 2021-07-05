@@ -16,6 +16,7 @@ module.exports = {
     pageContent: selectorFile.common.pageContent,
     menuBtn: selectorFile.common.menuBtn,
     signOutBtn: selectorFile.common.signOutBtn,
+    closeBtn: selectorFile.common.closeBtn,
 
     click_confirmDialog_Button: function () {
         logger.logInto(stackTrace.get());
@@ -32,6 +33,16 @@ module.exports = {
     click_Back_Button: function () {
         logger.logInto(stackTrace.get());
         res = action.click(this.backBtn);
+        if (res == true) {
+            res = action.waitForDisplayed(this.pageContent);
+        }
+        logger.logInto(stackTrace.get(), res);
+        return res;
+    },
+
+    click_Close_Button: function () {
+        logger.logInto(stackTrace.get());
+        res = action.click(this.closeBtn);
         if (res == true) {
             res = action.waitForDisplayed(this.pageContent);
         }

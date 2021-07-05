@@ -9,6 +9,7 @@ module.exports = {
     password_tbox: selectorFile.loginPage.password_tbox,
     login_btn: selectorFile.loginPage.login_btn,
     appLoader: selectorFile.common.appLoader,
+    buttonLoader: selectorFile.common.buttonLoader,
 
     isInitialized: function () {
         logger.logInto(stackTrace.get());
@@ -49,6 +50,7 @@ module.exports = {
         res = action.click(this.login_btn);
         if (res == true) {
             logger.logInto(stackTrace.get(), " -- Login button is clicked");
+            action.waitForDisplayed(this.buttonLoader, undefined, true)
             res = require('./home.page.js').isInitialized();
         }
         else {

@@ -1,15 +1,13 @@
 "use strict";
-const { getText } = require('../../core/actionLibrary/baseActionLibrary.js');
 var action = require('../../core/actionLibrary/baseActionLibrary.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
 const path = require('path');
-const { count, command } = require('yargs');
 var res, obj;
 
 // rename this file to itemEditor.page.js - akhil
 
 module.exports = {
-	
+
 	nextbtn: selectorFile.css.quizpage.nextbtn,
 	editor_tab: selectorFile.css.quizpage.editor_tab,
 	previewPublish_tab: selectorFile.css.quizpage.previewPublish_tab,
@@ -71,6 +69,24 @@ module.exports = {
 			}
 		}
 	},
+
+	clickSaveandReturnBtn: function () {
+		logger.logInto(stackTrace.get());
+		res = action.waitForClickable("[data-tid=button-saveandreturn]");
+		if (res == true) {
+			res = action.click("[data-tid=button-saveandreturn]");
+			if (res == true) {
+				res = action.waitForDisplayed("[role=progressbar]", undefined, true);
+				browser.pause(5000)
+			}
+		}
+		else {
+			res = res + " -- saveandreturn button is not clickable";
+			logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
+
 	selectCorrectOptions: function (correctOptions) { // this function should be enhanced to support MCQ and True/False - akhil
 		logger.logInto(stackTrace.get());
 		res = action.click(this.checkboxOption_input + "1]");
@@ -78,7 +94,7 @@ module.exports = {
 		for (var i = 0; i < correctOptions.length; i++) {
 			var optionSelector = this.checkboxOption_input + correctOptions[i] + "] input";
 			res = action.click(optionSelector);
-			optionsarr[i] = getText(optionSelector)
+			optionsarr[i] = action.getText(optionSelector)
 		}
 		// return the options selected - akhil
 		// updated - Swati
@@ -602,11 +618,10 @@ module.exports = {
 	imageUpload: function (imagePath) {
 		let filePath = path.join(tcDataDir, imagePath);
 		// use browser.uploadFile to upload the test file
-		let remoteFilePath = browser.uploadFile(filePath);
+		let remoteFilePath = browser.uploadFile(imagePath);
 		// set file path value in the input field
 		res = action.addValue(this.media_input, remoteFilePath);
 		action.waitForDisplayed(this.uploadedImage, 5000);
-		//rupsi: return audio file
 		return res;
 	},
 
@@ -638,10 +653,8 @@ module.exports = {
 	},
 
 	audioUpload: function (audioPath) { // this is duplicate, we should combine imageupload and audioupload - akhil
-		// store test file path
-		let filePath = path.join(tcDataDir, audioPath);
 		// use browser.uploadFile to upload the test file
-		let remoteFilePath = browser.uploadFile(filePath);
+		let remoteFilePath = browser.uploadFile(audioPath);
 		// set file path value in the input field
 		res = action.addValue(this.media_input, remoteFilePath);
 		action.waitForDisplayed(this.uploadedAudio, 5000);
@@ -721,7 +734,7 @@ module.exports = {
 		var optionsarr = [];
 		let getValueArray = []
 		var answerlength = action.findElements(this.fibAnswerOption)
-		
+
 		for (var i = 0; i < options.length; i++) {
 
 			var optionSelector = this.fibAnswerOption + options[i] + "] input";

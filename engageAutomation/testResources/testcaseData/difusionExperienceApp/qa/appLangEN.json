@@ -77,7 +77,7 @@
             },
             "myClassPage": {
                 "classHeading": "Classes",
-                "classSubHeading": "You current, upcoming and past classes",
+                "classSubHeading": "Your current, upcoming and past classes",
                 "pageTitleNoClassArchived": "See your list of archived classes here",
                 "pageSubTitleNoClassArchived": "Any class you have archived will appear here. Once archived, you can still view class details. You may restore the class to allow students to rejoin.",
                 "noClassTitle": "Create a class to get started",
@@ -94,6 +94,27 @@
                 "studentsOption_txt": "Students",
                 "gradeBookOption_txt": "Gradebook",
                 "materialsOption_txt": "Materials"
+            },
+            "editClassPage": {
+                "pageTitle": "Edit Class",
+                "pageSubTitle": "Edit the Class Name, duration or associated books.",
+                "classHeader": "Class Details",
+                "classSubHeader": "Name your class and assign the start and end dates.",
+                "title_lbl": "Name",
+                "startDate_lbl": "Start Date",
+                "endDate_lbl": "End Date",
+                "selectBook_lbl": "Class Books",
+                "selectBook_txt": "Assign a book to your class in order to view and assign materials.",
+                "bookTitle": "PROYECTOS",
+                "cancelBtn_txt": "Cancel & Go Back",
+                "notitleErrorMsg": "Name is required.",
+                "titleErrorMsg": "Name should be less than 50 characters.",
+                "bookErrorMsg": "No book selected",
+                "saveBtn_txt": "Save",
+                "endDateErrorMsg": "End Date cannot be less than today's date"
+            },
+            "teacherViewClass": {
+                "editOption_txt": "Edit Class"
             }
         }
     }
