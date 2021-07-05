@@ -253,7 +253,7 @@
                     "id": "ENG_INS_MYCO_TC_1",
                     "description": "Validate the content (in english) of the My Classes Page if instructor has not created any Class.",
                     "tags": "P1",
-                            "visualTest": true
+                    "visualTest": true
                 },
                 {
                     "id": "ENG_INS_MYCO_TC_2",
@@ -343,7 +343,7 @@
                 {
                     "id": "ENG_INS_MYCO_TC_22",
                     "description": "Validate the content of the Create Class Success Page",
-        "visualTest": true,
+                    "visualTest": true,
                     "tags": "P1"
                 },
                 {
@@ -397,7 +397,6 @@
                     "description": "Edit Class -Validate that the error message appears if user deselect the book and click on Save button to save the class",
                     "tags": "P1"
                 },
-                
                 {
                     "id": "ENG_INS_MYCO_TC_96",
                     "description": "Validate that My Class Page should displayed on clicking the my class tab",
@@ -529,24 +528,30 @@
                 },
                 {
                     "id": "ENG_DASH_TC_7",
-                    "description": "Validate on clicking View Classes from Book dropdown menu, class Pane is launched",
+                    "description": "Validate on clicking book ellipses, dropdown menu is launched",
                     "tags": "P2",
                     "visualTest": true
                 },
                 {
                     "id": "ENG_DASH_TC_8",
-                    "description": "Validate on clicking Create Classes from Book dropdown menu, create class page is launched",
+                    "description": "Validate on clicking View Classes from Book dropdown menu, class Pane is launched",
                     "tags": "P2",
                     "visualTest": true
                 },
                 {
                     "id": "ENG_DASH_TC_9",
-                    "description": "Validate on clicking Remove from My Books from Book dropdown menu, not active snackbar message is displayed",
+                    "description": "Validate on clicking Create Classes from Book dropdown menu, create class page is launched",
                     "tags": "P2",
                     "visualTest": true
                 },
                 {
                     "id": "ENG_DASH_TC_10",
+                    "description": "Validate on clicking Remove from My Books from Book dropdown menu, not active snackbar message is displayed",
+                    "tags": "P2",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_DASH_TC_11",
                     "description": "Validate on clicking Open Flipbook from Book dropdown menu, flipbook page is launched",
                     "tags": "P2",
                     "visualTest": true

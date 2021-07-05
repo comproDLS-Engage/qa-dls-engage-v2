@@ -67,19 +67,37 @@ module.exports = {
         return res;
     },
 
-    clickMenuViewClass: function (bookName) {
+    clickViewBookEllipses: function (bookName) {
         logger.logInto(stackTrace.get());
         ret = this.getDashboardPageData();
         for (var i = 0; i < ret.bookList.length; i++) {
             if (ret.bookList[i].bookTitle == bookName) {
                 res = action.click(this.bookEllipses + i + "]");
                 if (res == true) {
-                    res = action.click(this.viewClass_menu + i + "]");
-                    //Class Pane is Initialized
+                    //get Data of dropdown
                     logger.logInto(stackTrace.get(), " --Book Ellipse clicked");
                 }
                 else {
                     res = res + " -- Error in clicking Book Ellipses"
+                    logger.logInto(stackTrace.get(), res, "error");
+                }
+            }
+        }
+        return res;
+    },
+
+    clickMenuViewClass: function (bookName) {
+        logger.logInto(stackTrace.get());
+        ret = this.getDashboardPageData();
+        for (var i = 0; i < ret.bookList.length; i++) {
+            if (ret.bookList[i].bookTitle == bookName) {
+                res = action.click(this.viewClass_menu + i + "]");
+                if (res == true) {
+                    //Class Pane is Initialized
+                    logger.logInto(stackTrace.get(), " --View class clicked");
+                }
+                else {
+                    res = res + " -- Error in clicking View class"
                     logger.logInto(stackTrace.get(), res, "error");
                 }
             }
@@ -92,14 +110,13 @@ module.exports = {
         ret = this.getDashboardPageData();
         for (var i = 0; i < ret.bookList.length; i++) {
             if (ret.bookList[i].bookTitle == bookName) {
-                res = action.click(this.bookEllipses + i + "]");
+                res = action.click(this.createClass_menu + i + "]");
                 if (res == true) {
-                    res = action.click(this.createClass_menu + i + "]");
                     //create Class Is Initialized
-                    logger.logInto(stackTrace.get(), " --Book Ellipse clicked");
+                    logger.logInto(stackTrace.get(), " --create class clicked");
                 }
                 else {
-                    res = res + " -- Error in clicking Book Ellipses"
+                    res = res + " -- Error in clicking create class"
                     logger.logInto(stackTrace.get(), res, "error");
                 }
             }
@@ -112,14 +129,13 @@ module.exports = {
         ret = this.getDashboardPageData();
         for (var i = 0; i < ret.bookList.length; i++) {
             if (ret.bookList[i].bookTitle == bookName) {
-                res = action.click(this.bookEllipses + i + "]");
+                res = action.click(this.removeBook_menu + i + "]");
                 if (res == true) {
-                    res = action.click(this.removeBook_menu + i + "]");
                     //Snackbar
-                    logger.logInto(stackTrace.get(), " --Book Ellipse clicked");
+                    logger.logInto(stackTrace.get(), " --Remove from My books clicked");
                 }
                 else {
-                    res = res + " -- Error in clicking Book Ellipses"
+                    res = res + " -- Error in clicking Remove from My books"
                     logger.logInto(stackTrace.get(), res, "error");
                 }
             }
@@ -132,14 +148,13 @@ module.exports = {
         ret = this.getDashboardPageData();
         for (var i = 0; i < ret.bookList.length; i++) {
             if (ret.bookList[i].bookTitle == bookName) {
-                res = action.click(this.bookEllipses + i + "]");
+                res = action.click(this.openFlipbook_menu + i + "]");
                 if (res == true) {
-                    res = action.click(this.openFlipbook_menu + i + "]");
                     //Flipbook Page is Initialized
-                    logger.logInto(stackTrace.get(), " --Book Ellipse clicked");
+                    logger.logInto(stackTrace.get(), " --Open flipbook clicked");
                 }
                 else {
-                    res = res + " -- Error in clicking Book Ellipses"
+                    res = res + " -- Error in clicking Open flipbook"
                     logger.logInto(stackTrace.get(), res, "error");
                 }
             }
