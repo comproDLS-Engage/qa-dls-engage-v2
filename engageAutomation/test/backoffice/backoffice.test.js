@@ -69,7 +69,7 @@ module.exports = {
 
 	// Validate that user is able to logout of the back office application
 	BK_TC_7: function () {
-		browser.switchWindow('https://backoffice-difusion-dev1.comprodls.com/');
+		browser.switchWindow(global.appUrl);
 		sts = commonPage.signout_from_app();
 		assertion.assertEqual(sts, true, "Login page status mismatch");
 	},

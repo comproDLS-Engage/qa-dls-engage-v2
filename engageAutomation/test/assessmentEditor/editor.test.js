@@ -194,7 +194,7 @@ module.exports = {
 	ASE_COM_TC_999: function () {
 		sts = EditorPlayer.clickSaveandReturnBtn();
 		assertion.assert((sts instanceof Error) === true, "Error in save and return - " + sts);
-		browser.switchWindow('https://backoffice-difusion-dev1.comprodls.com/');
+		browser.switchWindow(global.appUrl);
 	},
 	
 	

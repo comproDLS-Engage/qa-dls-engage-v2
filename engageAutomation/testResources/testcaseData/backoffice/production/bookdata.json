@@ -1,0 +1,36 @@
+{
+    "backoffice": {
+        "book": [
+            {
+                "name": "Quality Test Book 2",
+                "coverImage": "./testResources/testcaseData/backOffice/qa/book_cover_140_2.png",
+                "description": "QA test automation description"
+            }
+        ],
+        "component": [
+            {
+                "type": "Learning Path",
+                "category": "Extra Activities",
+                "title": "QA Automation Test Learning Path - extra activities [dev2]",
+                "folderLevel": "3",
+                "autonumbering": "1-based"
+            }
+        ],
+        "folder": [
+            {
+                "name": "QA Automation Test folder L1",
+                "coverImage": ""
+            },
+            {
+                "name": "QA Automation Test folder L2",
+                "coverImage": ""
+            }
+        ],
+        "activity": [
+            {
+                "type": "Native Engage Learning Object",
+                "name": "QA Automation Test LO1 - native"
+            }
+        ]
+    }
+}
