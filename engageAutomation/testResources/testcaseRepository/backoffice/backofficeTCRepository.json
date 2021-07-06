@@ -10,27 +10,27 @@
             "testcase": [
                 {
                     "id": "BK_TC_1",
-                    "description": "Validate that use is able to login to the back office application",
+                    "description": "Validate that user is able to login to the back office application",
                     "tags": "P1"
                 },
                 {
                     "id": "BK_TC_2",
-                    "description": "Validate that add title page opens on clicking the add book button",
+                    "description": "Validate that add book page opens on clicking the add book button",
                     "tags": "P1"
                 },
                 {
                     "id": "BK_TC_3",
-                    "description": "Validate that new book is added on entering required details on the add title page",
+                    "description": "Validate that new book is added on entering required details on the add book page",
                     "tags": "P1"
                 },
                 {
                     "id": "BK_TC_4",
-                    "description": "Validate that the components page is launched on clicking the book card on the home page",
+                    "description": "Validate that the book details page is launched on clicking the book card on the home page",
                     "tags": "P1"
                 },
                 {
                     "id": "BK_TC_5",
-                    "description": "Validate that the delete book dialog box opens on clicking delete button on the components page",
+                    "description": "Validate that the delete book dialog box opens on clicking delete button on the book details page",
                     "tags": "P1"
                 },
                 {
@@ -40,7 +40,7 @@
                 },
                 {
                     "id": "BK_TC_7",
-                    "description": "Validate that use is able to logout to the back office application",
+                    "description": "Validate that user is able to logout to the back office application",
                     "tags": "P1"
                 },
                 {
@@ -50,12 +50,12 @@
                 },
                 {
                     "id": "BK_TC_9",
-                    "description": "Validate that new component is added on entering required details on the add title page",
+                    "description": "Validate that new component is added on entering required details on the add component page",
                     "tags": "P1"
                 },
                 {
                     "id": "BK_TC_10",
-                    "description": "Validate that the learning path page is launched on clicking the component card on the components page",
+                    "description": "Validate that the component details page is launched on clicking the component card on the book details page",
                     "tags": "P1"
                 },
                 {
@@ -90,7 +90,7 @@
                 },
                 {
                     "id": "BK_TC_17",
-                    "description": "Validate that the delete component dialog box opens on clicking delete button on the learning path page",
+                    "description": "Validate that the delete component dialog box opens on clicking delete button on the component details page",
                     "tags": "P1"
                 },
                 {
@@ -100,12 +100,12 @@
                 },
                 {
                     "id": "BK_TC_19",
-                    "description": "Validate that the delete folder dialog box opens on clicking delete button on the sub-folder or activity page",
+                    "description": "Validate that the delete item dialog box opens on clicking delete button on the learning path page",
                     "tags": "P1"
                 },
                 {
                     "id": "BK_TC_20",
-                    "description": "Validate that the component is deleted on clicking delete button in the dialog box",
+                    "description": "Validate that the items are deleted on clicking delete button in the dialog box",
                     "tags": "P1"
                 },
                 {
@@ -125,7 +125,7 @@
                 },
                 {
                     "id": "BK_TC_24",
-                    "description": "Validate that clicking on the back button moved to previous page",
+                    "description": "Validate that clicking on the back button moves to the previous page",
                     "tags": "P1"
                 },
                 {

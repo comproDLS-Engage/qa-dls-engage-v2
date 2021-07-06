@@ -86,10 +86,12 @@ module.exports = {
 	BK_TC_9: function (testdata) {
 		sts = addCompPage.set_Title(testdata.title);
 		assertion.assertEqual(sts, true, "Title status mismatch");
-		sts = addCompPage.select_LearningPathLevel(testdata.folderLevel);
-		assertion.assertEqual(sts, true, "Learning path level status mismatch");
-		sts = addCompPage.select_Autonumbering(testdata.autonumbering);
-		assertion.assertEqual(sts, true, "Autonumbering status mismatch");
+		if (testdata.type != "Flipbook") {
+			sts = addCompPage.select_LearningPathLevel(testdata.folderLevel);
+			assertion.assertEqual(sts, true, "Learning path level status mismatch");
+			sts = addCompPage.select_Autonumbering(testdata.autonumbering);
+			assertion.assertEqual(sts, true, "Autonumbering status mismatch");
+		}
 		sts = addCompPage.select_CategoryType(testdata.category);
 		assertion.assertEqual(sts, true, "Category status mismatch");
 		sts = addCompPage.click_Add_Button();
@@ -97,7 +99,7 @@ module.exports = {
 		assertion.assert((typeof sts === "string" && sts.includes("Your new Component is being setup.")), "Banner messsage mismatch. " + sts);
 	},
 
-	// Validate that the learning path page is launched on clicking the component card
+	// Validate that the component details page is launched on clicking the component card
 	BK_TC_10: function (testdata) {
 		sts = viewBookPage.click_Component(testdata.title);
 		assertion.assertEqual(sts, true, "Learning Path page status mismatch");
@@ -141,7 +143,7 @@ module.exports = {
 		//browser.switchWindow('https://backoffice-difusion-dev1.comprodls.com/');
 		//assertion.assert((typeof sts === "string" && sts.includes(testdata.name)), "Snackbar messsage mismatch. " + sts);
 		//assertion.assert((typeof sts === "string" && sts.includes("created successfully")), "Snackbar messsage mismatch. " + sts);
-		browser.switchWindow('https://qa-paint.backoffice.comprodls.com/');	
+		browser.switchWindow('https://qa-paint.backoffice.comprodls.com/');
 	},
 
 	// Validate that clicking on the Level 1 breadcrumb launches components page
@@ -151,7 +153,7 @@ module.exports = {
 	},
 
 	// Validate that the delete component dialog box opens on clicking delete button on the learning path page
-	BK_TC_17: function (testdata) {
+	BK_TC_17: function () {
 		sts = learningPathPage.click_DeleteComponent_Button();
 		assertion.assert((typeof sts === "string" && sts.includes("Are you sure, you want to delete component")), "Dialog text mismatch. " + sts);
 	},
