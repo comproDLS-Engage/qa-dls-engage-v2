@@ -1,6 +1,6 @@
 "use strict";
 
-var testbench = require('../../pages/assessmentEditor/testBench.page.js');
+var testbench = require('../../pages/assessmentEditor/testbench.page.js');
 var EditorPlayer = require('../../pages/assessmentEditor/itemPlayersFeatures.page.js');
 
 var sts, i;

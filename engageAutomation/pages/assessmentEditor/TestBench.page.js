@@ -1,6 +1,6 @@
 "use strict";
 var action = require('../../core/actionLibrary/baseActionLibrary.js');
-var selectorFile = jsonParserUtil.jsonParser(selectorDir);
+//var selectorFile = jsonParserUtil.jsonParser(selectorDir);
 var res;
 
 module.exports = {
