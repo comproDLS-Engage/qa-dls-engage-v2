@@ -143,7 +143,7 @@ module.exports = {
 		//browser.switchWindow('https://backoffice-difusion-dev1.comprodls.com/');
 		//assertion.assert((typeof sts === "string" && sts.includes(testdata.name)), "Snackbar messsage mismatch. " + sts);
 		//assertion.assert((typeof sts === "string" && sts.includes("created successfully")), "Snackbar messsage mismatch. " + sts);
-		browser.switchWindow('https://qa-paint.backoffice.comprodls.com/');
+		browser.switchWindow('paint.backoffice.comprodls.com/');
 	},
 
 	// Validate that clicking on the Level 1 breadcrumb launches components page
@@ -179,7 +179,8 @@ module.exports = {
 	// Validate that the delete activity dialog box opens on clicking delete button in the activity menu
 	BK_TC_21: function (testdata) {
 		sts = learningPathPage.click_Delete_Button_in_ActivityMenu();
-		assertion.assert((typeof sts === "string" && sts.includes("Are you sure, you want to delete the selected items?")), "Dialog text mismatch. " + sts);
+		assertion.assert((typeof sts === "string" && sts.includes("Are you sure, you want to delete ")), "Dialog text mismatch. " + sts);
+		assertion.assert((typeof sts === "string" && sts.includes(testdata.name)), "Dialog text mismatch. " + sts);
 	},
 
 	// Validate that the activity is deleted on clicking delete button in the dialog box

@@ -2,7 +2,7 @@
     "Suite1": {
         "Name": "Creation of a components in the book",
         "TestCaseRepo": [
-            "./testResources/testcaseRepository/backoffice/backOfficeTCRepository.json"
+            "./testResources/testcaseRepository/backoffice/backofficeTCRepository.json"
         ],
         "Before": [
             {
@@ -71,7 +71,7 @@
     "Suite2": {
         "Name": "Creation of folders",
         "TestCaseRepo": [
-            "./testResources/testcaseRepository/backoffice/backOfficeTCRepository.json"
+            "./testResources/testcaseRepository/backoffice/backofficeTCRepository.json"
         ],
         "Before": [
             {
@@ -186,7 +186,7 @@
     "Suite3": {
         "Name": "Creation of a native LO with all item players",
         "TestCaseRepo": [
-            "./testResources/testcaseRepository/backoffice/backOfficeTCRepository.json",
+            "./testResources/testcaseRepository/backoffice/backofficeTCRepository.json",
             "./testResources/testcaseRepository/assessmentEditor/editorTCRepository.json"
         ],
         "Before": [
@@ -630,66 +630,6 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
-						"jsonPath": "editor.questions.FIB[0].buttonName"
-					}
-				]
-			},
-			{
-				"id": "ASE_QUN_TC_9",
-				"description": "Validate that the Question can be added using Add Question button.",
-				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": []
-			},
-			{
-				"id": "ASE_QUN_TC_5",
-				"description": "Validate that alphanumeric text is supported in Question Title Text.",
-				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-					{
-						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
-						"jsonPath": "editor.questions.FIB[0].questionTitle"
-					}
-				]
-			},
-			{
-				"id": "ASE_COM_TC_42",
-				"description": "Validate if alpha-numeric text is allowed in the Question Text",
-				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-					{
-						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
-						"jsonPath": "editor.questions.FIB[0].questionText"
-					}
-				]
-			},
-			{
-				"id": "ASE_FIB_TC_1",
-				"description": "Enter the Answer in FIB Value",
-				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-					{
-						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
-						"jsonPath": "editor.questions.FIB[0].options"
-					},
-					{
-						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
-						"jsonPath": "editor.questions.FIB[0].optionValue"
-					}
-				]
-			},
-			{
-				"id": "ASE_COM_TC_4",
-				"description": "Validate that a new question is added by clicking on the 'Add new Question' button on the left pane",
-				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": []
-			},
-			{
-				"id": "ASE_COM_TC_120",
-				"description": "Validate the editor is selected in question pane and displayed.",
-				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-					{
-						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
 						"jsonPath": "editor.questions.Matching[0].buttonName"
 					}
 				]
@@ -817,120 +757,6 @@
 					}
 				]
 			},
-			{
-				"id": "ASE_COM_TC_4",
-				"description": "Validate that a new question is added by clicking on the 'Add new Question' button on the left pane",
-				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": []
-			},
-			{
-				"id": "ASE_COM_TC_120",
-				"description": "Validate the editor is selected in question pane and displayed.",
-				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-					{
-						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
-						"jsonPath": "editor.questions.Classify[0].buttonName"
-					}
-				]
-			},
-			{
-				"id": "ASE_QUN_TC_9",
-				"description": "Validate that the Question can be added using Add Question button.",
-				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": []
-			},
-			{
-				"id": "ASE_QUN_TC_5",
-				"description": "Validate that alphanumeric text is supported in Question Title Text.",
-				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-					{
-						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
-						"jsonPath": "editor.questions.Classify[0].questionTitle"
-					}
-				]
-			},
-			{
-				"id": "ASE_COM_TC_42",
-				"description": "Validate if alpha-numeric text is allowed in the Question Text",
-				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-					{
-						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
-						"jsonPath": "editor.questions.Classify[0].questionText"
-					}
-				]
-			},
-			{
-				"id": "ASE_COM_TC_15",
-				"description": "Click on Media button and Set Image Media",
-				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-					{
-						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
-						"jsonPath": "editor.questions.Classify[0].videoURL"
-					}
-				]
-			},
-			{
-				"id": "ASE_CLS_TC_2",
-				"description": "Click Add Group button",
-				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": []
-			},
-			{
-				"id": "ASE_CLS_TC_13",
-				"description": "Click Add Option button",
-				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-					{
-						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
-						"jsonPath": "editor.questions.Classify[0].options"
-					}
-				]
-			},
-			{
-				"id": "ASE_CLS_TC_9",
-				"description": "",
-				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-					{
-						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
-						"jsonPath": "editor.questions.Classify[0].groups"
-					}
-				]
-			},
-			{
-				"id": "ASE_CLS_TC_21",
-				"description": "",
-				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-					{
-						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
-						"jsonPath": "editor.questions.Classify[0].options"
-					}
-				]
-			},
-			{
-				"id": "ASE_CLS_TC_17",
-				"description": "",
-				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-					{
-						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
-						"jsonPath": "editor.questions.Classify[0].setGroups"
-					},
-					{
-						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
-						"jsonPath": "editor.questions.Classify[0].groupsIcon"
-					},
-					{
-						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
-						"jsonPath": "editor.questions.Classify[0].groups"
-					}
-				]
-			},
             {
                 "id": "ASE_COM_TC_998",
                 "description": "Click Preview tab",
@@ -941,6 +767,167 @@
                 "id": "ASE_COM_TC_999",
                 "description": "Click save and return button",
                 "testFile": "./test/assessmentEditor/editor.test.js",
+                "testData": []
+            }
+        ],
+        "AfterEach": [],
+        "After": [
+            {
+                "id": "BK_TC_7",
+                "description": "",
+                "testFile": "./test/backoffice/backoffice.test.js",
+                "testData": []
+            }
+        ]
+    },
+    "Suite4": {
+        "Name": "Deletion of delete activity, folders and components",
+        "TestCaseRepo": [
+            "./testResources/testcaseRepository/backoffice/backofficeTCRepository.json"
+        ],
+        "Before": [
+            {
+                "id": "launchUrl",
+                "description": "",
+                "testFile": "./engageAutomation/core/runner/launchUrl.js",
+                "testData": []
+            },
+            {
+                "id": "BK_TC_1",
+                "description": "",
+                "testFile": "./test/backoffice/backoffice.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/backoffice/production/logindata.json",
+                        "jsonPath": "backoffice.user.validUser1"
+                    }
+                ]
+            },
+            {
+                "id": "BK_TC_4",
+                "description": "",
+                "testFile": "./test/backoffice/backoffice.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
+                        "jsonPath": "backoffice.book[0]"
+                    }
+                ]
+            },
+            {
+                "id": "BK_TC_10",
+                "description": "",
+                "testFile": "./test/backoffice/backoffice.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
+                        "jsonPath": "backoffice.component[0]"
+                    }
+                ]
+            },
+            {
+                "id": "BK_TC_13",
+                "description": "",
+                "testFile": "./test/backoffice/backoffice.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
+                        "jsonPath": "backoffice.folder[0]"
+                    }
+                ]
+            },
+            {
+                "id": "BK_TC_13",
+                "description": "",
+                "testFile": "./test/backoffice/backoffice.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
+                        "jsonPath": "backoffice.folder[1]"
+                    }
+                ]
+            }
+        ],
+        "BeforeEach": [],
+        "Test": [
+            {
+                "id": "BK_TC_21",
+                "description": "",
+                "testFile": "./test/backoffice/backoffice.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
+                        "jsonPath": "backoffice.activity[1]"
+                    }
+                ]
+            },
+            {
+                "id": "BK_TC_22",
+                "description": "",
+                "testFile": "./test/backoffice/backoffice.test.js",
+                "testData": []
+            },
+            {
+                "id": "BK_TC_24",
+                "description": "",
+                "testFile": "./test/backoffice/backoffice.test.js",
+                "testData": []
+            },
+            {
+                "id": "BK_TC_19",
+                "description": "",
+                "testFile": "./test/backoffice/backoffice.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
+                        "jsonPath": "backoffice.folder[1]"
+                    }
+                ]
+            },
+            {
+                "id": "BK_TC_20",
+                "description": "",
+                "testFile": "./test/backoffice/backoffice.test.js",
+                "testData": []
+            },
+            {
+                "id": "BK_TC_24",
+                "description": "",
+                "testFile": "./test/backoffice/backoffice.test.js",
+                "testData": []
+            },
+            {
+                "id": "BK_TC_19",
+                "description": "",
+                "testFile": "./test/backoffice/backoffice.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
+                        "jsonPath": "backoffice.folder[0]"
+                    }
+                ]
+            },
+            {
+                "id": "BK_TC_20",
+                "description": "",
+                "testFile": "./test/backoffice/backoffice.test.js",
+                "testData": []
+            },
+            {
+                "id": "BK_TC_17",
+                "description": "",
+                "testFile": "./test/backoffice/backoffice.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
+                        "jsonPath": "backoffice.component[0]"
+                    }
+                ]
+            },
+            {
+                "id": "BK_TC_18",
+                "description": "",
+                "testFile": "./test/backoffice/backoffice.test.js",
                 "testData": []
             }
         ],
