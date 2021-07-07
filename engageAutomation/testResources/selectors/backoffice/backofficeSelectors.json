@@ -83,7 +83,9 @@
 		"deleteComponentBtn": "[data-tid=button-delete-component]",
 		"activityTypeList": "[class=c-radio-label]",
 		"activityMenuBtn": "[data-tid=button-display-activity-menu]",
-		"activityMenuDeleteBtn": "[class*=mdc-menu-surface--open] [data-tid=button-Delete]"
+		"activityMenuDeleteBtn": "[class*=mdc-menu-surface--open] [data-tid=button-Delete]",
+		"itemCheckboxes": "[data-tid*=button-folder-details] > div > div",
+		"deleteItemBtn": "[id=deletSlectedItem]"
 	},
 	"addFolderPage": {
 		"nameTxtbox": "[id=Name]",

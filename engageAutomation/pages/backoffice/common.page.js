@@ -23,8 +23,11 @@ module.exports = {
         res = action.click(this.confirmDialog);
         if (res == true) {
             res = action.waitForDisplayed(this.snackbarLbl);
-            res = action.getText(this.snackbarLbl);
-            action.click(this.snackbarBtn);
+            if (res == true) {
+                res = action.getText(this.snackbarLbl);
+                action.click(this.snackbarBtn);
+            }
+            browser.pause(10000);
         }
         logger.logInto(stackTrace.get(), res);
         return res;

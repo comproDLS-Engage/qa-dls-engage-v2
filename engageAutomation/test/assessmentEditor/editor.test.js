@@ -184,10 +184,16 @@ module.exports = {
 		}
 	},
 
+	//click preview tab
+	ASE_COM_TC_998: function () {
+		sts = EditorPlayer.clickPreviewPublishTab();
+		assertion.assertEqual(sts, true, "Preview tab status mismatch");
+	},
+
 	//click save and return button
 	ASE_COM_TC_999: function () {
 		sts = EditorPlayer.clickSaveandReturnBtn();
-		assertion.assertEqual(sts, true, "Error in save and return");
+		assertion.assert((sts instanceof Error) === true, "Error in save and return - " + sts);
 		browser.switchWindow('https://backoffice-difusion-dev1.comprodls.com/');
 	},
 	

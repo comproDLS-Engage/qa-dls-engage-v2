@@ -5,7 +5,7 @@
                 "maxInstances": 5,
                 "browserName": "chrome",
                 "goog:chromeOptions": {
-                    "args": []
+                    "args": ["--log-level=3"]
                 }
             }
         ],

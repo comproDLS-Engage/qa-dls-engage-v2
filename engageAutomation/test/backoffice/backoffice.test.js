@@ -69,6 +69,7 @@ module.exports = {
 
 	// Validate that user is able to logout of the back office application
 	BK_TC_7: function () {
+		browser.switchWindow('https://backoffice-difusion-dev1.comprodls.com/');
 		sts = commonPage.signout_from_app();
 		assertion.assertEqual(sts, true, "Login page status mismatch");
 	},
@@ -85,10 +86,12 @@ module.exports = {
 	BK_TC_9: function (testdata) {
 		sts = addCompPage.set_Title(testdata.title);
 		assertion.assertEqual(sts, true, "Title status mismatch");
-		sts = addCompPage.select_LearningPathLevel(testdata.folderLevel);
-		assertion.assertEqual(sts, true, "Learning path level status mismatch");
-		sts = addCompPage.select_Autonumbering(testdata.autonumbering);
-		assertion.assertEqual(sts, true, "Autonumbering status mismatch");
+		if (testdata.type != "Flipbook") {
+			sts = addCompPage.select_LearningPathLevel(testdata.folderLevel);
+			assertion.assertEqual(sts, true, "Learning path level status mismatch");
+			sts = addCompPage.select_Autonumbering(testdata.autonumbering);
+			assertion.assertEqual(sts, true, "Autonumbering status mismatch");
+		}
 		sts = addCompPage.select_CategoryType(testdata.category);
 		assertion.assertEqual(sts, true, "Category status mismatch");
 		sts = addCompPage.click_Add_Button();
@@ -96,7 +99,7 @@ module.exports = {
 		assertion.assert((typeof sts === "string" && sts.includes("Your new Component is being setup.")), "Banner messsage mismatch. " + sts);
 	},
 
-	// Validate that the learning path page is launched on clicking the component card
+	// Validate that the component details page is launched on clicking the component card
 	BK_TC_10: function (testdata) {
 		sts = viewBookPage.click_Component(testdata.title);
 		assertion.assertEqual(sts, true, "Learning Path page status mismatch");
@@ -140,7 +143,7 @@ module.exports = {
 		//browser.switchWindow('https://backoffice-difusion-dev1.comprodls.com/');
 		//assertion.assert((typeof sts === "string" && sts.includes(testdata.name)), "Snackbar messsage mismatch. " + sts);
 		//assertion.assert((typeof sts === "string" && sts.includes("created successfully")), "Snackbar messsage mismatch. " + sts);
-		browser.switchWindow('https://qa-paint.backoffice.comprodls.com/');	
+		browser.switchWindow('https://qa-paint.backoffice.comprodls.com/');
 	},
 
 	// Validate that clicking on the Level 1 breadcrumb launches components page
@@ -150,33 +153,33 @@ module.exports = {
 	},
 
 	// Validate that the delete component dialog box opens on clicking delete button on the learning path page
-	BK_TC_17: function (testdata) {
+	BK_TC_17: function () {
 		sts = learningPathPage.click_DeleteComponent_Button();
-		assertion.assert((typeof sts === "string" && sts.includes(testdata.title)), "Dialog text mismatch. " + sts);
+		assertion.assert((typeof sts === "string" && sts.includes("Are you sure, you want to delete component")), "Dialog text mismatch. " + sts);
 	},
 
 	// Validate that the component is deleted on clicking delete button in the dialog box
 	BK_TC_18: function () {
 		sts = common.click_confirmDialog_Button();
-		assertion.assert((typeof sts === "string" && sts.includes("deletion request submitted successfully")), "Snackbar messsage mismatch. " + sts);
+		assertion.assert((typeof sts === "string" && sts.includes("is being deleted. This process can take a few seconds to complete.")), "Snackbar messsage mismatch. " + sts);
 	},
 
 	// Validate that the delete folder dialog box opens on clicking delete button on the activity page
 	BK_TC_19: function (testdata) {
-		sts = learningPathPage.click_DeleteFolder_Button();
-		assertion.assert((typeof sts === "string" && sts.includes(testdata.name)), "Dialog text mismatch. " + sts);
+		sts = learningPathPage.select_Item_and_Click_Delete(testdata.name);
+		assertion.assert((typeof sts === "string" && sts.includes("Are you sure, you want to delete the selected items?")), "Dialog text mismatch. " + sts);
 	},
 
 	// Validate that the folder is deleted on clicking delete button in the dialog box
 	BK_TC_20: function () {
 		sts = common.click_confirmDialog_Button();
-		assertion.assert((typeof sts === "string" && sts.includes("folder deleted successfully")), "Snackbar messsage mismatch. " + sts);
+		assertion.assert((typeof sts === "string" && sts.includes("Selected items deleted successfully.")), "Snackbar messsage mismatch. " + sts);
 	},
 
 	// Validate that the delete activity dialog box opens on clicking delete button in the activity menu
 	BK_TC_21: function (testdata) {
 		sts = learningPathPage.click_Delete_Button_in_ActivityMenu();
-		assertion.assert((typeof sts === "string" && sts.includes(testdata.name)), "Dialog text mismatch. " + sts);
+		assertion.assert((typeof sts === "string" && sts.includes("Are you sure, you want to delete the selected items?")), "Dialog text mismatch. " + sts);
 	},
 
 	// Validate that the activity is deleted on clicking delete button in the dialog box

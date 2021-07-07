@@ -616,7 +616,7 @@ module.exports = {
 	},
 
 	imageUpload: function (imagePath) {
-		let filePath = path.join(tcDataDir, imagePath);
+		//let filePath = path.join(tcDataDir, imagePath);
 		// use browser.uploadFile to upload the test file
 		let remoteFilePath = browser.uploadFile(imagePath);
 		// set file path value in the input field
