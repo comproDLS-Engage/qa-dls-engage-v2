@@ -11,7 +11,7 @@ module.exports = {
         sts = header.clickProfileMenuSignout();
     },
     get_Snackbar_Message_Text: function () {
-        let res = action.waitForDisplayed(this.snackbarInfo_txt)
+        let res = action.waitForDisplayed(this.snackbarInfo_txt,60000)
         if (res == true) {
             res = action.getText(this.snackbarInfo_txt)
             logger.logInto(stackTrace.get(), res);

@@ -48,18 +48,23 @@ module.exports = {
         let productCount = action.getElementCount(this.productTabBtns);
         for (i = 0; i < productCount; i++) {
             productSelector = this.productTabBtns + i + "]";
-            productData[i] = action.getText(productSelector);
-            isProductSelected = action.getAttribute(this.productSelector, 'aria-selected');
-            if (isProductSelected == true) {
-                obj.selectedProduct = productData[i];
+                productData[i] = action.getText(productSelector);
+                isProductSelected = action.getAttribute(productSelector, 'aria-selected');
+                if (isProductSelected=='true') {
+                    obj.selectedProduct = productData[i];
             }
+
         }
         let bookComponentData = [];
-        
+
         languageCount = action.getElementCount(this.bookComponentNamesBtns);
         for (i = 0; i < languageCount; i++) {
             componentSelector = this.bookComponentNamesBtns + i + "]";
+            if (action.getElementCount(componentSelector) > 0) {
             bookComponentData[i] = action.getText(componentSelector);
+            }
+            else
+            bookComponentData[i] = "";
         }
 
         obj.productList = productData;
