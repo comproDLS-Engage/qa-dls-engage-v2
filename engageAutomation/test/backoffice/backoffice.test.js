@@ -1,15 +1,15 @@
 "use strict";
-const loginPage = require('../../pages/backOffice/login.page.js');
-const homePage = require('../../pages/backOffice/home.page.js');
-const viewBookPage = require('../../pages/backOffice/viewBook.page.js');
-const learningPathPage = require('../../pages/backOffice/viewLearningPath.page.js');
-const common = require('../../pages/backOffice/common.page.js');
-const addTitlePage = require('../../pages/backOffice/addTitle.page.js');
-const addCompPage = require('../../pages/backOffice/addComponent.page.js');
-const addFolderPage = require('../../pages/backOffice/addFolder.page.js');
-const addActivityPage = require('../../pages/backOffice/addActivity.page.js');
-const commonPage = require('../../pages/backOffice/common.page.js');
-const viewLearningPathPage = require('../../pages/backOffice/viewLearningPath.page.js');
+const loginPage = require('../../pages/backoffice/login.page.js');
+const homePage = require('../../pages/backoffice/home.page.js');
+const viewBookPage = require('../../pages/backoffice/viewBook.page.js');
+const learningPathPage = require('../../pages/backoffice/viewLearningPath.page.js');
+const common = require('../../pages/backoffice/common.page.js');
+const addTitlePage = require('../../pages/backoffice/addTitle.page.js');
+const addCompPage = require('../../pages/backoffice/addComponent.page.js');
+const addFolderPage = require('../../pages/backoffice/addFolder.page.js');
+const addActivityPage = require('../../pages/backoffice/addActivity.page.js');
+const commonPage = require('../../pages/backoffice/common.page.js');
+const viewLearningPathPage = require('../../pages/backoffice/viewLearningPath.page.js');
 var sts;
 
 module.exports = {
