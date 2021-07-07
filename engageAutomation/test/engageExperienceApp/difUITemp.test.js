@@ -397,8 +397,8 @@ module.exports = {
 	ENG_DIF_TC_30: function () {
 		res = action.click("[data-tid=btn-open-in-flipbook]");
 		console.log(res)
-		browser.back();
-		res = action.click("[data-tid=btn-open-in-flipbook]");
+		//browser.back();
+		//res = action.click("[data-tid=btn-open-in-flipbook]");
 		console.log(res)
 		res = action.waitForDocumentLoad();
 		console.log(res)
