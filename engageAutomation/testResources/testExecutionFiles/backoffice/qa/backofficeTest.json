@@ -1075,7 +1075,7 @@
                 "testData": [
                     {
                         "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
-                        "jsonPath": "backoffice.activity[1]"
+                        "jsonPath": "backoffice.activity[0]"
                     }
                 ]
             },
@@ -1138,7 +1138,7 @@
                 "testData": [
                     {
                         "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
-                        "jsonPath": "backoffice.component[1]"
+                        "jsonPath": "backoffice.component[0]"
                     }
                 ]
             },
@@ -1194,7 +1194,7 @@
                 "testData": [
                     {
                         "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
-                        "jsonPath": "backoffice.component[1]"
+                        "jsonPath": "backoffice.component[2]"
                     }
                 ]
             },
