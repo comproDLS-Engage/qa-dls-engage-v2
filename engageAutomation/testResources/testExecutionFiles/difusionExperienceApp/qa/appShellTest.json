@@ -100,6 +100,10 @@
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
                   "jsonPath": "engage.appContent.appShell"
+               },
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+                  "jsonPath": "engage.login.user.validStudent1"
                }
             ]
          },

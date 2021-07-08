@@ -74,15 +74,13 @@ module.exports = {
     //Validate on clicking "View Classes" from Book dropdown menu, class Pane is launched
     ENG_DASH_TC_8: function(){
         sts = dashboardPage.clickMenuViewClass("PROYECTOS");
-        console.log(JSON.stringify(sts));
-        assertion.assertEqual(sts, true);
+        assertion.assertEqual(sts.instructorMyClassData.pageStatus, true);
     },
 
     //Validate on clicking "Create Classes" from Book dropdown menu, create class page is launched
     ENG_DASH_TC_9: function(){
         sts = dashboardPage.clickMenuCreateClass("PROYECTOS");
-        console.log(JSON.stringify(sts));
-        assertion.assertEqual(sts, true);
+        assertion.assertEqual(sts.pageStatus, true);
     },
 
     //Validate on clicking "Remove from My Books" from Book dropdown menu, not active snackbar message is displayed

@@ -86,7 +86,7 @@
                 "NoClassInstructor": {
                     "email": "noclassinstructornew@yopmail.com",
                     "password": "Compro@1234",
-                    "name": "noclassinstructor",
+                    "name": "noclassinstructornew",
                     "role": "instructor",
                     "class": [],
                     "info": {}
@@ -95,7 +95,7 @@
                     "email": "classinstructor1@yopmail.com",
                     "password": "Compro@1234",
                     "role": "instructor",
-                    "name": "classinstructortest",
+                    "name": "classinstructor1",
                     "class": [
                         {
                             "key": "AEYP-p9hk",

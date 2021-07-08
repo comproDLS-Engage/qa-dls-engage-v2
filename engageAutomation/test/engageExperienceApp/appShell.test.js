@@ -64,12 +64,12 @@ module.exports = {
 
 	//Validate that clicking on the profile dropdown launches the dropdown of profile and other options
 	ENG_SHELL_TC_8: function (testdata) {
-		sts = appShell.clickProfileButton(testdata);
-		assertion.assertEqual(sts.userName, testdata.profileUsername, "User Name Text mismatch");
-		assertion.assertEqual(sts.emailID, testdata.emailID, "email ID Text mismatch");
-		assertion.assertEqual(sts.userProfileHelpBtn, testdata.userProfileHelpBtn, "Help Text mismatch");
-		assertion.assertEqual(sts.userProfileSettingsBtn, testdata.userProfileSettingsBtn, "Settings Text mismatch");
-		assertion.assertEqual(sts.userProfileLogoutBtn, testdata.userProfileLogoutBtn, "Logout Text mismatch");
+		sts = appShell.clickProfileButton();
+		assertion.assertEqual(sts.userName, testdata[1].name, "User Name Text mismatch");
+		assertion.assertEqual(sts.emailID, testdata[1].email, "email ID Text mismatch");
+		assertion.assertEqual(sts.userProfileHelpBtn, testdata[0].userProfileHelpBtn, "Help Text mismatch");
+		assertion.assertEqual(sts.userProfileSettingsBtn, testdata[0].userProfileSettingsBtn, "Settings Text mismatch");
+		assertion.assertEqual(sts.userProfileLogoutBtn, testdata[0].userProfileLogoutBtn, "Logout Text mismatch");
 	},
 
 	//Validate that clicking on logout logs out from application
@@ -77,5 +77,14 @@ module.exports = {
 		sts = appShell.clickLogoutButton();
 		assertion.assertEqual(sts.pageStatus, true, "Landing page status mismatch");
 	},
+	//Click + icon on classes tab
+	ENG_SHELL_TC_10: function () {
+		sts = appShell.click_PlusIconClassesTab()
+		if ((typeof (sts)) === "object") {
+			assertion.assertEqual(sts.pageStatus, true, "Create Class Page not launched: " + JSON.stringify(sts))
+		} else {
+			assertion.assertFail(sts);
+		}
 
+	},
 }

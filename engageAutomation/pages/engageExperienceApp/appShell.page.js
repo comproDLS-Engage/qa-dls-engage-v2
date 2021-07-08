@@ -31,6 +31,7 @@ module.exports = {
 	userProfileHelpBtn: selectorFile.css.ComproEngage.appShell.userProfileHelpBtn,
 	userProfileSettingsBtn: selectorFile.css.ComproEngage.appShell.userProfileSettingsBtn,
 	userProfileLogoutBtn: selectorFile.css.ComproEngage.appShell.userProfileLogoutBtn,
+	classPlusIcon:selectorFile.css.ComproEngage.appShell.classPlusIcon,
 
 	isInitialized: function () {
 		logger.logInto(stackTrace.get());
@@ -235,4 +236,15 @@ module.exports = {
 		}
 		return res;
 	},
+	click_PlusIconClassesTab: function () {
+        res = action.click(this.classPlusIcon)
+        if (res == true) {
+            logger.logInto(stackTrace.get(), res + "Class plus button is clicked");
+			var createClassPage = require('./createClass.page.js');
+            res = createClassPage.isInitialized();
+        }
+        else
+            logger.logInto(stackTrace.get(), res + ":Add A New Book Button is NOT Clicked", "error");
+        return res;
+    }
 };

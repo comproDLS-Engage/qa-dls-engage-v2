@@ -58,7 +58,7 @@
 				"info": "Existing Active Course"
 			},
 			"newValidClass": {
-				"name": "create Class with name & :\"{} = _+,.?<: character",
+				"name": "create Class for testing purpose",
 				"key": "",
 				"startDate": "",
 				"endDate": "",
@@ -74,6 +74,21 @@
 			},
 			"newInvalidClass": {
 				"name": "create invalid Class with name & :\"{} = _+,.?<: character",
+				"key": "",
+				"startDate": "",
+				"endDate": "",
+				"instructor": {
+					"name": "",
+					"email": ""
+				},
+				"bookName": "INTRODUCTION TO BIOLOGY",
+				"schoolName": "",
+				"status": "Active",
+				"studentCount": "",
+				"info": "testdata for a new invalid course"
+			},
+			"newValidClasswithspecialCharacter": {
+				"name": "}{~!#$%^&*()& :\"{} = _+,.?<: character",
 				"key": "",
 				"startDate": "",
 				"endDate": "",

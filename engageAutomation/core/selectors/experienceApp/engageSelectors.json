@@ -39,14 +39,13 @@
 				"invalidEmail_txt": "[data-tid=text-erroremail]",
 				"emailPasswordError": "[data-tid=text-info]",
 				"loginbtnState": "button[class*='TwtyK']"
-				
 			},
 			"SignUpPage": {
-				"signUpEmailPage_btn":"[data-tid=button-signup]"
+				"signUpEmailPage_btn": "[data-tid=button-signup]"
 			},
 			"widgets": {
 				"loaderIcon": "[data-tid=image-loader]",
-				"snackbarInfo_txt": "[data-tid=text-error], [data-tid=text-info], [data-tid=text-success]",
+				"snackbarInfo_txt": "[data-tid=text-info], [data-tid=text-error], [data-tid=text-success]",
 				"snackbarClose_btn": "[data-tid=button-close]"
 			},
 			"appShell": {
@@ -78,18 +77,25 @@
 				"userProfileLogoutBtn": "[data-tid=button-user-profile-option-2]",
 				"loaderIcon": "[data-tid=image-loader]",
 				"snackbarInfo_txt": "[data-tid=text-error], [data-tid=text-info], [data-tid=text-success]",
-				"snackbarClose_btn": "[data-tid=button-close]"
+				"snackbarClose_btn": "[data-tid=button-close]",
+				"classPlusIcon": "[data-tid=button-classes] button"
 			},
 			"dashboardPage": {
 				"pageTitle": "[data-tid=text-pageTitle]",
 				"resourceList": "[data-tid*=item-globalresource-",
 				"resourceTitle": "//div[@data-tid=\"item-globalresource-",
 				"bookTitle": "[data-tid*=text-bookTitle-",
-				"bookEllipses":"[data-tid*=button-contextMenu-",
-				"viewClass_menu":"[data-tid*=button-viewClass-",
-				"createClass_menu":"[data-tid*=button-createClass-",
-				"removeBook_menu":"[data-tid*=button-remove-",
-				"openFlipbook_menu":"[data-tid*=button-openFlipbook-"
+				"bookEllipses": "[data-tid*=button-contextMenu-",
+				"viewClass_menu": "[data-tid*=button-viewClass-",
+				"createClass_menu": "[data-tid*=button-createClass-",
+				"removeBook_menu": "[data-tid*=button-remove-",
+				"openFlipbook_menu": "[data-tid*=button-openFlipbook-"
+			},
+			"classDrawer": {
+				"classDrawerHeader": "[data-tid=text-drawerHeaderTitle]",
+				"classDrawerTitle": "[data-tid=text-ClassesTitle]",
+				"classDrawerSubTitle": "[data-tid=text-ClassesSubtitle]",
+				"classDrawerCloseBtn":"[data-tid=button-close]"
 			},
 			"browsePage": {
 				"pageTitle": "[data-tid=text-pageTitle]",
@@ -144,7 +150,7 @@
 				"selectBook_lbl": "[data-tid='text-selectBookLabel']",
 				"selectBook_txt": "[data-tid=text-selectBookSubtext]",
 				"bookTitle": "[data-tid='text-bundeTitle']",
-				"bookIsbn": "[data-tid=text-bundeIsbn]",
+				"bookIcon": "[data-tid=image-bookCover]",
 				"datePicker_okBtn": "/html/body/div[2]/div[3]/div/div[2]/button[2]",
 				"titleErrorMsg": "[data-tid='text-titleError']",
 				"descErrorMsg": "[data-tid='text-descriptionError']",
@@ -152,10 +158,9 @@
 				"endDateErrorMsg": "[data-tid='text-endDateError']",
 				"bookErrorMsg": "p[class*='MuiFormHelperText",
 				"saveBtn": "[data-tid='button-Save']",
-				"restoreBtn": "[data-tid='button-Restore']",
+				"removeBookbtn": "[data-tid=button-removeBook]",
 				"AddANewBook_btn": "[data-tid=button-assignBook]",
-				"bookCard": "label[class*='MuiFormControlLabel']:nth-child(",
-				"bookCardCheckbox": "[id=checkbox-"
+				"bookCard": "label[class*='MuiFormControlLabel']:nth-child("
 			},
 			"successClassPage": {
 				"viewClass": "[data-tid='button-View Class']",
@@ -176,7 +181,7 @@
 				"dataSubtitle": "[data-tid=text-pageSubtitle]",
 				"productTabBtns": "[data-tid*=button-product-",
 				"bookCoverImg": "[data-tid=image-classBookCover]",
-				"bookTitleTxt": "[data-tid=text-classBookTitle]]",
+				"bookTitleTxt": "[data-tid=text-classBookTitle]",
 				"bookSubtitleTxt": "[data-tid=text-classBookSubtitle]",
 				"viewBookBtn": "[data-tid=button-classViewBook]",
 				"bookComponentNamesBtns": "[data-tid*=text-classBookProduct-",
@@ -188,26 +193,7 @@
 				"createAssignmentByline_lbl": "[data-tid=MISSING]",
 				"noInboxActivity_lbl": "[data-tid=MISSING]",
 				"noInboxActivityByline_lbl": "[data-tid=MISSING]"
-			},
-			"classDashboard":{
-				"moreOption":"[data-tid=button-classOptions]"
-			},
-			"teacherViewClassPage": {
-				"pageTitle": "[data-tid=text-pageTitle]",
-				"gradebookBtn": "[data-tid=button-gradebook]",
-				"classOptionsBtn": "[data-tid=button-classOptions]",
-				"editClassBtn": "[data-tid=button-editClass]",
-				"addBooksBtn": "[data-tid=button-addBooks]",
-				"dataSubtitle": "[data-tid=text-pageSubtitle]",
-				"productTabBtns": "[data-tid=button-product-",
-				"productTabBtn": "[data-tid=button-product-",
-				"bookCoverImg": "[data-tid=image-classBookCover]",
-				"bookTitleTxt": "[data-tid=text-classBookTitle]",
-				"bookSubtitleTxt": "[data-tid=text-classBookSubtitle]",
-				"viewBookBtn": "[data-tid=button-classViewBook]",
-				"bookComponentNamesBtns": "[data-tid*=text-classBookProduct-"
 			}
 		}
-		
 	}
 }
