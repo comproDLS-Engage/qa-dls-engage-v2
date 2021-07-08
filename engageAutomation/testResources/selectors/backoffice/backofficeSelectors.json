@@ -29,11 +29,13 @@
 		"bannerText": "[class*=mdc-banner__text]",
 		"bannerCloseBtn": "[class=c-banner__close]",
 		"proceedBtn": "[data-tid=button-item-type-launch] div",
-		"buttonLoader": "[class=c-button__spinner]"
+		"buttonLoader": "[class=c-button__spinner]",
+		"emptyStateBtn": "[class*=c-empty-state-button]"
 	},
 	"homePage": {
 		"headingText": "[class*=c-nav__heading-text]",
 		"newTitleBtn": "[data-tid=button-newtitle]",
+		"titleTypeList": "[class*=mdc-list-item__primary-text]",
 		"bookCount": "[class*=book-count]",
 		"bookList": "[data-tid*=button-book-detail] [class*=c-card__title]",
 		"libraryBtn": "button[data-tid=button-library]",
@@ -53,15 +55,14 @@
 	"viewBookPage": {
 		"componentList": "[data-tid*=button-component-detail] [class*=c-card__title]",
 		"addComponentBtn": "[data-tid='button-ADD COMPONENT']",
-		"componentTypeList": "[class=c-item-type-launcher] [class*=c-list-item__primary-text]"
+		"componentTypeList": "[class=c-item-type-launcher] [class*=c-list-item__primary-text]",
+		"deleteBookBtn": "[data-tid=button-book_delete]"
 	},
 	"addTitlePage": {
-		"titleTypeDropdown": "[class=c-create-book__form__book-categories] [class*=mdc-select__anchor]",
-		"titleTypeList": "[class*=mdc-menu-surface--open] [class*=mdc-list-item__primary-text]",
 		"nameTxtbox": "[id=Name]",
-		"descriptionTxtbox": "[id=tf-Description]",
+		"descriptionTxtbox": "[id=Description]",
 		"imageUploadBtn": "[class=c-image-upload__file-input]",
-		"createTitleBtn": "[class*=c-create-book] button"
+		"createTitleBtn": "[class=c-form-section] button[class*=action-button-padding]"
 	},
 	"addComponentPage": {
 		"titleTxtbox": "[id=Name]",
@@ -74,7 +75,6 @@
 		"addBtn": "[class=c-form-section] button[class*=action-button-padding]"
 	},
 	"viewLearningPathPage": {
-		"emptyStateBtn": "[class*=c-empty-state-button]",
 		"folderList": "[data-tid*=button-folder-details] [class=c-list-item__primary-text]",
 		"activityList": "[class='c-activity--title']",
 		"addFolderBtn": "button[data-tid=button-add-folder]",

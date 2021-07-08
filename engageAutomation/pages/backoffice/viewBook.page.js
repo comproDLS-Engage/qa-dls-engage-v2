@@ -6,10 +6,13 @@ var res;
 module.exports = {
 
     addComponentBtn: selectorFile.viewBookPage.addComponentBtn,
+    emptyStateBtn: selectorFile.common.emptyStateBtn,
     componentList: selectorFile.viewBookPage.componentList,
     componentTypeList: selectorFile.viewBookPage.componentTypeList,
     proceedBtn: selectorFile.common.proceedBtn,
     loadingContainer: selectorFile.common.loadingContainer,
+    deleteBookBtn: selectorFile.viewBookPage.deleteBookBtn,
+    dialogContent: selectorFile.common.dialogContent,
 
     isInitialized: function () {
         logger.logInto(stackTrace.get());
@@ -22,7 +25,12 @@ module.exports = {
 
     click_AddComponent_Button: function () {
         logger.logInto(stackTrace.get());
-        res = action.click(this.addComponentBtn);
+        if (action.isClickable(this.emptyStateBtn)) {
+            res = action.click(this.emptyStateBtn);
+        }
+        else {
+            res = action.click(this.addComponentBtn);
+        }
         if (res == true) {
             res = action.waitForDisplayed(this.proceedBtn);
         }
@@ -70,6 +78,17 @@ module.exports = {
                 break;
             }
             res = "component type not found";
+        }
+        logger.logInto(stackTrace.get(), res);
+        return res;
+    },
+
+    click_DeleteBook_Button: function () {
+        logger.logInto(stackTrace.get());
+        let res = action.click(this.deleteBookBtn);
+        if (res == true) {
+            action.waitForDisplayed(this.dialogContent);
+            res = action.getText(this.dialogContent);
         }
         logger.logInto(stackTrace.get(), res);
         return res;

@@ -7,6 +7,8 @@ module.exports = {
 
     headingText: selectorFile.homePage.headingText,
     newTitleBtn: selectorFile.homePage.newTitleBtn,
+    titleTypeList: selectorFile.homePage.titleTypeList,
+    proceedBtn: selectorFile.common.proceedBtn,
     bookCount: selectorFile.homePage.bookCount,
     bookList: selectorFile.homePage.bookList,
     menuBtn: selectorFile.common.menuBtn,
@@ -50,7 +52,31 @@ module.exports = {
         logger.logInto(stackTrace.get());
         res = action.click(this.newTitleBtn);
         if (res == true) {
-            res = require('./addTitle.page.js').isInitialized();
+            res = action.waitForDisplayed(this.proceedBtn);
+        }
+        logger.logInto(stackTrace.get(), res);
+        return res;
+    },
+
+    select_TitleType_and_Proceed: function (type) {
+        logger.logInto(stackTrace.get());
+        res = null;
+        let i, list;
+        list = action.findElements(this.titleTypeList);
+        for (i = 0; i < list.length; i++) {
+            //console.log(action.getText(list[i]))
+            if (action.getText(list[i]).includes(type)) {
+                res = action.click(list[i]);
+                if (res == true) {
+                    res = action.click(this.proceedBtn);
+                    if (res == true) {
+                        res = require('./addTitle.page.js').isInitialized();
+                        browser.pause(5000);
+                    }
+                }
+                break;
+            }
+            res = "component type not found";
         }
         logger.logInto(stackTrace.get(), res);
         return res;
@@ -78,7 +104,7 @@ module.exports = {
         return res;
     },
 
-    click_Library_Button: function () {
+    /*click_Library_Button: function () {
         logger.logInto(stackTrace.get());
         res = action.click(this.libraryBtn);
         if (res == true) {
@@ -192,6 +218,6 @@ module.exports = {
         }
         logger.logInto(stackTrace.get(), res);
         return res;
-    }
+    }*/
 
 }
