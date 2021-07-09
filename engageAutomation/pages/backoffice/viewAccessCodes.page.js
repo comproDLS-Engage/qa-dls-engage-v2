@@ -4,19 +4,19 @@ var selectorFile = jsonParserUtil.jsonParser(selectorDir);
 
 module.exports = {
 
-    batchName: selectorFile.css.viewAccessCodesPage.batchName,
-    startDate: selectorFile.css.viewAccessCodesPage.startDate,
-    endDate: selectorFile.css.viewAccessCodesPage.endDate,
-    totalAccessCodes: selectorFile.css.viewAccessCodesPage.totalAccessCodes,
-    consumedAccessCodes: selectorFile.css.viewAccessCodesPage.consumedAccessCodes,
-    batchStatus: selectorFile.css.viewAccessCodesPage.batchStatus,
-    accessCodes: selectorFile.css.viewAccessCodesPage.accessCodes,
-    accessCodeStatus: selectorFile.css.viewAccessCodesPage.accessCodeStatus,
-    modifyBtn: selectorFile.css.viewAccessCodesPage.modifyBtn,
-    deactivateBtn: selectorFile.css.viewAccessCodesPage.deactivateBtn,
-    redeemBtn: selectorFile.css.viewAccessCodesPage.redeemBtn,
-    loadingContainer: selectorFile.css.common.loadingContainer,
-    dialogContent: selectorFile.css.common.dialogContent,
+    batchName: selectorFile.viewAccessCodesPage.batchName,
+    startDate: selectorFile.viewAccessCodesPage.startDate,
+    endDate: selectorFile.viewAccessCodesPage.endDate,
+    totalAccessCodes: selectorFile.viewAccessCodesPage.totalAccessCodes,
+    consumedAccessCodes: selectorFile.viewAccessCodesPage.consumedAccessCodes,
+    batchStatus: selectorFile.viewAccessCodesPage.batchStatus,
+    accessCodes: selectorFile.viewAccessCodesPage.accessCodes,
+    accessCodeStatus: selectorFile.viewAccessCodesPage.accessCodeStatus,
+    modifyBtn: selectorFile.viewAccessCodesPage.modifyBtn,
+    deactivateBtn: selectorFile.viewAccessCodesPage.deactivateBtn,
+    redeemBtn: selectorFile.viewAccessCodesPage.redeemBtn,
+    loadingContainer: selectorFile.common.loadingContainer,
+    dialogContent: selectorFile.common.dialogContent,
 
     isInitialized: function () {
         logger.logInto(stackTrace.get());

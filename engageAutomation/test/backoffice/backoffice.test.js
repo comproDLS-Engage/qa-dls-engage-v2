@@ -236,7 +236,7 @@ module.exports = {
 		sts = generateCodesPage.set_CodeLimit(testdata[1].codeLimit);
 		assertion.assertEqual(sts, true, "Error in setting code limit");
 		sts = generateCodesPage.click_Generate_Button();
-		assertion.assert((typeof sts === "string" && sts.includes("Access Codes and its Batch are generated successfully")), "Snackbar messsage mismatch. " + sts);
+		assertion.assert((typeof sts === "string" && sts.includes("Access Batch and its Codes are generated successfully.")), "Snackbar messsage mismatch. " + sts);
 	},
 
 	// Validate that the view access code page is launched on clicking the view codes button on the home page

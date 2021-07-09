@@ -52,10 +52,10 @@ module.exports = {
             res = action.click(this.createTitleBtn);
             if (res == true) {
                 action.waitForDisplayed(this.bannerText);
-                //action.click(this.bannerCloseBtn);
                 res = action.getText(this.bannerText);
-                //action.waitForDisplayed(this.bannerText, undefined, true);
-                browser.pause(10000)
+                //action.click(this.bannerCloseBtn);
+                action.waitForDisplayed(this.bannerText, 60000, true);
+                //browser.pause(30000)
             }
         }
         logger.logInto(stackTrace.get(), res);

@@ -174,6 +174,7 @@ module.exports = {
         logger.logInto(stackTrace.get());
         res = action.click(this.viewCodeProceedBtn);
         if (res == true) {
+            browser.pause(5000);
             res = require('./viewAccessCodes.page.js').isInitialized();
         }
         logger.logInto(stackTrace.get(), res);
