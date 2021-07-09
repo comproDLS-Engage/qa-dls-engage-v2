@@ -10,6 +10,7 @@ const addFolderPage = require('../../pages/backoffice/addFolder.page.js');
 const addActivityPage = require('../../pages/backoffice/addActivity.page.js');
 const commonPage = require('../../pages/backoffice/common.page.js');
 const viewLearningPathPage = require('../../pages/backoffice/viewLearningPath.page.js');
+const generateCodesPage = require('../../pages/backoffice/generateCodes.page.js');
 var sts;
 
 module.exports = {
@@ -214,5 +215,41 @@ module.exports = {
 	BK_TC_26: function () {
 		sts = common.click_Close_Button();
 		assertion.assertEqual(sts, true, "Close form/preview status mismatch");
+	},
+
+	// Validate that the generate codes page is launched on clicking generate codes button
+	BK_TC_27: function () {
+		sts = homePage.click_GenerateCodes_Button();
+		assertion.assertEqual(sts, true, "Generate codes page status mismatch");
+	},
+
+	// Validate that access code batch is created on entering required details on the generate codes page
+	BK_TC_28: function (testdata) {
+		sts = generateCodesPage.select_Book(testdata[0].name);
+		assertion.assertEqual(sts, true, "Error in selecting book name");
+		sts = generateCodesPage.set_BatchName(testdata[1].batchName);
+		assertion.assertEqual(sts, true, "Error in setting batch name");
+		sts = generateCodesPage.set_StartDate(testdata[1].startDate);
+		assertion.assertEqual(sts, true, "Error in setting start date");
+		sts = generateCodesPage.set_EndDate(testdata[1].endDate);
+		assertion.assertEqual(sts, true, "Error in setting end date");
+		sts = generateCodesPage.set_CodeLimit(testdata[1].codeLimit);
+		assertion.assertEqual(sts, true, "Error in setting code limit");
+		sts = generateCodesPage.click_Generate_Button();
+		assertion.assert((typeof sts === "string" && sts.includes("Access Codes and its Batch are generated successfully")), "Snackbar messsage mismatch. " + sts);
+	},
+
+	// Validate that the view access code page is launched on clicking the view codes button on the home page
+	BK_TC_29: function (testdata) {
+		sts = homePage.click_ViewCodes_Button();
+		assertion.assertEqual(sts, true, "Error in clicking view codes button");
+		sts = homePage.select_Book_in_ViewCode_Launcher(testdata[0].name);
+		assertion.assertEqual(sts, true, "Error in selecting book");
+		sts = homePage.select_Batch_in_ViewCode_Launcher(testdata[1].batchName);
+		assertion.assertEqual(sts, true, "Error in selecting batch");
+		sts = homePage.click_Proceed_Button_in_ViewCode_Launcher();
+		assertion.assertEqual(sts.batchName, testdata[1].batchName, "Batch name mismatch");
+		assertion.assertEqual(sts.totalAccessCodes, testdata[1].codeLimit, "Total access codes mismatch");
+		assertion.assertEqual(sts.batchStatus, testdata[1].status, "Batch status mismatch");
 	},
 }

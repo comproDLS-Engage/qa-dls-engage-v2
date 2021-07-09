@@ -48,6 +48,15 @@
                 "type": "Close Ended Learning Object",
                 "name": "QA Automation Test LO2 - close ended"
             }
+        ],
+        "accessCodeBatch": [
+            {
+                "batchName": "QA automation test batch1",
+                "startDate": "01/01/2022",
+                "endDate": "01/31/2022",
+                "codeLimit": 50,
+                "status": "Active"
+            }
         ]
     }
 }

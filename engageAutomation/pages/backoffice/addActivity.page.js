@@ -5,7 +5,6 @@ const addFolderPage = require('./addFolder.page.js');
 
 module.exports = {
 
-    addBtn: selectorFile.addFolderPage.addBtn,
     buttonLoader: selectorFile.common.buttonLoader,
 
     isInitialized: function () {
@@ -18,10 +17,10 @@ module.exports = {
 
     click_Add_Button: function () {
         logger.logInto(stackTrace.get());
-        let res = action.waitForClickable(this.addBtn);
+        let res = action.waitForClickable(addFolderPage.addBtn);
         action.waitForDisplayed(this.buttonLoader, undefined, true)
         if (res == true) {
-            res = action.click(this.addBtn);
+            res = action.click(addFolderPage.addBtn);
             if (res == true) {
                 browser.pause(10000);
             }

@@ -122,7 +122,7 @@ module.exports = {
         }
         logger.logInto(stackTrace.get(), res);
         return res;
-    },
+    },*/
 
     click_ViewCodes_Button: function () {
         logger.logInto(stackTrace.get());
@@ -174,7 +174,7 @@ module.exports = {
         logger.logInto(stackTrace.get());
         res = action.click(this.viewCodeProceedBtn);
         if (res == true) {
-            res = require('./viewCode.page.js').isInitialized();
+            res = require('./viewAccessCodes.page.js').isInitialized();
         }
         logger.logInto(stackTrace.get(), res);
         return res;
@@ -218,6 +218,6 @@ module.exports = {
         }
         logger.logInto(stackTrace.get(), res);
         return res;
-    }*/
+    }
 
 }

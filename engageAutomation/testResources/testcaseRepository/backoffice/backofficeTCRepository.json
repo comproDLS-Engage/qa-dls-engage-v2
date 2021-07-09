@@ -137,6 +137,21 @@
                     "id": "BK_TC_26",
                     "description": "Validate that the form/preview is closed on clicking on the close button",
                     "tags": "P1"
+                },
+                {
+                    "id": "BK_TC_27",
+                    "description": "Validate that the generate codes page is launched on clicking generate codes button",
+                    "tags": "P1"
+                },
+                {
+                    "id": "BK_TC_28",
+                    "description": "Validate that access code batch is created on entering required details on the generate codes page",
+                    "tags": "P1"
+                },
+                {
+                    "id": "BK_TC_29",
+                    "description": "Validate that the view access code page is launched on clicking the view codes button on the home page",
+                    "tags": "P1"
                 }
             ]
         }

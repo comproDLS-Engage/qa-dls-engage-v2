@@ -111,5 +111,18 @@
 	"assessmentAuthorApp": {
 		"saveAndReturnBtn": "[data-tid=button-saveandreturn]",
 		"mcqBtn": "[data-tid=button-mutiplechoice]"
+	},
+	"viewAccessCodesPage": {
+		"batchName": "div[class=c-batch-detail] div:nth-child(1) [class=c-batch-detail__item__value]",
+		"startDate": "div[class=c-batch-detail] div:nth-child(2) [class=c-batch-detail__item__value]",
+		"endDate": "div[class=c-batch-detail] div:nth-child(3) [class=c-batch-detail__item__value]",
+		"totalAccessCodes": "div[class=c-batch-detail] div:nth-child(4) [class=c-batch-detail__item__value]",
+		"consumedAccessCodes": "div[class=c-batch-detail] div:nth-child(5) [class=c-batch-detail__item__value]",
+		"batchStatus": "[class*=c-status]",
+		"accessCodes": "[class=c-list-item__primary-text]",
+		"accessCodeStatus": "[class=mdc-list-item__secondary-text]",
+		"modifyBtn": "[data-tid=button-modify-access-codes] span",
+		"deactivateBtn": "[data-tid=button-deactivate-license] span",
+		"redeemBtn": "[data-tid=button-redeem-access-code] span"
 	}
 }
