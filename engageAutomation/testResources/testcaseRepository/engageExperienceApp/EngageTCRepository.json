@@ -413,13 +413,33 @@
                     "tags": "P1"
                 },  
                 {
-                    "id": "ENG_INS_CLASS_TC_99",
-                    "description": "Click + icon on classes tab",
+                    "id": "ENG_INS_CLASS_TC_38",
+                    "description": "Validate the class drwaer Pane when no class is added",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_INS_CLASS_TC_39",
+                    "description": "Validate the class drwaer Pane when class is addede",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_INS_CLASS_TC_31",
+                    "description": "Validate the Close button of class drwaer Pane",
                     "tags": "P1"
                 },
                 {
                     "id": "ENG_INS_CLASS_TC_17",
                     "description": "Validate that instructor is able to create a Class with special characters",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_INS_CLASS_TC_18",
+                    "description": "Set the start date of a class of next week",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_INS_CLASS_TC_20",
+                    "description": "Set the end date of a class of next week",
                     "tags": "P1"
                 }
             ]
@@ -625,7 +645,7 @@
                 },
                 {
                     "id": "ENG_SHELL_TC_10",
-                    "description": "Click + icon on classes tab",
+                    "description": "Validate that clicking on + button on classes in Left navigation pane, launched the create class page in teacher login",
                     "tags": "P1"
                 }
             ]

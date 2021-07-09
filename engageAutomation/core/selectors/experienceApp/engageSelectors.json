@@ -97,6 +97,19 @@
 				"classDrawerSubTitle": "[data-tid=text-ClassesSubtitle]",
 				"classDrawerCloseBtn":"[data-tid=button-close]"
 			},
+			"Calender": {
+				"calenderYear": "//h6[contains(@class,'MuiTypography-subtitle1')]",
+				"calenderCurrentMonth": "//div[contains(@class,'MuiPickersCalendarHeader')]/p",
+				"calenderLeftArrow": "//button[contains(@class,'MuiPickersCalendarHeader-iconButton')][1]",
+				"calenderRightArrow": "//button[contains(@class,'MuiPickersCalendarHeader-iconButton')][2]",
+				"calenderMonthHeader": "//div[contains(@class,'MuiPickersCalendarHeader-transitionContainer')]",
+				"calenderSelectedDate": "//button[contains(@class,'MuiPickersDay-daySelected')]",
+				"calenderDate": "//button[contains(@class,'MuiPickersDay-day')]",
+				"calenderDisabledDate": "/button[contains(@class,'MuiPickersDay-day')]",
+				"calenderSelectedYear": "//div[contains(@class,'MuiPickersYear-yearSelected-')]",
+				"calenderYearList": "[contains(@class,'MuiPickersYear-')]",
+				"calenderYearListCount": "//div[contains(@class,'MuiPickersYear-')]"
+			},
 			"browsePage": {
 				"pageTitle": "[data-tid=text-pageTitle]",
 				"tabList": "[data-tid*=button-product-"

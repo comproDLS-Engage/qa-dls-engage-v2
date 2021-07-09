@@ -93,6 +93,17 @@
                 "gradeBookOption_txt": "Gradebook",
                 "materialsOption_txt": "Materials"
             },
+            "classDrawerPane": {
+                "classHeading": "Dashboard",
+                "classSubHeading": "Your current, upcoming and past classes",
+                "noClassTitle": "Create a class to get started",
+                "noClassSubtitle": "Any classes associated with this book will appear here.",
+                "addClassBtn": "Create Class",
+                "addClassBtnwithClass":"Create Another Class",
+                "header":" Classes",
+                "classDrawerTitle":"Teaching another class with this book?",
+                "classDrawerSubTitle":"Create another class using this textbook material for your students."
+            },
             "editClassPage": {
                 "pageTitle": "Edit Class",
                 "pageSubTitle": "Edit the Class Name, duration or associated books.",

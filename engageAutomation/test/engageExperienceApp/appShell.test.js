@@ -77,7 +77,7 @@ module.exports = {
 		sts = appShell.clickLogoutButton();
 		assertion.assertEqual(sts.pageStatus, true, "Landing page status mismatch");
 	},
-	//Click + icon on classes tab
+	//Validate that clicking on + button on classes in Left navigation pane, launched the create class page in teacher login
 	ENG_SHELL_TC_10: function () {
 		sts = appShell.click_PlusIconClassesTab()
 		if ((typeof (sts)) === "object") {
