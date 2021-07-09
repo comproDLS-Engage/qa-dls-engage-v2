@@ -2,9 +2,10 @@
     "backoffice": {
         "book": [
             {
-                "name": "Quality Test Book 5",
-                "coverImage": "./testResources/testcaseData/backOffice/qa/book_cover_140_2.png",
-                "description": "QA test automation description"
+                "type": "Book",
+                "name": "QA Automation Test Book [DO NOT PUBLISH]",
+                "coverImage": "./testResources/testcaseData/backOffice/qa/book_cover_compro_qa.png",
+                "description": "QA automation test description"
             }
         ],
         "component": [

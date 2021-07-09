@@ -1,15 +1,15 @@
 "use strict";
-const loginPage = require('../../pages/backOffice/login.page.js');
-const homePage = require('../../pages/backOffice/home.page.js');
-const viewBookPage = require('../../pages/backOffice/viewBook.page.js');
-const learningPathPage = require('../../pages/backOffice/viewLearningPath.page.js');
-const common = require('../../pages/backOffice/common.page.js');
-const addTitlePage = require('../../pages/backOffice/addTitle.page.js');
-const addCompPage = require('../../pages/backOffice/addComponent.page.js');
-const addFolderPage = require('../../pages/backOffice/addFolder.page.js');
-const addActivityPage = require('../../pages/backOffice/addActivity.page.js');
-const commonPage = require('../../pages/backOffice/common.page.js');
-const viewLearningPathPage = require('../../pages/backOffice/viewLearningPath.page.js');
+const loginPage = require('../../pages/backoffice/login.page.js');
+const homePage = require('../../pages/backoffice/home.page.js');
+const viewBookPage = require('../../pages/backoffice/viewBook.page.js');
+const learningPathPage = require('../../pages/backoffice/viewLearningPath.page.js');
+const common = require('../../pages/backoffice/common.page.js');
+const addTitlePage = require('../../pages/backoffice/addTitle.page.js');
+const addCompPage = require('../../pages/backoffice/addComponent.page.js');
+const addFolderPage = require('../../pages/backoffice/addFolder.page.js');
+const addActivityPage = require('../../pages/backoffice/addActivity.page.js');
+const commonPage = require('../../pages/backoffice/common.page.js');
+const viewLearningPathPage = require('../../pages/backoffice/viewLearningPath.page.js');
 var sts;
 
 module.exports = {
@@ -28,15 +28,15 @@ module.exports = {
 	},
 
 	// Validate that add title page opens on clicking the add book button
-	/*BK_TC_2: function () {
+	BK_TC_2: function (testdata) {
 		sts = homePage.click_NewTitle_Button();
+		assertion.assertEqual(sts, true, "Add title options status mismatch");
+		sts = homePage.select_TitleType_and_Proceed(testdata.type);
 		assertion.assertEqual(sts, true, "Add title page status mismatch");
 	},
 
 	// Validate that new book is added on entering required details on the add title page
 	BK_TC_3: function (testdata) {
-		//sts = addTitlePage.select_TitleType("Book");
-		//assertion.assertEqual(sts, true, "Title type selection status mismatch");
 		sts = addTitlePage.set_Name(testdata.name);
 		assertion.assertEqual(sts, true, "Title status mismatch");
 		sts = addTitlePage.upload_CoverImage(testdata.coverImage);
@@ -44,32 +44,31 @@ module.exports = {
 		sts = addTitlePage.set_Description(testdata.description);
 		assertion.assertEqual(sts, true, "Description status mismatch");
 		sts = addTitlePage.click_CreateTitle_Button();
-		assertion.assert((typeof sts === "string" && sts.includes("Book creation request submitted successfully")), "Snackbar messsage mismatch. " + sts);
-		//assertion.assert(sts.includes("Automation Test book"), "Snackbar messsage mismatch.");
-	},*/
+		assertion.assert((typeof sts === "string" && sts.includes("Your new Umbrella Product is being setup.")), "Banner messsage mismatch. " + sts);
+	},
 
 	// Validate that the view book page is launched on clicking the book card on the home page
 	BK_TC_4: function (testdata) {
 		sts = homePage.click_Book(testdata.name);
 		assertion.assert(sts.includes(testdata.name), "Book title mismatch. " + sts);
-		//assertion.assertEqual(sts, testdata.name, "Book title mismatch");
 	},
 
 	// Validate that the delete book dialog box opens on clicking delete button on the components page
-	/*BK_TC_5: function (testdata) {
+	BK_TC_5: function (testdata) {
 		sts = viewBookPage.click_DeleteBook_Button();
+		assertion.assert((typeof sts === "string" && sts.includes("Are you sure, you want to delete the Umbrella Product")), "Dialog text mismatch. " + sts);
 		assertion.assert((typeof sts === "string" && sts.includes(testdata.name)), "Dialog text mismatch. " + sts);
 	},
 
 	// Validate that the book is deleted on clicking delete button in the dialog box
 	BK_TC_6: function () {
 		sts = common.click_confirmDialog_Button();
-		assertion.assertEqual(sts, "Book deleted successfully", "Snackbar messsage mismatch");
-	},*/
+		assertion.assertEqual(sts, "Umbrella Product deleted successfully", "Snackbar messsage mismatch");
+	},
 
 	// Validate that user is able to logout of the back office application
 	BK_TC_7: function () {
-		browser.switchWindow('https://backoffice-difusion-dev1.comprodls.com/');
+		browser.switchWindow(global.appUrl);
 		sts = commonPage.signout_from_app();
 		assertion.assertEqual(sts, true, "Login page status mismatch");
 	},
@@ -143,7 +142,7 @@ module.exports = {
 		//browser.switchWindow('https://backoffice-difusion-dev1.comprodls.com/');
 		//assertion.assert((typeof sts === "string" && sts.includes(testdata.name)), "Snackbar messsage mismatch. " + sts);
 		//assertion.assert((typeof sts === "string" && sts.includes("created successfully")), "Snackbar messsage mismatch. " + sts);
-		browser.switchWindow('https://qa-paint.backoffice.comprodls.com/');
+		browser.switchWindow('paint.backoffice.comprodls.com/');
 	},
 
 	// Validate that clicking on the Level 1 breadcrumb launches components page
@@ -179,7 +178,7 @@ module.exports = {
 	// Validate that the delete activity dialog box opens on clicking delete button in the activity menu
 	BK_TC_21: function (testdata) {
 		sts = learningPathPage.click_Delete_Button_in_ActivityMenu();
-		assertion.assert((typeof sts === "string" && sts.includes("Are you sure, you want to delete the selected items?")), "Dialog text mismatch. " + sts);
+		assertion.assert((typeof sts === "string" && sts.includes("Are you sure, you want to delete the selected items")), "Dialog text mismatch. " + sts);
 	},
 
 	// Validate that the activity is deleted on clicking delete button in the dialog box

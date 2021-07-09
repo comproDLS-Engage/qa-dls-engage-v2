@@ -649,6 +649,18 @@
                     "tags": "P1"
                 }
             ]
+        },
+        {
+            "modulename": "Common functions",
+            "moduledetails": "",
+            "testFile": "./test/engageExperienceApp/common.test.js",
+            "testcase": [
+                {
+                    "id": "logout_from_app",
+                    "description": "Logout from the application",
+                    "tags": "P1"
+                }
+            ]
         }
     ]
 }

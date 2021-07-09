@@ -15,7 +15,7 @@ module.exports = {
     proceedBtn: selectorFile.common.proceedBtn,
     activityMenuBtn: selectorFile.viewLearningPathPage.activityMenuBtn,
     activityMenuDeleteBtn: selectorFile.viewLearningPathPage.activityMenuDeleteBtn,
-    emptyStateBtn: selectorFile.viewLearningPathPage.emptyStateBtn,
+    emptyStateBtn: selectorFile.common.emptyStateBtn,
     deleteItemBtn: selectorFile.viewLearningPathPage.deleteItemBtn,
     itemCheckboxes: selectorFile.viewLearningPathPage.itemCheckboxes,
 

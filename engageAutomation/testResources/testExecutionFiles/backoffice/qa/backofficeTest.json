@@ -1,326 +1,385 @@
 {
-    "Suite1": {
-        "Name": "Creation of a components in the book",
-        "TestCaseRepo": [
-            "./testResources/testcaseRepository/backOffice/backOfficeTCRepository.json"
-        ],
-        "Before": [
-            {
-                "id": "launchUrl",
-                "description": "",
-                "testFile": "./engageAutomation/core/runner/launchUrl.js",
-                "testData": []
-            }
-        ],
-        "BeforeEach": [],
-        "Test": [
-            {
-                "id": "BK_TC_1",
-                "description": "",
-                "testFile": "./test/backoffice/backoffice.test.js",
-                "testData": [
-                    {
-                        "dataFile": "./testResources/testcaseData/backOffice/qa/logindata.json",
-                        "jsonPath": "backoffice.user.validUser1"
-                    }
-                ]
-            },
-            {
-                "id": "BK_TC_4",
-                "description": "",
-                "testFile": "./test/backoffice/backoffice.test.js",
-                "testData": [
-                    {
-                        "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
-                        "jsonPath": "backoffice.book[0]"
-                    }
-                ]
-            },
-            {
-                "id": "BK_TC_8",
-                "description": "",
-                "testFile": "./test/backoffice/backoffice.test.js",
-                "testData": [
-                    {
-                        "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
-                        "jsonPath": "backoffice.component[2]"
-                    }
-                ]
-            },
-            {
-                "id": "BK_TC_9",
-                "description": "",
-                "testFile": "./test/backoffice/backoffice.test.js",
-                "testData": [
-                    {
-                        "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
-                        "jsonPath": "backoffice.component[2]"
-                    }
-                ]
-            },
+	"Suite1": {
+		"Name": "Creation of a book",
+		"TestCaseRepo": [
+			"./testResources/testcaseRepository/backOffice/backOfficeTCRepository.json"
+		],
+		"Before": [
 			{
-                "id": "BK_TC_8",
-                "description": "",
-                "testFile": "./test/backoffice/backoffice.test.js",
-                "testData": [
-                    {
-                        "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
-                        "jsonPath": "backoffice.component[1]"
-                    }
-                ]
-            },
-            {
-                "id": "BK_TC_9",
-                "description": "",
-                "testFile": "./test/backoffice/backoffice.test.js",
-                "testData": [
-                    {
-                        "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
-                        "jsonPath": "backoffice.component[1]"
-                    }
-                ]
-            },
+				"id": "launchUrl",
+				"description": "",
+				"testFile": "./engageAutomation/core/runner/launchUrl.js",
+				"testData": []
+			}
+		],
+		"BeforeEach": [],
+		"Test": [
 			{
-                "id": "BK_TC_8",
-                "description": "",
-                "testFile": "./test/backoffice/backoffice.test.js",
-                "testData": [
-                    {
-                        "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
-                        "jsonPath": "backoffice.component[0]"
-                    }
-                ]
-            },
-            {
-                "id": "BK_TC_9",
-                "description": "",
-                "testFile": "./test/backoffice/backoffice.test.js",
-                "testData": [
-                    {
-                        "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
-                        "jsonPath": "backoffice.component[0]"
-                    }
-                ]
-            },
-            {
-                "id": "BK_TC_7",
-                "description": "",
-                "testFile": "./test/backoffice/backoffice.test.js",
-                "testData": []
-            }
-        ],
-        "AfterEach": [],
-        "After": []
-    },
-    "Suite2": {
-        "Name": "Creation of folders",
-        "TestCaseRepo": [
-            "./testResources/testcaseRepository/backOffice/backOfficeTCRepository.json"
-        ],
-        "Before": [
-            {
-                "id": "launchUrl",
-                "description": "",
-                "testFile": "./engageAutomation/core/runner/launchUrl.js",
-                "testData": []
-            },
-            {
-                "id": "BK_TC_1",
-                "description": "",
-                "testFile": "./test/backoffice/backoffice.test.js",
-                "testData": [
-                    {
-                        "dataFile": "./testResources/testcaseData/backOffice/qa/logindata.json",
-                        "jsonPath": "backoffice.user.validUser1"
-                    }
-                ]
-            },
-            {
-                "id": "BK_TC_4",
-                "description": "",
-                "testFile": "./test/backoffice/backoffice.test.js",
-                "testData": [
-                    {
-                        "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
-                        "jsonPath": "backoffice.book[0]"
-                    }
-                ]
-            }
-        ],
-        "BeforeEach": [],
-        "Test": [
-            {
-                "id": "BK_TC_10",
-                "description": "",
-                "testFile": "./test/backoffice/backoffice.test.js",
-                "testData": [
-                    {
-                        "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
-                        "jsonPath": "backoffice.component[0]"
-                    }
-                ]
-            },
-            {
-                "id": "BK_TC_11",
-                "description": "",
-                "testFile": "./test/backoffice/backoffice.test.js",
-                "testData": []
-            },
-            {
-                "id": "BK_TC_12",
-                "description": "",
-                "testFile": "./test/backoffice/backoffice.test.js",
-                "testData": [
-                    {
-                        "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
-                        "jsonPath": "backoffice.folder[0]"
-                    }
-                ]
-            },
-            {
-                "id": "BK_TC_13",
-                "description": "",
-                "testFile": "./test/backoffice/backoffice.test.js",
-                "testData": [
-                    {
-                        "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
-                        "jsonPath": "backoffice.folder[0]"
-                    }
-                ]
-            },
-            {
-                "id": "BK_TC_11",
-                "description": "",
-                "testFile": "./test/backoffice/backoffice.test.js",
-                "testData": []
-            },
-            {
-                "id": "BK_TC_12",
-                "description": "",
-                "testFile": "./test/backoffice/backoffice.test.js",
-                "testData": [
-                    {
-                        "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
-                        "jsonPath": "backoffice.folder[1]"
-                    }
-                ]
-            },
-            {
-                "id": "BK_TC_13",
-                "description": "",
-                "testFile": "./test/backoffice/backoffice.test.js",
-                "testData": [
-                    {
-                        "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
-                        "jsonPath": "backoffice.folder[1]"
-                    }
-                ]
-            }
-        ],
-        "AfterEach": [],
-        "After": [
-            {
-                "id": "BK_TC_7",
-                "description": "",
-                "testFile": "./test/backoffice/backoffice.test.js",
-                "testData": []
-            }
-        ]
-    },
-    "Suite3": {
-        "Name": "Creation of a native LO with all item players",
-        "TestCaseRepo": [
-            "./testResources/testcaseRepository/backOffice/backOfficeTCRepository.json",
-            "./testResources/testcaseRepository/assessmentEditor/editorTCRepository.json"
-        ],
-        "Before": [
-            {
-                "id": "launchUrl",
-                "description": "",
-                "testFile": "./engageAutomation/core/runner/launchUrl.js",
-                "testData": []
-            },
-            {
-                "id": "BK_TC_1",
-                "description": "",
-                "testFile": "./test/backoffice/backoffice.test.js",
-                "testData": [
-                    {
-                        "dataFile": "./testResources/testcaseData/backOffice/qa/logindata.json",
-                        "jsonPath": "backoffice.user.validUser1"
-                    }
-                ]
-            },
-            {
-                "id": "BK_TC_4",
-                "description": "",
-                "testFile": "./test/backoffice/backoffice.test.js",
-                "testData": [
-                    {
-                        "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
-                        "jsonPath": "backoffice.book[0]"
-                    }
-                ]
-            },
-            {
-                "id": "BK_TC_10",
-                "description": "",
-                "testFile": "./test/backoffice/backoffice.test.js",
-                "testData": [
-                    {
-                        "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
-                        "jsonPath": "backoffice.component[0]"
-                    }
-                ]
-            },
-            {
-                "id": "BK_TC_13",
-                "description": "",
-                "testFile": "./test/backoffice/backoffice.test.js",
-                "testData": [
-                    {
-                        "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
-                        "jsonPath": "backoffice.folder[0]"
-                    }
-                ]
-            },
-            {
-                "id": "BK_TC_13",
-                "description": "",
-                "testFile": "./test/backoffice/backoffice.test.js",
-                "testData": [
-                    {
-                        "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
-                        "jsonPath": "backoffice.folder[1]"
-                    }
-                ]
-            }
-        ],
-        "BeforeEach": [],
-        "Test": [
-            {
-                "id": "BK_TC_14",
-                "description": "",
-                "testFile": "./test/backoffice/backoffice.test.js",
-                "testData": [
-                    {
-                        "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
-                        "jsonPath": "backoffice.activity[0]"
-                    }
-                ]
-            },
-            {
-                "id": "BK_TC_15",
-                "description": "",
-                "testFile": "./test/backoffice/backoffice.test.js",
-                "testData": [
-                    {
-                        "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
-                        "jsonPath": "backoffice.activity[0]"
-                    }
-                ]
-            },
-            {
+				"id": "BK_TC_1",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/qa/logindata.json",
+						"jsonPath": "backoffice.user.validUser1"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_2",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"jsonPath": "backoffice.book[0]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_3",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"jsonPath": "backoffice.book[0]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_7",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			}
+		],
+		"AfterEach": [],
+		"After": []
+	},
+	"Suite2": {
+		"Name": "Creation of a components in the book",
+		"TestCaseRepo": [
+			"./testResources/testcaseRepository/backOffice/backOfficeTCRepository.json"
+		],
+		"Before": [
+			{
+				"id": "launchUrl",
+				"description": "",
+				"testFile": "./engageAutomation/core/runner/launchUrl.js",
+				"testData": []
+			}
+		],
+		"BeforeEach": [],
+		"Test": [
+			{
+				"id": "BK_TC_1",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/qa/logindata.json",
+						"jsonPath": "backoffice.user.validUser1"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_4",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"jsonPath": "backoffice.book[0]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_8",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"jsonPath": "backoffice.component[2]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_9",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"jsonPath": "backoffice.component[2]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_8",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"jsonPath": "backoffice.component[1]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_9",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"jsonPath": "backoffice.component[1]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_8",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"jsonPath": "backoffice.component[0]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_9",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"jsonPath": "backoffice.component[0]"
+					}
+				]
+			}
+		],
+		"AfterEach": [],
+		"After": [
+			{
+				"id": "BK_TC_7",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			}
+		]
+	},
+	"Suite3": {
+		"Name": "Creation of folders",
+		"TestCaseRepo": [
+			"./testResources/testcaseRepository/backOffice/backOfficeTCRepository.json"
+		],
+		"Before": [
+			{
+				"id": "launchUrl",
+				"description": "",
+				"testFile": "./engageAutomation/core/runner/launchUrl.js",
+				"testData": []
+			},
+			{
+				"id": "BK_TC_1",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/qa/logindata.json",
+						"jsonPath": "backoffice.user.validUser1"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_4",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"jsonPath": "backoffice.book[0]"
+					}
+				]
+			}
+		],
+		"BeforeEach": [],
+		"Test": [
+			{
+				"id": "BK_TC_10",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"jsonPath": "backoffice.component[0]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_11",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			},
+			{
+				"id": "BK_TC_12",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"jsonPath": "backoffice.folder[0]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_13",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"jsonPath": "backoffice.folder[0]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_11",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			},
+			{
+				"id": "BK_TC_12",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"jsonPath": "backoffice.folder[1]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_13",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"jsonPath": "backoffice.folder[1]"
+					}
+				]
+			}
+		],
+		"AfterEach": [],
+		"After": [
+			{
+				"id": "BK_TC_7",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			}
+		]
+	},
+	"Suite4": {
+		"Name": "Creation of a native LO with all item players",
+		"TestCaseRepo": [
+			"./testResources/testcaseRepository/backOffice/backOfficeTCRepository.json",
+			"./testResources/testcaseRepository/assessmentEditor/editorTCRepository.json"
+		],
+		"Before": [
+			{
+				"id": "launchUrl",
+				"description": "",
+				"testFile": "./engageAutomation/core/runner/launchUrl.js",
+				"testData": []
+			},
+			{
+				"id": "BK_TC_1",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/qa/logindata.json",
+						"jsonPath": "backoffice.user.validUser1"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_4",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"jsonPath": "backoffice.book[0]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_10",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"jsonPath": "backoffice.component[0]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_13",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"jsonPath": "backoffice.folder[0]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_13",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"jsonPath": "backoffice.folder[1]"
+					}
+				]
+			}
+		],
+		"BeforeEach": [],
+		"Test": [
+			{
+				"id": "BK_TC_14",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"jsonPath": "backoffice.activity[0]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_15",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"jsonPath": "backoffice.activity[0]"
+					}
+				]
+			},
+			{
 				"id": "ASE_COM_TC_120",
 				"description": "Validate the editor is selected in question pane and displayed.",
 				"testFile": "./test/assessmentEditor/editor.test.js",
@@ -342,7 +401,6 @@
 				"description": "Validate that alphanumeric text is supported in Question Title Text.",
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": [
-
 					{
 						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
 						"jsonPath": "editor.questions.MCQ[0].question1.questionTitle"
@@ -975,244 +1033,309 @@
 					}
 				]
 			},
-            {
-                "id": "ASE_COM_TC_998",
-                "description": "Click Preview tab",
-                "testFile": "./test/assessmentEditor/editor.test.js",
-                "testData": []
-            },
-            {
-                "id": "ASE_COM_TC_999",
-                "description": "Click save and return button",
-                "testFile": "./test/assessmentEditor/editor.test.js",
-                "testData": []
-            }
-        ],
-        "AfterEach": [],
-        "After": [
-            {
-                "id": "BK_TC_7",
-                "description": "",
-                "testFile": "./test/backoffice/backoffice.test.js",
-                "testData": []
-            }
-        ]
-    },
-    "Suite4": {
-        "Name": "Deletion of delete activity, folders and components",
-        "TestCaseRepo": [
-            "./testResources/testcaseRepository/backOffice/backOfficeTCRepository.json"
-        ],
-        "Before": [
-            {
-                "id": "launchUrl",
-                "description": "",
-                "testFile": "./engageAutomation/core/runner/launchUrl.js",
-                "testData": []
-            },
-            {
-                "id": "BK_TC_1",
-                "description": "",
-                "testFile": "./test/backoffice/backoffice.test.js",
-                "testData": [
-                    {
-                        "dataFile": "./testResources/testcaseData/backOffice/qa/logindata.json",
-                        "jsonPath": "backoffice.user.validUser1"
-                    }
-                ]
-            },
-            {
-                "id": "BK_TC_4",
-                "description": "",
-                "testFile": "./test/backoffice/backoffice.test.js",
-                "testData": [
-                    {
-                        "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
-                        "jsonPath": "backoffice.book[0]"
-                    }
-                ]
-            },
-            {
-                "id": "BK_TC_10",
-                "description": "",
-                "testFile": "./test/backoffice/backoffice.test.js",
-                "testData": [
-                    {
-                        "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
-                        "jsonPath": "backoffice.component[0]"
-                    }
-                ]
-            },
-            {
-                "id": "BK_TC_13",
-                "description": "",
-                "testFile": "./test/backoffice/backoffice.test.js",
-                "testData": [
-                    {
-                        "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
-                        "jsonPath": "backoffice.folder[0]"
-                    }
-                ]
-            },
-            {
-                "id": "BK_TC_13",
-                "description": "",
-                "testFile": "./test/backoffice/backoffice.test.js",
-                "testData": [
-                    {
-                        "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
-                        "jsonPath": "backoffice.folder[1]"
-                    }
-                ]
-            }
-        ],
-        "BeforeEach": [],
-        "Test": [
-            {
-                "id": "BK_TC_21",
-                "description": "",
-                "testFile": "./test/backoffice/backoffice.test.js",
-                "testData": [
-                    {
-                        "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
-                        "jsonPath": "backoffice.activity[1]"
-                    }
-                ]
-            },
-            {
-                "id": "BK_TC_22",
-                "description": "",
-                "testFile": "./test/backoffice/backoffice.test.js",
-                "testData": []
-            },
-            {
-                "id": "BK_TC_24",
-                "description": "",
-                "testFile": "./test/backoffice/backoffice.test.js",
-                "testData": []
-            },
-            {
-                "id": "BK_TC_19",
-                "description": "",
-                "testFile": "./test/backoffice/backoffice.test.js",
-                "testData": [
-                    {
-                        "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
-                        "jsonPath": "backoffice.folder[1]"
-                    }
-                ]
-            },
-            {
-                "id": "BK_TC_20",
-                "description": "",
-                "testFile": "./test/backoffice/backoffice.test.js",
-                "testData": []
-            },
-            {
-                "id": "BK_TC_24",
-                "description": "",
-                "testFile": "./test/backoffice/backoffice.test.js",
-                "testData": []
-            },
-            {
-                "id": "BK_TC_19",
-                "description": "",
-                "testFile": "./test/backoffice/backoffice.test.js",
-                "testData": [
-                    {
-                        "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
-                        "jsonPath": "backoffice.folder[0]"
-                    }
-                ]
-            },
-            {
-                "id": "BK_TC_20",
-                "description": "",
-                "testFile": "./test/backoffice/backoffice.test.js",
-                "testData": []
-            },
-            {
-                "id": "BK_TC_17",
-                "description": "",
-                "testFile": "./test/backoffice/backoffice.test.js",
-                "testData": [
-                    {
-                        "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
-                        "jsonPath": "backoffice.component[1]"
-                    }
-                ]
-            },
-            {
-                "id": "BK_TC_18",
-                "description": "",
-                "testFile": "./test/backoffice/backoffice.test.js",
-                "testData": []
-            },
 			{
-                "id": "BK_TC_10",
-                "description": "",
-                "testFile": "./test/backoffice/backoffice.test.js",
-                "testData": [
-                    {
-                        "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
-                        "jsonPath": "backoffice.component[1]"
-                    }
-                ]
-            },
-            {
-                "id": "BK_TC_17",
-                "description": "",
-                "testFile": "./test/backoffice/backoffice.test.js",
-                "testData": [
-                    {
-                        "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
-                        "jsonPath": "backoffice.component[1]"
-                    }
-                ]
-            },
-            {
-                "id": "BK_TC_18",
-                "description": "",
-                "testFile": "./test/backoffice/backoffice.test.js",
-                "testData": []
-            },
+				"id": "ASE_COM_TC_998",
+				"description": "Click Preview tab",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
 			{
-                "id": "BK_TC_10",
-                "description": "",
-                "testFile": "./test/backoffice/backoffice.test.js",
-                "testData": [
-                    {
-                        "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
-                        "jsonPath": "backoffice.component[2]"
-                    }
-                ]
-            },
-            {
-                "id": "BK_TC_17",
-                "description": "",
-                "testFile": "./test/backoffice/backoffice.test.js",
-                "testData": [
-                    {
-                        "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
-                        "jsonPath": "backoffice.component[1]"
-                    }
-                ]
-            },
-            {
-                "id": "BK_TC_18",
-                "description": "",
-                "testFile": "./test/backoffice/backoffice.test.js",
-                "testData": []
-            }
-        ],
-        "AfterEach": [],
-        "After": [
-            {
-                "id": "BK_TC_7",
-                "description": "",
-                "testFile": "./test/backoffice/backoffice.test.js",
-                "testData": []
-            }
-        ]
-    }
+				"id": "ASE_COM_TC_999",
+				"description": "Click save and return button",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			}
+		],
+		"AfterEach": [],
+		"After": [
+			{
+				"id": "BK_TC_7",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			}
+		]
+	},
+	"Suite5": {
+		"Name": "Deletion of delete activity, folders and components",
+		"TestCaseRepo": [
+			"./testResources/testcaseRepository/backOffice/backOfficeTCRepository.json"
+		],
+		"Before": [
+			{
+				"id": "launchUrl",
+				"description": "",
+				"testFile": "./engageAutomation/core/runner/launchUrl.js",
+				"testData": []
+			},
+			{
+				"id": "BK_TC_1",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/qa/logindata.json",
+						"jsonPath": "backoffice.user.validUser1"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_4",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"jsonPath": "backoffice.book[0]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_10",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"jsonPath": "backoffice.component[0]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_13",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"jsonPath": "backoffice.folder[0]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_13",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"jsonPath": "backoffice.folder[1]"
+					}
+				]
+			}
+		],
+		"BeforeEach": [],
+		"Test": [
+			{
+				"id": "BK_TC_21",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"jsonPath": "backoffice.activity[0]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_22",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			},
+			{
+				"id": "BK_TC_24",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			},
+			{
+				"id": "BK_TC_19",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"jsonPath": "backoffice.folder[1]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_20",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			},
+			{
+				"id": "BK_TC_24",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			},
+			{
+				"id": "BK_TC_19",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"jsonPath": "backoffice.folder[0]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_20",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			},
+			{
+				"id": "BK_TC_17",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"jsonPath": "backoffice.component[0]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_18",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			},
+			{
+				"id": "BK_TC_10",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"jsonPath": "backoffice.component[1]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_17",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"jsonPath": "backoffice.component[1]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_18",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			},
+			{
+				"id": "BK_TC_10",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"jsonPath": "backoffice.component[2]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_17",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"jsonPath": "backoffice.component[2]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_18",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			}
+		],
+		"AfterEach": [],
+		"After": [
+			{
+				"id": "BK_TC_7",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			}
+		]
+	},
+	"Suite6": {
+		"Name": "Deletion of the book",
+		"TestCaseRepo": [
+			"./testResources/testcaseRepository/backOffice/backOfficeTCRepository.json"
+		],
+		"Before": [
+			{
+				"id": "launchUrl",
+				"description": "",
+				"testFile": "./engageAutomation/core/runner/launchUrl.js",
+				"testData": []
+			},
+			{
+				"id": "BK_TC_1",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/qa/logindata.json",
+						"jsonPath": "backoffice.user.validUser1"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_4",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"jsonPath": "backoffice.book[0]"
+					}
+				]
+			}
+		],
+		"BeforeEach": [],
+		"Test": [
+			{
+				"id": "BK_TC_5",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"jsonPath": "backoffice.book[0]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_6",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			}
+		],
+		"AfterEach": [],
+		"After": [
+			{
+				"id": "BK_TC_7",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			}
+		]
+	}
 }

@@ -1,0 +1,13 @@
+{
+    "backoffice": {
+        "user": {
+            "validUser1": {
+                "email": "akhil.aggarwal@comprotechnologies.com",
+                "password": "BOAkhil@1",
+                "role": "",
+                "name": "Akhil Aggarwal",
+                "info": {}
+            }
+        }
+    }
+}
