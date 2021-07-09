@@ -23,8 +23,8 @@ module.exports = {
     //Validate that clicking on View Class button launches the list of classes corresponding to the book
     ENG_BKTOC_TC_4: function () {
         sts = bookDetailPage.clickViewClasses();
-        assertion.assertEqual(sts, true, "View Classes Not Clicked");
-
+        assertion.assertEqual(sts.classDrawerHeader, "Aula Plus 1 (For DEV2 - DONT TOUCH) Classes", "Class Drawer Header Mismatch");
+        //tbd other assertions
         sts = bookDetailPage.closeClassListMenu();
          assertion.assertEqual(sts, true, "Close Class List Menu Not Clicked");
 

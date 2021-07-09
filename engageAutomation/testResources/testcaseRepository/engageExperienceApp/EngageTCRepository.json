@@ -474,7 +474,7 @@
                 },
                 {
                     "id": "ENG_BKTOC_TC_6",
-                    "description": "Validate that clicking on 3 dot options displays View Book Details and Remove Book options if the book has been added to My books",
+                    "description": "Validate that clicking on More options displays View Book Details and Remove Book options if the book has been added to My books",
                     "tags": "P1",
                     "visualTest": true
                 },
@@ -486,7 +486,7 @@
                 },
                 {
                     "id": "ENG_BKTOC_TC_8",
-                    "description": "Validate that clicking on View Book details launches snackbar with Feature Coming Soon message",
+                    "description": "Validate that clicking on View Book details launches 'Not Available or Active in this version' snackbar",
                     "tags": "P1",
                     "visualTest": true
                 },
@@ -516,7 +516,7 @@
                 },
                 {
                     "id": "ENG_BKTOC_TC_18",
-                    "description": "Anchor Component - Validate that Book Detail view page should display the list of units which are present of anchor component",
+                    "description": "Validate that Book Detail view page should display the list of units which are present in the anchored component",
                     "tags": "P1",
                     "visualTest": true
                 },                

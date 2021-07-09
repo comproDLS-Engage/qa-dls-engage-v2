@@ -32,6 +32,15 @@
                     ],
                     "info": {}
                 },
+                "validStudent3": {
+                    "email": "difusionqa.stud11@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "student",
+                    "name": "difusionqa.stud11",
+                    "class": [
+                    ],
+                    "info": {}
+                },
                 "resetPasswordUser": {
                     "email": "difusionqa.stud47@yopmail.com",
                     "password": "Compro@1234",

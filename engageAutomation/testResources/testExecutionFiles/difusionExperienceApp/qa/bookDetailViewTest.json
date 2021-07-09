@@ -1,199 +1,259 @@
 {
-    "Suite1":
-    {
-        "Name": "Validation of Book Detail and Unit Detail View for a book added to My Books",
-        "TestCaseRepo": [
-            "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
-        ],
-        "Before": [
-        {
-            "id": "launchUrl",
-            "description": "",
-            "testFile": "./engageAutomation/core/runner/launchUrl.js",
-            "testData": []
-        },
-        {
-            "id": "ENG_LAND_TC_1",
-            "description": "Landing page",
-            "testFile": "./test/engageExperienceApp/landing.test.js",
-            "visualTest": true,
-            "visualTolerance": 0.07,
-            "testData": []
-        },
-        {
-            "id": "ENG_LAND_TC_3",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/landing.test.js",
-            "visualTest": true,
-            "visualTolerance": 0.07,
-            "testData": []
-        },
-        {
-            "id": "ENG_IDEN_TC_7",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/login.test.js",
-            "visualTest": true,
-            "visualTolerance": 0.07,
-            "testData": [
-            {
-                "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
-                "jsonPath": "engage.login.user.validInstructorUser3"
-            }]
-        },
-        {
-            "id": "ENG_DIF_TC_1",
-            "description": "View book page",
-            "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-            "visualTolerance": 0.07,
-            "testData": []
-        }],
-        "BeforeEach": [],
-        "Test": [
-        {
-            "id": "ENG_BKTOC_TC_3",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/bookDetailView.test.js",
-            "testData": []
-        },
-        {
-            "id": "ENG_BKTOC_TC_18",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/bookDetailView.test.js",
-            "testData": []
-        },
-        {
-            "id": "ENG_BKTOC_TC_4",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/bookDetailView.test.js",
-            "testData": []
-        },
-        {
-            "id": "ENG_BKTOC_TC_6",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/bookDetailView.test.js",
-            "testData": []
-        },
-        {
-            "id": "ENG_BKTOC_TC_7",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/bookDetailView.test.js",
-            "testData": []
-        },
-        {
-            "id": "ENG_BKTOC_TC_8",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/bookDetailView.test.js",
-            "testData": []
-        },
-        {
-            "id": "ENG_BKTOC_TC_11",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/bookDetailView.test.js",
-            "testData": []
-        },
-        {
-            "id": "ENG_BKTOC_TC_13",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/bookDetailView.test.js",
-            "testData": []
-        },
-        {
-            "id": "ENG_BKTOC_TC_12",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/bookDetailView.test.js",
-            "testData": []
-        },
-        {
-            "id": "ENG_BKTOC_TC_20",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/bookDetailView.test.js",
-            "testData": []
-        }],
-        "AfterEach": [],
-        "After": [
-        {
-            "id": "logout_from_app",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/common.test.js",
-            "testData": []
-        }]
-    },
-    "Suite2":
-    {
-        "Name": "Validation of Book Detail and Unit Detail View for a book Not added to My Books",
-        "TestCaseRepo": [
-            "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
-        ],
-        "Before": [
-        {
-            "id": "launchUrl",
-            "description": "",
-            "testFile": "./engageAutomation/core/runner/launchUrl.js",
-            "testData": []
-        },
-        {
-            "id": "ENG_LAND_TC_1",
-            "description": "Landing page",
-            "testFile": "./test/engageExperienceApp/landing.test.js",
-            "visualTest": true,
-            "visualTolerance": 0.07,
-            "testData": []
-        },
-        {
-            "id": "ENG_LAND_TC_3",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/landing.test.js",
-            "visualTest": true,
-            "visualTolerance": 0.07,
-            "testData": []
-        },
-        {
-            "id": "ENG_IDEN_TC_7",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/login.test.js",
-            "visualTest": true,
-            "visualTolerance": 0.07,
-            "testData": [
-            {
-                "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
-                "jsonPath": "engage.login.user.validInstructorUser2"
-            }]
-        },
-        {
-            "id": "ENG_DIF_TC_27",
-            "description": "Add book page from Getting Started",
-            "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-            "visualTolerance": 0.07,
-            "testData": []
-        },
-        {
-            "id": "ENG_DIF_TC_5",
-            "description": "View book page (not added)",
-            "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-            "visualTolerance": 0.07,
-            "testData": []
-        }],
-        "BeforeEach": [],
-        "Test": [
-        {
-            "id": "ENG_BKTOC_TC_1",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/bookDetailView.test.js",
-            "testData": []
-        },
-        {
-            "id": "ENG_BKTOC_TC_5",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/bookDetailView.test.js",
-            "testData": []
-        }],
-        "AfterEach": [],
-        "After": [
-        {
-            "id": "logout_from_app",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/common.test.js",
-            "testData": []
-        }]
-    }
+   "Suite1":{
+      "Name":"Validation of Book Detail and Unit Detail View for Aula Plus 1",
+      "TestCaseRepo":[
+         "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
+      ],
+      "Before":[
+         {
+            "id":"launchUrl",
+            "description":"",
+            "testFile":"./engageAutomation/core/runner/launchUrl.js",
+            "testData":[
+               
+            ]
+         },
+         {
+            "id":"ENG_LAND_TC_1",
+            "description":"Landing page",
+            "testFile":"./test/engageExperienceApp/landing.test.js",
+            "visualTest":true,
+            "visualTolerance":0.07,
+            "testData":[
+               
+            ]
+         },
+         {
+            "id":"ENG_LAND_TC_3",
+            "description":"",
+            "testFile":"./test/engageExperienceApp/landing.test.js",
+            "visualTest":true,
+            "visualTolerance":0.07,
+            "testData":[
+               
+            ]
+         },
+         {
+            "id":"ENG_IDEN_TC_7",
+            "description":"",
+            "testFile":"./test/engageExperienceApp/login.test.js",
+            "visualTest":true,
+            "visualTolerance":0.07,
+            "testData":[
+               {
+                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+                  "jsonPath":"engage.login.user.validStudent3"
+               }
+            ]
+         },
+         {
+            "id":"ENG_DIF_TC_1",
+            "description":"View book page",
+            "testFile":"./test/engageExperienceApp/difUITemp.test.js",
+            "visualTolerance":0.07,
+            "testData":[
+               
+            ]
+         }
+      ],
+      "BeforeEach":[
+         
+      ],
+      "Test":[
+         {
+            "id":"ENG_BKTOC_TC_3",
+            "description":"",
+            "testFile":"./test/engageExperienceApp/bookDetailView.test.js",
+            "testData":[
+               
+            ]
+         },
+         {
+            "id":"ENG_BKTOC_TC_18",
+            "description":"",
+            "testFile":"./test/engageExperienceApp/bookDetailView.test.js",
+            "testData":[
+               
+            ]
+         },
+         {
+            "id":"ENG_BKTOC_TC_4",
+            "description":"",
+            "testFile":"./test/engageExperienceApp/bookDetailView.test.js",
+            "testData":[
+               
+            ]
+         },
+         {
+            "id":"ENG_BKTOC_TC_6",
+            "description":"",
+            "testFile":"./test/engageExperienceApp/bookDetailView.test.js",
+            "testData":[
+               
+            ]
+         },
+         {
+            "id":"ENG_BKTOC_TC_7",
+            "description":"",
+            "testFile":"./test/engageExperienceApp/bookDetailView.test.js",
+            "testData":[
+               
+            ]
+         },
+         {
+            "id":"ENG_BKTOC_TC_8",
+            "description":"",
+            "testFile":"./test/engageExperienceApp/bookDetailView.test.js",
+            "testData":[
+               
+            ]
+         },
+         {
+            "id":"ENG_BKTOC_TC_11",
+            "description":"",
+            "testFile":"./test/engageExperienceApp/bookDetailView.test.js",
+            "testData":[
+               
+            ]
+         },
+         {
+            "id":"ENG_BKTOC_TC_13",
+            "description":"",
+            "testFile":"./test/engageExperienceApp/bookDetailView.test.js",
+            "testData":[
+               
+            ]
+         },
+         {
+            "id":"ENG_BKTOC_TC_12",
+            "description":"",
+            "testFile":"./test/engageExperienceApp/bookDetailView.test.js",
+            "testData":[
+               
+            ]
+         },
+         {
+            "id":"ENG_BKTOC_TC_20",
+            "description":"",
+            "testFile":"./test/engageExperienceApp/bookDetailView.test.js",
+            "testData":[
+               
+            ]
+         }
+      ],
+      "AfterEach":[
+         
+      ],
+      "After":[
+         {
+            "id":"logout_from_app",
+            "description":"",
+            "testFile":"./test/engageExperienceApp/common.test.js",
+            "testData":[
+               
+            ]
+         }
+      ]
+   },
+   "Suite2":{
+      "Name":"Validation of Book Detail and Unit Detail View for a book Not added to My Books",
+      "TestCaseRepo":[
+         "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
+      ],
+      "Before":[
+         {
+            "id":"launchUrl",
+            "description":"",
+            "testFile":"./engageAutomation/core/runner/launchUrl.js",
+            "testData":[
+               
+            ]
+         },
+         {
+            "id":"ENG_LAND_TC_1",
+            "description":"Landing page",
+            "testFile":"./test/engageExperienceApp/landing.test.js",
+            "visualTest":true,
+            "visualTolerance":0.07,
+            "testData":[
+               
+            ]
+         },
+         {
+            "id":"ENG_LAND_TC_3",
+            "description":"",
+            "testFile":"./test/engageExperienceApp/landing.test.js",
+            "visualTest":true,
+            "visualTolerance":0.07,
+            "testData":[
+               
+            ]
+         },
+         {
+            "id":"ENG_IDEN_TC_7",
+            "description":"",
+            "testFile":"./test/engageExperienceApp/login.test.js",
+            "visualTest":true,
+            "visualTolerance":0.07,
+            "testData":[
+               {
+                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+                  "jsonPath":"engage.login.user.validInstructorUser2"
+               }
+            ]
+         },
+         {
+            "id":"ENG_DIF_TC_27",
+            "description":"Add book page from Getting Started",
+            "testFile":"./test/engageExperienceApp/difUITemp.test.js",
+            "visualTolerance":0.07,
+            "testData":[
+               
+            ]
+         },
+         {
+            "id":"ENG_DIF_TC_5",
+            "description":"View book page (not added)",
+            "testFile":"./test/engageExperienceApp/difUITemp.test.js",
+            "visualTolerance":0.07,
+            "testData":[
+               
+            ]
+         }
+      ],
+      "BeforeEach":[
+         
+      ],
+      "Test":[
+         {
+            "id":"ENG_BKTOC_TC_1",
+            "description":"",
+            "testFile":"./test/engageExperienceApp/bookDetailView.test.js",
+            "testData":[
+               
+            ]
+         },
+         {
+            "id":"ENG_BKTOC_TC_5",
+            "description":"",
+            "testFile":"./test/engageExperienceApp/bookDetailView.test.js",
+            "testData":[
+               
+            ]
+         }
+      ],
+      "AfterEach":[
+         
+      ],
+      "After":[
+         {
+            "id":"logout_from_app",
+            "description":"",
+            "testFile":"./test/engageExperienceApp/common.test.js",
+            "testData":[
+               
+            ]
+         }
+      ]
+   }
 }

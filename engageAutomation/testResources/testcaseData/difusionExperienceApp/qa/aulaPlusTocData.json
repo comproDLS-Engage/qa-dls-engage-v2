@@ -1,0 +1,107 @@
+{
+   "engage":{
+      "books":{
+         "book1":{
+            "name":"Aula Plus 1 (For DEV2 - DONT TOUCH)",
+            "title":"Aula Plus 1 (For DEV2 - DONT TOUCH)",
+            "subtitle":"",
+            "component":{
+               "index":"0",
+               "name":"",
+               "units":[
+                  {
+                     "index":0,
+                     "number":"0",
+                     "title":"En el aula",
+                     "thumbnailImage":{
+                        "alt":"En el aula",
+                        "src":""
+                     },
+                     "activityCount":"6",
+                     "folderCount":"0",
+                     "section":[
+                        {
+                           "index":0,
+                           "name":"Manual Web",
+                           "resource":[
+                              {
+                                 "index":0,
+                                 "name":"1. Me llamo Anderson. ¿Y tú?",
+                                 "moreOptions":"View Activity"
+                              },
+                              {
+                                 "index":1,
+                                 "name":"2. Sonidos",
+                                 "moreOptions":"View Activity"
+                              },
+                              {
+                                 "index":2,
+                                 "name":"3. Hola, ¿qué tal?",
+                                 "moreOptions":"View Activity"
+                              },
+                              {
+                                 "index":3,
+                                 "name":"4. ¿Cómo se escribe?",
+                                 "moreOptions":"View Activity"
+                              },
+                              {
+                                 "index":4,
+                                 "name":"5. Las cosas de la clase",
+                                 "moreOptions":"View Activity"
+                              },
+                              {
+                                 "index":5,
+                                 "name":"6. ¿Qué significa \"vale\"?",
+                                 "moreOptions":"View Activity"
+                              }
+                           ]
+                        },
+                        {
+                           "index":1,
+                           "name":"Recursos",
+                           "resource":[
+                              
+                           ]
+                        }
+                     ]
+                  },
+                  {
+                     "index":1,
+                     "number":"1",
+                     "title":"Nosotros y nosotras",
+                     "thumbnailImage":{
+                        "alt":"Nosotros y nosotras",
+                        "src":""
+                     },
+                     "activityCount":"13",
+                     "folderCount":"0",
+                     "section":[
+                        {
+                           "index":0,
+                           "name":"Manual Web",
+                           "resource":[
+                              
+                           ]
+                        },
+                        {
+                           "index":1,
+                           "name":"Más Ejercicios",
+                           "resource":[
+                              
+                           ]
+                        },
+                        {
+                           "index":2,
+                           "name":"Recursos",
+                           "resource":[
+                              
+                           ]
+                        }
+                     ]
+                  }
+               ]
+            }
+         }
+      }
+   }
+}
