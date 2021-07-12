@@ -68,7 +68,6 @@ module.exports = {
     //Validate on clicking Book Ellipses, dropdown menu is launched
     ENG_DASH_TC_7: function(){
         sts = dashboardPage.clickViewBookEllipses("PROYECTOS");
-        console.log(JSON.stringify(sts));
         assertion.assertEqual(sts, true);
     },
     //Validate on clicking "View Classes" from Book dropdown menu, class Pane is launched

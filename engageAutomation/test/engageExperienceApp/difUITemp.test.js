@@ -169,8 +169,8 @@ module.exports = {
 	ENG_DIF_TC_14: function () {
 		res = action.waitForDisplayed("[data-tid=button-close]", undefined, true);
 		console.log(res)
-		if (action.isDisplayed("[data-tid=button-closeinfotoc]")) {
-			res = action.click("[data-tid=button-closeinfotoc]");
+		if (action.isDisplayed("[id=infoToc-popover] [data-tid=button-closeinfotoc]")) {
+			res = action.click("[id=infoToc-popover] [data-tid=button-closeinfotoc]");
 			console.log(res)
 		}
 		if (action.isDisplayed("[data-tid=button-goback]")) {

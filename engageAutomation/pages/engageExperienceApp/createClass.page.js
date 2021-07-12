@@ -46,7 +46,6 @@ module.exports = {
         let pageStatus = action.waitForDisplayed(this.title_lbl)
         res = this.get_PageData();
         res.pageStatus = pageStatus;
-        console.log(res)
         return res;
     },
 

@@ -2,11 +2,11 @@
 var instructorMyClassPage = require('../../pages/engageExperienceApp/instructorMyClass.page.js');
 var createClassPage = require('../../pages/engageExperienceApp/createClass.page.js');
 var successClassPage = require('../../pages/engageExperienceApp/successClass.page.js');
-
-//var calender = require('../../pages/engageExperienceApp/calender.page.js');
-//var addBook = require('../../pages/engageExperienceApp/addBook.page.js');
+var calender = require('../../pages/engageExperienceApp/calender.page.js');
+var classDrawerpage = require('../../pages/engageExperienceApp/classDrawer.page.js');
 const { add } = require('winston');
 const teacherViewClassPage = require('../../pages/engageExperienceApp/teacherViewClass.page.js');
+const commonTest = require('./common.test.js');
 var sts;
 module.exports = {
 
@@ -157,7 +157,7 @@ module.exports = {
 	//Validate that clicking on inbox option from Class Menu launches class details page with inbox tab selected
 	ENG_INS_CLASS_TC_10: function (testdata) {
 		sts = instructorMyClassPage.click_inboxOption();
-		console.log(sts)
+		//console.log(sts)
 		if ((typeof (sts)) === "object") {
 			assertion.assertEqual(sts.selectedProduct, testdata.inboxOption_txt, "Add Student Page is not displayed: " + JSON.stringify(sts.pageStatus))
 		} else {
@@ -167,7 +167,7 @@ module.exports = {
 	//Validate that clicking on Student option from Class Menu launches class details page with Student tab selected
 	ENG_INS_CLASS_TC_11: function (testdata) {
 		sts = instructorMyClassPage.click_studentsOption();
-		console.log(sts)
+		//console.log(sts)
 		if ((typeof (sts)) === "object") {
 			assertion.assertEqual(sts.selectedProduct, testdata.studentsOption_txt, "Add Student Page is not displayed: " + JSON.stringify(sts.pageStatus))
 		} else {
@@ -177,7 +177,7 @@ module.exports = {
 	//Validate that clicking on Assignment option from Class Menu launches class details page with Assignment tab selected
 	ENG_INS_CLASS_TC_12: function (testdata) {
 		sts = instructorMyClassPage.click_assignmentsOption();
-		console.log(sts)
+		//console.log(sts)
 		if ((typeof (sts)) === "object") {
 			assertion.assertEqual(sts.selectedProduct, testdata.assignmentsOption_txt, "Add Student Page is not displayed: " + JSON.stringify(sts.pageStatus))
 		} else {
@@ -243,6 +243,18 @@ module.exports = {
 		sts = createClassPage.set_ClassName(testdata.name);
 		assertion.assertEqual(sts, testdata.name, "Class Name is mismatched" + JSON.stringify(sts))
 	},
+
+	//Update the start date of a class for next week
+	ENG_INS_CLASS_TC_18: function () {
+		sts = createClassPage.click_StartDate_Button()
+		assertion.assertEqual(sts, true, "EndDateButton is not clicked.")
+		sts = calender.isInitialized()
+		assertion.assertEqual(sts.CalenderStatus, true, "Calender PopUp is not launched: " + JSON.stringify(sts))
+		var currentDate = calender.getCurrentDate();
+		calender.selectDate(parseInt(currentDate) + 15);
+		calender.clickOkBtn()
+	},
+
 	//Validate that the My Classes page appears if user click on the cancel and go back button on Create Class Page
 	ENG_INS_CLASS_TC_19: function () {
 		sts = createClassPage.click_Cancel_Button();
@@ -252,6 +264,17 @@ module.exports = {
 		} else {
 			assertion.assertFail(sts);
 		}
+	},
+
+	//Update the end date of a class for next week
+	ENG_INS_CLASS_TC_20: function () {
+		sts = createClassPage.click_EndDate_Button()
+		assertion.assertEqual(sts, true, "EndDateButton is not clicked.")
+		sts = calender.isInitialized()
+		assertion.assertEqual(sts.CalenderStatus, true, "Calender PopUp is not launched: " + JSON.stringify(sts))
+		var currentDate = calender.getCurrentDate();
+		calender.selectDate(parseInt(currentDate) + 15);
+		calender.clickOkBtn()
 	},
 	//Validate the functionality of create button on Create Class Page.
 	ENG_INS_CLASS_TC_21: function (testdata) {
@@ -382,11 +405,40 @@ module.exports = {
 		assertion.assertEqual(sts, testdata.name, "Title text mismatch " + JSON.stringify(sts))
 
 	},
+	//Validate the Close button of class drwaer Pane
+	ENG_INS_CLASS_TC_31: function (testdata) {
+		sts = classDrawerpage.Click_classDrawerCloseBtn(testdata.nam);
+		assertion.assertEqual(sts.pageStatus, true, "Dashboard Page not launched: " + JSON.stringify(sts))
+	},
+	//Validate the class drwaer Pane when no class is added
+	ENG_INS_CLASS_TC_38: function (testdata) {
+		sts = classDrawerpage.isInitialized();
+		assertion.assertEqual(sts.classDrawerHeader, "PROYECTOS" + testdata.header, "Class Title Text Mismatch: " + JSON.stringify(sts.title_lbl))
+		assertion.assertEqual(sts.classDrawerCloseBtn, true, "Class Title Text Mismatch: " + JSON.stringify(sts.title_lbl))
+		assertion.assertEqual(sts.instructorMyClassData.classHeading, testdata.classHeading, "Page Title Text Mismatch: " + JSON.stringify(sts.pageTitle))
+		assertion.assertEqual(sts.instructorMyClassData.noClassFound_icon, true, "Page Icon Mismatch: " + JSON.stringify(sts.pageSubTitle))
+		assertion.assertEqual(sts.instructorMyClassData.noClassTitle, testdata.noClassTitle, "Page Header Text Mismatch: " + JSON.stringify(sts.classHeader))
+		assertion.assertEqual(sts.instructorMyClassData.noClassSubtitle, testdata.noClassSubtitle, "Page Sub Header Text Mismatch: " + JSON.stringify(sts.classSubHeader))
+		assertion.assertEqual(sts.instructorMyClassData.addClassBtn, testdata.addClassBtn, "Page Class add btn text is mismatch: " + JSON.stringify(sts.title_lbl))
+	},
+	//Validate the class drwaer Pane when  class is added
+	ENG_INS_CLASS_TC_39: function (testdata) {
+		sts = classDrawerpage.isInitialized();
+		assertion.assertEqual(sts.classDrawerHeader, "PROYECTOS" + testdata.header, "Class Title Text Mismatch: " + JSON.stringify(sts.title_lbl))
+		assertion.assertEqual(sts.classDrawerTitle, testdata.classDrawerTitle, "Class Title Text Mismatch: " + JSON.stringify(sts.title_lbl))
+		assertion.assertEqual(sts.classDrawerCloseBtn, true, "Class Title Text Mismatch: " + JSON.stringify(sts.title_lbl))
+		assertion.assertEqual(sts.classDrawerSubTitle, testdata.classDrawerSubTitle, "Class Title Text Mismatch: " + JSON.stringify(sts.title_lbl))
+		assertion.assertEqual(sts.classDrawerHeader, "PROYECTOS" + testdata.header, "Class Title Text Mismatch: " + JSON.stringify(sts.title_lbl))
+		assertion.assertEqual(sts.instructorMyClassData.classHeading, testdata.classHeading, "Page Title Text Mismatch: " + JSON.stringify(sts.pageTitle))
+		assertion.assertEqual(sts.instructorMyClassData.addClassBtn, testdata.addClassBtnwithClass, "Class Title Text Mismatch: " + JSON.stringify(sts.title_lbl))
+
+
+	},
 	//rupsi		
 	//Edit Class -Validate that the error message appears if user delete the book and click on Save button to save the class
 	ENG_INS_CLASS_TC_40: function (testdata) {
 		sts = createClassPage.clickdeleteBook();
-		console.log(sts)
+		//console.log(sts)
 		if ((typeof (sts)) === "object") {
 			assertion.assertEqual(sts.bookErrorMsg, testdata.bookErrorMsg, "Book Error Message mismatch " + JSON.stringify(sts))
 
@@ -403,7 +455,7 @@ module.exports = {
 	//Click on add book button and Validate the book is added in the class
 	ENG_INS_CLASS_TC_42: function () {
 		sts = createClassPage.click_AddANewBook_Button();
-		console.log(sts)
+		//console.log(sts)
 		if ((sts) == "alreadySelected") {
 			sts = true;
 		}
