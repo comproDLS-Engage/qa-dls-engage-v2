@@ -54,12 +54,12 @@ module.exports = {
 			}
 			//action.click("[data-tid=button-close]");
 		}*/
-		if (action.isDisplayed("[data-tid=button-goback]")) {
-			res = action.click("[data-tid=button-goback]");
+		if (action.isDisplayed("[data-tid=breadcrumb-productTitle]")) {
+			res = action.click("[data-tid=breadcrumb-productTitle]");
 			console.log(res)
 		}
 		if (action.isDisplayed("[data-tid=button-continue]")) {
-			res = action.click("div:nth-child(1) > div > div > button")
+			res = action.click("[role=dialog] button svg")
 			console.log(res)
 		}
 		if (!action.isDisplayed("[data-tid=button-dashboard]")) {
@@ -173,8 +173,8 @@ module.exports = {
 			res = action.click("[id=infoToc-popover] [data-tid=button-closeinfotoc]");
 			console.log(res)
 		}
-		if (action.isDisplayed("[data-tid=button-goback]")) {
-			res = action.click("[data-tid=button-goback]");
+		if (action.isDisplayed("[data-tid=breadcrumb-productTitle]")) {
+			res = action.click("[data-tid=breadcrumb-productTitle]");
 			console.log(res)
 			res = action.scrollIntoView("#app")
 			console.log(res)
