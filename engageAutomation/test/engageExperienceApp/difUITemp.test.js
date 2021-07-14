@@ -179,14 +179,10 @@ module.exports = {
 		}
 		res = action.waitForDisplayed("[class*=MuiCircularProgress-indeterminate]", undefined, true);
 		console.log(res);
-		if (action.isDisplayed("[data-tid=breadcrumb-viewbook]")) {
-			res = action.click("[data-tid=breadcrumb-viewbook]");
-			console.log(res)
-		}
-		res = action.click("button[data-tid=button-classes]");
+		res = action.click("[data-tid=breadcrumb-viewbook]");
 		console.log(res)
-		//res = action.waitForDisplayed("[class*=MuiIconButton-edgeEnd]");
-		//console.log(res)
+		res = action.click("button[data-tid=button-bookClasses]");
+		console.log(res)
 		res = action.waitForDisplayed("[data-tid=button-class-0]");
 		console.log(res)
 	},
@@ -435,7 +431,7 @@ module.exports = {
 
 	// Singout of the app
 	ENG_DIF_TC_34: function () {
-		if(action.isDisplayed("[role=dialog] button > svg")) {
+		if (action.isDisplayed("[role=dialog] button > svg")) {
 			res = action.click("[role=dialog] button > svg");
 			console.log(res)
 		}
@@ -569,6 +565,10 @@ module.exports = {
 
 	// View playlist page
 	ENG_DIF_TC_47: function () {
+		if (action.isDisplayed("[data-tid=button-close]")) {
+			res = action.click("[data-tid=button-close]");
+			console.log(res)
+		}
 		if (!action.isDisplayed("[data-tid=text-playlistTitle-0]")) {
 			res = action.click("[data-tid=button-dashboard]");
 			console.log(res)

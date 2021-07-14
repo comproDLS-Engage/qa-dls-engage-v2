@@ -537,7 +537,7 @@
             },
             {
                 "id": "ENG_DIF_TC_14",
-                "description": "Open classes tab on the view book page",
+                "description": "Open classes sidebar on the view book page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
                 "visualTolerance": 0.07,
                 "testData": []
