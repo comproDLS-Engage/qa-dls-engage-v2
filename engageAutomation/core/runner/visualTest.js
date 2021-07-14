@@ -5,6 +5,10 @@ var hideSelectors = [
     'h4[data-tid="title-analyticsbox-0-1"]',
     '[data-tid*="button"] div div div:nth-of-type(4)',
     '[data-tid*="button"] div div div:nth-of-type(5)'];
+var excludeSelectors = [
+    '[id=input-startDate]',
+    '[id=input-endDate]',
+    '[data-tid=text-versionInfo]'];
 const { Eyes, Target, ClassicRunner, By, Configuration, BatchInfo } = require('@applitools/eyes-webdriverio');
 var eyes = new Eyes();
 var action = require(rootDir + '/core/actionLibrary/baseActionLibrary');
@@ -69,8 +73,13 @@ module.exports = {
         Object.keys(hideSelectors).forEach(function (selector) {
             hideElements[selector] = action.findElements(hideSelectors[selector]);
         })
+        var excludeElements = [];
+        // find all the elements to be hide while taking screenshots
+        Object.keys(excludeSelectors).forEach(function (selector) {
+            excludeElements[selector] = action.findElements(excludeSelectors[selector]);
+        })
         //console.log(" Mismatch Percentage for " + execJsonData[suiteIndex].Test[testIndex].id + " = " + result[0].misMatchPercentage);
-        var result = browser.checkDocument({ hide: hideElements, misMatchTolerance: testObj.visualTolerance, fuzzLevel: testObj.visualTolerance });
+        var result = browser.checkDocument({ exclude: excludeElements, hide: hideElements, misMatchTolerance: testObj.visualTolerance, fuzzLevel: testObj.visualTolerance });
 
         browser.call(() =>
             mergeImg.combineImages(

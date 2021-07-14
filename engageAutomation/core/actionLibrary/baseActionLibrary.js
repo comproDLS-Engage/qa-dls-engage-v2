@@ -124,8 +124,8 @@ module.exports = {
         }
     },
 
-    moveTo: function (selector, xoffset, yoffset) { //this function needs to be enhanced to support offsets in percentages
-        message = "element:" + selector + " xoffset:" + xoffset + " yoffset:" + yoffset;
+    moveTo: function (selector, xOffset, yOffset) { //this function needs to be enhanced to support offsets in percentages
+        message = "element:" + selector + " xoffset:" + xOffset + " yoffset:" + yOffset;
         try {
             $(selector).moveTo({ xOffset, yOffset });
             logger.logInto(stackTrace.get(), message);
