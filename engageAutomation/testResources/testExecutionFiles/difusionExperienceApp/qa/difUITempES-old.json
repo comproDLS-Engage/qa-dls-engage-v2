@@ -1,6 +1,6 @@
 {
     "Suite1": {
-        "Name": "UI validation of difusion teacher experience with books and classes (in Spanish)",
+        "Name": "UI validation of difusion teacher experience with books (in Spanish)",
         "TestCaseRepo": [
             "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
         ],
@@ -15,6 +15,8 @@
                 "id": "ENG_LAND_TC_1",
                 "description": "Landing page",
                 "testFile": "./test/engageExperienceApp/landing.test.js",
+                "visualTest": true,
+                "visualTolerance": 0.07,
                 "testData": []
             }
         ],
@@ -87,13 +89,6 @@
                 "description": "Move to next activity",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
                 "visualTolerance": 0.1,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_42",
-                "description": "View index",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.01,
                 "testData": []
             },
             {
@@ -212,6 +207,7 @@
                 "id": "ENG_DIF_TC_20",
                 "description": "Create Class page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.07,
                 "testData": []
             },
             {
@@ -232,27 +228,6 @@
                 "description": "Cancel and go back to Classes page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
                 "visualTolerance": 0.1,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_39",
-                "description": "View profile tab on Settings page",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.07,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_40",
-                "description": "View password tab on Settings page",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.07,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_41",
-                "description": "View accessibility tab on Settings page",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.07,
                 "testData": []
             }
         ],
@@ -325,15 +300,22 @@
                 "testData": []
             },
             {
-                "id": "ENG_DIF_TC_5",
-                "description": "View book page (not added)",
+                "id": "ENG_DIF_TC_19",
+                "description": "Classes page",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.1,
+                "testData": []
+            },
+            {
+                "id": "ENG_DIF_TC_4",
+                "description": "Browse page with books tab",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
                 "visualTolerance": 0.07,
                 "testData": []
             },
             {
-                "id": "ENG_DIF_TC_35",
-                "description": "Add a book to my books",
+                "id": "ENG_DIF_TC_5",
+                "description": "View book page (not added)",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
                 "visualTolerance": 0.07,
                 "testData": []
@@ -351,110 +333,12 @@
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
                 "visualTolerance": 0.07,
                 "testData": []
-            },             
-            {
-                "id": "ENG_DIF_TC_36",
-                "description": "Remove book dialog box",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.07,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_37",
-                "description": "Remove book and check the dashboard page",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.07,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_43",
-                "description": "Create playlist dialog",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.07,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_44",
-                "description": "Enter playlist name and create playlist",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.07,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_45",
-                "description": "View blank playlist page",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.07,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_46",
-                "description": "Browse resources and add to playlist",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.07,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_47",
-                "description": "View playlist page",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.07,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_48",
-                "description": "Delete playlist dialog",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.07,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_49",
-                "description": "Confirm playlist deletion",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.07,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_4",
-                "description": "Browse page with books tab",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.07,
-                "testData": []
             },
             {
                 "id": "ENG_DIF_TC_6",
                 "description": "Browse page with interactive activities tab",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
                 "visualTolerance": 0.07,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_7",
-                "description": "Browse page with videos tab",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.07,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_13",
-                "description": "Open filter sidebar",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.07,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_38",
-                "description": "Select and apply filter",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.07,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_19",
-                "description": "Classes page",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.1,
                 "testData": []
             }
         ],
@@ -469,7 +353,7 @@
         ]
     },
     "Suite3": {
-        "Name": "UI validation of difusion student experience with books and classes (in Spanish)",
+        "Name": "UI validation of difusion student experience with books (in Spanish)",
         "TestCaseRepo": [
             "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
         ],
@@ -555,13 +439,6 @@
                 "testData": []
             },
             {
-                "id": "ENG_DIF_TC_42",
-                "description": "View index",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.01,
-                "testData": []
-            },
-            {
                 "id": "ENG_DIF_TC_31",
                 "description": "info popup on Activity page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
@@ -599,27 +476,6 @@
             {
                 "id": "ENG_DIF_TC_7",
                 "description": "Browse page with videos tab",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.07,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_39",
-                "description": "View profile tab on Settings page",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.07,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_40",
-                "description": "View password tab on Settings page",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.07,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_41",
-                "description": "View accessibility tab on Settings page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
                 "visualTolerance": 0.07,
                 "testData": []
@@ -694,15 +550,29 @@
                 "testData": []
             },
             {
-                "id": "ENG_DIF_TC_5",
-                "description": "View book page (not added)",
+                "id": "ENG_DIF_TC_19",
+                "description": "Classes page",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.1,
+                "testData": []
+            },
+            {
+                "id": "ENG_DIF_TC_26",
+                "description": "Join Class page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
                 "visualTolerance": 0.07,
                 "testData": []
             },
             {
-                "id": "ENG_DIF_TC_35",
-                "description": "Add a book to my books",
+                "id": "ENG_DIF_TC_4",
+                "description": "Browse page with books tab",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.07,
+                "testData": []
+            },
+            {
+                "id": "ENG_DIF_TC_5",
+                "description": "View book page (not added)",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
                 "visualTolerance": 0.07,
                 "testData": []
@@ -720,76 +590,6 @@
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
                 "visualTolerance": 0.07,
                 "testData": []
-            },             
-            {
-                "id": "ENG_DIF_TC_36",
-                "description": "Remove book dialog box",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.07,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_37",
-                "description": "Remove book and check the dashboard page",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.07,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_43",
-                "description": "Create playlist dialog",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.07,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_44",
-                "description": "Enter playlist name and create playlist",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.07,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_45",
-                "description": "View blank playlist page",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.07,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_46",
-                "description": "Browse resources and add to playlist",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.07,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_47",
-                "description": "View playlist page",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.07,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_48",
-                "description": "Delete playlist dialog",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.07,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_49",
-                "description": "Confirm playlist deletion",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.07,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_4",
-                "description": "Browse page with books tab",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.07,
-                "testData": []
             },
             {
                 "id": "ENG_DIF_TC_6",
@@ -797,52 +597,16 @@
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
                 "visualTolerance": 0.07,
                 "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_7",
-                "description": "Browse page with videos tab",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.07,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_13",
-                "description": "Open filter sidebar",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.07,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_38",
-                "description": "Select and apply filter",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.07,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_19",
-                "description": "Classes page",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.1,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_26",
-                "description": "Join Class page",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.07,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_34",
-                "description": "Signout of the app",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.07,
-                "testData": []
             }
         ],
         "AfterEach": [],
         "After": [
+            {
+                "id": "logout_from_app",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/common.test.js",
+                "testData": []
+            }
         ]
     }
 }
