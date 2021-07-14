@@ -78,8 +78,6 @@ module.exports = {
 		console.log(res)
 		res = action.waitForDocumentLoad();
 		console.log(res)
-		res = action.waitForDisplayed("img[data-tid=img-bookCover-3]");
-		console.log(res)
 	},
 
 	// View book page (not added)
@@ -155,13 +153,13 @@ module.exports = {
 		console.log(res)
 	},
 
-	// Filter button snackbar message
+	// Open filter sidebar
 	ENG_DIF_TC_13: function () {
 		res = action.waitForDisplayed("[data-tid=button-close]", undefined, true);
 		console.log(res)
 		res = action.click("[data-tid=button-filter]");
 		console.log(res)
-		res = action.waitForDocumentLoad();
+		res = action.waitForDisplayed("[aria-label=filter-sidebar]");
 		console.log(res)
 	},
 
@@ -179,13 +177,14 @@ module.exports = {
 			res = action.scrollIntoView("#app")
 			console.log(res)
 		}
+		res = action.waitForDisplayed("[class*=MuiCircularProgress-indeterminate]", undefined, true);
+		console.log(res);
 		if (action.isDisplayed("[data-tid=breadcrumb-viewbook]")) {
 			res = action.click("[data-tid=breadcrumb-viewbook]");
 			console.log(res)
 		}
 		res = action.click("button[data-tid=button-classes]");
 		console.log(res)
-		//action.waitForDocumentLoad();
 		//res = action.waitForDisplayed("[class*=MuiIconButton-edgeEnd]");
 		//console.log(res)
 		res = action.waitForDisplayed("[data-tid=button-class-0]");
@@ -365,7 +364,7 @@ module.exports = {
 
 	// Add book page from Getting Started
 	ENG_DIF_TC_27: function () {
-		res = action.click("div:nth-child(1) > div > button[class*=MuiButton-textSecondary]");
+		res = action.click("[data-tid=button-actionCardBtn-0]");
 		console.log(res)
 		res = action.waitForDocumentLoad();
 		console.log(res)
@@ -408,6 +407,10 @@ module.exports = {
 
 	// info popup on Activity page
 	ENG_DIF_TC_31: function () {
+		if (action.isDisplayed("[data-tid=button-closeinfotoc]")) {
+			res = action.click("[data-tid=button-closeinfotoc]");
+			console.log(res)
+		}
 		res = action.click("[data-tid=button-openinfotoc]");
 		console.log(res)
 		res = action.waitForDisplayed("[data-tid=image-bundlecover]");
@@ -427,6 +430,170 @@ module.exports = {
 		res = action.click("[data-tid=button-notification]");
 		console.log(res)
 		res = action.waitForDisplayed("[data-tid=image-noNotifications]");
+		console.log(res)
+	},
+
+	// Singout of the app
+	ENG_DIF_TC_34: function () {
+		if(action.isDisplayed("[role=dialog] button > svg")) {
+			res = action.click("[role=dialog] button > svg");
+			console.log(res)
+		}
+		res = action.click("[data-tid=button-user-profile]");
+		console.log(res)
+		res = action.click("[data-tid=button-user-profile-option-2]");
+		console.log(res)
+		res = action.waitForDisplayed("[data-tid=image-landing]");
+		console.log(res)
+	},
+
+	// Add a book to my books
+	ENG_DIF_TC_35: function () {
+		res = action.click("[data-tid=button-addMyBook]");
+		console.log(res)
+		res = action.waitForDisplayed("[data-tid=pill-myBooks]");
+		console.log(res)
+	},
+
+	// Remove book dialog box
+	ENG_DIF_TC_36: function () {
+		if (action.isDisplayed("[data-tid=breadcrumb-productName]")) {
+			res = action.click("[data-tid=breadcrumb-productName]");
+			console.log(res)
+		}
+		res = action.click("[data-tid=button-dashboard]");
+		console.log(res)
+		res = action.click("[data-tid=button-contextMenu-0]");
+		console.log(res)
+		res = action.click("[data-tid=button-remove-0]");
+		console.log(res)
+		res = action.waitForDisplayed("[role=dialog] button:nth-child(2)");
+		console.log(res)
+	},
+
+	// Remove book and check the dashboard page
+	ENG_DIF_TC_37: function () {
+		res = action.click("[role=dialog] button:nth-child(2)");
+		console.log(res)
+		res = action.click("[data-tid=button-dashboard]");
+		console.log(res)
+		res = action.waitForDisplayed("[data-tid=button-actionCardBtn-0]");
+		console.log(res)
+	},
+
+	// Select and apply filter
+	ENG_DIF_TC_38: function () {
+		res = action.click("[data-tid=filtermenu-list-item-1-0]");
+		console.log(res)
+		res = action.click("[data-tid=button-apply-filter]");
+		console.log(res)
+		res = action.waitForDisplayed("[data-tid=chip-filter0]");
+		console.log(res)
+	},
+
+	// View profile tab on Settings page
+	ENG_DIF_TC_39: function () {
+		res = action.click("[data-tid=button-settings]");
+		console.log(res)
+		res = action.waitForDisplayed("[data-tid=button-product-0]");
+		console.log(res)
+	},
+
+	// View password tab on Settings page
+	ENG_DIF_TC_40: function () {
+		res = action.click("[data-tid=button-product-1]");
+		console.log(res)
+		res = action.waitForDisplayed("button[aria-selected=true]");
+		console.log(res)
+	},
+
+	// View accessibility tab on Settings page
+	ENG_DIF_TC_41: function () {
+		res = action.click("[data-tid=button-product-2]");
+		console.log(res)
+		res = action.waitForDisplayed("[data-tid=reset-button]");
+		console.log(res)
+	},
+
+	// View index
+	ENG_DIF_TC_42: function () {
+		res = action.click("[class*=MuiAppBar] > div > div > div > div > button");
+		console.log(res)
+		res = action.waitForDisplayed("[data-tid=button-closeinfotoc]");
+		console.log(res)
+	},
+
+	// Create playlist dialog
+	ENG_DIF_TC_43: function () {
+		res = action.scrollIntoView("#app");
+		console.log(res)
+		res = action.click("[data-tid=button-CreatePlaylist]");
+		console.log(res)
+		res = action.waitForDisplayed("[data-tid=text-createPlaylistLabel]");
+		console.log(res)
+	},
+
+	// Enter playlist name and create playlist
+	ENG_DIF_TC_44: function () {
+		res = action.waitForDisplayed("[data-tid=text-createPlaylistLabel]");
+		console.log(res)
+		res = action.setValue("[id=input-createPlaylist]", "qa automation test playlist1")
+		console.log(res)
+		res = action.click("button[type=submit]");
+		console.log(res)
+		res = action.waitForDisplayed("[data-tid=text-playlistTitle-0]");
+		console.log(res)
+	},
+
+	// View blank playlist page
+	ENG_DIF_TC_45: function () {
+		res = action.click("[data-tid=text-playlistTitle-0]");
+		console.log(res)
+		res = action.waitForDisplayed("[data-tid=image-noPlaylist]");
+		console.log(res)
+	},
+
+	// Browse resources and add to playlist
+	ENG_DIF_TC_46: function () {
+		res = action.click("div > button[class*=containedSecondary]");
+		console.log(res)
+		res = action.click("[data-tid='button-contextMenu-0.0']");
+		console.log(res)
+		res = action.moveTo("[data-tid='menu-add-to-playlist-0.0']");
+		console.log(res)
+		res = action.click("div[id*=class-subMenu] li[class*=MuiListItem-button]:nth-child(3)");
+		console.log(res)
+		res = action.waitForDisplayed("[data-tid=text-error], [data-tid=text-info], [data-tid=text-success]");
+		console.log(res)
+	},
+
+	// View playlist page
+	ENG_DIF_TC_47: function () {
+		if (!action.isDisplayed("[data-tid=text-playlistTitle-0]")) {
+			res = action.click("[data-tid=button-dashboard]");
+			console.log(res)
+		}
+		res = action.click("[data-tid=text-playlistTitle-0]");
+		console.log(res)
+		res = action.waitForDisplayed("[data-tid=button-playlistOptions]");
+		console.log(res)
+	},
+
+	// Delete playlist dialog
+	ENG_DIF_TC_48: function () {
+		res = action.click("[data-tid=button-playlistOptions]");
+		console.log(res)
+		res = action.click("[data-tid=button-deletePlaylist]");
+		console.log(res)
+		res = action.waitForDisplayed("[role=dialog] button:nth-child(2)");
+		console.log(res)
+	},
+
+	// Confirm playlist deletion
+	ENG_DIF_TC_49: function () {
+		res = action.click("[role=dialog] button:nth-child(2)");
+		console.log(res)
+		res = action.waitForDisplayed("[data-tid=text-error], [data-tid=text-info], [data-tid=text-success]");
 		console.log(res)
 	},
 }
