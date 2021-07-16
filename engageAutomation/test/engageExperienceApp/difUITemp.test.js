@@ -78,6 +78,10 @@ module.exports = {
 		console.log(res)
 		res = action.waitForDocumentLoad();
 		console.log(res)
+		res = action.click("[data-tid=button-product-1]");
+		console.log(res)
+		res = action.waitForDocumentLoad();
+		console.log(res)
 	},
 
 	// View book page (not added)
