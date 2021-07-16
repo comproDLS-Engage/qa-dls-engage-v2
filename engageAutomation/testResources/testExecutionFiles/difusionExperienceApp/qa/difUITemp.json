@@ -201,6 +201,7 @@
                 "id": "ENG_DIF_TC_20",
                 "description": "Create Class page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.1,
                 "testData": []
             },
             {
