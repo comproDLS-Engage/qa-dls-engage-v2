@@ -45,15 +45,8 @@ module.exports = {
 
 	// Browse page with books tab
 	ENG_DIF_TC_4: function () {
-		res = action.waitForDisplayed("[data-tid=button-close]", undefined, true);
+		res = action.click("[data-tid=button-close]");
 		console.log(res)
-		/*if (action.isDisplayed("[data-tid=button-close]")) {
-			let i, list = action.findElements("[data-tid=button-close]");
-			for(i=0;i<list.length;i++){
-				action.click(list[i]);
-			}
-			//action.click("[data-tid=button-close]");
-		}*/
 		if (action.isDisplayed("[data-tid=breadcrumb-productTitle]")) {
 			res = action.click("[data-tid=breadcrumb-productTitle]");
 			console.log(res)
@@ -76,9 +69,9 @@ module.exports = {
 		//action.waitForDocumentLoad();
 		res = action.click("[data-tid=btn-label-viewall]");
 		console.log(res)
-		res = action.waitForDocumentLoad();
+		res = action.waitForDisplayed("[data-tid=button-product-0]");
 		console.log(res)
-		res = action.click("[data-tid=button-product-1]");
+		res = action.click("[data-tid=button-product-0]");
 		console.log(res)
 		res = action.waitForDocumentLoad();
 		console.log(res)
