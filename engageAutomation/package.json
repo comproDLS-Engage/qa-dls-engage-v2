@@ -8,7 +8,9 @@
     "landingFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='landingTest.json' --windowWidth=1600 --windowHeight=900",
     "loginFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='loginTest.json' --windowWidth=1600 --windowHeight=900",
     "basicFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='Acceptance.json' --windowWidth=1600 --windowHeight=900",
-    "bookDetailViewTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='bookDetailViewTest.json' --windowWidth=1600 --windowHeight=900 --browserCapability=desktop-chrome-1366"
+    "appShellFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='appShellTest.json' --windowWidth=1600 --windowHeight=900",
+    "classIntructorFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='InstructorClassTest.json' --windowWidth=1600 --windowHeight=900",
+    "dashboardFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='dashboardTest.json' --windowWidth=1600 --windowHeight=900"
   },
   "keywords": [],
   "author": "",
@@ -37,7 +39,7 @@
     "lodash.get": "4.4.2",
     "mem-fs": "^1.2.0",
     "mem-fs-editor": "^8.0.0",
-    "nodemailer": "6.4.11",
+    "nodemailer": "^6.6.2",
     "path": "^0.12.7",
     "rimraf": "^3.0.2",
     "selenium-webdriver": "^4.0.0-beta.3",

@@ -34,7 +34,7 @@ module.exports = {
 	isInitialized: function () {
 		logger.logInto(stackTrace.get());
 		action.waitForDocumentLoad();
-		let pageStatus = action.waitForDisplayed(this.addClassBtn);
+		let pageStatus = action.waitForDisplayed(this.activeTab);
 		res = this.get_MyClasses_Data();
 		res.pageStatus = pageStatus;
 		return res;
@@ -208,8 +208,9 @@ module.exports = {
 		res = action.click(this.inboxOption);
 		if (res == true) {
 
-			//teacherViewClass = require('./teacherViewClass.page.js');
-			res = teacherViewClassPage.isInitialized();
+			//Rupsi: Will update will Class dashborad Page
+			//var classDashboardPage = require('./classDashboard.page.js');
+			//res = classDashboardPage.isInitialized();
 		}
 		else {
 			res = res + " -- inboxBtn is NOT clicked";
@@ -221,8 +222,9 @@ module.exports = {
 		logger.logInto(stackTrace.get());
 		res = action.click(this.assignmentsOption);
 		if (res == true) {
-		//var	teacherViewClass = require('./teacherViewClass.page.js');
-			res = teacherViewClassPage.isInitialized();
+			//Rupsi: Will update will Class dashborad Page
+			//var classDashboardPage = require('./classDashboard.page.js');
+			//res = classDashboardPage.isInitialized();
 		}
 		else {
 			res = res + " -- archievedBtn is NOT clicked";
@@ -234,8 +236,9 @@ module.exports = {
 		logger.logInto(stackTrace.get());
 		res = action.click(this.studentsOption);
 		if (res == true) {
-			//teacherViewClass = require('./teacherViewClass.page.js');
-			res = teacherViewClassPage.isInitialized();
+			//Rupsi: Will update will Class dashborad Page
+			//var classDashboardPage = require('./classDashboard.page.js');
+			//res = classDashboardPage.isInitialized();
 		}
 		else {
 			res = res + " -- restoreBtn is NOT clicked";
@@ -247,8 +250,9 @@ module.exports = {
 		logger.logInto(stackTrace.get());
 		res = action.click(this.gradeBookOption);
 		if (res == true) {
-			//teacherViewClass = require('./teacherViewClass.page.js');
-			res = teacherViewClassPage.isInitialized();
+			//Rupsi: Will update will Class dashborad Page
+			//var classDashboardPage = require('./classDashboard.page.js');
+			//res = classDashboardPage.isInitialized();
 		}
 		else {
 			res = res + " -- addStudentsOption button is NOT clicked";
@@ -260,8 +264,9 @@ module.exports = {
 		logger.logInto(stackTrace.get());
 		res = action.click(this.materialsOption);
 		if (res == true) {
-			//teacherViewClass = require('./teacherViewClass.page.js');
-			res = teacherViewClassPage.isInitialized();
+			//Rupsi: Will update will Class dashborad Page
+			//var classDashboardPage = require('./classDashboard.page.js');
+			//res = classDashboardPage.isInitialized();
 		}
 		else {
 			res = res + " -- addStudentsOption button is NOT clicked";

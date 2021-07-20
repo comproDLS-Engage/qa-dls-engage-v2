@@ -93,8 +93,7 @@ module.exports = {
             if (ret.bookList[i].bookTitle == bookName) {
                 res = action.click(this.viewClass_menu + i + "]");
                 if (res == true) {
-                   var classDrawerPage=require('./classDrawer.page.js')
-                    res = classDrawerPage.isInitialized();
+                    //Class Pane is Initialized
                     logger.logInto(stackTrace.get(), " --View class clicked");
                 }
                 else {
@@ -113,9 +112,8 @@ module.exports = {
             if (ret.bookList[i].bookTitle == bookName) {
                 res = action.click(this.createClass_menu + i + "]");
                 if (res == true) {
-                    var createClassPage = require('./createClass.page.js');
-                    res = createClassPage.isInitialized();
-                    logger.logInto(stackTrace.get(), " --Book Ellipse clicked");
+                    //create Class Is Initialized
+                    logger.logInto(stackTrace.get(), " --create class clicked");
                 }
                 else {
                     res = res + " -- Error in clicking create class"
@@ -163,6 +161,7 @@ module.exports = {
         }
         return res;
     }
+
+
 }
-    
 

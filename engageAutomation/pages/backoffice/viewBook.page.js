@@ -36,14 +36,16 @@ module.exports = {
         let i, list;
         list = action.findElements(this.componentList);
         for (i = 0; i < list.length; i++) {
-            if (action.getText(list[i]) == name) {
+            //console.log(action.getText(list[i]))
+            if (action.getText(list[i]).includes(name)) {
                 res = action.click(list[i]);
                 if (res == true) {
+                    browser.pause(5000)
                     res = require('./viewLearningPath.page.js').isInitialized();
                 }
                 break;
             }
-            res = "component not found ";
+            res = "component not found";
         }
         logger.logInto(stackTrace.get(), res);
         return res;
@@ -55,7 +57,8 @@ module.exports = {
         let i, list;
         list = action.findElements(this.componentTypeList);
         for (i = 0; i < list.length; i++) {
-            if (action.getText(list[i]) == type) {
+            //console.log(action.getText(list[i]))
+            if (action.getText(list[i]).includes(type)) {
                 res = action.click(list[i]);
                 if (res == true) {
                     res = action.click(this.proceedBtn);
@@ -63,7 +66,7 @@ module.exports = {
                 }
                 break;
             }
-            res = "component type not found ";
+            res = "component type not found";
         }
         logger.logInto(stackTrace.get(), res);
         return res;

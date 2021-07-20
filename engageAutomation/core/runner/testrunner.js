@@ -1,7 +1,6 @@
 "use strict";
 var testObj, execJsonData, prevtestFile, getName, hookFuncData, tcProp;
 var testDataArr = new Array();
-var tcRepo = new Array();
 var Arr = new Array();
 var rootDir = process.cwd();
 
@@ -26,10 +25,7 @@ class specRunner {
 
             Object.keys(execJsonData).forEach(function (suiteIndex, count) {
                 Arr[count] = { "title": suiteIndex + " " + execJsonData[suiteIndex].Name, "duration": "-", "start": "-", "end": "-", "tests": [], "hooks": [] }
-                //tcRepo[suiteIndex] = jsonParserUtil.jsonParser(testRepoDir + execJsonData[suiteIndex].TestCaseRepo);
-                //console.log(execJsonData[suiteIndex].TestCaseRepo)
 
-                tcRepo[suiteIndex] = execJsonData[suiteIndex].TestCaseRepo;
                 // initiating Applitools     
                 if (argv.visual == 'applitools')
                     that.visualTest.initiateApplitools();
@@ -40,9 +36,18 @@ class specRunner {
 
                     //This is before hook of Mocha runner
                     before(function () {
-                        if (count != 0)
+                        if (count != 0) {
                             browser.reloadSession();
-                        //setBrowserwindow();
+                        }
+                        if (global.maximizeWindow == true && global.view == 'desktop') { //this will cause browser to maximize on the client screen resolution
+                            browser.maximizeWindow();
+                            global.resolution = browser.getWindowSize();
+                            //console.log(global.resolution)
+                        }
+                        else if (global.resolution.width != undefined && global.resolution.height != undefined) {
+                            browser.setWindowSize(parseInt(global.resolution.width), parseInt(global.resolution.height));
+                        }
+
                         console.log("====== Starting Test " + suiteIndex + ": " + execJsonData[suiteIndex].Name + " ======");
 
                         if (argv.visual == 'applitools')
@@ -53,6 +58,7 @@ class specRunner {
                         Object.keys(execJsonData[suiteIndex].Before).forEach(function (key) {
                             console.log(" Before      : Start " + execJsonData[suiteIndex].Before[key].id);
                             logger.logInto(stackTrace.get(), "BEFORE HOOK:" + JSON.stringify(execJsonData[suiteIndex].Before[key]));
+                            global.selectorDir = that.getTCPropertiesFromTCRepo(execJsonData[suiteIndex].TestCaseRepo, execJsonData[suiteIndex].Before[key].testFile, execJsonData[suiteIndex].Before[key].id).selectorDir;
                             that.jsonHookObjParser(execJsonData[suiteIndex].Before[key]);
                             console.log(" Before      :   End " + execJsonData[suiteIndex].Before[key].id);
                         })
@@ -63,6 +69,7 @@ class specRunner {
                         Object.keys(execJsonData[suiteIndex].BeforeEach).forEach(function (key) {
                             console.log(" Before each : Start " + execJsonData[suiteIndex].BeforeEach[key].id);
                             logger.logInto(stackTrace.get(), "BEFORE EACH HOOK: " + JSON.stringify(execJsonData[suiteIndex].BeforeEach[key]));
+                            global.selectorDir = that.getTCPropertiesFromTCRepo(execJsonData[suiteIndex].TestCaseRepo, execJsonData[suiteIndex].BeforeEach[key].testFile, execJsonData[suiteIndex].BeforeEach[key].id).selectorDir;
                             that.jsonHookObjParser(execJsonData[suiteIndex].BeforeEach[key]);
                             console.log(" Before each :   End " + execJsonData[suiteIndex].BeforeEach[key].id);
                         })
@@ -73,12 +80,12 @@ class specRunner {
                     Object.keys(execJsonData[suiteIndex].Test).forEach(function (testIndex) {
                         testDataArr[suiteIndex][testIndex] = [];
                         Arr[count].tests[testIndex] = { "title": "", "start": "-", "end": "-", "duration": "-", "state": "skipped", "screenshots": [], "visual": "no", "misMatchPercentage": "", "isWithinMisMatchTolerance": "", "isSameDimensions": "", "isExactSameImage": "" };
-                        tcProp = that.getTCPropertiesFromTCRepo(tcRepo[suiteIndex], execJsonData[suiteIndex].Test[testIndex].testFile, execJsonData[suiteIndex].Test[testIndex].id, execJsonData[suiteIndex].Test[testIndex].description);
+                        tcProp = that.getTCPropertiesFromTCRepo(execJsonData[suiteIndex].TestCaseRepo, execJsonData[suiteIndex].Test[testIndex].testFile, execJsonData[suiteIndex].Test[testIndex].id, execJsonData[suiteIndex].Test[testIndex].description);
                         if (argv.visual == 'novus') {
                             let visual = execJsonData[suiteIndex].Test[testIndex].visualTest;
                             if (visual == undefined)
                                 visual = tcProp.visualTag;
-                            //visual = that.getVisualTagFromTCRepo(tcRepo[suiteIndex], execJsonData[suiteIndex].Test[testIndex].testFile, execJsonData[suiteIndex].Test[testIndex].id);
+                            //visual = that.getVisualTagFromTCRepo(execJsonData[suiteIndex].TestCaseRepo, execJsonData[suiteIndex].Test[testIndex].testFile, execJsonData[suiteIndex].Test[testIndex].id);
                             if (visual == true) {
                                 visualTotalTc = parseInt(visualTotalTc) + 1;
                                 Arr[count].tests[testIndex].visual = "yes";
@@ -114,17 +121,15 @@ class specRunner {
                         }
                         //get name of the test case
                         getName = tcProp.tcName;
-                        //console.log("********** tcName: "+getName);
-                        //getName = that.getTCName(tcRepo[suiteIndex], execJsonData[suiteIndex].Test[testIndex].testFile, execJsonData[suiteIndex].Test[testIndex].id, execJsonData[suiteIndex].Test[testIndex].description)
-
+                        //getName = that.getTCName(execJsonData[suiteIndex].TestCaseRepo, execJsonData[suiteIndex].Test[testIndex].testFile, execJsonData[suiteIndex].Test[testIndex].id, execJsonData[suiteIndex].Test[testIndex].description)
                         Arr[count].tests[testIndex].title = getName;
 
                         //This is test hook of Mocha runner
                         it(getName, function () {
                             console.log(" Testcase    : Start " + execJsonData[suiteIndex].Test[testIndex].id);
                             logger.logInto(stackTrace.get(), "Executing testCase:" + execJsonData[suiteIndex].Test[testIndex].id);
+                            global.selectorDir = that.getTCPropertiesFromTCRepo(execJsonData[suiteIndex].TestCaseRepo, execJsonData[suiteIndex].Test[testIndex].testFile, execJsonData[suiteIndex].Test[testIndex].id).selectorDir;
                             that.identifyTest(execJsonData[suiteIndex].Test[testIndex].testFile, execJsonData[suiteIndex].Test[testIndex].id, testDataArr[suiteIndex][testIndex]);
-
                             if (argv.visual == 'novus' && Arr[count].tests[testIndex].visual == "yes")
                                 Arr[count] = that.visualTest.generateScreenshotsAndLogs(execJsonData[suiteIndex].Test[testIndex], suiteIndex, testIndex, Arr, count);
                             else if (argv.visual == 'applitools')
@@ -139,6 +144,7 @@ class specRunner {
                         Object.keys(execJsonData[suiteIndex].AfterEach).forEach(function (key) {
                             console.log(" After each  : Start " + execJsonData[suiteIndex].AfterEach[key].id);
                             logger.logInto(stackTrace.get(), "AFTER EACH HOOK: " + JSON.stringify((execJsonData[suiteIndex].AfterEach[key])));
+                            global.selectorDir = that.getTCPropertiesFromTCRepo(execJsonData[suiteIndex].TestCaseRepo, execJsonData[suiteIndex].AfterEach[key].testFile, execJsonData[suiteIndex].AfterEach[key].id).selectorDir;
                             that.jsonHookObjParser(execJsonData[suiteIndex].AfterEach[key]);
                             console.log(" After each  :   End " + execJsonData[suiteIndex].AfterEach[key].id);
                         })
@@ -149,6 +155,7 @@ class specRunner {
                         Object.keys(execJsonData[suiteIndex].After).forEach(function (key) {
                             console.log(" After       : Start " + execJsonData[suiteIndex].After[key].id);
                             logger.logInto(stackTrace.get(), "AFTER HOOK: " + JSON.stringify((execJsonData[suiteIndex].After[key])));
+                            global.selectorDir = that.getTCPropertiesFromTCRepo(execJsonData[suiteIndex].TestCaseRepo, execJsonData[suiteIndex].After[key].testFile, execJsonData[suiteIndex].After[key].id).selectorDir;
                             that.jsonHookObjParser(execJsonData[suiteIndex].After[key]);
                             console.log(" After       :   End " + execJsonData[suiteIndex].After[key].id);
                         })
@@ -241,7 +248,7 @@ class specRunner {
 
     //function to identify if a testcase in testRepo has a visual tag
     getTCPropertiesFromTCRepo(tcRepo, moduleTestFile, tcId, tcDescription) {
-        let repoKey, moduleKey, tcKey, testObj, selectorFileInRepo, obj = {};
+        let repoKey, moduleKey, tcKey, testObj, obj = {};
         let repository = [];
 
         tcRepo.forEach(function (repoFile, index) {
@@ -255,9 +262,10 @@ class specRunner {
                     for (tcKey = 0; tcKey < repository[repoKey].modules[moduleKey].testcase.length; tcKey++) {
                         testObj = repository[repoKey].modules[moduleKey].testcase[tcKey];
                         if (testObj.id == tcId) {
-                            global.selectorDir = path.resolve(rootDir, repository[repoKey].selectorFile);
+                            //global.selectorDir = path.resolve(rootDir, repository[repoKey].selectorFile);
                             obj.tcName = testObj.id + " " + ((tcDescription == "") ? testObj.description : tcDescription) + " - (" + testObj.tags + ")";
                             obj.visualTag = testObj.visualTest;
+                            obj.selectorDir = path.resolve(rootDir, repository[repoKey].selectorFile);
                             break;
                         }
                     }
@@ -265,61 +273,10 @@ class specRunner {
                 }
             }
         }
-        if (undefined == obj.tcName)
+        if (undefined == obj.tcName && tcId != "launchUrl")
             throw new Error(" Cannot find " + tcId + " or " + moduleTestFile + " in the test case repository.");
         // console.log("----------------- obj:")
         // console.log(obj)
         return obj;
     }
-
-    //function to get tescase name from test repository
-    /*getTCName(tcRepo, moduleTestFile, tcId, tcDescription) {
-        let tcName = null;
-        let tagname = null;
-        var repository = [];
-        var selectorFileInRepo = null
-        var testModule = null;
-        var testCaseName = null;
-
-        tcRepo.forEach(function (repoFile, index) {
-            repository[index] = jsonParserUtil.jsonParser(path.resolve(rootDir, repoFile))
-        })
-
-        repository.find(function (repoFile) {
-            testModule = repoFile.modules.find(function (module) {
-                selectorFileInRepo = repoFile.selectorFile;
-                if (module.testFile == moduleTestFile) {
-                    //console.log("repoFile.modules.testFile--" + module.testFile)
-                    return module;
-                }
-            })
-            //console.log("testModule")
-            if (testModule != null) {
-                testCaseName = testModule.testcase.find(function (testCaseList) {
-                    //console.log(testCaseList)
-                    if (testCaseList.id == tcId) {
-                        global.selectorDir = path.resolve(rootDir, selectorFileInRepo);
-                        if (tcDescription != undefined) {
-                            tagname = testCaseList.tags;
-                            tcName = testCaseList.id + " " + ((tcDescription == "") ? testCaseList.description : tcDescription) + " - (" + testCaseList.tags + ")";
-                            //console.log("tcName" + tcName)
-                        }
-                        return testCaseList;
-                    }
-                })
-                return testCaseName;
-            }
-        })
-
-        //console.log(testCaseName)
-        if (testCaseName) {
-            return tcName;
-        }
-        else {
-            if (undefined === testCaseName)
-                throw new Error(" Cannot find testcase ID - " + tcId + " in the test case repository.")
-            else
-                throw new Error(" Cannot find module - " + moduleTestFile + " in the test case repository.");
-        }
-    }*/
 };

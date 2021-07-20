@@ -1,0 +1,121 @@
+{
+	"engage": {
+		"courses": {
+			"class1": {
+				"name": "Active Class",
+				"key": "vQ9n-qhQ8",
+				"classDuration": "May 26, 2021 - May 26, 2022",
+				"instructor": {
+					"name": "vengqains5_new",
+					"email": "vengqains5_new@yopmail.com"
+				},
+				"bookName": "PROYECTOS",
+				"schoolName": "Mount Allison School",
+				"status": "Active",
+				"studentCount": 0,
+				"info": "Existing Active Course"
+			},
+			"class2": {
+				"name": "future Class",
+				"key": "kzU6-26jW",
+				"classDuration": "May 26, 2022 - May 26, 2024",
+				"instructor": {
+					"name": "kulujaco-1294",
+					"email": "kulujaco-1294@yopmail.com"
+				},
+				"bookName": "PROYECTOS",
+				"schoolName": "Mount Allison School",
+				"status": "Active",
+				"studentCount": 0,
+				"info": "Existing Course"
+			},
+			"class3": {
+				"name": "Archive Class",
+				"key": "x628-z9x4",
+				"classDuration": "May 18 - May 18, 2021",
+				"instructor": {
+					"name": "vengqains5_new",
+					"email": "vengqains5_new@yopmail.com"
+				},
+				"bookName": "PROYECTOS",
+				"schoolName": "Mount Allison School",
+				"status": "Archieved",
+				"studentCount": "",
+				"info": "Existing archieved Course"
+			},
+			"class4": {
+				"name": "course1",
+				"key": "vQ9n-qhQ8",
+				"classDuration": "May 10, 2021 - May 10, 2023",
+				"instructor": {
+					"name": "vengqains5_new",
+					"email": "vengqains5_new@yopmail.com"
+				},
+				"bookName": "PROYECTOS",
+				"schoolName": "Mount Allison School",
+				"status": "Active",
+				"studentCount": 0,
+				"info": "Existing Active Course"
+			},
+			"newValidClass": {
+				"name": "create Class with name & :\"{} = _+,.?<: character",
+				"key": "",
+				"startDate": "",
+				"endDate": "",
+				"instructor": {
+					"name": "",
+					"email": ""
+				},
+				"bookName": "INTRODUCTION TO BIOLOGY",
+				"schoolName": "Mount Allison School",
+				"status": "Active",
+				"studentCount": "",
+				"info": "testdata for a creating a new valid course"
+			},
+			"newInvalidClass": {
+				"name": "create invalid Class with name & :\"{} = _+,.?<: character",
+				"key": "",
+				"startDate": "",
+				"endDate": "",
+				"instructor": {
+					"name": "",
+					"email": ""
+				},
+				"bookName": "INTRODUCTION TO BIOLOGY",
+				"schoolName": "",
+				"status": "Active",
+				"studentCount": "",
+				"info": "testdata for a new invalid course"
+			},
+			"updatedClass": {
+				"name": "Test_Updated",
+				"key": "",
+				"startDate": "",
+				"endDate": "",
+				"instructor": {
+					"name": "",
+					"email": ""
+				},
+				"bookName": "INTRODUCTION TO BIOLOGY",
+				"schoolName": "Mount Allison School",
+				"status": "Active",
+				"studentCount": "0",
+				"info": "testdata for editing newValidCourse and archiving the updated course"
+			},
+			"archivedClass": {
+				"name": "Archived Class",
+				"key": "x628-z9x4",
+				"classDuration": "May 17 - May 17, 2021",
+				"instructor": {
+					"name": "vengqains5_new",
+					"email": "vengqains5_new@yopmail.com"
+				},
+				"bookName": "PROYECTOS",
+				"schoolName": "Mount Allison School",
+				"status": "Archieved",
+				"studentCount": "",
+				"info": "Existing archieved Course"
+			}
+		}
+	}
+}

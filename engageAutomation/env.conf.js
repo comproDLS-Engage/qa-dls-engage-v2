@@ -4,7 +4,7 @@ global.appUrl = undefined;
 // global.testRepoDir = undefined;
 global.testExecDir = undefined;
 global.selectorDir = undefined;
-// global.tcDataDir = undefined;
+//global.tcDataDir = undefined;
 global.fs = require('fs');
 global.argv = require('yargs').argv;
 global.path = require('path');
@@ -12,7 +12,10 @@ global.jsonParserUtil = require('./core/utils/jsonParser.js');
 global.assertion = require('./core/actionLibrary/baseAssertionLibrary.js');
 global.loadashget = require('lodash.get');
 global.stackTrace = require('stack-trace');
-global.resolution = undefined;
+global.resolution = {
+    width: undefined,
+    height: undefined
+};
 global.view = undefined;
 global.build = argv.buildNumber;
 global.jobName = argv.jobName;
@@ -24,8 +27,9 @@ global.reportOutputDir = 'output/reports/' + (argv.reportdir ? argv.reportdir : 
 global.baseScreenshotDir = undefined;
 global.testScreenshotDir = undefined;
 global.diffScreenshotDir = undefined;
-global.capabilities = undefined;
 global.resScreenshotDir = undefined;
+global.capabilities = undefined;
+global.maximizeWindow - undefined;
 global.capabilitiesFile = global.jsonParserUtil.jsonParser(path.join(process.cwd() + '/capabilities.json'));
 //global.specs = require('./core/utils/memoryfs.js')
 
@@ -46,7 +50,6 @@ else {
     //global.testJsDir = envData[argv.appType].testJsDir;
     // global.testRepoDir = envData[argv.appType].testRepoDir;
     global.testExecDir = envData[argv.appType].testExecDir;
-    //global.tcDataDir = envData[argv.appType].tcDataDir;
     // global.tcDataDir = envData[argv.appType].environments[argv.testEnv].tcDataDir;
     // global.selectorDir = envData[argv.appType].selectorDir;
     global.appUrl = envData[argv.appType].environments[argv.testEnv].url;
@@ -77,12 +80,14 @@ else {
         process.exit(1);
     }
     global.capabilities = capabilitiesFile[argv.browserCapability].capabilities;
-    global.resolution = argv.browserCapability;
+    global.maximizeWindow = capabilitiesFile[argv.browserCapability].maximizeWindow;
     global.resScreenshotDir = argv.browserCapability;
-    let browserWidth = argv.browserCapability.split("-")[2].trim();
-    //currently browserWidth is only used in visualTest.js to choose labels
-    if (parseInt(browserWidth, 10) > 1023)
-        global.view = 'desktop'; 
+    if (capabilitiesFile[argv.browserCapability].resolution != undefined) {
+        global.resolution.width = capabilitiesFile[argv.browserCapability].resolution.split("x")[0].trim();
+        global.resolution.height = capabilitiesFile[argv.browserCapability].resolution.split("x")[1].trim();
+    }
+    if (parseInt(global.resolution.width, 10) > 1023)
+        global.view = 'desktop';
     else
         global.view = 'mobile';
 }

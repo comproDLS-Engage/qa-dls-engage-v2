@@ -1,42 +1,39 @@
 {
     "desktop-chrome-1920": {
-        "resolution": "1920x1080",
         "capabilities": [
             {
                 "maxInstances": 5,
                 "browserName": "chrome",
                 "goog:chromeOptions": {
-                    "args": [
-                        "window-size=1920,1080"
-                    ]
+                    "args": []
                 }
             }
         ],
+        "resolution": "1920x1080",
+        "maximizeWindow": false,
         "hostname": "localhost",
         "portNumber": 4444,
         "webServicePath": "/",
         "webDriverService": "chromedriver"
     },
     "desktop-chrome-1366": {
-        "resolution": "1366x768",
         "capabilities": [
             {
                 "maxInstances": 5,
                 "browserName": "chrome",
                 "goog:chromeOptions": {
-                    "args": [
-                        "window-size=1366,768"
-                    ]
+                    "args": []
                 }
             }
         ],
+        "resolution": "1366x768",
+        "maximizeWindow": false,
         "hostname": "localhost",
         "portNumber": 4444,
         "webServicePath": "/",
         "webDriverService": "chromedriver"
     },
     "desktop-chrome-360": {
-        "resolution": "360x640",
         "capabilities": [
             {
                 "maxInstances": 5,
@@ -52,6 +49,8 @@
                 }
             }
         ],
+        "resolution": "360x640",
+        "maximizeWindow": false,
         "hostname": "localhost",
         "portNumber": 4444,
         "webServicePath": "/",
@@ -60,24 +59,32 @@
     "bstack-chrome-1920": {
         "capabilities": [
             {
-                "browserName": "chrome",
-                "browserVersion": "latest",
                 "bstack:options": {
                     "os": "Windows",
                     "osVersion": "10",
                     "resolution": "1920x1080",
-                    "local": "true",
+                    "local": "false",
                     "debug": "true",
+                    "consoleLogs": "info",
                     "networkLogs": "true",
-                    "seleniumVersion": "4.0.0-beta-3"
+                    "seleniumVersion": "3.141.59"
+                },
+                "browserName": "chrome",
+                "browserVersion": "latest",
+                "goog:chromeOptions": {
+                    "args": [
+                        "--start-maximized"
+                    ]
                 }
             }
         ],
+        "resolution": "1920x1080",
+        "maximizeWindow": true,
         "hostname": "hub.browserstack.com",
         "portNumber": 443,
         "webServicePath": "/wd/hub",
         "webDriverService": "appium",
-        "browserstackLocal": true,
+        "browserstackLocal": false,
         "updateJob": false,
         "user": "akhilaggarwal2",
         "key": "68pvrJyFDPdqKSpBptpi"
@@ -90,20 +97,22 @@
                 "bstack:options": {
                     "os": "OS X",
                     "osVersion": "Big Sur",
+                    "resolution": "1920x1080",
                     "local": "false",
                     "debug": "true",
                     "consoleLogs": "info",
                     "networkLogs": "true",
-                    "resolution": "1920x1080",
-                    "seleniumVersion": "4.0.0-beta-3"
+                    "seleniumVersion": "3.141.59"
                 }
             }
         ],
+        "resolution": "1920x1080",
+        "maximizeWindow": true,
         "hostname": "hub.browserstack.com",
         "portNumber": 443,
         "webServicePath": "/wd/hub",
         "webDriverService": "appium",
-        "browserstackLocal": true,
+        "browserstackLocal": false,
         "updateJob": false,
         "user": "akhilaggarwal2",
         "key": "68pvrJyFDPdqKSpBptpi"
@@ -113,16 +122,68 @@
             {
                 "maxInstances": 2,
                 "browserName": "chrome",
+                "browserVersion": "",
                 "deviceName": "",
                 "platformName": "Android",
                 "chromedriverExecutable": "require('chromedriver').path",
-                "javascriptEnabled": true,
-                "browserVersion": "85.0.4183"
+                "javascriptEnabled": true
             }
         ],
         "hostname": "",
         "portNumber": 4723,
         "webServicePath": "/wd/hub",
         "webDriverService": "appium"
+    },
+    "bstack-android-samsungS21": {
+        "capabilities": [
+            {
+                "bstack:options": {
+                    "osVersion": "11.0",
+                    "deviceName": "Samsung Galaxy S21",
+                    "realMobile": "true",
+                    "appiumVersion": "1.21.0",
+                    "local": "false",
+                    "debug": "true",
+                    "consoleLogs": "info",
+                    "networkLogs": "true"
+                },
+                "browserName": "Android"
+            }
+        ],
+        "maximizeWindow": false,
+        "hostname": "hub.browserstack.com",
+        "portNumber": 443,
+        "webServicePath": "/wd/hub",
+        "webDriverService": "appium",
+        "browserstackLocal": false,
+        "updateJob": false,
+        "user": "akhilaggarwal2",
+        "key": "68pvrJyFDPdqKSpBptpi"
+    },
+    "bstack-ios-iphone12pro": {
+        "capabilities": [
+            {
+                "bstack:options": {
+                    "osVersion": "14",
+                    "deviceName": "iPhone 12 Pro",
+                    "realMobile": "true",
+                    "appiumVersion": "1.21.0",
+                    "local": "false",
+                    "debug": "true",
+                    "consoleLogs": "info",
+                    "networkLogs": "true"
+                },
+                "browserName": "iPhone"
+            }
+        ],
+        "maximizeWindow": false,
+        "hostname": "hub.browserstack.com",
+        "portNumber": 443,
+        "webServicePath": "/wd/hub",
+        "webDriverService": "appium",
+        "browserstackLocal": false,
+        "updateJob": false,
+        "user": "akhilaggarwal2",
+        "key": "68pvrJyFDPdqKSpBptpi"
     }
 }

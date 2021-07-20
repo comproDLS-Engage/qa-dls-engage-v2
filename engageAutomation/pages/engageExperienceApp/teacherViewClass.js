@@ -64,7 +64,7 @@ module.exports = {
         for (i = 0; i < productCount; i++) {
             productSelector = this.productTabBtns + i + "]";
             productData[i] = action.getText(productSelector);
-            isProductSelected = action.getAttribute(this.productSelector, "aria-selected")
+            isProductSelected = action.getAttribute(this.productSelector, 'aria-selected');
             if (isProductSelected == true) {
                 obj.selectedProduct = productData[i];
             }

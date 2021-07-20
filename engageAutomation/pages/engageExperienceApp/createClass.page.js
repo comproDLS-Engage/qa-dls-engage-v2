@@ -23,13 +23,13 @@ module.exports = {
     datePicker_okBtn: selectorFile.css.ComproEngage.createClassPage.datePicker_okBtn,
     loaderIcon: selectorFile.css.ComproEngage.widgets.loaderIcon,
     saveBtn: selectorFile.css.ComproEngage.createClassPage.saveBtn,
-    removeBookbtn: selectorFile.css.ComproEngage.createClassPage.removeBookbtn,
+    restoreBtn: selectorFile.css.ComproEngage.createClassPage.restoreBtn,
     pageTitle: selectorFile.css.ComproEngage.createClassPage.pageTitle,
     pageSubTitle: selectorFile.css.ComproEngage.createClassPage.pageSubTitle,
     AddANewBook_btn: selectorFile.css.ComproEngage.createClassPage.AddANewBook_btn,
     selectBook_txt: selectorFile.css.ComproEngage.createClassPage.selectBook_txt,
     bookTitle: selectorFile.css.ComproEngage.createClassPage.bookTitle,
-    bookIcon: selectorFile.css.ComproEngage.createClassPage.bookIcon,
+    bookIsbn: selectorFile.css.ComproEngage.createClassPage.bookIsbn,
     classHeader: selectorFile.css.ComproEngage.createClassPage.classHeader,
     classSubHeader: selectorFile.css.ComproEngage.createClassPage.classSubHeader,
     bookCard: selectorFile.css.ComproEngage.createClassPage.classSubHeader,
@@ -38,7 +38,7 @@ module.exports = {
     bookErrorMsg: selectorFile.css.ComproEngage.createClassPage.bookErrorMsg,
     endDateErrorMsg: selectorFile.css.ComproEngage.createClassPage.endDateErrorMsg,
     startDateErrorMsg: selectorFile.css.ComproEngage.createClassPage.startDateErrorMsg,
-    msgBar: selectorFile.css.ComproEngage.myClassPage.msgBar,
+	msgBar: selectorFile.css.ComproEngage.myClassPage.msgBar,
 
     isInitialized: function () {
         logger.logInto(stackTrace.get());
@@ -46,7 +46,8 @@ module.exports = {
         let pageStatus = action.waitForDisplayed(this.title_lbl)
         res = this.get_PageData();
         res.pageStatus = pageStatus;
-        console.log(res)
+        //let header = require('./header.page.js')
+        //res.header = header.isInitialized();
         return res;
     },
 
@@ -67,11 +68,11 @@ module.exports = {
             selectBook_lbl: action.getElementCount(this.selectBook_lbl) > 0 ? action.getText(this.selectBook_lbl) : null,
             selectBook_txt: action.getElementCount(this.selectBook_txt) > 0 ? action.getText(this.selectBook_txt) : null,
             bookTitle: action.getElementCount(this.bookTitle) > 0 ? action.getText(this.bookTitle) : null,
-            bookIcon: action.getElementCount(this.bookIcon) > 0 ? action.waitForExist(this.bookIcon) : false,
+            bookIsbn: action.getElementCount(this.bookIsbn) > 0 ? action.getText(this.bookIsbn) : null,
             cancelBtn_txt: action.getElementCount(this.cancelBtn) > 0 ? action.getText(this.cancelBtn) : null,
             createBtn_txt: action.getElementCount(this.createBtn) > 0 ? action.getText(this.createBtn) : null,
             saveBtn_txt: action.getElementCount(this.saveBtn) > 0 ? action.getText(this.saveBtn) : null,
-            removeBookbtn_txt: action.getElementCount(this.removeBookbtn) > 0 ? action.getText(this.removeBookbtn) : null,
+            restoreBtn_txt: action.getElementCount(this.restoreBtn) > 0 ? action.getText(this.restoreBtn) : null,
         }
         return obj;
     },
@@ -234,43 +235,27 @@ module.exports = {
     // Akhil: function missing for selecting the book checkbox
     // this function should accept the book name then select the book based on name
     click_SelectBook: function (bookName) {
+        var i = 0;
+
         //rupsi: will work on this function when got another book, now workonly for selecting first book
-        if ((action.waitForExist("footer div>svg", 10000)) != true) {
+        if ((action.waitForExist("footer div>svg",10000)) != true) {
             action.click("[data-tid=button-add-0]")
         }
         res = action.waitForClickable("[data-tid=\"button-Add to Class\"")
         action.click("[data-tid=\"button-Add to Class\"]")
-        action.waitForDisplayed(this.bookIcon)
         return res;
     },
 
     click_AddANewBook_Button: function () {
         logger.logInto(stackTrace.get());
-        if (action.getElementCount(this.bookIcon) < 1) {
-
-            res = action.click(this.AddANewBook_btn);
-            if (res == true) {
-                logger.logInto(stackTrace.get(), res + "Add A New Book Button Clicked");
-                // let addBookPage = require('./addBook.page.js')
-                // res = addBookPage.isInitialized();
-            }
-            else
-                logger.logInto(stackTrace.get(), res + ":Add A New Book Button is NOT Clicked", "error");
-        } else
-            res = "alreadySelected"
-        return res;
-    },
-
-    clickdeleteBook: function () {
-        res = action.click(this.removeBookbtn);
+        res = action.click(this.AddANewBook_btn);
         if (res == true) {
-            logger.logInto(stackTrace.get(), res + "Book is removed");
-            res = this.isInitialized();
+            logger.logInto(stackTrace.get(), res + "Add A New Book Button Clicked");
+            // let addBookPage = require('./addBook.page.js')
+            // res = addBookPage.isInitialized();
         }
         else
             logger.logInto(stackTrace.get(), res + ":Add A New Book Button is NOT Clicked", "error");
-
         return res;
     }
-
 }

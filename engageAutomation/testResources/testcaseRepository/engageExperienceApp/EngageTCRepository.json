@@ -245,6 +245,171 @@
             ]
         },
         {
+            "modulename": "MyClass - Instructor",
+            "moduledetails": "",
+            "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+            "testcase": [
+                {
+                    "id": "ENG_INS_MYCO_TC_1",
+                    "description": "Validate the content (in english) of the My Classes Page if instructor has not created any Class.",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_INS_MYCO_TC_2",
+                    "description": "Validate the content (in english) of the My Classes Page if instructor has created Classes.",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_INS_MYCO_TC_3",
+                    "description": "Validate the content (in english) of the Archive Page if class is archived",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_INS_MYCO_TC_4",
+                    "description": "Validate that My Classes tab option shows only active and future class",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_INS_MYCO_TC_5",
+                    "description": "Validate that Archived tab shows only archived class",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_INS_MYCO_TC_6",
+                    "description": "Validate that Create Class page is launched on clicking create class button",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_INS_MYCO_TC_7",
+                    "description": "Validate that on clicking a View Class button on the My Classes Page, Class Dashboard is launched for that class",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_INS_MYCO_TC_8",
+                    "description": "Validate that clicking on menu button on a class card displays available menu options",
+                    "tags": "",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_INS_MYCO_TC_9",
+                    "description": "Validate that clicking on Edit Class option from Class Menu launches Edit Class Workflow",
+                    "tags": ""
+                },
+                {
+                    "id": "ENG_INS_MYCO_TC_10",
+                    "description": "Validate that clicking on Add Student option from Class Menu launches Student Invitation Workflow",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_INS_MYCO_TC_11",
+                    "description": "Validate that clicking on Archive Class option from Class Menu launches Class Archival Pop Up Workflow",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_INS_MYCO_TC_13",
+                    "description": "Validate the content (in english) of the Create Class Page",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_INS_MYCO_TC_14",
+                    "description": "Validate class cannot be created if Class name field is left blank.",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_INS_MYCO_TC_15",
+                    "description": "Validate that class cannot be created if Class name field contains more than 50 characters.",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_INS_MYCO_TC_16",
+                    "description": "Validate that instructor is able to create a Class with 50 alphanumeric characters",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_INS_MYCO_TC_19",
+                    "description": "Validate that the My Classes page appears if user click on the cancel and go back button on Create Class Page",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_INS_MYCO_TC_21",
+                    "description": "Validate the functionality of create button on Create Class Page.",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_INS_MYCO_TC_22",
+                    "description": "Validate the content of the Create Class Success Page",
+                    "visualTest": true,
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_INS_MYCO_TC_23",
+                    "description": "Validate that the class dashboard is launched on clicking the View Class button on success page",
+                    "tags": ""
+                },
+                {
+                    "id": "ENG_INS_MYCO_TC_24",
+                    "description": "Validate that the My Classes page is launched on clicking Back to all classes button on success page",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_INS_MYCO_TC_27",
+                    "description": "Validate that class cannot be created if user has not selected any Book",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_INS_MYCO_TC_32",
+                    "description": "Future Class: Validate that the Instructor Dashboard for future Class is launched on clicking the future Class.",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_INS_MYCO_TC_33",
+                    "description": "Edit Class: Validate the content (in english) of the Edit Class Page",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_INS_MYCO_TC_34",
+                    "description": "Edit Class: Validate that the class details are updated on clicking the save button on Edit Class Page",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_INS_MYCO_TC_35",
+                    "description": "Edit Class: Validate that the instructor My Classes page is launched on clicking Cancel and Go Back button on the Edit Class Page",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_INS_MYCO_TC_36",
+                    "description": "Edit Class: Validate that Class name can be updated with less than 50 characters.",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_INS_MYCO_TC_37",
+                    "description": "Edit Class: Validate that Class name can be updated with less than 50 characters.",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_INS_MYCO_TC_40",
+                    "description": "Edit Class -Validate that the error message appears if user deselect the book and click on Save button to save the class",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_INS_MYCO_TC_96",
+                    "description": "Validate that My Class Page should displayed on clicking the my class tab",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_INS_MYCO_TC_97",
+                    "description": "Validate the book selection",
+                    "tags": "P1"
+                }
+            ]
+        },
+        {
             "modulename": "Login and Reset Password",
             "testFile": "./test/engageExperienceApp/login.test.js",
             "testcase": [
@@ -317,86 +482,6 @@
                     "id": "ENG_IDEN_TC_16",
                     "description": "Validate that Reset Password page is launched on clicking 'Forgot Password' button",
                     "tags": ""
-                },
-                {
-                    "id": "ENG_IDEN_TC_17",
-                    "description": "Validate that Sign Up page is launched on clicking 'Sign Up' button",
-                    "tags": ""
-                },
-                {
-                    "id": "ENG_IDEN_TC_25",
-                    "description": "Validate content on Reset Password Send OTP Page in English Language",
-                    "tags": ""
-                },
-                {
-                    "id": "ENG_IDEN_TC_26",
-                    "description": "Validate content on Reset Password Send OTP Page in Spanish Language",
-                    "tags": ""
-                },
-                {
-                    "id": "ENG_IDEN_TC_27",
-                    "description": "Validate that error message is displayed if email with invalid format is entered on the Reset Password Send OTP page",
-                    "tags": ""
-                },
-                {
-                    "id": "ENG_IDEN_TC_28",
-                    "description": "Validate that Sign In page is launched on clicking 'Cancel & GO Back to Login' button on Reset Password Send OTP page",
-                    "tags": ""
-                },
-                {
-                    "id": "ENG_IDEN_TC_29",
-                    "description": "Validate email with leading trailing space on Reset Password Send OTP page",
-                    "tags": ""
-                },
-                {
-                    "id": "ENG_IDEN_TC_30",
-                    "description": "Validate email with upper case on Reset Password Send OTP page",
-                    "tags": ""
-                },
-                {
-                    "id": "ENG_IDEN_TC_31",
-                    "description": "Validate that Change Password page launches on clicking 'SEND OTP to reset password' button",
-                    "tags": ""
-                },
-                {
-                    "id": "ENG_IDEN_TC_35",
-                    "description": "Validate Content on Change Password page in English language",
-                    "tags": ""
-                },
-                {
-                    "id": "ENG_IDEN_TC_36",
-                    "description": "Validate Content on Change Password page in Spanish language",
-                    "tags": ""
-                },
-                {
-                    "id": "ENG_IDEN_TC_38",
-                    "description": "Validate that the Sign In page is launched on clicking the 'Cancel & GO Back to Login' button on Change Password page",
-                    "tags": ""
-                },
-                {
-                    "id": "ENG_IDEN_TC_39",
-                    "description": "Validate if user is able to click Resend OTP after 60 sec on Change Password page",
-                    "tags": ""
-                },
-                {
-                    "id": "ENG_IDEN_TC_40",
-                    "description": "Validate snackbar message is displayed and user is not able to proceed if user enter incorrect OTP on Reset Password page",
-                    "tags": ""
-                },
-                {
-                    "id": "ENG_IDEN_TC_41",
-                    "description": "Validate the Error message when the user enters the incomplete OTP i.e. less than 6 digits",
-                    "tags": ""
-                },
-                {
-                    "id": "ENG_IDEN_TC_43",
-                    "description": "Validate user is prompt for Password rules when user does not follow all rules and click Change Password button",
-                    "tags": ""
-                },
-                {
-                    "id": "ENG_IDEN_TC_44",
-                    "description": "Validate that message is displayed to the user when password and confirm password text does not match and user click Change Password button",
-                    "tags": ""
                 }
             ]
         },
@@ -440,6 +525,88 @@
                     "description": "Validate on clicking Projectable resource in Explore menu, same tab is launched on Browse",
                     "tags": "P2",
                     "visualTest": true
+                },
+                {
+                    "id": "ENG_DASH_TC_7",
+                    "description": "Validate on clicking book ellipses, dropdown menu is launched",
+                    "tags": "P2",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_DASH_TC_8",
+                    "description": "Validate on clicking View Classes from Book dropdown menu, class Pane is launched",
+                    "tags": "P2",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_DASH_TC_9",
+                    "description": "Validate on clicking Create Classes from Book dropdown menu, create class page is launched",
+                    "tags": "P2",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_DASH_TC_10",
+                    "description": "Validate on clicking Remove from My Books from Book dropdown menu, not active snackbar message is displayed",
+                    "tags": "P2",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_DASH_TC_11",
+                    "description": "Validate on clicking Open Flipbook from Book dropdown menu, flipbook page is launched",
+                    "tags": "P2",
+                    "visualTest": true
+                }
+            ]
+        },
+        {
+            "modulename": "App Shell",
+            "moduledetails": "",
+            "testFile": "./test/engageExperienceApp/appShell.test.js",
+            "testcase": [
+                {
+                    "id": "ENG_SHELL_TC_1",
+                    "description": "Validate that appShell is launched (Desktop)",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_SHELL_TC_2",
+                    "description": "Validate that clicking on the Dashboard button in left Navigation pane launches Dashboard page (Desktop)",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_SHELL_TC_3",
+                    "description": "Validate that clicking on the Browse button in left Navigation pane launches Browse page (Desktop)",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_SHELL_TC_4",
+                    "description": "Validate that clicking on the Classes button in left Navigation pane launches Classes page (Desktop)",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_SHELL_TC_5",
+                    "description": "Validate that clicking on the bell icon launches the notification drawer",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_SHELL_TC_6",
+                    "description": "Validate that clicking on cross icon closes the notification section",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_SHELL_TC_7",
+                    "description": "Validate that user is able to change the app language using the language switcher on the header",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_SHELL_TC_8",
+                    "description": "Validate that clicking on the profile dropdown launches the dropdown of profile and other options",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_SHELL_TC_9",
+                    "description": "Validate that clicking on logout logs out from application",
+                    "tags": "P1"
                 }
             ]
         },
