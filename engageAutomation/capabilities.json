@@ -185,5 +185,29 @@
         "updateJob": false,
         "user": "akhilaggarwal2",
         "key": "68pvrJyFDPdqKSpBptpi"
+    },
+    "applitools-chrome-1920": {
+        "capabilities": [
+            {
+                "maxInstances": 5,
+                "browserName": "chrome",
+                "goog:chromeOptions": {
+                    "args": ["--headless", "--disable-gpu", "--log-level=3"]
+                }
+            }
+        ],
+        "resolution": "1920x1080",
+        "maximizeWindow": false,
+        "hostname": "localhost",
+        "portNumber": 4444,
+        "webServicePath": "/",
+        "webDriverService": "chromedriver",
+        "enableEyesLogs": true,
+        "eyes": {
+            "batch": "Acceptance",
+            "matchLevel": "Layout",
+            "apiKey": "YgTpmv103jxt3HTzb0jJWyQLk3m3NQVFc8kUHuf1BOd2g110",
+            "stitchMode": "Scroll"
+        }
     }
 }
