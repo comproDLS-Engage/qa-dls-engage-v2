@@ -2,9 +2,10 @@
     "backoffice": {
         "book": [
             {
-                "name": "Quality Test Book 2",
-                "coverImage": "./testResources/testcaseData/backOffice/qa/book_cover_140_2.png",
-                "description": "QA test automation description"
+                "type": "Book",
+                "name": "QA Automation Test Book [DO NOT PUBLISH]",
+                "coverImage": "./testResources/testcaseData/backOffice/qa/book_cover_compro_qa.png",
+                "description": "QA automation test description"
             }
         ],
         "component": [
@@ -14,6 +15,18 @@
                 "title": "QA Automation Test Learning Path - extra activities [DO NOT PUBLISH]",
                 "folderLevel": "3",
                 "autonumbering": "1-based"
+            },
+            {
+                "type": "Bank",
+                "category": "Resources",
+                "title": "QA Automation Test Bank - resources [DO NOT PUBLISH]",
+                "folderLevel": "2",
+                "autonumbering": "0-based"
+            },
+            {
+                "type": "Flipbook",
+                "category": "--none--",
+                "title": "QA Automation Test Flipbook - none [DO NOT PUBLISH]"
             }
         ],
         "folder": [
@@ -30,6 +43,19 @@
             {
                 "type": "Native Engage Learning Object",
                 "name": "QA Automation Test LO1 - native"
+            },
+            {
+                "type": "Close Ended Learning Object",
+                "name": "QA Automation Test LO2 - close ended"
+            }
+        ],
+        "accessCodeBatch": [
+            {
+                "batchName": "QA automation test batch1",
+                "startDate": "01/01/2022",
+                "endDate": "01/31/2022",
+                "codeLimit": 50,
+                "status": "Active"
             }
         ]
     }
