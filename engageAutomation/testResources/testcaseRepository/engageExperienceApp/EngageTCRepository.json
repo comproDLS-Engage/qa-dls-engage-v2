@@ -507,7 +507,7 @@
                     "id": "ENG_INS_CLASS_TC_42",
                     "description": "Click on add book button and Validate the book is added in the class",
                     "tags": "P1"
-                },  
+                },
                 {
                     "id": "ENG_INS_CLASS_TC_38",
                     "description": "Validate the class drwaer Pane when no class is added",
@@ -754,6 +754,60 @@
                 {
                     "id": "logout_from_app",
                     "description": "Logout from the application",
+                    "tags": "P1"
+                }
+            ]
+        },
+        {
+            "modulename": "MCQ Block",
+            "moduledetails": "",
+            "testFile": "./test/engageExperienceApp/mcqBlock.test.js",
+            "testcase": [
+                {
+                    "id": "ENG_ITEM_MCQB_TC_5",
+                    "description": "Validate Block MCQ Question Functionality For Correct Scenario",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_ITEM_MCQB_TC_8",
+                    "description": "Validate Block MCQ question selected option",
+                    "tags": "P1"
+                }
+            ]
+        },
+        {
+            "modulename": "Test Player",
+            "moduledetails": "",
+            "testFile": "./test/engageExperienceApp/testPlayer.test.js",
+            "testcase": [
+                {
+                    "id": "ENG_QUIZ_TC_13",
+                    "description": "Validate the test player when user perform Check My Work in the first Question of the quiz.",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_QUIZ_TC_6",
+                    "description": "Validate The Test Player When User Click Next Question Button After Performing Check My Work",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_QUIZ_TC_2",
+                    "description": "Validate the test player when quiz is launched and question is not performed",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_QUIZ_TC_5",
+                    "description": "Validate the test player when user click try again",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_QUIZ_TC_20",
+                    "description": "Validate the test player when user click Previous button in the second question.",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_QUIZ_TC_3",
+                    "description": "Validate the test player when user click Reset",
                     "tags": "P1"
                 }
             ]

@@ -1,0 +1,81 @@
+{
+    "backoffice": {
+        "book": [
+            {
+                "type": "Book",
+                "name": "Quality Test Book 9",
+                "coverImage": "./testResources/testcaseData/backOffice/qa/book_cover_compro_qa.png",
+                "description": "QA automation test description"
+            }
+        ],
+        "component": [
+            {
+                "type": "Learning Path",
+                "category": "Textbook",
+                "title": "Component 1",
+                "folderLevel": "3",
+                "autonumbering": "1-based"
+            },
+            {
+                "type": "Bank",
+                "category": "Resources",
+                "title": "QA Automation Test Bank - resources [DO NOT PUBLISH]",
+                "folderLevel": "2",
+                "autonumbering": "0-based"
+            },
+            {
+                "type": "Flipbook",
+                "category": "--none--",
+                "title": "QA Automation Test Flipbook - none [DO NOT PUBLISH]"
+            }
+        ],
+        "folder": [
+            {
+                "name": "Folder 1",
+                "coverImage": ""
+            },
+            {
+                "name": "QA Automation Test folder L2",
+                "coverImage": ""
+            }
+        ],
+        "activity": [
+            {
+                "type": "Native Engage Learning Object",
+                "name": "MCQ Question DND",
+                "question": [
+                    {
+                      "number": 1,
+                      "instruction": "",
+                      "text":"Question Text Here",
+                      "type": "mcqb-single",
+                      "maxOptions": 3,
+                      "answerKey": [
+                        ["O1","Option A","select","correct"],
+                        ["O2","Option B","",""],
+                        ["O3","Option C","",""]
+                      ],
+                      "scenario1": [
+                        ["O1","Option A","",""],
+                        ["O2","Option B","select","incorrect"],
+                        ["O3","Option C","",""]
+                      ]
+                    }
+                ]
+            },
+            {
+                "type": "Close Ended Learning Object",
+                "name": "QA Automation Test LO2 - close ended"
+            }
+        ],
+        "accessCodeBatch": [
+            {
+                "batchName": "QA automation test batch1",
+                "startDate": "01/01/2022",
+                "endDate": "01/31/2022",
+                "codeLimit": 50,
+                "status": "Active"
+            }
+        ]
+    }
+}

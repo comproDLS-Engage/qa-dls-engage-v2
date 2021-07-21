@@ -206,6 +206,38 @@
 				"createAssignmentByline_lbl": "[data-tid=MISSING]",
 				"noInboxActivity_lbl": "[data-tid=MISSING]",
 				"noInboxActivityByline_lbl": "[data-tid=MISSING]"
+			},
+			"itemPlayer": {
+				"correctIcon": "[data-tid=icon-correct]",
+				"incorrectIcon": "[data-tid=icon-incorrect]",
+				"questionText": "[data-tid=text-question]",
+				"instructionText": "[data-tid=text-instruction]",
+				"itemPlayerContainer": "[id='itemContainer']",
+				"videoMedia": "[data-tid=container-video]",
+				"imageMedia": "[data-tid=container-image]",
+				"audioMedia": "[data-tid=container-audio]"
+			},
+			"testPlayer": {
+				"checkMyWork_btn": "[class=buttons-container] [class=defaultBtn-check-mywork-icon]",
+				"next_btn": "[id=next]",
+				"previous_btn": "[id=previous]",
+				"tryAgain_btn": "[id=tryAgain]",
+				"reset_btn":"[id=reset]",
+				"closeReview_btn": "[data-tid='container-testplayer'] button[data-tid*=button-closereview]",
+				"player_header": "[data-tid=container-testplayer] [data-tid=text-headertitle]",
+				"lo_container": "#container-lo",
+				"showAnswer_btn": "button[data-tid=button-showcorrectanswers]",
+				"yourResponse_btn": "button[data-tid=button-showuserresponse]",
+				"feedback_txt": "[data-tid=text-feedbackmessage]",
+				"showingCorrectAnswer_txt": "p[data-tid=text-showingcorrectanswer]",
+				"collapseBtn": "[data-tid='container-testplayer'] [data-tid='button-togglebuttonpanel']",
+				"tpBottomPanelHidden": "[class*='MuiCollapse-hidden']",
+				"tpBottomPanelVisible": "[class*='MuiCollapse-entered']"
+			},
+			"MCQB": {
+				"choice": "div[data-tid=input-click-option-",
+				"choices": "div[data-tid*=input-click-option-]",
+				"selectedChoice": "svg[data-tid=icon-selected]"
 			}
 		}
 	}

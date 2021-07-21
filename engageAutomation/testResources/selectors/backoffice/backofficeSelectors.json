@@ -76,7 +76,7 @@
 	},
 	"viewLearningPathPage": {
 		"folderList": "[data-tid*=button-folder-details] [class=c-list-item__primary-text]",
-		"activityList": "[class='c-activity--title']",
+		"activityList": "[class=c-list-item__primary-text]",
 		"addFolderBtn": "button[data-tid=button-add-folder]",
 		"addActivityBtn": "[data-tid='button-ADD COMPONENT']",
 		"publishBtn": "[data-tid=button-publish-book-component]",
