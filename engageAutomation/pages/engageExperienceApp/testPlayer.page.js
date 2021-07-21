@@ -1,5 +1,4 @@
 "use strict";
-const { BrowserType } = require('@applitools/eyes-webdriverio');
 var action = require('../../core/actionLibrary/baseActionLibrary.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
 // var summaryPage //= require('./summary.page.js');
@@ -9,24 +8,24 @@ var res, ret;
 
 module.exports = {
 
-	player_header: selectorFile.css.ComproEngage.testPlayer.player_header,
-	closeItem_btn: selectorFile.css.ComproEngage.testPlayer.closeItem_btn,
+	//player_header: selectorFile.css.ComproEngage.testPlayer.player_header,
+	//closeItem_btn: selectorFile.css.ComproEngage.testPlayer.closeItem_btn,
 	next_btn: selectorFile.css.ComproEngage.testPlayer.next_btn,
 	previous_btn: selectorFile.css.ComproEngage.testPlayer.previous_btn,
 	finish_btn: selectorFile.css.ComproEngage.testPlayer.finish_btn,
 	checkMyWork_btn: selectorFile.css.ComproEngage.testPlayer.checkMyWork_btn,
 	tryAgain_btn: selectorFile.css.ComproEngage.testPlayer.tryAgain_btn,
 	reset_btn: selectorFile.css.ComproEngage.testPlayer.reset_btn,
-	closeReview_btn: selectorFile.css.ComproEngage.testPlayer.closeReview_btn,
-	loaderIcon: selectorFile.css.ComproEngage.widgets.loaderIcon,
-	lo_container: selectorFile.css.ComproEngage.testPlayer.lo_container,
+	//closeReview_btn: selectorFile.css.ComproEngage.testPlayer.closeReview_btn,
+	//loaderIcon: selectorFile.css.ComproEngage.widgets.loaderIcon,
+	//lo_container: selectorFile.css.ComproEngage.testPlayer.lo_container,
 	showAnswer_btn: selectorFile.css.ComproEngage.testPlayer.showAnswer_btn,
 	yourResponse_btn: selectorFile.css.ComproEngage.testPlayer.yourResponse_btn,
 	feedbackText: selectorFile.css.ComproEngage.testPlayer.feedback_txt,
-	showingCorrectAnswerText: selectorFile.css.ComproEngage.testPlayer.showingCorrectAnswer_txt,
-	collapseBtn: selectorFile.css.ComproEngage.testPlayer.collapseBtn,
-	tpBottomPanelHidden: selectorFile.css.ComproEngage.testPlayer.tpBottomPanelHidden,
-	tpBottomPanelVisible: selectorFile.css.ComproEngage.testPlayer.tpBottomPanelVisible,
+	//showingCorrectAnswerText: selectorFile.css.ComproEngage.testPlayer.showingCorrectAnswer_txt,
+	//collapseBtn: selectorFile.css.ComproEngage.testPlayer.collapseBtn,
+	//tpBottomPanelHidden: selectorFile.css.ComproEngage.testPlayer.tpBottomPanelHidden,
+	//tpBottomPanelVisible: selectorFile.css.ComproEngage.testPlayer.tpBottomPanelVisible,
 
 	isInitialized: function () {
 		logger.logInto(stackTrace.get());
@@ -44,16 +43,16 @@ module.exports = {
 
 	getTestplayerInfo: function () {
 		var testplayerInfo = {
-			checkmyWork_IsExist: action.getElementCount(this.checkMyWork_btn) == 1 ? true : null,
-			checkmyWork_isDisabled: (action.getElementCount(this.checkMyWork_btn) == 1) ? action.getAttribute(this.checkMyWork_btn, 'disabled') : null,
-			tryAgain_IsExist: action.getElementCount(this.tryAgain_btn) == 1 ? true : null,
-			tryAgain_isDisabled: (action.getElementCount(this.tryAgain_btn) == 1) ? action.getAttribute(this.tryAgain_btn, 'disabled') : null,
-			reset_IsExist: action.getElementCount(this.reset_btn) == 1 ? true : null,
-			reset_isDisabled: (action.getElementCount(this.reset_btn) == 1) ? action.getAttribute(this.reset_btn, 'disabled') : null,
-			previous_IsExist: action.getElementCount(this.previous_btn) == 1 ? true : null,
-			previous_isDisabled: (action.getElementCount(this.previous_btn) == 1) ? action.getAttribute(this.previous_btn, 'disabled') : null,
-			next_IsExist: action.getElementCount(this.next_btn) == 1 ? true : null,
-			next_isDisabled: (action.getElementCount(this.next_btn) == 1) ? action.getAttribute(this.next_btn, 'disabled') : null,
+			checkmyWork_isExists: action.getElementCount(this.checkMyWork_btn) == 1 ? true : false,
+			checkmyWork_isDisabled: (action.getElementCount(this.checkMyWork_btn) == 1) ? action.getAttribute(this.checkMyWork_btn, 'disabled') : false,
+			tryAgain_isExists: action.getElementCount(this.tryAgain_btn) == 1 ? true : false,
+			tryAgain_isDisabled: (action.getElementCount(this.tryAgain_btn) == 1) ? action.getAttribute(this.tryAgain_btn, 'disabled') : false,
+			reset_isExists: action.getElementCount(this.reset_btn) == 1 ? true : false,
+			reset_isDisabled: (action.getElementCount(this.reset_btn) == 1) ? action.getAttribute(this.reset_btn, 'disabled') : false,
+			previous_isExists: action.getElementCount(this.previous_btn) == 1 ? true : false,
+			previous_isDisabled: (action.getElementCount(this.previous_btn) == 1) ? action.getAttribute(this.previous_btn, 'disabled') : false,
+			next_isExists: action.getElementCount(this.next_btn) == 1 ? true : false,
+			next_isDisabled: (action.getElementCount(this.next_btn) == 1) ? action.getAttribute(this.next_btn, 'disabled') : false,
 		};
 		return testplayerInfo;
 	},
