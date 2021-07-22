@@ -41,21 +41,21 @@ module.exports = {
 		return ret;
 	},
 
-	getTestplayerInfo: function () {
-		var testplayerInfo = {
-			checkmyWork_isExists: action.getElementCount(this.checkMyWork_btn) == 1 ? true : false,
-			checkmyWork_isDisabled: (action.getElementCount(this.checkMyWork_btn) == 1) ? action.getAttribute(this.checkMyWork_btn, 'disabled') : false,
-			tryAgain_isExists: action.getElementCount(this.tryAgain_btn) == 1 ? true : false,
-			tryAgain_isDisabled: (action.getElementCount(this.tryAgain_btn) == 1) ? action.getAttribute(this.tryAgain_btn, 'disabled') : false,
-			reset_isExists: action.getElementCount(this.reset_btn) == 1 ? true : false,
-			reset_isDisabled: (action.getElementCount(this.reset_btn) == 1) ? action.getAttribute(this.reset_btn, 'disabled') : false,
-			previous_isExists: action.getElementCount(this.previous_btn) == 1 ? true : false,
-			previous_isDisabled: (action.getElementCount(this.previous_btn) == 1) ? action.getAttribute(this.previous_btn, 'disabled') : false,
-			next_isExists: action.getElementCount(this.next_btn) == 1 ? true : false,
-			next_isDisabled: (action.getElementCount(this.next_btn) == 1) ? action.getAttribute(this.next_btn, 'disabled') : false,
-		};
-		return testplayerInfo;
-	},
+	// getTestplayerInfo: function () {
+	// 	var testplayerInfo = {
+	// 		checkmyWork_isExists: action.getElementCount(this.checkMyWork_btn) == 1 ? true : false,
+	// 		checkmyWork_isDisabled: (action.getElementCount(this.checkMyWork_btn) == 1) ? action.getAttribute(this.checkMyWork_btn, 'disabled') : false,
+	// 		tryAgain_isExists: action.getElementCount(this.tryAgain_btn) == 1 ? true : false,
+	// 		tryAgain_isDisabled: (action.getElementCount(this.tryAgain_btn) == 1) ? action.getAttribute(this.tryAgain_btn, 'disabled') : false,
+	// 		reset_isExists: action.getElementCount(this.reset_btn) == 1 ? true : false,
+	// 		reset_isDisabled: (action.getElementCount(this.reset_btn) == 1) ? action.getAttribute(this.reset_btn, 'disabled') : false,
+	// 		previous_isExists: action.getElementCount(this.previous_btn) == 1 ? true : false,
+	// 		previous_isDisabled: (action.getElementCount(this.previous_btn) == 1) ? action.getAttribute(this.previous_btn, 'disabled') : false,
+	// 		next_isExists: action.getElementCount(this.next_btn) == 1 ? true : false,
+	// 		next_isDisabled: (action.getElementCount(this.next_btn) == 1) ? action.getAttribute(this.next_btn, 'disabled') : false,
+	// 	};
+	// 	return testplayerInfo;
+	// },
 
 	click_CheckMyWork: function () {
 		logger.logInto(stackTrace.get());
@@ -135,6 +135,126 @@ module.exports = {
 	},
 
 
+	getTestplayerInfo: function () {
+		var testplayerInfo = {
+			// headerText: "",
+			checkmyWork_isExists: action.getElementCount(this.checkMyWork_btn) == 1 ? true : false,
+			checkmyWork_isDisabled: (action.getElementCount(this.checkMyWork_btn) == 1) ? action.getAttribute(this.checkMyWork_btn, 'disabled') : false,
+			tryAgain_isExists: action.getElementCount(this.tryAgain_btn) == 1 ? true : false,
+			tryAgain_isDisabled: (action.getElementCount(this.tryAgain_btn) == 1) ? action.getAttribute(this.tryAgain_btn, 'disabled') : false,
+			reset_isExists: action.getElementCount(this.reset_btn) == 1 ? true : false,
+			reset_isDisabled: (action.getElementCount(this.reset_btn) == 1) ? action.getAttribute(this.reset_btn, 'disabled') : false,
+			previous_isExists: action.getElementCount(this.previous_btn) == 1 ? true : false,
+			previous_isDisabled: (action.getElementCount(this.previous_btn) == 1) ? action.getAttribute(this.previous_btn, 'disabled') : false,
+			next_isExists: action.getElementCount(this.next_btn) == 1 ? true : false,
+			next_isDisabled: (action.getElementCount(this.next_btn) == 1) ? action.getAttribute(this.next_btn, 'disabled') : false,
+			activeQues: "",
+			// maxQues: "",
+			// centerBtn: {},
+			// leftBtn: {},
+			// rightBtn: {}
+		};
+		var quesInfo = this.getQuesInfo();
+		// testplayerInfo.maxQues = quesInfo.maxQues
+		testplayerInfo.activeQues = quesInfo.activeQues
+		// testplayerInfo.headerText = quesInfo.headerText
+
+		// var centerButtonArr = [this.checkMyWork_btn, this.next_btn, this.finish_btn, this.closeReview_btn]; //close_review to be added
+		// for (var i = 0; i < centerButtonArr.length; i++) {
+		// 	res = this.getBtnInfo(centerButtonArr[i]);
+		// 	if (res.btn_datatid.includes('center')) {
+		// 		testplayerInfo.centerBtn.btnText = res.btnText;
+		// 		testplayerInfo.centerBtn.btnState = res.btnState;
+		// 		testplayerInfo.centerBtn.btnDatatid = res.btn_datatid;
+		// 		break;
+		// 	}
+		// }
+		// var LeftButtonArr = [this.previous_btn];
+		// for (var i = 0; i < LeftButtonArr.length; i++) {
+		// 	res = this.getBtnInfo(LeftButtonArr[i]);
+		// 	if (res.btn_datatid.includes('left')) {
+		// 		testplayerInfo.leftBtn.btnText = res.btnText;
+		// 		testplayerInfo.leftBtn.btnState = res.btnState;
+		// 		testplayerInfo.leftBtn.btnDatatid = res.btn_datatid;
+		// 		break;
+		// 	}
+		// }
+		// var RightButtonArr = [this.next_btn, this.tryAgain_btn, this.finish_btn];
+		// for (var i = 0; i < RightButtonArr.length; i++) {
+		// 	res = this.getBtnInfo(RightButtonArr[i]);
+		// 	if (res.btn_datatid.includes('right')) {
+		// 		testplayerInfo.rightBtn.btnText = res.btnText;
+		// 		testplayerInfo.rightBtn.btnState = res.btnState;
+		// 		testplayerInfo.rightBtn.btnDatatid = res.btn_datatid;
+		// 		break;
+		// 	}
+		// }
+		// if (testplayerInfo.centerBtn.btnText == undefined || testplayerInfo.centerBtn.btnState == undefined)
+		// 	logger.logInto(stackTrace.get(), "-- testplayer centerBtn is NOT available", "error");
+		// if (testplayerInfo.leftBtn.btnText == undefined || testplayerInfo.leftBtn.btnState == undefined)
+		// 	logger.logInto(stackTrace.get(), "-- testplayer leftBtn is NOT available", "error");
+		// if (testplayerInfo.rightBtn.btnText == undefined || testplayerInfo.rightBtn.btnState == undefined)
+		// 	logger.logInto(stackTrace.get(), "-- testplayer rightBtn is NOT available", "error");
+
+		// if (action.getElementCount(this.tpBottomPanelHidden) == 0 && action.isDisplayed(this.collapseBtn)) {
+		// 	res = action.click(this.collapseBtn);
+		// 	action.waitForDisplayed(this.tpBottomPanelHidden, undefined, true);
+		// }
+
+		return testplayerInfo;
+	},
+
+	/* getBtnInfo: function (selector) {
+		var btnInfo = {
+			btnText: "",
+			btnState: "",
+			btn_datatid: ""
+		}
+		this.expandTestPlayer();
+		if (action.getElementCount(selector) == 1) {
+			logger.logInto(stackTrace.get(), " -- " + selector + " Button is available");
+			action.waitForDisplayed(selector);
+			btnInfo.btn_datatid = action.getAttribute(selector, 'data-tid');
+			btnInfo.btnText = action.getText(selector);
+			let disabled = action.getAttribute(selector, 'disabled');
+			if (disabled == 'true')
+				btnInfo.btnState = "disabled";
+			else
+				btnInfo.btnState = "enabled";
+		}
+		return btnInfo;
+	}, */
+
+	getQuesInfo: function () {
+		var quesInfo = {
+			// headerText: "",
+			activeQues: undefined,
+			// maxQues: undefined
+		};
+		// res = action.waitForDisplayed(this.player_header);
+		// if (res == true) {
+		// 	ret = res;
+		// 	logger.logInto(stackTrace.get(), " -- player_header is available");
+		// 	action.scrollIntoView(this.player_header)
+		// 	let ques_header = action.getText(this.player_header);
+		// 	//console.log(ques_header)
+		// 	ques_header = ques_header.trim();
+		// 	ques_header = ques_header.split('/');
+		// 	quesInfo.maxQues = Number(ques_header[1]);
+		// 	let headerText = ques_header[0].replace(/\d+/g, "");
+		// 	quesInfo.headerText = headerText.trim();
+
+		quesInfo.activeQues = action.getElementCount("div[class=\"item-player-container default-button-bar\"] > div");;
+		ret = quesInfo;
+		// }
+		// else {
+		// 	ret = res + " -- player_header is NOT available"
+		// 	logger.logInto(stackTrace.get(), ret, "error");
+		// }
+		return ret;
+	},
+
+	
 	// click_CheckMyWork: function () {
 	// 	logger.logInto(stackTrace.get());
 	// 	// this.expandTestPlayer();
@@ -277,114 +397,6 @@ module.exports = {
 	// 	return ret;
 	// },
 
-	getTestplayerInfo: function () {
-		var testplayerInfo = {
-			// headerText: "",
-			activeQues: "",
-			// maxQues: "",
-			// centerBtn: {},
-			// leftBtn: {},
-			// rightBtn: {}
-		};
-		var quesInfo = this.getQuesInfo();
-		// testplayerInfo.maxQues = quesInfo.maxQues
-		testplayerInfo.activeQues = quesInfo.activeQues
-		// testplayerInfo.headerText = quesInfo.headerText
-
-		// var centerButtonArr = [this.checkMyWork_btn, this.next_btn, this.finish_btn, this.closeReview_btn]; //close_review to be added
-		// for (var i = 0; i < centerButtonArr.length; i++) {
-		// 	res = this.getBtnInfo(centerButtonArr[i]);
-		// 	if (res.btn_datatid.includes('center')) {
-		// 		testplayerInfo.centerBtn.btnText = res.btnText;
-		// 		testplayerInfo.centerBtn.btnState = res.btnState;
-		// 		testplayerInfo.centerBtn.btnDatatid = res.btn_datatid;
-		// 		break;
-		// 	}
-		// }
-		// var LeftButtonArr = [this.previous_btn];
-		// for (var i = 0; i < LeftButtonArr.length; i++) {
-		// 	res = this.getBtnInfo(LeftButtonArr[i]);
-		// 	if (res.btn_datatid.includes('left')) {
-		// 		testplayerInfo.leftBtn.btnText = res.btnText;
-		// 		testplayerInfo.leftBtn.btnState = res.btnState;
-		// 		testplayerInfo.leftBtn.btnDatatid = res.btn_datatid;
-		// 		break;
-		// 	}
-		// }
-		// var RightButtonArr = [this.next_btn, this.tryAgain_btn, this.finish_btn];
-		// for (var i = 0; i < RightButtonArr.length; i++) {
-		// 	res = this.getBtnInfo(RightButtonArr[i]);
-		// 	if (res.btn_datatid.includes('right')) {
-		// 		testplayerInfo.rightBtn.btnText = res.btnText;
-		// 		testplayerInfo.rightBtn.btnState = res.btnState;
-		// 		testplayerInfo.rightBtn.btnDatatid = res.btn_datatid;
-		// 		break;
-		// 	}
-		// }
-		// if (testplayerInfo.centerBtn.btnText == undefined || testplayerInfo.centerBtn.btnState == undefined)
-		// 	logger.logInto(stackTrace.get(), "-- testplayer centerBtn is NOT available", "error");
-		// if (testplayerInfo.leftBtn.btnText == undefined || testplayerInfo.leftBtn.btnState == undefined)
-		// 	logger.logInto(stackTrace.get(), "-- testplayer leftBtn is NOT available", "error");
-		// if (testplayerInfo.rightBtn.btnText == undefined || testplayerInfo.rightBtn.btnState == undefined)
-		// 	logger.logInto(stackTrace.get(), "-- testplayer rightBtn is NOT available", "error");
-
-		// if (action.getElementCount(this.tpBottomPanelHidden) == 0 && action.isDisplayed(this.collapseBtn)) {
-		// 	res = action.click(this.collapseBtn);
-		// 	action.waitForDisplayed(this.tpBottomPanelHidden, undefined, true);
-		// }
-
-		return testplayerInfo;
-	},
-
-	/* getBtnInfo: function (selector) {
-		var btnInfo = {
-			btnText: "",
-			btnState: "",
-			btn_datatid: ""
-		}
-		this.expandTestPlayer();
-		if (action.getElementCount(selector) == 1) {
-			logger.logInto(stackTrace.get(), " -- " + selector + " Button is available");
-			action.waitForDisplayed(selector);
-			btnInfo.btn_datatid = action.getAttribute(selector, 'data-tid');
-			btnInfo.btnText = action.getText(selector);
-			let disabled = action.getAttribute(selector, 'disabled');
-			if (disabled == 'true')
-				btnInfo.btnState = "disabled";
-			else
-				btnInfo.btnState = "enabled";
-		}
-		return btnInfo;
-	}, */
-
-	getQuesInfo: function () {
-		var quesInfo = {
-			// headerText: "",
-			activeQues: undefined,
-			// maxQues: undefined
-		};
-		// res = action.waitForDisplayed(this.player_header);
-		// if (res == true) {
-		// 	ret = res;
-		// 	logger.logInto(stackTrace.get(), " -- player_header is available");
-		// 	action.scrollIntoView(this.player_header)
-		// 	let ques_header = action.getText(this.player_header);
-		// 	//console.log(ques_header)
-		// 	ques_header = ques_header.trim();
-		// 	ques_header = ques_header.split('/');
-		// 	quesInfo.maxQues = Number(ques_header[1]);
-		// 	let headerText = ques_header[0].replace(/\d+/g, "");
-		// 	quesInfo.headerText = headerText.trim();
-
-		quesInfo.activeQues = action.getElementCount("div[class=\"item-player-container default-button-bar\"] > div");;
-		ret = quesInfo;
-		// }
-		// else {
-		// 	ret = res + " -- player_header is NOT available"
-		// 	logger.logInto(stackTrace.get(), ret, "error");
-		// }
-		return ret;
-	},
 
 	/* getFeedbackInfo: function () {
 		var feedbackinfo = {
