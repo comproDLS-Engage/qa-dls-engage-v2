@@ -278,19 +278,19 @@ module.exports = {
 	// 	return ret;
 	// },
 
-	/*getTestplayerInfo: function () {
+	getTestplayerInfo: function () {
 		var testplayerInfo = {
-			headerText: "",
+			// headerText: "",
 			activeQues: "",
-			maxQues: "",
-			centerBtn: {},
-			leftBtn: {},
-			rightBtn: {}
+			// maxQues: "",
+			// centerBtn: {},
+			// leftBtn: {},
+			// rightBtn: {}
 		};
 		var quesInfo = this.getQuesInfo();
-		testplayerInfo.maxQues = quesInfo.maxQues
+		// testplayerInfo.maxQues = quesInfo.maxQues
 		testplayerInfo.activeQues = quesInfo.activeQues
-		testplayerInfo.headerText = quesInfo.headerText
+		// testplayerInfo.headerText = quesInfo.headerText
 
 		// var centerButtonArr = [this.checkMyWork_btn, this.next_btn, this.finish_btn, this.closeReview_btn]; //close_review to be added
 		// for (var i = 0; i < centerButtonArr.length; i++) {
@@ -337,7 +337,7 @@ module.exports = {
 		return testplayerInfo;
 	},
 
-	getBtnInfo: function (selector) {
+	/* getBtnInfo: function (selector) {
 		var btnInfo = {
 			btnText: "",
 			btnState: "",
@@ -356,38 +356,38 @@ module.exports = {
 				btnInfo.btnState = "enabled";
 		}
 		return btnInfo;
-	},
+	}, */
 
 	getQuesInfo: function () {
 		var quesInfo = {
-			headerText: "",
+			// headerText: "",
 			activeQues: undefined,
-			maxQues: undefined
+			// maxQues: undefined
 		};
-		res = action.waitForDisplayed(this.player_header);
-		if (res == true) {
-			ret = res;
-			logger.logInto(stackTrace.get(), " -- player_header is available");
-			action.scrollIntoView(this.player_header)
-			let ques_header = action.getText(this.player_header);
-			//console.log(ques_header)
-			ques_header = ques_header.trim();
-			ques_header = ques_header.split('/');
-			quesInfo.maxQues = Number(ques_header[1]);
-			let headerText = ques_header[0].replace(/\d+/g, "");
-			quesInfo.headerText = headerText.trim();
-			// quesInfo.activeQues = Number((ques_header[0].replace(/\D+/g, "")));
-			quesInfo.activeQues = "0";
-			ret = quesInfo;
-		}
-		else {
-			ret = res + " -- player_header is NOT available"
-			logger.logInto(stackTrace.get(), ret, "error");
-		}
+		// res = action.waitForDisplayed(this.player_header);
+		// if (res == true) {
+		// 	ret = res;
+		// 	logger.logInto(stackTrace.get(), " -- player_header is available");
+		// 	action.scrollIntoView(this.player_header)
+		// 	let ques_header = action.getText(this.player_header);
+		// 	//console.log(ques_header)
+		// 	ques_header = ques_header.trim();
+		// 	ques_header = ques_header.split('/');
+		// 	quesInfo.maxQues = Number(ques_header[1]);
+		// 	let headerText = ques_header[0].replace(/\d+/g, "");
+		// 	quesInfo.headerText = headerText.trim();
+
+		quesInfo.activeQues = action.getElementCount("div[class=\"item-player-container default-button-bar\"] > div");;
+		ret = quesInfo;
+		// }
+		// else {
+		// 	ret = res + " -- player_header is NOT available"
+		// 	logger.logInto(stackTrace.get(), ret, "error");
+		// }
 		return ret;
 	},
 
-	getFeedbackInfo: function () {
+	/* getFeedbackInfo: function () {
 		var feedbackinfo = {
 			fdbackText: "",
 			buttonText: "",
@@ -467,5 +467,5 @@ module.exports = {
 			//res = action.click(this.player_header);
 			//console.log("handle hidden")
 		}
-	}*/
+	} */
 };

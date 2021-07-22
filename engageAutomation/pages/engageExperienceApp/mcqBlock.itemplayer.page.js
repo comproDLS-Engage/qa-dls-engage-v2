@@ -13,8 +13,8 @@ module.exports = {
 
 	isInitialized: function (mcqbQuesData) {
 		logger.logInto(stackTrace.get(), "");
-		var qIndex = "0"
-		// itemplayer.switchMainFrame(0);
+		var qIndex = (testplayer.getQuesInfo()).activeQues - 1;
+		//  itemplayer.switchMainFrame(0);
 		let choiceSelector = "div[index='" + qIndex + "'] " + this.choice + mcqbQuesData[0][0] + "]";
 		res = action.getCSSProperty(choiceSelector, 'border-style');
 		if (res.value == 'solid') {
@@ -39,20 +39,15 @@ module.exports = {
 	},
 
 	clickOption: function (mcqbQuesData) {
-		// let qIndex = (testplayer.getQuesInfo()).activeQues - 1;
-		let qIndex = "0";
+		let qIndex = (testplayer.getQuesInfo()).activeQues - 1;
 		// testplayer.collapseTestPlayer();
 		// itemplayer.switchMainFrame(0);
 		for (let i = 0; i < mcqbQuesData.length; i++) {
 			let choiceSelector = "div[index='" + qIndex + "'] " + this.choice + mcqbQuesData[i][0] + "]";
-			console.log("choiceSelector : "  +choiceSelector)
 			res = action.getElementCount(choiceSelector);
-			console.log("res : "  +res);
 			if (res == 1) {
-				console.log("Inside IF 1");
 				logger.logInto(stackTrace.get(), " -- choice is available");
 				if (mcqbQuesData[i][2] == 'select') {
-					console.log("inside If 2");
 					res = action.click(choiceSelector);
 					if (true == res) {
 						logger.logInto(stackTrace.get(), " -- choice is clicked");
@@ -74,7 +69,7 @@ module.exports = {
 	},
 
 	getmcqbData: function (mcqbQuesData) {
-		itemplayer.switchParentFrame();
+		// itemplayer.switchParentFrame();
 		let quesNo = (testplayer.getQuesInfo()).activeQues - 1;
 		itemplayer.switchMainFrame(0);
 		var obj = [];
@@ -88,7 +83,7 @@ module.exports = {
 			else
 				obj[i] = [mcqbQuesData[i][0], action.getText(choiceSelector), "", value]
 		}
-		itemplayer.switchParentFrame();
+		// itemplayer.switchParentFrame();
 		return obj;
 	}
 }
