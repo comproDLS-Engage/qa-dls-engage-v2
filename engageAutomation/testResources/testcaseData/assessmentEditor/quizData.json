@@ -37,7 +37,7 @@
           "questionInstruction": "Listen to the audio carefully and choose the correct option of the given below question",
           "audioPath": "./testResources/testcaseData/assessmentEditor/media/Ringtone.mp3",
           "audioCredit": "Audio",
-          "questionText": "This is an iphone original ringtone"
+          "questionText": "Is this an iphone original ringtone?"
         }
       ],
       "MultipleResponse": [
@@ -121,7 +121,7 @@
           "questionTitle": "Question 8",
           "imagePath": "./testResources/testcaseData/assessmentEditor/media/WorldMap.jpg",
           "questionInstruction": "See the image and reorder the options in correct sequence.",
-          "questionText": "Identify the parts of the plants in the given options:",
+          "questionText": "Arrange the incidents in sequence",
           "options": [
             "Babur’s attack on India",
             "Akbar’s birth",
