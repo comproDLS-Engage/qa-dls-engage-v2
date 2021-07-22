@@ -18,6 +18,8 @@ var user = global.capabilitiesFile[argv.browserCapability].user;
 var key = global.capabilitiesFile[argv.browserCapability].key;
 var browserstackLocal = global.capabilitiesFile[argv.browserCapability].browserstackLocal;
 var updateJob = global.capabilitiesFile[argv.browserCapability].updateJob;
+var enableEyesLogs = global.capabilitiesFile[argv.browserCapability].enableEyesLogs;
+var eyes = global.capabilitiesFile[argv.browserCapability].eyes;
 
 // setting parameters for novus service
 var NovusService = [
@@ -75,6 +77,8 @@ exports.config = {
     user: user,
     key: key,
     browserstackLocal: browserstackLocal,
+    enableEyesLogs: enableEyesLogs,
+    eyes: eyes,
     //updateJob: updateJob,
     //
     // Override default path ('/wd/hub') for chromedriver service.
