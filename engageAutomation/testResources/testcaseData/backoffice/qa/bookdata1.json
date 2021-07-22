@@ -35,32 +35,59 @@
                 "coverImage": ""
             },
             {
-                "name": "QA Automation Test folder L2",
+                "name": "Automation Activity",
                 "coverImage": ""
             }
         ],
         "activity": [
             {
                 "type": "Native Engage Learning Object",
-                "name": "MCQ Question DND",
+                "name": "Native LO1",
                 "question": [
                     {
                       "number": 1,
                       "instruction": "",
-                      "text":"Question Text Here",
+                      "text":"Which organelle is called powerhouse of the cell?",
                       "type": "mcqb-single",
                       "maxOptions": 3,
                       "answerKey": [
-                        ["O1","Option A","select","correct"],
-                        ["O2","Option B","",""],
-                        ["O3","Option C","",""]
+                        ["O1","Mitochondria","select","correct"],
+                        ["O2","Nucleus","",""],
+                        ["O3","Golgi Bodies","",""],
+                        ["O4","Ribosomes","",""]
                       ],
                       "scenario1": [
-                        ["O1","Option A","",""],
-                        ["O2","Option B","select","incorrect"],
-                        ["O3","Option C","",""]
+                        ["O1","Mitochondria","",""],
+                        ["O2","Nucleus","select","incorrect"],
+                        ["O3","Golgi Bodies","",""],
+                        ["O4","Ribosomes","",""]
                       ]
-                    }
+                    },
+                    {
+                        "number": 4,
+                        "instruction": "",
+                        "text": "",
+                        "type": "FIB",
+                        "maxOptions": 4,
+                        "answerKey": [
+                          ["O1","","0","crow","correct"],
+                          ["O2","","1","thirsty","correct"],
+                          ["O3","","2","water","correct"],
+                          ["E4","","","",""]
+                        ],
+                        "scenario1": [
+                            ["O1","","2","crow","incorrect"],
+                            ["O2","","0","thirsty","incorrect"],
+                            ["O3","","1","water","incorrect"],
+                            ["E4","","","",""]
+                        ],
+                        "scenario2": [
+                            ["O1","","1","crow","incorrect"],
+                            ["O2","","0","thirsty","incorrect"],
+                            ["O3","","2","water","correct"],
+                            ["E4","","","",""]
+                        ]
+                      }
                 ]
             },
             {

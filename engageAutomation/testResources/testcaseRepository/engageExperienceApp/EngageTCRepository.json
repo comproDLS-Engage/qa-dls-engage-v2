@@ -764,14 +764,31 @@
             "testFile": "./test/engageExperienceApp/mcqBlock.test.js",
             "testcase": [
                 {
+                    "id": "ENG_ITEM_MCQB_TC_1",
+                    "description": "Validate UI of block MCQ question in unattempted state",
+                    "tags": ""
+                },
+                {
                     "id": "ENG_ITEM_MCQB_TC_5",
-                    "description": "Validate Block MCQ Question Functionality For Correct Scenario",
-                    "tags": "P1"
+                    "description": "Validate Block MCQ question functionality for correct scenario",
+                    "tags": ""
+                },
+                {
+                    "id": "ENG_ITEM_MCQB_TC_6",
+                    "description": "Validate Block MCQ question functionality for Incorrect scenario",
+                    "tags": "",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_ITEM_MCQB_TC_7",
+                    "description": "Validate Block MCQ question functionality with Try again",
+                    "tags": ""
                 },
                 {
                     "id": "ENG_ITEM_MCQB_TC_8",
                     "description": "Validate Block MCQ question selected option",
-                    "tags": "P1"
+                    "tags": "",
+                    "visualTest": true
                 }
             ]
         },
@@ -808,6 +825,50 @@
                 {
                     "id": "ENG_QUIZ_TC_3",
                     "description": "Validate the test player when user click Reset",
+                    "tags": "P1"
+                }
+            ]
+        },
+        {
+            "modulename": "Item Player - FIB",
+            "moduledetails": "",
+            "testFile": "./test/engageExperienceApp/FIB.test.js",
+            "testcase": [
+                {
+                    "id": "ENG_ITEM_FIB_TC_3",
+                    "description": "Validate FIB Question Functionality Using Drag & Drop Option",
+                    "tags": "",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_ITEM_FIB_TC_7",
+                    "description": "Validate FIB Question for correct scenario",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_ITEM_FIB_TC_8",
+                    "description": "Validate FIB Question for partial scenario",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_ITEM_FIB_TC_9",
+                    "description": "Validate FIB Question for complete incorrect scenario",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_ITEM_FIB_TC_13",
+                    "description": "Validate FIB Question Functionality Using Click Option",
+                    "tags": ""
+                },
+                {
+                    "id": "ENG_ITEM_FIB_TC_19",
+                    "description": "Validate that the user responses are retained in DND after clicking try again",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_ITEM_FIB_TC_20",
+                    "description": "Validate FIB Drag and Drop question is launched",
                     "tags": "P1"
                 }
             ]

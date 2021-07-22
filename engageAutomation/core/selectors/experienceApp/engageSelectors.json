@@ -238,6 +238,17 @@
 				"choice": "div[data-tid=input-click-option-",
 				"choices": "div[data-tid*=input-click-option-]",
 				"selectedChoice": "svg[data-tid=icon-selected]"
+			},
+			"FIB": {
+				"source": "[data-tid=dragsource-option-",
+				"target": "[data-tid=droptarget-option-"
+			},
+			"dragAndDrop": {
+				"source": "[data-tid=dragsource-option-",
+				"target": "[data-tid=droptarget-option-",
+				"tapToZoom": "[data-tid='button-taptozoom']",
+				"zoomOverlay": "[class*='zoom-overlay']",
+				"zoomDialogClose_btn": "[data-tid='button-zoomdialogclose']"
 			}
 		}
 	}
