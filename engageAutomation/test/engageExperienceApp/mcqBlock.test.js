@@ -19,8 +19,6 @@ module.exports = {
 	//Validate Block MCQ Question Functionality For Correct Scenario
 	ENG_ITEM_MCQB_TC_5: function (testdata) {
 		sts = mcqbPage.isInitialized(testdata);
-		console.log(JSON.stringify(sts));
-		console.log(JSON.stringify("Testdata: ") +  testdata);
 		if ((typeof (sts)) === "object") {
 			for (var i = 0; i < sts.length; i++) {
 				assertion.assertEqual(sts[i][3], testdata[i][3], "MCQB data for index " + i + " is - " + sts[i]);

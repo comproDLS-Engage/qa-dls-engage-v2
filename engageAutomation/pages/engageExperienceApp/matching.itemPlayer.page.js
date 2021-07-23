@@ -13,7 +13,7 @@ module.exports = {
     isInitialized: function (matchingQuesData) {
         logger.logInto(stackTrace.get());
         var quesNo = (testplayer.getQuesInfo()).activeQues;
-        itemplayer.switchMainFrame(0);
+        // itemplayer.switchMainFrame(0);
         matchingQuesData.leftData = this.getLeftData(quesNo - 1, matchingQuesData);
         matchingQuesData.rightData = this.getRightData(quesNo - 1, matchingQuesData);
         // itemplayer.switchParentFrame();
@@ -49,7 +49,7 @@ module.exports = {
 
     matchingClick: function (matchingQuesData) {
         qIndex = ((testplayer.getQuesInfo()).activeQues) - 1;
-        itemplayer.switchMainFrame(0);
+        // itemplayer.switchMainFrame(0);
         var leftPath, rightPath, i;
         for (i = 0; i < matchingQuesData.length; i++) {
             leftPath = "div[index='" + qIndex + "'] " + this.left + matchingQuesData[i][0] + "]";

@@ -42,7 +42,7 @@ module.exports = {
 			incorrectCount: undefined,
 			feedback: {},
 		};
-				this.switchMainFrame(0);
+				// this.switchMainFrame(0);
 
 		let testplayerInfo = testplayer.isInitialized();
 		

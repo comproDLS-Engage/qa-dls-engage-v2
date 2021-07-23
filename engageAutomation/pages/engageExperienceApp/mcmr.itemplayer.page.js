@@ -15,7 +15,7 @@ module.exports = {
 	isInitialized: function (mcmrQuesData) {
 		var qIndex = (testplayer.getQuesInfo()).activeQues - 1;
 		console.log("qIndex: " + qIndex);
-		itemplayer.switchMainFrame(0);
+		// itemplayer.switchMainFrame(0);
 		let choiceSelector = "div[index='" + qIndex + "'] " + this.choice + mcmrQuesData[2][0] + "]";
 		res = action.getCSSProperty(choiceSelector, 'border-style');
 		if (res.value == 'solid') {

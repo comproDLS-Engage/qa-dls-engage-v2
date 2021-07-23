@@ -21,7 +21,7 @@ module.exports = {
 	//Validate the test player when quiz is launched and question is not performed
 	ENG_QUIZ_TC_2: function (testdata) {
 		sts = itemPlayer.isInitialized();
-		console.log(sts);
+		// console.log(sts);
 		// assertion.assertEqual(sts.question.quesText, testdata, "Question text mismatch");
 		// if ((typeof (sts)) === "object") {
 		// 	if (sts.question.quesType.includes("order-list"))
@@ -43,7 +43,7 @@ module.exports = {
 	//Validate the test player when Reset is clicked
 	ENG_QUIZ_TC_3: function (testdata) {
 		sts = testPlayerPage.click_Reset();
-		console.log(sts);
+		// console.log(sts);
 		// assertion.assertEqual(sts.question.quesText, testdata, "Question text mismatch");
 		// if ((typeof (sts)) === "object") {
 		// 	if (sts.question.quesType.includes("order-list"))
@@ -64,7 +64,7 @@ module.exports = {
 	//Validate the test player when user perform "Try Again" in the last Question of the quiz.
 	ENG_QUIZ_TC_5: function () {
 		sts = testPlayerPage.click_TryAgain();
-		console.log(sts);
+		// console.log(sts);
 		// if ((typeof (sts)) === "object") {
 		// 	assertion.assertEqual(sts.centerBtn.btnState, 'enabled', "Center button state mismatch");
 		// 	assertion.assertEqual(sts.leftBtn.btnState, 'enabled', "Left button state mismatch");
@@ -104,7 +104,7 @@ module.exports = {
 	//Validate the test player when user perform "Check My Work" in the first Question of the quiz.
 	ENG_QUIZ_TC_13: function () {
 		sts = testPlayerPage.click_CheckMyWork();
-		console.log(sts);
+		// console.log(sts);
 		// if ((typeof (sts)) === "object") {
 		// 	assertion.assertEqual(sts.centerBtn.btnState, 'enabled', "Center button state mismatch");
 		// 	assertion.assertEqual(sts.leftBtn.btnState, 'disabled', "Left button state mismatch");
@@ -123,7 +123,7 @@ module.exports = {
 	//Validate the test player when user click Previous button in the second question.
 	ENG_QUIZ_TC_20: function () {
 		sts = testPlayerPage.click_Previous();
-		console.log(sts);
+		// console.log(sts);
 		// if ((typeof (sts)) === "object") {
 		// 	if (sts.question.quesType.includes("order-list"))
 		// 		assertion.assertEqual(sts.centerBtn.btnState, 'enabled', "Center button state mismatch");

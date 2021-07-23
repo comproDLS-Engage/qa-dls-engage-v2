@@ -244,7 +244,7 @@ module.exports = {
 		// 	let headerText = ques_header[0].replace(/\d+/g, "");
 		// 	quesInfo.headerText = headerText.trim();
 
-		quesInfo.activeQues = action.getElementCount("div[class=\"item-player-container default-button-bar\"] > div");;
+		quesInfo.activeQues = action.getElementCount("div[class=\"item-player-container default-button-bar\"] > div");
 		ret = quesInfo;
 		// }
 		// else {

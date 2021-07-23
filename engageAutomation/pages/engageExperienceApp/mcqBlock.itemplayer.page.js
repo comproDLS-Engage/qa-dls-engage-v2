@@ -71,7 +71,7 @@ module.exports = {
 	getmcqbData: function (mcqbQuesData) {
 		// itemplayer.switchParentFrame();
 		let quesNo = (testplayer.getQuesInfo()).activeQues - 1;
-		itemplayer.switchMainFrame(0);
+		// itemplayer.switchMainFrame(0);
 		var obj = [];
 		for (let i = 0; i < mcqbQuesData.length; i++) {
 			let choiceSelector = "div[index='" + (quesNo) + "'] " + this.choice + mcqbQuesData[i][0] + "]"

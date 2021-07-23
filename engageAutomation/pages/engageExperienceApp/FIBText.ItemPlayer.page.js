@@ -22,7 +22,7 @@ module.exports = {
 
     getTargetData: function (qIndex, fibQuesData) {
         logger.logInto(stackTrace.get());
-        itemplayer.switchMainFrame(0);
+        // itemplayer.switchMainFrame(0);
         let option = "div[index='" + qIndex + "'] " + this.responses;
         var targetArr = [];
         let optionLength = action.findElements(option).length;
@@ -38,12 +38,12 @@ module.exports = {
     inputValues: function (fibQuesData) {
         logger.logInto(stackTrace.get());
         quesNo = ((testplayer.getQuesInfo()).activeQues) - 1;
-        itemplayer.switchMainFrame(0);
+        // itemplayer.switchMainFrame(0);
         for (let i = 0; i < fibQuesData.length; i++) {
             var textSelector = "div[index='" + quesNo + "'] " + this.response + fibQuesData[i][0] + "] [data-tid=text-placeholder]";
             //itemplayer.switchParentFrame();
-            testplayer.collapseTestPlayer();
-            itemplayer.switchMainFrame(0);
+            // testplayer.collapseTestPlayer();
+            // itemplayer.switchMainFrame(0);
             res = action.click(textSelector);
             browser.pause(250);
             if (true == res) {

@@ -24,7 +24,7 @@ module.exports = {
             tapToZoom_exists: undefined
         };
         var quesNo = (testplayer.getQuesInfo()).activeQues;
-        itemplayer.switchMainFrame(0);
+        // itemplayer.switchMainFrame(0);
         dndData.sourceData = this.getSourceData(quesNo - 1, dndQuesData);
         dndData.targetData = this.getTargetData(quesNo - 1, dndQuesData);
         dndData.tapToZoom_exists = action.isDisplayed(this.tapToZoom);
@@ -67,7 +67,7 @@ module.exports = {
 
     dragAndDrop: function (dndQuesData) {
         qIndex = ((testplayer.getQuesInfo()).activeQues) - 1;
-        itemplayer.switchMainFrame(0);
+        // itemplayer.switchMainFrame(0);
         for (var i = 0; i < dndQuesData.length; i++) {
             srcPath = "div[index='" + qIndex + "'] " + this.source + dndQuesData[i][0] + "]";
             targetPath = "div[index='" + qIndex + "'] " + this.target + dndQuesData[i][2] + "]"
@@ -85,7 +85,7 @@ module.exports = {
 
     dragAndDropClick: function (dndQuesData) {
         qIndex = ((testplayer.getQuesInfo()).activeQues) - 1;
-        itemplayer.switchMainFrame(0);
+        // itemplayer.switchMainFrame(0);
         for (var i = 0; i < dndQuesData.length; i++) {
             srcPath = "div[index='" + qIndex + "'] " + this.source + dndQuesData[i][0] + "]";
             targetPath = "div[index='" + qIndex + "'] " + this.target + dndQuesData[i][2] + "]"
@@ -109,7 +109,7 @@ module.exports = {
 
     clickTaptoZoom: function () {
         qIndex = (testplayer.getQuesInfo()).activeQues - 1;
-        itemplayer.switchMainFrame(0);
+        // itemplayer.switchMainFrame(0);
         res = action.click("div[index='" + qIndex + "'] " + this.tapToZoom)
         if (res == true) {
             res = action.waitForDisplayed("div[index='" + qIndex + "'] " + this.zoomOverlay);
@@ -124,7 +124,7 @@ module.exports = {
 
     closeZoom: function () {
         var qIndex = (testplayer.getQuesInfo()).activeQues - 1;
-        itemplayer.switchMainFrame(0);
+        // itemplayer.switchMainFrame(0);
         res = action.click("div[index='" + qIndex + "'] " + this.zoomDialogClose_btn)
         itemplayer.switchParentFrame();
         if (res == true) {
@@ -139,7 +139,7 @@ module.exports = {
 
     dragAndDropZoomDropDown: function (dndQuesData) {
         qIndex = ((testplayer.getQuesInfo()).activeQues) - 1;
-        itemplayer.switchMainFrame(0);
+        // itemplayer.switchMainFrame(0);
         for (var i = 0; i < dndQuesData.length; i++) {
             targetPath = "div[index='" + qIndex + "'] " + this.target + dndQuesData[i][2] + "] select";
             res = action.selectByAttribute(targetPath, 'value', dndQuesData[i][0]);
@@ -151,7 +151,7 @@ module.exports = {
                 logger.logInto(stackTrace.get(), res, 'error');
             }
         }
-        itemplayer.switchParentFrame();
+        // itemplayer.switchParentFrame();
         return res;
     }
 }

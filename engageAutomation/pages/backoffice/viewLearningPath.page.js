@@ -99,6 +99,7 @@ module.exports = {
             res = "activity \"" + name + "\" not found";
         }
         logger.logInto(stackTrace.get(), res);
+        action.switchToFrame(0);
         return res;
     },
 

@@ -127,13 +127,13 @@
                         "instruction":"Fill in the below blanks with the correct answer.",
                         "text": "",
                         "type": "FIB",
-                        "maxOptions": 2,
+                        "maxOptions": 5,
                         "answerKey":[
                           ["A","had happened","correct"],
                           ["B","had gone","correct"],
                           ["C","were","correct"],
                           ["D","were left","correct"],
-                          ["E","were","correct"]
+                          ["E","had","correct"]
                         ],
                         "scenario1":[
                             ["A","happened","incorrect"],

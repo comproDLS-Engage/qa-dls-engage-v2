@@ -882,7 +882,7 @@
         {
             "modulename": "Item Player - FIB Text",
             "moduledetails": "",
-            "testFile": "FIBText.test.js",
+            "testFile": "./test/engageExperienceApp/FIBText.test.js",
             "testcase": [
                 {
                     "id": "ENG_ITEM_FIBTEXT_TC_2",
