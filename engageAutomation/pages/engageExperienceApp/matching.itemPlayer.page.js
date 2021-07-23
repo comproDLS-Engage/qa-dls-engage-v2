@@ -16,7 +16,7 @@ module.exports = {
         itemplayer.switchMainFrame(0);
         matchingQuesData.leftData = this.getLeftData(quesNo - 1, matchingQuesData);
         matchingQuesData.rightData = this.getRightData(quesNo - 1, matchingQuesData);
-        itemplayer.switchParentFrame();
+        // itemplayer.switchParentFrame();
         return matchingQuesData;
     },
 
@@ -62,7 +62,7 @@ module.exports = {
                 logger.logInto(stackTrace.get(), res, 'error');
             }
         }
-        itemplayer.switchParentFrame();
+        // itemplayer.switchParentFrame();
         return res;
     },
 

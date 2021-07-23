@@ -3,7 +3,7 @@
         "book": [
             {
                 "type": "Book",
-                "name": "Quality Test Book 9",
+                "name": "Quality Test Book 5",
                 "coverImage": "./testResources/testcaseData/backOffice/qa/book_cover_compro_qa.png",
                 "description": "QA automation test description"
             }
@@ -12,7 +12,7 @@
             {
                 "type": "Learning Path",
                 "category": "Textbook",
-                "title": "Component 1",
+                "title": "Component for final validation",
                 "folderLevel": "3",
                 "autonumbering": "1-based"
             },
@@ -31,11 +31,11 @@
         ],
         "folder": [
             {
-                "name": "Folder 1",
+                "name": "QA Automation Test folder L1",
                 "coverImage": ""
             },
             {
-                "name": "Automation Activity",
+                "name": "QA Automation Test folder L2",
                 "coverImage": ""
             }
         ],

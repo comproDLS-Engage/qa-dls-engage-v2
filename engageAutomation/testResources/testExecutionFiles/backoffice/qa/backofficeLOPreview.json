@@ -2,7 +2,8 @@
     "Suite1": {
         "Name": "Preview of native LO with all item players",
         "TestCaseRepo": [
-            "./testResources/testcaseRepository/backOffice/backOfficeTCRepository.json","./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
+            "./testResources/testcaseRepository/backOffice/backOfficeTCRepository.json",
+            "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
         ],
         "Before": [
             {
@@ -136,20 +137,22 @@
                 "description": "",
                 "testFile": "./test/engageExperienceApp/mcmr.test.js",
                 "testData": [
-                {
-                    "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata1.json",
-                    "jsonPath": "backoffice.activity[0].question[1].answerKey"
-                }]
+                    {
+                        "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata1.json",
+                        "jsonPath": "backoffice.activity[0].question[1].answerKey"
+                    }
+                ]
             },
             {
                 "id": "ENG_ITEM_MCMR_TC_3",
                 "description": "",
                 "testFile": "./test/engageExperienceApp/mcmr.test.js",
                 "testData": [
-                {
-                    "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata1.json",
-                    "jsonPath": "backoffice.activity[0].question[1].answerKey"
-                }]
+                    {
+                        "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata1.json",
+                        "jsonPath": "backoffice.activity[0].question[1].answerKey"
+                    }
+                ]
             },
             {
                 "id": "ENG_QUIZ_TC_13",
@@ -162,16 +165,11 @@
                 "description": "",
                 "testFile": "./test/engageExperienceApp/mcmr.test.js",
                 "testData": [
-                {
-                    "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata1.json",
-                    "jsonPath": "backoffice.activity[0].question[1].answerKey"
-                }]
-            },
-            {
-                "id": "ENG_QUIZ_TC_6",
-                "description": "",
-                "testFile": "./test/engageExperienceApp/testPlayer.test.js",
-                "testData": []
+                    {
+                        "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata1.json",
+                        "jsonPath": "backoffice.activity[0].question[1].answerKey"
+                    }
+                ]
             },
             {
                 "id": "ENG_QUIZ_TC_6",
@@ -190,20 +188,22 @@
                 "description": "",
                 "testFile": "./test/engageExperienceApp/FIB.test.js",
                 "testData": [
-                {
-                    "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata1.json",
-                    "jsonPath": "backoffice.activity[0].question[2]"
-                }]
+                    {
+                        "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata1.json",
+                        "jsonPath": "backoffice.activity[0].question[2]"
+                    }
+                ]
             },
             {
                 "id": "ENG_ITEM_FIB_TC_13",
                 "description": "",
                 "testFile": "./test/engageExperienceApp/FIB.test.js",
                 "testData": [
-                {
-                    "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata1.json",
-                    "jsonPath": "backoffice.activity[0].question[2].scenario1"
-                }]
+                    {
+                        "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata1.json",
+                        "jsonPath": "backoffice.activity[0].question[2].scenario1"
+                    }
+                ]
             },
             {
                 "id": "ENG_QUIZ_TC_13",
@@ -216,11 +216,63 @@
                 "description": "",
                 "testFile": "./test/engageExperienceApp/FIB.test.js",
                 "testData": [
-                {
-                    "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata1.json",
-                    "jsonPath": "backoffice.activity[0].question[2].scenario1"
-                }]
+                    {
+                        "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata1.json",
+                        "jsonPath": "backoffice.activity[0].question[2].scenario1"
+                    }
+                ]
             },
+            {
+                "id": "ENG_QUIZ_TC_6",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/testPlayer.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_QUIZ_TC_6",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/testPlayer.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_ITEM_MATCH_TC_1",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/matching.test.js",
+                "testData": [
+                  {
+                    "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata1.json",
+                    "jsonPath": "backoffice.activity[0].question[3]"
+                  }
+                ]
+              },
+              {
+                "id": "ENG_ITEM_MATCH_TC_2",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/matching.test.js",
+                "testData": [
+                  {
+                    "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata1.json",
+                    "jsonPath": "backoffice.activity[0].question[3].answerKey"
+                  }
+                ]
+              },
+              {
+                "id": "ENG_QUIZ_TC_13",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/testPlayer.test.js",
+                "testData": []
+              },
+              {
+                "id": "ENG_ITEM_MATCH_TC_5",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/matching.test.js",
+                "testData": [
+                  {
+                    "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata1.json",
+                    "jsonPath": "backoffice.activity[0].question[3].answerKey"
+                  }
+                ]
+              },
             {
                 "id": "BK_TC_26",
                 "description": "",
