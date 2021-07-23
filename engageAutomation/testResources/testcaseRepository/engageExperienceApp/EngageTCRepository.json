@@ -880,6 +880,44 @@
             ]
         },
         {
+            "modulename": "Item Player - FIB Text",
+            "moduledetails": "",
+            "testFile": "FIBText.test.js",
+            "testcase": [
+                {
+                    "id": "ENG_ITEM_FIBTEXT_TC_2",
+                    "description": "Validate FIB text question is launched",
+                    "tags": ""
+                },
+                {
+                    "id": "ENG_ITEM_FIBTEXT_TC_3",
+                    "description": "Validate that user is able to click in the text placeholders and type the desired text in the FIB text question",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_ITEM_FIBTEXT_TC_4",
+                    "description": "Validate that the user responses are retained in the FIB text question after clicking try again",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_ITEM_FIBTEXT_TC_5",
+                    "description": "Validate FIB Text Question for correct scenario",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_ITEM_FIBTEXT_TC_6",
+                    "description": "Validate FIB Text Question for partial scenario",
+                    "tags": ""
+                },
+                {
+                    "id": "ENG_ITEM_FIBTEXT_TC_7",
+                    "description": "Validate FIB Text Question for incorrect scenario",
+                    "tags": "P1"
+                }
+            ]
+        },
+        {
             "modulename": "Item Player - MCMR",
             "moduledetails": "",
             "testFile": "./test/engageExperienceApp/mcmr.test.js",

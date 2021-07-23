@@ -243,6 +243,10 @@
 				"source": "[data-tid=dragsource-option-",
 				"target": "[data-tid=droptarget-option-"
 			},
+			"FIBText": {
+				"response": "[data-tid=input-response-",
+				"responses": "[data-tid*='input-response']"
+			},
 			"dragAndDrop": {
 				"source": "[data-tid=dragsource-option-",
 				"target": "[data-tid=droptarget-option-",

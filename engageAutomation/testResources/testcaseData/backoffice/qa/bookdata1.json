@@ -121,6 +121,34 @@
                             ["O2","","0","thirsty","incorrect"],
                             ["O3","","2","water","correct"]
                         ]
+                    },
+                    {
+                        "number": 5,
+                        "instruction":"Fill in the below blanks with the correct answer.",
+                        "text": "",
+                        "type": "FIB",
+                        "maxOptions": 2,
+                        "answerKey":[
+                          ["A","had happened","correct"],
+                          ["B","had gone","correct"],
+                          ["C","were","correct"],
+                          ["D","were left","correct"],
+                          ["E","were","correct"]
+                        ],
+                        "scenario1":[
+                            ["A","happened","incorrect"],
+                            ["B","went","incorrect"],
+                            ["C","","incorrect"],
+                            ["D","left","incorrect"],
+                            ["E","is","incorrect"]
+                          ],
+                        "scenario2":[
+                            ["A","happened","incorrect"],
+                            ["B","had gone","incorrect"],
+                            ["C","","incorrect"],
+                            ["D","were ","correct"],
+                            ["E","where","incorrect"]
+                          ]
                       },
                       {
                         "number": 6,
