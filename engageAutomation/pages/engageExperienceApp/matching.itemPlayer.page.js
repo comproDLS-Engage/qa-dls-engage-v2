@@ -23,12 +23,13 @@ module.exports = {
     getLeftData: function (qIndex, matchingQuesData) {
         logger.logInto(stackTrace.get());
         var leftMap = [];
-        let leftSelector, i;
+        let leftSelector, i, leftSelectorIcon;
         let option = "div[index='" + qIndex + "'] " + this.left;
         let optionLength = action.findElements(option).length;
         for (i = 0; i < optionLength; i++) {
-            leftSelector = "div[index='" + qIndex + "'] " + this.left + matchingQuesData[i][0] + "]"
-            value = itemplayer.getFeedbackIconDetails(leftSelector);
+            leftSelector = "div[index='" + qIndex + "'] " + this.left + matchingQuesData[i][0] + "] div[id=" +matchingQuesData[i][0] + "label]";
+            leftSelectorIcon = "div[index='" + qIndex + "'] " + this.left + matchingQuesData[i][0] + "]";
+            value = itemplayer.getFeedbackIconDetails(leftSelectorIcon);
             leftMap[i] = [matchingQuesData[i][0], action.getText(leftSelector), value];
         }
         return leftMap;
@@ -41,7 +42,7 @@ module.exports = {
         let option = "div[index='" + qIndex + "'] " + this.right;
         let optionLength = action.findElements(option).length;
         for (i = 0; i < optionLength; i++) {
-            rightSelector = "div[index='" + qIndex + "'] " + this.right + matchingQuesData[i][2] + "]"
+            rightSelector = "div[index='" + qIndex + "'] " + this.right + matchingQuesData[i][2] + "] div[id=" +matchingQuesData[i][2] + "label]";
             rightMap[i] = [matchingQuesData[i][2], action.getText(rightSelector)];
         }
         return rightMap;

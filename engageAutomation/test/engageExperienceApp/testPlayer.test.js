@@ -81,7 +81,7 @@ module.exports = {
 	//Validate The Test Player When User Click "Next Question" Button After Performing Check My Work
 	ENG_QUIZ_TC_6: function (testdata) {
 		sts = testPlayerPage.click_Skip();
-		console.log(sts);
+		console.log(JSON.stringify(sts));
 		// if ((typeof (sts)) === "object") {
 		// 	if (sts.question.quesType.includes("order-list"))
 		// 		assertion.assertEqual(sts.centerBtn.btnState, 'enabled', "Center button state mismatch");

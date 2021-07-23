@@ -74,8 +74,6 @@ module.exports = {
         sts = FIBDragandDrop.isInitialized(testdata.answerKey);
         assertion.assertEqual(sts.sourceData.length, testdata.maxOptions, "Draggable option count mismatch");
         for (var i = 0; i < sts.sourceData.length; i++) {
-            console.log(i+ "    sts.targetData[i][1]    " + sts.targetData[i][1]);
-            console.log(i+ "    sts.targetData[i][1]    " + sts.targetData[i][2]);
             assertion.assertEqual(sts.targetData[i][1], "", "Target text mismatch for " + sts.targetData[i]);
             assertion.assertEqual(sts.targetData[i][2], "", "Status mismatch for " + sts.targetData[i]);
         }
