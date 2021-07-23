@@ -75,7 +75,6 @@ module.exports = {
     ENG_ITEM_DND_TC_20: function (testdata) {
         sts = dragAndDrop.isInitialized(testdata.answerKey);
         assertion.assertEqual(sts.sourceData.length, testdata.maxOptions, "Draggable option count mismatch");
-        console.log(sts)
         for (var i = 0; i < sts.sourceData.length; i++) {
            // assertion.assertEqual(sts.targetData[i][1], "", "Target text mismatch for " + sts.targetData[i]);
            // assertion.assertEqual(sts.targetData[i][2], "", "Status mismatch for " + sts.targetData[i]);

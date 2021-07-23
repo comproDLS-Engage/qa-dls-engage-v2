@@ -177,7 +177,45 @@
                 "testFile": "./test/engageExperienceApp/testPlayer.test.js",
                 "testData": []
             },
-
+            {
+                "id": "ENG_ITEM_MCQB_TC_1",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/mcqBlock.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata1.json",
+                        "jsonPath": "backoffice.activity[0].question[2].answerKey"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_ITEM_MCQB_TC_8",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/mcqBlock.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata1.json",
+                        "jsonPath": "backoffice.activity[0].question[2].answerKey"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_QUIZ_TC_13",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/testPlayer.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_ITEM_MCQB_TC_5",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/mcqBlock.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata1.json",
+                        "jsonPath": "backoffice.activity[0].question[2].answerKey"
+                    }
+                ]
+            },
             {
                 "id": "ENG_QUIZ_TC_6",
                 "description": "",
@@ -191,7 +229,7 @@
                 "testData": [
                     {
                         "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata1.json",
-                        "jsonPath": "backoffice.activity[0].question[6]"
+                        "jsonPath": "backoffice.activity[0].question[3]"
                     }
                 ]
             },
@@ -202,7 +240,7 @@
                 "testData": [
                     {
                         "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata1.json",
-                        "jsonPath": "backoffice.activity[0].question[6].answerKey"
+                        "jsonPath": "backoffice.activity[0].question[3].answerKey"
                     }
                 ]
             },
@@ -219,7 +257,7 @@
                 "testData": [
                     {
                         "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata1.json",
-                        "jsonPath": "backoffice.activity[0].question[6].answerKey"
+                        "jsonPath": "backoffice.activity[0].question[3].answerKey"
                     }
                 ]
             },
@@ -234,22 +272,20 @@
                 "description": "",
                 "testFile": "./test/engageExperienceApp/FIB.test.js",
                 "testData": [
-                    {
-                        "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata1.json",
-                        "jsonPath": "backoffice.activity[0].question[2]"
-                    }
-                ]
+                {
+                    "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata1.json",
+                    "jsonPath": "backoffice.activity[0].question[4]"
+                }]
             },
             {
-                "id": "ENG_ITEM_FIB_TC_13",
+                "id": "ENG_ITEM_FIB_TC_3",
                 "description": "",
                 "testFile": "./test/engageExperienceApp/FIB.test.js",
                 "testData": [
-                    {
-                        "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata1.json",
-                        "jsonPath": "backoffice.activity[0].question[2].scenario1"
-                    }
-                ]
+                {
+                    "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata1.json",
+                    "jsonPath": "backoffice.activity[0].question[4].answerKey"
+                }]
             },
             {
                 "id": "ENG_QUIZ_TC_13",
@@ -258,15 +294,14 @@
                 "testData": []
             },
             {
-                "id": "ENG_ITEM_FIB_TC_9",
+                "id": "ENG_ITEM_FIB_TC_7",
                 "description": "",
                 "testFile": "./test/engageExperienceApp/FIB.test.js",
                 "testData": [
-                    {
-                        "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata1.json",
-                        "jsonPath": "backoffice.activity[0].question[2].scenario1"
-                    }
-                ]
+                {
+                    "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata1.json",
+                    "jsonPath": "backoffice.activity[0].question[4].answerKey"
+                }]
             },
             {
                 "id": "ENG_QUIZ_TC_6",
@@ -281,7 +316,7 @@
                 "testData": [
                     {
                         "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata1.json",
-                        "jsonPath": "backoffice.activity[0].question[3]"
+                        "jsonPath": "backoffice.activity[0].question[5]"
                     }
                 ]
             },
@@ -292,7 +327,7 @@
                 "testData": [
                     {
                         "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata1.json",
-                        "jsonPath": "backoffice.activity[0].question[3].answerKey"
+                        "jsonPath": "backoffice.activity[0].question[5].answerKey"
                     }
                 ]
             },
@@ -309,7 +344,7 @@
                 "testData": [
                     {
                         "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata1.json",
-                        "jsonPath": "backoffice.activity[0].question[3].answerKey"
+                        "jsonPath": "backoffice.activity[0].question[5].answerKey"
                     }
                 ]
             },
@@ -319,7 +354,6 @@
                 "testFile": "./test/engageExperienceApp/testPlayer.test.js",
                 "testData": []
             },
-
             {
                 "id": "ENG_ITEM_MATCH_TC_1",
                 "description": "",
@@ -327,7 +361,7 @@
                 "testData": [
                     {
                         "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata1.json",
-                        "jsonPath": "backoffice.activity[0].question[4]"
+                        "jsonPath": "backoffice.activity[0].question[6]"
                     }
                 ]
             },
@@ -338,7 +372,7 @@
                 "testData": [
                     {
                         "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata1.json",
-                        "jsonPath": "backoffice.activity[0].question[4].answerKey"
+                        "jsonPath": "backoffice.activity[0].question[6].answerKey"
                     }
                 ]
             },
@@ -355,7 +389,7 @@
                 "testData": [
                     {
                         "dataFile": "./testResources/testcaseData/backOffice/qa/bookdata1.json",
-                        "jsonPath": "backoffice.activity[0].question[4].answerKey"
+                        "jsonPath": "backoffice.activity[0].question[6].answerKey"
                     }
                 ]
             },
@@ -410,7 +444,6 @@
                 "testFile": "./test/engageExperienceApp/testPlayer.test.js",
                 "testData": []
             },
-         
             {
                 "id": "ENG_QUIZ_TC_6",
                 "description": "",

@@ -6,7 +6,6 @@ var sts, sts1;
 module.exports = {
     //Validate that user is able to place option pill inside the Group using drag and drop
     ENG_ITEM_CLA_TC_2: function (testdata) {
-        console.log(testdata)
         sts = classify.dragAndDrop(testdata);
         assertion.assertEqual(sts, true, sts);
         sts1 = classify.isInitialized(testdata);

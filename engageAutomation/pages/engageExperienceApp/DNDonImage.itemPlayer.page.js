@@ -36,12 +36,9 @@ module.exports = {
         logger.logInto(stackTrace.get());
         var sourceMap = [];
         let option = "div[index='" + qIndex + "'] " + "[data-tid*='source-option']";
-        console.log("options:  "  + option);
         let optionLength = action.findElements(option).length;
-        console.log("optionLength : " + optionLength);
         for (let i = 0; i < optionLength; i++) {
             sourceMap[i] = [dndQuesData[i][0], action.getText("div[index='" + qIndex + "'] " + this.source + dndQuesData[i][0] + "] div")];
-            console.log("sourceMap[i] : "  + i  + " ... "  + sourceMap[i]);
         }
         return sourceMap;
     },
@@ -49,9 +46,7 @@ module.exports = {
     getTargetData: function (qIndex, dndQuesData) {
         let option = "div[index='" + qIndex + "'] " + "[data-tid*='target-option']";
         var targetMap = [];
-        console.log(option)
         let optionLength = action.findElements(option).length;
-        console.log(optionLength)
         for (let i = 0; i < optionLength; i++) {
             var dndSelector = "div[index='" + qIndex + "'] " + this.target + dndQuesData[i][2] + "] ";
             var dndSelectorText = dndSelector + "[data-tid=text-placeholder]";
