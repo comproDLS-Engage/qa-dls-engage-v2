@@ -3,11 +3,11 @@
         "appContent": {
             "language": "ES - Español",
             "landing": {
-                "headingText": "Un espacio para todo tu aprendizaje.",
+                "headingText": "Un espacio para todo su aprendizaje.",
                 "subheadingText": "Aprenda desde cualquier lugar y en cualquier momento. Acceso instantáneo a todos los cursos y actividades.",
                 "signup_btnText": "Regístrese y comience a aprender hoy mismo",
                 "login_btnText": "Iniciar sesión",
-                "login_lblText": "¿Tener una cuenta?",
+                "login_lblText": "¿Tiene una cuenta?",
                 "footerLabel": "Desarrollada por"
             },
             "login": {

@@ -281,7 +281,7 @@ module.exports = {
 		sts = createClassPage.click_Create_Button();
 		if ((typeof (sts)) === "object") {
 			assertion.assertEqual(sts.pageStatus, true, "Success Class Page Not Displayed: " + JSON.stringify(sts.pageStatus))
-			assertion.assertEqual(sts.className_txt, (testdata[0].className_txt).concat(testdata[1].name), "Success Class Page class text mismatch ")
+			assertion.assert(sts.className_txt.includes(testdata[1].name), "Success Class Page class text mismatch ")
 
 		} else {
 			assertion.assertFail(sts);
@@ -294,7 +294,7 @@ module.exports = {
 		if ((typeof (sts)) === "object") {
 			assertion.assertEqual(sts.pageTitle, testdata[0].pageTitle, "Page Title Text Mismatch: " + JSON.stringify(sts.pageTitle))
 			assertion.assertEqual(sts.pageSubTitle, testdata[0].pageSubTitle, "Page subTitle Text Mismatch: " + JSON.stringify(sts.pageSubTitle))
-			assertion.assertEqual(sts.className_txt, (testdata[0].className_txt).concat(testdata[1].name), "Class Name Text Mismatch: " + JSON.stringify(sts))
+			assertion.assert(sts.className_txt.includes(testdata[1].name), "Class Name Text Mismatch: " + JSON.stringify(sts))
 			assertion.assertEqual(sts.viewClassbtn, testdata[0].viewClassbtn, "View Class btn Mismatch: " + JSON.stringify(sts))
 			assertion.assertEqual(sts.backToHomeBtn_txt, testdata[0].backToHomeBtn_txt, "BscktoHome btn Text Mismatch: " + JSON.stringify(sts))
 			assertion.assertEqual(sts.successCaption_txt, testdata[0].successCaption_txt, "Success Caption Text Mismatch: " + JSON.stringify(sts))
