@@ -109,7 +109,8 @@
                         "answerKey": [
                           ["O1","","0","crow","correct"],
                           ["O2","","1","thirsty","correct"],
-                          ["O3","","2","water","correct"]                        ],
+                          ["O3","","2","water","correct"]          
+                     ],
                         "scenario1": [
                             ["O1","","2","crow","incorrect"],
                             ["O2","","0","thirsty","incorrect"],
@@ -120,7 +121,43 @@
                             ["O2","","0","thirsty","incorrect"],
                             ["O3","","2","water","correct"]
                         ]
-                      }
+                      },
+                      {
+                        "number": 6,
+                        "text": "Match the following countries with their corresponding capitals",
+                        "type": "matchingtext",
+                        "maxOptions": 3,
+                        "answerKey": [  
+                          ["RC1","China","O1","Beijing","correct"],
+                          ["RC2","Japan","O2","Tokyo","correct"],
+                          ["RC3","New Zealand","O3","Wellington","correct"]
+                        ],
+                        "scenario1":[
+                        ["RC1","China","O2","Beijing","incorrect"],
+                          ["RC2","Japan","O3","Tokyo","incorrect"],
+                          ["RC3","New Zealand","O1","Wellington","incorrect"]
+                        ],
+                        "scenario2":[
+                        ["RC1","China","O1","Beijing","correct"],
+                          ["RC2","Japan","O3","Tokyo","incorrect"],
+                          ["RC3","New Zealand","O2","Wellington","incorrect"]
+                          ]
+                     },
+                      {
+                        "number": 9,
+                        "instruction":"",
+                        "text": "Question Text Here",
+                        "type": "mcqr-single",
+                        "maxOptions": 2,
+                        "answerKey": [
+                            ["O2", "False", "", ""],
+                            ["O1", "True", "select", "correct"]
+                        ],
+                        "scenario1": [
+                            ["O2", "False", "select", "incorrect"],
+                            ["O1", "True", "", "correct"]
+                        ]
+                    }
                 ]
             },
             {

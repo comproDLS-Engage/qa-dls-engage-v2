@@ -254,6 +254,10 @@
 				"choice": "div[data-tid=input-click-option-",
 				"choices": "div[data-tid*=input-click-option-]",
 				"selectedChoice": "svg[data-tid=icon-selected]"
+			},
+			"Matching": {
+				"left": "[data-tid*=input-left-item-",
+				"right": "[data-tid*=input-right-item-"
 			}
 		}
 	}

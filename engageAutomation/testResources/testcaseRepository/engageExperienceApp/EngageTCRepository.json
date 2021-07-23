@@ -900,6 +900,43 @@
                     "tags": ""
                 }
             ]
+        },
+        {
+            "modulename": "Item Player - Matching",
+            "moduledetails": "",
+            "testFile": "./test/engageExperienceApp/matching.test.js",
+            "testcase": [
+                {
+                    "id": "ENG_ITEM_MATCH_TC_1",
+                    "description": "Validate the UI of the Matching player in the default mode",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_ITEM_MATCH_TC_2",
+                    "description": "Validate the behaviour of matching player when user match the left item with right item (Mobile)",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_ITEM_MATCH_TC_4",
+                    "description": "Validate that the behaviour in the Matching player when try again is clicked",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_ITEM_MATCH_TC_5",
+                    "description": "Validate Matching Question for correct scenario",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_ITEM_MATCH_TC_6",
+                    "description": "Validate Matching Question for partial scenario",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_ITEM_MATCH_TC_7",
+                    "description": "Validate Matching Question for incorrect scenario",
+                    "tags": "P1"
+                }
+            ]
         }
     ]
 }
