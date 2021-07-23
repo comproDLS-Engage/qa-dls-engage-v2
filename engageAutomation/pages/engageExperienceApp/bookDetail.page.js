@@ -8,9 +8,10 @@ module.exports = {
     bookCover: selectorFile.css.ComproEngage.bookView.bookCover,
     bookTitle: selectorFile.css.ComproEngage.bookView.bookTitle,
     bookSubTitle: selectorFile.css.ComproEngage.bookView.bookSubTitle,
-    viewClass: selectorFile.css.ComproEngage.bookView.viewClass, //duplicate Data-tids in engage ENG-6740
+    viewClass: selectorFile.css.ComproEngage.bookView.viewClass,
     closeClassDrawer: selectorFile.css.ComproEngage.bookView.closeClassDrawer,
     moreOptions: selectorFile.css.ComproEngage.bookView.moreOptions,
+    closeMoreOptions: selectorFile.css.ComproEngage.bookView.closeMoreOptions,
     removeBook_btn: selectorFile.css.ComproEngage.bookView.removeBook_btn,
     removeBook_Dialog: selectorFile.css.ComproEngage.bookView.removeBook_Dialog,
     removeBookDialogCancel: selectorFile.css.ComproEngage.bookView.removeBookDialogCancel,
@@ -32,7 +33,7 @@ module.exports = {
     chapterMoreOptions: selectorFile.css.ComproEngage.bookView.chapterMoreOptions,
     activityIcon: selectorFile.css.ComproEngage.bookView.activityIcon,
     activityCount: selectorFile.css.ComproEngage.bookView.activityCount,
-    folderIcon: selectorFile.css.ComproEngage.bookView.folderIcon, //duplicate Data-tids in engage ENG-6702
+    folderIcon: selectorFile.css.ComproEngage.bookView.folderIcon, 
     folderCount: selectorFile.css.ComproEngage.bookView.folderCount,
     unitOpenFlipbook_btn: selectorFile.css.ComproEngage.bookView.unitOpenInFlipbook_btn,
     unitViewActivity_btn: selectorFile.css.ComproEngage.bookView.unitViewActivity_btn,
@@ -89,14 +90,15 @@ module.exports = {
         list = action.findElements(this.chapter);
         for (i = 0; i < list.length; i++) {
             let obj;
+            console.log(this.activityCount +i)
             obj = {
                 chapterTitle: action.getText(this.chapterTitle + i),
                 chapterPage: action.getText(this.chapterPage + i),
                 chapterCoverImg: action.waitForDisplayed(this.chapterCoverImg + i),
-                activityIcon: (action.getElementCount(this.activityIcon) > 0) ? action.waitForDisplayed(this.bookCover) : null,
-                activityCount: (action.getElementCount(this.activityCount) > 0) ? action.getText(this.activityCount) : null,
-                folderIcon: (action.getElementCount(this.folderIcon) > 0) ? action.waitForDisplayed(this.folderIcon) : null,
-                folderCount: (action.getElementCount(this.folderCount) > 0) ? action.getText(this.folderCount) : null
+                activityIcon: (action.getElementCount(this.activityIcon) > 0) ? action.waitForDisplayed(this.activityIcon +i) : null,
+                activityCount: (action.getElementCount(this.activityCount) > 0) ? action.getText(this.activityCount + i) : null,
+                folderIcon: (action.getElementCount(this.folderIcon) > 0) ? action.waitForDisplayed(this.folderIcon +i) : null,
+                folderCount: (action.getElementCount(this.folderCount) > 0) ? action.getText(this.folderCount + i) : null
             }
             componentArr[i] = obj;
         }
@@ -145,15 +147,26 @@ module.exports = {
             //return what change happens after clicking this button - akhil
             //dummy flipbook page object added - akanksha
             //res = require('./flipbook.page.js')
-            action.waitForDisplayed(this.breadcrumbFlipbook)
-            res = action.click(this.breadcrumbFlipbook)
+            res = action.waitForDisplayed(this.breadcrumbFlipbook)
+            
             logger.logInto(stackTrace.get(), " --Open Flipbook Button clicked");
         } else
             logger.logInto(stackTrace.get(), " --Open Flipbook Button NOT clicked", "error");
         return res;
     },
 
-    clickComponent: function(componentName) { // this is more complicated, we need to discuss this - akhil
+    clickOnBreadcrumb: function(){
+        res = action.click(this.breadcrumbFlipbook)
+        if (res == true) {
+            res = this.getBookViewPageData();
+            logger.logInto(stackTrace.get(), " --Flipbook Breadcrumb Button clicked");
+        } else
+            logger.logInto(stackTrace.get(), " --Flipbook Breadcrumb Button NOT clicked", "error");
+        return res;
+
+    },
+
+    clickComponent: function(componentName) { 
         logger.logInto(stackTrace.get());
         let i, list;
         list = action.findElements(this.component);
@@ -172,10 +185,12 @@ module.exports = {
     clickUnit: function(unitName) {
         logger.logInto(stackTrace.get());
         let i, list;
-        list = action.findElements(this.chapter);
+        list = action.findElements(this.chapterTitle);
         for (i = 0; i < list.length; i++) {
-            console.log(action.getText(list[i]))
-            if (action.getText(list[i]).includes(unitName)) {
+            
+            console.log("clickUnit-"+action.getText(list[i]))
+
+            if (unitName.includes(action.getText(list[i]))) {
                 res = action.click(list[i]);
                 break;
             }
@@ -191,9 +206,18 @@ module.exports = {
         res = action.click(this.moreOptions);
         if (res == true) {
             logger.logInto(stackTrace.get(), " --More Options Button clicked");
-            res = this.getMoreOptionsButtonData();
         } else
             logger.logInto(stackTrace.get(), " --More Options Button NOT clicked", "error");
+        return res;
+    },
+
+    closeMoreOptionsButton: function(){
+        logger.logInto(stackTrace.get())
+        res = action.click(this.closeMoreOptions);
+        if (res == true) {
+            logger.logInto(stackTrace.get(), " --More Options Closed");
+        } else
+            logger.logInto(stackTrace.get(), " --More Options NOT Closed", "error");
         return res;
     },
 
@@ -246,9 +270,10 @@ module.exports = {
     clickUnitMoreOptions: function(unitName) {
         logger.logInto(stackTrace.get());
         let i, list;
-        list = action.findElements(this.chapter);
+        list = action.findElements(this.chapterTitle);
         for (i = 0; i < list.length; i++) {
-            if (action.getText(list[i]).includes(unitName)) {
+            var chapterName = action.getText(list[i]).trim()
+            if (unitName.includes(chapterName)) {
                 action.click(this.chapterMoreOptions + i);
                 res = i;
                 break;
@@ -266,8 +291,7 @@ module.exports = {
         if (res >= 0) {
             res = action.click(this.unitOpenFlipbook_btn + res)
             //tbd- add flipbook page object
-            action.waitForDisplayed(this.breadcrumbFlipbook)
-            res = action.click(this.breadcrumbFlipbook)
+            res = action.waitForDisplayed(this.breadcrumbFlipbook)
             logger.logInto(stackTrace.get(), "Open FlipBook in More Options Clicked");
         } else
             logger.logInto(stackTrace.get(), "Open FlipBook in More Options  Not Clicked", "error");

@@ -18,6 +18,8 @@ module.exports = {
     activityCompletionCircle: selectorFile.css.ComproEngage.bookView.activityCompletionCircle,
     openFlipbook_moreOptions: selectorFile.css.ComproEngage.bookView.openFlipbook_moreOptions,
     viewActivity_moreOptions: selectorFile.css.ComproEngage.bookView.viewActivity_moreOptions,
+    activity_lbl_unitView: selectorFile.css.ComproEngage.bookView.activity_lbl_unitView,
+    activity_byline_unitView: selectorFile.css.ComproEngage.bookView.activity_byline_unitView,
 
     isInitialized: function() {
         logger.logInto(stackTrace.get());
@@ -35,6 +37,8 @@ module.exports = {
             unitChapterName: (action.getElementCount(this.unitChapterName) > 0) ? action.getText(this.unitChapterName) : null,
             unitNumber: (action.getElementCount(this.unitNumber) > 0) ? action.getText(this.unitNumber) : null,
             unitOpenFlipbook_btn: (action.getElementCount(this.unitOpenFlipbook_btn) > 0) ? action.getText(this.unitOpenFlipbook_btn) : null,
+            activity_lbl_unitView : (action.getElementCount(this.activity_lbl_unitView) > 0) ? action.getText(this.activity_lbl_unitView) : null,
+            activity_byline_unitView : (action.getElementCount(this.activity_byline_unitView) > 0) ? action.getText(this.activity_byline_unitView) : null,
             nextUnit_btn: (action.getElementCount(this.nextUnit_btn) > 0) ? action.getText(this.nextUnit_btn) : null,
             previousUnit_btn: (action.getElementCount(this.previousUnit_btn) > 0) ? action.getText(this.previousUnit_btn) : null,
             componentList: this.getComponentListData(),
@@ -95,7 +99,6 @@ module.exports = {
         else 
           componentIndex = require('./bookDetail.page.js').clickComponent(componentName);
 
-        console.log(componentIndex);
         let i, list;
         let activityArr = [];
         if (componentIndex >= 0) {
@@ -104,7 +107,7 @@ module.exports = {
                 let obj;
                 obj = {
                     activityTitle: action.getText(this.activityTitle + componentIndex + '-' + i),
-                    activityPageInfo: action.getText(this.activityPageInfo + componentIndex + '-' + i),
+                    activityPageInfo: (action.getElementCount(this.activityPageInfo) > 0) ? action.getText(this.activityPageInfo + componentIndex + '-' + i) : null,
                     activityCompletionCircle: (action.getElementCount(this.activityCompletionCircle + i) > 0) ? action.waitForDisplayed(this.activityCompletionCircle + i) : null
                 }
                 activityArr[i] = obj;

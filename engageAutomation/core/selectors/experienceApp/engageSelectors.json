@@ -216,9 +216,10 @@
                 "bookCover": "[data-tid=image-bookCover]",
                 "bookTitle": "[data-tid=text-bookTitle]",
                 "bookSubTitle": "[data-tid=text-bookSubtitle]",
-                "viewClass": "button[data-tid=button-classes]",
+                "viewClass": "button[data-tid=button-bookClasses]",
                 "closeClassDrawer": "[data-tid=button-close]",
                 "moreOptions": "[data-tid=band-moreOptions]",
+                "closeMoreOptions":"[role=menu]",
                 "removeBook_btn": "[data-tid=button-removeBook]",
                 "removeBook_Dialog": "[role=dialog]",
                 "removeBookDialogCancel": "//span[text()='Cancel']",
@@ -234,10 +235,10 @@
                 "chapterPage": "[data-tid*=text-chapterPage-",
                 "chapterCoverImg": "[data-tid*=image-chapter-",
                 "chapterMoreOptions": "[data-tid*=button-moreOption-",
-                "activityIcon": "[data-tid=icon-lesson-index]",
-                "activityCount": "//*[@data-tid='text-lesson-index' and contains(text(),'Activities')]",
-                "folderIcon": "[data-tid=icon-lesson-index]",
-                "folderCount": "//*[@data-tid='text-lesson-index' and contains(text(),'Folder')]",
+                "activityIcon": "[data-tid*=icon-activityCount-",
+                "activityCount": "[data-tid*=text-activityCount-",
+                "folderIcon": "[data-tid*=icon-folderCount-",
+                "folderCount": "[data-tid*=text-folderCount-",
                 "unitOpenInFlipbook_btn": "[data-tid*=button-flipbook-",
                 "unitViewActivity_btn": "[data-tid*=button-open-",
                 "unitThumbnail": "[data-tid*=image-unit-thumbnail]",
@@ -258,7 +259,10 @@
                 "lastActivity_name": "[data-tid=text-lastActivityName]",
                 "lastActivity_Dismiss": "[data-tid=button-lastActivityDismiss]",
                 "lastActivity_Dismiss": "[data-tid=button-lastActivityDismiss]",
-                "lastActivity_Continue": "[data-tid=button-lastActivityContinue]"
+                "lastActivity_Continue": "[data-tid=button-lastActivityContinue]",
+                "activity_lbl_unitView":"[data-tid=text-unitselection]",
+                "activity_byline_unitView":"[data-tid=text-unitselectionbilinear]"
+
             },
             "classDashboard":
             {

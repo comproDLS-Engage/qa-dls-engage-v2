@@ -11,7 +11,8 @@
     "appShellFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='appShellTest.json' --windowWidth=1600 --windowHeight=900",
     "classIntructorFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='InstructorClassTest.json' --windowWidth=1600 --windowHeight=900",
     "dashboardFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='dashboardTest.json' --windowWidth=1600 --windowHeight=900",
-    "difUITemp": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa  --testExecFile=difUITemp.json --browserCapability=desktop-chrome-1920 --visual=applitools --skipAssertion=true"
+    "difUITemp": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa  --testExecFile=difUITemp.json --browserCapability=desktop-chrome-1920 --visual=applitools --skipAssertion=true",
+    "bookTocFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa  --testExecFile=bookDetailViewTest.json --browserCapability=desktop-chrome-1366"
 
   },
   "keywords": [],

@@ -676,8 +676,14 @@
                     "visualTest": true
                 },
                 {
+                    "id": "ENG_BKTOC_TC_15",
+                    "description": "Validate clicking on a component displays the units /chapters asscoiated with the component",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
                     "id": "ENG_BKTOC_TC_16",
-                    "description": "Validate clicking on a component displays the units /chapters associated with the component",
+                    "description": "Validate that clicking on Activity on unit detail view page launches the activity",
                     "tags": "P1",
                     "visualTest": true
                 },
@@ -696,6 +702,12 @@
                 {
                     "id": "ENG_BKTOC_TC_21",
                     "description": "Anchor component - Validate that clicking on Previous Unit button launch the previous unit of Anchor component",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_BKTOC_TC_41",
+                    "description": "Validate that clicking on unit Detail TOC breadcrumb naviagtes to Book detail TOC page",
                     "tags": "P1",
                     "visualTest": true
                 }

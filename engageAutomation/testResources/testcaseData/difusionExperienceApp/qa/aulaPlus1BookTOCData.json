@@ -1,0 +1,127 @@
+{
+   "book": {
+      "name": "Aula Plus 1 (For DEV2 - DONT TOUCH)",
+      "description": "",
+      "component": [
+         {
+            "index": 0,
+            "name" : {
+               "EN": "Manual Web",
+               "ES": "Manual Web"
+            },
+            "unit": [
+               {
+                  "index": 0,
+                  "title": "0. En el aula",
+                  "activityCount": "6",
+                  "folderCount": "0",
+                  "flipbookPageNum": "10",
+                  "section": [
+                     {
+                        "index": 0,
+                        "name": "",
+                        "activity": [
+                           "1. Me llamo Anderson. ¿Y tú?",
+                           "2. Sonidos",
+                           "3. Hola, ¿qué tal?",
+                           "4. ¿Cómo se escribe?",
+                           "5. Las cosas de la clase",
+                           "6. ¿Qué significa \"vale\"?"
+                        ]
+                     }
+                  ]
+               },
+               {
+                  "index": 1,
+                  "title": "1. Nosotros y nosotras",
+                  "activityCount": "13",
+                  "folderCount": "0",
+                  "flipbookPageNum": "14",
+                  "section": [
+                     {
+                        "index": 0,
+                        "name": "",
+                        "activity": [
+                           "Empezar | 1. Palabras en español",
+                           "Comprender | 2. Los nombres en español"
+                        ]
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "index": 1,
+            "name": "Recursos",
+            "nameES": "Recursos",
+            "unit": [
+               {
+                  "index": 0,
+                  "title": "0. En el aula",
+                  "activityCount": "6",
+                  "folderCount": "0",
+                  "flipbookPageNum": "2",
+                  "section": [
+                     {
+                        "index": 0,
+                        "name": "Unidad 0",
+                        "activity": [
+                           "Unidad 0 - Pistas audio",
+                           "Unidad 0 - Fichas proyectables",
+                           "Unidad 0 - Transcripciones"
+                        ]
+                     },
+                     {
+                        "index": 1,
+                        "name": "Edición anotada para docentes",
+                        "activity": [
+                           "Edición anotada para docentes"
+                        ]
+                     },
+                     {
+                        "index": 2,
+                        "name": "Evaluaciones",
+                        "activity": [
+                           "au_plus_1_it_digital_u02_ibk.zip"
+                        ]
+                     }
+                  ]
+               },
+               {
+                  "index": 1,
+                  "title": "1. Nosotros y nosotras",
+                  "activityCount": "13",
+                  "folderCount": "0",
+                  "flipbookPageNum": "10",
+                  "section": [
+                     {
+                        "index": 0,
+                        "name": "Digital itineraries",
+                        "activity": [
+                           "Unidad 1 - Itinerario digital"
+                        ]
+                     },
+                     {
+                        "index": 1,
+                        "name": "Unidad 1",
+                        "activity": [
+                           "Unidad 1 - Pistas audio",
+                           "Unidad 1 - Video",
+                           "Unidad 1 - Textos mapeados"
+                        ]
+                     },
+                     {
+                        "index": 2,
+                        "name": "Unidad 1 - Otros recursos disponible",
+                        "activity": [
+                           "Las profesiones",
+                           "Formulario Casa del lector (España)"
+                        ]
+                     }
+                  ]
+               }
+            ]
+         }
+      ]
+   }
+}

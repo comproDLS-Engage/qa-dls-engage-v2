@@ -51,7 +51,7 @@ module.exports = {
             nextActivity_btn: (action.getElementCount(this.nextActivity_btn) > 0) ? action.getText(this.nextActivity_btn) : null,
             next_btn: (action.getElementCount(this.next_btn) > 0) ? action.waitForDisplayed(this.next_btn) : null,
             previous_btn: (action.getElementCount(this.previous_btn) > 0) ? action.waitForDisplayed(this.previous_btn) : null,
-            showAnswer_btn: (action.getElementCount(this.showAnswer_btn) > 0) ? action.waitForDisplayed(this.showAnswer_btn) : null
+            showAnswer_btn: (action.getElementCount(this.showAnswer_btn) > 0) ? action.waitForDisplayed(this.showAnswer_btn) : null,
             showResponse_btn: (action.getElementCount(this.showResponse_btn) > 0) ? action.waitForDisplayed(this.showResponse_btn) : null
         }
         logger.logInto(stackTrace.get(), JSON.stringify(obj));
