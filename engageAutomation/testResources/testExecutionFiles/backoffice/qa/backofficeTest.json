@@ -401,9 +401,21 @@
 				"description": "Validate that alphanumeric text is supported in Question Title Text.",
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": [
+
 					{
 						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
 						"jsonPath": "editor.questions.MCQ[0].question1.questionTitle"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_9",
+				"description": "Validate that student can add instruction for each question under the 'Question' section",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQ[0].question1.questionInstruction"
 					}
 				]
 			},
@@ -553,6 +565,17 @@
 				]
 			},
 			{
+				"id": "ASE_COM_TC_9",
+				"description": "Validate that student can add instruction for each question under the 'Question' section",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.TrueFalse[0].questionInstruction"
+					}
+				]
+			},
+			{
 				"id": "ASE_COM_TC_42",
 				"description": "Validate if alpha-numeric text is allowed in the Question Text",
 				"testFile": "./test/assessmentEditor/editor.test.js",
@@ -698,6 +721,17 @@
 				]
 			},
 			{
+				"id": "ASE_COM_TC_9",
+				"description": "Validate that student can add instruction for each question under the 'Question' section",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.DragDropIntoText[0].questionInstruction"
+					}
+				]
+			},
+			{
 				"id": "ASE_COM_TC_42",
 				"description": "Validate if alpha-numeric text is allowed in the Question Text",
 				"testFile": "./test/assessmentEditor/editor.test.js",
@@ -750,6 +784,17 @@
 					{
 						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
 						"jsonPath": "editor.questions.FIB[0].questionTitle"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_9",
+				"description": "Validate that student can add instruction for each question under the 'Question' section",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.FIB[0].questionInstruction"
 					}
 				]
 			},
@@ -810,6 +855,17 @@
 					{
 						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
 						"jsonPath": "editor.questions.Matching[0].questionTitle"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_9",
+				"description": "Validate that student can add instruction for each question under the 'Question' section",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.Matching[0].questionInstruction"
 					}
 				]
 			},
@@ -887,6 +943,17 @@
 				]
 			},
 			{
+				"id": "ASE_COM_TC_9",
+				"description": "Validate that student can add instruction for each question under the 'Question' section",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.Ordering[0].questionInstruction"
+					}
+				]
+			},
+			{
 				"id": "ASE_COM_TC_42",
 				"description": "Validate if alpha-numeric text is allowed in the Question Text",
 				"testFile": "./test/assessmentEditor/editor.test.js",
@@ -950,6 +1017,17 @@
 					{
 						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
 						"jsonPath": "editor.questions.Classify[0].questionTitle"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_9",
+				"description": "Validate that student can add instruction for each question under the 'Question' section",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.Classify[0].questionInstruction"
 					}
 				]
 			},
