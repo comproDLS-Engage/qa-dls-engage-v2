@@ -57,7 +57,7 @@
                 "selectBook_lbl": "Class Books",
                 "selectBook_txt": "Assign a book to your class in order to view and assign materials.",
                 "bookTitle": "PROYECTOS",
-                "createBtn_txt": "Create",
+                "createBtn_txt": "Create Class",
                 "cancelBtn_txt": "Cancel & Go Back",
                 "notitleErrorMsg": "Name is required.",
                 "titleErrorMsg": "Name should be less than 50 characters.",

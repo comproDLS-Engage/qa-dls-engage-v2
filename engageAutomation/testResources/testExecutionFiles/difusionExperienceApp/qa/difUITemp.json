@@ -304,6 +304,13 @@
                 "testData": []
             },
             {
+                "id": "ENG_DIF_TC_50",
+                "description": "Search in global resources",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.08,
+                "testData": []
+            },
+            {
                 "id": "ENG_DIF_TC_5",
                 "description": "View book page (not added)",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
@@ -646,6 +653,13 @@
             {
                 "id": "ENG_DIF_TC_27",
                 "description": "Add book page from Getting Started",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.08,
+                "testData": []
+            },
+            {
+                "id": "ENG_DIF_TC_50",
+                "description": "Search in global resources",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
                 "visualTolerance": 0.08,
                 "testData": []
