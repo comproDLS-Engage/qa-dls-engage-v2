@@ -26,8 +26,8 @@ module.exports = {
 
 	// Activity page
 	ENG_DIF_TC_3: function () {
-		res = action.click("[data-tid=button-product-2]");
-		console.log(res)
+		//res = action.click("[data-tid=button-product-0]");
+		//console.log(res)
 		res = action.click("[data-tid=text-title-0-0]");
 		console.log(res)
 		//action.waitForDisplayed("[data-tid=image-loader]", undefined, true);
@@ -45,8 +45,8 @@ module.exports = {
 
 	// Browse page with books tab
 	ENG_DIF_TC_4: function () {
-		res = action.click("[data-tid=button-close]");
-		console.log(res)
+		//res = action.click("[data-tid=button-close]");
+		//console.log(res)
 		if (action.isDisplayed("[data-tid=breadcrumb-productTitle]")) {
 			res = action.click("[data-tid=breadcrumb-productTitle]");
 			console.log(res)
@@ -79,7 +79,7 @@ module.exports = {
 
 	// View book page (not added)
 	ENG_DIF_TC_5: function () {
-		res = action.click("[data-tid=button-view-3]");
+		res = action.click("[data-tid=button-view-0]");
 		console.log(res)
 		res = action.waitForDisplayed("[data-tid=image-chapter-0]");
 		console.log(res)
@@ -196,7 +196,7 @@ module.exports = {
 		res = action.waitForDocumentLoad();
 		console.log(res)
 		//action.waitForDisplayed("[data-tid=image-bookCover]");
-		res = action.waitForDisplayed("img[src*=Proyectos]");
+		res = action.waitForDisplayed("img[src*=Compro]");
 		console.log(res)
 		res = action.waitForDocumentLoad();
 		console.log(res)
@@ -237,7 +237,7 @@ module.exports = {
 		console.log(res)
 		res = action.waitForDocumentLoad();
 		console.log(res)
-		res = action.waitForDisplayed("img[src*=Proyectos]");
+		res = action.waitForDisplayed("img[src*=Compro]");
 		console.log(res)
 	},
 
@@ -426,7 +426,7 @@ module.exports = {
 		console.log(res)
 	},
 
-	// Singout of the app
+	// Sign out of the app
 	ENG_DIF_TC_34: function () {
 		if (action.isDisplayed("[role=dialog] button > svg")) {
 			res = action.click("[role=dialog] button > svg");
@@ -591,6 +591,19 @@ module.exports = {
 		res = action.click("[role=dialog] button:nth-child(2)");
 		console.log(res)
 		res = action.waitForDisplayed("[data-tid=text-error], [data-tid=text-info], [data-tid=text-success]");
+		console.log(res)
+	},
+
+	// Search in global resources
+	ENG_DIF_TC_50: function () {
+		//res = action.click("[data-tid=input-autocomplete-searchtextbox]");
+		//console.log(res)
+		action.
+		res = action.setValue("div > input", "Aula");
+		console.log(res)
+		res = action.keyPress("Enter");
+		console.log(res)
+		res = action.waitForDisplayed("img[src*=Aula]");
 		console.log(res)
 	},
 }
