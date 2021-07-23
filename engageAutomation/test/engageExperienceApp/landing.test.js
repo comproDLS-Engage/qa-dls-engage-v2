@@ -8,7 +8,7 @@ module.exports = {
 		sts = landing.isInitialized();
 		assertion.assertEqual(sts.pageStatus, true, "Landing page status mismatch");
 		assertion.assert((sts.signup_btnText instanceof Error) === false, "Get started button issue - " + sts.signup_btnText);
-		assertion.assert((sts.login_btnText instanceof Error) === false, "I have an account button issue - " + sts.iHaveAnAccount_btnText);
+		assertion.assert((sts.login_btnText instanceof Error) === false, "I have an account button issue - " + sts.login_btnText);
 		assertion.assertEqual(sts.brandLogo_img_exists, true, "Brand logo does not exist");
 		assertion.assertEqual(sts.selectedLangImg_exists, true, "Language image does not exist");
 	},
@@ -36,9 +36,5 @@ module.exports = {
 		assertion.assertEqual(sts.login_lblText, testdata.login_lblText, "Login label text mismatch");
 		assertion.assertEqual(sts.login_btnText, testdata.login_btnText, "Login button text mismatch");
 		assertion.assertEqual(sts.footerLabel, testdata.footerLabel, "Footer label text mismatch");
-	},
-
-	ENG_LAND_TC_6: function (testdata) {
-		this.ENG_LAND_TC_5(testdata);
-	},
+	}
 }
