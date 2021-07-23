@@ -49,7 +49,9 @@ module.exports = {
     getTargetData: function (qIndex, dndQuesData) {
         let option = "div[index='" + qIndex + "'] " + "[data-tid*='target-option']";
         var targetMap = [];
+        console.log(option)
         let optionLength = action.findElements(option).length;
+        console.log(optionLength)
         for (let i = 0; i < optionLength; i++) {
             var dndSelector = "div[index='" + qIndex + "'] " + this.target + dndQuesData[i][2] + "] ";
             var dndSelectorText = dndSelector + "[data-tid=text-placeholder]";
@@ -126,7 +128,7 @@ module.exports = {
         var qIndex = (testplayer.getQuesInfo()).activeQues - 1;
         // itemplayer.switchMainFrame(0);
         res = action.click("div[index='" + qIndex + "'] " + this.zoomDialogClose_btn)
-        itemplayer.switchParentFrame();
+       // itemplayer.switchParentFrame();
         if (res == true) {
             res = action.waitForDisplayed("div[index='" + qIndex + "'] " + this.zoomOverlay, undefined, true);
         }

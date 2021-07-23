@@ -262,7 +262,13 @@
 			"Matching": {
 				"left": "[data-tid*=input-left-item-",
 				"right": "[data-tid*=input-right-item-"
+			},
+			"orderList": {
+				"option": "li[data-tid=input-drag-option-",
+				"options": "li[data-tid*=input-drag-option-]",
+				"listIndex": "li[data-tid]:nth-child("
 			}
+
 		}
 	}
 }

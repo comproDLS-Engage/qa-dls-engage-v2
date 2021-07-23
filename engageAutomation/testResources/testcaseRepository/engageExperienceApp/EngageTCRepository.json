@@ -940,6 +940,141 @@
             ]
         },
         {
+            "modulename": "Item Player - Order List",
+            "moduledetails": "",
+            "testFile": "./test/engageExperienceApp/orderlist.test.js",
+            "testcase": [
+                {
+                    "id": "ENG_ITEM_OLI_TC_1",
+                    "description": "Validate the UI of the Order List player",
+                    "tags": ""
+                },
+                {
+                    "id": "ENG_ITEM_OLI_TC_5",
+                    "description": "Validate Order List Question for correct scenario",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_ITEM_OLI_TC_6",
+                    "description": "Validate Ordered List Question for partial scenario",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_ITEM_OLI_TC_7",
+                    "description": "Validate Order List Question for complete incorrect scenario",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_ITEM_OLI_TC_9",
+                    "description": "Validate if user is able to drag the items in from arrow the Order List Question",
+                    "tags": "",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_ITEM_OLI_TC_11",
+                    "description": "Validate that the user responses are retained in Orderlist after clicking try again",
+                    "tags": ""
+                }
+            ]
+        },
+        {
+            "modulename": "Item Player - Drag & Drop",
+            "moduledetails": "",
+            "testFile": "./test/engageExperienceApp/dragDrop.test.js",
+            "testcase": [
+                {
+                    "id": "ENG_ITEM_DND_TC_1",
+                    "description": "Validate Drag & Drop Question Functionality For Correct Scenario",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_ITEM_DND_TC_2",
+                    "description": "Validate Drag & Drop Question for partial correct scenario",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_ITEM_DND_TC_3",
+                    "description": "Validate Drag & Drop Question for complete incorrect scenario",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_ITEM_DND_TC_7",
+                    "description": "Validate Drag & Drop Question Functionality using Click option",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_ITEM_DND_TC_17",
+                    "description": "Validate Drag & Drop Question Functionality using drag drop option",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_ITEM_DND_TC_19",
+                    "description": "Validate that the user responses are retained in DND after clicking try again",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_ITEM_DND_TC_20",
+                    "description": "Validate Drag and Drop question is launched",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_ITEM_DND_TC_21",
+                    "description": "Validate That 'Tap To Zoom' Option Is Available In The Mobile Mode In The DND Question - (Portrait, Landscape)",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_ITEM_DND_TC_22",
+                    "description": "Validate That Image Opens In Zoom Mode On Clicking Tap To Zoom - (Portrait, Landscape)",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_ITEM_DND_TC_23",
+                    "description": "Validate That The Close Button On The Top Closes The Dialogue Box - (Portrait, Landscape)",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_ITEM_DND_TC_25",
+                    "description": "Validate That An Option Can Be Selected In The Dropdown - (Portrait, Landscape)",
+                    "tags": "P1"
+                }
+            ]
+        },
+        {
+            "modulename": "Item Player - Classify",
+            "moduledetails": "",
+            "testFile": "./test/engageExperienceApp/classify.test.js",
+            "testcase": [
+                {
+                    "id": "ENG_ITEM_CLA_TC_2",
+                    "description": "Validate that user is able to place option pill inside the Group using drag and drop",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_ITEM_CLA_TC_4",
+                    "description": "Validate the Classify Player for correct scenario",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_ITEM_CLA_TC_6",
+                    "description": "Validate the Classify Player for incorrect scenario",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_ITEM_CLA_TC_5",
+                    "description": "Validate the Classify Player for partial scenario",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_ITEM_CLA_TC_20",
+                    "description": "Validate the classify player behaviour when try again button is clicked.",
+                    "tags": "P1"
+                }
+            ]
+        },
+        {
             "modulename": "Item Player - Matching",
             "moduledetails": "",
             "testFile": "./test/engageExperienceApp/matching.test.js",
