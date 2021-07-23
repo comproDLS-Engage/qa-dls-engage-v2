@@ -64,28 +64,61 @@
                       ]
                     },
                     {
+                        "number": 2,
+                        "instruction":"See the image carefully and choose the correct option(s) of the given below question",
+                        "text": "Identify the parts of the plants in the given options:",
+                        "type": "mcmr",
+                        "maxOptions": 2,
+                        "answerKey": [
+                            ["O1", "Roots", "select", "correct"],
+                            ["O2", "Soil", "", ""],
+                            ["O3", "Stem", "", ""],
+                            ["O4", "Leaves", "", ""]
+                        ],
+                        "incorrectScenario": [
+                            ["O1", "Leaves", "", "incorrect"],
+                            ["O2", "Stem", "", "incorrect"],
+                            ["O3", "Roots", "", "incorrect"],
+                            ["O4", "Soil", "select", "incorrect"]
+                        ],
+                        "partialCorrect_withNoIncorrect": [
+                            ["O1", "Leaves", "select", "correct"],
+                            ["O2", "Stem", "select", "correct"],
+                            ["O3", "Roots", "", "incorrect"],
+                            ["O4", "Soil", "", ""]
+                        ],
+                        "partialCorrect_withIncorrect": [
+                            ["O1", "Leaves", "select", "correct"],
+                            ["O2", "Stem", "select", "correct"],
+                            ["O3", "Roots", "", "incorrect"],
+                            ["O4", "Soil", "select", "incorrect"]
+                        ],
+                        "tryAgainScenario": [
+                            ["O1", "Leaves", "", "correct"],
+                            ["O2", "Stem", "", "correct"],
+                            ["O3", "Roots", "select", "correct"],
+                            ["O4", "Soil", "", ""]
+                        ]
+                    },
+                    {
                         "number": 4,
                         "instruction": "",
                         "text": "",
                         "type": "FIB",
-                        "maxOptions": 4,
+                        "maxOptions": 3,
                         "answerKey": [
                           ["O1","","0","crow","correct"],
                           ["O2","","1","thirsty","correct"],
-                          ["O3","","2","water","correct"],
-                          ["E4","","","",""]
-                        ],
+                          ["O3","","2","water","correct"]                        ],
                         "scenario1": [
                             ["O1","","2","crow","incorrect"],
                             ["O2","","0","thirsty","incorrect"],
-                            ["O3","","1","water","incorrect"],
-                            ["E4","","","",""]
+                            ["O3","","1","water","incorrect"]
                         ],
                         "scenario2": [
                             ["O1","","1","crow","incorrect"],
                             ["O2","","0","thirsty","incorrect"],
-                            ["O3","","2","water","correct"],
-                            ["E4","","","",""]
+                            ["O3","","2","water","correct"]
                         ]
                       }
                 ]

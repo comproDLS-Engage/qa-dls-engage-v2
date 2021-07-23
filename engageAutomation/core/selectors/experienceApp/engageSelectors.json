@@ -95,7 +95,7 @@
 				"classDrawerHeader": "[data-tid=text-drawerHeaderTitle]",
 				"classDrawerTitle": "[data-tid=text-ClassesTitle]",
 				"classDrawerSubTitle": "[data-tid=text-ClassesSubtitle]",
-				"classDrawerCloseBtn":"[data-tid=button-close]"
+				"classDrawerCloseBtn": "[data-tid=button-close]"
 			},
 			"Calender": {
 				"calenderYear": "//h6[contains(@class,'MuiTypography-subtitle1')]",
@@ -222,7 +222,7 @@
 				"next_btn": "[id=next]",
 				"previous_btn": "[id=previous]",
 				"tryAgain_btn": "[id=tryAgain]",
-				"reset_btn":"[id=reset]",
+				"reset_btn": "[id=reset]",
 				"closeReview_btn": "[data-tid='container-testplayer'] button[data-tid*=button-closereview]",
 				"player_header": "[data-tid=container-testplayer] [data-tid=text-headertitle]",
 				"lo_container": "#container-lo",
@@ -249,6 +249,11 @@
 				"tapToZoom": "[data-tid='button-taptozoom']",
 				"zoomOverlay": "[class*='zoom-overlay']",
 				"zoomDialogClose_btn": "[data-tid='button-zoomdialogclose']"
+			},
+			"MCMR": {
+				"choice": "div[data-tid=input-click-option-",
+				"choices": "div[data-tid*=input-click-option-]",
+				"selectedChoice": "svg[data-tid=icon-selected]"
 			}
 		}
 	}
