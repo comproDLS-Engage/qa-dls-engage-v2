@@ -760,10 +760,11 @@ module.exports = {
 
 	clickPreviewBtn: function () {
 		logger.logInto(stackTrace.get());
+		action.waitForClickable(this.preview_btn);
 		res = action.click(this.preview_btn);
 		if (res == true) {
 			logger.logInto(stackTrace.get(), " -- Preview Button is clicked");
-			res = this.previewInitialized(); // here we should call testPlayer.page.js from engage experience app - akhil
+			//res = this.previewInitialized(); // here we should call testPlayer.page.js from engage experience app - akhil
 		}
 		else {
 			res = res + " -- Error in clicking Preview button";

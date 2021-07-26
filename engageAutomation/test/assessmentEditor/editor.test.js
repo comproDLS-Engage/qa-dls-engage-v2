@@ -184,6 +184,12 @@ module.exports = {
 		}
 	},
 
+	//click preview button
+	ASE_COM_TC_997: function () {
+		sts = EditorPlayer.clickPreviewBtn();
+		assertion.assertEqual(sts, true, "Preview button status mismatch");
+	},
+
 	//click preview tab
 	ASE_COM_TC_998: function () {
 		sts = EditorPlayer.clickPreviewPublishTab();

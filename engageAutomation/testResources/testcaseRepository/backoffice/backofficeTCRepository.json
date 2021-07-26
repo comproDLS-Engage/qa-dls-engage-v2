@@ -152,6 +152,11 @@
                     "id": "BK_TC_29",
                     "description": "Validate that the view access code page is launched on clicking the view codes button on the home page",
                     "tags": "P1"
+                },
+                {
+                    "id": "BK_TC_30",
+                    "description": "Validate that the assessment author app is launched on clicking activity author button in the activity menu",
+                    "tags": "P1"
                 }
             ]
         }

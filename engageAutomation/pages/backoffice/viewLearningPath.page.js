@@ -18,6 +18,7 @@ module.exports = {
     emptyStateBtn: selectorFile.common.emptyStateBtn,
     deleteItemBtn: selectorFile.viewLearningPathPage.deleteItemBtn,
     itemCheckboxes: selectorFile.viewLearningPathPage.itemCheckboxes,
+    activityMenuActivityAuthorBtn: selectorFile.viewLearningPathPage.activityMenuActivityAuthorBtn,
 
     isInitialized: function () {
         logger.logInto(stackTrace.get());
@@ -135,15 +136,61 @@ module.exports = {
         return res;
     },
 
-    click_Delete_Button_in_ActivityMenu: function () {
+    click_Delete_Button_in_ActivityMenu: function (name) {
         logger.logInto(stackTrace.get());
-        let res = action.click(this.activityMenuBtn);
-        if (res == true) {
-            res = action.click(this.activityMenuDeleteBtn);
-            if (res == true) {
-                action.waitForDisplayed(this.dialogContent);
-                res = action.getText(this.dialogContent);
+        let res = null;
+        let i, list, list2;
+        list = action.findElements(this.activityList);
+        list2 = action.findElements(this.activityMenuBtn);
+        for (i = 0; i < list.length; i++) {
+            if (action.getText(list[i]).includes(name)) {
+                res = action.click(list2[i]);
+                if (res == true) {
+                    res = action.click(this.activityMenuDeleteBtn);
+                    if (res == true) {
+                        action.waitForDisplayed(this.dialogContent);
+                        res = action.getText(this.dialogContent);
+                    }
+                }
+                break;
             }
+            res = "activity \"" + name + "\" not found";
+        }
+
+        // let res = action.click(this.activityMenuBtn);
+        // if (res == true) {
+        //     res = action.click(this.activityMenuDeleteBtn);
+        //     if (res == true) {
+        //         action.waitForDisplayed(this.dialogContent);
+        //         res = action.getText(this.dialogContent);
+        //     }
+        // }
+        logger.logInto(stackTrace.get(), res);
+        return res;
+    },
+
+    click_ActivityAuthor_Button_in_ActivityMenu: function (name) {
+        logger.logInto(stackTrace.get());
+        action.waitForDisplayed(this.activityList);
+        let res = null;
+        let i, list, list2;
+        list = action.findElements(this.activityList);
+        list2 = action.findElements(this.activityMenuBtn);
+        for (i = 0; i < list.length; i++) {
+            if (action.getText(list[i]).includes(name)) {
+                res = action.click(list2[i]);
+                if (res == true) {
+                    res = action.click(this.activityMenuActivityAuthorBtn);
+                    if (res == true) {
+                        browser.pause(5000);
+                        browser.switchWindow("paint.backoffice.comprodls.com");
+                        // action.waitForDisplayed(this.dialogContent);
+                        // res = action.getText(this.dialogContent);
+                    }
+                }
+                break;
+            }
+            res = "activity \"" + name + "\" not found";
         }
         logger.logInto(stackTrace.get(), res);
         return res;

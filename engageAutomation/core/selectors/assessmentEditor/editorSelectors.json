@@ -54,7 +54,7 @@
 			"addAnswer_btn": "[data-tid=button-addoption]",
 			"inputOptions": "[data-tid*=input-option-",
 			"optionStyle_radio": "[data-tid=radio-optionstyle-",
-			"preview_btn": "[data-tid=button-preview]",
+			"preview_btn": "#root > div > div > div > button[data-tid=button-preview]",
 			"multipleResponse": {
 				"checkboxOption_input": "[data-tid=checkbox-option-"
 			},
