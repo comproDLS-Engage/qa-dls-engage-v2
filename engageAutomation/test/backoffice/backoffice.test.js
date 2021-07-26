@@ -178,7 +178,7 @@ module.exports = {
 
 	// Validate that the delete activity dialog box opens on clicking delete button in the activity menu
 	BK_TC_21: function (testdata) {
-		sts = learningPathPage.click_Delete_Button_in_ActivityMenu();
+		sts = learningPathPage.click_Delete_Button_in_ActivityMenu(testdata.name);
 		assertion.assert((typeof sts === "string" && sts.includes("Are you sure, you want to delete the selected items")), "Dialog text mismatch. " + sts);
 	},
 
@@ -252,5 +252,11 @@ module.exports = {
 		assertion.assertEqual(sts.batchName, testdata[1].batchName, "Batch name mismatch");
 		assertion.assertEqual(sts.totalAccessCodes, testdata[1].codeLimit, "Total access codes mismatch");
 		assertion.assertEqual(sts.batchStatus, testdata[1].status, "Batch status mismatch");
+	},
+
+	// Validate that the assessment author app is launched on clicking activity author button in the activity menu
+	BK_TC_30: function (testdata) {
+		sts = learningPathPage.click_ActivityAuthor_Button_in_ActivityMenu(testdata.name);
+		//assertion.assert((typeof sts === "string" && sts.includes("Launching")), "Dialog text mismatch. " + sts);
 	},
 }

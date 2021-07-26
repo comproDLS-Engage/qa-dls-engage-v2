@@ -82,7 +82,7 @@
                 "id": "ENG_DIF_TC_42",
                 "description": "View index",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.01,
+                "visualTolerance": 0.08,
                 "testData": []
             },
             {
@@ -533,7 +533,7 @@
                 "id": "ENG_DIF_TC_42",
                 "description": "View index",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.01,
+                "visualTolerance": 0.08,
                 "testData": []
             },
             {

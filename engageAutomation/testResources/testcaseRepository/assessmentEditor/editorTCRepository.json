@@ -151,6 +151,11 @@
                     "tags": "P1"
                 },
                 {
+                    "id": "ASE_COM_TC_997",
+                    "description": "Click preview button",
+                    "tags": "P1"
+                },
+                {
                     "id": "ASE_COM_TC_998",
                     "description": "Click preview and publish tab",
                     "tags": "P1"

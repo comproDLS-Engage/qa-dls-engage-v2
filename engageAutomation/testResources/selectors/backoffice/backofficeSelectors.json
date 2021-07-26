@@ -84,6 +84,7 @@
 		"activityTypeList": "[class=c-radio-label]",
 		"activityMenuBtn": "[data-tid=button-display-activity-menu]",
 		"activityMenuDeleteBtn": "[class*=mdc-menu-surface--open] [data-tid=button-Delete]",
+		"activityMenuActivityAuthorBtn": "[class*=mdc-menu-surface--open] [data-tid*=button-Activity]",
 		"itemCheckboxes": "[data-tid*=button-folder-details] > div > div",
 		"deleteItemBtn": "[id=deletSlectedItem]"
 	},
