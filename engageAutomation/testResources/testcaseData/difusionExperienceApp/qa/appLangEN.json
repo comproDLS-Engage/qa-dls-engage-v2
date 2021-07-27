@@ -132,7 +132,10 @@
                     "remove_btn":"Remove"
                 },
                 "activity_lbl":"Activities",
-                "activity_byline":"Select an item to view materials."
+                "activity_byline":"Select an item to view materials.",
+                "continueWhereYouLeft":"Continue where you left off:",
+                "dismiss_btn":"Dismiss",
+                "continue_btn":"Continue"
 
             }
         }

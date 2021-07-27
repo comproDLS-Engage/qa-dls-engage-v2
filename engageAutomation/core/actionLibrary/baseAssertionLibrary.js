@@ -49,6 +49,11 @@ var assertionList = {
         logger.logInto(stackTrace.get(), message);
         assert.fail(message);
     },
+
+    isAtLeast: function(valueToCheck, valueToBeAtLeast, [message]){
+        logger.logInto(stackTrace.get(), message);
+        assert.isAtLeast(valueToCheck, valueToBeAtLeast, [message])
+    }
 }
 
 function _evaluateAndAssert(skipAssertion) {

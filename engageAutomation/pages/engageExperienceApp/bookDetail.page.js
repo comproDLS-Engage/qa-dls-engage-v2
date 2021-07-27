@@ -12,9 +12,10 @@ module.exports = {
     closeClassDrawer: selectorFile.css.ComproEngage.bookView.closeClassDrawer,
     moreOptions: selectorFile.css.ComproEngage.bookView.moreOptions,
     closeMoreOptions: selectorFile.css.ComproEngage.bookView.closeMoreOptions,
-    removeBook_btn: selectorFile.css.ComproEngage.bookView.removeBook_btn,
-    removeBook_Dialog: selectorFile.css.ComproEngage.bookView.removeBook_Dialog,
+    removeBook_btn: selectorFile.css.ComproEngage.bookView.removeBook_btn, 
+    removeBook_Dialog: selectorFile.css.ComproEngage.bookView.removeBook_Dialog, //https://compro.atlassian.net/browse/ENG-7136
     removeBookDialogCancel: selectorFile.css.ComproEngage.bookView.removeBookDialogCancel,
+    removeBookDialogRemove : selectorFile.css.ComproEngage.bookView.removeBookDialogRemove,
     viewBookDetails_btn: selectorFile.css.ComproEngage.bookView.viewBookDetails_btn,
     addBook_btn: selectorFile.css.ComproEngage.bookView.addBook_btn,
     myBooks_lbl: selectorFile.css.ComproEngage.bookView.myBooks_lbl,
@@ -28,6 +29,7 @@ module.exports = {
     unit_lbl: selectorFile.css.ComproEngage.bookView.unit,
     chapter: selectorFile.css.ComproEngage.bookView.chapter,
     chapterTitle: selectorFile.css.ComproEngage.bookView.chapterTitle,
+    chapterNumber : selectorFile.css.ComproEngage.bookView.chapterNumber,
     chapterPage: selectorFile.css.ComproEngage.bookView.chapterPage,
     chapterCoverImg: selectorFile.css.ComproEngage.bookView.chapterCoverImg,
     chapterMoreOptions: selectorFile.css.ComproEngage.bookView.chapterMoreOptions,
@@ -93,7 +95,8 @@ module.exports = {
             console.log(this.activityCount +i)
             obj = {
                 chapterTitle: action.getText(this.chapterTitle + i),
-                chapterPage: action.getText(this.chapterPage + i),
+                chapterPage: (action.getElementCount(this.chapterPage+i) > 0) ? action.getText(this.chapterPage + i) : null,
+                chapterNumber: (action.getElementCount(this.chapterNumber+i) > 0) ? action.getText(this.chapterNumber + i) : null,
                 chapterCoverImg: action.waitForDisplayed(this.chapterCoverImg + i),
                 activityIcon: (action.getElementCount(this.activityIcon) > 0) ? action.waitForDisplayed(this.activityIcon +i) : null,
                 activityCount: (action.getElementCount(this.activityCount) > 0) ? action.getText(this.activityCount + i) : null,
@@ -176,7 +179,7 @@ module.exports = {
                 res = i;
                 break;
             }
-            res = false;
+            res = -1;
         }
         logger.logInto(stackTrace.get(), res);
         return res;
@@ -187,8 +190,6 @@ module.exports = {
         let i, list;
         list = action.findElements(this.chapterTitle);
         for (i = 0; i < list.length; i++) {
-            
-            console.log("clickUnit-"+action.getText(list[i]))
 
             if (unitName.includes(action.getText(list[i]))) {
                 res = action.click(list[i]);
@@ -231,6 +232,17 @@ module.exports = {
 
     },
 
+    //todo ENG-7136
+    getRemoveBookPopUpData: function(){
+        obj = {
+            removeBook: (action.getElementCount(this.removeBook_btn) > 0) ? action.getText(this.removeBook_btn) : null,
+            viewBookDetails: (action.getElementCount(this.viewBookDetails_btn) > 0) ? action.getText(this.viewBookDetails_btn) : null
+        }
+        logger.logInto(stackTrace.get(), JSON.stringify(obj));
+        return obj;
+
+    },
+
     clickRemoveBook: function() {
         logger.logInto(stackTrace.get())
         res = action.click(this.removeBook_btn);
@@ -242,10 +254,24 @@ module.exports = {
         return res;
     },
 
-    cancelRemoveBookDialog: function() {
+    clickCancelRemoveBookDialog: function() {
         logger.logInto(stackTrace.get())
         action.waitForDisplayed(this.removeBook_Dialog)
         res = action.click(this.removeBookDialogCancel);
+        if (res == true) {
+            action.waitForDisplayed(this.bookCover)
+            logger.logInto(stackTrace.get(), " --Cancel Button clicked");
+
+        } else
+            logger.logInto(stackTrace.get(), " --Cancel Button NOT clicked", "error");
+        return res;
+
+    },
+
+    clickRemove_RemoveBookDialog: function() {
+        logger.logInto(stackTrace.get())
+        action.waitForDisplayed(this.removeBook_Dialog)
+        res = action.click(this.removeBookDialogRemove);
         if (res == true) {
             action.waitForDisplayed(this.bookCover)
             logger.logInto(stackTrace.get(), " --Remove Book Button clicked");
@@ -310,5 +336,25 @@ module.exports = {
             logger.logInto(stackTrace.get(), "View Activity in More Options Not Clicked", "error");
 
         return res;
-    }
+    },
+
+    clickOnContinue: function(){
+        res = action.click(this.lastActivity_Continue)
+        if (res == true) {
+            logger.logInto(stackTrace.get(), " --Continue Button clicked");
+        } else
+            logger.logInto(stackTrace.get(), " --Continue Button NOT clicked", "error");
+        return res;
+
+    },
+
+    clickOnDismiss: function(){
+        res = action.click(this.lastActivity_Dismiss)
+        if (res == true) {
+            logger.logInto(stackTrace.get(), " --Dismiss Button clicked");
+        } else
+            logger.logInto(stackTrace.get(), " --Dismiss Button NOT clicked", "error");
+        return res;
+
+    },
 }

@@ -144,8 +144,7 @@
                 "classDrawerSubTitle": "[data-tid=text-ClassesSubtitle]",
                 "classDrawerCloseBtn": "[data-tid=button-close]"
             },
-            "appShell":
-            {
+            "appShell": {
                 "toggleSidebarBtn": "[aria-label=toggle-sidebar]",
                 "headerLogo": "[data-tid=image-headerLogo]",
                 "dashboardBtn": "[data-tid=button-dashboard]",
@@ -174,7 +173,8 @@
                 "userProfileLogoutBtn": "[data-tid=button-user-profile-option-2]",
                 "loaderIcon": "[data-tid=image-loader]",
                 "snackbarInfo_txt": "[data-tid=text-error], [data-tid=text-info], [data-tid=text-success]",
-                "snackbarClose_btn": "[data-tid=button-close]"
+                "snackbarClose_btn": "[data-tid=button-close]",
+                "classPlusIcon": "[data-tid=button-classes] button"
             },
             "dashboardPage":
             {
@@ -221,8 +221,10 @@
                 "moreOptions": "[data-tid=band-moreOptions]",
                 "closeMoreOptions":"[role=menu]",
                 "removeBook_btn": "[data-tid=button-removeBook]",
+                "removeBook_title":"//b[text()='Remove from My Books?']",
                 "removeBook_Dialog": "[role=dialog]",
                 "removeBookDialogCancel": "//span[text()='Cancel']",
+                "removeBookDialogRemove": "//span[text()='Remove']",
                 "viewBookDetails_btn": "[data-tid=button-viewBookDetails]",
                 "addBook_btn": "[data-tid=button-addMyBook]",
                 "myBooks_lbl": "[data-tid=pill-myBooks]",
@@ -232,6 +234,7 @@
                 "chapter": "[data-tid*=button-chapter-",
                 "chapter_bandColor": "[data-tid*=band-color-",
                 "chapterTitle": "[data-tid*=text-chapterTitle-",
+                "chapterNumber":"[data-tid*=text-chapterNumber-",
                 "chapterPage": "[data-tid*=text-chapterPage-",
                 "chapterCoverImg": "[data-tid*=image-chapter-",
                 "chapterMoreOptions": "[data-tid*=button-moreOption-",

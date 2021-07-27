@@ -222,6 +222,16 @@ module.exports = {
 
             return res;
         }
-    }
+    },
+
+    clickOnBreadcrumb: function(){
+        res = action.click(this.breadCrumbTitle)
+        if (res == true) {
+            logger.logInto(stackTrace.get(), " --Breadcrumb Button clicked");
+        } else
+            logger.logInto(stackTrace.get(), " --Breadcrumb Button NOT clicked", "error");
+        return res;
+
+    },
 
 }

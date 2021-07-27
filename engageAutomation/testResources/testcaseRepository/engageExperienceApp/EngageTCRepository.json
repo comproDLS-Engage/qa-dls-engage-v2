@@ -616,8 +616,19 @@
             "testFile": "./test/engageExperienceApp/bookDetailView.test.js",
             "testcase": [
                 {
+                    "id": "ENG_DIF_TC_5",
+                    "description": "",
+                    "tags": "P1"
+                },
+                {
                     "id": "ENG_BKTOC_TC_1",
                     "description": "Validate that 'Add to My Books button' is visible on book detail screen if the book has not been added to My Books",
+                    "tags": "P1",
+                    "visualTest": true
+                }, 
+                {
+                    "id": "ENG_BKTOC_TC_2",
+                    "description": "Validate that clicking on 'Add to My Books' button adds the book to My Books section",
                     "tags": "P1",
                     "visualTest": true
                 },
@@ -704,10 +715,52 @@
                     "description": "Anchor component - Validate that clicking on Previous Unit button launch the previous unit of Anchor component",
                     "tags": "P1",
                     "visualTest": true
+                }, 
+                {
+                    "id": "ENG_BKTOC_TC_38",
+                    "description": "Validate that 'Continue where you left off' message appears on the book Detail View page when user launches a activity.",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_BKTOC_TC_39",
+                    "description": "Validate that Clicking on Continue on 'Continue where you left off' pop up launches the last activity viewed by the student",
+                    "tags": "P1",
+                    "visualTest": true
+                }, 
+                {
+                    "id": "ENG_BKTOC_TC_40",
+                    "description": "Validate that Clicking on Dismiss on 'Continue where you left off:' closes the pop up.",
+                    "tags": "P1",
+                    "visualTest": true
                 },
                 {
                     "id": "ENG_BKTOC_TC_41",
                     "description": "Validate that clicking on unit Detail TOC breadcrumb naviagtes to Book detail TOC page",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_BKTOC_TC_42",
+                    "description": "Validate that clicking on Activity Screen breadcrumb naviagtes to Unit detail TOC page",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_BKTOC_TC_43",
+                    "description": "Validate that clicking on Activity Screen breadcrumb naviagtes to Book Detail TOC page",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_BKTOC_TC_44",
+                    "description": "Validate clicking on Cancel on Remove book closes the Remove book pop up",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_BKTOC_TC_45",
+                    "description": "Validate clicking on Remove on Remove book pop up removes the book from My Books",
                     "tags": "P1",
                     "visualTest": true
                 }
