@@ -70,7 +70,7 @@ module.exports = {
 	},
 
 	getmcqbData: function (mcqbQuesData) {
-		// itemplayer.switchParentFrame();
+		itemplayer.switchParentFrame();
 		let quesNo = (testplayer.getQuesInfo()).activeQues - 1;
 		itemplayer.switchMainFrame(0);
 		var obj = [];
