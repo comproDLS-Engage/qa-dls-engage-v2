@@ -1,7 +1,7 @@
 "use strict";
 var action = require('../../core/actionLibrary/baseActionLibrary.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
-var res, ret, itemplayerPage, isPlayerInsideiFrame;
+var res, ret, itemplayerPage;
 
 module.exports = {
 
@@ -30,6 +30,10 @@ module.exports = {
 	},
 
 	getTestplayerInfo: function () {
+		let insideFrame = this.isPlayerInsideiFrame();
+		if (insideFrame == true) {
+			action.switchToFrame(0);
+		}
 		var testplayerInfo = {
 			checkmyWork_isExists: action.getElementCount(this.checkMyWork_btn) == 1 ? true : false,
 			checkmyWork_isDisabled: (action.getElementCount(this.checkMyWork_btn) == 1) ? action.getAttribute(this.checkMyWork_btn, 'disabled') : false,
@@ -44,10 +48,12 @@ module.exports = {
 			activeQues: "",
 			totalQues: "",
 		};
+		if (insideFrame == true) {
+			action.switchToParentFrame();
+		}
 		var quesInfo = this.getQuesInfo();
 		//testplayerInfo.isPlayerInsideiFrame = this.isPlayerInsideiFrame();
 		testplayerInfo.activeQues = quesInfo.activeQues;
-
 		return testplayerInfo;
 	},
 
@@ -69,9 +75,8 @@ module.exports = {
 
 	click_CheckMyWork: function () {
 		logger.logInto(stackTrace.get());
-		isPlayerInsideiFrame = this.isPlayerInsideiFrame();
-		console.log(" isPlayerInsideiFrame : " + isPlayerInsideiFrame);
-		if (isPlayerInsideiFrame == true) {
+		let insideFrame = this.isPlayerInsideiFrame();
+		if (insideFrame == true) {
 			action.switchToFrame(0);
 		}
 		res = action.click(this.checkMyWork_btn);
@@ -84,15 +89,15 @@ module.exports = {
 			ret = res + " -- Error in clicking CheckmyWork Button"
 			logger.logInto(stackTrace.get(), ret, "error");
 		}
-		if (isPlayerInsideiFrame == true) {
+		if (insideFrame == true) {
 			action.switchToParentFrame();
 		}
 		return ret;
 	},
 
 	click_Skip: function () {
-		isPlayerInsideiFrame = this.isPlayerInsideiFrame();
-		if (isPlayerInsideiFrame == true) {
+		let insideFrame = this.isPlayerInsideiFrame();
+		if (insideFrame == true) {
 			action.switchToFrame(0);
 		}
 		logger.logInto(stackTrace.get());
@@ -107,7 +112,7 @@ module.exports = {
 			ret = res + " --Error in clicking " + btnName;
 			logger.logInto(stackTrace.get(), ret, "error");
 		}
-		if (isPlayerInsideiFrame == true) {
+		if (insideFrame == true) {
 			action.switchToParentFrame();
 		}
 		return ret;
@@ -115,6 +120,10 @@ module.exports = {
 
 	click_Previous: function () {
 		logger.logInto(stackTrace.get());
+		let insideFrame = this.isPlayerInsideiFrame();
+		if (insideFrame == true) {
+			action.switchToFrame(0);
+		}
 		let btnName = action.getText(this.previous_btn)
 		res = action.click(this.previous_btn);
 		if (res == true) {
@@ -126,11 +135,18 @@ module.exports = {
 			ret = res + " --Error in clicking " + btnName;
 			logger.logInto(stackTrace.get(), ret, "error");
 		}
+		if (insideFrame == true) {
+			action.switchToParentFrame();
+		}
 		return ret;
 	},
 
 	click_TryAgain: function () {
 		logger.logInto(stackTrace.get());
+		let insideFrame = this.isPlayerInsideiFrame();
+		if (insideFrame == true) {
+			action.switchToFrame(0);
+		}
 		res = action.click(this.tryAgain_btn);
 		if (res == true) {
 			logger.logInto(stackTrace.get(), " -- TryAgain Button is clicked");
@@ -141,11 +157,18 @@ module.exports = {
 			ret = res + " -- Error in clicking TryAgain Button"
 			logger.logInto(stackTrace.get(), ret, "error");
 		}
+		if (insideFrame == true) {
+			action.switchToParentFrame();
+		}
 		return ret;
 	},
 
 	click_Reset: function () {
 		logger.logInto(stackTrace.get());
+		let insideFrame = this.isPlayerInsideiFrame();
+		if (insideFrame == true) {
+			action.switchToFrame(0);
+		}
 		res = action.click(this.reset_btn);
 		if (res == true) {
 			logger.logInto(stackTrace.get(), " -- Reset Button is clicked");
@@ -156,6 +179,9 @@ module.exports = {
 			ret = res + " -- Error in clicking TryAgain Button"
 			logger.logInto(stackTrace.get(), ret, "error");
 		}
+		if (insideFrame == true) {
+			action.switchToParentFrame();
+		}
 		return ret;
 	},
 
@@ -164,13 +190,13 @@ module.exports = {
 			activeQues: undefined,
 			// maxQues: undefined
 		};
-		isPlayerInsideiFrame = this.isPlayerInsideiFrame();
-		if (isPlayerInsideiFrame == true) {
+		let insideFrame = this.isPlayerInsideiFrame();
+		if (insideFrame == true) {
 			action.switchToFrame(0);
 		}
 		quesInfo.activeQues = action.getElementCount("div[class*=\"item-player-container\"] > div");
 		ret = quesInfo;
-		if (isPlayerInsideiFrame == true) {
+		if (insideFrame == true) {
 			action.switchToParentFrame();
 		}
 		return ret;
