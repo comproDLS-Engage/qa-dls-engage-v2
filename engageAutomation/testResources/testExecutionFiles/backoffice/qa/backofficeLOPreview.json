@@ -445,12 +445,6 @@
                 "testData": []
             },
             {
-                "id": "ENG_QUIZ_TC_6",
-                "description": "",
-                "testFile": "./test/engageExperienceApp/testPlayer.test.js",
-                "testData": []
-            },
-            {
                 "id": "ENG_ITEM_CLA_TC_2",
                 "description": "",
                 "testFile": "./test/engageExperienceApp/classify.test.js",

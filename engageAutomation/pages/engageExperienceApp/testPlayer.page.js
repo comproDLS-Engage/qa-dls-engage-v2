@@ -43,15 +43,40 @@ module.exports = {
 			next_isDisabled: (action.getElementCount(this.next_btn) == 1) ? action.getAttribute(this.next_btn, 'disabled') : false,
 			activeQues: "",
 			totalQues: "",
+			isPlayerInsideIframe: ""
 		};
 		var quesInfo = this.getQuesInfo();
+		testplayerInfo.isPlayerInsideIframe = this.isTestPlayerInsideIFrame();
 		testplayerInfo.activeQues = quesInfo.activeQues
 
 		return testplayerInfo;
 	},
 
+	isTestPlayerInsideIFrame: function () {
+		var isPlayerInside;
+		res = action.getElementCount(this.checkMyWork_btn);
+		if (res == 1) {
+			isPlayerInside = false;
+		}
+		else {
+			action.switchToFrame(0);
+			res = action.getElementCount(this.checkMyWork_btn)
+			if (res == 1) {
+				isPlayerInside = true;
+			}
+			else
+				res = "button not found";
+		}
+		return isPlayerInside;
+	},
+
 	click_CheckMyWork: function () {
 		logger.logInto(stackTrace.get());
+		res = this.isTestPlayerInsideIFrame();
+		console.log(" isTestPlayerInsideIFrame : "  +res);
+		if (res == true) {
+			action.switchToFrame(0);
+		}
 		res = action.click(this.checkMyWork_btn);
 		if (res == true) {
 			logger.logInto(stackTrace.get(), " -- CheckmyWork Button is clicked");
@@ -62,10 +87,15 @@ module.exports = {
 			ret = res + " -- Error in clicking CheckmyWork Button"
 			logger.logInto(stackTrace.get(), ret, "error");
 		}
+		action.switchToParentFrame();
 		return ret;
 	},
 
 	click_Skip: function () {
+		res = this.isTestPlayerInsideIFrame();
+		if (res == true) {
+			action.switchToFrame(0);
+		}
 		logger.logInto(stackTrace.get());
 		let btnName = action.getText(this.next_btn)
 		res = action.click(this.next_btn);
@@ -78,6 +108,7 @@ module.exports = {
 			ret = res + " --Error in clicking " + btnName;
 			logger.logInto(stackTrace.get(), ret, "error");
 		}
+		action.switchToParentFrame();
 		return ret;
 	},
 
@@ -132,11 +163,12 @@ module.exports = {
 			activeQues: undefined,
 			// maxQues: undefined
 		};
-
-		quesInfo.activeQues = action.getElementCount("div[class=\"item-player-container default-button-bar\"] > div");
+		action.switchToFrame(0);
+		quesInfo.activeQues = action.getElementCount("div[class*=\"item-player-container\"] > div");
 		ret = quesInfo;
+		action.switchToParentFrame();
 		return ret;
 	},
 
-	
+
 };

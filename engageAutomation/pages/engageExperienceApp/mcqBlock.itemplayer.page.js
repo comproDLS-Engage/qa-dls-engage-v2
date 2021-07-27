@@ -14,7 +14,8 @@ module.exports = {
 	isInitialized: function (mcqbQuesData) {
 		logger.logInto(stackTrace.get(), "");
 		var qIndex = (testplayer.getQuesInfo()).activeQues - 1;
-		//  itemplayer.switchMainFrame(0);
+		console.log("qIndex : "  + qIndex);
+		itemplayer.switchMainFrame(0);
 		let choiceSelector = "div[index='" + qIndex + "'] " + this.choice + mcqbQuesData[0][0] + "]";
 		res = action.getCSSProperty(choiceSelector, 'border-style');
 		if (res.value == 'solid') {
@@ -34,14 +35,14 @@ module.exports = {
 			ret = res + "-- Choice no " + mcqbQuesData[0][0] + " is NOT of MCQ Block type";
 			logger.logInto(stackTrace.get(), ret, "error");
 		}
-		// itemplayer.switchParentFrame();
+		itemplayer.switchParentFrame();
 		return ret;
 	},
 
 	clickOption: function (mcqbQuesData) {
 		let qIndex = (testplayer.getQuesInfo()).activeQues - 1;
 		// testplayer.collapseTestPlayer();
-		// itemplayer.switchMainFrame(0);
+		itemplayer.switchMainFrame(0);
 		for (let i = 0; i < mcqbQuesData.length; i++) {
 			let choiceSelector = "div[index='" + qIndex + "'] " + this.choice + mcqbQuesData[i][0] + "]";
 			res = action.getElementCount(choiceSelector);
@@ -64,14 +65,14 @@ module.exports = {
 				logger.logInto(stackTrace.get(), res, "error");
 			}
 		}
-		// itemplayer.switchParentFrame();
+		itemplayer.switchParentFrame();
 		return res;
 	},
 
 	getmcqbData: function (mcqbQuesData) {
 		// itemplayer.switchParentFrame();
 		let quesNo = (testplayer.getQuesInfo()).activeQues - 1;
-		// itemplayer.switchMainFrame(0);
+		itemplayer.switchMainFrame(0);
 		var obj = [];
 		for (let i = 0; i < mcqbQuesData.length; i++) {
 			let choiceSelector = "div[index='" + (quesNo) + "'] " + this.choice + mcqbQuesData[i][0] + "]"
@@ -83,7 +84,7 @@ module.exports = {
 			else
 				obj[i] = [mcqbQuesData[i][0], action.getText(choiceSelector), "", value]
 		}
-		// itemplayer.switchParentFrame();
+		itemplayer.switchParentFrame();
 		return obj;
 	}
 }

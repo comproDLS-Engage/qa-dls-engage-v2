@@ -15,7 +15,7 @@ module.exports = {
 	isInitialized: function (mcmrQuesData) {
 		var qIndex = (testplayer.getQuesInfo()).activeQues - 1;
 		console.log("qIndex: " + qIndex);
-		// itemplayer.switchMainFrame(0);
+		itemplayer.switchMainFrame(0);
 		let choiceSelector = "div[index='" + qIndex + "'] " + this.choice + mcmrQuesData[2][0] + "]";
 		res = action.getCSSProperty(choiceSelector, 'border-style');
 		if (res.value == 'solid') {
@@ -35,7 +35,7 @@ module.exports = {
 			ret = res + "-- Choice no " + mcmrQuesData[0][0] + " is NOT of MCMR type";
 			logger.logInto(stackTrace.get(), ret, "error");
 		}
-		// itemplayer.switchParentFrame();
+		itemplayer.switchParentFrame();
 		return ret;
 	},
 

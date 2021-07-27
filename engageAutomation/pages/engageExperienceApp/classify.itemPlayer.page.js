@@ -16,10 +16,10 @@ module.exports = {
             targetData: []
         };
         var quesNo = (testplayer.getQuesInfo()).activeQues;
-       // itemplayer.switchMainFrame(0);
+       itemplayer.switchMainFrame(0);
         data.sourceData = this.getSourceData(quesNo - 1, classifyQuesData);
         data.targetData = this.getTargetData(quesNo - 1, classifyQuesData, quesType);
-       // itemplayer.switchParentFrame();
+       itemplayer.switchParentFrame();
         return data;
     },
 

@@ -22,7 +22,7 @@ module.exports = {
 
     getTargetData: function (qIndex, fibQuesData) {
         logger.logInto(stackTrace.get());
-        // itemplayer.switchMainFrame(0);
+        itemplayer.switchMainFrame(0);
         let option = "div[index='" + qIndex + "'] " + this.responses;
         var targetArr = [];
         let optionLength = action.findElements(option).length;
@@ -31,14 +31,14 @@ module.exports = {
             var value = itemplayer.getFeedbackIconDetails(textSelector);
             targetArr[i] = [fibQuesData[i][0], action.getValue(textSelector + "[data-tid=text-placeholder]"), value];
         }
-        //itemplayer.switchParentFrame();
+        itemplayer.switchParentFrame();
         return targetArr;
     },
 
     inputValues: function (fibQuesData) {
         logger.logInto(stackTrace.get());
         quesNo = ((testplayer.getQuesInfo()).activeQues) - 1;
-        // itemplayer.switchMainFrame(0);
+        itemplayer.switchMainFrame(0);
         for (let i = 0; i < fibQuesData.length; i++) {
             var textSelector = "div[index='" + quesNo + "'] " + this.response + fibQuesData[i][0] + "] [data-tid=text-placeholder]";
             //itemplayer.switchParentFrame();
@@ -56,7 +56,7 @@ module.exports = {
                 logger.logInto(stackTrace.get(), res, 'error');
             }
         }
-        //itemplayer.switchParentFrame();
+        itemplayer.switchParentFrame();
         return res;
     }
 }

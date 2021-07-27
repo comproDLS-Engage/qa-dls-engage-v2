@@ -7,6 +7,7 @@ module.exports = {
 	//Validate UI Of Block MCQ Question In Unattempted State
 	ENG_ITEM_MCQB_TC_1: function (testdata) {
 		sts = mcqbPage.isInitialized(testdata);
+		console.log("sts : " +sts);
 		if ((typeof (sts)) === "object") {
 			assertion.assertEqual(sts.length, testdata.length, "Options count mismatch");
 			for (var i = 0; i < sts.length; i++) {

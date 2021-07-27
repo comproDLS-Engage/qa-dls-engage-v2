@@ -218,8 +218,8 @@
 				"audioMedia": "[data-tid=container-audio]"
 			},
 			"testPlayer": {
-				"checkMyWork_btn": "[class=buttons-container] [class=defaultBtn-check-mywork-icon]",
-				"next_btn": "[id=next]",
+				"checkMyWork_btn": "[class=buttons-container] [class=defaultBtn-check-mywork-icon] , [data-tid=button-checkanswers]",
+				"next_btn": "[id=next], [data-tid=button-next]",
 				"previous_btn": "[id=previous]",
 				"tryAgain_btn": "[id=tryAgain]",
 				"reset_btn": "[id=reset]",
