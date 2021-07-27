@@ -1,7 +1,7 @@
 "use strict";
 var action = require('../../core/actionLibrary/baseActionLibrary.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
-var res, ret, itemplayerPage;
+var res, ret, itemplayerPage, isPlayerInsideiFrame;
 
 module.exports = {
 
@@ -43,38 +43,35 @@ module.exports = {
 			next_isDisabled: (action.getElementCount(this.next_btn) == 1) ? action.getAttribute(this.next_btn, 'disabled') : false,
 			activeQues: "",
 			totalQues: "",
-			isPlayerInsideIframe: ""
 		};
 		var quesInfo = this.getQuesInfo();
-		testplayerInfo.isPlayerInsideIframe = this.isTestPlayerInsideIFrame();
-		testplayerInfo.activeQues = quesInfo.activeQues
+		//testplayerInfo.isPlayerInsideiFrame = this.isPlayerInsideiFrame();
+		testplayerInfo.activeQues = quesInfo.activeQues;
 
 		return testplayerInfo;
 	},
 
-	isTestPlayerInsideIFrame: function () {
-		var isPlayerInside;
-		res = action.getElementCount(this.checkMyWork_btn);
-		if (res == 1) {
-			isPlayerInside = false;
+	isPlayerInsideiFrame: function () {
+		let insideFrame;
+		res = action.getElementCount(this.checkMyWork_btn) + action.getElementCount(this.next_btn) + action.getElementCount(this.reset_btn);
+		if (res >= 1) {
+			insideFrame = false;
 		}
 		else {
 			action.switchToFrame(0);
-			res = action.getElementCount(this.checkMyWork_btn)
-			if (res == 1) {
-				isPlayerInside = true;
-			}
-			else
-				res = "button not found";
+			res = action.getElementCount(this.checkMyWork_btn) + action.getElementCount(this.next_btn) + action.getElementCount(this.reset_btn);
+			action.switchToParentFrame();
+			if (res >= 1)
+				insideFrame = true;
 		}
-		return isPlayerInside;
+		return insideFrame;
 	},
 
 	click_CheckMyWork: function () {
 		logger.logInto(stackTrace.get());
-		res = this.isTestPlayerInsideIFrame();
-		console.log(" isTestPlayerInsideIFrame : "  +res);
-		if (res == true) {
+		isPlayerInsideiFrame = this.isPlayerInsideiFrame();
+		console.log(" isPlayerInsideiFrame : " + isPlayerInsideiFrame);
+		if (isPlayerInsideiFrame == true) {
 			action.switchToFrame(0);
 		}
 		res = action.click(this.checkMyWork_btn);
@@ -87,13 +84,15 @@ module.exports = {
 			ret = res + " -- Error in clicking CheckmyWork Button"
 			logger.logInto(stackTrace.get(), ret, "error");
 		}
-		action.switchToParentFrame();
+		if (isPlayerInsideiFrame == true) {
+			action.switchToParentFrame();
+		}
 		return ret;
 	},
 
 	click_Skip: function () {
-		res = this.isTestPlayerInsideIFrame();
-		if (res == true) {
+		isPlayerInsideiFrame = this.isPlayerInsideiFrame();
+		if (isPlayerInsideiFrame == true) {
 			action.switchToFrame(0);
 		}
 		logger.logInto(stackTrace.get());
@@ -108,7 +107,9 @@ module.exports = {
 			ret = res + " --Error in clicking " + btnName;
 			logger.logInto(stackTrace.get(), ret, "error");
 		}
-		action.switchToParentFrame();
+		if (isPlayerInsideiFrame == true) {
+			action.switchToParentFrame();
+		}
 		return ret;
 	},
 
@@ -163,10 +164,15 @@ module.exports = {
 			activeQues: undefined,
 			// maxQues: undefined
 		};
-		action.switchToFrame(0);
+		isPlayerInsideiFrame = this.isPlayerInsideiFrame();
+		if (isPlayerInsideiFrame == true) {
+			action.switchToFrame(0);
+		}
 		quesInfo.activeQues = action.getElementCount("div[class*=\"item-player-container\"] > div");
 		ret = quesInfo;
-		action.switchToParentFrame();
+		if (isPlayerInsideiFrame == true) {
+			action.switchToParentFrame();
+		}
 		return ret;
 	},
 
