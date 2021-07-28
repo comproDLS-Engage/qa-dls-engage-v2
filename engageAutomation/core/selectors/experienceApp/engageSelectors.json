@@ -218,9 +218,9 @@
 				"audioMedia": "[data-tid=container-audio]"
 			},
 			"testPlayer": {
-				"checkMyWork_btn": "[class=buttons-container] [class=defaultBtn-check-mywork-icon] , [data-tid=button-checkanswers]",
+				"checkMyWork_btn": "[class=buttons-container] [class=defaultBtn-check-mywork-icon] , [data-tid=button-checkanswers], [data-tid=button-check]",
 				"next_btn": "[id=next], [data-tid=button-next]",
-				"previous_btn": "[id=previous]",
+				"previous_btn": "[id=previous], [data-tid=button-previousactivity]",
 				"tryAgain_btn": "[id=tryAgain]",
 				"reset_btn": "[id=reset]",
 				"closeReview_btn": "[data-tid='container-testplayer'] button[data-tid*=button-closereview]",
