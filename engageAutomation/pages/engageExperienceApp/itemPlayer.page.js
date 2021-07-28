@@ -19,7 +19,10 @@ module.exports = {
 	isInitialized: function () {
 		logger.logInto(stackTrace.get());
 		//res = action.waitForDisplayed(this.loaderIcon, undefined, true);
+		res = action.waitForDisplayed("iframe[id*=iframe]");
+		action.switchToFrame(0);
 		res = action.waitForDocumentLoad();
+		action.switchToParentFrame();
 		if (res == true) {
 			res = this.getItemplayerInfo();
 		}

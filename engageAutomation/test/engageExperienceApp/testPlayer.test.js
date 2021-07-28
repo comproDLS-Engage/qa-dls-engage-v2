@@ -21,7 +21,7 @@ module.exports = {
 	//Validate the test player when quiz is launched and question is not performed
 	ENG_QUIZ_TC_2: function (testdata) {
 		sts = itemPlayer.isInitialized();
-		// console.log(sts);
+		console.log(sts);
 		// assertion.assertEqual(sts.question.quesText, testdata, "Question text mismatch");
 		// if ((typeof (sts)) === "object") {
 		// 	if (sts.question.quesType.includes("order-list"))
