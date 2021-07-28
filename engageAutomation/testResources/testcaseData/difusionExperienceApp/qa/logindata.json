@@ -3,8 +3,8 @@
         "login": {
             "user": {
                 "validStudent1": {
-                    "email": "demoteacher3@yopmail.com",
-                    "password": "Compro@1234",
+                    "email": "etirrase-9139@yopmail.com",
+                    "password": "hfcghgufyhW#2",
                     "role": "student",
                     "name": "etirrase-9139",
                     "class": [
@@ -28,8 +28,7 @@
                     "password": "Compro@1234",
                     "role": "student",
                     "name": "etirrase-9139",
-                    "class": [
-                    ],
+                    "class": [],
                     "info": {}
                 },
                 "invalidUser1": {
@@ -120,12 +119,14 @@
                     "class": [],
                     "info": {}
                 }
-               
             }
         },
         "codesAndKeys": {
             "schoolName": "Mount Allison School",
-            "invalid_OTP":["12046","000000"],
+            "invalid_OTP": [
+                "12046",
+                "000000"
+            ],
             "validSchoolKey": "NGL-FUW-GQL",
             "invalidSchoolKey": "NGL-FUW-123",
             "invalidClassKey": [
