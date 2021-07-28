@@ -1,7 +1,7 @@
 "use strict";
 var action = require('../../core/actionLibrary/baseActionLibrary.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
-var res, ret, itemplayerPage;
+var res, itemplayerPage;
 
 module.exports = {
 
@@ -20,20 +20,17 @@ module.exports = {
 		logger.logInto(stackTrace.get());
 		res = action.waitForDocumentLoad();
 		if (res == true) {
-			ret = this.getTestplayerInfo();
+			res = this.getTestplayerInfo();
 		}
 		else {
-			ret = res + " -- TestPlayer page is not loaded yet";
-			logger.logInto(stackTrace.get(), res);
+			res = res + " -- TestPlayer page is not loaded yet";
+			logger.logInto(stackTrace.get(), res, "error");
 		}
-		return ret;
+		return res;
 	},
 
 	getTestplayerInfo: function () {
-		let insideFrame = this.isPlayerInsideiFrame();
-		if (insideFrame == true) {
-			action.switchToFrame(0);
-		}
+		let insideFrame = this.enterFrame(this.next_btn);
 		var testplayerInfo = {
 			checkmyWork_isExists: action.getElementCount(this.checkMyWork_btn) == 1 ? true : false,
 			checkmyWork_isDisabled: (action.getElementCount(this.checkMyWork_btn) == 1) ? action.getAttribute(this.checkMyWork_btn, 'disabled') : false,
@@ -48,159 +45,128 @@ module.exports = {
 			activeQues: "",
 			totalQues: "",
 		};
-		if (insideFrame == true) {
+		if (insideFrame)
 			action.switchToParentFrame();
-		}
 		var quesInfo = this.getQuesInfo();
-		//testplayerInfo.isPlayerInsideiFrame = this.isPlayerInsideiFrame();
 		testplayerInfo.activeQues = quesInfo.activeQues;
 		return testplayerInfo;
 	},
 
-	isPlayerInsideiFrame: function () {
+	click_CheckMyWork: function () {
+		logger.logInto(stackTrace.get());
+		let insideFrame = this.enterFrame(this.checkMyWork_btn);
+		res = action.click(this.checkMyWork_btn);
+		if (res == true) {
+			logger.logInto(stackTrace.get(), " -- CheckmyWork Button is clicked");
+			itemplayerPage = require('./itemPlayer.page.js');
+			res = itemplayerPage.isInitialized();
+		}
+		else {
+			res = res + " -- Error in clicking CheckmyWork Button"
+			logger.logInto(stackTrace.get(), res, "error");
+		}
+		if (insideFrame)
+			action.switchToParentFrame();
+		return res;
+	},
+
+	click_Skip: function () {
+		logger.logInto(stackTrace.get());
+		let insideFrame = this.enterFrame(this.next_btn);
+		res = action.click(this.next_btn);
+		if (res == true) {
+			logger.logInto(stackTrace.get(), " -- next is clicked");
+			itemplayerPage = require('./itemPlayer.page.js');
+			res = itemplayerPage.isInitialized();
+		}
+		else {
+			res = res + " --Error in clicking next button";
+			logger.logInto(stackTrace.get(), res, "error");
+		}
+		if (insideFrame)
+			action.switchToParentFrame();
+		return res;
+	},
+
+	click_Previous: function () {
+		logger.logInto(stackTrace.get());
+		let insideFrame = this.enterFrame(this.previous_btn);
+		res = action.click(this.previous_btn);
+		if (res == true) {
+			logger.logInto(stackTrace.get(), " -- previous button is clicked");
+			itemplayerPage = require('./itemPlayer.page.js');
+			res = itemplayerPage.isInitialized();
+		}
+		else {
+			res = res + " --Error in clicking previous button";
+			logger.logInto(stackTrace.get(), res, "error");
+		}
+		if (insideFrame)
+			action.switchToParentFrame();
+		return res;
+	},
+
+	click_TryAgain: function () {
+		logger.logInto(stackTrace.get());
+		let insideFrame = this.enterFrame(this.tryAgain_btn);
+		res = action.click(this.tryAgain_btn);
+		if (res == true) {
+			logger.logInto(stackTrace.get(), " -- TryAgain Button is clicked");
+			itemplayerPage = require('./itemPlayer.page.js');
+			res = itemplayerPage.isInitialized();
+		}
+		else {
+			res = res + " -- Error in clicking TryAgain Button"
+			logger.logInto(stackTrace.get(), res, "error");
+		}
+		if (insideFrame)
+			action.switchToParentFrame();
+		return res;
+	},
+
+	click_Reset: function () {
+		logger.logInto(stackTrace.get());
+		let insideFrame = this.enterFrame(this.reset_btn);
+		res = action.click(this.reset_btn);
+		if (res == true) {
+			logger.logInto(stackTrace.get(), " -- Reset Button is clicked");
+			itemplayerPage = require('./itemPlayer.page.js');
+			res = itemplayerPage.isInitialized();
+		}
+		else {
+			res = res + " -- Error in clicking Reset Button"
+			logger.logInto(stackTrace.get(), res, "error");
+		}
+		if (insideFrame)
+			action.switchToParentFrame();
+		return res;
+	},
+
+	getQuesInfo: function () {
+		logger.logInto(stackTrace.get());
+		let insideFrame = this.enterFrame("div[class*=\"item-player-container\"] > div");
+		var quesInfo = {
+			activeQues: action.getElementCount("div[class*=\"item-player-container\"] > div"),
+			// maxQues: undefined
+		};
+		if (insideFrame)
+			action.switchToParentFrame();
+		return quesInfo;
+	},
+	
+	enterFrame: function (selector) {
 		let insideFrame;
-		res = action.getElementCount(this.checkMyWork_btn) + action.getElementCount(this.next_btn) + action.getElementCount(this.reset_btn);
+		res = action.getElementCount(selector);
 		if (res >= 1) {
 			insideFrame = false;
 		}
 		else {
 			action.switchToFrame(0);
-			res = action.getElementCount(this.checkMyWork_btn) + action.getElementCount(this.next_btn) + action.getElementCount(this.reset_btn);
-			action.switchToParentFrame();
+			res = action.getElementCount(selector);
 			if (res >= 1)
 				insideFrame = true;
 		}
 		return insideFrame;
 	},
-
-	click_CheckMyWork: function () {
-		logger.logInto(stackTrace.get());
-		let insideFrame = this.isPlayerInsideiFrame();
-		if (insideFrame == true) {
-			action.switchToFrame(0);
-		}
-		res = action.click(this.checkMyWork_btn);
-		if (res == true) {
-			logger.logInto(stackTrace.get(), " -- CheckmyWork Button is clicked");
-			itemplayerPage = require('./itemPlayer.page.js');
-			ret = itemplayerPage.isInitialized();
-		}
-		else {
-			ret = res + " -- Error in clicking CheckmyWork Button"
-			logger.logInto(stackTrace.get(), ret, "error");
-		}
-		if (insideFrame == true) {
-			action.switchToParentFrame();
-		}
-		return ret;
-	},
-
-	click_Skip: function () {
-		let insideFrame = this.isPlayerInsideiFrame();
-		if (insideFrame == true) {
-			action.switchToFrame(0);
-		}
-		logger.logInto(stackTrace.get());
-		let btnName = action.getText(this.next_btn)
-		res = action.click(this.next_btn);
-		if (res == true) {
-			logger.logInto(stackTrace.get(), " -- " + btnName + " is clicked");
-			itemplayerPage = require('./itemPlayer.page.js');
-			ret = itemplayerPage.isInitialized();
-		}
-		else {
-			ret = res + " --Error in clicking " + btnName;
-			logger.logInto(stackTrace.get(), ret, "error");
-		}
-		if (insideFrame == true) {
-			action.switchToParentFrame();
-		}
-		return ret;
-	},
-
-	click_Previous: function () {
-		logger.logInto(stackTrace.get());
-		let insideFrame = this.isPlayerInsideiFrame();
-		if (insideFrame == true) {
-			action.switchToFrame(0);
-		}
-		let btnName = action.getText(this.previous_btn)
-		res = action.click(this.previous_btn);
-		if (res == true) {
-			logger.logInto(stackTrace.get(), " -- " + btnName + " is clicked");
-			itemplayerPage = require('./itemPlayer.page.js');
-			ret = itemplayerPage.isInitialized();
-		}
-		else {
-			ret = res + " --Error in clicking " + btnName;
-			logger.logInto(stackTrace.get(), ret, "error");
-		}
-		if (insideFrame == true) {
-			action.switchToParentFrame();
-		}
-		return ret;
-	},
-
-	click_TryAgain: function () {
-		logger.logInto(stackTrace.get());
-		let insideFrame = this.isPlayerInsideiFrame();
-		if (insideFrame == true) {
-			action.switchToFrame(0);
-		}
-		res = action.click(this.tryAgain_btn);
-		if (res == true) {
-			logger.logInto(stackTrace.get(), " -- TryAgain Button is clicked");
-			itemplayerPage = require('./itemPlayer.page.js');
-			ret = itemplayerPage.isInitialized();
-		}
-		else {
-			ret = res + " -- Error in clicking TryAgain Button"
-			logger.logInto(stackTrace.get(), ret, "error");
-		}
-		if (insideFrame == true) {
-			action.switchToParentFrame();
-		}
-		return ret;
-	},
-
-	click_Reset: function () {
-		logger.logInto(stackTrace.get());
-		let insideFrame = this.isPlayerInsideiFrame();
-		if (insideFrame == true) {
-			action.switchToFrame(0);
-		}
-		res = action.click(this.reset_btn);
-		if (res == true) {
-			logger.logInto(stackTrace.get(), " -- Reset Button is clicked");
-			itemplayerPage = require('./itemPlayer.page.js');
-			ret = itemplayerPage.isInitialized();
-		}
-		else {
-			ret = res + " -- Error in clicking TryAgain Button"
-			logger.logInto(stackTrace.get(), ret, "error");
-		}
-		if (insideFrame == true) {
-			action.switchToParentFrame();
-		}
-		return ret;
-	},
-
-	getQuesInfo: function () {
-		var quesInfo = {
-			activeQues: undefined,
-			// maxQues: undefined
-		};
-		let insideFrame = this.isPlayerInsideiFrame();
-		if (insideFrame == true) {
-			action.switchToFrame(0);
-		}
-		quesInfo.activeQues = action.getElementCount("div[class*=\"item-player-container\"] > div");
-		ret = quesInfo;
-		if (insideFrame == true) {
-			action.switchToParentFrame();
-		}
-		return ret;
-	},
-
 
 };
