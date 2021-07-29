@@ -214,11 +214,11 @@
                   ["O3","","B","tiger","correct"],
                   ["O4","","A","sheep","correct"],
                   ["O5","","C","cat","correct"],
-                  ["O6","","B","bear","incorrect"]
+                  ["O6","","A","bear","correct"]
               ],
               "key2": [
-                  ["A","herbivores","incorrect"],
-                  ["B","carnivores","incorrect"],
+                  ["A","herbivores","correct"],
+                  ["B","carnivores","correct"],
                   ["C","omnivores","correct"]
               ]
           },

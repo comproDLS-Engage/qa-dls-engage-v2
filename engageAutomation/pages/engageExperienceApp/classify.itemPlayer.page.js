@@ -62,11 +62,11 @@ module.exports = {
     },
 
     dragAndDrop: function (classifyQuesData) {
+        return DNDonImageItemPlayerPage.dragAndDrop(classifyQuesData.key1);
+    },
+
+    dragAndDropClick: function (classifyQuesData) {
         return DNDonImageItemPlayerPage.dragAndDropClick(classifyQuesData.key1);
     }
-
-    /*dragAndDropClick: function (fibQuesData) {
-        return DNDonImageItemPlayerPage.dragAndDropClick(fibQuesData);
-    }*/
 
 }
