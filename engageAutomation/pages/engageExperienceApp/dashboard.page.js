@@ -1,4 +1,5 @@
 "use strict";
+const { click } = require('../../core/actionLibrary/baseActionLibrary.js');
 var action = require('../../core/actionLibrary/baseActionLibrary.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
 var res, ret;
@@ -7,14 +8,24 @@ module.exports = {
 
 
     pageTitle: selectorFile.css.ComproEngage.dashboardPage.pageTitle,
+    createPlaylist_Btn: selectorFile.css.ComproEngage.dashboardPage.createPlaylist_Btn,
+    addBook_Btn: selectorFile.css.ComproEngage.dashboardPage.addBook_Btn,
+    bookPlusIcon: selectorFile.css.ComproEngage.dashboardPage.bookPlusIcon,
     resourceList: selectorFile.css.ComproEngage.dashboardPage.resourceList,
     resourceTitle: selectorFile.css.ComproEngage.dashboardPage.resourceTitle,
+    cardSliderTitle: selectorFile.css.ComproEngage.dashboardPage.cardSliderTitle,
+    cardSliderSubtitle: selectorFile.css.ComproEngage.dashboardPage.cardSliderTitle,
     bookTitle: selectorFile.css.ComproEngage.dashboardPage.bookTitle,
     bookEllipses: selectorFile.css.ComproEngage.dashboardPage.bookEllipses,
     viewClass_menu: selectorFile.css.ComproEngage.dashboardPage.viewClass_menu,
     createClass_menu: selectorFile.css.ComproEngage.dashboardPage.createClass_menu,
     removeBook_menu: selectorFile.css.ComproEngage.dashboardPage.removeBook_menu,
     openFlipbook_menu: selectorFile.css.ComproEngage.dashboardPage.openFlipbook_menu,
+    removeBook_title: selectorFile.css.ComproEngage.dashboardPage.removeBook_title,
+    removeBook_subTitle: selectorFile.css.ComproEngage.dashboardPage.removeBook_subTitle,
+    removeBook_cancel: selectorFile.css.ComproEngage.dashboardPage.removeBook_cancel,
+    removeBook_remove: selectorFile.css.ComproEngage.dashboardPage.removeBook_remove,
+
 
     isInitialized: function () {
         logger.logInto(stackTrace.get());
@@ -28,17 +39,22 @@ module.exports = {
     getDashboardPageData: function () {
         logger.logInto(stackTrace.get());
         let obj = {
+            pageTitle: (action.getElementCount(this.pageTitle) > 0) ? action.getText(this.pageTitle) : null,
+            createPlaylist_Txt: (action.getElementCount(this.createPlaylist_Btn) > 0) ? action.getText(this.createPlaylist_Btn) : null,
+            addBook_Txt: (action.getElementCount(this.addBook_Btn) > 0) ? action.getText(this.addBook_Btn) : null,
+            cardSliderTitle: (action.getElementCount(this.cardSliderTitle) > 0) ? action.getText(this.cardSliderTitle) : null, 
+            cardSliderSubtitle: (action.getElementCount(this.cardSliderSubtitle) > 0) ? action.getText(this.cardSliderSubtitle) : null,      
             resourceList: [],
             bookList: []
         }
+
         let resources, books, i;
         resources = action.findElements(this.resourceList);
         for (i = 0; i < resources.length; i++) {
             obj.resourceList[i] = {
-                resourceTitle: action.getText(this.resourceTitle + i + "\"]//p[1]"),
+                resourceTitle: action.getText(this.resourceTitle + i + "]" ),
             }
         }
-
         books = action.findElements(this.bookTitle);
         for (i = 0; i < books.length; i++) {
             obj.bookList[i] = {
@@ -55,8 +71,9 @@ module.exports = {
             if (ret.resourceList[i].resourceTitle == resourceName) {
                 res = action.click(this.resourceList + i + "]");
                 if (res == true) {
+                    var browsePage = require('./browse.page.js')
+                    res = browsePage.getActiveTabName();
                     logger.logInto(stackTrace.get(), " --Resource band is clicked");
-                    // res = contactStudentPage.isInitialized();
                 }
                 else {
                     res = res + " -- Error in clicking resource Button"
@@ -67,7 +84,7 @@ module.exports = {
         return res;
     },
 
-    clickViewBookEllipses: function (bookName) {
+    clickBookMenuOptions: function (bookName) {
         logger.logInto(stackTrace.get());
         ret = this.getDashboardPageData();
         for (var i = 0; i < ret.bookList.length; i++) {
@@ -86,7 +103,7 @@ module.exports = {
         return res;
     },
 
-    clickMenuViewClass: function (bookName) {
+    clickMenuViewClasses: function (bookName) {
         logger.logInto(stackTrace.get());
         ret = this.getDashboardPageData();
         for (var i = 0; i < ret.bookList.length; i++) {
@@ -106,7 +123,7 @@ module.exports = {
         return res;
     },
 
-    clickMenuCreateClass: function (bookName) {
+    clickMenuCreateNewClass: function (bookName) {
         logger.logInto(stackTrace.get());
         ret = this.getDashboardPageData();
         for (var i = 0; i < ret.bookList.length; i++) {
@@ -133,8 +150,14 @@ module.exports = {
             if (ret.bookList[i].bookTitle == bookName) {
                 res = action.click(this.removeBook_menu + i + "]");
                 if (res == true) {
-                    //Snackbar
                     logger.logInto(stackTrace.get(), " --Remove from My books clicked");
+                    let obj = {
+                        removeBook_title: (action.getElementCount(this.removeBook_title) > 0) ? action.getText(this.removeBook_title) : null,
+                        removeBook_subTitle: (action.getElementCount(this.removeBook_subTitle) > 0) ? action.getText(this.removeBook_subTitle) : null,
+                        removeBook_cancel: (action.getElementCount(this.removeBook_cancel) > 0) ? action.getText(this.removeBook_cancel) : null,
+                        removeBook_remove: (action.getElementCount(this.removeBook_remove) > 0) ? action.getText(this.removeBook_remove) : null,
+                    }
+                    return obj;
                 }
                 else {
                     res = res + " -- Error in clicking Remove from My books"
@@ -142,7 +165,34 @@ module.exports = {
                 }
             }
         }
-        return res;
+    },
+
+    clickMenuRemoveBook_Cancel: function () {
+        logger.logInto(stackTrace.get());
+        res = action.click(this.removeBook_cancel);
+		if (true == res) {
+            res = this.isInitialized();
+            logger.logInto(stackTrace.get(), " --cancel button is clicked");
+		}
+		else {
+			res = res + " -- Error in clicking Notification Close Button";
+			logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
+    },
+
+    clickMenuRemoveBook_Remove: function () {
+        logger.logInto(stackTrace.get());
+        res = action.click(this.removeBook_remove);
+		if (true == res) {
+            res = this.isInitialized();
+            logger.logInto(stackTrace.get(), " --cancel button is clicked");
+		}
+		else {
+			res = res + " -- Error in clicking Notification Close Button";
+			logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
     },
 
     clickMenuOpenFlipbook: function (bookName) {
@@ -150,19 +200,57 @@ module.exports = {
         ret = this.getDashboardPageData();
         for (var i = 0; i < ret.bookList.length; i++) {
             if (ret.bookList[i].bookTitle == bookName) {
-                res = action.click(this.openFlipbook_menu + i + "]");
-                if (res == true) {
-                    //Flipbook Page is Initialized
+                let openflipbookSelector = this.openFlipbook_menu + i + "]";
+                res = action.click(openflipbookSelector);
+                let arrowSelector = openflipbookSelector + " svg"
+                res = action.getElementCount(arrowSelector)
+                if (res == 0) {
+                    res = action.click(openflipbookSelector)
                     logger.logInto(stackTrace.get(), " --Open flipbook clicked");
                 }
                 else {
-                    res = res + " -- Error in clicking Open flipbook"
+                    //get list and click on the required flipbook
+                    //selectors not available, logged https://compro.atlassian.net/browse/ENG-7184
                     logger.logInto(stackTrace.get(), res, "error");
                 }
             }
         }
         return res;
-    }
+    },
+
+    clickAddBook: function () {
+        logger.logInto(stackTrace.get());
+                res = action.click(this.addBookbtn);
+                if (res == true) {
+                    logger.logInto(stackTrace.get(), " Add book button is clicked");
+                    var addBook = require('./addBook.page.js');
+                    res = addBook.isInitialized();
+                }
+                else {
+                    res = res + " -- Error in clicking Add book Button"
+                    logger.logInto(stackTrace.get(), res, "error");
+                }
+            
+        return res;
+    },
+
+    ClickPlusIconofBook:function(bookName) {
+        logger.logInto(stackTrace.get());
+        ret = this.getDashboardPageData();
+        for (var i = 0; i < ret.bookList.length; i++) {
+            if (ret.bookList[i].bookTitle == bookName) {
+                res = action.click(this.bookPlusIcon + i + "]");
+                if (res == true) {
+                     logger.logInto(stackTrace.get(), " --Book Plus icon is clicked");
+                    }
+                    else {
+                        res = res + " -- Error in clicking Book Plus icon"
+                        logger.logInto(stackTrace.get(), res, "error");
+                    }
+                }
+            }
+            return res;
+    },
 }
     
 
