@@ -3,7 +3,6 @@ var action = require('../../core/actionLibrary/baseActionLibrary');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
 var res, qIndex;
 var itemplayer = require('./itemPlayer.page.js');
-var testplayer = require('./testPlayer.page.js');
 
 module.exports = {
 
@@ -15,7 +14,7 @@ module.exports = {
         var obj = {
             targetData: []
         };
-        qIndex = (testplayer.getQuesInfo()).activeQues;
+        qIndex = itemplayer.getQuesIndex();
         obj.targetData = this.getTargetData(qIndex, fibQuesData);
         return obj;
     },
@@ -37,13 +36,10 @@ module.exports = {
 
     inputValues: function (fibQuesData) {
         logger.logInto(stackTrace.get());
-        qIndex = (testplayer.getQuesInfo()).activeQues;
+        qIndex = itemplayer.getQuesIndex();
         action.switchToFrame(0);
         for (let i = 0; i < fibQuesData.length; i++) {
             var textSelector = "div[index='" + qIndex + "'] " + this.response + fibQuesData[i][0] + "] [data-tid=text-placeholder]";
-            //action.switchToParentFrame();
-            // testplayer.collapseTestPlayer();
-            // action.switchToFrame(0)
             res = action.click(textSelector);
             browser.pause(250);
             if (true == res) {

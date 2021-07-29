@@ -215,7 +215,8 @@
 				"itemPlayerContainer": "[id='itemContainer']",
 				"videoMedia": "[data-tid=container-video]",
 				"imageMedia": "[data-tid=container-image]",
-				"audioMedia": "[data-tid=container-audio]"
+				"audioMedia": "[data-tid=container-audio]",
+				"activeQues": "div[class*=item-player-container] > div[style='height: 100%;']"
 			},
 			"testPlayer": {
 				"checkMyWork_btn": "[class=buttons-container] [class=defaultBtn-check-mywork-icon] , [data-tid=button-checkanswers], [data-tid=button-check]",
@@ -232,8 +233,7 @@
 				"showingCorrectAnswer_txt": "p[data-tid=text-showingcorrectanswer]",
 				"collapseBtn": "[data-tid='container-testplayer'] [data-tid='button-togglebuttonpanel']",
 				"tpBottomPanelHidden": "[class*='MuiCollapse-hidden']",
-				"tpBottomPanelVisible": "[class*='MuiCollapse-entered']",
-				"activeQues": "div[class*=item-player-container] > div[style='height: 100%;']"
+				"tpBottomPanelVisible": "[class*='MuiCollapse-entered']"
 			},
 			"MCQB": {
 				"choice": "div[data-tid=input-click-option-",

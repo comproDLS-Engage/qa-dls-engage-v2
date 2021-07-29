@@ -21,7 +21,7 @@ module.exports = {
 		logger.logInto(stackTrace.get());
 		res = action.waitForDocumentLoad();
 		if (res == true) {
-			res = this.getTestplayerInfo();
+			res = this.getBasePlayerInfo();
 		}
 		else {
 			res = res + " -- TestPlayer page is not loaded yet";
@@ -30,9 +30,9 @@ module.exports = {
 		return res;
 	},
 
-	getTestplayerInfo: function () {
+	getBasePlayerInfo: function () {
 		let insideFrame = this.enterFrame(this.next_btn);
-		var testplayerInfo = {
+		var playerInfo = {
 			checkmyWork_isExists: action.getElementCount(this.checkMyWork_btn) == 1 ? true : false,
 			checkmyWork_isDisabled: (action.getElementCount(this.checkMyWork_btn) == 1) ? action.getAttribute(this.checkMyWork_btn, 'disabled') : false,
 			tryAgain_isExists: action.getElementCount(this.tryAgain_btn) == 1 ? true : false,
@@ -43,12 +43,12 @@ module.exports = {
 			previous_isDisabled: (action.getElementCount(this.previous_btn) == 1) ? action.getAttribute(this.previous_btn, 'disabled') : false,
 			next_isExists: action.getElementCount(this.next_btn) == 1 ? true : false,
 			next_isDisabled: (action.getElementCount(this.next_btn) == 1) ? action.getAttribute(this.next_btn, 'disabled') : false,
-			activeQues: "",
+			//activeQues: "",
 		};
 		if (insideFrame)
 			action.switchToParentFrame();
-		testplayerInfo.activeQues = this.getQuesInfo().activeQues;
-		return testplayerInfo;
+		//playerInfo.activeQues = this.getQuesInfo().activeQues;
+		return playerInfo;
 	},
 
 	click_CheckMyWork: function () {
@@ -57,7 +57,7 @@ module.exports = {
 		res = action.click(this.checkMyWork_btn);
 		if (res == true) {
 			logger.logInto(stackTrace.get(), " -- CheckmyWork Button is clicked");
-			//res = this.getTestplayerInfo();
+			//res = this.getBasePlayerInfo();
 		}
 		else {
 			res = res + " -- Error in clicking CheckmyWork Button"
@@ -74,7 +74,7 @@ module.exports = {
 		res = action.click(this.next_btn);
 		if (res == true) {
 			logger.logInto(stackTrace.get(), " -- next is clicked");
-			//res = this.getTestplayerInfo();
+			//res = this.getBasePlayerInfo();
 		}
 		else {
 			res = res + " --Error in clicking next button";
@@ -91,7 +91,7 @@ module.exports = {
 		res = action.click(this.previous_btn);
 		if (res == true) {
 			logger.logInto(stackTrace.get(), " -- previous button is clicked");
-			//res = this.getTestplayerInfo();
+			//res = this.getBasePlayerInfo();
 		}
 		else {
 			res = res + " --Error in clicking previous button";
@@ -108,7 +108,7 @@ module.exports = {
 		res = action.click(this.tryAgain_btn);
 		if (res == true) {
 			logger.logInto(stackTrace.get(), " -- TryAgain Button is clicked");
-			//res = this.getTestplayerInfo();
+			//res = this.getBasePlayerInfo();
 		}
 		else {
 			res = res + " -- Error in clicking TryAgain Button"
@@ -125,7 +125,7 @@ module.exports = {
 		res = action.click(this.reset_btn);
 		if (res == true) {
 			logger.logInto(stackTrace.get(), " -- Reset Button is clicked");
-			//res = this.getTestplayerInfo();
+			//res = this.getBasePlayerInfo();
 		}
 		else {
 			res = res + " -- Error in clicking Reset Button"
@@ -136,7 +136,7 @@ module.exports = {
 		return res;
 	},
 
-	getQuesInfo: function () {
+	/*getQuesInfo: function () {
 		logger.logInto(stackTrace.get());
 		action.switchToFrame(0);
 		var quesInfo = {
@@ -144,7 +144,7 @@ module.exports = {
 		};
 		action.switchToParentFrame();
 		return quesInfo;
-	},
+	},*/
 
 	enterFrame: function (selector) {
 		let insideFrame;

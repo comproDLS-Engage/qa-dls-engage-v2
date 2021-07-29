@@ -2,7 +2,6 @@
 const action = require('../../core/actionLibrary/baseActionLibrary.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
 var itemplayer = require('./itemPlayer.page.js');
-var testplayer = require('./testPlayer.page.js');
 var res, qIndex, value;
 
 module.exports = {
@@ -12,7 +11,7 @@ module.exports = {
 
     isInitialized: function (matchingQuesData) {
         logger.logInto(stackTrace.get());
-        var qIndex = (testplayer.getQuesInfo()).activeQues;
+        var qIndex = itemplayer.getQuesIndex();
         action.switchToFrame(0);
         matchingQuesData.leftData = this.getLeftData(qIndex, matchingQuesData);
         matchingQuesData.rightData = this.getRightData(qIndex, matchingQuesData);
@@ -49,7 +48,8 @@ module.exports = {
     },
 
     matchingClick: function (matchingQuesData) {
-        qIndex = (testplayer.getQuesInfo()).activeQues;
+        logger.logInto(stackTrace.get());
+        qIndex = itemplayer.getQuesIndex();
         action.switchToFrame(0);
         var leftPath, rightPath, i;
         for (i = 0; i < matchingQuesData.length; i++) {

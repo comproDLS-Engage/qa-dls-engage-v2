@@ -1,6 +1,5 @@
 'use strict';
 var itemplayer = require('./itemPlayer.page.js');
-var testplayer = require('./testPlayer.page.js');
 const action = require('../../core/actionLibrary/baseActionLibrary.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
 var res, ret;
@@ -12,8 +11,8 @@ module.exports = {
 	selectedChoice: selectorFile.css.ComproEngage.MCQB.selectedChoice,
 
 	isInitialized: function (mcqbQuesData) {
-		logger.logInto(stackTrace.get(), "");
-		var qIndex = (testplayer.getQuesInfo()).activeQues;
+		logger.logInto(stackTrace.get());
+		var qIndex = itemplayer.getQuesIndex();
 		action.switchToFrame(0);
 		let choiceSelector = "div[index='" + qIndex + "'] " + this.choice + mcqbQuesData[0][0] + "]";
 		res = action.getCSSProperty(choiceSelector, 'border-style');
@@ -39,8 +38,8 @@ module.exports = {
 	},
 
 	clickOption: function (mcqbQuesData) {
-		let qIndex = (testplayer.getQuesInfo()).activeQues;
-		// testplayer.collapseTestPlayer();
+		logger.logInto(stackTrace.get());
+		let qIndex = itemplayer.getQuesIndex();
 		action.switchToFrame(0);
 		for (let i = 0; i < mcqbQuesData.length; i++) {
 			let choiceSelector = "div[index='" + qIndex + "'] " + this.choice + mcqbQuesData[i][0] + "]";
@@ -69,8 +68,9 @@ module.exports = {
 	},
 
 	getmcqbData: function (mcqbQuesData) {
+		logger.logInto(stackTrace.get());
 		action.switchToParentFrame();
-		let qIndex = (testplayer.getQuesInfo()).activeQues;
+		let qIndex = itemplayer.getQuesIndex();
 		action.switchToFrame(0);
 		var obj = [];
 		for (let i = 0; i < mcqbQuesData.length; i++) {

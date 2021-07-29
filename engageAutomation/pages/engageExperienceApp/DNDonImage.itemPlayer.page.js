@@ -2,7 +2,6 @@
 const action = require('../../core/actionLibrary/baseActionLibrary.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
 var itemplayer = require('./itemPlayer.page.js');
-var testplayer = require('./testPlayer.page.js');
 var srcPath, targetPath, res, value, qIndex;
 
 module.exports = {
@@ -17,13 +16,12 @@ module.exports = {
 
     isInitialized: function (dndQuesData) {
         logger.logInto(stackTrace.get());
-        //let quizData = itemplayer.isInitialized();
         var dndData = {
             sourceData: [],
             targetData: [],
             tapToZoom_exists: undefined
         };
-        var qIndex = (testplayer.getQuesInfo()).activeQues;
+        var qIndex = itemplayer.getQuesIndex();
         action.switchToFrame(0);
         dndData.sourceData = this.getSourceData(qIndex, dndQuesData);
         dndData.targetData = this.getTargetData(qIndex, dndQuesData);
@@ -44,6 +42,7 @@ module.exports = {
     },
 
     getTargetData: function (qIndex, dndQuesData) {
+        logger.logInto(stackTrace.get());
         let option = "div[index='" + qIndex + "'] " + "[data-tid*='target-option']";
         var targetMap = [];
         let optionLength = action.findElements(option).length;
@@ -63,7 +62,8 @@ module.exports = {
     },
 
     dragAndDrop: function (dndQuesData) {
-        qIndex = (testplayer.getQuesInfo()).activeQues;
+        logger.logInto(stackTrace.get());
+        qIndex = itemplayer.getQuesIndex();
         action.switchToFrame(0);
         for (var i = 0; i < dndQuesData.length; i++) {
             srcPath = "div[index='" + qIndex + "'] " + this.source + dndQuesData[i][0] + "]";
@@ -81,7 +81,8 @@ module.exports = {
     },
 
     dragAndDropClick: function (dndQuesData) {
-        qIndex = (testplayer.getQuesInfo()).activeQues;
+        logger.logInto(stackTrace.get());
+        qIndex = itemplayer.getQuesIndex();
         action.switchToFrame(0);
         for (var i = 0; i < dndQuesData.length; i++) {
             srcPath = "div[index='" + qIndex + "'] " + this.source + dndQuesData[i][0] + "]";
@@ -105,7 +106,8 @@ module.exports = {
     },
 
     clickTaptoZoom: function () {
-        qIndex = (testplayer.getQuesInfo()).activeQues;
+        logger.logInto(stackTrace.get());
+        qIndex = itemplayer.getQuesIndex();
         action.switchToFrame(0);
         res = action.click("div[index='" + qIndex + "'] " + this.tapToZoom)
         if (res == true) {
@@ -120,10 +122,9 @@ module.exports = {
     },
 
     closeZoom: function () {
-        var qIndex = (testplayer.getQuesInfo()).activeQues;
-        // action.switchToFrame(0);
+        logger.logInto(stackTrace.get());
+        qIndex = itemplayer.getQuesIndex();
         res = action.click("div[index='" + qIndex + "'] " + this.zoomDialogClose_btn)
-       // action.switchToParentFrame();
         if (res == true) {
             res = action.waitForDisplayed("div[index='" + qIndex + "'] " + this.zoomOverlay, undefined, true);
         }
@@ -135,7 +136,8 @@ module.exports = {
     },
 
     dragAndDropZoomDropDown: function (dndQuesData) {
-        qIndex = (testplayer.getQuesInfo()).activeQues;
+        logger.logInto(stackTrace.get());
+        qIndex = itemplayer.getQuesIndex();
         action.switchToFrame(0);
         for (var i = 0; i < dndQuesData.length; i++) {
             targetPath = "div[index='" + qIndex + "'] " + this.target + dndQuesData[i][2] + "] select";

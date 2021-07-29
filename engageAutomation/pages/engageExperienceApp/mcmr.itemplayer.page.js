@@ -1,6 +1,4 @@
 'use strict';
-var itemplayer = require('./itemPlayer.page.js');
-var testplayer = require('./testPlayer.page.js');
 const action = require('../../core/actionLibrary/baseActionLibrary.js');
 //var selectorFile = jsonParserUtil.jsonParser(selectorDir);
 var res, ret;
@@ -13,7 +11,8 @@ module.exports = {
 	selectedChoice: mcqBlockItemplayerPage.selectedChoice,
 
 	isInitialized: function (mcmrQuesData) {
-		var qIndex = (testplayer.getQuesInfo()).activeQues;
+		logger.logInto(stackTrace.get());
+		var qIndex = itemplayer.getQuesIndex();
 		action.switchToFrame(0);
 		let choiceSelector = "div[index='" + qIndex + "'] " + this.choice + mcmrQuesData[2][0] + "]";
 		res = action.getCSSProperty(choiceSelector, 'border-style');
@@ -39,10 +38,12 @@ module.exports = {
 	},
 
 	getmcmrData: function (mcmrQuesData) {
+		logger.logInto(stackTrace.get());
 		return mcqBlockItemplayerPage.getmcqbData(mcmrQuesData);
 	},
 
 	clickOptions: function (mcmrQuesData) {
+		logger.logInto(stackTrace.get());
 		return mcqBlockItemplayerPage.clickOption(mcmrQuesData);
 	}
 }
