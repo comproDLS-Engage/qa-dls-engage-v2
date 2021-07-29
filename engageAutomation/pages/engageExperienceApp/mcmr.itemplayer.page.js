@@ -3,6 +3,7 @@ const action = require('../../core/actionLibrary/baseActionLibrary.js');
 //var selectorFile = jsonParserUtil.jsonParser(selectorDir);
 var res, ret;
 const mcqBlockItemplayerPage = require("./mcqBlock.itemplayer.page");
+var itemplayer = require('./itemPlayer.page.js');
 
 module.exports = {
 

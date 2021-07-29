@@ -18,7 +18,7 @@ module.exports = {
 
 	isInitialized: function () {
 		logger.logInto(stackTrace.get());
-		res = action.waitForDisplayed("iframe[id*=iframe]");
+		res = action.waitForDisplayed("iframe[id*=iframe], iframe");
 		if (res == true) {
 			action.switchToFrame(0);
 			res = action.waitForDocumentLoad();

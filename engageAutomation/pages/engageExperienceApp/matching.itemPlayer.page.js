@@ -1,7 +1,7 @@
 'use strict';
 const action = require('../../core/actionLibrary/baseActionLibrary.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
-var itemplayer = require('./itemPlayer.page.js');
+const itemplayer = require('./itemPlayer.page.js');
 var res, qIndex, value;
 
 module.exports = {
@@ -26,7 +26,7 @@ module.exports = {
         let option = "div[index='" + qIndex + "'] " + this.left;
         let optionLength = action.findElements(option).length;
         for (i = 0; i < optionLength; i++) {
-            leftSelector = "div[index='" + qIndex + "'] " + this.left + matchingQuesData[i][0] + "] div[id=" +matchingQuesData[i][0] + "label]";
+            leftSelector = "div[index='" + qIndex + "'] " + this.left + matchingQuesData[i][0] + "] div[id=" + matchingQuesData[i][0] + "label]";
             leftSelectorIcon = "div[index='" + qIndex + "'] " + this.left + matchingQuesData[i][0] + "]";
             value = itemplayer.getFeedbackIconDetails(leftSelectorIcon);
             leftMap[i] = [matchingQuesData[i][0], action.getText(leftSelector), value];
@@ -41,7 +41,7 @@ module.exports = {
         let option = "div[index='" + qIndex + "'] " + this.right;
         let optionLength = action.findElements(option).length;
         for (i = 0; i < optionLength; i++) {
-            rightSelector = "div[index='" + qIndex + "'] " + this.right + matchingQuesData[i][2] + "] div[id=" +matchingQuesData[i][2] + "label]";
+            rightSelector = "div[index='" + qIndex + "'] " + this.right + matchingQuesData[i][2] + "] div[id=" + matchingQuesData[i][2] + "label]";
             rightMap[i] = [matchingQuesData[i][2], action.getText(rightSelector)];
         }
         return rightMap;

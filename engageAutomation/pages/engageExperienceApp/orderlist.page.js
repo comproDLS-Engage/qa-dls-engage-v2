@@ -1,7 +1,7 @@
 "use strict";
-var action = require('../../core/actionLibrary/baseActionLibrary');
+const action = require('../../core/actionLibrary/baseActionLibrary');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
-var itemplayer = require("./itemPlayer.page");
+const itemplayer = require("./itemPlayer.page");
 var res, ret;
 
 module.exports = {
@@ -24,7 +24,7 @@ module.exports = {
             res = "Invalid format for Order list as drag handle or correct/incorrect icons are missing"
             logger.logInto(stackTrace.get(), res, 'error');
         }
-       action.switchToParentFrame();
+        action.switchToParentFrame();
         return res;
     },
 
@@ -35,12 +35,9 @@ module.exports = {
         for (let i = 0; i < oliData.length; i++) {
             let srcPath = "div[index='" + (qIndex) + "'] " + this.optionSelector + oliData[i][0] + "] div:nth-child(2)";
             let targetPath = "div[index='" + (qIndex) + "'] " + this.listIndex + oliData[i][2] + ") div:nth-child(2)";
-           // action.switchToParentFrame();
-            //basePlayer.collapseTestPlayer();
-           // itemplayer.switchMainFrame(0);
             ret = action.dragAndDrop(srcPath, targetPath);
         }
-       action.switchToParentFrame();
+        action.switchToParentFrame();
         return ret;
     },
 

@@ -1,5 +1,5 @@
 'use strict';
-var itemplayer = require('./itemPlayer.page.js');
+const itemplayer = require('./itemPlayer.page.js');
 const action = require('../../core/actionLibrary/baseActionLibrary.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
 var res, ret;

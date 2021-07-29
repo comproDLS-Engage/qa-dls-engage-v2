@@ -1,5 +1,5 @@
 "use strict";
-var action = require('../../core/actionLibrary/baseActionLibrary.js');
+const action = require('../../core/actionLibrary/baseActionLibrary.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
 var res;
 
@@ -15,7 +15,6 @@ module.exports = {
 	showAnswer_btn: selectorFile.css.ComproEngage.testPlayer.showAnswer_btn,
 	yourResponse_btn: selectorFile.css.ComproEngage.testPlayer.yourResponse_btn,
 	feedbackText: selectorFile.css.ComproEngage.testPlayer.feedback_txt,
-	activeQues: selectorFile.css.ComproEngage.testPlayer.activeQues,
 
 	isInitialized: function () {
 		logger.logInto(stackTrace.get());
@@ -43,11 +42,9 @@ module.exports = {
 			previous_isDisabled: (action.getElementCount(this.previous_btn) == 1) ? action.getAttribute(this.previous_btn, 'disabled') : false,
 			next_isExists: action.getElementCount(this.next_btn) == 1 ? true : false,
 			next_isDisabled: (action.getElementCount(this.next_btn) == 1) ? action.getAttribute(this.next_btn, 'disabled') : false,
-			//activeQues: "",
 		};
 		if (insideFrame)
 			action.switchToParentFrame();
-		//playerInfo.activeQues = this.getQuesInfo().activeQues;
 		return playerInfo;
 	},
 
@@ -135,16 +132,6 @@ module.exports = {
 			action.switchToParentFrame();
 		return res;
 	},
-
-	/*getQuesInfo: function () {
-		logger.logInto(stackTrace.get());
-		action.switchToFrame(0);
-		var quesInfo = {
-			activeQues: action.getAttribute(this.activeQues, "index")
-		};
-		action.switchToParentFrame();
-		return quesInfo;
-	},*/
 
 	enterFrame: function (selector) {
 		let insideFrame;

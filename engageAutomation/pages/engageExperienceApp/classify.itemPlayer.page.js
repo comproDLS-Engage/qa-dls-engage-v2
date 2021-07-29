@@ -1,8 +1,7 @@
 'use strict';
 const action = require('../../core/actionLibrary/baseActionLibrary.js');
 const DNDonImageItemPlayerPage = require('./DNDonImage.itemPlayer.page.js');
-var itemplayer = require('./itemPlayer.page.js');
-var testplayer = require('./basePlayer.page.js');
+const itemplayer = require('./itemPlayer.page.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
 
 module.exports = {
@@ -15,7 +14,7 @@ module.exports = {
             sourceData: [],
             targetData: []
         };
-        var qIndex = (testplayer.getQuesInfo()).activeQues;
+        var qIndex = itemplayer.getQuesIndex();
         action.switchToFrame(0);
         data.sourceData = this.getSourceData(qIndex, classifyQuesData);
         data.targetData = this.getTargetData(qIndex, classifyQuesData, quesType);
@@ -29,6 +28,7 @@ module.exports = {
     },
 
     getTargetData: function (qIndex, classifyQuesData, quesType) {
+        logger.logInto(stackTrace.get());
         let option = "div[index='" + qIndex + "'] " + "[data-tid*='source-option']";
         var targetMap = {
             key1: [],
@@ -62,10 +62,12 @@ module.exports = {
     },
 
     dragAndDrop: function (classifyQuesData) {
+        logger.logInto(stackTrace.get());
         return DNDonImageItemPlayerPage.dragAndDrop(classifyQuesData.key1);
     },
 
     dragAndDropClick: function (classifyQuesData) {
+        logger.logInto(stackTrace.get());
         return DNDonImageItemPlayerPage.dragAndDropClick(classifyQuesData.key1);
     }
 
