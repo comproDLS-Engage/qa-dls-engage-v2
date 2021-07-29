@@ -216,7 +216,7 @@
 				"videoMedia": "[data-tid=container-video]",
 				"imageMedia": "[data-tid=container-image]",
 				"audioMedia": "[data-tid=container-audio]",
-				"activeQues": "div[class*=item-player-container] > div[style='height: 100%;']"
+				"activeQues": "div[class*=item-player-container] > div[style='height: 100%; display: block;'], div[class*=item-player-container] > div[style='height: 100%;']"
 			},
 			"testPlayer": {
 				"checkMyWork_btn": "[class=buttons-container] [class=defaultBtn-check-mywork-icon] , [data-tid=button-checkanswers], [data-tid=button-check]",
