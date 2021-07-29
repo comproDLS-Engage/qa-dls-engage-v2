@@ -2,7 +2,7 @@
 var action = require('../../core/actionLibrary/baseActionLibrary');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
 var itemplayer = require("./itemPlayer.page");
-var testplayer = require('./testPlayer.page');
+var testplayer = require('./basePlayer.page');
 var res, ret;
 
 module.exports = {
