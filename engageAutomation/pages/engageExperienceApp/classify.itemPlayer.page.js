@@ -2,7 +2,7 @@
 const action = require('../../core/actionLibrary/baseActionLibrary.js');
 const DNDonImageItemPlayerPage = require('./DNDonImage.itemPlayer.page.js');
 var itemplayer = require('./itemPlayer.page.js');
-var testplayer = require('./testPlayer.page.js');
+var testplayer = require('./basePlayer.page.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
 
 module.exports = {

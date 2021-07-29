@@ -1,7 +1,7 @@
 'use strict';
 
 var classify = require('../../pages/engageExperienceApp/classify.itemPlayer.page.js');
-var testplayer = require('../../pages/engageExperienceApp/testPlayer.page.js');
+var testplayer = require('../../pages/engageExperienceApp/basePlayer.page.js');
 var sts, sts1;
 module.exports = {
     //Validate that user is able to place option pill inside the Group using drag and drop
