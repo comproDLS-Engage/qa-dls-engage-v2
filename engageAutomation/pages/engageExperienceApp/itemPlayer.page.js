@@ -20,9 +20,11 @@ module.exports = {
 		logger.logInto(stackTrace.get());
 		//res = action.waitForDisplayed(this.loaderIcon, undefined, true);
 		res = action.waitForDisplayed("iframe[id*=iframe]");
-		action.switchToFrame(0);
-		res = action.waitForDocumentLoad();
-		action.switchToParentFrame();
+		if (res == true) {
+			action.switchToFrame(0);
+			res = action.waitForDocumentLoad();
+			action.switchToParentFrame();
+		}
 		if (res == true) {
 			res = this.getItemplayerInfo();
 		}
@@ -33,7 +35,7 @@ module.exports = {
 		return res;
 	},
 
-	
+
 	getItemplayerInfo: function () {
 		let question = {
 			quesType: "",
@@ -45,10 +47,10 @@ module.exports = {
 			incorrectCount: undefined,
 			feedback: {},
 		};
-				// this.switchMainFrame(0);
+		// this.switchMainFrame(0);
 
 		let testplayerInfo = testplayer.isInitialized();
-		
+
 		// let activeItemplayer = "div[index='" + (testplayerInfo.activeQues - 1) + "'] " + this.itemPlayerContainer;
 		// let correctOpt = "div[index='" + (testplayerInfo.activeQues - 1) + "'] " + this.correctIcon;
 		// let incorrectOpt = "div[index='" + (testplayerInfo.activeQues - 1) + "'] " + this.incorrectIcon;
@@ -105,12 +107,12 @@ module.exports = {
 		return testplayerInfo;
 	},
 
-	switchMainFrame: function (id) {
+	/*switchMainFrame: function (id) {
 		logger.logInto(stackTrace.get());
 		ret = action.switchToFrame(id)
 		if (ret == true) {
 			logger.logInto(stackTrace.get(), " -- Switched to frame");
-		} 
+		}
 		else {
 			ret = ret + " -- NOT Switched to frame";
 			logger.logInto(stackTrace.get(), ret, "error");
@@ -123,24 +125,24 @@ module.exports = {
 		ret = action.switchToParentFrame()
 		if (ret == true) {
 			logger.logInto(stackTrace.get(), " -- Switched to parent frame");
-		} 
+		}
 		else {
 			ret = ret + " -- NOT Switched to parent frame";
 			logger.logInto(stackTrace.get(), ret, "error");
 		}
 		return ret;
-	},
+	},*/
 
-	getFeedbackIconDetails: function (quesSelector,quesType) {
-		if(quesType == 'classify'){
-		res = action.getElementCount(quesSelector + " >" + this.correctIcon);
-		ret = action.getElementCount(quesSelector + " >" + this.incorrectIcon);
+	getFeedbackIconDetails: function (quesSelector, quesType) {
+		if (quesType == 'classify') {
+			res = action.getElementCount(quesSelector + " >" + this.correctIcon);
+			ret = action.getElementCount(quesSelector + " >" + this.incorrectIcon);
 		}
-		else{
-		res = action.getElementCount(quesSelector + " " + this.correctIcon);
-		//console.log("for i the itemplayer res is",res);
-		ret = action.getElementCount(quesSelector + " " + this.incorrectIcon);
-		//console.log("for i the itemplayer ret is",ret);
+		else {
+			res = action.getElementCount(quesSelector + " " + this.correctIcon);
+			//console.log("for i the itemplayer res is",res);
+			ret = action.getElementCount(quesSelector + " " + this.incorrectIcon);
+			//console.log("for i the itemplayer ret is",ret);
 		}
 		if (res > 0)
 			value = "correct"

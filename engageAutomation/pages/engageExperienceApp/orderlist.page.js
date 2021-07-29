@@ -14,7 +14,7 @@ module.exports = {
     isInitialized: function (oliData) {
         logger.logInto(stackTrace.get(), "");
         var quesNo = (testplayer.getQuesInfo()).activeQues - 1;
-        itemplayer.switchMainFrame(0);
+        action.switchToFrame(0);
         var option = "div[index='" + (quesNo) + "']";
         res = action.getElementCount(option + " [class*='draghandle']");
         ret = action.getElementCount(option + " [data-tid*=icon]");
@@ -25,23 +25,23 @@ module.exports = {
             res = "Invalid format for Order list as drag handle or correct/incorrect icons are missing"
             logger.logInto(stackTrace.get(), res, 'error');
         }
-       itemplayer.switchParentFrame();
+       action.switchToParentFrame();
         return res;
     },
 
     orderListChange: function (oliData) {
         logger.logInto(stackTrace.get());
         var quesNo = (testplayer.getQuesInfo()).activeQues - 1;
-       itemplayer.switchMainFrame(0);
+        action.switchToFrame(0);
         for (let i = 0; i < oliData.length; i++) {
             let srcPath = "div[index='" + (quesNo) + "'] " + this.optionSelector + oliData[i][0] + "] div:nth-child(2)";
             let targetPath = "div[index='" + (quesNo) + "'] " + this.listIndex + oliData[i][2] + ") div:nth-child(2)";
-           // itemplayer.switchParentFrame();
+           // action.switchToParentFrame();
             //testplayer.collapseTestPlayer();
            // itemplayer.switchMainFrame(0);
             ret = action.dragAndDrop(srcPath, targetPath);
         }
-       itemplayer.switchParentFrame();
+       action.switchToParentFrame();
         return ret;
     },
 

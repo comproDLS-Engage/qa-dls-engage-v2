@@ -58,8 +58,10 @@ module.exports = {
 		res = action.click(this.checkMyWork_btn);
 		if (res == true) {
 			logger.logInto(stackTrace.get(), " -- CheckmyWork Button is clicked");
-			itemplayerPage = require('./itemPlayer.page.js');
-			res = itemplayerPage.isInitialized();
+			//itemplayerPage = require('./itemPlayer.page.js');
+			//console.log("before item initialize...")
+			//res = itemplayerPage.isInitialized();
+			//console.log("after item initialize...")
 		}
 		else {
 			res = res + " -- Error in clicking CheckmyWork Button"
@@ -76,8 +78,8 @@ module.exports = {
 		res = action.click(this.next_btn);
 		if (res == true) {
 			logger.logInto(stackTrace.get(), " -- next is clicked");
-			itemplayerPage = require('./itemPlayer.page.js');
-			res = itemplayerPage.isInitialized();
+			//itemplayerPage = require('./itemPlayer.page.js');
+			//res = itemplayerPage.isInitialized();
 		}
 		else {
 			res = res + " --Error in clicking next button";
@@ -94,8 +96,8 @@ module.exports = {
 		res = action.click(this.previous_btn);
 		if (res == true) {
 			logger.logInto(stackTrace.get(), " -- previous button is clicked");
-			itemplayerPage = require('./itemPlayer.page.js');
-			res = itemplayerPage.isInitialized();
+			//itemplayerPage = require('./itemPlayer.page.js');
+			//res = itemplayerPage.isInitialized();
 		}
 		else {
 			res = res + " --Error in clicking previous button";
@@ -112,8 +114,8 @@ module.exports = {
 		res = action.click(this.tryAgain_btn);
 		if (res == true) {
 			logger.logInto(stackTrace.get(), " -- TryAgain Button is clicked");
-			itemplayerPage = require('./itemPlayer.page.js');
-			res = itemplayerPage.isInitialized();
+			//itemplayerPage = require('./itemPlayer.page.js');
+			//res = itemplayerPage.isInitialized();
 		}
 		else {
 			res = res + " -- Error in clicking TryAgain Button"
@@ -130,8 +132,8 @@ module.exports = {
 		res = action.click(this.reset_btn);
 		if (res == true) {
 			logger.logInto(stackTrace.get(), " -- Reset Button is clicked");
-			itemplayerPage = require('./itemPlayer.page.js');
-			res = itemplayerPage.isInitialized();
+			//itemplayerPage = require('./itemPlayer.page.js');
+			//res = itemplayerPage.isInitialized();
 		}
 		else {
 			res = res + " -- Error in clicking Reset Button"
