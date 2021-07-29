@@ -110,7 +110,7 @@ module.exports = {
         return componentArr;
     },
 
-    clickViewClasses: function () {
+    clickViewClasses: function () { // this can also be opened from dashboard, so it has to be reused dashboard or vice-versa, please discuss - akhil
         logger.logInto(stackTrace.get())
         res = action.click(this.viewClass);
         if (res == true) {
@@ -121,7 +121,7 @@ module.exports = {
         return res;
     },
 
-    closeClassListMenu: function () {
+    closeClassListMenu: function () { // this can also be opened from dashboard, so it has to be reused dashboard or vice-versa, please discuss - akhil
         logger.logInto(stackTrace.get())
         res = action.click(this.closeClassDrawer);
         if (res == true) {
@@ -133,7 +133,7 @@ module.exports = {
 
     },
 
-    clickAddBook: function () {
+    clickAddBook: function () {  //this needs to be updated - akhil
         logger.logInto(stackTrace.get())
         res = action.click(this.addBook_btn);
         if (res == true) {
@@ -160,7 +160,7 @@ module.exports = {
         return res;
     },
 
-    clickOnBreadcrumb: function () {
+    clickOnBreadcrumb: function () { // not clear on this function - akhil
         res = action.click(this.breadcrumbFlipbook)
         if (res == true) {
             res = this.getBookViewPageData();
@@ -178,6 +178,7 @@ module.exports = {
         for (i = 0; i < list.length; i++) {
             if (action.getText(list[i]) == componentName) {
                 action.click(list[i]);
+                 // we should return list of units - akhil
                 res = i;
                 break;
             }
@@ -195,6 +196,7 @@ module.exports = {
 
             if (unitName.includes(action.getText(list[i]))) {
                 res = action.click(list[i]);
+                // should n't we call unitDetails page obj? - akhil
                 break;
             }
             res = false;
@@ -247,7 +249,7 @@ module.exports = {
 
     },
 
-    clickRemoveBook: function () {
+    clickRemoveBook: function () { // this needs to be updated due to new change in the app - akhil
         logger.logInto(stackTrace.get())
         res = action.click(this.removeBook_btn);
         if (res == true) {
@@ -291,13 +293,13 @@ module.exports = {
         res = action.click(this.viewBookDetails_btn);
         if (res == true) {
             logger.logInto(stackTrace.get(), " --View Book Details Button clicked");
-            // add return - akhil
+            // add return values - akhil
         } else
             logger.logInto(stackTrace.get(), " --View Book Details Button NOT clicked", "error");
         return res;
     },
 
-    clickUnitMoreOptions: function (unitName) { //not clear on this function - akhil
+    clickUnitMoreOptions: function (unitName) { //this function is not required, please comment/remove for now - akhil
         logger.logInto(stackTrace.get());
         let i, list;
         list = action.findElements(this.chapterTitle);
@@ -316,7 +318,7 @@ module.exports = {
 
     },
 
-    clickUnitOpeninFlipbook: function (chapterName) {
+    clickUnitOpeninFlipbook: function (chapterName) { //this function is not required, please comment/remove for now - akhil
         res = this.clickUnitMoreOptions(chapterName)
         if (res >= 0) {
             res = action.click(this.unitOpenFlipbook_btn + res)
@@ -329,7 +331,7 @@ module.exports = {
         return res;
     },
 
-    clickUnitViewActivities: function (chapterName) {
+    clickUnitViewActivities: function (chapterName) { //this function is not required, please remove - akhil
         res = this.clickUnitMoreOptions(chapterName)
         if (res >= 0) {
             res = action.click(this.unitViewActivity_btn)
@@ -340,7 +342,7 @@ module.exports = {
         return res;
     },
 
-    clickOnContinue: function () {
+    clickOnContinue: function () { // this function should be reused in unitDetails page - akhil
         res = action.click(this.lastActivity_Continue)
         if (res == true) {
             logger.logInto(stackTrace.get(), " --Continue Button clicked");
@@ -354,6 +356,8 @@ module.exports = {
         res = action.click(this.lastActivity_Dismiss)
         if (res == true) {
             logger.logInto(stackTrace.get(), " --Dismiss Button clicked");
+            // add return data i.e. the status of last activity box - akhil
+
         } else
             logger.logInto(stackTrace.get(), " --Dismiss Button NOT clicked", "error");
         return res;
