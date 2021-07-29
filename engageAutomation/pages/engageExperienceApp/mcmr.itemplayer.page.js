@@ -13,8 +13,7 @@ module.exports = {
 	selectedChoice: mcqBlockItemplayerPage.selectedChoice,
 
 	isInitialized: function (mcmrQuesData) {
-		var qIndex = (testplayer.getQuesInfo()).activeQues - 1;
-		console.log("qIndex: " + qIndex);
+		var qIndex = (testplayer.getQuesInfo()).activeQues;
 		action.switchToFrame(0);
 		let choiceSelector = "div[index='" + qIndex + "'] " + this.choice + mcmrQuesData[2][0] + "]";
 		res = action.getCSSProperty(choiceSelector, 'border-style');

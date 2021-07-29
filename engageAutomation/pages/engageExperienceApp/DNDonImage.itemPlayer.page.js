@@ -23,10 +23,10 @@ module.exports = {
             targetData: [],
             tapToZoom_exists: undefined
         };
-        var quesNo = (testplayer.getQuesInfo()).activeQues;
+        var qIndex = (testplayer.getQuesInfo()).activeQues;
         action.switchToFrame(0);
-        dndData.sourceData = this.getSourceData(quesNo - 1, dndQuesData);
-        dndData.targetData = this.getTargetData(quesNo - 1, dndQuesData);
+        dndData.sourceData = this.getSourceData(qIndex, dndQuesData);
+        dndData.targetData = this.getTargetData(qIndex, dndQuesData);
         dndData.tapToZoom_exists = action.isDisplayed(this.tapToZoom);
         action.switchToParentFrame();
         return dndData;
@@ -63,7 +63,7 @@ module.exports = {
     },
 
     dragAndDrop: function (dndQuesData) {
-        qIndex = ((testplayer.getQuesInfo()).activeQues) - 1;
+        qIndex = (testplayer.getQuesInfo()).activeQues;
         action.switchToFrame(0);
         for (var i = 0; i < dndQuesData.length; i++) {
             srcPath = "div[index='" + qIndex + "'] " + this.source + dndQuesData[i][0] + "]";
@@ -81,7 +81,7 @@ module.exports = {
     },
 
     dragAndDropClick: function (dndQuesData) {
-        qIndex = ((testplayer.getQuesInfo()).activeQues) - 1;
+        qIndex = (testplayer.getQuesInfo()).activeQues;
         action.switchToFrame(0);
         for (var i = 0; i < dndQuesData.length; i++) {
             srcPath = "div[index='" + qIndex + "'] " + this.source + dndQuesData[i][0] + "]";
@@ -105,7 +105,7 @@ module.exports = {
     },
 
     clickTaptoZoom: function () {
-        qIndex = (testplayer.getQuesInfo()).activeQues - 1;
+        qIndex = (testplayer.getQuesInfo()).activeQues;
         action.switchToFrame(0);
         res = action.click("div[index='" + qIndex + "'] " + this.tapToZoom)
         if (res == true) {
@@ -120,7 +120,7 @@ module.exports = {
     },
 
     closeZoom: function () {
-        var qIndex = (testplayer.getQuesInfo()).activeQues - 1;
+        var qIndex = (testplayer.getQuesInfo()).activeQues;
         // action.switchToFrame(0);
         res = action.click("div[index='" + qIndex + "'] " + this.zoomDialogClose_btn)
        // action.switchToParentFrame();
@@ -135,7 +135,7 @@ module.exports = {
     },
 
     dragAndDropZoomDropDown: function (dndQuesData) {
-        qIndex = ((testplayer.getQuesInfo()).activeQues) - 1;
+        qIndex = (testplayer.getQuesInfo()).activeQues;
         action.switchToFrame(0);
         for (var i = 0; i < dndQuesData.length; i++) {
             targetPath = "div[index='" + qIndex + "'] " + this.target + dndQuesData[i][2] + "] select";

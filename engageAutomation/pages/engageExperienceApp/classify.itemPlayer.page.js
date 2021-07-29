@@ -15,10 +15,10 @@ module.exports = {
             sourceData: [],
             targetData: []
         };
-        var quesNo = (testplayer.getQuesInfo()).activeQues;
+        var qIndex = (testplayer.getQuesInfo()).activeQues;
         action.switchToFrame(0);
-        data.sourceData = this.getSourceData(quesNo - 1, classifyQuesData);
-        data.targetData = this.getTargetData(quesNo - 1, classifyQuesData, quesType);
+        data.sourceData = this.getSourceData(qIndex, classifyQuesData);
+        data.targetData = this.getTargetData(qIndex, classifyQuesData, quesType);
         action.switchToParentFrame();
         return data;
     },

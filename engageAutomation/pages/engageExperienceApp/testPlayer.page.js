@@ -1,7 +1,7 @@
 "use strict";
 var action = require('../../core/actionLibrary/baseActionLibrary.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
-var res, itemplayerPage;
+var res;
 
 module.exports = {
 
@@ -15,6 +15,7 @@ module.exports = {
 	showAnswer_btn: selectorFile.css.ComproEngage.testPlayer.showAnswer_btn,
 	yourResponse_btn: selectorFile.css.ComproEngage.testPlayer.yourResponse_btn,
 	feedbackText: selectorFile.css.ComproEngage.testPlayer.feedback_txt,
+	activeQues: selectorFile.css.ComproEngage.testPlayer.activeQues,
 
 	isInitialized: function () {
 		logger.logInto(stackTrace.get());
@@ -43,12 +44,10 @@ module.exports = {
 			next_isExists: action.getElementCount(this.next_btn) == 1 ? true : false,
 			next_isDisabled: (action.getElementCount(this.next_btn) == 1) ? action.getAttribute(this.next_btn, 'disabled') : false,
 			activeQues: "",
-			totalQues: "",
 		};
 		if (insideFrame)
 			action.switchToParentFrame();
-		var quesInfo = this.getQuesInfo();
-		testplayerInfo.activeQues = quesInfo.activeQues;
+		testplayerInfo.activeQues = this.getQuesInfo().activeQues;
 		return testplayerInfo;
 	},
 
@@ -58,10 +57,7 @@ module.exports = {
 		res = action.click(this.checkMyWork_btn);
 		if (res == true) {
 			logger.logInto(stackTrace.get(), " -- CheckmyWork Button is clicked");
-			//itemplayerPage = require('./itemPlayer.page.js');
-			//console.log("before item initialize...")
-			//res = itemplayerPage.isInitialized();
-			//console.log("after item initialize...")
+			//res = this.getTestplayerInfo();
 		}
 		else {
 			res = res + " -- Error in clicking CheckmyWork Button"
@@ -78,8 +74,7 @@ module.exports = {
 		res = action.click(this.next_btn);
 		if (res == true) {
 			logger.logInto(stackTrace.get(), " -- next is clicked");
-			//itemplayerPage = require('./itemPlayer.page.js');
-			//res = itemplayerPage.isInitialized();
+			//res = this.getTestplayerInfo();
 		}
 		else {
 			res = res + " --Error in clicking next button";
@@ -96,8 +91,7 @@ module.exports = {
 		res = action.click(this.previous_btn);
 		if (res == true) {
 			logger.logInto(stackTrace.get(), " -- previous button is clicked");
-			//itemplayerPage = require('./itemPlayer.page.js');
-			//res = itemplayerPage.isInitialized();
+			//res = this.getTestplayerInfo();
 		}
 		else {
 			res = res + " --Error in clicking previous button";
@@ -114,8 +108,7 @@ module.exports = {
 		res = action.click(this.tryAgain_btn);
 		if (res == true) {
 			logger.logInto(stackTrace.get(), " -- TryAgain Button is clicked");
-			//itemplayerPage = require('./itemPlayer.page.js');
-			//res = itemplayerPage.isInitialized();
+			//res = this.getTestplayerInfo();
 		}
 		else {
 			res = res + " -- Error in clicking TryAgain Button"
@@ -132,8 +125,7 @@ module.exports = {
 		res = action.click(this.reset_btn);
 		if (res == true) {
 			logger.logInto(stackTrace.get(), " -- Reset Button is clicked");
-			//itemplayerPage = require('./itemPlayer.page.js');
-			//res = itemplayerPage.isInitialized();
+			//res = this.getTestplayerInfo();
 		}
 		else {
 			res = res + " -- Error in clicking Reset Button"
@@ -146,16 +138,14 @@ module.exports = {
 
 	getQuesInfo: function () {
 		logger.logInto(stackTrace.get());
-		let insideFrame = this.enterFrame("div[class*=\"item-player-container\"] > div");
+		action.switchToFrame(0);
 		var quesInfo = {
-			activeQues: action.getElementCount("div[class*=\"item-player-container\"] > div"),
-			// maxQues: undefined
+			activeQues: action.getAttribute(this.activeQues, "index")
 		};
-		if (insideFrame)
-			action.switchToParentFrame();
+		action.switchToParentFrame();
 		return quesInfo;
 	},
-	
+
 	enterFrame: function (selector) {
 		let insideFrame;
 		res = action.getElementCount(selector);

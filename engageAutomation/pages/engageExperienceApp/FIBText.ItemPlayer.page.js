@@ -1,7 +1,7 @@
 "use strict";
 var action = require('../../core/actionLibrary/baseActionLibrary');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
-var res, quesNo;
+var res, qIndex;
 var itemplayer = require('./itemPlayer.page.js');
 var testplayer = require('./testPlayer.page.js');
 
@@ -15,8 +15,8 @@ module.exports = {
         var obj = {
             targetData: []
         };
-        quesNo = ((testplayer.getQuesInfo()).activeQues) - 1;
-        obj.targetData = this.getTargetData(quesNo, fibQuesData);
+        qIndex = (testplayer.getQuesInfo()).activeQues;
+        obj.targetData = this.getTargetData(qIndex, fibQuesData);
         return obj;
     },
 
@@ -37,10 +37,10 @@ module.exports = {
 
     inputValues: function (fibQuesData) {
         logger.logInto(stackTrace.get());
-        quesNo = ((testplayer.getQuesInfo()).activeQues) - 1;
+        qIndex = (testplayer.getQuesInfo()).activeQues;
         action.switchToFrame(0);
         for (let i = 0; i < fibQuesData.length; i++) {
-            var textSelector = "div[index='" + quesNo + "'] " + this.response + fibQuesData[i][0] + "] [data-tid=text-placeholder]";
+            var textSelector = "div[index='" + qIndex + "'] " + this.response + fibQuesData[i][0] + "] [data-tid=text-placeholder]";
             //action.switchToParentFrame();
             // testplayer.collapseTestPlayer();
             // action.switchToFrame(0)

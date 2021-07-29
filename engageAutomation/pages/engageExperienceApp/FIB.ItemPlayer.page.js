@@ -1,5 +1,4 @@
 'use strict';
-
 const DNDonImageItemPlayerPage = require('./DNDonImage.itemPlayer.page.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
 

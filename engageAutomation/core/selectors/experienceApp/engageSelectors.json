@@ -232,7 +232,8 @@
 				"showingCorrectAnswer_txt": "p[data-tid=text-showingcorrectanswer]",
 				"collapseBtn": "[data-tid='container-testplayer'] [data-tid='button-togglebuttonpanel']",
 				"tpBottomPanelHidden": "[class*='MuiCollapse-hidden']",
-				"tpBottomPanelVisible": "[class*='MuiCollapse-entered']"
+				"tpBottomPanelVisible": "[class*='MuiCollapse-entered']",
+				"activeQues": "div[class*=item-player-container] > div[style='height: 100%;']"
 			},
 			"MCQB": {
 				"choice": "div[data-tid=input-click-option-",

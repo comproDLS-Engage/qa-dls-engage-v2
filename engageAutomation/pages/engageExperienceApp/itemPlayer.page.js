@@ -107,32 +107,6 @@ module.exports = {
 		return testplayerInfo;
 	},
 
-	/*switchMainFrame: function (id) {
-		logger.logInto(stackTrace.get());
-		ret = action.switchToFrame(id)
-		if (ret == true) {
-			logger.logInto(stackTrace.get(), " -- Switched to frame");
-		}
-		else {
-			ret = ret + " -- NOT Switched to frame";
-			logger.logInto(stackTrace.get(), ret, "error");
-		}
-		return ret;
-	},
-
-	switchParentFrame: function () {
-		logger.logInto(stackTrace.get());
-		ret = action.switchToParentFrame()
-		if (ret == true) {
-			logger.logInto(stackTrace.get(), " -- Switched to parent frame");
-		}
-		else {
-			ret = ret + " -- NOT Switched to parent frame";
-			logger.logInto(stackTrace.get(), ret, "error");
-		}
-		return ret;
-	},*/
-
 	getFeedbackIconDetails: function (quesSelector, quesType) {
 		if (quesType == 'classify') {
 			res = action.getElementCount(quesSelector + " >" + this.correctIcon);
@@ -140,9 +114,7 @@ module.exports = {
 		}
 		else {
 			res = action.getElementCount(quesSelector + " " + this.correctIcon);
-			//console.log("for i the itemplayer res is",res);
 			ret = action.getElementCount(quesSelector + " " + this.incorrectIcon);
-			//console.log("for i the itemplayer ret is",ret);
 		}
 		if (res > 0)
 			value = "correct"

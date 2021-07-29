@@ -13,8 +13,7 @@ module.exports = {
 
 	isInitialized: function (mcqbQuesData) {
 		logger.logInto(stackTrace.get(), "");
-		var qIndex = (testplayer.getQuesInfo()).activeQues - 1;
-		console.log("qIndex : "  + qIndex);
+		var qIndex = (testplayer.getQuesInfo()).activeQues;
 		action.switchToFrame(0);
 		let choiceSelector = "div[index='" + qIndex + "'] " + this.choice + mcqbQuesData[0][0] + "]";
 		res = action.getCSSProperty(choiceSelector, 'border-style');
@@ -40,7 +39,7 @@ module.exports = {
 	},
 
 	clickOption: function (mcqbQuesData) {
-		let qIndex = (testplayer.getQuesInfo()).activeQues - 1;
+		let qIndex = (testplayer.getQuesInfo()).activeQues;
 		// testplayer.collapseTestPlayer();
 		action.switchToFrame(0);
 		for (let i = 0; i < mcqbQuesData.length; i++) {
@@ -71,11 +70,11 @@ module.exports = {
 
 	getmcqbData: function (mcqbQuesData) {
 		action.switchToParentFrame();
-		let quesNo = (testplayer.getQuesInfo()).activeQues - 1;
+		let qIndex = (testplayer.getQuesInfo()).activeQues;
 		action.switchToFrame(0);
 		var obj = [];
 		for (let i = 0; i < mcqbQuesData.length; i++) {
-			let choiceSelector = "div[index='" + (quesNo) + "'] " + this.choice + mcqbQuesData[i][0] + "]"
+			let choiceSelector = "div[index='" + (qIndex) + "'] " + this.choice + mcqbQuesData[i][0] + "]"
 			let selectedChoice = choiceSelector + " " + this.selectedChoice;
 			let value = itemplayer.getFeedbackIconDetails(choiceSelector)
 			res = action.getElementCount(selectedChoice);
