@@ -95,7 +95,7 @@
 				"classDrawerHeader": "[data-tid=text-drawerHeaderTitle]",
 				"classDrawerTitle": "[data-tid=text-ClassesTitle]",
 				"classDrawerSubTitle": "[data-tid=text-ClassesSubtitle]",
-				"classDrawerCloseBtn":"[data-tid=button-close]"
+				"classDrawerCloseBtn": "[data-tid=button-close]"
 			},
 			"Calender": {
 				"calenderYear": "//h6[contains(@class,'MuiTypography-subtitle1')]",
@@ -206,7 +206,70 @@
 				"createAssignmentByline_lbl": "[data-tid=MISSING]",
 				"noInboxActivity_lbl": "[data-tid=MISSING]",
 				"noInboxActivityByline_lbl": "[data-tid=MISSING]"
+			},
+			"itemPlayer": {
+				"correctIcon": "[data-tid=icon-correct]",
+				"incorrectIcon": "[data-tid=icon-incorrect]",
+				"questionText": "[data-tid=text-question]",
+				"instructionText": "[data-tid=text-instruction]",
+				"itemPlayerContainer": "[id='itemContainer']",
+				"videoMedia": "[data-tid=container-video]",
+				"imageMedia": "[data-tid=container-image]",
+				"audioMedia": "[data-tid=container-audio]",
+				"activeQues": "div[class*=item-player-container] > div[style='height: 100%;']"
+			},
+			"testPlayer": {
+				"checkMyWork_btn": "[class=buttons-container] [class=defaultBtn-check-mywork-icon] , [data-tid=button-checkanswers], [data-tid=button-check]",
+				"next_btn": "[id=next], [data-tid=button-next]",
+				"previous_btn": "[id=previous], [data-tid=button-previousactivity]",
+				"tryAgain_btn": "[id=tryAgain]",
+				"reset_btn": "[id=reset]",
+				"closeReview_btn": "[data-tid='container-testplayer'] button[data-tid*=button-closereview]",
+				"player_header": "[data-tid=container-testplayer] [data-tid=text-headertitle]",
+				"lo_container": "#container-lo",
+				"showAnswer_btn": "button[data-tid=button-showcorrectanswers]",
+				"yourResponse_btn": "button[data-tid=button-showuserresponse]",
+				"feedback_txt": "[data-tid=text-feedbackmessage]",
+				"showingCorrectAnswer_txt": "p[data-tid=text-showingcorrectanswer]",
+				"collapseBtn": "[data-tid='container-testplayer'] [data-tid='button-togglebuttonpanel']",
+				"tpBottomPanelHidden": "[class*='MuiCollapse-hidden']",
+				"tpBottomPanelVisible": "[class*='MuiCollapse-entered']"
+			},
+			"MCQB": {
+				"choice": "div[data-tid=input-click-option-",
+				"choices": "div[data-tid*=input-click-option-]",
+				"selectedChoice": "svg[data-tid=icon-selected]"
+			},
+			"FIB": {
+				"source": "[data-tid=dragsource-option-",
+				"target": "[data-tid=droptarget-option-"
+			},
+			"FIBText": {
+				"response": "[data-tid=input-response-",
+				"responses": "[data-tid*='input-response']"
+			},
+			"dragAndDrop": {
+				"source": "[data-tid=dragsource-option-",
+				"target": "[data-tid=droptarget-option-",
+				"tapToZoom": "[data-tid='button-taptozoom']",
+				"zoomOverlay": "[class*='zoom-overlay']",
+				"zoomDialogClose_btn": "[data-tid='button-zoomdialogclose']"
+			},
+			"MCMR": {
+				"choice": "div[data-tid=input-click-option-",
+				"choices": "div[data-tid*=input-click-option-]",
+				"selectedChoice": "svg[data-tid=icon-selected]"
+			},
+			"Matching": {
+				"left": "[data-tid*=input-left-item-",
+				"right": "[data-tid*=input-right-item-"
+			},
+			"orderList": {
+				"option": "li[data-tid=input-drag-option-",
+				"options": "li[data-tid*=input-drag-option-]",
+				"listIndex": "li[data-tid]:nth-child("
 			}
+
 		}
 	}
 }

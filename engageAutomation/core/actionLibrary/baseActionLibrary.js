@@ -330,7 +330,7 @@ module.exports = {
     waitForDocumentLoad: function () {
         logger.logInto(stackTrace.get());
         res = this.waitForDisplayed("[data-tid=image-loader]", undefined, true);
-        res2 = this.waitForDisplayed("[class*=rogress]", undefined, true);
+        res2 = this.waitForDisplayed("[class*=rogress][class*=indeterminate]", undefined, true);
         if (!res)
             console.log("Loader (image-loader) still exists after 30s - " + res)
         else if (!res2)
