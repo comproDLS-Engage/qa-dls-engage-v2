@@ -1,6 +1,6 @@
 "use strict";
 var action = require('../../core/actionLibrary/baseActionLibrary.js');
-var testplayer = require('./testPlayer.page.js');
+var testplayer = require('./basePlayer.page.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
 var res, ret;
 
@@ -48,7 +48,7 @@ module.exports = {
 			feedback: {},
 		};
 
-		let testplayerInfo = testplayer.isInitialized();
+		let testplayerInfo = testplayer.getQuesInfo();
 		let activeItemplayer = "div[index='" + testplayerInfo.activeQues + "'] " + this.itemPlayerContainer;
 		let correctOpt = "div[index='" + testplayerInfo.activeQues + "'] " + this.correctIcon;
 		let incorrectOpt = "div[index='" + testplayerInfo.activeQues + "'] " + this.incorrectIcon;

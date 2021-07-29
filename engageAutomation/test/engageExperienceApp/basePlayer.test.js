@@ -1,6 +1,6 @@
 "use strict";
 // var launchQuiz = require('../../pages/engageExperienceApp/launchQuiz.page.js');
-var testPlayerPage = require('../../pages/engageExperienceApp/testPlayer.page.js');
+var testPlayerPage = require('../../pages/engageExperienceApp/basePlayer.page.js');
 var itemPlayer = require('../../pages/engageExperienceApp/itemPlayer.page');
 // var orderlist = require("../../pages/engageExperienceApp/orderlist.page");
 // var summaryPage = require("../../pages/engageExperienceApp/summary.page")
@@ -19,7 +19,7 @@ module.exports = {
 	},
 
 	//Validate the test player when quiz is launched and question is not performed
-	ENG_QUIZ_TC_2: function (testdata) {
+	COM_PLAY_TC_2: function (testdata) {
 		sts = itemPlayer.isInitialized();
 		// assertion.assertEqual(sts.question.quesText, testdata, "Question text mismatch");
 		// if ((typeof (sts)) === "object") {
