@@ -515,6 +515,11 @@
                     "tags": "P1"
                 },  
                 {
+                    "id": "ENG_INS_CLASS_TC_43",
+                    "description": "Validate the class drawer Pane for student when  class is added",
+                    "tags": "P1"
+                },  
+                {
                     "id": "ENG_INS_CLASS_TC_38",
                     "description": "Validate the class drwaer Pane when no class is added",
                     "tags": "P1"
@@ -689,6 +694,18 @@
                 },
                 {
                     "id": "ENG_DASH_TC_11",
+                    "description": "Validate on clicking Open Flipbook from Book dropdown menu, flipbook page is launched",
+                    "tags": "P2",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_DASH_TC_12",
+                    "description": "Validate on clicking Open Flipbook from Book dropdown menu, flipbook page is launched",
+                    "tags": "P2",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_DASH_TC_13",
                     "description": "Validate on clicking Open Flipbook from Book dropdown menu, flipbook page is launched",
                     "tags": "P2",
                     "visualTest": true

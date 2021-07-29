@@ -89,7 +89,9 @@
 				"viewClass_menu": "[data-tid*=button-viewClass-",
 				"createClass_menu": "[data-tid*=button-createClass-",
 				"removeBook_menu": "[data-tid*=button-remove-",
-				"openFlipbook_menu": "[data-tid*=button-openFlipbook-"
+				"openFlipbook_menu": "[data-tid*=button-openFlipbook-",
+				"addBookbtn": "[data-tid=button-addBook]",
+				"bookPlusIcon":"[data-tid=button-addBook-"
 			},
 			"classDrawer": {
 				"classDrawerHeader": "[data-tid=text-drawerHeaderTitle]",

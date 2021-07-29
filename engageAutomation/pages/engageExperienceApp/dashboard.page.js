@@ -15,6 +15,8 @@ module.exports = {
     createClass_menu: selectorFile.css.ComproEngage.dashboardPage.createClass_menu,
     removeBook_menu: selectorFile.css.ComproEngage.dashboardPage.removeBook_menu,
     openFlipbook_menu: selectorFile.css.ComproEngage.dashboardPage.openFlipbook_menu,
+    addBookbtn: selectorFile.css.ComproEngage.dashboardPage.addBookbtn,
+    bookPlusIcon:selectorFile.css.ComproEngage.dashboardPage.bookPlusIcon,
 
     isInitialized: function () {
         logger.logInto(stackTrace.get());
@@ -65,6 +67,40 @@ module.exports = {
             }
         }
         return res;
+    },
+
+    clickAddBook: function () {
+        logger.logInto(stackTrace.get());
+                res = action.click(this.addBookbtn);
+                if (res == true) {
+                    logger.logInto(stackTrace.get(), " Add book button is clicked");
+                    // res = contactStudentPage.isInitialized();
+                }
+                else {
+                    res = res + " -- Error in clicking Add book Button"
+                    logger.logInto(stackTrace.get(), res, "error");
+                }
+            
+        return res;
+    },
+
+    ClickPlusIconofBook:function(bookName)
+    {
+        logger.logInto(stackTrace.get());
+        ret = this.getDashboardPageData();
+        for (var i = 0; i < ret.bookList.length; i++) {
+            if (ret.bookList[i].bookTitle == bookName) {
+                res = action.click(this.bookPlusIcon + i + "]");
+                if (res == true) {
+                     logger.logInto(stackTrace.get(), " --Book Plus icon is clicked");
+                    }
+                    else {
+                        res = res + " -- Error in clicking Book Plus icon"
+                        logger.logInto(stackTrace.get(), res, "error");
+                    }
+                }
+            }
+            return res;
     },
 
     clickViewBookEllipses: function (bookName) {
@@ -135,6 +171,7 @@ module.exports = {
                 if (res == true) {
                     //Snackbar
                     logger.logInto(stackTrace.get(), " --Remove from My books clicked");
+                    res = action.click("[aria-labelledby=form-dialog-title] button:nth-child(2)");
                 }
                 else {
                     res = res + " -- Error in clicking Remove from My books"
