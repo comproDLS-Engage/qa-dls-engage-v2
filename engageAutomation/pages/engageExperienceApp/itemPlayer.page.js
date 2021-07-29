@@ -2,7 +2,7 @@
 var action = require('../../core/actionLibrary/baseActionLibrary.js');
 var testplayer = require('./testPlayer.page.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
-var res, ret, value;
+var res, ret;
 
 module.exports = {
 
@@ -29,7 +29,7 @@ module.exports = {
 			res = this.getItemplayerInfo();
 		}
 		else {
-			ret = res + " -- Itemplayer page is not loaded yet";
+			res = res + " -- Itemplayer page is not loaded yet";
 			logger.logInto(stackTrace.get(), res);
 		}
 		return res;
@@ -47,67 +47,56 @@ module.exports = {
 			incorrectCount: undefined,
 			feedback: {},
 		};
-		// this.switchMainFrame(0);
 
 		let testplayerInfo = testplayer.isInitialized();
+		let activeItemplayer = "div[index='" + testplayerInfo.activeQues + "'] " + this.itemPlayerContainer;
+		let correctOpt = "div[index='" + testplayerInfo.activeQues + "'] " + this.correctIcon;
+		let incorrectOpt = "div[index='" + testplayerInfo.activeQues + "'] " + this.incorrectIcon;
+		let quesTextSelector = "div[index='" + testplayerInfo.activeQues + "'] " + this.questionText;
+		let instructionTextSelector = "div[index='" + testplayerInfo.activeQues + "'] " + this.instructionText;
 
-		// let activeItemplayer = "div[index='" + (testplayerInfo.activeQues - 1) + "'] " + this.itemPlayerContainer;
-		// let correctOpt = "div[index='" + (testplayerInfo.activeQues - 1) + "'] " + this.correctIcon;
-		// let incorrectOpt = "div[index='" + (testplayerInfo.activeQues - 1) + "'] " + this.incorrectIcon;
-		// let quesTextSelector = "div[index='" + (testplayerInfo.activeQues - 1) + "'] " + this.questionText;
-		// let instructionTextSelector = "div[index='" + (testplayerInfo.activeQues - 1) + "'] " + this.instructionText;
+		action.switchToFrame(0);
+		question.quesType = action.getAttribute(activeItemplayer, 'class');
+		question.quesText = (action.getElementCount(quesTextSelector) == 1) ? action.getText(quesTextSelector) : "";
+		question.instructionText = (action.getElementCount(instructionTextSelector) == 1) ? action.getText(instructionTextSelector) : "";
 
-		// this.switchMainFrame(0);
-		// question.quesType = action.getAttribute(activeItemplayer, 'class');
-		// question.quesText = (action.getElementCount(quesTextSelector) == 1) ? action.getText(quesTextSelector) : "";
-		// question.instructionText = (action.getElementCount(instructionTextSelector) == 1) ? action.getText(instructionTextSelector) : "";
+		if (action.getElementCount("div[index='" + testplayerInfo.activeQues + "'] " + this.videoMedia) == 1)
+			question.mediaType = "video";
+		else if (action.getElementCount("div[index='" + testplayerInfo.activeQues + "'] " + this.imageMedia) == 1)
+			question.mediaType = "image";
+		else if (action.getElementCount("div[index='" + testplayerInfo.activeQues + "'] " + this.audioMedia) == 1)
+			question.mediaType = "audio";
 
-		// if (action.getElementCount("div[index='" + (testplayerInfo.activeQues - 1) + "'] " + this.videoMedia) == 1)
-		// 	question.mediaType = "video";
-		// else if (action.getElementCount("div[index='" + (testplayerInfo.activeQues - 1) + "'] " + this.imageMedia) == 1)
-		// 	question.mediaType = "image";
-		// else if (action.getElementCount("div[index='" + (testplayerInfo.activeQues - 1) + "'] " + this.audioMedia) == 1)
-		// 	question.mediaType = "audio";
-
+		question.correctCount = action.getElementCount(correctOpt);
 		// res = action.getElementCount(correctOpt);
-		// if (res > 0) {
-		// 	logger.logInto(stackTrace.get(), " -- Correct option is available");
+		// if (res > 0)
 		// 	question.correctCount = res;
-		// }
-		// else {
-		// 	question.correctCount = 0;
-		// 	res = res + "-- Correct option is NOT available";
-		// 	logger.logInto(stackTrace.get(), res);
-		// }
-
-		// res = action.getElementCount(incorrectOpt);
-		// if (res > 0) {
-		// 	logger.logInto(stackTrace.get(), " -- Incorrect option is available");
-		// 	question.incorrectCount = res;
-		// }
-		// else {
-		// 	question.incorrectCount = 0;
-		// 	res = res + " -- Incorrect option is NOT available";
-		// 	logger.logInto(stackTrace.get(), res);
-		// }
-
-		// if (0 < question.correctCount || 0 < question.incorrectCount) {
-		// 	question.isSubmitted = true;
-		// 	// this.switchParentFrame();
-		// 	question.feedback = testplayer.getFeedbackInfo();
-		// 	// this.switchMainFrame(0);
-		// }
 		// else
-		// 	question.isSubmitted = false;
+		// 	question.correctCount = 0;
 
-		// // this.switchParentFrame();
-		// testplayerInfo.question = {};
-		// this.switchParentFrame();
-		testplayerInfo.question = question;
-		return testplayerInfo;
+		question.incorrectCount = action.getElementCount(incorrectOpt);
+		// res = action.getElementCount(incorrectOpt);
+		// if (res > 0)
+		// 	question.incorrectCount = res;
+		// else
+		// 	question.incorrectCount = 0;
+
+		if (0 < question.correctCount || 0 < question.incorrectCount) {
+			question.isSubmitted = true;
+			// this.switchParentFrame();
+			//question.feedback = testplayer.getFeedbackInfo();
+			// this.switchMainFrame(0);
+		}
+		else
+			question.isSubmitted = false;
+
+		action.switchToParentFrame();
+		console.log(question)
+		return question;
 	},
 
 	getFeedbackIconDetails: function (quesSelector, quesType) {
+		let value;
 		if (quesType == 'classify') {
 			res = action.getElementCount(quesSelector + " >" + this.correctIcon);
 			ret = action.getElementCount(quesSelector + " >" + this.incorrectIcon);

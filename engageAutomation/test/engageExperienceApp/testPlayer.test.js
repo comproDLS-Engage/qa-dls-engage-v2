@@ -21,7 +21,6 @@ module.exports = {
 	//Validate the test player when quiz is launched and question is not performed
 	ENG_QUIZ_TC_2: function (testdata) {
 		sts = itemPlayer.isInitialized();
-		console.log(sts);
 		// assertion.assertEqual(sts.question.quesText, testdata, "Question text mismatch");
 		// if ((typeof (sts)) === "object") {
 		// 	if (sts.question.quesType.includes("order-list"))
@@ -81,7 +80,6 @@ module.exports = {
 	//Validate The Test Player When User Click "Next Question" Button After Performing Check My Work
 	ENG_QUIZ_TC_6: function (testdata) {
 		sts = testPlayerPage.click_Skip();
-		console.log(JSON.stringify(sts));
 		// if ((typeof (sts)) === "object") {
 		// 	if (sts.question.quesType.includes("order-list"))
 		// 		assertion.assertEqual(sts.centerBtn.btnState, 'enabled', "Center button state mismatch");
