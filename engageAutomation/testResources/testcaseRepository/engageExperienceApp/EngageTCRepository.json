@@ -832,6 +832,21 @@
                     "id": "COM_PLAY_TC_6",
                     "description": "Validate the test player when user click Previous",
                     "tags": "P1"
+                },
+                {
+                    "id": "COM_PLAY_TC_7",
+                    "description": "Validate the test player when user click Show Answer",
+                    "tags": "P1"
+                },
+                {
+                    "id": "COM_PLAY_TC_8",
+                    "description": "Validate the test player when user click Your Response",
+                    "tags": "P1"
+                },
+                {
+                    "id": "COM_PLAY_TC_9",
+                    "description": "Validate the test player when user click Hint",
+                    "tags": "P1"
                 }
             ]
         },
