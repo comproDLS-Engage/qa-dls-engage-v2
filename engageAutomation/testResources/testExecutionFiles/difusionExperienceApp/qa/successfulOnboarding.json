@@ -1,0 +1,668 @@
+{
+    "Suite1": {
+        "Name": "Validate Successful Student Onboarding",
+        "TestCaseRepo": "EngageTCRepository.json",
+        "Before": [
+            {
+            "id": "launchUrl",
+            "description": "",
+            "testFile": "./engageAutomation/core/runner/launchUrl.js",
+            "testData": [
+
+            ]
+        },
+        {
+            "id": "ENG_LAND_TC_1",
+            "description": "Landing page",
+            "testFile": "./test/engageExperienceApp/landing.test.js",
+            "visualTest": true,
+            "visualTolerance": 0.07,
+            "testData": [
+
+            ]
+        },
+        {
+            "id": "ENG_LAND_TC_3",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/landing.test.js",
+            "visualTest": true,
+            "visualTolerance": 0.07,
+            "testData": [
+
+            ]
+        },
+        {
+            "id": "ENG_IDEN_TC_7",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/login.test.js",
+            "visualTest": true,
+            "visualTolerance": 0.07,
+            "testData": [
+            {
+                "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/successfulOnboardinglogindata.json",
+                "jsonPath": "engage.login.user.successfulStudentUser"
+            }]
+        }
+        ],
+        "BeforeEach": [],
+        "Test": [
+            {
+                "id": "ENG_ONBO_TC_1",
+                "description": "",
+                "testFile": "userOnboarding.test.js",
+                "testData": [
+                    {
+                        "dataFile": "successfulOnboardinglogindata.json",
+                        "jsonPath": "engage.login.user.successfulStudentUser"
+                    },
+                    {
+                        "dataFile": "appContentEnglish.json",
+                        "jsonPath": "engage.appContent.onboarding.welcomePage"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_ONBO_TC_3",
+                "description": "",
+                "testFile": "userOnboarding.test.js",
+                "testData": [
+                    {
+                        "dataFile": "appContentEnglish.json",
+                        "jsonPath": "engage.appContent.onboarding.rolePage"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_ONBO_TC_4",
+                "description": "",
+                "testFile": "userOnboarding.test.js",
+                "testData": [
+                    {
+                        "dataFile": "appContentEnglish.json",
+                        "jsonPath": "engage.appContent.onboarding.studentOptionsPage"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_ONBO_TC_5",
+                "description": "",
+                "testFile": "userOnboarding.test.js",
+                "testData": [
+                    {
+                        "dataFile": "appContentEnglish.json",
+                        "jsonPath": "engage.appContent.onboarding.courseKeyPage"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_ONBO_TC_7",
+                "description": "",
+                "testFile": "userOnboarding.test.js",
+                "testData": [
+                    {
+                        "dataFile": "appContentEnglish.json",
+                        "jsonPath": "engage.appContent.onboarding.activationCodePage"
+                    },
+                    {
+                        "dataFile": "successfulOnboardinglogindata.json",
+                        "jsonPath": "engage.login.user.successfulStudentUser.courses[0].key"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_ONBO_TC_10",
+                "description": "",
+                "testFile": "userOnboarding.test.js",
+                "testData": [
+                    {
+                        "dataFile": "appContentEnglish.json",
+                        "jsonPath": "engage.appContent.onboarding.studentSuccessPage"
+                    },
+                    {
+                        "dataFile": "successfulOnboardinglogindata.json",
+                        "jsonPath": "engage.login.user.successfulStudentUser.entitlement[0]"
+                    },
+                    {
+                        "dataFile": "courseData.json",
+                        "jsonPath": "engage.courses.onboardingCourse"
+                    },
+                    {
+                        "dataFile": "tocData.json",
+                        "jsonPath": "engage.books.book1"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_ONBO_TC_11",
+                "description": "",
+                "testFile": "userOnboarding.test.js",
+                "testData": [
+                    {
+                        "dataFile": "appContentEnglish.json",
+                        "jsonPath": "engage.appContent.dashboard"
+                    }
+                ]
+            }
+        ],
+        "AfterEach": [],
+        "After": [
+            {
+                "id": "ENG_FOOT_TC_1",
+                "description": "",
+                "testFile": "common.test.js",
+                "testData": []
+            }
+        ]
+    },
+    "Suite2": {
+        "Name": "Validate Successful Join Course Scenario of a book for Student",
+        "TestCaseRepo": "EngageTCRepository.json",
+        "Before": [
+            {
+                "id": "launchUrl",
+                "description": "",
+                "testFile": "launchUrl.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_LAND_TC_3",
+                "description": "",
+                "testFile": "landing.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_IDEN_TC_4",
+                "description": "",
+                "testFile": "login.test.js",
+                "testData": [
+                    {
+                        "dataFile": "successfulOnboardinglogindata.json",
+                        "jsonPath": "engage.login.user.joinCourseUser"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_FOOT_TC_7",
+                "description": "",
+                "testFile": "footer.test.js",
+                "testData": []
+            }
+        ],
+        "BeforeEach": [],
+        "Test": [
+            {
+                "id": "ENG_ONBO_TC_49",
+                "description": "",
+                "testFile": "userOnboarding.test.js",
+                "testData": [
+                    {
+                        "dataFile": "appContentEnglish.json",
+                        "jsonPath": "engage.appContent.onboarding.studentOptionsPage"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_ONBO_TC_5",
+                "description": "",
+                "testFile": "userOnboarding.test.js",
+                "testData": [
+                    {
+                        "dataFile": "appContentEnglish.json",
+                        "jsonPath": "engage.appContent.onboarding.courseKeyPage"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_ONBO_TC_50",
+                "description": "",
+                "testFile": "userOnboarding.test.js",
+                "testData": [
+                    {
+                        "dataFile": "appContentEnglish.json",
+                        "jsonPath": "engage.appContent.joinCourse.almostDone"
+                    },
+                    {
+                        "dataFile": "courseData.json",
+                        "jsonPath": "engage.courses.JoinCourse.key"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_ONBO_TC_67",
+                "description": "",
+                "testFile": "userOnboarding.test.js",
+                "testData": [
+                    {
+                        "dataFile": "appContentEnglish.json",
+                        "jsonPath": "engage.appContent.onboarding.studentSuccessPage"
+                    },
+                    {
+                        "dataFile": "courseData.json",
+                        "jsonPath": "engage.courses.JoinCourse"
+                    },
+                    {
+                        "dataFile": "tocData.json",
+                        "jsonPath": "engage.books.book1"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_ONBO_TC_11",
+                "description": "",
+                "testFile": "userOnboarding.test.js",
+                "testData": [
+                    {
+                        "dataFile": "appContentEnglish.json",
+                        "jsonPath": "engage.appContent.dashboard"
+                    }
+                ]
+            }
+        ],
+        "AfterEach": [],
+        "After": [
+            {
+                "id": "ENG_FOOT_TC_1",
+                "description": "",
+                "testFile": "common.test.js",
+                "testData": []
+            }
+        ]
+    },
+    "Suite3": {
+        "Name": "Validate Successful Join Course Scenario of a book with Access Codes for Student ",
+        "TestCaseRepo": "EngageTCRepository.json",
+        "Before": [
+            {
+                "id": "launchUrl",
+                "description": "",
+                "testFile": "launchUrl.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_LAND_TC_3",
+                "description": "",
+                "testFile": "landing.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_IDEN_TC_4",
+                "description": "",
+                "testFile": "login.test.js",
+                "testData": [
+                    {
+                        "dataFile": "successfulOnboardinglogindata.json",
+                        "jsonPath": "engage.login.user.joinCourseUser"
+                    }
+                ]
+            }
+        ],
+        "BeforeEach": [],
+        "Test": [
+            {
+                "id": "ENG_ONBO_TC_49",
+                "description": "",
+                "testFile": "userOnboarding.test.js",
+                "testData": [
+                    {
+                        "dataFile": "appContentEnglish.json",
+                        "jsonPath": "engage.appContent.onboarding.studentOptionsPage"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_ONBO_TC_5",
+                "description": "",
+                "testFile": "userOnboarding.test.js",
+                "testData": [
+                    {
+                        "dataFile": "appContentEnglish.json",
+                        "jsonPath": "engage.appContent.onboarding.courseKeyPage"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_ONBO_TC_52",
+                "description": "",
+                "testFile": "userOnboarding.test.js",
+                "testData": [
+                    {
+                        "dataFile": "appContentEnglish.json",
+                        "jsonPath": "engage.appContent.onboarding.activationCodePage"
+                    },
+                    {
+                        "dataFile": "courseData.json",
+                        "jsonPath": "engage.courses.JoinCourseBook2.key"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_ONBO_TC_10",
+                "description": "",
+                "testFile": "userOnboarding.test.js",
+                "testData": [
+                    {
+                        "dataFile": "appContentEnglish.json",
+                        "jsonPath": "engage.appContent.onboarding.studentSuccessPage"
+                    },
+                    {
+                        "dataFile": "successfulOnboardinglogindata.json",
+                        "jsonPath": "engage.login.user.successfulStudentUser.entitlement[1]"
+                    },
+                    {
+                        "dataFile": "courseData.json",
+                        "jsonPath": "engage.courses.JoinCourseBook2"
+                    },
+                    {
+                        "dataFile": "tocData.json",
+                        "jsonPath": "engage.books.book2"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_ONBO_TC_11",
+                "description": "",
+                "testFile": "userOnboarding.test.js",
+                "testData": [
+                    {
+                        "dataFile": "appContentEnglish.json",
+                        "jsonPath": "engage.appContent.dashboard"
+                    }
+                ]
+            }
+        ],
+        "AfterEach": [],
+        "After": [
+            {
+                "id": "ENG_FOOT_TC_1",
+                "description": "",
+                "testFile": "footer.test.js",
+                "testData": [
+                    {
+                        "dataFile": "appContentEnglish.json",
+                        "jsonPath": "engage.appContent.landing"
+                    }
+                ]
+            }
+        ]
+    },
+    "Suite4": {
+        "Name": "Validate Successful Teacher Onboarding",
+        "TestCaseRepo": "EngageTCRepository.json",
+        "Before": [
+            {
+                "id": "launchUrl",
+                "description": "",
+                "testFile": "launchUrl.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_LAND_TC_3",
+                "description": "",
+                "testFile": "landing.test.js",
+                "testData": []
+            }
+        ],
+        "BeforeEach": [],
+        "Test": [
+            {
+                "id": "ENG_ONBO_TC_1",
+                "description": "",
+                "testFile": "userOnboarding.test.js",
+                "testData": [
+                    {
+                        "dataFile": "successfulOnboardinglogindata.json",
+                        "jsonPath": "engage.login.user.successfulInstructorUser"
+                    },
+                    {
+                        "dataFile": "appContentEnglish.json",
+                        "jsonPath": "engage.appContent.onboarding.welcomePage"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_ONBO_TC_3",
+                "description": "",
+                "testFile": "userOnboarding.test.js",
+                "testData": [
+                    {
+                        "dataFile": "appContentEnglish.json",
+                        "jsonPath": "engage.appContent.onboarding.rolePage"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_ONBO_TC_17",
+                "description": "",
+                "testFile": "userOnboarding.test.js",
+                "testData": [
+                    {
+                        "dataFile": "appContentEnglish.json",
+                        "jsonPath": "engage.appContent.onboarding.intructorOptionsPage"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_ONBO_TC_18",
+                "description": "",
+                "testFile": "userOnboarding.test.js",
+                "testData": [
+                    {
+                        "dataFile": "appContentEnglish.json",
+                        "jsonPath": "engage.appContent.onboarding.schoolKeyPage"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_ONBO_TC_20",
+                "description": "",
+                "testFile": "userOnboarding.test.js",
+                "testData": [
+                    {
+                        "dataFile": "appContentEnglish.json",
+                        "jsonPath": "engage.appContent.onboarding.intructorSuccessPage"
+                    },
+                    {
+                        "dataFile": "successfulOnboardinglogindata.json",
+                        "jsonPath": [
+                            "engage.login.user.successfulInstructorUser.schoolKey[0]",
+                            "engage.login.user.successfulInstructorUser.schoolName"
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "ENG_ONBO_TC_40",
+                "description": "",
+                "testFile": "userOnboarding.test.js",
+                "testData": [
+                    {
+                        "dataFile": "appContentEnglish.json",
+                        "jsonPath": "engage.appContent.myCoursesPage"
+                    }
+                ]
+            }
+        ],
+        "AfterEach": [],
+        "After": [
+            {
+                "id": "ENG_FOOT_TC_1",
+                "description": "",
+                "testFile": "footer.test.js",
+                "testData": [
+                    {
+                        "dataFile": "appContentEnglish.json",
+                        "jsonPath": "engage.appContent.landing"
+                    }
+                ]
+            }
+        ]
+    },
+    "Suite5": {
+        "Name": "Validate successful 'Add Books' workflow for a New instructor using 'Access Code' in ENGLISH",
+        "TestCaseRepo": "EngageTCRepository.json",
+        "Before": [
+            {
+                "id": "launchUrl",
+                "description": "",
+                "testFile": "launchUrl.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_LAND_TC_3",
+                "description": "",
+                "testFile": "landing.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_IDEN_TC_4",
+                "description": "",
+                "testFile": "login.test.js",
+                "testData": [
+                    {
+                        "dataFile": "successfulOnboardinglogindata.json",
+                        "jsonPath": "engage.login.user.addBookUser"
+                    }
+                ]
+            }
+        ],
+        "BeforeEach": [],
+        "Test": [
+            {
+                "id": "ENG_INS_MYCO_TC_60",
+                "description": "",
+                "testFile": "instructorMyCourses.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_INS_MYCO_TC_64",
+                "description": "",
+                "testFile": "instructorMyCourses.test.js",
+                "testData": [
+                    {
+                        "dataFile": "successfulOnboardinglogindata.json",
+                        "jsonPath": "engage.login.user.addBookUser.entitlement[0].accesscode"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_INS_MYCO_TC_66",
+                "description": "",
+                "testFile": "instructorMyCourses.test.js",
+                "testData": [
+                    {
+                        "dataFile": "instructorAppContentEnglish.json",
+                        "jsonPath": "engage.appContent.addBook"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_INS_MYCO_TC_67",
+                "description": "",
+                "testFile": "instructorMyCourses.test.js",
+                "testData": []
+            }
+        ],
+        "AfterEach": [],
+        "After": [
+            {
+                "id": "ENG_INS_MYCO_TC_22",
+                "description": "",
+                "testFile": "instructorMyCourses.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_FOOT_TC_1",
+                "description": "",
+                "testFile": "footer.test.js",
+                "testData": []
+            }
+        ]
+    },
+    "Suite6": {
+        "Name": "Validate successful 'Add Books' workflow for a New instructor using 'Free Books' in ENGLISH",
+        "TestCaseRepo": "EngageTCRepository.json",
+        "Before": [
+            {
+                "id": "launchUrl",
+                "description": "",
+                "testFile": "launchUrl.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_LAND_TC_3",
+                "description": "",
+                "testFile": "landing.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_IDEN_TC_4",
+                "description": "",
+                "testFile": "login.test.js",
+                "testData": [
+                    {
+                        "dataFile": "successfulOnboardinglogindata.json",
+                        "jsonPath": "engage.login.user.addBookUser"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_INS_MYCO_TC_10",
+                "description": "",
+                "testFile": "instructorMyCourses.test.js",
+                "testData": []
+            }
+        ],
+        "BeforeEach": [],
+        "Test": [
+            {
+                "id": "ENG_INS_MYCO_TC_73",
+                "description": "",
+                "testFile": "instructorMyCourses.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_INS_MYCO_TC_69",
+                "description": "",
+                "testFile": "instructorMyCourses.test.js",
+                "testData": [
+                    {
+                        "dataFile": "tocData.json",
+                        "jsonPath": "engage.books.book2.name"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_INS_MYCO_TC_70",
+                "description": "",
+                "testFile": "instructorMyCourses.test.js",
+                "testData": [
+                    {
+                        "dataFile": "instructorAppContentEnglish.json",
+                        "jsonPath": "engage.appContent.addBook.addBookConfirmationAlert"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_INS_MYCO_TC_72",
+                "description": "",
+                "testFile": "instructorMyCourses.test.js",
+                "testData": []
+            }
+        ],
+        "AfterEach": [],
+        "After": [
+            {
+                "id": "ENG_INS_MYCO_TC_22",
+                "description": "",
+                "testFile": "instructorMyCourses.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_FOOT_TC_1",
+                "description": "",
+                "testFile": "footer.test.js",
+                "testData": []
+            }
+        ]
+    }
+}
