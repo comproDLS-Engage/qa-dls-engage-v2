@@ -224,11 +224,8 @@
 				"previous_btn": "[id=previous], [data-tid=button-previousactivity]",
 				"tryAgain_btn": "[id=tryAgain], [data-tid=button-tryagain]",
 				"reset_btn": "[id=reset], [data-tid=button-reset]",
-				"player_header": "[data-tid=container-testplayer] [data-tid=text-headertitle]",
-				"lo_container": "#container-lo",
 				"showAnswer_btn": "[data-tid=button-showcorrectanswers], [data-tid=button-showAnswer]",
 				"yourResponse_btn": "[data-tid=button-showuserresponse], [data-tid=button-showResponses]",
-				"feedback_txt": "[data-tid=text-feedbackmessage]",
 				"showingCorrectAnswer_txt": "p[data-tid=text-showingcorrectanswer]",
 				"hint_btn": "[data-tid=button-hint]"
 			},

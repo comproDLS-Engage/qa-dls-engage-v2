@@ -5,7 +5,6 @@ var res;
 
 module.exports = {
 
-	//player_header: selectorFile.css.ComproEngage.testPlayer.player_header,
 	next_btn: selectorFile.css.ComproEngage.testPlayer.next_btn,
 	previous_btn: selectorFile.css.ComproEngage.testPlayer.previous_btn,
 	checkMyWork_btn: selectorFile.css.ComproEngage.testPlayer.checkMyWork_btn,
@@ -13,7 +12,6 @@ module.exports = {
 	reset_btn: selectorFile.css.ComproEngage.testPlayer.reset_btn,
 	showAnswer_btn: selectorFile.css.ComproEngage.testPlayer.showAnswer_btn,
 	yourResponse_btn: selectorFile.css.ComproEngage.testPlayer.yourResponse_btn,
-	feedbackText: selectorFile.css.ComproEngage.testPlayer.feedback_txt,
 	hint_btn: selectorFile.css.ComproEngage.testPlayer.hint_btn,
 
 	isInitialized: function () {
@@ -42,6 +40,12 @@ module.exports = {
 			previous_isDisabled: (action.getElementCount(this.previous_btn) == 1) ? action.getAttribute(this.previous_btn, 'disabled') : false,
 			next_isExists: action.getElementCount(this.next_btn) == 1 ? true : false,
 			next_isDisabled: (action.getElementCount(this.next_btn) == 1) ? action.getAttribute(this.next_btn, 'disabled') : false,
+			showAnswer_isExists: action.getElementCount(this.showAnswer_btn) == 1 ? true : false,
+			showAnswer_isDisabled: (action.getElementCount(this.showAnswer_btn) == 1) ? action.getAttribute(this.showAnswer_btn, 'disabled') : false,
+			yourResponse_isExists: action.getElementCount(this.yourResponse_btn) == 1 ? true : false,
+			yourResponse_isDisabled: (action.getElementCount(this.yourResponse_btn) == 1) ? action.getAttribute(this.yourResponse_btn, 'disabled') : false,
+			hint_isExists: action.getElementCount(this.hint_btn) == 1 ? true : false,
+			hint_isDisabled: (action.getElementCount(this.hint_btn) == 1) ? action.getAttribute(this.hint_btn, 'disabled') : false
 		};
 		if (insideFrame)
 			action.switchToParentFrame();
