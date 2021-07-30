@@ -44,6 +44,23 @@ module.exports = {
 	COM_PLAY_TC_6: function () {
 		sts = testPlayerPage.click_Previous();
 		assertion.assertEqual(sts, true, "status mismatch");
+	},
 
+	//Validate the test player when user click Show Answer button.
+	COM_PLAY_TC_7: function () {
+		sts = testPlayerPage.click_ShowAnswer();
+		assertion.assertEqual(sts, true, "status mismatch");
+	},
+
+	//Validate the test player when user click Your Response.
+	COM_PLAY_TC_8: function () {
+		sts = testPlayerPage.click_YourResponse();
+		assertion.assertEqual(sts, true, "status mismatch");
+	},
+
+	//Validate the test player when user click Hint button.
+	COM_PLAY_TC_9: function () {
+		sts = testPlayerPage.click_Hint();
+		assertion.assertEqual(sts, true, "status mismatch");
 	}
 }
