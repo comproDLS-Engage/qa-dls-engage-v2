@@ -222,18 +222,15 @@
 				"checkMyWork_btn": "[class=buttons-container] [class=defaultBtn-check-mywork-icon] , [data-tid=button-checkanswers], [data-tid=button-check]",
 				"next_btn": "[id=next], [data-tid=button-next]",
 				"previous_btn": "[id=previous], [data-tid=button-previousactivity]",
-				"tryAgain_btn": "[id=tryAgain]",
-				"reset_btn": "[id=reset]",
-				"closeReview_btn": "[data-tid='container-testplayer'] button[data-tid*=button-closereview]",
+				"tryAgain_btn": "[id=tryAgain], [data-tid=button-tryagain]",
+				"reset_btn": "[id=reset], [data-tid=button-reset]",
 				"player_header": "[data-tid=container-testplayer] [data-tid=text-headertitle]",
 				"lo_container": "#container-lo",
-				"showAnswer_btn": "button[data-tid=button-showcorrectanswers]",
-				"yourResponse_btn": "button[data-tid=button-showuserresponse]",
+				"showAnswer_btn": "[data-tid=button-showcorrectanswers], [data-tid=button-showAnswer]",
+				"yourResponse_btn": "[data-tid=button-showuserresponse], [data-tid=button-showResponses]",
 				"feedback_txt": "[data-tid=text-feedbackmessage]",
 				"showingCorrectAnswer_txt": "p[data-tid=text-showingcorrectanswer]",
-				"collapseBtn": "[data-tid='container-testplayer'] [data-tid='button-togglebuttonpanel']",
-				"tpBottomPanelHidden": "[class*='MuiCollapse-hidden']",
-				"tpBottomPanelVisible": "[class*='MuiCollapse-entered']"
+				"hint_btn": "[data-tid=button-hint]"
 			},
 			"MCQB": {
 				"choice": "div[data-tid=input-click-option-",
@@ -269,7 +266,6 @@
 				"options": "li[data-tid*=input-drag-option-]",
 				"listIndex": "li[data-tid]:nth-child("
 			}
-
 		}
 	}
 }

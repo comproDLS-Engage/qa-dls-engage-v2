@@ -8,13 +8,13 @@ module.exports = {
 	//player_header: selectorFile.css.ComproEngage.testPlayer.player_header,
 	next_btn: selectorFile.css.ComproEngage.testPlayer.next_btn,
 	previous_btn: selectorFile.css.ComproEngage.testPlayer.previous_btn,
-	finish_btn: selectorFile.css.ComproEngage.testPlayer.finish_btn,
 	checkMyWork_btn: selectorFile.css.ComproEngage.testPlayer.checkMyWork_btn,
 	tryAgain_btn: selectorFile.css.ComproEngage.testPlayer.tryAgain_btn,
 	reset_btn: selectorFile.css.ComproEngage.testPlayer.reset_btn,
 	showAnswer_btn: selectorFile.css.ComproEngage.testPlayer.showAnswer_btn,
 	yourResponse_btn: selectorFile.css.ComproEngage.testPlayer.yourResponse_btn,
 	feedbackText: selectorFile.css.ComproEngage.testPlayer.feedback_txt,
+	hint_btn: selectorFile.css.ComproEngage.testPlayer.hint_btn,
 
 	isInitialized: function () {
 		logger.logInto(stackTrace.get());
@@ -126,6 +126,57 @@ module.exports = {
 		}
 		else {
 			res = res + " -- Error in clicking Reset Button"
+			logger.logInto(stackTrace.get(), res, "error");
+		}
+		if (insideFrame)
+			action.switchToParentFrame();
+		return res;
+	},
+
+	click_ShowAnswer: function () {
+		logger.logInto(stackTrace.get());
+		let insideFrame = this.enterFrame(this.showAnswer_btn);
+		res = action.click(this.showAnswer_btn);
+		if (res == true) {
+			logger.logInto(stackTrace.get(), " -- Show Answer Button is clicked");
+			//res = this.getBasePlayerInfo();
+		}
+		else {
+			res = res + " -- Error in clicking Show Answer Button"
+			logger.logInto(stackTrace.get(), res, "error");
+		}
+		if (insideFrame)
+			action.switchToParentFrame();
+		return res;
+	},
+
+	click_YourResponse: function () {
+		logger.logInto(stackTrace.get());
+		let insideFrame = this.enterFrame(this.yourResponse_btn);
+		res = action.click(this.yourResponse_btn);
+		if (res == true) {
+			logger.logInto(stackTrace.get(), " -- Your Response Button is clicked");
+			//res = this.getBasePlayerInfo();
+		}
+		else {
+			res = res + " -- Error in clicking Your Response Button"
+			logger.logInto(stackTrace.get(), res, "error");
+		}
+		if (insideFrame)
+			action.switchToParentFrame();
+		return res;
+	},
+
+	click_Hint: function () {
+		logger.logInto(stackTrace.get());
+		let insideFrame = this.enterFrame(this.hint_btn);
+		res = action.click(this.hint_btn);
+		if (res == true) {
+			logger.logInto(stackTrace.get(), " -- Hint Button is clicked");
+			//res = this.getBasePlayerInfo();
+		}
+		else {
+			res = res + " -- Error in clicking Hint Button"
 			logger.logInto(stackTrace.get(), res, "error");
 		}
 		if (insideFrame)
