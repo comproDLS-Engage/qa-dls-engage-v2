@@ -1,0 +1,74 @@
+{
+    "engage": {
+        "login": {
+            "user": {
+                "validStudent1": {
+                    "email": "qa_student003@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "student",
+                    "name": "etirrase-9139",
+                    "class": [
+                        {
+                            "key": "AEYP-p9hk",
+                            "name": "future Class"
+                        },
+                        {
+                            "key": "9q6x-QzFe",
+                            "name": "course1"
+                        },
+                        {
+                            "key": "Cw32-FLZ7",
+                            "name": "Archive Class"
+                        }
+                    ],
+                    "info": {}
+                },
+                "validStudent2": {
+                    "email": "qa_student004@yopmail.com",
+                    "password": "Compro@1111",
+                    "role": "student",
+                    "name": "etirrase-9139",
+                    "class": [
+                    ],
+                    "info": {}
+                },
+                "validInstructorUser1": {
+                    "email": "qa_teacher003@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "instructor",
+                    "name": "kulujaco-1294",
+                    "courses": [
+                        {
+                            "key": "VYd6-QDXo",
+                            "name": "course1"
+                        }
+                    ],
+                    "info": {}
+                },
+                "validInstructorUser2": {
+                    "email": "qa_teacher004@yopmail.com",
+                    "password": "Compro@1111",
+                    "role": "instructor",
+                    "name": "teacher 3",
+                    "courses": [],
+                    "info": "freash user without books or classes"
+                }               
+            }
+        },
+        "codesAndKeys": {
+            "schoolName": "Mount Allison School",
+            "invalid_OTP":["12046","000000"],
+            "validSchoolKey": "NGL-FUW-GQL",
+            "invalidSchoolKey": "NGL-FUW-123",
+            "invalidClassKey": [
+                "HJ2y-1234"
+            ],
+            "bookName1": "INTRODUCTION TO BIOLOGY",
+            "validAccessCodes1": [],
+            "invalidAccessCodes": [
+                "PT12-1111-7777-0000",
+                "PTH3-R79A-76DE-Y9RE"
+            ]
+        }
+    }
+}

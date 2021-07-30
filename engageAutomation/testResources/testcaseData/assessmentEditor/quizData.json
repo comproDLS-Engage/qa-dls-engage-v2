@@ -8,7 +8,7 @@
             "questionIndex": 1,
             "buttonName": "mutiplechoice",
             "questionTitle": "Question 1",
-            "questionInstruction": "Watch the video carefully and choose the correct option of the given below question",
+            "questionInstruction": "See the image carefully and answer the question",
             "videoURL": "https://www.youtube.com/watch?v=mxbodI60OT4",
             "videoCredit": "mcq video #1",
             "imagePath": "./testResources/testcaseData/assessmentEditor/media/Cell.png",
@@ -37,7 +37,7 @@
           "questionInstruction": "Listen to the audio carefully and choose the correct option of the given below question",
           "audioPath": "./testResources/testcaseData/assessmentEditor/media/Ringtone.mp3",
           "audioCredit": "Audio",
-          "questionText": "This is an iphone original ringtone"
+          "questionText": "Is this an iphone original ringtone?"
         }
       ],
       "MultipleResponse": [
@@ -45,7 +45,7 @@
           "questionIndex": 4,
           "buttonName": "multipleresponse",
           "questionTitle": "Question 4",
-          "questionInstruction": "See the image carefully and choose the correct option(s) of the given below question",
+          "questionInstruction": "See the image carefully and choose the correct option(s)",
           "imagePath": "./testResources/testcaseData/assessmentEditor/media/Plant.jpg",
           "imageCredit": "Plant Diagram",
           "questionText": "Identify the parts of the plants in the given options:",
@@ -83,17 +83,16 @@
           "questionIndex": 6,
           "buttonName": "draganddropintotext",
           "questionTitle": "Question 6",
-          "questionInstruction": "Watch the video carefully and choose the correct option of the given below question",
+          "questionInstruction": "Drag the pills at their correct places in the sentence.",
           "videoURL": "https://www.youtube.com/watch?v=uwzViw-T0-A",
           "videoCredit": "Thirsty Crow",
           "questionText": 
-            "Once there was a,{{Blank:A}}. He was very,{{Blank:B}}.He flew here and there in search of,{{Blank:C}}.He saw a"
+            "Once there was a,{{Blank:A}}. He was very,{{Blank:B}}.He flew here and there in search of,{{Blank:C}}.He saw a pot"
           ,
           "options": [
             "crow", 
             "thirsty",
-            "water",
-            "pitcher"
+            "water"
           ]
         }
       ],
@@ -102,7 +101,7 @@
           "questionIndex": 7,
           "buttonName": "fillintheblanks",
           "questionTitle": "Question 7",
-          "questionInstruction": "Fill in the blanks below with the correct form of verbs.",
+          "questionInstruction": "Fill the blanks with the correct options.",
           "questionText": "He walked along the road, wondering what,{{Blank:A}},( happen ) and where all the people,{{Blank:B}},( go ). The streets,{{Blank:C}},( be ) deserted, and the stalls,{{Blank:D}},( be leave ) as they,{{Blank:E}},( be ), with fruit and vegetables arranged in neat rows.",
           "options": ["A1","B1","C1","D1","E1"],
           "optionValue":[
@@ -120,8 +119,8 @@
           "buttonName": "ordering",
           "questionTitle": "Question 8",
           "imagePath": "./testResources/testcaseData/assessmentEditor/media/WorldMap.jpg",
-          "questionInstruction": "Starting with the earliest, arrange these landmarks events in the order in which they took place in Mughal History",
-          "questionText": "Identify the parts of the plants in the given options:",
+          "questionInstruction": "See the image and reorder the options in correct sequence.",
+          "questionText": "Arrange the incidents in sequence",
           "options": [
             "Babur’s attack on India",
             "Akbar’s birth",
@@ -135,7 +134,7 @@
           "questionIndex": 9,
           "buttonName": "matching",
           "questionTitle": "Question 9",
-          "questionInstruction": "Match the Left side with the right correct option",
+          "questionInstruction": "See the image and match the suitable word",
           "questionText": "Match the following countries with their corresponding capitals",
           "items": [
             "China",
@@ -154,6 +153,7 @@
           "questionIndex": 10,
           "buttonName": "classify",
           "questionTitle": "Question 10",
+          "questionInstruction": "View the video and place the items in the correct categories.",
           "videoURL": "https://www.youtube.com/watch?v=Vk461NU7wbg",
           "questionText": "Classify in to categories",
           "groups": ["herbivores","carnivores","omnivores"],

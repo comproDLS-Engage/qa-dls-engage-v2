@@ -52,6 +52,7 @@ module.exports = {
             logger.logInto(stackTrace.get(), " -- Login button is clicked");
             action.waitForDisplayed(this.buttonLoader, undefined, true)
             res = require('./home.page.js').isInitialized();
+            browser.pause(5000)
         }
         else {
             res = res + " -- Login button is NOT clicked ";

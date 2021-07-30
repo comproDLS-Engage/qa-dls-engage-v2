@@ -51,100 +51,11 @@
             "widgets":
             {
                 "loaderIcon": "[data-tid=image-loader]",
-                "snackbarInfo_txt": "[data-tid=text-error], [data-tid=text-info], [data-tid=text-success]",
+                "snackbarInfo_txt": "[data-tid=text-info], [data-tid=text-error], [data-tid=text-success]",
                 "snackbarClose_btn": "[data-tid=button-close]"
             },
-            "browsePage":
+            "appShell":
             {
-                "pageTitle": "[data-tid=text-pageTitle]",
-                "tabList": "[data-tid*=button-product-"
-            },
-            "myClassPage":
-            {
-                "pageTitle": "main h1",
-                "pageSubTitle": "main div>span",
-                "pageTitleNoClassArchived": "[data-tid='text-title-noClasses']",
-                "pageSubTitleNoClassArchived": "[data-tid='text-subtitle-noClasses']",
-                "classHeading": "[data-tid='text-pageTitle']",
-                "classSubHeading": "[data-tid='text-pageSubTitle']",
-                "activeTab": "[data-tid='button-product-0']",
-                "archivedTab": "[data-tid='button-product-1']",
-                "archivedlbl": "[data-tid='text-archive']>span:nth-child(1)",
-                "addClassBtn": "[data-tid='button-add']",
-                "notStarted_btn": "[data-tid*=button-notStarted-",
-                "menuOptionBtn": "[data-tid*=button-classSubmenu-",
-                "noClassPageTitle": "[data-tid=text-title-noClasses]",
-                "noClassPageSubTitle": "[data-tid='text-subtitle-noClasses']",
-                "noClassPageSubImg": "main img",
-                "className": "[data-tid*='text-classTitle-",
-                "classDuration": "[data-tid='text-classDuration-",
-                "bookTitle": "[data-tid*='text-classSubtitle-",
-                "bookIcon": "[data-tid*=image-book-",
-                "inboxOption": "div[style*='opacity: 1'] li[data-tid*='button-inbox']",
-                "assignmentsOption": "div[style*='opacity: 1'] li[data-tid*='button-assignments']",
-                "studentsOption": "div[style*='opacity: 1'] li[data-tid*='button-students']",
-                "gradeBookOption": "div[style*='opacity: 1'] li[data-tid*='button-gradebook']",
-                "materialsOption": "div[style*='opacity: 1'] li[data-tid*='button-material']",
-                "msgBar": "[data-tid='text-success']",
-                "msgBarClose": "[data-tid=text-close]",
-                "classCard": "[aria-label*=\"class card ",
-                "futureTab": "[aria-label*=\"class card "
-            },
-            "createClassPage":
-            {
-                "pageTitle": "[data-tid='text-pageTitle']",
-                "pageSubTitle": "[data-tid='text-pageSubTitle']",
-                "classHeader": "[data-tid='text-classheader']",
-                "classSubHeader": "[data-tid='text-classSubheader']",
-                "createBtn": "[data-tid='button-Create Class']",
-                "cancelBtn": "[data-tid='button-cancel']",
-                "title_txtbox": "#input-title",
-                "desc_lbl": "label[for='input-description']",
-                "desc_txtbox": "#input-description",
-                "title_lbl": "label[for='input-title']",
-                "startDate_txtbox": "#input-startDate",
-                "startDate_lbl": "label[for='input-startDate']",
-                "endDate_txtbox": "#input-endDate",
-                "endDate_lbl": "label[for='input-endDate']",
-                "selectBook_lbl": "[data-tid='text-selectBookLabel']",
-                "selectBook_txt": "[data-tid=text-selectBookSubtext]",
-                "bookTitle": "[data-tid='text-bundeTitle']",
-                "bookIsbn": "[data-tid=text-bundeIsbn]",
-                "datePicker_okBtn": "/html/body/div[2]/div[3]/div/div[2]/button[2]",
-                "titleErrorMsg": "[data-tid='text-titleError']",
-                "descErrorMsg": "[data-tid='text-descriptionError']",
-                "startDateErrorMsg": "[data-tid='text-startDateError']",
-                "endDateErrorMsg": "[data-tid='text-endDateError']",
-                "bookErrorMsg": "p[class*='MuiFormHelperText",
-                "saveBtn": "[data-tid='button-Save']",
-                "restoreBtn": "[data-tid='button-Restore']",
-                "AddANewBook_btn": "[data-tid=button-assignBook]",
-                "bookCard": "label[class*='MuiFormControlLabel']:nth-child(",
-                "bookCardCheckbox": "[id=checkbox-"
-            },
-            "successClassPage":
-            {
-                "viewClass": "[data-tid='button-View Class']",
-                "backToHomeBtn": "[data-tid='button-backtohome']",
-                "success_img": "[alt='Success page']",
-                "className_txt": "[data-tid='text-courseName']",
-                "successCaption_txt": "[data-tid='text-successfulCaption']",
-                "classKey_value": "[data-tid='text-courseCode']",
-                "copy_txt": "[data-tid='text-copy']",
-                "copy_btn": "[data-tid='button-copy']"
-            },
-            "classDashboard":
-            {
-                "moreOption": "[data-tid=button-classOptions]"
-            },
-            "classDrawer":
-            {
-                "classDrawerHeader": "[data-tid=text-drawerHeaderTitle]",
-                "classDrawerTitle": "[data-tid=text-ClassesTitle]",
-                "classDrawerSubTitle": "[data-tid=text-ClassesSubtitle]",
-                "classDrawerCloseBtn": "[data-tid=button-close]"
-            },
-            "appShell": {
                 "toggleSidebarBtn": "[aria-label=toggle-sidebar]",
                 "headerLogo": "[data-tid=image-headerLogo]",
                 "dashboardBtn": "[data-tid=button-dashboard]",
@@ -188,6 +99,106 @@
                 "removeBook_menu": "[data-tid*=button-remove-",
                 "openFlipbook_menu": "[data-tid*=button-openFlipbook-"
             },
+            "classDrawer":
+            {
+                "classDrawerHeader": "[data-tid=text-drawerHeaderTitle]",
+                "classDrawerTitle": "[data-tid=text-ClassesTitle]",
+                "classDrawerSubTitle": "[data-tid=text-ClassesSubtitle]",
+                "classDrawerCloseBtn": "[data-tid=button-close]"
+            },
+            "Calender":
+            {
+                "calenderYear": "//h6[contains(@class,'MuiTypography-subtitle1')]",
+                "calenderCurrentMonth": "//div[contains(@class,'MuiPickersCalendarHeader')]/p",
+                "calenderLeftArrow": "//button[contains(@class,'MuiPickersCalendarHeader-iconButton')][1]",
+                "calenderRightArrow": "//button[contains(@class,'MuiPickersCalendarHeader-iconButton')][2]",
+                "calenderMonthHeader": "//div[contains(@class,'MuiPickersCalendarHeader-transitionContainer')]",
+                "calenderSelectedDate": "//button[contains(@class,'MuiPickersDay-daySelected')]",
+                "calenderDate": "//button[contains(@class,'MuiPickersDay-day')]",
+                "calenderDisabledDate": "/button[contains(@class,'MuiPickersDay-day')]",
+                "calenderSelectedYear": "//div[contains(@class,'MuiPickersYear-yearSelected-')]",
+                "calenderYearList": "[contains(@class,'MuiPickersYear-')]",
+                "calenderYearListCount": "//div[contains(@class,'MuiPickersYear-')]"
+            },
+            "browsePage":
+            {
+                "pageTitle": "[data-tid=text-pageTitle]",
+                "tabList": "[data-tid*=button-product-"
+            },
+            "myClassPage":
+            {
+                "pageTitle": "main h1",
+                "pageSubTitle": "main div>span",
+                "pageIconNoClassArchived": "[data-tid=image-noClasses]",
+                "pageTitleNoClassArchived": "[data-tid='text-title-noClasses']",
+                "pageSubTitleNoClassArchived": "[data-tid='text-subtitle-noClasses']",
+                "classHeading": "[data-tid='text-pageTitle']",
+                "classSubHeading": "[data-tid='text-pageSubTitle']",
+                "activeTab": "[data-tid='button-product-0']",
+                "archivedTab": "[data-tid='button-product-1']",
+                "archivedlbl": "[data-tid='text-archive']>span:nth-child(1)",
+                "addClassBtn": "[data-tid='button-add']",
+                "notStarted_btn": "[data-tid*=button-notStarted-",
+                "menuOptionBtn": "[data-tid*=button-classSubmenu-",
+                "noClassPageTitle": "[data-tid=text-title-noClasses]",
+                "noClassPageSubTitle": "[data-tid='text-subtitle-noClasses']",
+                "noClassPageSubImg": "main img",
+                "className": "[data-tid*='text-classTitle-",
+                "classDuration": "[data-tid='text-classDuration-",
+                "bookTitle": "[data-tid*='text-classSubtitle-",
+                "bookIcon": "[data-tid*=image-book-",
+                "inboxOption": "div[style*='opacity: 1'] li[data-tid*='button-inbox']",
+                "assignmentsOption": "div[style*='opacity: 1'] li[data-tid*='button-assignments']",
+                "studentsOption": "div[style*='opacity: 1'] li[data-tid*='button-students']",
+                "gradeBookOption": "div[style*='opacity: 1'] li[data-tid*='button-gradebook']",
+                "materialsOption": "div[style*='opacity: 1'] li[data-tid*='button-material']",
+                "msgBar": "[data-tid='text-success']",
+                "msgBarClose": "[data-tid=button-close]",
+                "classCard": "[data-tid=button-class-",
+                "futureTab": "[aria-label*=\"class card "
+            },
+            "createClassPage":
+            {
+                "pageTitle": "[data-tid='text-pageTitle']",
+                "pageSubTitle": "[data-tid='text-pageSubTitle']",
+                "classHeader": "[data-tid='text-classheader']",
+                "classSubHeader": "[data-tid='text-classSubheader']",
+                "createBtn": "[data-tid='button-Create Class']",
+                "cancelBtn": "[data-tid='button-cancel']",
+                "title_txtbox": "#input-title",
+                "desc_lbl": "label[for='input-description']",
+                "desc_txtbox": "#input-description",
+                "title_lbl": "label[for='input-title']",
+                "startDate_txtbox": "#input-startDate",
+                "startDate_lbl": "label[for='input-startDate']",
+                "endDate_txtbox": "#input-endDate",
+                "endDate_lbl": "label[for='input-endDate']",
+                "selectBook_lbl": "[data-tid='text-selectBookLabel']",
+                "selectBook_txt": "[data-tid=text-selectBookSubtext]",
+                "bookTitle": "[data-tid='text-bundeTitle']",
+                "bookIcon": "[data-tid=image-bookCover]",
+                "datePicker_okBtn": "/html/body/div[2]/div[3]/div/div[2]/button[2]",
+                "titleErrorMsg": "[data-tid='text-titleError']",
+                "descErrorMsg": "[data-tid='text-descriptionError']",
+                "startDateErrorMsg": "[data-tid='text-startDateError']",
+                "endDateErrorMsg": "[data-tid='text-endDateError']",
+                "bookErrorMsg": "p[class*='MuiFormHelperText",
+                "saveBtn": "[data-tid='button-Save']",
+                "removeBookbtn": "[data-tid=button-removeBook]",
+                "AddANewBook_btn": "[data-tid=button-assignBook]",
+                "bookCard": "label[class*='MuiFormControlLabel']:nth-child("
+            },
+            "successClassPage":
+            {
+                "viewClass": "[data-tid='button-View Class']",
+                "backToHomeBtn": "[data-tid='button-backtohome']",
+                "success_img": "[alt='Success page']",
+                "className_txt": "[data-tid='text-courseName']",
+                "successCaption_txt": "[data-tid='text-successfulCaption']",
+                "classKey_value": "[data-tid='text-courseCode']",
+                "copy_txt": "[data-tid='text-copy']",
+                "copy_btn": "[data-tid='button-copy']"
+            },
             "teacherViewClassPage":
             {
                 "pageTitle": "[data-tid=text-pageTitle]",
@@ -211,6 +222,77 @@
                 "noInboxActivity_lbl": "[data-tid=MISSING]",
                 "noInboxActivityByline_lbl": "[data-tid=MISSING]"
             },
+            "itemPlayer":
+            {
+                "correctIcon": "[data-tid=icon-correct]",
+                "incorrectIcon": "[data-tid=icon-incorrect]",
+                "questionText": "[data-tid=text-question]",
+                "instructionText": "[data-tid=text-instruction]",
+                "itemPlayerContainer": "[id='itemContainer']",
+                "videoMedia": "[data-tid=container-video]",
+                "imageMedia": "[data-tid=container-image]",
+                "audioMedia": "[data-tid=container-audio]",
+                "activeQues": "div[class*=item-player-container] > div[style='height: 100%; display: block;'], div[class*=item-player-container] > div[style='height: 100%;']"
+            },
+            "testPlayer":
+            {
+                "checkMyWork_btn": "[class=buttons-container] [class=defaultBtn-check-mywork-icon] , [data-tid=button-checkanswers], [data-tid=button-check]",
+                "next_btn": "[id=next], [data-tid=button-next]",
+                "previous_btn": "[id=previous], [data-tid=button-previousactivity]",
+                "tryAgain_btn": "[id=tryAgain]",
+                "reset_btn": "[id=reset]",
+                "closeReview_btn": "[data-tid='container-testplayer'] button[data-tid*=button-closereview]",
+                "player_header": "[data-tid=container-testplayer] [data-tid=text-headertitle]",
+                "lo_container": "#container-lo",
+                "showAnswer_btn": "button[data-tid=button-showcorrectanswers]",
+                "yourResponse_btn": "button[data-tid=button-showuserresponse]",
+                "feedback_txt": "[data-tid=text-feedbackmessage]",
+                "showingCorrectAnswer_txt": "p[data-tid=text-showingcorrectanswer]",
+                "collapseBtn": "[data-tid='container-testplayer'] [data-tid='button-togglebuttonpanel']",
+                "tpBottomPanelHidden": "[class*='MuiCollapse-hidden']",
+                "tpBottomPanelVisible": "[class*='MuiCollapse-entered']"
+            },
+            "MCQB":
+            {
+                "choice": "div[data-tid=input-click-option-",
+                "choices": "div[data-tid*=input-click-option-]",
+                "selectedChoice": "svg[data-tid=icon-selected]"
+            },
+            "FIB":
+            {
+                "source": "[data-tid=dragsource-option-",
+                "target": "[data-tid=droptarget-option-"
+            },
+            "FIBText":
+            {
+                "response": "[data-tid=input-response-",
+                "responses": "[data-tid*='input-response']"
+            },
+            "dragAndDrop":
+            {
+                "source": "[data-tid=dragsource-option-",
+                "target": "[data-tid=droptarget-option-",
+                "tapToZoom": "[data-tid='button-taptozoom']",
+                "zoomOverlay": "[class*='zoom-overlay']",
+                "zoomDialogClose_btn": "[data-tid='button-zoomdialogclose']"
+            },
+            "MCMR":
+            {
+                "choice": "div[data-tid=input-click-option-",
+                "choices": "div[data-tid*=input-click-option-]",
+                "selectedChoice": "svg[data-tid=icon-selected]"
+            },
+            "Matching":
+            {
+                "left": "[data-tid*=input-left-item-",
+                "right": "[data-tid*=input-right-item-"
+            },
+            "orderList":
+            {
+                "option": "li[data-tid=input-drag-option-",
+                "options": "li[data-tid*=input-drag-option-]",
+                "listIndex": "li[data-tid]:nth-child("
+            },
             "bookView":
             {
                 "bookCover": "[data-tid=image-bookCover]",
@@ -219,9 +301,9 @@
                 "viewClass": "button[data-tid=button-bookClasses]",
                 "closeClassDrawer": "[data-tid=button-close]",
                 "moreOptions": "[data-tid=band-moreOptions]",
-                "closeMoreOptions":"[role=menu]",
+                "closeMoreOptions": "[role=menu]",
                 "removeBook_btn": "[data-tid=button-removeBook]",
-                "removeBook_title":"//b[text()='Remove from My Books?']",
+                "removeBook_title": "//b[text()='Remove from My Books?']",
                 "removeBook_Dialog": "[role=dialog]",
                 "removeBookDialogCancel": "//span[text()='Cancel']",
                 "removeBookDialogRemove": "//span[text()='Remove']",
@@ -234,7 +316,7 @@
                 "chapter": "[data-tid*=button-chapter-",
                 "chapter_bandColor": "[data-tid*=band-color-",
                 "chapterTitle": "[data-tid*=text-chapterTitle-",
-                "chapterNumber":"[data-tid*=text-chapterNumber-",
+                "chapterNumber": "[data-tid*=text-chapterNumber-",
                 "chapterPage": "[data-tid*=text-chapterPage-",
                 "chapterCoverImg": "[data-tid*=image-chapter-",
                 "chapterMoreOptions": "[data-tid*=button-moreOption-",
@@ -263,36 +345,33 @@
                 "lastActivity_Dismiss": "[data-tid=button-lastActivityDismiss]",
                 "lastActivity_Dismiss": "[data-tid=button-lastActivityDismiss]",
                 "lastActivity_Continue": "[data-tid=button-lastActivityContinue]",
-                "activity_lbl_unitView":"[data-tid=text-unitselection]",
-                "activity_byline_unitView":"[data-tid=text-unitselectionbilinear]"
-
+                "activity_lbl_unitView": "[data-tid=text-unitselection]",
+                "activity_byline_unitView": "[data-tid=text-unitselectionbilinear]"
             },
-            "classDashboard":
+            "activitiyPlayer":
             {
-                "moreOption": "[data-tid=button-classOptions]"
+                "breadCrumbTitle": "[data-tid=breadcrumb-productTitle]",
+                "index_btn": "[data-tid=text-chaptertitle]",
+                "infoTOC": "[data-tid=button-openinfotoc]",
+                "checkAnswer": "[data-tid=button-check]",
+                "previousActivity_btn": "[data-tid=button-previousactivity]",
+                "nextActivity_btn": "[data-tid=button-nextactivity]",
+                "next_btn": "[data-tid=button-next]",
+                "previous_btn": "[data-tid=button-previous]",
+                "questionInfo": "[data-tid=text-currentquestion]",
+                "submitActivity_btn": "[data-tid=button-submit]",
+                "showAnswer_btn": "[data-tid=button-showAnswer]",
+                "showResponse_btn": "[data-tid=button-showResponses]",
+                "feedback_txt": "[data-tid=container-feedbackcard]",
+                "showingCorrectAnswer_txt": "[data-tid=text-showingcorrectanswer]"
             },
-            "activitiyPlayer":{
-               "breadCrumbTitle":"[data-tid=breadcrumb-productTitle]",
-               "index_btn":"[data-tid=text-chaptertitle]",
-               "infoTOC":"[data-tid=button-openinfotoc]",
-               "checkAnswer":"[data-tid=button-check]",
-               "previousActivity_btn":"[data-tid=button-previousactivity]",
-               "nextActivity_btn":"[data-tid=button-nextactivity]",
-               "next_btn":"[data-tid=button-next]",
-               "previous_btn":"[data-tid=button-previous]",
-               "questionInfo":"[data-tid=text-currentquestion]",
-               "submitActivity_btn":"[data-tid=button-submit]",
-               "showAnswer_btn":"[data-tid=button-showAnswer]",
-               "showResponse_btn":"[data-tid=button-showResponses]",
-               "feedback_txt":"[data-tid=container-feedbackcard]",
-               "showingCorrectAnswer_txt":"[data-tid=text-showingcorrectanswer]"
-            },
-            "OnboardingUser": {
+            "OnboardingUser":
+            {
                 "logo": "[data-tid=image-brandlogo]",
                 "logout": "[data-tid='button-onboardinglogout']",
                 "back_button": "[data-tid=button-onboardingback]",
                 "invalidKey_txt": "[data-tid='text-error']",
-                "skipForNow_btn":"[data-tid='anchor-skip']",
+                "skipForNow_btn": "[data-tid='anchor-skip']",
                 "Welcome_txt": "[data-tid='text-welcome']",
                 "Onboardingmsg_txt": "[data-tid='text-letsgetstarted']",
                 "Continue_btn": "[data-tid='button-continue']",
@@ -342,8 +421,9 @@
                 "insSuccess_schoolName": "[data-tid=text-schoolname]",
                 "insSuccess_name_txt": "[data-tid=text-classtitle]",
                 "insSuccess_proceedCreateClass_btn": "[data-tid=button-proceedandcreateclasses]",
-                "helper_txt":"#class-key-input-helper-text",
+                "helper_txt": "#class-key-input-helper-text",
             }
+
         }
     }
- }
+}

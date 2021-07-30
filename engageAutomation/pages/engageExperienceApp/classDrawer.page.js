@@ -1,5 +1,6 @@
 "use strict";
 var action = require('../../core/actionLibrary/baseActionLibrary.js');
+const dashboardPage = require('./dashboard.page.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
 var res, ret;
 
@@ -22,7 +23,18 @@ module.exports = {
         obj.instructorMyClassData = instructorMyClassData;
         return obj;
     },
-  
 
+    Click_classDrawerCloseBtn: function () {
+        res = action.click(this.classDrawerCloseBtn);
+        if (res == true) {
+            logger.logInto(stackTrace.get(), res + "Drawer Pane is closed");
+            res = dashboardPage.isInitialized();
+        }
+        else
+            logger.logInto(stackTrace.get(), res + "Drawer Pane is NOT closed", "error");
 
-}
+        return res;
+    }
+
+    }
+

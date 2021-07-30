@@ -15,7 +15,10 @@ module.exports = {
     proceedBtn: selectorFile.common.proceedBtn,
     activityMenuBtn: selectorFile.viewLearningPathPage.activityMenuBtn,
     activityMenuDeleteBtn: selectorFile.viewLearningPathPage.activityMenuDeleteBtn,
-    emptyStateBtn: selectorFile.viewLearningPathPage.emptyStateBtn,
+    emptyStateBtn: selectorFile.common.emptyStateBtn,
+    deleteItemBtn: selectorFile.viewLearningPathPage.deleteItemBtn,
+    itemCheckboxes: selectorFile.viewLearningPathPage.itemCheckboxes,
+    activityMenuActivityAuthorBtn: selectorFile.viewLearningPathPage.activityMenuActivityAuthorBtn,
 
     isInitialized: function () {
         logger.logInto(stackTrace.get());
@@ -37,6 +40,7 @@ module.exports = {
         }
         if (res == true) {
             res = require('./addFolder.page.js').isInitialized();
+            browser.pause(5000);
         }
         logger.logInto(stackTrace.get(), res);
         return res;
@@ -68,11 +72,11 @@ module.exports = {
                 res = action.click(list[i]);
                 if (res == true) {
                     res = action.waitForDisplayed(this.loadingContainer, undefined, true);
-                    browser.pause(5000)
+                    browser.pause(5000);
                 }
                 break;
             }
-            res = "folder not found";
+            res = "folder \"" + name + "\" not found";
         }
         logger.logInto(stackTrace.get(), res);
         return res;
@@ -85,6 +89,7 @@ module.exports = {
         list = action.findElements(this.activityList);
         for (i = 0; i < list.length; i++) {
             if (action.getText(list[i]).includes(name)) {
+                browser.pause(10000);
                 res = action.click(list[i]);
                 if (res == true) {
                     res = action.waitForDisplayed(this.loadingContainer, undefined, true);
@@ -92,9 +97,10 @@ module.exports = {
                 }
                 break;
             }
-            res = "activity not found";
+            res = "activity \"" + name + "\" not found";
         }
         logger.logInto(stackTrace.get(), res);
+        // action.switchToFrame(0);
         return res;
     },
 
@@ -108,11 +114,14 @@ module.exports = {
                 res = action.click(list[i]);
                 if (res == true) {
                     res = action.click(this.proceedBtn);
-                    res = require('./addActivity.page.js').isInitialized();
+                    if (res == true) {
+                        res = require('./addActivity.page.js').isInitialized();
+                        browser.pause(5000);
+                    }
                 }
                 break;
             }
-            res = "activity type not found";
+            res = "activity type \"" + type + "\" not found";
         }
         logger.logInto(stackTrace.get(), res);
         return res;
@@ -129,18 +138,87 @@ module.exports = {
         return res;
     },
 
-    click_Delete_Button_in_ActivityMenu: function () {
+    click_Delete_Button_in_ActivityMenu: function (name) {
         logger.logInto(stackTrace.get());
-        res = action.click(this.activityMenuBtn);
-        if (res == true) {
-            res = action.click(this.activityMenuDeleteBtn);
-            if (res == true) {
-                action.waitForDisplayed(this.dialogContent);
-                res = action.getText(this.dialogContent);
+        let res = null;
+        let i, list, list2;
+        list = action.findElements(this.activityList);
+        list2 = action.findElements(this.activityMenuBtn);
+        for (i = 0; i < list.length; i++) {
+            if (action.getText(list[i]).includes(name)) {
+                res = action.click(list2[i]);
+                if (res == true) {
+                    res = action.click(this.activityMenuDeleteBtn);
+                    if (res == true) {
+                        action.waitForDisplayed(this.dialogContent);
+                        res = action.getText(this.dialogContent);
+                    }
+                }
+                break;
             }
+            res = "activity \"" + name + "\" not found";
+        }
+
+        // let res = action.click(this.activityMenuBtn);
+        // if (res == true) {
+        //     res = action.click(this.activityMenuDeleteBtn);
+        //     if (res == true) {
+        //         action.waitForDisplayed(this.dialogContent);
+        //         res = action.getText(this.dialogContent);
+        //     }
+        // }
+        logger.logInto(stackTrace.get(), res);
+        return res;
+    },
+
+    click_ActivityAuthor_Button_in_ActivityMenu: function (name) {
+        logger.logInto(stackTrace.get());
+        action.waitForDisplayed(this.activityList);
+        let res = null;
+        let i, list, list2;
+        list = action.findElements(this.activityList);
+        list2 = action.findElements(this.activityMenuBtn);
+        for (i = 0; i < list.length; i++) {
+            if (action.getText(list[i]).includes(name)) {
+                res = action.click(list2[i]);
+                if (res == true) {
+                    res = action.click(this.activityMenuActivityAuthorBtn);
+                    if (res == true) {
+                        browser.pause(5000);
+                        browser.switchWindow("paint.backoffice.comprodls.com");
+                        // action.waitForDisplayed(this.dialogContent);
+                        // res = action.getText(this.dialogContent);
+                    }
+                }
+                break;
+            }
+            res = "activity \"" + name + "\" not found";
         }
         logger.logInto(stackTrace.get(), res);
         return res;
     },
 
+    select_Item_and_Click_Delete: function (item) {
+        logger.logInto(stackTrace.get());
+        let res = null;
+        let i, list, checkboxes;
+        list = action.findElements(this.folderList);
+        checkboxes = action.findElements(this.itemCheckboxes);
+        for (i = 0; i < list.length; i++) {
+            if (action.getText(list[i]) == item) {
+                res = action.click(checkboxes[i]);
+                if (res == true) {
+                    res = action.click(this.deleteItemBtn);
+                    if (res == true) {
+                        action.waitForDisplayed(this.dialogContent);
+                        res = action.getText(this.dialogContent);
+                    }
+                }
+                break;
+            }
+            res = "Item \"" + item + "\" not found";
+        }
+        logger.logInto(stackTrace.get(), res);
+        return res;
+    }
 }

@@ -124,8 +124,8 @@ module.exports = {
         }
     },
 
-    moveTo: function (selector, xoffset, yoffset) { //this function needs to be enhanced to support offsets in percentages
-        message = "element:" + selector + " xoffset:" + xoffset + " yoffset:" + yoffset;
+    moveTo: function (selector, xOffset, yOffset) { //this function needs to be enhanced to support offsets in percentages
+        message = "element:" + selector + " xoffset:" + xOffset + " yoffset:" + yOffset;
         try {
             $(selector).moveTo({ xOffset, yOffset });
             logger.logInto(stackTrace.get(), message);
@@ -330,7 +330,7 @@ module.exports = {
     waitForDocumentLoad: function () {
         logger.logInto(stackTrace.get());
         res = this.waitForDisplayed("[data-tid=image-loader]", undefined, true);
-        res2 = this.waitForDisplayed("[class*=rogress]", undefined, true);
+        res2 = this.waitForDisplayed("[class*=rogress][class*=indeterminate]", undefined, true);
         if (!res)
             console.log("Loader (image-loader) still exists after 30s - " + res)
         else if (!res2)

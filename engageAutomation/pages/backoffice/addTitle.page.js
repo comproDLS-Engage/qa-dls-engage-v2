@@ -1,6 +1,4 @@
 "use strict";
-const { error } = require('winston');
-const { string } = require('yargs');
 var action = require('../../core/actionLibrary/baseActionLibrary.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
 var res;
@@ -13,31 +11,13 @@ module.exports = {
     descriptionTxtbox: selectorFile.addTitlePage.descriptionTxtbox,
     imageUploadBtn: selectorFile.addTitlePage.imageUploadBtn,
     createTitleBtn: selectorFile.addTitlePage.createTitleBtn,
-    snackbarLbl: selectorFile.common.snackbarLbl,
-    snackbarBtn: selectorFile.common.snackbarBtn,
+    bannerText: selectorFile.common.bannerText,
+    bannerCloseBtn: selectorFile.common.bannerCloseBtn,
 
     isInitialized: function () {
         logger.logInto(stackTrace.get());
         //action.waitForDocumentLoad();
         res = action.waitForDisplayed(this.createTitleBtn);
-        return res;
-    },
-
-    select_TitleType: function (name) {
-        logger.logInto(stackTrace.get());
-        res = action.click(this.titleTypeDropdown);
-        if (res == true) {
-            logger.logInto(stackTrace.get(), " -- Title dropdown is clicked");
-            let i, list;
-            colistunt = action.findElements(this.titleTypeList);
-            for (i = 0; i < list.length; i++) {
-                if (action.getText(list[i]) == name) {
-                    res = action.click(list[i]);
-                    break;
-                }
-            }
-        }
-        logger.logInto(stackTrace.get(), res);
         return res;
     },
 
@@ -71,11 +51,11 @@ module.exports = {
         if (res == true) {
             res = action.click(this.createTitleBtn);
             if (res == true) {
-                action.waitForDisplayed(this.snackbarLbl);
-                res = action.getText(this.snackbarLbl);
-                action.click(this.snackbarBtn);
-                action.waitForDisplayed(this.snackbarLbl);
-                //action.click(this.snackbarBtn);
+                action.waitForDisplayed(this.bannerText);
+                res = action.getText(this.bannerText);
+                //action.click(this.bannerCloseBtn);
+                action.waitForDisplayed(this.bannerText, 60000, true);
+                //browser.pause(30000)
             }
         }
         logger.logInto(stackTrace.get(), res);

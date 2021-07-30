@@ -93,14 +93,15 @@ module.exports = {
     click_Add_Button: function () {
         logger.logInto(stackTrace.get());
         res = action.waitForClickable(this.addBtn);
+        action.waitForDisplayed(this.buttonLoader, undefined, true)
         if (res == true) {
             res = action.click(this.addBtn);
             if (res == true) {
                 action.waitForDisplayed(this.bannerText);
                 //action.click(this.bannerCloseBtn);
                 res = action.getText(this.bannerText);
-                action.waitForDisplayed(this.bannerText, undefined, true);
-                browser.pause(5000)
+                //action.waitForDisplayed(this.bannerText, undefined, true);
+                browser.pause(10000)
             }
         }
         logger.logInto(stackTrace.get(), res);

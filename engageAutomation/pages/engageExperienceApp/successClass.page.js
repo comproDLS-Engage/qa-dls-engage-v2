@@ -53,7 +53,7 @@ module.exports = {
         }
         return res;
     },
-    click_BacktoallClass_Button: function () {
+    click_Close_Button: function () {
         action.waitForClickable(this.backToHomeBtn)
         res = action.click(this.backToHomeBtn);
         console.log(res)

@@ -92,9 +92,9 @@ else {
         global.view = 'mobile';
 }
 
-global.baseScreenshotDir = path.join('screenshots/baseline/' + argv.appType, global.resScreenshotDir);
-global.testScreenshotDir = path.join('screenshots/screen/' + argv.appType, global.resScreenshotDir);
-global.diffScreenshotDir = path.join('screenshots/diff/' + argv.appType, global.resScreenshotDir);
+global.baseScreenshotDir = path.join('screenshots/baseline/' + argv.appType, argv.testEnv, global.resScreenshotDir);
+global.testScreenshotDir = path.join('screenshots/screen/' + argv.appType, argv.testEnv, global.resScreenshotDir);
+global.diffScreenshotDir = path.join('screenshots/diff/' + argv.appType, argv.testEnv, global.resScreenshotDir);
 
 // ========================================
 // Setting screenshot label folder location

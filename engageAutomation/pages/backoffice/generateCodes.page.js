@@ -14,6 +14,7 @@ module.exports = {
     generateBtn: selectorFile.generateCodesPage.generateBtn,
     snackbarLbl: selectorFile.common.snackbarLbl,
     snackbarBtn: selectorFile.common.snackbarBtn,
+    buttonLoader: selectorFile.common.buttonLoader,
 
     isInitialized: function () {
         logger.logInto(stackTrace.get());
@@ -72,6 +73,7 @@ module.exports = {
     click_Generate_Button: function () {
         logger.logInto(stackTrace.get());
         res = action.waitForClickable(this.generateBtn);
+        action.waitForDisplayed(this.buttonLoader, undefined, true);
         if (res == true) {
             res = action.click(this.generateBtn);
             if (res == true) {

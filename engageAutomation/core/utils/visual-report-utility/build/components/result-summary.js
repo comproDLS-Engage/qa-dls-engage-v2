@@ -9,7 +9,7 @@ const ResultsSummary = props => {
     const { total, passed, failed, skipped, duration, unknown } = props;
     return (react_1.default.createElement("div", { id: "filter", className: "container" },
         react_1.default.createElement("h3", { className: "title is-2" },
-            react_1.default.createElement("div", { className: "has-background-primary-dark has-text-white box" }, "VISUAL TEST REPORT"),
+            react_1.default.createElement("div", { className: "has-background-dark has-text-white box" }, "VISUAL TEST REPORT"),
         react_1.default.createElement("h3", { className: "title is-3" },
             react_1.default.createElement("span", { className: "has-text-grey-light" }, "Total Duration:"),
             ' ',

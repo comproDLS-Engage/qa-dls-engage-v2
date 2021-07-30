@@ -40,8 +40,6 @@
                 "markAllAsRead": "Mark All as Read",
                 "languageToSelect": "EN - English (UK)",
                 "selectedLanguage": "EN",
-                "profileUsername": "etirrase-9139",
-                "emailID": "etirrase-9139@yopmail.com",
                 "userProfileHelpBtn": "Help",
                 "userProfileSettingsBtn": "Settings",
                 "userProfileLogoutBtn": "Logout",
@@ -59,7 +57,7 @@
                 "selectBook_lbl": "Class Books",
                 "selectBook_txt": "Assign a book to your class in order to view and assign materials.",
                 "bookTitle": "PROYECTOS",
-                "createBtn_txt": "Create",
+                "createBtn_txt": "Create Class",
                 "cancelBtn_txt": "Cancel & Go Back",
                 "notitleErrorMsg": "Name is required.",
                 "titleErrorMsg": "Name should be less than 50 characters.",
@@ -94,6 +92,17 @@
                 "studentsOption_txt": "Students",
                 "gradeBookOption_txt": "Gradebook",
                 "materialsOption_txt": "Materials"
+            },
+            "classDrawerPane": {
+                "classHeading": "Dashboard",
+                "classSubHeading": "Your current, upcoming and past classes",
+                "noClassTitle": "Create a class to get started",
+                "noClassSubtitle": "Any classes associated with this book will appear here.",
+                "addClassBtn": "Create Class",
+                "addClassBtnwithClass":"Create Another Class",
+                "header":" Classes",
+                "classDrawerTitle":"Teaching another class with this book?",
+                "classDrawerSubTitle":"Create another class using this textbook material for your students."
             },
             "editClassPage": {
                 "pageTitle": "Edit Class",

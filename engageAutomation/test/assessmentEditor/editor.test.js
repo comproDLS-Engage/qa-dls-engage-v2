@@ -1,6 +1,6 @@
 "use strict";
 
-var testbench = require('../../pages/assessmentEditor/testBench.page.js');
+var testbench = require('../../pages/assessmentEditor/TestBench.page.js');
 var EditorPlayer = require('../../pages/assessmentEditor/itemPlayersFeatures.page.js');
 
 var sts, i;
@@ -184,11 +184,23 @@ module.exports = {
 		}
 	},
 
+	//click preview button
+	ASE_COM_TC_997: function () {
+		sts = EditorPlayer.clickPreviewBtn();
+		assertion.assertEqual(sts, true, "Preview button status mismatch");
+	},
+
+	//click preview tab
+	ASE_COM_TC_998: function () {
+		sts = EditorPlayer.clickPreviewPublishTab();
+		assertion.assertEqual(sts, true, "Preview tab status mismatch");
+	},
+
 	//click save and return button
 	ASE_COM_TC_999: function () {
 		sts = EditorPlayer.clickSaveandReturnBtn();
-		assertion.assertEqual(sts, true, "Error in save and return");
-		browser.switchWindow('https://backoffice-difusion-dev1.comprodls.com/');
+		assertion.assert((sts instanceof Error) === true, "Error in save and return - " + sts);
+		browser.switchWindow(global.appUrl);
 	},
 	
 	
