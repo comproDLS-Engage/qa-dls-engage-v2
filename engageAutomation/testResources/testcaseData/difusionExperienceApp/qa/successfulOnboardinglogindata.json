@@ -1,29 +1,24 @@
 {
-    "engage": {
-        "login": {
-            "user": {
-                "successfulStudentUser": {
-                    "email": "etirrase-9139@yopmail.com",
-                    "password": "hfcghgufyhW#2",
+    "engage":
+    {
+        "login":
+        {
+            "user":
+            {
+                "successfulStudentUser":
+                {
+                    "email": "difusionqa.stud6@yopmail.com",
+                    "password": "Compro@1234",
                     "role": "student",
-                    "name": "etirrase-9139",
+                    "name": "difusionqa.stud6",
                     "class": [
-                        {
-                            "key": "AEYP-p9hk",
-                            "name": "future Class"
-                        },
-                        {
-                            "key": "9q6x-QzFe",
-                            "name": "course1"
-                        },
-                        {
-                            "key": "Cw32-FLZ7",
-                            "name": "Archive Class"
-                        }
+
                     ],
-                    "info": {}
+                    "info":
+                    {}
                 },
-                "joinCourseUser": {
+                "joinCourseUser":
+                {
                     "username": "ls2akstu8@yopmail.com",
                     "password": "Compro@1234",
                     "name": "LS2 AkStud8",
@@ -32,54 +27,44 @@
                     "phoneNumber": "",
                     "registeredVia": "engage",
                     "courses": [
-                        {
-                            "key": "R28b-ya9p",
-                            "name": "Successful Onboard"
-                        }
-                    ],
+                    {
+                        "key": "R28b-ya9p",
+                        "name": "Successful Onboard"
+                    }],
                     "entitlement": [
-                        {
-                            "accesscode": "HP24-2EG7-XY4D-GUXA",
-                            "product": [
-                                "Study And Learn",
-                                "Practice"
-                            ],
-                            "bookInfo": "Introduction To Biology"
-                        },
-                        {
-                            "accesscode": "62G2-7DY4-9PRW-3GQQ",
-                            "product": [
-                                "Study And Learn",
-                                "Practice"
-                            ],
-                            "bookInfo": "Biologia Book"
-                        }
-                    ],
-                    "addlnInfo": {}
+                    {
+                        "accesscode": "HP24-2EG7-XY4D-GUXA",
+                        "product": [
+                            "Study And Learn",
+                            "Practice"
+                        ],
+                        "bookInfo": "Introduction To Biology"
+                    },
+                    {
+                        "accesscode": "62G2-7DY4-9PRW-3GQQ",
+                        "product": [
+                            "Study And Learn",
+                            "Practice"
+                        ],
+                        "bookInfo": "Biologia Book"
+                    }],
+                    "addlnInfo":
+                    {}
                 },
-                "successfulInstructorUser": {
-                    "username": "ls2akteach4@yopmail.com",
+                "successfulInstructorUser":
+                {
+                    "email": "difusionqa.teach46@yopmail.com",
                     "password": "Compro@1234",
-                    "name": "LS2 AkankshaTeach4",
-                    "role": "new",
-                    "CountryCode": "",
-                    "phoneNumber": "",
-                    "registeredVia": "engage",
-                    "schoolKey": [
-                        "NGL-FUW-XVC"
+                    "role": "student",
+                    "name": "difusionqa teach46",
+                    "class": [
+
                     ],
-                    "schoolName": "\"Mount Allison School\".",
-                    "entitlement": [
-                        {
-                            "product": [
-                                "Study And Learn",
-                                "Practice"
-                            ]
-                        }
-                    ],
-                    "addlnInfo": {}
+                    "info":
+                    {}
                 },
-                "addBookUser": {
+                "addBookUser":
+                {
                     "username": "ls2akteach4@yopmail.com",
                     "password": "Compro@1234",
                     "name": "LS2 AkankshaTeach4",
@@ -92,15 +77,15 @@
                     ],
                     "schoolName": "\"Mount Allison School\".",
                     "entitlement": [
-                        {
-                            "accesscode": "FTGW-EUUT-2WU2-EAA7",
-                            "product": [
-                                "Study And Learn",
-                                "Practice"
-                            ]
-                        }
-                    ],
-                    "addlnInfo": {}
+                    {
+                        "accesscode": "FTGW-EUUT-2WU2-EAA7",
+                        "product": [
+                            "Study And Learn",
+                            "Practice"
+                        ]
+                    }],
+                    "addlnInfo":
+                    {}
                 }
             }
         }

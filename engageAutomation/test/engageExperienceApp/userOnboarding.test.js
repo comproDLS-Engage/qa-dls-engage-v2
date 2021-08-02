@@ -7,10 +7,20 @@ module.exports = {
 
     //Validate that the welcome Screen appears when a new user login for onboarding
     ENG_ONBO_TC_1: function (testdata) {
-        sts = loginScreen.clickLogin(testdata[0].email, testdata[0].password, testdata[0].role)
+
+        sts = loginScreen.set_UserName(testdata[0].email)
+        assertion.assertEqual(sts, true, "Username Not Entered");
+        sts = loginScreen.set_Password(testdata[0].password)
+        assertion.assertEqual(sts, true, "Password Not Entered");
+        sts = loginScreen.click_Login_Button()
+        assertion.assertEqual(sts, true, "Login Button Not Clicked");
+
+
+        sts = userOnboardingScreen.isInitialized()
+
         assertion.typeOf(sts, 'object', new Error(sts));
         assertion.assertEqual(sts.welcome_heading, testdata[1].welcome_heading, "Welcome Screen heading Mismatch");
-        assertion.assertEqual(sts.userName.trim(), testdata[1].userName, "Username Mismatch");
+        assertion.assertEqual(sts.userName.trim(), testdata[0].name, "Username Mismatch");
         assertion.assertEqual((sts.welcome_msg).replace("\n", ""), testdata[1].welcome_msg, "Welcome Screen Message Mismatch");
         assertion.assertEqual(sts.continuebtn, testdata[1].continuebtn, "Welcome Screen Continue button text Mismatch")
         assertion.assertEqual(sts.continuebtnIsEnabled, false, "Welcome Screen Continue button text Not Disabled")
@@ -18,7 +28,7 @@ module.exports = {
         assertion.assertEqual(sts.studentBtn, testdata[1].studentBtn, "Welcome Screen 'studentBtn' text Mismatch")
         assertion.assertEqual(sts.teacherBtn, testdata[1].teacherBtn, "Welcome Screen 'teacherBtn' text Mismatch")
         assertion.assertEqual(sts.signOut, testdata[1].signOut, "Welcome Screen 'Logout' text Mismatch")
-        assertion.assertEqual(sts.comproDLSFooter, testdata[1].comproDLSFooter, "Welcome Screen 'comproDLSFooter' text Mismatch")
+        //assertion.assertEqual(sts.comproDLSFooter, testdata[1].comproDLSFooter, "Welcome Screen 'comproDLSFooter' text Mismatch")
     },
 
     //Validate that on selecting 'Student' role, user is directed to Student Options screen
@@ -114,7 +124,7 @@ module.exports = {
     ENG_ONBO_TC_11: function (testdata) {
         sts = userOnboardingScreen.clickContinueOnStudentSuccess();
         assertion.assertEqual(sts, true);
-        let dashboardPage = require('../../pages/engage/studentDashboard.page.js');
+        let dashboardPage = require('../../pages/engageExperienceApp/dashboard.page.js');
         sts = dashboardPage.isInitialized();
         assertion.assertEqual(sts, true, "Student dashboard page status mismatch");
     },
@@ -268,21 +278,14 @@ module.exports = {
         assertion.assertEqual(sts.comproDLSFooter, testdata.comproDLSFooter, "Welcome Screen 'comproDLSFooter' text Mismatch")
     },
 
-    //tbd-depends on Teacher dashboard
     //Teacher Onboarding -Validate that on clicking Continue button on the success screen, user navigates to My Course Dashboard
     ENG_ONBO_TC_40: function (testdata) {
         sts = userOnboardingScreen.clickContinueOnTeacherSuccess();
         assertion.assertEqual(sts, true);
 
-        // let myCourses = require('../../pages/engage/instructorMyCourses.page');
-        // sts = myCourses.isInitialized();
-
-        // assertion.typeOf(sts, 'object', new Error(sts));
-        // assertion.assertEqual(sts.header.titleText, testdata.headerTitle_txt, "MyCourse Screen Header Title Mismatch");
-        // assertion.assertEqual(sts.header.logo_Exists, true, "MyCourse Screen Header Logo False");
-        // assertion.assertEqual(sts.header.filterBtn_Exists, true, "MyCourse Screen Filter Button  Mismatch");
-        // assertion.assertEqual(sts.data[0].msg, testdata.noCourseFound_txt, "MyCourse Screen No Course Found Text Mismatch");
-        // assertion.assertEqual(sts.data[0].iconExist, true, "MyCourse Screen Icon Mismatch");
+        let dashboardPage = require('../../pages/engageExperienceApp/dashboard.page.js');
+        sts = dashboardPage.isInitialized();
+        assertion.assertEqual(sts, true, "Dashboard page status mismatch");
     },
 
     //Validate that clicking on Logout button on Welcome Screen redirects the user to landing page
@@ -423,19 +426,33 @@ module.exports = {
     },
 
     //Validate that on selecting 'Student' role, user is directed to Class Key Screen
-    ENG_ONBO_TC_75: function () {
+    ENG_ONBO_TC_75: function (testdata) {
         sts = userOnboardingScreen.clickStudent();
-        console.log(sts);
+
+        assertion.typeOf(sts, 'object', new Error(sts));
+        assertion.assertEqual(sts.pageHeading, testdata.pageHeading, "Enter Class Code Screen Heading Mismatch");
+        assertion.assertEqual(sts.subHeading, testdata.subHeading, "Enter Class Code Screen Sub-Heading Mismatch");
+        assertion.assertEqual(sts.message, testdata.message, "Enter Class Code Text Mismatch");
+        assertion.assertEqual(sts.submitBtn, testdata.submitBtn, "Enter Class Code Page -Continue Button Text Mismatch");
+        assertion.assertEqual(sts.submitBtnIsEnabled, false, "Enter Class Code Page -Continue Button Enabled");
+        assertion.assertEqual(sts.back_button, testdata.back_btn, "Enter Class Code Page- Back Button Text Mismatch");
+        assertion.assertEqual(sts.skipForNow, testdata.skipForNow, "Enter Class Code Page- Skip For Now Text Mismatch");
+        assertion.assertEqual(sts.helper_txt, testdata.helper_txt, "Enter Class Code Page- Skip For Now Text Mismatch");
         
     },
 
     //Validate that clicking on 'Skip for Now', for role Student ,user is directed to Success Screen.
-    ENG_ONBO_TC_76: function () {
-        sts = userOnboardingScreen.clickSkipForNow();
-        console.log(sts);
+    ENG_ONBO_TC_76: function (testdata) {
 
-        sts = userOnboardingScreen.courseKeyData();
-        console.log(sts);
+        sts = userOnboardingScreen.clickSkipForNow();
+        assertion.assertEqual(sts, true);
+
+        sts = userOnboardingScreen.studentSuccessOnboardingData();
+        assertion.typeOf(sts, 'object', new Error(sts));
+        assertion.assertEqual(sts.pageHeading, testdata.pageHeading, "Success Screen Heading Mismatch");
+        assertion.assertEqual(sts.pageSubHeading1, testdata.pageSubHeading1, "Success Screen Page Subheading Mismatch");
+        assertion.assertEqual(sts.startLearning, testdata.startLearning, "Success Screen Page Continue Mismatch");
+        assertion.assertEqual(sts.signOut, testdata.signOut, "Success Screen Page SignOut Mismatch");
         
     },
 
@@ -446,23 +463,38 @@ module.exports = {
 
         sts = userOnboardingScreen.studentSuccessOnboardingData();
         console.log(sts);
+
         
     },
 
     //Validate that on selecting 'Teacher' role, user is directed to School Key Screen
-    ENG_ONBO_TC_78: function () {
+    ENG_ONBO_TC_78: function (testdata) {
         sts = userOnboardingScreen.clickTeacher();
         console.log(sts);
+
+        assertion.typeOf(sts, 'object', new Error(sts));
+        assertion.assertEqual(sts.pageHeading, testdata.pageHeading, "Join Your School Screen Heading Mismatch");
+        assertion.assertEqual(sts.subHeading, testdata.subHeading, "Join Your School Screen Sub-Heading Mismatch");
+        assertion.assertEqual(sts.message, testdata.message, "Join Your School Text Mismatch");
+        assertion.assertEqual(sts.submitBtn, testdata.submitBtn, "Join Your School Page -Continue Button Text Mismatch");
+        assertion.assertEqual(sts.submitBtnIsEnabled, false, "Join Your School -Continue Button Enabled");
+        assertion.assertEqual(sts.back_button, testdata.back_btn, "Join Your School- Back Button Text Mismatch");
+        assertion.assertEqual(sts.skipForNow, testdata.skipForNow, "Join Your School- Skip For Now Text Mismatch");
+        assertion.assertEqual(sts.helper_txt, testdata.helper_txt, "Join Your School- Skip For Now Text Mismatch");   
         
     },
 
     //Validate that clicking on 'Skip for Now' , for role Teacher ,user is directed to Success Screen.
     ENG_ONBO_TC_79: function (testdata) {
-        sts = userOnboardingScreen.submitCourseKey(testdata[0]);
-        console.log(sts);
+       sts = userOnboardingScreen.clickSkipForNow();
+       assertion.assertEqual(sts, true);
 
         sts = userOnboardingScreen.instructorSuccessOnboardingData();
         console.log(sts);
+        assertion.assertEqual(sts.pageHeading, testdata.pageHeading, "Success Screen Heading Mismatch");
+        assertion.assertEqual(sts.pageSubHeading1, testdata.pageSubHeading1, "Success Screen Page Subheading Mismatch");
+        assertion.assertEqual(sts.proceedBtn, testdata.proceedBtn, "Success Screen Page Continue Mismatch");
+        assertion.assertEqual(sts.signOut, testdata.signOut, "Success Screen Page SignOut Mismatch");
         
     }
 };

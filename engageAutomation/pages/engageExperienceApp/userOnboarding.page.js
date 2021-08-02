@@ -61,10 +61,10 @@ module.exports = {
     insSuccess_name_txt: selectorFile.css.ComproEngage.OnboardingUser.insSuccess_name_txt,
     insSuccess_proceedCreateClass_btn: selectorFile.css.ComproEngage.OnboardingUser.insSuccess_proceedCreateClass_btn,
     //join Class
-    clickHere_btn: selectorFile.css.ComproEngage.joinCourse.clickHere_btn,
-    enterDiffCourse_txt: selectorFile.css.ComproEngage.joinCourse.enterDiffCourse_txt,
-    joinCourse_btn: selectorFile.css.ComproEngage.joinCourse.joinCourse_btn,
-    close_btn: selectorFile.css.ComproEngage.joinCourse.close_btn,
+    // clickHere_btn: selectorFile.css.ComproEngage.joinCourse.clickHere_btn,
+    // enterDiffCourse_txt: selectorFile.css.ComproEngage.joinCourse.enterDiffCourse_txt,
+    // joinCourse_btn: selectorFile.css.ComproEngage.joinCourse.joinCourse_btn,
+    // close_btn: selectorFile.css.ComproEngage.joinCourse.close_btn,
 
 
     isInitialized: function () {
@@ -196,13 +196,13 @@ module.exports = {
         obj = {
             pageHeading: (action.getElementCount(this.success_Heading_txt) == 1) ? action.getText(this.success_Heading_txt) : null,
             pageSubHeading1: (action.getElementCount(this.studentSuccess_pageSubHeading1) == 1) ? action.getText(this.studentSuccess_pageSubHeading1) : null,
-            courseName: (action.getElementCount(this.studentSuccess_Class_txt) == 1) ? action.getText(this.studentSuccess_Class_txt) : null,
-            classDates: (action.getElementCount(this.studentSuccess_ClassDates_txt) == 1) ? action.getText(this.studentSuccess_ClassDates_txt) : null,
+            //courseName: (action.getElementCount(this.studentSuccess_Class_txt) == 1) ? action.getText(this.studentSuccess_Class_txt) : null,
+            //classDates: (action.getElementCount(this.studentSuccess_ClassDates_txt) == 1) ? action.getText(this.studentSuccess_ClassDates_txt) : null,
             startLearning: (action.getElementCount(this.studentSuccess_proceedToClass_btn) == 1) ? action.getText(this.studentSuccess_proceedToClass_btn) : null,
             continuebtnIsEnabled: (action.getElementCount(this.studentSuccess_proceedToClass_btn) == 1) ? action.isEnabled(this.studentSuccess_proceedToClass_btn) : null,
-            schoolName: (action.getElementCount(this.studentSuccess_schoolName_txt) == 1) ? action.getText(this.studentSuccess_schoolName_txt) : null,
+            //schoolName: (action.getElementCount(this.studentSuccess_schoolName_txt) == 1) ? action.getText(this.studentSuccess_schoolName_txt) : null,
             signOut: (action.getElementCount(this.logout) == 1) ? action.getText(this.logout) : null,
-            comproDLSFooter: (action.getElementCount(this.comproDLSFooter) == 1) ? action.getText(this.comproDLSFooter) : null
+            //comproDLSFooter: (action.getElementCount(this.comproDLSFooter) == 1) ? action.getText(this.comproDLSFooter) : null
         }
         logger.logInto(stackTrace.get(), "Successful Student Onboarding Data: " + JSON.stringify(obj));
         return obj;
@@ -249,13 +249,13 @@ module.exports = {
         action.waitForDisplayed(this.insSuccuess_pageHeading)
         obj = {
             pageHeading: (action.getElementCount(this.insSuccuess_pageHeading) == 1) ? action.getText(this.insSuccuess_pageHeading) : null,
-            message1: (action.getElementCount(this.insSuccess_pageSubHeading1) == 1) ? action.getText(this.insSuccess_pageSubHeading1) : null,
-            schoolName: (action.getElementCount(this.insSuccess_schoolName) == 1) ? action.getText(this.insSuccess_schoolName) : null,
-            instructorName: (action.getElementCount(this.insSuccess_name_txt) == 1) ? action.getText(this.insSuccess_name_txt) : null,
+            pageSubHeading1: (action.getElementCount(this.insSuccess_pageSubHeading1) == 1) ? action.getText(this.insSuccess_pageSubHeading1) : null,
+            //schoolName: (action.getElementCount(this.insSuccess_schoolName) == 1) ? action.getText(this.insSuccess_schoolName) : null,
+            //instructorName: (action.getElementCount(this.insSuccess_name_txt) == 1) ? action.getText(this.insSuccess_name_txt) : null,
             proceedBtn: (action.getElementCount(this.insSuccess_proceedCreateClass_btn) == 1) ? action.getText(this.insSuccess_proceedCreateClass_btn) : null,
             continuebtnIsEnabled: (action.getElementCount(this.insSuccess_proceedCreateClass_btn) == 1) ? action.isEnabled(this.insSuccess_proceedCreateClass_btn) : null,
             signOut: (action.getElementCount(this.logout) == 1) ? action.getText(this.logout) : null,
-            comproDLSFooter: (action.getElementCount(this.comproDLSFooter) == 1) ? action.getText(this.comproDLSFooter) : null
+            //comproDLSFooter: (action.getElementCount(this.comproDLSFooter) == 1) ? action.getText(this.comproDLSFooter) : null
         }
         logger.logInto(stackTrace.get(), "Successful Teacher Onboarding Data: " + JSON.stringify(obj));
         return obj;
@@ -301,11 +301,13 @@ module.exports = {
             subHeading: (action.getElementCount(this.enterSchoolKey_subHeading_txt) == 1) ? action.getText(this.enterSchoolKey_subHeading_txt) : null,
             message: (action.getElementCount(this.enterSchoolKey_txt) == 1) ? action.getText(this.enterSchoolKey_txt) : null,
             //textboxMessage: (action.getElementCount(this.enterSchoolKey_txtBox) == 1) ? action.getAttribute(this.enterSchoolKey_txtBox, "placeholder") : null,
-            textboxValue: (action.getElementCount(this.enterSchoolKey_txtBox) == 1) ? action.getAttribute(this.enterSchoolKey_txtBox, "value") : "",
+            //textboxValue: (action.getElementCount(this.enterSchoolKey_txtBox) == 1) ? action.getAttribute(this.enterSchoolKey_txtBox, "value") : "",
             submitBtn: (action.getElementCount(this.Continue_btn) == 1) ? action.getText(this.Continue_btn) : null,
             submitBtnIsEnabled: (action.getElementCount(this.Continue_btn) == 1) ? action.isEnabled(this.Continue_btn) : null,
+            skipForNow: (action.getElementCount(this.skipForNow_btn) == 1) ? action.getText(this.skipForNow_btn) : null,
+            helper_txt: (action.getElementCount(this.helper_txt) == 1) ? action.getText(this.helper_txt) : null,
             back_button: (action.getElementCount(this.back_button) == 1) ? action.getText(this.back_button) : null,
-            comproDLSFooter: (action.getElementCount(this.comproDLSFooter) == 1) ? action.getText(this.comproDLSFooter) : null
+            //comproDLSFooter: (action.getElementCount(this.comproDLSFooter) == 1) ? action.getText(this.comproDLSFooter) : null
         }
         logger.logInto(stackTrace.get(), "School Key Page Data: " + JSON.stringify(obj));
         return obj;

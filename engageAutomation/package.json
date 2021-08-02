@@ -14,6 +14,7 @@
     "difUITemp": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa  --testExecFile=difUITemp.json --browserCapability=desktop-chrome-1920 --visual=applitools --skipAssertion=true",
     "bookTocFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa  --testExecFile=bookDetailViewTest.json --browserCapability=desktop-chrome-1366",
     "applitoolsTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='landingTest.json' --browserCapability=applitools-chrome-1920 --visual=applitools --skipAssertion=true",
+    "successfulOnboardingTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='successfulOnboardingTest.json' --browserCapability=desktop-chrome-1366",
     "bo": "./node_modules/.bin/wdio --appType=backoffice --testEnv=qa --testExecFile='backofficeLOPreview.json' --windowWidth=1600 --windowHeight=900"
   },
   "keywords": [],

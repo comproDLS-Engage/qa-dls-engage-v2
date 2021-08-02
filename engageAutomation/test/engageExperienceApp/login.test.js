@@ -69,7 +69,7 @@ module.exports = {
         assertion.assertEqual(sts, true, "Login Button Not Clicked");
         sts = require('../../pages/engageExperienceApp/dashboard.page.js').isInitialized();
         assertion.assertEqual(sts.pageStatus, true, "Dashboard page status mismatch");
-        //there should be some other assertion as well to validate successfull login - akhil
+        there should be some other assertion as well to validate successfull login - akhil
     },
 
     //Validate that the user is able to mask/unmask the password by clicking eye icon
