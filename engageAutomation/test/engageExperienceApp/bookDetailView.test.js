@@ -2,6 +2,8 @@
 var bookDetailPage = require('../../pages/engageExperienceApp/bookDetail.page.js');
 var unitDetailPage = require('../../pages/engageExperienceApp/unitDetail.page.js');
 var activityPlayerPage = require('../../pages/engageExperienceApp/activityPlayer.page.js');
+var classDrawerPage = require('../../pages/engageExperienceApp/classDrawer.page.js');
+var appShell = require('../../pages/engageExperienceApp/appShell.page.js');
 var action = require('../../core/actionLibrary/baseActionLibrary.js');
 
 var sts;
@@ -17,9 +19,13 @@ module.exports = {
 
     //Validate that clicking on "Add to My Books" button adds the book to My Books section
     ENG_BKTOC_TC_2: function (testdata) {
+        sts = bookDetailPage.clickMoreOptionsButton();
+        assertion.assertEqual(sts.addBook, testdata.addToMyBooks, "Add Book Option Mismatch");
+        assertion.assertEqual(sts.viewBookDetails, testdata.viewBookDetails, "View Book Details Option Mismatch");
+
         sts = bookDetailPage.clickAddBook();
         assertion.assertEqual(sts, true, "Add Book Not Clicked");
-        //console.log(sts)
+        
         sts = bookDetailPage.getBookViewPageData();
         assertion.assertEqual(sts.myBooks_lbl, testdata.myBooks, "My Books label Mismatch");
     },
@@ -36,17 +42,15 @@ module.exports = {
         sts = bookDetailPage.clickViewClasses();
         assertion.assertEqual(sts.classDrawerHeader, testdata[0]+' '+testdata[1], "Class Drawer Header Mismatch");
         
-        sts = bookDetailPage.closeClassListMenu();
+        sts = classDrawerPage.closeClassListMenu();
         assertion.assertEqual(sts, true, "Close Class List Menu Not Clicked");
 
     },
 
-    //Validate that clicking on 3 dot options displays View Book Details option if the book has not been added to My Books
+    //Validate that clicking on 3 dot options displays View Book Details and Add Book option if the book has not been added to My Books
     ENG_BKTOC_TC_5 : function (testdata) {
         sts = bookDetailPage.clickMoreOptionsButton();
-        assertion.assertEqual(sts,true,"More Options button not clicked");
-
-        sts = bookDetailPage.getMoreOptionsButtonData();
+        assertion.assertEqual(sts.addBook, testdata.addToMyBooks, "Add Book Option Mismatch");
         assertion.assertEqual(sts.viewBookDetails, testdata.viewBookDetails, "View Book Details Option Mismatch");
 
         sts = bookDetailPage.closeMoreOptionsButton();
@@ -56,10 +60,6 @@ module.exports = {
     //Validate that clicking on 3 dot options displays View Book Details and Remove Book options if the book has been added to My books
     ENG_BKTOC_TC_6 : function (testdata) {
         sts = bookDetailPage.clickMoreOptionsButton();
-        assertion.assertEqual(sts,true,"More Options button not clicked");
-        
-
-        sts = bookDetailPage.getMoreOptionsButtonData();
         assertion.assertEqual(sts.removeBook, testdata.removefromMyBooks, "Remove from My Books Option Mismatch");
         assertion.assertEqual(sts.viewBookDetails, testdata.viewBookDetails, "View Book Details Option Mismatch");
 
@@ -71,7 +71,8 @@ module.exports = {
     //Validate that clicking on Remove from My Books launches Remove Book Dialoge box 
     ENG_BKTOC_TC_7 : function () {
         sts = bookDetailPage.clickMoreOptionsButton();
-        assertion.assertEqual(sts,true,"More Options button not clicked");
+        assertion.assertEqual(sts.removeBook, testdata.removefromMyBooks, "Remove from My Books Option Mismatch");
+        assertion.assertEqual(sts.viewBookDetails, testdata.viewBookDetails, "View Book Details Option Mismatch");
 
         sts = bookDetailPage.clickRemoveBook();
         console.log(sts)
@@ -82,7 +83,7 @@ module.exports = {
 
     //Validate clicking on Cancel on Remove book closes the Remove book pop up
     ENG_BKTOC_TC_44 : function (testdata) {
-        sts = bookDetailPage.clickCancelRemoveBookDialog();
+        sts = bookDetailPage.clickCancel_RemoveBookDialog();
         assertion.assertEqual(sts, true, "cancel Remove Book Not Clicked");
 
         sts = bookDetailPage.getBookViewPageData();
@@ -117,7 +118,10 @@ module.exports = {
         sts = bookDetailPage.clickOpenFlipbook();
         assertion.assertEqual(sts,true,"Open Flipbook button not clicked");
         
-        sts = bookDetailPage.clickOnBreadcrumb();
+        sts = appShell.clickOnBreadcrumb();
+        assertion.assertEqual(sts,true,"Breadcrumb not clicked");
+
+        sts = bookDetailPage.getBookViewPageData();
         assertion.assertEqual(sts.componentList.length,testdata.component.length,"Number of Components Mismatch")
         assertion.assertEqual(sts.bookTitle,testdata.name,"Book Name Mismatch")
         assertion.assertEqual(sts.bookSubTitle,testdata.description,"Book Description Mismatch") 
@@ -127,9 +131,7 @@ module.exports = {
     //Validate clicking on a unit launches the unit detail view page.
     ENG_BKTOC_TC_12 : function (testdata) {
         sts = bookDetailPage.clickUnit(testdata[0]);
-        assertion.assertEqual(sts,true,"Unit Not Clicked");
 
-        sts = unitDetailPage.isInitialized();
         assertion.assertEqual(sts.unitThumbnail,true,"Unit Thumbnail Not displayed");
         assertion.assertEqual(sts.activityList.length,testdata[1].activity.length,"Number of Activities Mismatch");
         
@@ -150,9 +152,6 @@ module.exports = {
     //Validate clicking on a component displays the units /chapters asscoiated with the component
     ENG_BKTOC_TC_15 : function (testdata) {
         sts = bookDetailPage.clickComponent(testdata.name);
-        assertion.isAtLeast(sts,0,"Component Not Clicked");
-
-        sts = bookDetailPage.getChapterListData()
         assertion.assertEqual(sts[0].chapterNumber+ " " + sts[0].chapterTitle,testdata.unit[0].title,"Chapter Name Mismatch")
         assertion.assertEqual(sts[0].chapterCoverImg,true,"Chapter Cover Image Not Displayed")
         

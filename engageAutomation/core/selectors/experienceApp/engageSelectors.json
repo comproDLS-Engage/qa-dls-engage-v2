@@ -85,7 +85,8 @@
                 "loaderIcon": "[data-tid=image-loader]",
                 "snackbarInfo_txt": "[data-tid=text-error], [data-tid=text-info], [data-tid=text-success]",
                 "snackbarClose_btn": "[data-tid=button-close]",
-                "classPlusIcon": "[data-tid=button-classes] button"
+                "classPlusIcon": "[data-tid=button-classes] button",
+                "breadcrumb":"[data-tid*=breadcrumb-]",
             },
             "dashboardPage":
             {
@@ -303,10 +304,11 @@
                 "moreOptions": "[data-tid=band-moreOptions]",
                 "closeMoreOptions": "[role=menu]",
                 "removeBook_btn": "[data-tid=button-removeBook]",
-                "removeBook_title": "//b[text()='Remove from My Books?']",
+                "removeBook_title": "[data-tid=text-title-removeBook]",
+                "removeBook_subtitle": "[data-tid=text-subTitle-removeBook]",
                 "removeBook_Dialog": "[role=dialog]",
-                "removeBookDialogCancel": "//span[text()='Cancel']",
-                "removeBookDialogRemove": "//span[text()='Remove']",
+                "removeBookDialogCancel": "[data-tid=button-secondary-removeBook]",
+                "removeBookDialogRemove": "[data-tid=button-primary-removeBook]",
                 "viewBookDetails_btn": "[data-tid=button-viewBookDetails]",
                 "addBook_btn": "[data-tid=button-addMyBook]",
                 "myBooks_lbl": "[data-tid=pill-myBooks]",

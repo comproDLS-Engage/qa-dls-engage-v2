@@ -32,6 +32,7 @@ module.exports = {
 	userProfileSettingsBtn: selectorFile.css.ComproEngage.appShell.userProfileSettingsBtn,
 	userProfileLogoutBtn: selectorFile.css.ComproEngage.appShell.userProfileLogoutBtn,
 	classPlusIcon:selectorFile.css.ComproEngage.appShell.classPlusIcon,
+	breadcrumb: selectorFile.css.ComproEngage.appShell.breadcrumb,
 
 	isInitialized: function () {
 		logger.logInto(stackTrace.get());
@@ -246,5 +247,15 @@ module.exports = {
         else
             logger.logInto(stackTrace.get(), res + ":Add A New Book Button is NOT Clicked", "error");
         return res;
+    },
+
+    clickOnBreadcrumb: function () { 
+        res = action.click(this.breadcrumb)
+        if (res == true) {
+            logger.logInto(stackTrace.get(), " --Breadcrumb clicked");
+        } else
+            logger.logInto(stackTrace.get(), " --Breadcrumb NOT clicked", "error");
+        return res;
+
     }
 };

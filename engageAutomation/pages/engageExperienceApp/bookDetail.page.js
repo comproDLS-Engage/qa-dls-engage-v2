@@ -1,6 +1,7 @@
 "use strict";
 var action = require('../../core/actionLibrary/baseActionLibrary.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
+var unitDetailPage = require('../../pages/engageExperienceApp/unitDetail.page.js');
 var res, obj;
 
 module.exports = {
@@ -13,9 +14,11 @@ module.exports = {
     moreOptions: selectorFile.css.ComproEngage.bookView.moreOptions,
     closeMoreOptions: selectorFile.css.ComproEngage.bookView.closeMoreOptions,
     removeBook_btn: selectorFile.css.ComproEngage.bookView.removeBook_btn,
-    removeBook_Dialog: selectorFile.css.ComproEngage.bookView.removeBook_Dialog, //https://compro.atlassian.net/browse/ENG-7136
+    removeBook_Dialog: selectorFile.css.ComproEngage.bookView.removeBook_Dialog, 
     removeBookDialogCancel: selectorFile.css.ComproEngage.bookView.removeBookDialogCancel,
     removeBookDialogRemove: selectorFile.css.ComproEngage.bookView.removeBookDialogRemove,
+    removeBook_subtitle: selectorFile.css.ComproEngage.bookView.removeBook_subtitle,
+    removeBook_title: selectorFile.css.ComproEngage.bookView.removeBook_title,
     viewBookDetails_btn: selectorFile.css.ComproEngage.bookView.viewBookDetails_btn,
     addBook_btn: selectorFile.css.ComproEngage.bookView.addBook_btn,
     myBooks_lbl: selectorFile.css.ComproEngage.bookView.myBooks_lbl,
@@ -56,7 +59,7 @@ module.exports = {
             bookSubTitle: (action.getElementCount(this.bookSubTitle) > 0) ? action.getText(this.bookSubTitle) : null,
             viewClass: (action.getElementCount(this.viewClass) > 0) ? action.getText(this.viewClass) : null,
             moreOptions: (action.getElementCount(this.moreOptions) > 0) ? action.waitForDisplayed(this.moreOptions) : null,
-            addBook_btn: (action.getElementCount(this.addBook_btn) > 0) ? action.getText(this.addBook_btn) : null,
+            //addBook_btn: (action.getElementCount(this.addBook_btn) > 0) ? action.getText(this.addBook_btn) : null,
             myBooks_lbl: (action.getElementCount(this.myBooks_lbl) > 0) ? action.getText(this.myBooks_lbl) : null,
             openFlipbook_btn: (action.getElementCount(this.openFlipbook_btn) > 0) ? action.getText(this.openFlipbook_btn) : null,
             lastActivity_lbl: (action.getElementCount(this.lastActivity_lbl) > 0) ? action.getText(this.lastActivity_lbl) : null,
@@ -85,7 +88,6 @@ module.exports = {
 
     getChapterListData: function () {
         logger.logInto(stackTrace.get())
-        // this.clickComponent(componentName);
         let i, list;
         let componentArr = [];
         action.waitForDisplayed(this.chapter);
@@ -110,7 +112,7 @@ module.exports = {
         return componentArr;
     },
 
-    clickViewClasses: function () { // this can also be opened from dashboard, so it has to be reused dashboard or vice-versa, please discuss - akhil
+    clickViewClasses: function () { 
         logger.logInto(stackTrace.get())
         res = action.click(this.viewClass);
         if (res == true) {
@@ -119,18 +121,6 @@ module.exports = {
         } else
             logger.logInto(stackTrace.get(), " --View Classes Button NOT clicked", "error");
         return res;
-    },
-
-    closeClassListMenu: function () { // this can also be opened from dashboard, so it has to be reused dashboard or vice-versa, please discuss - akhil
-        logger.logInto(stackTrace.get())
-        res = action.click(this.closeClassDrawer);
-        if (res == true) {
-            logger.logInto(stackTrace.get(), " --Class List Menu Close clicked");
-            // check whether the drawer is closed and return the status - akhil
-        } else
-            logger.logInto(stackTrace.get(), " --Class List Menu Close NOT clicked", "error");
-        return res;
-
     },
 
     clickAddBook: function () {  //this needs to be updated - akhil
@@ -149,26 +139,13 @@ module.exports = {
         logger.logInto(stackTrace.get())
         res = action.click(this.openFlipbook_btn);
         if (res == true) {
-            //return what change happens after clicking this button - akhil
             //dummy flipbook page object added - akanksha
-            //res = require('./flipbook.page.js')
+            //res = require('./flipbook.page.js') //TBD when flipbook page object is added.
             res = action.waitForDisplayed(this.breadcrumbFlipbook)
-
             logger.logInto(stackTrace.get(), " --Open Flipbook Button clicked");
         } else
             logger.logInto(stackTrace.get(), " --Open Flipbook Button NOT clicked", "error");
         return res;
-    },
-
-    clickOnBreadcrumb: function () { // not clear on this function - akhil
-        res = action.click(this.breadcrumbFlipbook)
-        if (res == true) {
-            res = this.getBookViewPageData();
-            logger.logInto(stackTrace.get(), " --Flipbook Breadcrumb Button clicked");
-        } else
-            logger.logInto(stackTrace.get(), " --Flipbook Breadcrumb Button NOT clicked", "error");
-        return res;
-
     },
 
     clickComponent: function (componentName) {
@@ -178,8 +155,7 @@ module.exports = {
         for (i = 0; i < list.length; i++) {
             if (action.getText(list[i]) == componentName) {
                 action.click(list[i]);
-                 // we should return list of units - akhil
-                res = i;
+                res = this.getChapterListData();
                 break;
             }
             res = -1;
@@ -195,8 +171,8 @@ module.exports = {
         for (i = 0; i < list.length; i++) {
 
             if (unitName.includes(action.getText(list[i]))) {
-                res = action.click(list[i]);
-                // should n't we call unitDetails page obj? - akhil
+                action.click(list[i]);
+                res = unitDetailPage.isInitialized();
                 break;
             }
             res = false;
@@ -211,7 +187,7 @@ module.exports = {
         res = action.click(this.moreOptions);
         if (res == true) {
             logger.logInto(stackTrace.get(), " --More Options Button clicked");
-            // return the list of options in the menu, will required for language validation - akhil
+            res = this.getMoreOptionsButtonData();
         } else
             logger.logInto(stackTrace.get(), " --More Options Button NOT clicked", "error");
         return res;
@@ -230,6 +206,8 @@ module.exports = {
 
     getMoreOptionsButtonData: function () {
         obj = {
+
+            addBook : addBook_btn: (action.getElementCount(this.addBook_btn) > 0) ? action.getText(this.addBook_btn) : null,
             removeBook: (action.getElementCount(this.removeBook_btn) > 0) ? action.getText(this.removeBook_btn) : null,
             viewBookDetails: (action.getElementCount(this.viewBookDetails_btn) > 0) ? action.getText(this.viewBookDetails_btn) : null
         }
@@ -238,11 +216,12 @@ module.exports = {
 
     },
 
-    //todo ENG-7136
     getRemoveBookPopUpData: function () {
         obj = {
-            removeBook: (action.getElementCount(this.removeBook_btn) > 0) ? action.getText(this.removeBook_btn) : null,
-            viewBookDetails: (action.getElementCount(this.viewBookDetails_btn) > 0) ? action.getText(this.viewBookDetails_btn) : null
+            removeBook_title: (action.getElementCount(this.removeBook_title) > 0) ? action.getText(this.removeBook_title) : null,
+            removeBook_subtitle: (action.getElementCount(this.removeBook_subtitle) > 0) ? action.getText(this.removeBook_subtitle) : null,
+            removeBookDialogCancel: (action.getElementCount(this.removeBookDialogCancel) > 0) ? action.getText(this.removeBookDialogCancel) : null,
+            removeBookDialogRemove: (action.getElementCount(this.removeBookDialogRemove) > 0) ? action.getText(this.removeBookDialogRemove) : null
         }
         logger.logInto(stackTrace.get(), JSON.stringify(obj));
         return obj;
@@ -260,7 +239,7 @@ module.exports = {
         return res;
     },
 
-    clickCancelRemoveBookDialog: function () {
+    clickCancel_RemoveBookDialog: function () {
         logger.logInto(stackTrace.get())
         action.waitForDisplayed(this.removeBook_Dialog)
         res = action.click(this.removeBookDialogCancel);
