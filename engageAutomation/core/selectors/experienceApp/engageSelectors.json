@@ -97,7 +97,7 @@
 				"classDrawerHeader": "[data-tid=text-drawerHeaderTitle]",
 				"classDrawerTitle": "[data-tid=text-ClassesTitle]",
 				"classDrawerSubTitle": "[data-tid=text-ClassesSubtitle]",
-				"classDrawerCloseBtn":"[data-tid=button-close]"
+				"classDrawerCloseBtn": "[data-tid=button-close]"
 			},
 			"Calender": {
 				"calenderYear": "//h6[contains(@class,'MuiTypography-subtitle1')]",
@@ -208,7 +208,80 @@
 				"createAssignmentByline_lbl": "[data-tid=MISSING]",
 				"noInboxActivity_lbl": "[data-tid=MISSING]",
 				"noInboxActivityByline_lbl": "[data-tid=MISSING]"
-			}
+			},
+			"itemPlayer": {
+				"correctIcon": "[data-tid=icon-correct]",
+				"incorrectIcon": "[data-tid=icon-incorrect]",
+				"questionText": "[data-tid=text-question]",
+				"instructionText": "[data-tid=text-instruction]",
+				"itemPlayerContainer": "[id='itemContainer']",
+				"videoMedia": "[data-tid=container-video]",
+				"imageMedia": "[data-tid=container-image]",
+				"audioMedia": "[data-tid=container-audio]",
+				"activeQues": "div[class*=item-player-container] > div[style='height: 100%; display: block;'], div[class*=item-player-container] > div[style='height: 100%;']"
+			},
+			"testPlayer": {
+				"checkMyWork_btn": "[class=buttons-container] [class=defaultBtn-check-mywork-icon] , [data-tid=button-checkanswers], [data-tid=button-check]",
+				"next_btn": "[id=next], [data-tid=button-next]",
+				"previous_btn": "[id=previous], [data-tid=button-previous]",
+				"tryAgain_btn": "[id=tryAgain], [data-tid=button-tryagain]",
+				"reset_btn": "[id=reset], [data-tid=button-reset]",
+				"showAnswer_btn": "[data-tid=button-showcorrectanswers], [data-tid=button-showAnswer]",
+				"yourResponse_btn": "[data-tid=button-showuserresponse], [data-tid=button-showResponses]",
+				"showingCorrectAnswer_txt": "p[data-tid=text-showingcorrectanswer]",
+				"hint_btn": "[data-tid=button-hint]"
+			},
+			"MCQB": {
+				"choice": "div[data-tid=input-click-option-",
+				"choices": "div[data-tid*=input-click-option-]",
+				"selectedChoice": "svg[data-tid=icon-selected]"
+			},
+			"FIB": {
+				"source": "[data-tid=dragsource-option-",
+				"target": "[data-tid=droptarget-option-"
+			},
+			"FIBText": {
+				"response": "[data-tid=input-response-",
+				"responses": "[data-tid*='input-response']"
+			},
+			"dragAndDrop": {
+				"source": "[data-tid=dragsource-option-",
+				"target": "[data-tid=droptarget-option-",
+				"tapToZoom": "[data-tid='button-taptozoom']",
+				"zoomOverlay": "[class*='zoom-overlay']",
+				"zoomDialogClose_btn": "[data-tid='button-zoomdialogclose']"
+			},
+			"MCMR": {
+				"choice": "div[data-tid=input-click-option-",
+				"choices": "div[data-tid*=input-click-option-]",
+				"selectedChoice": "svg[data-tid=icon-selected]"
+			},
+			"Matching": {
+				"left": "[data-tid*=input-left-item-",
+				"right": "[data-tid*=input-right-item-"
+			},
+			"orderList": {
+				"option": "li[data-tid=input-drag-option-",
+				"options": "li[data-tid*=input-drag-option-]",
+				"listIndex": "li[data-tid]:nth-child("
+			},
+			"activitiyPlayer":
+            {
+                "breadCrumbTitle": "[data-tid=breadcrumb-productTitle]",
+                "index_btn": "[data-tid=text-chaptertitle]",
+                "infoTOC": "[data-tid=button-openinfotoc]",
+                "checkAnswer": "[data-tid=button-check]",
+                "previousActivity_btn": "[data-tid=button-previousactivity]",
+                "nextActivity_btn": "[data-tid=button-nextactivity]",
+                "next_btn": "[data-tid=button-next]",
+                "previous_btn": "[data-tid=button-previous]",
+                "questionInfo": "[data-tid=text-currentquestion]",
+                "submitActivity_btn": "[data-tid=button-submit]",
+                "showAnswer_btn": "[data-tid=button-showAnswer]",
+                "showResponse_btn": "[data-tid=button-showResponses]",
+                "feedback_txt": "[data-tid=text-feedbackmessage]",
+                "showingCorrectAnswer_txt": "[data-tid=text-showingcorrectanswer]"
+            }
 		}
 	}
 }

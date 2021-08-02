@@ -442,7 +442,9 @@ module.exports = {
 
 	// Add a book to my books
 	ENG_DIF_TC_35: function () {
-		res = action.click("[data-tid=button-addMyBook]");
+		res = action.click("[data-tid=band-moreOptions]");
+		console.log(res)
+		res = action.click("[data-tid=button-addToMyBook]");
 		console.log(res)
 		res = action.waitForDisplayed("[data-tid=pill-myBooks]");
 		console.log(res)

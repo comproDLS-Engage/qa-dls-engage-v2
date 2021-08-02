@@ -513,7 +513,7 @@
                     "id": "ENG_INS_CLASS_TC_42",
                     "description": "Click on add book button and Validate the book is added in the class",
                     "tags": "P1"
-                },  
+                },
                 {
                     "id": "ENG_INS_CLASS_TC_43",
                     "description": "Validate the class drawer Pane for student when  class is added",
@@ -777,6 +777,405 @@
                 {
                     "id": "logout_from_app",
                     "description": "Logout from the application",
+                    "tags": "P1"
+                }
+            ]
+        },
+        {
+            "modulename": "MCQ Block",
+            "moduledetails": "",
+            "testFile": "./test/engageExperienceApp/mcqBlock.test.js",
+            "testcase": [
+                {
+                    "id": "ENG_ITEM_MCQB_TC_1",
+                    "description": "Validate UI of block MCQ question in unattempted state",
+                    "tags": ""
+                },
+                {
+                    "id": "ENG_ITEM_MCQB_TC_5",
+                    "description": "Validate Block MCQ question functionality for correct scenario",
+                    "tags": ""
+                },
+                {
+                    "id": "ENG_ITEM_MCQB_TC_6",
+                    "description": "Validate Block MCQ question functionality for Incorrect scenario",
+                    "tags": "",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_ITEM_MCQB_TC_7",
+                    "description": "Validate Block MCQ question functionality with Try again",
+                    "tags": ""
+                },
+                {
+                    "id": "ENG_ITEM_MCQB_TC_8",
+                    "description": "Validate Block MCQ question selected option",
+                    "tags": "",
+                    "visualTest": true
+                }
+            ]
+        },
+        {
+            "modulename": "Test Player",
+            "moduledetails": "",
+            "testFile": "./test/engageExperienceApp/basePlayer.test.js",
+            "testcase": [
+                {
+                    "id": "COM_PLAY_TC_1",
+                    "description": "Validate the test player when quiz is launched",
+                    "tags": "P1"
+                },
+                {
+                    "id": "COM_PLAY_TC_2",
+                    "description": "Validate The Test Player When User Click Next Question",
+                    "tags": "P1"
+                },
+                {
+                    "id": "COM_PLAY_TC_3",
+                    "description": "Validate the test player when user perform Check My Work",
+                    "tags": "P1"
+                },
+                {
+                    "id": "COM_PLAY_TC_4",
+                    "description": "Validate the test player when user click Reset",
+                    "tags": "P1"
+                },
+                {
+                    "id": "COM_PLAY_TC_5",
+                    "description": "Validate the test player when user click try again",
+                    "tags": "P1"
+                },
+                {
+                    "id": "COM_PLAY_TC_6",
+                    "description": "Validate the test player when user click Previous",
+                    "tags": "P1"
+                },
+                {
+                    "id": "COM_PLAY_TC_7",
+                    "description": "Validate the test player when user click Show Answer",
+                    "tags": "P1"
+                },
+                {
+                    "id": "COM_PLAY_TC_8",
+                    "description": "Validate the test player when user click Your Response",
+                    "tags": "P1"
+                },
+                {
+                    "id": "COM_PLAY_TC_9",
+                    "description": "Validate the test player when user click Hint",
+                    "tags": "P1"
+                }
+            ]
+        },
+        {
+            "modulename": "Item Player - FIB",
+            "moduledetails": "",
+            "testFile": "./test/engageExperienceApp/FIB.test.js",
+            "testcase": [
+                {
+                    "id": "ENG_ITEM_FIB_TC_3",
+                    "description": "Validate FIB Question Functionality Using Drag & Drop Option",
+                    "tags": "",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_ITEM_FIB_TC_7",
+                    "description": "Validate FIB Question for correct scenario",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_ITEM_FIB_TC_8",
+                    "description": "Validate FIB Question for partial scenario",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_ITEM_FIB_TC_9",
+                    "description": "Validate FIB Question for complete incorrect scenario",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_ITEM_FIB_TC_13",
+                    "description": "Validate FIB Question Functionality Using Click Option",
+                    "tags": ""
+                },
+                {
+                    "id": "ENG_ITEM_FIB_TC_19",
+                    "description": "Validate that the user responses are retained in DND after clicking try again",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_ITEM_FIB_TC_20",
+                    "description": "Validate FIB Drag and Drop question is launched",
+                    "tags": "P1"
+                }
+            ]
+        },
+        {
+            "modulename": "Item Player - FIB Text",
+            "moduledetails": "",
+            "testFile": "./test/engageExperienceApp/FIBText.test.js",
+            "testcase": [
+                {
+                    "id": "ENG_ITEM_FIBTEXT_TC_2",
+                    "description": "Validate FIB text question is launched",
+                    "tags": ""
+                },
+                {
+                    "id": "ENG_ITEM_FIBTEXT_TC_3",
+                    "description": "Validate that user is able to click in the text placeholders and type the desired text in the FIB text question",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_ITEM_FIBTEXT_TC_4",
+                    "description": "Validate that the user responses are retained in the FIB text question after clicking try again",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_ITEM_FIBTEXT_TC_5",
+                    "description": "Validate FIB Text Question for correct scenario",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_ITEM_FIBTEXT_TC_6",
+                    "description": "Validate FIB Text Question for partial scenario",
+                    "tags": ""
+                },
+                {
+                    "id": "ENG_ITEM_FIBTEXT_TC_7",
+                    "description": "Validate FIB Text Question for incorrect scenario",
+                    "tags": "P1"
+                }
+            ]
+        },
+        {
+            "modulename": "Item Player - MCMR",
+            "moduledetails": "",
+            "testFile": "./test/engageExperienceApp/mcmr.test.js",
+            "testcase": [
+                {
+                    "id": "ENG_ITEM_MCMR_TC_1",
+                    "description": "Validate the MCMR question launch in default unattempted state",
+                    "tags": ""
+                },
+                {
+                    "id": "ENG_ITEM_MCMR_TC_3",
+                    "description": "Validate that the user can select multiple options while performing MCMR question",
+                    "tags": ""
+                },
+                {
+                    "id": "ENG_ITEM_MCMR_TC_5",
+                    "description": "Validate MCMR question functionality for Correct scenario",
+                    "tags": ""
+                }
+            ]
+        },
+        {
+            "modulename": "Item Player - Order List",
+            "moduledetails": "",
+            "testFile": "./test/engageExperienceApp/orderlist.test.js",
+            "testcase": [
+                {
+                    "id": "ENG_ITEM_OLI_TC_1",
+                    "description": "Validate the UI of the Order List player",
+                    "tags": ""
+                },
+                {
+                    "id": "ENG_ITEM_OLI_TC_5",
+                    "description": "Validate Order List Question for correct scenario",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_ITEM_OLI_TC_6",
+                    "description": "Validate Ordered List Question for partial scenario",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_ITEM_OLI_TC_7",
+                    "description": "Validate Order List Question for complete incorrect scenario",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_ITEM_OLI_TC_9",
+                    "description": "Validate if user is able to drag the items in from arrow the Order List Question",
+                    "tags": "",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_ITEM_OLI_TC_11",
+                    "description": "Validate that the user responses are retained in Orderlist after clicking try again",
+                    "tags": ""
+                }
+            ]
+        },
+        {
+            "modulename": "Item Player - Drag & Drop",
+            "moduledetails": "",
+            "testFile": "./test/engageExperienceApp/dragDrop.test.js",
+            "testcase": [
+                {
+                    "id": "ENG_ITEM_DND_TC_1",
+                    "description": "Validate Drag & Drop Question Functionality For Correct Scenario",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_ITEM_DND_TC_2",
+                    "description": "Validate Drag & Drop Question for partial correct scenario",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_ITEM_DND_TC_3",
+                    "description": "Validate Drag & Drop Question for complete incorrect scenario",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_ITEM_DND_TC_7",
+                    "description": "Validate Drag & Drop Question Functionality using Click option",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_ITEM_DND_TC_17",
+                    "description": "Validate Drag & Drop Question Functionality using drag drop option",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ENG_ITEM_DND_TC_19",
+                    "description": "Validate that the user responses are retained in DND after clicking try again",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_ITEM_DND_TC_20",
+                    "description": "Validate Drag and Drop question is launched",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_ITEM_DND_TC_21",
+                    "description": "Validate That 'Tap To Zoom' Option Is Available In The Mobile Mode In The DND Question - (Portrait, Landscape)",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_ITEM_DND_TC_22",
+                    "description": "Validate That Image Opens In Zoom Mode On Clicking Tap To Zoom - (Portrait, Landscape)",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_ITEM_DND_TC_23",
+                    "description": "Validate That The Close Button On The Top Closes The Dialogue Box - (Portrait, Landscape)",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_ITEM_DND_TC_25",
+                    "description": "Validate That An Option Can Be Selected In The Dropdown - (Portrait, Landscape)",
+                    "tags": "P1"
+                }
+            ]
+        },
+        {
+            "modulename": "Item Player - Classify",
+            "moduledetails": "",
+            "testFile": "./test/engageExperienceApp/classify.test.js",
+            "testcase": [
+                {
+                    "id": "ENG_ITEM_CLA_TC_2",
+                    "description": "Validate that user is able to place option pill inside the Group using drag and drop",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_ITEM_CLA_TC_4",
+                    "description": "Validate the Classify Player for correct scenario",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_ITEM_CLA_TC_6",
+                    "description": "Validate the Classify Player for incorrect scenario",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_ITEM_CLA_TC_5",
+                    "description": "Validate the Classify Player for partial scenario",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_ITEM_CLA_TC_20",
+                    "description": "Validate the classify player behaviour when try again button is clicked.",
+                    "tags": "P1"
+                }
+            ]
+        },
+        {
+            "modulename": "Item Player - Matching",
+            "moduledetails": "",
+            "testFile": "./test/engageExperienceApp/matching.test.js",
+            "testcase": [
+                {
+                    "id": "ENG_ITEM_MATCH_TC_1",
+                    "description": "Validate the UI of the Matching player in the default mode",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_ITEM_MATCH_TC_2",
+                    "description": "Validate the behaviour of matching player when user match the left item with right item (Mobile)",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_ITEM_MATCH_TC_4",
+                    "description": "Validate that the behaviour in the Matching player when try again is clicked",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_ITEM_MATCH_TC_5",
+                    "description": "Validate Matching Question for correct scenario",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_ITEM_MATCH_TC_6",
+                    "description": "Validate Matching Question for partial scenario",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_ITEM_MATCH_TC_7",
+                    "description": "Validate Matching Question for incorrect scenario",
+                    "tags": "P1"
+                }
+            ]
+        },
+        {
+            "modulename": "Activity Player",
+            "moduledetails": "",
+            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
+            "testcase": [
+                {
+                    "id": "ENG_PLAY_TC_1",
+                    "description": "Validate the test player when quiz is launched",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_PLAY_TC_2",
+                    "description": "Validate The Test Player When User Click Next Question",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_PLAY_TC_3",
+                    "description": "Validate the test player when user perform Check My Work",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_PLAY_TC_4",
+                    "description": "Validate the test player when user click Previous",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_PLAY_TC_5",
+                    "description": "Validate the test player when user click Show Answer",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_PLAY_TC_6",
+                    "description": "Validate the test player when user click Your Response",
                     "tags": "P1"
                 }
             ]

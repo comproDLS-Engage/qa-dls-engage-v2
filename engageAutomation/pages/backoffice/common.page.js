@@ -45,6 +45,7 @@ module.exports = {
 
     click_Close_Button: function () {
         logger.logInto(stackTrace.get());
+        res = action.switchToParentFrame();
         res = action.click(this.closeBtn);
         if (res == true) {
             res = action.waitForDisplayed(this.pageContent);
