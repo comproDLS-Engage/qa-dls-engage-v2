@@ -87,8 +87,25 @@
 				"bookPlusIcon":"[data-tid*=button-addBook-",
 				"resourceList": "[data-tid*=item-globalresource-",
 				"resourceTitle": "//div[@data-tid=\"item-globalresource-",
+
 				"cardSliderTitle": "[data-tid=text-cardSliderTitle]",
 				"cardSliderSubtitle": "[data-tid=text-cardSliderTitle]",
+				"cardSliderLeftBtn": "[data-tid=button-cardSliderLeft]",
+				"cardSliderRightBtn": "[data-tid=button-cardSliderRight]",
+				"actionCardTitles": "[data-tid=button-actionCardTitle-",
+				"actionCardSubtitles": "[data-tid=button-actionCardSubtitle-",
+				"actionCardBtns": "[data-tid=button-actionCardBtn-",
+
+				"myBooksHeading_Txt": "[data-tid=text-myBooks]",
+				"noBooks_title": "[data-tid=text-title-noBookAdded]",
+				"noBooks_subTitle": "[data-tid=text-subtitle-noBookAdded]",
+				"noBooks_btn": "[data-tid=button-noBookAdded]",
+
+				"myPlaylistsHeading_Txt": "[data-tid=text-playlist]",
+				"noPlaylists_title": "[data-tid=text-title-noPlaylist]",
+				"noPlaylists_subTitle": "[data-tid=text-subtitle-noPlaylist]",
+				"noPlaylists_btn": "[data-tid=button-noPlaylist]",
+
 				"bookTitle": "[data-tid*=text-bookTitle-",
 				"bookEllipses": "[data-tid*=button-contextMenu-",
 				"view_Btn": "[data-tid*=button-view-",

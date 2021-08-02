@@ -5,6 +5,31 @@ var sts;
 
 module.exports = {
 
+    //Validate when blank dashboard is launched
+    ENG_DASH_TC_1: function () {
+        sts = dashboardPage.isInitialized();
+        assertion.assertEqual(sts, true, "Dashboard page status mismatch");
+    },
+
+    //Validate that clicking on 'Add Book' button, book list page is launched to select books to add
+    ENG_DASH_TC_7: function () {
+        sts = dashboardPage.clickAddBook();
+        assertion.assertEqual(sts, true, "Dashboard page status mismatch");
+    },
+
+    //Validate that clicking on 'Remove from My Books' launches a pop up with label 'Remove from My Books?'
+    ENG_DASH_TC_13: function () {
+        sts = dashboardPage.clickMenuRemoveBook();
+        assertion.assertEqual(sts, true, "Dashboard page status mismatch");
+    },
+    
+    //Validate that clicking on 'Remove' in dialogue box removes the book from 'My List'
+    ENG_DASH_TC_15: function () {
+        sts = dashboardPage.clickMenuRemoveBook();
+        assertion.assertEqual(sts, true, "Dashboard page status mismatch");
+    },
+
+
     //Validate on clicking "Interactive Activities" resource in Explore menu, same tab is launched on Browse
     ENG_DASH_TC_1: function () {
         sts = dashboardPage.clickExploreResource("Interactive Activities");
