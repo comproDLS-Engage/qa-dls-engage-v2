@@ -28,8 +28,8 @@ module.exports = {
 	ENG_PLAY_TC_3: function () {
 		sts = activityPlayerPage.clickCheckAnswer();
 		assertion.assertEqual(sts, true, "status mismatch");
-		sts =  activityPlayerPage.getFeedbackInfo();
-		console.log("feedback info : " + JSON.stringify(sts));
+		// sts =  activityPlayerPage.getFeedbackInfo();
+		// console.log("feedback info : " + JSON.stringify(sts));
 	},
 
 	//Validate the test player when user click Previous button in the second question.
