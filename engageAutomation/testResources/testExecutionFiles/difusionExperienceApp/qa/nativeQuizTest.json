@@ -27,14 +27,14 @@
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
-                  "jsonPath": "engage.login.user.validStudent1"
+                  "jsonPath": "engage.login.user.validInstructorUser1"
                }
             ]
          },
          {
-            "id": "COM_PLAY_TC_1",
+            "id": "ENG_PLAY_TC_1",
             "description": "",
-            "testFile": "./test/engageExperienceApp/basePlayer.test.js",
+            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
             "testData": []
          },
          {
@@ -60,9 +60,9 @@
             ]
          },
          {
-            "id": "COM_PLAY_TC_3",
+            "id": "ENG_PLAY_TC_3",
             "description": "",
-            "testFile": "./test/engageExperienceApp/basePlayer.test.js",
+            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
             "testData": []
          },
          {
@@ -77,9 +77,9 @@
             ]
          },
          {
-            "id": "COM_PLAY_TC_2",
+            "id": "ENG_PLAY_TC_2",
             "description": "",
-            "testFile": "./test/engageExperienceApp/basePlayer.test.js",
+            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
             "testData": []
          },
          {
@@ -105,9 +105,9 @@
             ]
          },
          {
-            "id": "COM_PLAY_TC_3",
+            "id": "ENG_PLAY_TC_3",
             "description": "",
-            "testFile": "./test/engageExperienceApp/basePlayer.test.js",
+            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
             "testData": []
          },
          {
@@ -122,9 +122,9 @@
             ]
          },
          {
-            "id": "COM_PLAY_TC_2",
+            "id": "ENG_PLAY_TC_2",
             "description": "",
-            "testFile": "./test/engageExperienceApp/basePlayer.test.js",
+            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
             "testData": []
          },
          {
@@ -150,9 +150,9 @@
             ]
          },
          {
-            "id": "COM_PLAY_TC_3",
+            "id": "ENG_PLAY_TC_3",
             "description": "",
-            "testFile": "./test/engageExperienceApp/basePlayer.test.js",
+            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
             "testData": []
          },
          {
@@ -167,9 +167,9 @@
             ]
          },
          {
-            "id": "COM_PLAY_TC_2",
+            "id": "ENG_PLAY_TC_2",
             "description": "",
-            "testFile": "./test/engageExperienceApp/basePlayer.test.js",
+            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
             "testData": []
          },
          {
@@ -195,9 +195,9 @@
             ]
          },
          {
-            "id": "COM_PLAY_TC_3",
+            "id": "ENG_PLAY_TC_3",
             "description": "",
-            "testFile": "./test/engageExperienceApp/basePlayer.test.js",
+            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
             "testData": []
          },
          {
@@ -212,9 +212,9 @@
             ]
          },
          {
-            "id": "COM_PLAY_TC_2",
+            "id": "ENG_PLAY_TC_2",
             "description": "",
-            "testFile": "./test/engageExperienceApp/basePlayer.test.js",
+            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
             "testData": []
          },
          {
@@ -240,9 +240,9 @@
             ]
          },
          {
-            "id": "COM_PLAY_TC_3",
+            "id": "ENG_PLAY_TC_3",
             "description": "",
-            "testFile": "./test/engageExperienceApp/basePlayer.test.js",
+            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
             "testData": []
          },
          {
@@ -257,9 +257,9 @@
             ]
          },
          {
-            "id": "COM_PLAY_TC_2",
+            "id": "ENG_PLAY_TC_2",
             "description": "",
-            "testFile": "./test/engageExperienceApp/basePlayer.test.js",
+            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
             "testData": []
          },
          {
@@ -285,9 +285,9 @@
             ]
          },
          {
-            "id": "COM_PLAY_TC_3",
+            "id": "ENG_PLAY_TC_3",
             "description": "",
-            "testFile": "./test/engageExperienceApp/basePlayer.test.js",
+            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
             "testData": []
          },
          {
@@ -302,9 +302,9 @@
             ]
          },
          {
-            "id": "COM_PLAY_TC_2",
+            "id": "ENG_PLAY_TC_2",
             "description": "",
-            "testFile": "./test/engageExperienceApp/basePlayer.test.js",
+            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
             "testData": []
          },
          {
@@ -330,9 +330,9 @@
             ]
          },
          {
-            "id": "COM_PLAY_TC_3",
+            "id": "ENG_PLAY_TC_3",
             "description": "",
-            "testFile": "./test/engageExperienceApp/basePlayer.test.js",
+            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
             "testData": []
          },
          {
@@ -347,9 +347,9 @@
             ]
          },
          {
-            "id": "COM_PLAY_TC_2",
+            "id": "ENG_PLAY_TC_2",
             "description": "",
-            "testFile": "./test/engageExperienceApp/basePlayer.test.js",
+            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
             "testData": []
          },
          {
@@ -375,9 +375,9 @@
             ]
          },
          {
-            "id": "COM_PLAY_TC_3",
+            "id": "ENG_PLAY_TC_3",
             "description": "",
-            "testFile": "./test/engageExperienceApp/basePlayer.test.js",
+            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
             "testData": []
          },
          {
@@ -392,9 +392,9 @@
             ]
          },
          {
-            "id": "COM_PLAY_TC_2",
+            "id": "ENG_PLAY_TC_2",
             "description": "",
-            "testFile": "./test/engageExperienceApp/basePlayer.test.js",
+            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
             "testData": []
          },
          {
@@ -410,9 +410,9 @@
             ]
          },
          {
-            "id": "COM_PLAY_TC_3",
+            "id": "ENG_PLAY_TC_3",
             "description": "",
-            "testFile": "./test/engageExperienceApp/basePlayer.test.js",
+            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
             "testData": []
          },
          {

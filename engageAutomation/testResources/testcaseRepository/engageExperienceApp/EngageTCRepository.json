@@ -1125,6 +1125,43 @@
                     "tags": "P1"
                 }
             ]
+        },
+        {
+            "modulename": "Activity Player",
+            "moduledetails": "",
+            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
+            "testcase": [
+                {
+                    "id": "ENG_PLAY_TC_1",
+                    "description": "Validate the test player when quiz is launched",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_PLAY_TC_2",
+                    "description": "Validate The Test Player When User Click Next Question",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_PLAY_TC_3",
+                    "description": "Validate the test player when user perform Check My Work",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_PLAY_TC_4",
+                    "description": "Validate the test player when user click Previous",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_PLAY_TC_5",
+                    "description": "Validate the test player when user click Show Answer",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_PLAY_TC_6",
+                    "description": "Validate the test player when user click Your Response",
+                    "tags": "P1"
+                }
+            ]
         }
     ]
 }
