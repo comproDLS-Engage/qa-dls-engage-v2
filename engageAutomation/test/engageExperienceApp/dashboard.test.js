@@ -53,8 +53,24 @@ module.exports = {
     //Validate that clicking on 'Remove' in dialogue box removes the book from 'My List'
     ENG_DASH_TC_15: function () {
         sts = dashboardPage.clickRemoveBookDialogueBox_Remove();
-        assertion.assertEqual(sts, true, "Dashboard page status mismatch");
-    },
+        assertion.assertEqual(sts.pageTitle, testdata.pageTitle, "Dashboard text mismatch");
+        assertion.assertEqual(sts.createPlaylist_Txt, testdata.createPlaylist_Txt, "Create Playlist text mismatch");
+        assertion.assertEqual(sts.addBook_Txt, testdata.addBook_Txt, "Add Book text mismatch");
+        assertion.assertEqual(sts.cardSliderTitle, testdata.cardSliderTitle, "slider title text mismatch");
+        assertion.assertEqual(sts.cardSliderSubtitle, testdata.cardSliderSubtitle, "slider subtile text mismatch");
+        assertion.assertEqual(sts.cardSliderLeftBtn,true, "left btn status mismatch");
+        assertion.assertEqual(sts.cardSliderRightBtn,true, "right btn status text mismatch");
+        assertion.assertEqual(sts.myBooksHeading_Txt, testdata.myBooksHeading_Txt, "My books text mismatch");
+        assertion.assertEqual(sts.noBooks_title, testdata.noBooks_title, "No books added text mismatch");
+        assertion.assertEqual(sts.noBooks_subTitle, testdata.noBooks_subTitle, "no books subtitle text mismatch");
+        assertion.assertEqual(sts.noBooks_btn, testdata.noBooks_btn, "add books text mismatch");
+        assertion.assertEqual(sts.myPlaylistsHeading_Txt, testdata.myPlaylistsHeading_Txt, "my playlist text mismatch");
+        assertion.assertEqual(sts.noPlaylists_title, testdata.noPlaylists_title, "no playlist text mismatch");
+        assertion.assertEqual(sts.noPlaylists_subTitle, testdata.noPlaylists_subTitle, "playlist subtitle text mismatch");
+        assertion.assertEqual(sts.noPlaylists_btn, testdata.noPlaylists_btn, "create playlist text mismatch");
+        assertion.assertEqual(sts.actionCardList[0].actionCardTitles,testdata.actionCard[0].actionCardTitles, "Action Card title text mismatch");
+        assertion.assertEqual(sts.actionCardList[0].actionCardSubtitles,testdata.actionCard[0].actionCardSubtitles, "Action Card subtitle text mismatch");
+        assertion.assertEqual(sts.actionCardList[0].actionCardBtns,testdata.actionCard[0].actionCardBtns, "Action Card button text mismatch");    },
 
     //Validate on clicking "View Classes" from Book dropdown menu, class Pane is launched
     ENG_DASH_TC_8: function(){
