@@ -32,7 +32,7 @@
                     "info": {}
                 },
                 "acceptanceteacher": {
-                    "email": "acceptanceinstructor@yopmail.com",
+                    "email": "acceptanceInstructor@yopmail.com",
                     "password": "Compro@1234",
                     "role": "student",
                     "name": "acceptance Instructor",
