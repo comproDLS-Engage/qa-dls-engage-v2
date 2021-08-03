@@ -1,6 +1,6 @@
 {
    "Suite1": {
-      "Name": "UI validation of difusion teacher experience with books and classes",
+      "Name": "Functional validation of teacher experience app",
       "TestCaseRepo": [
          "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
       ],
@@ -32,13 +32,24 @@
             ]
          },
          {
-            "id": "ENG_DASH_TC_12",
+            "id": "ENG_DASH_TC_1",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/dashboard.test.js",
+            "testData": [
+                {
+                    "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                    "jsonPath": "engage.appContent.dashboard"
+                 }
+            ]
+        },
+         {
+            "id": "ENG_DASH_TC_6",
             "description": "",
             "testFile": "./test/engageExperienceApp/dashboard.test.js",
             "testData": []
          },
          {
-            "id": "ENG_DASH_TC_13",
+            "id": "ENG_DASH_TC_99",
             "description": "",
             "testFile": "./test/engageExperienceApp/dashboard.test.js",
             "testData": []
@@ -520,13 +531,19 @@
             "testData": []
          },
          {
-            "id": "ENG_DASH_TC_7",
+            "id": "ENG_DASH_TC_12",
             "description": "",
             "testFile": "./test/engageExperienceApp/dashboard.test.js",
             "testData": []
          },
          {
-            "id": "ENG_DASH_TC_10",
+            "id": "ENG_DASH_TC_13",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/dashboard.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_DASH_TC_15",
             "description": "",
             "testFile": "./test/engageExperienceApp/dashboard.test.js",
             "testData": []

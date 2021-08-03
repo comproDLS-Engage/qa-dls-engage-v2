@@ -1,6 +1,7 @@
 "use strict";
 var action = require('../../core/actionLibrary/baseActionLibrary.js');
 const createClassPage = require('./createClass.page.js');
+const bookDetailsPage = require('./bookDetail.page.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
 var res, obj;
 var componentSelector, languageCount, i;
@@ -237,7 +238,7 @@ module.exports = {
         res = action.click(this.viewBookBtn);
         if (res == true) {
             logger.logInto(stackTrace.get(), "-- Progress Tab is clicked");
-            //res = toc.isInitialized();
+            res = bookDetailsPage.isInitialized();
         }
         else {
             res = res + "-- Error in clicking Progress Tab";

@@ -224,15 +224,15 @@ module.exports = {
         logger.logInto(stackTrace.get());
         res = action.click(this.removeBook_remove);
 		if (true == res) {
-            // res = this.isInitialized();
-            // logger.logInto(stackTrace.get(), " --cancel button is clicked");
-            return true
+             res = this.isInitialized();
+             logger.logInto(stackTrace.get(), " --remove button is clicked");
+           
 		}
 		else {
 			res = res + " -- Error in clicking Notification Close Button";
 			logger.logInto(stackTrace.get(), res, 'error');
 		}
-		//return res;
+		return res;
     },
 
     clickMenuOpenFlipbook: function (bookName) {
