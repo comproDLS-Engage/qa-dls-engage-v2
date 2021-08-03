@@ -57,7 +57,7 @@
             ]
         },
         {
-            "id": "ENG_ADD_BOOK_TC_1",
+            "id": "ENG_ADDBOOK_TC_20",
             "description": "",
             "testFile": "./test/engageExperienceApp/addBook.test.js",
             "visualTolerance": 0.07,
@@ -295,13 +295,11 @@
 
         ],
         "After": [
-        {
-            "id": "ENG_SHELL_TC_9",
-            "description": "Validate that clicking on logout logs out from application",
-            "testFile": "./test/engageExperienceApp/appShell.test.js",
-            "testData": [
-
-            ]
+         {
+                "id": "logout_from_app",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/common.test.js",
+                "testData": []
         }]
     }
 }

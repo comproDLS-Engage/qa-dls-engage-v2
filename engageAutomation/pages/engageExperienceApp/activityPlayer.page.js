@@ -1,6 +1,7 @@
 "use strict";
 var action = require('../../core/actionLibrary/baseActionLibrary.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
+const basePlayerPage = require('./basePlayer.page.js');
 var res, obj;
 
 module.exports = {
@@ -11,8 +12,8 @@ module.exports = {
     checkAnswer: selectorFile.css.ComproEngage.activitiyPlayer.checkAnswer,
     previousActivity_btn: selectorFile.css.ComproEngage.activitiyPlayer.previousActivity_btn,
     nextActivity_btn: selectorFile.css.ComproEngage.activitiyPlayer.nextActivity_btn,
-    next_btn: selectorFile.css.ComproEngage.activitiyPlayer.next_btn,
-    previous_btn: selectorFile.css.ComproEngage.activitiyPlayer.previous_btn,
+    // next_btn: selectorFile.css.ComproEngage.activitiyPlayer.next_btn,
+    // previous_btn: selectorFile.css.ComproEngage.activitiyPlayer.previous_btn,
     questionInfo: selectorFile.css.ComproEngage.activitiyPlayer.questionInfo,
     submitActivity_btn: selectorFile.css.ComproEngage.activitiyPlayer.submitActivity_btn,
     showAnswer_btn: selectorFile.css.ComproEngage.activitiyPlayer.showAnswer_btn,
@@ -20,7 +21,7 @@ module.exports = {
     feedback_txt: selectorFile.css.ComproEngage.activitiyPlayer.feedback_txt,
     showingCorrectAnswer_txt: selectorFile.css.ComproEngage.activitiyPlayer.showingCorrectAnswer_txt,
 
-    isInitialized: function() {
+    isInitialized: function () {
         logger.logInto(stackTrace.get());
         action.waitForDocumentLoad();
         action.waitForDisplayed(this.breadCrumbTitle);
@@ -28,37 +29,54 @@ module.exports = {
         return res;
     },
 
-    getBreadcrumbHeaderData: function() {
-        obj = {
-            breadCrumbTitle: (action.getElementCount(this.breadCrumbTitle) > 0) ? action.getText(this.breadCrumbTitle) : null,
-            index_btn: (action.getElementCount(this.index_btn) > 0) ? action.getText(this.index_btn) : null
+    // getBreadcrumbHeaderData: function () {
+    //     obj = {
+    //         breadCrumbTitle: (action.getElementCount(this.breadCrumbTitle) > 0) ? action.getText(this.breadCrumbTitle) : null,
+    //         index_btn: (action.getElementCount(this.index_btn) > 0) ? action.getText(this.index_btn) : null
+    //     }
+    //     logger.logInto(stackTrace.get(), JSON.stringify(obj));
+    //     return obj;
+    // },
 
-        }
+    getActivityPlayerData: function () {
+        let data = basePlayerPage.getBasePlayerInfo();
+        data.infoTOC = (action.getElementCount(this.infoTOC) > 0) ? action.waitForDisplayed(this.infoTOC) : null;
+        data.checkAnswer_txt = (action.getElementCount(this.checkAnswer) > 0) ? action.getText(this.checkAnswer) : null;
+        data.questionInfo = (action.getElementCount(this.questionInfo) > 0) ? action.getText(this.questionInfo) : null;
+        data.submitActivity_isDisabled = (action.getElementCount(this.submitActivity_btn) > 0) ? action.getAttribute(this.submitActivity_btn, 'disabled') : null;
+        data.submitActivity_txt = (action.getElementCount(this.submitActivity_btn) > 0) ? action.getText(this.submitActivity_btn) : null;
+        data.previousActivity_txt = (action.getElementCount(this.previousActivity_btn) > 0) ? action.getText(this.previousActivity_btn) : null;
+        data.nextActivity_txt = (action.getElementCount(this.nextActivity_btn) > 0) ? action.getText(this.nextActivity_btn) : null;
         logger.logInto(stackTrace.get(), JSON.stringify(obj));
-        return obj;
+        return data;
     },
 
-    getActivityPlayerData: function() {
-        obj = {
-            breadCrumbData: this.getBreadcrumbHeaderData(),
-            infoTOC: (action.getElementCount(this.infoTOC) > 0) ? action.waitForDisplayed(this.infoTOC) : null,
-            checkAnswer_txt: (action.getElementCount(this.checkAnswer) > 0) ? action.getText(this.checkAnswer) : null,
-            checkAnswer_enabled: (action.getElementCount(this.checkAnswer) > 0) ? action.isEnabled(this.checkAnswer) : null,
-            questionInfo: (action.getElementCount(this.questionInfo) > 0) ? action.getText(this.questionInfo) : null,
-            submitActivity_btn: (action.getElementCount(this.submitActivity_btn) > 0) ? action.getText(this.submitActivity_btn) : null,
-            submitActivity_btn_enabled: (action.getElementCount(this.submitActivity_btn) > 0) ? action.isEnabled(this.submitActivity_btn) : null,
-            previousActivity_btn: (action.getElementCount(this.previousActivity_btn) > 0) ? action.getText(this.previousActivity_btn) : null,
-            nextActivity_btn: (action.getElementCount(this.nextActivity_btn) > 0) ? action.getText(this.nextActivity_btn) : null,
-            next_btn: (action.getElementCount(this.next_btn) > 0) ? action.waitForDisplayed(this.next_btn) : null,
-            previous_btn: (action.getElementCount(this.previous_btn) > 0) ? action.waitForDisplayed(this.previous_btn) : null,
-            showAnswer_btn: (action.getElementCount(this.showAnswer_btn) > 0) ? action.waitForDisplayed(this.showAnswer_btn) : null,
-            showResponse_btn: (action.getElementCount(this.showResponse_btn) > 0) ? action.waitForDisplayed(this.showResponse_btn) : null
-        }
-        logger.logInto(stackTrace.get(), JSON.stringify(obj));
-        return obj;
+    clickPreviousQuestion: function () {
+        logger.logInto(stackTrace.get());
+        return basePlayerPage.click_Previous();
     },
 
-    clickPreviousActivity: function() {
+    clickNextQuestion: function () {
+        logger.logInto(stackTrace.get());
+        return basePlayerPage.click_Skip();
+    },
+
+    clickCheckAnswer: function () {
+        logger.logInto(stackTrace.get());
+        return basePlayerPage.click_CheckMyWork();
+    },
+
+    clickShowAnswer: function () {
+        logger.logInto(stackTrace.get());
+        return basePlayerPage.click_ShowAnswer();
+    },
+
+    clickYourResponse: function () {
+        logger.logInto(stackTrace.get());
+        return basePlayerPage.click_YourResponse();
+    },
+
+    clickPreviousActivity: function () {
         logger.logInto(stackTrace.get());
         res = action.click(this.previousActivity_btn);
         if (true == res) {
@@ -70,7 +88,7 @@ module.exports = {
         return res;
     },
 
-    clickNextActivity: function() {
+    clickNextActivity: function () {
         logger.logInto(stackTrace.get());
         res = action.click(this.nextActivity_btn);
         if (true == res) {
@@ -82,43 +100,7 @@ module.exports = {
         return res;
     },
 
-    clickPreviousQuestion: function() {
-        logger.logInto(stackTrace.get());
-        res = action.click(this.previous_btn);
-        if (true == res) {
-            res = this.getActivityPlayerData();
-        } else {
-            res = res + " -- Error in clicking Previous Question button";
-            logger.logInto(stackTrace.get(), res, 'error');
-        }
-        return res;
-    },
-
-    clickNextQuestion: function() {
-        logger.logInto(stackTrace.get());
-        res = action.click(this.next_btn);
-        if (true == res) {
-            res = this.getActivityPlayerData();
-        } else {
-            res = res + " -- Error in clicking Next Question button";
-            logger.logInto(stackTrace.get(), res, 'error');
-        }
-        return res;
-    },
-
-    clickCheckAnswer: function() {
-        logger.logInto(stackTrace.get());
-        res = action.isEnabled(this.checkAnswer);
-        if (true == res) {
-            res = action.click(this.checkAnswer);
-        } else {
-            res = res + " -- Error in clicking Check Answer button";
-            logger.logInto(stackTrace.get(), res, 'error');
-        }
-        return res;
-    },
-
-    clickSubmitActivity: function() {
+    clickSubmitActivity: function () {
         logger.logInto(stackTrace.get());
         res = action.click(this.submitActivity_btn);
         if (true == res) {
@@ -130,19 +112,9 @@ module.exports = {
         return res;
     },
 
-    clickShowAnswer: function() {
-        logger.logInto(stackTrace.get());
-        res = action.click(this.showAnswer_btn);
-        if (true == res) {
-            res = this.getActivityPlayerData();
-        } else {
-            res = res + " -- Error in clicking Next Question button";
-            logger.logInto(stackTrace.get(), res, 'error');
-        }
-        return res;
-    },
 
-    getQuestionInfo: function() {
+    // Not Required currently, may be used later
+    /*getQuestionInfo: function () {
         var quesInfo = {
             activeQues: undefined,
             maxQues: undefined
@@ -163,9 +135,10 @@ module.exports = {
             logger.logInto(stackTrace.get(), "Question Information Not available", "error");
         }
         return quesInfo;
-    },
+    },*/
 
-    getFeedbackInfo: function() {
+    getFeedbackInfo: function () {
+        let insideFrame = basePlayerPage.enterFrame(this.feedback_txt);
         var feedbackinfo = {
             fdbackText: "",
             buttonText: "",
@@ -175,7 +148,9 @@ module.exports = {
         res = action.getElementCount(this.feedback_txt);
         if (res != 0) {
             logger.logInto(stackTrace.get(), " -- Feedback text is available");
-            feedbackinfo.fdbackText = action.getText(this.feedbackText);
+            action.waitForDisplayed(this.feedback_txt);
+            feedbackinfo.fdbackText = action.getText(this.feedback_txt);
+            res = feedbackinfo;
         } else {
             res = res + " -- Feedback text is NOT available";
             logger.logInto(stackTrace.get(), res, "error");
@@ -183,23 +158,24 @@ module.exports = {
 
         //showAnswer + feedback text
         if (action.getElementCount(this.showAnswer_btn) == 1) {
-
             feedbackinfo.buttonText = action.getText(this.showAnswer_btn);
             res = feedbackinfo;
         }
 
         //showResponse + feedback text + Showing Correct Answer text
         if (action.getElementCount(this.showResponse_btn) == 1) {
-
             feedbackinfo.buttonText = action.getText(this.showResponse_btn);
             feedbackinfo.showCorrectAnswerText = action.getText(this.showingCorrectAnswer_txt);
             res = feedbackinfo;
         }
-
+        if (insideFrame)
+            action.switchToParentFrame();
         return res;
     },
 
-    skipToQuestion: function(questionNumber) {
+
+    // Not Required currently, may be used later
+    /*skipToQuestion: function (questionNumber) {
         var quesItr;
         res = this.getQuestionInfo();
 
@@ -222,9 +198,9 @@ module.exports = {
 
             return res;
         }
-    },
+    },*/
 
-    clickOnBreadcrumb: function(){
+    clickOnBreadcrumb: function () {
         res = action.click(this.breadCrumbTitle)
         if (res == true) {
             logger.logInto(stackTrace.get(), " --Breadcrumb Button clicked");

@@ -13,6 +13,7 @@ module.exports = {
     isInitialized: function () {
         var instructorMyClass = require('./instructorMyClass.page.js');
         var instructorMyClassData = instructorMyClass.isInitialized();
+        instructorMyClassData.pageStatus=action.waitForDisplayed(this.classDrawerHeader)
         action.scrollIntoView(this.classDrawerTitle)
         let obj = {
             classDrawerTitle: action.getElementCount(this.classDrawerTitle) > 0 ? action.getText(this.classDrawerTitle) : null,
@@ -24,11 +25,11 @@ module.exports = {
         return obj;
     },
 
-    click_classDrawerCloseBtn: function () {
+    Click_classDrawerCloseBtn: function () {
         res = action.click(this.classDrawerCloseBtn);
         if (res == true) {
             logger.logInto(stackTrace.get(), res + "Drawer Pane is closed");
-            //res = dashboardPage.isInitialized();
+            res = dashboardPage.isInitialized();
         }
         else
             logger.logInto(stackTrace.get(), res + "Drawer Pane is NOT closed", "error");

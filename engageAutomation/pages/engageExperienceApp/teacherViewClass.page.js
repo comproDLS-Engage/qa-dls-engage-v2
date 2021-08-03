@@ -230,7 +230,21 @@ module.exports = {
             logger.logInto(stackTrace.get(), res, 'error');
         }
         return res;
-    }
+    },
+    //Click on View Book button
+    clickViewBookbtn: function () {
+        logger.logInto(stackTrace.get());
+        res = action.click(this.viewBookBtn);
+        if (res == true) {
+            logger.logInto(stackTrace.get(), "-- Progress Tab is clicked");
+            //res = toc.isInitialized();
+        }
+        else {
+            res = res + "-- Error in clicking Progress Tab";
+            logger.logInto(stackTrace.get(), res, 'error');
+        }
+        return res;
+    },
 
 }
 

@@ -31,7 +31,7 @@
                     "class": [],
                     "info": {}
                 },
-                "validStudent3": {
+                 "validStudent3": {
                     "email": "difusionqa.stud12@yopmail.com",
                     "password": "Compro@1234",
                     "role": "student",
@@ -40,14 +40,24 @@
                     ],
                     "info": {}
                 },
-                "resetPasswordUser": {
-                    "email": "difusionqa.stud47@yopmail.com",
+                "acceptanceteacher": {
+                    "email": "acceptanceInstructor@yopmail.com",
                     "password": "Compro@1234",
                     "role": "student",
-                    "name": "difusionqa.stud66",
-                    "courses": [
-                        "course1"
-                    ],
+                    "name": "acceptance Instructor",
+                    "class": [  
+                        {
+                            "key": "TFbA-6AP7",
+                            "name": "acceptanceClass"
+                        }],
+                    "info": {}
+                },
+                "acceptanceStudent": {
+                    "email": "acceptancetest@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "student",
+                    "name": "acceptance test",
+                    "class": [],
                     "info": {}
                 },
                 "invalidUser1": {
@@ -101,37 +111,6 @@
                     "courses": [],
                     "info": "freash user without books or classes"
                 },
-                "validInstructorUser3": {
-                    "email": "difusionqa.teach1@yopmail.com",
-                    "password": "Compro@1234",
-                    "role": "instructor",
-                    "name": "difusionqa.teach1",
-                    "courses": [
-                        {
-                            "key": "VYd6-QDXo",
-                            "name": "course1"
-                        }
-                    ],
-                    "info": {}
-                },
-                "onboardingUser": {
-                    "email": "everexezu-6426@yopmail.com",
-                    "password": "Compro@1234",
-                    "name": "Onboarding User",
-                    "role": "new User",
-                    "courses": [],
-                    "info": {}
-                },
-                "joinCourseStudent": {
-                    "email": "ravelladditt-4110@yopmail.com",
-                    "password": "Compro@1234",
-                    "name": "JoinCourse Student",
-                    "role": "student",
-                    "courses": [
-                        "JoinCourse"
-                    ],
-                    "info": {}
-                },
                 "NoClassInstructor": {
                     "email": "noclassinstructornew@yopmail.com",
                     "password": "Compro@1234",
@@ -161,207 +140,12 @@
                     ],
                     "info": {}
                 },
-                "instructor1_20activeclass": {
-                    "email": "classinstructorlimit@yopmail.com",
-                    "password": "Compro@1234",
-                    "role": "instructor",
-                    "name": "classinstructorlimit",
-                    "class": [
-                        {
-                            "key": "Cw32-FLZ7",
-                            "name": "ClassActive1"
-                        },
-                        {
-                            "key": "Cw32-FLZ7",
-                            "name": "ClassActive2"
-                        },
-                        {
-                            "key": "Cw32-FLZ7",
-                            "name": "ClassActive3"
-                        },
-                        {
-                            "key": "Cw32-FLZ7",
-                            "name": "ClassActive4"
-                        },
-                        {
-                            "key": "Cw32-FLZ7",
-                            "name": "ClassActive5"
-                        },
-                        {
-                            "key": "Cw32-FLZ7",
-                            "name": "ClassActive6"
-                        },
-                        {
-                            "key": "Cw32-FLZ7",
-                            "name": "ClassActive7"
-                        },
-                        {
-                            "key": "Cw32-FLZ7",
-                            "name": "ClassActive8"
-                        },
-                        {
-                            "key": "Cw32-FLZ7",
-                            "name": "ClassActive9"
-                        },
-                        {
-                            "key": "Cw32-FLZ7",
-                            "name": "ClassActive10"
-                        },
-                        {
-                            "key": "Cw32-FLZ7",
-                            "name": "ClassActive11"
-                        },
-                        {
-                            "key": "Cw32-FLZ7",
-                            "name": "ClassActive12"
-                        },
-                        {
-                            "key": "Cw32-FLZ7",
-                            "name": "ClassActive13"
-                        },
-                        {
-                            "key": "Cw32-FLZ7",
-                            "name": "ClassActive14"
-                        },
-                        {
-                            "key": "Cw32-FLZ7",
-                            "name": "ClassActive15"
-                        },
-                        {
-                            "key": "Cw32-FLZ7",
-                            "name": "ClassActive16"
-                        },
-                        {
-                            "key": "Cw32-FLZ7",
-                            "name": "ClassActive17"
-                        },
-                        {
-                            "key": "Cw32-FLZ7",
-                            "name": "ClassActive18"
-                        },
-                        {
-                            "key": "Cw32-FLZ7",
-                            "name": "ClassActive19"
-                        },
-                        {
-                            "key": "Cw32-FLZ7",
-                            "name": "ClassActive20"
-                        }
-                    ],
-                    "info": {}
-                },
-                "instructor1_20activeArchievedclass": {
-                    "email": "20activearchievedcourses@yopmail.com",
-                    "password": "Compro@1234",
-                    "role": "instructor",
-                    "name": "instructor1_20activeArchievedcourses",
-                    "class": [
-                        {
-                            "key": "Cw32-FLZ7",
-                            "name": "ClassActive1"
-                        },
-                        {
-                            "key": "Cw32-FLZ7",
-                            "name": "ClassActive2"
-                        },
-                        {
-                            "key": "Cw32-FLZ7",
-                            "name": "ClassActive3"
-                        },
-                        {
-                            "key": "Cw32-FLZ7",
-                            "name": "ClassActive4"
-                        },
-                        {
-                            "key": "Cw32-FLZ7",
-                            "name": "ClassActive5"
-                        },
-                        {
-                            "key": "Cw32-FLZ7",
-                            "name": "ClassActive6"
-                        },
-                        {
-                            "key": "Cw32-FLZ7",
-                            "name": "ClassActive7"
-                        },
-                        {
-                            "key": "Cw32-FLZ7",
-                            "name": "ClassActive8"
-                        },
-                        {
-                            "key": "Cw32-FLZ7",
-                            "name": "ClassActive9"
-                        },
-                        {
-                            "key": "Cw32-FLZ7",
-                            "name": "ClassActive10"
-                        },
-                        {
-                            "key": "Cw32-FLZ7",
-                            "name": "ClassActive11"
-                        },
-                        {
-                            "key": "Cw32-FLZ7",
-                            "name": "ClassActive12"
-                        },
-                        {
-                            "key": "Cw32-FLZ7",
-                            "name": "ClassActive13"
-                        },
-                        {
-                            "key": "Cw32-FLZ7",
-                            "name": "ClassActive14"
-                        },
-                        {
-                            "key": "Cw32-FLZ7",
-                            "name": "ClassActive15"
-                        },
-                        {
-                            "key": "Cw32-FLZ7",
-                            "name": "ClassActive16"
-                        },
-                        {
-                            "key": "Cw32-FLZ7",
-                            "name": "ClassActive17"
-                        },
-                        {
-                            "key": "Cw32-FLZ7",
-                            "name": "ClassActive18"
-                        },
-                        {
-                            "key": "Cw32-FLZ7",
-                            "name": "ClassActive19"
-                        }
-                    ],
-                    "info": {}
-                },
                 "classInstructorUser3": {
                     "email": "engageblank@yopmail.com",
                     "password": "Compro@1234",
                     "role": "instructor",
                     "name": "12",
                     "class": [],
-                    "info": {}
-                },
-                "studentMgmtInstructorUser": {
-                    "email": "olowaca-3116@yopmail.com",
-                    "password": "Compro@1234",
-                    "role": "instructor",
-                    "name": "olowaca-3116",
-                    "courses": [
-                        {
-                            "key": "VYv9-4C38",
-                            "name": "courseWithStudents"
-                        },
-                        {
-                            "key": "iK2t-3TLy",
-                            "name": "courseWithoutStudents"
-                        },
-                        {
-                            "key": "WdTp-4Q47",
-                            "name": "archievedCourseWithStudents"
-                        }
-                    ],
                     "info": {}
                 }
             }

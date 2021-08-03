@@ -1,6 +1,7 @@
 "use strict";
 var instructorMyClassPage = require('../../pages/engageExperienceApp/instructorMyClass.page.js');
 var createClassPage = require('../../pages/engageExperienceApp/createClass.page.js');
+var addBookPage = require('../../pages/engageExperienceApp/addBook.page.js');
 var successClassPage = require('../../pages/engageExperienceApp/successClass.page.js');
 var calender = require('../../pages/engageExperienceApp/calender.page.js');
 var classDrawerpage = require('../../pages/engageExperienceApp/classDrawer.page.js');
@@ -108,6 +109,7 @@ module.exports = {
 	},
 	//Validate that Create Class page is launched on clicking create class button
 	ENG_INS_CLASS_TC_6: function () {
+		sts = instructorMyClassPage.isInitialized()
 		sts = instructorMyClassPage.click_CreateClass_Button();
 		assertion.assertEqual(sts, true, "Create Class Page not launched: " + JSON.stringify(sts))
 		sts = createClassPage.isInitialized();
@@ -121,9 +123,9 @@ module.exports = {
 	},
 	//Validate that on clicking a Class card on the My Classes Page, Class Dashboard is launched for that class
 	ENG_INS_CLASS_TC_7: function (testdata) {
-		sts = instructorMyClassPage.click_ClassCard(testdata.class[1].name)
+		sts = instructorMyClassPage.click_ClassCard(testdata)
 		assertion.assertEqual(sts.pageStatus, true, "Class Deatails page is not launched" + JSON.stringify(sts.pageStatus))
-		assertion.assertEqual(sts.className, testdata.class[1].name, "Same Class is not displayed" + JSON.stringify(sts))
+		assertion.assertEqual(sts.className, testdata, "Same Class is not displayed" + JSON.stringify(sts))
 
 	},
 
@@ -426,11 +428,11 @@ module.exports = {
 		sts = classDrawerpage.isInitialized();
 		assertion.assertEqual(sts.classDrawerHeader, "PROYECTOS" + testdata.header, "Class Title Text Mismatch: " + JSON.stringify(sts.title_lbl))
 		assertion.assertEqual(sts.classDrawerTitle, testdata.classDrawerTitle, "Class Title Text Mismatch: " + JSON.stringify(sts.title_lbl))
-		assertion.assertEqual(sts.classDrawerCloseBtn, true, "Class Title Text Mismatch: " + JSON.stringify(sts.title_lbl))
-		assertion.assertEqual(sts.classDrawerSubTitle, testdata.classDrawerSubTitle, "Class Title Text Mismatch: " + JSON.stringify(sts.title_lbl))
-		assertion.assertEqual(sts.classDrawerHeader, "PROYECTOS" + testdata.header, "Class Title Text Mismatch: " + JSON.stringify(sts.title_lbl))
+		assertion.assertEqual(sts.classDrawerCloseBtn, true, "Class Close btn Text Mismatch: " + JSON.stringify(sts.title_lbl))
+		assertion.assertEqual(sts.classDrawerSubTitle, testdata.classDrawerSubTitle, "Class SubTitle Text Mismatch: " + JSON.stringify(sts.title_lbl))
+		assertion.assertEqual(sts.classDrawerHeader, "PROYECTOS" + testdata.header, "Class Header Text Mismatch: " + JSON.stringify(sts.title_lbl))
 		assertion.assertEqual(sts.instructorMyClassData.classHeading, testdata.classHeading, "Page Title Text Mismatch: " + JSON.stringify(sts.pageTitle))
-		assertion.assertEqual(sts.instructorMyClassData.addClassBtn, testdata.addClassBtnwithClass, "Class Title Text Mismatch: " + JSON.stringify(sts.title_lbl))
+		assertion.assertEqual(sts.instructorMyClassData.addClassBtn, testdata.addClassBtnwithClass, "Add Class button Text Mismatch: " + JSON.stringify(sts.title_lbl))
 
 
 	},
@@ -449,19 +451,49 @@ module.exports = {
 	//Validate book is by default selected
 	ENG_INS_CLASS_TC_41: function () {
 		sts = createClassPage.isInitialized();
-		assertion.assertEqual(sts.bookIcon, true, "My Class Page Not Displayed: " + JSON.stringify(sts.pageStatus))
-
-	},
-	//Click on add book button and Validate the book is added in the class
-	ENG_INS_CLASS_TC_42: function () {
-		sts = createClassPage.click_AddANewBook_Button();
+		assertion.assertEqual(sts.bookIcon, true, "Book is already displayed: " + JSON.stringify(sts.pageStatus))
+		sts = createClassPage.checkbookAvaibility();
 		//console.log(sts)
 		if ((sts) == "alreadySelected") {
 			sts = true;
 		}
-		else
-			sts = createClassPage.click_SelectBook();
-		assertion.assertEqual(sts, true, "My Class Page Not Displayed: " + JSON.stringify(sts.pageStatus))
+		assertion.assertEqual(sts, true, "Book is not selected on page: " + JSON.stringify(sts.pageStatus))
+
+	},
+	//Click on add book button and Validate the book is added in the class
+	ENG_INS_CLASS_TC_42: function (index) {
+		sts = createClassPage.click_AddANewBook_Button();
+		if ((typeof (sts)) === "object") {
+			assertion.assertEqual(sts.pageStatus, true, "Create Class Page not launched: " + JSON.stringify(sts))
+
+		} else {
+			assertion.assertFail(sts);
+		}
+		/*		
+				sts = addBookPage.click_addBook("PROYECTOS");
+				sts=addBookPage.click_AddtoClass_Button();
+				assertion.assertEqual(sts.pageStatus, true, "My Class Page Not Displayed: " + JSON.stringify(sts.pageStatus))
+				*/
+
+	},
+
+	//Validate the class drawer Pane for student when  class is added
+	ENG_INS_CLASS_TC_43: function (testdata) {
+		sts = classDrawerpage.isInitialized();
+		assertion.assertEqual(sts.classDrawerHeader, "PROYECTOS" + testdata.header, "Class Title Text Mismatch: " + JSON.stringify(sts.title_lbl))
+		//assertion.assertEqual(sts.classDrawerTitle, testdata.classDrawerTitle, "Class Title Text Mismatch: " + JSON.stringify(sts.title_lbl))
+		assertion.assertEqual(sts.classDrawerCloseBtn, true, "Class Close btn Text Mismatch: " + JSON.stringify(sts.title_lbl))
+		//assertion.assertEqual(sts.classDrawerSubTitle, testdata.classDrawerSubTitle, "Class SubTitle Text Mismatch: " + JSON.stringify(sts.title_lbl))
+		//	assertion.assertEqual(sts.instructorMyClassData.classHeading, testdata.classHeading, "Page Title Text Mismatch: " + JSON.stringify(sts.pageTitle))
+		//	assertion.assertEqual(sts.instructorMyClassData.addClassBtn, testdata.addClassBtnwithClass, "Add Class button Text Mismatch: " + JSON.stringify(sts.title_lbl))
+
+
+	},
+	// Validate book details is launched after clicking on View Book button
+
+	ENG_INS_CLASS_TC_44: function () {
+		sts = teacherViewClassPage.clickViewBookbtn()
+		console.log(sts)
 
 	},
 	//rupsi	

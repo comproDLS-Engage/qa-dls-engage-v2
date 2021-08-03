@@ -10,7 +10,6 @@ module.exports = {
     className_txt: selectorFile.css.ComproEngage.successClassPage.className_txt,
     successCaption_txt: selectorFile.css.ComproEngage.successClassPage.successCaption_txt,
     classKey_value: selectorFile.css.ComproEngage.successClassPage.classKey_value,
-    copy_txt: selectorFile.css.ComproEngage.successClassPage.copy_txt,
     copy_btn: selectorFile.css.ComproEngage.successClassPage.copy_btn,
     loaderIcon: selectorFile.css.ComproEngage.widgets.loaderIcon,
     pageTitle: selectorFile.css.ComproEngage.createClassPage.pageTitle,
@@ -33,7 +32,7 @@ module.exports = {
             backToHomeBtn_txt: action.getElementCount(this.backToHomeBtn) > 0 ? action.getText(this.backToHomeBtn) : null,
             className_txt: action.getElementCount(this.className_txt) > 0 ? action.getText(this.className_txt) : null,
             successCaption_txt: action.getElementCount(this.successCaption_txt) > 0 ? action.getText(this.successCaption_txt) : null,
-            copy_txt: action.getElementCount(this.copy_txt) > 0 ? action.getText(this.copy_txt) : null,
+            copy_txt: action.getElementCount(this.copy_btn) > 0 ? action.getText(this.copy_btn) : null,
             classKey_value: action.getElementCount(this.classKey_value) > 0 ? action.getText(this.classKey_value) : null,
             copy_btn: action.getElementCount(this.copy_btn) > 0 ? action.waitForExist(this.copy_btn) : null,
         }

@@ -232,31 +232,41 @@ module.exports = {
     },
     // Akhil: function missing for selecting the book checkbox
     // this function should accept the book name then select the book based on name
-    click_SelectBook: function (bookName) {
+    click_SelectBook: function (index) {
         //rupsi: will work on this function when got another book, now workonly for selecting first book
-        if ((action.waitForExist("footer div>svg", 10000)) != true) {
-            action.click("[data-tid=button-add-0]")
-        }
+        //if ((action.waitForExist("footer div>svg", 10000)) != true) {
+        //    action.click("[data-tid=button-add-" + index + "]")
+        //}
+        action.click("[data-tid=button-add-" + index + "]")
         res = action.waitForClickable("[data-tid=\"button-Add to Class\"")
         action.click("[data-tid=\"button-Add to Class\"]")
         action.waitForDisplayed(this.bookIcon)
         return res;
     },
 
-    click_AddANewBook_Button: function () {
+    checkbookAvaibility: function () {
         logger.logInto(stackTrace.get());
         if (action.getElementCount(this.bookIcon) < 1) {
 
-            res = action.click(this.AddANewBook_btn);
-            if (res == true) {
-                logger.logInto(stackTrace.get(), res + "Add A New Book Button Clicked");
-                // let addBookPage = require('./addBook.page.js')
-                // res = addBookPage.isInitialized();
-            }
-            else
-                logger.logInto(stackTrace.get(), res + ":Add A New Book Button is NOT Clicked", "error");
+            res = null;
         } else
             res = "alreadySelected"
+        return res;
+    },
+
+    click_AddANewBook_Button: function () {
+        logger.logInto(stackTrace.get());
+
+        res = action.click(this.AddANewBook_btn);
+        if (res == true) {
+            logger.logInto(stackTrace.get(), res + "Add A New Book Button Clicked");
+            let addBookPage = require('./addBook.page.js')
+            res = addBookPage.isInitialized();
+        }
+        else
+            logger.logInto(stackTrace.get(), res + ":Add A New Book Button is NOT Clicked", "error");
+
+        console.log(res)
         return res;
     },
 

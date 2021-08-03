@@ -10,6 +10,7 @@
 					"email": "vengqains5_new@yopmail.com"
 				},
 				"bookName": "PROYECTOS",
+				"bookIndex":"0",
 				"schoolName": "Mount Allison School",
 				"status": "Active",
 				"studentCount": 0,
@@ -82,6 +83,7 @@
 					"email": ""
 				},
 				"bookName": "INTRODUCTION TO BIOLOGY",
+				"bookIndex":"1",
 				"schoolName": "",
 				"status": "Active",
 				"studentCount": "",
@@ -97,6 +99,7 @@
 					"email": ""
 				},
 				"bookName": "INTRODUCTION TO BIOLOGY",
+				"bookIndex":"0",
 				"schoolName": "",
 				"status": "Active",
 				"studentCount": "",

@@ -3,7 +3,7 @@ var bookDetailPage = require('../../pages/engageExperienceApp/bookDetail.page.js
 var unitDetailPage = require('../../pages/engageExperienceApp/unitDetail.page.js');
 var activityPlayerPage = require('../../pages/engageExperienceApp/activityPlayer.page.js');
 var classDrawerPage = require('../../pages/engageExperienceApp/classDrawer.page.js');
-var appShell = require('../../pages/engageExperienceApp/appShell.page.js');
+var appShell = require('./appShell.test.js');
 var action = require('../../core/actionLibrary/baseActionLibrary.js');
 
 var sts;
@@ -74,7 +74,7 @@ module.exports = {
         sts = bookDetailPage.clickOpenFlipbook();
         assertion.assertEqual(sts, true, "Open Flipbook button not clicked");
 
-        sts = appShell.clickOnBreadcrumb();
+        sts = appShell.ENG_SHELL_TC_11();
         assertion.assertEqual(sts, true, "Breadcrumb not clicked");
 
         sts = bookDetailPage.getBookViewPageData();
@@ -114,7 +114,7 @@ module.exports = {
         assertion.assertEqual(sts, true, "Continue button not clicked");
 
         sts = activityPlayerPage.isInitialized()
-        assertion.assertEqual(sts.breadCrumbData.breadCrumbTitle, testdata.unit[0].title.replace(".", ":") + " | " + testdata.name, "Header breadcrumb Mismatch");
+        assertion.assertEqual(sts.checkmyWork_isExists, true, "Check My Work Not Displayed");
 
     },
 
@@ -135,7 +135,7 @@ module.exports = {
         sts = bookDetailPage.clickUnitOpeninFlipbook(testdata[0]);
         assertion.assertEqual(sts, true, "Open Flipbook button not clicked");
 
-        sts = appShell.clickOnBreadcrumb();
+        sts = appShell.ENG_SHELL_TC_11();
         assertion.assertEqual(sts, true, "Breadcrumb not clicked");
 
         sts = bookDetailPage.getBookViewPageData();
@@ -162,7 +162,7 @@ module.exports = {
         assertion.assertEqual(sts, true, "Activity Not Clicked");
 
         sts = activityPlayerPage.isInitialized()
-        assertion.assertEqual(sts.breadCrumbData.breadCrumbTitle, testdata[1].unit[0].title.replace(".", ":") + " | " + testdata[1].name, "Header breadcrumb Mismatch");
+        assertion.assertEqual(sts.checkmyWork_isExists, true, "Check My Work Not Displayed");
 
     },
 
@@ -176,7 +176,7 @@ module.exports = {
 
     //Validate that clicking on Activity Screen breadcrumb naviagtes to Unit detail TOC page
     ENG_BOOK_TC_43: function(testdata) {
-        sts = appShell.clickOnBreadcrumb();
+        sts = appShell.ENG_SHELL_TC_11();
         assertion.assertEqual(sts, true, "Breadcrumb Not Clicked");
 
         sts = unitDetailPage.isInitialized();
@@ -187,7 +187,7 @@ module.exports = {
 
     //Validate that clicking on unit Detail TOC breadcrumb naviagtes to Book detail TOC page
     ENG_BOOK_TC_44: function(testdata) {
-        sts = appShell.clickOnBreadcrumb();
+        sts = appShell.ENG_SHELL_TC_11();
         assertion.assertEqual(sts, true, "Breadcrumb Not Clicked");
 
         sts = bookDetailPage.isInitialized();
@@ -199,7 +199,7 @@ module.exports = {
 
     //Validate that clicking on Activity Screen breadcrumb naviagtes to Book Detail TOC page 
     ENG_BOOK_TC_45: function(testdata) {
-        sts = appShell.clickOnBreadcrumb();
+        sts = appShell.ENG_SHELL_TC_11();
         assertion.assertEqual(sts, true, "Activity Breadcrumb Not Clicked");
 
         sts = bookDetailPage.isInitialized();

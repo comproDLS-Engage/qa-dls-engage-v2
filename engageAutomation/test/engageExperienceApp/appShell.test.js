@@ -75,7 +75,7 @@ module.exports = {
 	//Validate that clicking on logout logs out from application
 	ENG_SHELL_TC_9: function () {
 		sts = appShell.clickLogoutButton();
-		//assertion.assertEqual(sts.pageStatus, true, "Landing page status mismatch");
+		assertion.assertEqual(sts.pageStatus, true, "Landing page status mismatch");
 	},
 	//Validate that clicking on + button on classes in Left navigation pane, launched the create class page in teacher login
 	ENG_SHELL_TC_10: function () {
@@ -85,6 +85,20 @@ module.exports = {
 		} else {
 			assertion.assertFail(sts);
 		}
-
 	},
+	// Validate that click on breadcrumb back button on the header launch the previous page
+	ENG_SHELL_TC_11: function () {
+		sts = appShell.Click_breadcrumbbackbutton()
+		if ((typeof (sts)) === "object") {
+			assertion.assertEqual(sts.pageStatus, true, "Back button is not clicked: " + JSON.stringify(sts))
+		} else {
+			assertion.assertFail(sts);
+		}
+	},
+		// Validate that click on breadcrumb product tile on the header launch the previous page
+		ENG_SHELL_TC_12: function () {
+			sts = appShell.Click_breadcrumbproductTitle()
+				assertion.assertEqual(sts, true, "Back button is not clicked: " + JSON.stringify(sts))
+		
+		},
 }
