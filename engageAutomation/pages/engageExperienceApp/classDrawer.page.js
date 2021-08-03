@@ -11,8 +11,8 @@ module.exports = {
     classDrawerSubTitle: selectorFile.css.ComproEngage.classDrawer.classDrawerSubTitle,
     classDrawerCloseBtn: selectorFile.css.ComproEngage.classDrawer.classDrawerCloseBtn,
     isInitialized: function () {
-        var instructorMyClass = require('./instructorMyClass.page.js');
-        var instructorMyClassData = instructorMyClass.isInitialized();
+        //var instructorMyClass = require('./instructorMyClass.page.js');
+        //var instructorMyClassData = instructorMyClass.isInitialized();
         action.scrollIntoView(this.classDrawerTitle)
         let obj = {
             classDrawerTitle: action.getElementCount(this.classDrawerTitle) > 0 ? action.getText(this.classDrawerTitle) : null,
@@ -24,7 +24,7 @@ module.exports = {
         return obj;
     },
 
-    Click_classDrawerCloseBtn: function () {
+    click_classDrawerCloseBtn: function () {
         res = action.click(this.classDrawerCloseBtn);
         if (res == true) {
             logger.logInto(stackTrace.get(), res + "Drawer Pane is closed");

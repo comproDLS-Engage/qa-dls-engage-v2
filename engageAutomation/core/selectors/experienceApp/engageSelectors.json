@@ -285,7 +285,7 @@
             "removeBookDialogCancel":"[data-tid=button-secondary-removeBook]",
             "removeBookDialogRemove":"[data-tid=button-primary-removeBook]",
             "viewBookDetails_btn":"[data-tid=button-viewBookDetails]",
-            "addBook_btn":"[data-tid=button-addMyBook]",
+            "addBook_btn":"[data-tid=button-addToMyBook]",
             "myBooks_lbl":"[data-tid=pill-myBooks]",
             "component":"[data-tid*=button-product-",
             "openFlipbook_btn":"[data-tid=button-openFlipbook]",

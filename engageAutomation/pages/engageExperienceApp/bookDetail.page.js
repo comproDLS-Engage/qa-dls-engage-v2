@@ -123,12 +123,13 @@ module.exports = {
         return res;
     },
 
-    clickAddBook: function () {  //this needs to be updated - akhil
+    clickAddBook: function () {  
         logger.logInto(stackTrace.get())
+        this.clickMoreOptionsButton();
         res = action.click(this.addBook_btn);
         if (res == true) {
             logger.logInto(stackTrace.get(), " --Add Book Button clicked");
-            //return what change happens after clicking this button - akhil
+            res = this.getBookViewPageData()
 
         } else
             logger.logInto(stackTrace.get(), " --Add Book Button NOT clicked", "error");
@@ -207,7 +208,7 @@ module.exports = {
     getMoreOptionsButtonData: function () {
         obj = {
 
-            addBook : addBook_btn: (action.getElementCount(this.addBook_btn) > 0) ? action.getText(this.addBook_btn) : null,
+            addBook_btn: (action.getElementCount(this.addBook_btn) > 0) ? action.getText(this.addBook_btn) : null,
             removeBook: (action.getElementCount(this.removeBook_btn) > 0) ? action.getText(this.removeBook_btn) : null,
             viewBookDetails: (action.getElementCount(this.viewBookDetails_btn) > 0) ? action.getText(this.viewBookDetails_btn) : null
         }
@@ -228,12 +229,13 @@ module.exports = {
 
     },
 
-    clickRemoveBook: function () { // this needs to be updated due to new change in the app - akhil
+    clickRemoveBook: function () { 
         logger.logInto(stackTrace.get())
+        this.clickMoreOptionsButton();
         res = action.click(this.removeBook_btn);
         if (res == true) {
             logger.logInto(stackTrace.get(), " --Remove Book Button clicked");
-            // return the change that happens after clicking remove book - akhil
+            res = this.getRemoveBookPopUpData();
         } else
             logger.logInto(stackTrace.get(), " --Remove Book Button NOT clicked", "error");
         return res;
@@ -245,6 +247,7 @@ module.exports = {
         res = action.click(this.removeBookDialogCancel);
         if (res == true) {
             action.waitForDisplayed(this.bookCover)
+            res = this.getBookViewPageData();
             logger.logInto(stackTrace.get(), " --Cancel Button clicked");
 
         } else
@@ -259,6 +262,7 @@ module.exports = {
         res = action.click(this.removeBookDialogRemove);
         if (res == true) {
             action.waitForDisplayed(this.bookCover)
+            res = this.getBookViewPageData();
             logger.logInto(stackTrace.get(), " --Remove Book Button clicked");
 
         } else

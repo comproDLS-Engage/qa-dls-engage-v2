@@ -235,7 +235,7 @@ exports.config = {
         //require: './env.conf.js',
         ui: 'bdd',
         timeout: 600000,
-        grep: ""
+        grep: "Suite1"
     },
     //
     // =====

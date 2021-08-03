@@ -2,7 +2,7 @@
     "book":
     {
         "name": "QA Test Automation Book [DO NOT MODIFY]",
-        "description": "Book used in test automation - DO NOT MODIFY",
+        "description": "DO NOT MODIFY",
         "component": [
         {
             "index": 0,
@@ -58,7 +58,7 @@
             "unit": [
             {
                 "index": 0,
-                "title": "1. Unit 1",
+                "title": "Unit 1",
                 "activityCount": "1",
                 "folderCount": "0",
                 "flipbookPageNum": "",
