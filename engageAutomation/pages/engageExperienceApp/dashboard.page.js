@@ -15,7 +15,7 @@ module.exports = {
     resourceTitle: selectorFile.css.ComproEngage.dashboardPage.resourceTitle,
     //for blank dashboard in slider section
     cardSliderTitle: selectorFile.css.ComproEngage.dashboardPage.cardSliderTitle,
-    cardSliderSubtitle: selectorFile.css.ComproEngage.dashboardPage.cardSliderTitle,
+    cardSliderSubtitle: selectorFile.css.ComproEngage.dashboardPage.cardSliderSubtitle,
     cardSliderLeftBtn: selectorFile.css.ComproEngage.dashboardPage.cardSliderLeftBtn,
     cardSliderRightBtn: selectorFile.css.ComproEngage.dashboardPage.cardSliderRightBtn,
     actionCardTitles: selectorFile.css.ComproEngage.dashboardPage.actionCardTitles,
@@ -183,11 +183,16 @@ module.exports = {
     },
 
     clickMenuRemoveBook: function (bookName) {
+        console.log("click menu remove !!!!")
         logger.logInto(stackTrace.get());
         ret = this.getDashboardPageData();
+        console.log("2. bo0ks",ret.bookList.length)
+        console.log("3. book name",bookName)
+
         for (var i = 0; i < ret.bookList.length; i++) {
             if (ret.bookList[i].bookTitle == bookName) {
                 res = action.click(this.removeBook_menu + i + "]");
+                console.log("---remove clicked ?",res)
                 if (res == true) {
                     logger.logInto(stackTrace.get(), " --Remove from My books clicked");
                     let obj = {
@@ -196,6 +201,7 @@ module.exports = {
                         removeBook_cancel: (action.getElementCount(this.removeBook_cancel) > 0) ? action.getText(this.removeBook_cancel) : null,
                         removeBook_remove: (action.getElementCount(this.removeBook_remove) > 0) ? action.getText(this.removeBook_remove) : null,
                     }
+                    console.log("-----obj",obj)
                     return obj;
                 }
                 else {
@@ -224,14 +230,15 @@ module.exports = {
         logger.logInto(stackTrace.get());
         res = action.click(this.removeBook_remove);
 		if (true == res) {
-            res = this.isInitialized();
-            logger.logInto(stackTrace.get(), " --cancel button is clicked");
+            // res = this.isInitialized();
+            // logger.logInto(stackTrace.get(), " --cancel button is clicked");
+            return true
 		}
 		else {
 			res = res + " -- Error in clicking Notification Close Button";
 			logger.logInto(stackTrace.get(), res, 'error');
 		}
-		return res;
+		//return res;
     },
 
     clickMenuOpenFlipbook: function (bookName) {
@@ -262,15 +269,15 @@ module.exports = {
                 res = action.click(this.addBook_Btn);
                 if (res == true) {
                     logger.logInto(stackTrace.get(), " Add book button is clicked");
-                    var addBook = require('./addBook.page.js');
-                    res = addBook.isInitialized();
+                    return true
+                    // var addBook = require('./addBook.page.js');
+                    // res = addBook.isInitialized();
                 }
                 else {
                     res = res + " -- Error in clicking Add book Button"
                     logger.logInto(stackTrace.get(), res, "error");
-                }
-            
-        return res;
+                }  
+        //return res;
     },
 
     ClickPlusIconofBook:function(bookName) {

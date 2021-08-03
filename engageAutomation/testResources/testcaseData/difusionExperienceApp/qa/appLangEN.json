@@ -46,6 +46,44 @@
                 "invalidEmail_txt": "Please check your email address and try again.",
                 "notRegisterUser_alert": "Please check your email address and password and try again."
             },
+            "dashboard": {
+                "pageTitle": "Dashboard",
+                "createPlaylist_Txt": "Create Playlist",
+                "addBook_Txt":"Add Book",
+                "cardSliderTitle":"Getting started",
+                "cardSliderSubtitle":"Use your dashboard to pin your textbooks and create playlists to share with your class.",
+                "myBooksHeading_Txt":"My Books",
+                "noBooks_title":"No Books added yet",
+                "noBooks_subTitle":"Any books you save while browsing the catalog will be added here for you to view later.",
+                "noBooks_btn":"Add Book",
+                "myPlaylistsHeading_Txt":"My Playlists",
+                "noPlaylists_title":"No Playlist created yet",
+                "noPlaylists_subTitle":"Any playlists you create will be added here for you to view, share, and use in your classes.",
+                "noPlaylists_btn":"Create Playlist",
+                "actionCard":[
+                    {
+                        "actionCardTitles": "Adding Books",
+                        "actionCardSubtitles":"Save your class books to your dashboard to quickly access your book materials.",
+                        "actionCardBtns":"Add Book"
+                    },
+                    {   
+                        "actionCardTitles": "Using Classes",
+                        "actionCardSubtitles":"assignments.",
+                        "actionCardBtns":"Create Class"
+
+                    },
+                    {   
+                        "actionCardTitles": "Using Playlists",
+                        "actionCardSubtitles":"Any playlists you create will be added here for you to view, share, and use in your classes.",
+                        "actionCardBtns":"Create Playlist"
+
+                    }
+                ],
+                "removeBook_title":"Remove from My Books?",
+                "removeBook_subTitle":"This will remove the book - All Type Book - from your My Books list.",
+                "removeBook_cancel":"Cancel",
+                "removeBook_remove":"Remove"
+            },
             "createClassPage": {
                 "pageTitle": "Create a new class",
                 "pageSubTitle": "Add your class details and start inviting students, creating assignments, and viewing progress.",
