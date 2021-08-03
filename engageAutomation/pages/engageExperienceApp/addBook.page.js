@@ -200,6 +200,20 @@ module.exports = {
             logger.logInto(stackTrace.get(), res + ":Add A New Book Button is NOT Clicked", "error");
 
         return res;
+    },
+
+    clickOnBook : function (bookTitle) {
+        console.log("[title='"+bookTitle+"']")
+        action.scrollIntoView("[title='"+bookTitle+"']");
+        res = action.click("[title='"+bookTitle+"']")
+        if (res == true) {
+            logger.logInto(stackTrace.get(), " --Book Title Clicked clicked");
+            let bookViewTOC = require('./bookDetail.page.js');
+            res = bookViewTOC.isInitialized();
+        } else
+            logger.logInto(stackTrace.get(), " --Book Title NOT clicked", "error");
+        return res;
+
     }
 
 }

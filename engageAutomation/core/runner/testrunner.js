@@ -1,7 +1,7 @@
 "use strict";
 var testObj, execJsonData, prevtestFile, getName, hookFuncData, tcProp;
-var testDataArr = new Array();
-var Arr = new Array();
+var testDataArr = [];
+var Arr = [];
 var rootDir = process.cwd();
 
 class specRunner {
