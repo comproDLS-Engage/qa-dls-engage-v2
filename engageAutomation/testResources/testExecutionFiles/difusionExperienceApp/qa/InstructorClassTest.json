@@ -91,7 +91,12 @@
         "id": "ENG_INS_CLASS_TC_42",
         "description": "",
         "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
-        "testData": []
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/classData.json",
+            "jsonPath": "engage.courses.newValidClasswithspecialCharacter.bookIndex"
+          }
+        ]
       },
       {
         "id": "ENG_INS_CLASS_TC_21",
@@ -166,6 +171,17 @@
         "description": "",
         "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
         "testData": []
+      },
+      {
+        "id": "ENG_INS_CLASS_TC_42",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/classData.json",
+            "jsonPath": "engage.courses.newInvalidClass.bookIndex"
+          }
+        ]
       },
       {
         "id": "ENG_INS_CLASS_TC_34",
@@ -580,7 +596,7 @@
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
-            "jsonPath": "engage.login.user.classInstructorUser1"
+            "jsonPath": "engage.login.user.classInstructorUser1.class[1].name"
           }
         ]
       },
@@ -684,7 +700,12 @@
         "id": "ENG_INS_CLASS_TC_42",
         "description": "",
         "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
-        "testData": []
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/classData.json",
+            "jsonPath": "engage.courses.newValidClasswithspecialCharacter.bookIndex"
+          }
+        ]
       },
       {
         "id": "ENG_INS_CLASS_TC_21",
@@ -792,7 +813,10 @@
         "id": "ENG_INS_CLASS_TC_42",
         "description": "",
         "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
-        "testData": []
+        "testData": [   {
+          "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/classData.json",
+          "jsonPath": "engage.courses.newValidClasswithspecialCharacter.bookIndex"
+        }]
       },
       {
         "id": "ENG_INS_CLASS_TC_21",
@@ -900,7 +924,12 @@
         "id": "ENG_INS_CLASS_TC_42",
         "description": "",
         "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
-        "testData": []
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/classData.json",
+            "jsonPath": "engage.courses.newValidClasswithspecialCharacter.bookIndex"
+          }
+        ]
       },
       {
         "id": "ENG_INS_CLASS_TC_21",

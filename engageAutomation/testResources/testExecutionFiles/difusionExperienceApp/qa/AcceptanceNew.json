@@ -494,6 +494,28 @@
             }
         ],
         "AfterEach": [],
-        "After": []
+        "After": [
+            {
+                "id": "ENG_SHELL_TC_8",
+                "description": "Validate that clicking on the profile dropdown launches the dropdown of profile and other options",
+                "testFile": "./test/engageExperienceApp/appShell.test.js",
+                "testData": [
+                   {
+                      "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                      "jsonPath": "engage.appContent.appShell"
+                   },
+                   {
+                      "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+                      "jsonPath": "engage.login.user.validStudent1"
+                   }
+                ]
+             },
+             {
+                "id": "ENG_SHELL_TC_9",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/appShell.test.js",
+                "testData": []
+              }
+        ]
     }
 }
