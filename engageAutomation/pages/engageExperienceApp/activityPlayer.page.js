@@ -2,7 +2,7 @@
 var action = require('../../core/actionLibrary/baseActionLibrary.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
 const basePlayerPage = require('./basePlayer.page.js');
-var res, obj, ret;
+var res, obj;
 
 module.exports = {
 
@@ -138,22 +138,19 @@ module.exports = {
     },*/
 
     getFeedbackInfo: function () {
-        let insideFrame = basePlayerPage.enterFrame(this.fdbackText);
-        console.log("Inside Frame : " + insideFrame);
+        let insideFrame = basePlayerPage.enterFrame(this.feedback_txt);
         var feedbackinfo = {
             fdbackText: "",
             buttonText: "",
             showCorrectAnswerText: ""
         }
 
-        ret = action.getElementCount(this.feedback_txt);
-        console.log("ret : " + ret);
-        if (ret != 0) {
+        res = action.getElementCount(this.feedback_txt);
+        if (res != 0) {
             logger.logInto(stackTrace.get(), " -- Feedback text is available");
-            action.waitForDisplayed(this.feedbackText);
-            feedbackinfo.fdbackText = action.getText(this.feedbackText);
+            action.waitForDisplayed(this.feedback_txt);
+            feedbackinfo.fdbackText = action.getText(this.feedback_txt);
             res = feedbackinfo;
-            console.log("INFO1: " +JSON.stringify(res));
         } else {
             res = res + " -- Feedback text is NOT available";
             logger.logInto(stackTrace.get(), res, "error");
@@ -161,21 +158,18 @@ module.exports = {
 
         //showAnswer + feedback text
         if (action.getElementCount(this.showAnswer_btn) == 1) {
-
             feedbackinfo.buttonText = action.getText(this.showAnswer_btn);
             res = feedbackinfo;
-            console.log("INFO2: " +JSON.stringify(res));
         }
 
         //showResponse + feedback text + Showing Correct Answer text
         if (action.getElementCount(this.showResponse_btn) == 1) {
-
             feedbackinfo.buttonText = action.getText(this.showResponse_btn);
             feedbackinfo.showCorrectAnswerText = action.getText(this.showingCorrectAnswer_txt);
             res = feedbackinfo;
         }
         if (insideFrame)
-			action.switchToParentFrame();
+            action.switchToParentFrame();
         return res;
     },
 
