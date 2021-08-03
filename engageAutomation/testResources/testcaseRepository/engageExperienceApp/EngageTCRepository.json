@@ -633,84 +633,91 @@
         "moduledetails": "",
         "testFile": "./test/engageExperienceApp/dashboard.test.js",
         "testcase": [
-        {
-            "id": "ENG_DASH_TC_1",
-            "description": "Validate on clicking Interactive Activities resource in Explore menu, same tab is launched on Browse",
-            "tags": "P2",
-            "visualTest": true
-        },
-        {
-            "id": "ENG_DASH_TC_2",
-            "description": "Validate on clicking Videos resource in Explore menu, same tab is launched on Browse",
-            "tags": "P2",
-            "visualTest": true
-        },
-        {
-            "id": "ENG_DASH_TC_3",
-            "description": "Validate on clicking Online Classes resource in Explore menu, same tab is launched on Browse",
-            "tags": "P2",
-            "visualTest": true
-        },
-        {
-            "id": "ENG_DASH_TC_4",
-            "description": "Validate on clicking Teacher Training resource in Explore menu, same tab is launched on Browse",
-            "tags": "P2",
-            "visualTest": true
-        },
-        {
-            "id": "ENG_DASH_TC_5",
-            "description": "Validate on clicking Today In Class resource in Explore menu, same tab is launched on Browse",
-            "tags": "P2",
-            "visualTest": true
-        },
-        {
-            "id": "ENG_DASH_TC_6",
-            "description": "Validate on clicking Projectable resource in Explore menu, same tab is launched on Browse",
-            "tags": "P2",
-            "visualTest": true
-        },
-        {
-            "id": "ENG_DASH_TC_7",
-            "description": "Validate on clicking book ellipses, dropdown menu is launched",
-            "tags": "P2",
-            "visualTest": true
-        },
-        {
-            "id": "ENG_DASH_TC_8",
-            "description": "Validate on clicking View Classes from Book dropdown menu, class Pane is launched",
-            "tags": "P2",
-            "visualTest": true
-        },
-        {
-            "id": "ENG_DASH_TC_9",
-            "description": "Validate on clicking Create Classes from Book dropdown menu, create class page is launched",
-            "tags": "P2",
-            "visualTest": true
-        },
-        {
-            "id": "ENG_DASH_TC_10",
-            "description": "Validate on clicking Remove from My Books from Book dropdown menu, not active snackbar message is displayed",
-            "tags": "P2",
-            "visualTest": true
-        },
-        {
-            "id": "ENG_DASH_TC_11",
-            "description": "Validate on clicking Open Flipbook from Book dropdown menu, flipbook page is launched",
-            "tags": "P2",
-            "visualTest": true
-        },
-        {
-            "id": "ENG_DASH_TC_12",
-            "description": "Validate the add book button of any book",
-            "tags": "P2",
-            "visualTest": true
-        },
-        {
-            "id": "ENG_DASH_TC_13",
-            "description": "Validate the \"+\" icon  button of any book",
-            "tags": "P2",
-            "visualTest": true
-        }]
+            {
+                "id": "ENG_DASH_TC_1",
+                "description": "Validate the content of the blank dashboard",
+                "tags": "P2",
+                "visualTest": true
+            },
+            {
+                "id": "ENG_DASH_TC_6",
+                "description": "Validate that clicking on 'Add Book' button, book list page is launched to select books to add",
+                "tags": "P2",
+                "visualTest": true
+            },
+            {
+                "id": "ENG_DASH_TC_12",
+                "description": "Validate on clicking book ellipses, dropdown menu is launched",
+                "tags": "P2",
+                "visualTest": true
+            },
+            {
+                "id": "ENG_DASH_TC_13",
+                "description": "Validate that clicking on 'Remove from My Books' launches a pop up with label 'Remove from My Books?'",
+                "tags": "P2",
+                "visualTest": true
+            },
+            {
+                "id": "ENG_DASH_TC_15",
+                "description": "Validate that clicking on 'Remove' in dialogue box removes the book from 'My List'",
+                "tags": "P2",
+                "visualTest": true
+            },
+            {
+                "id": "ENG_DASH_TC_8",
+                "description": "Validate on clicking View Classes from Book dropdown menu, class Pane is launched",
+                "tags": "P2",
+                "visualTest": true
+            },
+            {
+                "id": "ENG_DASH_TC_9",
+                "description": "Validate on clicking Create Classes from Book dropdown menu, create class page is launched",
+                "tags": "P2",
+                "visualTest": true
+            },
+            {
+                "id": "ENG_DASH_TC_11",
+                "description": "Validate on clicking Open Flipbook from Book dropdown menu, flipbook page is launched",
+                "tags": "P2",
+                "visualTest": true
+            },
+            {
+                "id": "ENG_DASH_TC_19",
+                "description": "Validate on clicking Interactive Activities resource in Explore menu, same tab is launched on Browse",
+                "tags": "P2",
+                "visualTest": true
+            },
+            {
+                "id": "ENG_DASH_TC_20",
+                "description": "Validate on clicking Videos resource in Explore menu, same tab is launched on Browse",
+                "tags": "P2",
+                "visualTest": true
+            },
+            {
+                "id": "ENG_DASH_TC_21",
+                "description": "Validate on clicking Online Classes resource in Explore menu, same tab is launched on Browse",
+                "tags": "P2",
+                "visualTest": true
+            },
+            {
+                "id": "ENG_DASH_TC_22",
+                "description": "Validate on clicking Teacher Training resource in Explore menu, same tab is launched on Browse",
+                "tags": "P2",
+                "visualTest": true
+            },
+            {
+                "id": "ENG_DASH_TC_23",
+                "description": "Validate on clicking Today In Class resource in Explore menu, same tab is launched on Browse",
+                "tags": "P2",
+                "visualTest": true
+            },
+            {
+                "id": "ENG_DASH_TC_24",
+                "description": "Validate on clicking Projectable resource in Explore menu, same tab is launched on Browse",
+                "tags": "P2",
+                "visualTest": true
+            }
+        ]
     },
     {
         "modulename": "App Shell",
