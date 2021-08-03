@@ -520,6 +520,11 @@
                     "tags": "P1"
                 },  
                 {
+                    "id": "ENG_INS_CLASS_TC_44",
+                    "description": "Validate book details is launched after clicking on View Book button",
+                    "tags": "P1"
+                }, 
+                {
                     "id": "ENG_INS_CLASS_TC_38",
                     "description": "Validate the class drwaer Pane when no class is added",
                     "tags": "P1"
@@ -700,13 +705,13 @@
                 },
                 {
                     "id": "ENG_DASH_TC_12",
-                    "description": "Validate on clicking Open Flipbook from Book dropdown menu, flipbook page is launched",
+                    "description": "Validate the add book button of any book",
                     "tags": "P2",
                     "visualTest": true
                 },
                 {
                     "id": "ENG_DASH_TC_13",
-                    "description": "Validate on clicking Open Flipbook from Book dropdown menu, flipbook page is launched",
+                    "description": "Validate the \"+\" icon  button of any book",
                     "tags": "P2",
                     "visualTest": true
                 }
@@ -765,6 +770,16 @@
                 {
                     "id": "ENG_SHELL_TC_10",
                     "description": "Validate that clicking on + button on classes in Left navigation pane, launched the create class page in teacher login",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_SHELL_TC_11",
+                    "description": "Validate that click on breadcrumb back button on the header launch the previous page",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ENG_SHELL_TC_12",
+                    "description": "Validate that click on breadcrumb product tile on the header launch the previous page",
                     "tags": "P1"
                 }
             ]

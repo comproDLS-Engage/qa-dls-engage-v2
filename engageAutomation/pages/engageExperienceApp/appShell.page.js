@@ -32,6 +32,8 @@ module.exports = {
 	userProfileSettingsBtn: selectorFile.css.ComproEngage.appShell.userProfileSettingsBtn,
 	userProfileLogoutBtn: selectorFile.css.ComproEngage.appShell.userProfileLogoutBtn,
 	classPlusIcon:selectorFile.css.ComproEngage.appShell.classPlusIcon,
+	breadcrumbbackbtn:selectorFile.css.ComproEngage.appShell.breadcrumbbackbtn,
+	breadcrumbproductTitle:selectorFile.css.ComproEngage.appShell.breadcrumbproductTitle,
 
 	isInitialized: function () {
 		logger.logInto(stackTrace.get());
@@ -246,5 +248,26 @@ module.exports = {
         else
             logger.logInto(stackTrace.get(), res + ":Add A New Book Button is NOT Clicked", "error");
         return res;
-    }
+    },
+
+	Click_breadcrumbbackbutton:function()
+	{
+		res = action.click(this.breadcrumbbackbtn)
+        if (res == true) {
+            logger.logInto(stackTrace.get(), res + "back button from snakebar is clicked");
+        }
+        else
+            logger.logInto(stackTrace.get(), res + ":back button from snakebar is NOT Clicked", "error");
+        return res;
+	},
+	Click_breadcrumbproductTitle:function()
+	{
+		res = action.click(this.breadcrumbproductTitle)
+        if (res == true) {
+            logger.logInto(stackTrace.get(), res + "Product title from snakebar is clicked");
+        }
+        else
+            logger.logInto(stackTrace.get(), res + "Product title from snakebar is NOT Clicked", "error");
+        return res;
+	}
 };

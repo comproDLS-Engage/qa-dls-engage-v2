@@ -31,6 +31,26 @@
                     "class": [],
                     "info": {}
                 },
+                "acceptanceteacher": {
+                    "email": "acceptanceinstructor@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "student",
+                    "name": "acceptance Instructor",
+                    "class": [  
+                        {
+                            "key": "TFbA-6AP7",
+                            "name": "acceptanceClass"
+                        }],
+                    "info": {}
+                },
+                "acceptanceStudent": {
+                    "email": "acceptancetest@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "student",
+                    "name": "acceptance test",
+                    "class": [],
+                    "info": {}
+                },
                 "invalidUser1": {
                     "email": "etirrase@yopmail",
                     "password": "hfcghgufyhW#2",

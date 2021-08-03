@@ -78,7 +78,10 @@
 				"loaderIcon": "[data-tid=image-loader]",
 				"snackbarInfo_txt": "[data-tid=text-error], [data-tid=text-info], [data-tid=text-success]",
 				"snackbarClose_btn": "[data-tid=button-close]",
-				"classPlusIcon": "[data-tid=button-classes] button"
+				"classPlusIcon": "[data-tid=button-classes] button",
+				"breadcrumbbackbtn":"[data-tid=icon-breadcrumb-back]",
+				"breadcrumbproductTitle":"[data-tid=breadcrumb-productTitle]"
+
 			},
 			"dashboardPage": {
 				"pageTitle": "[data-tid=text-pageTitle]",
@@ -177,6 +180,25 @@
 				"AddANewBook_btn": "[data-tid=button-assignBook]",
 				"bookCard": "label[class*='MuiFormControlLabel']:nth-child("
 			},
+			"addBookPage": {
+				"pageTitle": "[data-tid='text-pageTitle']",
+				"pageSubTitle": "[data-tid='text-pageSubTitle']",
+				"myBooksTab": "[data-tid='button-product-0']",
+				"allBooksTab": "[data-tid='button-product-1']",
+				"addtoClassbtn": "[data-tid=\"button-Add to Class\"]",
+				"cancelAndGoBackbtn": "[data-tid=button-cancel]",
+				"noBooklbl": "[data-tid=text-noBookLabel]",
+				"addBookbtn": "[data-tid=button-add-",
+				"bookImgIcon": "[data-tid=img-bookCover-",
+				"bookTitle": "[data-tid*='text-bookTitle-",
+				"bookSubTitle": "[data-tid=text-bookSubtitle-",
+				"bookAddedlbl":"[data-tid=text-bookLabel]",
+				"bookAddedtxt":"[data-tid=text-bookValue]",
+				"bookdeletebtmIcon":"[data-tid=icon-close]",
+				"noBookTitle":"[data-tid=text-title-noBooks]",
+				"noBookSubTitle":"[data-tid=text-subtitle-noBooks]"
+			},
+			
 			"successClassPage": {
 				"viewClass": "[data-tid='button-View Class']",
 				"backToHomeBtn": "[data-tid='button-backtohome']",
@@ -185,8 +207,9 @@
 				"successCaption_txt": "[data-tid='text-successfulCaption']",
 				"classKey_value": "[data-tid='text-courseCode']",
 				"copy_txt": "[data-tid='text-copy']",
-				"copy_btn": "[data-tid='button-copy']"
+				"copy_btn": "[data-tid='button-copy'] span"
 			},
+			
 			"teacherViewClassPage": {
 				"pageTitle": "[data-tid=text-pageTitle]",
 				"gradebookBtn": "[data-tid=button-gradebook]",

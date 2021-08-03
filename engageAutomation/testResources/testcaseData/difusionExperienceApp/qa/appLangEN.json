@@ -71,7 +71,7 @@
                 "backToHomeBtn_txt": "Close",
                 "className_txt": "Added: ",
                 "successCaption_txt": "Your class has been added! Share the class key below to let your students join",
-                "copy_txt": "Copy Code"
+                "copy_txt": "Copy Key"
             },
             "myClassPage": {
                 "classHeading": "Classes",
@@ -99,10 +99,10 @@
                 "noClassTitle": "Create a class to get started",
                 "noClassSubtitle": "Any classes associated with this book will appear here.",
                 "addClassBtn": "Create Class",
-                "addClassBtnwithClass":"Create Another Class",
-                "header":" Classes",
-                "classDrawerTitle":"Teaching another class with this book?",
-                "classDrawerSubTitle":"Create another class using this textbook material for your students."
+                "addClassBtnwithClass": "Create Another Class",
+                "header": " Classes",
+                "classDrawerTitle": "Teaching another class with this book?",
+                "classDrawerSubTitle": "Create another class using this textbook material for your students."
             },
             "editClassPage": {
                 "pageTitle": "Edit Class",
@@ -124,6 +124,17 @@
             },
             "teacherViewClass": {
                 "editOption_txt": "Edit Class"
+            },
+            "addBook": {
+                "pageTitle": "Add books to your class",
+                "pageSubTitle": "Select books from either your list (My Books) or the full catalog (All Books) to associate materials with your class.",
+                "myBooksTab": "My Books",
+                "allBooksTab": "All Books",
+                "addtoClassbtn": "Add to Class",
+                "cancelAndGoBackbtn": "Cancel & Go Back",
+                "noBooklbl": "null",
+                "bookAddedlbl": "Books Added:",
+                "bookAddedtxt": "PROYECTOS"
             }
         }
     }
