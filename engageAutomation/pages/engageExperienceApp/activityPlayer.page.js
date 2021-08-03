@@ -47,7 +47,6 @@ module.exports = {
         data.submitActivity_txt = (action.getElementCount(this.submitActivity_btn) > 0) ? action.getText(this.submitActivity_btn) : null;
         data.previousActivity_txt = (action.getElementCount(this.previousActivity_btn) > 0) ? action.getText(this.previousActivity_btn) : null;
         data.nextActivity_txt = (action.getElementCount(this.nextActivity_btn) > 0) ? action.getText(this.nextActivity_btn) : null;
-        logger.logInto(stackTrace.get(), JSON.stringify(obj));
         return data;
     },
 
