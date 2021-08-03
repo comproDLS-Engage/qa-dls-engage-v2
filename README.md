@@ -19,6 +19,9 @@ Test execution json that contains the list of all the testcases to be executed. 
 ```
 npm test -- --appType=engageExperienceApp -- testEnv=qa --testExecFile='End2End.json'
 ```
+```
+npm test -- --appType=engageExperienceApp -- testEnv=qa --testExecFile='etextFeatureTest.json,'End2End.json'
+```
 ----
 ### Optional parameters:
 #### capability
@@ -82,7 +85,7 @@ npm test -- --reportdir=%date:/=%-%time::=-% --appType=engageExperienceApp  --te
 Parameter for excluding one or more test execution files from a group of test execution files. This parameter can be used in parallel mode when multiple sessions of browser run concurrently.
 
  ```
-npm test -- --reportdir=%date:/=%-%time::=-% --appType=engageExperienceApp  --testEnv=qa --testExecFile=End2End.json --testExecFile='./testResources/testExecutionFiles/engageExperienceApp/*' --excludeTestFile='etextFeatureTest.json,tocFeatureTest.json,dashboardFeatureTest.json'
+npm test -- --reportdir=%date:/=%-%time::=-% --appType=engageExperienceApp  --testEnv=qa --testExecFile='./testResources/testExecutionFiles/engageExperienceApp/*' --excludeTestFile='etextFeatureTest.json,tocFeatureTest.json,dashboardFeatureTest.json'
 ```
 
 Supported Options for testExecFile & excludeTestFile
