@@ -1,6 +1,6 @@
 {
    "Suite1": {
-      "Name": "Functional validation of teacher experience app",
+      "Name": "Functional Validation of experience app for Teacher workflow",
       "TestCaseRepo": [
          "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
       ],

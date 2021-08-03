@@ -719,7 +719,7 @@
             },
             {
                 "id": "ENG_DASH_TC_99",
-                "description": "//Validate the \"+\" icon  button of any book",
+                "description": "Validate the book is added after clicking on \"+\" icon of a book",
                 "tags": "P2",
                 "visualTest": true
             }
