@@ -1,5 +1,4 @@
 "use strict";
-const { BrowserType } = require('@applitools/eyes-webdriverio');
 // var launchQuiz = require('../../pages/engageExperienceApp/launchQuiz.page.js');
 var activityPlayerPage = require('../../pages/engageExperienceApp/activityPlayer.page.js');
 var itemPlayer = require('../../pages/engageExperienceApp/itemPlayer.page');
@@ -13,7 +12,6 @@ module.exports = {
 
 	//Validate the activity player when quiz is launched
 	ENG_PLAY_TC_1: function (testdata) {
-		browser.url("https://engage-difusion-dev1.comprodls.com/learningpath-app/teacher/books/qualitytestbook51624254116850/products/componentforfinalvalidation1626447288503/item/1626447612766%2F1626447630088%2F1627026454057?rc=1626447612766%2F1626447630088%2F1627026454057")
 		sts = itemPlayer.isInitialized();
 		console.log(JSON.stringify(sts));
 		sts = activityPlayerPage.getActivityPlayerData();
