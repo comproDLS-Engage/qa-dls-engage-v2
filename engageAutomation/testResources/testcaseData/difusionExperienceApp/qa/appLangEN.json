@@ -1,171 +1,166 @@
 {
-    "engage":
-    {
-        "appContent":
-        {
-            "language": "EN - English (UK)",
-            "landing":
-            {
-                "headingText": "One space for all your learning.",
-                "subheadingText": "Learn from anywhere, anytime. Instant access to all courses and activities.",
-                "signup_btnText": "Sign Up & Start Learning Today",
-                "login_btnText": "Log in",
-                "login_lblText": "Have an Account?",
-                "footerLabel": "powered by"
+   "engage":{
+      "appContent":{
+         "language":"EN - English (UK)",
+         "landing":{
+            "headingText":"One space for all your learning.",
+            "subheadingText":"Learn from anywhere, anytime. Instant access to all courses and activities.",
+            "signup_btnText":"Sign Up & Start Learning Today",
+            "login_btnText":"Log in",
+            "login_lblText":"Have an Account?",
+            "footerLabel":"powered by"
+         },
+         "login":{
+            "loginPage_title":"Log in",
+            "email_tbox_lbl":"Email",
+            "userName_tbox_placeholder":"Enter Email",
+            "pswrd_tbox_lbl":"Password",
+            "password_tbox_placeholder":"Enter Password",
+            "google_btn":"Google",
+            "facebook_btn":"Facebook",
+            "login_btn":"Log in with Email",
+            "forgotPassword":"Forgot Password?",
+            "signup":"Sign Up",
+            "dontHaveAccount_txt":"Don't have an account?",
+            "loginoption_txt":"Or continue with:",
+            "footerLabel":"powered by",
+            "invalidEmail_txt":"Please check your email address and try again.",
+            "notRegisterUser_alert":"Please check your email address and password and try again."
+         },
+         "appShell":{
+            "dashboardTxt":"Dashboard",
+            "browseTxt":"Browse",
+            "classesTxt":"Classes",
+            "helpTxt":"Help",
+            "settingsTxt":"Settings",
+            "poweredByTxt":"powered by",
+            "engageTxt":"ENGAGE",
+            "technologyPreviewTxt":"Technology Preview",
+            "notificationHeader":"Notifcations",
+            "markAllAsRead":"Mark All as Read",
+            "languageToSelect":"EN - English (UK)",
+            "selectedLanguage":"EN",
+            "userProfileHelpBtn":"Help",
+            "userProfileSettingsBtn":"Settings",
+            "userProfileLogoutBtn":"Logout",
+            "invalidEmail_txt":"Please check your email address and try again.",
+            "notRegisterUser_alert":"Please check your email address and password and try again."
+         },
+         "createClassPage":{
+            "pageTitle":"Create a new class",
+            "pageSubTitle":"Add your class details and start inviting students, creating assignments, and viewing progress.",
+            "classHeader":"Class Details",
+            "classSubHeader":"Name your class and assign the start and end dates.",
+            "title_lbl":"Name",
+            "startDate_lbl":"Start Date",
+            "endDate_lbl":"End Date",
+            "selectBook_lbl":"Class Books",
+            "selectBook_txt":"Assign a book to your class in order to view and assign materials.",
+            "bookTitle":"PROYECTOS",
+            "createBtn_txt":"Create Class",
+            "cancelBtn_txt":"Cancel & Go Back",
+            "notitleErrorMsg":"Name is required.",
+            "titleErrorMsg":"Name should be less than 50 characters.",
+            "bookErrorMsg":"No book selected",
+            "endDateErrorMsg":"End Date cannot be less than today's date"
+         },
+         "successClassPage":{
+            "pageTitle":"New class created",
+            "pageSubTitle":"Your class has been added!",
+            "viewClassbtn":"View Class",
+            "backToHomeBtn_txt":"Close",
+            "className_txt":"Added: ",
+            "successCaption_txt":"Your class has been added! Share the class key below to let your students join",
+            "copy_txt":"Copy Key"
+         },
+         "myClassPage":{
+            "classHeading":"Classes",
+            "classSubHeading":"Your current, upcoming and past classes",
+            "pageTitleNoClassArchived":"See your list of archived classes here",
+            "pageSubTitleNoClassArchived":"Any class you have archived will appear here. Once archived, you can still view class details. You may restore the class to allow students to rejoin.",
+            "noClassTitle":"Create a class to get started",
+            "noClassSubtitle":"Add your classes to invite students and get to all of your class materials.",
+            "activeTab":"Active",
+            "addClassBtn":"Create Class",
+            "applyBtn_txt":"Apply",
+            "cancelBtn_txt":"Cancel",
+            "archivedTab":"Archived",
+            "viewClassText":"View Class",
+            "editMsgBar_txt":"Class Updated!",
+            "inboxOption_txt":"Inbox",
+            "assignmentsOption_txt":"Assignments",
+            "studentsOption_txt":"Students",
+            "gradeBookOption_txt":"Gradebook",
+            "materialsOption_txt":"Materials"
+         },
+         "classDrawerPane":{
+            "classHeading":"Dashboard",
+            "classSubHeading":"Your current, upcoming and past classes",
+            "noClassTitle":"Create a class to get started",
+            "noClassSubtitle":"Any classes associated with this book will appear here.",
+            "addClassBtn":"Create Class",
+            "addClassBtnwithClass":"Create Another Class",
+            "header":" Classes",
+            "classDrawerTitle":"Teaching another class with this book?",
+            "classDrawerSubTitle":"Create another class using this textbook material for your students."
+         },
+         "editClassPage":{
+            "pageTitle":"Edit Class",
+            "pageSubTitle":"Edit the Class Name, duration or associated books.",
+            "classHeader":"Class Details",
+            "classSubHeader":"Name your class and assign the start and end dates.",
+            "title_lbl":"Name",
+            "startDate_lbl":"Start Date",
+            "endDate_lbl":"End Date",
+            "selectBook_lbl":"Class Books",
+            "selectBook_txt":"Assign a book to your class in order to view and assign materials.",
+            "bookTitle":"PROYECTOS",
+            "cancelBtn_txt":"Cancel & Go Back",
+            "notitleErrorMsg":"Name is required.",
+            "titleErrorMsg":"Name should be less than 50 characters.",
+            "bookErrorMsg":"No book selected",
+            "saveBtn_txt":"Save",
+            "endDateErrorMsg":"End Date cannot be less than today's date"
+         },
+         "teacherViewClass":{
+            "editOption_txt":"Edit Class"
+         },
+         "addBook":{
+            "pageTitle":"Add books to your class",
+            "pageSubTitle":"Select books from either your list (My Books) or the full catalog (All Books) to associate materials with your class.",
+            "myBooksTab":"My Books",
+            "allBooksTab":"All Books",
+            "addtoClassbtn":"Add to Class",
+            "cancelAndGoBackbtn":"Cancel & Go Back",
+            "noBooklbl":"null",
+            "bookAddedlbl":"Books Added:",
+            "bookAddedtxt":"PROYECTOS"
+         },
+         "bookViewTOC":{
+            "addToMyBooks":"Add to My Books",
+            "myBooks":"My Books",
+            "viewClasses":"View Classes",
+            "openFlipbook":"Open Flipbook",
+            "viewBookDetails":"View Book Details",
+            "removefromMyBooks":"Remove from My Books",
+            "units":"Units",
+            "removeBook_menu":{
+               "removeBookTitle":"Remove from My Books?",
+               "message1":"This will remove the book - ",
+               "message2":" - from your My Books list.",
+               "cancel_btn":"Cancel",
+               "remove_btn":"Remove"
             },
-            "login":
-            {
-                "loginPage_title": "Log in",
-                "email_tbox_lbl": "Email",
-                "userName_tbox_placeholder": "Enter Email",
-                "pswrd_tbox_lbl": "Password",
-                "password_tbox_placeholder": "Enter Password",
-                "google_btn": "Google",
-                "facebook_btn": "Facebook",
-                "login_btn": "Log in with Email",
-                "forgotPassword": "Forgot Password?",
-                "signup": "Sign Up",
-                "dontHaveAccount_txt": "Don't have an account?",
-                "loginoption_txt": "Or continue with:",
-                "footerLabel": "powered by",
-                "invalidEmail_txt": "Please check your email address and try again.",
-                "notRegisterUser_alert": "Please check your email address and password and try again."
-            },
-            "appShell":
-            {
-                "dashboardTxt": "Dashboard",
-                "browseTxt": "Browse",
-                "classesTxt": "Classes",
-                "helpTxt": "Help",
-                "settingsTxt": "Settings",
-                "poweredByTxt": "powered by",
-                "engageTxt": "ENGAGE",
-                "technologyPreviewTxt": "Technology Preview",
-                "notificationHeader": "Notifcations",
-                "markAllAsRead": "Mark All as Read",
-                "languageToSelect": "EN - English (UK)",
-                "selectedLanguage": "EN",
-                "userProfileHelpBtn": "Help",
-                "userProfileSettingsBtn": "Settings",
-                "userProfileLogoutBtn": "Logout",
-                "invalidEmail_txt": "Please check your email address and try again.",
-                "notRegisterUser_alert": "Please check your email address and password and try again."
-            },
-            "createClassPage":
-            {
-                "pageTitle": "Create a new class",
-                "pageSubTitle": "Add your class details and start inviting students, creating assignments, and viewing progress.",
-                "classHeader": "Class Details",
-                "classSubHeader": "Name your class and assign the start and end dates.",
-                "title_lbl": "Name",
-                "startDate_lbl": "Start Date",
-                "endDate_lbl": "End Date",
-                "selectBook_lbl": "Class Books",
-                "selectBook_txt": "Assign a book to your class in order to view and assign materials.",
-                "bookTitle": "PROYECTOS",
-                "createBtn_txt": "Create Class",
-                "cancelBtn_txt": "Cancel & Go Back",
-                "notitleErrorMsg": "Name is required.",
-                "titleErrorMsg": "Name should be less than 50 characters.",
-                "bookErrorMsg": "No book selected",
-                "endDateErrorMsg": "End Date cannot be less than today's date"
-            },
-            "successClassPage":
-            {
-                "pageTitle": "New class created",
-                "pageSubTitle": "Your class has been added!",
-                "viewClassbtn": "View Class",
-                "backToHomeBtn_txt": "Close",
-                "className_txt": "Added: ",
-                "successCaption_txt": "Your class has been added! Share the class key below to let your students join",
-                "copy_txt": "Copy Key"
-            },
-            "myClassPage":
-            {
-                "classHeading": "Classes",
-                "classSubHeading": "Your current, upcoming and past classes",
-                "pageTitleNoClassArchived": "See your list of archived classes here",
-                "pageSubTitleNoClassArchived": "Any class you have archived will appear here. Once archived, you can still view class details. You may restore the class to allow students to rejoin.",
-                "noClassTitle": "Create a class to get started",
-                "noClassSubtitle": "Add your classes to invite students and get to all of your class materials.",
-                "activeTab": "Active",
-                "addClassBtn": "Create Class",
-                "applyBtn_txt": "Apply",
-                "cancelBtn_txt": "Cancel",
-                "archivedTab": "Archived",
-                "viewClassText": "View Class",
-                "editMsgBar_txt": "Class Updated!",
-                "inboxOption_txt": "Inbox",
-                "assignmentsOption_txt": "Assignments",
-                "studentsOption_txt": "Students",
-                "gradeBookOption_txt": "Gradebook",
-                "materialsOption_txt": "Materials"
-            },
-            "classDrawerPane":
-            {
-                "classHeading": "Dashboard",
-                "classSubHeading": "Your current, upcoming and past classes",
-                "noClassTitle": "Create a class to get started",
-                "noClassSubtitle": "Any classes associated with this book will appear here.",
-                "addClassBtn": "Create Class",
-                "addClassBtnwithClass": "Create Another Class",
-                "header": " Classes",
-                "classDrawerTitle": "Teaching another class with this book?",
-                "classDrawerSubTitle": "Create another class using this textbook material for your students."
-            },
-            "editClassPage":
-            {
-                "pageTitle": "Edit Class",
-                "pageSubTitle": "Edit the Class Name, duration or associated books.",
-                "classHeader": "Class Details",
-                "classSubHeader": "Name your class and assign the start and end dates.",
-                "title_lbl": "Name",
-                "startDate_lbl": "Start Date",
-                "endDate_lbl": "End Date",
-                "selectBook_lbl": "Class Books",
-                "selectBook_txt": "Assign a book to your class in order to view and assign materials.",
-                "bookTitle": "PROYECTOS",
-                "cancelBtn_txt": "Cancel & Go Back",
-                "notitleErrorMsg": "Name is required.",
-                "titleErrorMsg": "Name should be less than 50 characters.",
-                "bookErrorMsg": "No book selected",
-                "saveBtn_txt": "Save",
-                "endDateErrorMsg": "End Date cannot be less than today's date"
-            },
-            "teacherViewClass":
-            {
-                "editOption_txt": "Edit Class"
-            },
-            "addBook":
-            {
-                "pageTitle": "Add books to your class",
-                "pageSubTitle": "Select books from either your list (My Books) or the full catalog (All Books) to associate materials with your class.",
-                "myBooksTab": "My Books",
-                "allBooksTab": "All Books",
-                "addtoClassbtn": "Add to Class",
-                "cancelAndGoBackbtn": "Cancel & Go Back",
-                "noBooklbl": "null",
-                "bookAddedlbl": "Books Added:",
-                "bookAddedtxt": "PROYECTOS"
-            },
-            "bookViewTOC":
-            {
-                "addToMyBooks": "Add to My Books",
-                "myBooks": "My Books",
-                "viewClasses": "View Classes",
-                "openFlipbook": "Open Flipbook",
-                "viewBookDetails": "View Book Details",
-                "removefromMyBooks": "Remove from My Books",
-                "units": "Units",
-                "removeBook_menu":
-                {
-                    "removeBookTitle": "Remove from My Books?",
-                    "message1": "This will remove the book - ",
-                    "message2": " - from your My Books list.",
-                    "cancel_btn": "Cancel",
-                    "remove_btn": "Remove"
-                }
+            "activity_lbl":"Activities",
+            "activity_byline":"Select an item to view materials.",
+            "continueWhereYouLeft":"Continue where you left off:",
+            "dismiss_btn":"Dismiss",
+            "continue_btn":"Continue",
+            "unit_moreOptions":{
+               "openInFlipbook":"Open in Flipbook",
+               "viewActivities":"View Activities"
             }
-        }
-    }
+         }
+      }
+   }
 }

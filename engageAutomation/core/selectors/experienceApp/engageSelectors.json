@@ -384,7 +384,8 @@
                 "lastActivity_Dismiss": "[data-tid=button-lastActivityDismiss]",
                 "lastActivity_Continue": "[data-tid=button-lastActivityContinue]",
                 "activity_lbl_unitView": "[data-tid=text-unitselection]",
-                "activity_byline_unitView": "[data-tid=text-unitselectionbilinear]"
+                "activity_byline_unitView": "[data-tid=text-unitselectionbilinear]",
+                "flipbookProduct":"[data-tid*=button-flipbookProduct-"
             }
         }
     }

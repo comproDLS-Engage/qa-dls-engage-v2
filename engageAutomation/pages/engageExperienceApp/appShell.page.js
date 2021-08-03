@@ -253,6 +253,7 @@ module.exports = {
 	Click_breadcrumbbackbutton:function()
 	{
 		res = action.click(this.breadcrumbbackbtn)
+		console.log(res)
         if (res == true) {
             logger.logInto(stackTrace.get(), res + "back button from snakebar is clicked");
         }

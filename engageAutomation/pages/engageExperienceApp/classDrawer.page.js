@@ -29,7 +29,7 @@ module.exports = {
         res = action.click(this.classDrawerCloseBtn);
         if (res == true) {
             logger.logInto(stackTrace.get(), res + "Drawer Pane is closed");
-            res = dashboardPage.isInitialized();
+            //res = dashboardPage.isInitialized();
         }
         else
             logger.logInto(stackTrace.get(), res + "Drawer Pane is NOT closed", "error");

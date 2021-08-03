@@ -1242,6 +1242,11 @@
             "tags": "P1"
         },
         {
+            "id": "ENG_BOOK_TC_16",
+            "description": "Validate that clicking on 3 dots for a unit displays a list of options.",
+            "tags": "P1"
+        },
+        {
             "id": "ENG_BOOK_TC_17",
             "description": "Validate that clicking 'Open flipbook' option from the 3 dot options for a Unit launches the corresponding flipbook page",
             "tags": "P1"
@@ -1252,6 +1257,11 @@
             "tags": "P1"
         },
         {
+            "id": "ENG_BOOK_TC_20",
+            "description": "Validate that clicking on 'Open in Flipbook' button on unit Detail View page launches the corresponding unit page in the flipbook",
+            "tags": "P1"
+        },
+        {
             "id": "ENG_BOOK_TC_21",
             "description": "Validate that clicking on Activity on unit detail view page launches the activity",
             "tags": "P1"
@@ -1259,6 +1269,16 @@
         {
             "id": "ENG_BOOK_TC_30",
             "description": "Anchor Component - Validate that Book Detail view page should display the list of units which are present in the anchored component",
+            "tags": "P1"
+        },        
+        {
+            "id": "ENG_BOOK_TC_32",
+            "description": "Anchor component - Validate that clicking on Next Unit button launches the Next unit of the Anchored component in an indexed book",
+            "tags": "P1"
+        }, 
+        {
+            "id": "ENG_BOOK_TC_33",
+            "description": "Anchor component - Validate that clicking on Previous Unit button launch the previous unit of component in an indexed book",
             "tags": "P1"
         },
         {
