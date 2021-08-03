@@ -13,29 +13,40 @@ module.exports = {
 	//Validate the activity player when quiz is launched
 	ENG_PLAY_TC_1: function (testdata) {
 		sts = itemPlayer.isInitialized();
-		console.log(JSON.stringify(sts));
+		assertion.assertEqual(sts.isSubmitted, false, "submit status mismatch");
+		sts = itemPlayer.getQuesIndex();
+		assertion.assertEqual((sts), "0", "Active question index mismatch");
 		sts = activityPlayerPage.getActivityPlayerData();
-		console.log(JSON.stringify(sts));
+		assertion.assertEqual(sts.checkmyWork_isExists, true, "check answer button status mismatch");
+		assertion.assertEqual(sts.checkmyWork_isDisabled, "true", "button state mismatch");
+		assertion.assertEqual(sts.previous_isExists, false, "previous button status mismatch");
 	},
 
 	//Validate The Test Player When User Click "Next Question" Button
 	ENG_PLAY_TC_2: function (testdata) {
 		sts = activityPlayerPage.clickNextQuestion();
 		assertion.assertEqual(sts, true, "status mismatch");
+		sts = activityPlayerPage.getActivityPlayerData();
+		assertion.assertEqual(sts.previous_isExists, true, "previous button status mismatch");
+		assertion.assertEqual(sts.previous_isDisabled, null, "previous button state mismatch");
+		sts = parseInt(itemPlayer.getQuesIndex()) + 1;
+		assertion.assertEqual(sts, testdata.number, "question index mismatch");
+
 	},
 
 	//Validate the test player when user perform "Check My Work"
-	ENG_PLAY_TC_3: function () {
+	ENG_PLAY_TC_3: function (testdata) {
 		sts = activityPlayerPage.clickCheckAnswer();
 		assertion.assertEqual(sts, true, "status mismatch");
-		// sts =  activityPlayerPage.getFeedbackInfo();
-		// console.log("feedback info : " + JSON.stringify(sts));
+		sts = activityPlayerPage.getFeedbackInfo();
+		assertion.assertEqual(sts.fdbackText, testdata, "text mismatch");
 	},
 
 	//Validate the test player when user click Previous button in the second question.
 	ENG_PLAY_TC_4: function () {
 		sts = activityPlayerPage.clickPreviousQuestion();
 		assertion.assertEqual(sts, true, "status mismatch");
+		sts = activityPlayerPage.getActivityPlayerData();
 	},
 
 	//Validate the test player when user click Show Answer button.
