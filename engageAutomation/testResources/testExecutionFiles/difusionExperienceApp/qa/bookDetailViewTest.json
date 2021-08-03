@@ -2,7 +2,7 @@
 
     "Suite1":
     {
-        "Name": "Validation of Book Detail and Unit Detail View for an Anchored Book Not added to My Books",
+        "Name": "Validation of Book Detail and Unit Detail View for an Anchored Book",
         "TestCaseRepo": [
             "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
         ],
@@ -157,10 +157,6 @@
             {
                 "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
                 "jsonPath": "book"
-            },
-            {
-                "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                "jsonPath": "engage.appContent.bookViewTOC"
             }]
         },
         {
@@ -212,17 +208,17 @@
             }]
         },
         {
-            "id": "ENG_BOOK_TC_44",
+            "id": "ENG_BOOK_TC_43",
             "description": "",
             "testFile": "./test/engageExperienceApp/bookDetailView.test.js",
             "testData": [
             {
                 "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
-                "jsonPath": "book.component[2].unit[0].section[0]"
+                "jsonPath": "book.component[2].unit[0].section[0].activity"
             }]
         },
         {
-            "id": "ENG_BOOK_TC_45",
+            "id": "ENG_BOOK_TC_44",
             "description": "",
             "testFile": "./test/engageExperienceApp/bookDetailView.test.js",
             "testData": [
@@ -293,123 +289,8 @@
             "id": "ENG_BOOK_TC_6",
             "description": "",
             "testFile": "./test/engageExperienceApp/bookDetailView.test.js",
-            "testData": [
-                {
-                    "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                    "jsonPath": "engage.appContent.bookViewTOC"
-                }
-
-            ]
+            "testData": []
         }],
-        "AfterEach": [
-
-        ],
-        "After": [
-        {
-            "id": "ENG_SHELL_TC_9",
-            "description": "Validate that clicking on logout logs out from application",
-            "testFile": "./test/engageExperienceApp/appShell.test.js",
-            "testData": [
-
-            ]
-        }]
-    },
-    "Suite2":
-    {
-        "Name": "Validation of Book Detail and Unit Detail View for an Anchored Book added to My Books",
-        "TestCaseRepo": [
-            "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
-        ],
-        "Before": [
-        {
-            "id": "launchUrl",
-            "description": "",
-            "testFile": "./engageAutomation/core/runner/launchUrl.js",
-            "testData": [
-
-            ]
-        },
-        {
-            "id": "ENG_LAND_TC_1",
-            "description": "Landing page",
-            "testFile": "./test/engageExperienceApp/landing.test.js",
-            "visualTest": true,
-            "visualTolerance": 0.07,
-            "testData": [
-
-            ]
-        },
-        {
-            "id": "ENG_LAND_TC_3",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/landing.test.js",
-            "visualTest": true,
-            "visualTolerance": 0.07,
-            "testData": [
-
-            ]
-        },
-        {
-            "id": "ENG_IDEN_TC_7",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/login.test.js",
-            "visualTest": true,
-            "visualTolerance": 0.07,
-            "testData": [
-            {
-                "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
-                "jsonPath": "engage.login.user.validStudent3"
-            }]
-        },
-        {
-            "id": "ENG_DIF_TC_1",
-            "description": "View book page",
-            "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-            "visualTolerance": 0.07,
-            "testData": [
-                {
-                    "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                    "jsonPath": "engage.appContent.bookViewTOC"
-                },
-                {
-                    "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
-                    "jsonPath": "book"
-                }
-
-            ]
-        }],
-        "BeforeEach": [
-
-        ],
-        "Test": [
-
-            {
-                "id": "ENG_BKTOC_TC_40",
-                "description": "",
-                "testFile": "./test/engageExperienceApp/bookDetailView.test.js",
-                "testData": []
-            },
-            {
-                "id": "ENG_BKTOC_TC_7",
-                "description": "",
-                "testFile": "./test/engageExperienceApp/bookDetailView.test.js",
-                "testData": [
-
-                ]
-            },
-            {
-                "id": "ENG_BKTOC_TC_45",
-                "description": "",
-                "testFile": "./test/engageExperienceApp/bookDetailView.test.js",
-                "testData": [
-                    {
-                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                        "jsonPath": "engage.appContent.bookViewTOC"
-                    }
-
-                ]
-            }
-        ],
         "AfterEach": [
 
         ],

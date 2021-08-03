@@ -47,7 +47,7 @@ module.exports = {
         sts = bookDetailPage.clickRemoveBook();
         
         assertion.assertEqual(sts.removeBook_title, testdata[0].removeBookTitle, "Remove Book Pop up Title Mismatch");
-        assertion.assertEqual(sts.removeBook_title, testdata[0].message1 + testdata[1].name + testdata[0].message2, "Remove Book Pop up description Mismatch");
+        assertion.assertEqual(sts.removeBook_subtitle, testdata[0].message1 + testdata[1].name + testdata[0].message2, "Remove Book Pop up description Mismatch");
         assertion.assertEqual(sts.removeBookDialogCancel, testdata[0].cancel_btn, "Remove Book Pop up Cancel Button Mismatch");
         assertion.assertEqual(sts.removeBookDialogRemove, testdata[0].remove_btn, "Remove Book Pop up Remove Button Mismatch");
         
@@ -60,13 +60,11 @@ module.exports = {
 
     },
 
-    //todo -ENG_BKTOC_TC_45
     //Validate clicking on Remove on Remove book pop up removes the book from My Books
-    ENG_BOOK_TC_6: function(testdata) {
+    ENG_BOOK_TC_6: function() {
         sts = bookDetailPage.clickRemove_RemoveBookDialog();
-        assertion.assertEqual(sts, true, "cancel Remove Book Not Clicked");
 
-        sts = bookDetailPage.getBookViewPageData();
+        assertion.assertEqual(sts.bookCover, true, "Book Cover Not displayed");
         assertion.assertEqual(sts.myBooks_lbl, null, "My Books label Mismatch");
 
     },
@@ -90,7 +88,11 @@ module.exports = {
     //Validate clicking on a component displays the units asscoiated with the component
     ENG_BOOK_TC_10: function(testdata) {
         sts = bookDetailPage.clickComponent(testdata.name);
-        assertion.assertEqual(sts[0].chapterNumber + " " + sts[0].chapterTitle, testdata.unit[0].title, "Chapter Name Mismatch")
+        if(sts[0].chapterNumber != null)
+            assertion.assertEqual(sts[0].chapterNumber + " " + sts[0].chapterTitle, testdata.unit[0].title, "Chapter Name Mismatch")
+        else
+            assertion.assertEqual(sts[0].chapterTitle, testdata.unit[0].title, "Chapter Name Mismatch")
+
         assertion.assertEqual(sts[0].chapterCoverImg, true, "Chapter Cover Image Not Displayed")
 
     },
@@ -137,9 +139,9 @@ module.exports = {
         assertion.assertEqual(sts, true, "Breadcrumb not clicked");
 
         sts = bookDetailPage.getBookViewPageData();
-        assertion.assertEqual(sts.componentList.length, testdata.component.length, "Number of Components Mismatch")
-        assertion.assertEqual(sts.bookTitle, testdata.name, "Book Name Mismatch")
-        assertion.assertEqual(sts.bookSubTitle, testdata.description, "Book Description Mismatch")
+        assertion.assertEqual(sts.componentList.length, testdata[1].component.length, "Number of Components Mismatch")
+        assertion.assertEqual(sts.bookTitle, testdata[1].name, "Book Name Mismatch")
+        assertion.assertEqual(sts.bookSubTitle, testdata[1].description, "Book Description Mismatch")
 
     },
 
@@ -179,7 +181,7 @@ module.exports = {
 
         sts = unitDetailPage.isInitialized();
         assertion.assertEqual(sts.unitThumbnail, true, "Unit Thumbnail Not displayed");
-        assertion.assertEqual(sts.activityList.length, testdata.activity.length, "Number of Activities Mismatch");
+        assertion.assertEqual(sts.activityList.length, testdata.length, "Number of Activities Mismatch");
 
     },
 
@@ -205,12 +207,8 @@ module.exports = {
         assertion.assertEqual(sts.bookTitle, testdata[1].name, "Book Title Mismatch");
         assertion.assertEqual(sts.bookSubTitle, testdata[1].description, "Book Description Mismatch");
         assertion.assertEqual(sts.viewClass, testdata[0].viewClasses, "View Class Text Mismatch");
-        assertion.assertEqual(sts.myBooks_lbl, testdata[0].myBooks, "My Books Label Mismatch");
         assertion.assertEqual(sts.openFlipbook_btn, testdata[0].openFlipbook, "Open Flipbook Button text Mismatch");
     },
-
-
-
 
 
 
@@ -285,24 +283,24 @@ module.exports = {
 
     },
 
-    //Validate clicking on Cancel on Remove book closes the Remove book pop up
-    ENG_BKTOC_TC_44: function(testdata) {
-        sts = bookDetailPage.clickCancel_RemoveBookDialog();
-        assertion.assertEqual(sts, true, "cancel Remove Book Not Clicked");
+    // //Validate clicking on Cancel on Remove book closes the Remove book pop up
+    // ENG_BKTOC_TC_44: function(testdata) {
+    //     sts = bookDetailPage.clickCancel_RemoveBookDialog();
+    //     assertion.assertEqual(sts, true, "cancel Remove Book Not Clicked");
 
-        sts = bookDetailPage.getBookViewPageData();
-        assertion.assertEqual(sts.myBooks_lbl, testdata.myBooks, "My Books label Mismatch");
-    },
+    //     sts = bookDetailPage.getBookViewPageData();
+    //     assertion.assertEqual(sts.myBooks_lbl, testdata.myBooks, "My Books label Mismatch");
+    // },
 
 
-    //Validate clicking on Remove on Remove book pop up removes the book from My Books
-    ENG_BKTOC_TC_45: function(testdata) {
-        sts = bookDetailPage.clickRemove_RemoveBookDialog();
-        assertion.assertEqual(sts, true, "cancel Remove Book Not Clicked");
+    // //Validate clicking on Remove on Remove book pop up removes the book from My Books
+    // ENG_BKTOC_TC_45: function(testdata) {
+    //     sts = bookDetailPage.clickRemove_RemoveBookDialog();
+    //     assertion.assertEqual(sts, true, "cancel Remove Book Not Clicked");
 
-        sts = bookDetailPage.getBookViewPageData();
-        assertion.assertEqual(sts.addBook_btn.trim(), testdata.addToMyBooks, "Add to My Books button Mismatch");
-    },
+    //     sts = bookDetailPage.getBookViewPageData();
+    //     assertion.assertEqual(sts.addBook_btn.trim(), testdata.addToMyBooks, "Add to My Books button Mismatch");
+    // },
 
 
 
@@ -344,17 +342,17 @@ module.exports = {
 
     // },
 
-    //Validate that clicking "Open flipbook" option from the 3 dot options for a Unit launches the corresponding flipbook page
-    ENG_BKTOC_TC_13: function(testdata) {
-        sts = bookDetailPage.clickUnitOpeninFlipbook(testdata[0]);
-        assertion.assertEqual(sts, true, "Open Flipbook button not clicked");
+    // //Validate that clicking "Open flipbook" option from the 3 dot options for a Unit launches the corresponding flipbook page
+    // ENG_BKTOC_TC_13: function(testdata) {
+    //     sts = bookDetailPage.clickUnitOpeninFlipbook(testdata[0]);
+    //     assertion.assertEqual(sts, true, "Open Flipbook button not clicked");
 
-        sts = bookDetailPage.clickOnBreadcrumb();
-        assertion.assertEqual(sts.componentList.length, testdata[1].component.length, "Number of Components Mismatch")
-        assertion.assertEqual(sts.bookTitle, testdata[1].name, "Book Name Mismatch")
-        assertion.assertEqual(sts.bookSubTitle, testdata[1].description, "Book Description Mismatch")
+    //     sts = bookDetailPage.clickOnBreadcrumb();
+    //     assertion.assertEqual(sts.componentList.length, testdata[1].component.length, "Number of Components Mismatch")
+    //     assertion.assertEqual(sts.bookTitle, testdata[1].name, "Book Name Mismatch")
+    //     assertion.assertEqual(sts.bookSubTitle, testdata[1].description, "Book Description Mismatch")
 
-    },
+    // },
 
     // //Validate clicking on a component displays the units /chapters asscoiated with the component
     // ENG_BKTOC_TC_15: function(testdata) {
@@ -375,101 +373,101 @@ module.exports = {
 
     // },
 
-    //Anchor Component - Validate that Book Detail view page should display the list of units which are present of anchor component
-    ENG_BKTOC_TC_18: function(testdata) {
-        sts = bookDetailPage.getChapterListData();
-        assertion.assertEqual(sts.length, testdata.length, "Number of Units Mismatch");
-    },
+    // //Anchor Component - Validate that Book Detail view page should display the list of units which are present of anchor component
+    // ENG_BKTOC_TC_18: function(testdata) {
+    //     sts = bookDetailPage.getChapterListData();
+    //     assertion.assertEqual(sts.length, testdata.length, "Number of Units Mismatch");
+    // },
 
-    // Anchor component - Validate that clicking on Next Unit button launches the Next unit of the Anchor component
-    ENG_BKTOC_TC_20: function() {
-        sts = unitDetailPage.clickNextUnit();
-        console.log(sts);
+    // // Anchor component - Validate that clicking on Next Unit button launches the Next unit of the Anchor component
+    // ENG_BKTOC_TC_20: function() {
+    //     sts = unitDetailPage.clickNextUnit();
+    //     console.log(sts);
 
-        sts = unitDetailPage.isInitialized()
-        //todo
-        //console.log(sts)
-
-    },
-
-    // Anchor component - Validate that clicking on Previous Unit button launch the previous unit of Anchor component
-    ENG_BKTOC_TC_21: function() {
-        sts = unitDetailPage.clickPreviousUnit();
-        console.log(sts);
-
-        sts = unitDetailPage.isInitialized()
-        //todo
-        //console.log(sts)
-
-    },
-
-    //Validate that 'Continue where you left off' message appears on the book Detail View page.
-    ENG_BKTOC_TC_38: function(testdata) {
-        sts = bookDetailPage.getBookViewPageData();
-
-        assertion.assertEqual(sts.lastActivity_lbl, testdata[0].continueWhereYouLeft, "Continue Where You left Off label Mismatch");
-        assertion.assertEqual(sts.lastActivity_Dismiss, testdata[0].dismiss_btn, "Continue Where You left Off Dismiss button text Mismatch");
-        assertion.assertEqual(sts.lastActivityIcon, true, "Continue Where You left Off Activity Icon not Displayed");
-        assertion.assertEqual(sts.lastActivity_name, testdata[1], "Continue Where You left Off Activity Name text Mismatch");
-
-    },
-
-    //Validate that Clicking on Continue on 'Continue where you left off' pop up launches the last activity viewed by the student
-    ENG_BKTOC_TC_39: function(testdata) {
-        sts = bookDetailPage.clickOnContinue();
-        assertion.assertEqual(sts, true, "Continue button not clicked");
-
-        sts = activityPlayerPage.isInitialized()
-        assertion.assertEqual(sts.breadCrumbData.breadCrumbTitle, testdata.unit[0].title.replace(".", ":") + " | " + testdata.name, "Header breadcrumb Mismatch");
-
-    },
-
-    //Validate that Clicking on Dismiss on 'Continue where you left off:' closes the pop up.
-    ENG_BKTOC_TC_40: function() {
-        sts = bookDetailPage.clickOnDismiss();
-        assertion.assertEqual(sts, true, "Dismiss button Not Clicked");
-
-        sts = bookDetailPage.isInitialized();
-        assertion.assertEqual(sts.lastActivity_lbl, null, "Continue Where You Left Off Not Dismissed");
-        assertion.assertEqual(sts.lastActivityIcon, null, "Continue Where You Left Off last Activity Icon Displayed");
-
-
-
-    },
-
-    // //Validate that clicking on unit Detail TOC breadcrumb naviagtes to Book detail TOC page
-    // ENG_BKTOC_TC_41: function(testdata) {
-    //     sts = bookDetailPage.clickOnBreadcrumb();
-    //     assertion.assertEqual(sts.componentList.length, testdata.component.length, "Number of Components Mismatch")
-    //     assertion.assertEqual(sts.bookTitle, testdata.name, "Book Name Mismatch")
-    //     assertion.assertEqual(sts.bookSubTitle, testdata.description, "Book Description Mismatch")
+    //     sts = unitDetailPage.isInitialized()
+    //     //todo
+    //     //console.log(sts)
 
     // },
 
-    // //Validate that clicking on Activity Screen breadcrumb naviagtes to Unit detail TOC page
-    // ENG_BKTOC_TC_42: function(testdata) {
+    // // Anchor component - Validate that clicking on Previous Unit button launch the previous unit of Anchor component
+    // ENG_BKTOC_TC_21: function() {
+    //     sts = unitDetailPage.clickPreviousUnit();
+    //     console.log(sts);
+
+    //     sts = unitDetailPage.isInitialized()
+    //     //todo
+    //     //console.log(sts)
+
+    // },
+
+    // //Validate that 'Continue where you left off' message appears on the book Detail View page.
+    // ENG_BKTOC_TC_38: function(testdata) {
+    //     sts = bookDetailPage.getBookViewPageData();
+
+    //     assertion.assertEqual(sts.lastActivity_lbl, testdata[0].continueWhereYouLeft, "Continue Where You left Off label Mismatch");
+    //     assertion.assertEqual(sts.lastActivity_Dismiss, testdata[0].dismiss_btn, "Continue Where You left Off Dismiss button text Mismatch");
+    //     assertion.assertEqual(sts.lastActivityIcon, true, "Continue Where You left Off Activity Icon not Displayed");
+    //     assertion.assertEqual(sts.lastActivity_name, testdata[1], "Continue Where You left Off Activity Name text Mismatch");
+
+    // },
+
+    // //Validate that Clicking on Continue on 'Continue where you left off' pop up launches the last activity viewed by the student
+    // ENG_BKTOC_TC_39: function(testdata) {
+    //     sts = bookDetailPage.clickOnContinue();
+    //     assertion.assertEqual(sts, true, "Continue button not clicked");
+
+    //     sts = activityPlayerPage.isInitialized()
+    //     assertion.assertEqual(sts.breadCrumbData.breadCrumbTitle, testdata.unit[0].title.replace(".", ":") + " | " + testdata.name, "Header breadcrumb Mismatch");
+
+    // },
+
+    // //Validate that Clicking on Dismiss on 'Continue where you left off:' closes the pop up.
+    // ENG_BKTOC_TC_40: function() {
+    //     sts = bookDetailPage.clickOnDismiss();
+    //     assertion.assertEqual(sts, true, "Dismiss button Not Clicked");
+
+    //     sts = bookDetailPage.isInitialized();
+    //     assertion.assertEqual(sts.lastActivity_lbl, null, "Continue Where You Left Off Not Dismissed");
+    //     assertion.assertEqual(sts.lastActivityIcon, null, "Continue Where You Left Off last Activity Icon Displayed");
+
+
+
+    // },
+
+    // // //Validate that clicking on unit Detail TOC breadcrumb naviagtes to Book detail TOC page
+    // // ENG_BKTOC_TC_41: function(testdata) {
+    // //     sts = bookDetailPage.clickOnBreadcrumb();
+    // //     assertion.assertEqual(sts.componentList.length, testdata.component.length, "Number of Components Mismatch")
+    // //     assertion.assertEqual(sts.bookTitle, testdata.name, "Book Name Mismatch")
+    // //     assertion.assertEqual(sts.bookSubTitle, testdata.description, "Book Description Mismatch")
+
+    // // },
+
+    // // //Validate that clicking on Activity Screen breadcrumb naviagtes to Unit detail TOC page
+    // // ENG_BKTOC_TC_42: function(testdata) {
+    // //     sts = appShell.clickOnBreadcrumb();
+    // //     assertion.assertEqual(sts, true, "Activity Breadcrumb Not Clicked");
+
+    // //     sts = unitDetailPage.isInitialized();
+    // //     assertion.assertEqual(sts.unitThumbnail, true, "Unit Thumbnail Not displayed");
+    // //     assertion.assertEqual(sts.activityList.length, testdata.activity.length, "Number of Activities Mismatch");
+
+    // // },
+
+    // //Validate that clicking on Activity Screen breadcrumb naviagtes to Book Detail TOC page 
+    // ENG_BKTOC_TC_43: function(testdata) {
     //     sts = appShell.clickOnBreadcrumb();
     //     assertion.assertEqual(sts, true, "Activity Breadcrumb Not Clicked");
 
-    //     sts = unitDetailPage.isInitialized();
-    //     assertion.assertEqual(sts.unitThumbnail, true, "Unit Thumbnail Not displayed");
-    //     assertion.assertEqual(sts.activityList.length, testdata.activity.length, "Number of Activities Mismatch");
-
-    // },
-
-    //Validate that clicking on Activity Screen breadcrumb naviagtes to Book Detail TOC page 
-    ENG_BKTOC_TC_43: function(testdata) {
-        sts = appShell.clickOnBreadcrumb();
-        assertion.assertEqual(sts, true, "Activity Breadcrumb Not Clicked");
-
-        sts = bookDetailPage.isInitialized();
-        assertion.assertEqual(sts.bookCover, true, "Book Cover Not displayed");
-        assertion.assertEqual(sts.bookTitle, testdata[1].name, "Book Title Mismatch");
-        assertion.assertEqual(sts.bookSubTitle, testdata[1].description, "Book Description Mismatch");
-        assertion.assertEqual(sts.viewClass, testdata[0].viewClasses, "View Class Text Mismatch");
-        assertion.assertEqual(sts.myBooks_lbl, testdata[0].myBooks, "My Books Label Mismatch");
-        assertion.assertEqual(sts.openFlipbook_btn, testdata[0].openFlipbook, "Open Flipbook Button text Mismatch");
-    }
+    //     sts = bookDetailPage.isInitialized();
+    //     assertion.assertEqual(sts.bookCover, true, "Book Cover Not displayed");
+    //     assertion.assertEqual(sts.bookTitle, testdata[1].name, "Book Title Mismatch");
+    //     assertion.assertEqual(sts.bookSubTitle, testdata[1].description, "Book Description Mismatch");
+    //     assertion.assertEqual(sts.viewClass, testdata[0].viewClasses, "View Class Text Mismatch");
+    //     assertion.assertEqual(sts.myBooks_lbl, testdata[0].myBooks, "My Books Label Mismatch");
+    //     assertion.assertEqual(sts.openFlipbook_btn, testdata[0].openFlipbook, "Open Flipbook Button text Mismatch");
+    // }
 
 
 };
