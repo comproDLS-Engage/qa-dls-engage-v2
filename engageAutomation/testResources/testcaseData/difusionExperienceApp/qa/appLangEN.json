@@ -202,6 +202,10 @@
                     "cancel_btn": "Cancel",
                     "remove_btn": "Remove"
                 }
+            },
+            "activityPlayerPage":{
+                "correct_txt": "Well done",
+                "incorrect_txt" : "Oops! Not quite correct."
             }
         }
     }
