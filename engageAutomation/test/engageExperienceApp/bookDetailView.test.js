@@ -111,9 +111,6 @@ module.exports = {
     //Validate that Clicking on Continue on 'Continue where you left off' pop up launches the last activity viewed by the user
     ENG_BOOK_TC_12: function(testdata) {
         sts = bookDetailPage.clickOnContinue();
-        assertion.assertEqual(sts, true, "Continue button not clicked");
-
-        sts = activityPlayerPage.isInitialized()
         assertion.assertEqual(sts.checkmyWork_isExists, true, "Check My Work Not Displayed");
 
     },
@@ -133,8 +130,6 @@ module.exports = {
     //Validate that clicking on 3 dots for a unit displays a list of options.
     ENG_BOOK_TC_16: function(testdata) {
         sts = bookDetailPage.clickUnitMoreOptions(testdata[0]);
-
-        sts = bookDetailPage.get_UnitMoreOptionsButton_Data(sts);
         assertion.assertEqual(sts.openInFlipbook, testdata[1].openInFlipbook, "Open In Flipbook Mismatch");
         assertion.assertEqual(sts.viewActivity, testdata[1].viewActivities, "View Activities Mismatch");
 

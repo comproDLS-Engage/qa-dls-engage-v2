@@ -157,7 +157,7 @@
             "testData":[
                {
                   "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
-                  "jsonPath":"book.component[0].unit[0].title"
+                  "jsonPath":"book.component[0].unit[0].index"
                },
                {
                   "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
