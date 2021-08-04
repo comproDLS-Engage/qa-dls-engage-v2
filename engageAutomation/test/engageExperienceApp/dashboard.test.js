@@ -69,7 +69,7 @@ module.exports = {
         assertion.assertEqual(sts.noPlaylists_subTitle, testdata.noPlaylists_subTitle, "playlist subtitle text mismatch");
         assertion.assertEqual(sts.noPlaylists_btn, testdata.noPlaylists_btn, "create playlist text mismatch");
         assertion.assertEqual(sts.actionCardList[0].actionCardTitles,testdata.actionCard[0].actionCardTitles, "Action Card title text mismatch");
-        assertion.assertEqual(sts.actionCardList[0].actionCardSubtitles,testdata.actionCard[0].actionCardSubtitles, "Action Card subtitle text mismatch");
+        assertion.assertEqual(sts.actionCardList[0].actionCardSubtitles,testdata.actionCard[0].actionCardSubtitles, "Action Card Subtitle text mismatch");
         assertion.assertEqual(sts.actionCardList[0].actionCardBtns,testdata.actionCard[0].actionCardBtns, "Action Card button text mismatch");    },
 
     //Validate on clicking "View Classes" from Book dropdown menu, class Pane is launched
