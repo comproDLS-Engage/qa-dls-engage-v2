@@ -1,5 +1,5 @@
 "use strict";
-var action = require('../../core/actionLibrary/baseActionLibrary.js');
+const action = require('../../core/actionLibrary/baseActionLibrary.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
 const basePlayerPage = require('./basePlayer.page.js');
 var res;
@@ -17,7 +17,7 @@ module.exports = {
     isInitialized: function () {
         logger.logInto(stackTrace.get());
         action.waitForDocumentLoad();
-        action.waitForDisplayed(this.breadCrumbTitle);
+        action.waitForDisplayed(this.infoTOC);
         res = this.getActivityPlayerData();
         return res;
     },
