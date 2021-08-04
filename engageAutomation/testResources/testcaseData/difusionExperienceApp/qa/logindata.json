@@ -60,6 +60,30 @@
                     "class": [],
                     "info": {}
                 },
+                 "successfulStudentUser":
+                {
+                    "email": "difusionqa.stud6@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "student",
+                    "name": "difusionqa.stud6",
+                    "class": [
+
+                    ],
+                    "info":
+                    {}
+                },
+                "successfulInstructorUser":
+                {
+                    "email": "difusionqa.teach46@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "student",
+                    "name": "difusionqa teach46",
+                    "class": [
+
+                    ],
+                    "info":
+                    {}
+                },
                 "invalidUser1": {
                     "email": "etirrase@yopmail",
                     "password": "hfcghgufyhW#2",
