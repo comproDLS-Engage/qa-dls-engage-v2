@@ -51,45 +51,46 @@
                 "invalidEmail_txt": "Please check your email address and try again.",
                 "notRegisterUser_alert": "Please check your email address and password and try again."
             },
-            "dashboard": {
+            "dashboard":
+            {
                 "pageTitle": "Dashboard",
                 "createPlaylist_Txt": "Create Playlist",
-                "addBook_Txt":"Add Book",
-                "cardSliderTitle":"Getting started",
-                "cardSliderSubtitle":"Use your dashboard to pin your textbooks and create playlists to share with your class.",
-                "myBooksHeading_Txt":"My Books",
-                "noBooks_title":"No Books added yet",
-                "noBooks_subTitle":"Any books you save while browsing the catalog will be added here for you to view later.",
-                "noBooks_btn":"Add Book",
-                "myPlaylistsHeading_Txt":"My Playlists",
-                "noPlaylists_title":"No Playlist created yet",
-                "noPlaylists_subTitle":"Any playlists you create will be added here for you to view, share, and use in your classes.",
-                "noPlaylists_btn":"Create Playlist",
-                "actionCard":[
-                    {
-                        "actionCardTitles": "Adding Books",
-                        "actionCardSubtitles":"Save your class books to your dashboard to quickly access your book materials.",
-                        "actionCardBtns":"Add Book"
-                    },
-                    {   
-                        "actionCardTitles": "Using Classes",
-                        "actionCardSubtitles":"assignments.",
-                        "actionCardBtns":"Create Class"
+                "addBook_Txt": "Add Book",
+                "cardSliderTitle": "Getting started",
+                "cardSliderSubtitle": "Use your dashboard to pin your textbooks and create playlists to share with your class.",
+                "myBooksHeading_Txt": "My Books",
+                "noBooks_title": "No Books added yet",
+                "noBooks_subTitle": "Any books you save while browsing the catalog will be added here for you to view later.",
+                "noBooks_btn": "Add Book",
+                "myPlaylistsHeading_Txt": "My Playlists",
+                "noPlaylists_title": "No Playlist created yet",
+                "noPlaylists_subTitle": "Any playlists you create will be added here for you to view, share, and use in your classes.",
+                "noPlaylists_btn": "Create Playlist",
+                "actionCard": [
+                {
+                    "actionCardTitles": "Adding Books",
+                    "actionCardSubtitles": "Save your class books to your dashboard to quickly access your book materials.",
+                    "actionCardBtns": "Add Book"
+                },
+                {
+                    "actionCardTitles": "Using Classes",
+                    "actionCardSubtitles": "assignments.",
+                    "actionCardBtns": "Create Class"
 
-                    },
-                    {   
-                        "actionCardTitles": "Using Playlists",
-                        "actionCardSubtitles":"Any playlists you create will be added here for you to view, share, and use in your classes.",
-                        "actionCardBtns":"Create Playlist"
+                },
+                {
+                    "actionCardTitles": "Using Playlists",
+                    "actionCardSubtitles": "Any playlists you create will be added here for you to view, share, and use in your classes.",
+                    "actionCardBtns": "Create Playlist"
 
-                    }
-                ],
-                "removeBook_title":"Remove from My Books?",
-                "removeBook_subTitle":"This will remove the book - All Type Book - from your My Books list.",
-                "removeBook_cancel":"Cancel",
-                "removeBook_remove":"Remove"
+                }],
+                "removeBook_title": "Remove from My Books?",
+                "removeBook_subTitle": "This will remove the book - All Type Book - from your My Books list.",
+                "removeBook_cancel": "Cancel",
+                "removeBook_remove": "Remove"
             },
-            "createClassPage": {
+            "createClassPage":
+            {
                 "pageTitle": "Create a new class",
                 "pageSubTitle": "Add your class details and start inviting students, creating assignments, and viewing progress.",
                 "classHeader": "Class Details",
@@ -203,9 +204,51 @@
                     "remove_btn": "Remove"
                 }
             },
-            "activityPlayerPage":{
+            "activityPlayerPage":
+            {
                 "correct_txt": "Well done",
-                "incorrect_txt" : "Oops! Not quite correct."
+                "incorrect_txt": "Oops! Not quite correct."
+            },
+            "onboarding":
+            {
+                "welcomePage":
+                {
+                    "pageHeading": "Welcome, Onboarding User",
+                    "userName": "Onboarding User",
+                    "message": "Let's get started. Select the role that best describes you.",
+                    "continueBtn": "Continue",
+                    "signOut": "Logout"
+                },
+                "rolePage":
+                {
+                    "pageHeading": "Select your role",
+                    "role1": "I'm a student",
+                    "role2": "I'm a teacher"
+                },
+                "courseKeyPage":
+                {
+                    "pageHeading": "Enter your class code",
+                    "subHeading": "Use the class code provided by your teacher or skip for now.",
+                    "textboxMessage": "Enter Class Code",
+                    "helper_txt": "Your class code should look like: iqig-Gq32. Be sure to check your email to see if your teacher sent you an invite.",
+                    "submitBtn": "Continue",
+                    "skipForNow": "Skip for now",
+                    "invalidKeyMessage": "Invalid course key",
+                    "alreadyEnrolledMsg": "You are already enrolled in this course",
+                    "clickToExitMsg": "Please enter a different course key or click here to exit.",
+                    "back_btn": "Back (select a different role)"
+                },
+                "schoolKeyPage":
+                {
+                    "pageHeading": "Join Your School",
+                    "message": "Use the school key provided by your school or skip for now.",
+                    "textboxMessage": "Enter School Key",
+                    "helper_txt": "Your school key should look like: ABC-DEF-GHI. Please contact your school admin if you don’t have school key.",
+                    "submitBtn": "Continue",
+                    "skipForNow": "Skip for now",
+                    "invalidKeyMessage": "Invalid school key",
+                    "back_btn": "Back (select a different role)"
+                }
             }
         }
     }
