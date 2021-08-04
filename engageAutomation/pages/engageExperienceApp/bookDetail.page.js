@@ -334,14 +334,12 @@ module.exports = {
 
     clickUnitOpeninFlipbook: function(unitIndex) {
         this.clickUnitMoreOptions(unitIndex)
-        //if (res == true) {
             res = action.click(this.unitOpenFlipbook_btn + unitIndex)
             if(res == true)
             {   
                 logger.logInto(stackTrace.get(), "Open FlipBook in More Options Clicked");
                 res = action.waitForDisplayed(this.breadcrumbFlipbook)
             }
-        //} 
         else
             logger.logInto(stackTrace.get(), "Open FlipBook in More Options  Not Clicked", "error");
 
@@ -375,7 +373,6 @@ module.exports = {
         if (res == true) {
             logger.logInto(stackTrace.get(), " --Dismiss Button clicked");
             res = action.waitForDisplayed(this.lastActivityIcon,30000,true)
-
         } else
             logger.logInto(stackTrace.get(), " --Dismiss Button NOT clicked", "error");
         return res;
