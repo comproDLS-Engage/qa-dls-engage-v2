@@ -36,12 +36,12 @@
             "description": "",
             "testFile": "./test/engageExperienceApp/dashboard.test.js",
             "testData": [
-                {
-                    "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                    "jsonPath": "engage.appContent.dashboard"
-                 }
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.dashboard"
+               }
             ]
-        },
+         },
          {
             "id": "ENG_DASH_TC_6",
             "description": "",
@@ -625,13 +625,24 @@
             "id": "ENG_DASH_TC_13",
             "description": "",
             "testFile": "./test/engageExperienceApp/dashboard.test.js",
-            "testData": []
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.dashboard"
+              }
+
+            ]
          },
          {
             "id": "ENG_DASH_TC_15",
             "description": "",
             "testFile": "./test/engageExperienceApp/dashboard.test.js",
-            "testData": []
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.dashboard"
+               }
+            ]
          }
       ],
       "AfterEach": [],

@@ -42,16 +42,16 @@ module.exports = {
     },
 
     //Validate that clicking on 'Remove from My Books' launches a pop up with label 'Remove from My Books?'
-    ENG_DASH_TC_13: function () {
+    ENG_DASH_TC_13: function (testdata) {
         sts = dashboardPage.clickMenuRemoveBook("All Type Book");
-      /*  assertion.assertEqual(sts.removeBook_title,testdata.removeBook_title, "Menu Remove Title status mismatch");
+        assertion.assertEqual(sts.removeBook_title,testdata.removeBook_title, "Menu Remove Title status mismatch");
         assertion.assertEqual(sts.removeBook_subTitle,testdata.removeBook_subTitle, "Menu Remove Subtitle status mismatch");
         assertion.assertEqual(sts.removeBook_cancel,testdata.removeBook_cancel, "Menu Remove Cancel status mismatch");
-        assertion.assertEqual(sts.removeBook_remove,testdata.removeBook_remove, "Menu Remove Remove status mismatch");*/
+        assertion.assertEqual(sts.removeBook_remove,testdata.removeBook_remove, "Menu Remove Remove status mismatch");
     },
     
     //Validate that clicking on 'Remove' in dialogue box removes the book from 'My List'
-    ENG_DASH_TC_15: function () {
+    ENG_DASH_TC_15: function (testdata) {
         sts = dashboardPage.clickRemoveBookDialogueBox_Remove();
         assertion.assertEqual(sts.pageTitle, testdata.pageTitle, "Dashboard text mismatch");
         assertion.assertEqual(sts.createPlaylist_Txt, testdata.createPlaylist_Txt, "Create Playlist text mismatch");
