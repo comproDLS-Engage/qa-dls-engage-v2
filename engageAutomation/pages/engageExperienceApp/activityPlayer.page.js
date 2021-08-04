@@ -98,7 +98,6 @@ module.exports = {
     },
 
     getFeedbackInfo: function () {
-        let insideFrame = basePlayerPage.enterFrame(this.feedback_txt);
         var feedbackinfo = {
             fdbackText: "",
             buttonText: "",
@@ -126,8 +125,6 @@ module.exports = {
             feedbackinfo.showCorrectAnswerText = action.getText(this.showingCorrectAnswer_txt);
             res = feedbackinfo;
         }
-        if (insideFrame)
-            action.switchToParentFrame();
         return res;
     }
 
