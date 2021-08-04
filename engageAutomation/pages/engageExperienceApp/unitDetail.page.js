@@ -21,7 +21,7 @@ module.exports = {
     activity_lbl_unitView: selectorFile.css.ComproEngage.bookView.activity_lbl_unitView,
     activity_byline_unitView: selectorFile.css.ComproEngage.bookView.activity_byline_unitView,
 
-    isInitialized: function() {
+    isInitialized: function () {
         logger.logInto(stackTrace.get());
         action.waitForDocumentLoad();
         action.waitForDisplayed(this.unitThumbnail);
@@ -29,27 +29,25 @@ module.exports = {
         return res;
     },
 
-
-    getUnitTOCData: function() {
+    getUnitTOCData: function () {
         obj = {
-
             unitThumbnail: (action.getElementCount(this.unitThumbnail) > 0) ? action.waitForDisplayed(this.unitThumbnail) : null,
             unitChapterName: (action.getElementCount(this.unitChapterName) > 0) ? action.getText(this.unitChapterName) : null,
             unitNumber: (action.getElementCount(this.unitNumber) > 0) ? action.getText(this.unitNumber) : null,
             unitOpenFlipbook_btn: (action.getElementCount(this.unitOpenFlipbook_btn) > 0) ? action.getText(this.unitOpenFlipbook_btn) : null,
-            activity_lbl_unitView : (action.getElementCount(this.activity_lbl_unitView) > 0) ? action.getText(this.activity_lbl_unitView) : null,
-            activity_byline_unitView : (action.getElementCount(this.activity_byline_unitView) > 0) ? action.getText(this.activity_byline_unitView) : null,
+            activity_lbl_unitView: (action.getElementCount(this.activity_lbl_unitView) > 0) ? action.getText(this.activity_lbl_unitView) : null,
+            activity_byline_unitView: (action.getElementCount(this.activity_byline_unitView) > 0) ? action.getText(this.activity_byline_unitView) : null,
             nextUnit_btn: (action.getElementCount(this.nextUnit_btn) > 0) ? action.getText(this.nextUnit_btn) : null,
             previousUnit_btn: (action.getElementCount(this.previousUnit_btn) > 0) ? action.getText(this.previousUnit_btn) : null,
             componentList: this.getComponentListData(),
             activityList: this.getActivityListData()
+            // do we need attribute for which component is selected ? are/will we check this in testcase?- akhil
         }
         logger.logInto(stackTrace.get(), JSON.stringify(obj));
         return obj;
-
     },
 
-    getComponentListData: function() {
+    getComponentListData: function () { //use getComponentListData from bookDetail.page - akhil
         let i, list;
         let componentArr = [];
         list = action.findElements(this.component);
@@ -60,44 +58,46 @@ module.exports = {
         return componentArr;
     },
 
-    clickNextUnit: function() {
-
+    clickNextUnit: function () {
         logger.logInto(stackTrace.get())
         res = action.click(this.nextUnit_btn);
         if (res == true) {
             logger.logInto(stackTrace.get(), " --Next Unit Button clicked");
+            // return getUnitTOCData - akhil
         } else
             logger.logInto(stackTrace.get(), " --Next Unit Button NOT clicked", "error");
         return res;
     },
 
-    clickPreviousUnit: function() {
+    clickPreviousUnit: function () {
         logger.logInto(stackTrace.get())
         res = action.click(this.previousUnit_btn);
         if (res == true) {
             logger.logInto(stackTrace.get(), " --Previous Unit Button clicked");
+            // return getUnitTOCData - akhil
         } else
             logger.logInto(stackTrace.get(), " --Previous Unit Button NOT clicked", "error");
         return res;
     },
 
-    clickOpenInFlipBook_unitLevel: function() {
+    clickOpenInFlipBook_unitLevel: function () {
         logger.logInto(stackTrace.get())
         res = action.click(this.unitOpenFlipbook_btn);
         if (res == true) {
             logger.logInto(stackTrace.get(), " --Open In FlipBook Button clicked");
+            // return flipbook isInitialized()
         } else
             logger.logInto(stackTrace.get(), " --Open In FlipBook Button NOT clicked", "error");
         return res;
     },
 
-    getActivityListData: function(componentName) {
+    getActivityListData: function (componentName) {
         var componentIndex;
         logger.logInto(stackTrace.get())
-        if(componentName == undefined)
+        if (componentName == undefined)
             componentIndex = 0;
-        else 
-          componentIndex = require('./bookDetail.page.js').clickComponent(componentName);
+        else
+            componentIndex = require('./bookDetail.page.js').clickComponent(componentName);
 
         let i, list;
         let activityArr = [];
@@ -113,15 +113,13 @@ module.exports = {
                 activityArr[i] = obj;
             }
             logger.logInto(stackTrace.get(), activityArr);
-
         } else {
-
             logger.logInto(stackTrace.get(), "Component Not Clicked", "error");
         }
         return activityArr;
     },
 
-    clickActiivty: function(activityName) {
+    clickActiivty: function (activityName) { //typo in function name - akhil
         logger.logInto(stackTrace.get());
         let i, list;
         list = action.findElements(this.activityTitle);
@@ -132,12 +130,11 @@ module.exports = {
             }
             res = false;
         }
-
         logger.logInto(stackTrace.get(), res);
         return res;
     },
 
-    clickActiivtyMoreOptions: function(activityName) {
+    clickActiivtyMoreOptions: function (activityName) { //typo in function name, and disable this function as it is not required for now - akhil
         let i, list;
         list = action.findElements(this.activityTitle);
         for (i = 0; i < list.length; i++) {
@@ -147,33 +144,28 @@ module.exports = {
             }
             res = false;
         }
-
         logger.logInto(stackTrace.get(), res);
         return res;
     },
 
-    clickOpenFlipbook_MoreOptions: function(activityName) {
+    clickOpenFlipbook_MoreOptions: function (activityName) { //not clear on this function - akhil
         res = this.clickActiivtyMoreOptions(activityName)
         if (res == true) {
             res = action.click(this.openFlipbook_moreOptions)
             logger.logInto(stackTrace.get(), "Open FlipBook in More Options Clicked");
         } else
             logger.logInto(stackTrace.get(), "Open FlipBook in More Options  Not Clicked", "error");
-
         return res;
-
     },
 
-    clickViewActivity_moreOptions: function(activityName) {
+    clickViewActivity_moreOptions: function (activityName) { //disable this function as it is not required for now - akhil
         res = this.clickActiivtyMoreOptions(activityName)
         if (res == true) {
             res = action.click(this.viewActivity_moreOptions)
             logger.logInto(stackTrace.get(), "View Activity in More Options Clicked");
         } else
             logger.logInto(stackTrace.get(), "View Activity in More Options  Not Clicked", "error");
-
         return res;
-
     }
 
 }
