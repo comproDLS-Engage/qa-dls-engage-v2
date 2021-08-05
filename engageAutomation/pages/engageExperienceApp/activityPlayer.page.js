@@ -1,52 +1,38 @@
 "use strict";
-var action = require('../../core/actionLibrary/baseActionLibrary.js');
+const action = require('../../core/actionLibrary/baseActionLibrary.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
 const basePlayerPage = require('./basePlayer.page.js');
-var res, obj;
+var res;
 
 module.exports = {
 
-    breadCrumbTitle: selectorFile.css.ComproEngage.activitiyPlayer.breadCrumbTitle,
-    index_btn: selectorFile.css.ComproEngage.activitiyPlayer.index_btn,
     infoTOC: selectorFile.css.ComproEngage.activitiyPlayer.infoTOC,
-    checkAnswer: selectorFile.css.ComproEngage.activitiyPlayer.checkAnswer,
     previousActivity_btn: selectorFile.css.ComproEngage.activitiyPlayer.previousActivity_btn,
     nextActivity_btn: selectorFile.css.ComproEngage.activitiyPlayer.nextActivity_btn,
-    // next_btn: selectorFile.css.ComproEngage.activitiyPlayer.next_btn,
-    // previous_btn: selectorFile.css.ComproEngage.activitiyPlayer.previous_btn,
     questionInfo: selectorFile.css.ComproEngage.activitiyPlayer.questionInfo,
     submitActivity_btn: selectorFile.css.ComproEngage.activitiyPlayer.submitActivity_btn,
-    showAnswer_btn: selectorFile.css.ComproEngage.activitiyPlayer.showAnswer_btn,
-    showResponse_btn: selectorFile.css.ComproEngage.activitiyPlayer.showResponse_btn,
     feedback_txt: selectorFile.css.ComproEngage.activitiyPlayer.feedback_txt,
     showingCorrectAnswer_txt: selectorFile.css.ComproEngage.activitiyPlayer.showingCorrectAnswer_txt,
 
     isInitialized: function () {
         logger.logInto(stackTrace.get());
         action.waitForDocumentLoad();
-        action.waitForDisplayed(this.breadCrumbTitle);
+        action.waitForDisplayed(this.infoTOC);
         res = this.getActivityPlayerData();
         return res;
     },
 
-    // getBreadcrumbHeaderData: function () {
-    //     obj = {
-    //         breadCrumbTitle: (action.getElementCount(this.breadCrumbTitle) > 0) ? action.getText(this.breadCrumbTitle) : null,
-    //         index_btn: (action.getElementCount(this.index_btn) > 0) ? action.getText(this.index_btn) : null
-    //     }
-    //     logger.logInto(stackTrace.get(), JSON.stringify(obj));
-    //     return obj;
-    // },
-
     getActivityPlayerData: function () {
         let data = basePlayerPage.getBasePlayerInfo();
         data.infoTOC = (action.getElementCount(this.infoTOC) > 0) ? action.waitForDisplayed(this.infoTOC) : null;
-        data.checkAnswer_txt = (action.getElementCount(this.checkAnswer) > 0) ? action.getText(this.checkAnswer) : null;
+        data.checkAnswer_txt = (action.getElementCount(basePlayerPage.checkMyWork_btn) > 0) ? action.getText(basePlayerPage.checkMyWork_btn) : null;
         data.questionInfo = (action.getElementCount(this.questionInfo) > 0) ? action.getText(this.questionInfo) : null;
         data.submitActivity_isDisabled = (action.getElementCount(this.submitActivity_btn) > 0) ? action.getAttribute(this.submitActivity_btn, 'disabled') : null;
         data.submitActivity_txt = (action.getElementCount(this.submitActivity_btn) > 0) ? action.getText(this.submitActivity_btn) : null;
         data.previousActivity_txt = (action.getElementCount(this.previousActivity_btn) > 0) ? action.getText(this.previousActivity_btn) : null;
         data.nextActivity_txt = (action.getElementCount(this.nextActivity_btn) > 0) ? action.getText(this.nextActivity_btn) : null;
+        data.showAnswer_txt = (action.getElementCount(basePlayerPage.showAnswer_btn) > 0) ? action.getText(basePlayerPage.showAnswer_btn) : null;
+        data.yourResponse_txt = (action.getElementCount(basePlayerPage.yourResponse_btn) > 0) ? action.getText(basePlayerPage.yourResponse_btn) : null;
         return data;
     },
 
@@ -111,6 +97,36 @@ module.exports = {
         return res;
     },
 
+    getFeedbackInfo: function () {
+        var feedbackinfo = {
+            fdbackText: "",
+            buttonText: "",
+            showCorrectAnswerText: ""
+        }
+
+        res = action.getElementCount(this.feedback_txt);
+        if (res != 0) {
+            logger.logInto(stackTrace.get(), " -- Feedback text is available");
+            action.waitForDisplayed(this.feedback_txt);
+            feedbackinfo.fdbackText = action.getText(this.feedback_txt);
+            res = feedbackinfo;
+        } else {
+            res = res + " -- Feedback text is NOT available";
+            logger.logInto(stackTrace.get(), res, "error");
+        }
+        //showAnswer + feedback text
+        if (action.getElementCount(basePlayerPage.showAnswer_btn) == 1) {
+            feedbackinfo.buttonText = action.getText(basePlayerPage.showAnswer_btn);
+            res = feedbackinfo;
+        }
+        //showResponse + feedback text + Showing Correct Answer text
+        if (action.getElementCount(basePlayerPage.yourResponse_btn) == 1) {
+            feedbackinfo.buttonText = action.getText(basePlayerPage.yourResponse_btn);
+            feedbackinfo.showCorrectAnswerText = action.getText(this.showingCorrectAnswer_txt);
+            res = feedbackinfo;
+        }
+        return res;
+    }
 
     // Not Required currently, may be used later
     /*getQuestionInfo: function () {
@@ -135,78 +151,5 @@ module.exports = {
         }
         return quesInfo;
     },*/
-
-    getFeedbackInfo: function () {
-        let insideFrame = basePlayerPage.enterFrame(this.feedback_txt);
-        var feedbackinfo = {
-            fdbackText: "",
-            buttonText: "",
-            showCorrectAnswerText: ""
-        }
-
-        res = action.getElementCount(this.feedback_txt);
-        if (res != 0) {
-            logger.logInto(stackTrace.get(), " -- Feedback text is available");
-            action.waitForDisplayed(this.feedback_txt);
-            feedbackinfo.fdbackText = action.getText(this.feedback_txt);
-            res = feedbackinfo;
-        } else {
-            res = res + " -- Feedback text is NOT available";
-            logger.logInto(stackTrace.get(), res, "error");
-        }
-
-        //showAnswer + feedback text
-        if (action.getElementCount(this.showAnswer_btn) == 1) {
-            feedbackinfo.buttonText = action.getText(this.showAnswer_btn);
-            res = feedbackinfo;
-        }
-
-        //showResponse + feedback text + Showing Correct Answer text
-        if (action.getElementCount(this.showResponse_btn) == 1) {
-            feedbackinfo.buttonText = action.getText(this.showResponse_btn);
-            feedbackinfo.showCorrectAnswerText = action.getText(this.showingCorrectAnswer_txt);
-            res = feedbackinfo;
-        }
-        if (insideFrame)
-            action.switchToParentFrame();
-        return res;
-    },
-
-
-    // Not Required currently, may be used later
-    /*skipToQuestion: function (questionNumber) {
-        var quesItr;
-        res = this.getQuestionInfo();
-
-        if (res.activeQues < 0 || res.maxQues < 0) {
-            logger.logInto(stackTrace.get(), "Question Information Not available. Cannot Skip to questionNumber:" + questionNumber, "error");
-            return res;
-        } else {
-            if (res.activeQues == questionNumber) {
-                logger.logInto(stackTrace.get(), "Currently on :" + questionNumber);
-                return res;
-            } else if (questionNumber > res.activeQues) {
-                for (quesItr = res.activeQues; quesItr < questionNumber; quesItr++) {
-                    res = this.clickNextQuestion();
-                }
-            } else {
-                for (quesItr = questionNumber; quesItr < res.activeQues; quesItr++) {
-                    res = this.clickPreviousQuestion();
-                }
-            }
-
-            return res;
-        }
-    },*/
-
-    clickOnBreadcrumb: function () {
-        res = action.click(this.breadCrumbTitle)
-        if (res == true) {
-            logger.logInto(stackTrace.get(), " --Breadcrumb Button clicked");
-        } else
-            logger.logInto(stackTrace.get(), " --Breadcrumb Button NOT clicked", "error");
-        return res;
-
-    },
 
 }

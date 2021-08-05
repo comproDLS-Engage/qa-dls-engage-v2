@@ -1393,6 +1393,209 @@
                     "visualTest": true
                 }
             ]
-        }
-    ]
+        },
+
+    {
+         "modulename":"Onboarding New User",
+         "moduledetails":"",
+         "testFile":"./test/engageExperienceApp/userOnboarding.test.js",
+         "testcase":[
+            {
+               "id":"ENG_ONBO_TC_1",
+               "description":"Validate Welcome Screen when new user sign in into application for onboarding",
+               "tags":"P2",
+               "visualTest":true
+            },
+            {
+               "id":"ENG_ONBO_TC_4",
+               "description":"Validate that on selecting 'Student' role, user is directed to Student Options screen",
+               "tags":"P2",
+               "visualTest":true
+            },
+            {
+               "id":"ENG_ONBO_TC_5",
+               "description":"Validate that selecting the Class Key option , user is directed to the Class key screen",
+               "tags":"P1",
+               "visualTest":true
+            },
+            {
+               "id":"ENG_ONBO_TC_6",
+               "description":"Validate the error message on entering invalid or wrong Class Key",
+               "tags":"P1",
+               "visualTest":true
+            },
+            {
+               "id":"ENG_ONBO_TC_7",
+               "description":"Validate that activation key page appears when the user enters a valid Class Key",
+               "tags":"P1",
+               "visualTest":true
+            },
+            {
+               "id":"ENG_ONBO_TC_8",
+               "description":"Validate the error message when the Activation key with invalid format is entered",
+               "tags":"P1",
+               "visualTest":true
+            },
+            {
+               "id":"ENG_ONBO_TC_9",
+               "description":"Validate the error message when already redeemed Activation key is entered",
+               "tags":"P1"
+            },
+            {
+               "id":"ENG_ONBO_TC_10",
+               "description":"Validate that the success screen appears when the user enters the correct Activation key",
+               "tags":"P1",
+               "visualTest":true
+            },
+            {
+               "id":"ENG_ONBO_TC_11",
+               "description":"Validate that on Clicking Continue on Success Screen the user navigates to Dashboard",
+               "tags":"P1"
+            },
+            {
+               "id":"ENG_ONBO_TC_13",
+               "description":"Validate that back button (arrow) navigates to the Class Key Screen from Activation Key Screen",
+               "tags":"P2"
+            },
+            {
+               "id":"ENG_ONBO_TC_14",
+               "description":"Validate that back button (arrow) navigates to Student Options Screen from the Class key screen",
+               "tags":"P2"
+            },
+            {
+               "id":"ENG_ONBO_TC_16",
+               "description":"Validate that back button (arrow) navigates to the Welcome screen from  Student Options Screen",
+               "tags":"P2"
+            },
+            {
+               "id":"ENG_ONBO_TC_17",
+               "description":"Teacher Onboarding - Validate that on selecting 'Teacher' role, user is directed to Teacher Options screen",
+               "tags":"P1",
+               "visualTest":true
+            },
+            {
+               "id":"ENG_ONBO_TC_18",
+               "description":"Teacher Onboarding - Validate that selecting on 'Enter School Key' option Enter your school key Screen is launched.",
+               "tags":"P1",
+               "visualTest":true
+            },
+            {
+               "id":"ENG_ONBO_TC_19",
+               "description":"Teacher Onboarding - Validate the error message appears on entering invalid or wrong school Key",
+               "tags":"P1",
+               "visualTest":true
+            },
+            {
+               "id":"ENG_ONBO_TC_20",
+               "description":"Teacher Onboarding - Validate that Success Page appears on entering a valid School Key",
+               "tags":"P1",
+               "visualTest":true
+            },
+            {
+               "id":"ENG_ONBO_TC_21",
+               "description":"Teacher Onboarding- Validate that on clicking Back Button on School Key Screen, the Teacher Options Screen appears",
+               "tags":"P2"
+            },
+            {
+               "id":"ENG_ONBO_TC_23",
+               "description":"Teacher Onboarding - Validate that back button (arrow) on Teacher Options Screen navigates to the Welcome screen",
+               "tags":"P2"
+            },
+            {
+               "id":"ENG_ONBO_TC_25",
+               "description":"Validate that on Logout button on Success Screen ,the user logs out of the application",
+               "tags":"P2"
+            },
+            {
+               "id":"ENG_ONBO_TC_40",
+               "description":"Teacher Onboarding -Validate that on clicking Continue button on the success screen, user navigates to My Course Dashboard",
+               "tags":"P1"
+            },
+            {
+               "id":"ENG_ONBO_TC_46",
+               "description":"Validate that clicking on Logout button on Welcome Screen redirects the user to landing page",
+               "tags":"P1"
+            },
+            {
+               "id":"ENG_ONBO_TC_49",
+               "description":"Validate that the Student Options Screen is launched on clicking join course button",
+               "tags":"P1",
+               "visualTest":true
+            },
+            {
+               "id":"ENG_ONBO_TC_50",
+               "description":"Validate the scenario when user tries to enroll in a new Class of the existing book which he/she already has with another Class",
+               "tags":"P1"
+            },
+            {
+               "id":"ENG_ONBO_TC_52",
+               "description":"Validate that the Activation Key screen appears on submitting the Class key of a new/different book of which Student does not have access yet",
+               "tags":"P1"
+            },
+            {
+               "id":"ENG_ONBO_TC_53",
+               "description":"Validate the scenario where user enter Class key in which student is already enrolled",
+               "tags":"P2",
+               "visualTest":true
+            },
+            {
+               "id":"ENG_ONBO_TC_54",
+               "description":"Validate the Back button functionality on Student Options Screen for Join Course",
+               "tags":"P2"
+            },
+            {
+               "id":"ENG_ONBO_TC_60",
+               "description":"Validate the functionality of 'Click Here' button on Class Key Screen to exit the workflow when user enter the duplicate key",
+               "tags":"P1"
+            },
+            {
+               "id":"ENG_ONBO_TC_74",
+               "description":"Validate the functionality of Close button on Success Join Class Screen to navigate to My Courses Screen",
+               "tags":"P1"
+            },
+            {
+               "id":"ENG_ONBO_TC_47",
+               "description":"Validate the scenario when the user enters an expired/Archived Class Key",
+               "tags":"P1"
+            },
+            {
+               "id":"ENG_ONBO_TC_44",
+               "description":"Validate the scenario when the user enters Activation key entitled to different products than the products in the class",
+               "tags":"P1",
+               "visualTest":true
+            },
+            {
+               "id":"ENG_ONBO_TC_75",
+               "description":"Validate that on selecting 'Student' role, user is directed to Class Key Screen",
+               "tags":"P1",
+               "visualTest":true
+            },
+            {
+               "id":"ENG_ONBO_TC_76",
+               "description":"Validate that clicking on 'Skip for Now', for role Student ,user is directed to Success Screen.",
+               "tags":"P1",
+               "visualTest":true
+            },
+            {
+               "id":"ENG_ONBO_TC_77",
+               "description":"Validate that on submitting a valid class key, user is directed to Success Screen",
+               "tags":"P1",
+               "visualTest":true
+            },
+            {
+               "id":"ENG_ONBO_TC_78",
+               "description":"Validate that on selecting 'Teacher' role, user is directed to School Key Screen",
+               "tags":"P1",
+               "visualTest":true
+            },
+            {
+               "id":"ENG_ONBO_TC_79",
+               "description":"Validate that clicking on 'Skip for Now' , for role Teacher ,user is directed to Success Screen.",
+               "tags":"P1",
+               "visualTest":true
+            }
+         ]
+    
+
+}]
 }
