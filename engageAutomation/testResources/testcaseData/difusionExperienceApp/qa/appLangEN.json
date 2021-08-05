@@ -83,7 +83,6 @@
                     "actionCardSubtitles": "Any playlists you create will be added here for you to view, share, and use in your classes.",
                     "actionCardBtns": "Create Playlist"
 
-<<<<<<< HEAD
                     }
                 ],
                 "removeBook_title":"Remove from My Books?",
@@ -91,13 +90,6 @@
                 "removeBook_subTitle2":" - from your My Books list.",
                 "removeBook_cancel":"Cancel",
                 "removeBook_remove":"Remove"
-=======
-                }],
-                "removeBook_title": "Remove from My Books?",
-                "removeBook_subTitle": "This will remove the book - All Type Book - from your My Books list.",
-                "removeBook_cancel": "Cancel",
-                "removeBook_remove": "Remove"
->>>>>>> 526d48375d7913ed60328ac806e8d8b1ffb54528
             },
             "createClassPage":
             {
