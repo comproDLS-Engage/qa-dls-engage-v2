@@ -36,18 +36,20 @@ module.exports = {
     },
 
     //Validate on clicking Book Ellipses, dropdown menu is launched
-    ENG_DASH_TC_12: function(){
-        sts = dashboardPage.clickBookMenuOptions("All Type Book");
+    ENG_DASH_TC_12: function(testdata){
+        sts = dashboardPage.clickBookMenuOptions(testdata);
         assertion.assertEqual(sts, true);
     },
 
     //Validate that clicking on 'Remove from My Books' launches a pop up with label 'Remove from My Books?'
     ENG_DASH_TC_13: function (testdata) {
-        sts = dashboardPage.clickMenuRemoveBook("All Type Book");
-        assertion.assertEqual(sts.removeBook_title,testdata.removeBook_title, "Menu Remove Title status mismatch");
-        assertion.assertEqual(sts.removeBook_subTitle,testdata.removeBook_subTitle, "Menu Remove Subtitle status mismatch");
-        assertion.assertEqual(sts.removeBook_cancel,testdata.removeBook_cancel, "Menu Remove Cancel status mismatch");
-        assertion.assertEqual(sts.removeBook_remove,testdata.removeBook_remove, "Menu Remove Remove status mismatch");
+        sts = dashboardPage.clickMenuRemoveBook(testdata[0]);
+        assertion.assertEqual(sts.removeBook_title,testdata[1].removeBook_title, "Menu Remove Title status mismatch");
+        var removeBook_subTitle=testdata[1].removeBook_subTitle1 + testdata[0] +testdata[1].removeBook_subTitle2
+        console.log(removeBook_subTitle)
+        assertion.assertEqual(sts.removeBook_subTitle,removeBook_subTitle, "Menu Remove Subtitle status mismatch");
+        assertion.assertEqual(sts.removeBook_cancel,testdata[1].removeBook_cancel, "Menu Remove Cancel status mismatch");
+        assertion.assertEqual(sts.removeBook_remove,testdata[1].removeBook_remove, "Menu Remove Remove status mismatch");
     },
     
     //Validate that clicking on 'Remove' in dialogue box removes the book from 'My List'
@@ -151,9 +153,5 @@ module.exports = {
         assertion.assertEqual(sts, "Projectable", "Active tab name status Mismatch");
     },
 
-        //Validate the "+" icon  button of any book
-        ENG_DASH_TC_99: function () {
-            sts = dashboardPage.ClickPlusIconofBook("All Type Book");
-            assertion.assertEqual(sts, true, "Book Details Page is launched");
-        },
+        
 };

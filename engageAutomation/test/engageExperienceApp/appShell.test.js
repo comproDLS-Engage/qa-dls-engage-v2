@@ -39,7 +39,7 @@ module.exports = {
 	//Validate that clicking on the Classes button in left Navigation pane launches Classes page
 	ENG_SHELL_TC_4: function () {
 		sts = appShell.clickClassesButton();
-		assertion.assertEqual(sts, true, "Classes page status mismatch");
+		assertion.assertEqual(sts.pageStatus, true, "Classes page status mismatch");
 	},
 
 	//Validate that clicking on the bell icon launches the notification drawer

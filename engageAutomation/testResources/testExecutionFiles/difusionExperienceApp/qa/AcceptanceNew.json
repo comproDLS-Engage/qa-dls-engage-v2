@@ -49,10 +49,15 @@
             "testData": []
          },
          {
-            "id": "ENG_DASH_TC_99",
+            "id": "ENG_ADDBOOK_TC_21",
             "description": "",
-            "testFile": "./test/engageExperienceApp/dashboard.test.js",
-            "testData": []
+            "testFile": "./test/engageExperienceApp/addBook.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/classData.json",
+                  "jsonPath": "engage.courses.newValidClasswithspecialCharacter.bookName"
+               }
+            ]
          },
          {
             "id": "ENG_SHELL_TC_4",
@@ -619,7 +624,12 @@
             "id": "ENG_DASH_TC_12",
             "description": "",
             "testFile": "./test/engageExperienceApp/dashboard.test.js",
-            "testData": []
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/classData.json",
+                  "jsonPath": "engage.courses.newValidClasswithspecialCharacter.bookName"
+               }
+            ]
          },
          {
             "id": "ENG_DASH_TC_13",
@@ -627,10 +637,13 @@
             "testFile": "./test/engageExperienceApp/dashboard.test.js",
             "testData": [
                {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/classData.json",
+                  "jsonPath": "engage.courses.newValidClasswithspecialCharacter.bookName"
+               },
+               {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
                   "jsonPath": "engage.appContent.dashboard"
-              }
-
+               }
             ]
          },
          {
@@ -643,10 +656,7 @@
                   "jsonPath": "engage.appContent.dashboard"
                }
             ]
-         }
-      ],
-      "AfterEach": [],
-      "After": [
+         },
          {
             "id": "ENG_SHELL_TC_8",
             "description": "Validate that clicking on the profile dropdown launches the dropdown of profile and other options",
@@ -668,6 +678,8 @@
             "testFile": "./test/engageExperienceApp/appShell.test.js",
             "testData": []
          }
-      ]
+      ],
+      "AfterEach": [],
+      "After": []
    }
 }

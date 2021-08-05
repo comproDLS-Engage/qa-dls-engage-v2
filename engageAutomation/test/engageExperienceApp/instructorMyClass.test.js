@@ -109,7 +109,7 @@ module.exports = {
 	},
 	//Validate that Create Class page is launched on clicking create class button
 	ENG_INS_CLASS_TC_6: function () {
-		sts = instructorMyClassPage.isInitialized()
+		//sts = instructorMyClassPage.isInitialized()
 		sts = instructorMyClassPage.click_CreateClass_Button();
 		assertion.assertEqual(sts, true, "Create Class Page not launched: " + JSON.stringify(sts))
 		sts = createClassPage.isInitialized();
@@ -461,10 +461,10 @@ module.exports = {
 
 	},
 	//Click on add book button and Validate the book is added in the class
-	ENG_INS_CLASS_TC_42: function (index) {
+	ENG_INS_CLASS_TC_42: function () {
 		sts = createClassPage.click_AddANewBook_Button();
 		if ((typeof (sts)) === "object") {
-			assertion.assertEqual(sts.pageStatus, true, "Create Class Page not launched: " + JSON.stringify(sts))
+			assertion.assertEqual(sts.pageStatus, true, "Add book page is not launched: " + JSON.stringify(sts))
 
 		} else {
 			assertion.assertFail(sts);

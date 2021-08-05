@@ -1,8 +1,10 @@
 'use strict';
 const { BrowserType } = require('@applitools/eyes-webdriverio');
-var action = require('../../core/actionLibrary/baseActionLibrary.js')
+var action = require('../../core/actionLibrary/baseActionLibrary.js');
+const createClassPage = require('./createClass.page.js');
+const dashboardPage = require('./dashboard.page.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
-var res, obj;
+var res, obj, ret;
 var bookList = new Array();
 module.exports = {
 
@@ -22,7 +24,7 @@ module.exports = {
     bookdeletebottomIcon: selectorFile.css.ComproEngage.addBookPage.bookdeletebtmIcon,
     noBookTitle: selectorFile.css.ComproEngage.addBookPage.noBookTitle,
     noBookSubTitle: selectorFile.css.ComproEngage.addBookPage.noBookSubTitle,
-
+    bookPlusIcon: selectorFile.css.ComproEngage.addBookPage.bookPlusIcon,
     isInitialized: function () {
         logger.logInto(stackTrace.get());
         // action.waitForDocumentLoad();
@@ -50,15 +52,13 @@ module.exports = {
             noBooklbl: action.getElementCount(this.noBooklbl) > 0 ? action.getText(this.noBooklbl) : null,
             bookAddedlbl: action.getElementCount(this.bookAddedlbl) > 0 ? action.getText(this.bookAddedlbl) : null,
             bookAddedtxt: action.getElementCount(this.bookAddedtxt) > 0 ? action.getText(this.bookAddedtxt) : null,
-            bookdeletebtmIcon: action.getElementCount(this.bookdeletebtmIcon) > 0 ? action.waitForExist(this.bookdeletebtmIcon) : null,
+            bookdeletebottomIcon: action.getElementCount(this.bookdeletebottomIcon) > 0 ? action.waitForExist(this.bookdeletebottomIcon) : null,
         }
         return obj;
     },
 
     getBookData: function () {
         let bookCount = action.getElementCount(this.bookTitle);
-        browser.pause(5000)
-        console.log(action.getText(this.bookSubTitle + 0 + "]"))
         obj = {
             bookList: []
         }
@@ -73,18 +73,44 @@ module.exports = {
                     addBookbtnIcon: action.getElementCount(this.addBookbtn + i + "] svg") > 0 ? action.waitForExist(this.addBookbtn + i + "] svg") : null
                 }
             }
-            console.log(obj)
             return obj;
         }
     },
 
+	click_AllBooks_Tab: function () {
+		logger.logInto(stackTrace.get());
+		res = action.click(this.allBooksTab);
+		if (res == true) {
+			res = this.isInitialized();
+			logger.logInto(stackTrace.get(), res + " -- All Books Tab is clicked");
+		}
+		else {
+			res = res + " -- All Books tab is NOT clicked";
+			logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
 
+	click_MyBooks_Tab: function () {
+		logger.logInto(stackTrace.get());
+		res = action.click(this.myBooksTab);
+		if (res == true) {
+			res = this.isInitialized();
+			logger.logInto(stackTrace.get(), res + " -- My Books tab is clicked");
+		}
+		else {
+			res = res + " -- My Books Tab is NOT clicked";
+			logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
     click_AddtoClass_Button: function () {
         logger.logInto(stackTrace.get());
         res = action.click(this.addtoClassbtn);
         if (res == true) {
             logger.logInto(stackTrace.get(), "-- addBtn is clicked");
             var creatClassPage = require('./createClass.page.js');
+            action.waitForDisplayed(createClassPage.bookSkeleton,true,30000)
             res = creatClassPage.isInitialized();
         }
         else {
@@ -112,7 +138,6 @@ module.exports = {
     click_addBook: function (bookName) {
         logger.logInto(stackTrace.get());
         let book_index = this.getBookIndex(bookName);
-        console.log(book_index)
         if (typeof book_index != 'string') {
             res = action.click(this.addBookbtn + book_index + "]");
             if (res == true) {
@@ -136,7 +161,6 @@ module.exports = {
         var arr = [];
         action.waitForDisplayed("circle[class*='MuiCircularProgress-circle']", undefined, true)
         res = action.findElements(this.bookTitle);
-        console.log(res.length)
         if (res.length == 0) {
             res = res + " -- No Book available";
             logger.logInto(stackTrace.get(), res, 'error');
@@ -144,7 +168,6 @@ module.exports = {
         else {
             for (var i = 0; i < res.length; i++) {
                 var findBookName = action.getText(this.bookTitle + i + "']");
-                console.log(findBookName)
                 if (bookName == findBookName) {
                     arr[index] = i
                     index = index + 1;
@@ -157,7 +180,6 @@ module.exports = {
             else
                 res = "ERROR! No Book found with name " + bookName + " !!";
         }
-        console.log(res)
         return res;
     },
 
@@ -203,7 +225,6 @@ module.exports = {
     },
 
     clickOnBook : function (bookTitle) {
-        console.log("[title='"+bookTitle+"']")
         action.scrollIntoView("[title='"+bookTitle+"']");
         res = action.click("[title='"+bookTitle+"']")
         if (res == true) {
@@ -214,6 +235,23 @@ module.exports = {
             logger.logInto(stackTrace.get(), " --Book Title NOT clicked", "error");
         return res;
 
-    }
+    },
+    ClickPlusIconofBook:function(bookName) {
+        logger.logInto(stackTrace.get());
+        ret = dashboardPage.getDashboardPageData();
+        for (var i = 0; i < ret.bookList.length; i++) {
+            if (ret.bookList[i].bookTitle == bookName) {
+                res = action.click(this.bookPlusIcon + i + "]");
+                if (res == true) {
+                     logger.logInto(stackTrace.get(), " --Book Plus icon is clicked");
+                    }
+                    else {
+                        res = res + " -- Error in clicking Book Plus icon"
+                        logger.logInto(stackTrace.get(), res, "error");
+                    }
+                }
+            }
+            return res;
+    },
 
 }

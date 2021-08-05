@@ -85,7 +85,8 @@
                     }
                 ],
                 "removeBook_title":"Remove from My Books?",
-                "removeBook_subTitle":"This will remove the book - All Type Book - from your My Books list.",
+                "removeBook_subTitle1":"This will remove the book - ",
+                "removeBook_subTitle2":" - from your My Books list.",
                 "removeBook_cancel":"Cancel",
                 "removeBook_remove":"Remove"
             },
@@ -99,7 +100,6 @@
                 "endDate_lbl": "End Date",
                 "selectBook_lbl": "Class Books",
                 "selectBook_txt": "Assign a book to your class in order to view and assign materials.",
-                "bookTitle": "PROYECTOS",
                 "createBtn_txt": "Create Class",
                 "cancelBtn_txt": "Cancel & Go Back",
                 "notitleErrorMsg": "Name is required.",
@@ -181,9 +181,11 @@
                 "allBooksTab": "All Books",
                 "addtoClassbtn": "Add to Class",
                 "cancelAndGoBackbtn": "Cancel & Go Back",
-                "noBooklbl": "null",
+                "noBooklbl": "No Books Added",
                 "bookAddedlbl": "Books Added:",
-                "bookAddedtxt": "PROYECTOS"
+                "noBookerror":"No Books Added : Atleast one book needs to be selected",
+                "addBookbtntxt":"Add Book",
+                "addedBookbtntxt":"Added"
             },
             "bookViewTOC":
             {
