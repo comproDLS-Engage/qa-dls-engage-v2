@@ -601,11 +601,11 @@ module.exports = {
 		//res = action.click("[data-tid=input-autocomplete-searchtextbox]");
 		//console.log(res)
 		action.
-		res = action.setValue("div > input", "Aula");
+		res = action.setValue("div > input", "Automation");
 		console.log(res)
 		res = action.keyPress("Enter");
 		console.log(res)
-		res = action.waitForDisplayed("img[src*=Aula]");
+		res = action.waitForDisplayed("img[src*=Compro]");
 		console.log(res)
 	},
 }
