@@ -10,7 +10,7 @@ module.exports = {
     pageTitle: selectorFile.css.ComproEngage.dashboardPage.pageTitle,
     createPlaylist_Btn: selectorFile.css.ComproEngage.dashboardPage.createPlaylist_Btn,
     addBook_Btn: selectorFile.css.ComproEngage.dashboardPage.addBook_Btn,
-    bookPlusIcon: selectorFile.css.ComproEngage.dashboardPage.bookPlusIcon,
+   
     resourceList: selectorFile.css.ComproEngage.dashboardPage.resourceList,
     resourceTitle: selectorFile.css.ComproEngage.dashboardPage.resourceTitle,
     //for blank dashboard in slider section
@@ -273,23 +273,7 @@ module.exports = {
         //return res;
     },
 
-    ClickPlusIconofBook:function(bookName) {
-        logger.logInto(stackTrace.get());
-        ret = this.getDashboardPageData();
-        for (var i = 0; i < ret.bookList.length; i++) {
-            if (ret.bookList[i].bookTitle == bookName) {
-                res = action.click(this.bookPlusIcon + i + "]");
-                if (res == true) {
-                     logger.logInto(stackTrace.get(), " --Book Plus icon is clicked");
-                    }
-                    else {
-                        res = res + " -- Error in clicking Book Plus icon"
-                        logger.logInto(stackTrace.get(), res, "error");
-                    }
-                }
-            }
-            return res;
-    },
+    
 }
     
 

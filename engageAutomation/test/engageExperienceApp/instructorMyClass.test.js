@@ -109,7 +109,7 @@ module.exports = {
 	},
 	//Validate that Create Class page is launched on clicking create class button
 	ENG_INS_CLASS_TC_6: function () {
-		sts = instructorMyClassPage.isInitialized()
+		//sts = instructorMyClassPage.isInitialized()
 		sts = instructorMyClassPage.click_CreateClass_Button();
 		assertion.assertEqual(sts, true, "Create Class Page not launched: " + JSON.stringify(sts))
 		sts = createClassPage.isInitialized();
@@ -415,24 +415,23 @@ module.exports = {
 	//Validate the class drwaer Pane when no class is added
 	ENG_INS_CLASS_TC_38: function (testdata) {
 		sts = classDrawerpage.isInitialized();
-		assertion.assertEqual(sts.classDrawerHeader, "PROYECTOS" + testdata.header, "Class Title Text Mismatch: " + JSON.stringify(sts.title_lbl))
+		assertion.assertEqual(sts.classDrawerHeader, testdata[1] + testdata[0].header, "Class Title Text Mismatch: " + JSON.stringify(sts.title_lbl))
 		assertion.assertEqual(sts.classDrawerCloseBtn, true, "Class Title Text Mismatch: " + JSON.stringify(sts.title_lbl))
-		assertion.assertEqual(sts.instructorMyClassData.classHeading, testdata.classHeading, "Page Title Text Mismatch: " + JSON.stringify(sts.pageTitle))
+		assertion.assertEqual(sts.instructorMyClassData.classHeading, testdata[0].classHeading, "Page Title Text Mismatch: " + JSON.stringify(sts.pageTitle))
 		assertion.assertEqual(sts.instructorMyClassData.noClassFound_icon, true, "Page Icon Mismatch: " + JSON.stringify(sts.pageSubTitle))
-		assertion.assertEqual(sts.instructorMyClassData.noClassTitle, testdata.noClassTitle, "Page Header Text Mismatch: " + JSON.stringify(sts.classHeader))
-		assertion.assertEqual(sts.instructorMyClassData.noClassSubtitle, testdata.noClassSubtitle, "Page Sub Header Text Mismatch: " + JSON.stringify(sts.classSubHeader))
-		assertion.assertEqual(sts.instructorMyClassData.addClassBtn, testdata.addClassBtn, "Page Class add btn text is mismatch: " + JSON.stringify(sts.title_lbl))
+		assertion.assertEqual(sts.instructorMyClassData.noClassTitle, testdata[0].noClassTitle, "Page Header Text Mismatch: " + JSON.stringify(sts.classHeader))
+		assertion.assertEqual(sts.instructorMyClassData.noClassSubtitle, testdata[0].noClassSubtitle, "Page Sub Header Text Mismatch: " + JSON.stringify(sts.classSubHeader))
+		assertion.assertEqual(sts.instructorMyClassData.addClassBtn, testdata[0].addClassBtn, "Page Class add btn text is mismatch: " + JSON.stringify(sts.title_lbl))
 	},
 	//Validate the class drwaer Pane when  class is added
 	ENG_INS_CLASS_TC_39: function (testdata) {
 		sts = classDrawerpage.isInitialized();
-		assertion.assertEqual(sts.classDrawerHeader, "PROYECTOS" + testdata.header, "Class Title Text Mismatch: " + JSON.stringify(sts.title_lbl))
-		assertion.assertEqual(sts.classDrawerTitle, testdata.classDrawerTitle, "Class Title Text Mismatch: " + JSON.stringify(sts.title_lbl))
+		assertion.assertEqual(sts.classDrawerHeader, testdata[1] + testdata[0].header, "Class Title Text Mismatch: " + JSON.stringify(sts.title_lbl))
+		assertion.assertEqual(sts.classDrawerTitle, testdata[0].classDrawerTitle, "Class Title Text Mismatch: " + JSON.stringify(sts.title_lbl))
 		assertion.assertEqual(sts.classDrawerCloseBtn, true, "Class Close btn Text Mismatch: " + JSON.stringify(sts.title_lbl))
-		assertion.assertEqual(sts.classDrawerSubTitle, testdata.classDrawerSubTitle, "Class SubTitle Text Mismatch: " + JSON.stringify(sts.title_lbl))
-		assertion.assertEqual(sts.classDrawerHeader, "PROYECTOS" + testdata.header, "Class Header Text Mismatch: " + JSON.stringify(sts.title_lbl))
-		assertion.assertEqual(sts.instructorMyClassData.classHeading, testdata.classHeading, "Page Title Text Mismatch: " + JSON.stringify(sts.pageTitle))
-		assertion.assertEqual(sts.instructorMyClassData.addClassBtn, testdata.addClassBtnwithClass, "Add Class button Text Mismatch: " + JSON.stringify(sts.title_lbl))
+		assertion.assertEqual(sts.classDrawerSubTitle, testdata[0].classDrawerSubTitle, "Class SubTitle Text Mismatch: " + JSON.stringify(sts.title_lbl))
+		assertion.assertEqual(sts.instructorMyClassData.classHeading, testdata[0].classHeading, "Page Title Text Mismatch: " + JSON.stringify(sts.pageTitle))
+		assertion.assertEqual(sts.instructorMyClassData.addClassBtn, testdata[0].addClassBtnwithClass, "Add Class button Text Mismatch: " + JSON.stringify(sts.title_lbl))
 
 
 	},
@@ -461,10 +460,10 @@ module.exports = {
 
 	},
 	//Click on add book button and Validate the book is added in the class
-	ENG_INS_CLASS_TC_42: function (index) {
+	ENG_INS_CLASS_TC_42: function () {
 		sts = createClassPage.click_AddANewBook_Button();
 		if ((typeof (sts)) === "object") {
-			assertion.assertEqual(sts.pageStatus, true, "Create Class Page not launched: " + JSON.stringify(sts))
+			assertion.assertEqual(sts.pageStatus, true, "Add book page is not launched: " + JSON.stringify(sts))
 
 		} else {
 			assertion.assertFail(sts);
