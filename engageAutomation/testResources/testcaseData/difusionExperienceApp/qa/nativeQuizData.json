@@ -196,9 +196,9 @@
             ["O4","Aurangzeb’s death","4","correct"]
           ],
           "scenario1":[
-            ["O1","Babur’s attack on India","4","incorrect"],
+            ["O1","Babur’s attack on India","2","incorrect"],
             ["O2","Akbar’s birth","3","incorrect"],
-            ["O3","Construction of the Taj Mahal","2","incorrect"],
+            ["O3","Construction of the Taj Mahal","4","incorrect"],
             ["O4","Aurangzeb’s death","1","incorrect"]
           ],
           "scenario2":[
