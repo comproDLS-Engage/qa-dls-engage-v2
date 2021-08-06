@@ -38,7 +38,7 @@
                 ["O4", "Leaves", "", ""]
             ],
             "incorrectScenario": [
-              ["O1", "Roots", "", "correct"],
+              ["O1", "Roots", "", "incorrect"],
               ["O2", "Soil", "select", "incorrect"],
               ["O3", "Stem", "select", "incorrect"],
               ["O4", "Leaves", "select", "incorrect"]
