@@ -47,8 +47,8 @@ module.exports = {
         return obj;
     },
 
-    getComponentListData: function () { 
-        let componentArr = require("./bookDetail.page.js").getComponentListData()   
+    getComponentListData: function () {
+        let componentArr = require("./bookDetail.page.js").getComponentListData()
         return componentArr;
     },
 
@@ -93,19 +93,19 @@ module.exports = {
             componentIndex = 0;
         else
             componentIndex = require('./bookDetail.page.js').clickComponent(componentName);
+            // this is returning getChapterListData() and not index, please check - akhil
 
-        let i, list;
-        let activityArr = [];
+        // i think we need a function like getSelectedComponentandIndex() which can be added in bookDetail.page.js - akhil
+        let i, list, activityArr = [];
         if (componentIndex >= 0) {
             list = action.findElements(this.activityTitle);
             for (i = 0; i < list.length; i++) {
-                let obj;
-                obj = {
+                activityArr[i] = {
                     activityTitle: action.getText(this.activityTitle + componentIndex + '-' + i),
+                    // this will not work for Resources component, check Recursos in Aula book - akhil
                     activityPageInfo: (action.getElementCount(this.activityPageInfo) > 0) ? action.getText(this.activityPageInfo + componentIndex + '-' + i) : null,
                     activityCompletionCircle: (action.getElementCount(this.activityCompletionCircle + i) > 0) ? action.waitForDisplayed(this.activityCompletionCircle + i) : null
                 }
-                activityArr[i] = obj;
             }
             logger.logInto(stackTrace.get(), activityArr);
         } else {
@@ -114,7 +114,7 @@ module.exports = {
         return activityArr;
     },
 
-    clickActivity: function (activityName) { 
+    clickActivity: function (activityName) {
         logger.logInto(stackTrace.get());
         let i, list;
         list = action.findElements(this.activityTitle);
