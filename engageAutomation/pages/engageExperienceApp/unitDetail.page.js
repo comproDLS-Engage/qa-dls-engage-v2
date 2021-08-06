@@ -47,14 +47,8 @@ module.exports = {
         return obj;
     },
 
-    getComponentListData: function () { //use getComponentListData from bookDetail.page - akhil
-        let i, list;
-        let componentArr = [];
-        list = action.findElements(this.component);
-        for (i = 0; i < list.length; i++) {
-            componentArr[i] = action.getText(list[i])
-        }
-        logger.logInto(stackTrace.get(), componentArr);
+    getComponentListData: function () { 
+        let componentArr = require("./bookDetail.page.js").getComponentListData()   
         return componentArr;
     },
 
@@ -74,7 +68,7 @@ module.exports = {
         res = action.click(this.previousUnit_btn);
         if (res == true) {
             logger.logInto(stackTrace.get(), " --Previous Unit Button clicked");
-            // return getUnitTOCData - akhil
+            res = this.getUnitTOCData();
         } else
             logger.logInto(stackTrace.get(), " --Previous Unit Button NOT clicked", "error");
         return res;
@@ -86,6 +80,7 @@ module.exports = {
         if (res == true) {
             logger.logInto(stackTrace.get(), " --Open In FlipBook Button clicked");
             // return flipbook isInitialized()
+            //res = require('./flipbook.page.js').isInitialized()
         } else
             logger.logInto(stackTrace.get(), " --Open In FlipBook Button NOT clicked", "error");
         return res;
@@ -119,7 +114,7 @@ module.exports = {
         return activityArr;
     },
 
-    clickActiivty: function (activityName) { //typo in function name - akhil
+    clickActivity: function (activityName) { 
         logger.logInto(stackTrace.get());
         let i, list;
         list = action.findElements(this.activityTitle);
@@ -134,22 +129,22 @@ module.exports = {
         return res;
     },
 
-    clickActiivtyMoreOptions: function (activityName) { //typo in function name, and disable this function as it is not required for now - akhil
-        let i, list;
-        list = action.findElements(this.activityTitle);
-        for (i = 0; i < list.length; i++) {
-            if (action.getText(list[i]) == activityName) {
-                res = action.click(this.activityMoreOptions + i);
-                break;
-            }
-            res = false;
-        }
-        logger.logInto(stackTrace.get(), res);
-        return res;
-    },
+    // clickActivityMoreOptions: function (activityName) { 
+    //     let i, list;
+    //     list = action.findElements(this.activityTitle);
+    //     for (i = 0; i < list.length; i++) {
+    //         if (action.getText(list[i]) == activityName) {
+    //             res = action.click(this.activityMoreOptions + i);
+    //             break;
+    //         }
+    //         res = false;
+    //     }
+    //     logger.logInto(stackTrace.get(), res);
+    //     return res;
+    // },
 
-    clickOpenFlipbook_MoreOptions: function (activityName) { //not clear on this function - akhil
-        res = this.clickActiivtyMoreOptions(activityName)
+    clickOpenFlipbook_MoreOptions: function (activityName) { //not clear on this function - akhil // this is 3 dot option --> open flipbook for activity
+        res = this.clickActivityMoreOptions(activityName)
         if (res == true) {
             res = action.click(this.openFlipbook_moreOptions)
             logger.logInto(stackTrace.get(), "Open FlipBook in More Options Clicked");
@@ -158,14 +153,14 @@ module.exports = {
         return res;
     },
 
-    clickViewActivity_moreOptions: function (activityName) { //disable this function as it is not required for now - akhil
-        res = this.clickActiivtyMoreOptions(activityName)
-        if (res == true) {
-            res = action.click(this.viewActivity_moreOptions)
-            logger.logInto(stackTrace.get(), "View Activity in More Options Clicked");
-        } else
-            logger.logInto(stackTrace.get(), "View Activity in More Options  Not Clicked", "error");
-        return res;
-    }
+    // clickViewActivity_moreOptions: function (activityName) { //disable this function as it is not required for now - akhil
+    //     res = this.clickActivityMoreOptions(activityName)
+    //     if (res == true) {
+    //         res = action.click(this.viewActivity_moreOptions)
+    //         logger.logInto(stackTrace.get(), "View Activity in More Options Clicked");
+    //     } else
+    //         logger.logInto(stackTrace.get(), "View Activity in More Options  Not Clicked", "error");
+    //     return res;
+    // }
 
 }

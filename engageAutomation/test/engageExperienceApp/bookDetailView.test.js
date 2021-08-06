@@ -177,7 +177,7 @@ module.exports = {
     //Validate that clicking on Activity on unit detail view page launches the activity
     ENG_BOOK_TC_21: function(testdata) {
 
-        sts = unitDetailPage.clickActiivty(testdata[0])
+        sts = unitDetailPage.clickActivity(testdata[0])
         assertion.assertEqual(sts, true, "Activity Not Clicked");
 
         sts = activityPlayerPage.isInitialized()
