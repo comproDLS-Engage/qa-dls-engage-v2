@@ -28,11 +28,6 @@ module.exports = {
         assertion.assertEqual(sts.languageSelector_image_exists, true, "Login Page Language Selector Image Not Displayed");
     },
 
-    //Validate content on Login page in Spanish Language
-    ENG_IDEN_TC_3: function (testdata) {
-        this.ENG_IDEN_TC_2(testdata)
-    },
-
     //Validate that the user is able to change the language on the login page
     ENG_IDEN_TC_4: function (testdata) {
         sts = landingPage.select_Language_from_dropdown(testdata)

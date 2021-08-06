@@ -91,7 +91,7 @@ module.exports = {
 	ENG_ADDBOOK_TC_8: function (testdata) {
 
 		sts = addBookPage.click_AddtoClass_Button()
-		//console.log(sts)
+		sts = createClassPage.isInitialized();
 		if ((typeof (sts)) === "object") {
 			assertion.assertEqual(sts.pageStatus, true, "Create Class Page not launched: " + JSON.stringify(sts))
 			assertion.assertEqual(sts.bookTitle, testdata, "Book Title is mismatched: " + JSON.stringify(sts))
@@ -219,8 +219,8 @@ module.exports = {
 			assertion.assertEqual(sts.addtoClassbtn, testdata.addtoClassbtn, "Add Class button Text Mismatch: " + JSON.stringify(sts.createBtn_txt))
 			assertion.assertEqual(sts.cancelAndGoBackbtn, testdata.cancelAndGoBackbtn, "Cancel button Text Mismatch: " + JSON.stringify(sts.cancelBtn_txt))
 			assertion.assertEqual(sts.noBooklbl, testdata.noBooklbl, "Bottom label Text Mismatch: " + JSON.stringify(sts.bookAddedlbl))
-			assertion.assertEqual(sts.noBookTitle, null, "No Book Title is mismatched " + JSON.stringify(sts.noBookTitle))
-			assertion.assertEqual(sts.noBookSubTitle, null, "No Book SubTitle is mismatched: " + JSON.stringify(sts.noBookSubTitle))
+			assertion.assertEqual(sts.noBookTitle, testdata.noBookTitle, "No Book Title is mismatched " + JSON.stringify(sts.noBookTitle))
+			assertion.assertEqual(sts.noBookSubTitle, testdata.noBookSubTitle, "No Book SubTitle is mismatched: " + JSON.stringify(sts.noBookSubTitle))
 
 		} else {
 			assertion.assertFail(sts);

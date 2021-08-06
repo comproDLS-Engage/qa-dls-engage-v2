@@ -415,24 +415,23 @@ module.exports = {
 	//Validate the class drwaer Pane when no class is added
 	ENG_INS_CLASS_TC_38: function (testdata) {
 		sts = classDrawerpage.isInitialized();
-		assertion.assertEqual(sts.classDrawerHeader, "PROYECTOS" + testdata.header, "Class Title Text Mismatch: " + JSON.stringify(sts.title_lbl))
+		assertion.assertEqual(sts.classDrawerHeader, testdata[1] + testdata[0].header, "Class Title Text Mismatch: " + JSON.stringify(sts.title_lbl))
 		assertion.assertEqual(sts.classDrawerCloseBtn, true, "Class Title Text Mismatch: " + JSON.stringify(sts.title_lbl))
-		assertion.assertEqual(sts.instructorMyClassData.classHeading, testdata.classHeading, "Page Title Text Mismatch: " + JSON.stringify(sts.pageTitle))
+		assertion.assertEqual(sts.instructorMyClassData.classHeading, testdata[0].classHeading, "Page Title Text Mismatch: " + JSON.stringify(sts.pageTitle))
 		assertion.assertEqual(sts.instructorMyClassData.noClassFound_icon, true, "Page Icon Mismatch: " + JSON.stringify(sts.pageSubTitle))
-		assertion.assertEqual(sts.instructorMyClassData.noClassTitle, testdata.noClassTitle, "Page Header Text Mismatch: " + JSON.stringify(sts.classHeader))
-		assertion.assertEqual(sts.instructorMyClassData.noClassSubtitle, testdata.noClassSubtitle, "Page Sub Header Text Mismatch: " + JSON.stringify(sts.classSubHeader))
-		assertion.assertEqual(sts.instructorMyClassData.addClassBtn, testdata.addClassBtn, "Page Class add btn text is mismatch: " + JSON.stringify(sts.title_lbl))
+		assertion.assertEqual(sts.instructorMyClassData.noClassTitle, testdata[0].noClassTitle, "Page Header Text Mismatch: " + JSON.stringify(sts.classHeader))
+		assertion.assertEqual(sts.instructorMyClassData.noClassSubtitle, testdata[0].noClassSubtitle, "Page Sub Header Text Mismatch: " + JSON.stringify(sts.classSubHeader))
+		assertion.assertEqual(sts.instructorMyClassData.addClassBtn, testdata[0].addClassBtn, "Page Class add btn text is mismatch: " + JSON.stringify(sts.title_lbl))
 	},
 	//Validate the class drwaer Pane when  class is added
 	ENG_INS_CLASS_TC_39: function (testdata) {
 		sts = classDrawerpage.isInitialized();
-		assertion.assertEqual(sts.classDrawerHeader, "PROYECTOS" + testdata.header, "Class Title Text Mismatch: " + JSON.stringify(sts.title_lbl))
-		assertion.assertEqual(sts.classDrawerTitle, testdata.classDrawerTitle, "Class Title Text Mismatch: " + JSON.stringify(sts.title_lbl))
+		assertion.assertEqual(sts.classDrawerHeader, testdata[1] + testdata[0].header, "Class Title Text Mismatch: " + JSON.stringify(sts.title_lbl))
+		assertion.assertEqual(sts.classDrawerTitle, testdata[0].classDrawerTitle, "Class Title Text Mismatch: " + JSON.stringify(sts.title_lbl))
 		assertion.assertEqual(sts.classDrawerCloseBtn, true, "Class Close btn Text Mismatch: " + JSON.stringify(sts.title_lbl))
-		assertion.assertEqual(sts.classDrawerSubTitle, testdata.classDrawerSubTitle, "Class SubTitle Text Mismatch: " + JSON.stringify(sts.title_lbl))
-		assertion.assertEqual(sts.classDrawerHeader, "PROYECTOS" + testdata.header, "Class Header Text Mismatch: " + JSON.stringify(sts.title_lbl))
-		assertion.assertEqual(sts.instructorMyClassData.classHeading, testdata.classHeading, "Page Title Text Mismatch: " + JSON.stringify(sts.pageTitle))
-		assertion.assertEqual(sts.instructorMyClassData.addClassBtn, testdata.addClassBtnwithClass, "Add Class button Text Mismatch: " + JSON.stringify(sts.title_lbl))
+		assertion.assertEqual(sts.classDrawerSubTitle, testdata[0].classDrawerSubTitle, "Class SubTitle Text Mismatch: " + JSON.stringify(sts.title_lbl))
+		assertion.assertEqual(sts.instructorMyClassData.classHeading, testdata[0].classHeading, "Page Title Text Mismatch: " + JSON.stringify(sts.pageTitle))
+		assertion.assertEqual(sts.instructorMyClassData.addClassBtn, testdata[0].addClassBtnwithClass, "Add Class button Text Mismatch: " + JSON.stringify(sts.title_lbl))
 
 
 	},

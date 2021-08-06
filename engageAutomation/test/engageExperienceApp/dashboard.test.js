@@ -75,14 +75,14 @@ module.exports = {
         assertion.assertEqual(sts.actionCardList[0].actionCardBtns,testdata.actionCard[0].actionCardBtns, "Action Card button text mismatch");    },
 
     //Validate on clicking "View Classes" from Book dropdown menu, class Pane is launched
-    ENG_DASH_TC_16: function(){
-        sts = dashboardPage.clickMenuViewClass("All Type Book");
+    ENG_DASH_TC_16: function(testdata){
+        sts = dashboardPage.clickMenuViewClasses(testdata);
         assertion.assertEqual(sts.instructorMyClassData.pageStatus, true);
     },
 
     //Validate on clicking "Create Classes" from Book dropdown menu, create class page is launched
-    ENG_DASH_TC_17: function(){
-        sts = dashboardPage.clickMenuCreateClass("All Type Book");
+    ENG_DASH_TC_17: function(testdata){
+        sts = dashboardPage.clickMenuCreateNewClass(testdata);
         assertion.assertEqual(sts.pageStatus, true);
     },
 

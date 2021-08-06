@@ -347,7 +347,7 @@
             ]
         },
         {
-            "modulename": "MyClass - Instructor",
+            "modulename": "MyClass - Teacher",
             "moduledetails": "",
             "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
             "testcase": [
@@ -668,19 +668,19 @@
                     "visualTest": true
                 },
                 {
-                    "id": "ENG_DASH_TC_8",
+                    "id": "ENG_DASH_TC_16",
                     "description": "Validate on clicking View Classes from Book dropdown menu, class Pane is launched",
                     "tags": "P2",
                     "visualTest": true
                 },
                 {
-                    "id": "ENG_DASH_TC_9",
+                    "id": "ENG_DASH_TC_17",
                     "description": "Validate on clicking Create Classes from Book dropdown menu, create class page is launched",
                     "tags": "P2",
                     "visualTest": true
                 },
                 {
-                    "id": "ENG_DASH_TC_11",
+                    "id": "ENG_DASH_TC_18",
                     "description": "Validate on clicking Open Flipbook from Book dropdown menu, flipbook page is launched",
                     "tags": "P2",
                     "visualTest": true
