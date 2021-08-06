@@ -1,17 +1,22 @@
 var orderlist = require("../../pages/engageExperienceApp/orderlist.page");
+const itemPlayerPage = require('../../pages/engageExperienceApp/itemPlayer.page.js');
 
 module.exports = {
 
     ENG_ITEM_OLI_TC_1: function (testdata) {
         //Validate the unattempt state of the Order List player
-        sts = orderlist.isInitialized(testdata);
+        sts = orderlist.isInitialized(testdata[0]);
         if ((typeof (sts)) === "object") {
-            assertion.assertEqual(sts.length, testdata.length, "Options count mismatch");
+            assertion.assertEqual(sts.length, testdata[0].length, "Options count mismatch");
             for (var i = 0; i < sts.length; i++) {
                 assertion.assertEqual(sts[i][3], "", "OrderList data for index " + i + " is - " + sts[i]);
             }
         }
         else assertion.assertFail(sts);
+        sts = itemPlayerPage.getItemplayerInfo();
+		assertion.assertEqual(sts.mediaType, testdata[1].mediaType, "Media type mismatch");
+		assertion.assertEqual(sts.quesText, testdata[1].text, "Question text mismatch");
+		assertion.assertEqual(sts.instructionText, testdata[1].instruction, "Instruction text mismatch");
     },
 
     ENG_ITEM_OLI_TC_5: function (testdata) {

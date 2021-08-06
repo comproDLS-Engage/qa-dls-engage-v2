@@ -6,6 +6,7 @@ let TCArray = [];
 let opJson = {
     "appname": "comproDLS Engage",
     "appdetails": "",
+	"selectorFile": "./core/selectors/experienceApp/engageSelectors.json",
     "modules":[ 
     ]
 }
@@ -35,7 +36,7 @@ function testCaseRepoCreation(inputFilePath, outputFilePath){
             let moduleStructure = {
             "modulename": ModuleName,
             "moduledetails": "",
-            "testFile": "",
+            "testFile": "./test/engageExperienceApp/test.js",
             "testcase": TCArray
             }
             opJson.modules.push(moduleStructure);

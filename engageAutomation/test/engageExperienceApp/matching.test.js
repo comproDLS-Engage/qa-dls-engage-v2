@@ -1,5 +1,6 @@
 'use strict';
 var matching = require('../../pages/engageExperienceApp/matching.itemPlayer.page.js');
+const itemPlayerPage = require('../../pages/engageExperienceApp/itemPlayer.page.js');
 var sts, sts1;
 
 module.exports = {
@@ -57,6 +58,10 @@ module.exports = {
             assertion.assertEqual(sts.leftData[i][1], testdata.answerKey[i][1], "left text mismatch for " + sts.rightData[i]);
             assertion.assertEqual(sts.leftData[i][2], "", "Status mismatch for " + sts.rightData[i]);
         }
+        sts = itemPlayerPage.getItemplayerInfo();
+		assertion.assertEqual(sts.mediaType, testdata.mediaType, "Media type mismatch");
+		assertion.assertEqual(sts.quesText, testdata.text, "Question text mismatch");
+		assertion.assertEqual(sts.instructionText, testdata.instruction, "Instruction text mismatch");
     },
 
 }

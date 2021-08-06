@@ -26,7 +26,6 @@ module.exports = {
 		assertion.assertEqual(sts.previous_isDisabled, null, "previous button state mismatch");
 		sts = parseInt(itemPlayer.getQuesIndex()) + 1;
 		assertion.assertEqual(sts, testdata.number, "question index mismatch");
-
 	},
 
 	//Validate the test player when user perform "Check My Work"
