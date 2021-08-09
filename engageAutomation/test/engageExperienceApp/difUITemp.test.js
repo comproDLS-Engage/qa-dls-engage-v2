@@ -100,6 +100,8 @@ module.exports = {
 		console.log(res)
 		res = action.waitForDocumentLoad();
 		console.log(res)
+		res = action.waitForDisplayed("[data-tid=button-filter]")
+		console.log(res)
 	},
 
 	// Browse page with videos tab
@@ -107,6 +109,8 @@ module.exports = {
 		res = action.click("[data-tid=button-product-2]");
 		console.log(res)
 		res = action.waitForDocumentLoad();
+		console.log(res)
+		res = action.waitForDisplayed("[data-tid=button-filter]")
 		console.log(res)
 	},
 
@@ -116,6 +120,8 @@ module.exports = {
 		console.log(res)
 		res = action.waitForDocumentLoad();
 		console.log(res)
+		res = action.waitForDisplayed("[data-tid=button-filter]")
+		console.log(res)
 	},
 
 	// Browse page with teacher training tab
@@ -123,6 +129,8 @@ module.exports = {
 		res = action.click("[data-tid=button-product-4]");
 		console.log(res)
 		res = action.waitForDocumentLoad();
+		console.log(res)
+		res = action.waitForDisplayed("[data-tid=button-filter]")
 		console.log(res)
 	},
 
@@ -132,6 +140,8 @@ module.exports = {
 		console.log(res)
 		res = action.waitForDocumentLoad();
 		console.log(res)
+		res = action.waitForDisplayed("[data-tid=button-filter]")
+		console.log(res)
 	},
 
 	// Browse page with projectable tab
@@ -139,6 +149,8 @@ module.exports = {
 		res = action.click("[data-tid=button-product-6]");
 		console.log(res)
 		res = action.waitForDocumentLoad();
+		console.log(res)
+		res = action.waitForDisplayed("[data-tid=button-filter]")
 		console.log(res)
 	},
 
