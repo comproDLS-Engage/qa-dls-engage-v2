@@ -310,7 +310,7 @@
       ]
     },
     {
-      "modulename": "Experience App>Classes>MyClass - Teacher",
+      "modulename": "MyClass - Teacher",
       "moduledetails": "",
       "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
       "testcase": [
@@ -521,7 +521,7 @@
       ]
     },
     {
-      "modulename": "Experience App>AppShell",
+      "modulename": "AppShell",
       "moduledetails": "",
       "testFile": "./test/engageExperienceApp/appShell.test.js",
       "testcase": [
@@ -600,7 +600,7 @@
       ]
     },
     {
-      "modulename": "Experience App>Add Book",
+      "modulename": "Add Book",
       "moduledetails": "",
       "testFile": "./test/engageExperienceApp/addBook.test.js",
       "testcase": [
@@ -709,7 +709,7 @@
       ]
     },
     {
-      "modulename": "Experience App>Item Players>Item Player - FIB",
+      "modulename": "Item Player - FIB",
       "moduledetails": "",
       "testFile": "./test/engageExperienceApp/FIB.test.js",
       "testcase": [
@@ -734,7 +734,7 @@
       ]
     },
     {
-      "modulename": "Experience App>Item Players>Item Player - Order List",
+      "modulename": "Item Player - Order List",
       "moduledetails": "",
       "testFile": "./test/engageExperienceApp/orderlist.test.js",
       "testcase": [
@@ -759,7 +759,7 @@
       ]
     },
     {
-      "modulename": "Experience App>Item Players>Item Player - Classify",
+      "modulename": "Item Player - Classify",
       "moduledetails": "",
       "testFile": "./test/engageExperienceApp/classify.test.js",
       "testcase": [
@@ -778,7 +778,7 @@
       ]
     },
     {
-      "modulename": "Experience App>Item Players>Item Player - Matching",
+      "modulename": "Item Player - Matching",
       "moduledetails": "",
       "testFile": "./test/engageExperienceApp/matching.test.js",
       "testcase": [
@@ -803,7 +803,7 @@
       ]
     },
     {
-      "modulename": "Experience App>Base TestPlayer",
+      "modulename": "Base TestPlayer",
       "moduledetails": "",
       "testFile": "./test/engageExperienceApp/basePlayer.test.js",
       "testcase": [
@@ -864,7 +864,7 @@
       ]
     },
     {
-      "modulename": "Experience App>Activity Player",
+      "modulename": "Activity Player",
       "moduledetails": "",
       "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
       "testcase": [
@@ -889,7 +889,7 @@
       ]
     },
     {
-      "modulename": "Experience App>Onboarding>Onboarding New User",
+      "modulename": "Onboarding>Onboarding New User",
       "moduledetails": "",
       "testFile": "./test/engageExperienceApp/userOnboarding.test.js",
       "testcase": [
@@ -956,7 +956,7 @@
       ]
     },
     {
-      "modulename": "Experience App>Dashboard",
+      "modulename": "Dashboard",
       "moduledetails": "",
       "testFile": "./test/engageExperienceApp/dashboard.test.js",
       "testcase": [
@@ -1029,7 +1029,7 @@
       ]
     },
     {
-      "modulename": "Experience App>Item Players>Item Player - Multiple Choice",
+      "modulename": "Item Player - Multiple Choice",
       "moduledetails": "",
       "testFile": "./test/engageExperienceApp/mcqBlock.test.js",
       "testcase": [
@@ -1054,7 +1054,7 @@
       ]
     },
     {
-      "modulename": "Experience App>Item Players>Item Player - DND Into Text",
+      "modulename": "Item Player - DND Into Text",
       "moduledetails": "",
       "testFile": "./test/engageExperienceApp/FIBText.test.js",
       "testcase": [
@@ -1079,7 +1079,7 @@
       ]
     },
     {
-      "modulename": "Experience App>Item Players>Item Player - DND Onto Image",
+      "modulename": "Item Player - DND Onto Image",
       "moduledetails": "",
       "testFile": "./test/engageExperienceApp/dragDrop.test.js",
       "testcase": [
@@ -1104,7 +1104,7 @@
       ]
     },
     {
-      "modulename": "Experience App>Item Players>Item Player - Multiple Response",
+      "modulename": "Item Player - Multiple Response",
       "moduledetails": "",
       "testFile": "./test/engageExperienceApp/mcmr.test.js",
       "testcase": [
@@ -1129,7 +1129,7 @@
       ]
     },
     {
-      "modulename": "Experience App>Landing",
+      "modulename": "Landing",
       "moduledetails": "",
       "testFile": "./test/engageExperienceApp/landing.test.js",
       "testcase": [
@@ -1166,7 +1166,7 @@
       ]
     },
     {
-      "modulename": "Experience App>Login",
+      "modulename": "Login",
       "moduledetails": "",
       "testFile": "./test/engageExperienceApp/login.test.js",
       "testcase": [
