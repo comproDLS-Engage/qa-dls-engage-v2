@@ -1,0 +1,60 @@
+"use strict";
+var action = require('../../core/actionLibrary/baseActionLibrary.js');
+var selectorFile = jsonParserUtil.jsonParser(selectorDir);
+
+module.exports = {
+
+    searchBox: selectorFile.linkFromLibraryPage.searchBox,
+    loCheckbox: selectorFile.linkFromLibraryPage.loCheckbox,
+    nextBtn: selectorFile.linkFromLibraryPage.nextBtn,
+    resourceNameList: selectorFile.linkFromLibraryPage.resourceNameList,
+
+    isInitialized: function () {
+        logger.logInto(stackTrace.get());
+        let res = action.waitForDisplayed(this.nextBtn);
+        return res;
+    },
+
+    searchLO_byName: function (text) {
+        logger.logInto(stackTrace.get());
+        let res = action.setValue(this.searchBox, text);
+        if (res == null)
+            res = action.keyPress("Enter");
+        return res;
+    },
+
+    select_Resource_and_Proceed: function (type) {
+        logger.logInto(stackTrace.get());
+        let res = null;
+        let i, list, cboxes;
+        list = action.findElements(this.resourceNameList);
+        cboxes = action.findElements(this.loCheckbox);
+        for (i = 0; i < list.length; i++) {
+            if (action.getText(list[i]) == type) {
+                res = action.click(cboxes[i]);
+                if (res == true) {
+                    res = action.click(this.nextBtn);
+                    if (res == true) {
+                        res = require('./addActivity.page.js').isInitialized();
+                        browser.pause(5000);
+                    }
+                }
+                break;
+            }
+            res = "resource \"" + type + "\" not found";
+        }
+        logger.logInto(stackTrace.get(), res);
+        return res;
+    },
+
+    set_Name: function (text) {
+        const addActivityPage = require('./addActivity.page.js');
+        return addActivityPage.set_Name(text);
+    },
+
+    click_Add_Button: function () {
+        const addActivityPage = require('./addActivity.page.js');
+        return addActivityPage.click_Add_Button();
+    },
+
+}

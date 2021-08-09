@@ -104,13 +104,14 @@ module.exports = {
         return res;
     },
 
-    select_ActivityType_and_Proceed: function (type) {
+    select_ActivityType_and_Proceed: function (index) {
         logger.logInto(stackTrace.get());
         let res = null;
         let i, list;
         list = action.findElements(this.activityTypeList);
         for (i = 0; i < list.length; i++) {
-            if (action.getText(list[i]) == type) {
+            //if (action.getText(list[i]) == type) {
+            if (i == index) {
                 res = action.click(list[i]);
                 if (res == true) {
                     res = action.click(this.proceedBtn);

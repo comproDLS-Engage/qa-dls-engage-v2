@@ -42,11 +42,18 @@
         "activity": [
             {
                 "type": "Native Engage Learning Object",
-                "name": "QA Automation Test LO1 - native"
+                "name": "QA Automation Test LO1 - native",
+                "typeIndex": 0
             },
             {
                 "type": "Close Ended Learning Object",
-                "name": "QA Automation Test LO2 - close ended"
+                "name": "QA Automation Test LO2 - close ended",
+                "typeIndex": 3
+            },
+            {
+                "type": "Close Ended Learning Object",
+                "name": "QA Automation Test LO3 - close ended linked from Library",
+                "typeIndex": 5
             }
         ],
         "accessCodeBatch": [

@@ -130,7 +130,7 @@ module.exports = {
 	BK_TC_14: function (testdata) {
 		sts = learningPathPage.click_AddActivity_Button();
 		assertion.assertEqual(sts, true, "Add learning object options status mismatch");
-		sts = learningPathPage.select_ActivityType_and_Proceed(testdata.type);
+		sts = learningPathPage.select_ActivityType_and_Proceed(testdata.typeIndex);
 		assertion.assertEqual(sts, true, "Add activity page status mismatch");
 	},
 
