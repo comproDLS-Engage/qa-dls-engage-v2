@@ -165,10 +165,10 @@
                     "info": {}
                 },
                 "classInstructorUser3": {
-                    "email": "engageblank@yopmail.com",
+                    "email": "qa_teacher1@yopmail.com",
                     "password": "Compro@1234",
                     "role": "instructor",
-                    "name": "12",
+                    "name": "qa teacher001",
                     "class": [],
                     "info": {}
                 }
