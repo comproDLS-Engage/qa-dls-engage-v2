@@ -43,7 +43,7 @@
             ]
          },
          {
-            "id": "ENG_DASH_TC_6",
+            "id": "ENG_DASH_TC_7",
             "description": "",
             "testFile": "./test/engageExperienceApp/dashboard.test.js",
             "testData": []
@@ -127,7 +127,12 @@
             "id": "ENG_PLAY_TC_1",
             "description": "",
             "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
-            "testData": []
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
+                  "jsonPath": "unit1_native2.question[0]"
+               }
+            ]
          },
          {
             "id": "ENG_ITEM_MCQB_TC_1",
@@ -137,6 +142,10 @@
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
                   "jsonPath": "unit1_native2.question[0].answerKey"
+               },
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
+                  "jsonPath": "unit1_native2.question[0]"
                }
             ]
          },
@@ -192,6 +201,10 @@
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
                   "jsonPath": "unit1_native2.question[1].answerKey"
+               },
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
+                  "jsonPath": "unit1_native2.question[1]"
                }
             ]
          },
@@ -247,6 +260,10 @@
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
                   "jsonPath": "unit1_native2.question[2].answerKey"
+               },
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
+                  "jsonPath": "unit1_native2.question[2]"
                }
             ]
          },
@@ -522,6 +539,10 @@
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
                   "jsonPath": "unit1_native2.question[7].answerKey"
+               },
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
+                  "jsonPath": "unit1_native2.question[7]"
                }
             ]
          },
@@ -578,6 +599,10 @@
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
                   "jsonPath": "unit1_native2.question[8].answerKey"
+               },
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
+                  "jsonPath": "unit1_native2.question[8]"
                }
             ]
          },

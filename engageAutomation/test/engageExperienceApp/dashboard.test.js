@@ -30,7 +30,7 @@ module.exports = {
     },
 
     //Validate that clicking on 'Add Book' button, book list page is launched to select books to add
-    ENG_DASH_TC_6: function () {
+    ENG_DASH_TC_7: function () {
         sts = dashboardPage.clickAddBook();
         assertion.assertEqual(sts,true, "Dashboard page status mismatch");
     },
