@@ -11,6 +11,7 @@ const addActivityPage = require('../../pages/backoffice/addActivity.page.js');
 const commonPage = require('../../pages/backoffice/common.page.js');
 const viewLearningPathPage = require('../../pages/backoffice/viewLearningPath.page.js');
 const generateCodesPage = require('../../pages/backoffice/generateCodes.page.js');
+const libraryPage = require('../../pages/backoffice/linkFromLibrary.page.js');
 var sts;
 
 module.exports = {
@@ -257,6 +258,12 @@ module.exports = {
 	// Validate that the assessment author app is launched on clicking activity author button in the activity menu
 	BK_TC_30: function (testdata) {
 		sts = learningPathPage.click_ActivityAuthor_Button_in_ActivityMenu(testdata.name);
+		//assertion.assert((typeof sts === "string" && sts.includes("Launching")), "Dialog text mismatch. " + sts);
+	},
+
+	// Validate that the searched LO is displayed on searching the LO in the Library
+	BK_TC_32: function (testdata) {
+		sts = libraryPage.click_ActivityAuthor_Button_in_ActivityMenu(testdata.name);
 		//assertion.assert((typeof sts === "string" && sts.includes("Launching")), "Dialog text mismatch. " + sts);
 	},
 }
