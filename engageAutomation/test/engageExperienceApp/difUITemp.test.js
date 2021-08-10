@@ -391,15 +391,15 @@ module.exports = {
 	ENG_DIF_TC_29: function () {
 		res = action.click("[data-tid=button-product-3]");
 		console.log(res)
-		res = action.click("[data-tid=button-chapter-0]");
-		console.log(res)
+		//res = action.click("[data-tid=button-chapter-0]");
+		//console.log(res)
 		res = action.waitForDocumentLoad();
 		console.log(res)
 	},
 
 	// Flipbook page
 	ENG_DIF_TC_30: function () {
-		res = action.click("[data-tid=btn-open-in-flipbook]");
+		res = action.click("[data-tid=button-openFlipbook]");
 		console.log(res)
 		//browser.back();
 		//res = action.click("[data-tid=btn-open-in-flipbook]");
