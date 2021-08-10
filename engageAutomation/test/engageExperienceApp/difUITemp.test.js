@@ -342,7 +342,7 @@ module.exports = {
 
 	// Move to next activity
 	ENG_DIF_TC_25: function () {
-		res = action.click("[data-tid=button-nextactivity]");
+		res = action.click("[data-tid*=button-next]");
 		console.log(res)
 		res = action.waitForDisplayed("iframe");
 		console.log(res)
@@ -389,9 +389,9 @@ module.exports = {
 
 	// Resource Bank page
 	ENG_DIF_TC_29: function () {
-		res = action.click("[data-tid=button-chapter-0]");
+		res = action.click("[data-tid=button-product-3]");
 		console.log(res)
-		res = action.click("[data-tid=button-product-1]");
+		res = action.click("[data-tid=button-chapter-0]");
 		console.log(res)
 		res = action.waitForDocumentLoad();
 		console.log(res)

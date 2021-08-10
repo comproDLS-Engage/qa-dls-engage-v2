@@ -249,9 +249,9 @@
         "AfterEach": [],
         "After": [
             {
-                "id": "logout_from_app",
+                "id": "ENG_SHELL_TC_9",
                 "description": "",
-                "testFile": "./test/engageExperienceApp/common.test.js",
+                "testFile": "./test/engageExperienceApp/appShell.test.js",
                 "testData": []
             }
         ]
@@ -447,9 +447,9 @@
         "AfterEach": [],
         "After": [
             {
-                "id": "logout_from_app",
+                "id": "ENG_SHELL_TC_9",
                 "description": "",
-                "testFile": "./test/engageExperienceApp/common.test.js",
+                "testFile": "./test/engageExperienceApp/appShell.test.js",
                 "testData": []
             }
         ]
@@ -603,9 +603,9 @@
         "AfterEach": [],
         "After": [
             {
-                "id": "logout_from_app",
+                "id": "ENG_SHELL_TC_9",
                 "description": "",
-                "testFile": "./test/engageExperienceApp/common.test.js",
+                "testFile": "./test/engageExperienceApp/appShell.test.js",
                 "testData": []
             }
         ]
