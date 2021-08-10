@@ -263,9 +263,9 @@
                 "activeQues": "div[class*=item-player-container] > div[style='height: 100%; display: block;'], div[class*=item-player-container] > div[style='height: 100%;']"
             },
             "testPlayer": {
-                "checkMyWork_btn": "[class=buttons-container] [class=defaultBtn-check-mywork-icon] , [data-tid=button-checkanswers], [data-tid=button-check]",
-                "next_btn": "[id=next], [data-tid=button-next]",
-                "previous_btn": "[id=previous], [data-tid=button-previous]",
+                "checkMyWork_btn": "[class=buttons-container] [class=defaultBtn-check-mywork-icon] , [data-tid=button-checkAnswers],[data-tid=button-checkanswers], [data-tid=button-check]",
+                "next_btn": "[id=next], [data-tid=button-next], [data-tid=button-goNext]",
+                "previous_btn": "[id=previous], [data-tid=button-previous], [data-tid=button-goPrev]",
                 "tryAgain_btn": "[id=tryAgain], [data-tid=button-tryagain]",
                 "reset_btn": "[id=reset], [data-tid=button-reset]",
                 "showAnswer_btn": "[data-tid=button-showcorrectanswers], [data-tid=button-showAnswer]",
