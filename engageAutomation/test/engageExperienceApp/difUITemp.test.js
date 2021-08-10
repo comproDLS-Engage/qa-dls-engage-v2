@@ -464,8 +464,8 @@ module.exports = {
 
 	// Remove book dialog box
 	ENG_DIF_TC_36: function () {
-		if (action.isDisplayed("[data-tid=breadcrumb-productName]")) {
-			res = action.click("[data-tid=breadcrumb-productName]");
+		if (action.isDisplayed("[data-tid=breadcrumb-viewbook]")) {
+			res = action.click("[data-tid*=breadcrumb]");
 			console.log(res)
 		}
 		res = action.click("[data-tid=button-dashboard]");
