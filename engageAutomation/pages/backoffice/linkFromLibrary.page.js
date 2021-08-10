@@ -15,22 +15,24 @@ module.exports = {
         return res;
     },
 
-    searchLO_byName: function (text) {
+    searchLO_byName: function (name) {
         logger.logInto(stackTrace.get());
-        let res = action.setValue(this.searchBox, text);
+        let res = action.setValue(this.searchBox, name);
         if (res == null)
             res = action.keyPress("Enter");
+            action.waitForDocumentLoad();
+            res = action.waitForDisplayed(this.resourceNameList);
         return res;
     },
 
-    select_Resource_and_Proceed: function (type) {
+    select_Resource_and_Proceed: function (name) {
         logger.logInto(stackTrace.get());
         let res = null;
         let i, list, cboxes;
         list = action.findElements(this.resourceNameList);
         cboxes = action.findElements(this.loCheckbox);
         for (i = 0; i < list.length; i++) {
-            if (action.getText(list[i]) == type) {
+            if (action.getText(list[i]) == name) {
                 res = action.click(cboxes[i]);
                 if (res == true) {
                     res = action.click(this.nextBtn);
