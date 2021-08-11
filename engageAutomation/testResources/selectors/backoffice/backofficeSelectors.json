@@ -91,7 +91,7 @@
 	},
 	"addFolderPage": {
 		"nameTxtbox": "[id=Name]",
-		"addBtn": "[class=c-form-section] button[class*=action-button-padding]"
+		"addBtn": "[class*=c-form] button[class*=action-button-padding]"
 	},
 	"addActivityPage": {},
 	"publishComponentPage": {
@@ -131,6 +131,7 @@
 		"searchBox": "input[data-tid=input-searchbyenter]",
 		"loCheckbox": "[class=c-library-search-result-container] div[class*=mdc-checkbox--touch]",
 		"nextBtn": "div[class=c-library-info] button",
-		"resourceNameList": "[class=c-resource-name]"
+		"resourceNameList": "[class=c-resource-name]",
+		"filteredChips": "div[class=c-filtered-chips]"
 	}
 }

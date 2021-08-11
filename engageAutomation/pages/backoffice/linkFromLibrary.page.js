@@ -8,6 +8,7 @@ module.exports = {
     loCheckbox: selectorFile.linkFromLibraryPage.loCheckbox,
     nextBtn: selectorFile.linkFromLibraryPage.nextBtn,
     resourceNameList: selectorFile.linkFromLibraryPage.resourceNameList,
+    filteredChips: selectorFile.linkFromLibraryPage.filteredChips,
 
     isInitialized: function () {
         logger.logInto(stackTrace.get());
@@ -18,10 +19,12 @@ module.exports = {
     searchLO_byName: function (name) {
         logger.logInto(stackTrace.get());
         let res = action.setValue(this.searchBox, name);
-        if (res == null)
+        if (res == true) {
             res = action.keyPress("Enter");
-            action.waitForDocumentLoad();
-            res = action.waitForDisplayed(this.resourceNameList);
+            res = action.waitForDisplayed(this.filteredChips);
+            if (res == true)
+                res = action.waitForDisplayed(this.resourceNameList);
+        }
         return res;
     },
 
@@ -32,7 +35,7 @@ module.exports = {
         list = action.findElements(this.resourceNameList);
         cboxes = action.findElements(this.loCheckbox);
         for (i = 0; i < list.length; i++) {
-            if (action.getText(list[i]) == name) {
+            if (action.getText(list[i]).includes(name)) {
                 res = action.click(cboxes[i]);
                 if (res == true) {
                     res = action.click(this.nextBtn);
@@ -43,7 +46,7 @@ module.exports = {
                 }
                 break;
             }
-            res = "resource \"" + type + "\" not found";
+            res = "resource \"" + name + "\" not found";
         }
         logger.logInto(stackTrace.get(), res);
         return res;

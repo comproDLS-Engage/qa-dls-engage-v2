@@ -262,12 +262,6 @@ module.exports = {
 		//assertion.assert((typeof sts === "string" && sts.includes("Launching")), "Dialog text mismatch. " + sts);
 	},
 
-	/*// Validate that the searched LO is displayed on searching the LO in the Library
-	BK_TC_31: function (testdata) {
-		sts = libraryPage.click_ActivityAuthor_Button_in_ActivityMenu(testdata.name);
-		//assertion.assert((typeof sts === "string" && sts.includes("Launching")), "Dialog text mismatch. " + sts);
-	},*/
-
 	// Validate that the searched LO is displayed on searching the LO in the Library
 	BK_TC_31: function (testdata) {
 		sts = libraryPage.searchLO_byName(testdata.fileName);

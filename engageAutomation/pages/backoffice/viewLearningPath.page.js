@@ -125,7 +125,8 @@ module.exports = {
                 }
                 break;
             }
-            res = "activity type \"" + type + "\" not found";
+            //res = "activity type \"" + type + "\" not found";
+            res = "activity index \"" + index + "\" not found";
         }
         logger.logInto(stackTrace.get(), res);
         return res;
