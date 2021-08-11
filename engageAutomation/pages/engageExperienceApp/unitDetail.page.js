@@ -44,7 +44,7 @@ module.exports = {
             componentList: this.getComponentListData(),
             activityList: this.getActivityListData()
             // do we need attribute for which component is selected ? are/will we check this in testcase?- akhil
-            // attributes missing for no activity present - akhil 
+            // attributes missing for no activity present scenario - akhil 
         }
         logger.logInto(stackTrace.get(), JSON.stringify(obj));
         return obj;

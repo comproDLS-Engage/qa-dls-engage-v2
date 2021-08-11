@@ -299,19 +299,8 @@ module.exports = {
     // },
 
 
-    clickUnitMoreOptions: function (unitIndex) { //change to unit index
+    clickUnitMoreOptions: function (unitIndex) {
         logger.logInto(stackTrace.get());
-        // let i, list;
-        // list = action.findElements(this.chapterTitle);
-        // for (i = 0; i < list.length; i++) {
-        //     var chapterName = action.getText(list[i]).trim()
-        //     if (unitName.includes(chapterName)) {
-        //         action.click(this.chapterMoreOptions + i);
-        //         res = i; // shouldn't we call get_UnitMoreOptionsButton_Data here? - akhil
-        //         break;
-        //     }
-        //     res = -1;
-        // }
         res = action.click(this.chapterMoreOptions + unitIndex)
         if (res == true) {
             logger.logInto(stackTrace.get(), " --Unit More Options Clicked");
