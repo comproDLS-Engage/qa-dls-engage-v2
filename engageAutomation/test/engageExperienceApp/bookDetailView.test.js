@@ -163,7 +163,7 @@ module.exports = {
 
     //Validate that clicking on "Open in Flipbook" button on unit Detail View page launches the corresponding unit page in the flipbook
     ENG_BOOK_TC_20: function(testdata) {
-        sts = unitDetailPage.clickOpenInFlipBook_unitLevel();
+        sts = unitDetailPage.clickOpenInFlipbookButton();
         assertion.assertEqual(sts, true, "Open Flipbook button not clicked");
 
         appShell.ENG_SHELL_TC_11();
