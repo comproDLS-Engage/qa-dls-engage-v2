@@ -20,6 +20,8 @@ module.exports = {
     viewActivity_moreOptions: selectorFile.css.ComproEngage.bookView.viewActivity_moreOptions,
     activity_lbl_unitView: selectorFile.css.ComproEngage.bookView.activity_lbl_unitView,
     activity_byline_unitView: selectorFile.css.ComproEngage.bookView.activity_byline_unitView,
+    itemTypeIcon:selectorFile.css.ComproEngage.bookView.itemTypeIcon,
+    itemTypeText:selectorFile.css.ComproEngage.bookView.itemTypeText,
 
     isInitialized: function () {
         logger.logInto(stackTrace.get());
@@ -52,12 +54,13 @@ module.exports = {
         return componentArr;
     },
 
+
     clickNextUnit: function () {
         logger.logInto(stackTrace.get())
         res = action.click(this.nextUnit_btn);
         if (res == true) {
             logger.logInto(stackTrace.get(), " --Next Unit Button clicked");
-            // return getUnitTOCData - akhil
+            res = this.getUnitTOCData();
         } else
             logger.logInto(stackTrace.get(), " --Next Unit Button NOT clicked", "error");
         return res;
@@ -86,31 +89,32 @@ module.exports = {
         return res;
     },
 
-    getActivityListData: function (componentName) {
+    getActivityListData: function () {
         var componentIndex;
         logger.logInto(stackTrace.get())
-        if (componentName == undefined)
-            componentIndex = 0;
-        else
-            componentIndex = require('./bookDetail.page.js').clickComponent(componentName);
-            // this is returning getChapterListData() and not index, please check - akhil
-
-        // i think we need a function like getSelectedComponentandIndex() which can be added in bookDetail.page.js - akhil
+       
         let i, list, activityArr = [];
-        if (componentIndex >= 0) {
-            list = action.findElements(this.activityTitle);
-            for (i = 0; i < list.length; i++) {
+        var activityList = action.findElements(this.activityTitle)
+        var pageInfoList = action.findElements(this.activityPageInfo)
+        var activityCompletionCirlceList = action.findElements(this.activityCompletionCircle)
+        var itemTypeIcon = action.findElements(this.itemTypeIcon)
+        var itemTypeText = action.findElements(this.itemTypeText)
+
+        // console.log(itemTypeIcon)
+        // console.log(itemTypeText)
+
+            for (i = 0; i < activityList.length; i++) {
                 activityArr[i] = {
-                    activityTitle: action.getText(this.activityTitle + componentIndex + '-' + i),
-                    // this will not work for Resources component, check Recursos in Aula book - akhil
-                    activityPageInfo: (action.getElementCount(this.activityPageInfo) > 0) ? action.getText(this.activityPageInfo + componentIndex + '-' + i) : null,
-                    activityCompletionCircle: (action.getElementCount(this.activityCompletionCircle + i) > 0) ? action.waitForDisplayed(this.activityCompletionCircle + i) : null
+                    activityTitle: action.getText(activityList[i]),
+                    activityPageInfo: (action.getElementCount(pageInfoList[i]) > 0) ? action.getText(pageInfoList[i]) : null,
+                    activityCompletionCircle: (action.getElementCount(activityCompletionCirlceList[i]) > 0) ? action.waitForDisplayed(activityCompletionCirlceList[i]) : null,
+                    resourceItemTypeIcon: (action.getElementCount(itemTypeIcon[i]) > 0) ? action.waitForDisplayed(itemTypeIcon[i]) : null,
+                    resourceItemTypeText: (action.getElementCount(itemTypeText[i]) > 0) ? action.getText(itemTypeText[i]) : null
                 }
             }
             logger.logInto(stackTrace.get(), activityArr);
-        } else {
-            logger.logInto(stackTrace.get(), "Component Not Clicked", "error");
-        }
+        
+        //console.log(activityArr);
         return activityArr;
     },
 
@@ -143,10 +147,12 @@ module.exports = {
     //     return res;
     // },
 
-    clickOpenFlipbook_MoreOptions: function (activityName) { //not clear on this function - akhil // this is 3 dot option --> open flipbook for activity
+    clickOpenFlipbook_MoreOptions: function (activityName) { 
         res = this.clickActivityMoreOptions(activityName)
         if (res == true) {
             res = action.click(this.openFlipbook_moreOptions)
+            // return flipbook isInitialized()
+            //res = require('./flipbook.page.js').isInitialized()
             logger.logInto(stackTrace.get(), "Open FlipBook in More Options Clicked");
         } else
             logger.logInto(stackTrace.get(), "Open FlipBook in More Options  Not Clicked", "error");
