@@ -199,7 +199,8 @@ module.exports = {
 	//click save and return button
 	ASE_COM_TC_999: function () {
 		sts = EditorPlayer.clickSaveandReturnBtn();
-		assertion.assert((sts instanceof Error) === true, "Error in save and return - " + sts);
+		assertion.assertEqual(sts, true, "Error in save and return");
+		//assertion.assert((sts instanceof Error) === true, "Error in save and return - " + sts);
 		browser.switchWindow(global.appUrl);
 	},
 	
