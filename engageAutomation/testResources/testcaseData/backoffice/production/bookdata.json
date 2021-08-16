@@ -42,11 +42,19 @@
         "activity": [
             {
                 "type": "Native Engage Learning Object",
+                "typeIndex": 0,
                 "name": "QA Automation Test LO1 - native"
             },
             {
                 "type": "Close Ended Learning Object",
+                "typeIndex": 3,
                 "name": "QA Automation Test LO2 - close ended"
+            },
+            {
+                "type": "Close Ended Learning Object",
+                "typeIndex": 9,
+                "name": "QA Automation Test LO3 - close ended linked from Library",
+                "fileName": "au_plus_1_iexe_exam_9"
             }
         ],
         "accessCodeBatch": [
