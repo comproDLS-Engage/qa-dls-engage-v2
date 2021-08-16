@@ -490,7 +490,7 @@ module.exports = {
 
 	// Select and apply filter
 	ENG_DIF_TC_38: function () {
-		res = action.click("[data-tid=filtermenu-list-item-1-0]");
+		res = action.click("[data-tid=filtermenu-list-item-0-0]");
 		console.log(res)
 		res = action.click("[data-tid=button-apply-filter]");
 		console.log(res)
