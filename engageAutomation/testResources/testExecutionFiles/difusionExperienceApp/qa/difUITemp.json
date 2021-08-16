@@ -249,9 +249,9 @@
         "AfterEach": [],
         "After": [
             {
-                "id": "logout_from_app",
-                "description": "",
-                "testFile": "./test/engageExperienceApp/common.test.js",
+                "id": "ENG_DIF_TC_34",
+                "description": "Signout of the app",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
                 "testData": []
             }
         ]
@@ -337,7 +337,7 @@
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
                 "visualTolerance": 0.08,
                 "testData": []
-            },             
+            },
             {
                 "id": "ENG_DIF_TC_36",
                 "description": "Remove book dialog box",
@@ -447,9 +447,9 @@
         "AfterEach": [],
         "After": [
             {
-                "id": "logout_from_app",
-                "description": "",
-                "testFile": "./test/engageExperienceApp/common.test.js",
+                "id": "ENG_DIF_TC_34",
+                "description": "Signout of the app",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
                 "testData": []
             }
         ]
@@ -603,9 +603,9 @@
         "AfterEach": [],
         "After": [
             {
-                "id": "logout_from_app",
-                "description": "",
-                "testFile": "./test/engageExperienceApp/common.test.js",
+                "id": "ENG_DIF_TC_34",
+                "description": "Signout of the app",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
                 "testData": []
             }
         ]
@@ -691,7 +691,7 @@
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
                 "visualTolerance": 0.08,
                 "testData": []
-            },             
+            },
             {
                 "id": "ENG_DIF_TC_36",
                 "description": "Remove book dialog box",
@@ -813,7 +813,6 @@
             }
         ],
         "AfterEach": [],
-        "After": [
-        ]
+        "After": []
     }
 }

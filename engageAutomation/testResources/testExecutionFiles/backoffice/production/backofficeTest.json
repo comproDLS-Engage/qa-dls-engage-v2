@@ -286,7 +286,7 @@
 			}
 		]
 	},
-	"Suite4": {
+	"Suite4a": {
 		"Name": "Creation of a native LO with all item players",
 		"TestCaseRepo": [
 			"./testResources/testcaseRepository/backOffice/backOfficeTCRepository.json",
@@ -350,7 +350,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
-						"jsonPath": "backoffice.folder[1]"
+						"jsonPath": "backoffice.folder[0]"
 					}
 				]
 			}
@@ -401,9 +401,21 @@
 				"description": "Validate that alphanumeric text is supported in Question Title Text.",
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": [
+
 					{
 						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
 						"jsonPath": "editor.questions.MCQ[0].question1.questionTitle"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_9",
+				"description": "Validate that student can add instruction for each question under the 'Question' section",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQ[0].question1.questionInstruction"
 					}
 				]
 			},
@@ -553,6 +565,17 @@
 				]
 			},
 			{
+				"id": "ASE_COM_TC_9",
+				"description": "Validate that student can add instruction for each question under the 'Question' section",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.TrueFalse[0].questionInstruction"
+					}
+				]
+			},
+			{
 				"id": "ASE_COM_TC_42",
 				"description": "Validate if alpha-numeric text is allowed in the Question Text",
 				"testFile": "./test/assessmentEditor/editor.test.js",
@@ -698,6 +721,17 @@
 				]
 			},
 			{
+				"id": "ASE_COM_TC_9",
+				"description": "Validate that student can add instruction for each question under the 'Question' section",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.DragDropIntoText[0].questionInstruction"
+					}
+				]
+			},
+			{
 				"id": "ASE_COM_TC_42",
 				"description": "Validate if alpha-numeric text is allowed in the Question Text",
 				"testFile": "./test/assessmentEditor/editor.test.js",
@@ -750,6 +784,17 @@
 					{
 						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
 						"jsonPath": "editor.questions.FIB[0].questionTitle"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_9",
+				"description": "Validate that student can add instruction for each question under the 'Question' section",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.FIB[0].questionInstruction"
 					}
 				]
 			},
@@ -810,6 +855,17 @@
 					{
 						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
 						"jsonPath": "editor.questions.Matching[0].questionTitle"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_9",
+				"description": "Validate that student can add instruction for each question under the 'Question' section",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.Matching[0].questionInstruction"
 					}
 				]
 			},
@@ -887,6 +943,17 @@
 				]
 			},
 			{
+				"id": "ASE_COM_TC_9",
+				"description": "Validate that student can add instruction for each question under the 'Question' section",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.Ordering[0].questionInstruction"
+					}
+				]
+			},
+			{
 				"id": "ASE_COM_TC_42",
 				"description": "Validate if alpha-numeric text is allowed in the Question Text",
 				"testFile": "./test/assessmentEditor/editor.test.js",
@@ -950,6 +1017,17 @@
 					{
 						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
 						"jsonPath": "editor.questions.Classify[0].questionTitle"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_9",
+				"description": "Validate that student can add instruction for each question under the 'Question' section",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.Classify[0].questionInstruction"
 					}
 				]
 			},
@@ -1056,10 +1134,11 @@
 			}
 		]
 	},
-	"Suite5": {
-		"Name": "Create and view access codes batch",
+	"Suite4b": {
+		"Name": "Creation of an LO linked from Library",
 		"TestCaseRepo": [
-			"./testResources/testcaseRepository/backOffice/backOfficeTCRepository.json"
+			"./testResources/testcaseRepository/backOffice/backOfficeTCRepository.json",
+			"./testResources/testcaseRepository/assessmentEditor/editorTCRepository.json"
 		],
 		"Before": [
 			{
@@ -1078,41 +1157,95 @@
 						"jsonPath": "backoffice.user.validUser1"
 					}
 				]
+			},
+			{
+				"id": "BK_TC_4",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
+						"jsonPath": "backoffice.book[0]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_10",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
+						"jsonPath": "backoffice.component[0]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_13",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
+						"jsonPath": "backoffice.folder[0]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_13",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
+						"jsonPath": "backoffice.folder[1]"
+					}
+				]
 			}
 		],
 		"BeforeEach": [],
 		"Test": [
 			{
-				"id": "BK_TC_27",
-				"description": "",
-				"testFile": "./test/backoffice/backoffice.test.js",
-				"testData": []
-			},
-			{
-				"id": "BK_TC_28",
+				"id": "BK_TC_14",
 				"description": "",
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
-						"jsonPath": [
-							"backoffice.book[0]",
-							"backoffice.accessCodeBatch[0]"
-						]
+						"jsonPath": "backoffice.activity[2]"
 					}
 				]
 			},
 			{
-				"id": "BK_TC_29",
+				"id": "BK_TC_31",
 				"description": "",
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
-						"jsonPath": [
-							"backoffice.book[0]",
-							"backoffice.accessCodeBatch[0]"
-						]
+						"jsonPath": "backoffice.activity[2]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_32",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
+						"jsonPath": "backoffice.activity[2]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_15",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
+						"jsonPath": "backoffice.activity[2]"
 					}
 				]
 			}
@@ -1205,6 +1338,23 @@
 					{
 						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
 						"jsonPath": "backoffice.activity[0]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_22",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			},
+			{
+				"id": "BK_TC_21",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
+						"jsonPath": "backoffice.activity[2]"
 					}
 				]
 			},

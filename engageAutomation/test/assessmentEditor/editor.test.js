@@ -38,7 +38,7 @@ module.exports = {
 	//Validate that a new question is added by clicking on the 'Add new Question' button on the left pane
 	ASE_COM_TC_4: function (testdata) {
 		sts = EditorPlayer.clickAddQuestionBtn();
-		assertion.assertEqual(sts.editorCount, 9, "Question tab is not selected");
+		assertion.assertEqual(sts.editorCount, 10, "Question tab is not selected");
 	},
 	//Validate that alphanumeric text is supported in Question Title Text.
 	ASE_QUN_TC_5: function (testdata) {
@@ -199,7 +199,8 @@ module.exports = {
 	//click save and return button
 	ASE_COM_TC_999: function () {
 		sts = EditorPlayer.clickSaveandReturnBtn();
-		assertion.assert((sts instanceof Error) === true, "Error in save and return - " + sts);
+		assertion.assertEqual(sts, true, "Error in save and return");
+		//assertion.assert((sts instanceof Error) === true, "Error in save and return - " + sts);
 		browser.switchWindow(global.appUrl);
 	},
 	

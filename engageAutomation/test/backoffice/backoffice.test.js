@@ -11,6 +11,7 @@ const addActivityPage = require('../../pages/backoffice/addActivity.page.js');
 const commonPage = require('../../pages/backoffice/common.page.js');
 const viewLearningPathPage = require('../../pages/backoffice/viewLearningPath.page.js');
 const generateCodesPage = require('../../pages/backoffice/generateCodes.page.js');
+const libraryPage = require('../../pages/backoffice/linkFromLibrary.page.js');
 var sts;
 
 module.exports = {
@@ -130,7 +131,7 @@ module.exports = {
 	BK_TC_14: function (testdata) {
 		sts = learningPathPage.click_AddActivity_Button();
 		assertion.assertEqual(sts, true, "Add learning object options status mismatch");
-		sts = learningPathPage.select_ActivityType_and_Proceed(testdata.type);
+		sts = learningPathPage.select_ActivityType_and_Proceed(testdata.typeIndex);
 		assertion.assertEqual(sts, true, "Add activity page status mismatch");
 	},
 
@@ -143,7 +144,8 @@ module.exports = {
 		//browser.switchWindow('https://backoffice-difusion-dev1.comprodls.com/');
 		//assertion.assert((typeof sts === "string" && sts.includes(testdata.name)), "Snackbar messsage mismatch. " + sts);
 		//assertion.assert((typeof sts === "string" && sts.includes("created successfully")), "Snackbar messsage mismatch. " + sts);
-		browser.switchWindow('paint.backoffice.comprodls.com/');
+		if (testdata.typeIndex == 0)
+			browser.switchWindow('paint.backoffice.comprodls.com/');
 	},
 
 	// Validate that clicking on the Level 1 breadcrumb launches components page
@@ -258,5 +260,17 @@ module.exports = {
 	BK_TC_30: function (testdata) {
 		sts = learningPathPage.click_ActivityAuthor_Button_in_ActivityMenu(testdata.name);
 		//assertion.assert((typeof sts === "string" && sts.includes("Launching")), "Dialog text mismatch. " + sts);
+	},
+
+	// Validate that the searched LO is displayed on searching the LO in the Library
+	BK_TC_31: function (testdata) {
+		sts = libraryPage.searchLO_byName(testdata.fileName);
+		assertion.assertEqual(sts, true, "Error in searching LO");
+	},
+
+	// Validate that the add activity page appears after selecting the LO and clicking on next button
+	BK_TC_32: function (testdata) {
+		sts = libraryPage.select_Resource_and_Proceed(testdata.fileName);
+		assertion.assertEqual(sts, true, "Error in searching LO");
 	},
 }

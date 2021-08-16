@@ -342,7 +342,7 @@ module.exports = {
 
 	// Move to next activity
 	ENG_DIF_TC_25: function () {
-		res = action.click("[data-tid=button-nextactivity]");
+		res = action.click("[data-tid*=button-next]");
 		console.log(res)
 		res = action.waitForDisplayed("iframe");
 		console.log(res)
@@ -389,17 +389,17 @@ module.exports = {
 
 	// Resource Bank page
 	ENG_DIF_TC_29: function () {
-		res = action.click("[data-tid=button-chapter-0]");
+		res = action.click("[data-tid=button-product-3]");
 		console.log(res)
-		res = action.click("[data-tid=button-product-1]");
-		console.log(res)
+		//res = action.click("[data-tid=button-chapter-0]");
+		//console.log(res)
 		res = action.waitForDocumentLoad();
 		console.log(res)
 	},
 
 	// Flipbook page
 	ENG_DIF_TC_30: function () {
-		res = action.click("[data-tid=btn-open-in-flipbook]");
+		res = action.click("[data-tid=button-openFlipbook]");
 		console.log(res)
 		//browser.back();
 		//res = action.click("[data-tid=btn-open-in-flipbook]");
@@ -464,8 +464,8 @@ module.exports = {
 
 	// Remove book dialog box
 	ENG_DIF_TC_36: function () {
-		if (action.isDisplayed("[data-tid=breadcrumb-productName]")) {
-			res = action.click("[data-tid=breadcrumb-productName]");
+		if (action.isDisplayed("[data-tid=breadcrumb-viewbook]")) {
+			res = action.click("[data-tid*=breadcrumb]");
 			console.log(res)
 		}
 		res = action.click("[data-tid=button-dashboard]");
@@ -490,7 +490,7 @@ module.exports = {
 
 	// Select and apply filter
 	ENG_DIF_TC_38: function () {
-		res = action.click("[data-tid=filtermenu-list-item-1-0]");
+		res = action.click("[data-tid=filtermenu-list-item-0-0]");
 		console.log(res)
 		res = action.click("[data-tid=button-apply-filter]");
 		console.log(res)
