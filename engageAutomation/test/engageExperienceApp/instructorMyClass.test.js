@@ -1,13 +1,12 @@
 "use strict";
 var instructorMyClassPage = require('../../pages/engageExperienceApp/instructorMyClass.page.js');
 var createClassPage = require('../../pages/engageExperienceApp/createClass.page.js');
-var addBookPage = require('../../pages/engageExperienceApp/addBook.page.js');
 var successClassPage = require('../../pages/engageExperienceApp/successClass.page.js');
+const dashboardPage = require('../../pages/engageExperienceApp/dashboard.page.js');
 var calender = require('../../pages/engageExperienceApp/calender.page.js');
 var classDrawerpage = require('../../pages/engageExperienceApp/classDrawer.page.js');
 const { add } = require('winston');
 const teacherViewClassPage = require('../../pages/engageExperienceApp/teacherViewClass.page.js');
-const commonTest = require('./common.test.js');
 var sts;
 module.exports = {
 
@@ -494,7 +493,8 @@ module.exports = {
 
 	ENG_INS_CLASS_TC_44: function () {
 		sts = teacherViewClassPage.clickViewBookbtn()
-		console.log(sts)
+
+		//console.log(sts)
 
 	},
 	//rupsi	
@@ -509,5 +509,60 @@ module.exports = {
 		calender.clickOkBtn()
 
 	},
+	//Click on student tab and validate student tab is selected
+	ENG_INS_CLASS_TC_99: function (testdata) {
+		sts = teacherViewClassPage.clickStudentsTab()
+		//console.log(sts)
+		if ((typeof (sts)) === "object") {
+			assertion.assertEqual(sts.pageData.selectedProduct, "Students", "Student Tab is not selected " + JSON.stringify(sts))
 
+		} else {
+			assertion.assertFail(sts);
+		}
+
+	},
+
+	//Validate that score is coming for anchord book class students  
+		ENG_INS_CLASS_TC_100: function (testdata) {
+			//console.log(testdata)
+			sts = teacherViewClassPage.getStudentPageData()
+			if ((typeof (sts)) === "object") {
+				assertion.assertEqual(sts.studentData[0].studentName, testdata[0].Name, "Student Name is not mismatched " + JSON.stringify(sts))
+				assertion.assertEqual(sts.studentData[0].studentStatus, testdata[1].enrolledStatus, "Student Status is not mismatched " + JSON.stringify(sts))
+				assertion.assertEqual(sts.studentData[0].studentAvgScore, testdata[0].AvgScore, "Student AvgScore is not mismatched " + JSON.stringify(sts))
+				assertion.assertEqual(sts.studentData[0].studentCompletionScore, testdata[0].CompletionScore, "Student CompletionScore is not mismatched " + JSON.stringify(sts))
+				assertion.assertEqual(sts.studentData[0].studentMoreOption, true, "Student MoreOption is not mismatched " + JSON.stringify(sts))
+	
+			} else {
+				assertion.assertFail(sts);
+			}
+	
+		},
+	//Validate that score is not coming for non-anchord book class students  
+	ENG_INS_CLASS_TC_101: function (testdata) {
+		//console.log(testdata)
+		sts = teacherViewClassPage.getStudentPageData()
+		if ((typeof (sts)) === "object") {
+			assertion.assertEqual(sts.studentData[0].studentName, testdata[0].Name, "Student Name is not mismatched " + JSON.stringify(sts))
+				assertion.assertEqual(sts.studentData[0].studentStatus, testdata[1].enrolledStatus, "Student Status is not mismatched " + JSON.stringify(sts))
+				assertion.assertEqual(sts.studentData[0].viewProgressbtn, true, "Student viewProgressbtn is not mismatched " + JSON.stringify(sts))
+				assertion.assertEqual(sts.studentData[0]. viewMessagebtn, true, "Student viewMessagebtn is not mismatched " + JSON.stringify(sts))
+				assertion.assertEqual(sts.studentData[0].studentMoreOption, true, "Student MoreOption is not mismatched " + JSON.stringify(sts))
+
+		} else {
+			assertion.assertFail(sts);
+		}
+	},
+	// Validate the page when no student is added 
+		ENG_INS_CLASS_TC_102: function (testdata) {
+			sts = teacherViewClassPage.getStudentPageData()
+			if ((typeof (sts)) === "object") {
+				assertion.assertEqual(sts.noStudentSubTitle, testdata.noStudentSubTitle, "Student Title is not matched" + JSON.stringify(sts))
+					assertion.assertEqual(sts.noStudentTitle, testdata.noStudentTitle, "Student subTitle is not mismatched " + JSON.stringify(sts))
+					assertion.assertEqual(sts.noStudentIcon, true, "Student viewProgressbtn is not mismatched " + JSON.stringify(sts))
+				
+			} else {
+				assertion.assertFail(sts);
+			}
+	},
 };
