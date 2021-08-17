@@ -176,7 +176,8 @@
                 "noBookTitle": "No Books added yet",
                 "noBookSubTitle": "Any books you save while browsing the catalog will be added here for you to view later."
             },
-            "bookViewTOC": {
+             "bookViewTOC":
+            {
                 "addToMyBooks": "Add to My Books",
                 "myBooks": "My Books",
                 "viewClasses": "View Classes",
@@ -184,12 +185,23 @@
                 "viewBookDetails": "View Book Details",
                 "removefromMyBooks": "Remove from My Books",
                 "units": "Units",
-                "removeBook_menu": {
+                "removeBook_menu":
+                {
                     "removeBookTitle": "Remove from My Books?",
                     "message1": "This will remove the book - ",
                     "message2": " - from your My Books list.",
                     "cancel_btn": "Cancel",
                     "remove_btn": "Remove"
+                },
+                "activity_lbl": "Activities",
+                "activity_byline": "Select an item to view materials.",
+                "continueWhereYouLeft": "Continue where you left off:",
+                "dismiss_btn": "Dismiss",
+                "continue_btn": "Continue",
+                "unit_moreOptions":
+                {
+                    "openInFlipbook": "Open in Flipbook",
+                    "viewActivities": "View Activities"
                 }
             },
             "activityPlayerPage": {

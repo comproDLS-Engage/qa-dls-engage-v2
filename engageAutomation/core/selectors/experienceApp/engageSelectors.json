@@ -323,7 +323,8 @@
                 "feedback_txt": "[data-tid=text-feedbackmessage]",
                 "showingCorrectAnswer_txt": "[data-tid=text-showingcorrectanswer]"
             },
-            "bookView": {
+            "bookView":
+            {
                 "bookCover": "[data-tid=image-bookCover]",
                 "bookTitle": "[data-tid=text-bookTitle]",
                 "bookSubTitle": "[data-tid=text-bookSubtitle]",
@@ -362,10 +363,10 @@
                 "unitOpenFlipbook_btn": "[data-tid=btn-open-in-flipbook]",
                 "nextUnit_btn": "[data-tid=button-next-unit]",
                 "previousUnit_btn": "[data-tid=button-previous-unit]",
-                "activityTitle": "[data-tid*=text-title-",
-                "activityPageInfo": "[data-tid*=text-metaInfo-",
+                "activityTitle": "[data-tid*=text-title],[data-tid*=text-itemName]",
+                "activityPageInfo": "[data-tid*=text-metaInfo]",
                 "activityMoreOptions": "[data-tid*=button-contextMenu-",
-                "activityCompletionCircle": "[data-tid*=chart-",
+                "activityCompletionCircle": "[data-tid*=chart]",
                 "openFlipbook_moreOptions": "[data-tid=*menu-open-in-flipbook-",
                 "viewActivity_moreOptions": "[data-tid=*menu-view-activity-",
                 "breadcrumbFlipbook": "[data-tid=breadcrumb-viewbook]",
@@ -376,7 +377,10 @@
                 "lastActivity_Dismiss": "[data-tid=button-lastActivityDismiss]",
                 "lastActivity_Continue": "[data-tid=button-lastActivityContinue]",
                 "activity_lbl_unitView": "[data-tid=text-unitselection]",
-                "activity_byline_unitView": "[data-tid=text-unitselectionbilinear]"
+                "activity_byline_unitView": "[data-tid=text-unitselectionbilinear]",
+                "flipbookProduct": "[data-tid*=button-flipbookProduct-",
+                "itemTypeIcon":"[data-tid*=icon-itemType",
+                "itemTypeText":"[data-tid*=text-itemType"
             },
             "OnboardingUser":
             {
