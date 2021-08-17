@@ -28,7 +28,11 @@ module.exports = {
 	},
 
 	getBasePlayerInfo: function () {
-		let insideFrame = this.enterFrame(this.next_btn);
+		let insideFrame;
+		if (action.getElementCount(this.next_btn) == 1)
+			insideFrame = this.enterFrame(this.next_btn);
+		else
+			insideFrame = this.enterFrame(this.previous_btn);
 		var playerInfo = {
 			checkmyWork_isExists: action.getElementCount(this.checkMyWork_btn) == 1 ? true : false,
 			checkmyWork_isDisabled: (action.getElementCount(this.checkMyWork_btn) == 1) ? action.getAttribute(this.checkMyWork_btn, 'disabled') : false,

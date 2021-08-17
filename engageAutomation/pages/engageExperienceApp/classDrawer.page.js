@@ -27,13 +27,10 @@ module.exports = {
 
     Click_classDrawerCloseBtn: function () {
         res = action.click(this.classDrawerCloseBtn);
-        if (res == true) {
-            logger.logInto(stackTrace.get(), res + "Drawer Pane is closed");
-            //res = dashboardPage.isInitialized();
-        }
+        if (res == true) 
+            logger.logInto(stackTrace.get(), res + "Drawer Pane button is clicked");
         else
-            logger.logInto(stackTrace.get(), res + "Drawer Pane is NOT closed", "error");
-
+            logger.logInto(stackTrace.get(), res + "Drawer Pane is NOT Clicked", "error");
         return res;
     }
 

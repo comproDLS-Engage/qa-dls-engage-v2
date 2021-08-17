@@ -1,19 +1,24 @@
 'use strict';
 var mcmrPage = require('../../pages/engageExperienceApp/mcmr.itemplayer.page.js');
+const itemPlayerPage = require('../../pages/engageExperienceApp/itemPlayer.page.js');
 var sts;
 
 module.exports = {
 
 	//Validate the MCMR question launch in default unattempted state
 	ENG_ITEM_MCMR_TC_1: function (testdata) {
-		sts = mcmrPage.isInitialized(testdata);
+		sts = mcmrPage.isInitialized(testdata[0]);
 		if ((typeof (sts)) === "object") {
-			assertion.assertEqual(sts.length, testdata.length, "Options count mismatch");
+			assertion.assertEqual(sts.length, testdata[0].length, "Options count mismatch");
 			for (var i = 0; i < sts.length; i++) {
 				assertion.assertEqual(sts[i][3], "", "MCMR 'value' for index " + i + " is - " + sts[i]);
 			}
 		}
 		else assertion.assertFail(sts);
+		sts = itemPlayerPage.getItemplayerInfo();
+		assertion.assertEqual(sts.mediaType, testdata[1].mediaType, "Media type mismatch");
+		assertion.assertEqual(sts.quesText, testdata[1].text, "Question text mismatch");
+		assertion.assertEqual(sts.instructionText, testdata[1].instruction, "Instruction text mismatch");
 	},
 
 	//Validate that the user responses are retained in MCMR after clicking try again

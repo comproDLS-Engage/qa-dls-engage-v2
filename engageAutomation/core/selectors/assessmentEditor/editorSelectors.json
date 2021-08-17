@@ -8,7 +8,7 @@
 			"previewPublish_tab": "[data-tid=tab-previewnpublish]",
 			"title_txtbox": "[data-tid=input-title] input",
 			"ok_btn": "[data-tid=button-ok]",
-			"itemPlayer_btn": "[data-tid=button-"
+			"itemPlayer_btn": "[data-tid*=button-"
 		},
 		"editorTab": {
 			"questionHeader": "h5[class*=MuiTypography-noWrap]",

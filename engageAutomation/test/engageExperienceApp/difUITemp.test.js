@@ -100,6 +100,8 @@ module.exports = {
 		console.log(res)
 		res = action.waitForDocumentLoad();
 		console.log(res)
+		res = action.waitForDisplayed("[data-tid=button-filter]")
+		console.log(res)
 	},
 
 	// Browse page with videos tab
@@ -107,6 +109,8 @@ module.exports = {
 		res = action.click("[data-tid=button-product-2]");
 		console.log(res)
 		res = action.waitForDocumentLoad();
+		console.log(res)
+		res = action.waitForDisplayed("[data-tid=button-filter]")
 		console.log(res)
 	},
 
@@ -116,6 +120,8 @@ module.exports = {
 		console.log(res)
 		res = action.waitForDocumentLoad();
 		console.log(res)
+		res = action.waitForDisplayed("[data-tid=button-filter]")
+		console.log(res)
 	},
 
 	// Browse page with teacher training tab
@@ -123,6 +129,8 @@ module.exports = {
 		res = action.click("[data-tid=button-product-4]");
 		console.log(res)
 		res = action.waitForDocumentLoad();
+		console.log(res)
+		res = action.waitForDisplayed("[data-tid=button-filter]")
 		console.log(res)
 	},
 
@@ -132,6 +140,8 @@ module.exports = {
 		console.log(res)
 		res = action.waitForDocumentLoad();
 		console.log(res)
+		res = action.waitForDisplayed("[data-tid=button-filter]")
+		console.log(res)
 	},
 
 	// Browse page with projectable tab
@@ -139,6 +149,8 @@ module.exports = {
 		res = action.click("[data-tid=button-product-6]");
 		console.log(res)
 		res = action.waitForDocumentLoad();
+		console.log(res)
+		res = action.waitForDisplayed("[data-tid=button-filter]")
 		console.log(res)
 	},
 
@@ -330,7 +342,7 @@ module.exports = {
 
 	// Move to next activity
 	ENG_DIF_TC_25: function () {
-		res = action.click("[data-tid=button-nextactivity]");
+		res = action.click("[data-tid*=button-next]");
 		console.log(res)
 		res = action.waitForDisplayed("iframe");
 		console.log(res)
@@ -377,17 +389,17 @@ module.exports = {
 
 	// Resource Bank page
 	ENG_DIF_TC_29: function () {
-		res = action.click("[data-tid=button-chapter-0]");
+		res = action.click("[data-tid=button-product-3]");
 		console.log(res)
-		res = action.click("[data-tid=button-product-1]");
-		console.log(res)
+		//res = action.click("[data-tid=button-chapter-0]");
+		//console.log(res)
 		res = action.waitForDocumentLoad();
 		console.log(res)
 	},
 
 	// Flipbook page
 	ENG_DIF_TC_30: function () {
-		res = action.click("[data-tid=btn-open-in-flipbook]");
+		res = action.click("[data-tid=button-openFlipbook]");
 		console.log(res)
 		//browser.back();
 		//res = action.click("[data-tid=btn-open-in-flipbook]");
@@ -452,8 +464,8 @@ module.exports = {
 
 	// Remove book dialog box
 	ENG_DIF_TC_36: function () {
-		if (action.isDisplayed("[data-tid=breadcrumb-productName]")) {
-			res = action.click("[data-tid=breadcrumb-productName]");
+		if (action.isDisplayed("[data-tid=breadcrumb-viewbook]")) {
+			res = action.click("[data-tid*=breadcrumb]");
 			console.log(res)
 		}
 		res = action.click("[data-tid=button-dashboard]");
@@ -478,7 +490,7 @@ module.exports = {
 
 	// Select and apply filter
 	ENG_DIF_TC_38: function () {
-		res = action.click("[data-tid=filtermenu-list-item-1-0]");
+		res = action.click("[data-tid=filtermenu-list-item-0-0]");
 		console.log(res)
 		res = action.click("[data-tid=button-apply-filter]");
 		console.log(res)
@@ -601,11 +613,11 @@ module.exports = {
 		//res = action.click("[data-tid=input-autocomplete-searchtextbox]");
 		//console.log(res)
 		action.
-		res = action.setValue("div > input", "Aula");
+		res = action.setValue("div > input", "Automation");
 		console.log(res)
 		res = action.keyPress("Enter");
 		console.log(res)
-		res = action.waitForDisplayed("img[src*=Aula]");
+		res = action.waitForDisplayed("img[src*=Compro]");
 		console.log(res)
 	},
 }

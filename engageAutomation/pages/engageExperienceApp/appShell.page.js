@@ -1,5 +1,6 @@
 "use strict";
 var action = require('../../core/actionLibrary/baseActionLibrary.js');
+var instructorMyClassPage = require('../../pages/engageExperienceApp/instructorMyClass.page.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
 var res;
 
@@ -17,8 +18,8 @@ module.exports = {
 	comproLogo: selectorFile.css.ComproEngage.appShell.comproLogo,
 	versionTxt: selectorFile.css.ComproEngage.appShell.versionTxt,
 	notificationBtn: selectorFile.css.ComproEngage.appShell.notificationBtn,
-	notificationCloseBtn: selectorFile.css.ComproEngage.appShell.notificationCloseBtn, 
-	notificationTxt: selectorFile.css.ComproEngage.appShell.notificationTxt, 
+	notificationCloseBtn: selectorFile.css.ComproEngage.appShell.notificationCloseBtn,
+	notificationTxt: selectorFile.css.ComproEngage.appShell.notificationTxt,
 	noNotificationImg: selectorFile.css.ComproEngage.appShell.noNotificationImg,
 	grayBackdrop: selectorFile.css.ComproEngage.appShell.grayBackdrop,
 	languageSwitcherBtn: selectorFile.css.ComproEngage.appShell.languageSwitcherBtn,
@@ -31,9 +32,9 @@ module.exports = {
 	userProfileHelpBtn: selectorFile.css.ComproEngage.appShell.userProfileHelpBtn,
 	userProfileSettingsBtn: selectorFile.css.ComproEngage.appShell.userProfileSettingsBtn,
 	userProfileLogoutBtn: selectorFile.css.ComproEngage.appShell.userProfileLogoutBtn,
-	classPlusIcon:selectorFile.css.ComproEngage.appShell.classPlusIcon,
-	breadcrumbbackbtn:selectorFile.css.ComproEngage.appShell.breadcrumbbackbtn,
-	breadcrumbproductTitle:selectorFile.css.ComproEngage.appShell.breadcrumbproductTitle,
+	classPlusIcon: selectorFile.css.ComproEngage.appShell.classPlusIcon,
+	breadcrumbbackbtn: selectorFile.css.ComproEngage.appShell.breadcrumbbackbtn,
+	breadcrumbproductTitle: selectorFile.css.ComproEngage.appShell.breadcrumbproductTitle,
 
 	isInitialized: function () {
 		logger.logInto(stackTrace.get());
@@ -98,8 +99,8 @@ module.exports = {
 		logger.logInto(stackTrace.get());
 		res = action.click(this.classesBtn);
 		if (true == res) {
-			res = true;
-			//Class page is not yet developed so returning true in this case
+			res = res + " -- Create Class button is clicked";
+			res = instructorMyClassPage.isInitialized()
 		}
 		else {
 			res = res + " -- Error in clicking Class Button";
@@ -222,7 +223,7 @@ module.exports = {
 			userProfileOptionData[i] = action.getText(userProfileOptionSelector);
 		}
 		obj.options = userProfileOptionData;*/
-		return obj; 
+		return obj;
 	},
 
 	clickLogoutButton: function () {
@@ -239,36 +240,33 @@ module.exports = {
 		return res;
 	},
 	click_PlusIconClassesTab: function () {
-        res = action.click(this.classPlusIcon)
-        if (res == true) {
-            logger.logInto(stackTrace.get(), res + "Class plus button is clicked");
+		res = action.click(this.classPlusIcon)
+		if (res == true) {
+			logger.logInto(stackTrace.get(), res + "Class plus button is clicked");
 			var createClassPage = require('./createClass.page.js');
-            res = createClassPage.isInitialized();
-        }
-        else
-            logger.logInto(stackTrace.get(), res + ":Add A New Book Button is NOT Clicked", "error");
-        return res;
-    },
-
-	Click_breadcrumbbackbutton:function()
-	{
-		res = action.click(this.breadcrumbbackbtn)
-		console.log(res)
-        if (res == true) {
-            logger.logInto(stackTrace.get(), res + "back button from snakebar is clicked");
-        }
-        else
-            logger.logInto(stackTrace.get(), res + ":back button from snakebar is NOT Clicked", "error");
-        return res;
+			res = createClassPage.isInitialized();
+		}
+		else
+			logger.logInto(stackTrace.get(), res + ":Add A New Book Button is NOT Clicked", "error");
+		return res;
 	},
-	Click_breadcrumbproductTitle:function()
-	{
+
+	Click_breadcrumbbackbutton: function () {
+		res = action.click(this.breadcrumbbackbtn)
+		if (res == true) {
+			logger.logInto(stackTrace.get(), res + "back button from snakebar is clicked");
+		}
+		else
+			logger.logInto(stackTrace.get(), res + ":back button from snakebar is NOT Clicked", "error");
+		return res;
+	},
+	Click_breadcrumbproductTitle: function () {
 		res = action.click(this.breadcrumbproductTitle)
-        if (res == true) {
-            logger.logInto(stackTrace.get(), res + "Product title from snakebar is clicked");
-        }
-        else
-            logger.logInto(stackTrace.get(), res + "Product title from snakebar is NOT Clicked", "error");
-        return res;
+		if (res == true) {
+			logger.logInto(stackTrace.get(), res + "Product title from snakebar is clicked");
+		}
+		else
+			logger.logInto(stackTrace.get(), res + "Product title from snakebar is NOT Clicked", "error");
+		return res;
 	}
 };

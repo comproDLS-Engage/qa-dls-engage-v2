@@ -32,10 +32,22 @@
                     ],
                     "info": {}
                 },
+                "acceptanceteacher": {
+                    "email": "qa_acceptanceteacher100@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "student",
+                    "name": "qa teacher100",
+                    "class": [  
+                        {
+                            "key": "TFbA-6AP7",
+                            "name": "acceptanceClass"
+                        }],
+                    "info": {}
+                },
                 "validInstructorUser1": {
                     "email": "qa_teacher003@yopmail.com",
                     "password": "Compro@1234",
-                    "role": "instructor",
+                    "role": "qateacher003",
                     "name": "kulujaco-1294",
                     "courses": [
                         {
@@ -52,7 +64,44 @@
                     "name": "teacher 3",
                     "courses": [],
                     "info": "freash user without books or classes"
-                }               
+                },
+                "classInstructorUser3": {
+                    "email": "qa_teacherClass@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "instructor",
+                    "name": "qa teacher001",
+                    "class": [],
+                    "info": {}
+                },
+                "NoClassInstructor": {
+                    "email": "noclassinstructor1@yopmail.com",
+                    "password": "Compro@1234",
+                    "name": "qa instructor",
+                    "role": "teacher",
+                    "class": [],
+                    "info": {}
+                },
+                "classInstructorUser1": {
+                    "email": "classinstructor1@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "instructor",
+                    "name": "class instructor1",
+                    "class": [
+                        {
+                            "key": "AEYP-p9hk",
+                            "name": "future Class"
+                        },
+                        {
+                            "key": "9q6x-QzFe",
+                            "name": "Active Class"
+                        },
+                        {
+                            "key": "Cw32-FLZ7",
+                            "name": "Archive Class"
+                        }
+                    ],
+                    "info": {}
+                }             
             }
         },
         "codesAndKeys": {

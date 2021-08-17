@@ -72,7 +72,7 @@
 		"lpLevelsList": "[class*=mdc-menu-surface--open] [class*=mdc-list-item__text]",
 		"autonumberingDropdown": "[class=c-form-section] > div:nth-child(4) > div",
 		"autonumberingList": "[class*=mdc-menu-surface--open] [class*=mdc-list-item__text]",
-		"addBtn": "[class=c-form-section] button[class*=action-button-padding]"
+		"addBtn": "[class*=c-form] button[class*=action-button-padding]"
 	},
 	"viewLearningPathPage": {
 		"folderList": "[data-tid*=button-folder-details] [class=c-list-item__primary-text]",
@@ -81,6 +81,7 @@
 		"addActivityBtn": "[data-tid='button-ADD COMPONENT']",
 		"publishBtn": "[data-tid=button-publish-book-component]",
 		"deleteComponentBtn": "[data-tid=button-delete-component]",
+		"activityCategoryList": "[class=c-list-primary-text]",
 		"activityTypeList": "[class=c-radio-label]",
 		"activityMenuBtn": "[data-tid=button-display-activity-menu]",
 		"activityMenuDeleteBtn": "[class*=mdc-menu-surface--open] [data-tid=button-Delete]",
@@ -90,7 +91,7 @@
 	},
 	"addFolderPage": {
 		"nameTxtbox": "[id=Name]",
-		"addBtn": "[class=c-form-section] button[class*=action-button-padding]"
+		"addBtn": "[class*=c-form] button[class*=action-button-padding]"
 	},
 	"addActivityPage": {},
 	"publishComponentPage": {
@@ -125,5 +126,12 @@
 		"modifyBtn": "[data-tid=button-modify-access-codes] span",
 		"deactivateBtn": "[data-tid=button-deactivate-license] span",
 		"redeemBtn": "[data-tid=button-redeem-access-code] span"
+	},
+	"linkFromLibraryPage": {
+		"searchBox": "input[data-tid=input-searchbyenter]",
+		"loCheckbox": "[class=c-library-search-result-container] div[class*=mdc-checkbox--touch]",
+		"nextBtn": "div[class=c-library-info] button",
+		"resourceNameList": "[class=c-resource-name]",
+		"filteredChips": "div[class=c-filtered-chips]"
 	}
 }

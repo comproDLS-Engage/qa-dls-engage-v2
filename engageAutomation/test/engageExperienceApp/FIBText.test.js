@@ -1,6 +1,7 @@
 'use strict';
 
 var FIBText = require('../../pages/engageExperienceApp/FIBText.ItemPlayer.page.js');
+const itemPlayerPage = require('../../pages/engageExperienceApp/itemPlayer.page.js');
 var sts, sts1;
 module.exports = {
 
@@ -12,6 +13,10 @@ module.exports = {
             assertion.assertEqual(sts.targetData[i][1], "", "Target text mismatch for " + sts.targetData[i]);
             assertion.assertEqual(sts.targetData[i][2], "", "Status mismatch for " + sts.targetData[i]);
         }
+        sts = itemPlayerPage.getItemplayerInfo();
+		assertion.assertEqual(sts.mediaType, testdata.mediaType, "Media type mismatch");
+		assertion.assertEqual(sts.quesText, testdata.text, "Question text mismatch");
+		assertion.assertEqual(sts.instructionText, testdata.instruction, "Instruction text mismatch");
     },
     
     //Validate that user is able to click in the text placeholders and type the desired text in the FIB text question

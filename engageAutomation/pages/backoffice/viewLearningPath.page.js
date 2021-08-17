@@ -104,24 +104,29 @@ module.exports = {
         return res;
     },
 
-    select_ActivityType_and_Proceed: function (type) {
+    select_ActivityType_and_Proceed: function (index) {
         logger.logInto(stackTrace.get());
         let res = null;
         let i, list;
         list = action.findElements(this.activityTypeList);
         for (i = 0; i < list.length; i++) {
-            if (action.getText(list[i]) == type) {
+            //if (action.getText(list[i]) == type) {
+            if (i == index) {
                 res = action.click(list[i]);
                 if (res == true) {
                     res = action.click(this.proceedBtn);
                     if (res == true) {
-                        res = require('./addActivity.page.js').isInitialized();
+                        if (index == 9)
+                            res = require('./linkFromLibrary.page.js').isInitialized();
+                        else
+                            res = require('./addActivity.page.js').isInitialized();
                         browser.pause(5000);
                     }
                 }
                 break;
             }
-            res = "activity type \"" + type + "\" not found";
+            //res = "activity type \"" + type + "\" not found";
+            res = "activity index \"" + index + "\" not found";
         }
         logger.logInto(stackTrace.get(), res);
         return res;

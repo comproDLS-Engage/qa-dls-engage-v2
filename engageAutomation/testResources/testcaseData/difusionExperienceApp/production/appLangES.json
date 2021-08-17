@@ -1,0 +1,32 @@
+{
+    "engage": {
+        "appContent": {
+            "language": "ES - Español",
+            "landing": {
+                "headingText": "Un espacio para todo su aprendizaje.",
+                "subheadingText": "Aprenda desde cualquier lugar y en cualquier momento. Acceso instantáneo a todos los cursos y actividades.",
+                "signup_btnText": "Regístrese y comience a aprender hoy mismo",
+                "login_btnText": "Iniciar sesión",
+                "login_lblText": "¿Tiene una cuenta?",
+                "footerLabel": "Desarrollada por"
+            },
+            "login": {
+                "loginPage_title": "Iniciar sesión",
+                "email_tbox_lbl": "Correo electrónico",
+                "userName_tbox_placeholder": "Ingrese correo electrónico",
+                "pswrd_tbox_lbl": "Contraseña",
+                "password_tbox_placeholder": "Introducir la contraseña",
+                "google_btn": "Google",
+                "facebook_btn": "Facebook",
+                "login_btn": "Iniciar sesión con correo electrónico",
+                "forgotPassword": "¿Ha olvidado tu contraseña?",
+                "signup": "Regístrese",
+                "dontHaveAccount_txt": "¿No tiene una cuenta?",
+                "loginoption_txt": "O continúe con:",
+                "footerLabel": "powered by",
+                "invalidEmail_txt": "Compruebe su dirección de correo electrónico y vuelva a intentarlo.",
+                "notRegisterUser_alert": "Verifique su dirección de correo electrónico y contraseña y vuelva a intentarlo."
+            }
+        }
+    }
+}

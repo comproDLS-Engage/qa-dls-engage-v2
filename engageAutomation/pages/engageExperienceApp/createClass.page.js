@@ -39,7 +39,7 @@ module.exports = {
     endDateErrorMsg: selectorFile.css.ComproEngage.createClassPage.endDateErrorMsg,
     startDateErrorMsg: selectorFile.css.ComproEngage.createClassPage.startDateErrorMsg,
     msgBar: selectorFile.css.ComproEngage.myClassPage.msgBar,
-
+    bookSkeleton: selectorFile.css.ComproEngage.createClassPage.bookSkeleton,
     isInitialized: function () {
         logger.logInto(stackTrace.get());
         // action.waitForDocumentLoad();

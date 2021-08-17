@@ -91,10 +91,31 @@
         "id": "ENG_INS_CLASS_TC_42",
         "description": "",
         "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_ADDBOOK_TC_12",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/addBook.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/classData.json",
-            "jsonPath": "engage.courses.newValidClasswithspecialCharacter.bookIndex"
+            "jsonPath": "engage.courses.newValidClasswithspecialCharacter.bookName"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.addBook"
+          }
+        ]
+      },
+      {
+        "id": "ENG_ADDBOOK_TC_8",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/addBook.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/classData.json",
+            "jsonPath": "engage.courses.newValidClasswithspecialCharacter.bookName"
           }
         ]
       },
@@ -176,10 +197,16 @@
         "id": "ENG_INS_CLASS_TC_42",
         "description": "",
         "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_ADDBOOK_TC_8",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/addBook.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/classData.json",
-            "jsonPath": "engage.courses.newInvalidClass.bookIndex"
+            "jsonPath": "engage.courses.newValidClasswithspecialCharacter.bookName"
           }
         ]
       },
@@ -700,10 +727,31 @@
         "id": "ENG_INS_CLASS_TC_42",
         "description": "",
         "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_ADDBOOK_TC_12",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/addBook.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/classData.json",
-            "jsonPath": "engage.courses.newValidClasswithspecialCharacter.bookIndex"
+            "jsonPath": "engage.courses.newValidClasswithspecialCharacter.bookName"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.addBook"
+          }
+        ]
+      },
+      {
+        "id": "ENG_ADDBOOK_TC_8",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/addBook.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/classData.json",
+            "jsonPath": "engage.courses.newValidClasswithspecialCharacter.bookName"
           }
         ]
       },
@@ -781,15 +829,31 @@
     "BeforeEach": [],
     "Test": [
       {
-        "id": "ENG_DASH_TC_7",
+        "id": "ENG_DASH_TC_12",
         "description": "",
         "testFile": "./test/engageExperienceApp/dashboard.test.js",
-        "testData": []
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/classData.json",
+            "jsonPath": "engage.courses.newValidClasswithspecialCharacter.bookName"
+          }
+        ]
       },
       {
-        "id": "ENG_DASH_TC_9",
+        "id": "ENG_DASH_TC_16",
         "description": "",
         "testFile": "./test/engageExperienceApp/dashboard.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/classData.json",
+            "jsonPath": "engage.courses.newValidClasswithspecialCharacter.bookName"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_CLASS_TC_6",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
         "testData": []
       },
       {
@@ -813,10 +877,18 @@
         "id": "ENG_INS_CLASS_TC_42",
         "description": "",
         "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
-        "testData": [   {
-          "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/classData.json",
-          "jsonPath": "engage.courses.newValidClasswithspecialCharacter.bookIndex"
-        }]
+        "testData": []
+      },
+      {
+        "id": "ENG_ADDBOOK_TC_8",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/addBook.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/classData.json",
+            "jsonPath": "engage.courses.newValidClasswithspecialCharacter.bookName"
+          }
+        ]
       },
       {
         "id": "ENG_INS_CLASS_TC_21",
@@ -892,22 +964,26 @@
     "BeforeEach": [],
     "Test": [
       {
-        "id": "ENG_DASH_TC_7",
+        "id": "ENG_DASH_TC_12",
         "description": "",
         "testFile": "./test/engageExperienceApp/dashboard.test.js",
-        "testData": []
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/classData.json",
+            "jsonPath": "engage.courses.newValidClasswithspecialCharacter.bookName"
+          }
+        ]
       },
       {
-        "id": "ENG_DASH_TC_8",
+        "id": "ENG_DASH_TC_17",
         "description": "",
         "testFile": "./test/engageExperienceApp/dashboard.test.js",
-        "testData": []
-      },
-      {
-        "id": "ENG_INS_CLASS_TC_6",
-        "description": "",
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
-        "testData": []
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/classData.json",
+            "jsonPath": "engage.courses.newValidClasswithspecialCharacter.bookName"
+          }
+        ]
       },
       {
         "id": "ENG_INS_CLASS_TC_16",
@@ -924,10 +1000,16 @@
         "id": "ENG_INS_CLASS_TC_42",
         "description": "",
         "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_ADDBOOK_TC_8",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/addBook.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/classData.json",
-            "jsonPath": "engage.courses.newValidClasswithspecialCharacter.bookIndex"
+            "jsonPath": "engage.courses.newValidClasswithspecialCharacter.bookName"
           }
         ]
       },
@@ -1138,7 +1220,7 @@
     "AfterEach": [],
     "After": []
   },
-  "Suite13": {
+  "Suite12": {
     "Name": "Validate the class pane when no class is available",
     "TestCaseRepo": [
       "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
@@ -1171,16 +1253,26 @@
     "BeforeEach": [],
     "Test": [
       {
-        "id": "ENG_DASH_TC_7",
+        "id": "ENG_DASH_TC_12",
         "description": "",
         "testFile": "./test/engageExperienceApp/dashboard.test.js",
-        "testData": []
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/classData.json",
+            "jsonPath": "engage.courses.newValidClasswithspecialCharacter.bookName"
+          }
+        ]
       },
       {
-        "id": "ENG_DASH_TC_8",
+        "id": "ENG_DASH_TC_16",
         "description": "",
         "testFile": "./test/engageExperienceApp/dashboard.test.js",
-        "testData": []
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/classData.json",
+            "jsonPath": "engage.courses.newValidClasswithspecialCharacter.bookName"
+          }
+        ]
       },
       {
         "id": "ENG_INS_CLASS_TC_38",
@@ -1190,6 +1282,10 @@
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
             "jsonPath": "engage.appContent.classDrawerPane"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/classData.json",
+            "jsonPath": "engage.courses.newValidClasswithspecialCharacter.bookName"
           }
         ]
       },
@@ -1203,7 +1299,7 @@
     "AfterEach": [],
     "After": []
   },
-  "Suite14": {
+  "Suite13": {
     "Name": "Validate the class pane when no class is available",
     "TestCaseRepo": [
       "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
@@ -1236,16 +1332,26 @@
     "BeforeEach": [],
     "Test": [
       {
-        "id": "ENG_DASH_TC_7",
+        "id": "ENG_DASH_TC_12",
         "description": "",
         "testFile": "./test/engageExperienceApp/dashboard.test.js",
-        "testData": []
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/classData.json",
+            "jsonPath": "engage.courses.newValidClasswithspecialCharacter.bookName"
+          }
+        ]
       },
       {
-        "id": "ENG_DASH_TC_8",
+        "id": "ENG_DASH_TC_16",
         "description": "",
         "testFile": "./test/engageExperienceApp/dashboard.test.js",
-        "testData": []
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/classData.json",
+            "jsonPath": "engage.courses.newValidClasswithspecialCharacter.bookName"
+          }
+        ]
       },
       {
         "id": "ENG_INS_CLASS_TC_39",
@@ -1255,6 +1361,10 @@
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
             "jsonPath": "engage.appContent.classDrawerPane"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/classData.json",
+            "jsonPath": "engage.courses.newValidClasswithspecialCharacter.bookName"
           }
         ]
       },

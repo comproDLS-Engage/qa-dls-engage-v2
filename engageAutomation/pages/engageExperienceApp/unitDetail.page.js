@@ -20,8 +20,8 @@ module.exports = {
     viewActivity_moreOptions: selectorFile.css.ComproEngage.bookView.viewActivity_moreOptions,
     activity_lbl_unitView: selectorFile.css.ComproEngage.bookView.activity_lbl_unitView,
     activity_byline_unitView: selectorFile.css.ComproEngage.bookView.activity_byline_unitView,
-    itemTypeIcon: selectorFile.css.ComproEngage.bookView.itemTypeIcon,
-    itemTypeText: selectorFile.css.ComproEngage.bookView.itemTypeText,
+    itemTypeIcon:selectorFile.css.ComproEngage.bookView.itemTypeIcon,
+    itemTypeText:selectorFile.css.ComproEngage.bookView.itemTypeText,
 
     isInitialized: function () {
         logger.logInto(stackTrace.get());
@@ -44,7 +44,6 @@ module.exports = {
             componentList: this.getComponentListData(),
             activityList: this.getActivityListData()
             // do we need attribute for which component is selected ? are/will we check this in testcase?- akhil
-            // attributes missing for no activity present scenario - akhil 
         }
         logger.logInto(stackTrace.get(), JSON.stringify(obj));
         return obj;
@@ -54,6 +53,7 @@ module.exports = {
         let componentArr = require("./bookDetail.page.js").getComponentListData()
         return componentArr;
     },
+
 
     clickNextUnit: function () {
         logger.logInto(stackTrace.get())
@@ -77,7 +77,7 @@ module.exports = {
         return res;
     },
 
-    clickOpenInFlipbookButton: function () {
+    clickOpenInFlipBook_unitLevel: function () {
         logger.logInto(stackTrace.get())
         res = action.click(this.unitOpenFlipbook_btn);
         if (res == true) {
@@ -90,23 +90,30 @@ module.exports = {
     },
 
     getActivityListData: function () {
+        var componentIndex;
         logger.logInto(stackTrace.get())
-        let i, activityArr = [];
+       
+        let i, list, activityArr = [];
         var activityList = action.findElements(this.activityTitle)
         var pageInfoList = action.findElements(this.activityPageInfo)
         var activityCompletionCirlceList = action.findElements(this.activityCompletionCircle)
         var itemTypeIcon = action.findElements(this.itemTypeIcon)
         var itemTypeText = action.findElements(this.itemTypeText)
-        for (i = 0; i < activityList.length; i++) {
-            activityArr[i] = {
-                activityTitle: action.getText(activityList[i]),
-                activityPageInfo: (action.getElementCount(pageInfoList[i]) > 0) ? action.getText(pageInfoList[i]) : null,
-                activityCompletionCircle: (action.getElementCount(activityCompletionCirlceList[i]) > 0) ? action.waitForDisplayed(activityCompletionCirlceList[i]) : null,
-                resourceItemTypeIcon: (action.getElementCount(itemTypeIcon[i]) > 0) ? action.waitForDisplayed(itemTypeIcon[i]) : null,
-                resourceItemTypeText: (action.getElementCount(itemTypeText[i]) > 0) ? action.getText(itemTypeText[i]) : null
+
+        // console.log(itemTypeIcon)
+        // console.log(itemTypeText)
+
+            for (i = 0; i < activityList.length; i++) {
+                activityArr[i] = {
+                    activityTitle: action.getText(activityList[i]),
+                    activityPageInfo: (action.getElementCount(pageInfoList[i]) > 0) ? action.getText(pageInfoList[i]) : null,
+                    activityCompletionCircle: (action.getElementCount(activityCompletionCirlceList[i]) > 0) ? action.waitForDisplayed(activityCompletionCirlceList[i]) : null,
+                    resourceItemTypeIcon: (action.getElementCount(itemTypeIcon[i]) > 0) ? action.waitForDisplayed(itemTypeIcon[i]) : null,
+                    resourceItemTypeText: (action.getElementCount(itemTypeText[i]) > 0) ? action.getText(itemTypeText[i]) : null
+                }
             }
-        }
-        logger.logInto(stackTrace.get(), activityArr);
+            logger.logInto(stackTrace.get(), activityArr);
+        
         //console.log(activityArr);
         return activityArr;
     },
@@ -140,7 +147,7 @@ module.exports = {
     //     return res;
     // },
 
-    clickOpenInFlipbook_MoreOptions: function (activityName) {
+    clickOpenFlipbook_MoreOptions: function (activityName) { 
         res = this.clickActivityMoreOptions(activityName)
         if (res == true) {
             res = action.click(this.openFlipbook_moreOptions)

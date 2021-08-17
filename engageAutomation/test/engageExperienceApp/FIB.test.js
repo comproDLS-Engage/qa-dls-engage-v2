@@ -1,6 +1,7 @@
 'use strict';
 
 var FIBDragandDrop = require('../../pages/engageExperienceApp/FIB.ItemPlayer.page.js');
+const itemPlayerPage = require('../../pages/engageExperienceApp/itemPlayer.page.js');
 var sts, sts1;
 module.exports = {
 
@@ -44,7 +45,6 @@ module.exports = {
             assertion.assertEqual(sts.targetData[i][1], testdata[i][3], "Target text mismatch for " + sts.targetData[i]);
             assertion.assertEqual(sts.targetData[i][2], testdata[i][4], "Status mismatch for " + sts.targetData[i]);
         }
-
     },
 
     ENG_ITEM_FIB_TC_13: function (testdata) {
@@ -77,5 +77,9 @@ module.exports = {
             assertion.assertEqual(sts.targetData[i][1], "", "Target text mismatch for " + sts.targetData[i]);
             assertion.assertEqual(sts.targetData[i][2], "", "Status mismatch for " + sts.targetData[i]);
         }
+        sts = itemPlayerPage.getItemplayerInfo();
+		assertion.assertEqual(sts.mediaType, testdata.mediaType, "Media type mismatch");
+		assertion.assertEqual(sts.quesText, testdata.text, "Question text mismatch");
+		assertion.assertEqual(sts.instructionText, testdata.instruction, "Instruction text mismatch");
     }
 }

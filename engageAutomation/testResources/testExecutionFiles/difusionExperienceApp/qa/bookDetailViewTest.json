@@ -316,13 +316,11 @@
          
       ],
       "After":[
-         {
-            "id":"logout_from_app",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/common.test.js",
-            "testData":[
-               
-            ]
+        {
+            "id": "ENG_SHELL_TC_9",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/appShell.test.js",
+            "testData": []
          }
       ]
    }

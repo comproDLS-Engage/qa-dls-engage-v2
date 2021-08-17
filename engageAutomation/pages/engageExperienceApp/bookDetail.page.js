@@ -45,7 +45,7 @@ module.exports = {
     breadcrumbFlipbook: selectorFile.css.ComproEngage.bookView.breadcrumbFlipbook,
     flipbookProduct: selectorFile.css.ComproEngage.bookView.flipbookProduct,
 
-    isInitialized: function () {
+    isInitialized: function() {
         logger.logInto(stackTrace.get());
         action.waitForDocumentLoad();
         action.waitForDisplayed(this.bookCover);
@@ -53,7 +53,7 @@ module.exports = {
         return res;
     },
 
-    getBookViewPageData: function () {
+    getBookViewPageData: function() {
         obj = {
             bookCover: (action.getElementCount(this.bookCover) > 0) ? action.waitForDisplayed(this.bookCover) : null,
             bookTitle: (action.getElementCount(this.bookTitle) > 0) ? action.getText(this.bookTitle) : null,
@@ -75,7 +75,7 @@ module.exports = {
         return obj;
     },
 
-    getComponentListData: function () {
+    getComponentListData: function() {
         let i, list;
         let componentArr = [];
         list = action.findElements(this.component);
@@ -87,7 +87,7 @@ module.exports = {
         return componentArr;
     },
 
-    getChapterListData: function () {
+    getChapterListData: function() {
         logger.logInto(stackTrace.get())
         let i, list;
         let componentArr = [];
@@ -111,7 +111,7 @@ module.exports = {
         return componentArr;
     },
 
-    clickViewClasses: function () {
+    clickViewClasses: function() {
         logger.logInto(stackTrace.get())
         res = action.click(this.viewClass);
         if (res == true) {
@@ -122,22 +122,22 @@ module.exports = {
         return res;
     },
 
-    clickAddBook: function () {
+    clickAddBook: function() {
         logger.logInto(stackTrace.get())
         this.clickMoreOptionsButton();
         // if (res == true) {
-        res = action.click(this.addBook_btn);
-        if (res == true) {
-            logger.logInto(stackTrace.get(), " --Add Book Button clicked");
-            res = this.getBookViewPageData()
-        }
+            res = action.click(this.addBook_btn);
+            if (res == true) {
+                logger.logInto(stackTrace.get(), " --Add Book Button clicked");
+                res = this.getBookViewPageData()
+            }
         //} 
         else
             logger.logInto(stackTrace.get(), " --Add Book Button NOT clicked", "error");
         return res;
     },
 
-    clickOpenFlipbook: function () {
+    clickOpenFlipbook: function() {
         logger.logInto(stackTrace.get())
         res = action.click(this.openFlipbook_btn);
         if (res == true) {
@@ -154,7 +154,7 @@ module.exports = {
         return res;
     },
 
-    clickComponent: function (componentName) {
+    clickComponent: function(componentName) {
         logger.logInto(stackTrace.get());
         let i, list;
         list = action.findElements(this.component);
@@ -174,7 +174,7 @@ module.exports = {
         return res;
     },
 
-    clickUnit: function (unitName) {
+    clickUnit: function(unitName) {
         logger.logInto(stackTrace.get());
         let i, list;
         list = action.findElements(this.chapterTitle);
@@ -194,7 +194,7 @@ module.exports = {
         return res;
     },
 
-    clickMoreOptionsButton: function () {
+    clickMoreOptionsButton: function() {
         logger.logInto(stackTrace.get())
         res = action.click(this.moreOptions);
         if (res == true) {
@@ -205,18 +205,18 @@ module.exports = {
         return res;
     },
 
-    closeMoreOptionsButton: function () {
+    closeMoreOptionsButton: function() {
         logger.logInto(stackTrace.get())
         res = action.click(this.closeMoreOptions);
         if (res == true) {
             logger.logInto(stackTrace.get(), " --More Options Closed");
-            res = action.waitForDisplayed(this.viewBookDetails_btn, 30000, true);
+            res = action.waitForDisplayed(this.viewBookDetails_btn,30000,true);
         } else
             logger.logInto(stackTrace.get(), " --More Options NOT Closed", "error");
         return res;
     },
 
-    getListOfFlipbooks: function () {
+    getListOfFlipbooks: function() {
         var obj = []
         list = action.findElements(this.flipbookProduct);
         for (i = 0; i < list.length; i++) {
@@ -226,7 +226,7 @@ module.exports = {
         return obj;
     },
 
-    getMoreOptionsButtonData: function () {
+    getMoreOptionsButtonData: function() {
         obj = {
             addBook_btn: (action.getElementCount(this.addBook_btn) > 0) ? action.getText(this.addBook_btn) : null,
             removeBook: (action.getElementCount(this.removeBook_btn) > 0) ? action.getText(this.removeBook_btn) : null,
@@ -236,7 +236,7 @@ module.exports = {
         return obj;
     },
 
-    getRemoveBookPopUpData: function () {
+    getRemoveBookPopUpData: function() {
         obj = {
             removeBook_title: (action.getElementCount(this.removeBook_title) > 0) ? action.getText(this.removeBook_title) : null,
             removeBook_subtitle: (action.getElementCount(this.removeBook_subtitle) > 0) ? action.getText(this.removeBook_subtitle) : null,
@@ -247,7 +247,7 @@ module.exports = {
         return obj;
     },
 
-    clickRemoveBook: function () {
+    clickRemoveBook: function() {
         logger.logInto(stackTrace.get())
         this.clickMoreOptionsButton();
         res = action.click(this.removeBook_btn);
@@ -259,7 +259,7 @@ module.exports = {
         return res;
     },
 
-    clickCancel_RemoveBookDialog: function () {
+    clickCancel_RemoveBookDialog: function() {
         logger.logInto(stackTrace.get())
         action.waitForDisplayed(this.removeBook_Dialog)
         res = action.click(this.removeBookDialogCancel);
@@ -272,14 +272,14 @@ module.exports = {
         return res;
     },
 
-    clickRemove_RemoveBookDialog: function () {
+    clickRemove_RemoveBookDialog: function() {
         logger.logInto(stackTrace.get())
         action.waitForDisplayed(this.removeBook_Dialog)
         res = action.click(this.removeBookDialogRemove);
         if (res == true) {
-            res = action.waitForDisplayed(this.removeBook_Dialog, 30000, true)
-            if (res == true) {
-                res = this.getBookViewPageData();
+            res = action.waitForDisplayed(this.removeBook_Dialog,30000, true)
+            if(res == true){
+                res = this.getBookViewPageData(); 
                 logger.logInto(stackTrace.get(), " --Remove Book Button clicked");
             }
         } else
@@ -299,8 +299,19 @@ module.exports = {
     // },
 
 
-    clickUnitMoreOptions: function (unitIndex) {
+    clickUnitMoreOptions: function(unitIndex) { //change to unit index
         logger.logInto(stackTrace.get());
+        // let i, list;
+        // list = action.findElements(this.chapterTitle);
+        // for (i = 0; i < list.length; i++) {
+        //     var chapterName = action.getText(list[i]).trim()
+        //     if (unitName.includes(chapterName)) {
+        //         action.click(this.chapterMoreOptions + i);
+        //         res = i; // shouldn't we call get_UnitMoreOptionsButton_Data here? - akhil
+        //         break;
+        //     }
+        //     res = -1;
+        // }
         res = action.click(this.chapterMoreOptions + unitIndex)
         if (res == true) {
             logger.logInto(stackTrace.get(), " --Unit More Options Clicked");
@@ -308,10 +319,10 @@ module.exports = {
         } else
             logger.logInto(stackTrace.get(), " --Unit More Options NOT clicked", "error");
         return res;
-
+        
     },
 
-    get_UnitMoreOptionsButton_Data: function (unitIndex) {
+    get_UnitMoreOptionsButton_Data: function(unitIndex) {
         obj = {
             openInFlipbook: (action.getElementCount(this.unitOpenFlipbook_btn + unitIndex) > 0) ? action.getText(this.unitOpenFlipbook_btn + unitIndex) : null,
             viewActivity: (action.getElementCount(this.unitViewActivity_btn + unitIndex) > 0) ? action.getText(this.unitViewActivity_btn + unitIndex) : null
@@ -321,13 +332,14 @@ module.exports = {
     },
 
 
-    clickUnitOpeninFlipbook: function (unitIndex) {
+    clickUnitOpeninFlipbook: function(unitIndex) {
         this.clickUnitMoreOptions(unitIndex)
-        res = action.click(this.unitOpenFlipbook_btn + unitIndex)
-        if (res == true) {
-            logger.logInto(stackTrace.get(), "Open FlipBook in More Options Clicked");
-            res = action.waitForDisplayed(this.breadcrumbFlipbook)
-        }
+            res = action.click(this.unitOpenFlipbook_btn + unitIndex)
+            if(res == true)
+            {   
+                logger.logInto(stackTrace.get(), "Open FlipBook in More Options Clicked");
+                res = action.waitForDisplayed(this.breadcrumbFlipbook)
+            }
         else
             logger.logInto(stackTrace.get(), "Open FlipBook in More Options  Not Clicked", "error");
 
@@ -345,7 +357,7 @@ module.exports = {
     //     return res;
     // },
 
-    clickOnContinue: function () {
+    clickOnContinue: function() { 
         res = action.click(this.lastActivity_Continue)
         if (res == true) {
             logger.logInto(stackTrace.get(), " --Continue Button clicked");
@@ -356,11 +368,11 @@ module.exports = {
         return res;
     },
 
-    clickOnDismiss: function () {
+    clickOnDismiss: function() {
         res = action.click(this.lastActivity_Dismiss)
         if (res == true) {
             logger.logInto(stackTrace.get(), " --Dismiss Button clicked");
-            res = action.waitForDisplayed(this.lastActivityIcon, 30000, true)
+            res = action.waitForDisplayed(this.lastActivityIcon,30000,true)
         } else
             logger.logInto(stackTrace.get(), " --Dismiss Button NOT clicked", "error");
         return res;
