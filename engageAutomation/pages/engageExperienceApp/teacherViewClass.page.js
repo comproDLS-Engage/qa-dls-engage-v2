@@ -3,10 +3,11 @@ var action = require('../../core/actionLibrary/baseActionLibrary.js');
 const createClassPage = require('./createClass.page.js');
 const bookDetailsPage = require('./bookDetail.page.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
-var res, obj;
+var res, obj,pageData;
 var componentSelector, languageCount, i;
 module.exports = {
     pageTitle: selectorFile.css.ComproEngage.teacherViewClassPage.pageTitle,
+    pageSubTitle: selectorFile.css.ComproEngage.teacherViewClassPage.pageSubTitle,
     gradebookBtn: selectorFile.css.ComproEngage.teacherViewClassPage.gradebookBtn,
     classOptionsBtn: selectorFile.css.ComproEngage.teacherViewClassPage.classOptionsBtn,
     editClassBtn: selectorFile.css.ComproEngage.teacherViewClassPage.editClassBtn,
@@ -19,7 +20,21 @@ module.exports = {
     bookSubtitleTxt: selectorFile.css.ComproEngage.teacherViewClassPage.bookSubtitleTxt,
     viewBookBtn: selectorFile.css.ComproEngage.teacherViewClassPage.viewBookBtn,
     bookComponentNamesBtns: selectorFile.css.ComproEngage.teacherViewClassPage.bookComponentNamesBtns,
-
+    studentList: selectorFile.css.ComproEngage.teacherViewClassPage.studentList,
+    noStudentIcon: selectorFile.css.ComproEngage.teacherViewClassPage.noStudentIcon,
+    noStudentTitle: selectorFile.css.ComproEngage.teacherViewClassPage.noStudentTitle,
+    noStudentSubTitle: selectorFile.css.ComproEngage.teacherViewClassPage.noStudentSubTitle,
+    namelbl: selectorFile.css.ComproEngage.teacherViewClassPage.nameHeading,
+    statuslbl: selectorFile.css.ComproEngage.teacherViewClassPage.statusHeading,
+    studentName: selectorFile.css.ComproEngage.teacherViewClassPage.studentName,
+    studentStatus: selectorFile.css.ComproEngage.teacherViewClassPage.studentStatus,
+    studentMoreOption: selectorFile.css.ComproEngage.teacherViewClassPage.studentMoreOption,
+    studentAvgScorelbl: selectorFile.css.ComproEngage.teacherViewClassPage.studentAvgScorelbl,
+    studentCompletionScorelbl: selectorFile.css.ComproEngage.teacherViewClassPage.studentCompletionScorelbl,
+    studentAvgScore: selectorFile.css.ComproEngage.teacherViewClassPage.studentAvgScore,
+    studentCompletionScore: selectorFile.css.ComproEngage.teacherViewClassPage.studentCompletionScore,
+    viewProgressbtn: selectorFile.css.ComproEngage.teacherViewClassPage.viewProgressbtn,
+    viewMessagebtn: selectorFile.css.ComproEngage.teacherViewClassPage.viewMessagebtn,
 
     isInitialized: function () {
         logger.logInto(stackTrace.get());
@@ -34,6 +49,7 @@ module.exports = {
         logger.logInto(stackTrace.get());
         obj = {
             className: (action.getElementCount(this.pageTitle) > 0) ? action.getText(this.pageTitle) : null,
+            classDuration: (action.getElementCount(this.pageSubTitle) > 0) ? action.getText(this.pageSubTitle) : null,
             gradebookBtn: (action.getElementCount(this.gradebookBtn) > 0) ? action.getText(this.gradebookBtn) : null,
             classOptionsBtn_exists: (action.getElementCount(this.classOptionsBtn) > 0) ? action.waitForDisplayed(this.classOptionsBtn) : false,
             productList: (action.getElementCount(this.productList) > 0) ? action.waitForDisplayed(this.productList) : null,
@@ -49,10 +65,10 @@ module.exports = {
         let productCount = action.getElementCount(this.productTabBtns);
         for (i = 0; i < productCount; i++) {
             productSelector = this.productTabBtns + i + "]";
-                productData[i] = action.getText(productSelector);
-                isProductSelected = action.getAttribute(productSelector, 'aria-selected');
-                if (isProductSelected=='true') {
-                    obj.selectedProduct = productData[i];
+            productData[i] = action.getText(productSelector);
+            isProductSelected = action.getAttribute(productSelector, 'aria-selected');
+            if (isProductSelected == 'true') {
+                obj.selectedProduct = productData[i];
             }
 
         }
@@ -62,10 +78,10 @@ module.exports = {
         for (i = 0; i < languageCount; i++) {
             componentSelector = this.bookComponentNamesBtns + i + "]";
             if (action.getElementCount(componentSelector) > 0) {
-            bookComponentData[i] = action.getText(componentSelector);
+                bookComponentData[i] = action.getText(componentSelector);
             }
             else
-            bookComponentData[i] = "";
+                bookComponentData[i] = "";
         }
 
         obj.productList = productData;
@@ -171,10 +187,10 @@ module.exports = {
     //clicking on Progress Tab
     clickStudentsTab: function () {
         logger.logInto(stackTrace.get());
-        res = action.click(this.progressTab);
+        res = action.click(this.productTabBtns + "2]");
         if (res == true) {
             logger.logInto(stackTrace.get(), "-- Progress Tab is clicked");
-            res = this.isInitialized();
+            res = this.getStudentPageData();
         }
         else {
             res = res + "-- Error in clicking Progress Tab";
@@ -246,6 +262,37 @@ module.exports = {
         }
         return res;
     },
+
+    getStudentPageData: function () {
+        pageData = this.isInitialized();
+        obj = {
+            noStudentIcon: (action.getElementCount(this.noStudentIcon) > 0) ? action.waitForExist(this.noStudentIcon) : null,
+            noStudentTitle: (action.getElementCount(this.noStudentTitle) > 0) ? action.getText(this.noStudentTitle) : null,
+            noStudentSubTitle: (action.getElementCount(this.noStudentSubTitle) > 0) ? action.getText(this.noStudentSubTitle) : null,
+            namelbl: (action.getElementCount(this.namelbl) > 0) ? action.getText(this.namelbl) : null,
+            statuslbl: (action.getElementCount(this.statuslbl) > 0) ? action.getText(this.statuslbl) : null,
+            studentAvgScorelbl: (action.getElementCount(this.studentAvgScorelbl) > 0) ? action.getText(this.studentAvgScorelbl) : null,
+            studentCompletionScorelbl: (action.getElementCount(this.studentCompletionScorelbl) > 0) ? action.getText(this.studentCompletionScorelbl) : null,
+        }
+        let studentData = [], i;
+        let studentcount = action.getElementCount(this.studentList);
+        for (i = 0; i < studentcount; i++) {
+            studentData[i] =
+            {
+                studentName: (action.getElementCount(this.studentName + i + "]") > 0) ? action.getText(this.studentName + i + "]") : null,
+                studentStatus: (action.getElementCount(this.studentStatus + i + "]") > 0) ? action.getText(this.studentStatus + i + "]") : null,
+                studentAvgScore: (action.getElementCount(this.studentAvgScore + i + "-2]") > 0) ? action.getText(this.studentAvgScore + i + "-2]") : null,
+                studentCompletionScore: (action.getElementCount(this.studentCompletionScore + i + "-3]") > 0) ? action.getText(this.studentCompletionScore + i + "-3]") : null,
+                viewProgressbtn: (action.getElementCount(this.viewProgressbtn + i + "]") > 0) ? action.waitForExist(this.viewProgressbtn + i + "]") : null,
+                viewMessagebtn: (action.getElementCount(this.viewMessagebtn + i + "]") > 0) ? action.waitForExist(this.viewMessagebtn + i + "]") : null,
+                studentMoreOption: (action.getElementCount(this.studentMoreOption + i + "]") > 0) ? action.waitForExist(this.studentMoreOption + i + "]") : null,
+            }
+
+        }
+        obj.pageData = pageData;
+        obj.studentData = studentData;
+        return obj;
+    }
 
 }
 
