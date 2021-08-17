@@ -724,104 +724,123 @@
       ]
     },
     {
-      "modulename": "Book Detail & Unit Detail View",
-      "moduledetails": "",
-      "testFile": "./test/engageExperienceApp/bookDetailView.test.js",
-      "testcase": [
+        "modulename": "Book Detail & Unit Detail View",
+        "moduledetails": "",
+        "testFile": "./test/engageExperienceApp/bookDetailView.test.js",
+        "testcase": [
         {
-          "id": "ENG_BOOK_TC_1",
-          "description": "Validate that clicking on 3 dot options displays a list of options",
-          "tags": "P1",
-          "visualTest": true
+            "id": "ENG_BOOK_TC_1",
+            "description": "Validate that clicking on 3 dot options displays a list of options",
+            "tags": "P1",
+            "visualTest": true
         },
         {
-          "id": "ENG_BOOK_TC_2",
-          "description": "Validate that clicking on 'Add to My Books' button adds the book to My Books section",
-          "tags": "P1",
-          "visualTest": true
+            "id": "ENG_BOOK_TC_2",
+            "description": "Validate that clicking on 'Add to My Books' button adds the book to My Books section",
+            "tags": "P1",
+            "visualTest": true
         },
         {
-          "id": "ENG_BOOK_TC_3",
-          "description": "Validate that clicking on View Class button displays the list of classes corresponding to the book",
-          "tags": "P1",
-          "visualTest": true
+            "id": "ENG_BOOK_TC_3",
+            "description": "Validate that clicking on View Class button displays the list of classes corresponding to the book",
+            "tags": "P1",
+            "visualTest": true
         },
         {
-          "id": "ENG_BOOK_TC_4",
-          "description": "Validate that clicking on Remove Book option launches the remove book pop up",
-          "tags": "P1"
+            "id": "ENG_BOOK_TC_4",
+            "description": "Validate that clicking on Remove Book option launches the remove book pop up",
+            "tags": "P1"
         },
         {
-          "id": "ENG_BOOK_TC_5",
-          "description": "Validate clicking on Cancel closes the Remove book pop up",
-          "tags": "P1"
+            "id": "ENG_BOOK_TC_5",
+            "description": "Validate clicking on Cancel closes the Remove book pop up",
+            "tags": "P1"
         },
         {
-          "id": "ENG_BOOK_TC_6",
-          "description": "Validate clicking on Remove on Remove book pop up removes the book from My Books",
-          "tags": "P1"
+            "id": "ENG_BOOK_TC_6",
+            "description": "Validate clicking on Remove on Remove book pop up removes the book from My Books",
+            "tags": "P1"
         },
         {
-          "id": "ENG_BOOK_TC_9",
-          "description": "Validate that clicking on 'Open Flipbook' button launches the flipbook if single flipbook is associated with the book",
-          "tags": "P1"
+            "id": "ENG_BOOK_TC_9",
+            "description": "Validate that clicking on 'Open Flipbook' button launches the flipbook if single flipbook is associated with the book",
+            "tags": "P1"
         },
         {
-          "id": "ENG_BOOK_TC_10",
-          "description": "Validate clicking on a component displays the units asscoiated with the component",
-          "tags": "P1"
+            "id": "ENG_BOOK_TC_10",
+            "description": "Validate clicking on a component displays the units asscoiated with the component",
+            "tags": "P1"
         },
         {
-          "id": "ENG_BOOK_TC_11",
-          "description": "Validate that 'Continue where you left off' message appears on the book Detail View page when user launches an activity",
-          "tags": "P1"
+            "id": "ENG_BOOK_TC_11",
+            "description": "Validate that 'Continue where you left off' message appears on the book Detail View page when user launches an activity",
+            "tags": "P1"
         },
         {
-          "id": "ENG_BOOK_TC_12",
-          "description": "Validate that Clicking on Continue on 'Continue where you left off:' pop up launches the last activity viewed by the user",
-          "tags": "P1"
+            "id": "ENG_BOOK_TC_12",
+            "description": "Validate that Clicking on Continue on 'Continue where you left off:' pop up launches the last activity viewed by the user",
+            "tags": "P1"
         },
         {
-          "id": "ENG_BOOK_TC_13",
-          "description": "Validate that Clicking on Dismiss on 'Continue where you left off:' closes the pop up.",
-          "tags": "P1"
+            "id": "ENG_BOOK_TC_13",
+            "description": "Validate that Clicking on Dismiss on 'Continue where you left off:' closes the pop up.",
+            "tags": "P1"
         },
         {
-          "id": "ENG_BOOK_TC_17",
-          "description": "Validate that clicking 'Open flipbook' option from the 3 dot options for a Unit launches the corresponding flipbook page",
-          "tags": "P1"
+            "id": "ENG_BOOK_TC_16",
+            "description": "Validate that clicking on 3 dots for a unit displays a list of options.",
+            "tags": "P1"
         },
         {
-          "id": "ENG_BOOK_TC_19",
-          "description": "Validate clicking on a unit launches the unit detail view page.",
-          "tags": "P1"
+            "id": "ENG_BOOK_TC_17",
+            "description": "Validate that clicking 'Open flipbook' option from the 3 dot options for a Unit launches the corresponding flipbook page",
+            "tags": "P1"
         },
         {
-          "id": "ENG_BOOK_TC_21",
-          "description": "Validate that clicking on Activity on unit detail view page launches the activity",
-          "tags": "P1"
+            "id": "ENG_BOOK_TC_19",
+            "description": "Validate clicking on a unit launches the unit detail view page.",
+            "tags": "P1"
         },
         {
-          "id": "ENG_BOOK_TC_30",
-          "description": "Anchor Component - Validate that Book Detail view page should display the list of units which are present in the anchored component",
-          "tags": "P1"
+            "id": "ENG_BOOK_TC_20",
+            "description": "Validate that clicking on 'Open in Flipbook' button on unit Detail View page launches the corresponding unit page in the flipbook",
+            "tags": "P1"
         },
         {
-          "id": "ENG_BOOK_TC_43",
-          "description": "Validate that clicking on Activity Screen breadcrumb naviagtes to Unit detail TOC page",
-          "tags": "P1"
+            "id": "ENG_BOOK_TC_21",
+            "description": "Validate that clicking on Activity on unit detail view page launches the activity",
+            "tags": "P1"
         },
         {
-          "id": "ENG_BOOK_TC_44",
-          "description": "Validate that clicking on unit Detail TOC breadcrumb naviagtes to Book detail TOC page",
-          "tags": "P1"
+            "id": "ENG_BOOK_TC_30",
+            "description": "Anchor Component - Validate that Book Detail view page should display the list of units which are present in the anchored component",
+            "tags": "P1"
+        },        
+        {
+            "id": "ENG_BOOK_TC_32",
+            "description": "Anchor component - Validate that clicking on Next Unit button launches the Next unit of the Anchored component in an indexed book",
+            "tags": "P1"
+        }, 
+        {
+            "id": "ENG_BOOK_TC_33",
+            "description": "Anchor component - Validate that clicking on Previous Unit button launch the previous unit of component in an indexed book",
+            "tags": "P1"
         },
         {
-          "id": "ENG_BOOK_TC_45",
-          "description": "Validate that clicking on Activity Screen breadcrumb naviagtes to Book Detail TOC page",
-          "tags": "P1"
-        }
-      ]
+            "id": "ENG_BOOK_TC_43",
+            "description": "Validate that clicking on Activity Screen breadcrumb naviagtes to Unit detail TOC page",
+            "tags": "P1"
+        },
+        {
+            "id": "ENG_BOOK_TC_44",
+            "description": "Validate that clicking on unit Detail TOC breadcrumb naviagtes to Book detail TOC page",
+            "tags": "P1"
+        },
+        {
+            "id": "ENG_BOOK_TC_45",
+            "description": "Validate that clicking on Activity Screen breadcrumb naviagtes to Book Detail TOC page",
+            "tags": "P1"
+        }]
     },
     {
       "modulename": "Item Player - FIB",
