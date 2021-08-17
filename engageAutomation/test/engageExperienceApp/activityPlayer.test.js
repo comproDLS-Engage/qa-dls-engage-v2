@@ -6,7 +6,7 @@ var sts;
 module.exports = {
 
 	//Validate the activity player when quiz is launched
-	ENG_PLAY_TC_1: function (testdata) {
+	ENG_PLAY_TC_1: function () {
 		sts = itemPlayer.isInitialized();
 		assertion.assertEqual(sts.isSubmitted, false, "submit status mismatch");
 		sts = itemPlayer.getQuesIndex();
@@ -57,4 +57,25 @@ module.exports = {
 		assertion.assertEqual(sts, true, "status mismatch");
 		//assertions to be added
 	}*/
+
+	//Click Restart button in left pane
+	ENG_PLAY_TC_7: function(){
+		sts = activityPlayerPage.clickRestartButton();
+		assertion.assertEqual(sts.checkmyWork_isExists, true, "check answer button status mismatch");
+		assertion.assertEqual(sts.checkmyWork_isDisabled, "true", "button state mismatch");
+	},
+
+	//Validate the activity player when quiz is launched for the student
+	ENG_PLAY_TC_8: function (testdata) {
+		sts = itemPlayer.isInitialized();
+		assertion.assertEqual(sts.isSubmitted, true, "submit status mismatch");
+		sts = itemPlayer.getQuesIndex();
+		assertion.assertEqual((sts), "0", "Active question index mismatch");
+		sts = activityPlayerPage.getActivityPlayerData();
+		assertion.assertEqual(sts.checkmyWork_isExists, true, "check answer button status mismatch");
+		assertion.assertEqual(sts.checkmyWork_isDisabled, "true", "button state mismatch");
+		assertion.assertEqual(sts.previous_isExists, false, "previous button status mismatch");
+		sts = activityPlayerPage.getFeedbackInfo();
+		assertion.assertEqual(sts.fdbackText, testdata, "text mismatch");
+	},
 }
