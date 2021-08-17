@@ -89,11 +89,12 @@ module.exports = {
 	// Validate that click on breadcrumb back button on the header launch the previous page
 	ENG_SHELL_TC_11: function () {
 		sts = appShell.Click_breadcrumbbackbutton()
-		if ((typeof (sts)) === "object") {
-			assertion.assertEqual(sts.pageStatus, true, "Back button is not clicked: " + JSON.stringify(sts))
-		} else {
-			assertion.assertFail(sts);
-		}
+		assertion.assertEqual(sts, true, "Back button is not clicked: " + JSON.stringify(sts))
+		// if ((typeof (sts)) === "object") {
+		// 	assertion.assertEqual(sts.pageStatus, true, "Back button is not clicked: " + JSON.stringify(sts))
+		// } else {
+		// 	assertion.assertFail(sts);
+		// }
 	},
 		// Validate that click on breadcrumb product tile on the header launch the previous page
 		ENG_SHELL_TC_12: function () {
