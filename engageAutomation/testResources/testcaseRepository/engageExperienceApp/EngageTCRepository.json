@@ -538,6 +538,26 @@
           "id": "ENG_INS_CLASS_TC_44",
           "description": "Validate book details is launched after clicking on View Book button",
           "tags": "P1"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_99",
+          "description": "Click on student tab and validate student tab is selected",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_100",
+          "description": "Validate that score is coming for anchord book class students.",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_101",
+          "description": "Validate that score is not coming for non-anchord book class students",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_102",
+          "description": " Validate the page when no student is added ",
+          "tags": "P1"
         }
       ]
     },

@@ -231,6 +231,7 @@
             },
             "teacherViewClassPage": {
                 "pageTitle": "[data-tid=text-pageTitle]",
+                "pageSubTitle": "[data-tid=text-pageSubtitle]",
                 "gradebookBtn": "[data-tid=button-gradebook]",
                 "classOptionsBtn": "[data-tid=button-classOptions]",
                 "editClassBtn": "[data-tid=button-editClass",
@@ -249,7 +250,22 @@
                 "createAssignment_lbl": "[data-tid=MISSING]",
                 "createAssignmentByline_lbl": "[data-tid=MISSING]",
                 "noInboxActivity_lbl": "[data-tid=MISSING]",
-                "noInboxActivityByline_lbl": "[data-tid=MISSING]"
+                "noInboxActivityByline_lbl": "[data-tid=MISSING]", 
+                "noStudentIcon":"[data-tid=icon-nostudent]",
+                "noStudentTitle":"[data-tid=text-noStudentEnrolled]", 
+                "noStudentSubTitle":"[data-tid=text-noStudentEnrolledBilinear]",
+                "nameHeading":"[data-tid=value-text-heading-name]" ,
+                "statusHeading":"[data-tid=value-text-heading-status]", 
+                "studentName":"[data-tid*=text-name-", 
+                "studentStatus":"[data-tid=text-status-", 
+                "studentMoreOption":"[data-tid=button-contextMenu-",
+                "studentAvgScorelbl":"[data-tid=value-text-heading-avgScore]",                
+                "studentCompletionScorelbl":"[data-tid=value-text-heading-completion]",
+                "studentAvgScore":"[data-tid=text-avgScore-",                
+                "studentCompletionScore":"[data-tid=text-progress-",
+                "viewProgressbtn":"[data-tid=button-viewProgress-",
+                "viewMessagebtn":"[data-tid=button-message-",
+                "studentList":"[data-tid*=list-"
             },
             "itemPlayer": {
                 "correctIcon": "[data-tid=icon-correct]",

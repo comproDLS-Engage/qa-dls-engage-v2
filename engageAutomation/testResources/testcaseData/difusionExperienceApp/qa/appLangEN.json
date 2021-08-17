@@ -159,7 +159,10 @@
                 "endDateErrorMsg": "End Date cannot be less than today's date"
             },
             "teacherViewClass": {
-                "editOption_txt": "Edit Class"
+                "editOption_txt": "Edit Class",
+                "noStudentSubTitle":"Go and add few students in this class.",
+                "noStudentTitle":"No students are enrolled in the class",
+                "enrolledStatus":"enrolled"
             },
             "addBook": {
                 "pageTitle": "Add books to your class",
