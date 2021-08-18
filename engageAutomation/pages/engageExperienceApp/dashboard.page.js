@@ -263,15 +263,14 @@ module.exports = {
                 if (res == true) {
                     logger.logInto(stackTrace.get(), " Add book button is clicked");
                     return true
-                    var addBook = require('./addBook.page.js');
-                    var rest = addBook.isInitialized();
-                    console.log(rest)
+                    // var addBook = require('./addBook.page.js');
+                    // res = addBook.isInitialized();
                 }
                 else {
                     res = res + " -- Error in clicking Add book Button"
                     logger.logInto(stackTrace.get(), res, "error");
                 }  
-        return res;
+        //return res;
     },
 
     
