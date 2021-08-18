@@ -24,7 +24,7 @@
                     "info": {}
                 },
                 "validStudent2": {
-                    "email": "difusion.qa.student1@yopmail.com",
+                    "email": "jijetoullozo-4043@yopmail.com",
                     "password": "Compro@1234",
                     "role": "student",
                     "name": "etirrase-9139",
@@ -168,8 +168,20 @@
                     "email": "qa_teacher1@yopmail.com",
                     "password": "Compro@1234",
                     "role": "instructor",
-                    "name": "qa teacher001",
-                    "class": [],
+                    "name": "qa teacher9",
+                    "class": [
+                        {
+                            "key": "TFbA-6AP7",
+                            "name": "class2"
+                        },
+                        {
+                            "key": "TFbA-6AP7",
+                            "name": "class1"
+                        },
+                        {
+                            "key": "TFbA-6AP7",
+                            "name": "class3"
+                        }],
                     "info": {}
                 }
             }

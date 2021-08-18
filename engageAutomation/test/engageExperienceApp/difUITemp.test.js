@@ -610,9 +610,6 @@ module.exports = {
 
 	// Search in global resources
 	ENG_DIF_TC_50: function () {
-		//res = action.click("[data-tid=input-autocomplete-searchtextbox]");
-		//console.log(res)
-		action.
 		res = action.setValue("div > input", "Automation");
 		console.log(res)
 		res = action.keyPress("Enter");
@@ -620,4 +617,14 @@ module.exports = {
 		res = action.waitForDisplayed("img[src*=Compro]");
 		console.log(res)
 	},
+
+	// Empty search in global resources
+	ENG_DIF_TC_51: function () {
+		res = action.setValue("div > input", "test123");
+		console.log(res)
+		res = action.keyPress("Enter");
+		console.log(res)
+		res = action.waitForDisplayed("[data-tid=text-noResultFound]");
+		console.log(res)
+	}
 }

@@ -55,7 +55,7 @@
                 ]
             },
             {
-                "id": "ENG_DASH_TC_6",
+                "id": "ENG_DASH_TC_7",
                 "description": "",
                 "testFile": "./test/engageExperienceApp/dashboard.test.js",
                 "testData": []

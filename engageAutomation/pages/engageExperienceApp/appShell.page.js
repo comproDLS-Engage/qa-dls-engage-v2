@@ -268,5 +268,39 @@ module.exports = {
 		else
 			logger.logInto(stackTrace.get(), res + "Product title from snakebar is NOT Clicked", "error");
 		return res;
-	}
+	},
+
+	clickOnTab: function(componentName) {
+        logger.logInto(stackTrace.get());
+        let i, list;
+        list = action.findElements(this.component);
+        for (i = 0; i < list.length; i++) {
+            if (action.getText(list[i]) == componentName) {
+                res = action.click(list[i]);
+                if (res == true) {
+                    logger.logInto(stackTrace.get(), " --Component clicked");
+                } else
+                    logger.logInto(stackTrace.get(), " --Component NOT clicked", "error");
+                break;
+            }
+            res = false;
+        }
+        return res;
+    },
+
+    getTabsListData: function() {
+        let i, list;
+        let obj = {};
+        let componentArr = [];
+        list = action.findElements(this.component);
+        for (i = 0; i < list.length; i++) {
+            componentArr[i] = action.getText(list[i])
+            if(action.getAttribute(this.myBooksTab, "aria-selected") == true)
+            	obj.selected = componentArr[i];
+        }
+        obj.tabsList = componentArr;
+        console.log(obj)
+        logger.logInto(stackTrace.get(), JSON.stringify(obj));
+        return obj;
+    }
 };
