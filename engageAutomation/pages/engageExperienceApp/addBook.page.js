@@ -61,7 +61,7 @@ module.exports = {
         let pageStatus = action.waitForDisplayed(this.pageTitle)
         res = this.getAddBookPageData();
         res.pageStatus = pageStatus;
-
+        //console.log(JSON.stringify(res))
         return res;
     },
 
@@ -403,8 +403,10 @@ module.exports = {
             logger.logInto(stackTrace.get(), res + " Open Flipbook Button Clicked");
             if (action.getElementCount(this.flipBookCount) > 0)
                 res = this.getListOfFlipbooks();
-            else
-            //res = require('./flipbook.page.js').isInitialized()
+            else{
+                //res = require('./flipbook.page.js').isInitialized()
+            }
+            
         } else
             logger.logInto(stackTrace.get(), res + " Open Flipbook Button Not Clicked", "error");
 
@@ -490,7 +492,7 @@ module.exports = {
         logger.logInto(stackTrace.get());
         let listItem;
         var obj;
-        var searchList; = [];
+        var searchList = [];
         action.waitForDisplayed(this.searchPopUp)
         listItem = action.findElements(this.searchList);
         listItemIcon = action.findElements(this.searchListIcon);
@@ -510,7 +512,7 @@ module.exports = {
         logger.logInto(stackTrace.get());
         let listItem;
         var obj;
-        var searchList; = [];
+        var searchList = [];
         action.waitForDisplayed(this.searchPopUp)
         listItem = action.findElements(this.searchList);
         listItemIcon = action.findElements(this.searchListIcon);

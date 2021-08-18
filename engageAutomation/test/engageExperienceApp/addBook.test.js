@@ -4,24 +4,22 @@ const createClassPage = require('../../pages/engageExperienceApp/createClass.pag
 var sts;
 module.exports = {
 
-	//Validate the content of add book page in english language .
+	//Validate the content of add book page in english language
+	//rename to ENG_ADDBOOK_TC_2 as per QA touch
 	ENG_ADDBOOK_TC_1: function (testdata) {
 		sts = addBookPage.isInitialized()
 		//console.log(sts)
-		if ((typeof (sts)) === "object") {
-			assertion.assertEqual(sts.pageTitle, testdata.pageTitle, "Page title is Not Displayed: " + JSON.stringify(sts))
-			assertion.assertEqual(sts.pageSubTitle, testdata.pageSubTitle, "Page subtitle is Not Displayed: " + JSON.stringify(sts))
-			assertion.assertEqual(sts.myBooksTab, testdata.myBooksTab, "My Books Tab is mismatched: " + JSON.stringify(sts))
-			assertion.assertEqual(sts.allBooksTab, testdata.allBooksTab, "All Books Tab is mismatched: " + JSON.stringify(sts))
-			assertion.assertEqual(sts.myBooksTabSelected, 'true', "My BooksTab is not selected: " + JSON.stringify(sts))
-			assertion.assertEqual(sts.allBooksTabSelected, 'false', "All Books Tab is selected: " + JSON.stringify(sts))
+			assertion.typeOf(sts, 'object', new Error(sts));
+			assertion.assertEqual(sts.pageInfo.pageTitle, testdata.pageTitle, "Page title Mismatch: " + JSON.stringify(sts))
+			assertion.assertEqual(sts.pageInfo.pageSubTitle, testdata.pageSubTitle, "Page subtitle Mismatch: " + JSON.stringify(sts))
+			// assertion.assertEqual(sts.myBooksTab, testdata.myBooksTab, "My Books Tab is mismatched: " + JSON.stringify(sts))
+			// assertion.assertEqual(sts.allBooksTab, testdata.allBooksTab, "All Books Tab is mismatched: " + JSON.stringify(sts))
+			// assertion.assertEqual(sts.myBooksTabSelected, 'true', "My BooksTab is not selected: " + JSON.stringify(sts))
+			// assertion.assertEqual(sts.allBooksTabSelected, 'false', "All Books Tab is selected: " + JSON.stringify(sts))
 			assertion.assertEqual(sts.addtoClassbtn, testdata.addtoClassbtn, "Add Class button Text Mismatch: " + JSON.stringify(sts))
 			assertion.assertEqual(sts.cancelAndGoBackbtn, testdata.cancelAndGoBackbtn, "Cancel button Text Mismatch: " + JSON.stringify(sts))
 			assertion.assertEqual(sts.noBooklbl, testdata.noBooklbl, "Bottom label Text Mismatch: " + JSON.stringify(sts))
 
-		} else {
-			assertion.assertFail(sts);
-		}
 	},
 
 	//Validate the "My Books" page content
@@ -87,6 +85,8 @@ module.exports = {
 			assertion.assertFail(sts);
 		}
 	},
+
+	//check instructor classtest.json	
 	//Validate that create class page is launched after click on add to class button
 	ENG_ADDBOOK_TC_8: function (testdata) {
 
@@ -142,6 +142,7 @@ module.exports = {
 		}
 	},
 
+	//check instructor classtest.json
 	//Validate the book is added on clicking of add book button of a specific book
 	ENG_ADDBOOK_TC_12: function (testdata) {
 		sts = addBookPage.click_addBook(testdata[0])
