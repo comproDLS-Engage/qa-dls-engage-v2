@@ -42,24 +42,38 @@ module.exports = {
 		assertion.assertEqual(sts, true, "status mismatch");
 		sts = activityPlayerPage.getActivityPlayerData();
 		//assertions to be added
-	},
+	},*/
 
 	//Validate the test player when user click Show Answer button.
 	ENG_PLAY_TC_5: function () {
+		sts = itemPlayer.getItemplayerInfo();
+		let correctCount = sts.correctCount;
+		let incorrectCount = sts.incorrectCount;
 		sts = activityPlayerPage.clickShowAnswer();
 		assertion.assertEqual(sts, true, "status mismatch");
-		//assertions to be added
+		sts = activityPlayerPage.getActivityPlayerData();
+		sts = itemPlayer.getItemplayerInfo();
+		assertion.assertEqual(sts.correctCount, correctCount + incorrectCount, "Correct count mismatch");
+		assertion.assertEqual(sts.incorrectCount, 0, "Incorrect count mismatch");
 	},
 
 	//Validate the test player when user click Your Response.
 	ENG_PLAY_TC_6: function () {
+		sts = itemPlayer.getItemplayerInfo();
+		let correctCount = sts.correctCount;
+		let incorrectCount = sts.incorrectCount;
+		sts = activityPlayerPage.clickShowAnswer();
+		assertion.assertEqual(sts, true, "status mismatch");
+		sts = activityPlayerPage.getActivityPlayerData();
 		sts = activityPlayerPage.clickYourResponse();
 		assertion.assertEqual(sts, true, "status mismatch");
-		//assertions to be added
-	}*/
+		sts = itemPlayer.getItemplayerInfo();
+		assertion.assertEqual(sts.correctCount, correctCount, "Correct count mismatch");
+		assertion.assertEqual(sts.incorrectCount, incorrectCount, "Incorrect count mismatch");
+	},
 
 	//Click Restart button in left pane
-	ENG_PLAY_TC_7: function(){
+	ENG_PLAY_TC_7: function () {
 		sts = activityPlayerPage.clickRestartButton();
 		assertion.assertEqual(sts.checkmyWork_isExists, true, "check answer button status mismatch");
 		assertion.assertEqual(sts.checkmyWork_isDisabled, "true", "button state mismatch");
@@ -75,7 +89,15 @@ module.exports = {
 		assertion.assertEqual(sts.checkmyWork_isExists, true, "check answer button status mismatch");
 		assertion.assertEqual(sts.checkmyWork_isDisabled, "true", "button state mismatch");
 		assertion.assertEqual(sts.previous_isExists, false, "previous button status mismatch");
-		sts = activityPlayerPage.getFeedbackInfo();
-		assertion.assertEqual(sts.fdbackText, testdata, "text mismatch");
+		// sts = activityPlayerPage.getFeedbackInfo();
+		// assertion.assertEqual(sts.fdbackText, testdata, "text mismatch");
 	},
+
+	//Validate the activity player when user click on Submit Answers button
+	ENG_PLAY_TC_9: function (testdata) {
+		sts = activityPlayerPage.clickSubmitActivity();
+		console.log(JSON.stringify(sts));
+		assertion.assertEqual(sts.submitActivity_isDisabled, "true", "status mismatch");
+	},
+
 }

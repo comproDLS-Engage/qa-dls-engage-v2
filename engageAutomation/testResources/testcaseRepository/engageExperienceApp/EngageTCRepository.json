@@ -627,7 +627,7 @@
           "visualTest": "-"
         },
         {
-          "id": "ENG_DASH_TC_1",
+          "id": "ENG_SHELL_TC_11",
           "description": "Validate that click on breadcrumb back button on the header launch the previous page",
           "tags": "P1",
           "visualTest": "-"
@@ -1048,6 +1048,18 @@
           "visualTest": "-"
         },
         {
+          "id": "ENG_PLAY_TC_5",
+          "description": "Validate testplayer when user click on Show Answer button",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLAY_TC_6",
+          "description": "Validate testplayer when user click Your Response button",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
           "id": "ENG_PLAY_TC_7",
           "description": "Validate testplayer when user click on Restart button",
           "tags": "P1",
@@ -1056,6 +1068,12 @@
         {
           "id": "ENG_PLAY_TC_8",
           "description": "Validate testplayer when a question is launched for the student",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLAY_TC_9",
+          "description": "Validate testplayer when user click on Submit button",
           "tags": "P1",
           "visualTest": "-"
         }
