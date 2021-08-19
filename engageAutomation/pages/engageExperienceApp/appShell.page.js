@@ -7,6 +7,7 @@ var res;
 module.exports = {
 
 	toggleSidebarBtn: selectorFile.css.ComproEngage.appShell.toggleSidebarBtn,
+	//Left Pane
 	headerLogo: selectorFile.css.ComproEngage.appShell.headerLogo,
 	dashboardBtn: selectorFile.css.ComproEngage.appShell.dashboardBtn,
 	browseBtn: selectorFile.css.ComproEngage.appShell.browseBtn,
@@ -17,6 +18,7 @@ module.exports = {
 	poweredbyTxt: selectorFile.css.ComproEngage.appShell.poweredbyTxt,
 	comproLogo: selectorFile.css.ComproEngage.appShell.comproLogo,
 	versionTxt: selectorFile.css.ComproEngage.appShell.versionTxt,
+	//Header
 	notificationBtn: selectorFile.css.ComproEngage.appShell.notificationBtn,
 	notificationCloseBtn: selectorFile.css.ComproEngage.appShell.notificationCloseBtn,
 	notificationTxt: selectorFile.css.ComproEngage.appShell.notificationTxt,
@@ -45,7 +47,7 @@ module.exports = {
 		return res;
 	},
 
-	getAppShellData: function () {
+	getAppShellLeftPaneData: function () {
 		var obj = {
 			headerLogo_exists: (action.getElementCount(this.headerLogo) > 0) ? action.waitForDisplayed(this.headerLogo) : false,
 			dashboardBtn: (action.getElementCount(this.dashboardBtn) > 0) ? action.getText(this.dashboardBtn) : null,
@@ -56,7 +58,13 @@ module.exports = {
 			sidebarImg_exists: (action.getElementCount(this.sidebarImg) > 0) ? action.waitForDisplayed(this.sidebarImg) : false,
 			poweredbyTxt: (action.getElementCount(this.poweredbyTxt) > 0) ? action.getText(this.poweredbyTxt) : null,
 			comproLogo_exists: (action.getElementCount(this.comproLogo) > 0) ? action.waitForDisplayed(this.comproLogo) : false,
-			versionTxt: (action.getElementCount(this.versionTxt) > 0) ? action.getText(this.versionTxt) : null,
+			versionTxt: (action.getElementCount(this.versionTxt) > 0) ? action.getText(this.versionTxt) : null
+		};
+		return obj;
+	},
+
+	getAppShellHeaderData: function () {
+		var obj = {
 			notificationBtn_exists: (action.getElementCount(this.notificationBtn) > 0) ? action.waitForDisplayed(this.notificationBtn) : false,
 			notificationTxt: (action.getElementCount(this.notificationTxt) > 0) ? action.getText(this.notificationTxt) : null,
 			notificationCloseBtn: (action.getElementCount(this.notificationCloseBtn) > 0) ? action.getText(this.notificationCloseBtn) : null,
