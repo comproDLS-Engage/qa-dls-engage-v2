@@ -44,6 +44,7 @@ module.exports = {
 	inviteStudentText: selectorFile.css.ComproEngage.appShell.inviteStudentText,
 	addToPlaylistBtn: selectorFile.css.ComproEngage.appShell.addToPlaylistBtn,
 	newPlaylistOption: selectorFile.css.ComproEngage.appShell.newPlaylistOption,
+	component: selectorFile.css.ComproEngage.appShell.component,
 
 	isInitialized: function () {
 		logger.logInto(stackTrace.get());
@@ -363,4 +364,37 @@ module.exports = {
 		}
 		return res;
 	},
+
+	clickOnTab: function(componentName) {
+        logger.logInto(stackTrace.get());
+        let i, list;
+        list = action.findElements(this.component);
+        for (i = 0; i < list.length; i++) {
+            if (action.getText(list[i]) == componentName) {
+                res = action.click(list[i]);
+                if (res == true) {
+                    logger.logInto(stackTrace.get(), " --Component clicked");
+                } else
+                    logger.logInto(stackTrace.get(), " --Component NOT clicked", "error");
+                break;
+            }
+            res = false;
+        }
+        return res;
+    },
+
+    getTabsListData: function() {
+        let i, list;
+        let obj = {};
+        let componentArr = [];
+        list = action.findElements(this.component);
+        for (i = 0; i < list.length; i++) {
+            componentArr[i] = action.getText(list[i])
+            if(action.getAttribute(this.component, "aria-selected") == true)
+            	obj.selected = componentArr[i];
+        }
+        obj.list = componentArr;
+        logger.logInto(stackTrace.get(), JSON.stringify(obj));
+        return obj;
+    }
 };
