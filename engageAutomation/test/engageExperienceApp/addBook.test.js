@@ -1,6 +1,8 @@
 "use strict";
 var addBookPage = require('../../pages/engageExperienceApp/addBook.page.js');
+var appShell = require('./appShell.test.js');
 const createClassPage = require('../../pages/engageExperienceApp/createClass.page.js');
+var dashboardPage = require('../../pages/engageExperienceApp/dashboard.page.js');
 var sts;
 module.exports = {
 
@@ -240,10 +242,109 @@ module.exports = {
 		assertion.assertEqual(sts.viewClass, testdata[0].viewClasses, "View Class Text Mismatch");
 		assertion.assertEqual(sts.openFlipbook_btn, testdata[0].openFlipbook, "Open Flipbook Button text Mismatch");
 	},
-	
+
 	//Validate that clicking on '+' button adds the book to My Books
 	ENG_ADDBOOK_TC_21: function (testdata) {
 		sts = addBookPage.clickPlusbutton(testdata);
-		assertion.assertEqual(sts, true, "Book Details Page is launched");
+		var bookObj;
+		var arr = sts.bookList;
+		for (var i = 0; i < arr.length; i++) {
+            bookObj = arr.find(book => book.bookTitle === testdata);
+            assertion.assertEqual(book.bookAddedIcon, true, "Book Added to My Books");
+            break;
+        }
 	},
+
+	//Validate clicking on the breadcrumb on add book page launches the dashboard page
+	ENG_ADDBOOK_TC_22: function (testdata) {
+		appShell.ENG_SHELL_TC_11();
+
+		sts = dashboardPage.isInitialized();
+		assertion.assertEqual(sts.pageTitle, testdata.pageTitle, "Dashboard text mismatch");
+        assertion.assertEqual(sts.createPlaylist_Txt, testdata.createPlaylist_Txt, "Create Playlist text mismatch");
+        assertion.assertEqual(sts.addBook_Txt, testdata.addBook_Txt, "Add Book text mismatch");
+        assertion.assertEqual(sts.myBooksHeading_Txt, testdata.myBooksHeading_Txt, "My books text mismatch");
+        assertion.assertEqual(sts.myPlaylistsHeading_Txt, testdata.myPlaylistsHeading_Txt, "my playlist text mismatch");
+	},
+	/****************************Dashboard Add Book Testcases******************************************/
+
+	/****************************Browse Book Testcases*************************************************/
+
+
+	//Validate that clicking on more options displays a list of options available
+	ENG_ADDBOOK_TC_23: function (testdata) {
+
+		sts = addBookPage.clickMoreOptions();
+		assertion.assertEqual(sts.viewClass_btn, testdata.viewClass_btn, "View Class button mismatch");
+        assertion.assertEqual(sts.createClass_btn, testdata.createClass_btn, "Create Class button mismatch");
+        assertion.assertEqual(sts.openFlipbook_btn, testdata.openFlipbook_btn, "Open Flipbook  button mismatch");
+
+        if(sts.addToMyBooks_btn ! == undefined)
+        assertion.assertEqual(sts.addToMyBooks_btn, testdata.addBook_Txt, "Add To My Books button mismatch");
+	},
+
+	//Validate that clicking on View Classes launches Class Drawer
+	ENG_ADDBOOK_TC_24: function (testdata) {
+		//use testdata from ENG_BOOK_TC_3
+		sts = addBookPage.clickViewClasses();
+		assertion.assertEqual(sts.classDrawerHeader, testdata[0] + ' ' + testdata[1], "Class Drawer Header Mismatch");
+
+        sts = classDrawerPage.Click_classDrawerCloseBtn();
+        assertion.assertEqual(sts, true, "Close Class List Menu Not Clicked");
+	},
+
+    //Validate that clicking on Add to My Books adds the book to My Books in Dashboard
+	ENG_ADDBOOK_TC_25: function (testdata) {
+		sts = addBookPage.clickAddToMyBooks();
+		assertion.assertEqual(sts, testdata, "Snackbar text Mismatch");
+
+	},
+
+	//Validate that clicking on Open flipbook launches the flipbook associated with the book
+	ENG_ADDBOOK_TC_26: function (testdata) {
+		sts = addBookPage.clickOpenFlipbook();
+		assertion.assertEqual(sts, true, "Open Flipbook Not Clicked");
+
+	},
+
+	//Validate that clicking on Open flipbook displays a list of flipbooks associated with the book
+	ENG_ADDBOOK_TC_27: function (testdata) {
+		sts = addBookPage.clickOpenFlipbook();
+		assertion.assertEqual(sts.length, testdata.length, "Number of Flipbooks Mismatch");
+
+
+	},
+
+	//Validate that clicking on Create New Class launches create class workflow where book is added to Class Books
+	ENG_ADDBOOK_TC_28: function (testdata) {
+		sts = addBookPage.clickCreateNewClass();
+		assertion.assertEqual(sts.pageTitle, testdata[0].pageTitle, "Create Class Page Title Mismatch");
+		assertion.assertEqual(sts.pageSubTitle, testdata[0].pageSubTitle, "Create Class Page SubTitle Mismatch");
+		assertion.assertEqual(sts.classHeader, testdata[0].classHeader, "Create Class Page Header Mismatch");
+		assertion.assertEqual(sts.classSubHeader, testdata[0].classSubHeader, "Create Class Page Class SubHeader Mismatch");
+		assertion.assertEqual(sts.title_lbl, testdata[0].title_lbl, "Create Class Page Title Label Mismatch");
+		assertion.assertEqual(sts.startDate_lbl, testdata[0].startDate_lbl, "Create Class Page Start Date Label Mismatch");
+		assertion.assertEqual(sts.endDate_lbl, testdata[0].endDate_lbl, "Create Class Page End Date Label Mismatch");
+		assertion.assertEqual(sts.selectBook_lbl, testdata[0].selectBook_lbl, "Create Class Page Select Book Label Mismatch");
+		assertion.assertEqual(sts.cancelBtn_txt, testdata[0].cancelBtn_txt, "Create Class Page Cancel Button Mismatch");
+		assertion.assertEqual(sts.createBtn_txt, testdata[0].createBtn_txt, "Create Class Page Create Button Mismatch");
+		
+		assertion.assertEqual(sts.bookTitle, testdata[1].bookTitle, "Create Class Page Book Title Mismatch");
+		assertion.assertEqual(sts.bookIcon, true, "Create Class Page Book Cover Thumbnail Mismatch");
+
+	},
+
+	//Validate that clicking on a page number launches the list of books 
+	ENG_ADDBOOK_TC_29: function (testdata) {
+		sts = addBookPage.goToPageNumber(testdata[0]);
+		
+		assertion.typeOf(sts, 'object', new Error(sts));
+		assertion.assertEqual(sts.pageInfo.pageTitle, testdata.pageTitle, "Page title Mismatch: " + JSON.stringify(sts))
+		assertion.assertEqual(sts.pageInfo.pageSubTitle, testdata.pageSubTitle, "Page subtitle Mismatch: " + JSON.stringify(sts))
+		assertion.assertEqual(sts.previousPageArrow, true, "Previous Arrow Not displayed")
+		assertion.assertEqual(sts.previousPageArrow, true, "Previous Arrow Not displayed")
+
+	},
+
+	/****************************Browse Book Testcases*************************************************/
 };

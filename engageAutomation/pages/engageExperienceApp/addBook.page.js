@@ -15,8 +15,8 @@ module.exports = {
     view_Btn: selectorFile.css.ComproEngage.addBookPage.view_Btn,
     searchBox: selectorFile.css.ComproEngage.addBookPage.searchBox,
     searchIcon: selectorFile.css.ComproEngage.addBookPage.searchIcon,
-    closeSearch: selectorFile.css.ComproEngage.addBookPage.closeSearch, //not clear on this - akhil
-    searchPopUp: selectorFile.css.ComproEngage.addBookPage.searchPopUp, //not clear on this - akhil
+    closeSearch: selectorFile.css.ComproEngage.addBookPage.closeSearch, //not clear on this - akhil -- cross icon to close the search dropdown in the search textbox
+    searchPopUp: selectorFile.css.ComproEngage.addBookPage.searchPopUp, //not clear on this - akhil -- this is the dropdown suggestion list. data-tid for this dropdown says "Search popup"
     searchList: selectorFile.css.ComproEngage.addBookPage.searchList,
     searchListIcon: selectorFile.css.ComproEngage.addBookPage.searchListIcon,
     showMoreResults: selectorFile.css.ComproEngage.addBookPage.showMoreResults,
@@ -25,23 +25,24 @@ module.exports = {
     search_NoResult_title: selectorFile.css.ComproEngage.addBookPage.search_NoResult_title,
     search_NoResult_subTitle: selectorFile.css.ComproEngage.addBookPage.search_NoResult_subTitle,
     searchPill: selectorFile.css.ComproEngage.addBookPage.searchPill,
+    breadcrumbFlipbook: selectorFile.css.ComproEngage.bookView.breadcrumbFlipbook,
     //dashboard
-    bookPlusIcon: selectorFile.css.ComproEngage.addBookPage.dashboard.bookPlusIcon, //this is a button, please rename it to addBookbtn - akhil
+    addBook_Btn: selectorFile.css.ComproEngage.addBookPage.dashboard.addBook_Btn, //this is a button, please rename it to addBookbtn - akhil --changed
     bookAddedIcon: selectorFile.css.ComproEngage.addBookPage.dashboard.bookAddedIcon,
     //browse
     moreOptions: selectorFile.css.ComproEngage.addBookPage.browse.moreOptions,
     viewClass_btn: selectorFile.css.ComproEngage.addBookPage.browse.viewClass_btn,
-    createClass_btn: selectorFile.css.ComproEngage.addBookPage.browse.createClass_btn, //not clear on this - akhil
+    createClass_btn: selectorFile.css.ComproEngage.addBookPage.browse.createClass_btn, //not clear on this - akhil -- this is one of the options on More Options for Teacher
     addToMyBooks_btn: selectorFile.css.ComproEngage.addBookPage.browse.addToMyBooks_btn,
     openFlipbook_btn: selectorFile.css.ComproEngage.addBookPage.browse.openFlipbook_btn,
-    flipBookTitle: selectorFile.css.ComproEngage.addBookPage.browse.flipBookTitle, // this should be an array - akhil
-    flipBookCount: selectorFile.css.ComproEngage.addBookPage.browse.flipBookCount, // this is not required if title is array - akhil
+    flipBookTitle: selectorFile.css.ComproEngage.addBookPage.browse.flipBookTitle, // this should be an array - akhil -- refer line 39
+    flipBookCount: selectorFile.css.ComproEngage.addBookPage.browse.flipBookCount, // this is not required if title is array - akhil - there is no data-tid for list of flipbooks. flipBookTitle selector is not an array. this is for generating the flipbook's selector in the list.
     previousPageArrow: selectorFile.css.ComproEngage.addBookPage.browse.previousPageArrow,
     nextPageArrow: selectorFile.css.ComproEngage.addBookPage.browse.nextPageArrow,
-    goToPage: selectorFile.css.ComproEngage.addBookPage.browse.goToPage, // not clear on this - akhil
-    currentPage: selectorFile.css.ComproEngage.addBookPage.browse.currentPage, // not sure if we are using this, please advise - akhil
+    goToPage: selectorFile.css.ComproEngage.addBookPage.browse.goToPage, // not clear on this - akhil -- this is for pagination purpose. jumping from one page to another.
+    currentPage: selectorFile.css.ComproEngage.addBookPage.browse.currentPage, // not sure if we are using this, please advise - akhil -- used in get data in line 85
     //class workflow
-    noBookTitle: selectorFile.css.ComproEngage.addBookPage.classWorkflow.noBookTitle, // not clear on this - akhil
+    noBookTitle: selectorFile.css.ComproEngage.addBookPage.classWorkflow.noBookTitle, // not clear on this - akhil -- Rupsi to advise for Class workflow
     noBookSubTitle: selectorFile.css.ComproEngage.addBookPage.classWorkflow.noBookSubTitle, // not clear on this - akhil
     addtoClassbtn: selectorFile.css.ComproEngage.addBookPage.classWorkflow.addtoClassbtn,
     cancelAndGoBackbtn: selectorFile.css.ComproEngage.addBookPage.classWorkflow.cancelAndGoBackbtn,
@@ -63,12 +64,13 @@ module.exports = {
         return res;
     },
 
-    getAddBookPageData: function () { //obj is too much hierachical, please reduce hierarchy - akhil
+    getAddBookPageData: function () { //obj is too much hierachical, please reduce hierarchy - akhil -- added page title and subtitle back
         logger.logInto(stackTrace.get());
         obj = {
             pageStatus: "",
-            pageInfo: this.getPageInfo(),
-            booksList: this.getBooksList(), // i think this should just be simple array of book titles - akhil
+            pageTitle: action.getElementCount(this.pageTitle) > 0 ? action.getText(this.pageTitle) : null,
+            pageSubTitle: action.getElementCount(this.pageSubTitle) > 0 ? action.getText(this.pageSubTitle) : null,
+            booksList: this.getBooksList(), // i think this should just be simple array of book titles - akhil -- refer line 106
             tabsList: appShell.getTabsListData(),
             //classes
             addtoClassbtn: action.getElementCount(this.addtoClassbtn) > 0 ? action.getText(this.addtoClassbtn) : null,
@@ -88,7 +90,7 @@ module.exports = {
     },
 
 
-    getPageInfo: function () { // not sure why this is required seperately, this should be part of getAddBookPageData - akhil
+    getPageInfo: function () { // not sure why this is required seperately, this should be part of getAddBookPageData - akhil -- added this separately to maintain readability. adding this back to getAddBookPageData
         logger.logInto(stackTrace.get());
         obj = {
             pageTitle: action.getElementCount(this.pageTitle) > 0 ? action.getText(this.pageTitle) : null,
@@ -101,7 +103,10 @@ module.exports = {
     getBooksList: function () { 
         //after looking at this I am not sure if we need all this info for every book.
         // I think this function should return book specific data if this function is called by giving book title - akhil
-        
+        /*can be updated to a list of books but if we are performing add book / remove book operation from Dashboard, 
+        plus button is updated as tick icon that is updated agaist the book's name. this kind of data for individual books would be lost.
+        please advice  -- akanksha 
+        */
         let bookCount = action.findElements(this.bookTitle);
         obj = {
             bookList: []
@@ -113,15 +118,15 @@ module.exports = {
                     bookImgIcon: action.getElementCount(this.bookImgIcon + i + "]") > 0 ? action.waitForExist(this.bookImgIcon + i + "]") : null,
                     bookTitle: action.getElementCount(this.bookTitle + i + "']") > 0 ? action.getText(this.bookTitle + i + "']") : null,
                     bookSubTitle: action.getElementCount(this.bookSubTitle + i + "]") > 0 ? action.getText(this.bookSubTitle + i + "]") : null,
-                    // text of view button should be get for first book only, hence we should move this to data function - akhil
+                    // text of view button should be get for first book only, hence we should move this to data function - akhil --refer line 105
                     view_Btn: action.getElementCount(this.view_Btn + i) > 0 ? action.getText(this.view_Btn + i) : null,
                     //classWorkflow
-                    // text of add button should be get for first book only, hence we should move this to data function - akhil
+                    // text of add button should be get for first book only, hence we should move this to data function - akhil --refer line 105
                     addBookbtntxt: action.getElementCount(this.addBookbtn + i + "] div") > 0 ? action.getText(this.addBookbtn + i + "] div") : null,
                     addBookbtnIcon: action.getElementCount(this.addBookbtn + i + "] svg") > 0 ? action.waitForExist(this.addBookbtn + i + "] svg") : null,
                     //dashboard
                     bookAddedIcon: action.getElementCount(this.bookAddedIcon + i) > 0 ? action.waitForExist(this.bookAddedIcon + i) : null,
-                    bookPlusIcon: action.getElementCount(this.bookPlusIcon + i) > 0 ? action.getText(this.bookPlusIcon + i) : null,
+                    addBook_Btn: action.getElementCount(this.addBook_Btn + i) > 0 ? action.getText(this.addBook_Btn + i) : null,
                     //browse
                     moreOptions: action.getElementCount(this.moreOptions + i) > 0 ? action.waitForExist(this.moreOptions + i) : null
                 }
@@ -210,7 +215,7 @@ module.exports = {
         return res;
     },
 
-    getBookIndex: function (bookName) { // not sure why is this required - akhil
+    getBookIndex: function (bookName) { // not sure why is this required - akhil -- Rupsi to advise on class workflow
         logger.logInto(stackTrace.get());
         var index = 0;
         var arr = [];
@@ -276,7 +281,7 @@ module.exports = {
         ret = dashboardPage.getDashboardPageData();
         for (var i = 0; i < ret.bookList.length; i++) {
             if (ret.bookList[i].bookTitle == bookName) {
-                res = action.click(this.bookPlusIcon + i + "]");
+                res = action.click(this.addBook_Btn + i + "]");
                 if (res == true) {
                     logger.logInto(stackTrace.get(), " --Book Plus icon is clicked");
                 } else {
@@ -291,7 +296,7 @@ module.exports = {
 
     /**************dashboard************************/
     clickOnBook: function (bookTitle) {
-        action.scrollIntoView("[title='" + bookTitle + "']"); // we should not manipulate selector - akhil
+        action.scrollIntoView("[title='" + bookTitle + "']"); // we should not manipulate selector - akhil -- this is a cleaner way to click on a book cover thumbnail since data-tid indexes can change for a book based on number of books. please advice.
         res = action.click("[title='" + bookTitle + "']") // we should not manipulate selector - akhil
         if (res == true) {
             logger.logInto(stackTrace.get(), " --Book Title Clicked clicked");
@@ -326,10 +331,10 @@ module.exports = {
         list = action.findElements(this.bookTitle);
         for (i = 0; i < list.length; i++) {
             if (action.getText(list[i]) == bookTitle) {
-                res = action.click(this.bookPlusIcon + i);
+                res = action.click(this.addBook_Btn + i);
                 if (res == true) {
-                    res = this.getBooksList(); // this is not required - akhil
-                    // we have to actually go back to dashboard page and check if book is added - akhil
+                    res = this.getBooksList(); // this is not required - akhil -- this has been added to check that plus button has been updated to tick
+                    // we have to actually go back to dashboard page and check if book is added - akhil -- this can be added in the testcase since these functions are meant to be unit level. please advise.
                     //not sure if we should perform that step here or seperately in the TC - akhil
                     logger.logInto(stackTrace.get(), " --Plus Button clicked");
                 } else
@@ -386,7 +391,7 @@ module.exports = {
         res = action.click(this.createClass_btn);
         if (res == true) {
             logger.logInto(stackTrace.get(), res + " View Classes Button Clicked");
-            res = require('./classDrawer.page.js').isInitialized()
+            res = require('./createClass.page.js').isInitialized()
         } else
             logger.logInto(stackTrace.get(), res + " View Classes Button Not Clicked", "error");
 
@@ -411,8 +416,9 @@ module.exports = {
             logger.logInto(stackTrace.get(), res + " Open Flipbook Button Clicked");
             if (action.getElementCount(this.flipBookCount) > 0)
                 res = this.getListOfFlipbooks();
-            else {
-                //res = require('./flipbook.page.js').isInitialized()
+            else{
+                 res = action.waitForDisplayed(this.breadcrumbFlipbook)
+                //res = require('./flipbook.page.js').isInitialized() //dummy page object adde
             }
 
         } else
@@ -481,9 +487,9 @@ module.exports = {
 
         return res;
     },
-    /**************Browse*************************************/
+    /**************Browse****************************************************************/
 
-    /**************Search*************************************/
+    /**************Search*****************************************************************/
     enterTextInSearchBox: function (searchText) {
         logger.logInto(stackTrace.get());
         res = action.setValue(this.searchBox, searchText)

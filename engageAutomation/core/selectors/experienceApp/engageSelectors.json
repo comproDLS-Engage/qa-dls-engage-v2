@@ -221,7 +221,7 @@
             "searchPill":"[data-tid=chip-search]",
             "dashboard":{
                "bookAddedIcon":"[data-tid*=icon-added",
-               "bookPlusIcon":"[data-tid*=button-addBook-"
+               "addBook_Btn":"[data-tid*=button-addBook-"
             },
             "browse":{
                "moreOptions":"[data-tid*=button-contextMenu-",
