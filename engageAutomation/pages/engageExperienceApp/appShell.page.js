@@ -66,9 +66,6 @@ module.exports = {
 	getAppShellHeaderData: function () {
 		var obj = {
 			notificationBtn_exists: (action.getElementCount(this.notificationBtn) > 0) ? action.waitForDisplayed(this.notificationBtn) : false,
-			notificationTxt: (action.getElementCount(this.notificationTxt) > 0) ? action.getText(this.notificationTxt) : null,
-			notificationCloseBtn: (action.getElementCount(this.notificationCloseBtn) > 0) ? action.getText(this.notificationCloseBtn) : null,
-			noNotificationImg: (action.getElementCount(this.noNotificationImg) > 0) ? action.getText(this.noNotificationImg) : null,
 			selectedLanguage: (action.getElementCount(this.selectedLanguage) > 0) ? action.getText(this.selectedLanguage) : null,
 			userProfileBtn_exists: (action.getElementCount(this.userProfileBtn) > 0) ? action.waitForDisplayed(this.userProfileBtn) : false,
 		};
@@ -114,6 +111,18 @@ module.exports = {
 			res = res + " -- Error in clicking Class Button";
 			logger.logInto(stackTrace.get(), res, 'error');
 		}
+		return res;
+	},
+
+	click_PlusIconClassesTab: function () {
+		res = action.click(this.classPlusIcon)
+		if (res == true) {
+			logger.logInto(stackTrace.get(), res + "Class plus button is clicked");
+			var createClassPage = require('./createClass.page.js');
+			res = createClassPage.isInitialized();
+		}
+		else
+			logger.logInto(stackTrace.get(), res + ":Add A New Book Button is NOT Clicked", "error");
 		return res;
 	},
 
@@ -247,17 +256,8 @@ module.exports = {
 		}
 		return res;
 	},
-	click_PlusIconClassesTab: function () {
-		res = action.click(this.classPlusIcon)
-		if (res == true) {
-			logger.logInto(stackTrace.get(), res + "Class plus button is clicked");
-			var createClassPage = require('./createClass.page.js');
-			res = createClassPage.isInitialized();
-		}
-		else
-			logger.logInto(stackTrace.get(), res + ":Add A New Book Button is NOT Clicked", "error");
-		return res;
-	},
+
+	
 
 	Click_breadcrumbbackbutton: function () {
 		res = action.click(this.breadcrumbbackbtn)
@@ -268,6 +268,7 @@ module.exports = {
 			logger.logInto(stackTrace.get(), res + ":back button from snakebar is NOT Clicked", "error");
 		return res;
 	},
+
 	Click_breadcrumbproductTitle: function () {
 		res = action.click(this.breadcrumbproductTitle)
 		if (res == true) {
