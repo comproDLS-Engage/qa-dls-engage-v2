@@ -12,10 +12,10 @@ module.exports = {
 			assertion.typeOf(sts, 'object', new Error(sts));
 			assertion.assertEqual(sts.pageInfo.pageTitle, testdata.pageTitle, "Page title Mismatch: " + JSON.stringify(sts))
 			assertion.assertEqual(sts.pageInfo.pageSubTitle, testdata.pageSubTitle, "Page subtitle Mismatch: " + JSON.stringify(sts))
-			// assertion.assertEqual(sts.myBooksTab, testdata.myBooksTab, "My Books Tab is mismatched: " + JSON.stringify(sts))
-			// assertion.assertEqual(sts.allBooksTab, testdata.allBooksTab, "All Books Tab is mismatched: " + JSON.stringify(sts))
-			// assertion.assertEqual(sts.myBooksTabSelected, 'true', "My BooksTab is not selected: " + JSON.stringify(sts))
-			// assertion.assertEqual(sts.allBooksTabSelected, 'false', "All Books Tab is selected: " + JSON.stringify(sts))
+			assertion.assertEqual(sts.myBooksTab, testdata.myBooksTab, "My Books Tab is mismatched: " + JSON.stringify(sts))
+			assertion.assertEqual(sts.allBooksTab, testdata.allBooksTab, "All Books Tab is mismatched: " + JSON.stringify(sts))
+			assertion.assertEqual(sts.myBooksTabSelected, 'true', "My BooksTab is not selected: " + JSON.stringify(sts))
+			assertion.assertEqual(sts.allBooksTabSelected, 'false', "All Books Tab is selected: " + JSON.stringify(sts))
 			assertion.assertEqual(sts.addtoClassbtn, testdata.addtoClassbtn, "Add Class button Text Mismatch: " + JSON.stringify(sts))
 			assertion.assertEqual(sts.cancelAndGoBackbtn, testdata.cancelAndGoBackbtn, "Cancel button Text Mismatch: " + JSON.stringify(sts))
 			assertion.assertEqual(sts.noBooklbl, testdata.noBooklbl, "Bottom label Text Mismatch: " + JSON.stringify(sts))
@@ -228,7 +228,8 @@ module.exports = {
 		}
 	},
 
-	//Validate that clicking on Book Thmbnail launches the book View page
+	/****************************Dashboard Add Book Testcases******************************************/
+	//Validate that clicking on Book Thumbnail launches the book View page
 	ENG_ADDBOOK_TC_20: function (testdata) {
 
 		sts = addBookPage.clickOnBook(testdata[1].name);
@@ -239,9 +240,10 @@ module.exports = {
 		assertion.assertEqual(sts.viewClass, testdata[0].viewClasses, "View Class Text Mismatch");
 		assertion.assertEqual(sts.openFlipbook_btn, testdata[0].openFlipbook, "Open Flipbook Button text Mismatch");
 	},
+	
 	//Validate that clicking on '+' button adds the book to My Books
 	ENG_ADDBOOK_TC_21: function (testdata) {
-		sts = addBookPage.ClickPlusIconofBook(testdata);
+		sts = addBookPage.clickPlusbutton(testdata);
 		assertion.assertEqual(sts, true, "Book Details Page is launched");
 	},
 };

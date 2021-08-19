@@ -306,6 +306,8 @@ module.exports = {
             if (action.getText(list[i]) == bookTitle) {
                 res = action.click(this.view_Btn + i);
                 if (res == true) {
+                    let bookViewTOC = require('./bookDetail.page.js');
+                    res = bookViewTOC.isInitialized();
                     logger.logInto(stackTrace.get(), " --View Button clicked");
                 } else
                     logger.logInto(stackTrace.get(), " --View Button NOT clicked", "error");
