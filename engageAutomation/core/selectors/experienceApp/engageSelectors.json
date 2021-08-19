@@ -80,7 +80,16 @@
                 "snackbarClose_btn": "[data-tid=button-close]",
                 "classPlusIcon": "[data-tid=button-classes] button",
                 "breadcrumbbackbtn": "[data-tid*=breadcrumb-]",
-                "breadcrumbproductTitle": "[data-tid=breadcrumb-productTitle]"
+                "breadcrumbproductTitle": "[data-tid=breadcrumb-productTitle]",
+                "indexBtn": "p[data-tid=text-chaptertitle]",
+                "indexTOCPanel": "[id=indexToc-panel]",
+                "chapterTitle": "h4[data-tid=text-chaptertitle]",
+                "indexCloseBtn": "[data-tid=button-closeinfotoc]",
+                "inviteBtnTxt": "[data-tid=text-invite]",
+                "inviteStudentText": "/html/body/div[4]/div[3]/div/div[1]/div[1]/h6",
+                "addToPlaylistBtn": "[data-tid=button-addToPlaylist]",
+                "newPlaylistOption": "[data-tid=button-newPlaylistOption]"
+
             },
             "dashboardPage": {
                 "pageTitle": "[data-tid=text-pageTitle]",

@@ -30,19 +30,27 @@ module.exports = {
 	userProfileBtn: selectorFile.css.ComproEngage.appShell.userProfileBtn,
 	userName: selectorFile.css.ComproEngage.appShell.userName,
 	emailID: selectorFile.css.ComproEngage.appShell.emailID,
-	//userProfileOptionBtns: selectorFile.css.ComproEngage.appShell.userProfileOptionBtns, //not used for now since each selector has been added individually - swati
 	userProfileHelpBtn: selectorFile.css.ComproEngage.appShell.userProfileHelpBtn,
 	userProfileSettingsBtn: selectorFile.css.ComproEngage.appShell.userProfileSettingsBtn,
 	userProfileLogoutBtn: selectorFile.css.ComproEngage.appShell.userProfileLogoutBtn,
 	classPlusIcon: selectorFile.css.ComproEngage.appShell.classPlusIcon,
 	breadcrumbbackbtn: selectorFile.css.ComproEngage.appShell.breadcrumbbackbtn,
 	breadcrumbproductTitle: selectorFile.css.ComproEngage.appShell.breadcrumbproductTitle,
+	indexBtn: selectorFile.css.ComproEngage.appShell.indexBtn,
+	chapterTitle: selectorFile.css.ComproEngage.appShell.chapterTitle,
+	indexCloseBtn: selectorFile.css.ComproEngage.appShell.indexCloseBtn,
+	indexTOCPanel: selectorFile.css.ComproEngage.appShell.indexTOCPanel,
+	inviteBtnTxt: selectorFile.css.ComproEngage.appShell.inviteBtnTxt,
+	inviteStudentText: selectorFile.css.ComproEngage.appShell.inviteStudentText,
+	addToPlaylistBtn: selectorFile.css.ComproEngage.appShell.addToPlaylistBtn,
+	newPlaylistOption: selectorFile.css.ComproEngage.appShell.newPlaylistOption,
 
 	isInitialized: function () {
 		logger.logInto(stackTrace.get());
 		action.waitForDocumentLoad();
 		let pageStatus = action.waitForDisplayed(this.headerLogo);
-		res = this.getAppShellData();
+		res.leftPane = this.getAppShellLeftPaneData();
+		res.header = this.getAppShellHeaderData();
 		res.pageStatus = pageStatus;
 		return res;
 	},
@@ -68,6 +76,9 @@ module.exports = {
 			notificationBtn_exists: (action.getElementCount(this.notificationBtn) > 0) ? action.waitForDisplayed(this.notificationBtn) : false,
 			selectedLanguage: (action.getElementCount(this.selectedLanguage) > 0) ? action.getText(this.selectedLanguage) : null,
 			userProfileBtn_exists: (action.getElementCount(this.userProfileBtn) > 0) ? action.waitForDisplayed(this.userProfileBtn) : false,
+			indexBtn: (action.getElementCount(this.indexBtn) > 0) ? action.getText(this.indexBtn) : null,
+			inviteBtnTxt: (action.getElementCount(this.inviteBtnTxt) > 0) ? action.getText(this.inviteBtnTxt) : null,
+			addToPlaylistBtn: (action.getElementCount(this.addToPlaylistBtn) > 0) ? action.getText(this.addToPlaylistBtn) : null
 		};
 		return obj;
 	},
@@ -257,25 +268,99 @@ module.exports = {
 		return res;
 	},
 
-	
-
-	Click_breadcrumbbackbutton: function () {
+	ClickBreadcrumbBackButton: function () {
 		res = action.click(this.breadcrumbbackbtn)
 		if (res == true) {
-			logger.logInto(stackTrace.get(), res + "back button from snakebar is clicked");
+			logger.logInto(stackTrace.get(), res + "back button from snackbar is clicked");
 		}
 		else
-			logger.logInto(stackTrace.get(), res + ":back button from snakebar is NOT Clicked", "error");
+			logger.logInto(stackTrace.get(), res + ":back button from snackbar is NOT Clicked", "error");
 		return res;
 	},
 
-	Click_breadcrumbproductTitle: function () {
+	ClickBreadCrumbProductTitle: function () {
 		res = action.click(this.breadcrumbproductTitle)
 		if (res == true) {
-			logger.logInto(stackTrace.get(), res + "Product title from snakebar is clicked");
+			logger.logInto(stackTrace.get(), res + "Product title from snackbar is clicked");
 		}
 		else
-			logger.logInto(stackTrace.get(), res + "Product title from snakebar is NOT Clicked", "error");
+			logger.logInto(stackTrace.get(), res + "Product title from snackbar is NOT Clicked", "error");
 		return res;
-	}
+	},
+
+	clickIndexButton: function () {
+		logger.logInto(stackTrace.get());
+		res = action.click(this.indexBtn);
+		if (true == res) {
+			action.waitForDisplayed(this.chapterTitle);
+			res = {
+				chapterTitleTxt: (action.getElementCount(this.chapterTitle) > 0) ? action.getText(this.chapterTitle) : null,
+			};
+		}
+		else {
+			res = res + " -- Error in clicking index Button";
+			logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
+
+	clickIndexCloseButton: function () {
+		logger.logInto(stackTrace.get());
+		res = action.click(this.indexCloseBtn);
+		if (true == res) {
+			res = action.waitForDisplayed(this.indexTOCPanel, undefined, true);
+		}
+		else {
+			res = res + " -- Error in clicking Index Close Button";
+			logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
+
+	clickIndexButton: function () {
+		logger.logInto(stackTrace.get());
+		res = action.click(this.indexBtn);
+		if (true == res) {
+			action.waitForDisplayed(this.chapterTitle);
+			res = {
+				chapterTitleTxt: (action.getElementCount(this.chapterTitle) > 0) ? action.getText(this.chapterTitle) : null,
+			};
+		}
+		else {
+			res = res + " -- Error in clicking index Button";
+			logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
+
+	clickInviteButton: function () {
+		logger.logInto(stackTrace.get());
+		res = action.click(this.inviteBtnTxt);
+		if (true == res) {
+			res = {
+				inviteBtnTxt: (action.getElementCount(this.inviteBtnTxt) > 0) ? action.getText(this.inviteBtnTxt) : null,
+			};
+		}
+		else {
+			res = res + " -- Error in clicking Invite Button Button";
+			logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
+
+	clickAddToPlaylistButton: function () {
+		logger.logInto(stackTrace.get());
+		res = action.click(this.addToPlaylistBtn);
+		if (true == res) {
+			action.waitForDisplayed(this.newPlaylistOption);
+			res = {
+				newPlaylistOption: (action.getElementCount(this.newPlaylistOption) > 0) ? action.getText(this.newPlaylistOption) : null
+			};
+		}
+		else {
+			res = res + " -- Error in clicking Add To Playlist Button";
+			logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
 };
