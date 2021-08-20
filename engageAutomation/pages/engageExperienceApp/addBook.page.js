@@ -1,10 +1,9 @@
 'use strict';
 var action = require('../../core/actionLibrary/baseActionLibrary.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
-const createClassPage = require('./createClass.page.js');
-const dashboardPage = require('./dashboard.page.js');
 const appShell = require('./appShell.page.js')
 var res, obj, ret;
+
 module.exports = {
 
     pageTitle: selectorFile.css.ComproEngage.addBookPage.pageTitle,
@@ -27,12 +26,12 @@ module.exports = {
     searchPill: selectorFile.css.ComproEngage.addBookPage.searchPill,
     breadcrumbFlipbook: selectorFile.css.ComproEngage.bookView.breadcrumbFlipbook,
     //dashboard
-    addBook_Btn: selectorFile.css.ComproEngage.addBookPage.dashboard.addBook_Btn, //this is a button, please rename it to addBookbtn - akhil --changed
+    addBook_Btn: selectorFile.css.ComproEngage.addBookPage.dashboard.addBook_Btn,
     bookAddedIcon: selectorFile.css.ComproEngage.addBookPage.dashboard.bookAddedIcon,
     //browse
     moreOptions: selectorFile.css.ComproEngage.addBookPage.browse.moreOptions,
     viewClass_btn: selectorFile.css.ComproEngage.addBookPage.browse.viewClass_btn,
-    createClass_btn: selectorFile.css.ComproEngage.addBookPage.browse.createClass_btn, //not clear on this - akhil -- this is one of the options on More Options for Teacher
+    createClass_btn: selectorFile.css.ComproEngage.addBookPage.browse.createClass_btn,
     addToMyBooks_btn: selectorFile.css.ComproEngage.addBookPage.browse.addToMyBooks_btn,
     openFlipbook_btn: selectorFile.css.ComproEngage.addBookPage.browse.openFlipbook_btn,
     flipBookTitle: selectorFile.css.ComproEngage.addBookPage.browse.flipBookTitle, // this should be an array - akhil -- refer line 39
@@ -90,17 +89,17 @@ module.exports = {
     },
 
 
-    getPageInfo: function () { // not sure why this is required seperately, this should be part of getAddBookPageData - akhil -- added this separately to maintain readability. adding this back to getAddBookPageData
+    /*getPageInfo: function () { // not sure why this is required seperately, this should be part of getAddBookPageData - akhil -- added this separately to maintain readability. adding this back to getAddBookPageData
         logger.logInto(stackTrace.get());
         obj = {
             pageTitle: action.getElementCount(this.pageTitle) > 0 ? action.getText(this.pageTitle) : null,
             pageSubTitle: action.getElementCount(this.pageSubTitle) > 0 ? action.getText(this.pageSubTitle) : null
         }
         return obj;
-    },
+    },*/
 
     //getBookData: function() {
-    getBooksList: function () { 
+    getBooksList: function () {
         //after looking at this I am not sure if we need all this info for every book.
         // I think this function should return book specific data if this function is called by giving book title - akhil
         /*can be updated to a list of books but if we are performing add book / remove book operation from Dashboard, 
@@ -278,7 +277,7 @@ module.exports = {
 
     clickPlusIconOfBook: function (bookName) {
         logger.logInto(stackTrace.get());
-        ret = dashboardPage.getDashboardPageData();
+        ret = require('./dashboard.page.js').getDashboardPageData();
         for (var i = 0; i < ret.bookList.length; i++) {
             if (ret.bookList[i].bookTitle == bookName) {
                 res = action.click(this.addBook_Btn + i + "]");
@@ -416,8 +415,8 @@ module.exports = {
             logger.logInto(stackTrace.get(), res + " Open Flipbook Button Clicked");
             if (action.getElementCount(this.flipBookCount) > 0)
                 res = this.getListOfFlipbooks();
-            else{
-                 res = action.waitForDisplayed(this.breadcrumbFlipbook)
+            else {
+                res = action.waitForDisplayed(this.breadcrumbFlipbook)
                 //res = require('./flipbook.page.js').isInitialized() //dummy page object adde
             }
 
