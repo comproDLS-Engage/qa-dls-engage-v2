@@ -243,15 +243,6 @@ module.exports = {
 			userProfileSettingsBtn: (action.getElementCount(this.userProfileSettingsBtn) > 0) ? action.getText(this.userProfileSettingsBtn) : null,
 			userProfileLogoutBtn: (action.getElementCount(this.userProfileLogoutBtn) > 0) ? action.getText(this.userProfileLogoutBtn) : null,
 		}
-		//since we have already created selectors for each option, hence following logic is not required - akhil
-		//this commented piece of code can be deleted now after review - swati
-		/*let userProfileOptionData = [], i
-		let userProfileOptionCount = action.getElementCount(this.userProfileOptionBtns)
-		for (i = 0; i < userProfileOptionCount; i++) {
-			let userProfileOptionSelector = this.userProfileOptionBtns + i + "]";
-			userProfileOptionData[i] = action.getText(userProfileOptionSelector);
-		}
-		obj.options = userProfileOptionData;*/
 		return obj;
 	},
 
@@ -318,22 +309,6 @@ module.exports = {
 		return res;
 	},
 
-	clickIndexButton: function () {
-		logger.logInto(stackTrace.get());
-		res = action.click(this.indexBtn);
-		if (true == res) {
-			action.waitForDisplayed(this.chapterTitle);
-			res = {
-				chapterTitleTxt: (action.getElementCount(this.chapterTitle) > 0) ? action.getText(this.chapterTitle) : null,
-			};
-		}
-		else {
-			res = res + " -- Error in clicking index Button";
-			logger.logInto(stackTrace.get(), res, 'error');
-		}
-		return res;
-	},
-
 	clickInviteButton: function () {
 		logger.logInto(stackTrace.get());
 		res = action.click(this.inviteBtnTxt);
@@ -350,6 +325,7 @@ module.exports = {
 	},
 
 	clickAddToPlaylistButton: function () {
+		//page not working currently, getting crash
 		logger.logInto(stackTrace.get());
 		res = action.click(this.addToPlaylistBtn);
 		if (true == res) {
