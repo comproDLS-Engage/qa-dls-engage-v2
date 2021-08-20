@@ -341,6 +341,7 @@ module.exports = {
 	},
 
 	clickAddToPlaylistButton: function () { //to be reviewed - akhil
+		//page not working currently, getting crash
 		logger.logInto(stackTrace.get());
 		res = action.click(this.addToPlaylistBtn);
 		if (true == res) {

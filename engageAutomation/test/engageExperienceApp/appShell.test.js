@@ -8,20 +8,23 @@ module.exports = {
 	ENG_SHELL_TC_1: function (testdata) {
 		sts = appShell.isInitialized();
 		assertion.assertEqual(sts.pageStatus, true, "AppShell status mismatch");
-		assertion.assertEqual(sts.headerLogo_exists, true, "Difusion logo does not exist");
-		assertion.assertEqual(sts.dashboardBtn, testdata.dashboardTxt, "Dashboard text mismatch");
-		assertion.assertEqual(sts.browseBtn, testdata.browseTxt, "Browser text mismatch");
-		assertion.assertEqual(sts.classesBtn, testdata.classesTxt, "Classes text mismatch");
-		assertion.assertEqual(sts.helpBtn, testdata.helpTxt, "Help text mismatch");
-		assertion.assertEqual(sts.settingsBtn, testdata.settingsTxt, "Settings text mismatch");
-		assertion.assertEqual(sts.sidebarImg_exists, true, "Left Pane Image does not exist");
-		assertion.assertEqual(sts.poweredbyTxt, testdata.poweredByTxt, "Powered By text mismatch");
-		assertion.assertEqual(sts.comproLogo_exists, true, "Compro logo does not exist");
-		assertion.assert(sts.versionTxt.includes(testdata.engageTxt), "Engage text mismatch");
-		assertion.assert(sts.versionTxt.includes(testdata.technologyPreviewTxt), "Technology Preview text mismatch");
-		assertion.assertEqual(sts.notificationBtn_exists, true, "Notification Button does not exist");
-		assertion.assertEqual(sts.selectedLanguage, testdata.selectedLanguage, "Language Button does not exist");
-		assertion.assertEqual(sts.userProfileBtn_exists, true, "User Profile Button does not exist");
+		assertion.assertEqual(sts.leftPane.headerLogo_exists, true, "Difusion logo does not exist");
+		assertion.assertEqual(sts.leftPane.dashboardBtn, testdata.dashboardTxt, "Dashboard text mismatch");
+		assertion.assertEqual(sts.leftPane.browseBtn, testdata.browseTxt, "Browser text mismatch");
+		assertion.assertEqual(sts.leftPane.classesBtn, testdata.classesTxt, "Classes text mismatch");
+		assertion.assertEqual(sts.leftPane.helpBtn, testdata.helpTxt, "Help text mismatch");
+		assertion.assertEqual(sts.leftPane.settingsBtn, testdata.settingsTxt, "Settings text mismatch");
+		assertion.assertEqual(sts.leftPane.sidebarImg_exists,true, "Left Pane Image does not exist");
+		assertion.assertEqual(sts.leftPane.poweredbyTxt, testdata.poweredByTxt, "Powered By text mismatch");
+		assertion.assertEqual(sts.leftPane.comproLogo_exists, true, "Compro logo does not exist");
+		assertion.assert(sts.leftPane.versionTxt.includes(testdata.engageTxt), "Engage text mismatch");
+		assertion.assert(sts.leftPane.versionTxt.includes(testdata.technologyPreviewTxt), "Technology Preview text mismatch");
+		assertion.assertEqual(sts.header.notificationBtn_exists, true, "Notification Button does not exist");
+		assertion.assertEqual(sts.header.selectedLanguage, testdata.selectedLanguage, "Language Button does not exist");
+		assertion.assertEqual(sts.header.userProfileBtn_exists, true, "User Profile Button does not exist");
+		assertion.assertEqual(sts.header.indexBtn,testdata.indexBtnText, "Index Button text does not match");
+		assertion.assertEqual(sts.header.inviteBtnTxt,testdata.inviteBtnTxt, "Invite Button text does not match");
+		assertion.assertEqual(sts.header.addToPlaylistBtn,testdata.addToPlaylist, "Add to Playlist Button text does not match");
 	},
 
 	//Validate that clicking on the Dashboard button in left Navigation pane launches Dashboard page 
@@ -45,9 +48,9 @@ module.exports = {
 	//Validate that clicking on the bell icon launches the notification drawer
 	ENG_SHELL_TC_5: function (testdata) {
 		sts = appShell.clickNotificationButton(testdata);
-		assertion.assertEqual(sts.notificationTxt, testdata.notificationHeader, "Notification Header Text mismatch");
-		assertion.assertEqual(sts.notificationCloseBtn_exists, true, "Close icon does not exist");
-		assertion.assertEqual(sts.noNotificationImg_exists, true, "No Notification Image does not exist");
+		assertion.assertEqual(sts.header.notificationTxt, testdata.notificationHeader, "Notification Header Text mismatch");
+		assertion.assertEqual(sts.header.notificationCloseBtn_exists, true, "Close icon does not exist");
+		assertion.assertEqual(sts.header.noNotificationImg_exists, true, "No Notification Image does not exist");
 	},
 
 	//Validate that clicking on cross icon closes the notification section
@@ -77,6 +80,7 @@ module.exports = {
 		sts = appShell.clickLogoutButton();
 		assertion.assertEqual(sts.pageStatus, true, "Landing page status mismatch");
 	},
+
 	//Validate that clicking on + button on classes in Left navigation pane, launched the create class page in teacher login
 	ENG_SHELL_TC_10: function () {
 		sts = appShell.click_PlusIconClassesTab()
@@ -86,6 +90,7 @@ module.exports = {
 			assertion.assertFail(sts);
 		}
 	},
+
 	// Validate that click on breadcrumb back button on the header launch the previous page
 	ENG_SHELL_TC_11: function () {
 		sts = appShell.ClickBreadcrumbBackButton()
@@ -96,10 +101,34 @@ module.exports = {
 		// 	assertion.assertFail(sts);
 		// }
 	},
-		// Validate that click on breadcrumb product tile on the header launch the previous page
-		ENG_SHELL_TC_12: function () {
-			sts = appShell.ClickBreadCrumbProductTitle()
-				assertion.assertEqual(sts, true, "Back button is not clicked: " + JSON.stringify(sts))
-		
-		},
+
+	// Validate that click on breadcrumb product tile on the header launch the previous page
+	ENG_SHELL_TC_12: function () {
+		sts = appShell.ClickBreadCrumbProductTitle()
+			assertion.assertEqual(sts, true, "Back button is not clicked: " + JSON.stringify(sts))
+	
+	},
+
+	//Validate that clicking on the index button launches index dropdown
+	ENG_SHELL_TC_13: function (testdata) {
+		sts = appShell.clickIndexButton();
+		assertion.assertEqual(sts.chapterTitleTxt, testdata.chapterTitleTxt, "Jump to Section Text mismatch")
+	},
+
+	//Validate that clicking on the Invite button launches Invite dropdown
+	ENG_SHELL_TC_14: function (testdata) {
+		sts = appShell.clickInviteButton();
+		assertion.assertEqual(sts.inviteBtnTxt, testdata.inviteBtnText, "Invite Button Text mismatch")
+	},
+
+	//Validate that clicking on the Add to Playlist button launches
+	ENG_SHELL_TC_14: function (testdata) {
+		sts = appShell.clickAddToPlaylistButton();
+		assertion.assertEqual(sts.inviteBtnTxt, testdata.inviteBtnText, "Invite Button Text mismatch")
+	},
+
+	//Validate that the list of the tabs is correct
+	ENG_SHELL_TC_14: function (testdata) {
+		sts = appShell.getTabsListData();
+	},
 }
