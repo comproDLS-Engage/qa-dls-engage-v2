@@ -8,7 +8,7 @@ module.exports = {
 
 	toggleSidebarBtn: selectorFile.css.ComproEngage.appShell.toggleSidebarBtn,
 	//Left Pane
-	headerLogo: selectorFile.css.ComproEngage.appShell.headerLogo,
+	headerLogo: selectorFile.css.ComproEngage.appShell.headerLogo, // headerLogo is causing confusion as it is not in header, rename this, like custLogo - akhil
 	dashboardBtn: selectorFile.css.ComproEngage.appShell.dashboardBtn,
 	browseBtn: selectorFile.css.ComproEngage.appShell.browseBtn,
 	classesBtn: selectorFile.css.ComproEngage.appShell.classesBtn,
@@ -23,7 +23,7 @@ module.exports = {
 	notificationCloseBtn: selectorFile.css.ComproEngage.appShell.notificationCloseBtn,
 	notificationTxt: selectorFile.css.ComproEngage.appShell.notificationTxt,
 	noNotificationImg: selectorFile.css.ComproEngage.appShell.noNotificationImg,
-	grayBackdrop: selectorFile.css.ComproEngage.appShell.grayBackdrop,
+	grayBackdrop: selectorFile.css.ComproEngage.appShell.grayBackdrop, //is this generic? can it be used anywhere where backdrop is visible? - akhil
 	languageSwitcherBtn: selectorFile.css.ComproEngage.appShell.languageSwitcherBtn,
 	languageList: selectorFile.css.ComproEngage.appShell.languageList,
 	selectedLanguage: selectorFile.css.ComproEngage.appShell.selectedLanguage,
@@ -44,7 +44,7 @@ module.exports = {
 	inviteStudentText: selectorFile.css.ComproEngage.appShell.inviteStudentText,
 	addToPlaylistBtn: selectorFile.css.ComproEngage.appShell.addToPlaylistBtn,
 	newPlaylistOption: selectorFile.css.ComproEngage.appShell.newPlaylistOption,
-	component: selectorFile.css.ComproEngage.appShell.component,
+	tabList: selectorFile.css.ComproEngage.appShell.tabList,
 
 	isInitialized: function () {
 		logger.logInto(stackTrace.get());
@@ -58,7 +58,7 @@ module.exports = {
 
 	getAppShellLeftPaneData: function () {
 		var obj = {
-			headerLogo_exists: (action.getElementCount(this.headerLogo) > 0) ? action.waitForDisplayed(this.headerLogo) : false,
+			headerLogo_exists: (action.getElementCount(this.headerLogo) > 0) ? action.waitForDisplayed(this.headerLogo) : false, //rename - akhil
 			dashboardBtn: (action.getElementCount(this.dashboardBtn) > 0) ? action.getText(this.dashboardBtn) : null,
 			browseBtn: (action.getElementCount(this.browseBtn) > 0) ? action.getText(this.browseBtn) : null,
 			classesBtn: (action.getElementCount(this.classesBtn) > 0) ? action.getText(this.classesBtn) : null,
@@ -117,7 +117,7 @@ module.exports = {
 		res = action.click(this.classesBtn);
 		if (true == res) {
 			res = res + " -- Create Class button is clicked";
-			res = instructorMyClassPage.isInitialized()
+			res = instructorMyClassPage.isInitialized() // this is teacher specific, we need to handle student also, lets discuss - akhil
 		}
 		else {
 			res = res + " -- Error in clicking Class Button";
@@ -130,7 +130,7 @@ module.exports = {
 		res = action.click(this.classPlusIcon)
 		if (res == true) {
 			logger.logInto(stackTrace.get(), res + "Class plus button is clicked");
-			var createClassPage = require('./createClass.page.js');
+			var createClassPage = require('./createClass.page.js'); // this is teacher specific, we need to handle student also, lets discuss - akhil
 			res = createClassPage.isInitialized();
 		}
 		else
@@ -138,7 +138,7 @@ module.exports = {
 		return res;
 	},
 
-	clickNotificationButton: function () {
+	clickNotificationButton: function () { //to be reviewed - akhil
 		logger.logInto(stackTrace.get());
 		res = action.click(this.notificationBtn);
 		if (true == res) {
@@ -243,15 +243,6 @@ module.exports = {
 			userProfileSettingsBtn: (action.getElementCount(this.userProfileSettingsBtn) > 0) ? action.getText(this.userProfileSettingsBtn) : null,
 			userProfileLogoutBtn: (action.getElementCount(this.userProfileLogoutBtn) > 0) ? action.getText(this.userProfileLogoutBtn) : null,
 		}
-		//since we have already created selectors for each option, hence following logic is not required - akhil
-		//this commented piece of code can be deleted now after review - swati
-		/*let userProfileOptionData = [], i
-		let userProfileOptionCount = action.getElementCount(this.userProfileOptionBtns)
-		for (i = 0; i < userProfileOptionCount; i++) {
-			let userProfileOptionSelector = this.userProfileOptionBtns + i + "]";
-			userProfileOptionData[i] = action.getText(userProfileOptionSelector);
-		}
-		obj.options = userProfileOptionData;*/
 		return obj;
 	},
 
@@ -279,7 +270,7 @@ module.exports = {
 		return res;
 	},
 
-	ClickBreadCrumbProductTitle: function () {
+	ClickBreadCrumbProductTitle: function () { //not clear on this - akhil
 		res = action.click(this.breadcrumbproductTitle)
 		if (res == true) {
 			logger.logInto(stackTrace.get(), res + "Product title from snackbar is clicked");
@@ -289,7 +280,7 @@ module.exports = {
 		return res;
 	},
 
-	clickIndexButton: function () {
+	clickIndexButton: function () { //to be reviewed - akhil
 		logger.logInto(stackTrace.get());
 		res = action.click(this.indexBtn);
 		if (true == res) {
@@ -318,7 +309,7 @@ module.exports = {
 		return res;
 	},
 
-	clickIndexButton: function () {
+	clickIndexButton: function () { //duplicate, check line#292 - akhil
 		logger.logInto(stackTrace.get());
 		res = action.click(this.indexBtn);
 		if (true == res) {
@@ -334,7 +325,7 @@ module.exports = {
 		return res;
 	},
 
-	clickInviteButton: function () {
+	clickInviteButton: function () { //to be reviewed - akhil
 		logger.logInto(stackTrace.get());
 		res = action.click(this.inviteBtnTxt);
 		if (true == res) {
@@ -349,7 +340,7 @@ module.exports = {
 		return res;
 	},
 
-	clickAddToPlaylistButton: function () {
+	clickAddToPlaylistButton: function () { //to be reviewed - akhil
 		logger.logInto(stackTrace.get());
 		res = action.click(this.addToPlaylistBtn);
 		if (true == res) {
@@ -365,36 +356,37 @@ module.exports = {
 		return res;
 	},
 
-	clickOnTab: function(componentName) {
-        logger.logInto(stackTrace.get());
-        let i, list;
-        list = action.findElements(this.component);
-        for (i = 0; i < list.length; i++) {
-            if (action.getText(list[i]) == componentName) {
-                res = action.click(list[i]);
-                if (res == true) {
-                    logger.logInto(stackTrace.get(), " --Component clicked");
-                } else
-                    logger.logInto(stackTrace.get(), " --Component NOT clicked", "error");
-                break;
-            }
-            res = false;
-        }
-        return res;
-    },
+	clickOnTab: function (name) { //rename this to selectTab - akhil
+		logger.logInto(stackTrace.get());
+		let i, list;
+		list = action.findElements(this.tabList);
+		for (i = 0; i < list.length; i++) {
+			if (action.getText(list[i]) == name) {
+				res = action.click(list[i]);
+				if (res == true) {
+					logger.logInto(stackTrace.get(), " --Component clicked");
+				} else
+					logger.logInto(stackTrace.get(), " --Component NOT clicked", "error");
+				break;
+			}
+			res = false;
+		}
+		return res;
+	},
 
-    getTabsListData: function() {
-        let i, list;
-        let obj = {};
-        let componentArr = [];
-        list = action.findElements(this.component);
-        for (i = 0; i < list.length; i++) {
-            componentArr[i] = action.getText(list[i])
-            if(action.getAttribute(this.component, "aria-selected") == true)
-            	obj.selected = componentArr[i];
-        }
-        obj.list = componentArr;
-        logger.logInto(stackTrace.get(), JSON.stringify(obj));
-        return obj;
-    }
+	getTabsListData: function () {
+		logger.logInto(stackTrace.get());
+		let i, list;
+		let obj = {};
+		let tabArr = [];
+		list = action.findElements(this.tabList);
+		for (i = 0; i < list.length; i++) {
+			tabArr[i] = action.getText(list[i])
+			if (action.getAttribute(this.tabList, "aria-selected") == true)
+				obj.selected = tabArr[i];
+		}
+		obj.list = tabArr;
+		logger.logInto(stackTrace.get(), JSON.stringify(obj));
+		return obj;
+	}
 };
