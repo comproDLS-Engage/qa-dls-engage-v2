@@ -12,8 +12,8 @@ module.exports = {
 		sts = addBookPage.isInitialized()
 		//console.log(sts)
 			assertion.typeOf(sts, 'object', new Error(sts));
-			assertion.assertEqual(sts.pageInfo.pageTitle, testdata.pageTitle, "Page title Mismatch: " + JSON.stringify(sts))
-			assertion.assertEqual(sts.pageInfo.pageSubTitle, testdata.pageSubTitle, "Page subtitle Mismatch: " + JSON.stringify(sts))
+			assertion.assertEqual(sts.pageTitle, testdata.pageTitle, "Page title Mismatch: " + JSON.stringify(sts))
+			assertion.assertEqual(sts.pageSubTitle, testdata.pageSubTitle, "Page subtitle Mismatch: " + JSON.stringify(sts))
 			assertion.assertEqual(sts.myBooksTab, testdata.myBooksTab, "My Books Tab is mismatched: " + JSON.stringify(sts))
 			assertion.assertEqual(sts.allBooksTab, testdata.allBooksTab, "All Books Tab is mismatched: " + JSON.stringify(sts))
 			assertion.assertEqual(sts.myBooksTabSelected, 'true', "My BooksTab is not selected: " + JSON.stringify(sts))
@@ -347,4 +347,125 @@ module.exports = {
 	},
 
 	/****************************Browse Book Testcases*************************************************/
+	
+	/****************************Search Testcases*************************************************/
+
+	//Validate that the serach result count displays the correct number of resources as listed under the tab.
+	ENG_ADDBOOK_TC_32: function (testdata) {
+		sts = addBookPage.enterTextInSearchBox(testdata[0]);
+		assertion.assertEqual(sts, true, "Search Text Not Entered")
+
+		sts = addBookPage.clickOnMoreSerachResult()
+		assertion.typeOf(sts, 'object', new Error(sts));
+		assertion.assertEqual(sts.booksList.boobooksArray, testdata[1].count, "Count Mismatch: " + JSON.stringify(sts))
+		assertion.assertEqual(sts.booksList.boobooksArray[0].bookTitle, testdata[1].bookTitle, "Book Title Mismatch: " + JSON.stringify(sts))
+		assertion.assertEqual(sts.booksList.boobooksArray[0].bookSubTitle, testdata[1].bookSubTitle, "Book SubTitle Mismatch: " + JSON.stringify(sts))
+		
+		sts = addBookPage.getSearchData()
+		assertion.typeOf(sts, 'object', new Error(sts));
+		assertion.assertEqual(sts.searchIcon, true, "Serach Icon Not Displayed: " + JSON.stringify(sts))
+		assertion.assertEqual(sts.searchCount, testdata[1].count, "Serach Count Mismatch: " + JSON.stringify(sts))
+		assertion.assertEqual(sts.searchPill, testdata[0], "Serach Pill Mismatch: " + JSON.stringify(sts))
+		
+		sts = addBookPage.clearSearch()
+		assertion.assertEqual(sts.searchData.searchPill, null, "Serach Pill Displayed: " + JSON.stringify(sts))
+
+	},
+
+	//Validate that search results are listed correctly for alpha numeric text.
+	ENG_ADDBOOK_TC_36: function (testdata) {
+		sts = addBookPage.enterTextInSearchBox(testdata[0]);
+		assertion.assertEqual(sts, true, "Search Text Not Entered")
+
+		sts = addBookPage.clickOnMoreSerachResult()
+		assertion.typeOf(sts, 'object', new Error(sts));
+		assertion.assertEqual(sts.booksList.boobooksArray, testdata[1].count, "Count Mismatch: " + JSON.stringify(sts))
+		assertion.assertEqual(sts.booksList.boobooksArray[0].bookTitle, testdata[1].bookTitle, "Book Title Mismatch: " + JSON.stringify(sts))
+		assertion.assertEqual(sts.booksList.boobooksArray[0].bookSubTitle, testdata[1].bookSubTitle, "Book SubTitle Mismatch: " + JSON.stringify(sts))
+		
+		sts = addBookPage.getSearchData()
+		assertion.typeOf(sts, 'object', new Error(sts));
+		assertion.assertEqual(sts.searchIcon, true, "Serach Icon Not Displayed: " + JSON.stringify(sts))
+		assertion.assertEqual(sts.searchCount, testdata[1].count, "Serach Count Mismatch: " + JSON.stringify(sts))
+		assertion.assertEqual(sts.searchPill, testdata[0], "Serach Pill Mismatch: " + JSON.stringify(sts))
+		
+		sts = addBookPage.clearSearch()
+		assertion.assertEqual(sts.searchData.searchPill, null, "Serach Pill Displayed: " + JSON.stringify(sts))
+
+	},
+
+	//Validate that a search text lists maximum 5 suggestions matching the search text.
+	ENG_ADDBOOK_TC_36: function (testdata) {
+		sts = addBookPage.enterTextInSearchBox(testdata[0]);
+		assertion.assertEqual(sts, true, "Search Text Not Entered")
+
+		sts = addBookPage.getSearchList();
+		assertion.isAtMost(sts.length, 6 , "Search List Count Mismatch")
+		
+		sts = addBookPage.clearSearch()
+		assertion.assertEqual(sts.searchData.searchPill, null, "Serach Pill Displayed: " + JSON.stringify(sts))
+
+	},
+
+	//Validate that No Result Found screen is displayed when no resource matching the search crietria is fulfilled
+	ENG_ADDBOOK_TC_39: function (testdata) {
+		sts = addBookPage.enterTextInSearchBox(testdata[0]);
+		assertion.assertEqual(sts, true, "Search Text Not Entered")
+
+		sts = addBookPage.getSearchList();
+		assertion.assertEqual(sts[0].itemName, testdata[1].NoBooksFound , "No Books Found Mismatch")
+
+		sts = addBookPage.pressEnter()
+		assertion.typeOf(sts, 'object', new Error(sts));
+		assertion.assertEqual(sts.searchData.search_NoResult_title, testdata[1].search_NoResult_title, "No Result Found Title Mismatch")
+		assertion.assertEqual(sts.searchData.search_NoResult_subTitle, testdata[1].search_NoResult_subTitle, "No Result Found Sub-Title Mismatch")
+		
+		sts = addBookPage.clearSearch()
+		assertion.assertEqual(sts.searchData.searchPill, null, "Serach Pill Displayed: " + JSON.stringify(sts))
+
+	},
+
+	//Validate that clicking on close search pill icon, the search results are cleared
+	ENG_ADDBOOK_TC_40: function (testdata) {
+		
+		sts = addBookPage.getSearchData()
+		assertion.typeOf(sts, 'object', new Error(sts));
+		assertion.assertEqual(sts.searchIcon, true, "Serach Icon Not Displayed: " + JSON.stringify(sts))
+		assertion.assertEqual(sts.searchCount, testdata[1].count, "Serach Count Mismatch: " + JSON.stringify(sts))
+		assertion.assertEqual(sts.searchPill, testdata[0], "Serach Pill Mismatch: " + JSON.stringify(sts))
+
+		sts = addBookPage.enterTextInSearchBox(testdata[0]);
+		assertion.assertEqual(sts, true, "Search Text Not Entered")
+
+		sts = addBookPage.clickOnMoreSerachResult()
+		assertion.typeOf(sts, 'object', new Error(sts));
+		assertion.assertEqual(sts.booksList.boobooksArray, testdata[2].count, "Count Mismatch: " + JSON.stringify(sts))
+		assertion.assertEqual(sts.booksList.boobooksArray[0].bookTitle, testdata[2].bookTitle, "Book Title Mismatch: " + JSON.stringify(sts))
+		assertion.assertEqual(sts.booksList.boobooksArray[0].bookSubTitle, testdata[2].bookSubTitle, "Book SubTitle Mismatch: " + JSON.stringify(sts))
+		
+		sts = addBookPage.clearSearchPill()
+		assertion.assertEqual(sts.searchData.searchPill, null, "Serach Pill Displayed: " + JSON.stringify(sts))
+
+		sts = addBookPage.getSearchData()
+		assertion.typeOf(sts, 'object', new Error(sts));
+		assertion.assertEqual(sts.searchIcon, true, "Serach Icon Not Displayed: " + JSON.stringify(sts))
+		assertion.assertEqual(sts.searchCount, testdata[1].count, "Serach Count Mismatch: " + JSON.stringify(sts))
+		assertion.assertEqual(sts.searchPill, testdata[0], "Serach Pill Mismatch: " + JSON.stringify(sts))
+
+	},
+
+	//Validate that clicking on a resource from the search suggestion drop down list launches the resource.
+	ENG_ADDBOOK_TC_41: function (testdata) {
+		sts = addBookPage.enterTextInSearchBox(testdata[0]);
+		assertion.assertEqual(sts, true, "Search Text Not Entered")
+
+		sts = addBookPage.getSearchList();
+		assertion.assertEqual(sts[0].itemName, testdata[1].NoBooksFound , "No Books Found Mismatch")
+
+		sts = addBookPage.clickOnSearchSuggestion(testdata[0])
+		assertion.assertEqual(sts.componentList.length, testdata[1].component.length, "Number of Components Mismatch")
+        assertion.assertEqual(sts.bookTitle, testdata[1].name, "Book Name Mismatch")
+        assertion.assertEqual(sts.bookSubTitle, testdata[1].description, "Book Description Mismatch")
+
+	}
 };
