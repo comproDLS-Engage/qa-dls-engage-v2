@@ -54,7 +54,7 @@ var assertionList = {
         logger.logInto(stackTrace.get(), message);
         assert.isAtMost(valueToCheck, valueToBeAtMost, [message]);
     }
-
+ 
     
 }
 

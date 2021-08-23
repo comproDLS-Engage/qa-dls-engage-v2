@@ -30,14 +30,14 @@ module.exports = {
     //browse
     moreOptions: selectorFile.css.ComproEngage.addBookPage.browse.moreOptions,
     viewClass_btn: selectorFile.css.ComproEngage.addBookPage.browse.viewClass_btn,
-    createClass_btn: selectorFile.css.ComproEngage.addBookPage.browse.createClass_btn, //not clear on this - akhil -- this is one of the options on More Options for Teacher
+    createClass_btn: selectorFile.css.ComproEngage.addBookPage.browse.createClass_btn, 
     addToMyBooks_btn: selectorFile.css.ComproEngage.addBookPage.browse.addToMyBooks_btn,
     openFlipbook_btn: selectorFile.css.ComproEngage.addBookPage.browse.openFlipbook_btn,
     flipBookCount: selectorFile.css.ComproEngage.addBookPage.browse.flipBookCount,
     previousPageArrow: selectorFile.css.ComproEngage.addBookPage.browse.previousPageArrow,
     nextPageArrow: selectorFile.css.ComproEngage.addBookPage.browse.nextPageArrow,
-    goToPage: selectorFile.css.ComproEngage.addBookPage.browse.goToPage, // not clear on this - akhil -- this is for pagination purpose. jumping from one page to another.
-    currentPage: selectorFile.css.ComproEngage.addBookPage.browse.currentPage, // not sure if we are using this, please advise - akhil -- used in get data in line 85
+    goToPage: selectorFile.css.ComproEngage.addBookPage.browse.goToPage, //ENG-7435
+    currentPage: selectorFile.css.ComproEngage.addBookPage.browse.currentPage, //ENG-7435
     //class workflow
     noBookTitle: selectorFile.css.ComproEngage.addBookPage.classWorkflow.noBookTitle, // not clear on this - akhil -- Rupsi to advise for Class workflow
     noBookSubTitle: selectorFile.css.ComproEngage.addBookPage.classWorkflow.noBookSubTitle, // not clear on this - akhil
@@ -61,13 +61,13 @@ module.exports = {
         return res;
     },
 
-    getAddBookPageData: function() { //obj is too much hierachical, please reduce hierarchy - akhil -- added page title and subtitle back
+    getAddBookPageData: function() { 
         logger.logInto(stackTrace.get());
         obj = {
             pageStatus: "",
             pageTitle: action.getElementCount(this.pageTitle) > 0 ? action.getText(this.pageTitle) : null,
             pageSubTitle: action.getElementCount(this.pageSubTitle) > 0 ? action.getText(this.pageSubTitle) : null,
-            booksList: this.getBooksList(), // i think this should just be simple array of book titles - akhil -- refer line 106
+            booksList: this.getBooksList(),
             tabsList: appShell.getTabsListData(),
             //classes
             addtoClassbtn: action.getElementCount(this.addtoClassbtn) > 0 ? action.getText(this.addtoClassbtn) : null,
@@ -87,7 +87,6 @@ module.exports = {
     },
 
 
-    //getBookData: function() {
     getBooksList: function() {
         let bookCount = action.findElements(this.bookTitle);
         obj = {
@@ -338,7 +337,7 @@ module.exports = {
             if (action.getText(list[i]) == bookTitle) {
                 res = action.click(this.addBook_Btn + i);
                 if (res == true) {
-                    res = this.getBookInfo(bookTitle); // update testcase //ENG_ADDBOOK_TC_21
+                    res = this.getBookInfo(bookTitle); 
                     logger.logInto(stackTrace.get(), " --Plus Button clicked");
                 } else
                     logger.logInto(stackTrace.get(), " --Plus Button NOT clicked", "error");

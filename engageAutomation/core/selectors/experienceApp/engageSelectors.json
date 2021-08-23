@@ -82,7 +82,7 @@
             "breadcrumbbackbtn":"[data-tid*=breadcrumb-]",
             "breadcrumbproductTitle":"[data-tid=breadcrumb-productTitle]"
          },
-         "dashboardPage":{
+         "dashboardPage":{ 
             "pageTitle":"[data-tid=text-pageTitle]",
             "createPlaylist_Btn":"[data-tid=button-CreatePlaylist]",
             "addBook_Btn":"[data-tid=button-addBook]",

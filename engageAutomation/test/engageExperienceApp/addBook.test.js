@@ -246,13 +246,14 @@ module.exports = {
 	//Validate that clicking on '+' button adds the book to My Books
 	ENG_ADDBOOK_TC_21: function (testdata) {
 		sts = addBookPage.clickPlusbutton(testdata);
-		var bookObj;
-		var arr = sts.bookList;
-		for (var i = 0; i < arr.length; i++) {
-            bookObj = arr.find(book => book.bookTitle === testdata);
-            assertion.assertEqual(book.bookAddedIcon, true, "Book Added to My Books");
-            break;
-        }
+		assertion.assertEqual(book.bookAddedIcon, true, "Book Added to My Books")
+		
+		appShell.ENG_SHELL_TC_11();
+
+		sts = dashboardPage.isInitialized();
+		assertion.assertEqual(sts.pageTitle, testdata.pageTitle, "Dashboard text mismatch");
+		assertion.assertEqual(sts.bookList[0].bookTitle,testdata.bookTitle,"Book Title Mismatch")
+
 	},
 
 	//Validate clicking on the breadcrumb on add book page launches the dashboard page
