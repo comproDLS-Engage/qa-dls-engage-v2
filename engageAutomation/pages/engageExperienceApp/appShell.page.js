@@ -8,7 +8,7 @@ module.exports = {
 
 	toggleSidebarBtn: selectorFile.css.ComproEngage.appShell.toggleSidebarBtn,
 	//Left Pane
-	headerLogo: selectorFile.css.ComproEngage.appShell.headerLogo, // headerLogo is causing confusion as it is not in header, rename this, like custLogo - akhil
+	custLogo: selectorFile.css.ComproEngage.appShell.custLogo,
 	dashboardBtn: selectorFile.css.ComproEngage.appShell.dashboardBtn,
 	browseBtn: selectorFile.css.ComproEngage.appShell.browseBtn,
 	classesBtn: selectorFile.css.ComproEngage.appShell.classesBtn,
@@ -58,7 +58,7 @@ module.exports = {
 
 	getAppShellLeftPaneData: function () {
 		var obj = {
-			headerLogo_exists: (action.getElementCount(this.headerLogo) > 0) ? action.waitForDisplayed(this.headerLogo) : false, //rename - akhil
+			custLogo_exists: (action.getElementCount(this.custLogo) > 0) ? action.waitForDisplayed(this.custLogo) : false, 
 			dashboardBtn: (action.getElementCount(this.dashboardBtn) > 0) ? action.getText(this.dashboardBtn) : null,
 			browseBtn: (action.getElementCount(this.browseBtn) > 0) ? action.getText(this.browseBtn) : null,
 			classesBtn: (action.getElementCount(this.classesBtn) > 0) ? action.getText(this.classesBtn) : null,
@@ -117,7 +117,6 @@ module.exports = {
 		res = action.click(this.classesBtn);
 		if (true == res) {
 			res = res + " -- Create Class button is clicked";
-			res = instructorMyClassPage.isInitialized() // this is teacher specific, we need to handle student also, lets discuss - akhil
 		}
 		else {
 			res = res + " -- Error in clicking Class Button";
@@ -130,8 +129,6 @@ module.exports = {
 		res = action.click(this.classPlusIcon)
 		if (res == true) {
 			logger.logInto(stackTrace.get(), res + "Class plus button is clicked");
-			var createClassPage = require('./createClass.page.js'); // this is teacher specific, we need to handle student also, lets discuss - akhil
-			res = createClassPage.isInitialized();
 		}
 		else
 			logger.logInto(stackTrace.get(), res + ":Add A New Book Button is NOT Clicked", "error");
@@ -147,7 +144,6 @@ module.exports = {
 				notificationTxt: (action.getElementCount(this.notificationTxt) > 0) ? action.getText(this.notificationTxt) : null,
 				notificationCloseBtn_exists: (action.getElementCount(this.notificationCloseBtn) > 0) ? action.waitForDisplayed(this.notificationCloseBtn) : false,
 				noNotificationImg_exists: (action.getElementCount(this.noNotificationImg) > 0) ? action.waitForDisplayed(this.noNotificationImg) : null,
-				//for now image has been added, will create separate page object for notification feature once it is activated
 			};
 		}
 		else {
@@ -261,22 +257,13 @@ module.exports = {
 	},
 
 	ClickBreadcrumbBackButton: function () {
+		//function added by Rupsi -- swati
 		res = action.click(this.breadcrumbbackbtn)
 		if (res == true) {
 			logger.logInto(stackTrace.get(), res + "back button from snackbar is clicked");
 		}
 		else
 			logger.logInto(stackTrace.get(), res + ":back button from snackbar is NOT Clicked", "error");
-		return res;
-	},
-
-	ClickBreadCrumbProductTitle: function () { //not clear on this - akhil
-		res = action.click(this.breadcrumbproductTitle)
-		if (res == true) {
-			logger.logInto(stackTrace.get(), res + "Product title from snackbar is clicked");
-		}
-		else
-			logger.logInto(stackTrace.get(), res + "Product title from snackbar is NOT Clicked", "error");
 		return res;
 	},
 
@@ -304,22 +291,6 @@ module.exports = {
 		}
 		else {
 			res = res + " -- Error in clicking Index Close Button";
-			logger.logInto(stackTrace.get(), res, 'error');
-		}
-		return res;
-	},
-
-	clickIndexButton: function () { //duplicate, check line#292 - akhil
-		logger.logInto(stackTrace.get());
-		res = action.click(this.indexBtn);
-		if (true == res) {
-			action.waitForDisplayed(this.chapterTitle);
-			res = {
-				chapterTitleTxt: (action.getElementCount(this.chapterTitle) > 0) ? action.getText(this.chapterTitle) : null,
-			};
-		}
-		else {
-			res = res + " -- Error in clicking index Button";
 			logger.logInto(stackTrace.get(), res, 'error');
 		}
 		return res;
@@ -357,7 +328,7 @@ module.exports = {
 		return res;
 	},
 
-	clickOnTab: function (name) { //rename this to selectTab - akhil
+	selectTab: function (name) { 
 		logger.logInto(stackTrace.get());
 		let i, list;
 		list = action.findElements(this.tabList);

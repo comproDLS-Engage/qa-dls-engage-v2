@@ -121,14 +121,14 @@ module.exports = {
 		assertion.assertEqual(sts.inviteBtnTxt, testdata.inviteBtnText, "Invite Button Text mismatch")
 	},
 
-	//Validate that clicking on the Add to Playlist button launches
-	ENG_SHELL_TC_14: function (testdata) {
+	//Validate that clicking on the Add to Playlist button launches playlist dropdown
+	ENG_SHELL_TC_15: function (testdata) {
 		sts = appShell.clickAddToPlaylistButton();
 		assertion.assertEqual(sts.inviteBtnTxt, testdata.inviteBtnText, "Invite Button Text mismatch")
 	},
 
 	//Validate that the list of the tabs is correct
-	ENG_SHELL_TC_14: function (testdata) {
+	ENG_SHELL_TC_16: function (testdata) {
 		sts = appShell.getTabsListData();
-	},
+	}
 }
