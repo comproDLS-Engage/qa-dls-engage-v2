@@ -22,7 +22,7 @@ module.exports = {
 	notificationCloseBtn: selectorFile.css.ComproEngage.appShell.notificationCloseBtn,
 	notificationTxt: selectorFile.css.ComproEngage.appShell.notificationTxt,
 	noNotificationImg: selectorFile.css.ComproEngage.appShell.noNotificationImg,
-	grayBackdrop: selectorFile.css.ComproEngage.appShell.grayBackdrop, //is this generic? can it be used anywhere where backdrop is visible? - akhil
+	grayBackdrop: selectorFile.css.ComproEngage.appShell.grayBackdrop,
 	languageSwitcherBtn: selectorFile.css.ComproEngage.appShell.languageSwitcherBtn,
 	languageList: selectorFile.css.ComproEngage.appShell.languageList,
 	selectedLanguage: selectorFile.css.ComproEngage.appShell.selectedLanguage,
@@ -257,14 +257,13 @@ module.exports = {
 		return res;
 	},
 
-	ClickBreadcrumbBackButton: function () {
-		//function added by Rupsi -- swati
+	clickBackButton: function () {
 		res = action.click(this.breadcrumbbackbtn)
 		if (res == true) {
-			logger.logInto(stackTrace.get(), res + "back button from snackbar is clicked");
+			logger.logInto(stackTrace.get(), res + "back button is clicked");
 		}
 		else
-			logger.logInto(stackTrace.get(), res + ":back button from snackbar is NOT Clicked", "error");
+			logger.logInto(stackTrace.get(), res + ":back button is NOT Clicked", "error");
 		return res;
 	},
 

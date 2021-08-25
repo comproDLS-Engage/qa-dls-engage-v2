@@ -110,7 +110,7 @@ module.exports = {
 
 	// Validate that click on breadcrumb back button on the header launch the previous page
 	ENG_SHELL_TC_11: function () {
-		sts = appShell.ClickBreadcrumbBackButton()
+		sts = appShell.clickBackButton()
 		assertion.assertEqual(sts, true, "Back button is not clicked: " + JSON.stringify(sts))
 		// if ((typeof (sts)) === "object") {
 		// 	assertion.assertEqual(sts.pageStatus, true, "Back button is not clicked: " + JSON.stringify(sts))
