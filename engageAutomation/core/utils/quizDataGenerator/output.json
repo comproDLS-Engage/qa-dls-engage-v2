@@ -1,0 +1,875 @@
+{
+  "quizName": {
+    "totalScore": 10,
+    "passScore": 7,
+    "question": [
+      {
+        "number": 1,
+        "maxScore": 1,
+        "instruction": "See the image carefully and answer the question",
+        "text": "Which organelle is called powerhouse of the cell?",
+        "type": "block-mcsr-itemplayer",
+        "maxOptions": 4,
+        "answerKey": [
+          [
+            "O1",
+            "Mitochondria",
+            "select",
+            "correct"
+          ],
+          [
+            "O2",
+            "Nucleus",
+            "",
+            ""
+          ],
+          [
+            "O3",
+            "Golgi Bodies",
+            "",
+            ""
+          ],
+          [
+            "O4",
+            "Ribosomes",
+            "",
+            ""
+          ]
+        ],
+        "scenario1": [
+          [
+            "O1",
+            "Mitochondria",
+            "select",
+            "correct"
+          ],
+          [
+            "O2",
+            "Nucleus",
+            "",
+            ""
+          ],
+          [
+            "O3",
+            "Golgi Bodies",
+            "",
+            ""
+          ],
+          [
+            "O4",
+            "Ribosomes",
+            "",
+            ""
+          ]
+        ],
+        "scenario2": [
+          [
+            "O1",
+            "Mitochondria",
+            "select",
+            "correct"
+          ],
+          [
+            "O2",
+            "Nucleus",
+            "",
+            ""
+          ],
+          [
+            "O3",
+            "Golgi Bodies",
+            "",
+            ""
+          ],
+          [
+            "O4",
+            "Ribosomes",
+            "",
+            ""
+          ]
+        ]
+      },
+      {
+        "number": 2,
+        "maxScore": 1,
+        "instruction": "See the image carefully and choose the correct option(s)",
+        "text": "Identify the parts of the plants in the given options:",
+        "type": "mcmr-itemplayer",
+        "maxOptions": 4,
+        "answerKey": [
+          [
+            "O1",
+            "Roots",
+            "select",
+            "correct"
+          ],
+          [
+            "O2",
+            "Soil",
+            "",
+            ""
+          ],
+          [
+            "O3",
+            "Stem",
+            "",
+            ""
+          ],
+          [
+            "O4",
+            "Leaves",
+            "",
+            ""
+          ]
+        ],
+        "scenario1": [
+          [
+            "O1",
+            "Roots",
+            "select",
+            "correct"
+          ],
+          [
+            "O2",
+            "Soil",
+            "",
+            ""
+          ],
+          [
+            "O3",
+            "Stem",
+            "",
+            ""
+          ],
+          [
+            "O4",
+            "Leaves",
+            "",
+            ""
+          ]
+        ],
+        "scenario2": [
+          [
+            "O1",
+            "Roots",
+            "select",
+            "correct"
+          ],
+          [
+            "O2",
+            "Soil",
+            "",
+            ""
+          ],
+          [
+            "O3",
+            "Stem",
+            "",
+            ""
+          ],
+          [
+            "O4",
+            "Leaves",
+            "",
+            ""
+          ]
+        ]
+      },
+      {
+        "number": 3,
+        "maxScore": 1,
+        "instruction": "Listen to the audio carefully and choose the correct option of the given below question",
+        "text": "Is this an iphone original ringtone?",
+        "type": "block-mcsr-itemplayer",
+        "maxOptions": 2,
+        "answerKey": [
+          [
+            "O1",
+            "True",
+            "select",
+            "correct"
+          ],
+          [
+            "O2",
+            "False",
+            "",
+            ""
+          ]
+        ],
+        "scenario1": [
+          [
+            "O1",
+            "True",
+            "select",
+            "correct"
+          ],
+          [
+            "O2",
+            "False",
+            "",
+            ""
+          ]
+        ],
+        "scenario2": [
+          [
+            "O1",
+            "True",
+            "select",
+            "correct"
+          ],
+          [
+            "O2",
+            "False",
+            "",
+            ""
+          ]
+        ]
+      },
+      {
+        "number": 4,
+        "maxScore": 1,
+        "instruction": "",
+        "text": "Drag the continents at their correct places on the world map",
+        "type": "dnd-imagelabel-itemplayer",
+        "maxOptions": 5,
+        "answerKey": [
+          [
+            "O1",
+            "",
+            "A",
+            "Asia",
+            "correct"
+          ],
+          [
+            "O2",
+            "",
+            "B",
+            "Africa",
+            "correct"
+          ],
+          [
+            "O3",
+            "",
+            "C",
+            "Europe",
+            "correct"
+          ],
+          [
+            "O4",
+            "",
+            "D",
+            "North America",
+            "correct"
+          ],
+          [
+            "O5",
+            "",
+            "E",
+            "South America",
+            "correct"
+          ]
+        ],
+        "scenario1": [
+          [
+            "O1",
+            "",
+            "A",
+            "Asia",
+            "correct"
+          ],
+          [
+            "O2",
+            "",
+            "B",
+            "Africa",
+            "correct"
+          ],
+          [
+            "O3",
+            "",
+            "C",
+            "Europe",
+            "correct"
+          ],
+          [
+            "O4",
+            "",
+            "D",
+            "North America",
+            "correct"
+          ],
+          [
+            "O5",
+            "",
+            "E",
+            "South America",
+            "correct"
+          ]
+        ],
+        "scenario2": [
+          [
+            "O1",
+            "",
+            "A",
+            "Asia",
+            "correct"
+          ],
+          [
+            "O2",
+            "",
+            "B",
+            "Africa",
+            "correct"
+          ],
+          [
+            "O3",
+            "",
+            "C",
+            "Europe",
+            "correct"
+          ],
+          [
+            "O4",
+            "",
+            "D",
+            "North America",
+            "correct"
+          ],
+          [
+            "O5",
+            "",
+            "E",
+            "South America",
+            "correct"
+          ]
+        ]
+      },
+      {
+        "number": 5,
+        "maxScore": 1,
+        "instruction": "Drag the pills at their correct places in the sentence.",
+        "text": "Once there was a,{{Blank:A}}. He was very,{{Blank:B}}.He flew here and there in search of,{{Blank:C}}.He saw a pot",
+        "type": "dnd-fib-itemplayer",
+        "maxOptions": 3,
+        "answerKey": [
+          [
+            "O1",
+            "",
+            "A",
+            "crow",
+            "correct"
+          ],
+          [
+            "O2",
+            "",
+            "B",
+            "thirsty",
+            "correct"
+          ],
+          [
+            "O3",
+            "",
+            "C",
+            "water",
+            "correct"
+          ]
+        ],
+        "scenario1": [
+          [
+            "O1",
+            "",
+            "A",
+            "crow",
+            "correct"
+          ],
+          [
+            "O2",
+            "",
+            "B",
+            "thirsty",
+            "correct"
+          ],
+          [
+            "O3",
+            "",
+            "C",
+            "water",
+            "correct"
+          ]
+        ],
+        "scenario2": [
+          [
+            "O1",
+            "",
+            "A",
+            "crow",
+            "correct"
+          ],
+          [
+            "O2",
+            "",
+            "B",
+            "thirsty",
+            "correct"
+          ],
+          [
+            "O3",
+            "",
+            "C",
+            "water",
+            "correct"
+          ]
+        ]
+      },
+      {
+        "number": 6,
+        "maxScore": 1,
+        "instruction": "Fill the blanks with the correct options.",
+        "text": "He walked along the road, wondering what,{{Blank:A}},( happen ) and where all the people,{{Blank:B}},( go ). The streets,{{Blank:C}},( be ) deserted, and the stalls,{{Blank:D}},( be leave ) as they,{{Blank:E}},( be ), with fruit and vegetables arranged in neat rows.",
+        "type": "fibtext-itemplayer",
+        "maxOptions": 5,
+        "answerKey": [
+          [
+            "A",
+            "had happened",
+            "correct"
+          ],
+          [
+            "B",
+            "had gone",
+            "correct"
+          ],
+          [
+            "C",
+            "were",
+            "correct"
+          ],
+          [
+            "D",
+            "were left",
+            "correct"
+          ],
+          [
+            "E",
+            "had",
+            "correct"
+          ]
+        ],
+        "scenario1": [
+          [
+            "A",
+            "had happened",
+            "correct"
+          ],
+          [
+            "B",
+            "had gone",
+            "correct"
+          ],
+          [
+            "C",
+            "were",
+            "correct"
+          ],
+          [
+            "D",
+            "were left",
+            "correct"
+          ],
+          [
+            "E",
+            "had",
+            "correct"
+          ]
+        ],
+        "scenario2": [
+          [
+            "A",
+            "had happened",
+            "correct"
+          ],
+          [
+            "B",
+            "had gone",
+            "correct"
+          ],
+          [
+            "C",
+            "were",
+            "correct"
+          ],
+          [
+            "D",
+            "were left",
+            "correct"
+          ],
+          [
+            "E",
+            "had",
+            "correct"
+          ]
+        ]
+      },
+      {
+        "number": 7,
+        "maxScore": 1,
+        "instruction": "See the image and match the suitable word",
+        "text": "Match the following countries with their corresponding capitals",
+        "type": "matching-itemplayer",
+        "maxOptions": 3,
+        "answerKey": [
+          [
+            "RC1",
+            "China",
+            "O1",
+            "Beijing",
+            "correct"
+          ],
+          [
+            "RC2",
+            "Japan",
+            "O2",
+            "Tokyo",
+            "correct"
+          ],
+          [
+            "RC3",
+            "New Zealand",
+            "O3",
+            "Wellington",
+            "correct"
+          ]
+        ],
+        "scenario1": [
+          [
+            "RC1",
+            "China",
+            "O1",
+            "Beijing",
+            "correct"
+          ],
+          [
+            "RC2",
+            "Japan",
+            "O2",
+            "Tokyo",
+            "correct"
+          ],
+          [
+            "RC3",
+            "New Zealand",
+            "O3",
+            "Wellington",
+            "correct"
+          ]
+        ],
+        "scenario2": [
+          [
+            "RC1",
+            "China",
+            "O1",
+            "Beijing",
+            "correct"
+          ],
+          [
+            "RC2",
+            "Japan",
+            "O2",
+            "Tokyo",
+            "correct"
+          ],
+          [
+            "RC3",
+            "New Zealand",
+            "O3",
+            "Wellington",
+            "correct"
+          ]
+        ]
+      },
+      {
+        "number": 8,
+        "maxScore": 1,
+        "instruction": "See the image and reorder the options in correct sequence.",
+        "text": "Arrange the incidents in sequence",
+        "type": "orderlist-itemplayer",
+        "maxOptions": 4,
+        "answerKey": [
+          [
+            "O1",
+            "Babur’s attack on India",
+            "1",
+            "correct"
+          ],
+          [
+            "O2",
+            "Akbar’s birth",
+            "2",
+            "correct"
+          ],
+          [
+            "O3",
+            "Construction of the Taj Mahal",
+            "3",
+            "correct"
+          ],
+          [
+            "O4",
+            "Aurangzeb’s death",
+            "4",
+            "correct"
+          ]
+        ],
+        "scenario1": [
+          [
+            "O1",
+            "Babur’s attack on India",
+            "1",
+            "correct"
+          ],
+          [
+            "O2",
+            "Akbar’s birth",
+            "2",
+            "correct"
+          ],
+          [
+            "O3",
+            "Construction of the Taj Mahal",
+            "3",
+            "correct"
+          ],
+          [
+            "O4",
+            "Aurangzeb’s death",
+            "4",
+            "correct"
+          ]
+        ],
+        "scenario2": [
+          [
+            "O1",
+            "Babur’s attack on India",
+            "1",
+            "correct"
+          ],
+          [
+            "O2",
+            "Akbar’s birth",
+            "2",
+            "correct"
+          ],
+          [
+            "O3",
+            "Construction of the Taj Mahal",
+            "3",
+            "correct"
+          ],
+          [
+            "O4",
+            "Aurangzeb’s death",
+            "4",
+            "correct"
+          ]
+        ]
+      },
+      {
+        "number": 9,
+        "maxScore": 2,
+        "instruction": "View the video and place the items in the correct categories.",
+        "text": "Classify in to categories",
+        "type": "classify-itemplayer",
+        "maxOptions": 6,
+        "answerKey": {
+          "key1": [
+            [
+              "O1",
+              "",
+              "A",
+              "cow",
+              "correct"
+            ],
+            [
+              "O2",
+              "",
+              "C",
+              "human",
+              "correct"
+            ],
+            [
+              "O3",
+              "",
+              "B",
+              "tiger",
+              "correct"
+            ],
+            [
+              "O4",
+              "",
+              "A",
+              "sheep",
+              "correct"
+            ],
+            [
+              "O5",
+              "",
+              "C",
+              "cat",
+              "correct"
+            ],
+            [
+              "O6",
+              "",
+              "A",
+              "bear",
+              "correct"
+            ]
+          ],
+          "key2": [
+            [
+              "A",
+              "herbivores",
+              "correct"
+            ],
+            [
+              "B",
+              "carnivores",
+              "correct"
+            ],
+            [
+              "C",
+              "omnivores",
+              "correct"
+            ]
+          ]
+        },
+        "scenario1": {
+          "key1": [
+            [
+              "O1",
+              "",
+              "A",
+              "cow",
+              "correct"
+            ],
+            [
+              "O2",
+              "",
+              "C",
+              "human",
+              "correct"
+            ],
+            [
+              "O3",
+              "",
+              "B",
+              "tiger",
+              "correct"
+            ],
+            [
+              "O4",
+              "",
+              "A",
+              "sheep",
+              "correct"
+            ],
+            [
+              "O5",
+              "",
+              "C",
+              "cat",
+              "correct"
+            ],
+            [
+              "O6",
+              "",
+              "A",
+              "bear",
+              "correct"
+            ]
+          ],
+          "key2": [
+            [
+              "A",
+              "herbivores",
+              "correct"
+            ],
+            [
+              "B",
+              "carnivores",
+              "correct"
+            ],
+            [
+              "C",
+              "omnivores",
+              "correct"
+            ]
+          ]
+        },
+        "scenario2": {
+          "key1": [
+            [
+              "O1",
+              "",
+              "A",
+              "cow",
+              "correct"
+            ],
+            [
+              "O2",
+              "",
+              "C",
+              "human",
+              "correct"
+            ],
+            [
+              "O3",
+              "",
+              "B",
+              "tiger",
+              "correct"
+            ],
+            [
+              "O4",
+              "",
+              "A",
+              "sheep",
+              "correct"
+            ],
+            [
+              "O5",
+              "",
+              "C",
+              "cat",
+              "correct"
+            ],
+            [
+              "O6",
+              "",
+              "A",
+              "bear",
+              "correct"
+            ]
+          ],
+          "key2": [
+            [
+              "A",
+              "herbivores",
+              "correct"
+            ],
+            [
+              "B",
+              "carnivores",
+              "correct"
+            ],
+            [
+              "C",
+              "omnivores",
+              "correct"
+            ]
+          ]
+        }
+      }
+    ]
+  }
+}
