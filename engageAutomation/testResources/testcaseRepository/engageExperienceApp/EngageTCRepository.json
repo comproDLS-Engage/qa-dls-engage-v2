@@ -597,6 +597,12 @@
           "visualTest": "-"
         },
         {
+          "id": "ENG_SHELL_TC_6",
+          "description": "Validate that clicking on cross icon closes the notification section",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
           "id": "ENG_SHELL_TC_7",
           "description": "Validate that user is able to change the app language using the language switcher on the header",
           "tags": "P1, Desktop",

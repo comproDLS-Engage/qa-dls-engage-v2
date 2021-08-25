@@ -1,13 +1,13 @@
 "use strict";
 var action = require('../../core/actionLibrary/baseActionLibrary.js');
-var instructorMyClassPage = require('../../pages/engageExperienceApp/instructorMyClass.page.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
 var res;
 
 module.exports = {
 
 	toggleSidebarBtn: selectorFile.css.ComproEngage.appShell.toggleSidebarBtn,
-	headerLogo: selectorFile.css.ComproEngage.appShell.headerLogo,
+	//Left Pane
+	custLogo: selectorFile.css.ComproEngage.appShell.custLogo,
 	dashboardBtn: selectorFile.css.ComproEngage.appShell.dashboardBtn,
 	browseBtn: selectorFile.css.ComproEngage.appShell.browseBtn,
 	classesBtn: selectorFile.css.ComproEngage.appShell.classesBtn,
@@ -17,6 +17,7 @@ module.exports = {
 	poweredbyTxt: selectorFile.css.ComproEngage.appShell.poweredbyTxt,
 	comproLogo: selectorFile.css.ComproEngage.appShell.comproLogo,
 	versionTxt: selectorFile.css.ComproEngage.appShell.versionTxt,
+	//Header
 	notificationBtn: selectorFile.css.ComproEngage.appShell.notificationBtn,
 	notificationCloseBtn: selectorFile.css.ComproEngage.appShell.notificationCloseBtn,
 	notificationTxt: selectorFile.css.ComproEngage.appShell.notificationTxt,
@@ -28,26 +29,36 @@ module.exports = {
 	userProfileBtn: selectorFile.css.ComproEngage.appShell.userProfileBtn,
 	userName: selectorFile.css.ComproEngage.appShell.userName,
 	emailID: selectorFile.css.ComproEngage.appShell.emailID,
-	//userProfileOptionBtns: selectorFile.css.ComproEngage.appShell.userProfileOptionBtns, //not used for now since each selector has been added individually - swati
 	userProfileHelpBtn: selectorFile.css.ComproEngage.appShell.userProfileHelpBtn,
 	userProfileSettingsBtn: selectorFile.css.ComproEngage.appShell.userProfileSettingsBtn,
 	userProfileLogoutBtn: selectorFile.css.ComproEngage.appShell.userProfileLogoutBtn,
 	classPlusIcon: selectorFile.css.ComproEngage.appShell.classPlusIcon,
 	breadcrumbbackbtn: selectorFile.css.ComproEngage.appShell.breadcrumbbackbtn,
 	breadcrumbproductTitle: selectorFile.css.ComproEngage.appShell.breadcrumbproductTitle,
+	indexBtn: selectorFile.css.ComproEngage.appShell.indexBtn,
+	chapterTitle: selectorFile.css.ComproEngage.appShell.chapterTitle,
+	indexCloseBtn: selectorFile.css.ComproEngage.appShell.indexCloseBtn,
+	indexTOCPanel: selectorFile.css.ComproEngage.appShell.indexTOCPanel,
+	inviteBtnTxt: selectorFile.css.ComproEngage.appShell.inviteBtnTxt,
+	inviteStudentText: selectorFile.css.ComproEngage.appShell.inviteStudentText,
+	addToPlaylistBtn: selectorFile.css.ComproEngage.appShell.addToPlaylistBtn,
+	newPlaylistOption: selectorFile.css.ComproEngage.appShell.newPlaylistOption,
+	tabList: selectorFile.css.ComproEngage.appShell.tabList,
 
 	isInitialized: function () {
 		logger.logInto(stackTrace.get());
 		action.waitForDocumentLoad();
-		let pageStatus = action.waitForDisplayed(this.headerLogo);
-		res = this.getAppShellData();
+		let pageStatus = action.waitForDisplayed(this.custLogo);
+		res = {};
+		res.leftPane = this.getAppShellLeftPaneData();
+		res.header = this.getAppShellHeaderData();
 		res.pageStatus = pageStatus;
 		return res;
 	},
 
-	getAppShellData: function () {
+	getAppShellLeftPaneData: function () {
 		var obj = {
-			headerLogo_exists: (action.getElementCount(this.headerLogo) > 0) ? action.waitForDisplayed(this.headerLogo) : false,
+			custLogo_exists: (action.getElementCount(this.custLogo) > 0) ? action.waitForDisplayed(this.custLogo) : false, 
 			dashboardBtn: (action.getElementCount(this.dashboardBtn) > 0) ? action.getText(this.dashboardBtn) : null,
 			browseBtn: (action.getElementCount(this.browseBtn) > 0) ? action.getText(this.browseBtn) : null,
 			classesBtn: (action.getElementCount(this.classesBtn) > 0) ? action.getText(this.classesBtn) : null,
@@ -56,13 +67,19 @@ module.exports = {
 			sidebarImg_exists: (action.getElementCount(this.sidebarImg) > 0) ? action.waitForDisplayed(this.sidebarImg) : false,
 			poweredbyTxt: (action.getElementCount(this.poweredbyTxt) > 0) ? action.getText(this.poweredbyTxt) : null,
 			comproLogo_exists: (action.getElementCount(this.comproLogo) > 0) ? action.waitForDisplayed(this.comproLogo) : false,
-			versionTxt: (action.getElementCount(this.versionTxt) > 0) ? action.getText(this.versionTxt) : null,
+			versionTxt: (action.getElementCount(this.versionTxt) > 0) ? action.getText(this.versionTxt) : null
+		};
+		return obj;
+	},
+
+	getAppShellHeaderData: function () {
+		var obj = {
 			notificationBtn_exists: (action.getElementCount(this.notificationBtn) > 0) ? action.waitForDisplayed(this.notificationBtn) : false,
-			notificationTxt: (action.getElementCount(this.notificationTxt) > 0) ? action.getText(this.notificationTxt) : null,
-			notificationCloseBtn: (action.getElementCount(this.notificationCloseBtn) > 0) ? action.getText(this.notificationCloseBtn) : null,
-			noNotificationImg: (action.getElementCount(this.noNotificationImg) > 0) ? action.getText(this.noNotificationImg) : null,
 			selectedLanguage: (action.getElementCount(this.selectedLanguage) > 0) ? action.getText(this.selectedLanguage) : null,
 			userProfileBtn_exists: (action.getElementCount(this.userProfileBtn) > 0) ? action.waitForDisplayed(this.userProfileBtn) : false,
+			indexBtn: (action.getElementCount(this.indexBtn) > 0) ? action.getText(this.indexBtn) : null,
+			inviteBtnTxt: (action.getElementCount(this.inviteBtnTxt) > 0) ? action.getText(this.inviteBtnTxt) : null,
+			addToPlaylistBtn: (action.getElementCount(this.addToPlaylistBtn) > 0) ? action.getText(this.addToPlaylistBtn) : null
 		};
 		return obj;
 	},
@@ -99,13 +116,23 @@ module.exports = {
 		logger.logInto(stackTrace.get());
 		res = action.click(this.classesBtn);
 		if (true == res) {
-			res = res + " -- Create Class button is clicked";
-			res = instructorMyClassPage.isInitialized()
+			logger.logInto(stackTrace.get(),res);
 		}
 		else {
 			res = res + " -- Error in clicking Class Button";
 			logger.logInto(stackTrace.get(), res, 'error');
 		}
+		console.log("click classes res",res)
+		return res;
+	},
+
+	click_PlusIconClassesTab: function () {
+		res = action.click(this.classPlusIcon)
+		if (res == true) {
+			logger.logInto(stackTrace.get(), res + "Class plus button is clicked");
+		}
+		else
+			logger.logInto(stackTrace.get(), res + ":Add A New Book Button is NOT Clicked", "error");
 		return res;
 	},
 
@@ -118,7 +145,6 @@ module.exports = {
 				notificationTxt: (action.getElementCount(this.notificationTxt) > 0) ? action.getText(this.notificationTxt) : null,
 				notificationCloseBtn_exists: (action.getElementCount(this.notificationCloseBtn) > 0) ? action.waitForDisplayed(this.notificationCloseBtn) : false,
 				noNotificationImg_exists: (action.getElementCount(this.noNotificationImg) > 0) ? action.waitForDisplayed(this.noNotificationImg) : null,
-				//for now image has been added, will create separate page object for notification feature once it is activated
 			};
 		}
 		else {
@@ -214,15 +240,6 @@ module.exports = {
 			userProfileSettingsBtn: (action.getElementCount(this.userProfileSettingsBtn) > 0) ? action.getText(this.userProfileSettingsBtn) : null,
 			userProfileLogoutBtn: (action.getElementCount(this.userProfileLogoutBtn) > 0) ? action.getText(this.userProfileLogoutBtn) : null,
 		}
-		//since we have already created selectors for each option, hence following logic is not required - akhil
-		//this commented piece of code can be deleted now after review - swati
-		/*let userProfileOptionData = [], i
-		let userProfileOptionCount = action.getElementCount(this.userProfileOptionBtns)
-		for (i = 0; i < userProfileOptionCount; i++) {
-			let userProfileOptionSelector = this.userProfileOptionBtns + i + "]";
-			userProfileOptionData[i] = action.getText(userProfileOptionSelector);
-		}
-		obj.options = userProfileOptionData;*/
 		return obj;
 	},
 
@@ -239,34 +256,109 @@ module.exports = {
 		}
 		return res;
 	},
-	click_PlusIconClassesTab: function () {
-		res = action.click(this.classPlusIcon)
+
+	clickBackButton: function () {
+		res = action.click(this.breadcrumbbackbtn)
 		if (res == true) {
-			logger.logInto(stackTrace.get(), res + "Class plus button is clicked");
-			var createClassPage = require('./createClass.page.js');
-			res = createClassPage.isInitialized();
+			logger.logInto(stackTrace.get(), res + "back button is clicked");
 		}
 		else
-			logger.logInto(stackTrace.get(), res + ":Add A New Book Button is NOT Clicked", "error");
+			logger.logInto(stackTrace.get(), res + ":back button is NOT Clicked", "error");
 		return res;
 	},
 
-	Click_breadcrumbbackbutton: function () {
-		res = action.click(this.breadcrumbbackbtn)
-		if (res == true) {
-			logger.logInto(stackTrace.get(), res + "back button from snakebar is clicked");
+	clickIndexButton: function () { //to be reviewed - akhil
+		logger.logInto(stackTrace.get());
+		res = action.click(this.indexBtn);
+		if (true == res) {
+			action.waitForDisplayed(this.chapterTitle);
+			res = {
+				chapterTitleTxt: (action.getElementCount(this.chapterTitle) > 0) ? action.getText(this.chapterTitle) : null,
+			};
 		}
-		else
-			logger.logInto(stackTrace.get(), res + ":back button from snakebar is NOT Clicked", "error");
+		else {
+			res = res + " -- Error in clicking index Button";
+			logger.logInto(stackTrace.get(), res, 'error');
+		}
 		return res;
 	},
-	Click_breadcrumbproductTitle: function () {
-		res = action.click(this.breadcrumbproductTitle)
-		if (res == true) {
-			logger.logInto(stackTrace.get(), res + "Product title from snakebar is clicked");
+
+	clickIndexCloseButton: function () {
+		logger.logInto(stackTrace.get());
+		res = action.click(this.indexCloseBtn);
+		if (true == res) {
+			res = action.waitForDisplayed(this.indexTOCPanel, undefined, true);
 		}
-		else
-			logger.logInto(stackTrace.get(), res + "Product title from snakebar is NOT Clicked", "error");
+		else {
+			res = res + " -- Error in clicking Index Close Button";
+			logger.logInto(stackTrace.get(), res, 'error');
+		}
 		return res;
+	},
+
+	clickInviteButton: function () { //to be reviewed - akhil
+		logger.logInto(stackTrace.get());
+		res = action.click(this.inviteBtnTxt);
+		if (true == res) {
+			res = {
+				inviteBtnTxt: (action.getElementCount(this.inviteBtnTxt) > 0) ? action.getText(this.inviteBtnTxt) : null,
+			};
+		}
+		else {
+			res = res + " -- Error in clicking Invite Button Button";
+			logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
+
+	clickAddToPlaylistButton: function () { //to be reviewed - akhil
+		//page not working currently, getting crash
+		logger.logInto(stackTrace.get());
+		res = action.click(this.addToPlaylistBtn);
+		if (true == res) {
+			action.waitForDisplayed(this.newPlaylistOption);
+			res = {
+				newPlaylistOption: (action.getElementCount(this.newPlaylistOption) > 0) ? action.getText(this.newPlaylistOption) : null
+			};
+		}
+		else {
+			res = res + " -- Error in clicking Add To Playlist Button";
+			logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
+
+	selectTab: function (name) { 
+		logger.logInto(stackTrace.get());
+		let i, list;
+		list = action.findElements(this.tabList);
+		for (i = 0; i < list.length; i++) {
+			if (action.getText(list[i]) == name) {
+				res = action.click(list[i]);
+				if (res == true) {
+					logger.logInto(stackTrace.get(), " --Component clicked");
+				} else
+					logger.logInto(stackTrace.get(), " --Component NOT clicked", "error");
+				break;
+			}
+			res = false;
+		}
+		return res;
+	},
+
+	getTabsListData: function () {
+		logger.logInto(stackTrace.get());
+		let i, list;
+		let obj = {};
+		let tabArr = [];
+		list = action.findElements(this.tabList);
+		for (i = 0; i < list.length; i++) {
+			tabArr[i] = action.getText(list[i])
+			if (action.getAttribute(this.tabList, "aria-selected") == true)
+				obj.selected = tabArr[i];
+		}
+		obj.list = tabArr;
+		logger.logInto(stackTrace.get(), JSON.stringify(obj));
+		return obj;
 	}
 };
