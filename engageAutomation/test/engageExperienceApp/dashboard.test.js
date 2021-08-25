@@ -30,9 +30,12 @@ module.exports = {
     },
 
     //Validate that clicking on 'Add Book' button, book list page is launched to select books to add
-    ENG_DASH_TC_7: function () {
+    ENG_DASH_TC_7: function (testdata) {
         sts = dashboardPage.clickAddBook();
-        assertion.assertEqual(sts,true, "Dashboard page status mismatch");
+        assertion.typeOf(sts, 'object', new Error(sts));
+        assertion.assertEqual(sts.pageStatus, true, "Add Book page status mismatch");
+        assertion.assertEqual(sts.pageTitle, testdata.pageTitle, "Add Book Page Title Mismatch");
+        
     },
 
     //Validate on clicking Book Ellipses, dropdown menu is launched

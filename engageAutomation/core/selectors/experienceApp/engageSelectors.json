@@ -45,7 +45,7 @@
          },
          "widgets":{
             "loaderIcon":"[data-tid=image-loader]",
-            "snackbarInfo_txt":"[data-tid=text-info], [data-tid=text-error], [data-tid=text-success]",
+            "snackbarInfo_txt":"[data-tid=text-success],[data-tid=text-info],[data-tid=text-error]",
             "snackbarClose_btn":"[data-tid=button-close]"
          },
          "appShell":{
@@ -207,19 +207,22 @@
             "bookTitle":"[data-tid*='text-bookTitle-",
             "bookSubTitle":"[data-tid*=text-bookSubtitle-",
             "view_Btn":"[data-tid*=button-view-",
-            "searchBox":"[data-tid='input-autocomplete-searchtextbox'] input",
+            "searchBox":"input[type=text]",
+            "searchBoxText":"input[type=text]",
             "searchIcon":"[data-tid='icon-autocomplete-search']",
             "searchPopUp":"#serach-input-popup",
-            "searchList":"[data-tid*=list-item]",
-            "searchListIcon":"[data-tid*=list-item] svg",
+            "searchList":"[id*=serach-input-option-",
+            "searchListIcon":"[id*=serach-input-option-] svg",
             "showMoreResults":"[data-tid=list-item-show-more-result]",
             "clearSearchText":"[title=Clear],[data-tid=icon-close-serach]",
-            "searchCount":"[data-tid=label-result]",
-            "search_NoResult_title":"[data-tid=text-title-no-search-result-found]",
-            "search_NoResult_subTitle":"[data-tid=text-subtitle-no-search-result-found]",
+            "searchCount":"[data-tid*=label-",
+            "noItemFound_Dropdown":"[data-tid=list-item-no-result]",
+            "search_NoResult_title":"[data-tid=text-noResultFound]",
+            "search_NoResult_subTitle":"[data-tid=text-noResultFoundBilinear]",
             "searchPill":"[data-tid=chip-search]",
+            "closeSearchPill":"[data-tid=chip-search] svg",
             "dashboard":{
-               "bookAddedIcon":"[data-tid*=icon-added",
+               "bookAddedIcon":"[data-tid*=icon-added-",
                "addBook_Btn":"[data-tid*=button-addBook-"
             },
             "browse":{
@@ -227,11 +230,12 @@
                "viewClass_btn":"[data-tid*=button-viewClass-",
                "createClass_btn":"[data-tid*=button-createClass-",
                "addToMyBooks_btn":"[data-tid*=button-add-",
+               "removeFromMyBooks_btn":"[data-tid*=button-remove-",
                "openFlipbook_btn":"[data-tid*=button-openFlipbook-",
                "flipBookCount":"[data-tid*=button-flipbook",
                "previousPageArrow":"[aria-label='Go to previous page']",
                "nextPageArrow":"[aria-label='Go to next page']",
-               "goToPage":"[aria-label*='Go to page ",
+               "goToPage":"[aria-label*='page ",
                "currentPage":"[aria-label^='page"
             },
             "classWorkflow":{

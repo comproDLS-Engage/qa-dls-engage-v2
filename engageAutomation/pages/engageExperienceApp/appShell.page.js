@@ -245,6 +245,7 @@ module.exports = {
     },
 
     Click_breadcrumbbackbutton: function() {
+        action.scrollIntoView(this.breadcrumbbackbtn)
         res = action.click(this.breadcrumbbackbtn)
         if (res == true) {
             logger.logInto(stackTrace.get(), res + "back button from snakebar is clicked");
@@ -281,12 +282,16 @@ module.exports = {
 
     getTabsListData: function() {
         let i, list;
-        let obj = {};
+        let obj = {
+            list: null,
+            selected : null
+        };
         let componentArr = [];
+        
         list = action.findElements(this.component);
         for (i = 0; i < list.length; i++) {
             componentArr[i] = action.getText(list[i])
-            if(action.getAttribute(this.component, "aria-selected") == true)
+            if(action.getAttribute(list[i], "aria-selected") == "true")
             	obj.selected = componentArr[i];
         }
         obj.list = componentArr;

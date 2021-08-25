@@ -1,7 +1,7 @@
 {
     "engage": {
         "appContent": {
-            "language": "EN - English (UK)",
+           "language": "EN - English (UK)",
             "landing": {
                 "headingText": "One space for all your learning.",
                 "subheadingText": "Learn from anywhere, anytime. Instant access to all courses and activities.",
@@ -245,6 +245,41 @@
                     "skipForNow": "Skip for now",
                     "invalidKeyMessage": "Invalid school key",
                     "back_btn": "Back (select a different role)"
+                }
+            },
+            "addBookPage":{
+                "dashboard":{
+                    "pageTitle":"Add your books",
+                    "pageDescription":"Select your books to add to your My Books list. Once added, you'll be able to view all book materials directly from the dashboard.",
+                    "view_btn":"View"
+                },
+                "browse":{
+                    "pageTitle":"Browse",
+                    "pageDescription":"Find all our digital books and their associated resources.",
+                    "tab_0":"Books",
+                    "searchPlaceholder":"Search Books...",
+                    "view_btn":"View",
+                    "moreOptions":{
+                        "viewClass_btn":"View Classes",
+                        "createClass_btn":"Create New Class",
+                        "addToMyBooks_btn":"Add to My Books",
+                        "openFlipbook_btn":"Open Flipbook",
+                        "removeFromMyBooks_btn":"Remove from My Books"
+                    },
+                    "snackBarMessages":{
+                        "addToMyBooks":"1 book has been added to My Books.",
+                        "removeFromMyBooks":"1 book has been removed from My Books."
+                    }
+                },
+                "search":{
+                    "searchPlaceholder":"Search...",
+                    "results":"results:",
+                    "result":"result:",
+                    "noItemFoundTitle":"No Results\nThere aren't any resources available that match those terms.",
+                    "noResultFound":{
+                        "title":"No result found",
+                        "subTitle":"We didn't find anything matching your search or filters. Try your search again, or change your filters to update the results here."
+                    }
                 }
             }
         }

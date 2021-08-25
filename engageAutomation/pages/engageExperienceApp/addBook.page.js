@@ -14,24 +14,34 @@ module.exports = {
     bookSubTitle: selectorFile.css.ComproEngage.addBookPage.bookSubTitle,
     view_Btn: selectorFile.css.ComproEngage.addBookPage.view_Btn,
     searchBox: selectorFile.css.ComproEngage.addBookPage.searchBox,
+    searchBoxText: selectorFile.css.ComproEngage.addBookPage.searchBoxText,
     searchIcon: selectorFile.css.ComproEngage.addBookPage.searchIcon,
     searchList: selectorFile.css.ComproEngage.addBookPage.searchList,
     searchListIcon: selectorFile.css.ComproEngage.addBookPage.searchListIcon,
     showMoreResults: selectorFile.css.ComproEngage.addBookPage.showMoreResults,
     clearSearchText: selectorFile.css.ComproEngage.addBookPage.clearSearchText,
     searchCount: selectorFile.css.ComproEngage.addBookPage.searchCount,
+    noItemFound_Dropdown: selectorFile.css.ComproEngage.addBookPage.noItemFound_Dropdown,
     search_NoResult_title: selectorFile.css.ComproEngage.addBookPage.search_NoResult_title,
     search_NoResult_subTitle: selectorFile.css.ComproEngage.addBookPage.search_NoResult_subTitle,
     searchPill: selectorFile.css.ComproEngage.addBookPage.searchPill,
+    closeSearchPill: selectorFile.css.ComproEngage.addBookPage.closeSearchPill,
     breadcrumbFlipbook: selectorFile.css.ComproEngage.bookView.breadcrumbFlipbook,
+    removeBook_Dialog: selectorFile.css.ComproEngage.bookView.removeBook_Dialog,
+    removeBookDialogCancel: selectorFile.css.ComproEngage.bookView.removeBookDialogCancel,
+    removeBookDialogRemove: selectorFile.css.ComproEngage.bookView.removeBookDialogRemove,
+    removeBook_subtitle: selectorFile.css.ComproEngage.bookView.removeBook_subtitle,
+    removeBook_title: selectorFile.css.ComproEngage.bookView.removeBook_title,
+    breadcrumbbackbtn: selectorFile.css.ComproEngage.appShell.breadcrumbbackbtn,
     //dashboard
     addBook_Btn: selectorFile.css.ComproEngage.addBookPage.dashboard.addBook_Btn,
     bookAddedIcon: selectorFile.css.ComproEngage.addBookPage.dashboard.bookAddedIcon,
     //browse
     moreOptions: selectorFile.css.ComproEngage.addBookPage.browse.moreOptions,
     viewClass_btn: selectorFile.css.ComproEngage.addBookPage.browse.viewClass_btn,
-    createClass_btn: selectorFile.css.ComproEngage.addBookPage.browse.createClass_btn, 
+    createClass_btn: selectorFile.css.ComproEngage.addBookPage.browse.createClass_btn,
     addToMyBooks_btn: selectorFile.css.ComproEngage.addBookPage.browse.addToMyBooks_btn,
+    removeFromMyBooks_btn: selectorFile.css.ComproEngage.addBookPage.browse.removeFromMyBooks_btn,
     openFlipbook_btn: selectorFile.css.ComproEngage.addBookPage.browse.openFlipbook_btn,
     flipBookCount: selectorFile.css.ComproEngage.addBookPage.browse.flipBookCount,
     previousPageArrow: selectorFile.css.ComproEngage.addBookPage.browse.previousPageArrow,
@@ -57,11 +67,10 @@ module.exports = {
         let pageStatus = action.waitForDisplayed(this.pageTitle)
         res = this.getAddBookPageData();
         res.pageStatus = pageStatus;
-        //console.log(JSON.stringify(res))
         return res;
     },
 
-    getAddBookPageData: function() { 
+    getAddBookPageData: function() {
         logger.logInto(stackTrace.get());
         obj = {
             pageStatus: "",
@@ -69,6 +78,7 @@ module.exports = {
             pageSubTitle: action.getElementCount(this.pageSubTitle) > 0 ? action.getText(this.pageSubTitle) : null,
             booksList: this.getBooksList(),
             tabsList: appShell.getTabsListData(),
+            bookInfo: null,
             //classes
             addtoClassbtn: action.getElementCount(this.addtoClassbtn) > 0 ? action.getText(this.addtoClassbtn) : null,
             cancelAndGoBackbtn: action.getElementCount(this.cancelAndGoBackbtn) > 0 ? action.getText(this.cancelAndGoBackbtn) : null,
@@ -83,24 +93,33 @@ module.exports = {
             //search
             searchData: this.getSearchData()
         }
+        if (obj.booksList.length > 0) {
+            var bookInfo = this.getBookInfo(obj.booksList[0].bookTitle);
+            obj.bookInfo = bookInfo;
+        }
+
+
+        //console.log(obj)
         return obj;
     },
 
 
     getBooksList: function() {
         let bookCount = action.findElements(this.bookTitle);
-        obj = {
-            booksArray: []
-        }
+        var i;
+        var booksArray = [];
+
         if (bookCount.length > 0) {
             let i;
             for (i = 0; i < bookCount.length; i++) {
-                obj.booksArray[i] = {
+                var obj = {
+
                     bookImgIcon: action.getElementCount(this.bookImgIcon + i + "]") > 0 ? action.waitForExist(this.bookImgIcon + i + "]") : null,
                     bookTitle: action.getElementCount(this.bookTitle + i + "']") > 0 ? action.getText(this.bookTitle + i + "']") : null,
                     bookSubTitle: action.getElementCount(this.bookSubTitle + i + "]") > 0 ? action.getText(this.bookSubTitle + i + "]") : null
 
                 }
+                booksArray[i] = obj;
             }
         } else {
             obj = {
@@ -108,15 +127,17 @@ module.exports = {
                 noBookTitle: action.getElementCount(this.noBookTitle) > 0 ? action.getText(this.noBookTitle) : null,
                 noBookSubTitle: action.getElementCount(this.noBookSubTitle) > 0 ? action.getText(this.noBookSubTitle) : null,
             }
+            booksArray[i] = obj;
         }
-        return obj;
+        return booksArray;
     },
 
-    getBookInfo: function(bookTitle) {
+    getBookInfo: function(bookName) {
         var obj = null;
+        var i;
         let bookCount = action.findElements(this.bookTitle);
         for (i = 0; i < bookCount.length; i++) {
-            if (action.getText(bookCount[i]) == bookTitle) {
+            if (action.getText(bookCount[i]) == bookName) {
                 obj = {
                     view_Btn: action.getElementCount(this.view_Btn + i) > 0 ? action.getText(this.view_Btn + i) : null,
                     //classWorkflow
@@ -124,20 +145,20 @@ module.exports = {
                     addBookbtnIcon: action.getElementCount(this.addBookbtn + i + "] svg") > 0 ? action.waitForExist(this.addBookbtn + i + "] svg") : null,
                     //dashboard
                     bookAddedIcon: action.getElementCount(this.bookAddedIcon + i) > 0 ? action.waitForExist(this.bookAddedIcon + i) : null,
-                    addBook_Btn: action.getElementCount(this.addBook_Btn + i) > 0 ? action.getText(this.addBook_Btn + i) : null,
+                    addBook_Btn: action.getElementCount(this.addBook_Btn + i) > 0 ? action.waitForExist(this.addBook_Btn + i) : null,
                     //browse
                     moreOptions: action.getElementCount(this.moreOptions + i) > 0 ? action.waitForExist(this.moreOptions + i) : null
                 }
-                logger.logInto(stackTrace.get(),JSON.stringify(obj));
+
+                logger.logInto(stackTrace.get(), JSON.stringify(obj));
                 break;
             }
-            if(obj == null)
-            {
-                logger.logInto(stackTrace.get(),"No Book found for title:-" == bookTitle);
+            if (obj == null) {
+                logger.logInto(stackTrace.get(), "No Book found for title:-" + bookName);
             }
         }
         return obj;
-    }
+    },
 
     /**************class workflow************************/
     // click_AllBooks_Tab: function() {
@@ -186,8 +207,8 @@ module.exports = {
         res = action.click(this.cancelAndGoBackbtn);
         if (res == true) {
             logger.logInto(stackTrace.get(), "-- cancelBtn is clicked");
-            var creatClassPage = require('./createClass.page.js');
-            res = creatClassPage.isInitialized();
+            // var creatClassPage = require('./createClass.page.js'); // cancel and go back can redirect to browse as well.
+            // res = creatClassPage.isInitialized();
         } else {
             res = res + " -- cancelBtn is NOT clicked";
             logger.logInto(stackTrace.get(), res, 'error');
@@ -217,13 +238,14 @@ module.exports = {
         logger.logInto(stackTrace.get());
         var index = 0;
         var arr = [];
+        var i;
         action.waitForDisplayed("circle[class*='MuiCircularProgress-circle']", undefined, true)
         res = action.findElements(this.bookTitle);
         if (res.length == 0) {
             res = res + " -- No Book available";
             logger.logInto(stackTrace.get(), res, 'error');
         } else {
-            for (var i = 0; i < res.length; i++) {
+            for (i = 0; i < res.length; i++) {
                 var findBookName = action.getText(this.bookTitle + i + "']");
                 if (bookName == findBookName) {
                     arr[index] = i
@@ -276,8 +298,9 @@ module.exports = {
 
     clickPlusIconOfBook: function(bookName) {
         logger.logInto(stackTrace.get());
+        var i;
         ret = dashboardPage.getDashboardPageData();
-        for (var i = 0; i < ret.bookList.length; i++) {
+        for (i = 0; i < ret.bookList.length; i++) {
             if (ret.bookList[i].bookTitle == bookName) {
                 res = action.click(this.addBook_Btn + i + "]");
                 if (res == true) {
@@ -295,6 +318,7 @@ module.exports = {
     /**************dashboard************************/
     clickOnBook: function(bookTitle) {
         let list;
+        var i;
         list = action.findElements(this.bookTitle);
         for (i = 0; i < list.length; i++) {
             if (action.getText(list[i]) == bookTitle) {
@@ -314,6 +338,7 @@ module.exports = {
 
     clickViewButton: function(bookTitle) {
         let list;
+        var i;
         list = action.findElements(this.bookTitle);
         for (i = 0; i < list.length; i++) {
             if (action.getText(list[i]) == bookTitle) {
@@ -332,12 +357,13 @@ module.exports = {
 
     clickPlusbutton: function(bookTitle) {
         let list;
+        var i;
         list = action.findElements(this.bookTitle);
         for (i = 0; i < list.length; i++) {
             if (action.getText(list[i]) == bookTitle) {
                 res = action.click(this.addBook_Btn + i);
                 if (res == true) {
-                    res = this.getBookInfo(bookTitle); 
+                    res = this.getBookInfo(bookTitle);
                     logger.logInto(stackTrace.get(), " --Plus Button clicked");
                 } else
                     logger.logInto(stackTrace.get(), " --Plus Button NOT clicked", "error");
@@ -352,6 +378,7 @@ module.exports = {
 
     clickMoreOptions: function(bookTitle) {
         let list;
+        var i;
         list = action.findElements(this.bookTitle);
         for (i = 0; i < list.length; i++) {
             if (action.getText(list[i]) == bookTitle) {
@@ -374,6 +401,7 @@ module.exports = {
             createClass_btn: action.getElementCount(this.createClass_btn) > 0 ? action.getText(this.createClass_btn) : null,
             addToMyBooks_btn: action.getElementCount(this.addToMyBooks_btn) > 0 ? action.getText(this.addToMyBooks_btn) : null,
             openFlipbook_btn: action.getElementCount(this.openFlipbook_btn) > 0 ? action.getText(this.openFlipbook_btn) : null,
+            removeFromMyBooks_btn: action.getElementCount(this.removeFromMyBooks_btn) > 0 ? action.getText(this.removeFromMyBooks_btn) : null,
         }
         return obj;
     },
@@ -403,13 +431,57 @@ module.exports = {
     clickAddToMyBooks: function() {
         res = action.click(this.addToMyBooks_btn);
         if (res == true) {
+            var snackBarTest = require('../../test/engageExperienceApp/common.test.js');
+            res = snackBarTest.get_Snackbar_Message_Text()
+            //console.log(res)
             logger.logInto(stackTrace.get(), res + " Add To My Books Button Clicked");
-            res = require('../test/engageExperienceApp/common.test.js').get_Snackbar_Message_Text()
         } else
             logger.logInto(stackTrace.get(), res + " Add To My Books Button Not Clicked", "error");
 
         return res;
 
+    },
+
+    clickRemoveFromMyBooks: function() {
+        res = action.click(this.removeFromMyBooks_btn);
+        if (res == true) {
+            logger.logInto(stackTrace.get(), res + " Add To My Books Button Clicked");
+            action.waitForDisplayed(this.removeBook_Dialog)
+            res = require('./bookDetail.page.js').getRemoveBookPopUpData()
+            //console.log(res);
+
+        } else
+            logger.logInto(stackTrace.get(), res + " Add To My Books Button Not Clicked", "error");
+
+        return res;
+
+    },
+
+    clickCancel_RemoveBookDialog: function() {
+        logger.logInto(stackTrace.get())
+        action.waitForDisplayed(this.removeBook_Dialog)
+        res = action.click(this.removeBookDialogCancel);
+        if (res == true) {
+            res = action.waitForDisplayed(this.removeBook_Dialog, 30000, true)
+            logger.logInto(stackTrace.get(), " --Cancel Button clicked");
+        } else
+            logger.logInto(stackTrace.get(), " --Cancel Button NOT clicked", "error");
+        return res;
+    },
+
+    clickRemove_RemoveBookDialog: function() {
+        logger.logInto(stackTrace.get())
+        action.waitForDisplayed(this.removeBook_Dialog)
+        res = action.click(this.removeBookDialogRemove);
+        if (res == true) {
+            res = action.waitForDisplayed(this.removeBook_Dialog, 30000, true)
+            if (res == true) {
+                res = res = require('../../test/engageExperienceApp/common.test.js').get_Snackbar_Message_Text()
+                logger.logInto(stackTrace.get(), " --Remove Book Button clicked");
+            }
+        } else
+            logger.logInto(stackTrace.get(), " --Remove Book Button NOT clicked", "error");
+        return res;
     },
 
     clickOpenFlipbook: function() {
@@ -420,7 +492,7 @@ module.exports = {
             if (flipBooksList.length > 0)
                 res = this.getListOfFlipbooks();
             else {
-                res = action.waitForDisplayed(this.breadcrumbFlipbook)
+                res = action.waitForDisplayed(this.breadcrumbbackbtn)
                 //res = require('./flipbook.page.js').isInitialized() //dummy page object adde
             }
 
@@ -432,6 +504,7 @@ module.exports = {
 
     getListofFlipbooks: function() {
         let list;
+        var i;
         var flipBooksList = [];
         list = action.findElements(this.flipBookCount);
         for (i = 0; i < list.length; i++) {
@@ -441,6 +514,7 @@ module.exports = {
     },
 
     clickOpenFlipbookFromList: function(title) {
+        var i;
         res = this.clickOpenFlipbook();
         for (i = 0; i < res.length; i++) {
             if (res[i] == title) {
@@ -495,31 +569,43 @@ module.exports = {
     /**************Search*****************************************************************/
     enterTextInSearchBox: function(searchText) {
         logger.logInto(stackTrace.get());
-        res = action.setValue(this.searchBox, searchText)
+        res = action.click(this.searchBox)
         if (res == true) {
-            logger.logInto(stackTrace.get(), " -- searchText is entered");
-        } else {
-            res = res + " -- searchText is NOT entered";
-            logger.logInto(stackTrace.get(), res, 'error');
+            action.waitForDisplayed(this.searchBoxText)
+            res = action.setValue(this.searchBoxText, searchText)
+            if (res == true) {
+                logger.logInto(stackTrace.get(), " -- searchText is entered");
+            } else {
+                res = res + " -- searchText is NOT entered";
+                logger.logInto(stackTrace.get(), res, 'error');
+            }
         }
+
         return res;
     },
 
     getSearchList: function() {
         logger.logInto(stackTrace.get());
-        let listItem;
-        var obj;
+        let listItem, listItemIcon;
+        var obj = {}
+        var i;
         var searchList = [];
         action.waitForDisplayed(this.searchList)
         listItem = action.findElements(this.searchList);
         listItemIcon = action.findElements(this.searchListIcon);
 
-        for (i = 0; i < listItem.length; i++) {
+        if (action.getElementCount(this.noItemFound_Dropdown) > 0) {
             obj = {
-                icon: action.getElementCount(this.listItemIcon[i]) > 0 ? action.waitForExist(this.listItemIcon[i]) : null,
-                itemName: action.getElementCount(this.listItem[i]) > 0 ? action.getText(this.listItem[i]) : null
+                noItemFoundTitle: action.getElementCount(this.noItemFound_Dropdown) > 0 ? action.getText(this.noItemFound_Dropdown) : null
             }
-            searchList[i] = obj;
+            searchList[0] = obj;
+
+        } else {
+            for (i = 0; i < listItem.length; i++) {
+
+                searchList[i] = action.getText(listItem[i])
+            }
+
         }
         logger.logInto(stackTrace.get(), JSON.stringify(searchList));
         return searchList;
@@ -527,24 +613,28 @@ module.exports = {
 
     clickOnSearchSuggestion: function(suggestionText) {
         logger.logInto(stackTrace.get());
-        let listItem;
+        let listItem, listItemIcon;
+
         action.waitForDisplayed(this.searchList)
         listItem = action.findElements(this.searchList);
         listItemIcon = action.findElements(this.searchListIcon);
 
-        for (i = 0; i < listItem.length; i++) {
-            if (action.getText(this.listItem[i]) == suggestionText) {
-                res = action.click(this.listItem[i])
-                if (res == true) {
-                    logger.logInto(stackTrace.get(), res + "- suggestionText Clicked");
-                    res = require('./bookDetail.page.js').isInitialized();
-                } else
-                    logger.logInto(stackTrace.get(), res + "- suggestionText NOT Clicked", "error");
+        for (var i = 0; i < listItem.length - 1; i++) 
+        {   
+            if (action.getText(this.searchList + i).includes(suggestionText))
+            {
+                    res = action.click(this.searchList + i)
+                    if (res == true) 
+                    {
+                        res = require('./bookDetail.page.js').isInitialized();
+                        logger.logInto(stackTrace.get(), res + "- suggestionText Clicked");
+                        //console.log(res)
+                    } else
+                        logger.logInto(stackTrace.get(), res + "- suggestionText NOT Clicked", "error");
             }
+                
         }
-
         return res;
-
     },
 
     clickOnMoreSerachResult: function() {
@@ -572,7 +662,7 @@ module.exports = {
         return res;
     },
 
-    pressEnter : function(){
+    pressEnter: function() {
         logger.logInto(stackTrace.get());
         res = action.keyPress('Enter')
         if (res == true) {
@@ -587,7 +677,8 @@ module.exports = {
 
     clearSearchPill: function() {
         logger.logInto(stackTrace.get());
-        res = action.click(this.searchPill)
+        action.waitForDisplayed(this.searchPill)
+        res = action.click(this.closeSearchPill)
         if (res == true) {
             logger.logInto(stackTrace.get(), res + "- Search Pill cleared");
             res = this.getAddBookPageData()
@@ -605,7 +696,7 @@ module.exports = {
             searchBoxPlaceholder: action.getElementCount(this.searchBox) > 0 ? action.getAttribute(this.searchBox, "placeholder") : null,
             searchIcon: action.getElementCount(this.searchIcon) > 0 ? action.waitForExist(this.searchIcon) : null,
             searchCount: action.getElementCount(this.searchCount) > 0 ? action.getText(this.searchCount) : null,
-            searchPill : action.getElementCount(this.searchPill) > 0 ? action.getText(this.searchPill) : null,
+            searchPill: action.getElementCount(this.searchPill) > 0 ? action.getText(this.searchPill) : null,
             search_NoResult_title: action.getElementCount(this.search_NoResult_title) > 0 ? action.getText(this.search_NoResult_title) : null,
             search_NoResult_subTitle: action.getElementCount(this.search_NoResult_subTitle) > 0 ? action.getText(this.search_NoResult_subTitle) : null
         }

@@ -15,13 +15,13 @@ module.exports = {
 
     get_Snackbar_Message_Text: function () {
         logger.logInto(stackTrace.get());
-        let res = action.waitForDisplayed(this.snackbarInfo_txt, 60000)
+        let res = action.waitForDisplayed(this.snackbarInfo_txt)
         if (res == true) {
             res = action.getText(this.snackbarInfo_txt)
             logger.logInto(stackTrace.get(), res);
-            if (action.waitForDisplayed(this.snackbarClose_btn)) {
-                action.click(this.snackbarClose_btn)
-            }
+            // if (action.waitForDisplayed(this.snackbarClose_btn)) {
+            //     action.click(this.snackbarClose_btn)
+            // }
         } else
             logger.logInto(stackTrace.get(), res + " -- Snackbar Alert Not displayed");
         return res;
