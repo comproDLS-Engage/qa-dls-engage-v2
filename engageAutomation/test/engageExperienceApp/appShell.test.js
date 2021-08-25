@@ -41,6 +41,7 @@ module.exports = {
 	//Validate that clicking on the Classes button in left Navigation pane launches Classes page for teacher
 	ENG_SHELL_TC_4: function (testdata) {
 		sts = appShell.clickClassesButton();
+		//add asssertion for true - akhil
 		sts = instructorMyClassPage.isInitialized();
 		assertion.assertEqual(sts.pageStatus, true, "Classes page status mismatch");
 		assertion.assertEqual(sts.classHeading, testdata.classHeading, "classHeading text mismatch");
@@ -100,6 +101,7 @@ module.exports = {
 	//Validate that clicking on + button on classes in Left navigation pane, launched the join class page in student login
 	ENG_SHELL_TC_10: function () {
 		sts = appShell.click_PlusIconClassesTab();
+		//add asssertion for true - akhil
 		sts = instructorMyClassPage.isInitialized();
 		if ((typeof (sts)) === "object") {
 			assertion.assertEqual(sts.pageStatus, true, "Create Class Page not launched: " + JSON.stringify(sts))
