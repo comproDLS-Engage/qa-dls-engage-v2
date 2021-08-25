@@ -1,6 +1,5 @@
 "use strict";
 var action = require('../../core/actionLibrary/baseActionLibrary.js');
-var instructorMyClassPage = require('../../pages/engageExperienceApp/instructorMyClass.page.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
 var res;
 
@@ -49,7 +48,8 @@ module.exports = {
 	isInitialized: function () {
 		logger.logInto(stackTrace.get());
 		action.waitForDocumentLoad();
-		let pageStatus = action.waitForDisplayed(this.headerLogo);
+		let pageStatus = action.waitForDisplayed(this.custLogo);
+		res = {};
 		res.leftPane = this.getAppShellLeftPaneData();
 		res.header = this.getAppShellHeaderData();
 		res.pageStatus = pageStatus;
@@ -116,12 +116,13 @@ module.exports = {
 		logger.logInto(stackTrace.get());
 		res = action.click(this.classesBtn);
 		if (true == res) {
-			res = res + " -- Create Class button is clicked";
+			logger.logInto(stackTrace.get(),res);
 		}
 		else {
 			res = res + " -- Error in clicking Class Button";
 			logger.logInto(stackTrace.get(), res, 'error');
 		}
+		console.log("click classes res",res)
 		return res;
 	},
 
@@ -135,7 +136,7 @@ module.exports = {
 		return res;
 	},
 
-	clickNotificationButton: function () { //to be reviewed - akhil
+	clickNotificationButton: function () {
 		logger.logInto(stackTrace.get());
 		res = action.click(this.notificationBtn);
 		if (true == res) {

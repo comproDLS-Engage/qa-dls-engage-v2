@@ -50,7 +50,7 @@
             },
             "appShell": {
                 "toggleSidebarBtn": "[aria-label=toggle-sidebar]",
-                "headerLogo": "[data-tid=image-headerLogo]",
+                "custLogo": "[data-tid=image-headerLogo]",
                 "dashboardBtn": "[data-tid=button-dashboard]",
                 "browseBtn": "[data-tid=button-browse]",
                 "classesBtn": "[data-tid=button-classes]",
