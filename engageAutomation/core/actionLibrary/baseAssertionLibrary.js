@@ -49,6 +49,11 @@ var assertionList = {
         logger.logInto(stackTrace.get(), message);
         assert.fail(message);
     },
+
+    isAtMost: function (valueToCheck, valueToBeAtMost, message) {
+        logger.logInto(stackTrace.get(), message);
+        assert.isAtMost(valueToCheck, valueToBeAtMost, [message]);
+    }
 }
 
 function _evaluateAndAssert(skipAssertion) {
