@@ -292,7 +292,7 @@
                     "cancelAndGoBackbtn": "Cancel & Go Back",
                     "noBooklbl": "No Books Added",
                     "bookAddedlbl": "Books Added:",
-                    "noBookerror": "No Books Added : Atleast one book needs to be selected",
+                    "noBookerror": "No Books Added : At least one book needs to be selected",
                     "addBookbtntxt": "Add Book",
                     "addedBookbtntxt": "Added",
                     "noBookTitle": "No Books added yet",

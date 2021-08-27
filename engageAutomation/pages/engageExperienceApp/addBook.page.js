@@ -54,6 +54,7 @@ module.exports = {
     addtoClassbtn: selectorFile.css.ComproEngage.addBookPage.classWorkflow.addtoClassbtn,
     cancelAndGoBackbtn: selectorFile.css.ComproEngage.addBookPage.classWorkflow.cancelAndGoBackbtn,
     noBooklbl: selectorFile.css.ComproEngage.addBookPage.classWorkflow.noBooklbl,
+    noBooklblError: selectorFile.css.ComproEngage.addBookPage.classWorkflow.noBooklblError,
     addBookbtn: selectorFile.css.ComproEngage.addBookPage.classWorkflow.addBookbtn, // this is not required - akhil
     bookAddedlbl: selectorFile.css.ComproEngage.addBookPage.classWorkflow.bookAddedlbl,
     bookAddedtxt: selectorFile.css.ComproEngage.addBookPage.classWorkflow.bookAddedtxt,
@@ -83,6 +84,7 @@ module.exports = {
             addtoClassbtn: action.getElementCount(this.addtoClassbtn) > 0 ? action.getText(this.addtoClassbtn) : null,
             cancelAndGoBackbtn: action.getElementCount(this.cancelAndGoBackbtn) > 0 ? action.getText(this.cancelAndGoBackbtn) : null,
             noBooklbl: action.getElementCount(this.noBooklbl) > 0 ? action.getText(this.noBooklbl) : null,
+            noBooklblError: action.getElementCount(this.noBooklblError) > 0 ? action.getText(this.noBooklblError) : null,
             bookAddedlbl: action.getElementCount(this.bookAddedlbl) > 0 ? action.getText(this.bookAddedlbl) : null,
             bookAddedtxt: action.getElementCount(this.bookAddedtxt) > 0 ? action.getText(this.bookAddedtxt) : null,
             bookdeletebottomIcon: action.getElementCount(this.bookdeletebottomIcon) > 0 ? action.waitForExist(this.bookdeletebottomIcon) : null,
@@ -116,8 +118,8 @@ module.exports = {
 
                     bookImgIcon: action.getElementCount(this.bookImgIcon + i + "]") > 0 ? action.waitForExist(this.bookImgIcon + i + "]") : null,
                     bookTitle: action.getElementCount(this.bookTitle + i + "']") > 0 ? action.getText(this.bookTitle + i + "']") : null,
-                    bookSubTitle: action.getElementCount(this.bookSubTitle + i + "]") > 0 ? action.getText(this.bookSubTitle + i + "]") : null
-
+                    bookSubTitle: action.getElementCount(this.bookSubTitle + i + "]") > 0 ? action.getText(this.bookSubTitle + i + "]") : null,
+                     
                 }
                 booksArray[i] = obj;
             }
@@ -192,9 +194,10 @@ module.exports = {
         res = action.click(this.addtoClassbtn);
         if (res == true) {
             logger.logInto(stackTrace.get(), "-- addBtn is clicked");
-            var creatClassPage = require('./createClass.page.js');
+            browser.pause(2000);
+         /*   var creatClassPage = require('./createClass.page.js');
             action.waitForDisplayed(createClassPage.bookSkeleton, true, 30000)
-            res = creatClassPage.isInitialized();
+            res = creatClassPage.isInitialized();*/
         } else {
             res = res + " -- cancelBtn is NOT clicked";
             logger.logInto(stackTrace.get(), res, 'error');

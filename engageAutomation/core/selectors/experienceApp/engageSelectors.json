@@ -253,6 +253,7 @@
                "addtoClassbtn":"[data-tid=\"button-Add to Class\"]",
                "cancelAndGoBackbtn":"[data-tid=button-cancel]",
                "noBooklbl":"[data-tid=text-noBookLabel]",
+               "noBooklblError":"[data-tid=text-noBookLabelError]",
                "bookAddedlbl":"[data-tid=text-bookLabel]",
                "bookAddedtxt":"[data-tid=text-bookValue]",
                "bookdeletebtmIcon":"[data-tid=icon-close]",
