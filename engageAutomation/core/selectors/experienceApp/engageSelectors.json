@@ -45,12 +45,12 @@
          },
          "widgets":{
             "loaderIcon":"[data-tid=image-loader]",
-            "snackbarInfo_txt":"[data-tid=text-success],[data-tid=text-info],[data-tid=text-error]",
+            "snackbarInfo_txt":"[data-tid=text-info], [data-tid=text-error], [data-tid=text-success]",
             "snackbarClose_btn":"[data-tid=button-close]"
          },
          "appShell":{
             "toggleSidebarBtn":"[aria-label=toggle-sidebar]",
-            "headerLogo":"[data-tid=image-headerLogo]",
+            "custLogo":"[data-tid=image-headerLogo]",
             "dashboardBtn":"[data-tid=button-dashboard]",
             "browseBtn":"[data-tid=button-browse]",
             "classesBtn":"[data-tid=button-classes]",
@@ -80,9 +80,18 @@
             "snackbarClose_btn":"[data-tid=button-close]",
             "classPlusIcon":"[data-tid=button-classes] button",
             "breadcrumbbackbtn":"[data-tid*=breadcrumb-]",
-            "breadcrumbproductTitle":"[data-tid=breadcrumb-productTitle]"
+            "breadcrumbproductTitle":"[data-tid=breadcrumb-productTitle]",
+            "indexBtn":"p[data-tid=text-chaptertitle]",
+            "indexTOCPanel":"[id=indexToc-panel]",
+            "chapterTitle":"h4[data-tid=text-chaptertitle]",
+            "indexCloseBtn":"[data-tid=button-closeinfotoc]",
+            "inviteBtnTxt":"[data-tid=text-invite]",
+            "inviteStudentText":"/html/body/div[4]/div[3]/div/div[1]/div[1]/h6",
+            "addToPlaylistBtn":"[data-tid=button-addToPlaylist]",
+            "newPlaylistOption":"[data-tid=button-newPlaylistOption]",
+            "component":"[data-tid*=button-product-"
          },
-         "dashboardPage":{ 
+         "dashboardPage":{
             "pageTitle":"[data-tid=text-pageTitle]",
             "createPlaylist_Btn":"[data-tid=button-CreatePlaylist]",
             "addBook_Btn":"[data-tid=button-addBook]",
@@ -264,6 +273,7 @@
          },
          "teacherViewClassPage":{
             "pageTitle":"[data-tid=text-pageTitle]",
+            "pageSubTitle":"[data-tid=text-pageSubtitle]",
             "gradebookBtn":"[data-tid=button-gradebook]",
             "classOptionsBtn":"[data-tid=button-classOptions]",
             "editClassBtn":"[data-tid=button-editClass",
@@ -282,7 +292,22 @@
             "createAssignment_lbl":"[data-tid=MISSING]",
             "createAssignmentByline_lbl":"[data-tid=MISSING]",
             "noInboxActivity_lbl":"[data-tid=MISSING]",
-            "noInboxActivityByline_lbl":"[data-tid=MISSING]"
+            "noInboxActivityByline_lbl":"[data-tid=MISSING]",
+            "noStudentIcon":"[data-tid=icon-nostudent]",
+            "noStudentTitle":"[data-tid=text-noStudentEnrolled]",
+            "noStudentSubTitle":"[data-tid=text-noStudentEnrolledBilinear]",
+            "nameHeading":"[data-tid=value-text-heading-name]",
+            "statusHeading":"[data-tid=value-text-heading-status]",
+            "studentName":"[data-tid*=text-name-",
+            "studentStatus":"[data-tid=text-status-",
+            "studentMoreOption":"[data-tid=button-contextMenu-",
+            "studentAvgScorelbl":"[data-tid=value-text-heading-avgScore]",
+            "studentCompletionScorelbl":"[data-tid=value-text-heading-completion]",
+            "studentAvgScore":"[data-tid=text-avgScore-",
+            "studentCompletionScore":"[data-tid=text-progress-",
+            "viewProgressbtn":"[data-tid=button-viewProgress-",
+            "viewMessagebtn":"[data-tid=button-message-",
+            "studentList":"[data-tid*=list-"
          },
          "itemPlayer":{
             "correctIcon":"[data-tid=icon-correct]",
@@ -293,7 +318,8 @@
             "videoMedia":"[data-tid=container-video]",
             "imageMedia":"[data-tid=container-image]",
             "audioMedia":"[data-tid=container-audio]",
-            "activeQues":"div[class*=item-player-container] > div[style='height: 100%; display: block;'], div[class*=item-player-container] > div[style='height: 100%;']"
+            "activeQues":"div[class*=item-player-container] > div[style='height: 100%; display: block;'], div[class*=item-player-container] > div[style='height: 100%;']",
+            "imageScelaton":"img[src*=\"data:image\"]"
          },
          "testPlayer":{
             "checkMyWork_btn":"[class=buttons-container] [class=defaultBtn-check-mywork-icon] , [data-tid=button-checkAnswers],[data-tid=button-checkanswers], [data-tid=button-check]",

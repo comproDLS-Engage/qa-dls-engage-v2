@@ -15,6 +15,7 @@ module.exports = {
 	imageMedia: selectorFile.css.ComproEngage.itemPlayer.imageMedia,
 	audioMedia: selectorFile.css.ComproEngage.itemPlayer.audioMedia,
 	activeQues: selectorFile.css.ComproEngage.itemPlayer.activeQues,
+	imageScelaton:selectorFile.css.ComproEngage.itemPlayer.imageScelaton,
 
 	isInitialized: function () {
 		logger.logInto(stackTrace.get());
@@ -73,6 +74,7 @@ module.exports = {
 		else
 			question.isSubmitted = false;
 
+		action.waitForDisplayed(this.imageScelaton, true, 10000)
 		if (action.getElementCount("div[index='" + qIndex + "'] " + this.videoMedia) == 1)
 			question.mediaType = "video";
 		else if (action.getElementCount("div[index='" + qIndex + "'] " + this.imageMedia) == 1)

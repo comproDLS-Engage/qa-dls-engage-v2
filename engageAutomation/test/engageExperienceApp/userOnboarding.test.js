@@ -23,7 +23,7 @@ module.exports = {
         assertion.assertEqual(sts.userName.trim(), testdata[0].name, "Username Mismatch");
         assertion.assertEqual((sts.welcome_msg).replace("\n", ""), testdata[1].welcome_msg, "Welcome Screen Message Mismatch");
         assertion.assertEqual(sts.continuebtn, testdata[1].continuebtn, "Welcome Screen Continue button text Mismatch")
-        assertion.assertEqual(sts.continuebtnIsEnabled, false, "Welcome Screen Continue button text Not Disabled")
+        assertion.assertEqual(sts.continuebtnIsEnabled, true, "Welcome Screen Continue button text Not Enabled")
         assertion.assertEqual(sts.rolePage_heading, testdata[1].rolePage_heading, "Welcome Screen 'Select Your Role' text Mismatch")
         assertion.assertEqual(sts.studentBtn, testdata[1].studentBtn, "Welcome Screen 'studentBtn' text Mismatch")
         assertion.assertEqual(sts.teacherBtn, testdata[1].teacherBtn, "Welcome Screen 'teacherBtn' text Mismatch")
@@ -43,7 +43,7 @@ module.exports = {
         assertion.assertEqual(sts.heading2, testdata.heading2, "Student Options Screen 'Self Study' text Mismatch");
         assertion.assertEqual(sts.option4, testdata.option4, "Student Options Screen 'Self Learning' text Mismatch");
         assertion.assertEqual(sts.continuebtn, testdata.continuebtn, "Student Options Screen 'continuebtn' text Mismatch");
-        assertion.assertEqual(sts.continuebtnIsEnabled, false, "Student Options Screen 'continuebtn' not Disabled");
+        assertion.assertEqual(sts.continuebtnIsEnabled, true, "Student Options Screen 'continuebtn' not Enabled");
         assertion.assertEqual(sts.back_button, testdata.back_button, "Student Options Screen 'back Button' text Disabled");
         assertion.assertEqual(sts.comproDLSFooter, testdata.comproDLSFooter, "Student Options Screen 'comproDLSFooter' text Mismatch")
     },
@@ -197,7 +197,7 @@ module.exports = {
         assertion.assertEqual(sts.heading2, testdata.heading2, "Teacher Options Screen Heading2 Mismatch")
         assertion.assertEqual(sts.option3, testdata.option3, "Teacher Options Option3 Mismatch")
         assertion.assertEqual(sts.continuebtn, testdata.continuebtn, "Teacher Options Screen Continue Button Mismatch");
-        assertion.assertEqual(sts.continuebtnIsEnabled, false, "Teacher Options Screen Continue Button Not Disabled");
+        assertion.assertEqual(sts.continuebtnIsEnabled, true, "Teacher Options Screen Continue Button Not Enabled");
         assertion.assertEqual(sts.back_button, testdata.back_button, "Teacher Options Screen 'back Button' text Disabled");
         assertion.assertEqual(sts.comproDLSFooter, testdata.comproDLSFooter, "Teacher Options Screen 'comproDLSFooter' text Mismatch")
     },
@@ -309,7 +309,7 @@ module.exports = {
         assertion.assertEqual(sts.heading2, testdata.heading2, "Student Options Screen 'Self Study' text Mismatch");
         assertion.assertEqual(sts.option4, testdata.option4, "Student Options Screen 'Self Learning' text Mismatch");
         assertion.assertEqual(sts.continuebtn, testdata.continuebtn, "Student Options Screen 'continuebtn' text Mismatch");
-        assertion.assertEqual(sts.continuebtnIsEnabled, false, "Student Options Screen 'continuebtn' not Disabled");
+        assertion.assertEqual(sts.continuebtnIsEnabled, true, "Student Options Screen 'continuebtn' not Enabled");
         assertion.assertEqual(sts.back_button, testdata.back_button, "Student Options Screen 'back Button' text Disabled");
         assertion.assertEqual(sts.comproDLSFooter, testdata.comproDLSFooter, "Student Options Screen 'comproDLSFooter' text Mismatch")
     },

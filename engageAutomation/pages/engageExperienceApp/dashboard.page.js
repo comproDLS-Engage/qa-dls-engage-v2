@@ -1,6 +1,7 @@
 "use strict";
 const { click } = require('../../core/actionLibrary/baseActionLibrary.js');
 var action = require('../../core/actionLibrary/baseActionLibrary.js');
+const { browseBtn } = require('./appShell.page.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
 var res, ret;
 
@@ -10,7 +11,6 @@ module.exports = {
     pageTitle: selectorFile.css.ComproEngage.dashboardPage.pageTitle,
     createPlaylist_Btn: selectorFile.css.ComproEngage.dashboardPage.createPlaylist_Btn,
     addBook_Btn: selectorFile.css.ComproEngage.dashboardPage.addBook_Btn,
-   
     resourceList: selectorFile.css.ComproEngage.dashboardPage.resourceList,
     resourceTitle: selectorFile.css.ComproEngage.dashboardPage.resourceTitle,
     //for blank dashboard in slider section
@@ -42,7 +42,7 @@ module.exports = {
     removeBook_subTitle: selectorFile.css.ComproEngage.dashboardPage.removeBook_subTitle,
     removeBook_cancel: selectorFile.css.ComproEngage.dashboardPage.removeBook_cancel,
     removeBook_remove: selectorFile.css.ComproEngage.dashboardPage.removeBook_remove,
-    
+
     isInitialized: function () {
         logger.logInto(stackTrace.get());
         action.waitForDocumentLoad();
@@ -58,20 +58,20 @@ module.exports = {
             pageTitle: (action.getElementCount(this.pageTitle) > 0) ? action.getText(this.pageTitle) : null,
             createPlaylist_Txt: (action.getElementCount(this.createPlaylist_Btn) > 0) ? action.getText(this.createPlaylist_Btn) : null,
             addBook_Txt: (action.getElementCount(this.addBook_Btn) > 0) ? action.getText(this.addBook_Btn) : null,
-            myBooksHeading_Txt: (action.getElementCount(this.myBooksHeading_Txt) > 0) ? action.getText(this.myBooksHeading_Txt) : null, 
-            
-            myPlaylistsHeading_Txt: (action.getElementCount(this.myPlaylistsHeading_Txt) > 0) ? action.getText(this.myPlaylistsHeading_Txt) : null, 
-            noPlaylists_title: (action.getElementCount(this.noPlaylists_title) > 0) ? action.getText(this.noPlaylists_title) : null, 
-            noPlaylists_subTitle: (action.getElementCount(this.noPlaylists_subTitle) > 0) ? action.getText(this.noPlaylists_subTitle) : null, 
-            noPlaylists_btn: (action.getElementCount(this.noPlaylists_btn) > 0) ? action.getText(this.noPlaylists_btn) : null, 
+            myBooksHeading_Txt: (action.getElementCount(this.myBooksHeading_Txt) > 0) ? action.getText(this.myBooksHeading_Txt) : null,
 
-            cardSliderTitle: (action.getElementCount(this.cardSliderTitle) > 0) ? action.getText(this.cardSliderTitle) : null, 
+            myPlaylistsHeading_Txt: (action.getElementCount(this.myPlaylistsHeading_Txt) > 0) ? action.getText(this.myPlaylistsHeading_Txt) : null,
+            noPlaylists_title: (action.getElementCount(this.noPlaylists_title) > 0) ? action.getText(this.noPlaylists_title) : null,
+            noPlaylists_subTitle: (action.getElementCount(this.noPlaylists_subTitle) > 0) ? action.getText(this.noPlaylists_subTitle) : null,
+            noPlaylists_btn: (action.getElementCount(this.noPlaylists_btn) > 0) ? action.getText(this.noPlaylists_btn) : null,
+
+            cardSliderTitle: (action.getElementCount(this.cardSliderTitle) > 0) ? action.getText(this.cardSliderTitle) : null,
             cardSliderSubtitle: (action.getElementCount(this.cardSliderSubtitle) > 0) ? action.getText(this.cardSliderSubtitle) : null,
             cardSliderLeftBtn: (action.getElementCount(this.cardSliderLeftBtn) > 0) ? action.waitForDisplayed(this.cardSliderLeftBtn) : false,
             cardSliderRightBtn: (action.getElementCount(this.cardSliderRightBtn) > 0) ? action.waitForDisplayed(this.cardSliderRightBtn) : false,
-            noBooks_title: (action.getElementCount(this.noBooks_title) > 0) ? action.getText(this.noBooks_title) : null, 
-            noBooks_subTitle: (action.getElementCount(this.noBooks_subTitle) > 0) ? action.getText(this.noBooks_subTitle) : null, 
-            noBooks_btn: (action.getElementCount(this.noBooks_btn) > 0) ? action.getText(this.noBooks_btn) : null, 
+            noBooks_title: (action.getElementCount(this.noBooks_title) > 0) ? action.getText(this.noBooks_title) : null,
+            noBooks_subTitle: (action.getElementCount(this.noBooks_subTitle) > 0) ? action.getText(this.noBooks_subTitle) : null,
+            noBooks_btn: (action.getElementCount(this.noBooks_btn) > 0) ? action.getText(this.noBooks_btn) : null,
 
             actionCardList: [],
             resourceList: [],
@@ -84,15 +84,15 @@ module.exports = {
         //gets the title, subtile and button names of the action cards for blank dashboard 
         for (i = 0; i < actionCards.length; i++) {
             obj.actionCardList[i] = {
-                actionCardTitles: action.getText(this.actionCardTitles + i + "]" ),
-                actionCardSubtitles: action.getText(this.actionCardSubtitles + i + "]" ),
-                actionCardBtns: action.getText(this.actionCardBtns + i + "]" ),
+                actionCardTitles: action.getText(this.actionCardTitles + i + "]"),
+                actionCardSubtitles: action.getText(this.actionCardSubtitles + i + "]"),
+                actionCardBtns: action.getText(this.actionCardBtns + i + "]"),
             }
         }
         resources = action.findElements(this.resourceList);
         for (i = 0; i < resources.length; i++) {
             obj.resourceList[i] = {
-                resourceTitle: action.getText(this.resourceTitle + i + "]" ),
+                resourceTitle: action.getText(this.resourceTitle + i + "]"),
             }
         }
         books = action.findElements(this.bookTitle);
@@ -150,7 +150,7 @@ module.exports = {
             if (ret.bookList[i].bookTitle == bookName) {
                 res = action.click(this.viewClass_menu + i + "]");
                 if (res == true) {
-                   var classDrawerPage=require('./classDrawer.page.js')
+                    var classDrawerPage = require('./classDrawer.page.js')
                     res = classDrawerPage.isInitialized();
                     logger.logInto(stackTrace.get(), " --View class clicked");
                 }
@@ -226,10 +226,10 @@ module.exports = {
         res = action.click(this.removeBook_remove);
         if (true == res) {
             logger.logInto(stackTrace.get(), " --Rmove button is clicked");
-            res = action.waitForDisplayed(this.removeBook_remove, true)
-            if ( res == true )
-               // action.waitForDisplayed(this.cardSliderTitle)
-                res = this.isInitialized();
+            if (res == true)
+                res = action.waitForDisplayed(this.pageTitle, 5000)
+            // action.waitForDisplayed(this.cardSliderTitle)
+            res = this.isInitialized();
         }
         else {
             res = res + " -- Error in clicking Notification Close Button";
@@ -263,17 +263,21 @@ module.exports = {
 
     clickAddBook: function () {
         logger.logInto(stackTrace.get());
-                res = action.click(this.addBook_Btn);
-                if (res == true) {
-                    logger.logInto(stackTrace.get(), " Add book button is clicked");
-                    res = require('./addBook.page.js').isInitialized();
-                }
-                else {
-                    res = res + " -- Error in clicking Add book Button"
-                    logger.logInto(stackTrace.get(), res, "error");
-                }  
-        return res;
-    }
+        res = action.click(this.addBook_Btn);
+        if (res == true) {
+            logger.logInto(stackTrace.get(), " Add book button is clicked");
+            return true
+            // var addBook = require('./addBook.page.js');
+            // res = addBook.isInitialized();
+        }
+        else {
+            res = res + " -- Error in clicking Add book Button"
+            logger.logInto(stackTrace.get(), res, "error");
+        }
+        //return res;
+    },
 
-    
+
 }
+
+
