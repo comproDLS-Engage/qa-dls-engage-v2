@@ -21,8 +21,8 @@ module.exports = {
 
     /***********************Class Workflow ****************************************************/
 
-    //Validate the content of add book page launched from Class workflow
-    ENG_ADDBOOK_TC_43: function(testdata) {
+    //Validate the content of add book page launched from Class workflow -- needs to be updated.
+    ENG_ADDBOOK_TC_44: function(testdata) {
         sts = addBookPage.isInitialized()
         //console.log(sts)
         assertion.typeOf(sts, 'object', new Error(sts));

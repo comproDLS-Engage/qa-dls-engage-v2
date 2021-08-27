@@ -874,7 +874,7 @@
           "visualTest": "-"
         },
         {
-          "id": "ENG_ADDBOOK_TC_45",
+          "id": "ENG_ADDBOOK_TC_44",
           "description": "Validate the content of add book page launched from Class workflow",
           "tags": "P1",
           "visualTest": "-"
