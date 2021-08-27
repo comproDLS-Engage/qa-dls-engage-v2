@@ -210,23 +210,57 @@
                 "bookSkeleton": "span[class*='MuiSkeleton-text']:nth-child(1)"
             },
             "addBookPage": {
-                "pageTitle": "[data-tid='text-pageTitle']",
-                "pageSubTitle": "[data-tid='text-pageSubTitle']",
+            "pageTitle":"[data-tid*='text-pageTitle']",
+            "pageSubTitle":"[data-tid*='text-pageSubTitle']",
+            "bookImgIcon":"[data-tid*=img-bookCover-",
+            "bookTitle":"[data-tid*='text-bookTitle-",
+            "bookSubTitle":"[data-tid*=text-bookSubtitle-",
+            "view_Btn":"[data-tid*=button-view-",
+            "searchBox":"input[type=text]",
+            "searchBoxText":"input[type=text]",
+            "searchIcon":"[data-tid='icon-autocomplete-search']",
+            "searchPopUp":"#serach-input-popup",
+            "searchList":"[id*=serach-input-option-",
+            "searchListIcon":"[id*=serach-input-option-] svg",
+            "showMoreResults":"[data-tid=list-item-show-more-result]",
+            "clearSearchText":"[title=Clear],[data-tid=icon-close-serach]",
+            "searchCount":"[data-tid*=label-",
+            "noItemFound_Dropdown":"[data-tid=list-item-no-result]",
+            "search_NoResult_title":"[data-tid=text-noResultFound]",
+            "search_NoResult_subTitle":"[data-tid=text-noResultFoundBilinear]",
+            "searchPill":"[data-tid=chip-search]",
+            "closeSearchPill":"[data-tid=chip-search] svg",
+            "dashboard":{
+               "bookAddedIcon":"[data-tid*=icon-added-",
+               "addBook_Btn":"[data-tid*=button-addBook-"
+            },
+            "browse":{
+               "moreOptions":"[data-tid*=button-contextMenu-",
+               "viewClass_btn":"[data-tid*=button-viewClass-",
+               "createClass_btn":"[data-tid*=button-createClass-",
+               "addToMyBooks_btn":"[data-tid*=button-add-",
+               "removeFromMyBooks_btn":"[data-tid*=button-remove-",
+               "openFlipbook_btn":"[data-tid*=button-openFlipbook-",
+               "flipBookCount":"[data-tid*=button-flipbook",
+               "previousPageArrow":"[aria-label='Go to previous page']",
+               "nextPageArrow":"[aria-label='Go to next page']",
+               "goToPage":"[aria-label*='page ",
+               "currentPage":"[aria-label^='page"
+            },
+            "classWorkflow":{
                 "myBooksTab": "[data-tid='button-product-0']",
                 "allBooksTab": "[data-tid='button-product-1']",
                 "addtoClassbtn": "[data-tid=\"button-Add to Class\"]",
                 "cancelAndGoBackbtn": "[data-tid=button-cancel]",
                 "noBooklbl": "[data-tid=text-noBookLabel]",
-                "addBookbtn": "[data-tid=button-add-",
-                "bookImgIcon": "[data-tid=img-bookCover-",
-                "bookTitle": "[data-tid*='text-bookTitle-",
-                "bookSubTitle": "[data-tid=text-bookSubtitle-",
+               "noBooklblError":"[data-tid=text-noBookLabelError]",
                 "bookAddedlbl": "[data-tid=text-bookLabel]",
                 "bookAddedtxt": "[data-tid=text-bookValue]",
                 "bookdeletebtmIcon": "[data-tid=icon-close]",
                 "noBookTitle": "[data-tid=text-title-noBooks]",
                 "noBookSubTitle": "[data-tid=text-subtitle-noBooks]",
-                "bookPlusIcon": "[data-tid*=button-addBook-"
+               "addBookbtn":"[data-tid*=button-add-"
+            }
             },
             "successClassPage": {
                 "viewClass": "[data-tid='button-View Class']",
@@ -350,8 +384,7 @@
                 "showingCorrectAnswer_txt": "[data-tid=text-showingcorrectanswer]",
                 "restart_btn":"[data-tid=container-restartactivity] a"
             },
-            "bookView":
-            {
+         "bookView":{
                 "bookCover": "[data-tid=image-bookCover]",
                 "bookTitle": "[data-tid=text-bookTitle]",
                 "bookSubTitle": "[data-tid=text-bookSubtitle]",
@@ -408,8 +441,7 @@
                 "itemTypeIcon":"[data-tid*=icon-itemType",
                 "itemTypeText":"[data-tid*=text-itemType"
             },
-            "OnboardingUser":
-            {
+         "OnboardingUser":{
                 "logo": "[data-tid=image-brandlogo]",
                 "logout": "[data-tid='button-onboardinglogout']",
                 "back_button": "[data-tid=button-onboardingback]",

@@ -45,6 +45,10 @@ module.exports = {
 		assertion.assertEqual(sts, true, "Upload cover image status mismatch");
 		sts = addTitlePage.set_Description(testdata.description);
 		assertion.assertEqual(sts, true, "Description status mismatch");
+		sts = addTitlePage.select_bookDesign(testdata.bookDesign);
+		assertion.assertEqual(sts, true, "Book Design status mismatch");
+		sts = addTitlePage.select_bookVisibility(testdata.visibility);
+		assertion.assertEqual(sts, true, "Visibility status mismatch");
 		sts = addTitlePage.click_CreateTitle_Button();
 		assertion.assert((typeof sts === "string" && sts.includes("Your new Umbrella Product is being setup.")), "Banner messsage mismatch. " + sts);
 	},
@@ -273,4 +277,25 @@ module.exports = {
 		sts = libraryPage.select_Resource_and_Proceed(testdata.fileName);
 		assertion.assertEqual(sts, true, "Error in searching LO");
 	},
+
+	//Validate on clicking Global resources Pill, global resources are filtered out
+	BK_TC_33: function () {
+		sts = homePage.click_GlobalResources_Pill();
+		assertion.assertEqual(sts, true, "Global resources not filtered");
+
+	},
+
+	//Validate on clicking Books Pill, Books are filtered out
+	BK_TC_34: function () {
+		sts = homePage.click_Books_Pill();
+		assertion.assertEqual(sts, true, "Books not filtered");
+	},
+
+	//Validate user is able to search a book
+	BK_TC_35: function(testdata){
+		sts = homePage.set_Search_Text("Quality Test Book 8");
+		assertion.assertEqual(sts, true, "search text status mismatch");
+		sts = homePage.click_Search_Button();
+		assertion.assertEqual(sts.length, "1", "Book count Mismatch");
+	}
 }

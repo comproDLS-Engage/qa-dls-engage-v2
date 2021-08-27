@@ -5,7 +5,9 @@
                 "type": "Book",
                 "name": "QA Automation Test Book [DO NOT PUBLISH]",
                 "coverImage": "./testResources/testcaseData/backOffice/qa/book_cover_compro_qa.png",
-                "description": "QA automation test description"
+                "description": "QA automation test description",
+                "bookDesign" : "Green",
+                "visibility" : "True"
             }
         ],
         "component": [
