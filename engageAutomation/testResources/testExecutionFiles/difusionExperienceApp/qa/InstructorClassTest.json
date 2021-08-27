@@ -32,7 +32,12 @@
         "id": "ENG_SHELL_TC_4",
         "description": "",
         "testFile": "./test/engageExperienceApp/appShell.test.js",
-        "testData": []
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.myClassPage"
+         }
+        ]
       }
     ],
     "BeforeEach": [],
@@ -104,7 +109,7 @@
           },
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-            "jsonPath": "engage.appContent.addBook"
+            "jsonPath": "engage.appContent.addBookPage.classes"
           }
         ]
       },
@@ -280,7 +285,12 @@
         "id": "ENG_SHELL_TC_4",
         "description": "",
         "testFile": "./test/engageExperienceApp/appShell.test.js",
-        "testData": []
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.myClassPage"
+         }
+        ]
       }
     ],
     "BeforeEach": [],
@@ -355,7 +365,12 @@
         "id": "ENG_SHELL_TC_4",
         "description": "",
         "testFile": "./test/engageExperienceApp/appShell.test.js",
-        "testData": []
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.myClassPage"
+         }
+        ]
       }
     ],
     "BeforeEach": [],
@@ -462,7 +477,12 @@
         "id": "ENG_SHELL_TC_4",
         "description": "",
         "testFile": "./test/engageExperienceApp/appShell.test.js",
-        "testData": []
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.myClassPage"
+         }
+        ]
       },
       {
         "id": "ENG_INS_CLASS_TC_4",
@@ -545,7 +565,12 @@
         "id": "ENG_SHELL_TC_4",
         "description": "",
         "testFile": "./test/engageExperienceApp/appShell.test.js",
-        "testData": []
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.myClassPage"
+         }
+        ]
       },
       {
         "id": "ENG_INS_CLASS_TC_6",
@@ -611,7 +636,12 @@
         "id": "ENG_SHELL_TC_4",
         "description": "",
         "testFile": "./test/engageExperienceApp/appShell.test.js",
-        "testData": []
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.myClassPage"
+         }
+        ]
       }
     ],
     "BeforeEach": [],
@@ -740,7 +770,7 @@
           },
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-            "jsonPath": "engage.appContent.addBook"
+            "jsonPath": "engage.appContent.addBookPage.classes"
           }
         ]
       },
@@ -1087,7 +1117,12 @@
         "id": "ENG_SHELL_TC_4",
         "description": "",
         "testFile": "./test/engageExperienceApp/appShell.test.js",
-        "testData": []
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.myClassPage"
+         }
+        ]
       },
       {
         "id": "ENG_INS_CLASS_TC_4",
@@ -1170,7 +1205,12 @@
         "id": "ENG_SHELL_TC_4",
         "description": "",
         "testFile": "./test/engageExperienceApp/appShell.test.js",
-        "testData": []
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.myClassPage"
+         }
+        ]
       },
       {
         "id": "ENG_INS_CLASS_TC_4",
