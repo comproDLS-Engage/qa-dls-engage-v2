@@ -60,17 +60,6 @@
 				"testData": []
 			},
 			{
-				"id": "BK_TC_35",
-				"description": "",
-				"testFile": "./test/backoffice/backoffice.test.js",
-				"testData": [
-					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
-						"jsonPath": "backoffice.book[0]"
-					}
-				]
-			},
-			{
 				"id": "BK_TC_7",
 				"description": "",
 				"testFile": "./test/backoffice/backoffice.test.js",
@@ -103,6 +92,17 @@
 					{
 						"dataFile": "./testResources/testcaseData/backOffice/qa/logindata.json",
 						"jsonPath": "backoffice.user.validUser1"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_35",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"jsonPath": "backoffice.book[0]"
 					}
 				]
 			},

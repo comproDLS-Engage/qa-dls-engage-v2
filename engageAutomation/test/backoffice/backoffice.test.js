@@ -96,9 +96,15 @@ module.exports = {
 			assertion.assertEqual(sts, true, "Learning path level status mismatch");
 			sts = addCompPage.select_Autonumbering(testdata.autonumbering);
 			assertion.assertEqual(sts, true, "Autonumbering status mismatch");
+			sts = addCompPage.select_Assignable(testdata.assignable);
+			assertion.assertEqual(sts, true, "Assignable status mismatch");
 		}
 		sts = addCompPage.select_CategoryType(testdata.category);
 		assertion.assertEqual(sts, true, "Category status mismatch");
+		sts = addCompPage.select_TargetRole(testdata.targetRole);
+		assertion.assertEqual(sts, true, "Target Role status mismatch");
+		sts = addCompPage.select_Visibility(testdata.visibility);
+		assertion.assertEqual(sts, true, "Visibility status mismatch");
 		sts = addCompPage.click_Add_Button();
 		//assertion.assert((typeof sts === "string" && sts.includes("Component \"" + testdata.title + "\" is created")), "Banner messsage mismatch. " + sts);
 		assertion.assert((typeof sts === "string" && sts.includes("Your new Component is being setup.")), "Banner messsage mismatch. " + sts);
@@ -120,6 +126,16 @@ module.exports = {
 	BK_TC_12: function (testdata) {
 		sts = addFolderPage.set_Name(testdata.name);
 		assertion.assertEqual(sts, true, "Name status mismatch");
+		sts = addFolderPage.upload_CoverImage(testdata.coverImage);
+		assertion.assertEqual(sts, true, "Upload cover image status mismatch");
+		sts = addFolderPage.select_TargetRole(testdata.targetRole);
+		assertion.assertEqual(sts, true, "Target Role status mismatch");
+		sts = addFolderPage.select_Assignable(testdata.assignable);
+		assertion.assertEqual(sts, true, "Assignable status mismatch");
+		sts = addFolderPage.set_Folder_Color(testdata.color);
+		assertion.assertEqual(sts, true, "Folder color status mismatch");
+		sts == addFolderPage.set_Page_Reference(testdata.page);
+		assertion.assertEqual(sts, true, "Page reference status mismatch");
 		sts = addFolderPage.click_Add_Button();
 		assertion.assert((typeof sts === "string" && sts.includes(testdata.name)), "Snackbar messsage mismatch. " + sts);
 		assertion.assert((typeof sts === "string" && sts.includes("Folder created successfully")), "Snackbar messsage mismatch. " + sts);
@@ -293,7 +309,7 @@ module.exports = {
 
 	//Validate user is able to search a book
 	BK_TC_35: function(testdata){
-		sts = homePage.set_Search_Text("Quality Test Book 8");
+		sts = homePage.set_Search_Text(testdata.name);
 		assertion.assertEqual(sts, true, "search text status mismatch");
 		sts = homePage.click_Search_Button();
 		assertion.assertEqual(sts.length, "1", "Book count Mismatch");

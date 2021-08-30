@@ -55,8 +55,8 @@
 		"globalResourcesPill": "[data-tid=button-search-by-GLOBAL_RESOURCES]",
 		"searchTxtbox": "[data-tid=input-searchbyenter]",
 		"searchBtn": "[data-tid=button-clearsearch]",
-		"bookIcon" : "[data-tid*=button-book-detail]:not([style='display: none;']) [class=c-book-mode-icon]",
-		"globalResourceIcon" :"[data-tid*=button-book-detail]:not([style='display: none;']) [class*=c-book-mode-icon-gr]"
+		"bookIcon": "[data-tid*=button-book-detail]:not([style='display: none;']) [class=c-book-mode-icon]",
+		"globalResourceIcon": "[data-tid*=button-book-detail]:not([style='display: none;']) [class*=c-book-mode-icon-gr]"
 	},
 	"viewBookPage": {
 		"componentList": "[data-tid*=button-component-detail] [class*=c-card__title]",
@@ -82,7 +82,13 @@
 		"lpLevelsList": "[class*=mdc-menu-surface--open] [class*=mdc-list-item__text]",
 		"autonumberingDropdown": "[class=c-form-section] > div:nth-child(4) > div",
 		"autonumberingList": "[class*=mdc-menu-surface--open] [class*=mdc-list-item__text]",
-		"addBtn": "[class*=c-form] button[class*=action-button-padding]"
+		"addBtn": "[class*=c-form] button[class*=action-button-padding]",
+		"visibilityDropdown": "[class=c-form-section] > div:nth-child(6) > div",
+		"visibilityList": "[class*=mdc-menu-surface--open] [class*=mdc-list-item__text]",
+		"targetRoleDropdown": "[class=c-form-section] > div:nth-child(7) > div",
+		"targetRoleList": "[class*=mdc-menu-surface--open] [class*=mdc-list-item__text]",
+		"assignableDropdown": "[class=c-form-section] > div:nth-child(8) > div",
+		"assignableList": "[class*=mdc-menu-surface--open] [class*=mdc-list-item__text]"
 	},
 	"viewLearningPathPage": {
 		"folderList": "[data-tid*=button-folder-details] [class=c-list-item__primary-text]",
@@ -101,7 +107,13 @@
 	},
 	"addFolderPage": {
 		"nameTxtbox": "[id=Name]",
-		"addBtn": "[class*=c-form] button[class*=action-button-padding]"
+		"addBtn": "[class*=c-form] button[class*=action-button-padding]",
+		"targetRoleDropdown": "[class=c-form-section] > div:nth-child(4) > div",
+		"targetRoleList": "[class*=mdc-menu-surface--open] [class*=mdc-list-item__text]",
+		"assignableDropdown": "[class=c-form-section] > div:nth-child(5) > div",
+		"assignableList": "[class*=mdc-menu-surface--open] [class*=mdc-list-item__text]",
+		"folderColor" : "[id=\"Folder strand color\"]",
+		"pageReference" :"[id=\"Page Reference\"]"
 	},
 	"addActivityPage": {},
 	"publishComponentPage": {
