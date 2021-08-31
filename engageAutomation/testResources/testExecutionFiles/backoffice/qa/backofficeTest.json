@@ -392,6 +392,17 @@
 				]
 			},
 			{
+				"id": "BK_TC_36",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"jsonPath": "backoffice.activity[0]"
+					}
+				]
+			},
+			{
 				"id": "BK_TC_15",
 				"description": "",
 				"testFile": "./test/backoffice/backoffice.test.js",

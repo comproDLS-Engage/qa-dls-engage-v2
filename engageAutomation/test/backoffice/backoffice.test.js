@@ -313,5 +313,19 @@ module.exports = {
 		assertion.assertEqual(sts, true, "search text status mismatch");
 		sts = homePage.click_Search_Button();
 		assertion.assertEqual(sts.length, "1", "Book count Mismatch");
+	},
+
+	//Set Optional fields on Add Learning Objective page
+	BK_TC_36: function(testdata){
+		sts = addActivityPage.click_Completion_Checkbox();
+		assertion.assertEqual(sts, true, "completion checkbox status mismatch");
+		sts = addActivityPage.click_Score_Checkbox();
+		assertion.assertEqual(sts, true, "score checkbox status mismatch");
+		sts = addActivityPage.select_TargetRole(testdata.targetRole);
+		assertion.assertEqual(sts, true, "target role status mismatch");
+		sts = addActivityPage.select_Assignable(testdata.assignable);
+		assertion.assertEqual(sts, true, "assignable status mismatch");
+		sts = addActivityPage.set_Page_Reference(testdata.page);
+		assertion.assertEqual(sts, true, "page reference status mismatch");
 	}
 }

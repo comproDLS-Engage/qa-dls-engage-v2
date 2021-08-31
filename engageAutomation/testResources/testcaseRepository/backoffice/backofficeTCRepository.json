@@ -182,6 +182,11 @@
                     "id": "BK_TC_35",
                     "description": "Validate user is able to search a book",
                     "tags": "P1"
+                },
+                {
+                    "id": "BK_TC_36",
+                    "description": "Set Optional fields on Add Learning Objective page",
+                    "tags": "P1"
                 }
             ]
         }

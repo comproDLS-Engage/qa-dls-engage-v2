@@ -61,7 +61,10 @@
             {
                 "type": "Native Engage Learning Object",
                 "typeIndex": 0,
-                "name": "QA Automation Test LO1 - native"
+                "name": "QA Automation Test LO1 - native",
+                "targetRole":"All",
+                "assignable" :"True",
+                "page" : "13"
             },
             {
                 "type": "Close Ended Learning Object",

@@ -115,7 +115,12 @@
 		"folderColor" : "[id=\"Folder strand color\"]",
 		"pageReference" :"[id=\"Page Reference\"]"
 	},
-	"addActivityPage": {},
+	"addActivityPage": {
+		"completionCheckBox" : "[class=c-form-section__completion-container] [class*=c-form-section__completion-checkbox]",
+		"scoreCheckBox" :"[class=c-form-section__score-container] [class*=c-form-section__completion-checkbox]",
+		"targetRoleDropdown" : "[id=target-role]",
+		"assignableDropdown" :"[id=assignability]"
+	},
 	"publishComponentPage": {
 		"snapshotBtn": "[data-tid*='button-Create New Snapshot']",
 		"previewBtn": "[data-tid*='button-Preview']",
