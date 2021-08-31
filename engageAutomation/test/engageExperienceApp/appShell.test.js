@@ -1,7 +1,7 @@
 "use strict";
 var appShell = require('../../pages/engageExperienceApp/appShell.page.js');
+var createClassPage = require('../../pages/engageExperienceApp/createClass.page.js');
 var instructorMyClassPage = require('../../pages/engageExperienceApp/instructorMyClass.page.js');
-
 var sts;
 
 module.exports = {
@@ -102,7 +102,7 @@ module.exports = {
 	ENG_SHELL_TC_10: function () {
 		sts = appShell.click_PlusIconClassesTab();
 		assertion.assertEqual(sts, true, "status mismatch");
-		sts = instructorMyClassPage.isInitialized();
+		sts = createClassPage.isInitialized();
 		if ((typeof (sts)) === "object") {
 			assertion.assertEqual(sts.pageStatus, true, "Create Class Page not launched: " + JSON.stringify(sts))
 		} else {
