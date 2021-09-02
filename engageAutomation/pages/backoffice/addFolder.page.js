@@ -57,53 +57,69 @@ module.exports = {
 
     select_TargetRole: function (value) {
         logger.logInto(stackTrace.get());
-        res = action.click(this.targetRoleDropdown);
-        action.waitForDisplayed(this.targetRoleList);
-        if (res == true) {
-            let i, list;
-            list = action.findElements(this.targetRoleList);
-            for (i = 0; i < list.length; i++) {
-                if (action.getText(list[i]).includes(value)) {
-                    res = action.click(action.parentElement(list[i]));
-                    break;
+        if (value == "" || value == undefined)
+            res = true;
+        else {
+            res = action.click(this.targetRoleDropdown);
+            action.waitForDisplayed(this.targetRoleList);
+            if (res == true) {
+                let i, list;
+                list = action.findElements(this.targetRoleList);
+                for (i = 0; i < list.length; i++) {
+                    if (action.getText(list[i]).includes(value)) {
+                        res = action.click(action.parentElement(list[i]));
+                        break;
+                    }
+                    res = "Target Role value not found ";
                 }
-                res = "Target Role value not found ";
             }
+            logger.logInto(stackTrace.get(), res);
         }
-        logger.logInto(stackTrace.get(), res);
         return res;
     },
 
     select_Assignable: function (value) {
         logger.logInto(stackTrace.get());
-        res = action.click(this.assignableDropdown);
-        action.waitForDisplayed(this.assignableList);
-        if (res == true) {
-            let i, list;
-            list = action.findElements(this.assignableList);
-            for (i = 0; i < list.length; i++) {
-                if (action.getText(list[i]).includes(value)) {
-                    res = action.click(action.parentElement(list[i]));
-                    break;
+        if (value == "" || value == undefined)
+            res = true;
+        else {
+            res = action.click(this.assignableDropdown);
+            action.waitForDisplayed(this.assignableList);
+            if (res == true) {
+                let i, list;
+                list = action.findElements(this.assignableList);
+                for (i = 0; i < list.length; i++) {
+                    if (action.getText(list[i]).includes(value)) {
+                        res = action.click(action.parentElement(list[i]));
+                        break;
+                    }
+                    res = "Assignable value not found ";
                 }
-                res = "Assignable value not found ";
             }
+            logger.logInto(stackTrace.get(), res);
         }
-        logger.logInto(stackTrace.get(), res);
         return res;
     },
 
     set_Folder_Color: function (value) {
         logger.logInto(stackTrace.get());
-        res = action.setValue(this.folderColor, value);
-        logger.logInto(stackTrace.get(), res);
+        if (value == "" || value == undefined)
+            res = true;
+        else {
+            res = action.setValue(this.folderColor, value);
+            logger.logInto(stackTrace.get(), res);
+        }
         return res;
     },
 
     set_Page_Reference: function (value) {
         logger.logInto(stackTrace.get());
-        res = action.setValue(this.pageReference, value);
-        logger.logInto(stackTrace.get(), res);
+        if (value == "" || value == undefined)
+            res = true;
+        else {
+            res = action.setValue(this.pageReference, value);
+            logger.logInto(stackTrace.get(), res);
+        }
         return res;
     }
 
