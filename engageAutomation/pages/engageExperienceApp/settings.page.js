@@ -12,10 +12,10 @@ module.exports = {
     email_label: selectorFile.css.ComproEngage.settings.email_label,
     email_input: selectorFile.css.ComproEngage.settings.email_input,
     firstName_label: selectorFile.css.ComproEngage.settings.firstName_label,
-    firstName_input: selectorFile.css.ComproEngage.settings.selectorFile.css.ComproEngage.settings.selectorFile.css.ComproEngage.settings.selectorFile.css.ComproEngage.settings.selectorFile.css.ComproEngage.settings.firstName_input,
-    lastName_label: selectorFile.css.ComproEngage.settings.selectorFile.css.ComproEngage.settings.selectorFile.css.ComproEngage.settings.selectorFile.css.ComproEngage.settings.lastName_label,
-    lastName_input: selectorFile.css.ComproEngage.settings.selectorFile.css.ComproEngage.settings.selectorFile.css.ComproEngage.settings.lastName_input,
-    country_label: selectorFile.css.ComproEngage.settings.selectorFile.css.ComproEngage.settings.country_label,
+    firstName_input: selectorFile.css.ComproEngage.settings.firstName_input,
+    lastName_label: selectorFile.css.ComproEngage.settings.lastName_label,
+    lastName_input: selectorFile.css.ComproEngage.settings.lastName_input,
+    country_label: selectorFile.css.ComproEngage.settings.country_label,
     country_input: selectorFile.css.ComproEngage.settings.country_input,
     countryListItem: selectorFile.css.ComproEngage.settings.countryListItem,
     clearIcon: selectorFile.css.ComproEngage.settings.clearIcon,
@@ -23,7 +23,7 @@ module.exports = {
     lastNameError_text: selectorFile.css.ComproEngage.settings.lastNameError_text, //ENG-7484
     changeProfile_button: selectorFile.css.ComproEngage.settings.changeProfile_button,
     //Password
-    currentPassword_label: selectorFile.css.ComproEngage.settings.selectorFile.css.ComproEngage.settings.currentPassword_label,
+    currentPassword_label: selectorFile.css.ComproEngage.settings.currentPassword_label,
     currentPassword_input: selectorFile.css.ComproEngage.settings.currentPassword_input,
     button_togglepasswordvisibility: selectorFile.css.ComproEngage.settings.button_togglepasswordvisibility,
     password_label: selectorFile.css.ComproEngage.settings.password_label,
@@ -40,10 +40,10 @@ module.exports = {
     accessbility_button: selectorFile.css.ComproEngage.settings.accessbility_button,
     fontSize_text: selectorFile.css.ComproEngage.settings.fontSize_text, //ENG-7484
     lineSpace_text: selectorFile.css.ComproEngage.settings.lineSpace_text, //ENG-7484
-    checkItOut_text: selectorFile.css.ComproEngage.settings.checkItOut_text, //ENG-7484 //rename to samplePara_text - akhil
-    pageHeader_text: selectorFile.css.ComproEngage.settings.pageHeader_text,  //ENG-7484 //rename to sampleHeader_text - akhil
+    samplePara_text: selectorFile.css.ComproEngage.settings.samplePara_text, //ENG-7484 
+    sampleHeader_text: selectorFile.css.ComproEngage.settings.sampleHeader_text, //ENG-7484 
 
-    isInitialized: function () {
+    isInitialized: function() {
         logger.logInto(stackTrace.get());
         action.waitForDocumentLoad();
         let pageStatus = action.waitForDisplayed(this.pageTitle)
@@ -52,77 +52,120 @@ module.exports = {
         return res;
     },
 
-    getSettingsPageData: function () {
+    getSettingsPageData: function() {
         logger.logInto(stackTrace.get());
         obj = {
             pageStatus: "",
             pageTitle: action.getElementCount(this.pageTitle) > 0 ? action.getText(this.pageTitle) : null,
             pageSubTitle: action.getElementCount(this.pageSubTitle) > 0 ? action.getText(this.pageSubTitle) : null,
-            tabsList: appShell.getTabsListData(), // tabList should only be an array with list of tabs, currently it is an obj - akhil
-            // value of selected tab returned by appShell.getTabsListData() should be a seperate property here - akhil 
-            
-            // is it possible to identify which tab is selected and then call the data function of that tab? please advise - akhil
-            //profile
-            pageHeading: action.getElementCount(this.pageHeading) > 0 ? action.getText(this.pageHeading) : null,
-            email_label: action.getElementCount(this.email_label) > 0 ? action.getText(this.email_label) : null,
-            email_input: action.getElementCount(this.email_input) > 0 ? action.getAttribute(this.email_input, "value") : null,
-            firstName_label: action.getElementCount(this.firstName_label) > 0 ? action.getText(this.firstName_label) : null,
-            firstName_input: action.getElementCount(this.firstName_label) > 0 ? action.getAttribute(this.firstName_label, "value") : null,
-            lastName_label: action.getElementCount(this.lastName_label) > 0 ? action.getText(this.lastName_label) : null,
-            lastName_input: action.getElementCount(this.lastName_input) > 0 ? action.getAttribute(this.lastName_input, "value") : null,
-            country_label: action.getElementCount(this.country_label) > 0 ? action.getText(this.country_label) : null,
-            country_input_placeholder: action.getElementCount(this.lastName_input) > 0 ? action.getAttribute(this.lastName_input, "placeholder") : null,
-            country_input_value: action.getElementCount(this.lastName_input) > 0 ? action.getAttribute(this.lastName_input, "value") : null,
-            changeProfile_button: action.getElementCount(this.changeProfile_button) > 0 ? action.getText(this.changeProfile_button) : null
+            tabsList: null,
+            selectedTab: null
         }
+
+        var tabInfo = appShell.getTabsListData();
+        obj.tabsList = tabInfo.list;
+        obj.selectedTab = tabInfo.selected;
         //console.log(obj)
         return obj;
     },
 
-    setFirstName: function (name) {
+    getProfileTabData: function() {
+        logger.logInto(stackTrace.get());
+        obj = {
+            pageHeading: action.getElementCount(this.pageHeading) > 0 ? action.getText(this.pageHeading) : null,
+            email_label: action.getElementCount(this.email_label) > 0 ? action.getText(this.email_label) : null,
+            email_input: action.getElementCount(this.email_input) > 0 ? action.getAttribute(this.email_input, "value") : null,
+            email_input_readOnly: action.getElementCount(this.email_input) > 0 ? action.getAttribute(this.email_input, "readOnly") : null,
+            firstName_label: action.getElementCount(this.firstName_label) > 0 ? action.getText(this.firstName_label) : null,
+            firstName_input: action.getElementCount(this.firstName_input) > 0 ? action.getAttribute(this.firstName_input, "value") : null,
+            lastName_label: action.getElementCount(this.lastName_label) > 0 ? action.getText(this.lastName_label) : null,
+            lastName_input: action.getElementCount(this.lastName_input) > 0 ? action.getAttribute(this.lastName_input, "value") : null,
+            country_label: action.getElementCount(this.country_label) > 0 ? action.getText(this.country_label) : null,
+            country_input_placeholder: action.getElementCount(this.country_input) > 0 ? action.getAttribute(this.country_input, "placeholder") : null,
+            country_input_value: action.getElementCount(this.country_input) > 0 ? action.getAttribute(this.country_input, "value") : null,
+            changeProfile_button: action.getElementCount(this.changeProfile_button) > 0 ? action.getText(this.changeProfile_button) : null
+        }
+        //console.log(obj)
+        return obj;
+
+    },
+
+    setFirstName: function(name) {
         logger.logInto(stackTrace.get());
         res = action.setValue(this.firstName_input, name);
         if (res == true) {
             logger.logInto(stackTrace.get(), " -- First Name Entered");
-        }
-        else {
+        } else {
             res = res + " -- First Name Not Entered";
             logger.logInto(stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    setLastName: function (lastname) {
+    setLastName: function(lastname) {
         logger.logInto(stackTrace.get());
         res = action.setValue(this.lastName_input, lastname);
         if (res == true) {
             logger.logInto(stackTrace.get(), " -- Last Name Entered");
-        }
-        else {
+        } else {
             res = res + " -- Last Name Not Entered";
             logger.logInto(stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    setCountry: function () {
+    setCountry: function(countryName) {
         logger.logInto(stackTrace.get());
-        res = action.setValue(this.lastName_input, lastname);
+        res = action.click(this.country_input)
         if (res == true) {
-            res = action.click(this.countryListItem)
+            res = action.setValue(this.country_input, countryName);
             if (res == true) {
-                logger.logInto(stackTrace.get(), " -- Country Name Entered");
-                res = this.getSettingsPageData()
+                res = action.waitForDisplayed(this.countryListItem)
+                if (res == true) {
+                    res = action.click(this.countryListItem)
+                    if (res == true) {
+                        logger.logInto(stackTrace.get(), " -- Country Name Entered");
+                    }
+                } else
+                    logger.logInto(stackTrace.get(), res + " -- Country Name Not Entered", 'error');
+
             }
         }
-        else {
-            res = res + " -- Last Name Not Entered";
+
+        return res;
+    },
+
+    clickClose: function(argument) {
+        logger.logInto(stackTrace.get());
+        res = action.moveTo(this.country_input, 0, 0)
+        if (res == true) {
+            res = action.click(this.clearIcon);
+            if (res == true) {
+                res = this.getSettingsPageData()
+                logger.logInto(stackTrace.get(), " -- Close Icon Clicked");
+            } else {
+                res = res + " -- Close Icon Not Clicked";
+                logger.logInto(stackTrace.get(), res, 'error');
+            }
+
+        }
+        return res;
+    },
+
+    clickUpdateSettingsProfile: function() {
+        logger.logInto(stackTrace.get());
+        res = action.click(this.changeProfile_button);
+        if (res == true) {
+            // res = snackBarTest.get_Snackbar_Message_Text();
+            logger.logInto(stackTrace.get(), " -- Update Settings Clicked");
+        } else {
+            res = res + " -- Update Settings Not Clicked";
             logger.logInto(stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    getErrorMessages: function () {
+    getErrorMessages: function() {
         logger.logInto(stackTrace.get());
         obj = {
             //profile
@@ -131,20 +174,15 @@ module.exports = {
             //password
             currentPasswordError_text: action.getElementCount(this.currentPasswordError_text) > 0 ? action.getText(this.currentPasswordError_text) : null,
             newPasswordError_text: action.getElementCount(this.newPasswordError_text) > 0 ? action.getText(this.newPasswordError_text) : null,
-            confirmPasswordError_text: action.getElementCount(this.confirmPasswordError_text) > 0 ? action.getText(this.confirmPasswordError_text) : null,
+            confirmPasswordError_text: action.getElementCount(this.confirmPasswordError_text) > 0 ? action.getText(this.confirmPasswordError_text) : null
         }
         //console.log(obj)
         return obj;
     },
 
-    getPasswordTabData: function () {
+    getPasswordTabData: function() {
         logger.logInto(stackTrace.get());
         obj = {
-            pageTitle: action.getElementCount(this.pageTitle) > 0 ? action.getText(this.pageTitle) : null,
-            pageSubTitle: action.getElementCount(this.pageSubTitle) > 0 ? action.getText(this.pageSubTitle) : null,
-            tabsList: appShell.getTabsListData(),
-            // above 3 properties are already covered, not required again - akhil
-
             //password
             pageHeading: action.getElementCount(this.pageHeading) > 0 ? action.getText(this.pageHeading) : null,
             currentPassword_label: action.getElementCount(this.currentPassword_label) > 0 ? action.getText(this.currentPassword_label) : null,
@@ -162,80 +200,86 @@ module.exports = {
         return obj;
     },
 
-    setCurrentPassword: function (password) {
+    setCurrentPassword: function(password) {
         logger.logInto(stackTrace.get());
+        action.click(this.currentPassword_input)
         res = action.setValue(this.currentPassword_input, password);
         if (res == true) {
             logger.logInto(stackTrace.get(), " --Current password Entered");
-        }
-        else {
+        } else {
             res = res + " -- Current password Not Entered";
             logger.logInto(stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    setNewPassword: function (password) {
+    setNewPassword: function(password) {
         logger.logInto(stackTrace.get());
+        action.click(this.password_input)
         res = action.setValue(this.password_input, password);
         if (res == true) {
             logger.logInto(stackTrace.get(), " --New Password Entered");
-        }
-        else {
+        } else {
             res = res + " -- New Password Not Entered";
             logger.logInto(stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    setNewPassword: function (password) { // this appears to be a duplicate function, please check - akhil
+    setConfirmPassword: function(password) {
         logger.logInto(stackTrace.get());
+        action.click(this.confirmPassword_input)
         res = action.setValue(this.confirmPassword_input, password);
         if (res == true) {
             logger.logInto(stackTrace.get(), " --Confirm Password Entered");
-        }
-        else {
+        } else {
             res = res + " -- Confirm Password Not Entered";
             logger.logInto(stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    togglePasswordVisibility: function () {
+    togglePasswordVisibility: function() {
         logger.logInto(stackTrace.get());
         res = action.click(this.button_togglepasswordvisibility);
         if (res == true) {
             res = this.getPasswordTabData()
             logger.logInto(stackTrace.get(), " --Confirm Password Entered");
-        }
-        else {
+        } else {
             res = res + " -- Confirm Password Not Entered";
             logger.logInto(stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    getAccessibilityTabData: function () {
+    clickUpdateSettingsPassword: function() {
+        logger.logInto(stackTrace.get());
+        res = action.click(this.changePassword_button);
+        if (res == true) {
+            //res = snackBarTest.get_Snackbar_Message_Text();
+            logger.logInto(stackTrace.get(), " -- Update Settings Clicked");
+        } else {
+            res = res + " -- Update Settings Not Clicked";
+            logger.logInto(stackTrace.get(), res, 'error');
+        }
+        return res;
+
+    },
+
+    getAccessibilityTabData: function() {
         logger.logInto(stackTrace.get());
         obj = {
-            pageTitle: action.getElementCount(this.pageTitle) > 0 ? action.getText(this.pageTitle) : null,
-            pageSubTitle: action.getElementCount(this.pageSubTitle) > 0 ? action.getText(this.pageSubTitle) : null,
-            tabsList: appShell.getTabsListData(),
-            // above 3 properties are already covered, not required again - akhil
-
             pageHeading: action.getElementCount(this.pageHeading) > 0 ? action.getText(this.pageHeading) : null,
             reset_button: action.getElementCount(this.reset_button) > 0 ? action.getText(this.reset_button) : null,
             accessbility_button: action.getElementCount(this.accessbility_button) > 0 ? action.getText(this.accessbility_button) : null,
             fontSize_text: action.getElementCount(this.fontSize_text) > 0 ? action.getText(this.fontSize_text) : null,
             lineSpace_text: action.getElementCount(this.lineSpace_text) > 0 ? action.getText(this.lineSpace_text) : null,
-            checkItOut_text: action.getElementCount(this.checkItOut_text) > 0 ? action.getText(this.checkItOut_text) : null, //rename to samplePara_text - akhil
-            pageHeader_text: action.getElementCount(this.pageHeader_text) > 0 ? action.getText(this.pageHeader_text) : null //rename to sampleHeader_text - akhil
+            samplePara_text: action.getElementCount(this.samplePara_text) > 0 ? action.getText(this.samplePara_text) : null,
+            sampleHeader_text: action.getElementCount(this.sampleHeader_text) > 0 ? action.getText(this.sampleHeader_text) : null
         }
 
         //console.log(obj)
         return obj;
-
-
     }
 
 

@@ -534,17 +534,16 @@
                 "pageSubTitle": "[data-tid=text-pageSubTitle]",
                 "pageHeading": "[data-tid=text-myDetailsHeading]",
                 "currentPassword_label": "[data-tid=label-currentPassword]",
-                "currentPassword_input": "[data-tid=input-currentPassword]",
+                "currentPassword_input": "[data-tid=input-currentPassword] input",
                 "button_togglepasswordvisibility": "[data-tid=button-togglepasswordvisibility]",
                 "password_label": "[data-tid=label-password]",
-                "password_input": "[data-tid=input-password]",
+                "password_input": "[data-tid=input-password] input",
                 "confirmPassword_label": "[data-tid=label-confirmPassword]",
-                "confirmPassword_input": "[data-tid=input-confirmPassword]",
-                "newPasswordRules_text": "[xpath='1']",
+                "confirmPassword_input": "[data-tid=input-confirmPassword] input",
+                "newPasswordRules_text": "//p[contains(text(),'Must')]",
                 "currentPasswordError_text":"//p[contains(text(),'Please')]",
                 "newPasswordError_text":"//p[contains(text(),'special character')]",
                 "confirmPasswordError_text":"//p[contains(text(),'must match')]",
-
                 "changePassword_button": "[data-tid=button-changePassword]",
                 "email_label": "[data-tid=label-email]",
                 "email_input": "[data-tid=input-email] input",
@@ -555,16 +554,16 @@
                 "country_label": "[data-tid=label-country]",
                 "country_input": "[data-tid=input-country] input",
                 "clearIcon":"[title=Clear]",
-                "countryListItem":"[role=listbox]",
-                "firstNameError_text":"//p[contains(text(),'First')]",
-                "lastNameError_text":"//p[contains(text(),'Last')]",
+                "countryListItem":"[data-option-index='0']",
+                "firstNameError_text":"//p[contains(text(),'First name is required')]",
+                "lastNameError_text":"//p[contains(text(),'Last name is required')]",
                 "changeProfile_button": "[data-tid=button-changeProfile]",
                 "reset_button": "[data-tid=reset-button]",
                 "accessbility_button": "[data-tid=button-accessbility]",
                 "fontSize_text": "//p[contains(text(),'Font Size')]",
                 "lineSpace_text": "//p[contains(text(),'Line')]",
-                "checkItOut_text": "//p[contains(text(),'Check it out')]",
-                "pageHeader_text": "//h6[contains(text(),'page')]"
+                "samplePara_text": "//p[contains(text(),'Check it out')]",
+                "sampleHeader_text": "//h6[contains(text(),'page')]"
             }
         }
     }
