@@ -12,6 +12,7 @@ const commonPage = require('../../pages/backoffice/common.page.js');
 const viewLearningPathPage = require('../../pages/backoffice/viewLearningPath.page.js');
 const generateCodesPage = require('../../pages/backoffice/generateCodes.page.js');
 const libraryPage = require('../../pages/backoffice/linkFromLibrary.page.js');
+const publishComponentPage = require('../../pages/backoffice/publishComponent.page.js');
 var sts;
 
 module.exports = {
@@ -308,7 +309,7 @@ module.exports = {
 	},
 
 	//Validate user is able to search a book
-	BK_TC_35: function(testdata){
+	BK_TC_35: function (testdata) {
 		sts = homePage.set_Search_Text(testdata.name);
 		assertion.assertEqual(sts, true, "search text status mismatch");
 		sts = homePage.click_Search_Button();
@@ -316,7 +317,7 @@ module.exports = {
 	},
 
 	//Set Optional fields on Add Learning Objective page
-	BK_TC_36: function(testdata){
+	BK_TC_36: function (testdata) {
 		sts = addActivityPage.click_Completion_Checkbox();
 		assertion.assertEqual(sts, true, "completion checkbox status mismatch");
 		sts = addActivityPage.click_Score_Checkbox();
@@ -327,5 +328,24 @@ module.exports = {
 		assertion.assertEqual(sts, true, "assignable status mismatch");
 		sts = addActivityPage.set_Page_Reference(testdata.page);
 		assertion.assertEqual(sts, true, "page reference status mismatch");
-	}
+	},
+
+	//Click Preview and Publish button on Component viewer Page
+	BK_TC_37: function () {
+		sts = common.click_PreviewAndPublish_button();
+		assertion.assertEqual(sts.snapshotBtn_isEnabled, true, "snapshot button status mismatch");
+	},
+
+	//Click Snapshot on Preview and Publish Component page
+	BK_TC_38: function () {
+		sts = publishComponentPage.click_CreateSnapshot_Button();
+		assertion.assertEqual(sts, true, "Snapshot status mismatch");
+	},
+
+	//Click Publish on Preview and Publish Component page
+	BK_TC_39: function () {
+		sts = publishComponentPage.click_Publish_Button();
+		assertion.assertEqual(sts, true, "Publish status mismatch");
+	},
+
 }

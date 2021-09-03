@@ -187,6 +187,21 @@
                     "id": "BK_TC_36",
                     "description": "Set Optional fields on Add Learning Objective page",
                     "tags": "P1"
+                },
+                {
+                    "id": "BK_TC_37",
+                    "description": "Click Preview and Publish button",
+                    "tags": "P1"
+                },
+                {
+                    "id": "BK_TC_38",
+                    "description": "Click Snapshot on Preview and Publish Component page",
+                    "tags": "P1"
+                },
+                {
+                    "id": "BK_TC_39",
+                    "description": "Click Publish on Preview and Publish Component page",
+                    "tags": "P1"
                 }
             ]
         }

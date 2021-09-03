@@ -30,7 +30,8 @@
 		"bannerCloseBtn": "[class=c-banner__close]",
 		"proceedBtn": "[data-tid=button-item-type-launch] div",
 		"buttonLoader": "[class=c-button__spinner]",
-		"emptyStateBtn": "[class*=c-empty-state-button]"
+		"emptyStateBtn": "[class*=c-empty-state-button]",
+		"publishBtn": "[data-tid=button-publish-book-component]"
 	},
 	"homePage": {
 		"headingText": "[class*=c-nav__heading-text]",
@@ -95,7 +96,6 @@
 		"activityList": "[class=c-list-item__primary-text]",
 		"addFolderBtn": "button[data-tid=button-add-folder]",
 		"addActivityBtn": "[data-tid='button-ADD COMPONENT']",
-		"publishBtn": "[data-tid=button-publish-book-component]",
 		"deleteComponentBtn": "[data-tid=button-delete-component]",
 		"activityCategoryList": "[class=c-list-primary-text]",
 		"activityTypeList": "[class=c-radio-label]",
