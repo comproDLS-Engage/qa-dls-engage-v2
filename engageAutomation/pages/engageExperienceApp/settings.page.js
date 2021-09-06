@@ -1,8 +1,9 @@
 'use strict';
-var action = require('../../core/actionLibrary/baseActionLibrary.js');
+const action = require('../../core/actionLibrary/baseActionLibrary.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
 const appShell = require('./appShell.page.js');
 var res, obj;
+
 module.exports = {
 
     pageTitle: selectorFile.css.ComproEngage.settings.pageTitle,
@@ -43,7 +44,7 @@ module.exports = {
     samplePara_text: selectorFile.css.ComproEngage.settings.samplePara_text, //ENG-7484 
     sampleHeader_text: selectorFile.css.ComproEngage.settings.sampleHeader_text, //ENG-7484 
 
-    isInitialized: function() {
+    isInitialized: function () {
         logger.logInto(stackTrace.get());
         action.waitForDocumentLoad();
         let pageStatus = action.waitForDisplayed(this.pageTitle)
@@ -52,7 +53,7 @@ module.exports = {
         return res;
     },
 
-    getSettingsPageData: function() {
+    getSettingsPageData: function () {
         logger.logInto(stackTrace.get());
         obj = {
             pageStatus: "",
@@ -69,7 +70,7 @@ module.exports = {
         return obj;
     },
 
-    getProfileTabData: function() {
+    getProfileTabData: function () {
         logger.logInto(stackTrace.get());
         obj = {
             pageHeading: action.getElementCount(this.pageHeading) > 0 ? action.getText(this.pageHeading) : null,
@@ -90,7 +91,7 @@ module.exports = {
 
     },
 
-    setFirstName: function(name) {
+    setFirstName: function (name) {
         logger.logInto(stackTrace.get());
         res = action.setValue(this.firstName_input, name);
         if (res == true) {
@@ -102,7 +103,7 @@ module.exports = {
         return res;
     },
 
-    setLastName: function(lastname) {
+    setLastName: function (lastname) {
         logger.logInto(stackTrace.get());
         res = action.setValue(this.lastName_input, lastname);
         if (res == true) {
@@ -114,7 +115,7 @@ module.exports = {
         return res;
     },
 
-    setCountry: function(countryName) {
+    setCountry: function (countryName) {
         logger.logInto(stackTrace.get());
         res = action.click(this.country_input)
         if (res == true) {
@@ -126,16 +127,15 @@ module.exports = {
                     if (res == true) {
                         logger.logInto(stackTrace.get(), " -- Country Name Entered");
                     }
-                } else
+                } 
+                else
                     logger.logInto(stackTrace.get(), res + " -- Country Name Not Entered", 'error');
-
             }
         }
-
         return res;
     },
 
-    clickClose: function(argument) {
+    clickClose: function () {
         logger.logInto(stackTrace.get());
         res = action.moveTo(this.country_input, 0, 0)
         if (res == true) {
@@ -147,12 +147,11 @@ module.exports = {
                 res = res + " -- Close Icon Not Clicked";
                 logger.logInto(stackTrace.get(), res, 'error');
             }
-
         }
         return res;
     },
 
-    clickUpdateSettingsProfile: function() {
+    clickUpdateSettingsProfile: function () {
         logger.logInto(stackTrace.get());
         res = action.click(this.changeProfile_button);
         if (res == true) {
@@ -165,7 +164,7 @@ module.exports = {
         return res;
     },
 
-    getErrorMessages: function() {
+    getErrorMessages: function () {
         logger.logInto(stackTrace.get());
         obj = {
             //profile
@@ -180,7 +179,7 @@ module.exports = {
         return obj;
     },
 
-    getPasswordTabData: function() {
+    getPasswordTabData: function () {
         logger.logInto(stackTrace.get());
         obj = {
             //password
@@ -195,12 +194,11 @@ module.exports = {
             newPasswordRules_text: action.getElementCount(this.newPasswordRules_text) > 0 ? action.getText(this.newPasswordRules_text) : null,
             changePassword_button: action.getElementCount(this.changePassword_button) > 0 ? action.getText(this.changePassword_button) : null
         }
-
         //console.log(obj)
         return obj;
     },
 
-    setCurrentPassword: function(password) {
+    setCurrentPassword: function (password) {
         logger.logInto(stackTrace.get());
         action.click(this.currentPassword_input)
         res = action.setValue(this.currentPassword_input, password);
@@ -213,7 +211,7 @@ module.exports = {
         return res;
     },
 
-    setNewPassword: function(password) {
+    setNewPassword: function (password) {
         logger.logInto(stackTrace.get());
         action.click(this.password_input)
         res = action.setValue(this.password_input, password);
@@ -226,7 +224,7 @@ module.exports = {
         return res;
     },
 
-    setConfirmPassword: function(password) {
+    setConfirmPassword: function (password) {
         logger.logInto(stackTrace.get());
         action.click(this.confirmPassword_input)
         res = action.setValue(this.confirmPassword_input, password);
@@ -239,7 +237,7 @@ module.exports = {
         return res;
     },
 
-    togglePasswordVisibility: function() {
+    togglePasswordVisibility: function () {
         logger.logInto(stackTrace.get());
         res = action.click(this.button_togglepasswordvisibility);
         if (res == true) {
@@ -252,7 +250,7 @@ module.exports = {
         return res;
     },
 
-    clickUpdateSettingsPassword: function() {
+    clickUpdateSettingsPassword: function () {
         logger.logInto(stackTrace.get());
         res = action.click(this.changePassword_button);
         if (res == true) {
@@ -263,10 +261,9 @@ module.exports = {
             logger.logInto(stackTrace.get(), res, 'error');
         }
         return res;
-
     },
 
-    getAccessibilityTabData: function() {
+    getAccessibilityTabData: function () {
         logger.logInto(stackTrace.get());
         obj = {
             pageHeading: action.getElementCount(this.pageHeading) > 0 ? action.getText(this.pageHeading) : null,
@@ -277,7 +274,6 @@ module.exports = {
             samplePara_text: action.getElementCount(this.samplePara_text) > 0 ? action.getText(this.samplePara_text) : null,
             sampleHeader_text: action.getElementCount(this.sampleHeader_text) > 0 ? action.getText(this.sampleHeader_text) : null
         }
-
         //console.log(obj)
         return obj;
     }
