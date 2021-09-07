@@ -1495,13 +1495,13 @@
             },
             {
                "id":"ENG_IDEN_TC_5",
-               "description":"Validate that the login button is disabled if email is left blank",
+               "description":"Validate that the login button is enabled if email is left blank",
                "tags":"P3",
                "visualTest":"-"
             },
             {
                "id":"ENG_IDEN_TC_6",
-               "description":"Validate that the login button is disabled if password is left blank",
+               "description":"Validate that the login button is enabled if password is left blank",
                "tags":"P3",
                "visualTest":"-"
             },
