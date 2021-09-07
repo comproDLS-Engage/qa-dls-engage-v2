@@ -310,6 +310,48 @@
                         "subTitle": "We didn't find anything matching your search or filters. Try your search again, or change your filters to update the results here."
                     }
                 }
+            },
+            "settings":{
+                "pageTitle":"Settings",
+                "pageSubTitle":"Update and change details about your account",
+                "tabList":["Profile","Password","Accessibility"],
+                "Profile":{
+                    "pageHeading":"Edit Profile",
+                    "email_label":"Email",
+                    "firstName_label":"First Name",
+                    "lastName_label":"Last Name",
+                    "country_label":"Country",
+                    "country_input_placeholder":"Enter Country",
+                    "changeProfile_button":"Update Settings"
+                },
+                "Password":{
+                    "pageHeading":"Change Password",
+                    "currentPassword_label":"Current Password",
+                    "newPassword_label":"New Password",
+                    "confirmPassword_label":"Confirm Password",
+                    "newPasswordRules_text":"Must have a min of 8 characters and contain: 1 uppercase, 1 lowercase, 1 number, and 1 special character.",
+                    "changePassword_button":"Update Settings"
+                },
+                "Accessibility":{
+                    "pageHeading":"Accessibility",
+                    "fontSize_text":"Font Size",
+                    "lineSpace_text":"Line Spacing",
+                    "sampleHeader_text":"Here's a page header style.",
+                    "samplePara_text":"Check it out! Here's an example body paragraph. Toggle the font size to make this text larger or smaller. Saving these changes will update the text across the entire app.",
+                    "reset_button":"Reset Default Style",
+                    "accessbility_button":"Update Settings"
+                },
+                "ErrorMessages":{
+                    "currentPasswordError_text":"Please enter current password",
+                    "newPasswordError_text":"Must have a min of 8 characters and contain: 1 uppercase, 1 lowercase, 1 number, and 1 special character.",
+                    "confirmPasswordError_text":"New password and Confirm password must match",
+                    "firstNameError_text":"First name is required",
+                    "lastNameError_text":"Last name is required"
+                },
+                "snackBarMessages":{
+                    "update":"User settings updated successfully",
+                    "incorrectPassword":"Incorrect current password. Please try again"
+                }
             }
         }
     }

@@ -643,6 +643,12 @@
           "description": "Validate that click on breadcrumb product tile on the header launch the previous page",
           "tags": "P1",
           "visualTest": "-"
+        },
+        {
+          "id": "ENG_SHELL_TC_17",
+          "description": "Validate that clicking on the Settings button in left Navigation pane launches Settings page",
+          "tags": "P1",
+          "visualTest": "-"
         }
       ]
     },
@@ -1558,6 +1564,127 @@
           "visualTest": "-"
         }
       ]
+    },
+    {
+         "modulename":"Settings",
+         "moduledetails":"",
+         "testFile":"./test/engageExperienceApp/settings.test.js",
+         "testcase":[
+            {
+               "id":"ENG_SETT_TC_1",
+               "description":"Validate that Profile tab is selected by default when settings page is launched",
+               "tags":"P1",
+               "visualTest":true
+            },
+            {
+               "id":"ENG_SETT_TC_2",
+               "description":"Validate that clicking on Profile tab launches Profile page",
+               "tags":"P1",
+               "visualTest":"-"
+            },
+            {
+               "id":"ENG_SETT_TC_3",
+               "description":"Validate that clicking on Password tab launches Password page",
+               "tags":"P1",
+               "visualTest":"-"
+            },
+            {
+               "id":"ENG_SETT_TC_4",
+               "description":"Validate that clicking on Accessibility tab launches Accessibility page",
+               "tags":"P1",
+               "visualTest":"-"
+            },
+            {
+               "id":"ENG_SETT_TC_5",
+               "description":"Validate the content of Profile tab",
+               "tags":"P1",
+               "visualTest":"-"
+            },
+            {
+               "id":"ENG_SETT_TC_6",
+               "description":"Validate the content of Password tab",
+               "tags":"P1",
+               "visualTest":"-"
+            },
+            {
+               "id":"ENG_SETT_TC_7",
+               "description":"Validate the content of Accessibility tab",
+               "tags":"P1",
+               "visualTest":"-"
+            },
+            {
+               "id":"ENG_SETT_TC_8",
+               "description":"Validate that email ID textbox is not editable",
+               "tags":"P1",
+               "visualTest":"-"
+            },
+            {
+               "id":"ENG_SETT_TC_9",
+               "description":"Validate that user can modify the First name.",
+               "tags":"P1",
+               "visualTest":"-"
+            },
+            {
+               "id":"ENG_SETT_TC_10",
+               "description":"Validate that user can modify the Last name",
+               "tags":"P1",
+               "visualTest":"-"
+            },
+            {
+               "id":"ENG_SETT_TC_11",
+               "description":"Validate that user can select country from the drop down suggestions",
+               "tags":"P1",
+               "visualTest":"-"
+            },
+            {
+               "id":"ENG_SETT_TC_12",
+               "description":"Validate that clicking on cross button clears the country name from the text box",
+               "tags":"P1",
+               "visualTest":"-"
+            },
+            {
+               "id":"ENG_SETT_TC_13",
+               "description":"Validate the error message if First name is left blank",
+               "tags":"P1",
+               "visualTest":"-"
+            },
+            {
+               "id":"ENG_SETT_TC_14",
+               "description":"Validate the error message if Last name is left blank",
+               "tags":"P1",
+               "visualTest":"-"
+            },
+            {
+               "id":"ENG_SETT_TC_15",
+               "description":"Validate that user can update the Password",
+               "tags":"P1",
+               "visualTest":"-"
+            },
+            {
+               "id":"ENG_SETT_TC_16",
+               "description":"Validate the error messages if all Password textboxes are left blank",
+               "tags":"P1",
+               "visualTest":"-"
+            },
+            {
+               "id":"ENG_SETT_TC_17",
+               "description":"Validate the error message if New and Confirm Passwords textboxes are left blank",
+               "tags":"P1",
+               "visualTest":"-"
+            },
+            {
+               "id":"ENG_SETT_TC_18",
+               "description":"Validate the error message if New Password and Confirm Passwords do not match",
+               "tags":"P1",
+               "visualTest":"-"
+            },
+            {
+               "id":"ENG_SETT_TC_19",
+               "description":"Validate clicking on toggle password eye button displays the Password",
+               "tags":"P1",
+               "visualTest":"-"
+            }
+         ]
     }
   ]
 }

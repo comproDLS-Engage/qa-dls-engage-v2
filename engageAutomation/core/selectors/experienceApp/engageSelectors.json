@@ -497,7 +497,44 @@
             "insSuccess_name_txt":"[data-tid=text-classtitle]",
             "insSuccess_proceedCreateClass_btn":"[data-tid=button-proceedandcreateclasses]",
             "helper_txt":"#class-key-input-helper-text"
-         }
+         },
+         "settings":
+            {
+                "pageTitle": "[data-tid=text-pageTitle]",
+                "pageSubTitle": "[data-tid=text-pageSubTitle]",
+                "pageHeading": "[data-tid=text-myDetailsHeading]",
+                "currentPassword_label": "[data-tid=label-currentPassword]",
+                "currentPassword_input": "[data-tid=input-currentPassword] input",
+                "button_togglepasswordvisibility": "[data-tid=button-togglepasswordvisibility]",
+                "password_label": "[data-tid=label-password]",
+                "password_input": "[data-tid=input-password] input",
+                "confirmPassword_label": "[data-tid=label-confirmPassword]",
+                "confirmPassword_input": "[data-tid=input-confirmPassword] input",
+                "newPasswordRules_text": "[data-tid=text-sublabelpassword]",
+                "currentPasswordError_text":"[data-tid=text-errorcurrentPassword]",
+                "newPasswordError_text":"[data-tid=text-errorpassword]",
+                "confirmPasswordError_text":"[data-tid=text-errorconfirmPassword]",
+                "changePassword_button": "[data-tid=button-changePassword]",
+                "email_label": "[data-tid=label-email]",
+                "email_input": "[data-tid=input-email] input",
+                "firstName_label": "[data-tid=label-firstName]",
+                "firstName_input": "[data-tid=input-firstName] input",
+                "lastName_label": "[data-tid=label-input-lastName]",
+                "lastName_input": "[data-tid=input-input-lastName] input",
+                "country_label": "[data-tid=label-country]",
+                "country_input": "[data-tid=input-country] input",
+                "clearIcon":"[title=Clear]",
+                "countryListItem":"[data-option-index='0']",
+                "firstNameError_text":"//p[contains(text(),'First name is required')]",
+                "lastNameError_text":"//p[contains(text(),'Last name is required')]",
+                "changeProfile_button": "[data-tid=button-changeProfile]",
+                "reset_button": "[data-tid=reset-button]",
+                "accessbility_button": "[data-tid=button-accessbility]",
+                "fontSize_text": "[data-tid=settings-accessibilty-fontsize]",
+                "lineSpace_text": "[data-tid=settings-accessibilty-linespace]",
+                "samplePara_text": "[data-tid=accessibility-previewPragraph]",
+                "sampleHeader_text": "[data-tid=accessibility-previewHeading]"
+            }
       }
    }
 }

@@ -133,6 +133,7 @@
                     "role": "instructor",
                     "name": "teacher 3",
                     "courses": [],
+                    "country":"Cuba",
                     "info": "freash user without books or classes"
                 },
                 "NoClassInstructor": {

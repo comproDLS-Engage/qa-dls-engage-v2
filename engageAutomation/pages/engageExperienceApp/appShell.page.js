@@ -363,5 +363,15 @@ module.exports = {
         obj.list = componentArr;
         logger.logInto(stackTrace.get(), JSON.stringify(obj));
         return obj;
+    },
+
+    clickSettingsButton: function() {
+        res = action.click(this.settingsBtn);
+        if (true == res) {
+            logger.logInto(stackTrace.get(), res + "Settings Button clicked");
+            res = require('./settings.page.js').isInitialized()
+        } else
+            logger.logInto(stackTrace.get(), res + " -- Error in clicking Settings Button", 'error');
+        return res;
     }
 };
