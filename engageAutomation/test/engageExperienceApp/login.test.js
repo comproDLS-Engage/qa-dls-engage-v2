@@ -50,7 +50,7 @@ module.exports = {
         sts = loginPage.set_Password("")
         assertion.assertEqual(sts, true, "Password Not Entered");
         sts = loginPage.login_PageData();
-        //need to check button disable
+        //need to check button disable 
         assertion.assertEqual(sts.login_btn_Disabled, false, "Login Button Not Disabled")
     },
 
