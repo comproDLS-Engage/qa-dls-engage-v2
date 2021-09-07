@@ -197,6 +197,7 @@ module.exports = {
 	selectLanguagefromLanguageSelector: function (languageToSelect) {
 		logger.logInto(stackTrace.get());
 		res = action.click(this.languageSwitcherBtn);
+		action.waitForDisplayed(this.languageList);
 		if (res == true) {
 			let list, i, languageListText;
 			list = action.findElements(this.languageList);

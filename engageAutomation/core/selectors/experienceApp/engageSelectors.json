@@ -67,7 +67,7 @@
             "grayBackdrop":"[class*=MuiBackdrop]",
             "languageSwitcherBtn":"[data-tid=dropdown-languageselector]",
             "languageList":"[data-tid*=dropdownitem]",
-            "selectedLanguage":"[data-tid=dropdown-languageselector] p",
+            "selectedLanguage":"[data-tid=dropdown-languageselector] [class*=caption], [data-tid=dropdown-languageselector] p",
             "userProfileBtn":"[data-tid=button-user-profile]",
             "userName":"[data-tid=button-user-profile-info] span",
             "emailID":"[data-tid=button-user-profile-info] p",
