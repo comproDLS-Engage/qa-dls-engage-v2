@@ -328,7 +328,7 @@
             "previous_btn":"[id=previous], [data-tid=button-previous], [data-tid=button-goPrev]",
             "tryAgain_btn":"[id=tryAgain], [data-tid=button-tryagain]",
             "reset_btn":"[id=reset], [data-tid=button-reset]",
-            "showAnswer_btn":"[data-tid=button-showcorrectanswers], [data-tid=button-showAnswer]",
+                "showAnswer_btn": "[data-tid=button-showcorrectanswers], [data-tid=button-showAnswers]",
             "yourResponse_btn":"[data-tid=button-showuserresponse], [data-tid=button-showResponses]",
             "showingCorrectAnswer_txt":"p[data-tid=text-showingcorrectanswer]",
             "hint_btn":"[data-tid=button-hint]"
@@ -377,11 +377,12 @@
             "next_btn":"[data-tid=button-next]",
             "previous_btn":"[data-tid=button-previous]",
             "questionInfo":"[data-tid=text-currentquestion]",
-            "submitActivity_btn":"[data-tid=button-submit]",
-            "showAnswer_btn":"[data-tid=button-showAnswer]",
+                "submitActivity_btn": "[data-tid=button-submitActivity]",
+                "showAnswer_btn": "[data-tid=button-showAnswers]",
             "showResponse_btn":"[data-tid=button-showResponses]",
             "feedback_txt":"[data-tid=text-feedbackmessage]",
-            "showingCorrectAnswer_txt":"[data-tid=text-showingcorrectanswer]"
+                "showingCorrectAnswer_txt": "[data-tid=text-showingcorrectanswer]",
+                "restart_btn":"[data-tid=container-restartactivity] a"
          },
          "bookView":{
             "bookCover":"[data-tid=image-bookCover]",
@@ -432,7 +433,6 @@
             "lastActivityIcon":"[data-tid=icon-lastActivity]",
             "lastActivity_lbl":"[data-tid=text-lastActivityLabel]",
             "lastActivity_name":"[data-tid=text-lastActivityName]",
-            "lastActivity_Dismiss":"[data-tid=button-lastActivityDismiss]",
             "lastActivity_Dismiss":"[data-tid=button-lastActivityDismiss]",
             "lastActivity_Continue":"[data-tid=button-lastActivityContinue]",
             "activity_lbl_unitView":"[data-tid=text-unitselection]",

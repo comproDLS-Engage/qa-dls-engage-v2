@@ -30,14 +30,15 @@
 		"bannerCloseBtn": "[class=c-banner__close]",
 		"proceedBtn": "[data-tid=button-item-type-launch] div",
 		"buttonLoader": "[class=c-button__spinner]",
-		"emptyStateBtn": "[class*=c-empty-state-button]"
+		"emptyStateBtn": "[class*=c-empty-state-button]",
+		"publishBtn": "[data-tid=button-publish-book-component]"
 	},
 	"homePage": {
 		"headingText": "[class*=c-nav__heading-text]",
 		"newTitleBtn": "[data-tid=button-newtitle]",
 		"titleTypeList": "[class*=mdc-list-item__primary-text]",
 		"bookCount": "[class*=book-count]",
-		"bookList": "[data-tid*=button-book-detail] [class*=c-card__title]",
+		"bookList": "[data-tid*=button-book-detail]:not([style='display: none;']) [class*=c-card__title]",
 		"libraryBtn": "button[data-tid=button-library]",
 		"metadataBtn": "button[data-tid=button-metadata]",
 		"loadMoreBtn": "[data-tid=button-loadmoretitles]",
@@ -50,7 +51,13 @@
 		"viewCodeBatchList": "[class*=mdc-menu-surface--open] [class*=mdc-list-item__text]",
 		"viewCodeProceedBtn": "[data-tid=button-access-codes-launch]",
 		"accessCodeTxtbox": "[data-tid=input-access-code-for-check] input",
-		"checkCodeProceedBtn": "[data-tid=button-check-access-code]"
+		"checkCodeProceedBtn": "[data-tid=button-check-access-code]",
+		"booksPill": "[data-tid=button-search-by-BOOKS]",
+		"globalResourcesPill": "[data-tid=button-search-by-GLOBAL_RESOURCES]",
+		"searchTxtbox": "[data-tid=input-searchbyenter]",
+		"searchBtn": "[data-tid=button-clearsearch]",
+		"bookIcon": "[data-tid*=button-book-detail]:not([style='display: none;']) [class=c-book-mode-icon]",
+		"globalResourceIcon": "[data-tid*=button-book-detail]:not([style='display: none;']) [class*=c-book-mode-icon-gr]"
 	},
 	"viewBookPage": {
 		"componentList": "[data-tid*=button-component-detail] [class*=c-card__title]",
@@ -62,7 +69,11 @@
 		"nameTxtbox": "[id=Name]",
 		"descriptionTxtbox": "[id=Description]",
 		"imageUploadBtn": "[class=c-image-upload__file-input]",
-		"createTitleBtn": "[class=c-form-section] button[class*=action-button-padding]"
+		"createTitleBtn": "[class=c-form-section] button[class*=action-button-padding]",
+		"bookDesignDropdown": "[class*=c-create-book__form__book-theme] [class*=mdc-select__anchor]",
+		"bookDesignList": "[class*=mdc-menu-surface--open] [class*=mdc-list-item__text]",
+		"bookVisibilityDropdown": "[class*=c-create-book__form__visibility] [class*=mdc-select__anchor]",
+		"bookVisibilityList": "[class*=mdc-menu-surface--open] [class*=mdc-list-item__text]"
 	},
 	"addComponentPage": {
 		"titleTxtbox": "[id=Name]",
@@ -72,14 +83,19 @@
 		"lpLevelsList": "[class*=mdc-menu-surface--open] [class*=mdc-list-item__text]",
 		"autonumberingDropdown": "[class=c-form-section] > div:nth-child(4) > div",
 		"autonumberingList": "[class*=mdc-menu-surface--open] [class*=mdc-list-item__text]",
-		"addBtn": "[class*=c-form] button[class*=action-button-padding]"
+		"addBtn": "[class*=c-form] button[class*=action-button-padding]",
+		"visibilityDropdown": "[class=c-form-section] > div:nth-child(6) > div",
+		"visibilityList": "[class*=mdc-menu-surface--open] [class*=mdc-list-item__text]",
+		"targetRoleDropdown": "[class=c-form-section] > div:nth-child(7) > div",
+		"targetRoleList": "[class*=mdc-menu-surface--open] [class*=mdc-list-item__text]",
+		"assignableDropdown": "[class=c-form-section] > div:nth-child(8) > div",
+		"assignableList": "[class*=mdc-menu-surface--open] [class*=mdc-list-item__text]"
 	},
 	"viewLearningPathPage": {
 		"folderList": "[data-tid*=button-folder-details] [class=c-list-item__primary-text]",
 		"activityList": "[class=c-list-item__primary-text]",
 		"addFolderBtn": "button[data-tid=button-add-folder]",
 		"addActivityBtn": "[data-tid='button-ADD COMPONENT']",
-		"publishBtn": "[data-tid=button-publish-book-component]",
 		"deleteComponentBtn": "[data-tid=button-delete-component]",
 		"activityCategoryList": "[class=c-list-primary-text]",
 		"activityTypeList": "[class=c-radio-label]",
@@ -91,9 +107,20 @@
 	},
 	"addFolderPage": {
 		"nameTxtbox": "[id=Name]",
-		"addBtn": "[class*=c-form] button[class*=action-button-padding]"
+		"addBtn": "[class*=c-form] button[class*=action-button-padding]",
+		"targetRoleDropdown": "[class=c-form-section] > div:nth-child(4) > div",
+		"targetRoleList": "[class*=mdc-menu-surface--open] [class*=mdc-list-item__text]",
+		"assignableDropdown": "[class=c-form-section] > div:nth-child(5) > div",
+		"assignableList": "[class*=mdc-menu-surface--open] [class*=mdc-list-item__text]",
+		"folderColor" : "[id=\"Folder strand color\"]",
+		"pageReference" :"[id=\"Page Reference\"]"
 	},
-	"addActivityPage": {},
+	"addActivityPage": {
+		"completionCheckBox" : "[class=c-form-section__completion-container] [class*=c-form-section__completion-checkbox]",
+		"scoreCheckBox" :"[class=c-form-section__score-container] [class*=c-form-section__completion-checkbox]",
+		"targetRoleDropdown" : "[id=target-role]",
+		"assignableDropdown" :"[id=assignability]"
+	},
 	"publishComponentPage": {
 		"snapshotBtn": "[data-tid*='button-Create New Snapshot']",
 		"previewBtn": "[data-tid*='button-Preview']",
