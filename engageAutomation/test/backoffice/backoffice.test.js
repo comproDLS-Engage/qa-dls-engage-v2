@@ -280,6 +280,7 @@ module.exports = {
 	// Validate that the assessment author app is launched on clicking activity author button in the activity menu
 	BK_TC_30: function (testdata) {
 		sts = learningPathPage.click_ActivityAuthor_Button_in_ActivityMenu(testdata.name);
+		assertion.assertEqual(sts, true, "Error in clicking LO");
 		//assertion.assert((typeof sts === "string" && sts.includes("Launching")), "Dialog text mismatch. " + sts);
 	},
 
