@@ -167,6 +167,41 @@
                     "id": "BK_TC_32",
                     "description": "Validate that the add activity page appears after selecting the LO and clicking on next button",
                     "tags": "P1"
+                },
+                {
+                    "id": "BK_TC_33",
+                    "description": "Validate on clicking Global resources Pill, global resources are filtered out",
+                    "tags": "P1"
+                },
+                {
+                    "id": "BK_TC_34",
+                    "description": "Validate on clicking Books Pill, Books are filtered out",
+                    "tags": "P1"
+                },
+                {
+                    "id": "BK_TC_35",
+                    "description": "Validate user is able to search a book",
+                    "tags": "P1"
+                },
+                {
+                    "id": "BK_TC_36",
+                    "description": "Set Optional fields on Add Learning Objective page",
+                    "tags": "P1"
+                },
+                {
+                    "id": "BK_TC_37",
+                    "description": "Click Preview and Publish button",
+                    "tags": "P1"
+                },
+                {
+                    "id": "BK_TC_38",
+                    "description": "Click Snapshot on Preview and Publish Component page",
+                    "tags": "P1"
+                },
+                {
+                    "id": "BK_TC_39",
+                    "description": "Click Publish on Preview and Publish Component page",
+                    "tags": "P1"
                 }
             ]
         }

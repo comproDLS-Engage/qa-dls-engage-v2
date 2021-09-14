@@ -12,6 +12,7 @@ const commonPage = require('../../pages/backoffice/common.page.js');
 const viewLearningPathPage = require('../../pages/backoffice/viewLearningPath.page.js');
 const generateCodesPage = require('../../pages/backoffice/generateCodes.page.js');
 const libraryPage = require('../../pages/backoffice/linkFromLibrary.page.js');
+const publishComponentPage = require('../../pages/backoffice/publishComponent.page.js');
 var sts;
 
 module.exports = {
@@ -45,6 +46,10 @@ module.exports = {
 		assertion.assertEqual(sts, true, "Upload cover image status mismatch");
 		sts = addTitlePage.set_Description(testdata.description);
 		assertion.assertEqual(sts, true, "Description status mismatch");
+		sts = addTitlePage.select_bookDesign(testdata.bookDesign);
+		assertion.assertEqual(sts, true, "Book Design status mismatch");
+		sts = addTitlePage.select_bookVisibility(testdata.visibility);
+		assertion.assertEqual(sts, true, "Visibility status mismatch");
 		sts = addTitlePage.click_CreateTitle_Button();
 		assertion.assert((typeof sts === "string" && sts.includes("Your new Umbrella Product is being setup.")), "Banner messsage mismatch. " + sts);
 	},
@@ -92,9 +97,15 @@ module.exports = {
 			assertion.assertEqual(sts, true, "Learning path level status mismatch");
 			sts = addCompPage.select_Autonumbering(testdata.autonumbering);
 			assertion.assertEqual(sts, true, "Autonumbering status mismatch");
+			sts = addCompPage.select_Assignable(testdata.assignable);
+			assertion.assertEqual(sts, true, "Assignable status mismatch");
 		}
 		sts = addCompPage.select_CategoryType(testdata.category);
 		assertion.assertEqual(sts, true, "Category status mismatch");
+		sts = addCompPage.select_TargetRole(testdata.targetRole);
+		assertion.assertEqual(sts, true, "Target Role status mismatch");
+		sts = addCompPage.select_Visibility(testdata.visibility);
+		assertion.assertEqual(sts, true, "Visibility status mismatch");
 		sts = addCompPage.click_Add_Button();
 		//assertion.assert((typeof sts === "string" && sts.includes("Component \"" + testdata.title + "\" is created")), "Banner messsage mismatch. " + sts);
 		assertion.assert((typeof sts === "string" && sts.includes("Your new Component is being setup.")), "Banner messsage mismatch. " + sts);
@@ -116,6 +127,16 @@ module.exports = {
 	BK_TC_12: function (testdata) {
 		sts = addFolderPage.set_Name(testdata.name);
 		assertion.assertEqual(sts, true, "Name status mismatch");
+		sts = addFolderPage.upload_CoverImage(testdata.coverImage);
+		assertion.assertEqual(sts, true, "Upload cover image status mismatch");
+		sts = addFolderPage.select_TargetRole(testdata.targetRole);
+		assertion.assertEqual(sts, true, "Target Role status mismatch");
+		sts = addFolderPage.select_Assignable(testdata.assignable);
+		assertion.assertEqual(sts, true, "Assignable status mismatch");
+		sts = addFolderPage.set_Folder_Color(testdata.color);
+		assertion.assertEqual(sts, true, "Folder color status mismatch");
+		sts == addFolderPage.set_Page_Reference(testdata.page);
+		assertion.assertEqual(sts, true, "Page reference status mismatch");
 		sts = addFolderPage.click_Add_Button();
 		assertion.assert((typeof sts === "string" && sts.includes(testdata.name)), "Snackbar messsage mismatch. " + sts);
 		assertion.assert((typeof sts === "string" && sts.includes("Folder created successfully")), "Snackbar messsage mismatch. " + sts);
@@ -259,6 +280,7 @@ module.exports = {
 	// Validate that the assessment author app is launched on clicking activity author button in the activity menu
 	BK_TC_30: function (testdata) {
 		sts = learningPathPage.click_ActivityAuthor_Button_in_ActivityMenu(testdata.name);
+		assertion.assertEqual(sts, true, "Error in clicking LO");
 		//assertion.assert((typeof sts === "string" && sts.includes("Launching")), "Dialog text mismatch. " + sts);
 	},
 
@@ -273,4 +295,58 @@ module.exports = {
 		sts = libraryPage.select_Resource_and_Proceed(testdata.fileName);
 		assertion.assertEqual(sts, true, "Error in searching LO");
 	},
+
+	//Validate on clicking Global resources Pill, global resources are filtered out
+	BK_TC_33: function () {
+		sts = homePage.click_GlobalResources_Pill();
+		assertion.assertEqual(sts, true, "Global resources not filtered");
+
+	},
+
+	//Validate on clicking Books Pill, Books are filtered out
+	BK_TC_34: function () {
+		sts = homePage.click_Books_Pill();
+		assertion.assertEqual(sts, true, "Books not filtered");
+	},
+
+	//Validate user is able to search a book
+	BK_TC_35: function (testdata) {
+		sts = homePage.set_Search_Text(testdata.name);
+		assertion.assertEqual(sts, true, "search text status mismatch");
+		sts = homePage.click_Search_Button();
+		assertion.assertEqual(sts.length, "1", "Book count Mismatch");
+	},
+
+	//Set Optional fields on Add Learning Objective page
+	BK_TC_36: function (testdata) {
+		sts = addActivityPage.click_Completion_Checkbox();
+		assertion.assertEqual(sts, true, "completion checkbox status mismatch");
+		sts = addActivityPage.click_Score_Checkbox();
+		assertion.assertEqual(sts, true, "score checkbox status mismatch");
+		sts = addActivityPage.select_TargetRole(testdata.targetRole);
+		assertion.assertEqual(sts, true, "target role status mismatch");
+		sts = addActivityPage.select_Assignable(testdata.assignable);
+		assertion.assertEqual(sts, true, "assignable status mismatch");
+		sts = addActivityPage.set_Page_Reference(testdata.page);
+		assertion.assertEqual(sts, true, "page reference status mismatch");
+	},
+
+	//Click Preview and Publish button on Component viewer Page
+	BK_TC_37: function () {
+		sts = common.click_PreviewAndPublish_button();
+		assertion.assertEqual(sts.snapshotBtn_isEnabled, true, "snapshot button status mismatch");
+	},
+
+	//Click Snapshot on Preview and Publish Component page
+	BK_TC_38: function () {
+		sts = publishComponentPage.click_CreateSnapshot_Button();
+		assertion.assertEqual(sts, true, "Snapshot status mismatch");
+	},
+
+	//Click Publish on Preview and Publish Component page
+	BK_TC_39: function () {
+		sts = publishComponentPage.click_Publish_Button();
+		assertion.assertEqual(sts, true, "Publish status mismatch");
+	},
+
 }

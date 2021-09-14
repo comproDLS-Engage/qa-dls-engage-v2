@@ -48,6 +48,18 @@
 				]
 			},
 			{
+				"id": "BK_TC_33",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			},
+			{
+				"id": "BK_TC_34",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			},
+			{
 				"id": "BK_TC_7",
 				"description": "",
 				"testFile": "./test/backoffice/backoffice.test.js",
@@ -80,6 +92,17 @@
 					{
 						"dataFile": "./testResources/testcaseData/backOffice/qa/logindata.json",
 						"jsonPath": "backoffice.user.validUser1"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_35",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"jsonPath": "backoffice.book[0]"
 					}
 				]
 			},
@@ -369,6 +392,17 @@
 				]
 			},
 			{
+				"id": "BK_TC_36",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"jsonPath": "backoffice.activity[0]"
+					}
+				]
+			},
+			{
 				"id": "BK_TC_15",
 				"description": "",
 				"testFile": "./test/backoffice/backoffice.test.js",
@@ -401,7 +435,6 @@
 				"description": "Validate that alphanumeric text is supported in Question Title Text.",
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": [
-
 					{
 						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
 						"jsonPath": "editor.questions.MCQ[0].question1.questionTitle"

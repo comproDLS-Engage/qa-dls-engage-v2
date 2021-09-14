@@ -448,7 +448,7 @@ module.exports = {
 		console.log(res)
 		res = action.click("[data-tid=button-user-profile-option-2]");
 		console.log(res)
-		res = action.waitForDisplayed("[data-tid=image-landing]");
+		res = action.waitForDisplayed("[data-tid=text-logintitle]");
 		console.log(res)
 	},
 
@@ -524,7 +524,7 @@ module.exports = {
 
 	// View index
 	ENG_DIF_TC_42: function () {
-		res = action.click("[class*=MuiAppBar] > div > div > div > div > button");
+		res = action.click("[class*=MuiAppBar] > div > div > div > div > div > div> button");
 		console.log(res)
 		res = action.waitForDisplayed("[data-tid=button-closeinfotoc]");
 		console.log(res)

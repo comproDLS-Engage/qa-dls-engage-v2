@@ -643,6 +643,12 @@
           "description": "Validate that click on breadcrumb product tile on the header launch the previous page",
           "tags": "P1",
           "visualTest": "-"
+        },
+        {
+          "id": "ENG_SHELL_TC_17",
+          "description": "Validate that clicking on the Settings button in left Navigation pane launches Settings page",
+          "tags": "P1",
+          "visualTest": "-"
         }
       ]
     },
@@ -888,123 +894,124 @@
       ]
     },
     {
-        "modulename": "Book Detail & Unit Detail View",
-        "moduledetails": "",
-        "testFile": "./test/engageExperienceApp/bookDetailView.test.js",
-        "testcase": [
+      "modulename": "Book Detail & Unit Detail View",
+      "moduledetails": "",
+      "testFile": "./test/engageExperienceApp/bookDetailView.test.js",
+      "testcase": [
         {
-            "id": "ENG_BOOK_TC_1",
-            "description": "Validate that clicking on 3 dot options displays a list of options",
-            "tags": "P1",
-            "visualTest": true
+          "id": "ENG_BOOK_TC_1",
+          "description": "Validate that clicking on 3 dot options displays a list of options",
+          "tags": "P1",
+          "visualTest": true
         },
         {
-            "id": "ENG_BOOK_TC_2",
-            "description": "Validate that clicking on 'Add to My Books' button adds the book to My Books section",
-            "tags": "P1",
-            "visualTest": true
+          "id": "ENG_BOOK_TC_2",
+          "description": "Validate that clicking on 'Add to My Books' button adds the book to My Books section",
+          "tags": "P1",
+          "visualTest": true
         },
         {
-            "id": "ENG_BOOK_TC_3",
-            "description": "Validate that clicking on View Class button displays the list of classes corresponding to the book",
-            "tags": "P1",
-            "visualTest": true
+          "id": "ENG_BOOK_TC_3",
+          "description": "Validate that clicking on View Class button displays the list of classes corresponding to the book",
+          "tags": "P1",
+          "visualTest": true
         },
         {
-            "id": "ENG_BOOK_TC_4",
-            "description": "Validate that clicking on Remove Book option launches the remove book pop up",
-            "tags": "P1"
+          "id": "ENG_BOOK_TC_4",
+          "description": "Validate that clicking on Remove Book option launches the remove book pop up",
+          "tags": "P1"
         },
         {
-            "id": "ENG_BOOK_TC_5",
-            "description": "Validate clicking on Cancel closes the Remove book pop up",
-            "tags": "P1"
+          "id": "ENG_BOOK_TC_5",
+          "description": "Validate clicking on Cancel closes the Remove book pop up",
+          "tags": "P1"
         },
         {
-            "id": "ENG_BOOK_TC_6",
-            "description": "Validate clicking on Remove on Remove book pop up removes the book from My Books",
-            "tags": "P1"
+          "id": "ENG_BOOK_TC_6",
+          "description": "Validate clicking on Remove on Remove book pop up removes the book from My Books",
+          "tags": "P1"
         },
         {
-            "id": "ENG_BOOK_TC_9",
-            "description": "Validate that clicking on 'Open Flipbook' button launches the flipbook if single flipbook is associated with the book",
-            "tags": "P1"
+          "id": "ENG_BOOK_TC_9",
+          "description": "Validate that clicking on 'Open Flipbook' button launches the flipbook if single flipbook is associated with the book",
+          "tags": "P1"
         },
         {
-            "id": "ENG_BOOK_TC_10",
-            "description": "Validate clicking on a component displays the units asscoiated with the component",
-            "tags": "P1"
+          "id": "ENG_BOOK_TC_10",
+          "description": "Validate clicking on a component displays the units asscoiated with the component",
+          "tags": "P1"
         },
         {
-            "id": "ENG_BOOK_TC_11",
-            "description": "Validate that 'Continue where you left off' message appears on the book Detail View page when user launches an activity",
-            "tags": "P1"
+          "id": "ENG_BOOK_TC_11",
+          "description": "Validate that 'Continue where you left off' message appears on the book Detail View page when user launches an activity",
+          "tags": "P1"
         },
         {
-            "id": "ENG_BOOK_TC_12",
-            "description": "Validate that Clicking on Continue on 'Continue where you left off:' pop up launches the last activity viewed by the user",
-            "tags": "P1"
+          "id": "ENG_BOOK_TC_12",
+          "description": "Validate that Clicking on Continue on 'Continue where you left off:' pop up launches the last activity viewed by the user",
+          "tags": "P1"
         },
         {
-            "id": "ENG_BOOK_TC_13",
-            "description": "Validate that Clicking on Dismiss on 'Continue where you left off:' closes the pop up.",
-            "tags": "P1"
+          "id": "ENG_BOOK_TC_13",
+          "description": "Validate that Clicking on Dismiss on 'Continue where you left off:' closes the pop up.",
+          "tags": "P1"
         },
         {
-            "id": "ENG_BOOK_TC_16",
-            "description": "Validate that clicking on 3 dots for a unit displays a list of options.",
-            "tags": "P1"
+          "id": "ENG_BOOK_TC_16",
+          "description": "Validate that clicking on 3 dots for a unit displays a list of options.",
+          "tags": "P1"
         },
         {
-            "id": "ENG_BOOK_TC_17",
-            "description": "Validate that clicking 'Open flipbook' option from the 3 dot options for a Unit launches the corresponding flipbook page",
-            "tags": "P1"
+          "id": "ENG_BOOK_TC_17",
+          "description": "Validate that clicking 'Open flipbook' option from the 3 dot options for a Unit launches the corresponding flipbook page",
+          "tags": "P1"
         },
         {
-            "id": "ENG_BOOK_TC_19",
-            "description": "Validate clicking on a unit launches the unit detail view page.",
-            "tags": "P1"
+          "id": "ENG_BOOK_TC_19",
+          "description": "Validate clicking on a unit launches the unit detail view page.",
+          "tags": "P1"
         },
         {
-            "id": "ENG_BOOK_TC_20",
-            "description": "Validate that clicking on 'Open in Flipbook' button on unit Detail View page launches the corresponding unit page in the flipbook",
-            "tags": "P1"
+          "id": "ENG_BOOK_TC_20",
+          "description": "Validate that clicking on 'Open in Flipbook' button on unit Detail View page launches the corresponding unit page in the flipbook",
+          "tags": "P1"
         },
         {
-            "id": "ENG_BOOK_TC_21",
-            "description": "Validate that clicking on Activity on unit detail view page launches the activity",
-            "tags": "P1"
+          "id": "ENG_BOOK_TC_21",
+          "description": "Validate that clicking on Activity on unit detail view page launches the activity",
+          "tags": "P1"
         },
         {
-            "id": "ENG_BOOK_TC_30",
-            "description": "Anchor Component - Validate that Book Detail view page should display the list of units which are present in the anchored component",
-            "tags": "P1"
-        },        
-        {
-            "id": "ENG_BOOK_TC_32",
-            "description": "Anchor component - Validate that clicking on Next Unit button launches the Next unit of the Anchored component in an indexed book",
-            "tags": "P1"
-        }, 
-        {
-            "id": "ENG_BOOK_TC_33",
-            "description": "Anchor component - Validate that clicking on Previous Unit button launch the previous unit of component in an indexed book",
-            "tags": "P1"
+          "id": "ENG_BOOK_TC_30",
+          "description": "Anchor Component - Validate that Book Detail view page should display the list of units which are present in the anchored component",
+          "tags": "P1"
         },
         {
-            "id": "ENG_BOOK_TC_43",
-            "description": "Validate that clicking on Activity Screen breadcrumb naviagtes to Unit detail TOC page",
-            "tags": "P1"
+          "id": "ENG_BOOK_TC_32",
+          "description": "Anchor component - Validate that clicking on Next Unit button launches the Next unit of the Anchored component in an indexed book",
+          "tags": "P1"
         },
         {
-            "id": "ENG_BOOK_TC_44",
-            "description": "Validate that clicking on unit Detail TOC breadcrumb naviagtes to Book detail TOC page",
-            "tags": "P1"
+          "id": "ENG_BOOK_TC_33",
+          "description": "Anchor component - Validate that clicking on Previous Unit button launch the previous unit of component in an indexed book",
+          "tags": "P1"
         },
         {
-            "id": "ENG_BOOK_TC_45",
-            "description": "Validate that clicking on Activity Screen breadcrumb naviagtes to Book Detail TOC page",
-            "tags": "P1"
-        }]
+          "id": "ENG_BOOK_TC_43",
+          "description": "Validate that clicking on Activity Screen breadcrumb naviagtes to Unit detail TOC page",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_BOOK_TC_44",
+          "description": "Validate that clicking on unit Detail TOC breadcrumb naviagtes to Book detail TOC page",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_BOOK_TC_45",
+          "description": "Validate that clicking on Activity Screen breadcrumb naviagtes to Book Detail TOC page",
+          "tags": "P1"
+        }
+      ]
     },
     {
       "modulename": "Item Player - FIB",
@@ -1181,6 +1188,36 @@
         {
           "id": "ENG_PLAY_TC_3",
           "description": "Validate testplayer when user click on Check My Work button",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLAY_TC_5",
+          "description": "Validate testplayer when user click on Show Answer button",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLAY_TC_6",
+          "description": "Validate testplayer when user click Your Response button",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLAY_TC_7",
+          "description": "Validate testplayer when user click on Restart button",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLAY_TC_8",
+          "description": "Validate testplayer when a question is launched for the student",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLAY_TC_9",
+          "description": "Validate testplayer when user click on Submit button",
           "tags": "P1",
           "visualTest": "-"
         }
@@ -1558,6 +1595,127 @@
           "visualTest": "-"
         }
       ]
+    },
+    {
+         "modulename":"Settings",
+         "moduledetails":"",
+         "testFile":"./test/engageExperienceApp/settings.test.js",
+         "testcase":[
+            {
+               "id":"ENG_SETT_TC_1",
+               "description":"Validate that Profile tab is selected by default when settings page is launched",
+               "tags":"P1",
+               "visualTest":true
+            },
+            {
+               "id":"ENG_SETT_TC_2",
+               "description":"Validate that clicking on Profile tab launches Profile page",
+               "tags":"P1",
+               "visualTest":"-"
+            },
+            {
+               "id":"ENG_SETT_TC_3",
+               "description":"Validate that clicking on Password tab launches Password page",
+               "tags":"P1",
+               "visualTest":"-"
+            },
+            {
+               "id":"ENG_SETT_TC_4",
+               "description":"Validate that clicking on Accessibility tab launches Accessibility page",
+               "tags":"P1",
+               "visualTest":"-"
+            },
+            {
+               "id":"ENG_SETT_TC_5",
+               "description":"Validate the content of Profile tab",
+               "tags":"P1",
+               "visualTest":"-"
+            },
+            {
+               "id":"ENG_SETT_TC_6",
+               "description":"Validate the content of Password tab",
+               "tags":"P1",
+               "visualTest":"-"
+            },
+            {
+               "id":"ENG_SETT_TC_7",
+               "description":"Validate the content of Accessibility tab",
+               "tags":"P1",
+               "visualTest":"-"
+            },
+            {
+               "id":"ENG_SETT_TC_8",
+               "description":"Validate that email ID textbox is not editable",
+               "tags":"P1",
+               "visualTest":"-"
+            },
+            {
+               "id":"ENG_SETT_TC_9",
+               "description":"Validate that user can modify the First name.",
+               "tags":"P1",
+               "visualTest":"-"
+            },
+            {
+               "id":"ENG_SETT_TC_10",
+               "description":"Validate that user can modify the Last name",
+               "tags":"P1",
+               "visualTest":"-"
+            },
+            {
+               "id":"ENG_SETT_TC_11",
+               "description":"Validate that user can select country from the drop down suggestions",
+               "tags":"P1",
+               "visualTest":"-"
+            },
+            {
+               "id":"ENG_SETT_TC_12",
+               "description":"Validate that clicking on cross button clears the country name from the text box",
+               "tags":"P1",
+               "visualTest":"-"
+            },
+            {
+               "id":"ENG_SETT_TC_13",
+               "description":"Validate the error message if First name is left blank",
+               "tags":"P1",
+               "visualTest":"-"
+            },
+            {
+               "id":"ENG_SETT_TC_14",
+               "description":"Validate the error message if Last name is left blank",
+               "tags":"P1",
+               "visualTest":"-"
+            },
+            {
+               "id":"ENG_SETT_TC_15",
+               "description":"Validate that user can update the Password",
+               "tags":"P1",
+               "visualTest":"-"
+            },
+            {
+               "id":"ENG_SETT_TC_16",
+               "description":"Validate the error messages if all Password textboxes are left blank",
+               "tags":"P1",
+               "visualTest":"-"
+            },
+            {
+               "id":"ENG_SETT_TC_17",
+               "description":"Validate the error message if New and Confirm Passwords textboxes are left blank",
+               "tags":"P1",
+               "visualTest":"-"
+            },
+            {
+               "id":"ENG_SETT_TC_18",
+               "description":"Validate the error message if New Password and Confirm Passwords do not match",
+               "tags":"P1",
+               "visualTest":"-"
+            },
+            {
+               "id":"ENG_SETT_TC_19",
+               "description":"Validate clicking on toggle password eye button displays the Password",
+               "tags":"P1",
+               "visualTest":"-"
+            }
+         ]
     }
   ]
 }

@@ -1,0 +1,31 @@
+{
+    "backoffice": {
+        "book": [
+            {
+                "type": "Book",
+                "name": "Quality Test Book 8",
+                "coverImage": "./testResources/testcaseData/backOffice/qa/book_cover_compro_qa.png",
+                "description": "QA automation test description",
+                "bookDesign": "Green",
+                "visibility": "True"
+            }
+        ],
+        "component": [
+            {
+                "type": "Learning Path",
+                "category": "Extra Activities",
+                "title": "Test component dummy",
+                "folderLevel": "3",
+                "autonumbering": "1-based",
+                "targetRole": "All",
+                "visibility": "True",
+                "assignable": "True"
+            }
+        ],
+        "folder": [
+            {
+                "name": "QA Automation Test folder L1"
+            }
+        ]
+    }
+}

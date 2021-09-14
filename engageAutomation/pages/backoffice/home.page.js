@@ -27,6 +27,12 @@ module.exports = {
     viewCodeProceedBtn: selectorFile.homePage.viewCodeProceedBtn,
     accessCodeTxtbox: selectorFile.homePage.accessCodeTxtbox,
     checkCodeProceedBtn: selectorFile.homePage.checkCodeProceedBtn,
+    booksPill: selectorFile.homePage.booksPill,
+    globalResourcesPill: selectorFile.homePage.globalResourcesPill,
+    searchTxtbox: selectorFile.homePage.searchTxtbox,
+    searchBtn: selectorFile.homePage.searchBtn,
+    bookIcon: selectorFile.homePage.bookIcon,
+    globalResourceIcon: selectorFile.homePage.globalResourceIcon,
 
     isInitialized: function () {
         logger.logInto(stackTrace.get());
@@ -42,7 +48,8 @@ module.exports = {
         res = [];
         let i, count;
         count = action.findElements(this.bookList);
-        for (i = 0; i < count; i++) {
+        console.log("count: " + count.length);
+        for (i = 0; i < count.length; i++) {
             res = action.getText(count[i]);
         }
         return res;
@@ -219,6 +226,45 @@ module.exports = {
         }
         logger.logInto(stackTrace.get(), res);
         return res;
+    },
+
+    set_Search_Text: function (text) {
+        logger.logInto(stackTrace.get());
+        res = action.click(this.searchTxtbox);
+        res = action.setValue(this.searchTxtbox, text);
+        logger.logInto(stackTrace.get(), res);
+        return res;
+    },
+
+    click_Search_Button: function () {
+        logger.logInto(stackTrace.get());
+        res = action.click(this.searchBtn);
+        if (res == true) {
+            res = action.findElements(this.bookList);
+        }
+        logger.logInto(stackTrace.get(), res);
+        return res;
+    },
+
+    click_Books_Pill: function () {
+        logger.logInto(stackTrace.get());
+        res = action.click(this.booksPill);
+        if (res == true) {
+            res = action.waitForDisplayed(this.bookIcon)
+        }
+        logger.logInto(stackTrace.get(), res);
+        return res;
+    },
+
+    click_GlobalResources_Pill: function () {
+        logger.logInto(stackTrace.get());
+        res = action.click(this.globalResourcesPill);
+        if (res == true) {
+            res = action.waitForDisplayed(this.globalResourceIcon)
+        }
+        logger.logInto(stackTrace.get(), res);
+        return res;
     }
+
 
 }

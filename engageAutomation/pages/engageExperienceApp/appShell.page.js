@@ -346,22 +346,32 @@ module.exports = {
 		return res;
 	},
 
-	getTabsListData: function () {
-		let i, list;
-		let obj = {
-			list: null,
-			selected: null
-		};
-		let componentArr = [];
+	getTabsListData: function() {
+        let i, list;
+        let obj = {
+            list: null,
+            selected : null
+        };
+        let componentArr = [];
+        
+        list = action.findElements(this.tabList);
+        for (i = 0; i < list.length; i++) {
+            componentArr[i] = action.getText(list[i])
+            if(action.getAttribute(list[i], "aria-selected") == "true")
+            	obj.selected = componentArr[i];
+        }
+        obj.list = componentArr;
+        logger.logInto(stackTrace.get(), JSON.stringify(obj));
+        return obj;
+    },
 
-		list = action.findElements(this.tabList);
-		for (i = 0; i < list.length; i++) {
-			componentArr[i] = action.getText(list[i])
-			if (action.getAttribute(list[i], "aria-selected") == "true")
-				obj.selected = componentArr[i];
-		}
-		obj.list = componentArr;
-		logger.logInto(stackTrace.get(), JSON.stringify(obj));
-		return obj;
-	}
+    clickSettingsButton: function() {
+        res = action.click(this.settingsBtn);
+        if (true == res) {
+            logger.logInto(stackTrace.get(), res + "Settings Button clicked");
+            res = require('./settings.page.js').isInitialized()
+        } else
+            logger.logInto(stackTrace.get(), res + " -- Error in clicking Settings Button", 'error');
+        return res;
+    }
 };
