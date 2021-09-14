@@ -55,12 +55,11 @@ module.exports = {
     isInitialized: function () {
         logger.logInto(stackTrace.get());
         action.waitForDocumentLoad();
-        let shell = appShell.isInitialized();
         res = {
             pageStatus: action.waitForDisplayed(this.pageTitle),
-            header: shell.header,
-            leftPane: shell.leftPane
+            appShell: null
         };
+        res.appShell = appShell.isInitialized();
         return res;
     },
 
