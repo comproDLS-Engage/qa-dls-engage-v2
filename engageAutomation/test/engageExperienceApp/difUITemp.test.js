@@ -448,7 +448,7 @@ module.exports = {
 		console.log(res)
 		res = action.click("[data-tid=button-user-profile-option-2]");
 		console.log(res)
-		res = action.waitForDisplayed("[data-tid=image-landing]");
+		res = action.waitForDisplayed("[data-tid=text-logintitle]");
 		console.log(res)
 	},
 
