@@ -91,56 +91,108 @@ module.exports = {
         return obj;
     },
 
-    getActionCardsData: function () {
+    getActionCardsData: function (str) {
         logger.logInto(stackTrace.get());
         let list, i, arr = [];
         list = action.findElements(this.actionCardTitles);
-        for (i = 0; i < list.length; i++) {
-            arr[i] = {
-                actionCardTitles: action.getText(this.actionCardTitles + i),
-                actionCardSubtitles: action.getText(this.actionCardSubtitles + i),
-                actionCardBtns: action.getText(this.actionCardBtns + i)
+        if (str) {
+            for (i = 0; i < list.length; i++) {
+                if (action.getText(list[i]) == str) {
+                    arr[0] = {
+                        actionCardTitles: action.getText(this.actionCardTitles + i),
+                        actionCardSubtitles: action.getText(this.actionCardSubtitles + i),
+                        actionCardBtns: action.getText(this.actionCardBtns + i)
+                    }
+                    break;
+                }
+            }
+        }
+        else {
+            for (i = 0; i < list.length; i++) {
+                arr[i] = {
+                    actionCardTitles: action.getText(this.actionCardTitles + i),
+                    actionCardSubtitles: action.getText(this.actionCardSubtitles + i),
+                    actionCardBtns: action.getText(this.actionCardBtns + i)
+                }
             }
         }
         return arr;
     },
 
-    getBooksData: function () {
+    getBooksData: function (str) {
         logger.logInto(stackTrace.get());
         let list, i, arr = [];
         list = action.findElements(this.bookTitle);
-        for (i = 0; i < list.length; i++) {
-            arr[i] = {
-                bookTitle: action.getText(this.bookTitle + i)
-                //view button:
-                //book image:
-                //bookSubtitle
+        if (str) {
+            for (i = 0; i < list.length; i++) {
+                if (action.getText(list[i]) == str) {
+                    arr[0] = {
+                        bookTitle: action.getText(this.bookTitle + i)
+                        //view button:
+                        //book image:
+                        //bookSubtitle
+                    }
+                    break;
+                }
+            }
+        }
+        else {
+            for (i = 0; i < list.length; i++) {
+                arr[i] = {
+                    bookTitle: action.getText(this.bookTitle + i)
+                }
             }
         }
         return arr;
     },
 
-    getResourcesData: function () {
+    getResourcesData: function (str) {
         logger.logInto(stackTrace.get());
         let list, i, arr = [];
         list = action.findElements(this.resourceList);
-        for (i = 0; i < list.length; i++) {
-            arr[i] = {
-                resourceTitle: action.getText(this.resourceTitle + i)
-                //resourceSubtitle
+        if (str) {
+            for (i = 0; i < list.length; i++) {
+                if (action.getText(list[i]) == str) {
+                    arr[0] = {
+                        resourceTitle: action.getText(this.resourceTitle + i)
+                        //resourceSubtitle
+                    }
+                    break;
+                }
+            }
+        }
+        else {
+            for (i = 0; i < list.length; i++) {
+                arr[i] = {
+                    resourceTitle: action.getText(this.resourceTitle + i)
+                    //resourceSubtitle
+                }
             }
         }
         return arr;
     },
 
-    getPlaylistData: function () {
+    getPlaylistData: function (str) {
         logger.logInto(stackTrace.get());
         let list, i, arr = [];
         list = action.findElements(this.playlistTitle);
-        for (i = 0; i < list.length; i++) {
-            arr[i] = {
-                playlistTitle: action.getText(this.playlistTitle + i),
-                playlistSubtitle: action.getText(this.playlistSubtitle + i)
+        if (str) {
+            for (i = 0; i < list.length; i++) {
+                if (action.getText(list[i]) == str) {
+                    arr[0] = {
+                        playlistTitle: action.getText(this.playlistTitle + i),
+                        playlistSubtitle: action.getText(this.playlistSubtitle + i)
+                    }
+                    break;
+                }
+            }
+        }
+        else {
+            for (i = 0; i < list.length; i++) {
+                arr[i] = {
+                    playlistTitle: action.getText(this.playlistTitle + i),
+                    playlistSubtitle: action.getText(this.playlistSubtitle + i)
+                }
             }
         }
         return arr;
