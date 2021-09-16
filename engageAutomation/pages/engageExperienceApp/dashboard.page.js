@@ -198,9 +198,9 @@ module.exports = {
         return arr;
     },
 
-    /*getRecentlyViewedData: function () {
+    getRecentlyViewedData: function () {
         
-    },*/
+    },
 
     clickAddBook: function () {
         logger.logInto(stackTrace.get());
@@ -371,10 +371,10 @@ module.exports = {
             if (action.getText(list[i]) == str) {
                 res = action.click(this.openFlipbook_menu + i);
                 if (res == true) {
-                    logger.logInto(stackTrace.get(), " --Create class clicked");
+                    logger.logInto(stackTrace.get(), " -- Open Flipbook button clicked");
                 }
                 else {
-                    res = res + " -- Error in clicking create class";
+                    res = res + " -- Error in clicking Open Flipbook button";
                     logger.logInto(stackTrace.get(), res, "error");
                 }
             }
@@ -382,32 +382,33 @@ module.exports = {
         return res;
     },
 
-    /*selectFlipbookFromList: function (str) {
+    selectFlipbookFromList: function (str) {
         logger.logInto(stackTrace.get());
        
         return res;
-    },*/
+    },
 
-    /*clickExploreResource: function (resourceName) {
+    clickExploreResource: function (str) {
         logger.logInto(stackTrace.get());
-        ret = this.getDashboardPageData();
-        for (var i = 0; i < ret.resourceList.length; i++) {
-            if (ret.resourceList[i].resourceTitle == resourceName) {
-                res = action.click(this.resourceList + i + "]");
+        let i, list;
+        list = action.findElements(this.resourceList);
+        for (i = 0; i < list.length; i++) {
+            if (action.getText(list[i]) == str) {
+                res = action.click(this.resourceTitle + i);
                 if (res == true) {
-                    var browsePage = require('./browse.page.js')
-                    res = browsePage.getActiveTabName();
-                    logger.logInto(stackTrace.get(), " --Resource band is clicked");
+                    logger.logInto(stackTrace.get(), " -- Open Flipbook button clicked");
+                    var browse = require('./browse.page');
+                    res = browse.isInitialized();
+                    // add info of selected tab in res - akhil
                 }
                 else {
-                    res = res + " -- Error in clicking resource Button"
+                    res = res + " -- Error in clicking Open Flipbook button";
                     logger.logInto(stackTrace.get(), res, "error");
                 }
             }
         }
         return res;
-    },*/
-
+    },
 
 }
 

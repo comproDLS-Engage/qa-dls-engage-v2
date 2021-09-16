@@ -97,19 +97,24 @@ module.exports = {
 
     //Validate on clicking "Open Flipbook" from Book dropdown menu, flipbook page is launched
     ENG_DASH_TC_18: function (testdata) {
-        sts = dashboardPage.clickMenuOpenFlipbook(testdata.bookName);
-        console.log(JSON.stringify(sts));
+        sts = dashboardPage.clickMenuOpenFlipbook(testdata.bookName); //this should be testdata only - akhil
         assertion.assertEqual(sts, true);
+        //sts = require('../../pages/engageExperienceApp/flipbook.page').isInitialized();
+        //assertion.assertEqual(sts.pageStatus, true);
     },
 
     //Validate on clicking "Interactive Activities" resource in Explore menu, same tab is launched on Browse
     ENG_DASH_TC_19: function () {
-        sts = dashboardPage.clickExploreResource("Interactive Activities");
-        assertion.assertEqual(sts, true, "Dashboard page status mismatch");
+        sts = dashboardPage.clickExploreResource("Interactive Activities"); //this should be a testdata
+        //above command should return the status of page launch and the selected tab
+        //assertion should be added for both
+        //all the below TCs should be updated likewise
+
+        /*assertion.assertEqual(sts, true, "Dashboard page status mismatch");
         sts = browsePage.isInitialized();
         assertion.assertEqual(sts.pageStatus, true, "Browse page status mismatch");
         sts = browsePage.getActiveTabName();
-        assertion.assertEqual(sts, "Interactive Activities", "Active tab name status Mismatch");
+        assertion.assertEqual(sts, "Interactive Activities", "Active tab name status Mismatch");*/
     },
 
     //Validate on clicking "Videos" resource in Explore menu, same tab is launched on Browse
