@@ -56,14 +56,23 @@
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/classData.json",
                   "jsonPath": "engage.courses.newValidClasswithspecialCharacter.bookName"
-               }
+               },
+              {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+                  "jsonPath": "engage.appContent.dashboard"
+              }
             ]
          },
          {
             "id": "ENG_SHELL_TC_4",
             "description": "",
             "testFile": "./test/engageExperienceApp/appShell.test.js",
-            "testData": []
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+                  "jsonPath": "engage.appContent.myClassPage"
+               }
+            ]
          },
          {
             "id": "ENG_INS_CLASS_TC_7",
@@ -634,7 +643,7 @@
             ]
          },
          {
-            "id": "ENG_SHELL_TC_12",
+            "id": "ENG_SHELL_TC_11",
             "description": "",
             "testFile": "./test/engageExperienceApp/appShell.test.js",
             "testData": []
