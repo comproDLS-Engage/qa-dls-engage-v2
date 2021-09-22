@@ -3,18 +3,18 @@
         "book": [
             {
                 "type": "Book",
-                "name": "Quality Test Book 8",
+                "name": "QA Test Automation Book [DO NOT MODIFY]",
                 "coverImage": "./testResources/testcaseData/backOffice/qa/book_cover_compro_qa.png",
-                "description": "QA automation test description",
-                "bookDesign": "Green",
+                "description": "DO NOT MODIFY",
+                "bookDesign": "Red",
                 "visibility": "True"
             }
         ],
         "component": [
             {
                 "type": "Learning Path",
-                "category": "Extra Activities",
-                "title": "Test component dummy",
+                "category": "Textbook",
+                "title": "Textbook",
                 "folderLevel": "3",
                 "autonumbering": "1-based",
                 "targetRole": "All",
@@ -24,7 +24,12 @@
         ],
         "folder": [
             {
-                "name": "QA Automation Test folder L1"
+                "name": "Unit 1",
+                "coverImage": "",
+                "targetRole":"",
+                "assignable" :"",
+                "color" : "",
+                "page" : ""
             }
         ]
     }

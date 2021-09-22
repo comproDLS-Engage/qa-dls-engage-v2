@@ -103,7 +103,8 @@
 		"activityMenuDeleteBtn": "[class*=mdc-menu-surface--open] [data-tid=button-Delete]",
 		"activityMenuActivityAuthorBtn": "[class*=mdc-menu-surface--open] [data-tid*=button-Activity]",
 		"itemCheckboxes": "[data-tid*=button-folder-details] > div > div",
-		"deleteItemBtn": "[id=deletSlectedItem]"
+		"deleteItemBtn": "[id=deletSlectedItem]",
+		"modifyFolderOptionsBtn":"[data-tid=button-modify-folder-options]"
 	},
 	"addFolderPage": {
 		"nameTxtbox": "[id=Name]",
@@ -123,8 +124,8 @@
 	},
 	"publishComponentPage": {
 		"snapshotBtn": "[data-tid*='button-Create New Snapshot']",
-		"previewBtn": "[data-tid*='button-Preview']",
-		"publishBtn": "[data-tid*='button-Publish']",
+		"previewBtn": "button[data-tid*='button-Preview']",
+		"publishBtn": "button[data-tid*='button-Publish']",
 		"lastPublishedVer": "div:nth-child(1)[class=c-publish-component-page__component__attribute] [class=c-publish-component-page__component__attribute_value__version]",
 		"lastSnapshotVer": "div:nth-child(2)[class=c-publish-component-page__component__attribute] [class=c-publish-component-page__component__attribute_value__version]"
 	},

@@ -19,6 +19,7 @@ module.exports = {
     deleteItemBtn: selectorFile.viewLearningPathPage.deleteItemBtn,
     itemCheckboxes: selectorFile.viewLearningPathPage.itemCheckboxes,
     activityMenuActivityAuthorBtn: selectorFile.viewLearningPathPage.activityMenuActivityAuthorBtn,
+    modifyFolderOptionsBtn: selectorFile.viewLearningPathPage.modifyFolderOptionsBtn,
 
     isInitialized: function () {
         logger.logInto(stackTrace.get());
@@ -225,5 +226,17 @@ module.exports = {
         }
         logger.logInto(stackTrace.get(), res);
         return res;
-    }
+    },
+
+    click_ModifyFolderOptions_Button: function () {
+        logger.logInto(stackTrace.get());
+        let res;
+        res = action.click(this.modifyFolderOptionsBtn);
+        if (res == true) {
+            res = require('./addFolder.page.js').isInitialized();
+            browser.pause(2000);
+        }
+        logger.logInto(stackTrace.get(), res);
+        return res;
+    },
 }
