@@ -2,7 +2,8 @@
 	"Suite1": {
 		"Name": "Snapshot and Publish Workflow",
 		"TestCaseRepo": [
-			"./testResources/testcaseRepository/backOffice/backOfficeTCRepository.json"
+			"./testResources/testcaseRepository/backOffice/backOfficeTCRepository.json",
+			"./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
 		],
 		"Before": [
 			{
@@ -32,10 +33,7 @@
 						"jsonPath": "backoffice.book[0]"
 					}
 				]
-			}
-		],
-		"BeforeEach": [],
-		"Test": [
+			},
 			{
 				"id": "BK_TC_10",
 				"description": "",
@@ -48,7 +46,21 @@
 				]
 			},
 			{
-				"id": "BK_TC_11",
+				"id": "BK_TC_13",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/qa/publishData.json",
+						"jsonPath": "backoffice.folder[0]"
+					}
+				]
+			}
+		],
+		"BeforeEach": [],
+		"Test": [
+			{
+				"id": "BK_TC_42",
 				"description": "",
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": []
@@ -72,6 +84,48 @@
 			},
 			{
 				"id": "BK_TC_38",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			},
+			{
+				"id": "BK_TC_40",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			},
+			{
+				"id": "ENG_BOOK_TC_19",
+				"description": "",
+				"testFile": "./test/engageExperienceApp/bookDetailView.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+						"jsonPath": "book.component[0].unit[0].title"
+					},
+					{
+						"dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+						"jsonPath": "book.component[0].unit[0].section[0]"
+					}
+				]
+			},
+			{
+				"id": "ENG_BOOK_TC_21",
+				"description": "",
+				"testFile": "./test/engageExperienceApp/bookDetailView.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+						"jsonPath": "book.component[0].unit[0].section[0].activity[0]"
+					},
+					{
+						"dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+						"jsonPath": "book.component[0]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_41",
 				"description": "",
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": []

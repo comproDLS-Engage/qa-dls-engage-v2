@@ -202,6 +202,21 @@
                     "id": "BK_TC_39",
                     "description": "Click Publish on Preview and Publish Component page",
                     "tags": "P1"
+                },
+                {
+                    "id": "BK_TC_40",
+                    "description": "Click Preview on Preview and Publish Component page",
+                    "tags": "P1"
+                },
+                {
+                    "id": "BK_TC_41",
+                    "description": "Close Preview window",
+                    "tags": "P1"
+                },
+                {
+                    "id": "BK_TC_42",
+                    "description": "Validate that edit folder page opens on clicking the modify options button",
+                    "tags": "P1"
                 }
             ]
         }

@@ -127,14 +127,25 @@ module.exports = {
 	BK_TC_12: function (testdata) {
 		sts = addFolderPage.set_Name(testdata.name);
 		assertion.assertEqual(sts, true, "Name status mismatch");
-		sts = addFolderPage.upload_CoverImage(testdata.coverImage);
-		assertion.assertEqual(sts, true, "Upload cover image status mismatch");
-		sts = addFolderPage.select_TargetRole(testdata.targetRole);
-		assertion.assertEqual(sts, true, "Target Role status mismatch");
-		sts = addFolderPage.select_Assignable(testdata.assignable);
-		assertion.assertEqual(sts, true, "Assignable status mismatch");
-		sts = addFolderPage.set_Folder_Color(testdata.color);
-		assertion.assertEqual(sts, true, "Folder color status mismatch");
+		if (testdata.coverImage != "") {
+			sts = addFolderPage.upload_CoverImage(testdata.coverImage);
+			assertion.assertEqual(sts, true, "Upload cover image status mismatch");
+		}
+		if (testdata.targetRole != "") {
+			sts = addFolderPage.select_TargetRole(testdata.targetRole);
+			assertion.assertEqual(sts, true, "Target Role status mismatch");
+		}
+		if (testdata.assignable != "") {
+			sts = addFolderPage.select_Assignable(testdata.assignable);
+			assertion.assertEqual(sts, true, "Assignable status mismatch");
+		}
+		if (testdata.color != "") {
+			sts = addFolderPage.set_Folder_Color(testdata.color);
+			assertion.assertEqual(sts, true, "Folder color status mismatch");
+		}
+		if (testdata.page == "") {
+			testdata.page = Math.floor(Math.random() * 10);
+		}
 		sts == addFolderPage.set_Page_Reference(testdata.page);
 		assertion.assertEqual(sts, true, "Page reference status mismatch");
 		sts = addFolderPage.click_Add_Button();
@@ -334,7 +345,7 @@ module.exports = {
 	//Click Preview and Publish button on Component viewer Page
 	BK_TC_37: function () {
 		sts = common.click_PreviewAndPublish_button();
-		assertion.assertEqual(sts.snapshotBtn_isEnabled, true, "snapshot button status mismatch");
+		assertion.assertEqual(sts.snapshotBtn_isEnabled, true, "Preview and Publish page status mismatch");
 	},
 
 	//Click Snapshot on Preview and Publish Component page
@@ -347,6 +358,28 @@ module.exports = {
 	BK_TC_39: function () {
 		sts = publishComponentPage.click_Publish_Button();
 		assertion.assertEqual(sts, true, "Publish status mismatch");
+	},
+
+	//Click Preview on Preview and Publish Component page
+	BK_TC_40: function () {
+		sts = publishComponentPage.click_Preview_Button();
+		assertion.assertEqual(sts, true, "Preview status mismatch");
+		//browser.switchWindow('engage-difusion');
+		//const page = require('../../pages/engageExperienceApp/appShell.page');
+		//sts = page.getAppShellHeaderData();
+		//assertion.assertEqual(sts, "Preview", "Preview status mismatch");
+	},
+
+	//Close Preview window
+	BK_TC_41: function () {
+		browser.closeWindow();
+		browser.switchWindow(global.appUrl);
+	},
+
+	//Validate that edit folder page opens on clicking the modify options button
+	BK_TC_42: function () {
+		sts = learningPathPage.click_ModifyFolderOptions_Button();
+		assertion.assertEqual(sts, true, "Edit folder page status mismatch");
 	},
 
 }

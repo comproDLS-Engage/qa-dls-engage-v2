@@ -46,7 +46,9 @@ module.exports = {
         logger.logInto(stackTrace.get());
         res = action.click(this.previewBtn);
         if (res == true) {
-            //res = require('./addLO.page.js').isInitialized();
+            browser.switchWindow('engage-difusion');
+            res = action.waitForDocumentLoad();
+            res = action.waitForDisplayed("[data-tid=text-bookTitle]");
         }
         logger.logInto(stackTrace.get(), res);
         return res;
