@@ -41,10 +41,10 @@
                     "info": {}
                 },
                 "acceptanceteacher": {
-                    "email": "acceptanceInstructor@yopmail.com",
+                    "email": "acceptanceTeacher@yopmail.com",
                     "password": "Compro@1234",
                     "role": "student",
-                    "name": "acceptance Instructor",
+                    "name": "acceptance Teacher",
                     "class": [  
                         {
                             "key": "TFbA-6AP7",

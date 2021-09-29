@@ -184,6 +184,10 @@
                {
                   "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
                   "jsonPath":"book.component[2]"
+               },
+               {
+                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                  "jsonPath":"book.component[2].unit[0]"
                }
             ]
          },
