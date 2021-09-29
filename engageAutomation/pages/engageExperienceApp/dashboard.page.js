@@ -26,18 +26,20 @@ module.exports = {
     noPlaylists_title: selectorFile.css.ComproEngage.dashboardPage.noPlaylists_title,
     noPlaylists_subTitle: selectorFile.css.ComproEngage.dashboardPage.noPlaylists_subTitle,
     noPlaylists_btn: selectorFile.css.ComproEngage.dashboardPage.noPlaylists_btn,
+
     //My Books section
     bookTitle: selectorFile.css.ComproEngage.dashboardPage.bookTitle,
     bookEllipses: selectorFile.css.ComproEngage.dashboardPage.bookEllipses,
     view_btn: selectorFile.css.ComproEngage.dashboardPageview_btn,
-    viewClass_menu: selectorFile.css.ComproEngage.dashboardPage.viewClass_menu,
-    createClass_menu: selectorFile.css.ComproEngage.dashboardPage.createClass_menu,
-    removeBook_menu: selectorFile.css.ComproEngage.dashboardPage.removeBook_menu,
-    openFlipbook_menu: selectorFile.css.ComproEngage.dashboardPage.openFlipbook_menu,
     removeBook_title: selectorFile.css.ComproEngage.dashboardPage.removeBook_title,
     removeBook_subTitle: selectorFile.css.ComproEngage.dashboardPage.removeBook_subTitle,
     removeBook_cancel: selectorFile.css.ComproEngage.dashboardPage.removeBook_cancel,
     removeBook_remove: selectorFile.css.ComproEngage.dashboardPage.removeBook_remove,
+    bookMenu_viewClass: selectorFile.css.ComproEngage.dashboardPage.bookMenu_viewClass,
+    bookMenu_createClass: selectorFile.css.ComproEngage.dashboardPage.bookMenu_createClass,
+    bookMenu_remove: selectorFile.css.ComproEngage.dashboardPage.bookMenu_remove,
+    bookMenu_openFlipbook: selectorFile.css.ComproEngage.dashboardPage.bookMenu_openFlipbook,
+
     //my playlist section
     playlistTitle: selectorFile.css.ComproEngage.dashboardPage.playlistTitle,
     playlistSubtitle: selectorFile.css.ComproEngage.dashboardPage.playlistSubtitle,
@@ -50,7 +52,6 @@ module.exports = {
     viewAll_btn: selectorFile.css.ComproEngage.dashboardPage.viewAll_btn,
     resourceList: selectorFile.css.ComproEngage.dashboardPage.resourceList,
     resourceTitle: selectorFile.css.ComproEngage.dashboardPage.resourceTitle,
-
 
     isInitialized: function () {
         logger.logInto(stackTrace.get());
@@ -199,7 +200,7 @@ module.exports = {
     },
 
     getRecentlyViewedData: function () {
-        
+
     },
 
     clickAddBook: function () {
@@ -259,47 +260,56 @@ module.exports = {
     },
 
     getBookMenuData: function () {
-
+        logger.logInto(stackTrace.get());
+        let obj = {
+            bookMenu_viewClass: (action.getElementCount(this.bookMenu_viewClass) > 0) ? action.getText(this.bookMenu_viewClass) : null,
+            bookMenu_createClass: (action.getElementCount(this.bookMenu_createClass) > 0) ? action.getText(this.bookMenu_createClass) : null,
+            bookMenu_remove: (action.getElementCount(this.bookMenu_remove) > 0) ? action.getText(this.bookMenu_remove) : null,
+            bookMenu_openFlipbook: (action.getElementCount(this.bookMenu_openFlipbook) > 0) ? action.getText(this.bookMenu_openFlipbook) : null,
+        }
+        return obj;
     },
 
-    clickMenuViewClasses: function (str) {
+    clickMenuViewClasses: function () {
         logger.logInto(stackTrace.get());
-        let i, list;
-        list = action.findElements(this.bookTitle);
-        for (i = 0; i < list.length; i++) {
-            if (action.getText(list[i]) == str) {
-                res = action.click(this.viewClass_menu + i);
-                if (res == true) {
-                    let classDrawerPage = require('./classDrawer.page');
-                    res = classDrawerPage.isInitialized();
-                    logger.logInto(stackTrace.get(), " --View class clicked");
-                }
-                else {
-                    res = res + " -- Error in clicking View class";
-                    logger.logInto(stackTrace.get(), res, "error");
-                }
-            }
+        res = action.click(this.bookMenu_viewClass);
+        if (res == true) {
+            let classDrawerPage = require('./classDrawer.page');
+            res = classDrawerPage.isInitialized();
+            logger.logInto(stackTrace.get(), " --View class clicked");
+        }
+        else {
+            res = res + " -- Error in clicking View class";
+            logger.logInto(stackTrace.get(), res, "error");
         }
         return res;
     },
 
-    clickMenuCreateNewClass: function (str) {
+    clickMenuCreateNewClass: function () {
         logger.logInto(stackTrace.get());
-        let i, list;
-        list = action.findElements(this.bookTitle);
-        for (i = 0; i < list.length; i++) {
-            if (action.getText(list[i]) == str) {
-                res = action.click(this.createClass_menu + i);
-                if (res == true) {
-                    var createClassPage = require('./createClass.page.js');
-                    res = createClassPage.isInitialized();
-                    logger.logInto(stackTrace.get(), " --Create class clicked");
-                }
-                else {
-                    res = res + " -- Error in clicking create class";
-                    logger.logInto(stackTrace.get(), res, "error");
-                }
-            }
+        res = action.click(this.bookMenu_createClass);
+        if (res == true) {
+            var createClassPage = require('./createClass.page.js');
+            res = createClassPage.isInitialized();
+            logger.logInto(stackTrace.get(), " --Create class clicked");
+        }
+        else {
+            res = res + " -- Error in clicking create class";
+            logger.logInto(stackTrace.get(), res, "error");
+        }
+        return res;
+    },
+
+    clickMenuRemoveBook: function () {
+        logger.logInto(stackTrace.get());
+        res = action.click(this.bookMenu_remove);
+        if (res == true) {
+            res = this.getRemoveBookData();
+            logger.logInto(stackTrace.get(), " --Remove from My books clicked");
+        }
+        else {
+            res = res + " -- Error in clicking Remove from My books"
+            logger.logInto(stackTrace.get(), res, "error");
         }
         return res;
     },
@@ -315,31 +325,11 @@ module.exports = {
         return obj;
     },
 
-    clickMenuRemoveBook: function (str) {
-        logger.logInto(stackTrace.get());
-        let i, list;
-        list = action.findElements(this.bookTitle);
-        for (i = 0; i < list.length; i++) {
-            if (action.getText(list[i]) == str) {
-                res = action.click(this.removeBook_menu + i);
-                if (res == true) {
-                    res = this.getRemoveBookData();
-                    logger.logInto(stackTrace.get(), " --Remove from My books clicked");
-                }
-                else {
-                    res = res + " -- Error in clicking Remove from My books"
-                    logger.logInto(stackTrace.get(), res, "error");
-                }
-            }
-        }
-        return res;
-    },
-
     clickRemoveBookDialogueBox_Cancel: function () {
         logger.logInto(stackTrace.get());
         res = action.click(this.removeBook_cancel);
         if (true == res) {
-            res = this.getDashboardPageData();
+            res = this.getBooksData();
             logger.logInto(stackTrace.get(), " --cancel button is clicked");
         }
         else {
@@ -353,7 +343,7 @@ module.exports = {
         logger.logInto(stackTrace.get());
         res = action.click(this.removeBook_remove);
         if (true == res) {
-            res = this.getDashboardPageData();
+            res = this.getBooksData();
             logger.logInto(stackTrace.get(), " --Rmove button is clicked");
         }
         else {
@@ -363,28 +353,22 @@ module.exports = {
         return res;
     },
 
-    clickMenuOpenFlipbook: function (str) {
+    clickMenuOpenFlipbook: function () {
         logger.logInto(stackTrace.get());
-        let i, list;
-        list = action.findElements(this.bookTitle);
-        for (i = 0; i < list.length; i++) {
-            if (action.getText(list[i]) == str) {
-                res = action.click(this.openFlipbook_menu + i);
-                if (res == true) {
-                    logger.logInto(stackTrace.get(), " -- Open Flipbook button clicked");
-                }
-                else {
-                    res = res + " -- Error in clicking Open Flipbook button";
-                    logger.logInto(stackTrace.get(), res, "error");
-                }
-            }
+        res = action.click(this.bookMenu_openFlipbook);
+        if (res == true) {
+            logger.logInto(stackTrace.get(), " -- Open Flipbook button clicked");
+        }
+        else {
+            res = res + " -- Error in clicking Open Flipbook button";
+            logger.logInto(stackTrace.get(), res, "error");
         }
         return res;
     },
 
     selectFlipbookFromList: function (str) {
         logger.logInto(stackTrace.get());
-       
+
         return res;
     },
 
@@ -399,7 +383,7 @@ module.exports = {
                     logger.logInto(stackTrace.get(), " -- Open Flipbook button clicked");
                     var browse = require('./browse.page');
                     res = browse.isInitialized();
-                    // add info of selected tab in res - akhil
+                    // add info of selected tab in res ?? - akhil
                 }
                 else {
                     res = res + " -- Error in clicking Open Flipbook button";
