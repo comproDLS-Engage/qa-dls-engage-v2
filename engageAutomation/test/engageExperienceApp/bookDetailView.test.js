@@ -86,13 +86,12 @@ module.exports = {
 
     //Validate clicking on a component displays the units asscoiated with the component
     ENG_BOOK_TC_10: function(testdata) {
-        console.log(testdata[0])
-        sts = bookDetailPage.clickComponent(testdata[0]);
-        console.log(sts)
+       
+        sts = bookDetailPage.clickComponent(testdata.name);
         if(sts[0].chapterNumber != null)
-            assertion.assertEqual(sts[0].chapterNumber + " " + sts[0].chapterTitle, testdata[1].title, "Chapter Name Mismatch")
+            assertion.assertEqual(sts[0].chapterNumber + " " + sts[0].chapterTitle, testdata.title, "Chapter Name Mismatch")
         else
-            assertion.assertEqual(sts[0].chapterTitle, testdata[1].title, "Chapter Name Mismatch")
+            assertion.assertEqual(sts[0].chapterTitle, testdata.unit[0].title, "Chapter Name Mismatch")
 
         assertion.assertEqual(sts[0].chapterCoverImg, true, "Chapter Cover Image Not Displayed")
 

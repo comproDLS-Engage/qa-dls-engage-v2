@@ -1,7 +1,5 @@
 "use strict";
-const { click } = require('../../core/actionLibrary/baseActionLibrary.js');
 var action = require('../../core/actionLibrary/baseActionLibrary.js');
-const { browseBtn } = require('./appShell.page.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
 var res, ret;
 
@@ -228,6 +226,7 @@ module.exports = {
             logger.logInto(stackTrace.get(), " --Rmove button is clicked");
             if (res == true)
                 res = action.waitForDisplayed(this.pageTitle, 5000)
+                browser.pause(2000);
             // action.waitForDisplayed(this.cardSliderTitle)
             res = this.isInitialized();
         }

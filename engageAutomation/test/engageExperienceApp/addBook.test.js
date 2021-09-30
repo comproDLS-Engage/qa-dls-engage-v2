@@ -166,9 +166,8 @@ module.exports = {
     //check instructor classtest.json
     //Validate the book is added on clicking of add book button of a specific book
     ENG_ADDBOOK_TC_12: function (testdata) {
-        sts = addBookPage.click_addBook(testdata[0])
-        //console.log(sts)
-        if ((typeof (sts)) === "object") {
+       sts = addBookPage.click_addBook(testdata[0])
+      if ((typeof (sts)) === "object") {
             assertion.assertEqual(sts.bookInfo.addBookbtntxt, testdata[1].addedBookbtntxt, "My Books Tab is mismatched: " + JSON.stringify(sts))
         } else {
             assertion.assertFail(sts);
