@@ -74,6 +74,7 @@ module.exports = {
 		res = action.click("[data-tid=button-product-0]");
 		console.log(res)
 		res = action.waitForDocumentLoad();
+		browser.pause(3000);
 		console.log(res)
 	},
 
@@ -101,6 +102,7 @@ module.exports = {
 		res = action.waitForDocumentLoad();
 		console.log(res)
 		res = action.waitForDisplayed("[data-tid=button-filter]")
+		browser.pause(3000);
 		console.log(res)
 	},
 
@@ -111,6 +113,7 @@ module.exports = {
 		res = action.waitForDocumentLoad();
 		console.log(res)
 		res = action.waitForDisplayed("[data-tid=button-filter]")
+		browser.pause(3000);
 		console.log(res)
 	},
 
@@ -121,6 +124,7 @@ module.exports = {
 		res = action.waitForDocumentLoad();
 		console.log(res)
 		res = action.waitForDisplayed("[data-tid=button-filter]")
+		browser.pause(3000);
 		console.log(res)
 	},
 
@@ -131,6 +135,7 @@ module.exports = {
 		res = action.waitForDocumentLoad();
 		console.log(res)
 		res = action.waitForDisplayed("[data-tid=button-filter]")
+		browser.pause(3000);
 		console.log(res)
 	},
 
@@ -141,6 +146,7 @@ module.exports = {
 		res = action.waitForDocumentLoad();
 		console.log(res)
 		res = action.waitForDisplayed("[data-tid=button-filter]")
+		browser.pause(3000);
 		console.log(res)
 	},
 
@@ -151,6 +157,7 @@ module.exports = {
 		res = action.waitForDocumentLoad();
 		console.log(res)
 		res = action.waitForDisplayed("[data-tid=button-filter]")
+		browser.pause(3000);
 		console.log(res)
 	},
 
@@ -159,6 +166,7 @@ module.exports = {
 		res = action.click("[data-tid=btn-viewAll-0]");
 		console.log(res)
 		res = action.waitForDocumentLoad();
+		browser.pause(3000);
 		console.log(res)
 	},
 
