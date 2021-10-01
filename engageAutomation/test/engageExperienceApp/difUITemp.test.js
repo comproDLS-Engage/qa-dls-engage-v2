@@ -503,6 +503,7 @@ module.exports = {
 		res = action.click("[data-tid=button-apply-filter]");
 		console.log(res)
 		res = action.waitForDisplayed("[data-tid=chip-filter0]");
+		browser.pause(3000);
 		console.log(res)
 	},
 
