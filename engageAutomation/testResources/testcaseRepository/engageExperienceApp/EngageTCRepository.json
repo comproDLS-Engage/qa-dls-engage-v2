@@ -890,6 +890,12 @@
           "description": "Validate the content of add book page launched from Class workflow",
           "tags": "P1",
           "visualTest": "-"
+        },
+        {
+          "id": "ENG_ADDBOOK_TC_99",
+          "description": "Validate the Search of  book Name on  the add Book List page.",
+          "tags": "P1",
+          "visualTest": "-"
         }
       ]
     },
