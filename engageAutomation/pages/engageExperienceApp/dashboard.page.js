@@ -242,6 +242,7 @@ module.exports = {
     clickBookMenuOptions: function (str) {
         logger.logInto(stackTrace.get());
         let i, list;
+        res = undefined;
         list = action.findElements(this.bookTitle);
         for (i = 0; i < list.length; i++) {
             if (action.getText(list[i]) == str) {
@@ -261,6 +262,7 @@ module.exports = {
 
     getBookMenuData: function () {
         logger.logInto(stackTrace.get());
+        action.waitForDisplayed(this.bookMenu_viewClass);
         let obj = {
             bookMenu_viewClass: (action.getElementCount(this.bookMenu_viewClass) > 0) ? action.getText(this.bookMenu_viewClass) : null,
             bookMenu_createClass: (action.getElementCount(this.bookMenu_createClass) > 0) ? action.getText(this.bookMenu_createClass) : null,
