@@ -16,7 +16,7 @@ module.exports = {
 		assertion.assertEqual(sts.leftPane.classesBtn, testdata.classesTxt, "Classes text mismatch");
 		assertion.assertEqual(sts.leftPane.helpBtn, testdata.helpTxt, "Help text mismatch");
 		assertion.assertEqual(sts.leftPane.settingsBtn, testdata.settingsTxt, "Settings text mismatch");
-		assertion.assertEqual(sts.leftPane.sidebarImg_exists,true, "Left Pane Image does not exist");
+		assertion.assertEqual(sts.leftPane.sidebarImg_exists, true, "Left Pane Image does not exist");
 		assertion.assertEqual(sts.leftPane.poweredbyTxt, testdata.poweredByTxt, "Powered By text mismatch");
 		assertion.assertEqual(sts.leftPane.comproLogo_exists, true, "Compro logo does not exist");
 		assertion.assert(sts.leftPane.versionTxt.includes(testdata.engageTxt), "Engage text mismatch");
@@ -74,11 +74,13 @@ module.exports = {
 	//Validate that clicking on the profile dropdown launches the dropdown of profile and other options
 	ENG_SHELL_TC_8: function (testdata) {
 		sts = appShell.clickProfileButton();
-		assertion.assertEqual(sts.userName, testdata[1].name, "User Name Text mismatch");
-		assertion.assertEqual(sts.emailID, testdata[1].email, "email ID Text mismatch");
-		assertion.assertEqual(sts.userProfileHelpBtn, testdata[0].userProfileHelpBtn, "Help Text mismatch");
-		assertion.assertEqual(sts.userProfileSettingsBtn, testdata[0].userProfileSettingsBtn, "Settings Text mismatch");
-		assertion.assertEqual(sts.userProfileLogoutBtn, testdata[0].userProfileLogoutBtn, "Logout Text mismatch");
+		if (testdata[0] != undefined) {
+			assertion.assertEqual(sts.userName, testdata[1].name, "User Name Text mismatch");
+			assertion.assertEqual(sts.emailID, testdata[1].email, "email ID Text mismatch");
+			assertion.assertEqual(sts.userProfileHelpBtn, testdata[0].userProfileHelpBtn, "Help Text mismatch");
+			assertion.assertEqual(sts.userProfileSettingsBtn, testdata[0].userProfileSettingsBtn, "Settings Text mismatch");
+			assertion.assertEqual(sts.userProfileLogoutBtn, testdata[0].userProfileLogoutBtn, "Logout Text mismatch");
+		}
 	},
 
 	//Validate that clicking on logout logs out from application

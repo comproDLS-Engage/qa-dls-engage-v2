@@ -34,7 +34,6 @@ module.exports = {
 	userProfileLogoutBtn: selectorFile.css.ComproEngage.appShell.userProfileLogoutBtn,
 	classPlusIcon: selectorFile.css.ComproEngage.appShell.classPlusIcon,
 	breadcrumbbackbtn: selectorFile.css.ComproEngage.appShell.breadcrumbbackbtn,
-	breadcrumbproductTitle: selectorFile.css.ComproEngage.appShell.breadcrumbproductTitle,
 	indexBtn: selectorFile.css.ComproEngage.appShell.indexBtn,
 	chapterTitle: selectorFile.css.ComproEngage.appShell.chapterTitle,
 	indexCloseBtn: selectorFile.css.ComproEngage.appShell.indexCloseBtn,
@@ -48,17 +47,16 @@ module.exports = {
 	isInitialized: function () {
 		logger.logInto(stackTrace.get());
 		action.waitForDocumentLoad();
-		let pageStatus = action.waitForDisplayed(this.custLogo);
-		res = {};
-		res.leftPane = this.getAppShellLeftPaneData();
-		res.header = this.getAppShellHeaderData();
-		res.pageStatus = pageStatus;
+		res = {
+			leftPane: action.waitForDisplayed(this.custLogo),
+			header: (action.getElementCount(this.breadcrumbbackbtn) > 0) ? action.waitForDisplayed(this.breadcrumbbackbtn) : action.waitForDisplayed(this.selectedLanguage)
+		}
 		return res;
 	},
 
 	getAppShellLeftPaneData: function () {
 		var obj = {
-			custLogo_exists: (action.getElementCount(this.custLogo) > 0) ? action.waitForDisplayed(this.custLogo) : false, 
+			custLogo_exists: (action.getElementCount(this.custLogo) > 0) ? action.waitForDisplayed(this.custLogo) : false,
 			dashboardBtn: (action.getElementCount(this.dashboardBtn) > 0) ? action.getText(this.dashboardBtn) : null,
 			browseBtn: (action.getElementCount(this.browseBtn) > 0) ? action.getText(this.browseBtn) : null,
 			classesBtn: (action.getElementCount(this.classesBtn) > 0) ? action.getText(this.classesBtn) : null,
@@ -116,13 +114,13 @@ module.exports = {
 		logger.logInto(stackTrace.get());
 		res = action.click(this.classesBtn);
 		if (true == res) {
-			logger.logInto(stackTrace.get(),res);
+			logger.logInto(stackTrace.get(), res);
 		}
 		else {
 			res = res + " -- Error in clicking Class Button";
 			logger.logInto(stackTrace.get(), res, 'error');
 		}
-		console.log("click classes res",res)
+		console.log("click classes res", res)
 		return res;
 	},
 
@@ -197,6 +195,7 @@ module.exports = {
 	selectLanguagefromLanguageSelector: function (languageToSelect) {
 		logger.logInto(stackTrace.get());
 		res = action.click(this.languageSwitcherBtn);
+		action.waitForDisplayed(this.languageList);
 		if (res == true) {
 			let list, i, languageListText;
 			list = action.findElements(this.languageList);
@@ -258,7 +257,8 @@ module.exports = {
 	},
 
 	clickBackButton: function () {
-		res = action.click(this.breadcrumbbackbtn)
+		logger.logInto(stackTrace.get());
+		res = action.click(this.breadcrumbbackbtn);
 		if (res == true) {
 			logger.logInto(stackTrace.get(), res + "back button is clicked");
 		}
@@ -328,7 +328,7 @@ module.exports = {
 		return res;
 	},
 
-	selectTab: function (name) { 
+	selectTab: function (name) {
 		logger.logInto(stackTrace.get());
 		let i, list;
 		list = action.findElements(this.tabList);

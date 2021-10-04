@@ -6,12 +6,12 @@ module.exports = {
     snackbarInfo_txt: selectorFile.css.ComproEngage.widgets.snackbarInfo_txt,
     snackbarClose_btn: selectorFile.css.ComproEngage.widgets.snackbarClose_btn,
 
-    logout_from_app: function () {
+    /*logout_from_app: function () {
         logger.logInto(stackTrace.get());
         let appShell = require('../../pages/engageExperienceApp/appShell.page.js');
         appShell.clickProfileButton();
         appShell.clickLogoutButton();
-    },
+    },*/
 
     get_Snackbar_Message_Text: function () {
         logger.logInto(stackTrace.get());

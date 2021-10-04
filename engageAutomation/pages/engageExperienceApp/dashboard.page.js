@@ -1,17 +1,16 @@
 "use strict";
 var action = require('../../core/actionLibrary/baseActionLibrary.js');
+var appShell = require('./appShell.page');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
-var res, ret;
+var res;
 
 module.exports = {
-
 
     pageTitle: selectorFile.css.ComproEngage.dashboardPage.pageTitle,
     createPlaylist_Btn: selectorFile.css.ComproEngage.dashboardPage.createPlaylist_Btn,
     addBook_Btn: selectorFile.css.ComproEngage.dashboardPage.addBook_Btn,
-    resourceList: selectorFile.css.ComproEngage.dashboardPage.resourceList,
-    resourceTitle: selectorFile.css.ComproEngage.dashboardPage.resourceTitle,
-    //for blank dashboard in slider section
+
+    //for blank dashboard
     cardSliderTitle: selectorFile.css.ComproEngage.dashboardPage.cardSliderTitle,
     cardSliderSubtitle: selectorFile.css.ComproEngage.dashboardPage.cardSliderSubtitle,
     cardSliderLeftBtn: selectorFile.css.ComproEngage.dashboardPage.cardSliderLeftBtn,
@@ -19,34 +18,49 @@ module.exports = {
     actionCardTitles: selectorFile.css.ComproEngage.dashboardPage.actionCardTitles,
     actionCardSubtitles: selectorFile.css.ComproEngage.dashboardPage.actionCardSubtitles,
     actionCardBtns: selectorFile.css.ComproEngage.dashboardPage.actionCardBtns,
-    //My Books section
     myBooksHeading_Txt: selectorFile.css.ComproEngage.dashboardPage.myBooksHeading_Txt,
     noBooks_title: selectorFile.css.ComproEngage.dashboardPage.noBooks_title,
     noBooks_subTitle: selectorFile.css.ComproEngage.dashboardPage.noBooks_subTitle,
     noBooks_btn: selectorFile.css.ComproEngage.dashboardPage.noBooks_btn,
-    //My Playlist section
     myPlaylistsHeading_Txt: selectorFile.css.ComproEngage.dashboardPage.myPlaylistsHeading_Txt,
     noPlaylists_title: selectorFile.css.ComproEngage.dashboardPage.noPlaylists_title,
     noPlaylists_subTitle: selectorFile.css.ComproEngage.dashboardPage.noPlaylists_subTitle,
     noPlaylists_btn: selectorFile.css.ComproEngage.dashboardPage.noPlaylists_btn,
 
+    //My Books section
     bookTitle: selectorFile.css.ComproEngage.dashboardPage.bookTitle,
     bookEllipses: selectorFile.css.ComproEngage.dashboardPage.bookEllipses,
-    viewClass_menu: selectorFile.css.ComproEngage.dashboardPage.viewClass_menu,
-    createClass_menu: selectorFile.css.ComproEngage.dashboardPage.createClass_menu,
-    removeBook_menu: selectorFile.css.ComproEngage.dashboardPage.removeBook_menu,
-    openFlipbook_menu: selectorFile.css.ComproEngage.dashboardPage.openFlipbook_menu,
+    view_btn: selectorFile.css.ComproEngage.dashboardPageview_btn,
     removeBook_title: selectorFile.css.ComproEngage.dashboardPage.removeBook_title,
     removeBook_subTitle: selectorFile.css.ComproEngage.dashboardPage.removeBook_subTitle,
     removeBook_cancel: selectorFile.css.ComproEngage.dashboardPage.removeBook_cancel,
     removeBook_remove: selectorFile.css.ComproEngage.dashboardPage.removeBook_remove,
+    bookMenu_viewClass: selectorFile.css.ComproEngage.dashboardPage.bookMenu_viewClass,
+    bookMenu_createClass: selectorFile.css.ComproEngage.dashboardPage.bookMenu_createClass,
+    bookMenu_remove: selectorFile.css.ComproEngage.dashboardPage.bookMenu_remove,
+    bookMenu_openFlipbook: selectorFile.css.ComproEngage.dashboardPage.bookMenu_openFlipbook,
+
+    //my playlist section
+    playlistTitle: selectorFile.css.ComproEngage.dashboardPage.playlistTitle,
+    playlistSubtitle: selectorFile.css.ComproEngage.dashboardPage.playlistSubtitle,
+
+    //recently viewed section
+    recentlyViewed_heading: selectorFile.css.ComproEngage.dashboardPage.recentlyViewed_heading,
+
+    //explore section
+    exploreHeading: selectorFile.css.ComproEngage.dashboardPage.exploreHeading,
+    viewAll_btn: selectorFile.css.ComproEngage.dashboardPage.viewAll_btn,
+    resourceList: selectorFile.css.ComproEngage.dashboardPage.resourceList,
+    resourceTitle: selectorFile.css.ComproEngage.dashboardPage.resourceTitle,
 
     isInitialized: function () {
         logger.logInto(stackTrace.get());
         action.waitForDocumentLoad();
-        let pageStatus = action.waitForDisplayed(this.pageTitle);
-        res = this.getDashboardPageData();
-        res.pageStatus = pageStatus;
+        res = {
+            pageStatus: action.waitForDisplayed(this.pageTitle),
+            appShell: null
+        };
+        res.appShell = appShell.isInitialized();
         return res;
     },
 
@@ -57,8 +71,15 @@ module.exports = {
             createPlaylist_Txt: (action.getElementCount(this.createPlaylist_Btn) > 0) ? action.getText(this.createPlaylist_Btn) : null,
             addBook_Txt: (action.getElementCount(this.addBook_Btn) > 0) ? action.getText(this.addBook_Btn) : null,
             myBooksHeading_Txt: (action.getElementCount(this.myBooksHeading_Txt) > 0) ? action.getText(this.myBooksHeading_Txt) : null,
-
             myPlaylistsHeading_Txt: (action.getElementCount(this.myPlaylistsHeading_Txt) > 0) ? action.getText(this.myPlaylistsHeading_Txt) : null,
+            recentlyViewed_heading: (action.getElementCount(this.recentlyViewed_heading) > 0) ? action.getText(this.recentlyViewed_heading) : null,
+            exploreHeading: (action.getElementCount(this.exploreHeading) > 0) ? action.getText(this.exploreHeading) : null,
+            viewAll_btn: (action.getElementCount(this.viewAll_btn) > 0) ? action.getText(this.viewAll_btn) : null,
+
+            noBooks_title: (action.getElementCount(this.noBooks_title) > 0) ? action.getText(this.noBooks_title) : null,
+            noBooks_subTitle: (action.getElementCount(this.noBooks_subTitle) > 0) ? action.getText(this.noBooks_subTitle) : null,
+            noBooks_btn: (action.getElementCount(this.noBooks_btn) > 0) ? action.getText(this.noBooks_btn) : null,
+
             noPlaylists_title: (action.getElementCount(this.noPlaylists_title) > 0) ? action.getText(this.noPlaylists_title) : null,
             noPlaylists_subTitle: (action.getElementCount(this.noPlaylists_subTitle) > 0) ? action.getText(this.noPlaylists_subTitle) : null,
             noPlaylists_btn: (action.getElementCount(this.noPlaylists_btn) > 0) ? action.getText(this.noPlaylists_btn) : null,
@@ -66,55 +87,151 @@ module.exports = {
             cardSliderTitle: (action.getElementCount(this.cardSliderTitle) > 0) ? action.getText(this.cardSliderTitle) : null,
             cardSliderSubtitle: (action.getElementCount(this.cardSliderSubtitle) > 0) ? action.getText(this.cardSliderSubtitle) : null,
             cardSliderLeftBtn: (action.getElementCount(this.cardSliderLeftBtn) > 0) ? action.waitForDisplayed(this.cardSliderLeftBtn) : false,
-            cardSliderRightBtn: (action.getElementCount(this.cardSliderRightBtn) > 0) ? action.waitForDisplayed(this.cardSliderRightBtn) : false,
-            noBooks_title: (action.getElementCount(this.noBooks_title) > 0) ? action.getText(this.noBooks_title) : null,
-            noBooks_subTitle: (action.getElementCount(this.noBooks_subTitle) > 0) ? action.getText(this.noBooks_subTitle) : null,
-            noBooks_btn: (action.getElementCount(this.noBooks_btn) > 0) ? action.getText(this.noBooks_btn) : null,
-
-            actionCardList: [],
-            resourceList: [],
-            bookList: []
-        }
-
-        let actionCards, resources, books, i;
-
-        actionCards = action.findElements(this.actionCardTitles);
-        //gets the title, subtile and button names of the action cards for blank dashboard 
-        for (i = 0; i < actionCards.length; i++) {
-            obj.actionCardList[i] = {
-                actionCardTitles: action.getText(this.actionCardTitles + i + "]"),
-                actionCardSubtitles: action.getText(this.actionCardSubtitles + i + "]"),
-                actionCardBtns: action.getText(this.actionCardBtns + i + "]"),
-            }
-        }
-        resources = action.findElements(this.resourceList);
-        for (i = 0; i < resources.length; i++) {
-            obj.resourceList[i] = {
-                resourceTitle: action.getText(this.resourceTitle + i + "]"),
-            }
-        }
-        books = action.findElements(this.bookTitle);
-        for (i = 0; i < books.length; i++) {
-            obj.bookList[i] = {
-                bookTitle: action.getText(this.bookTitle + i + "]")
-            }
+            cardSliderRightBtn: (action.getElementCount(this.cardSliderRightBtn) > 0) ? action.waitForDisplayed(this.cardSliderRightBtn) : false
         }
         return obj;
     },
 
-    clickExploreResource: function (resourceName) {
+    getActionCardsData: function (str) {
         logger.logInto(stackTrace.get());
-        ret = this.getDashboardPageData();
-        for (var i = 0; i < ret.resourceList.length; i++) {
-            if (ret.resourceList[i].resourceTitle == resourceName) {
-                res = action.click(this.resourceList + i + "]");
+        let list, i, arr = [];
+        list = action.findElements(this.actionCardTitles);
+        if (str) {
+            for (i = 0; i < list.length; i++) {
+                if (action.getText(list[i]) == str) {
+                    arr[0] = {
+                        actionCardTitles: action.getText(this.actionCardTitles + i),
+                        actionCardSubtitles: action.getText(this.actionCardSubtitles + i),
+                        actionCardBtns: action.getText(this.actionCardBtns + i)
+                    }
+                    break;
+                }
+            }
+        }
+        else {
+            for (i = 0; i < list.length; i++) {
+                arr[i] = {
+                    actionCardTitles: action.getText(this.actionCardTitles + i),
+                    actionCardSubtitles: action.getText(this.actionCardSubtitles + i),
+                    actionCardBtns: action.getText(this.actionCardBtns + i)
+                }
+            }
+        }
+        return arr;
+    },
+
+    getBooksData: function (str) {
+        logger.logInto(stackTrace.get());
+        let list, i, arr = [];
+        list = action.findElements(this.bookTitle);
+        if (str) {
+            for (i = 0; i < list.length; i++) {
+                if (action.getText(list[i]) == str) {
+                    arr[0] = {
+                        bookTitle: action.getText(this.bookTitle + i)
+                        //view button:
+                        //book image:
+                        //bookSubtitle
+                    }
+                    break;
+                }
+            }
+        }
+        else {
+            for (i = 0; i < list.length; i++) {
+                arr[i] = {
+                    bookTitle: action.getText(this.bookTitle + i)
+                }
+            }
+        }
+        return arr;
+    },
+
+    getResourcesData: function (str) {
+        logger.logInto(stackTrace.get());
+        let list, i, arr = [];
+        list = action.findElements(this.resourceList);
+        if (str) {
+            for (i = 0; i < list.length; i++) {
+                if (action.getText(list[i]) == str) {
+                    arr[0] = {
+                        resourceTitle: action.getText(this.resourceTitle + i)
+                        //resourceSubtitle
+                    }
+                    break;
+                }
+            }
+        }
+        else {
+            for (i = 0; i < list.length; i++) {
+                arr[i] = {
+                    resourceTitle: action.getText(this.resourceTitle + i)
+                    //resourceSubtitle
+                }
+            }
+        }
+        return arr;
+    },
+
+    getPlaylistData: function (str) {
+        logger.logInto(stackTrace.get());
+        let list, i, arr = [];
+        list = action.findElements(this.playlistTitle);
+        if (str) {
+            for (i = 0; i < list.length; i++) {
+                if (action.getText(list[i]) == str) {
+                    arr[0] = {
+                        playlistTitle: action.getText(this.playlistTitle + i),
+                        playlistSubtitle: action.getText(this.playlistSubtitle + i)
+                    }
+                    break;
+                }
+            }
+        }
+        else {
+            for (i = 0; i < list.length; i++) {
+                arr[i] = {
+                    playlistTitle: action.getText(this.playlistTitle + i),
+                    playlistSubtitle: action.getText(this.playlistSubtitle + i)
+                }
+            }
+        }
+        return arr;
+    },
+
+    getRecentlyViewedData: function () {
+
+    },
+
+    clickAddBook: function () {
+        logger.logInto(stackTrace.get());
+        res = action.click(this.addBook_Btn);
+        if (res == true) {
+            logger.logInto(stackTrace.get(), " Add book button is clicked");
+            let addBook = require('./addBook.page');
+            res = addBook.isInitialized();
+        }
+        else {
+            res = res + " -- Error in clicking Add book Button";
+            logger.logInto(stackTrace.get(), res, "error");
+        }
+        return res;
+    },
+
+    clickViewButton: function (str) {
+        logger.logInto(stackTrace.get());
+        let i, list;
+        list = action.findElements(this.bookTitle);
+        for (i = 0; i < list.length; i++) {
+            if (action.getText(list[i]) == str) {
+                res = action.click(this.view_btn + i);
                 if (res == true) {
-                    var browsePage = require('./browse.page.js')
-                    res = browsePage.getActiveTabName();
-                    logger.logInto(stackTrace.get(), " --Resource band is clicked");
+                    let bookPage = require('./bookDetail.page');
+                    res = bookPage.isInitialized();
+                    logger.logInto(stackTrace.get(), " -- View button clicked");
                 }
                 else {
-                    res = res + " -- Error in clicking resource Button"
+                    res = res + " -- Error in clicking View button"
                     logger.logInto(stackTrace.get(), res, "error");
                 }
             }
@@ -122,15 +239,16 @@ module.exports = {
         return res;
     },
 
-    clickBookMenuOptions: function (bookName) {
+    clickBookMenuOptions: function (str) {
         logger.logInto(stackTrace.get());
-        ret = this.getDashboardPageData();
-        for (var i = 0; i < ret.bookList.length; i++) {
-            if (ret.bookList[i].bookTitle == bookName) {
-                res = action.click(this.bookEllipses + i + "]");
+        let i, list;
+        list = action.findElements(this.bookTitle);
+        for (i = 0; i < list.length; i++) {
+            if (action.getText(list[i]) == str) {
+                res = action.click(this.bookEllipses + i);
                 if (res == true) {
-                    //get Data of dropdown
-                    logger.logInto(stackTrace.get(), " --Book Ellipse clicked");
+                    res = this.getBookMenuData();
+                    logger.logInto(stackTrace.get(), " --Book Ellipses clicked");
                 }
                 else {
                     res = res + " -- Error in clicking Book Ellipses"
@@ -141,75 +259,77 @@ module.exports = {
         return res;
     },
 
-    clickMenuViewClasses: function (bookName) {
+    getBookMenuData: function () {
         logger.logInto(stackTrace.get());
-        ret = this.getDashboardPageData();
-        for (var i = 0; i < ret.bookList.length; i++) {
-            if (ret.bookList[i].bookTitle == bookName) {
-                res = action.click(this.viewClass_menu + i + "]");
-                if (res == true) {
-                    var classDrawerPage = require('./classDrawer.page.js')
-                    res = classDrawerPage.isInitialized();
-                    logger.logInto(stackTrace.get(), " --View class clicked");
-                }
-                else {
-                    res = res + " -- Error in clicking View class"
-                    logger.logInto(stackTrace.get(), res, "error");
-                }
-            }
+        let obj = {
+            bookMenu_viewClass: (action.getElementCount(this.bookMenu_viewClass) > 0) ? action.getText(this.bookMenu_viewClass) : null,
+            bookMenu_createClass: (action.getElementCount(this.bookMenu_createClass) > 0) ? action.getText(this.bookMenu_createClass) : null,
+            bookMenu_remove: (action.getElementCount(this.bookMenu_remove) > 0) ? action.getText(this.bookMenu_remove) : null,
+            bookMenu_openFlipbook: (action.getElementCount(this.bookMenu_openFlipbook) > 0) ? action.getText(this.bookMenu_openFlipbook) : null,
+        }
+        return obj;
+    },
+
+    clickMenuViewClasses: function () {
+        logger.logInto(stackTrace.get());
+        res = action.click(this.bookMenu_viewClass);
+        if (res == true) {
+            let classDrawerPage = require('./classDrawer.page');
+            res = classDrawerPage.isInitialized();
+            logger.logInto(stackTrace.get(), " --View class clicked");
+        }
+        else {
+            res = res + " -- Error in clicking View class";
+            logger.logInto(stackTrace.get(), res, "error");
         }
         return res;
     },
 
-    clickMenuCreateNewClass: function (bookName) {
+    clickMenuCreateNewClass: function () {
         logger.logInto(stackTrace.get());
-        ret = this.getDashboardPageData();
-        for (var i = 0; i < ret.bookList.length; i++) {
-            if (ret.bookList[i].bookTitle == bookName) {
-                res = action.click(this.createClass_menu + i + "]");
-                if (res == true) {
-                    var createClassPage = require('./createClass.page.js');
-                    res = createClassPage.isInitialized();
-                    logger.logInto(stackTrace.get(), " --Book Ellipse clicked");
-                }
-                else {
-                    res = res + " -- Error in clicking create class"
-                    logger.logInto(stackTrace.get(), res, "error");
-                }
-            }
+        res = action.click(this.bookMenu_createClass);
+        if (res == true) {
+            var createClassPage = require('./createClass.page.js');
+            res = createClassPage.isInitialized();
+            logger.logInto(stackTrace.get(), " --Create class clicked");
+        }
+        else {
+            res = res + " -- Error in clicking create class";
+            logger.logInto(stackTrace.get(), res, "error");
         }
         return res;
     },
 
-    clickMenuRemoveBook: function (bookName) {
+    clickMenuRemoveBook: function () {
         logger.logInto(stackTrace.get());
-        ret = this.getDashboardPageData();
-        for (var i = 0; i < ret.bookList.length; i++) {
-            if (ret.bookList[i].bookTitle == bookName) {
-                res = action.click(this.removeBook_menu + i + "]");
-                if (res == true) {
-                    logger.logInto(stackTrace.get(), " --Remove from My books clicked");
-                    let obj = {
-                        removeBook_title: (action.getElementCount(this.removeBook_title) > 0) ? action.getText(this.removeBook_title) : null,
-                        removeBook_subTitle: (action.getElementCount(this.removeBook_subTitle) > 0) ? action.getText(this.removeBook_subTitle) : null,
-                        removeBook_cancel: (action.getElementCount(this.removeBook_cancel) > 0) ? action.getText(this.removeBook_cancel) : null,
-                        removeBook_remove: (action.getElementCount(this.removeBook_remove) > 0) ? action.getText(this.removeBook_remove) : null,
-                    }
-                    return obj;
-                }
-                else {
-                    res = res + " -- Error in clicking Remove from My books"
-                    logger.logInto(stackTrace.get(), res, "error");
-                }
-            }
+        res = action.click(this.bookMenu_remove);
+        if (res == true) {
+            res = this.getRemoveBookData();
+            logger.logInto(stackTrace.get(), " --Remove from My books clicked");
         }
+        else {
+            res = res + " -- Error in clicking Remove from My books"
+            logger.logInto(stackTrace.get(), res, "error");
+        }
+        return res;
+    },
+
+    getRemoveBookData: function () {
+        logger.logInto(stackTrace.get());
+        let obj = {
+            removeBook_title: (action.getElementCount(this.removeBook_title) > 0) ? action.getText(this.removeBook_title) : null,
+            removeBook_subTitle: (action.getElementCount(this.removeBook_subTitle) > 0) ? action.getText(this.removeBook_subTitle) : null,
+            removeBook_cancel: (action.getElementCount(this.removeBook_cancel) > 0) ? action.getText(this.removeBook_cancel) : null,
+            removeBook_remove: (action.getElementCount(this.removeBook_remove) > 0) ? action.getText(this.removeBook_remove) : null,
+        }
+        return obj;
     },
 
     clickRemoveBookDialogueBox_Cancel: function () {
         logger.logInto(stackTrace.get());
         res = action.click(this.removeBook_cancel);
         if (true == res) {
-            res = this.isInitialized();
+            res = this.getBooksData();
             logger.logInto(stackTrace.get(), " --cancel button is clicked");
         }
         else {
@@ -223,12 +343,8 @@ module.exports = {
         logger.logInto(stackTrace.get());
         res = action.click(this.removeBook_remove);
         if (true == res) {
+            res = this.getBooksData();
             logger.logInto(stackTrace.get(), " --Rmove button is clicked");
-            if (res == true)
-                res = action.waitForDisplayed(this.pageTitle, 5000)
-                browser.pause(2000);
-            // action.waitForDisplayed(this.cardSliderTitle)
-            res = this.isInitialized();
         }
         else {
             res = res + " -- Error in clicking Notification Close Button";
@@ -237,45 +353,47 @@ module.exports = {
         return res;
     },
 
-    clickMenuOpenFlipbook: function (bookName) {
+    clickMenuOpenFlipbook: function () {
         logger.logInto(stackTrace.get());
-        ret = this.getDashboardPageData();
-        for (var i = 0; i < ret.bookList.length; i++) {
-            if (ret.bookList[i].bookTitle == bookName) {
-                let openflipbookSelector = this.openFlipbook_menu + i + "]";
-                res = action.click(openflipbookSelector);
-                let arrowSelector = openflipbookSelector + " svg"
-                res = action.getElementCount(arrowSelector)
-                if (res == 0) {
-                    res = action.click(openflipbookSelector)
-                    logger.logInto(stackTrace.get(), " --Open flipbook clicked");
+        res = action.click(this.bookMenu_openFlipbook);
+        if (res == true) {
+            logger.logInto(stackTrace.get(), " -- Open Flipbook button clicked");
+        }
+        else {
+            res = res + " -- Error in clicking Open Flipbook button";
+            logger.logInto(stackTrace.get(), res, "error");
+        }
+        return res;
+    },
+
+    selectFlipbookFromList: function (str) {
+        logger.logInto(stackTrace.get());
+
+        return res;
+    },
+
+    clickExploreResource: function (str) {
+        logger.logInto(stackTrace.get());
+        res = null;
+        let i, list;
+        list = action.findElements(this.resourceTitle);
+        for (i = 0; i < list.length; i++) {
+            if (action.getText(list[i]) == str) {
+                res = action.click(this.resourceList + i + "]");
+                if (res == true) {
+                    logger.logInto(stackTrace.get(), " -- Global Resource button clicked");
+                    var browse = require('./browse.page');
+                    res = browse.isInitialized();
+                    // add info of selected tab in res ?? - akhil
                 }
                 else {
-                    //get list and click on the required flipbook
-                    //selectors not available, logged https://compro.atlassian.net/browse/ENG-7184
+                    res = res + " -- Error in clicking Global Resource button";
                     logger.logInto(stackTrace.get(), res, "error");
                 }
             }
         }
         return res;
     },
-
-    clickAddBook: function () {
-        logger.logInto(stackTrace.get());
-        res = action.click(this.addBook_Btn);
-        if (res == true) {
-            logger.logInto(stackTrace.get(), " Add book button is clicked");
-            return true
-            // var addBook = require('./addBook.page.js');
-            // res = addBook.isInitialized();
-        }
-        else {
-            res = res + " -- Error in clicking Add book Button"
-            logger.logInto(stackTrace.get(), res, "error");
-        }
-        //return res;
-    },
-
 
 }
 
