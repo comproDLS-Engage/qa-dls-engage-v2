@@ -374,19 +374,20 @@ module.exports = {
 
     clickExploreResource: function (str) {
         logger.logInto(stackTrace.get());
+        res = null;
         let i, list;
-        list = action.findElements(this.resourceList);
+        list = action.findElements(this.resourceTitle);
         for (i = 0; i < list.length; i++) {
             if (action.getText(list[i]) == str) {
-                res = action.click(this.resourceTitle + i);
+                res = action.click(this.resourceList + i + "]");
                 if (res == true) {
-                    logger.logInto(stackTrace.get(), " -- Open Flipbook button clicked");
+                    logger.logInto(stackTrace.get(), " -- Global Resource button clicked");
                     var browse = require('./browse.page');
                     res = browse.isInitialized();
                     // add info of selected tab in res ?? - akhil
                 }
                 else {
-                    res = res + " -- Error in clicking Open Flipbook button";
+                    res = res + " -- Error in clicking Global Resource button";
                     logger.logInto(stackTrace.get(), res, "error");
                 }
             }

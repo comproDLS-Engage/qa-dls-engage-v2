@@ -124,8 +124,8 @@
             "removeBook_remove":"[data-tid=button-primary-removeBook]",
             "exploreHeading": "[data-tid=text-explore]",
             "viewAll_btn":"[data-tid=btn-label-viewall]",
-            "resourceList":"[data-tid*=item-globalresource]",
-            "resourceTitle":"[data-tid*=item-globalresource-",
+            "resourceList":"[data-tid*=item-globalresource-",
+            "resourceTitle":"[data-tid*=item-globalresource] p:nth-child(1)",
             "recentlyViewed_heading":"[data-tid=text-recentActivitiesTitle]"
          },
          "classDrawer":{
