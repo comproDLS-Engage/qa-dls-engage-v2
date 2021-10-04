@@ -38,7 +38,7 @@
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath": "engage.appContent.dashboard"
+                  "jsonPath": "engage.appContent.dashboard.teacher"
                }
             ]
          },
@@ -693,7 +693,7 @@
                },
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath": "engage.appContent.dashboard"
+                  "jsonPath": "engage.appContent.dashboard.teacher"
                }
             ]
          },

@@ -72,7 +72,7 @@ module.exports = {
     ENG_DASH_TC_15: function (testdata) {
         sts = dashboardPage.clickRemoveBookDialogueBox_Remove();
         let i;
-        for (i = 0; i < sts.length(); i++) {
+        for (i = 0; i < sts.length; i++) {
             assertion.assertNotEqual(sts[i].bookTitle, testdata, "Book title match found");
         }
     },
