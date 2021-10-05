@@ -94,9 +94,8 @@ module.exports = {
 	},
 
 	//Validate the activity player when user click on Submit Answers button
-	ENG_PLAY_TC_9: function (testdata) {
+	ENG_PLAY_TC_9: function () {
 		sts = activityPlayerPage.clickSubmitActivity();
-		console.log(JSON.stringify(sts));
 		assertion.assertEqual(sts.submitActivity_isDisabled, "true", "status mismatch");
 	},
 

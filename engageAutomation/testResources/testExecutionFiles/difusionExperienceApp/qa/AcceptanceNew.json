@@ -1394,6 +1394,12 @@
             ]
          },
          {
+            "id": "ENG_PLAY_TC_9",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
+            "testData": []
+         },
+         {
             "id": "ENG_PLAY_TC_7",
             "description": "",
             "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
