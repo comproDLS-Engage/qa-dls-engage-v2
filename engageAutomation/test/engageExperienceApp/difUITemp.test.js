@@ -440,6 +440,8 @@ module.exports = {
 
 	// Notifications pane
 	ENG_DIF_TC_33: function () {
+		res = action.click("[data-tid=button-dashboard]");
+		console.log(res)
 		res = action.click("[data-tid=button-notification]");
 		console.log(res)
 		res = action.waitForDisplayed("[data-tid=image-noNotifications]");
@@ -635,5 +637,30 @@ module.exports = {
 		console.log(res)
 		res = action.waitForDisplayed("[data-tid=text-noResultFound]");
 		console.log(res)
-	}
+	},
+
+	// View book page (locked book)
+	ENG_DIF_TC_52: function () {
+		res = action.click("[data-tid=button-view-1]");
+		console.log(res)
+		res = action.waitForDisplayed("[data-tid=image-no-access]");
+		console.log(res)
+	},
+
+	// Activate book popup
+	ENG_DIF_TC_53: function () {
+		res = action.click("//*[text()='Add an Access Key']/..");
+		console.log(res)
+		res = action.waitForDisplayed("[id=input-access-code]");
+		console.log(res)
+	},
+
+	// Close activate book popup
+	ENG_DIF_TC_54: function () {
+		res = action.click("[data-tid=button-close]");
+		console.log(res)
+		res = action.waitForDisplayed("[class*=MuiBackdrop]", undefined, true);
+		console.log(res)
+	},
+
 }

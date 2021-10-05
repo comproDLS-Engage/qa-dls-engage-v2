@@ -312,6 +312,24 @@
           "description": "",
           "tags": "P1",
           "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_52",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_53",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_54",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
         }
       ]
     },
