@@ -34,7 +34,7 @@ module.exports = {
 	isInitialized: function () {
 		logger.logInto(stackTrace.get());
 		action.waitForDocumentLoad();
-		let pageStatus = action.waitForDisplayed(this.addClassBtn);
+		let pageStatus = action.waitForDisplayed(this.activeTab);
 		res = this.get_MyClasses_Data();
 		res.pageStatus = pageStatus;
 		return res;

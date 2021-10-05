@@ -112,7 +112,6 @@ module.exports = {
 		sts = instructorMyClassPage.click_CreateClass_Button();
 		assertion.assertEqual(sts, true, "Create Class Page not launched: " + JSON.stringify(sts))
 		sts = createClassPage.isInitialized();
-		//console.log(sts)
 		if ((typeof (sts)) === "object") {
 			assertion.assertEqual(sts.pageStatus, true, "Create Class Page not launched: " + JSON.stringify(sts))
 
@@ -123,8 +122,8 @@ module.exports = {
 	//Validate that on clicking a Class card on the My Classes Page, Class Dashboard is launched for that class
 	ENG_INS_CLASS_TC_7: function (testdata) {
 		sts = instructorMyClassPage.click_ClassCard(testdata)
-		assertion.assertEqual(sts.pageStatus, true, "Class Deatails page is not launched" + JSON.stringify(sts.pageStatus))
-		assertion.assertEqual(sts.className, testdata, "Same Class is not displayed" + JSON.stringify(sts))
+		assertion.assertEqual(sts.pageStatus, true, "Class Details page is not launched" ,sts.pageStatus)
+		//assertion.assertEqual(sts.className, testdata, "Same Class is not displayed" + JSON.stringify(sts))
 
 	},
 
@@ -147,6 +146,7 @@ module.exports = {
 		sts = teacherViewClassPage.clickClassOptionsButton()
 		assertion.assertEqual(sts.editClassBtn, testdata[1].editOption_txt, "Edit button is Not displayed: " + JSON.stringify(sts))
 		sts = teacherViewClassPage.clickEditbtn();
+		
 		if ((typeof (sts)) === "object") {
 			assertion.assertEqual(sts.pageStatus, true, "Edit Class Page is not displayed: " + JSON.stringify(sts.pageStatus))
 		} else {

@@ -39,7 +39,7 @@ module.exports = {
     isInitialized: function () {
         logger.logInto(stackTrace.get());
         action.waitForDocumentLoad();
-        let pageStatus = action.waitForDisplayed(this.pageTitle);
+        let pageStatus = action.waitForDisplayed(this.productTabBtns + 0 + "]");
         res = this.getViewClassPageData();
         res.pageStatus = pageStatus;
         return res;

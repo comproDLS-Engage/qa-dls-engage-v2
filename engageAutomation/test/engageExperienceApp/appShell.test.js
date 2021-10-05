@@ -46,7 +46,7 @@ module.exports = {
 		assertion.assertEqual(sts.pageStatus, true, "Classes page status mismatch");
 		assertion.assertEqual(sts.classHeading, testdata.classHeading, "classHeading text mismatch");
 		assertion.assertEqual(sts.classSubHeading, testdata.classSubHeading, "classSubHeading text mismatch");
-		assertion.assertEqual(sts.addClassBtn, testdata.addClassBtn, "addClassBtn text mismatch");
+		//assertion.assertEqual(sts.addClassBtn, testdata.addClassBtn, "addClassBtn text mismatch");
 		assertion.assertEqual(sts.activeTab, testdata.activeTab, "activeTab text mismatch");
 		assertion.assertEqual(sts.archivedTab, testdata.archivedTab, "archivedTab text mismatch");
 	},

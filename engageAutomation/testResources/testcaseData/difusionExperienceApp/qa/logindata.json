@@ -53,11 +53,15 @@
                     "info": {}
                 },
                 "acceptanceStudent": {
-                    "email": "acceptancetest@yopmail.com",
+                    "email": "acceptanceStudent@yopmail.com",
                     "password": "Compro@1234",
                     "role": "student",
-                    "name": "acceptance test",
-                    "class": [],
+                    "name": "acceptance student",
+                    "class": [  
+                        {
+                            "key": "TFbA-6AP7",
+                            "name": "acceptanceClass"
+                        }],
                     "info": {}
                 },
                  "successfulStudentUser":

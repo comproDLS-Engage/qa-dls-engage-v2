@@ -269,9 +269,11 @@ module.exports = {
 
         appShell.ENG_SHELL_TC_11();
 
-        sts = dashboardPage.isInitialized();
+        dashboardPage.isInitialized();
+        sts = dashboardPage.getDashboardPageData();
         assertion.assertEqual(sts.pageTitle, testdata[1].pageTitle, "Dashboard text mismatch");
-        assertion.assertEqual(sts.bookList[0].bookTitle, testdata[0], "Book Title Mismatch")
+        sts=dashboardPage.getBooksData()
+        assertion.assertEqual(sts[0].bookTitle, testdata[0], "Book Title Mismatch")
 
     },
 
@@ -614,7 +616,7 @@ module.exports = {
     },
     // Validate the Search of  book Name on  the add Book List page.-- add by rupsi for acceptance test
     ENG_ADDBOOK_TC_99: function (testdata) {
-        var testdata1="\""+testdata+"\""
+        var testdata1 = "\"" + testdata + "\""
         sts = addBookPage.enterTextInSearchBox(testdata1);
         assertion.assertEqual(sts, true, "Search Text Not Entered")
 
@@ -622,5 +624,5 @@ module.exports = {
         assertion.typeOf(sts, 'object', new Error(sts));
         console.log(sts)
         assertion.assertEqual(sts.booksList[0].bookTitle, testdata, "Book Title Mismatch: " + JSON.stringify(sts))
-           }
+    }
 };

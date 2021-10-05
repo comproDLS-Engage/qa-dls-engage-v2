@@ -6,6 +6,7 @@ module.exports = {
 
     //Validate the content of the blank dashboard
     ENG_DASH_TC_1: function (testdata) {
+        dashboardPage.isInitialized();
         sts = dashboardPage.getDashboardPageData();
         assertion.assertEqual(sts.pageTitle, testdata.pageTitle, "Dashboard text mismatch");
         assertion.assertEqual(sts.createPlaylist_Txt, testdata.createPlaylist_Txt, "Create Playlist text mismatch");
@@ -41,6 +42,7 @@ module.exports = {
 
     //Validate on clicking Book Ellipses, dropdown menu is launched
     ENG_DASH_TC_12: function (testdata) {
+        
         sts = dashboardPage.clickBookMenuOptions(testdata[0]);
         assertion.assertEqual(sts.bookMenu_viewClass, testdata[1].bookMenu_viewClass, "View Class text mismatch");
         assertion.assertEqual(sts.bookMenu_remove, testdata[1].bookMenu_remove, "Remove text mismatch");
