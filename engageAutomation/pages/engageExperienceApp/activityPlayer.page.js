@@ -150,13 +150,13 @@ module.exports = {
          //updated selector for running the acceptance test only (Rupsi)
         res= action.click("footer > div > div:nth-child(1)> div:nth-child(2)> div > button > span.containerApp-MuiButton-label > p");
          if (true == res) {
+             browse.pause(5000);
             action.waitForDisplayed(this.restart_btn)
             res =  (action.getElementCount(this.restart_btn) > 0) ? action.getText(this.restart_btn) : null;
         } else {
             res = res + " -- Error in clicking Restart button";
             logger.logInto(stackTrace.get(), res, 'error');
         }
-        console.log(res)
         return res;
     }
 
