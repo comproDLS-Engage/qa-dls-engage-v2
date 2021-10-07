@@ -133,11 +133,26 @@ module.exports = {
     clickRestartButton: function(){
         logger.logInto(stackTrace.get());
         //updated selector for running the acceptance test only (Rupsi)
-        action.click("footer > div > div:nth-child(1)> div:nth-child(2)> div > button > span.containerApp-MuiButton-label > p");
+       // action.click("footer > div > div:nth-child(1)> div:nth-child(2)> div > button > span.containerApp-MuiButton-label > p");
         action.waitForDisplayed(this.restart_btn)
         res = action.click(this.restart_btn);
         if (true == res) {
             res = this.isInitialized();
+        } else {
+            res = res + " -- Error in clicking Restart button";
+            logger.logInto(stackTrace.get(), res, 'error');
+        }
+        return res;
+    },
+
+    ClickShowDetailsButton:function()
+    {
+         //updated selector for running the acceptance test only (Rupsi)
+        res= action.click("footer > div > div:nth-child(1)> div:nth-child(2)> div > button > span.containerApp-MuiButton-label > p");
+         if (true == res) {
+            browser.pause(5000);
+            action.waitForDisplayed(this.restart_btn)
+            res =  (action.getElementCount(this.restart_btn) > 0) ? action.getText(this.restart_btn) : null;
         } else {
             res = res + " -- Error in clicking Restart button";
             logger.logInto(stackTrace.get(), res, 'error');

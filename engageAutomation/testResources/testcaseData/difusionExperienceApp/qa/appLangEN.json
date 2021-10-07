@@ -284,7 +284,12 @@
             },
             "activityPlayerPage": {
                 "correct_txt": "Well done",
-                "incorrect_txt": "Oops! Not quite correct."
+                "incorrect_txt": "Oops! Not quite correct.",
+                "finish":"Finish",
+                "submit":"Submit Answers",
+                "reset":"Reset Activity",
+                "retake":"Retake Activity",
+                "checkAnswer_txt":"Check Answers"
             },
             "onboarding": {
                 "welcomePage": {

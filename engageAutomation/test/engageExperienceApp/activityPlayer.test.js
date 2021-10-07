@@ -17,6 +17,7 @@ module.exports = {
 		assertion.assertEqual(sts.previous_isExists, false, "previous button status mismatch");
 	},
 
+	
 	//Validate The Test Player When User Click "Next Question" Button
 	ENG_PLAY_TC_2: function (testdata) {
 		sts = activityPlayerPage.clickNextQuestion();
@@ -75,6 +76,7 @@ module.exports = {
 	//Click Restart button in left pane
 	ENG_PLAY_TC_7: function () {
 		sts = activityPlayerPage.clickRestartButton();
+		console.log(sts)
 		assertion.assertEqual(sts.checkmyWork_isExists, true, "check answer button status mismatch");
 		assertion.assertEqual(sts.checkmyWork_isDisabled, "true", "button state mismatch");
 	},
@@ -97,6 +99,21 @@ module.exports = {
 	ENG_PLAY_TC_9: function () {
 		sts = activityPlayerPage.clickSubmitActivity();
 		assertion.assertEqual(sts.submitActivity_isDisabled, "true", "status mismatch");
+	},
+
+	//Validate the activity player when Last question of quiz is launched
+	ENG_PLAY_TC_10: function (testdata) {
+		sts = itemPlayer.isInitialized();
+		assertion.assertEqual(sts.isSubmitted, true, "submit status mismatch");
+		sts = activityPlayerPage.getActivityPlayerData();
+		assertion.assertEqual(sts.checkAnswer_txt, testdata[0].checkAnswer_txt, "submit status mismatch");
+		assertion.assertEqual(sts.submitActivity_txt, testdata[1], "submit status mismatch");
+	},
+	
+	// Click show details button in activity Player
+	ENG_PLAY_TC_11: function (testdata) {
+		sts = activityPlayerPage.ClickShowDetailsButton();
+		assertion.assertEqual(sts, testdata, "restart button status mismatch");
 	},
 
 }

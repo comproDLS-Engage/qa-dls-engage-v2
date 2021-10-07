@@ -1190,6 +1190,7 @@
           "tags": "",
           "visualTest": "-"
         }
+       
       ]
     },
     {
@@ -1240,9 +1241,22 @@
           "visualTest": "-"
         },
         {
+          "id": "ENG_PLAY_TC_10",
+          "description": "Validate the activity player when Last question of quiz is launched",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
           "id": "ENG_PLAY_TC_9",
           "description": "Validate testplayer when user click on Submit button",
           "tags": "P1",
+          "visualTest": "-"
+        },
+     
+        {
+          "id": "ENG_PLAY_TC_11",
+          "description": "Click show details button in activity Player",
+          "tags": "",
           "visualTest": "-"
         }
       ]
