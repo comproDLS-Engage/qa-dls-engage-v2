@@ -37,7 +37,7 @@ module.exports = {
             logger.logInto(stackTrace.get(), res);
         }
         else {
-            res = res + "Snapshot button is not enabled"
+            res = res + " - Snapshot button is not enabled"
         }
         return res;
     },
@@ -72,7 +72,7 @@ module.exports = {
             logger.logInto(stackTrace.get(), res);
         }
         else {
-            res = res + "publish button is not enabled"
+            res = res + " - publish button is not enabled"
         }
         return res;
     },

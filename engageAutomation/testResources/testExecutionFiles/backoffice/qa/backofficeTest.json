@@ -124,7 +124,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
-						"jsonPath": "backoffice.component[2]"
+						"jsonPath": "backoffice.component[0]"
 					}
 				]
 			},
@@ -135,7 +135,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
-						"jsonPath": "backoffice.component[2]"
+						"jsonPath": "backoffice.component[0]"
 					}
 				]
 			},
@@ -168,7 +168,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
-						"jsonPath": "backoffice.component[0]"
+						"jsonPath": "backoffice.component[2]"
 					}
 				]
 			},
@@ -179,7 +179,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
-						"jsonPath": "backoffice.component[0]"
+						"jsonPath": "backoffice.component[2]"
 					}
 				]
 			}

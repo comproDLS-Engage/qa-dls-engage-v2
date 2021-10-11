@@ -106,8 +106,8 @@ module.exports = {
                 action.waitForDisplayed(this.bannerText);
                 //action.click(this.bannerCloseBtn);
                 res = action.getText(this.bannerText);
-                //action.waitForDisplayed(this.bannerText, undefined, true);
-                browser.pause(10000)
+                action.waitForDisplayed(this.bannerText, 60000, true);
+                browser.pause(5000)
             }
         }
         logger.logInto(stackTrace.get(), res);

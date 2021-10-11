@@ -24,6 +24,14 @@
                                     "Presentation 1",
                                     "Presentation 2"
                                 ]
+                            },
+                            {
+                                "index": 1,
+                                "name": "Part2",
+                                "activity": [
+                                    "Etext Activity -1",
+                                    "HTML Webbook Activity-1"
+                                ]
                             }
                         ]
                     }
@@ -47,6 +55,14 @@
                                 "activity": [
                                     "Close Ended Activity 1",
                                     "Close Ended Activity 2"
+                                ]
+                            },
+                            {
+                                "index": 1,
+                                "name": "Part2",
+                                "activity": [
+                                    "VDP Non-Scorable Activity",
+                                    "Presentation Slides Activity"
                                 ]
                             }
                         ]
