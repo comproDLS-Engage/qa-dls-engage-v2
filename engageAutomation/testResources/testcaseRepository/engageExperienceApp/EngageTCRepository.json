@@ -1563,6 +1563,54 @@
                "description":"Validate that the user is able to change the language on the login page",
                "tags":"P1",
                "visualTest":"-"
+            },
+            {
+               "id":"ENG_IDEN_TC_49",
+               "description":"Validate Content on Sign Up Page in default language",
+               "tags":"P1",
+               "visualTest":"-"
+            },
+            {
+               "id":"ENG_IDEN_TC_50",
+               "description":"Validate Content on Sign Up Page in Spanish language",
+               "tags":"P1",
+               "visualTest":"-"
+            },
+            {
+               "id":"ENG_IDEN_TC_57",
+               "description":"Validate Enter Account Details page is launched if user enter valid Email ID and click Sign up",
+               "tags":"P1",
+               "visualTest":"-"
+            },
+            {
+               "id":"ENG_IDEN_TC_64",
+               "description":"Validate content on Create Account page",
+               "tags":"P1",
+               "visualTest":"-"
+            },
+            {
+               "id":"ENG_IDEN_TC_65",
+               "description":"Validate the content on  Create Account page in Spanish Language",
+               "tags":"P1",
+               "visualTest":"-"
+            },
+            {
+               "id":"ENG_IDEN_TC_76",
+               "description":"Validate 'Verify Your Account' page is launched on clicking 'Create Account' on Account Details page",
+               "tags":"P1",
+               "visualTest":"-"
+            },
+            {
+               "id":"ENG_IDEN_TC_89",
+               "description":"Validate the content on Verify Your Account page",
+               "tags":"P1",
+               "visualTest":"-"
+            },
+            {
+               "id":"ENG_IDEN_TC_90",
+               "description":"Validate the content on Verify Your Account page in Spanish Language",
+               "tags":"P1",
+               "visualTest":"-"
             }
          ]
       },
