@@ -1,0 +1,45 @@
+{
+    "engage":
+    {
+        "searchAndFilter":
+        {
+
+            "searchScenario1":
+            {
+                "search_txt": "\"QA Test Automation Book\"",
+                "expected_txt": "QA Test Automation Book [DO NOT MODIFY]",
+                "searchResultCount": "1"
+            },
+            "searchScenario2":
+            {
+                "search_txt": "Automation",
+                "expected_txt": "QA Test Automation Book [DO NOT MODIFY]",
+                "searchResultCount": "1"
+            },
+            "searchScenario3":
+            {
+                "search_txt": "\"Plus 1\"",
+                "expected_txt": ["Aula Plus 1 (For DEV2 - DONT TOUCH)", "Old Aula Plus 1"],
+                "searchResultCount": "2"
+            },
+            "searchScenario4":
+            {
+                "search_txt": "book",
+                "expected_txt": "",
+                "searchResultCount": ""
+            },
+            "searchScenario5":
+            {
+                "search_txt": "@@Hello",
+                "expected_txt": "No Results There aren't any resources available that match those terms.",
+                "searchResultCount": "0"
+            }
+
+        },
+        "pagination":
+        {
+            "jumpToPage": 2
+        }
+    }
+
+}

@@ -44,6 +44,27 @@
                 ]
             },
             {
+                "id": "ENG_DIF_TC_52",
+                "description": "View book page (locked book)",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.03,
+                "testData": []
+            },
+            {
+                "id": "ENG_DIF_TC_53",
+                "description": "Activate book popup",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.03,
+                "testData": []
+            },
+            {
+                "id": "ENG_DIF_TC_54",
+                "description": "Close activate book popup",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.03,
+                "testData": []
+            },
+            {
                 "id": "ENG_DIF_TC_33",
                 "description": "Notifications pane",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
@@ -507,6 +528,27 @@
                         "jsonPath": "engage.login.user.validStudent1"
                     }
                 ]
+            },
+            {
+                "id": "ENG_DIF_TC_52",
+                "description": "View book page (locked book)",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.03,
+                "testData": []
+            },
+            {
+                "id": "ENG_DIF_TC_53",
+                "description": "Activate book popup",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.03,
+                "testData": []
+            },
+            {
+                "id": "ENG_DIF_TC_54",
+                "description": "Close activate book popup",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.03,
+                "testData": []
             },
             {
                 "id": "ENG_DIF_TC_33",
