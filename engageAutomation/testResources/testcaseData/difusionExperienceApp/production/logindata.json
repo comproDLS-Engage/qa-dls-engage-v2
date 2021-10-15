@@ -44,6 +44,18 @@
                         }],
                     "info": {}
                 },
+                "acceptanceStudent": {
+                    "email" :"qa_acceptanceStudent1@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "student",
+                    "name": "qa student",
+                    "class": [  
+                        {
+                            "key": "TFbA-6AP7",
+                            "name": "acceptanceClass"
+                        }],
+                    "info": {}
+                },
                 "validInstructorUser1": {
                     "email": "qa_teacher003@yopmail.com",
                     "password": "Compro@1234",
