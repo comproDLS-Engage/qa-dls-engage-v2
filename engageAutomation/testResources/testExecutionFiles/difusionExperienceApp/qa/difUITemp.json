@@ -47,21 +47,21 @@
                 "id": "ENG_DIF_TC_52",
                 "description": "View book page (locked book)",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.03,
+                "visualTolerance": 0.05,
                 "testData": []
             },
             {
                 "id": "ENG_DIF_TC_53",
                 "description": "Activate book popup",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.03,
+                "visualTolerance": 0.05,
                 "testData": []
             },
             {
                 "id": "ENG_DIF_TC_54",
                 "description": "Close activate book popup",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.03,
+                "visualTolerance": 0.05,
                 "testData": []
             },
             {
@@ -533,21 +533,21 @@
                 "id": "ENG_DIF_TC_52",
                 "description": "View book page (locked book)",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.03,
+                "visualTolerance": 0.05,
                 "testData": []
             },
             {
                 "id": "ENG_DIF_TC_53",
                 "description": "Activate book popup",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.03,
+                "visualTolerance": 0.05,
                 "testData": []
             },
             {
                 "id": "ENG_DIF_TC_54",
                 "description": "Close activate book popup",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.03,
+                "visualTolerance": 0.05,
                 "testData": []
             },
             {
