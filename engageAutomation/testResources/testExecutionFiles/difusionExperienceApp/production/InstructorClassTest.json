@@ -36,7 +36,7 @@
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
             "jsonPath": "engage.appContent.myClassPage"
-         }
+          }
         ]
       }
     ],
@@ -109,7 +109,7 @@
           },
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
-	            "jsonPath": "engage.appContent.addBookPage.classes"
+            "jsonPath": "engage.appContent.addBookPage.classes"
           }
         ]
       },
@@ -289,7 +289,7 @@
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
             "jsonPath": "engage.appContent.myClassPage"
-         }
+          }
         ]
       }
     ],
@@ -369,7 +369,7 @@
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
             "jsonPath": "engage.appContent.myClassPage"
-         }
+          }
         ]
       }
     ],
@@ -481,7 +481,7 @@
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
             "jsonPath": "engage.appContent.myClassPage"
-         }
+          }
         ]
       },
       {
@@ -569,7 +569,7 @@
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
             "jsonPath": "engage.appContent.myClassPage"
-         }
+          }
         ]
       },
       {
@@ -640,7 +640,7 @@
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
             "jsonPath": "engage.appContent.myClassPage"
-         }
+          }
         ]
       }
     ],
@@ -866,6 +866,10 @@
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/classData.json",
             "jsonPath": "engage.courses.newValidClasswithspecialCharacter.bookName"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+            "jsonPath": "engage.appContent.dashboard.teacher"
           }
         ]
       },
@@ -1001,6 +1005,10 @@
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/classData.json",
             "jsonPath": "engage.courses.newValidClasswithspecialCharacter.bookName"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+            "jsonPath": "engage.appContent.dashboard.teacher"
           }
         ]
       },
@@ -1121,7 +1129,7 @@
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
             "jsonPath": "engage.appContent.myClassPage"
-         }
+          }
         ]
       },
       {
@@ -1209,7 +1217,7 @@
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
             "jsonPath": "engage.appContent.myClassPage"
-         }
+          }
         ]
       },
       {
@@ -1300,6 +1308,10 @@
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/classData.json",
             "jsonPath": "engage.courses.newValidClasswithspecialCharacter.bookName"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+            "jsonPath": "engage.appContent.dashboard.teacher"
           }
         ]
       },
@@ -1379,6 +1391,10 @@
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/classData.json",
             "jsonPath": "engage.courses.newValidClasswithspecialCharacter.bookName"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+            "jsonPath": "engage.appContent.dashboard.teacher"
           }
         ]
       },

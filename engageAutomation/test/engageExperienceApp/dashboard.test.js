@@ -42,7 +42,6 @@ module.exports = {
 
     //Validate on clicking Book Ellipses, dropdown menu is launched
     ENG_DASH_TC_12: function (testdata) {
-        
         sts = dashboardPage.clickBookMenuOptions(testdata[0]);
         assertion.assertEqual(sts.bookMenu_viewClass, testdata[1].bookMenu_viewClass, "View Class text mismatch");
         assertion.assertEqual(sts.bookMenu_remove, testdata[1].bookMenu_remove, "Remove text mismatch");
