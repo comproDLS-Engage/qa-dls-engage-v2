@@ -264,32 +264,28 @@
                 "openFlipbook": "Open Flipbook",
                 "viewBookDetails": "View Book Details",
                 "removefromMyBooks": "Remove from My Books",
-                "units": "Units",
-                "removeBook_menu": {
-                    "removeBookTitle": "Remove from My Books?",
-                    "message1": "This will remove the book - ",
-                    "message2": " - from your My Books list.",
-                    "cancel_btn": "Cancel",
-                    "remove_btn": "Remove"
-                },
+                "unit_lbl": "Units",
+                "removeBook_title": "Remove from My Books?",
+                "removeBook_subtitle1": "This will remove the book - ",
+                "removeBook_subtitle2": " - from your My Books list.",
+                "removeBookDialogCancel": "Cancel",
+                "removeBookDialogRemove": "Remove",
                 "activity_lbl": "Activities",
                 "activity_byline": "Select an item to view materials.",
-                "continueWhereYouLeft": "Continue where you left off:",
-                "dismiss_btn": "Dismiss",
-                "continue_btn": "Continue",
-                "unit_moreOptions": {
-                    "openInFlipbook": "Open in Flipbook",
-                    "viewActivities": "View Activities"
-                }
+                "lastActivity_lbl": "Continue where you left off:",
+                "lastActivity_Dismiss": "Dismiss",
+                "lastActivity_Continue": "Continue",
+                "unitOpenFlipbook_option": "Open in Flipbook",
+                "unitViewActivity_option": "View Activities"
             },
             "activityPlayerPage": {
                 "correct_txt": "Well done",
                 "incorrect_txt": "Oops! Not quite correct.",
-                "finish":"Finish",
-                "submit":"Submit Answers",
-                "reset":"Reset Activity",
-                "retake":"Retake Activity",
-                "checkAnswer_txt":"Check Answers"
+                "finish": "Finish",
+                "submit": "Submit Answers",
+                "reset": "Reset Activity",
+                "retake": "Retake Activity",
+                "checkAnswer_txt": "Check Answers"
             },
             "onboarding": {
                 "welcomePage": {

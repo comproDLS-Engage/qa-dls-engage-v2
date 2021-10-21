@@ -1,0 +1,112 @@
+{
+    "book": {
+        "name": "Aula Plus 1 (For DEV2)",
+        "description": "Curso De Espanol A1",
+        "component": [
+            {
+                "index": 0,
+                "name": {
+                    "EN": "Manual Web",
+                    "ES": "Manual Web"
+                },
+                "unit": [
+                    {
+                        "index": 0,
+                        "title": "0. En el aula",
+                        "activityCount": "6",
+                        "folderCount": "",
+                        "flipbookPageNum": "10",
+                        "section": [
+                            {
+                                "index": 0,
+                                "name": "",
+                                "activity": [
+                                    "1. Me llamo Anderson. ¿Y tú?",
+                                    "2. Sonidos"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "index": 1,
+                "name": "Extra Activities",
+                "nameES": "Extra Activities",
+                "unit": [
+                    {
+                        "index": 0,
+                        "title": "1. Unit 1",
+                        "activityCount": "2",
+                        "folderCount": "1",
+                        "flipbookPageNum": "3",
+                        "section": [
+                            {
+                                "index": 0,
+                                "name": "Part 1",
+                                "activity": [
+                                    "Close Ended Activity 1",
+                                    "Close Ended Activity 2"
+                                ]
+                            },
+                            {
+                                "index": 1,
+                                "name": "Part2",
+                                "activity": [
+                                    "VDP Non-Scorable Activity",
+                                    "Presentation Slides Activity"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "index": 2,
+                "name": "Custom Component",
+                "nameES": "Custom Component",
+                "unit": [
+                    {
+                        "index": 0,
+                        "title": "Unit 1",
+                        "activityCount": "1",
+                        "folderCount": "0",
+                        "flipbookPageNum": "",
+                        "section": [
+                            {
+                                "index": 0,
+                                "name": "",
+                                "activity": [
+                                    "Native LO 1"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "index": 3,
+                "name": "Book Resources",
+                "nameES": "Book Resources",
+                "unit": [
+                    {
+                        "index": 0,
+                        "title": "1. Unit 1",
+                        "activityCount": "1",
+                        "folderCount": "0",
+                        "flipbookPageNum": "",
+                        "section": [
+                            {
+                                "index": 0,
+                                "name": "",
+                                "activity": [
+                                    "Practice Exam 1"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

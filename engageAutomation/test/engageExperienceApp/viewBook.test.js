@@ -34,10 +34,10 @@ module.exports = {
     //Validate that clicking on "Remove from My Books" option launches the remove book pop up
     ENG_BOOK_TC_4: function (testdata) {
         sts = viewBookPage.clickRemoveBook();
-        assertion.assertEqual(sts.removeBook_title, testdata[0].removeBookTitle, "Remove Book Pop up Title Mismatch");
-        assertion.assertEqual(sts.removeBook_subtitle, testdata[0].message1 + testdata[1].name + testdata[0].message2, "Remove Book Pop up description Mismatch");
-        assertion.assertEqual(sts.removeBookDialogCancel, testdata[0].cancel_btn, "Remove Book Pop up Cancel Button Mismatch");
-        assertion.assertEqual(sts.removeBookDialogRemove, testdata[0].remove_btn, "Remove Book Pop up Remove Button Mismatch");
+        assertion.assertEqual(sts.removeBook_title, testdata[0].removeBook_title, "Remove Book Pop up Title Mismatch");
+        assertion.assertEqual(sts.removeBook_subtitle, testdata[0].removeBook_subtitle1 + testdata[1].name + testdata[0].removeBook_subtitle2, "Remove Book Pop up description Mismatch");
+        assertion.assertEqual(sts.removeBookDialogCancel, testdata[0].removeBookDialogCancel, "Remove Book Pop up Cancel Button Mismatch");
+        assertion.assertEqual(sts.removeBookDialogRemove, testdata[0].removeBookDialogRemove, "Remove Book Pop up Remove Button Mismatch");
     },
 
     //Validate clicking on Cancel closes the Remove book pop up
@@ -59,7 +59,7 @@ module.exports = {
         //assertions to be updated after flipbook page obj - Akhil
     },
 
-    //Validate clicking on a component displays the units asscoiated with the component
+    //Non-Anchor Component - Validate clicking on a component displays the units asscoiated with the component
     ENG_BOOK_TC_10: function (testdata) {
         var appShell = require('../../pages/engageExperienceApp/appShell.page');
         sts = appShell.selectTab(testdata[0].name);
@@ -71,10 +71,11 @@ module.exports = {
     //Validate that 'Continue where you left off' message appears on the view book page
     ENG_BOOK_TC_11: function (testdata) {
         sts = viewBookPage.getViewBookData();
-        assertion.assertEqual(sts.lastActivity_lbl, testdata[0].continueWhereYouLeft, "Continue Where You left Off label Mismatch");
-        assertion.assertEqual(sts.lastActivity_Dismiss, testdata[0].dismiss_btn, "Continue Where You left Off Dismiss button text Mismatch");
-        assertion.assertEqual(sts.lastActivityIcon, true, "Continue Where You left Off Activity Icon not Displayed");
-        assertion.assertEqual(sts.lastActivity_name, testdata[1], "Continue Where You left Off Activity Name text Mismatch");
+        assertion.assertEqual(sts.lastActivity_lbl, testdata[0].lastActivity_lbl, "Continue Where You left Off label mismatch");
+        assertion.assertEqual(sts.lastActivity_Dismiss, testdata[0].lastActivity_Dismiss, "Dismiss button text mismatch");
+        assertion.assertEqual(sts.lastActivity_Continue, testdata[0].lastActivity_Continue, "Continue button text mismatch");
+        assertion.assertEqual(sts.lastActivity_icon, true, "Continue Where You left Off icon not displayed");
+        assertion.assertEqual(sts.lastActivity_name, testdata[1], "Activity name text mismatch");
     },
 
     //Validate that clicking on Continue button launches the last activity viewed by the user

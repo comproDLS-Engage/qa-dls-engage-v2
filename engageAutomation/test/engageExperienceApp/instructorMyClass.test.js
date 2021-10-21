@@ -407,11 +407,11 @@ module.exports = {
 
 	},
 	//Validate the Close button of class drwaer Pane
-	ENG_INS_CLASS_TC_31: function (testdata) {
-		sts = classDrawerpage.Click_classDrawerCloseBtn(testdata.nam);
+	ENG_INS_CLASS_TC_31: function () {
+		sts = classDrawerpage.Click_classDrawerCloseBtn();
 		assertion.assertEqual(sts, true, "Close Drawer is not clicked: " + JSON.stringify(sts))
-		sts = dashboardPage.isInitialized();
-		assertion.assertEqual(sts.pageStatus, true, "Dashboard Page not launched: " + JSON.stringify(sts))
+		//sts = dashboardPage.isInitialized();
+		//assertion.assertEqual(sts.pageStatus, true, "Dashboard Page not launched: " + JSON.stringify(sts))
 	},
 	//Validate the class drwaer Pane when no class is added
 	ENG_INS_CLASS_TC_38: function (testdata) {
