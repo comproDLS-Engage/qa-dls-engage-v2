@@ -126,10 +126,10 @@ module.exports = {
     },
 
     //Non-Anchor Component - Validate that View Book page should display all the components present in the Book
-    ENG_BOOK_TC_27: function (testdata) {
+    ENG_BOOK_TC_27: function () {
         sts = viewBookPage.getViewBookData();
         assertion.assertEqual(sts.bookCover, true, "Book cover status mismatch");
-        assertion.assert((sts.componentList.length > 0), "Component list is empty");
+        assertion.assert((sts.componentList.length > 0), "Component list is empty on View Book page");
     },
 
     // //Validate the count of folders and activities for a unit on Book view page matches the count on unit detail view page.
@@ -138,10 +138,17 @@ module.exports = {
     //     //assertions to be updated - Akhil
     // },
 
-    //Anchor Component - Validate that Book Detail view page should display the list of units which are present in the anchored component
+    //Anchor Component - Validate that View Book page should display the list of units which are present in the anchored component
     ENG_BOOK_TC_30: function (testdata) {
         sts = viewBookPage.getUnitsData();
         assertion.assertEqual(sts.length, testdata.length, "Number of Units Mismatch");
+    },
+
+    //Anchor Component - Validate that No Components should be visible on View book page for an indexed book
+    ENG_BOOK_TC_31: function () {
+        sts = viewBookPage.getViewBookData();
+        assertion.assertEqual(sts.bookCover, true, "Book cover status mismatch");
+        assertion.assert((sts.componentList.length == 0), "Component list is not empty on View Book page");
     },
 
     /*//Validate that clicking on unit Detail TOC breadcrumb naviagtes to Book detail TOC page

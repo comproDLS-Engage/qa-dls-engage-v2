@@ -1,7 +1,5 @@
 "use strict";
 var unitDetailPage = require('../../pages/engageExperienceApp/viewUnit.page');
-//var activityPlayerPage = require('../../pages/engageExperienceApp/activityPlayer.page.js');
-//var appShell = require('./appShell.test.js');
 var sts;
 
 module.exports = {
@@ -36,6 +34,20 @@ module.exports = {
         assertion.assertEqual(sts.unitNumber, testdata.unitNumber, "Unit number mismatch");
     },
 
+    //Non-Anchor component - Validate that components are not displayed on View Unit page
+    ENG_BOOK_TC_28: function () {
+        sts = unitDetailPage.getViewUnitData();
+        assertion.assertEqual(sts.unitThumbnail, true, "Book cover status mismatch");
+        assertion.assert((sts.componentList.length == 0), "Component list is not empty on View Unit page");
+    },
+
+    //Anchor component - Validate that component list is displayed on View Unit page
+    ENG_BOOK_TC_34: function () {
+        sts = viewBookPage.getViewBookData();
+        assertion.assertEqual(sts.bookCover, true, "Book cover status mismatch");
+        assertion.assert((sts.componentList.length > 0), "Component list is empty on View Book page");
+    },
+
     // //to be added in execution json for aula plus 1
     // //Anchor component - Validate that clicking on Next Unit button launches the Next unit of the Anchored component in an indexed book
     // ENG_BOOK_TC_32: function (testdata) {
@@ -52,14 +64,23 @@ module.exports = {
     //     assertion.assertEqual(sts.unitNumber, testdata.unitNumber, "Number of Activities Mismatch");
     // },
 
-    //Validate that clicking on Activity Screen breadcrumb naviagtes to Unit detail TOC page
-    ENG_BOOK_TC_43: function (testdata) {
+    // //Validate that clicking on Activity Screen breadcrumb naviagtes to Unit detail TOC page
+    // ENG_BOOK_TC_43: function (testdata) {
+    //     appShell.ENG_SHELL_TC_11();
+
+    //     sts = unitDetailPage.isInitialized();
+    //     assertion.assertEqual(sts.unitThumbnail, true, "Unit Thumbnail Not displayed");
+    //     assertion.assertEqual(sts.activityList.length, testdata.length, "Number of Activities Mismatch");
+
+    // },
+
+    //Validate that clicking on unit Detail TOC breadcrumb naviagtes to Book detail TOC page
+    ENG_BOOK_TC_44: function (testdata) {
+        let appShell = require('./appShell.test');
         appShell.ENG_SHELL_TC_11();
-
-        sts = unitDetailPage.isInitialized();
-        assertion.assertEqual(sts.unitThumbnail, true, "Unit Thumbnail Not displayed");
-        assertion.assertEqual(sts.activityList.length, testdata.length, "Number of Activities Mismatch");
-
+        let viewBookPage = require('../../pages/engageExperienceApp/viewBook.page')
+        sts = viewBookPage.isInitialized();
+        assertion.assertEqual(sts.pageStatus, true, "View Book page status mismatch");
     },
 
     /*//Validate that clicking on Activity Screen breadcrumb naviagtes to Book Detail TOC page 

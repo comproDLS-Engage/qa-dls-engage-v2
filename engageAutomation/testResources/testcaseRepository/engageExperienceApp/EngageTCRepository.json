@@ -918,9 +918,9 @@
       ]
     },
     {
-      "modulename": "Book Detail & Unit Detail View",
+      "modulename": "View Book",
       "moduledetails": "",
-      "testFile": "./test/engageExperienceApp/bookDetailView.test.js",
+      "testFile": "./test/engageExperienceApp/viewBook.test.js",
       "testcase": [
         {
           "id": "ENG_BOOK_TC_1",
@@ -981,20 +981,32 @@
           "tags": "P1"
         },
         {
-          "id": "ENG_BOOK_TC_16",
-          "description": "Validate that clicking on 3 dots for a unit displays a list of options.",
-          "tags": "P1"
-        },
-        {
-          "id": "ENG_BOOK_TC_17",
-          "description": "Validate that clicking 'Open flipbook' option from the 3 dot options for a Unit launches the corresponding flipbook page",
-          "tags": "P1"
-        },
-        {
           "id": "ENG_BOOK_TC_19",
           "description": "Validate clicking on a unit launches the unit detail view page.",
           "tags": "P1"
         },
+        {
+          "id": "ENG_BOOK_TC_27",
+          "description": "Non-Anchor Component - Validate that View Book page should display all the components present in the Book",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_BOOK_TC_30",
+          "description": "Anchor Component - Validate that Book Detail view page should display the list of units which are present in the anchored component",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_BOOK_TC_31",
+          "description": "Anchor Component - Validate that No Components should be visible on View book page for an indexed book",
+          "tags": "P1"
+        }
+      ]
+    },
+    {
+      "modulename": "View Unit",
+      "moduledetails": "",
+      "testFile": "./test/engageExperienceApp/viewUnit.test.js",
+      "testcase": [
         {
           "id": "ENG_BOOK_TC_20",
           "description": "Validate that clicking on 'Open in Flipbook' button on unit Detail View page launches the corresponding unit page in the flipbook",
@@ -1006,33 +1018,23 @@
           "tags": "P1"
         },
         {
-          "id": "ENG_BOOK_TC_30",
-          "description": "Anchor Component - Validate that Book Detail view page should display the list of units which are present in the anchored component",
+          "id": "ENG_BOOK_TC_25",
+          "description": "Validate that clicking on Next Unit button launches the Next unit of the Current Component",
           "tags": "P1"
         },
         {
-          "id": "ENG_BOOK_TC_32",
-          "description": "Anchor component - Validate that clicking on Next Unit button launches the Next unit of the Anchored component in an indexed book",
+          "id": "ENG_BOOK_TC_26",
+          "description": "Validate that clicking on Previous Unit button launches the Previous unit of Current Component",
           "tags": "P1"
         },
         {
-          "id": "ENG_BOOK_TC_33",
-          "description": "Anchor component - Validate that clicking on Previous Unit button launch the previous unit of component in an indexed book",
+          "id": "ENG_BOOK_TC_28",
+          "description": "Non-Anchor component - Validate that components are not displayed on View Unit page",
           "tags": "P1"
         },
         {
-          "id": "ENG_BOOK_TC_43",
-          "description": "Validate that clicking on Activity Screen breadcrumb naviagtes to Unit detail TOC page",
-          "tags": "P1"
-        },
-        {
-          "id": "ENG_BOOK_TC_44",
-          "description": "Validate that clicking on unit Detail TOC breadcrumb naviagtes to Book detail TOC page",
-          "tags": "P1"
-        },
-        {
-          "id": "ENG_BOOK_TC_45",
-          "description": "Validate that clicking on Activity Screen breadcrumb naviagtes to Book Detail TOC page",
+          "id": "ENG_BOOK_TC_34",
+          "description": "Anchor component - Validate that component list is displayed on View Unit page",
           "tags": "P1"
         }
       ]
@@ -1190,7 +1192,6 @@
           "tags": "",
           "visualTest": "-"
         }
-       
       ]
     },
     {
@@ -1252,7 +1253,6 @@
           "tags": "P1",
           "visualTest": "-"
         },
-     
         {
           "id": "ENG_PLAY_TC_11",
           "description": "Click show details button in activity Player",
