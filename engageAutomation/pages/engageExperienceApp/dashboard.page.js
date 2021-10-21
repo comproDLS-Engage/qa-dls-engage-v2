@@ -226,7 +226,7 @@ module.exports = {
             if (action.getText(list[i]) == str) {
                 res = action.click(this.view_btn + i);
                 if (res == true) {
-                    let bookPage = require('./bookDetail.page');
+                    let bookPage = require('./viewBook.page');
                     res = bookPage.isInitialized();
                     logger.logInto(stackTrace.get(), " -- View button clicked");
                 }

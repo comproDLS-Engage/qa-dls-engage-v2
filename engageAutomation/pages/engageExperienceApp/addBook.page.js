@@ -327,7 +327,7 @@ module.exports = {
             if (action.getText(list[i]) == bookTitle) {
                 res = action.click(list[i]);
                 if (res == true) {
-                    let bookViewTOC = require('./bookDetail.page.js');
+                    let bookViewTOC = require('./viewBook.page.js');
                     res = bookViewTOC.isInitialized();
                     logger.logInto(stackTrace.get(), " --Book Title clicked");
                 } else
@@ -347,7 +347,7 @@ module.exports = {
             if (action.getText(list[i]) == bookTitle) {
                 res = action.click(this.view_Btn + i);
                 if (res == true) {
-                    let bookViewTOC = require('./bookDetail.page.js');
+                    let bookViewTOC = require('./viewBook.page.js');
                     res = bookViewTOC.isInitialized();
                     logger.logInto(stackTrace.get(), " --View Button clicked");
                 } else
@@ -450,7 +450,7 @@ module.exports = {
         if (res == true) {
             logger.logInto(stackTrace.get(), res + " Add To My Books Button Clicked");
             action.waitForDisplayed(this.removeBook_Dialog)
-            res = require('./bookDetail.page.js').getRemoveBookPopUpData()
+            res = require('./viewBook.page.js').getRemoveBookPopUpData()
             //console.log(res);
 
         } else
@@ -629,7 +629,7 @@ module.exports = {
                     res = action.click(this.searchList + i)
                     if (res == true) 
                     {
-                        res = require('./bookDetail.page.js').isInitialized();
+                        res = require('./viewBook.page.js').isInitialized();
                         logger.logInto(stackTrace.get(), res + "- suggestionText Clicked");
                         //console.log(res)
                     } else

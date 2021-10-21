@@ -1,7 +1,7 @@
 "use strict";
 var action = require('../../core/actionLibrary/baseActionLibrary.js');
 const createClassPage = require('./createClass.page.js');
-const bookDetailsPage = require('./bookDetail.page.js');
+const bookDetailsPage = require('./viewBook.page.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
 var res, obj,pageData;
 var componentSelector, languageCount, i;
