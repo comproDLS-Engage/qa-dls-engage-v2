@@ -30,24 +30,18 @@
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
-                  "jsonPath": "engage.login.user.validStudent3"
+                  "jsonPath": "engage.login.user.validInstructorUser1"
                }
             ]
          },
          {
-            "id": "ENG_DASH_TC_7",
+            "id": "ENG_DASH_TC_11",
             "description": "",
             "testFile": "./test/engageExperienceApp/dashboard.test.js",
-            "testData": []
-         },
-         {
-            "id": "ENG_ADDBOOK_TC_20",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/addBook.test.js",
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/Aula Plus 1 (For DEV2).json",
-                  "jsonPath": "book"
+                  "jsonPath": "book.name"
                }
             ]
          }
@@ -64,21 +58,75 @@
             "id": "ENG_BOOK_TC_30",
             "description": "",
             "testFile": "./test/engageExperienceApp/viewBook.test.js",
-            "testData": []
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/Aula Plus 1 (For DEV2).json",
+                  "jsonPath": "book.component[0].unit"
+               }
+            ]
          },
          {
-            "id": "ENG_BOOK_TC_1",
+            "id": "ENG_BOOK_TC_11",
             "description": "",
             "testFile": "./test/engageExperienceApp/viewBook.test.js",
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
                   "jsonPath": "engage.appContent.bookViewTOC"
+               },
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/Aula Plus 1 (For DEV2).json",
+                  "jsonPath": "book.component[0].unit[0].section[0].activity[0]"
                }
             ]
          },
          {
-            "id": "ENG_BOOK_TC_2",
+            "id": "ENG_BOOK_TC_12",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/viewBook.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_SHELL_TC_11",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/appShell.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_BOOK_TC_9",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/viewBook.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_SHELL_TC_11",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/appShell.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_BOOK_TC_3",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/viewBook.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/Aula Plus 1 (For DEV2).json",
+                  "jsonPath": "book.name"
+               },
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.myClassPage.classHeading"
+               }
+            ]
+         },
+         {
+            "id": "ENG_INS_CLASS_TC_31",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_BOOK_TC_13",
             "description": "",
             "testFile": "./test/engageExperienceApp/viewBook.test.js",
             "testData": []
@@ -148,67 +196,18 @@
             "testData": []
          },
          {
-            "id": "ENG_BOOK_TC_3",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/viewBook.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/Aula Plus 1 (For DEV2).json",
-                  "jsonPath": "book.name"
-               },
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath": "engage.appContent.myClassPage.classHeading"
-               }
-            ]
-         },
-         {
-            "id": "ENG_INS_CLASS_TC_31",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
-            "testData": []
-         },
-         {
-            "id": "ENG_BOOK_TC_9",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/viewBook.test.js",
-            "testData": []
-         },
-         {
-            "id": "ENG_SHELL_TC_11",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/appShell.test.js",
-            "testData": []
-         },
-         {
-            "id": "ENG_BOOK_TC_11",
+            "id": "ENG_BOOK_TC_1",
             "description": "",
             "testFile": "./test/engageExperienceApp/viewBook.test.js",
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
                   "jsonPath": "engage.appContent.bookViewTOC"
-               },
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/Aula Plus 1 (For DEV2).json",
-                  "jsonPath": "book.component[2].unit[0].section[0].activity"
                }
             ]
          },
          {
-            "id": "ENG_BOOK_TC_12",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/viewBook.test.js",
-            "testData": []
-         },
-         {
-            "id": "ENG_SHELL_TC_11",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/appShell.test.js",
-            "testData": []
-         },
-         {
-            "id": "ENG_BOOK_TC_13",
+            "id": "ENG_BOOK_TC_2",
             "description": "",
             "testFile": "./test/engageExperienceApp/viewBook.test.js",
             "testData": []
@@ -219,10 +218,73 @@
             "testFile": "./test/engageExperienceApp/viewBook.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/Aula Plus 1 (For DEV2).json",
                   "jsonPath": "book.component[0].unit[0].title"
                }
             ]
+         },
+         {
+            "id": "ENG_BOOK_TC_34",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/viewUnit.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_BOOK_TC_20",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/viewUnit.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_SHELL_TC_11",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/appShell.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_BOOK_TC_21",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/viewUnit.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/Aula Plus 1 (For DEV2).json",
+                  "jsonPath": "book.component[0].unit[0].section[0].activity[0]"
+               }
+            ]
+         },
+         {
+            "id": "ENG_SHELL_TC_11",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/appShell.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_BOOK_TC_25",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/viewUnit.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/Aula Plus 1 (For DEV2).json",
+                  "jsonPath": "book.component[0].unit[1].title"
+               }
+            ]
+         },
+         {
+            "id": "ENG_BOOK_TC_26",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/viewUnit.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/Aula Plus 1 (For DEV2).json",
+                  "jsonPath": "book.component[0].unit[0].title"
+               }
+            ]
+         },
+         {
+            "id": "ENG_BOOK_TC_44",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/viewUnit.test.js",
+            "testData": []
          }
       ],
       "AfterEach": [],

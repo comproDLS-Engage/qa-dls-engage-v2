@@ -38,6 +38,14 @@ module.exports = {
     ENG_DASH_TC_7: function () {
         sts = dashboardPage.clickAddBook();
         assertion.assertEqual(sts.pageStatus, true, "Add book page status mismatch");
+        assertion.assertEqual(sts.appShell.header, true, "Add book page header status mismatch");
+    },
+
+    //Validate that clicking on 'View' button of an added book launched the Book details page
+    ENG_DASH_TC_11: function (testdata) {
+        sts = dashboardPage.clickViewButton(testdata);
+        assertion.assertEqual(sts.pageStatus, true, "View Book page status mismatch");
+        assertion.assertEqual(sts.appShell.header, true, "View Book page header status mismatch");
     },
 
     //Validate on clicking Book Ellipses, dropdown menu is launched

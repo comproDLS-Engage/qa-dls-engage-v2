@@ -30,7 +30,7 @@ module.exports = {
     //My Books section
     bookTitle: selectorFile.css.ComproEngage.dashboardPage.bookTitle,
     bookEllipses: selectorFile.css.ComproEngage.dashboardPage.bookEllipses,
-    view_btn: selectorFile.css.ComproEngage.dashboardPageview_btn,
+    view_btn: selectorFile.css.ComproEngage.dashboardPage.view_btn,
     removeBook_title: selectorFile.css.ComproEngage.dashboardPage.removeBook_title,
     removeBook_subTitle: selectorFile.css.ComproEngage.dashboardPage.removeBook_subTitle,
     removeBook_cancel: selectorFile.css.ComproEngage.dashboardPage.removeBook_cancel,
@@ -234,6 +234,7 @@ module.exports = {
                     res = res + " -- Error in clicking View button"
                     logger.logInto(stackTrace.get(), res, "error");
                 }
+                break;
             }
         }
         return res;
@@ -255,6 +256,7 @@ module.exports = {
                     res = res + " -- Error in clicking Book Ellipses"
                     logger.logInto(stackTrace.get(), res, "error");
                 }
+                break;
             }
         }
         return res;
@@ -392,6 +394,7 @@ module.exports = {
                     res = res + " -- Error in clicking Global Resource button";
                     logger.logInto(stackTrace.get(), res, "error");
                 }
+                break;
             }
         }
         return res;

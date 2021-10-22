@@ -1036,6 +1036,11 @@
           "id": "ENG_BOOK_TC_34",
           "description": "Anchor component - Validate that component list is displayed on View Unit page",
           "tags": "P1"
+        },
+        {
+          "id": "ENG_BOOK_TC_44",
+          "description": "Validate that clicking on unit Detail TOC breadcrumb naviagtes to Book detail TOC page",
+          "tags": "P1"
         }
       ]
     },
@@ -1342,6 +1347,12 @@
         {
           "id": "ENG_DASH_TC_7",
           "description": "Validate that clicking on 'Add Book' button, book list page is launched to select books to add",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_DASH_TC_11",
+          "description": "Validate that clicking on 'View' button of an added book launched the Book details page",
           "tags": "P1",
           "visualTest": "-"
         },

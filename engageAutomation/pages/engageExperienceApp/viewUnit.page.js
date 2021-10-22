@@ -46,7 +46,7 @@ module.exports = {
             activity_label_byline: (action.getElementCount(this.activity_label_byline) > 0) ? action.getText(this.activity_label_byline) : null,
             nextUnit_btn: (action.getElementCount(this.nextUnit_btn) > 0) ? action.getText(this.nextUnit_btn) : null,
             previousUnit_btn: (action.getElementCount(this.previousUnit_btn) > 0) ? action.getText(this.previousUnit_btn) : null,
-            componentList: appShell.getTabsListData(),
+            component: appShell.getTabsListData(),
         }
         logger.logInto(stackTrace.get(), JSON.stringify(obj));
         return obj;
@@ -57,6 +57,7 @@ module.exports = {
         res = action.click(this.nextUnit_btn);
         if (res == true) {
             logger.logInto(stackTrace.get(), " --Next Unit Button clicked");
+            this.isInitialized();
             res = this.getViewUnitData();
         } else
             logger.logInto(stackTrace.get(), " --Next Unit Button NOT clicked", "error");
@@ -68,6 +69,7 @@ module.exports = {
         res = action.click(this.previousUnit_btn);
         if (res == true) {
             logger.logInto(stackTrace.get(), " --Previous Unit Button clicked");
+            this.isInitialized();
             res = this.getViewUnitData();
         } else
             logger.logInto(stackTrace.get(), " --Previous Unit Button NOT clicked", "error");
@@ -165,6 +167,7 @@ module.exports = {
         logger.logInto(stackTrace.get());
         res = false;
         let i, list;
+        action.waitForDisplayed(this.activityTitle);
         list = action.findElements(this.activityTitle);
         for (i = 0; i < list.length; i++) {
             if (action.getText(list[i]) == str) {

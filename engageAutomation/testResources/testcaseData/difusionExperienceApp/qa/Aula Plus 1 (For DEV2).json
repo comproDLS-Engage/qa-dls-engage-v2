@@ -22,8 +22,138 @@
                                 "name": "",
                                 "activity": [
                                     "1. Me llamo Anderson. ¿Y tú?",
-                                    "2. Sonidos"
+                                    "2. Sonidos",
+                                    "3. Hola, ¿qué tal?",
+                                    "4. ¿Cómo se escribe?",
+                                    "5. Las cosas de la clase",
+                                    "6. ¿Qué significa \"vale\"?"
                                 ]
+                            }
+                        ]
+                    },
+                    {
+                        "index": 1,
+                        "title": "1. Nosotros y nosotras",
+                        "activityCount": "7",
+                        "folderCount": "",
+                        "flipbookPageNum": "14",
+                        "section": [
+                            {
+                                "index": 0,
+                                "name": "",
+                                "activity": []
+                            }
+                        ]
+                    },
+                    {
+                        "index": 2,
+                        "title": "2. Quiero aprender español",
+                        "activityCount": "15",
+                        "folderCount": "",
+                        "flipbookPageNum": "28",
+                        "section": [
+                            {
+                                "index": 0,
+                                "name": "",
+                                "activity": []
+                            }
+                        ]
+                    },
+                    {
+                        "index": 3,
+                        "title": "3. ¿Dónde está Santiago?",
+                        "activityCount": "16",
+                        "folderCount": "",
+                        "flipbookPageNum": "42",
+                        "section": [
+                            {
+                                "index": 0,
+                                "name": "",
+                                "activity": []
+                            }
+                        ]
+                    },
+                    {
+                        "index": 4,
+                        "title": "4. ¿Cuál prefieres?",
+                        "activityCount": "17",
+                        "folderCount": "",
+                        "flipbookPageNum": "56",
+                        "section": [
+                            {
+                                "index": 0,
+                                "name": "",
+                                "activity": []
+                            }
+                        ]
+                    },
+                    {
+                        "index": 5,
+                        "title": "5. Tus amigos son mis amigos",
+                        "activityCount": "17",
+                        "folderCount": "",
+                        "flipbookPageNum": "70",
+                        "section": [
+                            {
+                                "index": 0,
+                                "name": "",
+                                "activity": []
+                            }
+                        ]
+                    },
+                    {
+                        "index": 6,
+                        "title": "6. Día a día",
+                        "activityCount": "16",
+                        "folderCount": "",
+                        "flipbookPageNum": "84",
+                        "section": [
+                            {
+                                "index": 0,
+                                "name": "",
+                                "activity": []
+                            }
+                        ]
+                    },
+                    {
+                        "index": 7,
+                        "title": "7. ¡A comer!",
+                        "activityCount": "14",
+                        "folderCount": "",
+                        "flipbookPageNum": "98",
+                        "section": [
+                            {
+                                "index": 0,
+                                "name": "",
+                                "activity": []
+                            }
+                        ]
+                    },
+                    {
+                        "index": 8,
+                        "title": "8. El barrio ideal",
+                        "activityCount": "13",
+                        "folderCount": "",
+                        "flipbookPageNum": "112",
+                        "section": [
+                            {
+                                "index": 0,
+                                "name": "",
+                                "activity": []
+                            }
+                        ]
+                    },
+                    {
+                        "index": 9,
+                        "title": "9. ¿Sabes conducir?",
+                        "activityCount": "14",
+                        "folderCount": "",
+                        "flipbookPageNum": "126",
+                        "section": [
+                            {
+                                "index": 0,
+                                "name": "",
+                                "activity": []
                             }
                         ]
                     }
@@ -31,76 +161,24 @@
             },
             {
                 "index": 1,
-                "name": "Extra Activities",
-                "nameES": "Extra Activities",
+                "name": {
+                    "EN": "Recursos",
+                    "ES": "Recursos"
+                },
                 "unit": [
                     {
                         "index": 0,
-                        "title": "1. Unit 1",
-                        "activityCount": "2",
-                        "folderCount": "1",
-                        "flipbookPageNum": "3",
-                        "section": [
-                            {
-                                "index": 0,
-                                "name": "Part 1",
-                                "activity": [
-                                    "Close Ended Activity 1",
-                                    "Close Ended Activity 2"
-                                ]
-                            },
-                            {
-                                "index": 1,
-                                "name": "Part2",
-                                "activity": [
-                                    "VDP Non-Scorable Activity",
-                                    "Presentation Slides Activity"
-                                ]
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "index": 2,
-                "name": "Custom Component",
-                "nameES": "Custom Component",
-                "unit": [
-                    {
-                        "index": 0,
-                        "title": "Unit 1",
-                        "activityCount": "1",
-                        "folderCount": "0",
+                        "title": "Unidad 0",
+                        "activityCount": "",
+                        "folderCount": "",
                         "flipbookPageNum": "",
                         "section": [
                             {
                                 "index": 0,
-                                "name": "",
+                                "name": "Resources",
                                 "activity": [
-                                    "Native LO 1"
-                                ]
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "index": 3,
-                "name": "Book Resources",
-                "nameES": "Book Resources",
-                "unit": [
-                    {
-                        "index": 0,
-                        "title": "1. Unit 1",
-                        "activityCount": "1",
-                        "folderCount": "0",
-                        "flipbookPageNum": "",
-                        "section": [
-                            {
-                                "index": 0,
-                                "name": "",
-                                "activity": [
-                                    "Practice Exam 1"
+                                    "Unidad 0 - Pistas audio",
+                                    "Unidad 0 - Fichas proyectables"
                                 ]
                             }
                         ]

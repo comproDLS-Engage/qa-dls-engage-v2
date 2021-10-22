@@ -394,7 +394,7 @@
             "bookSubTitle": "[data-tid=text-bookSubtitle]",
             "viewClass": "button[data-tid=button-bookClasses]",
             "openFlipbook_btn": "[data-tid=button-openFlipbook]",
-            "moreOptions": "[data-tid=band-moreOptions]",
+            "moreOptions_btn": "[data-tid=band-moreOptions]",
             "myBooks_lbl": "[data-tid=pill-myBooks]",
             "unit_lbl": "[data-tid=text-contents]",
             "viewBookDetails_option": "[data-tid=button-viewBookDetails]",

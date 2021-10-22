@@ -48,9 +48,8 @@ module.exports = {
         action.waitForDocumentLoad();
         res = {
             pageStatus: action.waitForDisplayed(this.bookCover),
-            appShell: null
+            appShell: appShell.isInitialized()
         };
-        res.appShell = appShell.isInitialized();
         return res;
     },
 
@@ -69,7 +68,7 @@ module.exports = {
             lastActivity_name: (action.getElementCount(this.lastActivity_name) > 0) ? action.getText(this.lastActivity_name) : null,
             lastActivity_Dismiss: (action.getElementCount(this.lastActivity_Dismiss) > 0) ? action.getText(this.lastActivity_Dismiss) : null,
             lastActivity_Continue: (action.getElementCount(this.lastActivity_Continue) > 0) ? action.getText(this.lastActivity_Continue) : null,
-            componentList: appShell.getTabsListData(),
+            component: appShell.getTabsListData(),
             unit_lbl: (action.getElementCount(this.unit_lbl) > 0) ? action.getText(this.unit_lbl) : null
         }
         logger.logInto(stackTrace.get(), JSON.stringify(obj));
@@ -148,7 +147,7 @@ module.exports = {
         res = action.click(this.viewClass);
         if (res == true) {
             logger.logInto(stackTrace.get(), " --View Classes Button clicked");
-            res = require('./classDrawer.page.js').isInitialized();
+            res = require('./classDrawer.page').isInitialized();
         } else
             logger.logInto(stackTrace.get(), " --View Classes Button NOT clicked", "error");
         return res;
@@ -332,8 +331,9 @@ module.exports = {
         logger.logInto(stackTrace.get());
         res = action.click(this.lastActivity_Continue);
         if (res == true) {
-            let activityPlayerPage = require('./activityPlayer.page');
-            res = activityPlayerPage.isInitialized();
+            //let activityPlayerPage = require('./activityPlayer.page');
+            //res = activityPlayerPage.isInitialized();
+            // to be activated when activity player is updated - Akhil
             logger.logInto(stackTrace.get(), " --Continue Button clicked");
         } else
             logger.logInto(stackTrace.get(), " --Continue Button NOT clicked", "error");

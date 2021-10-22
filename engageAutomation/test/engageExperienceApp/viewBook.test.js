@@ -82,7 +82,8 @@ module.exports = {
     ENG_BOOK_TC_12: function () {
         sts = viewBookPage.clickOnContinue();
         //assertions to be updated - Akhil
-        assertion.assertEqual(sts.checkmyWork_isExists, true, "Check My Work Not Displayed");
+        //assertion.assertEqual(sts.checkmyWork_isExists, false, "Check My Work displayed");
+        assertion.assertEqual(sts, true, "Continue button Not Clicked");
     },
 
     //Validate that clicking on Dismiss button closes the message
@@ -121,7 +122,7 @@ module.exports = {
 
     //Validate clicking on a unit launches the view unit page
     ENG_BOOK_TC_19: function (testdata) {
-        sts = viewBookPage.clickUnit(testdata[0]);
+        sts = viewBookPage.clickUnit(testdata);
         assertion.assertEqual(sts.pageStatus, true, "View Unit page status mismatch");
         assertion.assertEqual(sts.appShell.header, true, "View Unit page header status mismatch");
     },
@@ -130,7 +131,7 @@ module.exports = {
     ENG_BOOK_TC_27: function () {
         sts = viewBookPage.getViewBookData();
         assertion.assertEqual(sts.bookCover, true, "Book cover status mismatch");
-        assertion.assert((sts.componentList.length > 0), "Component list is empty on View Book page");
+        assertion.assert((sts.component.length > 0), "Component list is empty on View Book page");
     },
 
     // //Validate the count of folders and activities for a unit on Book view page matches the count on unit detail view page.
@@ -149,7 +150,7 @@ module.exports = {
     ENG_BOOK_TC_31: function () {
         sts = viewBookPage.getViewBookData();
         assertion.assertEqual(sts.bookCover, true, "Book cover status mismatch");
-        assertion.assert((sts.componentList.length == 0), "Component list is not empty on View Book page");
+        assertion.assert((sts.component.list.length == 0), "Component list is not empty on View Book page");
     },
 
     /*//Validate that clicking on unit Detail TOC breadcrumb naviagtes to Book detail TOC page
