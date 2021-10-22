@@ -43,6 +43,7 @@ module.exports = {
     //Validate on clicking Book Ellipses, dropdown menu is launched
     ENG_DASH_TC_12: function (testdata) {
         sts = dashboardPage.clickBookMenuOptions(testdata[0]);
+        console.log(sts)
         assertion.assertEqual(sts.bookMenu_viewClass, testdata[1].bookMenu_viewClass, "View Class text mismatch");
         assertion.assertEqual(sts.bookMenu_remove, testdata[1].bookMenu_remove, "Remove text mismatch");
         assertion.assertEqual(sts.bookMenu_createClass, testdata[1].bookMenu_createClass, "Create Class text mismatch");
@@ -81,7 +82,7 @@ module.exports = {
     //Validate on clicking "View Classes" from Book dropdown menu, class Pane is launched
     ENG_DASH_TC_16: function (testdata) {
         sts = dashboardPage.clickMenuViewClasses(testdata);
-        assertion.assertEqual(sts.instructorMyClassData.pageStatus, true);
+        assertion.assertEqual(sts.classDashboardData.pageStatus, true);
     },
 
     //Validate on clicking "Create Classes" from Book dropdown menu, create class page is launched

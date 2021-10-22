@@ -9,7 +9,7 @@ module.exports = {
 	pageTitle: selectorFile.css.ComproEngage.myClassPage.pageTitle,
 	pageSubTitle: selectorFile.css.ComproEngage.myClassPage.pageSubTitle,
 	pageTitleNoClassArchived: selectorFile.css.ComproEngage.myClassPage.pageTitleNoClassArchived,
-	pageIconNoClassArchived:selectorFile.css.ComproEngage.myClassPage.pageIconNoClassArchived,
+	pageIconNoClassArchived: selectorFile.css.ComproEngage.myClassPage.pageIconNoClassArchived,
 	pageSubTitleNoClassArchived: selectorFile.css.ComproEngage.myClassPage.pageSubTitleNoClassArchived,
 	activeTab: selectorFile.css.ComproEngage.myClassPage.activeTab,
 	archivedTab: selectorFile.css.ComproEngage.myClassPage.archivedTab,
@@ -20,6 +20,8 @@ module.exports = {
 	noClassFound_icon: selectorFile.css.ComproEngage.myClassPage.noClassPageSubImg,
 	loaderIcon: selectorFile.css.ComproEngage.widgets.loaderIcon,
 	className: selectorFile.css.ComproEngage.myClassPage.className,
+	classInstructorName: selectorFile.css.ComproEngage.myClassPage.classInstructorName,
+	classInstructorIcon: selectorFile.css.ComproEngage.myClassPage.classInstructorIcon,
 	bookTitle: selectorFile.css.ComproEngage.myClassPage.bookTitle,
 	bookIcon: selectorFile.css.ComproEngage.myClassPage.bookIcon,
 	inboxOption: selectorFile.css.ComproEngage.myClassPage.inboxOption,
@@ -31,10 +33,14 @@ module.exports = {
 	classHeading: selectorFile.css.ComproEngage.myClassPage.classHeading,
 	classSubHeading: selectorFile.css.ComproEngage.myClassPage.classSubHeading,
 	classCard: selectorFile.css.ComproEngage.myClassPage.classCard,
+	joinClassbtn: selectorFile.css.ComproEngage.myClassPage.joinClassbtn,
+	viewClassOption:selectorFile.css.ComproEngage.myClassPage.viewClassOption,
+	progressOption:selectorFile.css.ComproEngage.myClassPage.progressOption,
+
 	isInitialized: function () {
 		logger.logInto(stackTrace.get());
 		action.waitForDocumentLoad();
-		let pageStatus = action.waitForDisplayed(this.activeTab);
+		let pageStatus = action.waitForDisplayed(this.classHeading);
 		res = this.get_MyClasses_Data();
 		res.pageStatus = pageStatus;
 		return res;
@@ -45,7 +51,7 @@ module.exports = {
 		var obj = {
 			classHeading: action.getElementCount(this.classHeading) > 0 ? action.getText(this.classHeading) : null,
 			classSubHeading: action.getElementCount(this.classSubHeading) > 0 ? action.getText(this.classSubHeading) : null,
-			pageIconNoClassArchived:action.getElementCount(this.pageIconNoClassArchived) > 0 ? action.waitForExist(this.pageIconNoClassArchived) : false,
+			pageIconNoClassArchived: action.getElementCount(this.pageIconNoClassArchived) > 0 ? action.waitForExist(this.pageIconNoClassArchived) : false,
 			pageTitleNoClassArchived: action.getElementCount(this.pageTitleNoClassArchived) > 0 ? action.getText(this.pageTitleNoClassArchived) : null,
 			pageSubTitleNoClassArchived: action.getElementCount(this.pageSubTitleNoClassArchived) > 0 ? action.getText(this.pageSubTitleNoClassArchived) : null,
 			addClassBtn: action.getElementCount(this.addClassBtn) > 0 ? action.getText(this.addClassBtn) : null,
@@ -72,7 +78,9 @@ module.exports = {
 					bookName: action.getElementCount(this.bookTitle + i + "']") > 0 ? action.getText(this.bookTitle + i + "']").split("\n")[1] : null,
 					//	viewClassText: action.getElementCount(this.viewClass_btn + i + "]") > 0 ? action.getText(this.viewClass_btn + i + "]") : null,
 					menuBtnExists: action.getElementCount(this.menuOptionBtn + i + "]") > 0 ? action.waitForExist(this.menuOptionBtn + i + "]") : null,
-					bookIconExists: action.getElementCount(this.bookIcon + i + "]") > 0 ? action.waitForExist(this.bookIcon + i + "]") : null
+					bookIconExists: action.getElementCount(this.bookIcon + i + "]") > 0 ? action.waitForExist(this.bookIcon + i + "]") : null,
+					classInstructorName: action.getElementCount(this.classInstructorName + i + "]") > 0 ? action.getText(this.classInstructorName + i + "]").split("\n")[1] : null,
+					classInstructorIcon: action.getElementCount(this.classInstructorIcon + i + "]") > 0 ? action.waitForExist(this.classInstructorIcon + i + "]") : null
 				}
 			}
 		}
@@ -87,6 +95,19 @@ module.exports = {
 		}
 		else {
 			res = res + " -- addClassBtn is NOT clicked";
+			logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
+	Click_JoinClassBtn: function () {
+		logger.logInto(stackTrace.get());
+		action.waitForDisplayed(this.joinClassbtn);
+		res = action.click(this.joinClassbtn);
+		if (res == true) {
+			logger.logInto(stackTrace.get(), res + " -- joinClassBtn is clicked");
+		}
+		else {
+			res = res + " -- joinClassBtn is NOT clicked";
 			logger.logInto(stackTrace.get(), res, 'error');
 		}
 		return res;
@@ -123,13 +144,7 @@ module.exports = {
 		let class_index = this.getClassIndex(className);
 		if (typeof class_index != 'string') {
 			res = action.click(this.classCard + class_index + "]");
-			if (res == true) {
-				res = teacherViewClassPage.isInitialized();
-			}
-			else {
-				res = res + " --class card is NOT available";
-				logger.logInto(stackTrace.get(), res, 'error');
-			}
+		
 		}
 		else {
 			res = class_index; //storing error message recieved from getclassIndex()
@@ -199,7 +214,10 @@ module.exports = {
 			assignmentsOption_txt: action.getElementCount(this.assignmentsOption) > 0 ? action.getText(this.assignmentsOption) : null,
 			studentsOption_txt: action.getElementCount(this.studentsOption) > 0 ? action.getText(this.studentsOption) : null,
 			gradeBookOption_txt: action.getElementCount(this.gradeBookOption) > 0 ? action.getText(this.gradeBookOption) : null,
-			materialsOption_txt: action.getElementCount(this.materialsOption) > 0 ? action.getText(this.materialsOption) : null
+			materialsOption_txt: action.getElementCount(this.materialsOption) > 0 ? action.getText(this.materialsOption) : null,
+			viewClassOption_txt: action.getElementCount(this.viewClassOption) > 0 ? action.getText(this.viewClassOption) : null,
+			progressOption_txt: action.getElementCount(this.progressOption) > 0 ? action.getText(this.progressOption) : null
+
 		}
 		return obj;
 	},
@@ -221,7 +239,7 @@ module.exports = {
 		logger.logInto(stackTrace.get());
 		res = action.click(this.assignmentsOption);
 		if (res == true) {
-		//var	teacherViewClass = require('./teacherViewClass.page.js');
+			//var	teacherViewClass = require('./teacherViewClass.page.js');
 			res = teacherViewClassPage.isInitialized();
 		}
 		else {
@@ -262,6 +280,19 @@ module.exports = {
 		if (res == true) {
 			//teacherViewClass = require('./teacherViewClass.page.js');
 			res = teacherViewClassPage.isInitialized();
+		}
+		else {
+			res = res + " -- addStudentsOption button is NOT clicked";
+			logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
+	click_viewClassOption: function () {
+		logger.logInto(stackTrace.get());
+		res = action.click(this.viewClassOption);
+		if (res == true) {
+		var	studentClassdetails = require('./studentClassDetails.page.js');
+			res = studentClassdetails.isInitialized();
 		}
 		else {
 			res = res + " -- addStudentsOption button is NOT clicked";

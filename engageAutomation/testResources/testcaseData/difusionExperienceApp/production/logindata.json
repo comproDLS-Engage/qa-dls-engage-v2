@@ -85,6 +85,14 @@
                     "class": [],
                     "info": {}
                 },
+                "noClassStudent": {
+                    "email": "noClassStudent@yopmail.com",
+                    "password": "Compro@1234",
+                    "name": "No Class",
+                    "role": "student",
+                    "class": [],
+                    "info": {}
+                },
                 "NoClassInstructor": {
                     "email": "noclassinstructor3@yopmail.com",
                     "password": "Compro@1234",

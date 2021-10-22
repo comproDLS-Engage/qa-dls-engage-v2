@@ -57,8 +57,8 @@ module.exports = {
         res = action.click(this.backToHomeBtn);
         console.log(res)
         if (res == true) {
-            var instructorMyClassPage = require('./instructorMyClass.page.js');
-            res = instructorMyClassPage.isInitialized();
+            var classDashboardPage = require('./classDashboard.page.js');
+            res = classDashboardPage.isInitialized();
         }
         else {
             res = res + " -- headerBack_btn is NOT clicked";

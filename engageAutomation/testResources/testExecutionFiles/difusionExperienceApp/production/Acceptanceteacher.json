@@ -88,7 +88,7 @@
          {
             "id": "ENG_INS_CLASS_TC_7",
             "description": "",
-            "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+            "testFile": "./test/engageExperienceApp/classDashboard.test.js",
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
@@ -99,7 +99,7 @@
          {
             "id": "ENG_INS_CLASS_TC_44",
             "description": "",
-            "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+            "testFile": "./test/engageExperienceApp/classDashboard.test.js",
             "testData": []
          },
          {

@@ -1,7 +1,7 @@
 "use strict";
 var appShell = require('../../pages/engageExperienceApp/appShell.page.js');
 var createClassPage = require('../../pages/engageExperienceApp/createClass.page.js');
-var instructorMyClassPage = require('../../pages/engageExperienceApp/instructorMyClass.page.js');
+var classDashboardPage = require('../../pages/engageExperienceApp/classDashboard.page.js');
 var sts;
 
 module.exports = {
@@ -42,7 +42,7 @@ module.exports = {
 	ENG_SHELL_TC_4: function (testdata) {
 		sts = appShell.clickClassesButton();
 		assertion.assertEqual(sts, true, "status mismatch");
-		sts = instructorMyClassPage.isInitialized();
+		sts = classDashboardPage.isInitialized();
 		assertion.assertEqual(sts.pageStatus, true, "Classes page status mismatch");
 		assertion.assertEqual(sts.classHeading, testdata.classHeading, "classHeading text mismatch");
 		assertion.assertEqual(sts.classSubHeading, testdata.classSubHeading, "classSubHeading text mismatch");
