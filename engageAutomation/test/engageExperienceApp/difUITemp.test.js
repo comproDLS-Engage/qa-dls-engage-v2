@@ -511,6 +511,10 @@ module.exports = {
 
 	// View profile tab on Settings page
 	ENG_DIF_TC_39: function () {
+		if (action.isDisplayed("[role=dialog] button > svg")) {
+			res = action.click("[role=dialog] button > svg");
+			console.log(res)
+		}
 		res = action.click("[data-tid=button-settings]");
 		console.log(res)
 		res = action.waitForDisplayed("[data-tid=button-product-0]");
@@ -667,7 +671,7 @@ module.exports = {
 	ENG_DIF_TC_55: function () {
 		res = action.click("[data-tid=button-premiumAccessBtn]");
 		console.log(res)
-		res = action.waitForDisplayed("[//*[text()='Upgrade to Premium']/..]");
+		res = action.waitForDisplayed("//*[text()='Upgrade to Premium']/..");
 		console.log(res)
 	},
 
