@@ -56,7 +56,7 @@
                 "facebook_btn": "[data-tid=button-federatedloginfacebook]",
                 "haveAnAccount_text": "[data-tid=text-haveanaccount]",
                 "login_btn": "[data-tid=anchor-login]",
-                "error_text":"[data-tid=text-erroremail]"
+                "error_text": "[data-tid=text-erroremail]"
 
             },
             "createAccountPage":
@@ -607,7 +607,34 @@
                 "fontSize_text": "//p[contains(text(),'Font Size')]",
                 "lineSpace_text": "//p[contains(text(),'Line')]",
                 "samplePara_text": "//p[contains(text(),'Check it out')]",
-                "sampleHeader_text": "//h6[contains(text(),'page')]"
+                "sampleHeader_text": "//h6[contains(text(),'page')]",
+
+                "fontSizeText": "[data-tid=settings-accessibilty-fontsize]",
+                "fontSizeValue": "[data-tid=text-fontSizeType]",
+                "fontSizeDec": "[data-tid=settings-accessibilty-fontsize-previous] ",
+                "fontSizeInc": "[data-tid=settings-accessibilty-fontsize-next] ",
+                "lineSpaceText": "[data-tid=settings-accessibilty-linespace]",
+                "lineSpaceValue": "[data-tid=text-lineSpaceType]",
+                "lineSpaceDec": "[data-tid=settings-accessibilty-lineSpace-previous]",
+                "lineSpaceInc": "[data-tid=settings-accessibilty-lineSpace-next]",
+                "highContrastText": "[data-tid=high_contrast]",
+                "highContrastToggleBtn": "[data-tid=input-high_contrast]",
+                "dylexicFontText": "[data-tid=dylexic-font]",
+                "dylexicFontToggleBtn": "[data-tid=input-dylexic-font]",
+                "underlinelinksText": "[data-tid=underline_links]",
+                "underlinelinksToggleBtn": "[data-tid=input-underline_links]",
+                "previewTextHeading": "[data-tid=text-previewHeading]",
+                "previewTextPara": "[data-tid=text-previewPara]",
+                "previewLinkText": "[data-tid=setting-preview-link]",
+                "button1": "[data-tid=setting-preview-button]",
+                "button2": "[data-tid=button-accessbility]",
+                "moreDetailsBtn": "[data-tid=accessibilty-link]",
+                "resetButton": "[data-tid=reset-button]",
+                "applySettingsBtn": "[type=submit]",
+                "resetSettingsTitle":"[data-tid=text-title-reset-user-settings]",
+                "resetSettingsSubTitle":"[data-tid=text-subTitle-reset-user-settings]",
+                "resetSettingsCancelBtn":"[data-tid=button-secondary-reset-user-settings]",
+                "resetSettingsConfirmBtn":"[data-tid=button-primary-reset-user-settings]"
             }
         }
     }

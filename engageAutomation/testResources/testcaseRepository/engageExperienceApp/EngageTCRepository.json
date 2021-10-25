@@ -1728,8 +1728,56 @@
                "visualTest":"-"
             },
             {
-               "id":"ENG_SETT_TC_19",
-               "description":"Validate clicking on toggle password eye button displays the Password",
+               "id":"ENG_SETT_TC_23",
+               "description":"Validate that font size of the application is updated when the Font Size is increased.",
+               "tags":"P1",
+               "visualTest":"-"
+            },
+            {
+               "id":"ENG_SETT_TC_24",
+               "description":"Validate that font size of the application is updated when the Font Size decreased.",
+               "tags":"P1",
+               "visualTest":"-"
+            },
+            {
+               "id":"ENG_SETT_TC_25",
+               "description":"Validate that Line Spacing of the application is updated when the Line Spacing is increased.",
+               "tags":"P1",
+               "visualTest":"-"
+            },
+            {
+               "id":"ENG_SETT_TC_26",
+               "description":"Validate that Line Spacing of the application is updated when the Line Spacing is decreased.",
+               "tags":"P1",
+               "visualTest":"-"
+            },
+            {
+               "id":"ENG_SETT_TC_27",
+               "description":"Validate that High contrast theme is applied in the application when High Contrast is toggled ON.",
+               "tags":"P1",
+               "visualTest":"-"
+            },
+            {
+               "id":"ENG_SETT_TC_28",
+               "description":"Validate that OpenDyslexic Font is applied in the application when OpenDyslexic Font is toggled ON.",
+               "tags":"P1",
+               "visualTest":"-"
+            },
+            {
+               "id":"ENG_SETT_TC_29",
+               "description":"Validate that Underline Links are applied in the application when Underline Links is toggled ON.",
+               "tags":"P1",
+               "visualTest":"-"
+            },
+            {
+               "id":"ENG_SETT_TC_37",
+               "description":"Validate that clicking on Apply Settings updates the application on the basis of settings modified.",
+               "tags":"P1",
+               "visualTest":"-"
+            },
+            {
+               "id":"ENG_SETT_TC_40",
+               "description":"Validate that clicking on Confirm button on Reset Default Settings Modal resets the applied settings to default behavior.",
                "tags":"P1",
                "visualTest":"-"
             }

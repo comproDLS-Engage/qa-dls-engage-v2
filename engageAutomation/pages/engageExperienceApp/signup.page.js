@@ -16,7 +16,7 @@ module.exports = {
     google_btn: selectorFile.css.ComproEngage.SignUpPage.google_btn,
     facebook_btn: selectorFile.css.ComproEngage.SignUpPage.facebook_btn,
     haveAnAccount_text: selectorFile.css.ComproEngage.SignUpPage.haveAnAccount_text,
-    login_btn: selectorFile.css.ComproEngage.SignUpPage.login_btn
+    login_btn: selectorFile.css.ComproEngage.SignUpPage.login_btn,
 
     isInitialized: function () {
         logger.logInto(stackTrace.get());
