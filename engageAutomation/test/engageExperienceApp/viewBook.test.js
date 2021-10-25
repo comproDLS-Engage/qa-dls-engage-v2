@@ -59,11 +59,11 @@ module.exports = {
         //assertions to be updated after flipbook page obj - Akhil
     },
 
-    //Non-Anchor Component - Validate clicking on a component displays the units asscoiated with the component
+    //Non-Anchor Component - Validate clicking on a component displays the units associated with the component
     ENG_BOOK_TC_10: function (testdata) {
         var appShell = require('../../pages/engageExperienceApp/appShell.page');
-        sts = appShell.selectTab(testdata[0].name);
-        assertion.assertEqual(sts, true);
+        sts = appShell.selectTab(testdata[0]);
+        assertion.assertEqual(sts, true, "Tab not selected");
         sts = viewBookPage.getUnitsData();
         assertion.assertEqual(sts.length, testdata[1].length, "Number of units in the component did not match");
     },
@@ -130,8 +130,9 @@ module.exports = {
     //Non-Anchor Component - Validate that View Book page should display all the components present in the Book
     ENG_BOOK_TC_27: function () {
         sts = viewBookPage.getViewBookData();
+
         assertion.assertEqual(sts.bookCover, true, "Book cover status mismatch");
-        assertion.assert((sts.component.length > 0), "Component list is empty on View Book page");
+        assertion.assert((sts.component.list.length > 0), "Component list is empty on View Book page");
     },
 
     // //Validate the count of folders and activities for a unit on Book view page matches the count on unit detail view page.

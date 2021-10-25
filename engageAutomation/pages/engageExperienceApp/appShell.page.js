@@ -328,12 +328,12 @@ module.exports = {
 		return res;
 	},
 
-	selectTab: function (name) {
+	selectTab: function (str) {
 		logger.logInto(stackTrace.get());
 		let i, list;
 		list = action.findElements(this.tabList);
 		for (i = 0; i < list.length; i++) {
-			if (action.getText(list[i]) == name) {
+			if (action.getText(list[i]) == str) {
 				res = action.click(list[i]);
 				if (res == true) {
 					logger.logInto(stackTrace.get(), " --Component clicked");

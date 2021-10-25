@@ -23,8 +23,6 @@ module.exports = {
     //Validate that clicking on Next Unit button launches the Next unit of the Current Component
     ENG_BOOK_TC_25: function (testdata) {
         sts = unitDetailPage.clickNextUnit();
-        console.log(sts.unitName)
-        console.log(testdata.title)
         assertion.assertEqual(sts.unitThumbnail, true, "Unit thumbnail not displayed");
         assertion.assert(testdata.includes(sts.unitName), "Unit name mismatch");
     },

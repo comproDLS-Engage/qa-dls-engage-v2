@@ -39,8 +39,10 @@
             },
             {
                 "index": 1,
-                "name": "Extra Activities",
-                "nameES": "Extra Activities",
+                "name": {
+                    "EN": "Extra Activities",
+                    "ES": "Extra Activities"
+                },
                 "unit": [
                     {
                         "index": 0,
@@ -71,8 +73,10 @@
             },
             {
                 "index": 2,
-                "name": "Custom Component",
-                "nameES": "Custom Component",
+                "name": {
+                    "EN": "Custom Component",
+                    "ES": "Custom Component"
+                },
                 "unit": [
                     {
                         "index": 0,
@@ -86,6 +90,22 @@
                                 "name": "",
                                 "activity": [
                                     "Native LO 1"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "index": 1,
+                        "title": "Unit 2",
+                        "activityCount": "1",
+                        "folderCount": "0",
+                        "flipbookPageNum": "",
+                        "section": [
+                            {
+                                "index": 0,
+                                "name": "",
+                                "activity": [
+                                    "Native LO 2"
                                 ]
                             }
                         ]
