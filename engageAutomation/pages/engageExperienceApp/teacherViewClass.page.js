@@ -1,7 +1,7 @@
 "use strict";
 var action = require('../../core/actionLibrary/baseActionLibrary.js');
 const createClassPage = require('./createClass.page.js');
-const bookDetailsPage = require('./bookDetail.page.js');
+const bookDetailsPage = require('./viewBook.page.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
 var res, obj,pageData;
 var componentSelector, languageCount, i;
@@ -39,7 +39,7 @@ module.exports = {
     isInitialized: function () {
         logger.logInto(stackTrace.get());
         action.waitForDocumentLoad();
-        let pageStatus = action.waitForDisplayed(this.pageTitle);
+        let pageStatus = action.waitForDisplayed(this.productTabBtns + 0 + "]");
         res = this.getViewClassPageData();
         res.pageStatus = pageStatus;
         return res;

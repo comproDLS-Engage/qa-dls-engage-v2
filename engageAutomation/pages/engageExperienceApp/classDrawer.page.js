@@ -10,9 +10,9 @@ module.exports = {
     classDrawerSubTitle: selectorFile.css.ComproEngage.classDrawer.classDrawerSubTitle,
     classDrawerCloseBtn: selectorFile.css.ComproEngage.classDrawer.classDrawerCloseBtn,
     isInitialized: function () {
-        var instructorMyClass = require('./instructorMyClass.page.js');
-        var instructorMyClassData = instructorMyClass.isInitialized();
-        instructorMyClassData.pageStatus=action.waitForDisplayed(this.classDrawerHeader)
+        var classDashboard = require('./classDashboard.page.js');
+        var classDashboardData = classDashboard.isInitialized();
+        classDashboardData.pageStatus=action.waitForDisplayed(this.classDrawerHeader)
         action.scrollIntoView(this.classDrawerTitle)
         let obj = {
             classDrawerTitle: action.getElementCount(this.classDrawerTitle) > 0 ? action.getText(this.classDrawerTitle) : null,
@@ -20,7 +20,7 @@ module.exports = {
             classDrawerSubTitle: action.getElementCount(this.classDrawerSubTitle) > 0 ? action.getText(this.classDrawerSubTitle) : null,
             classDrawerCloseBtn: action.getElementCount(this.classDrawerCloseBtn) > 0 ? action.waitForExist(this.classDrawerCloseBtn) : false,
         }
-        obj.instructorMyClassData = instructorMyClassData;
+        obj.classDashboardData = classDashboardData;
         return obj;
     },
 

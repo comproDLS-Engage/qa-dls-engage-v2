@@ -13,6 +13,10 @@ module.exports = {
     createTitleBtn: selectorFile.addTitlePage.createTitleBtn,
     bannerText: selectorFile.common.bannerText,
     bannerCloseBtn: selectorFile.common.bannerCloseBtn,
+    bookDesignDropdown: selectorFile.addTitlePage.bookDesignDropdown,
+    bookDesignList: selectorFile.addTitlePage.bookDesignList,
+    bookVisibilityDropdown: selectorFile.addTitlePage.bookVisibilityDropdown,
+    bookVisibilityList: selectorFile.addTitlePage.bookVisibilityList,
 
     isInitialized: function () {
         logger.logInto(stackTrace.get());
@@ -37,11 +41,15 @@ module.exports = {
 
     upload_CoverImage: function (imgPath) {
         logger.logInto(stackTrace.get());
-        res = action.uploadFile(imgPath);
-        if ((typeof res) === 'string') {
-            res = action.setValue(this.imageUploadBtn, res);
+        if (imgPath == "" || imgPath == undefined)
+            res = true;
+        else {
+            res = action.uploadFile(imgPath);
+            if ((typeof res) === 'string') {
+                res = action.setValue(this.imageUploadBtn, res);
+            }
+            logger.logInto(stackTrace.get(), res);
         }
-        logger.logInto(stackTrace.get(), res);
         return res;
     },
 
@@ -62,4 +70,50 @@ module.exports = {
         return res;
     },
 
+    select_bookDesign: function (name) {
+        logger.logInto(stackTrace.get());
+        if (name == "" || name == undefined)
+            res = true;
+        else {
+            res = action.click(this.bookDesignDropdown);
+            action.waitForDisplayed(this.bookDesignList);
+            if (res == true) {
+                let i, list;
+                list = action.findElements(this.bookDesignList);
+                for (i = 0; i < list.length; i++) {
+                    if (action.getText(list[i]).includes(name)) {
+                        res = action.click(action.parentElement(list[i]));
+                        break;
+                    }
+                    res = "book design not found ";
+                }
+            }
+            logger.logInto(stackTrace.get(), res);
+        }
+        return res;
+
+    },
+
+    select_bookVisibility: function (name) {
+        logger.logInto(stackTrace.get());
+        if (name == "" || name == undefined)
+            res = true;
+        else {
+            res = action.click(this.bookVisibilityDropdown);
+            action.waitForDisplayed(this.bookVisibilityList);
+            if (res == true) {
+                let i, list;
+                list = action.findElements(this.bookVisibilityList);
+                for (i = 0; i < list.length; i++) {
+                    if (action.getText(list[i]).includes(name)) {
+                        res = action.click(action.parentElement(list[i]));
+                        break;
+                    }
+                    res = "book visibility not found ";
+                }
+            }
+            logger.logInto(stackTrace.get(), res);
+        }
+        return res;
+    }
 }

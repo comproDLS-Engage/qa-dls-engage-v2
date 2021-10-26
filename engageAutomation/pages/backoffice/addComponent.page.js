@@ -15,6 +15,12 @@ module.exports = {
     addBtn: selectorFile.addComponentPage.addBtn,
     bannerText: selectorFile.common.bannerText,
     bannerCloseBtn: selectorFile.common.bannerCloseBtn,
+    visibilityDropdown: selectorFile.addComponentPage.visibilityDropdown,
+    visibilityList: selectorFile.addComponentPage.visibilityList,
+    targetRoleDropdown: selectorFile.addComponentPage.targetRoleDropdown,
+    targetRoleList: selectorFile.addComponentPage.targetRoleList,
+    assignableDropdown: selectorFile.addComponentPage.assignableDropdown,
+    assignableList: selectorFile.addComponentPage.assignableList,
 
     isInitialized: function () {
         logger.logInto(stackTrace.get());
@@ -100,11 +106,80 @@ module.exports = {
                 action.waitForDisplayed(this.bannerText);
                 //action.click(this.bannerCloseBtn);
                 res = action.getText(this.bannerText);
-                //action.waitForDisplayed(this.bannerText, undefined, true);
-                browser.pause(10000)
+                action.waitForDisplayed(this.bannerText, 60000, true);
+                browser.pause(5000)
             }
         }
         logger.logInto(stackTrace.get(), res);
+        return res;
+    },
+
+    select_Visibility: function (value) {
+        logger.logInto(stackTrace.get());
+        if (value == "" || value == undefined)
+            res = true;
+        else {
+            res = action.click(this.visibilityDropdown);
+            action.waitForDisplayed(this.visibilityList);
+            if (res == true) {
+                let i, list;
+                list = action.findElements(this.visibilityList);
+                for (i = 0; i < list.length; i++) {
+                    if (action.getText(list[i]).includes(value)) {
+                        res = action.click(action.parentElement(list[i]));
+                        break;
+                    }
+                    res = "visibility value not found ";
+                }
+            }
+            logger.logInto(stackTrace.get(), res);
+        }
+        return res;
+    },
+
+    select_TargetRole: function (value) {
+        logger.logInto(stackTrace.get());
+        if (value == "" || value == undefined)
+            res = true;
+        else {
+            res = action.click(this.targetRoleDropdown);
+            action.waitForDisplayed(this.targetRoleList);
+            if (res == true) {
+                let i, list;
+                list = action.findElements(this.targetRoleList);
+                for (i = 0; i < list.length; i++) {
+                    if (action.getText(list[i]).includes(value)) {
+                        res = action.click(action.parentElement(list[i]));
+                        break;
+                    }
+                    res = "Target Role value not found ";
+                }
+            }
+            logger.logInto(stackTrace.get(), res);
+        }
+        return res;
+    },
+
+    select_Assignable: function (value) {
+        logger.logInto(stackTrace.get());
+        if (value == "" || value == undefined)
+            res = true;
+        else {
+            res = action.click(this.assignableDropdown);
+            action.waitForDisplayed(this.assignableList);
+            if (res == true) {
+                let i, list;
+                list = action.findElements(this.assignableList);
+                for (i = 0; i < list.length; i++) {
+                    if (action.getText(list[i]).includes(value)) {
+                        res = action.click(action.parentElement(list[i]));
+                        break;
+                    }
+                    res = "Assignable value not found ";
+                }
+            }
+            logger.logInto(stackTrace.get(), res);
+        }
         return res;
     },
 

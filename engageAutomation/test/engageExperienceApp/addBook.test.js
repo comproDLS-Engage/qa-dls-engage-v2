@@ -1,6 +1,7 @@
 "use strict";
 var addBookPage = require('../../pages/engageExperienceApp/addBook.page.js');
 var appShell = require('./appShell.test.js');
+var appShellPage = require('../../pages/engageExperienceApp/appShell.page.js');
 const createClassPage = require('../../pages/engageExperienceApp/createClass.page.js');
 var dashboardPage = require('../../pages/engageExperienceApp/dashboard.page.js');
 var classDrawerPage = require('../../pages/engageExperienceApp/classDrawer.page.js');
@@ -8,7 +9,7 @@ var sts;
 module.exports = {
 
     //Validate the content of add book page launched from Dashboard
-    ENG_ADDBOOK_TC_2: function(testdata) {
+    ENG_ADDBOOK_TC_2: function (testdata) {
         sts = addBookPage.isInitialized()
         //console.log(sts)
         assertion.typeOf(sts, 'object', new Error(sts));
@@ -22,16 +23,15 @@ module.exports = {
     /***********************Class Workflow ****************************************************/
 
     //Validate the content of add book page launched from Class workflow -- needs to be updated.
-    ENG_ADDBOOK_TC_44: function(testdata) {
+    ENG_ADDBOOK_TC_44: function (testdata) {
         sts = addBookPage.isInitialized()
-        //console.log(sts)
         assertion.typeOf(sts, 'object', new Error(sts));
         assertion.assertEqual(sts.pageTitle, testdata.pageTitle, "Page title Mismatch: " + JSON.stringify(sts))
         assertion.assertEqual(sts.pageSubTitle, testdata.pageSubTitle, "Page subtitle Mismatch: " + JSON.stringify(sts))
-        assertion.assertEqual(sts.myBooksTab, testdata.myBooksTab, "My Books Tab is mismatched: " + JSON.stringify(sts))
-        assertion.assertEqual(sts.allBooksTab, testdata.allBooksTab, "All Books Tab is mismatched: " + JSON.stringify(sts))
-        assertion.assertEqual(sts.myBooksTabSelected, 'true', "My BooksTab is not selected: " + JSON.stringify(sts))
-        assertion.assertEqual(sts.allBooksTabSelected, 'false', "All Books Tab is selected: " + JSON.stringify(sts))
+        assertion.assertEqual(sts.tabsList.list[0], testdata.myBooksTab, "My Books Tab is mismatched: " + JSON.stringify(sts))
+        assertion.assertEqual(sts.tabsList.list[1], testdata.allBooksTab, "All Books Tab is mismatched: " + JSON.stringify(sts))
+        assertion.assertEqual(sts.tabsList.selected, testdata.myBooksTab, "My BooksTab is not selected: " + JSON.stringify(sts))
+        //assertion.assertEqual(sts.allBooksTabSelected, 'false', "All Books Tab is selected: " + JSON.stringify(sts))
         assertion.assertEqual(sts.addtoClassbtn, testdata.addtoClassbtn, "Add Class button Text Mismatch: " + JSON.stringify(sts))
         assertion.assertEqual(sts.cancelAndGoBackbtn, testdata.cancelAndGoBackbtn, "Cancel button Text Mismatch: " + JSON.stringify(sts))
         assertion.assertEqual(sts.noBooklbl, testdata.noBooklbl, "Bottom label Text Mismatch: " + JSON.stringify(sts))
@@ -39,14 +39,14 @@ module.exports = {
     },
 
     //Validate the "My Books" page content
-    ENG_ADDBOOK_TC_4: function(testdata) {
+    ENG_ADDBOOK_TC_4: function (testdata) {
         sts = addBookPage.isInitialized()
         //console.log(sts)
-        if ((typeof(sts)) === "object") {
-            assertion.assertEqual(sts.myBooksTab, testdata.myBooksTab, "My Books Tab is mismatched: " + JSON.stringify(sts))
-            assertion.assertEqual(sts.allBooksTab, testdata.allBooksTab, "All Books Tab is mismatched: " + JSON.stringify(sts))
-            assertion.assertEqual(sts.myBooksTabSelected, 'true', "My BooksTab is not selected: " + JSON.stringify(sts))
-            assertion.assertEqual(sts.allBooksTabSelected, 'false', "All Books Tab is selected: " + JSON.stringify(sts))
+        if ((typeof (sts)) === "object") {
+            assertion.assertEqual(sts.tabsList.list[0], testdata.myBooksTab, "My Books Tab is mismatched: " + JSON.stringify(sts))
+            assertion.assertEqual(sts.tabsList.list[1], testdata.allBooksTab, "All Books Tab is mismatched: " + JSON.stringify(sts))
+            assertion.assertEqual(sts.tabsList.selected, testdata.myBooksTab, "My BooksTab is not selected: " + JSON.stringify(sts))
+            // assertion.assertEqual(sts.allBooksTabSelected, 'false', "All Books Tab is selected: " + JSON.stringify(sts))
             assertion.assertEqual(sts.addtoClassbtn, testdata.addtoClassbtn, "Add Class button Text Mismatch: " + JSON.stringify(sts.addtoClassbtn))
             assertion.assertEqual(sts.cancelAndGoBackbtn, testdata.cancelAndGoBackbtn, "Cancel button Text Mismatch: " + JSON.stringify(sts.cancelAndGoBackbtn))
             //assertion.assertEqual(sts.bookAddedlbl, testdata.bookAddedlbl, "Bottom label Text Mismatch: " + JSON.stringify(sts.bookAddedlbl))
@@ -57,14 +57,15 @@ module.exports = {
     },
 
     //Validate the "All Books" page content
-    ENG_ADDBOOK_TC_5: function(testdata) {
+    ENG_ADDBOOK_TC_5: function (testdata) {
         sts = addBookPage.isInitialized()
         //console.log(sts)
-        if ((typeof(sts)) === "object") {
-            assertion.assertEqual(sts.myBooksTab, testdata.myBooksTab, "My Books Tab is mismatched: " + JSON.stringify(sts))
-            assertion.assertEqual(sts.allBooksTab, testdata.allBooksTab, "All Books Tab is mismatched: " + JSON.stringify(sts))
-            assertion.assertEqual(sts.myBooksTabSelected, 'false', "My BooksTab is not selected: " + JSON.stringify(sts))
-            assertion.assertEqual(sts.allBooksTabSelected, 'true', "All Books Tab is selected: " + JSON.stringify(sts))
+        if ((typeof (sts)) === "object") {
+            assertion.assertEqual(sts.tabsList.list[0], testdata.myBooksTab, "My Books Tab is mismatched: " + JSON.stringify(sts))
+            assertion.assertEqual(sts.tabsList.list[1], testdata.allBooksTab, "All Books Tab is mismatched: " + JSON.stringify(sts))
+            assertion.assertEqual(sts.tabsList.selected, testdata.allBooksTab, "All BooksTab is not selected: " + JSON.stringify(sts))
+            //   assertion.assertEqual(sts.myBooksTabSelected, 'false', "My BooksTab is not selected: " + JSON.stringify(sts))
+            //  assertion.assertEqual(sts.allBooksTabSelected, 'true', "All Books Tab is selected: " + JSON.stringify(sts))
             assertion.assertEqual(sts.addtoClassbtn, testdata.addtoClassbtn, "Add Class button Text Mismatch: " + JSON.stringify(sts.addtoClassbtn))
             assertion.assertEqual(sts.cancelAndGoBackbtn, testdata.cancelAndGoBackbtn, "Cancel button Text Mismatch: " + JSON.stringify(sts.cancelAndGoBackbtn))
             //assertion.assertEqual(sts.bookAddedlbl, testdata.bookAddedlbl, "Bottom label Text Mismatch: " + JSON.stringify(sts.bookAddedlbl))
@@ -75,28 +76,29 @@ module.exports = {
     },
 
     //Validate the "My Books" tab selected when click on my book tab
-    ENG_ADDBOOK_TC_6: function(testdata) {
-        sts = addBookPage.click_MyBooks_Tab()
+    ENG_ADDBOOK_TC_6: function (testdata) {
+        sts = appShellPage.selectTab(testdata.myBooksTab)
         //console.log(sts)
-        if ((typeof(sts)) === "object") {
-            assertion.assertEqual(sts.myBooksTab, testdata.myBooksTab, "My Books Tab is mismatched: " + JSON.stringify(sts))
-            assertion.assertEqual(sts.allBooksTab, testdata.allBooksTab, "All Books Tab is mismatched: " + JSON.stringify(sts))
-            assertion.assertEqual(sts.myBooksTabSelected, 'true', "My BooksTab is not selected: " + JSON.stringify(sts))
-            assertion.assertEqual(sts.allBooksTabSelected, 'false', "All Books Tab is selected: " + JSON.stringify(sts))
+        sts = addBookPage.isInitialized()
+        if ((typeof (sts)) === "object") {
+            assertion.assertEqual(sts.tabsList.list[0], testdata.myBooksTab, "My Books Tab is mismatched: " + JSON.stringify(sts))
+            assertion.assertEqual(sts.tabsList.list[1], testdata.allBooksTab, "All Books Tab is mismatched: " + JSON.stringify(sts))
+            assertion.assertEqual(sts.tabsList.selected, testdata.myBooksTab, "All BooksTab is not selected: " + JSON.stringify(sts))
+            // assertion.assertEqual(sts.allBooksTabSelected, 'false', "All Books Tab is selected: " + JSON.stringify(sts))
         } else {
             assertion.assertFail(sts);
         }
     },
 
     //Validate the "All Books" tab selected when click on my book tab
-    ENG_ADDBOOK_TC_7: function(testdata) {
-        sts = addBookPage.click_AllBooks_Tab()
+    ENG_ADDBOOK_TC_7: function (testdata) {
+        sts = appShellPage.selectTab(testdata.allBooksTab)
         //console.log(sts)
-        if ((typeof(sts)) === "object") {
-            assertion.assertEqual(sts.myBooksTab, testdata.myBooksTab, "My Books Tab is mismatched: " + JSON.stringify(sts))
-            assertion.assertEqual(sts.allBooksTab, testdata.allBooksTab, "All Books Tab is mismatched: " + JSON.stringify(sts))
-            assertion.assertEqual(sts.myBooksTabSelected, 'false', "My BooksTab is not selected: " + JSON.stringify(sts))
-            assertion.assertEqual(sts.allBooksTabSelected, 'true', "All Books Tab is selected: " + JSON.stringify(sts))
+        sts = addBookPage.isInitialized()
+        if ((typeof (sts)) === "object") {
+            assertion.assertEqual(sts.tabsList.list[0], testdata.myBooksTab, "My Books Tab is mismatched: " + JSON.stringify(sts))
+            assertion.assertEqual(sts.tabsList.list[1], testdata.allBooksTab, "All Books Tab is mismatched: " + JSON.stringify(sts))
+            assertion.assertEqual(sts.tabsList.selected, testdata.allBooksTab, "My BooksTab is not selected: " + JSON.stringify(sts))
         } else {
             assertion.assertFail(sts);
         }
@@ -104,11 +106,11 @@ module.exports = {
 
 
     //Validate that create class page is launched after click on add to class button
-    ENG_ADDBOOK_TC_8: function(testdata) {
+    ENG_ADDBOOK_TC_8: function (testdata) {
 
         sts = addBookPage.click_AddtoClass_Button()
         sts = createClassPage.isInitialized();
-        if ((typeof(sts)) === "object") {
+        if ((typeof (sts)) === "object") {
             assertion.assertEqual(sts.pageStatus, true, "Create Class Page not launched: " + JSON.stringify(sts))
             assertion.assertEqual(sts.bookTitle, testdata, "Book Title is mismatched: " + JSON.stringify(sts))
             assertion.assertEqual(sts.bookIcon, true, "Book Icon is mismatched: " + JSON.stringify(sts))
@@ -117,13 +119,14 @@ module.exports = {
         }
     },
     //Validate the create class page is launched and book is not chnaged after click on Cancel and go Back button
-    ENG_ADDBOOK_TC_9: function() {
+    ENG_ADDBOOK_TC_9: function () {
         sts = createClassPage.isInitialized();
         var existingbookTitle = sts.bookTitle;
         sts = createClassPage.click_AddANewBook_Button();
         assertion.assertEqual(sts.pageStatus, true, "Add Book Page not launched: " + JSON.stringify(sts))
         sts = addBookPage.click_CancelAndGoBack_Button()
-        if ((typeof(sts)) === "object") {
+        sts = createClassPage.isInitialized();
+        if ((typeof (sts)) === "object") {
             assertion.assertEqual(sts.pageStatus, true, "Create Class Page not launched: " + JSON.stringify(sts))
             assertion.assertEqual(sts.bookTitle, existingbookTitle, "Book Title is mismatched: " + JSON.stringify(sts))
             assertion.assertEqual(sts.bookIcon, true, "Book Icon is mismatched: " + JSON.stringify(sts))
@@ -134,9 +137,11 @@ module.exports = {
     },
 
     //Validate the create class page is launched and no book is added after click on Cancel and go Back button
-    ENG_ADDBOOK_TC_10: function(testdata) {
+    ENG_ADDBOOK_TC_10: function (testdata) {
         sts = addBookPage.click_CancelAndGoBack_Button()
-        if ((typeof(sts)) === "object") {
+        assertion.assertEqual(sts, true, "Cancel Button is not clicked: ", sts)
+        sts = createClassPage.isInitialized();
+        if ((typeof (sts)) === "object") {
             assertion.assertEqual(sts.pageStatus, true, "Create Class Page not launched: " + JSON.stringify(sts))
             assertion.assertEqual(sts.bookTitle, null, "Book Title is mismatched: " + JSON.stringify(sts))
             assertion.assertEqual(sts.bookIcon, false, "Book Icon is mismatched: " + JSON.stringify(sts))
@@ -148,11 +153,11 @@ module.exports = {
         }
     },
     //Validate the bottom label when no book added in a class
-    ENG_ADDBOOK_TC_11: function(testdata) {
+    ENG_ADDBOOK_TC_11: function (testdata) {
         sts = addBookPage.isInitialized()
-        //console.log(sts)
-        if ((typeof(sts)) === "object") {
-            assertion.assertEqual(sts.noBooklbl, testdata.noBookerror, "Botton book label is not matched: " + JSON.stringify(sts))
+        // console.log(sts)
+        if ((typeof (sts)) === "object") {
+            assertion.assertEqual(sts.noBooklblError, testdata.noBookerror, "Botton book label is not matched: " + JSON.stringify(sts))
         } else {
             assertion.assertFail(sts);
         }
@@ -160,20 +165,19 @@ module.exports = {
 
     //check instructor classtest.json
     //Validate the book is added on clicking of add book button of a specific book
-    ENG_ADDBOOK_TC_12: function(testdata) {
+    ENG_ADDBOOK_TC_12: function (testdata) {
         sts = addBookPage.click_addBook(testdata[0])
-        //console.log(sts)
-        if ((typeof(sts)) === "object") {
-            assertion.assertEqual(sts.bookData.bookList[0].addBookbtntxt, testdata[1].addedBookbtntxt, "My Books Tab is mismatched: " + JSON.stringify(sts))
+        if ((typeof (sts)) === "object") {
+            assertion.assertEqual(sts.addBookbtntxt, testdata[1].addedBookbtntxt, "My Books Tab is mismatched: " + JSON.stringify(sts))
         } else {
             assertion.assertFail(sts);
         }
     },
     //Validate the book details in bottom lable when book is added
-    ENG_ADDBOOK_TC_13: function(testdata) {
+    ENG_ADDBOOK_TC_13: function (testdata) {
         sts = addBookPage.isInitialized()
         //console.log(sts)
-        if ((typeof(sts)) === "object") {
+        if ((typeof (sts)) === "object") {
             assertion.assertEqual(sts.bookAddedlbl, testdata[0].bookAddedlbl, "Book label is mismatched: " + JSON.stringify(sts))
             assertion.assertEqual(sts.bookAddedtxt, testdata[1], "book text is mismatched: " + JSON.stringify(sts))
             assertion.assertEqual(sts.bookdeletebottomIcon, true, "Cross icon is not selected: " + JSON.stringify(sts))
@@ -183,11 +187,11 @@ module.exports = {
     },
 
     //Validate the book is remove from class when click on cross icon on bottom lable
-    ENG_ADDBOOK_TC_14: function(testdata) {
+    ENG_ADDBOOK_TC_14: function (testdata) {
         sts = addBookPage.clickBookDeleteIcon()
-        //console.log(sts)
-        if ((typeof(sts)) === "object") {
-            assertion.assertEqual(sts.bookData.bookList[0].addBookbtntxt, testdata.addBookbtntxt, "book text is mismatched: " + JSON.stringify(sts))
+        // console.log(sts)
+        if ((typeof (sts)) === "object") {
+            assertion.assertEqual(sts.bookInfo.addBookbtntxt, testdata.addBookbtntxt, "book text is mismatched: " + JSON.stringify(sts))
             assertion.assertEqual(sts.bookAddedlbl, sts.bookAddedlbl, "Book label is mismatched: " + JSON.stringify(sts))
             assertion.assertEqual(sts.bookAddedtxt, null, "book text is mismatched: " + JSON.stringify(sts))
             assertion.assertEqual(sts.bookdeletebottomIcon, null, "Cross icon is not selected: " + JSON.stringify(sts))
@@ -197,12 +201,11 @@ module.exports = {
     },
 
     //Validate the book is removed after clicking on "Added" button of a book which is already added
-    ENG_ADDBOOK_TC_15: function(testdata) {
+    ENG_ADDBOOK_TC_15: function (testdata) {
         sts = addBookPage.click_addBook(testdata[1])
-        //console.log(sts)
-        if ((typeof(sts)) === "object") {
-            assertion.assertEqual(sts.bookData.bookList[0].bookTitle, testdata[1], "Book label is mismatched: " + JSON.stringify(sts))
-            assertion.assertEqual(sts.bookData.bookList[0].addBookbtntxt, testdata[0].addBookbtntxt, "book text is mismatched: " + JSON.stringify(sts))
+        if ((typeof (sts)) === "object") {
+            assertion.assertEqual(sts.booksList[0].bookTitle, testdata[1], "Book label is mismatched: " + JSON.stringify(sts))
+            assertion.assertEqual(sts.bookInfo.addBookbtntxt, testdata[0].addBookbtntxt, "book text is mismatched: " + JSON.stringify(sts))
             assertion.assertEqual(sts.noBooklbl, testdata[0].noBooklbl, "Book label is mismatched: " + JSON.stringify(sts))
             assertion.assertEqual(sts.bookAddedtxt, null, "book text is mismatched: " + JSON.stringify(sts))
             assertion.assertEqual(sts.bookdeletebottomIcon, null, "Cross icon is not selected: " + JSON.stringify(sts))
@@ -212,32 +215,33 @@ module.exports = {
     },
 
     //Validate the error message when click on add to class button  without adding any class
-    ENG_ADDBOOK_TC_16: function() {
+    ENG_ADDBOOK_TC_16: function (testdata) {
         sts = addBookPage.click_AddtoClass_Button()
+        assertion.assertEqual(sts, true, "Add to Class button is not clicked: " + JSON.stringify(sts))
+        sts = addBookPage.isInitialized();
         //console.log(sts)
-        if ((typeof(sts)) === "object") {
-            assertion.assertEqual(sts.noBooklbl, null, "Error Message is mismatched: " + JSON.stringify(sts))
+        if ((typeof (sts)) === "object") {
+            assertion.assertEqual(sts.noBooklblError, testdata.noBookerror, "Error Message is mismatched: " + JSON.stringify(sts))
         } else {
             assertion.assertFail(sts);
         }
     },
 
     //Validate the content when no book is added on my book tab
-    ENG_ADDBOOK_TC_19: function(testdata) {
+    ENG_ADDBOOK_TC_19: function (testdata) {
         sts = addBookPage.isInitialized()
-        //console.log(sts)
-        if ((typeof(sts)) === "object") {
+        // console.log(sts)
+        if ((typeof (sts)) === "object") {
             assertion.assertEqual(sts.pageTitle, testdata.pageTitle, "Page title is Not Displayed: " + JSON.stringify(sts))
             assertion.assertEqual(sts.pageSubTitle, testdata.pageSubTitle, "Page subtitle is Not Displayed: " + JSON.stringify(sts))
-            assertion.assertEqual(sts.myBooksTab, testdata.myBooksTab, "My Books Tab is mismatched: " + JSON.stringify(sts))
-            assertion.assertEqual(sts.allBooksTab, testdata.allBooksTab, "All Books Tab is mismatched: " + JSON.stringify(sts))
-            assertion.assertEqual(sts.myBooksTabSelected, 'true', "My BooksTab is not selected: " + JSON.stringify(sts))
-            assertion.assertEqual(sts.allBooksTabSelected, 'false', "All Books Tab is selected: " + JSON.stringify(sts))
+            assertion.assertEqual(sts.tabsList.list[0], testdata.myBooksTab, "My Books Tab is mismatched: " + JSON.stringify(sts))
+            assertion.assertEqual(sts.tabsList.list[1], testdata.allBooksTab, "All Books Tab is mismatched: " + JSON.stringify(sts))
+            assertion.assertEqual(sts.tabsList.selected, testdata.myBooksTab, "All BooksTab is not selected: " + JSON.stringify(sts))
             assertion.assertEqual(sts.addtoClassbtn, testdata.addtoClassbtn, "Add Class button Text Mismatch: " + JSON.stringify(sts.createBtn_txt))
             assertion.assertEqual(sts.cancelAndGoBackbtn, testdata.cancelAndGoBackbtn, "Cancel button Text Mismatch: " + JSON.stringify(sts.cancelBtn_txt))
             assertion.assertEqual(sts.noBooklbl, testdata.noBooklbl, "Bottom label Text Mismatch: " + JSON.stringify(sts.bookAddedlbl))
-            assertion.assertEqual(sts.noBookTitle, testdata.noBookTitle, "No Book Title is mismatched " + JSON.stringify(sts.noBookTitle))
-            assertion.assertEqual(sts.noBookSubTitle, testdata.noBookSubTitle, "No Book SubTitle is mismatched: " + JSON.stringify(sts.noBookSubTitle))
+            assertion.assertEqual(sts.booksList.undefined.noBookTitle, testdata.noBookTitle, "No Book Title is mismatched " + JSON.stringify(sts.noBookTitle))
+            assertion.assertEqual(sts.booksList.undefined.noBookSubTitle, testdata.noBookSubTitle, "No Book SubTitle is mismatched: " + JSON.stringify(sts.noBookSubTitle))
 
         } else {
             assertion.assertFail(sts);
@@ -247,32 +251,28 @@ module.exports = {
 
     /****************************Dashboard Add Book Testcases - START ********************************/
     //Validate that clicking on Book Thumbnail launches the book View page
-    ENG_ADDBOOK_TC_20: function(testdata) {
-
-        sts = addBookPage.clickOnBook(testdata[1].name);
-
-        assertion.assertEqual(sts.bookCover, true, "Book Cover Not displayed");
-        assertion.assertEqual(sts.bookTitle, testdata[1].name, "Book Title Mismatch");
-        assertion.assertEqual(sts.bookSubTitle, testdata[1].description, "Book Description Mismatch");
-        assertion.assertEqual(sts.viewClass, testdata[0].viewClasses, "View Class Text Mismatch");
-        assertion.assertEqual(sts.openFlipbook_btn, testdata[0].openFlipbook, "Open Flipbook Button text Mismatch");
+    ENG_ADDBOOK_TC_20: function (testdata) {
+        sts = addBookPage.clickOnBook(testdata.name);
+        assertion.assertEqual(sts.pageStatus, true, "View Book page status mismatch");
     },
 
     //Validate that clicking on '+' button adds the book to My Books
-    ENG_ADDBOOK_TC_21: function(testdata) {
+    ENG_ADDBOOK_TC_21: function (testdata) {
         sts = addBookPage.clickPlusbutton(testdata[0]);
         assertion.assertEqual(sts.bookAddedIcon, true, "Book Added to My Books")
 
         appShell.ENG_SHELL_TC_11();
 
-        sts = dashboardPage.isInitialized();
+        dashboardPage.isInitialized();
+        sts = dashboardPage.getDashboardPageData();
         assertion.assertEqual(sts.pageTitle, testdata[1].pageTitle, "Dashboard text mismatch");
-        assertion.assertEqual(sts.bookList[0].bookTitle, testdata[0], "Book Title Mismatch")
+        sts=dashboardPage.getBooksData()
+        assertion.assertEqual(sts[0].bookTitle, testdata[0], "Book Title Mismatch")
 
     },
 
     //Validate clicking on the breadcrumb on add book page launches the dashboard page
-    ENG_ADDBOOK_TC_22: function(testdata) {
+    ENG_ADDBOOK_TC_22: function (testdata) {
         appShell.ENG_SHELL_TC_11();
 
         sts = dashboardPage.isInitialized();
@@ -288,14 +288,14 @@ module.exports = {
 
 
     //Validate that clicking on more options displays a list of options available
-    ENG_ADDBOOK_TC_23: function(testdata) {
+    ENG_ADDBOOK_TC_23: function (testdata) {
 
         sts = addBookPage.clickMoreOptions(testdata[0]);
         assertion.assertEqual(sts.viewClass_btn, testdata[1].viewClass_btn, "View Class button mismatch");
         assertion.assertEqual(sts.createClass_btn, testdata[1].createClass_btn, "Create Class button mismatch");
-        
+
         if (sts.addToMyBooks_btn != undefined)
-        assertion.assertEqual(sts.openFlipbook_btn, testdata[1].openFlipbook_btn, "Open Flipbook  button mismatch");
+            assertion.assertEqual(sts.openFlipbook_btn, testdata[1].openFlipbook_btn, "Open Flipbook  button mismatch");
 
         if (sts.addToMyBooks_btn != undefined)
             assertion.assertEqual(sts.addToMyBooks_btn, testdata[1].addToMyBooks_btn, "Add To My Books button mismatch");
@@ -305,7 +305,7 @@ module.exports = {
     },
 
     //Validate that clicking on View Classes launches Class Drawer
-    ENG_ADDBOOK_TC_24: function(testdata) {
+    ENG_ADDBOOK_TC_24: function (testdata) {
         sts = addBookPage.clickViewClasses();
         assertion.assertEqual(sts.classDrawerHeader, testdata[0] + ' ' + testdata[1], "Class Drawer Header Mismatch");
 
@@ -314,7 +314,7 @@ module.exports = {
     },
 
     //Validate that clicking on Add to My Books adds the book to My Books in Dashboard
-    ENG_ADDBOOK_TC_25: function(testdata) {
+    ENG_ADDBOOK_TC_25: function (testdata) {
         sts = addBookPage.clickAddToMyBooks();
         assertion.assertEqual(sts, testdata[0], "Snackbar text Mismatch");
 
@@ -327,7 +327,7 @@ module.exports = {
     },
 
     //Validate that clicking on Open flipbook launches the flipbook associated with the book
-    ENG_ADDBOOK_TC_26: function(testdata) {
+    ENG_ADDBOOK_TC_26: function (testdata) {
         sts = addBookPage.clickOpenFlipbook();
         assertion.assertEqual(sts, true, "Open Flipbook Not Clicked");
 
@@ -338,13 +338,13 @@ module.exports = {
     },
 
     //Validate that clicking on Open flipbook displays a list of flipbooks associated with the book
-    ENG_ADDBOOK_TC_27: function(testdata) {
+    ENG_ADDBOOK_TC_27: function (testdata) {
         sts = addBookPage.clickOpenFlipbook();
         assertion.assertEqual(sts.length, testdata.length, "Number of Flipbooks Mismatch");
     },
 
     //Validate that clicking on Create New Class launches create class workflow where book is added to Class Books
-    ENG_ADDBOOK_TC_28: function(testdata) {
+    ENG_ADDBOOK_TC_28: function (testdata) {
         sts = addBookPage.clickCreateNewClass();
         assertion.assertEqual(sts.pageTitle, testdata[0].pageTitle, "Create Class Page Title Mismatch");
         assertion.assertEqual(sts.pageSubTitle, testdata[0].pageSubTitle, "Create Class Page SubTitle Mismatch");
@@ -361,7 +361,7 @@ module.exports = {
         assertion.assertEqual(sts.bookIcon, true, "Create Class Page Book Cover Thumbnail Mismatch");
 
         sts = addBookPage.click_CancelAndGoBack_Button();
-        assertion.assertEqual(sts,true, "Cancel and Go Back Not Clicked");
+        assertion.assertEqual(sts, true, "Cancel and Go Back Not Clicked");
 
         this.ENG_ADDBOOK_TC_32(testdata[2]);
 
@@ -369,7 +369,7 @@ module.exports = {
     },
 
     //Validate that clicking on a page number launches the list of books 
-    ENG_ADDBOOK_TC_29: function(testdata) {
+    ENG_ADDBOOK_TC_29: function (testdata) {
         sts = addBookPage.goToPageNumber(testdata[0]);
 
         assertion.assertEqual(sts.pageTitle, testdata[1].pageTitle, "Page title Mismatch: " + JSON.stringify(sts))
@@ -383,7 +383,7 @@ module.exports = {
     },
 
     //Validate that clicking on next arrow launches the next page in books tab
-    ENG_ADDBOOK_TC_30: function(testdata) {
+    ENG_ADDBOOK_TC_30: function (testdata) {
         sts = addBookPage.clickNextArrowButton();
 
         assertion.typeOf(sts, 'object', new Error(sts));
@@ -395,7 +395,7 @@ module.exports = {
     },
 
     //Validate that clicking on previous arrow launches the previous page in books tab
-    ENG_ADDBOOK_TC_31: function(testdata) {
+    ENG_ADDBOOK_TC_31: function (testdata) {
         sts = addBookPage.clickPreviousArrowButton();
 
         assertion.typeOf(sts, 'object', new Error(sts));
@@ -411,7 +411,7 @@ module.exports = {
 
 
     //Validate the content of books page launched from Browse
-    ENG_ADDBOOK_TC_32: function(testdata) {
+    ENG_ADDBOOK_TC_32: function (testdata) {
         sts = addBookPage.isInitialized()
         //console.log(sts)
         assertion.typeOf(sts, 'object', new Error(sts));
@@ -426,7 +426,7 @@ module.exports = {
     },
 
     //Validate that clicking on Remove from My Books removes the book to My Books in Dashboard
-    ENG_ADDBOOK_TC_33: function(testdata) {
+    ENG_ADDBOOK_TC_33: function (testdata) {
         sts = addBookPage.clickRemoveFromMyBooks();
         assertion.assertEqual(sts.removeBook_title, testdata[0].removeBookTitle, "Remove Book Pop up Dialog Title Mismatch");
         assertion.assertEqual(sts.removeBook_subtitle, testdata[0].message1 + testdata[1].name + testdata[0].message2, "Remove Book Pop up Dialog SubTitle Mismatch");
@@ -444,14 +444,14 @@ module.exports = {
         assertion.assertEqual(sts.actionCardList.length, 2, "Action Card List Count Mismatch")
         assertion.assertEqual(sts.cardSliderTitle, testdata[3].cardSliderTitle, "slider title text mismatch");
         assertion.assertEqual(sts.cardSliderSubtitle, testdata[3].cardSliderSubtitle, "slider subtile text mismatch");
-        assertion.assertEqual(sts.cardSliderLeftBtn,true, "left btn status mismatch");
-        assertion.assertEqual(sts.cardSliderRightBtn,true, "right btn status text mismatch");
+        assertion.assertEqual(sts.cardSliderLeftBtn, true, "left btn status mismatch");
+        assertion.assertEqual(sts.cardSliderRightBtn, true, "right btn status text mismatch");
 
     },
 
 
     //Validate that clicking on Cancel from My Books does not remove the book to My Books in Dashboard
-    ENG_ADDBOOK_TC_34: function(testdata) {
+    ENG_ADDBOOK_TC_34: function (testdata) {
         sts = addBookPage.clickRemoveFromMyBooks();
         assertion.assertEqual(sts.removeBook_title, testdata[0].removeBookTitle, "Remove Book Pop up Dialog Title Mismatch");
         assertion.assertEqual(sts.removeBook_subtitle, testdata[0].message1 + testdata[1].name + testdata[0].message2, "Remove Book Pop up Dialog SubTitle Mismatch");
@@ -467,7 +467,7 @@ module.exports = {
     /****************************Search Testcases*************************************************/
 
     //Validate that the serach for partial text book.
-    ENG_ADDBOOK_TC_35: function(testdata) {
+    ENG_ADDBOOK_TC_35: function (testdata) {
         sts = addBookPage.enterTextInSearchBox(testdata[0].search_txt);
         assertion.assertEqual(sts, true, "Search Text Not Entered")
 
@@ -480,7 +480,7 @@ module.exports = {
         sts = addBookPage.getSearchData()
         assertion.typeOf(sts, 'object', new Error(sts));
         assertion.assertEqual(sts.searchIcon, true, "Serach Icon Not Displayed: " + JSON.stringify(sts))
-        assertion.assertEqual(sts.searchCount, testdata[0].searchResultCount + " "+testdata[2].result, "Serach Count Mismatch: " + JSON.stringify(sts))
+        assertion.assertEqual(sts.searchCount, testdata[0].searchResultCount + " " + testdata[2].result, "Serach Count Mismatch: " + JSON.stringify(sts))
         assertion.assertEqual(sts.searchPill, testdata[0].search_txt, "Serach Pill Mismatch: " + JSON.stringify(sts))
 
         sts = addBookPage.clearSearch()
@@ -489,7 +489,7 @@ module.exports = {
     },
 
     //Validate that the serach for complete text of resource's name
-    ENG_ADDBOOK_TC_36: function(testdata) {
+    ENG_ADDBOOK_TC_36: function (testdata) {
         sts = addBookPage.enterTextInSearchBox(testdata[0].search_txt);
         assertion.assertEqual(sts, true, "Search Text Not Entered")
 
@@ -502,7 +502,7 @@ module.exports = {
         sts = addBookPage.getSearchData()
         assertion.typeOf(sts, 'object', new Error(sts));
         assertion.assertEqual(sts.searchIcon, true, "Serach Icon Not Displayed: " + JSON.stringify(sts))
-        assertion.assertEqual(sts.searchCount, testdata[0].searchResultCount + " "+testdata[2].result, "Serach Count Mismatch: " + JSON.stringify(sts))
+        assertion.assertEqual(sts.searchCount, testdata[0].searchResultCount + " " + testdata[2].result, "Serach Count Mismatch: " + JSON.stringify(sts))
         assertion.assertEqual(sts.searchPill, testdata[0].search_txt, "Serach Pill Mismatch: " + JSON.stringify(sts))
 
         sts = addBookPage.clearSearch()
@@ -511,8 +511,8 @@ module.exports = {
     },
 
     //Validate the search for alpha numeric text
-    ENG_ADDBOOK_TC_37: function(testdata) {
-       sts = addBookPage.enterTextInSearchBox(testdata[0].search_txt);
+    ENG_ADDBOOK_TC_37: function (testdata) {
+        sts = addBookPage.enterTextInSearchBox(testdata[0].search_txt);
         assertion.assertEqual(sts, true, "Search Text Not Entered")
 
         sts = addBookPage.clickOnMoreSerachResult()
@@ -522,7 +522,7 @@ module.exports = {
         sts = addBookPage.getSearchData()
         assertion.typeOf(sts, 'object', new Error(sts));
         assertion.assertEqual(sts.searchIcon, true, "Serach Icon Not Displayed: " + JSON.stringify(sts))
-        assertion.assertEqual(sts.searchCount, testdata[0].searchResultCount + " "+testdata[2].results, "Serach Count Mismatch: " + JSON.stringify(sts))
+        assertion.assertEqual(sts.searchCount, testdata[0].searchResultCount + " " + testdata[2].results, "Serach Count Mismatch: " + JSON.stringify(sts))
         assertion.assertEqual(sts.searchPill, testdata[0].search_txt, "Serach Pill Mismatch: " + JSON.stringify(sts))
 
         sts = addBookPage.clearSearch()
@@ -531,7 +531,7 @@ module.exports = {
     },
 
     //Validate that a search text lists maximum 5 suggestions matching the search text.
-    ENG_ADDBOOK_TC_38: function(testdata) {
+    ENG_ADDBOOK_TC_38: function (testdata) {
         sts = addBookPage.enterTextInSearchBox(testdata.search_txt);
         assertion.assertEqual(sts, true, "Search Text Not Entered")
 
@@ -544,7 +544,7 @@ module.exports = {
     },
 
     //Validate that No Result Found screen is displayed when no resource matching the search crietria is fulfilled
-    ENG_ADDBOOK_TC_39: function(testdata) {
+    ENG_ADDBOOK_TC_39: function (testdata) {
         sts = addBookPage.enterTextInSearchBox(testdata[0].search_txt);
         assertion.assertEqual(sts, true, "Search Text Not Entered")
 
@@ -562,7 +562,7 @@ module.exports = {
     },
 
     //Validate that clicking on close search pill icon, the search results are cleared
-    ENG_ADDBOOK_TC_40: function(testdata) {
+    ENG_ADDBOOK_TC_40: function (testdata) {
 
         sts = addBookPage.getSearchData()
         assertion.typeOf(sts, 'object', new Error(sts));
@@ -581,7 +581,7 @@ module.exports = {
         sts = addBookPage.getSearchData()
         assertion.typeOf(sts, 'object', new Error(sts));
         assertion.assertEqual(sts.searchIcon, true, "Serach Icon Not Displayed: " + JSON.stringify(sts))
-        assertion.assertEqual(sts.searchCount, testdata[0].searchResultCount + " "+testdata[2].result, "Serach Count Mismatch: " + JSON.stringify(sts))
+        assertion.assertEqual(sts.searchCount, testdata[0].searchResultCount + " " + testdata[2].result, "Serach Count Mismatch: " + JSON.stringify(sts))
         assertion.assertEqual(sts.searchPill, testdata[0].search_txt, "Serach Pill Mismatch: " + JSON.stringify(sts))
 
         sts = addBookPage.clearSearchPill()
@@ -595,7 +595,7 @@ module.exports = {
     },
 
     //Validate that clicking on a resource from the search suggestion drop down list launches the resource.
-    ENG_ADDBOOK_TC_41: function(testdata) {
+    ENG_ADDBOOK_TC_41: function (testdata) {
         sts = addBookPage.enterTextInSearchBox(testdata[0].search_txt);
         assertion.assertEqual(sts, true, "Search Text Not Entered")
 
@@ -607,5 +607,16 @@ module.exports = {
         assertion.assertEqual(sts.bookSubTitle, testdata[1].description, "Book Description Mismatch")
         assertion.assertEqual(sts.componentList.length, testdata[1].component.length, "Number of Components Mismatch")
 
+    },
+    // Validate the Search of  book Name on  the add Book List page.-- add by rupsi for acceptance test
+    ENG_ADDBOOK_TC_99: function (testdata) {
+        var testdata1 = "\"" + testdata + "\""
+        sts = addBookPage.enterTextInSearchBox(testdata1);
+        assertion.assertEqual(sts, true, "Search Text Not Entered")
+
+        sts = addBookPage.clickOnMoreSerachResult()
+        assertion.typeOf(sts, 'object', new Error(sts));
+        console.log(sts)
+        assertion.assertEqual(sts.booksList[0].bookTitle, testdata, "Book Title Mismatch: " + JSON.stringify(sts))
     }
 };

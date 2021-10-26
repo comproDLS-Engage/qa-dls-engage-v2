@@ -17,6 +17,7 @@ module.exports = {
     menuBtn: selectorFile.common.menuBtn,
     signOutBtn: selectorFile.common.signOutBtn,
     closeBtn: selectorFile.common.closeBtn,
+    publishBtn : selectorFile.common.publishBtn,
 
     click_confirmDialog_Button: function () {
         logger.logInto(stackTrace.get());
@@ -82,6 +83,16 @@ module.exports = {
             if (res == true) {
                 res = require('./login.page.js').isInitialized();
             }
+        }
+        logger.logInto(stackTrace.get(), res);
+        return res;
+    },
+
+    click_PreviewAndPublish_button: function () {
+        logger.logInto(stackTrace.get());
+        res = action.click(this.publishBtn);
+        if (res == true) {
+            res = require('./publishComponent.page.js').isInitialized();
         }
         logger.logInto(stackTrace.get(), res);
         return res;

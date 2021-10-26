@@ -6,11 +6,10 @@ var res;
 module.exports = {
 
     snapshotBtn: selectorFile.publishComponentPage.snapshotBtn,
-    previewBtn:selectorFile.publishComponentPage.previewBtn,
+    previewBtn: selectorFile.publishComponentPage.previewBtn,
     publishBtn: selectorFile.publishComponentPage.publishBtn,
     lastPublishedVer: selectorFile.publishComponentPage.lastPublishedVer,
     lastSnapshotVer: selectorFile.publishComponentPage.lastSnapshotVer,
-    closeBtn: selectorFile.common.closeBtn,
 
     isInitialized: function () {
         logger.logInto(stackTrace.get());
@@ -21,18 +20,25 @@ module.exports = {
             lastPublishedVer: action.getText(this.lastPublishedVer),
             lastSnapshotVer: action.getText(this.lastSnapshotVer),
             snapshotBtn_isEnabled: action.isEnabled(this.snapshotBtn),
-            publishBtn_isEnabled: action.isEnabled(this.publishBtn)
+            publishBtn_isEnabled: action.isEnabled(this.publishBtn),
         }
         return res;
     },
 
     click_CreateSnapshot_Button: function () {
         logger.logInto(stackTrace.get());
-        res = action.click(this.snapshotBtn);
+        res = action.isEnabled(this.snapshotBtn);
         if (res == true) {
-            res = action.isEnabled(this.publishBtn);
+            res = action.click(this.snapshotBtn);
+            if (res == true) {
+                res = action.waitForClickable(this.publishBtn);
+                // res = action.isEnabled(this.publishBtn);
+            }
+            logger.logInto(stackTrace.get(), res);
         }
-        logger.logInto(stackTrace.get(), res);
+        else {
+            res = res + " - Snapshot button is not enabled"
+        }
         return res;
     },
 
@@ -40,7 +46,9 @@ module.exports = {
         logger.logInto(stackTrace.get());
         res = action.click(this.previewBtn);
         if (res == true) {
-            //res = require('./addLO.page.js').isInitialized();
+            browser.switchWindow('engage-difusion');
+            res = action.waitForDocumentLoad();
+            res = action.waitForDisplayed("[data-tid=text-bookTitle]");
         }
         logger.logInto(stackTrace.get(), res);
         return res;
@@ -48,12 +56,27 @@ module.exports = {
 
     click_Publish_Button: function () {
         logger.logInto(stackTrace.get());
-        res = action.click(this.publishBtn);
+        let prevVersion = action.getText(this.lastPublishedVer);
+        res = action.isEnabled(this.publishBtn);
         if (res == true) {
-            res = action.isEnabled(this.snapshotBtn);
+            res = action.click(this.publishBtn);
+            if (res == true) {
+                browser.waitUntil(
+                    () => action.getText(this.lastPublishedVer) > prevVersion,
+                    {
+                        timeout: undefined,
+                        timeoutMsg: 'ERROR! Published version did not proceed'
+                    }
+                );
+            }
+            logger.logInto(stackTrace.get(), res);
         }
-        logger.logInto(stackTrace.get(), res);
+        else {
+            res = res + " - publish button is not enabled"
+        }
         return res;
-    }
+    },
+
+
 
 }

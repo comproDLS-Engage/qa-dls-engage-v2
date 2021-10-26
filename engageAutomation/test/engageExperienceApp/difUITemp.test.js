@@ -8,7 +8,7 @@ module.exports = {
 	ENG_DIF_TC_1: function () {
 		res = action.click("[class*=Drawer-paperAnchorRight] [class*=Button-edgeEnd]");
 		console.log(res)
-		res = action.click("[data-tid=button-view-0]");
+		res = action.click("[data-tid=button-view-1]");
 		console.log(res)
 		//action.waitForDocumentLoad();
 		res = action.waitForDisplayed("[data-tid=image-chapter-0]");
@@ -74,6 +74,7 @@ module.exports = {
 		res = action.click("[data-tid=button-product-0]");
 		console.log(res)
 		res = action.waitForDocumentLoad();
+		browser.pause(3000);
 		console.log(res)
 	},
 
@@ -101,6 +102,7 @@ module.exports = {
 		res = action.waitForDocumentLoad();
 		console.log(res)
 		res = action.waitForDisplayed("[data-tid=button-filter]")
+		browser.pause(3000);
 		console.log(res)
 	},
 
@@ -111,6 +113,7 @@ module.exports = {
 		res = action.waitForDocumentLoad();
 		console.log(res)
 		res = action.waitForDisplayed("[data-tid=button-filter]")
+		browser.pause(3000);
 		console.log(res)
 	},
 
@@ -121,6 +124,7 @@ module.exports = {
 		res = action.waitForDocumentLoad();
 		console.log(res)
 		res = action.waitForDisplayed("[data-tid=button-filter]")
+		browser.pause(3000);
 		console.log(res)
 	},
 
@@ -131,6 +135,7 @@ module.exports = {
 		res = action.waitForDocumentLoad();
 		console.log(res)
 		res = action.waitForDisplayed("[data-tid=button-filter]")
+		browser.pause(3000);
 		console.log(res)
 	},
 
@@ -141,6 +146,7 @@ module.exports = {
 		res = action.waitForDocumentLoad();
 		console.log(res)
 		res = action.waitForDisplayed("[data-tid=button-filter]")
+		browser.pause(3000);
 		console.log(res)
 	},
 
@@ -151,6 +157,7 @@ module.exports = {
 		res = action.waitForDocumentLoad();
 		console.log(res)
 		res = action.waitForDisplayed("[data-tid=button-filter]")
+		browser.pause(3000);
 		console.log(res)
 	},
 
@@ -159,6 +166,7 @@ module.exports = {
 		res = action.click("[data-tid=btn-viewAll-0]");
 		console.log(res)
 		res = action.waitForDocumentLoad();
+		browser.pause(3000);
 		console.log(res)
 	},
 
@@ -432,6 +440,8 @@ module.exports = {
 
 	// Notifications pane
 	ENG_DIF_TC_33: function () {
+		res = action.click("[data-tid=button-dashboard]");
+		console.log(res)
 		res = action.click("[data-tid=button-notification]");
 		console.log(res)
 		res = action.waitForDisplayed("[data-tid=image-noNotifications]");
@@ -448,7 +458,7 @@ module.exports = {
 		console.log(res)
 		res = action.click("[data-tid=button-user-profile-option-2]");
 		console.log(res)
-		res = action.waitForDisplayed("[data-tid=image-landing]");
+		res = action.waitForDisplayed("[data-tid=text-logintitle]");
 		console.log(res)
 	},
 
@@ -495,11 +505,16 @@ module.exports = {
 		res = action.click("[data-tid=button-apply-filter]");
 		console.log(res)
 		res = action.waitForDisplayed("[data-tid=chip-filter0]");
+		browser.pause(3000);
 		console.log(res)
 	},
 
 	// View profile tab on Settings page
 	ENG_DIF_TC_39: function () {
+		if (action.isDisplayed("[role=dialog] button > svg")) {
+			res = action.click("[role=dialog] button > svg");
+			console.log(res)
+		}
 		res = action.click("[data-tid=button-settings]");
 		console.log(res)
 		res = action.waitForDisplayed("[data-tid=button-product-0]");
@@ -524,7 +539,7 @@ module.exports = {
 
 	// View index
 	ENG_DIF_TC_42: function () {
-		res = action.click("[class*=MuiAppBar] > div > div > div > div > button");
+		res = action.click("[class*=MuiAppBar] > div > div > div > div > div > div> button");
 		console.log(res)
 		res = action.waitForDisplayed("[data-tid=button-closeinfotoc]");
 		console.log(res)
@@ -626,5 +641,73 @@ module.exports = {
 		console.log(res)
 		res = action.waitForDisplayed("[data-tid=text-noResultFound]");
 		console.log(res)
-	}
+	},
+
+	// View book page (locked book)
+	ENG_DIF_TC_52: function () {
+		res = action.click("[data-tid=button-view-2]");
+		console.log(res)
+		res = action.waitForDisplayed("[data-tid=image-no-access]");
+		console.log(res)
+	},
+
+	// Activate book popup
+	ENG_DIF_TC_53: function () {
+		res = action.click("[data-tid=button-accessKeyBtn]");
+		console.log(res)
+		res = action.waitForDisplayed("[id=input-access-code]");
+		console.log(res)
+	},
+
+	// Close activate book popup
+	ENG_DIF_TC_54: function () {
+		res = action.click("[data-tid=button-close]");
+		console.log(res)
+		res = action.waitForDisplayed("[class*=MuiBackdrop]", undefined, true);
+		console.log(res)
+	},
+
+	// Premium plan popup
+	ENG_DIF_TC_55: function () {
+		res = action.click("[data-tid=button-premiumAccessBtn]");
+		console.log(res)
+		res = action.waitForDisplayed("//*[text()='Upgrade to Premium']/..");
+		console.log(res)
+	},
+
+	// Change and Apply Accessibility Settings
+	ENG_DIF_TC_56: function () {
+		res = action.click("[data-tid=settings-accessibilty-fontsize-next]");
+		console.log(res)
+		res = action.click("[data-tid=settings-accessibilty-fontsize-next]");
+		console.log(res)
+		res = action.click("[data-tid=settings-accessibilty-lineSpace-next]");
+		console.log(res)
+		res = action.click("[data-tid=settings-accessibilty-lineSpace-next]");
+		console.log(res)
+		res = action.click("[data-tid=input-high_contrast]");
+		console.log(res)
+		res = action.click("[data-tid=input-dylexic-font]");
+		console.log(res)
+		res = action.click("[data-tid=input-underline_links]");
+		console.log(res)
+		res = action.click("[data-tid=button-accessbility][type=submit]");
+		console.log(res)
+		res = action.waitForDisplayed("[data-tid=text-info]");
+		console.log(res)
+		res = action.click("[data-tid=button-dashboard]");
+		console.log(res)
+	},
+
+	// Reset to Default Accessibility Settings
+	ENG_DIF_TC_57: function () {
+		res = action.click("[data-tid=reset-button]");
+		console.log(res)
+		res = action.waitForDisplayed("[class*=MuiBackdrop]");
+		console.log(res)
+		res = action.click("[data-tid=button-primary-reset-user-settings]");
+		console.log(res)
+		res = action.waitForDisplayed("[data-tid=text-info]");
+		console.log(res)
+	},
 }

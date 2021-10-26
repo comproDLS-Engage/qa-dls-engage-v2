@@ -1,9 +1,7 @@
 'use strict';
 var action = require('../../core/actionLibrary/baseActionLibrary.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
-const createClassPage = require('./createClass.page.js');
-const dashboardPage = require('./dashboard.page.js');
-const appShell = require('./appShell.page.js')
+const appShell = require('./appShell.page');
 var res, obj, ret;
 module.exports = {
 
@@ -26,12 +24,11 @@ module.exports = {
     search_NoResult_subTitle: selectorFile.css.ComproEngage.addBookPage.search_NoResult_subTitle,
     searchPill: selectorFile.css.ComproEngage.addBookPage.searchPill,
     closeSearchPill: selectorFile.css.ComproEngage.addBookPage.closeSearchPill,
-    breadcrumbFlipbook: selectorFile.css.ComproEngage.bookView.breadcrumbFlipbook,
-    removeBook_Dialog: selectorFile.css.ComproEngage.bookView.removeBook_Dialog,
-    removeBookDialogCancel: selectorFile.css.ComproEngage.bookView.removeBookDialogCancel,
-    removeBookDialogRemove: selectorFile.css.ComproEngage.bookView.removeBookDialogRemove,
-    removeBook_subtitle: selectorFile.css.ComproEngage.bookView.removeBook_subtitle,
-    removeBook_title: selectorFile.css.ComproEngage.bookView.removeBook_title,
+    removeBook_Dialog: selectorFile.css.ComproEngage.viewBook.removeBook_Dialog,
+    removeBookDialogCancel: selectorFile.css.ComproEngage.viewBook.removeBookDialogCancel,
+    removeBookDialogRemove: selectorFile.css.ComproEngage.viewBook.removeBookDialogRemove,
+    removeBook_subtitle: selectorFile.css.ComproEngage.viewBook.removeBook_subtitle,
+    removeBook_title: selectorFile.css.ComproEngage.viewBook.removeBook_title,
     breadcrumbbackbtn: selectorFile.css.ComproEngage.appShell.breadcrumbbackbtn,
     //dashboard
     addBook_Btn: selectorFile.css.ComproEngage.addBookPage.dashboard.addBook_Btn,
@@ -54,6 +51,7 @@ module.exports = {
     addtoClassbtn: selectorFile.css.ComproEngage.addBookPage.classWorkflow.addtoClassbtn,
     cancelAndGoBackbtn: selectorFile.css.ComproEngage.addBookPage.classWorkflow.cancelAndGoBackbtn,
     noBooklbl: selectorFile.css.ComproEngage.addBookPage.classWorkflow.noBooklbl,
+    noBooklblError: selectorFile.css.ComproEngage.addBookPage.classWorkflow.noBooklblError,
     addBookbtn: selectorFile.css.ComproEngage.addBookPage.classWorkflow.addBookbtn, // this is not required - akhil
     bookAddedlbl: selectorFile.css.ComproEngage.addBookPage.classWorkflow.bookAddedlbl,
     bookAddedtxt: selectorFile.css.ComproEngage.addBookPage.classWorkflow.bookAddedtxt,
@@ -63,10 +61,11 @@ module.exports = {
 
     isInitialized: function() {
         logger.logInto(stackTrace.get());
-        // action.waitForDocumentLoad();
-        let pageStatus = action.waitForDisplayed(this.pageTitle)
-        res = this.getAddBookPageData();
-        res.pageStatus = pageStatus;
+        action.waitForDocumentLoad();
+        res = {
+            pageStatus: action.waitForDisplayed(this.pageTitle),
+            appShell: appShell.isInitialized()
+        };
         return res;
     },
 
@@ -83,6 +82,7 @@ module.exports = {
             addtoClassbtn: action.getElementCount(this.addtoClassbtn) > 0 ? action.getText(this.addtoClassbtn) : null,
             cancelAndGoBackbtn: action.getElementCount(this.cancelAndGoBackbtn) > 0 ? action.getText(this.cancelAndGoBackbtn) : null,
             noBooklbl: action.getElementCount(this.noBooklbl) > 0 ? action.getText(this.noBooklbl) : null,
+            noBooklblError: action.getElementCount(this.noBooklblError) > 0 ? action.getText(this.noBooklblError) : null,
             bookAddedlbl: action.getElementCount(this.bookAddedlbl) > 0 ? action.getText(this.bookAddedlbl) : null,
             bookAddedtxt: action.getElementCount(this.bookAddedtxt) > 0 ? action.getText(this.bookAddedtxt) : null,
             bookdeletebottomIcon: action.getElementCount(this.bookdeletebottomIcon) > 0 ? action.waitForExist(this.bookdeletebottomIcon) : null,
@@ -116,8 +116,8 @@ module.exports = {
 
                     bookImgIcon: action.getElementCount(this.bookImgIcon + i + "]") > 0 ? action.waitForExist(this.bookImgIcon + i + "]") : null,
                     bookTitle: action.getElementCount(this.bookTitle + i + "']") > 0 ? action.getText(this.bookTitle + i + "']") : null,
-                    bookSubTitle: action.getElementCount(this.bookSubTitle + i + "]") > 0 ? action.getText(this.bookSubTitle + i + "]") : null
-
+                    bookSubTitle: action.getElementCount(this.bookSubTitle + i + "]") > 0 ? action.getText(this.bookSubTitle + i + "]") : null,
+                     
                 }
                 booksArray[i] = obj;
             }
@@ -192,9 +192,10 @@ module.exports = {
         res = action.click(this.addtoClassbtn);
         if (res == true) {
             logger.logInto(stackTrace.get(), "-- addBtn is clicked");
-            var creatClassPage = require('./createClass.page.js');
+            browser.pause(2000);
+         /*   var creatClassPage = require('./createClass.page.js');
             action.waitForDisplayed(createClassPage.bookSkeleton, true, 30000)
-            res = creatClassPage.isInitialized();
+            res = creatClassPage.isInitialized();*/
         } else {
             res = res + " -- cancelBtn is NOT clicked";
             logger.logInto(stackTrace.get(), res, 'error');
@@ -222,7 +223,7 @@ module.exports = {
         if (typeof book_index != 'string') {
             res = action.click(this.addBookbtn + book_index + "]");
             if (res == true) {
-                res = this.isInitialized();
+                res = this.getBookInfo(bookName);
             } else {
                 res = res + " --class card is NOT available";
                 logger.logInto(stackTrace.get(), res, 'error');
@@ -299,6 +300,7 @@ module.exports = {
     clickPlusIconOfBook: function(bookName) {
         logger.logInto(stackTrace.get());
         var i;
+        const dashboardPage = require('./dashboard.page');
         ret = dashboardPage.getDashboardPageData();
         for (i = 0; i < ret.bookList.length; i++) {
             if (ret.bookList[i].bookTitle == bookName) {
@@ -324,7 +326,7 @@ module.exports = {
             if (action.getText(list[i]) == bookTitle) {
                 res = action.click(list[i]);
                 if (res == true) {
-                    let bookViewTOC = require('./bookDetail.page.js');
+                    let bookViewTOC = require('./viewBook.page.js');
                     res = bookViewTOC.isInitialized();
                     logger.logInto(stackTrace.get(), " --Book Title clicked");
                 } else
@@ -344,7 +346,7 @@ module.exports = {
             if (action.getText(list[i]) == bookTitle) {
                 res = action.click(this.view_Btn + i);
                 if (res == true) {
-                    let bookViewTOC = require('./bookDetail.page.js');
+                    let bookViewTOC = require('./viewBook.page.js');
                     res = bookViewTOC.isInitialized();
                     logger.logInto(stackTrace.get(), " --View Button clicked");
                 } else
@@ -447,7 +449,7 @@ module.exports = {
         if (res == true) {
             logger.logInto(stackTrace.get(), res + " Add To My Books Button Clicked");
             action.waitForDisplayed(this.removeBook_Dialog)
-            res = require('./bookDetail.page.js').getRemoveBookPopUpData()
+            res = require('./viewBook.page.js').getRemoveBookPopUpData()
             //console.log(res);
 
         } else
@@ -626,7 +628,7 @@ module.exports = {
                     res = action.click(this.searchList + i)
                     if (res == true) 
                     {
-                        res = require('./bookDetail.page.js').isInitialized();
+                        res = require('./viewBook.page.js').isInitialized();
                         logger.logInto(stackTrace.get(), res + "- suggestionText Clicked");
                         //console.log(res)
                     } else
