@@ -122,7 +122,7 @@
          {
             "id": "ENG_INS_CLASS_TC_31",
             "description": "",
-            "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+            "testFile": "./test/engageExperienceApp/classDashboard.test.js",
             "testData": []
          },
          {
@@ -415,7 +415,7 @@
          {
             "id": "ENG_INS_CLASS_TC_31",
             "description": "",
-            "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+            "testFile": "./test/engageExperienceApp/classDashboard.test.js",
             "testData": []
          },
          {
