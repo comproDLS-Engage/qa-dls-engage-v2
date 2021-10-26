@@ -1,9 +1,7 @@
 'use strict';
 var action = require('../../core/actionLibrary/baseActionLibrary.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
-const createClassPage = require('./createClass.page.js');
-const dashboardPage = require('./dashboard.page.js');
-const appShell = require('./appShell.page.js')
+const appShell = require('./appShell.page');
 var res, obj, ret;
 module.exports = {
 
@@ -63,10 +61,11 @@ module.exports = {
 
     isInitialized: function() {
         logger.logInto(stackTrace.get());
-        // action.waitForDocumentLoad();
-        let pageStatus = action.waitForDisplayed(this.pageTitle)
-        res = this.getAddBookPageData();
-        res.pageStatus = pageStatus;
+        action.waitForDocumentLoad();
+        res = {
+            pageStatus: action.waitForDisplayed(this.pageTitle),
+            appShell: appShell.isInitialized()
+        };
         return res;
     },
 
@@ -301,6 +300,7 @@ module.exports = {
     clickPlusIconOfBook: function(bookName) {
         logger.logInto(stackTrace.get());
         var i;
+        const dashboardPage = require('./dashboard.page');
         ret = dashboardPage.getDashboardPageData();
         for (i = 0; i < ret.bookList.length; i++) {
             if (ret.bookList[i].bookTitle == bookName) {
