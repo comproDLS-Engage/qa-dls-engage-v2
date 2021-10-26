@@ -224,7 +224,7 @@ module.exports = {
         if (typeof book_index != 'string') {
             res = action.click(this.addBookbtn + book_index + "]");
             if (res == true) {
-                res = this.isInitialized();
+                res = this.getBookInfo(bookName);
             } else {
                 res = res + " --class card is NOT available";
                 logger.logInto(stackTrace.get(), res, 'error');

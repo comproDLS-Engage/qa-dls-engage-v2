@@ -32,10 +32,10 @@
                     "info": {}
                 },
                  "validStudent3": {
-                    "email": "difusionqa.stud12@yopmail.com",
+                    "email": "dev1_studentAutomation@yopmail.com",
                     "password": "Compro@1234",
                     "role": "student",
-                    "name": "difusionqa.stud12",
+                    "name": "student automation",
                     "class": [
                     ],
                     "info": {}
@@ -145,6 +145,14 @@
                     "password": "Compro@1234",
                     "name": "noclassinstructornew",
                     "role": "instructor",
+                    "class": [],
+                    "info": {}
+                },
+                "noClassStudent": {
+                    "email": "noClassStudent@yopmail.com",
+                    "password": "Compro@1234",
+                    "name": "No Class",
+                    "role": "student",
                     "class": [],
                     "info": {}
                 },

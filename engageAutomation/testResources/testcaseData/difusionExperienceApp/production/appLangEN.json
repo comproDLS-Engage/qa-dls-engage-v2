@@ -188,8 +188,8 @@
                 "selectBook_txt": "Assign a book to your class in order to view and assign materials.",
                 "createBtn_txt": "Create Class",
                 "cancelBtn_txt": "Cancel & Go Back",
-                "notitleErrorMsg": "Name is required.",
-                "titleErrorMsg": "Name should be less than 50 characters.",
+                "notitleErrorMsg": "Name is required",
+                "titleErrorMsg": "Name should be less than 50 characters",
                 "bookErrorMsg": "No book selected",
                 "endDateErrorMsg": "End Date cannot be less than today's date"
             },
@@ -245,8 +245,8 @@
                 "selectBook_txt": "Assign a book to your class in order to view and assign materials.",
                 "bookTitle": "PROYECTOS",
                 "cancelBtn_txt": "Cancel & Go Back",
-                "notitleErrorMsg": "Name is required.",
-                "titleErrorMsg": "Name should be less than 50 characters.",
+                "notitleErrorMsg": "Name is required",
+                "titleErrorMsg": "Name should be less than 50 characters",
                 "bookErrorMsg": "No book selected",
                 "saveBtn_txt": "Save",
                 "endDateErrorMsg": "End Date cannot be less than today's date"

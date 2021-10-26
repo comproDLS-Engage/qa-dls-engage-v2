@@ -330,13 +330,31 @@
           "description": "",
           "tags": "P1",
           "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_55",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_56",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_57",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
         }
       ]
     },
     {
       "modulename": "MyClass - Teacher",
       "moduledetails": "",
-      "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+      "testFile": "./test/engageExperienceApp/classDashboard.test.js",
       "testcase": [
         {
           "id": "ENG_INS_CLASS_TC_1",
@@ -576,6 +594,103 @@
           "id": "ENG_INS_CLASS_TC_102",
           "description": " Validate the page when no student is added ",
           "tags": "P1"
+        }
+      ]
+    },
+    {
+      "modulename": "MyClass - Student",
+      "moduledetails": "",
+      "testFile": "./test/engageExperienceApp/studentMyClass.test.js",
+      "testcase": [
+        {
+          "id": "ENG_STU_CLASS_TC_1",
+          "description": "Validate the content (in english) of the My Classes Page if Studnet has not Added any Class.",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_STU_CLASS_TC_2",
+          "description": "Validate the content (in english) of the My Classes Page if some class are added",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_STU_CLASS_TC_3",
+          "description": "Validate the content (in english) of the Archive Page",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_STU_CLASS_TC_4",
+          "description": "Validate that My Classes tab option shows all classes",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_STU_CLASS_TC_5",
+          "description": "Validate that Archived page launched after clicking on archive tab",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_STU_CLASS_TC_6",
+          "description": "Validate that Join Class pop is launched on clicking Join class button",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_STU_CLASS_TC_7",
+          "description": "Validate that on clicking a Class card on the My Classes Page, Student Class Dashboard is launched for that class",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_STU_CLASS_TC_8",
+          "description": "Validate that clicking on menu button on a class card displays available menu options",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_STU_CLASS_TC_9",
+          "description": "Validate that clicking on View Class option from Class Menu launches student Class Dashboard",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_STU_CLASS_TC_10",
+          "description": "Validate the content (in english) of the Join Class PopUP",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_STU_CLASS_TC_11",
+          "description": "Validate class cannot be jojned if Class Key field is left blank.",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_STU_CLASS_TC_12",
+          "description": "Validate that class cannot be joined if Class Code is not correct.",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_STU_CLASS_TC_13",
+          "description": "Validate that class cannot be joined if Class is already exist .",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_STU_CLASS_TC_14",
+          "description": "Validate that the My Classes page appears if user click on the Close button on Join Class popup",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_STU_CLASS_TC_15",
+          "description": "Validate that class cannot be joined if Class Code is not correct format.",
+          "tags": "P2",
+          "visualTest": "-"
         }
       ]
     },

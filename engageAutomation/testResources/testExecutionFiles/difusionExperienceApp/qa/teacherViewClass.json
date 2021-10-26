@@ -37,7 +37,7 @@
          {
             "id": "ENG_INS_CLASS_TC_7",
             "description": "",
-            "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+            "testFile": "./test/engageExperienceApp/classDashboard.test.js",
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
@@ -51,7 +51,7 @@
          {
             "id": "ENG_INS_CLASS_TC_99",
             "description": "",
-            "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+            "testFile": "./test/engageExperienceApp/classDashboard.test.js",
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
@@ -62,7 +62,7 @@
          {
             "id": "ENG_INS_CLASS_TC_101",
             "description": "",
-            "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+            "testFile": "./test/engageExperienceApp/classDashboard.test.js",
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/classData.json",
@@ -138,7 +138,7 @@
          {
             "id": "ENG_INS_CLASS_TC_7",
             "description": "",
-            "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+            "testFile": "./test/engageExperienceApp/classDashboard.test.js",
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
@@ -149,7 +149,7 @@
          {
             "id": "ENG_INS_CLASS_TC_99",
             "description": "",
-            "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+            "testFile": "./test/engageExperienceApp/classDashboard.test.js",
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
@@ -163,7 +163,7 @@
          {
             "id": "ENG_INS_CLASS_TC_100",
             "description": "",
-            "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+            "testFile": "./test/engageExperienceApp/classDashboard.test.js",
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/classData.json",
@@ -239,7 +239,7 @@
          {
             "id": "ENG_INS_CLASS_TC_7",
             "description": "",
-            "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+            "testFile": "./test/engageExperienceApp/classDashboard.test.js",
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
@@ -250,7 +250,7 @@
          {
             "id": "ENG_INS_CLASS_TC_99",
             "description": "",
-            "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+            "testFile": "./test/engageExperienceApp/classDashboard.test.js",
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
@@ -265,7 +265,7 @@
          {
             "id": "ENG_INS_CLASS_TC_102",
             "description": "",
-            "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+            "testFile": "./test/engageExperienceApp/classDashboard.test.js",
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",

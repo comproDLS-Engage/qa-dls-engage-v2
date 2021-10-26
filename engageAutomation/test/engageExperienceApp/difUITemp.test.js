@@ -8,7 +8,7 @@ module.exports = {
 	ENG_DIF_TC_1: function () {
 		res = action.click("[class*=Drawer-paperAnchorRight] [class*=Button-edgeEnd]");
 		console.log(res)
-		res = action.click("[data-tid=button-view-0]");
+		res = action.click("[data-tid=button-view-1]");
 		console.log(res)
 		//action.waitForDocumentLoad();
 		res = action.waitForDisplayed("[data-tid=image-chapter-0]");
@@ -511,6 +511,10 @@ module.exports = {
 
 	// View profile tab on Settings page
 	ENG_DIF_TC_39: function () {
+		if (action.isDisplayed("[role=dialog] button > svg")) {
+			res = action.click("[role=dialog] button > svg");
+			console.log(res)
+		}
 		res = action.click("[data-tid=button-settings]");
 		console.log(res)
 		res = action.waitForDisplayed("[data-tid=button-product-0]");
@@ -641,7 +645,7 @@ module.exports = {
 
 	// View book page (locked book)
 	ENG_DIF_TC_52: function () {
-		res = action.click("[data-tid=button-view-1]");
+		res = action.click("[data-tid=button-view-2]");
 		console.log(res)
 		res = action.waitForDisplayed("[data-tid=image-no-access]");
 		console.log(res)
@@ -649,7 +653,7 @@ module.exports = {
 
 	// Activate book popup
 	ENG_DIF_TC_53: function () {
-		res = action.click("//*[text()='Add an Access Key']/..");
+		res = action.click("[data-tid=button-accessKeyBtn]");
 		console.log(res)
 		res = action.waitForDisplayed("[id=input-access-code]");
 		console.log(res)
@@ -663,4 +667,47 @@ module.exports = {
 		console.log(res)
 	},
 
+	// Premium plan popup
+	ENG_DIF_TC_55: function () {
+		res = action.click("[data-tid=button-premiumAccessBtn]");
+		console.log(res)
+		res = action.waitForDisplayed("//*[text()='Upgrade to Premium']/..");
+		console.log(res)
+	},
+
+	// Change and Apply Accessibility Settings
+	ENG_DIF_TC_56: function () {
+		res = action.click("[data-tid=settings-accessibilty-fontsize-next]");
+		console.log(res)
+		res = action.click("[data-tid=settings-accessibilty-fontsize-next]");
+		console.log(res)
+		res = action.click("[data-tid=settings-accessibilty-lineSpace-next]");
+		console.log(res)
+		res = action.click("[data-tid=settings-accessibilty-lineSpace-next]");
+		console.log(res)
+		res = action.click("[data-tid=input-high_contrast]");
+		console.log(res)
+		res = action.click("[data-tid=input-dylexic-font]");
+		console.log(res)
+		res = action.click("[data-tid=input-underline_links]");
+		console.log(res)
+		res = action.click("[data-tid=button-accessbility][type=submit]");
+		console.log(res)
+		res = action.waitForDisplayed("[data-tid=text-info]");
+		console.log(res)
+		res = action.click("[data-tid=button-dashboard]");
+		console.log(res)
+	},
+
+	// Reset to Default Accessibility Settings
+	ENG_DIF_TC_57: function () {
+		res = action.click("[data-tid=reset-button]");
+		console.log(res)
+		res = action.waitForDisplayed("[class*=MuiBackdrop]");
+		console.log(res)
+		res = action.click("[data-tid=button-primary-reset-user-settings]");
+		console.log(res)
+		res = action.waitForDisplayed("[data-tid=text-info]");
+		console.log(res)
+	},
 }

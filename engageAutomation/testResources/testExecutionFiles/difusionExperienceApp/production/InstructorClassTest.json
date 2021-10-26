@@ -36,7 +36,7 @@
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
             "jsonPath": "engage.appContent.myClassPage"
-         }
+          }
         ]
       }
     ],
@@ -45,13 +45,13 @@
       {
         "id": "ENG_INS_CLASS_TC_6",
         "description": "",
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": []
       },
       {
         "id": "ENG_INS_CLASS_TC_14",
         "description": "",
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
@@ -63,7 +63,7 @@
         "id": "ENG_INS_CLASS_TC_15",
         "description": "",
         "visualTolerance": 0.5,
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/classData.json",
@@ -78,7 +78,7 @@
       {
         "id": "ENG_INS_CLASS_TC_16",
         "description": "",
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/classData.json",
@@ -89,13 +89,13 @@
       {
         "id": "ENG_INS_CLASS_TC_20",
         "description": "",
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": []
       },
       {
         "id": "ENG_INS_CLASS_TC_42",
         "description": "",
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": []
       },
       {
@@ -109,7 +109,7 @@
           },
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
-	            "jsonPath": "engage.appContent.addBookPage.classes"
+            "jsonPath": "engage.appContent.addBookPage.classes"
           }
         ]
       },
@@ -127,7 +127,7 @@
       {
         "id": "ENG_INS_CLASS_TC_21",
         "description": "",
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
@@ -143,7 +143,7 @@
         "id": "ENG_INS_CLASS_TC_22",
         "description": "",
         "visualTolerance": 0.5,
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
@@ -158,7 +158,7 @@
       {
         "id": "ENG_INS_CLASS_TC_23",
         "description": "",
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/classData.json",
@@ -169,7 +169,7 @@
       {
         "id": "ENG_INS_CLASS_TC_9",
         "description": "",
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/classData.json",
@@ -184,7 +184,7 @@
       {
         "id": "ENG_INS_CLASS_TC_37",
         "description": "",
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/classData.json",
@@ -195,13 +195,13 @@
       {
         "id": "ENG_INS_CLASS_TC_41",
         "description": "",
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": []
       },
       {
         "id": "ENG_INS_CLASS_TC_42",
         "description": "",
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": []
       },
       {
@@ -218,7 +218,7 @@
       {
         "id": "ENG_INS_CLASS_TC_34",
         "description": "",
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
@@ -289,7 +289,7 @@
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
             "jsonPath": "engage.appContent.myClassPage"
-         }
+          }
         ]
       }
     ],
@@ -298,7 +298,7 @@
       {
         "id": "ENG_INS_CLASS_TC_1",
         "description": "",
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
@@ -369,7 +369,7 @@
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
             "jsonPath": "engage.appContent.myClassPage"
-         }
+          }
         ]
       }
     ],
@@ -378,7 +378,7 @@
       {
         "id": "ENG_INS_CLASS_TC_2",
         "description": "",
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
@@ -389,7 +389,7 @@
       {
         "id": "ENG_INS_CLASS_TC_4",
         "description": "",
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/classData.json",
@@ -404,13 +404,13 @@
       {
         "id": "ENG_INS_CLASS_TC_5",
         "description": "",
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": []
       },
       {
         "id": "ENG_INS_CLASS_TC_3",
         "description": "",
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
@@ -481,13 +481,13 @@
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
             "jsonPath": "engage.appContent.myClassPage"
-         }
+          }
         ]
       },
       {
         "id": "ENG_INS_CLASS_TC_4",
         "description": "",
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/classData.json",
@@ -505,7 +505,7 @@
       {
         "id": "ENG_INS_CLASS_TC_8",
         "description": "",
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
@@ -520,7 +520,7 @@
       {
         "id": "ENG_INS_CLASS_TC_10",
         "description": "",
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
@@ -569,13 +569,13 @@
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
             "jsonPath": "engage.appContent.myClassPage"
-         }
+          }
         ]
       },
       {
         "id": "ENG_INS_CLASS_TC_6",
         "description": "",
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": []
       }
     ],
@@ -585,7 +585,7 @@
         "id": "ENG_INS_CLASS_TC_13",
         "description": "",
         "visualTolerance": 0.5,
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
@@ -596,7 +596,7 @@
       {
         "id": "ENG_INS_CLASS_TC_19",
         "description": "",
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": []
       }
     ],
@@ -640,7 +640,7 @@
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
             "jsonPath": "engage.appContent.myClassPage"
-         }
+          }
         ]
       }
     ],
@@ -649,7 +649,7 @@
       {
         "id": "ENG_INS_CLASS_TC_7",
         "description": "",
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
@@ -660,7 +660,7 @@
       {
         "id": "ENG_INS_CLASS_TC_9",
         "description": "",
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/classData.json",
@@ -675,7 +675,7 @@
       {
         "id": "ENG_INS_CLASS_TC_33",
         "description": "",
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
@@ -686,7 +686,7 @@
       {
         "id": "ENG_INS_CLASS_TC_36",
         "description": "",
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
@@ -697,7 +697,7 @@
       {
         "id": "ENG_INS_CLASS_TC_35",
         "description": "",
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": []
       }
     ],
@@ -745,7 +745,7 @@
       {
         "id": "ENG_INS_CLASS_TC_16",
         "description": "",
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/classData.json",
@@ -756,7 +756,7 @@
       {
         "id": "ENG_INS_CLASS_TC_42",
         "description": "",
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": []
       },
       {
@@ -788,7 +788,7 @@
       {
         "id": "ENG_INS_CLASS_TC_21",
         "description": "",
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
@@ -804,7 +804,7 @@
         "id": "ENG_INS_CLASS_TC_22",
         "description": "",
         "visualTolerance": 0.5,
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
@@ -819,7 +819,7 @@
       {
         "id": "ENG_INS_CLASS_TC_24",
         "description": "",
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": []
       }
     ],
@@ -866,6 +866,10 @@
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/classData.json",
             "jsonPath": "engage.courses.newValidClasswithspecialCharacter.bookName"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+            "jsonPath": "engage.appContent.dashboard.teacher"
           }
         ]
       },
@@ -883,13 +887,13 @@
       {
         "id": "ENG_INS_CLASS_TC_6",
         "description": "",
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": []
       },
       {
         "id": "ENG_INS_CLASS_TC_17",
         "description": "",
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/classData.json",
@@ -900,13 +904,13 @@
       {
         "id": "ENG_INS_CLASS_TC_18",
         "description": "",
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": []
       },
       {
         "id": "ENG_INS_CLASS_TC_42",
         "description": "",
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": []
       },
       {
@@ -923,7 +927,7 @@
       {
         "id": "ENG_INS_CLASS_TC_21",
         "description": "",
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
@@ -939,7 +943,7 @@
         "id": "ENG_INS_CLASS_TC_22",
         "description": "",
         "visualTolerance": 0.5,
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
@@ -954,7 +958,7 @@
       {
         "id": "ENG_INS_CLASS_TC_23",
         "description": "",
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": []
       }
     ],
@@ -1001,6 +1005,10 @@
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/classData.json",
             "jsonPath": "engage.courses.newValidClasswithspecialCharacter.bookName"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+            "jsonPath": "engage.appContent.dashboard.teacher"
           }
         ]
       },
@@ -1018,7 +1026,7 @@
       {
         "id": "ENG_INS_CLASS_TC_16",
         "description": "",
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/classData.json",
@@ -1029,7 +1037,7 @@
       {
         "id": "ENG_INS_CLASS_TC_42",
         "description": "",
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": []
       },
       {
@@ -1046,7 +1054,7 @@
       {
         "id": "ENG_INS_CLASS_TC_21",
         "description": "",
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
@@ -1062,7 +1070,7 @@
         "id": "ENG_INS_CLASS_TC_22",
         "description": "",
         "visualTolerance": 0.5,
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
@@ -1077,7 +1085,7 @@
       {
         "id": "ENG_INS_CLASS_TC_23",
         "description": "",
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": []
       }
     ],
@@ -1121,13 +1129,13 @@
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
             "jsonPath": "engage.appContent.myClassPage"
-         }
+          }
         ]
       },
       {
         "id": "ENG_INS_CLASS_TC_4",
         "description": "",
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/classData.json",
@@ -1142,7 +1150,7 @@
       {
         "id": "ENG_INS_CLASS_TC_8",
         "description": "",
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
@@ -1160,7 +1168,7 @@
       {
         "id": "ENG_INS_CLASS_TC_11",
         "description": "",
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
@@ -1209,13 +1217,13 @@
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
             "jsonPath": "engage.appContent.myClassPage"
-         }
+          }
         ]
       },
       {
         "id": "ENG_INS_CLASS_TC_4",
         "description": "",
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/classData.json",
@@ -1230,7 +1238,7 @@
       {
         "id": "ENG_INS_CLASS_TC_8",
         "description": "",
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
@@ -1248,7 +1256,7 @@
       {
         "id": "ENG_INS_CLASS_TC_12",
         "description": "",
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
@@ -1300,6 +1308,10 @@
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/classData.json",
             "jsonPath": "engage.courses.newValidClasswithspecialCharacter.bookName"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+            "jsonPath": "engage.appContent.dashboard.teacher"
           }
         ]
       },
@@ -1317,7 +1329,7 @@
       {
         "id": "ENG_INS_CLASS_TC_38",
         "description": "",
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
@@ -1332,7 +1344,7 @@
       {
         "id": "ENG_INS_CLASS_TC_31",
         "description": "",
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": []
       }
     ],
@@ -1379,6 +1391,10 @@
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/classData.json",
             "jsonPath": "engage.courses.newValidClasswithspecialCharacter.bookName"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+            "jsonPath": "engage.appContent.dashboard.teacher"
           }
         ]
       },
@@ -1396,7 +1412,7 @@
       {
         "id": "ENG_INS_CLASS_TC_39",
         "description": "",
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
@@ -1411,7 +1427,7 @@
       {
         "id": "ENG_INS_CLASS_TC_31",
         "description": "",
-        "testFile": "./test/engageExperienceApp/instructorMyClass.test.js",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": []
       }
     ],
