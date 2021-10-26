@@ -1,1620 +1,1778 @@
 {
-   "appname":"comproDLS Engage",
-   "appdetails":"",
-   "selectorFile":"./core/selectors/experienceApp/engageSelectors.json",
-   "modules":[
-      {
-         "modulename":"Difusion UI Temp",
-         "testFile":"./test/engageExperienceApp/difUITemp.test.js",
-         "testcase":[
-            {
-               "id":"ENG_DIF_TC_1",
-               "description":"",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_DIF_TC_2",
-               "description":"",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_DIF_TC_3",
-               "description":"",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_DIF_TC_4",
-               "description":"",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_DIF_TC_5",
-               "description":"",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_DIF_TC_6",
-               "description":"",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_DIF_TC_7",
-               "description":"",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_DIF_TC_8",
-               "description":"",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_DIF_TC_9",
-               "description":"",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_DIF_TC_10",
-               "description":"",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_DIF_TC_11",
-               "description":"",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_DIF_TC_12",
-               "description":"",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_DIF_TC_13",
-               "description":"",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_DIF_TC_14",
-               "description":"",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_DIF_TC_15",
-               "description":"",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_DIF_TC_16",
-               "description":"",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_DIF_TC_17",
-               "description":"",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_DIF_TC_18",
-               "description":"",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_DIF_TC_19",
-               "description":"",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_DIF_TC_20",
-               "description":"",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_DIF_TC_21",
-               "description":"",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_DIF_TC_22",
-               "description":"",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_DIF_TC_23",
-               "description":"",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_DIF_TC_24",
-               "description":"",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_DIF_TC_25",
-               "description":"",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_DIF_TC_26",
-               "description":"",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_DIF_TC_27",
-               "description":"",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_DIF_TC_28",
-               "description":"",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_DIF_TC_29",
-               "description":"",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_DIF_TC_30",
-               "description":"",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_DIF_TC_31",
-               "description":"",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_DIF_TC_32",
-               "description":"",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_DIF_TC_33",
-               "description":"",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_DIF_TC_34",
-               "description":"",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_DIF_TC_35",
-               "description":"",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_DIF_TC_36",
-               "description":"",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_DIF_TC_37",
-               "description":"",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_DIF_TC_38",
-               "description":"",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_DIF_TC_39",
-               "description":"",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_DIF_TC_40",
-               "description":"",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_DIF_TC_41",
-               "description":"",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_DIF_TC_42",
-               "description":"",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_DIF_TC_43",
-               "description":"",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_DIF_TC_44",
-               "description":"",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_DIF_TC_45",
-               "description":"",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_DIF_TC_46",
-               "description":"",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_DIF_TC_47",
-               "description":"",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_DIF_TC_48",
-               "description":"",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_DIF_TC_49",
-               "description":"",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_DIF_TC_50",
-               "description":"",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_DIF_TC_51",
-               "description":"",
-               "tags":"P1",
-               "visualTest":true
-            }
-         ]
-      },
-      {
-         "modulename":"MyClass - Teacher",
-         "moduledetails":"",
-         "testFile":"./test/engageExperienceApp/instructorMyClass.test.js",
-         "testcase":[
-            {
-               "id":"ENG_INS_CLASS_TC_1",
-               "description":"Validate the content (in english) of the My Classes Page if instructor has not created any Class.",
-               "tags":"P2",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_INS_CLASS_TC_2",
-               "description":"Validate the content (in english) of the My Classes Page if instructor has created Classes.",
-               "tags":"P2",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_INS_CLASS_TC_3",
-               "description":"Validate the content (in english) of the Archive Page",
-               "tags":"P2",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_INS_CLASS_TC_4",
-               "description":"Validate that My Classes tab option shows all classes",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_INS_CLASS_TC_5",
-               "description":"Validate that Archived page launched after clicking on archive tab",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_INS_CLASS_TC_6",
-               "description":"Validate that Create Class page is launched on clicking create class button",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_INS_CLASS_TC_7",
-               "description":"Validate that on clicking a Class card on the My Classes Page, Class Dashboard is launched for that class",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_INS_CLASS_TC_8",
-               "description":"Validate that clicking on menu button on a class card displays available menu options",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_INS_CLASS_TC_9",
-               "description":"Validate that clicking on Edit Class option from Class Menu launches Edit Class Workflow",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_INS_CLASS_TC_10",
-               "description":"Validate that clicking on inbox option from Class Menu launches class details page with inbox tab selected",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_INS_CLASS_TC_13",
-               "description":"Validate the content (in english) of the Create Class Page",
-               "tags":"P2",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_INS_CLASS_TC_14",
-               "description":"Validate class cannot be created if Class name field is left blank.",
-               "tags":"P2",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_INS_CLASS_TC_15",
-               "description":"Validate that class cannot be created if Class name field contains more than 50 characters.",
-               "tags":"P2",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_INS_CLASS_TC_16",
-               "description":"Validate that instructor is able to create a Class with 50 alphanumeric characters",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_INS_CLASS_TC_17",
-               "description":"Validate that instructor is able to create a Class with special characters",
-               "tags":"P2",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_INS_CLASS_TC_19",
-               "description":"Validate that the My Classes page appears if user click on the cancel and go back button on Create Class Page",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_INS_CLASS_TC_21",
-               "description":"Validate the functionality of create button on Create Class Page.",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_INS_CLASS_TC_22",
-               "description":"Validate the content of the Create Class Success Page",
-               "tags":"P2",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_INS_CLASS_TC_23",
-               "description":"Validate that the class dashboard is launched on clicking the View Class button on success page",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_INS_CLASS_TC_24",
-               "description":"Validate that the My Classes page is launched on clicking Close button on success page",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_INS_CLASS_TC_27",
-               "description":"Validate that class cannot be created if user has not selected any Book",
-               "tags":"P1"
-            },
-            {
-               "id":"ENG_INS_CLASS_TC_33",
-               "description":"Edit Class: Validate the content (in english) of the Edit Class Page",
-               "tags":"P2",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_INS_CLASS_TC_34",
-               "description":"Edit Class: Validate that the class details are updated on clicking the save button on Edit Class Page",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_INS_CLASS_TC_35",
-               "description":"Edit Class: Validate that the instructor My Classes page is launched on clicking Cancel and Go Back button on the Edit Class Page",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_INS_CLASS_TC_36",
-               "description":"Edit Class: Validate that Class Name cannot be modified as blank.",
-               "tags":"P2",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_INS_CLASS_TC_37",
-               "description":"Edit Class: Validate that Class name can be updated with less than 50 characters.",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_INS_CLASS_TC_40",
-               "description":"Edit Class -Validate that the error message appears if user deselect the book and click on Save button to save the class",
-               "tags":"P1"
-            },
-            {
-               "id":"ENG_INS_CLASS_TC_41",
-               "description":"Validate book is by default selected",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_INS_CLASS_TC_42",
-               "description":"Click on add book button and Validate the book is added in the class",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_INS_CLASS_TC_11",
-               "description":"Validate that clicking on Assignemnt option from Class Menu launches class details page with Assignment tab selected",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_INS_CLASS_TC_12",
-               "description":"Validate that clicking on Student option from Class Menu launches class details page with Students tab selected",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_INS_CLASS_TC_38",
-               "description":"Validate the class drwaer Pane when no class is added",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_INS_CLASS_TC_39",
-               "description":"Validate the class drawer Pane when class is added",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_INS_CLASS_TC_31",
-               "description":"Validate the Close button of class drawer Pane",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_INS_CLASS_TC_18",
-               "description":"Set the start date of a class of next week",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_INS_CLASS_TC_20",
-               "description":"Set the End date of a class of next week",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_INS_CLASS_TC_44",
-               "description":"Validate book details is launched after clicking on View Book button",
-               "tags":"P1"
-            },
-            {
-               "id":"ENG_INS_CLASS_TC_99",
-               "description":"Click on student tab and validate student tab is selected",
-               "tags":"P1"
-            },
-            {
-               "id":"ENG_INS_CLASS_TC_100",
-               "description":"Validate that score is coming for anchord book class students.",
-               "tags":"P1"
-            },
-            {
-               "id":"ENG_INS_CLASS_TC_101",
-               "description":"Validate that score is not coming for non-anchord book class students",
-               "tags":"P1"
-            },
-            {
-               "id":"ENG_INS_CLASS_TC_102",
-               "description":" Validate the page when no student is added ",
-               "tags":"P1"
-            }
-         ]
-      },
-      {
-         "modulename":"AppShell",
-         "moduledetails":"",
-         "testFile":"./test/engageExperienceApp/appShell.test.js",
-         "testcase":[
-            {
-               "id":"ENG_SHELL_TC_1",
-               "description":"Validate that on launching the application the appshell (left navigation pane and header) appears",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_SHELL_TC_2",
-               "description":"Validate that clicking on the Dashboard button in the left navigation pane launches Dashboard page",
-               "tags":"P1, Desktop",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_SHELL_TC_3",
-               "description":"Validate that clicking on the Browse button in the left navigation pane launches Browse page",
-               "tags":"P1, Desktop",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_SHELL_TC_4",
-               "description":"Validate that clicking on the Classes button in the left navigation pane launches Classes List  page",
-               "tags":"P1, Desktop",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_SHELL_TC_5",
-               "description":"Validate that clicking on the bell icon on the header launches the notifications pane",
-               "tags":"P1, Desktop",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_SHELL_TC_6",
-               "description":"Validate that clicking on cross icon closes the notification section",
-               "tags":"P1, Desktop",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_SHELL_TC_7",
-               "description":"Validate that user is able to change the app language using the language switcher on the header",
-               "tags":"P1, Desktop",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_SHELL_TC_8",
-               "description":"Validate that user is able to view name and email in the profile drop down on the header",
-               "tags":"P1, Desktop",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_SHELL_TC_9",
-               "description":"Validate that user is able to logout of the application by selecting the logout option from the profile dropdown",
-               "tags":"P1, Desktop",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_SHELL_TC_10",
-               "description":"Validate that clicking on + button on classes in Left navigation pane, launched the create class page in teacher login",
-               "tags":"P1, Desktop",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_DASH_TC_1",
-               "description":"Validate that clicking on the 'Dashboard' button on the left navigation panel, the Dashboard page is launched",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_SHELL_TC_11",
-               "description":"Validate that click on breadcrumb back button on the header launch the previous page",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_SHELL_TC_12",
-               "description":"Validate that click on breadcrumb product tile on the header launch the previous page",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_SHELL_TC_17",
-               "description":"Validate that clicking on the Settings button in left Navigation pane launches Settings page",
-               "tags":"P1",
-               "visualTest":"-"
-            }
-         ]
-      },
-      {
-         "modulename":"Add Book",
-         "moduledetails":"",
-         "testFile":"./test/engageExperienceApp/addBook.test.js",
-         "testcase":[
-            {
-               "id":"ENG_ADDBOOK_TC_2",
-               "description":"Validate the content of add book page launched from Dashboard",
-               "tags":"",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ADDBOOK_TC_4",
-               "description":"Validate the my books page content",
-               "tags":"",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ADDBOOK_TC_5",
-               "description":"Validate the all books page content",
-               "tags":"",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ADDBOOK_TC_6",
-               "description":"Validate the my book tab selected when click on my book tab",
-               "tags":"",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ADDBOOK_TC_7",
-               "description":"Validate the all book tab selected when click on all book tab",
-               "tags":"",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ADDBOOK_TC_8",
-               "description":"Validate that create class page is launched after click on add to class button",
-               "tags":"",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ADDBOOK_TC_9",
-               "description":"Validate the create class page is launched and book is not changed after click on Cancel and go Back button",
-               "tags":"",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ADDBOOK_TC_10",
-               "description":"Validate the create class page is launched and no book is added after click on Cancel and go Back button",
-               "tags":"",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ADDBOOK_TC_11",
-               "description":"Validate the bottom label when no book added in a class",
-               "tags":"",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ADDBOOK_TC_12",
-               "description":"Validate the book is added on clicking of add book button of a specific book",
-               "tags":"",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ADDBOOK_TC_13",
-               "description":"Validate the book details in bottom Label when book is added",
-               "tags":"",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ADDBOOK_TC_14",
-               "description":"Validate the book is remove from class when click on cross icon on button Label",
-               "tags":"",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ADDBOOK_TC_15",
-               "description":"Validate the book is removed after clicking on \"Added\" button of a book which is already added",
-               "tags":"",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ADDBOOK_TC_16",
-               "description":"Validate the error message when click on add to class button without adding any class",
-               "tags":"",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ADDBOOK_TC_19",
-               "description":"Validate the content when no book is added on my book tab",
-               "tags":"",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ADDBOOK_TC_21",
-               "description":"Validate that clicking on '+' button adds the book to My Books",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ADDBOOK_TC_20",
-               "description":"Validate that clicking on Book Thumbnail launches the book View page",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ADDBOOK_TC_21",
-               "description":"Validate that clicking on Book Thumbnail launches the book View page",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ADDBOOK_TC_22",
-               "description":"Validate clicking on the breadcrumb on add book page launches the dashboard page",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ADDBOOK_TC_23",
-               "description":"Validate that clicking on more options displays a list of options available",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ADDBOOK_TC_24",
-               "description":"Validate that clicking on View Classes launches Class Drawer",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ADDBOOK_TC_25",
-               "description":"Validate that clicking on Add to My Books adds the book to My Books in Dashboard",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ADDBOOK_TC_26",
-               "description":"Validate that clicking on Open flipbook launches the flipbook associated with the book",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ADDBOOK_TC_27",
-               "description":"Validate that clicking on Open flipbook displays a list of flipbooks associated with the book",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ADDBOOK_TC_28",
-               "description":"Validate that clicking on Create New Class launches create class workflow where book is added to Class Books",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ADDBOOK_TC_29",
-               "description":"Validate that clicking on a page number launches the list of books",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ADDBOOK_TC_30",
-               "description":"Validate that clicking on next arrow launches the next page in books tab",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ADDBOOK_TC_31",
-               "description":"Validate that clicking on previous arrow launches the previous page in books tab",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ADDBOOK_TC_32",
-               "description":"Validate the content of books page launched from Browse",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ADDBOOK_TC_33",
-               "description":"Validate that clicking on Remove from My Books removes the book to My Books in Dashboard",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ADDBOOK_TC_34",
-               "description":"Validate that clicking on Cancel from My Books does not remove the book to My Books in Dashboard",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ADDBOOK_TC_35",
-               "description":"Validate the serach for partial text of resource's name.",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ADDBOOK_TC_36",
-               "description":"Validate the serach for complete text of resource's name",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ADDBOOK_TC_37",
-               "description":"Validate the search for alpha numeric text",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ADDBOOK_TC_38",
-               "description":"Validate that a search text lists maximum 5 suggestions matching the search text",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ADDBOOK_TC_39",
-               "description":"Validate that No Result Found screen is displayed when no resource matching the search crietria is fulfilled",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ADDBOOK_TC_40",
-               "description":"Validate that clicking on close search pill icon, the search results are cleared",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ADDBOOK_TC_41",
-               "description":"Validate that clicking on a resource from the search suggestion drop down list launches the resource",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ADDBOOK_TC_44",
-               "description":"Validate the content of add book page launched from Class workflow",
-               "tags":"P1",
-               "visualTest":"-"
-            }
-         ]
-      },
-      {
-         "modulename":"Book Detail & Unit Detail View",
-         "moduledetails":"",
-         "testFile":"./test/engageExperienceApp/bookDetailView.test.js",
-         "testcase":[
-            {
-               "id":"ENG_BOOK_TC_1",
-               "description":"Validate that clicking on 3 dot options displays a list of options",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_BOOK_TC_2",
-               "description":"Validate that clicking on 'Add to My Books' button adds the book to My Books section",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_BOOK_TC_3",
-               "description":"Validate that clicking on View Class button displays the list of classes corresponding to the book",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_BOOK_TC_4",
-               "description":"Validate that clicking on Remove Book option launches the remove book pop up",
-               "tags":"P1"
-            },
-            {
-               "id":"ENG_BOOK_TC_5",
-               "description":"Validate clicking on Cancel closes the Remove book pop up",
-               "tags":"P1"
-            },
-            {
-               "id":"ENG_BOOK_TC_6",
-               "description":"Validate clicking on Remove on Remove book pop up removes the book from My Books",
-               "tags":"P1"
-            },
-            {
-               "id":"ENG_BOOK_TC_9",
-               "description":"Validate that clicking on 'Open Flipbook' button launches the flipbook if single flipbook is associated with the book",
-               "tags":"P1"
-            },
-            {
-               "id":"ENG_BOOK_TC_10",
-               "description":"Validate clicking on a component displays the units asscoiated with the component",
-               "tags":"P1"
-            },
-            {
-               "id":"ENG_BOOK_TC_11",
-               "description":"Validate that 'Continue where you left off' message appears on the book Detail View page when user launches an activity",
-               "tags":"P1"
-            },
-            {
-               "id":"ENG_BOOK_TC_12",
-               "description":"Validate that Clicking on Continue on 'Continue where you left off:' pop up launches the last activity viewed by the user",
-               "tags":"P1"
-            },
-            {
-               "id":"ENG_BOOK_TC_13",
-               "description":"Validate that Clicking on Dismiss on 'Continue where you left off:' closes the pop up.",
-               "tags":"P1"
-            },
-            {
-               "id":"ENG_BOOK_TC_16",
-               "description":"Validate that clicking on 3 dots for a unit displays a list of options.",
-               "tags":"P1"
-            },
-            {
-               "id":"ENG_BOOK_TC_17",
-               "description":"Validate that clicking 'Open flipbook' option from the 3 dot options for a Unit launches the corresponding flipbook page",
-               "tags":"P1"
-            },
-            {
-               "id":"ENG_BOOK_TC_19",
-               "description":"Validate clicking on a unit launches the unit detail view page.",
-               "tags":"P1"
-            },
-            {
-               "id":"ENG_BOOK_TC_20",
-               "description":"Validate that clicking on 'Open in Flipbook' button on unit Detail View page launches the corresponding unit page in the flipbook",
-               "tags":"P1"
-            },
-            {
-               "id":"ENG_BOOK_TC_21",
-               "description":"Validate that clicking on Activity on unit detail view page launches the activity",
-               "tags":"P1"
-            },
-            {
-               "id":"ENG_BOOK_TC_30",
-               "description":"Anchor Component - Validate that Book Detail view page should display the list of units which are present in the anchored component",
-               "tags":"P1"
-            },
-            {
-               "id":"ENG_BOOK_TC_32",
-               "description":"Anchor component - Validate that clicking on Next Unit button launches the Next unit of the Anchored component in an indexed book",
-               "tags":"P1"
-            },
-            {
-               "id":"ENG_BOOK_TC_33",
-               "description":"Anchor component - Validate that clicking on Previous Unit button launch the previous unit of component in an indexed book",
-               "tags":"P1"
-            },
-            {
-               "id":"ENG_BOOK_TC_43",
-               "description":"Validate that clicking on Activity Screen breadcrumb naviagtes to Unit detail TOC page",
-               "tags":"P1"
-            },
-            {
-               "id":"ENG_BOOK_TC_44",
-               "description":"Validate that clicking on unit Detail TOC breadcrumb naviagtes to Book detail TOC page",
-               "tags":"P1"
-            },
-            {
-               "id":"ENG_BOOK_TC_45",
-               "description":"Validate that clicking on Activity Screen breadcrumb naviagtes to Book Detail TOC page",
-               "tags":"P1"
-            }
-         ]
-      },
-      {
-         "modulename":"Item Player - FIB",
-         "moduledetails":"",
-         "testFile":"./test/engageExperienceApp/FIB.test.js",
-         "testcase":[
-            {
-               "id":"ENG_ITEM_FIB_TC_3",
-               "description":"Validate FIB Question Functionality Using Drag & Drop Option",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ITEM_FIB_TC_7",
-               "description":"Validate FIB Question for correct scenario",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ITEM_FIB_TC_20",
-               "description":"Validate Drag and Drop question is launched",
-               "tags":"P1",
-               "visualTest":"-"
-            }
-         ]
-      },
-      {
-         "modulename":"Item Player - Order List",
-         "moduledetails":"",
-         "testFile":"./test/engageExperienceApp/orderlist.test.js",
-         "testcase":[
-            {
-               "id":"ENG_ITEM_OLI_TC_1",
-               "description":"Validate the UI of the Order List player",
-               "tags":"P2",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ITEM_OLI_TC_9",
-               "description":"Validate if user is able to drag the items in from arrow the Order List Question",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ITEM_OLI_TC_5",
-               "description":"Validate Order List Question for correct scenario",
-               "tags":"P1",
-               "visualTest":"-"
-            }
-         ]
-      },
-      {
-         "modulename":"Item Player - Classify",
-         "moduledetails":"",
-         "testFile":"./test/engageExperienceApp/classify.test.js",
-         "testcase":[
-            {
-               "id":"ENG_ITEM_CLA_TC_2",
-               "description":"Validate that user is able to place option pill inside the Group using drag and drop",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ITEM_CLA_TC_4",
-               "description":"Validate the Classify Player for correct scenario",
-               "tags":"P1",
-               "visualTest":"-"
-            }
-         ]
-      },
-      {
-         "modulename":"Item Player - Matching",
-         "moduledetails":"",
-         "testFile":"./test/engageExperienceApp/matching.test.js",
-         "testcase":[
-            {
-               "id":"ENG_ITEM_MATCH_TC_1",
-               "description":"Validate the UI of the Matching player in the default mode",
-               "tags":"P3",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ITEM_MATCH_TC_2",
-               "description":"Validate the behaviour of matching player when user match the left item with right item (Mobile)",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ITEM_MATCH_TC_5",
-               "description":"Validate Matching Question for correct scenario",
-               "tags":"P1",
-               "visualTest":"-"
-            }
-         ]
-      },
-      {
-         "modulename":"Base TestPlayer",
-         "moduledetails":"",
-         "testFile":"./test/engageExperienceApp/basePlayer.test.js",
-         "testcase":[
-            {
-               "id":"COM_PLAY_TC_1",
-               "description":"Validate testplayer when a question is launched",
-               "tags":"",
-               "visualTest":"-"
-            },
-            {
-               "id":"COM_PLAY_TC_2",
-               "description":"Validate testplayer when user click on Next button",
-               "tags":"",
-               "visualTest":"-"
-            },
-            {
-               "id":"COM_PLAY_TC_6",
-               "description":"Validate testplayer when user click on Previous button",
-               "tags":"",
-               "visualTest":"-"
-            },
-            {
-               "id":"COM_PLAY_TC_3",
-               "description":"Validate testplayer when user click on Check My Work button",
-               "tags":"",
-               "visualTest":"-"
-            },
-            {
-               "id":"COM_PLAY_TC_4",
-               "description":"Validate testplayer when user click on Reset button",
-               "tags":"",
-               "visualTest":"-"
-            },
-            {
-               "id":"COM_PLAY_TC_5",
-               "description":"Validate testplayer when user click on Try Again button",
-               "tags":"",
-               "visualTest":"-"
-            },
-            {
-               "id":"COM_PLAY_TC_7",
-               "description":"Validate testplayer when user click on Show Answer button",
-               "tags":"",
-               "visualTest":"-"
-            },
-            {
-               "id":"COM_PLAY_TC_8",
-               "description":"Validate testplayer when user click on Your Response button",
-               "tags":"",
-               "visualTest":"-"
-            },
-            {
-               "id":"COM_PLAY_TC_9",
-               "description":"Validate testplayer when user click on Hint button",
-               "tags":"",
-               "visualTest":"-"
-            }
-         ]
-      },
-      {
-         "modulename":"Activity Player",
-         "moduledetails":"",
-         "testFile":"./test/engageExperienceApp/activityPlayer.test.js",
-         "testcase":[
-            {
-               "id":"ENG_PLAY_TC_1",
-               "description":"Validate testplayer when a question is launched",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_PLAY_TC_2",
-               "description":"Validate testplayer when user click on Next button",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_PLAY_TC_3",
-               "description":"Validate testplayer when user click on Check My Work button",
-               "tags":"P1",
-               "visualTest":"-"
-            }
-         ]
-      },
-      {
-         "modulename":"Onboarding>Onboarding New User",
-         "moduledetails":"",
-         "testFile":"./test/engageExperienceApp/userOnboarding.test.js",
-         "testcase":[
-            {
-               "id":"ENG_ONBO_TC_18",
-               "description":"Teacher Onboarding - Validate that selecting on 'Enter School Key' option Enter your school key Screen is launched.",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_ONBO_TC_24",
-               "description":"Validate the visual verification of the Welcome Screen",
-               "tags":"P2",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ONBO_TC_40",
-               "description":"Teacher Onboarding -Validate that on clicking Continue button on the success screen, user navigates to the Course Dashboard",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ONBO_TC_75",
-               "description":"Validate that on selecting 'Student' role, user is directed to Class Key Screen",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_ONBO_TC_76",
-               "description":"Validate that clicking on \"Skip for Now\" , for role Student ,user is directed to Success Screen.",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_ONBO_TC_78",
-               "description":"Validate that clicking on Continue on Class Key user is directed to Success Screen",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ONBO_TC_79",
-               "description":"Validate that on selecting 'Teacher' role, user is directed to School Key Screen",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_ONBO_TC_1",
-               "description":"Validate Welcome Screen when new user sign in into application for onboarding",
-               "tags":"P2",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_ONBO_TC_4",
-               "description":"Validate that on selecting 'Student' role, user is directed to Student Options screen_OLD",
-               "tags":"P1",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_ONBO_TC_11",
-               "description":"Validate that on Clicking Continue on Success Screen the user navigates to Dashboard",
-               "tags":"P1",
-               "visualTest":"-"
-            }
-         ]
-      },
-      {
-         "modulename":"Dashboard",
-         "moduledetails":"",
-         "testFile":"./test/engageExperienceApp/dashboard.test.js",
-         "testcase":[
-            {
-               "id":"ENG_DASH_TC_1",
-               "description":"Validate the content of the blank Dashboard page in English Language",
-               "tags":"P2",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_DASH_TC_7",
-               "description":"Validate that clicking on 'Add Book' button, book list page is launched to select books to add",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_DASH_TC_12",
-               "description":"Validate that clicking on the 3 dots on book details page, launches the option menu with 'Remove from My Books'",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_DASH_TC_13",
-               "description":"Validate that clicking on 'Remove from My Books' launches a pop up with label 'Remove from My Books?'",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_DASH_TC_15",
-               "description":"Validate that clicking on 'Remove' removes the book from 'My List'",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_DASH_TC_16",
-               "description":"Validate on clicking View Classes from Book dropdown menu, class Pane is launched",
-               "tags":"P2",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_DASH_TC_17",
-               "description":"Validate on clicking Create Classes from Book dropdown menu, create class page is launched",
-               "tags":"P2",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_DASH_TC_19",
-               "description":"Validate on clicking \"Interactive Activities\" resource in Explore menu, same tab is launched on Browse",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_DASH_TC_20",
-               "description":"Validate on clicking \"Videos\" resource in Explore menu, same tab is launched on Browse",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_DASH_TC_21",
-               "description":"Validate on clicking \"Online Classes\" resource in Explore menu, same tab is launched on Browse",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_DASH_TC_22",
-               "description":"Validate on clicking \"Teacher Training\" resource in Explore menu, same tab is launched on Browse",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_DASH_TC_23",
-               "description":"Validate on clicking \"Today in Class\" resource in Explore menu, same tab is launched on Browse",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_DASH_TC_24",
-               "description":"Validate on clicking \"Projectable\" resource in Explore menu, same tab is launched on Browse",
-               "tags":"P1",
-               "visualTest":"-"
-            }
-         ]
-      },
-      {
-         "modulename":"Item Player - Multiple Choice",
-         "moduledetails":"",
-         "testFile":"./test/engageExperienceApp/mcqBlock.test.js",
-         "testcase":[
-            {
-               "id":"ENG_ITEM_MCQB_TC_1",
-               "description":"Validate the block Multiple Choice question in unattempted state",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ITEM_MCQB_TC_5",
-               "description":"Validate Block Multiple Choice question functionality for correct scenario",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ITEM_MCQB_TC_8",
-               "description":"Validate Block Multiple Choice question select the option",
-               "tags":"P1",
-               "visualTest":"-"
-            }
-         ]
-      },
-      {
-         "modulename":"Item Player - DND Into Text",
-         "moduledetails":"",
-         "testFile":"./test/engageExperienceApp/FIBText.test.js",
-         "testcase":[
-            {
-               "id":"ENG_ITEM_FIBTEXT_TC_2",
-               "description":"Validate DND Into Text question is launched",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ITEM_FIBTEXT_TC_3",
-               "description":"Validate that user is able to click in the text placeholders and type the desired text in the DND Into Text question",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ITEM_FIBTEXT_TC_5",
-               "description":"Validate DND Into Text Question for correct scenario",
-               "tags":"P1",
-               "visualTest":"-"
-            }
-         ]
-      },
-      {
-         "modulename":"Item Player - DND Onto Image",
-         "moduledetails":"",
-         "testFile":"./test/engageExperienceApp/dragDrop.test.js",
-         "testcase":[
-            {
-               "id":"ENG_ITEM_DND_TC_7",
-               "description":"Validate DND Onto Image Functionality using Click option",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ITEM_DND_TC_1",
-               "description":"Validate DND Onto Image Question Functionality For Correct Scenario",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ITEM_DND_TC_20",
-               "description":"Validate DND Onto Image question is launched",
-               "tags":"P2",
-               "visualTest":"-"
-            }
-         ]
-      },
-      {
-         "modulename":"Item Player - Multiple Response",
-         "moduledetails":"",
-         "testFile":"./test/engageExperienceApp/mcmr.test.js",
-         "testcase":[
-            {
-               "id":"ENG_ITEM_MCMR_TC_1",
-               "description":"Validate the Multiple Response question launch in default unattempted state",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ITEM_MCMR_TC_3",
-               "description":"Validate that the user can select multiple options while performing Multiple Response question",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_ITEM_MCMR_TC_5",
-               "description":"Validate Multiple Response question functionality for Correct scenario",
-               "tags":"P1",
-               "visualTest":"-"
-            }
-         ]
-      },
-      {
-         "modulename":"Landing",
-         "moduledetails":"",
-         "testFile":"./test/engageExperienceApp/landing.test.js",
-         "testcase":[
-            {
-               "id":"ENG_LAND_TC_1",
-               "description":"Validate that the landing page appears on launching the URL",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_LAND_TC_2",
-               "description":"Validate that the sign up page is launched on clicking the \"Sign Up & Start Learning Today\" button",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_LAND_TC_3",
-               "description":"Validate that the sign in page is launched on clicking the \"Log in\" button",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_LAND_TC_4",
-               "description":"Validate that user is able to change the language of the page from the language drop down",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_LAND_TC_5",
-               "description":"Validate the content of the landing page (in English)",
-               "tags":"P2",
-               "visualTest":true
-            }
-         ]
-      },
-      {
-         "modulename":"Login",
-         "moduledetails":"",
-         "testFile":"./test/engageExperienceApp/login.test.js",
-         "testcase":[
-            {
-               "id":"ENG_IDEN_TC_2",
-               "description":"Validate content on Login page in english Language",
-               "tags":"P3",
-               "visualTest":true
-            },
-            {
-               "id":"ENG_IDEN_TC_5",
-               "description":"Validate that the login button is enabled if email is left blank",
-               "tags":"P3",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_IDEN_TC_6",
-               "description":"Validate that the login button is enabled if password is left blank",
-               "tags":"P3",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_IDEN_TC_7",
-               "description":"Validate that the user is able to login successfully with an existing account",
-               "tags":""
-            },
-            {
-               "id":"ENG_IDEN_TC_9",
-               "description":"Validate that the user is able to mask/unmask the password by clicking eye icon",
-               "tags":"P2",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_IDEN_TC_10",
-               "description":"Validate login with valid Email ID (Entered in UPPERCASE) & password",
-               "tags":"P2",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_IDEN_TC_11",
-               "description":"Validate user is not able to login with invalid Email ID/format",
-               "tags":"P3",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_IDEN_TC_12",
-               "description":"Validate message If user enter non-existing/unregistered Email ID while login",
-               "tags":"P2",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_IDEN_TC_13",
-               "description":"Validate user is not able to login with invalid password",
-               "tags":"P3",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_IDEN_TC_14",
-               "description":"Validate that user is able to log on entering leading and trailing spaces in the email id",
-               "tags":"P3",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_IDEN_TC_15",
-               "description":"Validate that the login button is clicked on pressing \"ENTER\" key on the login page",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_IDEN_TC_16",
-               "description":"Validate that Reset Password page is launched on clicking 'Forgot Password' button",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_IDEN_TC_4",
-               "description":"Validate that the user is able to change the language on the login page",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_IDEN_TC_49",
-               "description":"Validate Content on Sign Up Page in default language",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_IDEN_TC_50",
-               "description":"Validate Content on Sign Up Page in Spanish language",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_IDEN_TC_57",
-               "description":"Validate Enter Account Details page is launched if user enter valid Email ID and click Sign up",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_IDEN_TC_64",
-               "description":"Validate content on Create Account page",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_IDEN_TC_65",
-               "description":"Validate the content on  Create Account page in Spanish Language",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_IDEN_TC_76",
-               "description":"Validate 'Verify Your Account' page is launched on clicking 'Create Account' on Account Details page",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_IDEN_TC_89",
-               "description":"Validate the content on Verify Your Account page",
-               "tags":"P1",
-               "visualTest":"-"
-            },
-            {
-               "id":"ENG_IDEN_TC_90",
-               "description":"Validate the content on Verify Your Account page in Spanish Language",
-               "tags":"P1",
-               "visualTest":"-"
-            }
-         ]
-      },
-      {
+  "appname": "comproDLS Engage",
+  "appdetails": "",
+  "selectorFile": "./core/selectors/experienceApp/engageSelectors.json",
+  "modules": [
+    {
+      "modulename": "Difusion UI Temp",
+      "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+      "testcase": [
+        {
+          "id": "ENG_DIF_TC_1",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_2",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_3",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_4",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_5",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_6",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_7",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_8",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_9",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_10",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_11",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_12",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_13",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_14",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_15",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_16",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_17",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_18",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_19",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_20",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_21",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_22",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_23",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_24",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_25",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_26",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_27",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_28",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_29",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_30",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_31",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_32",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_33",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_34",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_35",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_36",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_37",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_38",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_39",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_40",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_41",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_42",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_43",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_44",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_45",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_46",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_47",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_48",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_49",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_50",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_51",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_52",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_53",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_54",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_55",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_56",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_57",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        }
+      ]
+    },
+    {
+      "modulename": "MyClass - Teacher",
+      "moduledetails": "",
+      "testFile": "./test/engageExperienceApp/classDashboard.test.js",
+      "testcase": [
+        {
+          "id": "ENG_INS_CLASS_TC_1",
+          "description": "Validate the content (in english) of the My Classes Page if instructor has not created any Class.",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_2",
+          "description": "Validate the content (in english) of the My Classes Page if instructor has created Classes.",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_3",
+          "description": "Validate the content (in english) of the Archive Page",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_4",
+          "description": "Validate that My Classes tab option shows all classes",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_5",
+          "description": "Validate that Archived page launched after clicking on archive tab",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_6",
+          "description": "Validate that Create Class page is launched on clicking create class button",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_7",
+          "description": "Validate that on clicking a Class card on the My Classes Page, Class Dashboard is launched for that class",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_8",
+          "description": "Validate that clicking on menu button on a class card displays available menu options",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_9",
+          "description": "Validate that clicking on Edit Class option from Class Menu launches Edit Class Workflow",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_10",
+          "description": "Validate that clicking on inbox option from Class Menu launches class details page with inbox tab selected",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_13",
+          "description": "Validate the content (in english) of the Create Class Page",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_14",
+          "description": "Validate class cannot be created if Class name field is left blank.",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_15",
+          "description": "Validate that class cannot be created if Class name field contains more than 50 characters.",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_16",
+          "description": "Validate that instructor is able to create a Class with 50 alphanumeric characters",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_17",
+          "description": "Validate that instructor is able to create a Class with special characters",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_19",
+          "description": "Validate that the My Classes page appears if user click on the cancel and go back button on Create Class Page",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_21",
+          "description": "Validate the functionality of create button on Create Class Page.",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_22",
+          "description": "Validate the content of the Create Class Success Page",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_23",
+          "description": "Validate that the class dashboard is launched on clicking the View Class button on success page",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_24",
+          "description": "Validate that the My Classes page is launched on clicking Close button on success page",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_27",
+          "description": "Validate that class cannot be created if user has not selected any Book",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_33",
+          "description": "Edit Class: Validate the content (in english) of the Edit Class Page",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_34",
+          "description": "Edit Class: Validate that the class details are updated on clicking the save button on Edit Class Page",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_35",
+          "description": "Edit Class: Validate that the instructor My Classes page is launched on clicking Cancel and Go Back button on the Edit Class Page",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_36",
+          "description": "Edit Class: Validate that Class Name cannot be modified as blank.",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_37",
+          "description": "Edit Class: Validate that Class name can be updated with less than 50 characters.",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_40",
+          "description": "Edit Class -Validate that the error message appears if user deselect the book and click on Save button to save the class",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_41",
+          "description": "Validate book is by default selected",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_42",
+          "description": "Click on add book button and Validate the book is added in the class",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_11",
+          "description": "Validate that clicking on Assignemnt option from Class Menu launches class details page with Assignment tab selected",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_12",
+          "description": "Validate that clicking on Student option from Class Menu launches class details page with Students tab selected",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_38",
+          "description": "Validate the class drwaer Pane when no class is added",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_39",
+          "description": "Validate the class drawer Pane when class is added",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_31",
+          "description": "Validate the Close button of class drawer Pane",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_18",
+          "description": "Set the start date of a class of next week",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_20",
+          "description": "Set the End date of a class of next week",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_44",
+          "description": "Validate book details is launched after clicking on View Book button",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_99",
+          "description": "Click on student tab and validate student tab is selected",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_100",
+          "description": "Validate that score is coming for anchord book class students.",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_101",
+          "description": "Validate that score is not coming for non-anchord book class students",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_102",
+          "description": " Validate the page when no student is added ",
+          "tags": "P1"
+        }
+      ]
+    },
+    {
+      "modulename": "MyClass - Student",
+      "moduledetails": "",
+      "testFile": "./test/engageExperienceApp/studentMyClass.test.js",
+      "testcase": [
+        {
+          "id": "ENG_STU_CLASS_TC_1",
+          "description": "Validate the content (in english) of the My Classes Page if Studnet has not Added any Class.",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_STU_CLASS_TC_2",
+          "description": "Validate the content (in english) of the My Classes Page if some class are added",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_STU_CLASS_TC_3",
+          "description": "Validate the content (in english) of the Archive Page",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_STU_CLASS_TC_4",
+          "description": "Validate that My Classes tab option shows all classes",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_STU_CLASS_TC_5",
+          "description": "Validate that Archived page launched after clicking on archive tab",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_STU_CLASS_TC_6",
+          "description": "Validate that Join Class pop is launched on clicking Join class button",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_STU_CLASS_TC_7",
+          "description": "Validate that on clicking a Class card on the My Classes Page, Student Class Dashboard is launched for that class",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_STU_CLASS_TC_8",
+          "description": "Validate that clicking on menu button on a class card displays available menu options",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_STU_CLASS_TC_9",
+          "description": "Validate that clicking on View Class option from Class Menu launches student Class Dashboard",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_STU_CLASS_TC_10",
+          "description": "Validate the content (in english) of the Join Class PopUP",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_STU_CLASS_TC_11",
+          "description": "Validate class cannot be jojned if Class Key field is left blank.",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_STU_CLASS_TC_12",
+          "description": "Validate that class cannot be joined if Class Code is not correct.",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_STU_CLASS_TC_13",
+          "description": "Validate that class cannot be joined if Class is already exist .",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_STU_CLASS_TC_14",
+          "description": "Validate that the My Classes page appears if user click on the Close button on Join Class popup",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_STU_CLASS_TC_15",
+          "description": "Validate that class cannot be joined if Class Code is not correct format.",
+          "tags": "P2",
+          "visualTest": "-"
+        }
+      ]
+    },
+    {
+      "modulename": "AppShell",
+      "moduledetails": "",
+      "testFile": "./test/engageExperienceApp/appShell.test.js",
+      "testcase": [
+        {
+          "id": "ENG_SHELL_TC_1",
+          "description": "Validate that on launching the application the appshell (left navigation pane and header) appears",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SHELL_TC_2",
+          "description": "Validate that clicking on the Dashboard button in the left navigation pane launches Dashboard page",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SHELL_TC_3",
+          "description": "Validate that clicking on the Browse button in the left navigation pane launches Browse page",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SHELL_TC_4",
+          "description": "Validate that clicking on the Classes button in the left navigation pane launches Classes List  page",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SHELL_TC_5",
+          "description": "Validate that clicking on the bell icon on the header launches the notifications pane",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SHELL_TC_6",
+          "description": "Validate that clicking on cross icon closes the notification section",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SHELL_TC_7",
+          "description": "Validate that user is able to change the app language using the language switcher on the header",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SHELL_TC_8",
+          "description": "Validate that user is able to view name and email in the profile drop down on the header",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SHELL_TC_9",
+          "description": "Validate that user is able to logout of the application by selecting the logout option from the profile dropdown",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SHELL_TC_10",
+          "description": "Validate that clicking on + button on classes in Left navigation pane, launched the create class page in teacher login",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_DASH_TC_1",
+          "description": "Validate that clicking on the 'Dashboard' button on the left navigation panel, the Dashboard page is launched",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SHELL_TC_11",
+          "description": "Validate that click on breadcrumb back button on the header launch the previous page",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SHELL_TC_12",
+          "description": "Validate that click on breadcrumb product tile on the header launch the previous page",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SHELL_TC_17",
+          "description": "Validate that clicking on the Settings button in left Navigation pane launches Settings page",
+          "tags": "P1",
+          "visualTest": "-"
+        }
+      ]
+    },
+    {
+      "modulename": "Add Book",
+      "moduledetails": "",
+      "testFile": "./test/engageExperienceApp/addBook.test.js",
+      "testcase": [
+        {
+          "id": "ENG_ADDBOOK_TC_2",
+          "description": "Validate the content of add book page launched from Dashboard",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ADDBOOK_TC_4",
+          "description": "Validate the my books page content",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ADDBOOK_TC_5",
+          "description": "Validate the all books page content",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ADDBOOK_TC_6",
+          "description": "Validate the my book tab selected when click on my book tab",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ADDBOOK_TC_7",
+          "description": "Validate the all book tab selected when click on all book tab",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ADDBOOK_TC_8",
+          "description": "Validate that create class page is launched after click on add to class button",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ADDBOOK_TC_9",
+          "description": "Validate the create class page is launched and book is not changed after click on Cancel and go Back button",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ADDBOOK_TC_10",
+          "description": "Validate the create class page is launched and no book is added after click on Cancel and go Back button",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ADDBOOK_TC_11",
+          "description": "Validate the bottom label when no book added in a class",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ADDBOOK_TC_12",
+          "description": "Validate the book is added on clicking of add book button of a specific book",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ADDBOOK_TC_13",
+          "description": "Validate the book details in bottom Label when book is added",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ADDBOOK_TC_14",
+          "description": "Validate the book is remove from class when click on cross icon on button Label",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ADDBOOK_TC_15",
+          "description": "Validate the book is removed after clicking on \"Added\" button of a book which is already added",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ADDBOOK_TC_16",
+          "description": "Validate the error message when click on add to class button without adding any class",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ADDBOOK_TC_19",
+          "description": "Validate the content when no book is added on my book tab",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ADDBOOK_TC_21",
+          "description": "Validate that clicking on '+' button adds the book to My Books",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ADDBOOK_TC_20",
+          "description": "Validate that clicking on Book Thumbnail launches the book View page",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ADDBOOK_TC_21",
+          "description": "Validate that clicking on Book Thumbnail launches the book View page",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ADDBOOK_TC_22",
+          "description": "Validate clicking on the breadcrumb on add book page launches the dashboard page",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ADDBOOK_TC_23",
+          "description": "Validate that clicking on more options displays a list of options available",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ADDBOOK_TC_24",
+          "description": "Validate that clicking on View Classes launches Class Drawer",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ADDBOOK_TC_25",
+          "description": "Validate that clicking on Add to My Books adds the book to My Books in Dashboard",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ADDBOOK_TC_26",
+          "description": "Validate that clicking on Open flipbook launches the flipbook associated with the book",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ADDBOOK_TC_27",
+          "description": "Validate that clicking on Open flipbook displays a list of flipbooks associated with the book",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ADDBOOK_TC_28",
+          "description": "Validate that clicking on Create New Class launches create class workflow where book is added to Class Books",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ADDBOOK_TC_29",
+          "description": "Validate that clicking on a page number launches the list of books",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ADDBOOK_TC_30",
+          "description": "Validate that clicking on next arrow launches the next page in books tab",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ADDBOOK_TC_31",
+          "description": "Validate that clicking on previous arrow launches the previous page in books tab",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ADDBOOK_TC_32",
+          "description": "Validate the content of books page launched from Browse",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ADDBOOK_TC_33",
+          "description": "Validate that clicking on Remove from My Books removes the book to My Books in Dashboard",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ADDBOOK_TC_34",
+          "description": "Validate that clicking on Cancel from My Books does not remove the book to My Books in Dashboard",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ADDBOOK_TC_35",
+          "description": "Validate the serach for partial text of resource's name.",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ADDBOOK_TC_36",
+          "description": "Validate the serach for complete text of resource's name",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ADDBOOK_TC_37",
+          "description": "Validate the search for alpha numeric text",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ADDBOOK_TC_38",
+          "description": "Validate that a search text lists maximum 5 suggestions matching the search text",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ADDBOOK_TC_39",
+          "description": "Validate that No Result Found screen is displayed when no resource matching the search crietria is fulfilled",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ADDBOOK_TC_40",
+          "description": "Validate that clicking on close search pill icon, the search results are cleared",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ADDBOOK_TC_41",
+          "description": "Validate that clicking on a resource from the search suggestion drop down list launches the resource",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ADDBOOK_TC_44",
+          "description": "Validate the content of add book page launched from Class workflow",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ADDBOOK_TC_99",
+          "description": "Validate the Search of  book Name on  the add Book List page.",
+          "tags": "P1",
+          "visualTest": "-"
+        }
+      ]
+    },
+    {
+      "modulename": "View Book",
+      "moduledetails": "",
+      "testFile": "./test/engageExperienceApp/viewBook.test.js",
+      "testcase": [
+        {
+          "id": "ENG_BOOK_TC_1",
+          "description": "Validate that clicking on 3 dot options displays a list of options",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_BOOK_TC_2",
+          "description": "Validate that clicking on 'Add to My Books' button adds the book to My Books section",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_BOOK_TC_3",
+          "description": "Validate that clicking on View Class button displays the list of classes corresponding to the book",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_BOOK_TC_4",
+          "description": "Validate that clicking on Remove Book option launches the remove book pop up",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_BOOK_TC_5",
+          "description": "Validate clicking on Cancel closes the Remove book pop up",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_BOOK_TC_6",
+          "description": "Validate clicking on Remove on Remove book pop up removes the book from My Books",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_BOOK_TC_9",
+          "description": "Validate that clicking on 'Open Flipbook' button launches the flipbook if single flipbook is associated with the book",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_BOOK_TC_10",
+          "description": "Validate clicking on a component displays the units asscoiated with the component",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_BOOK_TC_11",
+          "description": "Validate that 'Continue where you left off' message appears on the book Detail View page when user launches an activity",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_BOOK_TC_12",
+          "description": "Validate that Clicking on Continue on 'Continue where you left off:' pop up launches the last activity viewed by the user",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_BOOK_TC_13",
+          "description": "Validate that Clicking on Dismiss on 'Continue where you left off:' closes the pop up.",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_BOOK_TC_19",
+          "description": "Validate clicking on a unit launches the unit detail view page.",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_BOOK_TC_27",
+          "description": "Non-Anchor Component - Validate that View Book page should display all the components present in the Book",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_BOOK_TC_30",
+          "description": "Anchor Component - Validate that Book Detail view page should display the list of units which are present in the anchored component",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_BOOK_TC_31",
+          "description": "Anchor Component - Validate that No Components should be visible on View book page for an indexed book",
+          "tags": "P1"
+        }
+      ]
+    },
+    {
+      "modulename": "View Unit",
+      "moduledetails": "",
+      "testFile": "./test/engageExperienceApp/viewUnit.test.js",
+      "testcase": [
+        {
+          "id": "ENG_BOOK_TC_20",
+          "description": "Validate that clicking on 'Open in Flipbook' button on unit Detail View page launches the corresponding unit page in the flipbook",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_BOOK_TC_21",
+          "description": "Validate that clicking on Activity on unit detail view page launches the activity",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_BOOK_TC_25",
+          "description": "Validate that clicking on Next Unit button launches the Next unit of the Current Component",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_BOOK_TC_26",
+          "description": "Validate that clicking on Previous Unit button launches the Previous unit of Current Component",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_BOOK_TC_28",
+          "description": "Non-Anchor component - Validate that components are not displayed on View Unit page",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_BOOK_TC_34",
+          "description": "Anchor component - Validate that component list is displayed on View Unit page",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_BOOK_TC_44",
+          "description": "Validate that clicking on unit Detail TOC breadcrumb naviagtes to Book detail TOC page",
+          "tags": "P1"
+        }
+      ]
+    },
+    {
+      "modulename": "Item Player - FIB",
+      "moduledetails": "",
+      "testFile": "./test/engageExperienceApp/FIB.test.js",
+      "testcase": [
+        {
+          "id": "ENG_ITEM_FIB_TC_3",
+          "description": "Validate FIB Question Functionality Using Drag & Drop Option",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ITEM_FIB_TC_7",
+          "description": "Validate FIB Question for correct scenario",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ITEM_FIB_TC_20",
+          "description": "Validate Drag and Drop question is launched",
+          "tags": "P1",
+          "visualTest": "-"
+        }
+      ]
+    },
+    {
+      "modulename": "Item Player - Order List",
+      "moduledetails": "",
+      "testFile": "./test/engageExperienceApp/orderlist.test.js",
+      "testcase": [
+        {
+          "id": "ENG_ITEM_OLI_TC_1",
+          "description": "Validate the UI of the Order List player",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ITEM_OLI_TC_9",
+          "description": "Validate if user is able to drag the items in from arrow the Order List Question",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ITEM_OLI_TC_5",
+          "description": "Validate Order List Question for correct scenario",
+          "tags": "P1",
+          "visualTest": "-"
+        }
+      ]
+    },
+    {
+      "modulename": "Item Player - Classify",
+      "moduledetails": "",
+      "testFile": "./test/engageExperienceApp/classify.test.js",
+      "testcase": [
+        {
+          "id": "ENG_ITEM_CLA_TC_2",
+          "description": "Validate that user is able to place option pill inside the Group using drag and drop",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ITEM_CLA_TC_4",
+          "description": "Validate the Classify Player for correct scenario",
+          "tags": "P1",
+          "visualTest": "-"
+        }
+      ]
+    },
+    {
+      "modulename": "Item Player - Matching",
+      "moduledetails": "",
+      "testFile": "./test/engageExperienceApp/matching.test.js",
+      "testcase": [
+        {
+          "id": "ENG_ITEM_MATCH_TC_1",
+          "description": "Validate the UI of the Matching player in the default mode",
+          "tags": "P3",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ITEM_MATCH_TC_2",
+          "description": "Validate the behaviour of matching player when user match the left item with right item (Mobile)",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ITEM_MATCH_TC_5",
+          "description": "Validate Matching Question for correct scenario",
+          "tags": "P1",
+          "visualTest": "-"
+        }
+      ]
+    },
+    {
+      "modulename": "Base TestPlayer",
+      "moduledetails": "",
+      "testFile": "./test/engageExperienceApp/basePlayer.test.js",
+      "testcase": [
+        {
+          "id": "COM_PLAY_TC_1",
+          "description": "Validate testplayer when a question is launched",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "COM_PLAY_TC_2",
+          "description": "Validate testplayer when user click on Next button",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "COM_PLAY_TC_6",
+          "description": "Validate testplayer when user click on Previous button",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "COM_PLAY_TC_3",
+          "description": "Validate testplayer when user click on Check My Work button",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "COM_PLAY_TC_4",
+          "description": "Validate testplayer when user click on Reset button",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "COM_PLAY_TC_5",
+          "description": "Validate testplayer when user click on Try Again button",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "COM_PLAY_TC_7",
+          "description": "Validate testplayer when user click on Show Answer button",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "COM_PLAY_TC_8",
+          "description": "Validate testplayer when user click on Your Response button",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "COM_PLAY_TC_9",
+          "description": "Validate testplayer when user click on Hint button",
+          "tags": "",
+          "visualTest": "-"
+        }
+      ]
+    },
+    {
+      "modulename": "Activity Player",
+      "moduledetails": "",
+      "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
+      "testcase": [
+        {
+          "id": "ENG_PLAY_TC_1",
+          "description": "Validate testplayer when a question is launched",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLAY_TC_2",
+          "description": "Validate testplayer when user click on Next button",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLAY_TC_3",
+          "description": "Validate testplayer when user click on Check My Work button",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLAY_TC_5",
+          "description": "Validate testplayer when user click on Show Answer button",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLAY_TC_6",
+          "description": "Validate testplayer when user click Your Response button",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLAY_TC_7",
+          "description": "Validate testplayer when user click on Restart button",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLAY_TC_8",
+          "description": "Validate testplayer when a question is launched for the student",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLAY_TC_10",
+          "description": "Validate the activity player when Last question of quiz is launched",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLAY_TC_9",
+          "description": "Validate testplayer when user click on Submit button",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLAY_TC_11",
+          "description": "Click show details button in activity Player",
+          "tags": "",
+          "visualTest": "-"
+        }
+      ]
+    },
+    {
+      "modulename": "Onboarding>Onboarding New User",
+      "moduledetails": "",
+      "testFile": "./test/engageExperienceApp/userOnboarding.test.js",
+      "testcase": [
+        {
+          "id": "ENG_ONBO_TC_18",
+          "description": "Teacher Onboarding - Validate that selecting on 'Enter School Key' option Enter your school key Screen is launched.",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ONBO_TC_24",
+          "description": "Validate the visual verification of the Welcome Screen",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ONBO_TC_40",
+          "description": "Teacher Onboarding -Validate that on clicking Continue button on the success screen, user navigates to the Course Dashboard",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ONBO_TC_75",
+          "description": "Validate that on selecting 'Student' role, user is directed to Class Key Screen",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ONBO_TC_76",
+          "description": "Validate that clicking on \"Skip for Now\" , for role Student ,user is directed to Success Screen.",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ONBO_TC_78",
+          "description": "Validate that clicking on Continue on Class Key user is directed to Success Screen",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ONBO_TC_79",
+          "description": "Validate that on selecting 'Teacher' role, user is directed to School Key Screen",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ONBO_TC_1",
+          "description": "Validate Welcome Screen when new user sign in into application for onboarding",
+          "tags": "P2",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ONBO_TC_4",
+          "description": "Validate that on selecting 'Student' role, user is directed to Student Options screen_OLD",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ONBO_TC_11",
+          "description": "Validate that on Clicking Continue on Success Screen the user navigates to Dashboard",
+          "tags": "P1",
+          "visualTest": "-"
+        }
+      ]
+    },
+    {
+      "modulename": "Dashboard",
+      "moduledetails": "",
+      "testFile": "./test/engageExperienceApp/dashboard.test.js",
+      "testcase": [
+        {
+          "id": "ENG_DASH_TC_1",
+          "description": "Validate the content of the blank Dashboard page in English Language",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_DASH_TC_7",
+          "description": "Validate that clicking on 'Add Book' button, book list page is launched to select books to add",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_DASH_TC_11",
+          "description": "Validate that clicking on 'View' button of an added book launched the Book details page",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_DASH_TC_12",
+          "description": "Validate that clicking on the 3 dots on book details page, launches the option menu with 'Remove from My Books'",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_DASH_TC_13",
+          "description": "Validate that clicking on 'Remove from My Books' launches a pop up with label 'Remove from My Books?'",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_DASH_TC_14",
+          "description": "Validate that clicking on 'Cancel' in dialog box retains the book in 'My Books'",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_DASH_TC_15",
+          "description": "Validate that clicking on 'Remove' removes the book from 'My List'",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_DASH_TC_16",
+          "description": "Validate on clicking View Classes from Book dropdown menu, class Pane is launched",
+          "tags": "P2",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DASH_TC_17",
+          "description": "Validate on clicking Create Classes from Book dropdown menu, create class page is launched",
+          "tags": "P2",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DASH_TC_18",
+          "description": "Validate on clicking 'Open Flipbook' from Book dropdown menu, flipbook page is launched",
+          "tags": "P2",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DASH_TC_19",
+          "description": "Validate on clicking \"Interactive Activities\" resource in Explore menu, same tab is launched on Browse",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_DASH_TC_20",
+          "description": "Validate on clicking \"Videos\" resource in Explore menu, same tab is launched on Browse",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_DASH_TC_21",
+          "description": "Validate on clicking \"Online Classes\" resource in Explore menu, same tab is launched on Browse",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_DASH_TC_22",
+          "description": "Validate on clicking \"Teacher Training\" resource in Explore menu, same tab is launched on Browse",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_DASH_TC_23",
+          "description": "Validate on clicking \"Today in Class\" resource in Explore menu, same tab is launched on Browse",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_DASH_TC_24",
+          "description": "Validate on clicking \"Projectable\" resource in Explore menu, same tab is launched on Browse",
+          "tags": "P1",
+          "visualTest": "-"
+        }
+      ]
+    },
+    {
+      "modulename": "Item Player - Multiple Choice",
+      "moduledetails": "",
+      "testFile": "./test/engageExperienceApp/mcqBlock.test.js",
+      "testcase": [
+        {
+          "id": "ENG_ITEM_MCQB_TC_1",
+          "description": "Validate the block Multiple Choice question in unattempted state",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ITEM_MCQB_TC_5",
+          "description": "Validate Block Multiple Choice question functionality for correct scenario",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ITEM_MCQB_TC_8",
+          "description": "Validate Block Multiple Choice question select the option",
+          "tags": "P1",
+          "visualTest": "-"
+        }
+      ]
+    },
+    {
+      "modulename": "Item Player - DND Into Text",
+      "moduledetails": "",
+      "testFile": "./test/engageExperienceApp/FIBText.test.js",
+      "testcase": [
+        {
+          "id": "ENG_ITEM_FIBTEXT_TC_2",
+          "description": "Validate DND Into Text question is launched",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ITEM_FIBTEXT_TC_3",
+          "description": "Validate that user is able to click in the text placeholders and type the desired text in the DND Into Text question",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ITEM_FIBTEXT_TC_5",
+          "description": "Validate DND Into Text Question for correct scenario",
+          "tags": "P1",
+          "visualTest": "-"
+        }
+      ]
+    },
+    {
+      "modulename": "Item Player - DND Onto Image",
+      "moduledetails": "",
+      "testFile": "./test/engageExperienceApp/dragDrop.test.js",
+      "testcase": [
+        {
+          "id": "ENG_ITEM_DND_TC_7",
+          "description": "Validate DND Onto Image Functionality using Click option",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ITEM_DND_TC_1",
+          "description": "Validate DND Onto Image Question Functionality For Correct Scenario",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ITEM_DND_TC_20",
+          "description": "Validate DND Onto Image question is launched",
+          "tags": "P2",
+          "visualTest": "-"
+        }
+      ]
+    },
+    {
+      "modulename": "Item Player - Multiple Response",
+      "moduledetails": "",
+      "testFile": "./test/engageExperienceApp/mcmr.test.js",
+      "testcase": [
+        {
+          "id": "ENG_ITEM_MCMR_TC_1",
+          "description": "Validate the Multiple Response question launch in default unattempted state",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ITEM_MCMR_TC_3",
+          "description": "Validate that the user can select multiple options while performing Multiple Response question",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ITEM_MCMR_TC_5",
+          "description": "Validate Multiple Response question functionality for Correct scenario",
+          "tags": "P1",
+          "visualTest": "-"
+        }
+      ]
+    },
+    {
+      "modulename": "Landing",
+      "moduledetails": "",
+      "testFile": "./test/engageExperienceApp/landing.test.js",
+      "testcase": [
+        {
+          "id": "ENG_LAND_TC_1",
+          "description": "Validate that the landing page appears on launching the URL",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_LAND_TC_2",
+          "description": "Validate that the sign up page is launched on clicking the \"Sign Up & Start Learning Today\" button",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_LAND_TC_3",
+          "description": "Validate that the sign in page is launched on clicking the \"Log in\" button",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_LAND_TC_4",
+          "description": "Validate that user is able to change the language of the page from the language drop down",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_LAND_TC_5",
+          "description": "Validate the content of the landing page (in English)",
+          "tags": "P2",
+          "visualTest": true
+        }
+      ]
+    },
+    {
+      "modulename": "Login",
+      "moduledetails": "",
+      "testFile": "./test/engageExperienceApp/login.test.js",
+      "testcase": [
+        {
+          "id": "ENG_IDEN_TC_2",
+          "description": "Validate content on Login page in english Language",
+          "tags": "P3",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_IDEN_TC_5",
+          "description": "Validate that the login button is disabled if email is left blank",
+          "tags": "P3",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_IDEN_TC_6",
+          "description": "Validate that the login button is disabled if password is left blank",
+          "tags": "P3",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_IDEN_TC_7",
+          "description": "Validate that the user is able to login successfully with an existing account",
+          "tags": ""
+        },
+        {
+          "id": "ENG_IDEN_TC_9",
+          "description": "Validate that the user is able to mask/unmask the password by clicking eye icon",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_IDEN_TC_10",
+          "description": "Validate login with valid Email ID (Entered in UPPERCASE) & password",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_IDEN_TC_11",
+          "description": "Validate user is not able to login with invalid Email ID/format",
+          "tags": "P3",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_IDEN_TC_12",
+          "description": "Validate message If user enter non-existing/unregistered Email ID while login",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_IDEN_TC_13",
+          "description": "Validate user is not able to login with invalid password",
+          "tags": "P3",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_IDEN_TC_14",
+          "description": "Validate that user is able to log on entering leading and trailing spaces in the email id",
+          "tags": "P3",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_IDEN_TC_15",
+          "description": "Validate that the login button is clicked on pressing \"ENTER\" key on the login page",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_IDEN_TC_16",
+          "description": "Validate that Reset Password page is launched on clicking 'Forgot Password' button",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_IDEN_TC_4",
+          "description": "Validate that the user is able to change the language on the login page",
+          "tags": "P1",
+          "visualTest": "-"
+        }
+      ]
+    },
+     {
          "modulename":"Settings",
          "moduledetails":"",
          "testFile":"./test/engageExperienceApp/settings.test.js",
@@ -1783,5 +1941,5 @@
             }
          ]
       }
-   ]
+  ]
 }

@@ -32,19 +32,19 @@
                     "info": {}
                 },
                  "validStudent3": {
-                    "email": "difusionqa.stud12@yopmail.com",
+                    "email": "dev1_studentAutomation@yopmail.com",
                     "password": "Compro@1234",
                     "role": "student",
-                    "name": "difusionqa.stud12",
+                    "name": "student automation",
                     "class": [
                     ],
                     "info": {}
                 },
                 "acceptanceteacher": {
-                    "email": "acceptanceInstructor@yopmail.com",
+                    "email": "acceptanceTeacher@yopmail.com",
                     "password": "Compro@1234",
                     "role": "student",
-                    "name": "acceptance Instructor",
+                    "name": "acceptance Teacher",
                     "class": [  
                         {
                             "key": "TFbA-6AP7",
@@ -53,11 +53,15 @@
                     "info": {}
                 },
                 "acceptanceStudent": {
-                    "email": "acceptancetest@yopmail.com",
+                    "email": "acceptanceStudent@yopmail.com",
                     "password": "Compro@1234",
                     "role": "student",
-                    "name": "acceptance test",
-                    "class": [],
+                    "name": "acceptance student",
+                    "class": [  
+                        {
+                            "key": "TFbA-6AP7",
+                            "name": "acceptanceClass"
+                        }],
                     "info": {}
                 },
                  "successfulStudentUser":
@@ -141,6 +145,14 @@
                     "password": "Compro@1234",
                     "name": "noclassinstructornew",
                     "role": "instructor",
+                    "class": [],
+                    "info": {}
+                },
+                "noClassStudent": {
+                    "email": "noClassStudent@yopmail.com",
+                    "password": "Compro@1234",
+                    "name": "No Class",
+                    "role": "student",
                     "class": [],
                     "info": {}
                 },

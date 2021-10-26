@@ -21,8 +21,8 @@
 				"key": "kzU6-26jW",
 				"classDuration": "May 26, 2022 - May 26, 2024",
 				"instructor": {
-					"name": "kulujaco-1294",
-					"email": "kulujaco-1294@yopmail.com"
+					"name": "dev1 teacher",
+					"email": "dev1_teacher1@yopmail.com"
 				},
 				"bookName": "PROYECTOS",
 				"schoolName": "Mount Allison School",
@@ -32,11 +32,11 @@
 			},
 			"class3": {
 				"name": "Archive Class",
-				"key": "x628-z9x4",
+				"key": "GrqE-82UT",
 				"classDuration": "May 18 - May 18, 2021",
 				"instructor": {
-					"name": "vengqains5_new",
-					"email": "vengqains5_new@yopmail.com"
+					"name": "dev1 teacher",
+					"email": "dev1_teacher1@yopmail.com"
 				},
 				"bookName": "PROYECTOS",
 				"schoolName": "Mount Allison School",
@@ -75,7 +75,7 @@
 			},
 			"newInvalidClass": {
 				"name": "create invalid Class with name & :\"{} = _+,.?<: character",
-				"key": "",
+				"key": "atyb",
 				"startDate": "",
 				"endDate": "",
 				"instructor": {

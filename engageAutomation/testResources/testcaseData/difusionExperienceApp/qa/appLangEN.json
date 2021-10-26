@@ -1,11 +1,8 @@
 {
-    "engage":
-    {
-        "appContent":
-        {
+    "engage": {
+        "appContent": {
             "language": "EN - English (UK)",
-            "landing":
-            {
+            "landing": {
                 "headingText": "One space for all your learning.",
                 "subheadingText": "Learn from anywhere, anytime. Instant access to all courses and activities.",
                 "signup_btnText": "Sign Up & Start Learning Today",
@@ -13,8 +10,7 @@
                 "login_lblText": "Have an Account?",
                 "footerLabel": "powered by"
             },
-            "login":
-            {
+            "login": {
                 "loginPage_title": "Log in",
                 "email_tbox_lbl": "Email",
                 "userName_tbox_placeholder": "Enter Email",
@@ -31,8 +27,7 @@
                 "invalidEmail_txt": "Please check your email address and try again.",
                 "notRegisterUser_alert": "Please check your email address and password and try again."
             },
-            "appShell":
-            {
+            "appShell": {
                 "dashboardTxt": "Dashboard",
                 "browseTxt": "Browse",
                 "classesTxt": "Classes",
@@ -55,45 +50,133 @@
                 "invalidEmail_txt": "Please check your email address and try again.",
                 "notRegisterUser_alert": "Please check your email address and password and try again."
             },
-            "dashboard":
-            {
-                "pageTitle": "Dashboard",
-                "createPlaylist_Txt": "Create Playlist",
-                "addBook_Txt": "Add Book",
-                "cardSliderTitle": "Getting started",
-                "cardSliderSubtitle": "Use your dashboard to pin your textbooks and create playlists to share with your class.",
-                "myBooksHeading_Txt": "My Books",
-                "noBooks_title": "No Books added yet",
-                "noBooks_subTitle": "Any books you save while browsing the catalog will be added here for you to view later.",
-                "noBooks_btn": "Add Book",
-                "myPlaylistsHeading_Txt": "My Playlists",
-                "noPlaylists_title": "No Playlist created yet",
-                "noPlaylists_subTitle": "Any playlists you create will be added here for you to view, share, and use in your classes.",
-                "noPlaylists_btn": "Create Playlist",
-                "actionCard": [
-                {
-                    "actionCardTitles": "Adding Books",
-                    "actionCardSubtitles": "Save your class books to your dashboard to quickly access your book materials.",
-                    "actionCardBtns": "Add Book"
+            "dashboard": {
+                "teacher": {
+                    "pageTitle": "Dashboard",
+                    "createPlaylist_Txt": "Create Playlist",
+                    "addBook_Txt": "Add Book",
+                    "cardSliderTitle": "Getting started",
+                    "cardSliderSubtitle": "Use your dashboard to pin your textbooks and create playlists to share with your class.",
+                    "myBooksHeading_Txt": "My Books",
+                    "recentlyViewed_heading": "Recently Viewed",
+                    "exploreHeading": "Explore",
+                    "viewAll_btn": "View All",
+                    "noBooks_title": "No Books added yet",
+                    "noBooks_subTitle": "Any books you save while browsing the catalog will be added here for you to view later.",
+                    "noBooks_btn": "Add Book",
+                    "myPlaylistsHeading_Txt": "My Playlists",
+                    "noPlaylists_title": "No Playlist created yet",
+                    "noPlaylists_subTitle": "Any playlists you create will be added here for you to view, share, and use in your classes.",
+                    "noPlaylists_btn": "Create Playlist",
+                    "actionCard": [
+                        {
+                            "actionCardTitles": "Adding Books",
+                            "actionCardSubtitles": "Save your class books to your dashboard to quickly access your book materials.",
+                            "actionCardBtns": "Add Book"
+                        },
+                        {
+                            "actionCardTitles": "Using Classes",
+                            "actionCardSubtitles": "Create a class to see student progress, view submitted work and create assignments.",
+                            "actionCardBtns": "Create Class"
+                        },
+                        {
+                            "actionCardTitles": "Using Playlists",
+                            "actionCardSubtitles": "Any playlists you create will be added here for you to view, share, and use in your classes.",
+                            "actionCardBtns": "Create Playlist"
+                        }
+                    ],
+                    "bookMenu_viewClass": "View Classes",
+                    "bookMenu_createClass": "Create New Class",
+                    "bookMenu_remove": "Remove from My Books",
+                    "bookMenu_openFlipbook": "Open Flipbook",
+                    "removeBook_title": "Remove from My Books?",
+                    "removeBook_subTitle1": "This will remove the book - ",
+                    "removeBook_subTitle2": " - from your My Books list.",
+                    "removeBook_cancel": "Cancel",
+                    "removeBook_remove": "Remove",
+                    "globalResource": [
+                        {
+                            "title": "Interactive Activities",
+                            "subtitle": "Find here hundreds of interactive exercises to improve your vocabulary."
+                        },
+                        {
+                            "title": "Videos",
+                            "subtitle": "New & trending video resources to pair with your lessons."
+                        },
+                        {
+                            "title": "Online Class",
+                            "subtitle": "Discover live training from other teachers."
+                        },
+                        {
+                            "title": "Teacher Training",
+                            "subtitle": "Resources to help you improve your classroom lessons."
+                        },
+                        {
+                            "title": "Today in Class",
+                            "subtitle": "See recent news to pair with lessons and activities."
+                        },
+                        {
+                            "title": "Projectables",
+                            "subtitle": "Top activities to project in your classroom."
+                        }
+                    ]
                 },
-                {
-                    "actionCardTitles": "Using Classes",
-                    "actionCardSubtitles": "assignments.",
-                    "actionCardBtns": "Create Class"
-                },
-                {
-                    "actionCardTitles": "Using Playlists",
-                    "actionCardSubtitles": "Any playlists you create will be added here for you to view, share, and use in your classes.",
-                    "actionCardBtns": "Create Playlist"
-                }],
-                "removeBook_title": "Remove from My Books?",
-                "removeBook_subTitle1": "This will remove the book - ",
-                "removeBook_subTitle2": " - from your My Books list.",
-                "removeBook_cancel": "Cancel",
-                "removeBook_remove": "Remove"
+                "student": {
+                    "pageTitle": "Dashboard",
+                    "createPlaylist_Txt": "Create Playlist",
+                    "addBook_Txt": "Add Book",
+                    "cardSliderTitle": "Getting started",
+                    "cardSliderSubtitle": "Use your dashboard to pin your textbooks and create playlists.",
+                    "myBooksHeading_Txt": "My Books",
+                    "recentlyViewed_heading": "Recently Viewed",
+                    "exploreHeading": "Explore",
+                    "viewAll_btn": "View All",
+                    "noBooks_title": "No Books added yet",
+                    "noBooks_subTitle": "Any books you save while browsing the catalog will be added here for you to view later.",
+                    "noBooks_btn": "Add Book",
+                    "myPlaylistsHeading_Txt": "My Playlists",
+                    "noPlaylists_title": "No Playlist created yet",
+                    "noPlaylists_subTitle": "Any playlists you create will be added here for you to view.",
+                    "noPlaylists_btn": "Create Playlist",
+                    "actionCard": [
+                        {
+                            "actionCardTitles": "Adding Books",
+                            "actionCardSubtitles": "Save your class books to your dashboard to quickly access your book materials.",
+                            "actionCardBtns": "Add Book"
+                        },
+                        {
+                            "actionCardTitles": "Using Classes",
+                            "actionCardSubtitles": "Join a class to see progress and assignments of your class.",
+                            "actionCardBtns": "Join Class"
+                        },
+                        {
+                            "actionCardTitles": "Using Playlists",
+                            "actionCardSubtitles": "Any playlists you create will be added here for you to view.",
+                            "actionCardBtns": "Create Playlist"
+                        }
+                    ],
+                    "bookMenu_viewClass": "View Classes",
+                    "bookMenu_createClass": null,
+                    "bookMenu_remove": "Remove from My Books",
+                    "bookMenu_openFlipbook": "Open Flipbook",
+                    "removeBook_title": "Remove from My Books?",
+                    "removeBook_subTitle1": "This will remove the book - ",
+                    "removeBook_subTitle2": " - from your My Books list.",
+                    "removeBook_cancel": "Cancel",
+                    "removeBook_remove": "Remove",
+                    "globalResource": [
+                        {
+                            "title": "Interactive Activities",
+                            "subtitle": "Find here hundreds of interactive exercises to improve your vocabulary."
+                        },
+                        {
+                            "title": "Videos",
+                            "subtitle": "New & trending video resources to pair with your lessons."
+                        }
+                    ]
+                }
             },
-            "createClassPage":
-            {
+            "createClassPage": {
                 "pageTitle": "Create a new class",
                 "pageSubTitle": "Add your class details and start inviting students, creating assignments, and viewing progress.",
                 "classHeader": "Class Details",
@@ -105,13 +188,12 @@
                 "selectBook_txt": "Assign a book to your class in order to view and assign materials.",
                 "createBtn_txt": "Create Class",
                 "cancelBtn_txt": "Cancel & Go Back",
-                "notitleErrorMsg": "Name is required.",
-                "titleErrorMsg": "Name should be less than 50 characters.",
+                "notitleErrorMsg": "Name is required",
+                "titleErrorMsg": "Name should be less than 50 characters",
                 "bookErrorMsg": "No book selected",
                 "endDateErrorMsg": "End Date cannot be less than today's date"
             },
-            "successClassPage":
-            {
+            "successClassPage": {
                 "pageTitle": "New class created",
                 "pageSubTitle": "Your class has been added!",
                 "viewClassbtn": "View Class",
@@ -120,8 +202,7 @@
                 "successCaption_txt": "Your class has been added! Share the class key below to let your students join",
                 "copy_txt": "Copy Key"
             },
-            "myClassPage":
-            {
+            "myClassPage": {
                 "classHeading": "Classes",
                 "classSubHeading": "Your current, upcoming and past classes",
                 "pageTitleNoClassArchived": "See your list of archived classes here",
@@ -141,8 +222,32 @@
                 "gradeBookOption_txt": "Gradebook",
                 "materialsOption_txt": "Materials"
             },
-            "classDrawerPane":
-            {
+            "myClassPageStudent": {
+                "classHeading": "Classes",
+                "classSubHeading": "Your current, upcoming and past classes",
+                "pageTitleNoClassArchived": "See your list of archived classes here",
+                "pageSubTitleNoClassArchived": "You don't have any archived class yet!",
+                "noClassTitle": "Join a class to access your materials!",
+                "noClassSubtitle": "Enter class code from your teacher to view your class.",
+                "activeTab": "Active",
+                "addClassBtn": "Join Class",
+                "applyBtn_txt": "Apply",
+                "cancelBtn_txt": "Cancel",
+                "archivedTab": "Archived",
+                "viewClassText": "View Class",
+                "ProgressOption_txt": "Progress",
+                "assignmentsOption_txt": "Assignments",
+                "joinClassHeader": "Join a class",
+                "joinClassSubHeader": "If your teacher has enrolled you in a class, enter the class code.",
+                "enterClassCodeLabel": "Enter Class Code",
+                "classCodeInput": "Enter Class Code",
+                "classHelpText": "Your teacher provided class code should look like: iqig-Gq32. Be sure to check your email to see if your teacher sent you an invite.",
+                "joinclassPopUpbtn": "Join Class",
+                "helpJoiningClass": "Help Joining Classes",
+                "titleErrorMsg": "Invalid class code. Please check the class code and try again. If the problem persists, please contact your Teacher.",
+                "alreadyExistErrorMessage": "You are already enrolled in this class. Please enter a different class code."
+            },
+            "classDrawerPane": {
                 "classHeading": "Dashboard",
                 "classSubHeading": "Your current, upcoming and past classes",
                 "noClassTitle": "Create a class to get started",
@@ -153,8 +258,7 @@
                 "classDrawerTitle": "Teaching another class with this book?",
                 "classDrawerSubTitle": "Create another class using this textbook material for your students."
             },
-            "editClassPage":
-            {
+            "editClassPage": {
                 "pageTitle": "Edit Class",
                 "pageSubTitle": "Edit the Class Name, duration or associated books.",
                 "classHeader": "Class Details",
@@ -166,70 +270,62 @@
                 "selectBook_txt": "Assign a book to your class in order to view and assign materials.",
                 "bookTitle": "PROYECTOS",
                 "cancelBtn_txt": "Cancel & Go Back",
-                "notitleErrorMsg": "Name is required.",
-                "titleErrorMsg": "Name should be less than 50 characters.",
+                "notitleErrorMsg": "Name is required",
+                "titleErrorMsg": "Name should be less than 50 characters",
                 "bookErrorMsg": "No book selected",
                 "saveBtn_txt": "Save",
                 "endDateErrorMsg": "End Date cannot be less than today's date"
             },
-            "teacherViewClass":
-            {
+            "teacherViewClass": {
                 "editOption_txt": "Edit Class",
                 "noStudentSubTitle": "Go and add few students in this class.",
                 "noStudentTitle": "No students are enrolled in the class",
                 "enrolledStatus": "enrolled"
             },
-            "bookViewTOC":
-            {
+            "bookViewTOC": {
                 "addToMyBooks": "Add to My Books",
                 "myBooks": "My Books",
                 "viewClasses": "View Classes",
                 "openFlipbook": "Open Flipbook",
                 "viewBookDetails": "View Book Details",
                 "removefromMyBooks": "Remove from My Books",
-                "units": "Units",
-                "removeBook_menu":
-                {
-                    "removeBookTitle": "Remove from My Books?",
-                    "message1": "This will remove the book - ",
-                    "message2": " - from your My Books list.",
-                    "cancel_btn": "Cancel",
-                    "remove_btn": "Remove"
-                },
+                "unit_lbl": "Units",
+                "removeBook_title": "Remove from My Books?",
+                "removeBook_subtitle1": "This will remove the book - ",
+                "removeBook_subtitle2": " - from your My Books list.",
+                "removeBookDialogCancel": "Cancel",
+                "removeBookDialogRemove": "Remove",
                 "activity_lbl": "Activities",
                 "activity_byline": "Select an item to view materials.",
-                "continueWhereYouLeft": "Continue where you left off:",
-                "dismiss_btn": "Dismiss",
-                "continue_btn": "Continue",
-                "unit_moreOptions":
-                {
-                    "openInFlipbook": "Open in Flipbook",
-                    "viewActivities": "View Activities"
-                }
+                "lastActivity_lbl": "Continue where you left off:",
+                "lastActivity_Dismiss": "Dismiss",
+                "lastActivity_Continue": "Continue",
+                "unitOpenFlipbook_option": "Open in Flipbook",
+                "unitViewActivity_option": "View Activities"
             },
-            "activityPlayerPage":
-            {
+            "activityPlayerPage": {
                 "correct_txt": "Well done",
-                "incorrect_txt": "Oops! Not quite correct."
+                "incorrect_txt": "Oops! Not quite correct.",
+                "finish": "Finish",
+                "submit": "Submit Answers",
+                "reset": "Reset Activity",
+                "retake": "Retake Activity",
+                "checkAnswer_txt": "Check Answers"
             },
-            "onboarding":
-            {
-                "welcomePage":
-                {
+            "onboarding": {
+                "welcomePage": {
                     "pageHeading": "Welcome, Onboarding User",
                     "userName": "Onboarding User",
                     "message": "Let's get started. Select the role that best describes you.",
                     "continueBtn": "Continue",
                     "signOut": "Logout"
                 },
-                "rolePage":
-                {
+                "rolePage": {
                     "pageHeading": "Select your role",
                     "role1": "I'm a student",
                     "role2": "I'm a teacher"
                 },
-                "courseKeyPage":
-                {
+                "courseKeyPage": {
                     "pageHeading": "Enter your class code",
                     "subHeading": "Use the class code provided by your teacher or skip for now.",
                     "textboxMessage": "Enter Class Code",
@@ -241,8 +337,7 @@
                     "clickToExitMsg": "Please enter a different course key or click here to exit.",
                     "back_btn": "Back (select a different role)"
                 },
-                "schoolKeyPage":
-                {
+                "schoolKeyPage": {
                     "pageHeading": "Join Your School",
                     "message": "Use the school key provided by your school or skip for now.",
                     "textboxMessage": "Enter School Key",
@@ -253,37 +348,31 @@
                     "back_btn": "Back (select a different role)"
                 }
             },
-            "addBookPage":
-            {
-                "dashboard":
-                {
+            "addBookPage": {
+                "dashboard": {
                     "pageTitle": "Add your books",
                     "pageDescription": "Select your books to add to your My Books list. Once added, you'll be able to view all book materials directly from the dashboard.",
                     "view_btn": "View"
                 },
-                "browse":
-                {
+                "browse": {
                     "pageTitle": "Browse",
                     "pageDescription": "Find all our digital books and their associated resources.",
                     "tab_0": "Books",
                     "searchPlaceholder": "Search Books...",
                     "view_btn": "View",
-                    "moreOptions":
-                    {
+                    "moreOptions": {
                         "viewClass_btn": "View Classes",
                         "createClass_btn": "Create New Class",
                         "addToMyBooks_btn": "Add to My Books",
                         "openFlipbook_btn": "Open Flipbook",
                         "removeFromMyBooks_btn": "Remove from My Books"
                     },
-                    "snackBarMessages":
-                    {
+                    "snackBarMessages": {
                         "addToMyBooks": "1 book has been added to My Books.",
                         "removeFromMyBooks": "1 book has been removed from My Books."
                     }
                 },
-                "classes":
-                {
+                "classes": {
                     "pageTitle": "Add books to your class",
                     "pageSubTitle": "Select books from either your list (My Books) or the full catalog (All Books) to associate materials with your class.",
                     "myBooksTab": "My Books",
@@ -292,20 +381,18 @@
                     "cancelAndGoBackbtn": "Cancel & Go Back",
                     "noBooklbl": "No Books Added",
                     "bookAddedlbl": "Books Added:",
-                    "noBookerror": "No Books Added : Atleast one book needs to be selected",
+                    "noBookerror": "No Books Added : At least one book needs to be selected",
                     "addBookbtntxt": "Add Book",
                     "addedBookbtntxt": "Added",
                     "noBookTitle": "No Books added yet",
                     "noBookSubTitle": "Any books you save while browsing the catalog will be added here for you to view later."
                 },
-                "search":
-                {
+                "search": {
                     "searchPlaceholder": "Search...",
                     "results": "results:",
                     "result": "result:",
                     "noItemFoundTitle": "No Results\nThere aren't any resources available that match those terms.",
-                    "noResultFound":
-                    {
+                    "noResultFound": {
                         "title": "No result found",
                         "subTitle": "We didn't find anything matching your search or filters. Try your search again, or change your filters to update the results here."
                     }
