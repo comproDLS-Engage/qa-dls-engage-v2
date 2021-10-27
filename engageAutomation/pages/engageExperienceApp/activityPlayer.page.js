@@ -148,7 +148,7 @@ module.exports = {
     ClickShowDetailsButton:function()
     {
          //updated selector for running the acceptance test only (Rupsi)
-        res= action.click("footer > div > div:nth-child(1)> div:nth-child(2)> div > button > span.containerApp-MuiButton-label > p");
+        res= action.click("footer > div > div:nth-child(1)> div:nth-child(2)> div > button");
          if (true == res) {
             browser.pause(5000);
             action.waitForDisplayed(this.restart_btn)
