@@ -140,6 +140,15 @@
                     "country":"Cuba",
                     "info": "freash user without books or classes"
                 },
+                "validInstructorUser3": {
+                    "email": "teacher5@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "instructor",
+                    "name": "teacher 5",
+                    "courses": [],
+                    "country":"Cuba",
+                    "info": "Accessibility Settings User.Do Not Touch."
+                },
                 "NoClassInstructor": {
                     "email": "noclassinstructornew@yopmail.com",
                     "password": "Compro@1234",

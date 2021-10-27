@@ -37,14 +37,35 @@ module.exports = {
     newPasswordError_text: selectorFile.css.ComproEngage.settings.newPasswordError_text,
     confirmPasswordError_text: selectorFile.css.ComproEngage.settings.confirmPasswordError_text,
     //Accessibility
-    reset_button: selectorFile.css.ComproEngage.settings.reset_button,
-    accessbility_button: selectorFile.css.ComproEngage.settings.accessbility_button,
-    fontSize_text: selectorFile.css.ComproEngage.settings.fontSize_text, //ENG-7484
-    lineSpace_text: selectorFile.css.ComproEngage.settings.lineSpace_text, //ENG-7484
-    samplePara_text: selectorFile.css.ComproEngage.settings.samplePara_text, //ENG-7484 
-    sampleHeader_text: selectorFile.css.ComproEngage.settings.sampleHeader_text, //ENG-7484 
+    fontSizeText: selectorFile.css.ComproEngage.settings.fontSizeText,
+    fontSizeValue: selectorFile.css.ComproEngage.settings.fontSizeValue,
+    fontSizeDec: selectorFile.css.ComproEngage.settings.fontSizeDec,
+    fontSizeInc: selectorFile.css.ComproEngage.settings.fontSizeInc,
+    lineSpaceText: selectorFile.css.ComproEngage.settings.lineSpaceText,
+    lineSpaceValue: selectorFile.css.ComproEngage.settings.lineSpaceValue,
+    lineSpaceDec: selectorFile.css.ComproEngage.settings.lineSpaceDec,
+    lineSpaceInc: selectorFile.css.ComproEngage.settings.lineSpaceInc,
+    highContrastText: selectorFile.css.ComproEngage.settings.highContrastText,
+    highContrastToggleBtn: selectorFile.css.ComproEngage.settings.highContrastToggleBtn,
+    dylexicFontText: selectorFile.css.ComproEngage.settings.dylexicFontText,
+    dylexicFontToggleBtn: selectorFile.css.ComproEngage.settings.dylexicFontToggleBtn,
+    underlinelinksText: selectorFile.css.ComproEngage.settings.underlinelinksText,
+    underlinelinksToggleBtn: selectorFile.css.ComproEngage.settings.underlinelinksToggleBtn,
+    previewTextHeading: selectorFile.css.ComproEngage.settings.previewTextHeading,
+    previewTextPara: selectorFile.css.ComproEngage.settings.previewTextPara,
+    previewLinkText: selectorFile.css.ComproEngage.settings.previewLinkText,
+    button1: selectorFile.css.ComproEngage.settings.button1,
+    button2: selectorFile.css.ComproEngage.settings.button2,
+    moreDetailsBtn: selectorFile.css.ComproEngage.settings.moreDetailsBtn,
+    resetButton: selectorFile.css.ComproEngage.settings.resetButton,
+    applySettingsBtn: selectorFile.css.ComproEngage.settings.applySettingsBtn,
+    resetSettingsTitle: selectorFile.css.ComproEngage.settings.resetSettingsTitle,
+    resetSettingsSubTitle: selectorFile.css.ComproEngage.settings.resetSettingsSubTitle,
+    resetSettingsCancelBtn: selectorFile.css.ComproEngage.settings.resetSettingsCancelBtn,
+    resetSettingsConfirmBtn: selectorFile.css.ComproEngage.settings.resetSettingsConfirmBtn,
 
-    isInitialized: function () {
+
+    isInitialized: function() {
         logger.logInto(stackTrace.get());
         action.waitForDocumentLoad();
         let pageStatus = action.waitForDisplayed(this.pageTitle)
@@ -53,7 +74,7 @@ module.exports = {
         return res;
     },
 
-    getSettingsPageData: function () {
+    getSettingsPageData: function() {
         logger.logInto(stackTrace.get());
         obj = {
             pageStatus: "",
@@ -70,13 +91,13 @@ module.exports = {
         return obj;
     },
 
-    getProfileTabData: function () {
+    getProfileTabData: function() {
         logger.logInto(stackTrace.get());
         obj = {
             pageHeading: action.getElementCount(this.pageHeading) > 0 ? action.getText(this.pageHeading) : null,
             email_label: action.getElementCount(this.email_label) > 0 ? action.getText(this.email_label) : null,
             email_input: action.getElementCount(this.email_input) > 0 ? action.getAttribute(this.email_input, "value") : null,
-            email_input_readOnly: action.getElementCount(this.email_input) > 0 ? action.getAttribute(this.email_input, "readOnly") : null,
+            email_input_readOnly: action.getElementCount(this.email_input) > 0 ? action.getAttribute(this.email_input, "disabled") : null,
             firstName_label: action.getElementCount(this.firstName_label) > 0 ? action.getText(this.firstName_label) : null,
             firstName_input: action.getElementCount(this.firstName_input) > 0 ? action.getAttribute(this.firstName_input, "value") : null,
             lastName_label: action.getElementCount(this.lastName_label) > 0 ? action.getText(this.lastName_label) : null,
@@ -91,7 +112,7 @@ module.exports = {
 
     },
 
-    setFirstName: function (name) {
+    setFirstName: function(name) {
         logger.logInto(stackTrace.get());
         res = action.setValue(this.firstName_input, name);
         if (res == true) {
@@ -103,7 +124,7 @@ module.exports = {
         return res;
     },
 
-    setLastName: function (lastname) {
+    setLastName: function(lastname) {
         logger.logInto(stackTrace.get());
         res = action.setValue(this.lastName_input, lastname);
         if (res == true) {
@@ -115,7 +136,7 @@ module.exports = {
         return res;
     },
 
-    setCountry: function (countryName) {
+    setCountry: function(countryName) {
         logger.logInto(stackTrace.get());
         res = action.click(this.country_input)
         if (res == true) {
@@ -127,15 +148,14 @@ module.exports = {
                     if (res == true) {
                         logger.logInto(stackTrace.get(), " -- Country Name Entered");
                     }
-                } 
-                else
+                } else
                     logger.logInto(stackTrace.get(), res + " -- Country Name Not Entered", 'error');
             }
         }
         return res;
     },
 
-    clickClose: function () {
+    clickClose: function() {
         logger.logInto(stackTrace.get());
         res = action.moveTo(this.country_input, 0, 0)
         if (res == true) {
@@ -151,7 +171,7 @@ module.exports = {
         return res;
     },
 
-    clickUpdateSettingsProfile: function () {
+    clickUpdateSettingsProfile: function() {
         logger.logInto(stackTrace.get());
         res = action.click(this.changeProfile_button);
         if (res == true) {
@@ -164,7 +184,7 @@ module.exports = {
         return res;
     },
 
-    getErrorMessages: function () {
+    getErrorMessages: function() {
         logger.logInto(stackTrace.get());
         obj = {
             //profile
@@ -179,7 +199,7 @@ module.exports = {
         return obj;
     },
 
-    getPasswordTabData: function () {
+    getPasswordTabData: function() {
         logger.logInto(stackTrace.get());
         obj = {
             //password
@@ -198,7 +218,7 @@ module.exports = {
         return obj;
     },
 
-    setCurrentPassword: function (password) {
+    setCurrentPassword: function(password) {
         logger.logInto(stackTrace.get());
         action.click(this.currentPassword_input)
         res = action.setValue(this.currentPassword_input, password);
@@ -211,7 +231,7 @@ module.exports = {
         return res;
     },
 
-    setNewPassword: function (password) {
+    setNewPassword: function(password) {
         logger.logInto(stackTrace.get());
         action.click(this.password_input)
         res = action.setValue(this.password_input, password);
@@ -224,7 +244,7 @@ module.exports = {
         return res;
     },
 
-    setConfirmPassword: function (password) {
+    setConfirmPassword: function(password) {
         logger.logInto(stackTrace.get());
         action.click(this.confirmPassword_input)
         res = action.setValue(this.confirmPassword_input, password);
@@ -237,7 +257,7 @@ module.exports = {
         return res;
     },
 
-    togglePasswordVisibility: function () {
+    togglePasswordVisibility: function() {
         logger.logInto(stackTrace.get());
         res = action.click(this.button_togglepasswordvisibility);
         if (res == true) {
@@ -250,7 +270,7 @@ module.exports = {
         return res;
     },
 
-    clickUpdateSettingsPassword: function () {
+    clickUpdateSettingsPassword: function() {
         logger.logInto(stackTrace.get());
         res = action.click(this.changePassword_button);
         if (res == true) {
@@ -263,19 +283,262 @@ module.exports = {
         return res;
     },
 
-    getAccessibilityTabData: function () {
+    getAccessibilityTabData: function() {
         logger.logInto(stackTrace.get());
         obj = {
             pageHeading: action.getElementCount(this.pageHeading) > 0 ? action.getText(this.pageHeading) : null,
-            reset_button: action.getElementCount(this.reset_button) > 0 ? action.getText(this.reset_button) : null,
-            accessbility_button: action.getElementCount(this.accessbility_button) > 0 ? action.getText(this.accessbility_button) : null,
-            fontSize_text: action.getElementCount(this.fontSize_text) > 0 ? action.getText(this.fontSize_text) : null,
-            lineSpace_text: action.getElementCount(this.lineSpace_text) > 0 ? action.getText(this.lineSpace_text) : null,
-            samplePara_text: action.getElementCount(this.samplePara_text) > 0 ? action.getText(this.samplePara_text) : null,
-            sampleHeader_text: action.getElementCount(this.sampleHeader_text) > 0 ? action.getText(this.sampleHeader_text) : null
+            fontSizeText: (action.getElementCount(this.fontSizeText) > 0) ? action.getText(this.fontSizeText) : null,
+            fontSizeValue: (action.getElementCount(this.fontSizeValue) > 0) ? action.getText(this.fontSizeValue) : null,
+            fontSizeDec: (action.getElementCount(this.fontSizeDec) > 0) ? action.getText(this.fontSizeDec) : null,
+            fontSizeInc: (action.getElementCount(this.fontSizeInc) > 0) ? action.getText(this.fontSizeInc) : null,
+            lineSpaceText: (action.getElementCount(this.lineSpaceText) > 0) ? action.getText(this.lineSpaceText) : null,
+            lineSpaceValue: (action.getElementCount(this.lineSpaceValue) > 0) ? action.getText(this.lineSpaceValue) : null,
+            lineSpaceDec: (action.getElementCount(this.lineSpaceDec) > 0) ? action.getText(this.lineSpaceDec) : null,
+            lineSpaceInc: (action.getElementCount(this.lineSpaceInc) > 0) ? action.getText(this.lineSpaceInc) : null,
+            highContrastText: (action.getElementCount(this.highContrastText) > 0) ? action.getText(this.highContrastText) : null,
+            highContrastToggleBtn: (action.getElementCount(this.highContrastToggleBtn) > 0) ? action.getText(this.highContrastToggleBtn) : null,
+            dylexicFontText: (action.getElementCount(this.dylexicFontText) > 0) ? action.getText(this.dylexicFontText) : null,
+            dylexicFontToggleBtn: (action.getElementCount(this.dylexicFontToggleBtn) > 0) ? action.getText(this.dylexicFontToggleBtn) : null,
+            underlinelinksText: (action.getElementCount(this.underlinelinksText) > 0) ? action.getText(this.underlinelinksText) : null,
+            underlinelinksToggleBtn: (action.getElementCount(this.underlinelinksToggleBtn) > 0) ? action.getText(this.underlinelinksToggleBtn) : null,
+            previewTextHeading: (action.getElementCount(this.previewTextHeading) > 0) ? action.getText(this.previewTextHeading) : null,
+            previewTextPara: (action.getElementCount(this.previewTextPara) > 0) ? action.getText(this.previewTextPara) : null,
+            previewLinkText: (action.getElementCount(this.previewLinkText) > 0) ? action.getText(this.previewLinkText) : null,
+            button1: (action.getElementCount(this.button1) > 0) ? action.getText(this.button1) : null,
+            button2: (action.getElementCount(this.button2) > 0) ? action.getText(this.button2) : null,
+            moreDetailsBtn: (action.getElementCount(this.moreDetailsBtn) > 0) ? action.getText(this.moreDetailsBtn) : null,
+            resetButton: (action.getElementCount(this.resetButton) > 0) ? action.getText(this.resetButton) : null,
+            applySettingsBtn: (action.getElementCount(this.applySettingsBtn) > 0) ? action.getText(this.applySettingsBtn) : null
+
         }
         //console.log(obj)
         return obj;
+    },
+
+    getCssPropertyData: function() {
+        logger.logInto(stackTrace.get());
+        action.scrollIntoView(this.pageHeading)
+        obj = {
+            pageHeading_font: action.getElementCount(this.pageHeading) > 0 ? action.getCSSProperty(this.pageHeading, 'font-family').value : null,
+            pageHeading_lineHeight: action.getElementCount(this.pageHeading) > 0 ? action.getCSSProperty(this.pageHeading, 'line-height').value: null,
+            pageHeading_fontSize: action.getElementCount(this.pageHeading) > 0 ? action.getCSSProperty(this.pageHeading, 'font-size').value : null,
+            
+            previewTextHeading_font: (action.getElementCount(this.previewTextHeading) > 0) ? action.getCSSProperty(this.previewTextHeading, 'font-family').value : null,
+            previewTextHeading_lineHeight: (action.getElementCount(this.previewTextHeading) > 0) ? action.getCSSProperty(this.previewTextHeading, 'line-height').value : null,
+            previewTextHeading_fontSize: (action.getElementCount(this.previewTextHeading) > 0) ? action.getCSSProperty(this.previewTextHeading, 'font-size').value : null,
+            
+            previewTextPara_font: (action.getElementCount(this.previewTextPara) > 0) ? action.getCSSProperty(this.previewTextPara, 'font-family').value : null,
+            previewTextPara_lineHeight: (action.getElementCount(this.previewTextPara) > 0) ? action.getCSSProperty(this.previewTextPara, 'line-height').value : null,
+            previewTextPara_fontSize: (action.getElementCount(this.previewTextPara) > 0) ? action.getCSSProperty(this.previewTextPara, 'font-size').value : null,
+            
+            previewLinkText_font: (action.getElementCount(this.previewLinkText) > 0) ? action.getCSSProperty(this.previewLinkText, 'font-family').value : null,
+            previewLinkText_lineHeight: (action.getElementCount(this.previewLinkText) > 0) ? action.getCSSProperty(this.previewLinkText, 'line-height').value : null,
+            previewLinkText_fontSize: (action.getElementCount(this.previewLinkText) > 0) ? action.getCSSProperty(this.previewLinkText, 'font-size').value : null,
+            previewLinkText_textDecoration: (action.getElementCount(this.previewLinkText) > 0) ? action.getCSSProperty(this.previewLinkText, 'text-decoration').value : null,
+            previewLinkText_color: (action.getElementCount(this.previewLinkText) > 0) ? action.getCSSProperty(this.previewLinkText, 'color').value : null,
+            
+            button1_font: (action.getElementCount(this.button1) > 0) ? action.getCSSProperty(this.button1, 'font-family').value : null,
+            button1_lineHeight: (action.getElementCount(this.button1) > 0) ? action.getCSSProperty(this.button1, 'line-height').value : null,
+            button1_fontSize: (action.getElementCount(this.button1) > 0) ? action.getCSSProperty(this.button1, 'font-size').value : null,
+            button1_textDecoration: (action.getElementCount(this.button1) > 0) ? action.getCSSProperty(this.button1, 'text-decoration').value : null,
+            button1_color: (action.getElementCount(this.button1) > 0) ? action.getCSSProperty(this.button1, 'color').value : null,
+            
+            button2_font: (action.getElementCount(this.button2) > 0) ? action.getCSSProperty(this.button2, 'font-family').value : null,
+            button2_lineHeight: (action.getElementCount(this.button2) > 0) ? action.getCSSProperty(this.button2, 'line-height').value : null,
+            button2_fontSize: (action.getElementCount(this.button2) > 0) ? action.getCSSProperty(this.button2, 'font-size').value : null,
+            button2_textDecoration: (action.getElementCount(this.button2) > 0) ? action.getCSSProperty(this.button2, 'text-decoration').value : null,
+            button2_bgcolor: (action.getElementCount(this.button2) > 0) ? action.getCSSProperty(this.button2, 'background-color').value : null,
+            
+            moreDetailsBtn_font: (action.getElementCount(this.moreDetailsBtn) > 0) ? action.getCSSProperty(this.moreDetailsBtn, 'font-family').value : null,
+            moreDetailsBtn_lineHeight: (action.getElementCount(this.moreDetailsBtn) > 0) ? action.getCSSProperty(this.moreDetailsBtn, 'line-height').value : null,
+            moreDetailsBtn_fontSize: (action.getElementCount(this.moreDetailsBtn) > 0) ? action.getCSSProperty(this.moreDetailsBtn, 'font-size').value : null,
+            moreDetailsBtn_textDecoration: (action.getElementCount(this.moreDetailsBtn) > 0) ? action.getCSSProperty(this.moreDetailsBtn, 'text-decoration').value : null,
+            moreDetailsBtn_color: (action.getElementCount(this.moreDetailsBtn) > 0) ? action.getCSSProperty(this.moreDetailsBtn, 'color').value : null,
+
+            resetButton_font: (action.getElementCount(this.resetButton) > 0) ? action.getCSSProperty(this.resetButton, 'font-family').value : null,
+            resetButton_lineHeight: (action.getElementCount(this.resetButton) > 0) ? action.getCSSProperty(this.resetButton, 'line-height').value : null,
+            resetButton_fontSize: (action.getElementCount(this.resetButton) > 0) ? action.getCSSProperty(this.resetButton, 'font-size').value : null,
+            resetButton_textDecoration: (action.getElementCount(this.resetButton) > 0) ? action.getCSSProperty(this.resetButton, 'text-decoration').value : null,
+            resetButton_color: (action.getElementCount(this.resetButton) > 0) ? action.getCSSProperty(this.resetButton, 'color').value : null,
+
+            applySettingsBtn_font: (action.getElementCount(this.applySettingsBtn) > 0) ? action.getCSSProperty(this.applySettingsBtn, 'font-family').value : null,
+            applySettingsBtn_lineHeight: (action.getElementCount(this.applySettingsBtn) > 0) ? action.getCSSProperty(this.applySettingsBtn, 'line-height').value : null,
+            applySettingsBtn_fontSize: (action.getElementCount(this.applySettingsBtn) > 0) ? action.getCSSProperty(this.applySettingsBtn, 'font-size').value : null,
+            applySettingsBtn_textDecoration: (action.getElementCount(this.applySettingsBtn) > 0) ? action.getCSSProperty(this.applySettingsBtn, 'text-decoration').value : null,
+            applySettingsBtn_bgcolor: (action.getElementCount(this.applySettingsBtn) > 0) ? action.getCSSProperty(this.applySettingsBtn, 'background-color').value : null
+
+        }
+        //console.log(obj)
+        return obj;
+    },
+
+    getResetSettingsModalData: function() {
+        logger.logInto(stackTrace.get());
+        obj = {
+            resetSettingsTitle: action.getElementCount(this.resetSettingsTitle) > 0 ? action.getText(this.resetSettingsTitle) : null,
+            resetSettingsSubTitle: (action.getElementCount(this.resetSettingsSubTitle) > 0) ? action.getText(this.resetSettingsSubTitle) : null,
+            resetSettingsCancelBtn: (action.getElementCount(this.resetSettingsCancelBtn) > 0) ? action.getText(this.resetSettingsCancelBtn) : null,
+            resetSettingsConfirmBtn: (action.getElementCount(this.resetSettingsConfirmBtn) > 0) ? action.getText(this.resetSettingsConfirmBtn) : null
+        }
+        //console.log(obj)
+        return obj;
+    },
+
+    click_fontSizeDec: function(count) {
+        var itr;
+        logger.logInto(stackTrace.get());
+        for (itr = 0; itr < count; itr++) {
+            res = action.click(this.fontSizeDec);
+        }
+
+        if (true == res) {
+            logger.logInto(stackTrace.get(), " fontSizeDec button is clicked");
+        } else {
+            logger.logInto(stackTrace.get(), res, 'error');
+        }
+        return res;
+    },
+
+    click_fontSizeInc: function(count) {
+        logger.logInto(stackTrace.get());
+        var itr;
+        for (itr = 0; itr < count; itr++) {
+            res = action.click(this.fontSizeInc);
+        }
+        if (true == res) {
+            logger.logInto(stackTrace.get(), " fontSizeInc button is clicked");
+        } else {
+            logger.logInto(stackTrace.get(), res, 'error');
+        }
+        return res;
+    },
+
+    click_lineSpaceDec: function(count) {
+        logger.logInto(stackTrace.get());
+        var itr;
+        for (itr = 0; itr < count; itr++) {
+            res = action.click(this.lineSpaceDec);
+        }
+        if (true == res) {
+            logger.logInto(stackTrace.get(), " lineSpaceDec button is clicked");
+        } else {
+            logger.logInto(stackTrace.get(), res, 'error');
+        }
+        return res;
+    },
+
+    click_lineSpaceInc: function(count) {
+        logger.logInto(stackTrace.get());
+        var itr;
+        for (itr = 0; itr < count; itr++) {
+            res = action.click(this.lineSpaceInc);
+        }
+        if (true == res) {
+            logger.logInto(stackTrace.get(), " lineSpaceInc button is clicked");
+        } else {
+            logger.logInto(stackTrace.get(), res, 'error');
+        }
+        return res;
+    },
+
+    click_highContrastToggleBtn: function() {
+        logger.logInto(stackTrace.get());
+        res = action.click(this.highContrastToggleBtn);
+        if (true == res) {
+            logger.logInto(stackTrace.get(), " highContrastToggleBtn button is clicked");
+        } else {
+            logger.logInto(stackTrace.get(), res, 'error');
+        }
+        return res;
+    },
+
+    click_dylexicFontToggleBtn: function() {
+        logger.logInto(stackTrace.get());
+        res = action.click(this.dylexicFontToggleBtn);
+        if (true == res) {
+            logger.logInto(stackTrace.get(), " dylexicFontToggleBtn button is clicked");
+        } else {
+            logger.logInto(stackTrace.get(), res, 'error');
+        }
+        return res;
+    },
+
+    click_underlineLinksToggleBtn: function() {
+        logger.logInto(stackTrace.get());
+        res = action.click(this.underlinelinksToggleBtn);
+        if (true == res) {
+            logger.logInto(stackTrace.get(), " underlinelinksToggleBtn button is clicked");
+        } else {
+            logger.logInto(stackTrace.get(), res, 'error');
+        }
+        return res;
+    },
+
+    // click_button1: function () {
+    //     logger.logInto(stackTrace.get());
+    //     res = action.click(this.button1);
+    //     if (true == res) {
+    //         logger.logInto(stackTrace.get(), " button1 button is clicked");
+    //     } else {
+    //         logger.logInto(stackTrace.get(), res, 'error');
+    //     }
+    //     return res;
+    // },
+
+    // click_button2: function () {
+    //     logger.logInto(stackTrace.get());
+    //     res = action.click(this.button2);
+    //     if (true == res) {
+    //         logger.logInto(stackTrace.get(), " button2 button is clicked");
+    //     } else {
+    //         logger.logInto(stackTrace.get(), res, 'error');
+    //     }
+    //     return res;
+    // },
+
+    click_moreDetailsBtn: function() {
+        logger.logInto(stackTrace.get());
+        res = action.click(this.moreDetailsBtn);
+        if (true == res) {
+            logger.logInto(stackTrace.get(), " moreDetailsBtn button is clicked");
+        } else {
+            logger.logInto(stackTrace.get(), res, 'error');
+        }
+        return res;
+    },
+
+    click_resetButton: function() {
+        logger.logInto(stackTrace.get());
+        res = action.click(this.resetButton);
+        if (true == res) {
+            res = this.getResetSettingsModalData()
+            logger.logInto(stackTrace.get(), " resetButton button is clicked");
+        } else {
+            logger.logInto(stackTrace.get(), res, 'error');
+        }
+        return res;
+    },
+
+    click_applySettingsButton: function() {
+        logger.logInto(stackTrace.get());
+        res = action.click(this.applySettingsBtn);
+        if (true == res) {
+            logger.logInto(stackTrace.get(), " applySettings button is clicked");
+        } else {
+            logger.logInto(stackTrace.get(), res, 'error');
+        }
+        return res;
+    },
+
+    click_resetSettingsConfirmBtn : function(){
+        logger.logInto(stackTrace.get());
+        res = action.click(this.resetSettingsConfirmBtn);
+        if (true == res) {
+            logger.logInto(stackTrace.get(), " Confirm button is clicked");
+        } else {
+            logger.logInto(stackTrace.get(), res, 'error');
+        }
+        return res;
     }
 
 
