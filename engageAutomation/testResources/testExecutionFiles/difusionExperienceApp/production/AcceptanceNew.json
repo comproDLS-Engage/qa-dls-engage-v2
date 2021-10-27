@@ -105,18 +105,22 @@
          {
             "id": "ENG_BOOK_TC_10",
             "description": "",
-            "testFile": "./test/engageExperienceApp/bookDetailView.test.js",
+            "testFile": "./test/engageExperienceApp/viewBook.test.js",
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/QA Test Automation BookTOC.json",
-                  "jsonPath": "book.component[2]"
+                  "jsonPath": "book.component[2].name.EN"
+               },
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/QA Test Automation BookTOC.json",
+                  "jsonPath": "book.component[2].unit"
                }
             ]
          },
          {
             "id": "ENG_BOOK_TC_19",
             "description": "",
-            "testFile": "./test/engageExperienceApp/bookDetailView.test.js",
+            "testFile": "./test/engageExperienceApp/viewBook.test.js",
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/QA Test Automation BookTOC.json",
@@ -131,15 +135,11 @@
          {
             "id": "ENG_BOOK_TC_21",
             "description": "",
-            "testFile": "./test/engageExperienceApp/bookDetailView.test.js",
+            "testFile": "./test/engageExperienceApp/viewUnit.test.js",
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/QA Test Automation BookTOC.json",
-                  "jsonPath": "book.component[2].unit[0].section[0].activity"
-               },
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/QA Test Automation BookTOC.json",
-                  "jsonPath": "book.component[2]"
+                  "jsonPath": "book.component[2].unit[0].section[0].activity[0]"
                }
             ]
          },
@@ -846,18 +846,22 @@
          {
             "id": "ENG_BOOK_TC_10",
             "description": "",
-            "testFile": "./test/engageExperienceApp/bookDetailView.test.js",
+            "testFile": "./test/engageExperienceApp/viewBook.test.js",
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/QA Test Automation BookTOC.json",
-                  "jsonPath": "book.component[2]"
+                  "jsonPath": "book.component[2].name.EN"
+               },
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/QA Test Automation BookTOC.json",
+                  "jsonPath": "book.component[2].unit"
                }
             ]
          },
          {
             "id": "ENG_BOOK_TC_19",
             "description": "",
-            "testFile": "./test/engageExperienceApp/bookDetailView.test.js",
+            "testFile": "./test/engageExperienceApp/viewBook.test.js",
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/QA Test Automation BookTOC.json",
@@ -872,15 +876,11 @@
          {
             "id": "ENG_BOOK_TC_21",
             "description": "",
-            "testFile": "./test/engageExperienceApp/bookDetailView.test.js",
+            "testFile": "./test/engageExperienceApp/viewUnit.test.js",
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/QA Test Automation BookTOC.json",
-                  "jsonPath": "book.component[2].unit[0].section[0].activity"
-               },
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/QA Test Automation BookTOC.json",
-                  "jsonPath": "book.component[2]"
+                  "jsonPath": "book.component[2].unit[0].section[0].activity[0]"
                }
             ]
          },
