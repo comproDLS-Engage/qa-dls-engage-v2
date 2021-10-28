@@ -37,13 +37,6 @@ module.exports = {
     newPasswordError_text: selectorFile.css.ComproEngage.settings.newPasswordError_text,
     confirmPasswordError_text: selectorFile.css.ComproEngage.settings.confirmPasswordError_text,
     //Accessibility
-    reset_button: selectorFile.css.ComproEngage.settings.reset_button,
-    accessbility_button: selectorFile.css.ComproEngage.settings.accessbility_button,
-    fontSize_text: selectorFile.css.ComproEngage.settings.fontSize_text, //ENG-7484
-    lineSpace_text: selectorFile.css.ComproEngage.settings.lineSpace_text, //ENG-7484
-    samplePara_text: selectorFile.css.ComproEngage.settings.samplePara_text, //ENG-7484 
-    sampleHeader_text: selectorFile.css.ComproEngage.settings.sampleHeader_text, //ENG-7484 
-
     fontSizeText: selectorFile.css.ComproEngage.settings.fontSizeText,
     fontSizeValue: selectorFile.css.ComproEngage.settings.fontSizeValue,
     fontSizeDec: selectorFile.css.ComproEngage.settings.fontSizeDec,
@@ -104,7 +97,7 @@ module.exports = {
             pageHeading: action.getElementCount(this.pageHeading) > 0 ? action.getText(this.pageHeading) : null,
             email_label: action.getElementCount(this.email_label) > 0 ? action.getText(this.email_label) : null,
             email_input: action.getElementCount(this.email_input) > 0 ? action.getAttribute(this.email_input, "value") : null,
-            email_input_readOnly: action.getElementCount(this.email_input) > 0 ? action.getAttribute(this.email_input, "readOnly") : null,
+            email_input_readOnly: action.getElementCount(this.email_input) > 0 ? action.getAttribute(this.email_input, "disabled") : null,
             firstName_label: action.getElementCount(this.firstName_label) > 0 ? action.getText(this.firstName_label) : null,
             firstName_input: action.getElementCount(this.firstName_input) > 0 ? action.getAttribute(this.firstName_input, "value") : null,
             lastName_label: action.getElementCount(this.lastName_label) > 0 ? action.getText(this.lastName_label) : null,

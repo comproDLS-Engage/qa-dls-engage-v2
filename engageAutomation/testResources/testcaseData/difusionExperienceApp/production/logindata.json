@@ -44,6 +44,18 @@
                         }],
                     "info": {}
                 },
+                "acceptanceStudent": {
+                    "email" :"qa_acceptanceStudent1@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "student",
+                    "name": "qa student",
+                    "class": [  
+                        {
+                            "key": "TFbA-6AP7",
+                            "name": "acceptanceClass"
+                        }],
+                    "info": {}
+                },
                 "validInstructorUser1": {
                     "email": "qa_teacher003@yopmail.com",
                     "password": "Compro@1234",
@@ -73,8 +85,16 @@
                     "class": [],
                     "info": {}
                 },
+                "noClassStudent": {
+                    "email": "noClassStudent@yopmail.com",
+                    "password": "Compro@1234",
+                    "name": "No Class",
+                    "role": "student",
+                    "class": [],
+                    "info": {}
+                },
                 "NoClassInstructor": {
-                    "email": "noclassinstructor1@yopmail.com",
+                    "email": "noclassinstructor3@yopmail.com",
                     "password": "Compro@1234",
                     "name": "qa instructor",
                     "role": "teacher",

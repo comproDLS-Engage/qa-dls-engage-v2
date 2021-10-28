@@ -83,12 +83,12 @@ module.exports = {
         sts = settingsPage.getAccessibilityTabData()
         //console.log(sts)
         assertion.typeOf(sts, 'object', new Error(sts));
-        assertion.assertEqual(sts.reset_button, testdata.reset_button, "Accessibility Tab reset button Mismatch: ")
-        assertion.assertEqual(sts.accessbility_button, testdata.accessbility_button, "Accessibility Tab accessbility button Mismatch: ")
-        assertion.assertEqual(sts.fontSize_text, testdata.fontSize_text, "Accessibility Tab fontSize text Mismatch: ")
-        assertion.assertEqual(sts.lineSpace_text, testdata.lineSpace_text, "Accessibility Tab lineSpace text Mismatch: ")
-        assertion.assertEqual(sts.samplePara_text, testdata.samplePara_text, "Accessibility Tab samplePara text Mismatch: ")
-        assertion.assertEqual(sts.sampleHeader_text, testdata.sampleHeader_text, "Accessibility Tab sampleHeader text Mismatch: ")
+        assertion.assertEqual(sts.resetButton, testdata.reset_button, "Accessibility Tab reset button Mismatch: ")
+        assertion.assertEqual(sts.applySettingsBtn, testdata.accessbility_button, "Accessibility Tab accessbility button Mismatch: ")
+        assertion.assertEqual(sts.fontSizeText, testdata.fontSize_text, "Accessibility Tab fontSize text Mismatch: ")
+        assertion.assertEqual(sts.lineSpaceText, testdata.lineSpace_text, "Accessibility Tab lineSpace text Mismatch: ")
+        assertion.assertEqual(sts.previewTextPara, testdata.samplePara_text, "Accessibility Tab samplePara text Mismatch: ")
+        assertion.assertEqual(sts.previewTextHeading, testdata.sampleHeader_text, "Accessibility Tab sampleHeader text Mismatch: ")
     },
 
     //Validate that email ID textbox is not editable

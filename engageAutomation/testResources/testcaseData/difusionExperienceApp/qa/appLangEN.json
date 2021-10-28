@@ -411,7 +411,7 @@
                     "lastName_label": "Last Name",
                     "country_label": "Country",
                     "country_input_placeholder": "Enter Country",
-                    "changeProfile_button": "Update Settings"
+                    "changeProfile_button": "Apply Settings"
                 },
                 "Password":
                 {
@@ -420,13 +420,13 @@
                     "newPassword_label": "New Password",
                     "confirmPassword_label": "Confirm Password",
                     "newPasswordRules_text": "Must have a min of 8 characters and contain: 1 uppercase, 1 lowercase, 1 number, and 1 special character.",
-                    "changePassword_button": "Update Settings"
+                    "changePassword_button": "Apply Settings"
                 },
                 "Accessibility":
                 {
                     "pageHeading": "Accessibility",
-                    "fontSize_text": "Font Size",
-                    "lineSpace_text": "Line Spacing",
+                    "fontSize_text": "Font Size: ",
+                    "lineSpace_text": "Line Spacing: ",
                     "sampleHeader_text": "Here's a page header style.",
                     "samplePara_text": "Check it out! Here's an example body paragraph. Toggle the font size to make this text larger or smaller. Saving these changes will update the text across the entire app.",
                     "reset_button": "Reset Default Settings",
@@ -482,7 +482,7 @@
                     "moreDetailsBtn_font": "work sans",
                     "moreDetailsBtn_lineHeight": "22.4px",
                     "moreDetailsBtn_fontSize": "16px",
-                    "moreDetailsBtn_textDecoration": "none solid rgb(128, 127, 127)",
+                    "moreDetailsBtn_textDecoration": "none solid rgb(109, 109, 109)",
                     "moreDetailsBtn_color": "rgba(128,127,127,1)",
                     "resetButton_font": "work sans",
                     "resetButton_lineHeight": "22.4px",
@@ -524,7 +524,7 @@
                     "moreDetailsBtn_font": "opendyslexicalta",
                     "moreDetailsBtn_lineHeight_XL": "25.6px",
                     "moreDetailsBtn_fontSize_XL": "20px",
-                    "moreDetailsBtn_textDecoration": "underline solid rgb(128, 127, 127)",
+                    "moreDetailsBtn_textDecoration": "underline solid rgb(109, 109, 109)",
                     "moreDetailsBtn_color": "rgba(75,70,69,1)",
                     "resetButton_font": "opendyslexicalta",
                     "resetButton_lineHeight_XL": "25.6px",
@@ -555,7 +555,6 @@
                     "applySettingsBtn_fontSize_small": "14px",
                     "applySettingsBtn_lineHeight_narrow": "19.2px"
                 }
-
             }
         }
     }
