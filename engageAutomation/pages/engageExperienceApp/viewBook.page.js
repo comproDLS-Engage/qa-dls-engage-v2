@@ -42,6 +42,28 @@ module.exports = {
     unitOpenFlipbook_option: selectorFile.css.ComproEngage.viewBook.unitOpenFlipbook_option,
     unitViewActivity_option: selectorFile.css.ComproEngage.viewBook.unitViewActivity_option,
     flipbookList: selectorFile.css.ComproEngage.viewBook.flipbookList,
+    //lockedbook
+    bookLockImg: selectorFile.css.ComproEngage.viewBook.bookLockImg,
+    noAccessTitle: selectorFile.css.ComproEngage.viewBook.noAccessTitle,
+    noAccessSubTitle: selectorFile.css.ComproEngage.viewBook.noAccessSubTitle,
+    premiumAccessTitle: selectorFile.css.ComproEngage.viewBook.premiumAccessTitle,
+    premiumAccessSubTitle: selectorFile.css.ComproEngage.viewBook.premiumAccessSubTitle,
+    premiumAccessBtn: selectorFile.css.ComproEngage.viewBook.premiumAccessBtn,
+    accessKeyTitle: selectorFile.css.ComproEngage.viewBook.accessKeyTitle,
+    accessKeySubTitle: selectorFile.css.ComproEngage.viewBook.accessKeySubTitle,
+    accessKeyBtn: selectorFile.css.ComproEngage.viewBook.accessKeyBtn,
+    closeBtn: selectorFile.css.ComproEngage.viewBook.closeBtn,
+    //accessKey
+    activateBookHeading: selectorFile.css.ComproEngage.accessKeyPopUp.activateBookHeading,
+    activateBookSubHeading: selectorFile.css.ComproEngage.accessKeyPopUp.activateBookSubHeading,
+    enterKeyLabel: selectorFile.css.ComproEngage.accessKeyPopUp.enterKeyLabel,            
+    enterKeySubLabel: selectorFile.css.ComproEngage.accessKeyPopUp.enterKeySubLabel,
+    accessKeyTextBox: selectorFile.css.ComproEngage.accessKeyPopUp.accessKeyTextBox,
+    activateButton: selectorFile.css.ComproEngage.accessKeyPopUp.activateButton,
+    needHelpButton: selectorFile.css.ComproEngage.accessKeyPopUp.needHelpButton,
+    //paymentOptions
+    selectPlanHeading: selectorFile.css.ComproEngage.paymentOptions.selectPlanHeading,
+    selectPlanSubHeading: selectorFile.css.ComproEngage.paymentOptions.selectPlanSubHeading,
 
     isInitialized: function () {
         logger.logInto(stackTrace.get());
@@ -349,5 +371,82 @@ module.exports = {
         } else
             logger.logInto(stackTrace.get(), " --Dismiss Button NOT clicked", "error");
         return res;
+    },
+
+    getLockedViewBookData: function() {
+        logger.logInto(stackTrace.get());
+        obj = {
+            bookLockImg: (action.getElementCount(this.bookLockImg) > 0) ? action.waitForDisplayed(this.bookLockImg) : null,
+            noAccessTitle: (action.getElementCount(this.noAccessTitle) > 0) ? action.getText(this.noAccessTitle) : null,
+            noAccessSubTitle: (action.getElementCount(this.noAccessSubTitle) > 0) ? action.getText(this.noAccessSubTitle) : null,
+            premiumAccessTitle: (action.getElementCount(this.premiumAccessTitle) > 0) ? action.getText(this.premiumAccessTitle) : null,
+            premiumAccessSubTitle: (action.getElementCount(this.premiumAccessSubTitle) > 0) ? action.getText(this.premiumAccessSubTitle) : null,
+            premiumAccessBtn: (action.getElementCount(this.premiumAccessBtn) > 0) ? action.getText(this.premiumAccessBtn) : null,
+            accessKeyTitle: (action.getElementCount(this.accessKeyTitle) > 0) ? action.getText(this.accessKeyTitle) : null,
+            accessKeySubTitle: (action.getElementCount(this.accessKeySubTitle) > 0) ? action.getText(this.accessKeySubTitle) : null,
+            accessKeyBtn: (action.getElementCount(this.accessKeyBtn) > 0) ? action.getText(this.accessKeyBtn) : null
+        }
+        logger.logInto(stackTrace.get(), JSON.stringify(obj));
+        return obj;
+    },
+
+    clickViewPurhcaseOptionsBtn: function() {
+        logger.logInto(stackTrace.get());
+        res = action.click(this.premiumAccessBtn);
+        if (res == true) {
+            logger.logInto(stackTrace.get(), " --Premium Access Btn clicked");
+            res = action.waitForDisplayed(this.selectPlanHeading)
+        } else
+            logger.logInto(stackTrace.get(), " --Premium Access Btn NOT clicked", "error");
+        return res;
+    },
+
+    clickAccessKeyBtn: function() {
+        logger.logInto(stackTrace.get());
+        res = action.click(this.accessKeyBtn);
+        if (res == true) {
+            logger.logInto(stackTrace.get(), " --Access Key Btn clicked");
+            res = action.waitForDisplayed(this.activateBookHeading)
+        } else
+            logger.logInto(stackTrace.get(), " --Access Key Btn NOT clicked", "error");
+        return res;
+    },
+
+    clickCloseButton : function(){
+        logger.logInto(stackTrace.get());
+        res = action.click(this.closeBtn);
+        if (res == true) {
+            logger.logInto(stackTrace.get(), " --Close Btn clicked");
+            res = action.waitForDisplayed(this.bookLockImg)
+        } else
+            logger.logInto(stackTrace.get(), " --Close Btn NOT clicked", "error");
+        return res;
+    },
+
+    getAccessKeyPopUpData: function(){
+        logger.logInto(stackTrace.get());
+        obj = {
+            activateBookHeading: (action.getElementCount(this.activateBookHeading) > 0) ? action.getText(this.activateBookHeading) : null,
+            activateBookSubHeading: (action.getElementCount(this.activateBookSubHeading) > 0) ? action.getText(this.activateBookSubHeading) : null,
+            enterKeyLabel: (action.getElementCount(this.enterKeyLabel) > 0) ? action.getText(this.enterKeyLabel) : null,
+            enterKeySubLabel: (action.getElementCount(this.enterKeySubLabel) > 0) ? action.getText(this.enterKeySubLabel) : null,
+            accessKeyTextBoxPlaceholder: (action.getElementCount(this.accessKeyTextBox) > 0) ? action.getAttribute(this.accessKeyTextBox,"placeholder") : null,
+            activateButton: (action.getElementCount(this.activateButton) > 0) ? action.getText(this.activateButton) : null,
+            needHelpButton: (action.getElementCount(this.needHelpButton) > 0) ? action.getText(this.needHelpButton) : null,
+            closeBtn: (action.getElementCount(this.closeBtn) > 0) ? action.waitForDisplayed(this.closeBtn) : null
+        }
+        logger.logInto(stackTrace.get(), JSON.stringify(obj));
+        return obj;
+    },
+
+    getPaymentOptionsData: function(){
+        logger.logInto(stackTrace.get());
+        obj = {
+            selectPlanHeading: (action.getElementCount(this.selectPlanHeading) > 0) ? action.getText(this.selectPlanHeading) : null,
+            selectPlanSubHeading: (action.getElementCount(this.selectPlanSubHeading) > 0) ? action.getText(this.selectPlanSubHeading) : null,
+            closeBtn: (action.getElementCount(this.closeBtn) > 0) ? action.waitForDisplayed(this.closeBtn) : null
+        }
+        logger.logInto(stackTrace.get(), JSON.stringify(obj));
+        return obj;
     }
 }

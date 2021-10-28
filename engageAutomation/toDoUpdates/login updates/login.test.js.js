@@ -2,8 +2,8 @@
 const landingPage = require('../../pages/engageExperienceApp/landing.page.js');
 var loginPage = require('../../pages/engageExperienceApp/login.page.js');
 var signupPage = require('../../pages/engageExperienceApp/signup.page.js');
-// var createAccountPage = require('../../pages/engageExperienceApp/createAccount.page.js')
-// var verifyEmailPage = require('../../pages/engageExperienceApp/verifyEmail.page.js')
+var createAccountPage = require('../../pages/engageExperienceApp/createAccount.page.js')
+var verifyEmailPage = require('../../pages/engageExperienceApp/verifyEmail.page.js')
 var sts;
 
 module.exports = {

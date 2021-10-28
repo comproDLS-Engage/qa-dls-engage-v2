@@ -165,4 +165,64 @@ module.exports = {
 
     },*/
 
+    //locked book testcases
+    //Validate the content of locked book screen
+    ENG_BOOK_TC_46: function (testdata) {
+        sts = viewBookPage.getLockedViewBookData();
+
+        assertion.assertEqual(sts.bookLockImg, true, "Locked Book cover status mismatch");
+        assertion.assertEqual(sts.noAccessTitle, testdata.noAccessTitle, "No Access Title Mismatch")
+        assertion.assertEqual(sts.noAccessSubTitle, testdata.noAccessSubTitle, "No Access Sub Title Mismatch")
+        assertion.assertEqual(sts.premiumAccessTitle, testdata.premiumAccessTitle, "Premium Access Title Mismatch")
+        assertion.assertEqual(sts.premiumAccessSubTitle, testdata.premiumAccessSubTitle, "Premium Access Sub Title Mismatch")
+        assertion.assertEqual(sts.premiumAccessBtn, testdata.premiumAccessBtn, "Premium Access Button Mismatch")
+        assertion.assertEqual(sts.accessKeyTitle, testdata.accessKeyTitle, "AccessKey Title Mismatch")
+        assertion.assertEqual(sts.accessKeySubTitle, testdata.accessKeySubTitle, "AccessKey Sub Title Mismatch")
+        assertion.assertEqual(sts.accessKeyBtn, testdata.accessKeyBtn, "AccessKey Button Mismatch")
+    },
+
+    //Validate that clicking on View Purchase options launches Payment Options Screen
+    ENG_BOOK_TC_47: function () {
+        sts = viewBookPage.clickViewPurhcaseOptionsBtn();
+        assertion.assertEqual(sts, true, "Select Plan Heading Status Mismatch");
+    },
+
+    //Validate that clicking on cross button closes the payment options page
+    ENG_BOOK_TC_48: function () {
+        sts = viewBookPage.clickCloseButton();
+        assertion.assertEqual(sts, true, "BookLock Img Status Mismatch");
+    },
+
+    //Validate the content of Payment options page 
+    ENG_BOOK_TC_49: function (testdata) {
+        sts = viewBookPage.getPaymentOptionsData();
+        assertion.assertEqual(sts.selectPlanHeading, testdata.selectPlanHeading, "Select Plan Heading Mismatch")
+        assertion.assertEqual(sts.selectPlanSubHeading, testdata.selectPlanSubHeading, "Select Plan Sub Heading Mismatch")
+        assertion.assertEqual(sts.closeBtn, true, "Close Button Status Mismatch")
+    },
+
+    //Validate that clicking on Add an access key option launches Activate your Book modal pop up
+    ENG_BOOK_TC_50: function () {
+        sts = viewBookPage.clickAccessKeyBtn();
+        assertion.assertEqual(sts, true, "Activate Book Heading Status Mismatch");
+    },
+
+    //Validate the content of Activate your Book Modal pop up
+    ENG_BOOK_TC_51: function (testdata) {
+        sts = viewBookPage.getAccessKeyPopUpData();
+        assertion.assertEqual(sts.activateBookHeading, testdata.activateBookHeading, "Activate Book Heading Mismatch")
+        assertion.assertEqual(sts.activateBookSubHeading, testdata.activateBookSubHeading, "activateBook Sub Heading Mismatch")
+        assertion.assertEqual(sts.enterKeyLabel, testdata.enterKeyLabel, "Enter Key Label Mismatch")
+        assertion.assertEqual(sts.enterKeySubLabel, testdata.enterKeySubLabel, "Enter Key Sub Label Mismatch")
+        assertion.assertEqual(sts.accessKeyTextBoxPlaceholder, testdata.accessKeyTextBoxPlaceholder, "AccessKey TextBox Placeholder Mismatch")
+        assertion.assertEqual(sts.activateButton, testdata.activateButton, "Activate Button Mismatch")
+        assertion.assertEqual(sts.needHelpButton, testdata.needHelpButton, "Need Help Button Mismatch")
+        assertion.assertEqual(sts.closeBtn, true, "Close Button Status Mismatch")
+    },
+
+     //Validate that clicking on cross button closes the Activate your book modal
+    ENG_BOOK_TC_52: function () {
+        sts = viewBookPage.clickCloseButton();
+        assertion.assertEqual(sts, true, "BookLock Img Status Mismatch");
+    },
 };

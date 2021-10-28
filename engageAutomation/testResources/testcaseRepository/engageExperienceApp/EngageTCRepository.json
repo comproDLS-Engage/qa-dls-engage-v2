@@ -1114,6 +1114,41 @@
           "id": "ENG_BOOK_TC_31",
           "description": "Anchor Component - Validate that No Components should be visible on View book page for an indexed book",
           "tags": "P1"
+        },
+        {
+          "id": "ENG_BOOK_TC_46",
+          "description": "Validate the content of locked book screen",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_BOOK_TC_47",
+          "description": "Validate that clicking on View Purchase options launches Payment Options Screen",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_BOOK_TC_48",
+          "description": "Validate that clicking on cross button closes the payment options page",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_BOOK_TC_49",
+          "description": "Validate the content of Payment options page",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_BOOK_TC_50",
+          "description": "Validate that clicking on Add an access key option launches Activate your Book modal pop up",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_BOOK_TC_51",
+          "description": "Validate the content of Activate your Book Modal pop up",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_BOOK_TC_52",
+          "description": "Validate that clicking on cross button closes the Activate your book modal",
+          "tags": "P1"
         }
       ]
     },

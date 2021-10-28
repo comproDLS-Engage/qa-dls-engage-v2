@@ -555,6 +555,29 @@
                     "applySettingsBtn_fontSize_small": "14px",
                     "applySettingsBtn_lineHeight_narrow": "19.2px"
                 }
+            },
+            "lockedBookView":{
+                "noAccessTitle":"Add an access key to view a book",
+                "noAccessSubTitle":"View book materials with an access key. If you've already purchased your textbook, check inside for an access key. It should look like:7HRA-7UHW-QFER-H4TF.",
+                "premiumAccessTitle":"Get Premium Access",
+                "premiumAccessSubTitle":"Get full featured access to all our books and their resources for a low annual fee.",
+                "premiumAccessBtn":"View Purchase Options",
+                "accessKeyTitle":"Have an access key?",
+                "accessKeySubTitle":"Enter your access key (typically found inside your textbook) to get access to all materials.",
+                "accessKeyBtn":"Add an Access Key"
+            },
+            "paymentOptions":{
+                "selectPlanHeading":"Select a Plan",
+                "selectPlanSubHeading" : "Choose a plan with the features that you need."
+            },
+            "accessKey":{
+                "activateBookHeading":"Activate your Book",
+                "activateBookSubHeading":"If you've purchased a book, enter your access key below to get access to digital materials",
+                "enterKeyLabel":"Enter Access Key",
+                "enterKeySubLabel":"Your access key should look like: 7HRA-7UHW-QFER-H4TF. You can find your key inside the textbook you have purchased.",
+                "accessKeyTextBoxPlaceholder":"Enter Access Key",
+                "activateButton":"Activate",
+                "needHelpButton":"Need Help?"
             }
         }
     }

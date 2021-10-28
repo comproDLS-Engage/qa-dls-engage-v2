@@ -476,7 +476,17 @@
                 "lastActivity_name": "[data-tid=text-lastActivityName]",
                 "lastActivity_Dismiss": "[data-tid=button-lastActivityDismiss]",
                 "lastActivity_Continue": "[data-tid=button-lastActivityContinue]",
-                "flipbookList": "[data-tid*=button-flipbookProduct-"
+                "flipbookList": "[data-tid*=button-flipbookProduct-",
+                "bookLockImg":"[data-tid=image-no-access]",
+                "noAccessTitle":"[data-tid=text-title-no-access]",
+                "noAccessSubTitle":"[data-tid=text-subtitle-no-access]",
+                "premiumAccessTitle":"[data-tid=text-premiumAccessTitle]",
+                "premiumAccessSubTitle":"[data-tid=text-premiumAccessSubtitle]",
+                "premiumAccessBtn":"[data-tid=button-premiumAccessBtn]",
+                "accessKeyTitle":"[data-tid=text-accessKeyTitle]",
+                "accessKeySubTitle":"[data-tid=text-accessKeySubtitle]",
+                "accessKeyBtn":"[data-tid=button-accessKeyBtn]",
+                "closeBtn":"[data-tid=button-close]"
             },
             "viewUnit":
             {
@@ -612,6 +622,20 @@
                 "resetSettingsSubTitle": "[data-tid=text-subTitle-reset-user-settings]",
                 "resetSettingsCancelBtn": "[data-tid=button-secondary-reset-user-settings]",
                 "resetSettingsConfirmBtn": "[data-tid=button-primary-reset-user-settings]"
+            },
+            "accessKeyPopUp":{
+                "activateBookHeading":"[data-tid=text-activeTextbookHeading]",
+                "activateBookSubHeading":"[data-tid=text-activeTextbookSubheading]",
+                "enterKeyLabel":"[data-tid=text-access-codeLabel]",
+                "enterKeyLabel":"[data-tid=text-access-codeLabel]",
+                "enterKeySubLabel":"[data-tid=text-activeCodeSublabel]",
+                "accessKeyTextBox":"input[id=input-access-code]",
+                "activateButton":"[data-tid=button-activeCodeButton]",
+                "needHelpButton":"[data-tid=button-helpAddBook]"
+            },
+            "paymentOptions":{
+                "selectPlanHeading":"//h4[contains(text(),'Select a Plan')]",
+                "selectPlanSubHeading":"//*[contains(text(),'Choose a plan with the')]"
             }
         }
     }
