@@ -2,7 +2,7 @@
 var action = require('../../core/actionLibrary/baseActionLibrary.js');
 var appShell = require('./appShell.page');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
-var res, obj;
+var res;
 
 module.exports = {
 
@@ -56,7 +56,7 @@ module.exports = {
     //accessKey
     activateBookHeading: selectorFile.css.ComproEngage.accessKeyPopUp.activateBookHeading,
     activateBookSubHeading: selectorFile.css.ComproEngage.accessKeyPopUp.activateBookSubHeading,
-    enterKeyLabel: selectorFile.css.ComproEngage.accessKeyPopUp.enterKeyLabel,            
+    enterKeyLabel: selectorFile.css.ComproEngage.accessKeyPopUp.enterKeyLabel,
     enterKeySubLabel: selectorFile.css.ComproEngage.accessKeyPopUp.enterKeySubLabel,
     accessKeyTextBox: selectorFile.css.ComproEngage.accessKeyPopUp.accessKeyTextBox,
     activateButton: selectorFile.css.ComproEngage.accessKeyPopUp.activateButton,
@@ -77,7 +77,7 @@ module.exports = {
 
     getViewBookData: function () {
         logger.logInto(stackTrace.get());
-        obj = {
+        let obj = {
             bookCover: (action.getElementCount(this.bookCover) > 0) ? action.waitForDisplayed(this.bookCover) : null,
             bookTitle: (action.getElementCount(this.bookTitle) > 0) ? action.getText(this.bookTitle) : null,
             bookSubTitle: (action.getElementCount(this.bookSubTitle) > 0) ? action.getText(this.bookSubTitle) : null,
@@ -212,7 +212,7 @@ module.exports = {
 
     getMoreOptionsButtonData: function () {
         logger.logInto(stackTrace.get());
-        obj = {
+        let obj = {
             addBook: (action.getElementCount(this.addBook_option) > 0) ? action.getText(this.addBook_option) : null,
             removeBook: (action.getElementCount(this.removeBook_option) > 0) ? action.getText(this.removeBook_option) : null,
             viewBookDetails: (action.getElementCount(this.viewBookDetails_option) > 0) ? action.getText(this.viewBookDetails_option) : null
@@ -245,7 +245,7 @@ module.exports = {
 
     getRemoveBookPopUpData: function () {
         logger.logInto(stackTrace.get());
-        obj = {
+        let obj = {
             removeBook_title: (action.getElementCount(this.removeBook_title) > 0) ? action.getText(this.removeBook_title) : null,
             removeBook_subtitle: (action.getElementCount(this.removeBook_subtitle) > 0) ? action.getText(this.removeBook_subtitle) : null,
             removeBookDialogCancel: (action.getElementCount(this.removeBookDialogCancel) > 0) ? action.getText(this.removeBookDialogCancel) : null,
@@ -316,7 +316,7 @@ module.exports = {
 
     get_UnitMoreOptionsButton_Data: function () {
         logger.logInto(stackTrace.get());
-        obj = {
+        let obj = {
             openInFlipbook: (action.getElementCount(this.unitOpenFlipbook_option) > 0) ? action.getText(this.unitOpenFlipbook_option) : null,
             viewActivity: (action.getElementCount(this.unitViewActivity_option) > 0) ? action.getText(this.unitViewActivity_option) : null
         }
@@ -373,9 +373,9 @@ module.exports = {
         return res;
     },
 
-    getLockedViewBookData: function() {
+    getLockedViewBookData: function () {
         logger.logInto(stackTrace.get());
-        obj = {
+        let obj = {
             bookLockImg: (action.getElementCount(this.bookLockImg) > 0) ? action.waitForDisplayed(this.bookLockImg) : null,
             noAccessTitle: (action.getElementCount(this.noAccessTitle) > 0) ? action.getText(this.noAccessTitle) : null,
             noAccessSubTitle: (action.getElementCount(this.noAccessSubTitle) > 0) ? action.getText(this.noAccessSubTitle) : null,
@@ -390,47 +390,48 @@ module.exports = {
         return obj;
     },
 
-    clickViewPurhcaseOptionsBtn: function() {
+    clickViewPurhcaseOptionsBtn: function () {
         logger.logInto(stackTrace.get());
         res = action.click(this.premiumAccessBtn);
         if (res == true) {
             logger.logInto(stackTrace.get(), " --Premium Access Btn clicked");
-            res = action.waitForDisplayed(this.selectPlanHeading)
+            res = action.waitForDisplayed(this.selectPlanHeading) //this should be changed to "Upgrade to Premium" button - Akhil
         } else
             logger.logInto(stackTrace.get(), " --Premium Access Btn NOT clicked", "error");
         return res;
     },
 
-    clickAccessKeyBtn: function() {
+    clickAccessKeyBtn: function () {
         logger.logInto(stackTrace.get());
         res = action.click(this.accessKeyBtn);
         if (res == true) {
             logger.logInto(stackTrace.get(), " --Access Key Btn clicked");
-            res = action.waitForDisplayed(this.activateBookHeading)
+            res = action.waitForDisplayed(this.activateBookHeading) //this should be changed to activate button - Akhil
         } else
             logger.logInto(stackTrace.get(), " --Access Key Btn NOT clicked", "error");
         return res;
     },
 
-    clickCloseButton : function(){
+    clickCloseButton: function () {
         logger.logInto(stackTrace.get());
         res = action.click(this.closeBtn);
         if (res == true) {
             logger.logInto(stackTrace.get(), " --Close Btn clicked");
-            res = action.waitForDisplayed(this.bookLockImg)
+            res = action.waitForDisplayed(this.bookLockImg) 
+            //bookLockImg is always displayed...so it would be better to check for closeBtn not displayed - Akhil
         } else
             logger.logInto(stackTrace.get(), " --Close Btn NOT clicked", "error");
         return res;
     },
 
-    getAccessKeyPopUpData: function(){
+    getAccessKeyPopUpData: function () {
         logger.logInto(stackTrace.get());
-        obj = {
+        let obj = {
             activateBookHeading: (action.getElementCount(this.activateBookHeading) > 0) ? action.getText(this.activateBookHeading) : null,
             activateBookSubHeading: (action.getElementCount(this.activateBookSubHeading) > 0) ? action.getText(this.activateBookSubHeading) : null,
             enterKeyLabel: (action.getElementCount(this.enterKeyLabel) > 0) ? action.getText(this.enterKeyLabel) : null,
             enterKeySubLabel: (action.getElementCount(this.enterKeySubLabel) > 0) ? action.getText(this.enterKeySubLabel) : null,
-            accessKeyTextBoxPlaceholder: (action.getElementCount(this.accessKeyTextBox) > 0) ? action.getAttribute(this.accessKeyTextBox,"placeholder") : null,
+            accessKeyTextBoxPlaceholder: (action.getElementCount(this.accessKeyTextBox) > 0) ? action.getAttribute(this.accessKeyTextBox, "placeholder") : null,
             activateButton: (action.getElementCount(this.activateButton) > 0) ? action.getText(this.activateButton) : null,
             needHelpButton: (action.getElementCount(this.needHelpButton) > 0) ? action.getText(this.needHelpButton) : null,
             closeBtn: (action.getElementCount(this.closeBtn) > 0) ? action.waitForDisplayed(this.closeBtn) : null
@@ -439,12 +440,13 @@ module.exports = {
         return obj;
     },
 
-    getPaymentOptionsData: function(){
+    getPaymentOptionsData: function () {
         logger.logInto(stackTrace.get());
-        obj = {
+        let obj = {
             selectPlanHeading: (action.getElementCount(this.selectPlanHeading) > 0) ? action.getText(this.selectPlanHeading) : null,
             selectPlanSubHeading: (action.getElementCount(this.selectPlanSubHeading) > 0) ? action.getText(this.selectPlanSubHeading) : null,
             closeBtn: (action.getElementCount(this.closeBtn) > 0) ? action.waitForDisplayed(this.closeBtn) : null
+            //add "upgrade to Premium" button - Akhil
         }
         logger.logInto(stackTrace.get(), JSON.stringify(obj));
         return obj;
