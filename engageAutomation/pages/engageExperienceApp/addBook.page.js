@@ -64,7 +64,7 @@ module.exports = {
         action.waitForDocumentLoad();
         res = {
             pageStatus: action.waitForDisplayed(this.pageTitle),
-            appShell: appShell.isInitialized()
+            //appShell: appShell.isInitialized()
         };
         return res;
     },
