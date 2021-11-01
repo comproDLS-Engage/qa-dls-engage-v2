@@ -1,7 +1,7 @@
 {
     "appname": "Assessment Editor",
     "appdetails": "",
-    "selectorFile": "./core/selectors/assessmentEditor/editorSelectors.json",
+    "selectorFile": "./testResources/selectors/assessmentEditor/editorSelectors.json",
     "modules": [
         {
             "modulename": "Assessment Editor",
