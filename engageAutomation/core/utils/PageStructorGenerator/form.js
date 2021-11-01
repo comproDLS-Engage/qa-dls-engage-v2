@@ -7,7 +7,7 @@ var parse = require('csv-parse');
 var parser = parse({ columns: true }, function (err, records) {
     pageSelectorFile = records;
 });
-fs.createReadStream(__dirname + '/accessibilitySettings.csv').pipe(parser);
+fs.createReadStream(__dirname + '/GlobalResources.csv').pipe(parser);
 
 
 //use the application off of express.
@@ -145,7 +145,7 @@ function generatePageHeader(PageTemplate, param1, param2, appShellPageCheck) {
         file.write(PageTemplate.header[param2])
     if (appShellPageCheck)
         file.write(PageTemplate.isInitialized.appShellPageDeclartion)
-    file.write("\nvar res, obj;\n")
+    file.write("\nvar obj;\n")
     file.write("\nmodule.exports = {\n");
 
 }
@@ -160,8 +160,9 @@ function generatePageSelector(pageSelectorFile, inputFile) {
 //Basic isinitialize fucntion  
 function generateIsinitiazeFunction(pageSelectorFile, PageTemplate, param1) {
     var flag = false;
-    file.write("\n\nisInitialized: function ()\n" +
-        "{ \nlogger.logInto(stackTrace.get());\n" +
+    file.write("\n\nisInitialized: function ()\n{ \n" +
+    "var res;\n"+
+        "logger.logInto(stackTrace.get());\n" +
         "action.waitForDocumentLoad();\nres = {\n")
     for (var i = 0; i < pageSelectorFile.length; i++) {
         console.log(pageSelectorFile[i].extraInfo)
@@ -177,15 +178,15 @@ function generateIsinitiazeFunction(pageSelectorFile, PageTemplate, param1) {
     }
     if (param1)
         file.write(PageTemplate.isInitialized[param1])
-    file.write("   };\n")
+    file.write("/n};\n")
 
-    if (param1)
-        file.write(PageTemplate.isInitialized.appShellPagecall)
+    //  if (param1)
+    //    file.write(PageTemplate.isInitialized.appShellPagecall)
     file.write("\nreturn res; \n},\n\n")
 }
 
 function generateGetDatafunction(pageSelectorFile, key) {
-    file.write(key + "_Data: function ()\n {\n obj = {\n")
+    file.write(key + "_Data: function ()\n obj = {\n")
 
     for (var i = 0; i < pageSelectorFile.length; i++) {
         if ((pageSelectorFile[i].extraInfo) == "pattern") {
@@ -195,8 +196,8 @@ function generateGetDatafunction(pageSelectorFile, key) {
             if (pageSelectorFile[i].tagName.toLowerCase().includes("img") || pageSelectorFile[i].tagName.toLowerCase().includes("svg")) {
                 file.write(pageSelectorFile[i].Label + ":(action.getElementCount(this." + pageSelectorFile[i].Label + ") > 0) ? action.waitForExist(this." + pageSelectorFile[i].Label + ") : false,\n");
             } else {
-                if ((pageSelectorFile[i].tagName).toLowerCase().includes("input") || (pageSelectorFile[i].tagName).toLowerCase().includes("textarea")) 
-                    file.write(pageSelectorFile[i].Label +": (action.getElementCount(this." + pageSelectorFile[i].Label + ") > 0) ? action.getAttribute(this." + pageSelectorFile[i].Label + ", \"placeholder\") : null,\n")
+                if ((pageSelectorFile[i].tagName).toLowerCase().includes("input") || (pageSelectorFile[i].tagName).toLowerCase().includes("textarea"))
+                    file.write(pageSelectorFile[i].Label + ": (action.getElementCount(this." + pageSelectorFile[i].Label + ") > 0) ? action.getAttribute(this." + pageSelectorFile[i].Label + ", \"placeholder\") : null,\n")
                 else
                     file.write(pageSelectorFile[i].Label + ":(action.getElementCount(this." + pageSelectorFile[i].Label + ") > 0) ? action.getText(this." + pageSelectorFile[i].Label + ") : null,\n");
             }
@@ -268,7 +269,7 @@ function generateClickFunctions(pageSelectorFile, key, pageSelectorGroup) {
             }
             file.write("\nclick_" + pageSelectorFile[i].Label + ": function (" + selectedText + "Name) {\n" +
                 "logger.logInto(stackTrace.get());\n" +
-                "let i, list;\n" +
+                "let i, list, res;\n" +
                 "list = action.findElements(this." + pageSelectorFile[i].Label + ");\n" +
                 "for (i = 0; i < list.length; i++) {\n" +
                 "if ((action.getText(this." + selectedText + "+i+\"]\"))== " + selectedText + "Name) {\n " +
@@ -287,6 +288,7 @@ function generateClickFunctions(pageSelectorFile, key, pageSelectorGroup) {
             if ((pageSelectorFile[i].tagName).toLowerCase().includes("button")) {
                 file.write("\nclick_" + pageSelectorFile[i].Label + ": function () {\n" +
                     "logger.logInto(stackTrace.get());\n" +
+                    "var res;\n"+
                     "res = action.click(this." + pageSelectorFile[i].Label + ");\n" +
                     "if (true == res) {\n logger.logInto(stackTrace.get(), \" " + pageSelectorFile[i].Label + " button is clicked\");\n}" +
                     "else {\nlogger.logInto(stackTrace.get(), res, 'error');\n}\n" +
@@ -298,7 +300,7 @@ function generateClickFunctions(pageSelectorFile, key, pageSelectorGroup) {
 function generateSetValueFunctions(pageSelectorFile) {
     for (var i = 0; i < pageSelectorFile.length; i++) {
         if ((pageSelectorFile[i].tagName).toLowerCase().includes("input") || (pageSelectorFile[i].tagName).toLowerCase().includes("textarea")) {
-            file.write("\nset_" + pageSelectorFile[i].Label + ": function (testdata)" +
+            file.write("\nset_" + pageSelectorFile[i].Label + ": function (testdata)" +   "\nvar res;\n"+
                 "{\n logger.logInto(stackTrace.get());\n" +
                 "res = action.setValue(this." + pageSelectorFile[i].Label + ",testdata);\n" +
                 "if (true == res) {\nlogger.logInto(stackTrace.get(), \"Value is entered in " + pageSelectorFile[i].Label + "\");\n}" +
@@ -313,7 +315,7 @@ function generategroupDatafunction(group, groupName) {
     if (groupName != "") {
         for (var i = 0; i < group.length; i++) {
             if ((group[i].relation).toLowerCase().includes("parent")) {
-                console.log("dsdad" + groupName)
+                console.log("groupName" + groupName)
                 dataPatternGenerateWithParent(group, groupName, i)
                 generate = true;
                 break;
@@ -328,6 +330,7 @@ function generategroupDatafunction(group, groupName) {
 
 function dataPatternGenerate(pageSelectorFile, groupName) {
     file.write("getData_" + groupName + "_Group: function ()\n{\n")
+   // file.write("var res;\n")
     file.write("var obj = {\n")
     for (var i = 0; i < pageSelectorFile.length; i++) {
         if ((pageSelectorFile[i].extraInfo) == "pattern") {
@@ -366,25 +369,51 @@ function dataPatternGenerateWithParent(groupSelectorData, groupName, key) {
 
         file.write("obj[0] = {\n")
         for (var i = 0; i < groupSelectorData.length; i++) {
+            if ((groupSelectorData[i].extraInfo) == "pattern") {
+                if ((groupSelectorData[i].tagName).toLowerCase().includes("img") || (groupSelectorData[i].tagName).toLowerCase().includes("svg")) {
+                    file.write(groupSelectorData[i].Label + ":(action.getElementCount(this." + groupSelectorData[i].Label + "+i+\"]\") > 0) ? action.waitForExist(this." + groupSelectorData[i].Label + "+i+\"]\")  : false,\n");
+                } else
+                    file.write(groupSelectorData[i].Label + ":(action.getElementCount(this." + groupSelectorData[i].Label + "+i+\"]\")  > 0) ? action.getText(this." + groupSelectorData[i].Label + "+i+\"]\")  : null,\n");
+
+            }
+        }
+        file.write("}\n}\n} \n")
+        for (var i = 0; i < groupSelectorData.length; i++) {
+            if ((groupSelectorData[i].extraInfo) != "pattern") {
+                if ((groupSelectorData[i].tagName).toLowerCase().includes("img") || (groupSelectorData[i].tagName).toLowerCase().includes("svg")) {
+                    file.write(groupSelectorData[i].Label + "=(action.getElementCount(this." + groupSelectorData[i].Label + ") > 0) ? action.waitForExist(this." + groupSelectorData[i].Label + ")  : false\n");
+                } else
+                    file.write(groupSelectorData[i].Label + "=(action.getElementCount(this." + groupSelectorData[i].Label + ")  > 0) ? action.getText(this." + groupSelectorData[i].Label + ")  : null\n");
+
+            }
+        }
+        file.write("}else{ ")
+    }
+
+
+    file.write(" \nfor (var i=0;i<=list.length;i++){\n obj[i] = {\n")
+    for (var i = 0; i < groupSelectorData.length; i++) {
+     
+        if ((groupSelectorData[i].extraInfo) == "pattern") {
+            console.log("groupName"+groupSelectorData[i].Label)
             if ((groupSelectorData[i].tagName).toLowerCase().includes("img") || (groupSelectorData[i].tagName).toLowerCase().includes("svg")) {
                 file.write(groupSelectorData[i].Label + ":(action.getElementCount(this." + groupSelectorData[i].Label + "+i+\"]\") > 0) ? action.waitForExist(this." + groupSelectorData[i].Label + "+i+\"]\")  : false,\n");
             } else
                 file.write(groupSelectorData[i].Label + ":(action.getElementCount(this." + groupSelectorData[i].Label + "+i+\"]\")  > 0) ? action.getText(this." + groupSelectorData[i].Label + "+i+\"]\")  : null,\n");
-
         }
-        file.write("}\n}\n} \n}else{ ")
     }
-    file.write(" \nfor (var i=0;i<=list.length;i++){\n obj[i] = {\n")
-    for (var i = 0; i < groupSelectorData.length; i++) {
-        if ((groupSelectorData[i].tagName).toLowerCase().includes("img") || (groupSelectorData[i].tagName).toLowerCase().includes("svg")) {
-            file.write(groupSelectorData[i].Label + ":(action.getElementCount(this." + groupSelectorData[i].Label + "+i+\"]\") > 0) ? action.waitForExist(this." + groupSelectorData[i].Label + "+i+\"]\")  : false,\n");
-        } else
-            file.write(groupSelectorData[i].Label + ":(action.getElementCount(this." + groupSelectorData[i].Label + "+i+\"]\")  > 0) ? action.getText(this." + groupSelectorData[i].Label + "+i+\"]\")  : null,\n");
-    }
-
+    file.write("}\n}\n")
     if (selectedText) {
         file.write("}\n")
     }
+    for (var i = 0; i < groupSelectorData.length; i++) {
+        if ((groupSelectorData[i].extraInfo) != "pattern") {
+            if ((groupSelectorData[i].tagName).toLowerCase().includes("img") || (groupSelectorData[i].tagName).toLowerCase().includes("svg")) {
+                file.write(groupSelectorData[i].Label + "=(action.getElementCount(this." + groupSelectorData[i].Label + ") > 0) ? action.waitForExist(this." + groupSelectorData[i].Label + ")  : false\n");
+            } else
+                file.write(groupSelectorData[i].Label + "=(action.getElementCount(this." + groupSelectorData[i].Label + ")  > 0) ? action.getText(this." + groupSelectorData[i].Label + ")  : null\n");
 
-    file.write("}\n}\nreturn obj \n},\n")
+        }
+    }
+    file.write("return obj \n},\n")
 }

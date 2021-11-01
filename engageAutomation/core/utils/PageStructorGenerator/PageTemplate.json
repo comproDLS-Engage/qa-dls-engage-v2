@@ -6,7 +6,7 @@
  },
   "isInitialized": 
     {
-      "appShellPage": " appShellPage: \"\"",
+      "appShellPage": " appShellPage:appShellPage.isInitialized()",
       "appShellPagecall": " res.appShellPage= appShellPage.isInitialized()",
       "appShellPageDeclartion": "\nvar appShellPage = require('./appShell.page.js');"
     },
