@@ -7,7 +7,7 @@ var parse = require('csv-parse');
 var parser = parse({ columns: true }, function (err, records) {
     pageSelectorFile = records;
 });
-fs.createReadStream(__dirname + '/classstudent.csv').pipe(parser);
+fs.createReadStream(__dirname + '/accessibilitySettings.csv').pipe(parser);
 
 
 //use the application off of express.
