@@ -64,6 +64,7 @@ module.exports = {
     //paymentOptions
     selectPlanHeading: selectorFile.css.ComproEngage.paymentOptions.selectPlanHeading,
     selectPlanSubHeading: selectorFile.css.ComproEngage.paymentOptions.selectPlanSubHeading,
+    upgradeToPremiumBtn: selectorFile.css.ComproEngage.paymentOptions.upgradeToPremiumBtn,
 
     isInitialized: function () {
         logger.logInto(stackTrace.get());
@@ -395,7 +396,7 @@ module.exports = {
         res = action.click(this.premiumAccessBtn);
         if (res == true) {
             logger.logInto(stackTrace.get(), " --Premium Access Btn clicked");
-            res = action.waitForDisplayed(this.selectPlanHeading) //this should be changed to "Upgrade to Premium" button - Akhil
+            res = action.waitForDisplayed(this.upgradeToPremiumBtn) 
         } else
             logger.logInto(stackTrace.get(), " --Premium Access Btn NOT clicked", "error");
         return res;
@@ -406,7 +407,7 @@ module.exports = {
         res = action.click(this.accessKeyBtn);
         if (res == true) {
             logger.logInto(stackTrace.get(), " --Access Key Btn clicked");
-            res = action.waitForDisplayed(this.activateBookHeading) //this should be changed to activate button - Akhil
+            res = action.waitForDisplayed(this.activateButton) 
         } else
             logger.logInto(stackTrace.get(), " --Access Key Btn NOT clicked", "error");
         return res;
@@ -417,8 +418,7 @@ module.exports = {
         res = action.click(this.closeBtn);
         if (res == true) {
             logger.logInto(stackTrace.get(), " --Close Btn clicked");
-            res = action.waitForDisplayed(this.bookLockImg) 
-            //bookLockImg is always displayed...so it would be better to check for closeBtn not displayed - Akhil
+            res = action.waitForDisplayed(this.closeBtn, undefined, true);
         } else
             logger.logInto(stackTrace.get(), " --Close Btn NOT clicked", "error");
         return res;
@@ -445,8 +445,9 @@ module.exports = {
         let obj = {
             selectPlanHeading: (action.getElementCount(this.selectPlanHeading) > 0) ? action.getText(this.selectPlanHeading) : null,
             selectPlanSubHeading: (action.getElementCount(this.selectPlanSubHeading) > 0) ? action.getText(this.selectPlanSubHeading) : null,
+            upgradeToPremium: (action.getElementCount(this.upgradeToPremiumBtn) > 0) ? action.getText(this.upgradeToPremiumBtn) : null,
             closeBtn: (action.getElementCount(this.closeBtn) > 0) ? action.waitForDisplayed(this.closeBtn) : null
-            //add "upgrade to Premium" button - Akhil
+            
         }
         logger.logInto(stackTrace.get(), JSON.stringify(obj));
         return obj;

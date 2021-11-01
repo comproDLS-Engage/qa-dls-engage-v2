@@ -8,7 +8,7 @@ module.exports = {
 
     //Validate that Profile tab is selected by default when settings page is launched
     ENG_SETT_TC_1: function(testdata) {
-        sts = settingsPage.isInitialized()
+        sts = settingsPage.getSettingsPageData()
         //console.log(sts)
         assertion.typeOf(sts, 'object', new Error(sts));
         assertion.assertEqual(sts.selectedTab, testdata.tabList[0], "Settings Page Profile Tab Not Selected: ")
@@ -18,6 +18,7 @@ module.exports = {
     ENG_SETT_TC_2: function(testdata) {
         sts = appShellPage.selectTab(testdata[0].tabList[0])
         assertion.assertEqual(sts, true, "Profile Tab Not Clicked: ")
+       
         sts = settingsPage.getProfileTabData()
         //console.log(sts)
         assertion.typeOf(sts, 'object', new Error(sts));
@@ -71,7 +72,7 @@ module.exports = {
         //console.log(sts)
         assertion.typeOf(sts, 'object', new Error(sts));
         assertion.assertEqual(sts.currentPassword_label, testdata.currentPassword_label, "Password Current Password label Mismatch: ")
-        assertion.assertEqual(sts.togglepasswordvisibility, true, "Password toggle password visibility Not displayed: ")
+        assertion.assertEqual(sts.togglePassword_currentPassword, true, "Password toggle password visibility Not displayed: ")
         assertion.assertEqual(sts.password_label, testdata.newPassword_label, "Password New Password label Mismatch:")
         assertion.assertEqual(sts.confirmPassword_label, testdata.confirmPassword_label, "Password confirmPassword label Mismatch:")
         assertion.assertEqual(sts.newPasswordRules_text, testdata.newPasswordRules_text, "Password newPasswordRules text Mismatch:")
@@ -148,7 +149,8 @@ module.exports = {
     ENG_SETT_TC_12: function(testdata) {
         sts = settingsPage.clickClose()
         //console.log(sts)
-        assertion.assertEqual(sts.country_input_value, null, "Profile Country Mismatch: ")
+        //assertion.assertEqual(sts.country_input_value, null, "Profile Country Mismatch: ")
+        assertion.assertEqual(sts, '', "Profile Country Mismatch: ")
 
         sts = settingsPage.clickUpdateSettingsProfile()
         assertion.assertEqual(sts, true, "Update Settings Not Clicked: ")
@@ -245,6 +247,21 @@ module.exports = {
         sts = settingsPage.getErrorMessages()
         assertion.assertEqual(sts.confirmPasswordError_text, testdata[1].confirmPasswordError_text, "Confirm Password Error Mismatch: ")
     },
+
+    //TBD - password text to be extracted. getText and getValue not working - Akanksha
+    //Validate clicking on toggle password eye button displays the Password
+    // ENG_SETT_TC_19: function() {
+
+    //     sts = settingsPage.getPasswordTabData()
+    //     console.log(sts)
+        
+    //     sts = settingsPage.togglePasswordVisibility()
+    //     console.log(sts)
+    //     // assertion.assertEqual(sts, true, "Update Settings Not Clicked")
+
+    //     // sts = settingsPage.getErrorMessages()
+    //     // assertion.assertEqual(sts.confirmPasswordError_text, testdata[1].confirmPasswordError_text, "Confirm Password Error Mismatch: ")
+    // },
 
     //font size increament is hard coded
     //Validate that font size of the application is updated when the Font Size is increased.
@@ -397,9 +414,8 @@ module.exports = {
     ENG_SETT_TC_37: function(testdata) {
 
         sts = settingsPage.click_applySettingsButton();
-        assertion.assertEqual(sts, true, "Apply Settings Button Not Clicked ")
-
-        sts = snackBarTest.get_Snackbar_Message_Text();
+        // assertion.assertEqual(sts, true, "Apply Settings Button Not Clicked ")
+        // sts = snackBarTest.get_Snackbar_Message_Text();
         assertion.assertEqual(sts, testdata.update, "Snackbar Messsage Mismatch: ")
 
     },
@@ -417,9 +433,8 @@ module.exports = {
         assertion.assertEqual(sts.resetSettingsConfirmBtn, testdata[0].resetSettingsConfirmBtn, "Reset Settings Modal Confirm Button Mismatch")
         
         sts = settingsPage.click_resetSettingsConfirmBtn()
-        assertion.assertEqual(sts, true, "Confirm Button Not Clicked ")
-
-        sts = snackBarTest.get_Snackbar_Message_Text();
+        // assertion.assertEqual(sts, true, "Confirm Button Not Clicked ")
+        // sts = snackBarTest.get_Snackbar_Message_Text();
         assertion.assertEqual(sts, testdata[2].update, "Snackbar Messsage Mismatch: ")
 
         sts = settingsPage.getCssPropertyData()

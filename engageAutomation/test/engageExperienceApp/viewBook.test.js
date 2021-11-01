@@ -184,13 +184,13 @@ module.exports = {
     //Validate that clicking on View Purchase options launches Payment Options Screen
     ENG_BOOK_TC_47: function () {
         sts = viewBookPage.clickViewPurhcaseOptionsBtn();
-        assertion.assertEqual(sts, true, "Select Plan Heading Status Mismatch");
+        assertion.assertEqual(sts, true, "Upgrade to Premium Button Mismatch");
     },
 
     //Validate that clicking on cross button closes the payment options page
     ENG_BOOK_TC_48: function () {
         sts = viewBookPage.clickCloseButton();
-        assertion.assertEqual(sts, true, "BookLock Img Status Mismatch");
+        assertion.assertEqual(sts, true, "Close button Status Mismatch");
     },
 
     //Validate the content of Payment options page 
@@ -198,13 +198,14 @@ module.exports = {
         sts = viewBookPage.getPaymentOptionsData();
         assertion.assertEqual(sts.selectPlanHeading, testdata.selectPlanHeading, "Select Plan Heading Mismatch")
         assertion.assertEqual(sts.selectPlanSubHeading, testdata.selectPlanSubHeading, "Select Plan Sub Heading Mismatch")
+        assertion.assertEqual(sts.upgradeToPremium, testdata.upgradeToPremium, "Upgrade To Premium Text Mismatch")
         assertion.assertEqual(sts.closeBtn, true, "Close Button Status Mismatch")
     },
 
     //Validate that clicking on Add an access key option launches Activate your Book modal pop up
     ENG_BOOK_TC_50: function () {
         sts = viewBookPage.clickAccessKeyBtn();
-        assertion.assertEqual(sts, true, "Activate Book Heading Status Mismatch");
+        assertion.assertEqual(sts, true, "Activate Button Status Mismatch");
     },
 
     //Validate the content of Activate your Book Modal pop up

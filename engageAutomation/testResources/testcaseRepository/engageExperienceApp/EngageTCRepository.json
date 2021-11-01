@@ -1921,6 +1921,12 @@
                 "visualTest": "-"
             },
             {
+                "id": "ENG_SETT_TC_19",
+                "description": "Validate clicking on toggle password eye button displays the Password",
+                "tags": "P1",
+                "visualTest": "-"
+            },
+            {
                 "id": "ENG_SETT_TC_23",
                 "description": "Validate that font size of the application is updated when the Font Size is increased.",
                 "tags": "P1",

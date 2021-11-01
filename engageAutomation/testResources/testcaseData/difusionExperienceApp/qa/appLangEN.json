@@ -568,7 +568,8 @@
             },
             "paymentOptions":{
                 "selectPlanHeading":"Select a Plan",
-                "selectPlanSubHeading" : "Choose a plan with the features that you need."
+                "selectPlanSubHeading" : "Choose a plan with the features that you need.",
+                "upgradeToPremium":"Upgrade to Premium"
             },
             "accessKey":{
                 "activateBookHeading":"Activate your Book",

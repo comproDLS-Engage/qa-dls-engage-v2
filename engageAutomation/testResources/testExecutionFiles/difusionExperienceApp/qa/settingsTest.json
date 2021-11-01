@@ -56,10 +56,6 @@
             "description":"",
             "testFile":"./test/engageExperienceApp/appShell.test.js",
             "testData":[
-               {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath":"engage.appContent.settings"
-               }
             ]
          },
          {
@@ -352,11 +348,7 @@
             "id": "ENG_SHELL_TC_17",
             "description": "",
             "testFile": "./test/engageExperienceApp/appShell.test.js",
-            "testData": [
-            {
-                "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                "jsonPath": "engage.appContent.settings"
-            }]
+            "testData": []
         },
         {
             "id": "ENG_SETT_TC_4",
