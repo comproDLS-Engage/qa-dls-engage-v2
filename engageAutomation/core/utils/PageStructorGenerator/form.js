@@ -145,8 +145,8 @@ function generatePageHeader(PageTemplate, param1, param2, appShellPageCheck) {
         file.write(PageTemplate.header[param2])
     if (appShellPageCheck)
         file.write(PageTemplate.isInitialized.appShellPageDeclartion)
-    file.write("\nvar obj;\n")
-    file.write("\nmodule.exports = {\n");
+    //file.write("\nlet obj;\n")
+    file.write("\n\nmodule.exports = {\n");
 
 }
 
@@ -178,7 +178,7 @@ function generateIsinitiazeFunction(pageSelectorFile, PageTemplate, param1) {
     }
     if (param1)
         file.write(PageTemplate.isInitialized[param1])
-    file.write("/n};\n")
+    file.write("};\n")
 
     //  if (param1)
     //    file.write(PageTemplate.isInitialized.appShellPagecall)
@@ -186,7 +186,7 @@ function generateIsinitiazeFunction(pageSelectorFile, PageTemplate, param1) {
 }
 
 function generateGetDatafunction(pageSelectorFile, key) {
-    file.write(key + "_Data: function ()\n obj = {\n")
+    file.write(key + "_Data: function ()\n  \nvar obj;\n obj = {\n")
 
     for (var i = 0; i < pageSelectorFile.length; i++) {
         if ((pageSelectorFile[i].extraInfo) == "pattern") {
@@ -238,8 +238,8 @@ function listDataGenerate1(pageSelectorFile) {
     for (var i = 0; i < pageSelectorFile.length; i++) {
         if (((pageSelectorFile[i].extraInfo).includes("pattern"))) {
             file.write(pageSelectorFile[i].Label + "_Data: function ()\n {\n")
-            file.write("let i, list;\n" +
-                "let " + pageSelectorFile[i].Label + "_Arr = [];\n" +
+            file.write("var i, list;\n" +
+                "var " + pageSelectorFile[i].Label + "_Arr = [];\n" +
                 "list = action.findElements(this." + pageSelectorFile[i].Label + ");\n" +
                 "for (i = 0; i < list.length; i++) {\n" +
                 pageSelectorFile[i].Label + "_Arr[i] = action.getText(list[i])\n" +
@@ -269,7 +269,7 @@ function generateClickFunctions(pageSelectorFile, key, pageSelectorGroup) {
             }
             file.write("\nclick_" + pageSelectorFile[i].Label + ": function (" + selectedText + "Name) {\n" +
                 "logger.logInto(stackTrace.get());\n" +
-                "let i, list, res;\n" +
+                "var i, list, res;\n" +
                 "list = action.findElements(this." + pageSelectorFile[i].Label + ");\n" +
                 "for (i = 0; i < list.length; i++) {\n" +
                 "if ((action.getText(this." + selectedText + "+i+\"]\"))== " + selectedText + "Name) {\n " +
@@ -330,8 +330,8 @@ function generategroupDatafunction(group, groupName) {
 
 function dataPatternGenerate(pageSelectorFile, groupName) {
     file.write("getData_" + groupName + "_Group: function ()\n{\n")
-   // file.write("var res;\n")
-    file.write("var obj = {\n")
+    file.write("var obj;\n")
+    file.write("obj = {\n")
     for (var i = 0; i < pageSelectorFile.length; i++) {
         if ((pageSelectorFile[i].extraInfo) == "pattern") {
             file.write(pageSelectorFile[i].Label + ": this." + pageSelectorFile[i].Label + "_Data(),\n")
@@ -358,6 +358,7 @@ function dataPatternGenerateWithParent(groupSelectorData, groupName, key) {
         file.write("getData_" + groupName + "_Group: function (" + selectedText + "Name)\n{\n")
     else
         file.write("getData_" + groupName + "_Group: function ()\n{\n")
+        file.write("var obj;\n")
     file.write("action.waitForDisplayed(this." + groupSelectorData[key].Label + ");\n" +
         "var list = action.findElements(this." + groupSelectorData[key].Label + ");\n");
 
@@ -402,9 +403,9 @@ function dataPatternGenerateWithParent(groupSelectorData, groupName, key) {
                 file.write(groupSelectorData[i].Label + ":(action.getElementCount(this." + groupSelectorData[i].Label + "+i+\"]\")  > 0) ? action.getText(this." + groupSelectorData[i].Label + "+i+\"]\")  : null,\n");
         }
     }
-    file.write("}\n}\n")
+    file.write("}\n")
     if (selectedText) {
-        file.write("}\n")
+        file.write("} \n")
     }
     for (var i = 0; i < groupSelectorData.length; i++) {
         if ((groupSelectorData[i].extraInfo) != "pattern") {
@@ -415,5 +416,6 @@ function dataPatternGenerateWithParent(groupSelectorData, groupName, key) {
 
         }
     }
+    file.write("}\n")
     file.write("return obj \n},\n")
 }
