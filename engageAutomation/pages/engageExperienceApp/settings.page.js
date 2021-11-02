@@ -1,6 +1,5 @@
 'use strict';
 const action = require('../../core/actionLibrary/baseActionLibrary.js');
-var snackBarTest = require('../../test/engageExperienceApp/common.test.js');
 var appShell = require('./appShell.page');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
 
@@ -66,7 +65,7 @@ module.exports = {
     resetSettingsCancelBtn: selectorFile.css.ComproEngage.settings.resetSettingsCancelBtn,
     resetSettingsConfirmBtn: selectorFile.css.ComproEngage.settings.resetSettingsConfirmBtn,
 
-    isInitialized: function() {
+    isInitialized: function () {
         let res;
         logger.logInto(stackTrace.get());
         action.waitForDocumentLoad();
@@ -77,7 +76,7 @@ module.exports = {
         return res;
     },
 
-    getSettingsPageData: function() {
+    getSettingsPageData: function () {
         logger.logInto(stackTrace.get());
         let obj = {
             pageStatus: action.waitForDisplayed(this.pageTitle),
@@ -93,7 +92,7 @@ module.exports = {
         return obj;
     },
 
-    getProfileTabData: function() {
+    getProfileTabData: function () {
         logger.logInto(stackTrace.get());
         let obj = {
             pageHeading: action.getElementCount(this.pageHeading) > 0 ? action.getText(this.pageHeading) : null,
@@ -109,12 +108,10 @@ module.exports = {
             country_input_value: action.getElementCount(this.country_input) > 0 ? action.getAttribute(this.country_input, "value") : null,
             changeProfile_button: action.getElementCount(this.changeProfile_button) > 0 ? action.getText(this.changeProfile_button) : null
         }
-        //console.log(obj)
         return obj;
-
     },
 
-    setFirstName: function(name) {
+    setFirstName: function (name) {
         let res;
         logger.logInto(stackTrace.get());
         res = action.setValue(this.firstName_input, name);
@@ -127,7 +124,7 @@ module.exports = {
         return res;
     },
 
-    setLastName: function(lastname) {
+    setLastName: function (lastname) {
         let res;
         logger.logInto(stackTrace.get());
         res = action.setValue(this.lastName_input, lastname);
@@ -140,7 +137,7 @@ module.exports = {
         return res;
     },
 
-    setCountry: function(countryName) {
+    setCountry: function (countryName) {
         let res;
         logger.logInto(stackTrace.get());
         res = action.click(this.country_input)
@@ -160,7 +157,7 @@ module.exports = {
         return res;
     },
 
-    clickClose: function() {
+    clickClose: function () {
         let res;
         logger.logInto(stackTrace.get());
         res = action.moveTo(this.country_input, 0, 0)
@@ -177,7 +174,7 @@ module.exports = {
         return res;
     },
 
-    clickUpdateSettingsProfile: function() {
+    clickUpdateSettingsProfile: function () {
         let res;
         logger.logInto(stackTrace.get());
         res = action.click(this.changeProfile_button);
@@ -190,7 +187,7 @@ module.exports = {
         return res;
     },
 
-    getErrorMessages: function() {
+    getErrorMessages: function () {
         logger.logInto(stackTrace.get());
         let obj = {
             //profile
@@ -205,7 +202,7 @@ module.exports = {
         return obj;
     },
 
-    getPasswordTabData: function() {
+    getPasswordTabData: function () {
         logger.logInto(stackTrace.get());
         let obj = {
             //password
@@ -224,7 +221,7 @@ module.exports = {
         return obj;
     },
 
-    setCurrentPassword: function(password) {
+    setCurrentPassword: function (password) {
         let res;
         logger.logInto(stackTrace.get());
         res = action.setValue(this.currentPassword_input, password);
@@ -237,7 +234,7 @@ module.exports = {
         return res;
     },
 
-    setNewPassword: function(password) {
+    setNewPassword: function (password) {
         let res;
         logger.logInto(stackTrace.get());
         res = action.setValue(this.password_input, password);
@@ -250,7 +247,7 @@ module.exports = {
         return res;
     },
 
-    setConfirmPassword: function(password) {
+    setConfirmPassword: function (password) {
         let res;
         logger.logInto(stackTrace.get());
         res = action.setValue(this.confirmPassword_input, password);
@@ -290,7 +287,7 @@ module.exports = {
     //     return res;
     // },
 
-    clickUpdateSettingsPassword: function() {
+    clickUpdateSettingsPassword: function () {
         let res;
         logger.logInto(stackTrace.get());
         res = action.click(this.changePassword_button);
@@ -303,7 +300,7 @@ module.exports = {
         return res;
     },
 
-    getAccessibilityTabData: function() {
+    getAccessibilityTabData: function () {
         logger.logInto(stackTrace.get());
         let obj = {
             pageHeading: action.getElementCount(this.pageHeading) > 0 ? action.getText(this.pageHeading) : null,
@@ -329,13 +326,12 @@ module.exports = {
             moreDetailsBtn: (action.getElementCount(this.moreDetailsBtn) > 0) ? action.getText(this.moreDetailsBtn) : null,
             resetButton: (action.getElementCount(this.resetButton) > 0) ? action.getText(this.resetButton) : null,
             applySettingsBtn: (action.getElementCount(this.applySettingsBtn) > 0) ? action.getText(this.applySettingsBtn) : null
-
         }
         //console.log(obj)
         return obj;
     },
 
-    getCssPropertyData: function() {
+    getCssPropertyData: function () {
         logger.logInto(stackTrace.get());
         action.scrollIntoView(this.pageHeading)
         let obj = {
@@ -386,13 +382,12 @@ module.exports = {
             applySettingsBtn_fontSize: (action.getElementCount(this.applySettingsBtn) > 0) ? action.getCSSProperty(this.applySettingsBtn, 'font-size').value : null,
             applySettingsBtn_textDecoration: (action.getElementCount(this.applySettingsBtn) > 0) ? action.getCSSProperty(this.applySettingsBtn, 'text-decoration').value : null,
             applySettingsBtn_bgcolor: (action.getElementCount(this.applySettingsBtn) > 0) ? action.getCSSProperty(this.applySettingsBtn, 'background-color').value : null
-
         }
         //console.log(obj)
         return obj;
     },
 
-    getResetSettingsModalData: function() {
+    getResetSettingsModalData: function () {
         logger.logInto(stackTrace.get());
         let obj = {
             resetSettingsTitle: action.getElementCount(this.resetSettingsTitle) > 0 ? action.getText(this.resetSettingsTitle) : null,
@@ -404,10 +399,9 @@ module.exports = {
         return obj;
     },
 
-    click_fontSizeDec: function(count) {
-        let res;
-        var itr;
+    click_fontSizeDec: function (count) {
         logger.logInto(stackTrace.get());
+        let res, itr;
         for (itr = 0; itr < count; itr++) {
             res = action.click(this.fontSizeDec);
         }
@@ -420,10 +414,9 @@ module.exports = {
         return res;
     },
 
-    click_fontSizeInc: function(count) {
+    click_fontSizeInc: function (count) {
         logger.logInto(stackTrace.get());
-        let res;
-        var itr;
+        let res, itr;
         for (itr = 0; itr < count; itr++) {
             res = action.click(this.fontSizeInc);
         }
@@ -435,10 +428,9 @@ module.exports = {
         return res;
     },
 
-    click_lineSpaceDec: function(count) {
-        let res;
+    click_lineSpaceDec: function (count) {
         logger.logInto(stackTrace.get());
-        var itr;
+        let res, itr;
         for (itr = 0; itr < count; itr++) {
             res = action.click(this.lineSpaceDec);
         }
@@ -450,10 +442,9 @@ module.exports = {
         return res;
     },
 
-    click_lineSpaceInc: function(count) {
-        let res;
+    click_lineSpaceInc: function (count) {
         logger.logInto(stackTrace.get());
-        var itr;
+        let res, itr;
         for (itr = 0; itr < count; itr++) {
             res = action.click(this.lineSpaceInc);
         }
@@ -465,7 +456,7 @@ module.exports = {
         return res;
     },
 
-    click_highContrastToggleBtn: function() {
+    click_highContrastToggleBtn: function () {
         let res;
         logger.logInto(stackTrace.get());
         res = action.click(this.highContrastToggleBtn);
@@ -477,7 +468,7 @@ module.exports = {
         return res;
     },
 
-    click_dylexicFontToggleBtn: function() {
+    click_dylexicFontToggleBtn: function () {
         let res;
         logger.logInto(stackTrace.get());
         res = action.click(this.dylexicFontToggleBtn);
@@ -489,7 +480,7 @@ module.exports = {
         return res;
     },
 
-    click_underlineLinksToggleBtn: function() {
+    click_underlineLinksToggleBtn: function () {
         let res;
         logger.logInto(stackTrace.get());
         res = action.click(this.underlinelinksToggleBtn);
@@ -501,41 +492,20 @@ module.exports = {
         return res;
     },
 
-    // click_button1: function () {
-    //     logger.logInto(stackTrace.get());
-    //     res = action.click(this.button1);
-    //     if (true == res) {
-    //         logger.logInto(stackTrace.get(), " button1 button is clicked");
-    //     } else {
-    //         logger.logInto(stackTrace.get(), res, 'error');
-    //     }
-    //     return res;
-    // },
-
-    // click_button2: function () {
-    //     logger.logInto(stackTrace.get());
-    //     res = action.click(this.button2);
-    //     if (true == res) {
-    //         logger.logInto(stackTrace.get(), " button2 button is clicked");
-    //     } else {
-    //         logger.logInto(stackTrace.get(), res, 'error');
-    //     }
-    //     return res;
-    // },
-
-    click_moreDetailsBtn: function() {
+    click_moreDetailsBtn: function () {
         let res;
         logger.logInto(stackTrace.get());
         res = action.click(this.moreDetailsBtn);
         if (true == res) {
             logger.logInto(stackTrace.get(), " moreDetailsBtn button is clicked");
+            //need to add return statement after switching to new tab - Akhil
         } else {
             logger.logInto(stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    click_resetButton: function() {
+    click_resetButton: function () {
         let res;
         logger.logInto(stackTrace.get());
         res = action.click(this.resetButton);
@@ -548,31 +518,33 @@ module.exports = {
         return res;
     },
 
-    click_applySettingsButton: function() {
+    click_applySettingsButton: function () {
         let res;
         logger.logInto(stackTrace.get());
         res = action.click(this.applySettingsBtn);
         if (true == res) {
             logger.logInto(stackTrace.get(), " applySettings button is clicked");
-            res = snackBarTest.get_Snackbar_Message_Text();
         } else {
             logger.logInto(stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    click_resetSettingsConfirmBtn: function() {
+    click_resetSettingsConfirmBtn: function () {
         let res;
         logger.logInto(stackTrace.get());
         res = action.click(this.resetSettingsConfirmBtn);
         if (true == res) {
             logger.logInto(stackTrace.get(), " Confirm button is clicked");
-            res = snackBarTest.get_Snackbar_Message_Text();
         } else {
             logger.logInto(stackTrace.get(), res, 'error');
         }
         return res;
-    }
+    },
 
+    //add function for cancel button - Akhil
+    click_resetSettingsCancelBtn: function () {
+
+    }
 
 }

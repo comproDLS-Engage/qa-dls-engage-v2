@@ -398,13 +398,15 @@
                     }
                 }
             },
-            "settings":
-            {
+            "settings": {
                 "pageTitle": "Settings",
                 "pageSubTitle": "Update and change details about your account",
-                "tabList": ["Profile", "Password", "Accessibility"],
-                "Profile":
-                {
+                "tabList": [
+                    "Profile",
+                    "Password",
+                    "Accessibility"
+                ],
+                "Profile": {
                     "pageHeading": "Edit Profile",
                     "email_label": "Email",
                     "firstName_label": "First Name",
@@ -413,8 +415,7 @@
                     "country_input_placeholder": "Enter Country",
                     "changeProfile_button": "Apply Settings"
                 },
-                "Password":
-                {
+                "Password": {
                     "pageHeading": "Change Password",
                     "currentPassword_label": "Current Password",
                     "newPassword_label": "New Password",
@@ -422,8 +423,7 @@
                     "newPasswordRules_text": "Must have a min of 8 characters and contain: 1 uppercase, 1 lowercase, 1 number, and 1 special character.",
                     "changePassword_button": "Apply Settings"
                 },
-                "Accessibility":
-                {
+                "Accessibility": {
                     "pageHeading": "Accessibility",
                     "fontSize_text": "Font Size: ",
                     "lineSpace_text": "Line Spacing: ",
@@ -432,29 +432,24 @@
                     "reset_button": "Reset Default Settings",
                     "accessbility_button": "Apply Settings"
                 },
-                "ErrorMessages":
-                {
+                "ErrorMessages": {
                     "currentPasswordError_text": "Please enter current password",
                     "newPasswordError_text": "Must have a min of 8 characters and contain: 1 uppercase, 1 lowercase, 1 number, and 1 special character.",
                     "confirmPasswordError_text": "New password and Confirm password must match",
                     "firstNameError_text": "First name is required",
                     "lastNameError_text": "Last name is required"
                 },
-                "snackBarMessages":
-                {
+                "snackBarMessages": {
                     "update": "User settings updated successfully",
                     "incorrectPassword": "Incorrect current password. Please try again"
                 },
-                "resetSettings":
-                {
+                "resetSettings": {
                     "resetSettingsTitle": "Reset default settings?",
                     "resetSettingsSubTitle": "Are you sure you want to reset default settings? This will reset all styles to the default settings.",
                     "resetSettingsCancelBtn": "Cancel",
                     "resetSettingsConfirmBtn": "Confirm"
-
                 },
-                "defaultProps":
-                {
+                "defaultProps": {
                     "pageHeading_font": "work sans",
                     "pageHeading_lineHeight": "24px",
                     "pageHeading_fontSize": "20px",
@@ -495,8 +490,7 @@
                     "applySettingsBtn_textDecoration": "none solid rgb(255, 255, 255)",
                     "applySettingsBtn_color": "rgba(255,255,255,1)"
                 },
-                "appliedSettingsProps":
-                {
+                "appliedSettingsProps": {
                     "pageHeading_font": "opendyslexicalta",
                     "pageHeading_lineHeight_XL": "28px",
                     "pageHeading_fontSize_XL": "24px",
@@ -556,29 +550,29 @@
                     "applySettingsBtn_lineHeight_narrow": "19.2px"
                 }
             },
-            "lockedBookView":{
-                "noAccessTitle":"Add an access key to view a book",
-                "noAccessSubTitle":"View book materials with an access key. If you've already purchased your textbook, check inside for an access key. It should look like:7HRA-7UHW-QFER-H4TF.",
-                "premiumAccessTitle":"Get Premium Access",
-                "premiumAccessSubTitle":"Get full featured access to all our books and their resources for a low annual fee.",
-                "premiumAccessBtn":"View Purchase Options",
-                "accessKeyTitle":"Have an access key?",
-                "accessKeySubTitle":"Enter your access key (typically found inside your textbook) to get access to all materials.",
-                "accessKeyBtn":"Add an Access Key"
+            "lockedBookView": {
+                "noAccessTitle": "Add an access key to view a book",
+                "noAccessSubTitle": "View book materials with an access key. If you've already purchased your textbook, check inside for an access key. It should look like:7HRA-7UHW-QFER-H4TF.",
+                "premiumAccessTitle": "Get Premium Access",
+                "premiumAccessSubTitle": "Get full featured access to all our books and their resources for a low annual fee.",
+                "premiumAccessBtn": "View Purchase Options",
+                "accessKeyTitle": "Have an access key?",
+                "accessKeySubTitle": "Enter your access key (typically found inside your textbook) to get access to all materials.",
+                "accessKeyBtn": "Add an Access Key"
             },
-            "paymentOptions":{
-                "selectPlanHeading":"Select a Plan",
-                "selectPlanSubHeading" : "Choose a plan with the features that you need.",
-                "upgradeToPremium":"Upgrade to Premium"
+            "paymentOptions": {
+                "selectPlanHeading": "Select a Plan",
+                "selectPlanSubHeading": "Choose a plan with the features that you need.",
+                "upgradeToPremium": "Upgrade to Premium"
             },
-            "accessKey":{
-                "activateBookHeading":"Activate your Book",
-                "activateBookSubHeading":"If you've purchased a book, enter your access key below to get access to digital materials",
-                "enterKeyLabel":"Enter Access Key",
-                "enterKeySubLabel":"Your access key should look like: 7HRA-7UHW-QFER-H4TF. You can find your key inside the textbook you have purchased.",
-                "accessKeyTextBoxPlaceholder":"Enter Access Key",
-                "activateButton":"Activate",
-                "needHelpButton":"Need Help?"
+            "accessKey": {
+                "activateBookHeading": "Activate your Book",
+                "activateBookSubHeading": "If you've purchased a book, enter your access key below to get access to digital materials",
+                "enterKeyLabel": "Enter Access Key",
+                "enterKeySubLabel": "Your access key should look like: 7HRA-7UHW-QFER-H4TF. You can find your key inside the textbook you have purchased.",
+                "accessKeyTextBoxPlaceholder": "Enter Access Key",
+                "activateButton": "Activate",
+                "needHelpButton": "Need Help?"
             }
         }
     }
