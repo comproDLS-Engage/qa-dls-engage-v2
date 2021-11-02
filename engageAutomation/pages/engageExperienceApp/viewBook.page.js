@@ -2,7 +2,6 @@
 var action = require('../../core/actionLibrary/baseActionLibrary.js');
 var appShell = require('./appShell.page');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
-var res;
 
 module.exports = {
 
@@ -69,7 +68,7 @@ module.exports = {
     isInitialized: function () {
         logger.logInto(stackTrace.get());
         action.waitForDocumentLoad();
-        res = {
+        let res = {
             pageStatus: action.waitForDisplayed(this.bookCover),
             appShell: appShell.isInitialized()
         };
@@ -139,7 +138,7 @@ module.exports = {
 
     clickOpenFlipbook: function () { //to be reviewed for multiple flipbook scenario - Akhil
         logger.logInto(stackTrace.get())
-        res = action.click(this.openFlipbook_btn);
+        let res = action.click(this.openFlipbook_btn);
         if (res == true) {
             if (action.getElementCount(this.flipbookList) > 0) { //in case of multiple flipbooks
                 res = this.getListOfFlipbooks();
@@ -156,7 +155,7 @@ module.exports = {
 
     getListOfFlipbooks: function () {
         logger.logInto(stackTrace.get())
-        var arr = [];
+        var arr = [], list;
         list = action.findElements(this.flipbookList);
         for (i = 0; i < list.length; i++) {
             arr[i] = action.getText(this.flipbookList + i);
@@ -167,7 +166,7 @@ module.exports = {
 
     clickViewClasses: function () {
         logger.logInto(stackTrace.get())
-        res = action.click(this.viewClass);
+        let res = action.click(this.viewClass);
         if (res == true) {
             logger.logInto(stackTrace.get(), " --View Classes Button clicked");
             res = require('./classDrawer.page').isInitialized();
@@ -178,7 +177,7 @@ module.exports = {
 
     clickAddBook: function () {
         logger.logInto(stackTrace.get())
-        res = action.click(this.addBook_option);
+        let res = action.click(this.addBook_option);
         if (res == true) {
             logger.logInto(stackTrace.get(), " --Add Book Button clicked");
             res = action.waitForDisplayed(this.myBooks_lbl);
@@ -189,8 +188,7 @@ module.exports = {
 
     clickUnit: function (str) {
         logger.logInto(stackTrace.get());
-        res = false;
-        let i, list;
+        let i, list, res;
         list = action.findElements(this.unitTitle);
         for (i = 0; i < list.length; i++) {
             if (str.includes(action.getText(list[i]))) {
@@ -224,7 +222,7 @@ module.exports = {
 
     clickMoreOptionsButton: function () {
         logger.logInto(stackTrace.get());
-        res = action.click(this.moreOptions_btn);
+        let res = action.click(this.moreOptions_btn);
         if (res == true) {
             logger.logInto(stackTrace.get(), " --More Options Button clicked");
             res = this.getMoreOptionsButtonData();
@@ -259,7 +257,7 @@ module.exports = {
     clickRemoveBook: function () {
         logger.logInto(stackTrace.get());
         //this.clickMoreOptionsButton();
-        res = action.click(this.removeBook_option);
+        let res = action.click(this.removeBook_option);
         if (res == true) {
             logger.logInto(stackTrace.get(), " --Remove Book Button clicked");
             res = this.getRemoveBookPopUpData();
@@ -270,7 +268,7 @@ module.exports = {
 
     clickCancel_RemoveBookDialog: function () {
         logger.logInto(stackTrace.get());
-        res = action.click(this.removeBookDialogCancel);
+        let res = action.click(this.removeBookDialogCancel);
         if (res == true) {
             res = action.waitForDisplayed(this.myBooks_lbl);
             logger.logInto(stackTrace.get(), " --Cancel Button clicked");
@@ -281,7 +279,7 @@ module.exports = {
 
     clickRemove_RemoveBookDialog: function () {
         logger.logInto(stackTrace.get())
-        res = action.click(this.removeBookDialogRemove);
+        let res = action.click(this.removeBookDialogRemove);
         if (res == true) {
             res = action.waitForDisplayed(this.removeBookDialogRemove, undefined, true)
             if (res == true) {
@@ -295,7 +293,7 @@ module.exports = {
 
     // clickViewBookDetails: function () {
     //     logger.logInto(stackTrace.get())
-    //     res = action.click(this.viewBookDetails_option);
+    //     let res = action.click(this.viewBookDetails_option);
     //     if (res == true) {
     //         logger.logInto(stackTrace.get(), " --View Book Details Button clicked");
     //         // add return values - akhil
@@ -306,7 +304,7 @@ module.exports = {
 
     clickUnitMoreOptions: function (unitIndex) {
         logger.logInto(stackTrace.get());
-        res = action.click(this.unitMoreOptions + unitIndex);
+        let res = action.click(this.unitMoreOptions + unitIndex);
         if (res == true) {
             logger.logInto(stackTrace.get(), " --Unit More Options Clicked");
             res = this.get_UnitMoreOptionsButton_Data();
@@ -328,7 +326,7 @@ module.exports = {
     /*clickUnitOpeninFlipbook: function () {
         logger.logInto(stackTrace.get());
         //this.clickUnitMoreOptions(unitIndex);
-        res = action.click(this.unitOpenFlipbook_option);
+        let res = action.click(this.unitOpenFlipbook_option);
         if (res == true) {
             logger.logInto(stackTrace.get(), "--Open FlipBook in More Options Clicked");
             //res = require('./flipbook.page.js') //TBD when flipbook page object is added.
@@ -340,7 +338,7 @@ module.exports = {
 
     /*clickUnitViewActivities: function (chapterName) {
         logger.logInto(stackTrace.get());
-        res = this.clickUnitMoreOptions(chapterName);
+        let res = this.clickUnitMoreOptions(chapterName);
         if (res >= 0) {
             res = action.click(this.unitViewActivity_option)
             logger.logInto(stackTrace.get(), "View Activity in More Options Clicked");
@@ -352,7 +350,7 @@ module.exports = {
 
     clickOnContinue: function () {
         logger.logInto(stackTrace.get());
-        res = action.click(this.lastActivity_Continue);
+        let res = action.click(this.lastActivity_Continue);
         if (res == true) {
             //let activityPlayerPage = require('./activityPlayer.page');
             //res = activityPlayerPage.isInitialized();
@@ -365,7 +363,7 @@ module.exports = {
 
     clickOnDismiss: function () {
         logger.logInto(stackTrace.get());
-        res = action.click(this.lastActivity_Dismiss);
+        let res = action.click(this.lastActivity_Dismiss);
         if (res == true) {
             logger.logInto(stackTrace.get(), " --Dismiss Button clicked");
             res = action.waitForDisplayed(this.lastActivity_icon, undefined, true)
@@ -393,10 +391,10 @@ module.exports = {
 
     clickViewPurhcaseOptionsBtn: function () {
         logger.logInto(stackTrace.get());
-        res = action.click(this.premiumAccessBtn);
+        let res = action.click(this.premiumAccessBtn);
         if (res == true) {
             logger.logInto(stackTrace.get(), " --Premium Access Btn clicked");
-            res = action.waitForDisplayed(this.upgradeToPremiumBtn) 
+            res = action.waitForDisplayed(this.upgradeToPremiumBtn)
         } else
             logger.logInto(stackTrace.get(), " --Premium Access Btn NOT clicked", "error");
         return res;
@@ -404,10 +402,10 @@ module.exports = {
 
     clickAccessKeyBtn: function () {
         logger.logInto(stackTrace.get());
-        res = action.click(this.accessKeyBtn);
+        let res = action.click(this.accessKeyBtn);
         if (res == true) {
             logger.logInto(stackTrace.get(), " --Access Key Btn clicked");
-            res = action.waitForDisplayed(this.activateButton) 
+            res = action.waitForDisplayed(this.activateButton)
         } else
             logger.logInto(stackTrace.get(), " --Access Key Btn NOT clicked", "error");
         return res;
@@ -415,7 +413,7 @@ module.exports = {
 
     clickCloseButton: function () {
         logger.logInto(stackTrace.get());
-        res = action.click(this.closeBtn);
+        let res = action.click(this.closeBtn);
         if (res == true) {
             logger.logInto(stackTrace.get(), " --Close Btn clicked");
             res = action.waitForDisplayed(this.closeBtn, undefined, true);
@@ -447,7 +445,7 @@ module.exports = {
             selectPlanSubHeading: (action.getElementCount(this.selectPlanSubHeading) > 0) ? action.getText(this.selectPlanSubHeading) : null,
             upgradeToPremium: (action.getElementCount(this.upgradeToPremiumBtn) > 0) ? action.getText(this.upgradeToPremiumBtn) : null,
             closeBtn: (action.getElementCount(this.closeBtn) > 0) ? action.waitForDisplayed(this.closeBtn) : null
-            
+
         }
         logger.logInto(stackTrace.get(), JSON.stringify(obj));
         return obj;
