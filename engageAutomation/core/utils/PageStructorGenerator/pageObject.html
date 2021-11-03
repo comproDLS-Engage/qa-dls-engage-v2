@@ -1,0 +1,180 @@
+
+<html>
+
+<head>
+    <title>Simple Page Generator</title>
+    <style>
+        .prompt {
+            font-size: 16px;
+            color: brown;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .container {
+            display: block;
+            position: relative;
+            padding-left: 800px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            font-size: 22px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        .container4 {
+            display: block;
+            position: relative;
+            margin-bottom: 12px;
+            cursor: pointer;
+            font-size: 18px;
+            left: 800px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .container3 {
+            display: block;
+            position: relative;
+            padding-left: 135px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            font-size: 22px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .container2 {
+            display: block;
+            position: relative;
+            padding-left: 900px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            font-size: 22px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .left-pane {
+            width: 50%;
+            float: left;
+        }
+
+        .container1 {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .button {
+            background-color: #f44336;
+            /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+        .right-pane {
+            width: 50%;
+            float: right;
+        }
+
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 25px;
+            width: 25px;
+            background-color: #eee;
+        }
+
+        .submit-name {
+            background-color: #4CAF50;
+            /* Green */
+            border: none;
+            left:600px;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style=" text-align: center; color: blue;" > Page Object Generator</h1>
+
+    <form method='GET' action="/getvalue">
+        <div class="container3">
+
+            <div class="container1">
+                <div class="prompt left-pane">
+                    <span>
+                        <h2>Please give the name of Page object</h2>
+                    </span>
+              
+                <input class="container3" type="text" id="inputFile" name="inputFile" />
+            </div>
+        </div>
+        <div class="prompt container4">
+            <span>
+                <h2>Generate Page Object</h2>
+            </span>
+</div>
+<div>
+    <label class="container"><input name="selectorJson" type="checkbox" value="selectorJson" checked="checked">selectorJson</label>
+</div>
+            <div>
+                <label class="container"><input name="pageHeader" type="checkbox" value="pageHeader" checked="checked">pageHeader</label>
+            </div>
+            <div>
+                <label class="container2"><input name="baseAction" type="checkbox"
+                        value="baseAction" checked="checked">baseAction</label>
+            </div>
+            <div>
+                <label class="container2"><input name="selectorFile" type="checkbox"
+                        value="selectorFile" checked="checked">selectorFile</label>
+            </div>
+            <div>
+                <label class="container"><input name="selectorDeclartion" type="checkbox"
+                        value="selectorDeclartion" checked="checked">selectorDeclartion</label>
+            </div>
+            <div>
+                <label class="container "><input name="isInitialized" type="checkbox"
+                        value="isInitialized" checked="checked">isInitialized</label>
+            </div>
+            <div>
+                <label class="container2"><input name="appShellPage" type="checkbox"
+                        value="appShellPage" checked="checked">appShellPage</label>
+            </div>
+            <div>
+                <label class="container"><input name="getData" type="checkbox" value="getData" checked="checked">getData</label>
+            </div>
+            <div>
+                <label class="container"><input name="clickFunction" type="checkbox" value="clickFunction" checked="checked">clickFunction</label>
+            </div>
+            <div>
+                <label class="container"><input name="setValueFunction" type="checkbox" value="setValueFunction" checked="checked">setValueFunction</label>
+            </div>
+        </div>
+        <button class="submit-name container">Click for Generate Page</button>
+
+        </div>
+    </form>
+</body>
+
+</html>
