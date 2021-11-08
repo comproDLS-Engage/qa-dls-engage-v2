@@ -1,14 +1,12 @@
 {
-  "header": 
-    {
-      "baseAction": "var action = require('../../core/actionLibrary/baseActionLibrary.js');\n",
-      "selectorFile": "var selectorFile = jsonParserUtil.jsonParser(selectorDir);"
- },
-  "isInitialized": 
-    {
-      "appShellPage": " appShellPage:appShellPage.isInitialized()",
-      "appShellPageDeclartion": "\nvar appShellPage = require('./appShell.page.js');"
-    },
+  "header": {
+    "baseAction": "var action = require('../../core/actionLibrary/baseActionLibrary.js');\n",
+    "selectorFile": "var selectorFile = jsonParserUtil.jsonParser(selectorDir);"
+  },
+  "isInitialized": {
+    "appShellPage": " appShellPage:appShellPage.isInitialized()",
+    "appShellPageDeclartion": "\nvar appShellPage = require('./appShell.page.js');"
+  },
   "getDataFunctions": [],
   "clickFunctions": [
     {
@@ -17,4 +15,6 @@
       "bookDetailPage": "const bookDetailPage: require('./bookDetail.page.js').isInitialized();"
     }
   ]
+  
+  
 }

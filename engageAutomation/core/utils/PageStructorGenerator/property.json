@@ -1,0 +1,36 @@
+{
+    "elements": {
+        "button": "group1",
+        "p": "group2",
+        "h1": "group2",
+        "h2": "group2",
+        "a": "group3",
+        "icon": "group2"
+    },
+    "cssProperty": {
+        "group1": [
+            "font-size",
+            "font-weight",
+            "color",
+            "line-height",
+            "font-family",
+            "text-decoration-line",
+            "back-ground-color"
+        ],
+        "group2": [
+            "font-size",
+            "font-weight",
+            "color",
+            "line-height",
+            "font-family"
+        ],
+        "group3": [
+            "font-size",
+            "font-weight",
+            "color",
+            "line-height",
+            "font-family",
+            "text-decoration-line"
+        ]
+    }
+}
