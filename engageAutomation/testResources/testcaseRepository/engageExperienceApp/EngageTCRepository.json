@@ -1979,6 +1979,12 @@
                 "description": "Validate that clicking on Confirm button on Reset Default Settings Modal resets the applied settings to default behavior.",
                 "tags": "P1",
                 "visualTest": "-"
+            },
+            {
+                "id": "ENG_SETT_TC_54",
+                "description": "Validate that clicking on Reset Default Settings button Reset Default Settings pop up is launched.",
+                "tags": "P1",
+                "visualTest": "-"
             }
 
         ]

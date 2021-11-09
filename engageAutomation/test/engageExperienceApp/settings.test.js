@@ -19,7 +19,10 @@ module.exports = {
         sts = appShellPage.selectTab(testdata[0].tabList[0])
         assertion.assertEqual(sts, true, "Profile Tab Not Clicked: ")
 
-        //we should call getSettingsPageData() and check selectedTab in the response - Akhil
+        sts = settingsPage.getSettingsPageData()
+        assertion.typeOf(sts, 'object', new Error(sts));
+        assertion.assertEqual(sts.selectedTab, testdata[0].tabList[0], "Settings Page Profile Tab Not Selected: ")
+
         sts = settingsPage.getProfileTabData()
         //console.log(sts)
         assertion.typeOf(sts, 'object', new Error(sts));
@@ -34,7 +37,10 @@ module.exports = {
         sts = appShellPage.selectTab(testdata.tabList[1])
         assertion.assertEqual(sts, true, "Password Tab Not Clicked: ")
 
-        //we should call getSettingsPageData() and check selectedTab in the response - Akhil
+        sts = settingsPage.getSettingsPageData()
+        assertion.typeOf(sts, 'object', new Error(sts));
+        assertion.assertEqual(sts.selectedTab, testdata.tabList[1], "Settings Page Password Tab Not Selected: ")
+
         sts = settingsPage.getPasswordTabData()
         //console.log(sts)
         assertion.typeOf(sts, 'object', new Error(sts));
@@ -50,7 +56,10 @@ module.exports = {
         sts = appShellPage.selectTab(testdata.tabList[2])
         assertion.assertEqual(sts, true, "Password Tab Not Clicked: ")
 
-        //we should call getSettingsPageData() and check selectedTab in the response - Akhil
+        sts = settingsPage.getSettingsPageData()
+        assertion.typeOf(sts, 'object', new Error(sts));
+        assertion.assertEqual(sts.selectedTab, testdata.tabList[2], "Settings Page Accessibility Tab Not Selected: ")
+
         sts = settingsPage.getAccessibilityTabData()
         //console.log(sts)
         assertion.typeOf(sts, 'object', new Error(sts));
@@ -413,29 +422,36 @@ module.exports = {
         assertion.assertEqual(sts, testdata.update, "Snackbar Messsage Mismatch: ")
     },
 
+
+
     //Validate that clicking on Confirm button on Reset Default Settings Modal resets the applied settings to default behavior.
     // this testcase should be split into 2 TCs - Akhil
 
     ENG_SETT_TC_40: function (testdata) {
-        sts = settingsPage.click_resetButton()
-        assertion.assertEqual(sts.resetSettingsTitle, testdata[0].resetSettingsTitle, "Reset Settings Title Mismatch")
-        assertion.assertEqual(sts.resetSettingsSubTitle, testdata[0].resetSettingsSubTitle, "Reset Settings SubTitle Mismatch")
-        assertion.assertEqual(sts.resetSettingsCancelBtn, testdata[0].resetSettingsCancelBtn, "Reset Settings Modal Cancel Button Mismatch")
-        assertion.assertEqual(sts.resetSettingsConfirmBtn, testdata[0].resetSettingsConfirmBtn, "Reset Settings Modal Confirm Button Mismatch")
 
         sts = settingsPage.click_resetSettingsConfirmBtn()
         assertion.assertEqual(sts, true, "Confirm Button Not Clicked ")
         sts = snackBarTest.get_Snackbar_Message_Text();
-        assertion.assertEqual(sts, testdata[2].update, "Snackbar Messsage Mismatch: ")
+        assertion.assertEqual(sts, testdata[1].update, "Snackbar Messsage Mismatch: ")
 
         sts = settingsPage.getCssPropertyData()
-        assertion.assertEqual(sts.resetButton_lineHeight, testdata[1].resetButton_lineHeight, "Reset Button line Height Mismatch: ")
-        assertion.assertEqual(sts.applySettingsBtn_fontSize, testdata[1].applySettingsBtn_fontSize, "Apply Settings Btn Font Size Mismatch: ")
-        assertion.assertEqual(sts.moreDetailsBtn_textDecoration, testdata[1].moreDetailsBtn_textDecoration, "More Details Btn Link Text Decoration Mismatch: ")
+        assertion.assertEqual(sts.resetButton_lineHeight, testdata[0].resetButton_lineHeight, "Reset Button line Height Mismatch: ")
+        assertion.assertEqual(sts.applySettingsBtn_fontSize, testdata[0].applySettingsBtn_fontSize, "Apply Settings Btn Font Size Mismatch: ")
+        assertion.assertEqual(sts.moreDetailsBtn_textDecoration, testdata[0].moreDetailsBtn_textDecoration, "More Details Btn Link Text Decoration Mismatch: ")
 
-        assertion.assertEqual(sts.pageHeading_lineHeight, testdata[1].pageHeading_lineHeight, "Page Heading line Height Mismatch: ")
-        assertion.assertEqual(sts.pageHeading_font, testdata[1].pageHeading_font, "Page Heading Font Mismatch: ")
-        assertion.assertEqual(sts.pageHeading_fontSize, testdata[1].pageHeading_fontSize, "Page Heading Font Size Mismatch: ")
+        assertion.assertEqual(sts.pageHeading_lineHeight, testdata[0].pageHeading_lineHeight, "Page Heading line Height Mismatch: ")
+        assertion.assertEqual(sts.pageHeading_font, testdata[0].pageHeading_font, "Page Heading Font Mismatch: ")
+        assertion.assertEqual(sts.pageHeading_fontSize, testdata[0].pageHeading_fontSize, "Page Heading Font Size Mismatch: ")
+
+    },
+
+    //Validate that clicking on Reset Default Settings button Reset Default Settings pop up is launched
+    ENG_SETT_TC_54: function (testdata) {
+        sts = settingsPage.click_resetButton()
+        assertion.assertEqual(sts.resetSettingsTitle, testdata.resetSettingsTitle, "Reset Settings Title Mismatch")
+        assertion.assertEqual(sts.resetSettingsSubTitle, testdata.resetSettingsSubTitle, "Reset Settings SubTitle Mismatch")
+        assertion.assertEqual(sts.resetSettingsCancelBtn, testdata.resetSettingsCancelBtn, "Reset Settings Modal Cancel Button Mismatch")
+        assertion.assertEqual(sts.resetSettingsConfirmBtn, testdata.resetSettingsConfirmBtn, "Reset Settings Modal Confirm Button Mismatch")
 
     }
 };

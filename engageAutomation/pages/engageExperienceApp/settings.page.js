@@ -542,8 +542,16 @@ module.exports = {
         return res;
     },
 
-    //add function for cancel button - Akhil
     click_resetSettingsCancelBtn: function () {
+        let res;
+        logger.logInto(stackTrace.get());
+        res = action.click(this.resetSettingsCancelBtn);
+        if (true == res) {
+            logger.logInto(stackTrace.get(), " Cancel button is clicked");
+        } else {
+            logger.logInto(stackTrace.get(), res, 'error');
+        }
+        return res;
 
     }
 
