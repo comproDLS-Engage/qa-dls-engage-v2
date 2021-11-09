@@ -1,7 +1,7 @@
 {
   "appname": "comproDLS Engage",
   "appdetails": "",
-  "selectorFile": "./core/selectors/experienceApp/engageSelectors.json",
+  "selectorFile": "./testResources/selectors/engageExperienceApp/engageSelectors.json",
   "modules": [
     {
       "modulename": "Difusion UI Temp",

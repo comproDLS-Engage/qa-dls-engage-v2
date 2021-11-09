@@ -200,12 +200,12 @@
                 "joinClassbtn": "[data-tid=button-joincourse]",
                 "joinClassHeader": "[data-tid=text-joinaclass]",
                 "joinClassSubHeader": "[data-tid=text-enterclasskeybyinstructor]",
-                "enterClassCodeLabel": "label[class*='onboardingApp-MuiInputLabel-root']",
+                "enterClassCodeLabel": "[data-tid=text-enterclasskey]",
                 "classCodeInput": "#class-key-input",
                 "classHelpText": "#class-key-input-helper-text",
                 "joinclassPopUpbtn": "[data-tid=button-continue]",
                 "helpJoiningClass": "[data-tid=anchor-skip]",
-                "closebtn": "div[role=\"dialog\"] button[tabindex=\"0\"]>svg"
+                "closebtn": "[data-tid=button-joincourseclose]"
             },
             "createClassPage":
             {

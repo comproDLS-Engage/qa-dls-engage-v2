@@ -1,0 +1,20 @@
+{
+  "header": {
+    "baseAction": "var action = require('../../core/actionLibrary/baseActionLibrary.js');\n",
+    "selectorFile": "var selectorFile = jsonParserUtil.jsonParser(selectorDir);"
+  },
+  "isInitialized": {
+    "appShellPage": " appShellPage:appShellPage.isInitialized()",
+    "appShellPageDeclartion": "\nvar appShellPage = require('./appShell.page.js');"
+  },
+  "getDataFunctions": [],
+  "clickFunctions": [
+    {
+      "dashboardPage": "const dashBoradPage: require('./dashboard.page.js').isInitialized();",
+      "createClassPage": "const createClassPage: require('./createClass.page.js').isInitialized();",
+      "bookDetailPage": "const bookDetailPage: require('./bookDetail.page.js').isInitialized();"
+    }
+  ]
+  
+  
+}
