@@ -208,7 +208,7 @@ function generateGetDatafunction(pageSelectorFile, key) {
             }
         }
     }
-    file.write("}\n return obj \n},\n\n")
+    file.write("}\n return obj; \n},\n\n")
     listDataGenerate1(pageSelectorFile);
 }
 
@@ -239,7 +239,7 @@ function generategetCssPropertyData(pageSelectorFile, key, cssProperty) {
                 }
             }
 
-            file.write("}\n return obj \n},\n\n")
+            file.write("}\n return obj; \n},\n\n")
         }
     }
 
@@ -275,13 +275,14 @@ function generategetCssPropertyData(pageSelectorFile, key, cssProperty) {
         for (var i = 0; i < pageSelectorFile.length; i++) {
             if (((pageSelectorFile[i].extraInfo).toLowerCase().includes("pattern"))) {
                 file.write(pageSelectorFile[i].Label + "_Data: function ()\n {\n")
+                file.write("logger.logInto(stackTrace.get());\n")
                 file.write("var i, list;\n" +
                     "var " + pageSelectorFile[i].Label + "_Arr = [];\n" +
                     "list = action.findElements(this." + pageSelectorFile[i].Label + ");\n" +
                     "for (i = 0; i < list.length; i++) {\n" +
                     pageSelectorFile[i].Label + "_Arr[i] = action.getText(list[i])\n" +
                     "}\n" +
-                    "logger.logInto(stackTrace.get(), componentArr);\n" +
+                    "logger.logInto(stackTrace.get(), "+ pageSelectorFile[i].Label + "_Arr);\n" +
                     "return " + pageSelectorFile[i].Label + "_Arr;\n},\n\n")
             }
 
@@ -340,9 +341,9 @@ function generategetCssPropertyData(pageSelectorFile, key, cssProperty) {
     function generateSetValueFunctions(pageSelectorFile) {
         for (var i = 0; i < pageSelectorFile.length; i++) {
             if ((pageSelectorFile[i].tagName).toLowerCase().includes("input") || (pageSelectorFile[i].tagName).toLowerCase().includes("textarea")) {
-                file.write("\nset_" + pageSelectorFile[i].Label + ": function (testdata)" + "{\nvar res;\n" +
-                    "\n logger.logInto(stackTrace.get());\n" +
-                    "res = action.setValue(this." + pageSelectorFile[i].Label + ",testdata);\n" +
+                file.write("\nset_" + pageSelectorFile[i].Label + ": function (value)" + "{\nvar res;" +
+                    "\nlogger.logInto(stackTrace.get());\n" +
+                    "res = action.setValue(this." + pageSelectorFile[i].Label + ",value);\n" +
                     "if (true == res) {\nlogger.logInto(stackTrace.get(), \"Value is entered in " + pageSelectorFile[i].Label + "\");\n}" +
                     "else {\nlogger.logInto(stackTrace.get(), res, 'error');\n}\n" +
                     "return res;\n},\n")
@@ -384,7 +385,7 @@ function generategetCssPropertyData(pageSelectorFile, key, cssProperty) {
                     file.write(pageSelectorFile[i].Label + ":(action.getElementCount(this." + pageSelectorFile[i].Label + ") > 0) ? action.getText(this." + pageSelectorFile[i].Label + ") : null,\n");
             }
         }
-        file.write("}\n return obj \n},\n\n")
+        file.write("}\n return obj; \n},\n\n")
         listDataGenerate1(pageSelectorFile);
     }
     function dataPatternGenerateWithParent(groupSelectorData, groupName, key) {
@@ -430,11 +431,11 @@ function generategetCssPropertyData(pageSelectorFile, key, cssProperty) {
 
                 }
             }
-            file.write("}else{ ")
+            file.write("}else{\n ")
         }
 
 
-        file.write(" \nfor (var i=0;i<=list.length;i++){\n obj[i] = {\n")
+        file.write("for (var i=0;i<=list.length;i++){\n obj[i] = {\n")
         for (var i = 0; i < groupSelectorData.length; i++) {
 
             if ((groupSelectorData[i].extraInfo).toLowerCase().includes("pattern")){
@@ -459,5 +460,5 @@ function generategetCssPropertyData(pageSelectorFile, key, cssProperty) {
             }
         }
         //file.write("}\n")
-        file.write("return obj \n},\n\n")
+        file.write("return obj; \n},\n\n")
     }
