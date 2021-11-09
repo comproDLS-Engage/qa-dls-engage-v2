@@ -370,7 +370,7 @@ function generategetCssPropertyData(pageSelectorFile, key, cssProperty) {
     }
 
     function dataPatternGenerate(pageSelectorFile, groupName) {
-        file.write("getData_" + groupName + "_Group: function ()\n{\n")
+        file.write("getData_" + groupName + ": function ()\n{\n")
         file.write("logger.logInto(stackTrace.get());\n")
         file.write("var obj;\n")
         file.write("obj = {\n")
@@ -397,9 +397,9 @@ function generategetCssPropertyData(pageSelectorFile, key, cssProperty) {
             }
         }
         if (selectedText)
-            file.write("getData_" + groupName + "_Group: function (" + selectedText + "Name)\n{\n")
+            file.write("getData_" + groupName + ": function (" + selectedText + "Name)\n{\n")
         else
-            file.write("getData_" + groupName + "_Group: function ()\n{\n")
+            file.write("getData_" + groupName + ": function ()\n{\n")
         file.write("logger.logInto(stackTrace.get());\n")
         file.write("var obj;\n")
         file.write("action.waitForDisplayed(this." + groupSelectorData[key].Label + ");\n" +
