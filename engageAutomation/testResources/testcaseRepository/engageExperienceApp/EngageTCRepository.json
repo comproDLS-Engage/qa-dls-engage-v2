@@ -348,6 +348,12 @@
           "description": "",
           "tags": "P1",
           "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_58",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
         }
       ]
     },
@@ -1772,7 +1778,7 @@
         }
       ]
     },
-    {
+     {
         "modulename": "Settings",
         "moduledetails": "",
         "testFile": "./test/engageExperienceApp/settings.test.js",
@@ -1886,6 +1892,12 @@
                 "visualTest": "-"
             },
             {
+                "id": "ENG_SETT_TC_19",
+                "description": "Validate clicking on toggle password eye button displays the Password",
+                "tags": "P1",
+                "visualTest": "-"
+            },
+            {
                 "id": "ENG_SETT_TC_23",
                 "description": "Validate that font size of the application is updated when the Font Size is increased.",
                 "tags": "P1",
@@ -1936,6 +1948,12 @@
             {
                 "id": "ENG_SETT_TC_40",
                 "description": "Validate that clicking on Confirm button on Reset Default Settings Modal resets the applied settings to default behavior.",
+                "tags": "P1",
+                "visualTest": "-"
+            },
+            {
+                "id": "ENG_SETT_TC_54",
+                "description": "Validate that clicking on Reset Default Settings button Reset Default Settings pop up is launched.",
                 "tags": "P1",
                 "visualTest": "-"
             }

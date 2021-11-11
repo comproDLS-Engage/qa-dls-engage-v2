@@ -293,6 +293,13 @@
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
                 "visualTolerance": 0.08,
                 "testData": []
+            },
+            {
+                "id": "ENG_DIF_TC_58",
+                "description": "View billing tab on Settings page",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.08,
+                "testData": []
             }
         ],
         "AfterEach": [],
@@ -490,6 +497,20 @@
                 "description": "Classes page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
                 "visualTolerance": 0.1,
+                "testData": []
+            },
+            {
+                "id": "ENG_DIF_TC_39",
+                "description": "View profile tab on Settings page",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.08,
+                "testData": []
+            },
+            {
+                "id": "ENG_DIF_TC_58",
+                "description": "View billing tab on Settings page",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.08,
                 "testData": []
             }
         ],
@@ -696,6 +717,13 @@
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
                 "visualTolerance": 0.08,
                 "testData": []
+            },
+            {
+                "id": "ENG_DIF_TC_58",
+                "description": "View billing tab on Settings page",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.08,
+                "testData": []
             }
         ],
         "AfterEach": [],
@@ -898,6 +926,20 @@
             {
                 "id": "ENG_DIF_TC_26",
                 "description": "Join Class page",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.08,
+                "testData": []
+            },
+            {
+                "id": "ENG_DIF_TC_39",
+                "description": "View profile tab on Settings page",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.08,
+                "testData": []
+            },
+            {
+                "id": "ENG_DIF_TC_58",
+                "description": "View billing tab on Settings page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
                 "visualTolerance": 0.08,
                 "testData": []

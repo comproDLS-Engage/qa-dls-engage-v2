@@ -710,4 +710,12 @@ module.exports = {
 		res = action.waitForDisplayed("[data-tid=text-info]");
 		console.log(res)
 	},
+
+	// View billing tab on Settings page
+	ENG_DIF_TC_58: function () {
+		res = action.click("[data-tid=button-product-3]");
+		console.log(res)
+		res = action.waitForDisplayed("main:nth-child(2) div:nth-child(1) > div:nth-child(1) > h6:nth-child(1)");
+		console.log(res)
+	},
 }
