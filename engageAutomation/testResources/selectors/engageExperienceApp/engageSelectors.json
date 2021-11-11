@@ -51,7 +51,7 @@
             "widgets":
             {
                 "loaderIcon": "[data-tid=image-loader]",
-                "snackbarInfo_txt": "[data-tid=text-info], [data-tid=text-error], [data-tid=text-success]",
+                "snackbarInfo_txt": "[data-tid=text-info] p, [data-tid=text-error], [data-tid=text-success]",
                 "snackbarClose_btn": "[data-tid=button-close]"
             },
             "appShell":
@@ -556,22 +556,24 @@
                 "insSuccess_proceedCreateClass_btn": "[data-tid=button-proceedandcreateclasses]",
                 "helper_txt": "#class-key-input-helper-text"
             },
-            "settings":
+             "settings":
             {
                 "pageTitle": "[data-tid=text-pageTitle]",
                 "pageSubTitle": "[data-tid=text-pageSubTitle]",
                 "pageHeading": "[data-tid=text-myDetailsHeading]",
                 "currentPassword_label": "[data-tid=label-currentPassword]",
                 "currentPassword_input": "[data-tid=input-currentPassword] input",
-                "button_togglepasswordvisibility": "[data-tid=button-togglepasswordvisibility]",
+                "togglePassword_currentPassword": "[data-tid=input-currentPassword] [data-tid=button-togglepasswordvisibility]  svg",
+                "togglePassword_newPassword": "[data-tid=input-password] [data-tid=button-togglepasswordvisibility]  svg",
+                "togglePassword_confirmPassword": "[data-tid=input-confirmPassword] [data-tid=button-togglepasswordvisibility]  svg",
                 "password_label": "[data-tid=label-password]",
                 "password_input": "[data-tid=input-password] input",
                 "confirmPassword_label": "[data-tid=label-confirmPassword]",
                 "confirmPassword_input": "[data-tid=input-confirmPassword] input",
-                "newPasswordRules_text": "//p[contains(text(),'Must')]",
-                "currentPasswordError_text": "//p[contains(text(),'Please')]",
-                "newPasswordError_text": "//p[contains(text(),'special character')]",
-                "confirmPasswordError_text": "//p[contains(text(),'must match')]",
+                "newPasswordRules_text": "[data-tid=text-sublabelpassword]",
+                "currentPasswordError_text": "[data-tid=text-errorcurrentPassword]",
+                "newPasswordError_text": "[data-tid=text-errorpassword]",
+                "confirmPasswordError_text": "[data-tid=text-errorconfirmPassword]",
                 "changePassword_button": "[data-tid=button-changePassword]",
                 "email_label": "[data-tid=label-email]",
                 "email_input": "[data-tid=input-email] input",
@@ -583,8 +585,8 @@
                 "country_input": "[data-tid=country] input",
                 "clearIcon": "[title=Clear]",
                 "countryListItem": "[data-option-index='0']",
-                "firstNameError_text": "//p[contains(text(),'First name is required')]",
-                "lastNameError_text": "//p[contains(text(),'Last name is required')]",
+                "firstNameError_text": "[data-tid=text-errorfirstName]",
+                "lastNameError_text": "[data-tid=text-errorinput-lastName]",
                 "changeProfile_button": "[data-tid=button-changeProfile]",
                 "fontSizeText": "[data-tid=settings-accessibilty-fontsize]",
                 "fontSizeValue": "[data-tid=text-fontSizeType]",

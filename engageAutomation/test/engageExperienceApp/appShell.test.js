@@ -142,13 +142,10 @@ module.exports = {
 	},
 
 	//Validate that clicking on the Settings button in left Navigation pane launches Settings page
-	ENG_SHELL_TC_17: function (testdata) {
+	ENG_SHELL_TC_17: function () {
 		sts = appShell.clickSettingsButton();
 		//console.log(sts);
 		assertion.typeOf(sts, 'object', new Error(sts));
-		assertion.assertEqual(sts.selectedTab, testdata.tabList[0], "Settings Page Profile Tab Not Selected: ")
-		assertion.assertEqual(sts.pageTitle, testdata.pageTitle, "Settings Page - Page Title Mismatch: ")
-		assertion.assertEqual(sts.pageSubTitle, testdata.pageSubTitle, "Settings Page - SubTitle Mismatch: ")
-		assertion.assertEqual(sts.tabsList.length, testdata.tabList.length, "Settings Page - Tabs Count Mismatch: ")
+		assertion.assertEqual(sts.pageStatus, true, "Settings Page Status Mismatch: ")
 	}
 }
