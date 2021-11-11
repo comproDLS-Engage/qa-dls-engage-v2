@@ -157,7 +157,6 @@ function generatePageHeader(PageTemplate, param1, param2, appShellPageCheck) {
 }
 
 function getDatafunction(pageSelectorFile, pageSelectorGroup, inputFile) {
-    console.log("Data function is generated")
     var groupCheck = null;
     for (var i = 1; i < pageSelectorGroup.length; i++) {
         for (let j = 0; j < pageSelectorGroup[i].length; j++) {
