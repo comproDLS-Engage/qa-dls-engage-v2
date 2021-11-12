@@ -8,7 +8,7 @@ var parse = require('csv-parse');
 var parser = parse({ columns: true }, function (err, records) {
     pageSelectorFile = records;
 });
-fs.createReadStream(__dirname + '/GlobalResources3.csv').pipe(parser);
+fs.createReadStream(__dirname + '/flipbook1.csv').pipe(parser);
 
 
 //use the application off of express.
@@ -307,83 +307,7 @@ function listDataGenerate1(pageSelectorFile) {
     }
 }
 
-function generateClickFunctions1(pageSelectorFile, key, pageSelectorGroup) {
-    var selectedText = null, i = 0;
 
-    for (var k = 0; k < pageSelectorFile.length; k++) {
-        selectedText = null;
-        // console.log((pageSelectorFile[k].Label))
-        i++;
-        while (i < pageSelectorGroup.length) {
-            if (((pageSelectorFile[k].extraInfo).toLowerCase().includes("pattern")) && ((pageSelectorFile[k].tagName).toLowerCase().includes("button"))) {
-                //   var groupName = pkageSelectorFile[i].group
-                //   console.log("dsfsdf")
-                // console.log(pageSelectorGroup.length)
-
-                // console.log("group" + pageSelectorGroup[i].length)
-                for (var j = 0; j < pageSelectorGroup[i].length; j++) {
-                    // console.log(pageSelectorGroup[i][j].Label)
-                    //  console.log(pageSelectorGroup[i][j].relation)
-                    if (((pageSelectorGroup[i][j].relation).toLowerCase().includes("condition"))) {
-                        selectedText = pageSelectorGroup[i][j].Label;
-                        break;
-                    }
-                }
-
-                //console.log("rupsi" + selectedText)
-                if (selectedText == null) {
-                    for (var j = 0; j < pageSelectorGroup[i].length; j++) {
-
-                        //  console.log(pageSelectorGroup[i][j].Label)
-                        // console.log(pageSelectorGroup[i][j].relation)
-                        if (((pageSelectorGroup[i][j].relation).toLowerCase().includes("parent"))) {
-                            selectedText = pageSelectorGroup[i][j].Label;
-                            break;
-                        }
-                    }
-                }
-
-                //  console.log("mehta" + selectedText)
-                //  console.log("ccxczx" + pageSelectorFile[k].Label)
-                if (selectedText == null) {
-                    selectedText = pageSelectorFile[k].Label;
-                }
-
-
-                file.write("\nclick_" + pageSelectorFile[k].Label + ": function (" + selectedText + "Name) {\n" +
-                    "logger.logInto(stackTrace.get());\n" +
-                    "var i, list, res;\n" +
-                    "list = action.findElements(this." + pageSelectorFile[k].Label + ");\n" +
-                    "for (i = 0; i < list.length; i++) {\n" +
-                    "if ((action.getText(this." + selectedText + "+i+\"]\"))== " + selectedText + "Name) {\n " +
-                    "res = action.click(list[i]);\n" +
-                    "break;\n}\n" +
-                    "}\nif (res == true) {\n" +
-                    "logger.logInto(stackTrace.get(), \" --" + pageSelectorFile[k].Label + " clicked\");\n" +
-                    "} \nelse\n" +
-                    "logger.logInto(stackTrace.get(), \" --" + pageSelectorFile[k].Label + " NOT clicked\", \"error\")\n" +
-                    "logger.logInto(stackTrace.get(), res);\n" +
-                    "return res;\n},\n")
-
-
-                console.log("Click function write")
-            }
-
-            else {
-                if ((pageSelectorFile[k].tagName).toLowerCase().includes("button")) {
-                    file.write("\nclick_" + pageSelectorFile[k].Label + ": function () {\n" +
-                        "logger.logInto(stackTrace.get());\n" +
-                        "var res;\n" +
-                        "res = action.click(this." + pageSelectorFile[k].Label + ");\n" +
-                        "if (true == res) {\n logger.logInto(stackTrace.get(), \" " + pageSelectorFile[k].Label + " button is clicked\");\n}" +
-                        "else {\nlogger.logInto(stackTrace.get(), res, 'error');\n}\n" +
-                        "return res;\n},\n")
-                }
-            }
-            break;
-        }
-    }
-}
 function generateClickFunctions(pageSelectorFile, key, pageSelectorGroup, PageTemplate) {
     for (var k = 0; k < pageSelectorFile.length; k++) {
         if (((pageSelectorFile[k].extraInfo).toLowerCase().includes("pattern")) && ((pageSelectorFile[k].tagName).toLowerCase().includes("button")) && ((pageSelectorFile[k].group) != "")) {
@@ -413,7 +337,7 @@ function generateClickFunctions(pageSelectorFile, key, pageSelectorGroup, PageTe
                         "logger.logInto(stackTrace.get());\n" +
                         "var res;\n" +
                         "res = action.click(this." + pageSelectorFile[k].Label + ");\n" +
-                        "if (true == res) {\n logger.logInto(stackTrace.get(), \" " + pageSelectorFile[k].Label + " button is clicked\");\n")
+                        "if (true == res) {\n logger.logInto(stackTrace.get(), \" " + pageSelectorFile[k].Label + " is clicked\");\n")
                     if ((pageSelectorFile[k].returnValue) != "") {
                         if ((pageSelectorFile[k].returnValue).toLowerCase().includes(".page"))
                             file.write("res =require" + PageTemplate.returnValue[pageSelectorFile[k].returnValue] + ";\n")
@@ -422,7 +346,7 @@ function generateClickFunctions(pageSelectorFile, key, pageSelectorGroup, PageTe
 
                     }
                     file.write(
-                        "}\nelse {\nlogger.logInto(stackTrace.get(), res, 'error');\n}\n")
+                        "}\nelse {\nlogger.logInto(stackTrace.get(), res +\"" + pageSelectorFile[k].Label + " is NOT clicked\", 'error');\n}\n")
                     file.write("return res;\n},\n")
 
 
@@ -491,7 +415,7 @@ function generateSetValueFunctions(pageSelectorFile) {
                 "\nlogger.logInto(stackTrace.get());\n" +
                 "res = action.setValue(this." + pageSelectorFile[i].Label + ",value);\n" +
                 "if (true == res) {\nlogger.logInto(stackTrace.get(), \"Value is entered in " + pageSelectorFile[i].Label + "\");\n}" +
-                "else {\nlogger.logInto(stackTrace.get(), res, 'error');\n}\n" +
+                "else {\nlogger.logInto(stackTrace.get(), res + \"Value is NOT entered in " + pageSelectorFile[i].Label + "\", 'error');\n}\n" +
                 "return res;\n},\n")
         }
     }
