@@ -301,7 +301,7 @@ module.exports = {
     res = action.click(this.doublePageBtn);
     if (true == res) {
       logger.logInto(stackTrace.get(), " doublePageBtn button is clicked");
-      res = action.isDisplayed(this.pageLayoutDouble);
+      res = this.getData_flipbookPage();
     }
     else {
       logger.logInto(stackTrace.get(), res + " doublePageBtn button is not clicked", 'error');
@@ -315,7 +315,7 @@ module.exports = {
     res = action.click(this.singlePageBtn);
     if (true == res) {
       logger.logInto(stackTrace.get(), " singlePageBtn button is clicked");
-      res = action.isDisplayed(this.pageLayoutDouble);
+      res = this.getData_flipbookPage();
     }
     else {
       logger.logInto(stackTrace.get(), res + " singlePageBtn button is not clicked", 'error');
