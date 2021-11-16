@@ -1,0 +1,37 @@
+Label,cssSelector,tagName,group,relation,extraInfo,returnValue
+pageTitle,[data-tid=text-pageTitle],h1,browsePage,,,
+pageSubTitle,[data-tid=text-pageSubTitle],h2,browsePage,,,
+filtersBtn,[data-tid=button-filter],button,browsePage,,,filterMenu
+previousPageArrow,[data-tid=button-pagination-next],button,browsePage,,,browsePage
+nextPageArrow,[data-tid=button-pagination-previous],button,browsePage,,,browsePage
+currentPage,[data-tid*=button-pagination][aria-current=true],div,browsePage,,,
+searchBox,[data-tid=input-autocomplete-searchtextbox] input,input,browsePage,,,
+searchIcon,[data-tid=icon-autocomplete-search],svg,browsePage,,,
+resourceCategory,[data-tid*=text-seaction-heading],h2,resourceCategory,parent,pattern,
+viewAllBtn,[data-tid*=btn-viewAll],button,resourceCategory,,pattern,resourceCategory
+moreOptionsBtn,[data-tid*=button-contextMenu],button,resourceList,,pattern,moreOptions
+cardTitle,[data-tid*=text-cardTitl],p,resourceList,condition,pattern,
+cardSubTitle,[data-tid*=text-CardSubtile],p,resourceList,,pattern,
+cardImage,[data-tid*=image-card],img,resourceList,parent,pattern,
+cardLockIcon,[data-tid*=icon-locked],svg,resourceList,,pattern,
+viewOption,[data-tid*=menu-view],button,moreOptions,,,
+addToPlaylistOption,[data-tid*=menu-add-to-playlist],button,moreOptions,,,addToPlaylist
+shareOption,[data-tid*=menu-share],button,moreOptions,,,
+listOfPlaylist,"[data-tid*=menu-addToNewPlaylist],[data-tid*=menu-addToPlaylist]",button,addToPlaylist,,pattern,
+searchList,[data-tid*=list-item-]:not([data-tid=list-item-show-more-result]) > p,button,searchList,,pattern,browsePage
+showMoreResults,[data-tid=list-item-show-more-result],button,searchList,,,browsePage
+noResultListItemTitle,[data-tid=text-title-no-search-result-found],h6,searchList,,,
+noResultListItemSubtitle,[data-tid=text-subtitle-no-search-result-found],p,searchList,,,
+clearSearch,[data-tid=icon-close-serach],button,browsePage,,,browsePage
+searchCount,[data-tid=label-search-result],p,browsePage,,,
+search_NoResult_img,[data-tid=icon-nostudent],img,searchNoResults,,,
+search_NoResult_title,[data-tid=text-noResultFound],h5,searchNoResults,,,
+search_NoResult_subTitle,[data-tid=text-noResultFoundBilinear],p,searchNoResults,,,
+searchPill,[data-tid=chip-search],div,browsePage,,,
+closeSearchPill,[class*=Chip-deleteIcon],button,,,,browsePage
+goToPage,[data-tid=button-pagination-,button,,,,browsePage
+filterMenuTitle,[data-tid=filtermenu-title-filters],h6,filterMenu,,,
+filterMenuCloseBtn,[data-tid=filtermenu-button-cancel],button,filterMenu,,,
+filterMenuFilterCount,[data-tid=filtermenu-text-applied-filter-count],p,filterMenu,,,
+filterMenuClearAllBtn,[data-tid=btn-filtermenu-label-clearall],button,filterMenu,,,
+filterMenuApplyBtn,[data-tid=button-apply-filter],button,filterMenu,,,
