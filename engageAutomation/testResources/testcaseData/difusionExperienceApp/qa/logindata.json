@@ -31,25 +31,34 @@
                     "class": [],
                     "info": {}
                 },
-                 "validStudent3": {
+                "validStudent3": {
                     "email": "dev1_studentAutomation@yopmail.com",
                     "password": "Compro@1234",
                     "role": "student",
                     "name": "student automation",
-                    "class": [
-                    ],
+                    "class": [],
                     "info": {}
+                },
+                "validStudent4": {
+                    "email": "gudacivoto-4427@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "student",
+                    "name": "QAStudent4",
+                    "class": [],
+                    "country": "",
+                    "info": "Automation User.Do Not Touch."
                 },
                 "acceptanceteacher": {
                     "email": "acceptanceTeacher@yopmail.com",
                     "password": "Compro@1234",
                     "role": "student",
                     "name": "acceptance Teacher",
-                    "class": [  
+                    "class": [
                         {
                             "key": "TFbA-6AP7",
                             "name": "acceptanceClass"
-                        }],
+                        }
+                    ],
                     "info": {}
                 },
                 "acceptanceStudent": {
@@ -57,36 +66,29 @@
                     "password": "Compro@1234",
                     "role": "student",
                     "name": "acceptance student",
-                    "class": [  
+                    "class": [
                         {
                             "key": "TFbA-6AP7",
                             "name": "acceptanceClass"
-                        }],
+                        }
+                    ],
                     "info": {}
                 },
-                 "successfulStudentUser":
-                {
+                "successfulStudentUser": {
                     "email": "difusionqa.stud6@yopmail.com",
                     "password": "Compro@1234",
                     "role": "student",
                     "name": "difusionqa.stud6",
-                    "class": [
-
-                    ],
-                    "info":
-                    {}
+                    "class": [],
+                    "info": {}
                 },
-                "successfulInstructorUser":
-                {
+                "successfulInstructorUser": {
                     "email": "difusionqa.teach46@yopmail.com",
                     "password": "Compro@1234",
                     "role": "student",
                     "name": "difusionqa teach46",
-                    "class": [
-
-                    ],
-                    "info":
-                    {}
+                    "class": [],
+                    "info": {}
                 },
                 "invalidUser1": {
                     "email": "etirrase@yopmail",
@@ -137,7 +139,7 @@
                     "role": "instructor",
                     "name": "teacher 3",
                     "courses": [],
-                    "country":"Cuba",
+                    "country": "Cuba",
                     "info": "freash user without books or classes"
                 },
                 "validInstructorUser3": {
@@ -146,8 +148,17 @@
                     "role": "instructor",
                     "name": "teacher 5",
                     "courses": [],
-                    "country":"Cuba",
+                    "country": "Cuba",
                     "info": "Accessibility Settings User.Do Not Touch."
+                },
+                "validInstructorUser4": {
+                    "email": "durazoroma-2856@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "instructor",
+                    "name": "QATeacher4",
+                    "courses": [],
+                    "country": "",
+                    "info": "Automation User.Do Not Touch."
                 },
                 "NoClassInstructor": {
                     "email": "noclassinstructornew@yopmail.com",
@@ -203,7 +214,8 @@
                         {
                             "key": "TFbA-6AP7",
                             "name": "class3"
-                        }],
+                        }
+                    ],
                     "info": {}
                 }
             }
