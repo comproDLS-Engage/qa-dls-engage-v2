@@ -718,4 +718,123 @@ module.exports = {
 		res = action.waitForDisplayed("main:nth-child(2) div:nth-child(1) > div:nth-child(1) > h6:nth-child(1)");
 		console.log(res)
 	},
+
+	// --------------------------------- Test cases for Native LO and Avallain LO --------------------------------- //
+	// ------------------------------------------------------------------------------------------------------------ //
+	// Launch native LO
+	ENG_DIF_TC_999: function () {
+		res = action.click("[data-tid=button-class-0]");
+		console.log(res)
+		res = action.waitForDisplayed("[data-tid=image-chapter-0]");
+		console.log(res)
+		res = action.click("[data-tid=button-product-4]");
+		console.log(res)
+		res = action.click("[data-tid=button-chapter-0]");
+		console.log(res)
+		res = action.waitForDisplayed("[data-tid=image-unit-thumbnail-0]");
+		console.log(res)
+		res = action.click("[data-tid=button-item-0-0]");
+		console.log(res)
+		res = action.waitForDisplayed("iframe");
+		console.log(res)
+		res = action.findElements("iframe");
+		res = action.switchToFrame(res[0]);
+		console.log(res)
+		res = action.waitForDisplayed("[id=player-container]");
+		console.log(res)
+	},
+
+	// Perform question1
+	ENG_DIF_TC_998: function () {
+		res = action.click("[data-tid*=input-click-option-sub-question-1-O1]");
+		console.log(res)
+		res = action.click("[data-tid*=input-click-option-sub-question-2-O2]");
+		console.log(res)
+		res = action.switchToParentFrame();
+		console.log(res)
+		res = action.click("[data-tid=button-checkAnswers]");
+		console.log(res)
+		res = action.click("[data-tid=button-goNext]");
+		console.log(res)
+		res = action.waitForClickable("[data-tid=button-goPrev]");
+		console.log(res)
+		res = action.click("[data-tid=button-goPrev]");
+		console.log(res)
+	},
+
+	// Perform question2
+	ENG_DIF_TC_997: function () {
+		res = action.click("[data-tid=button-goNext]");
+		console.log(res)
+		res = action.findElements("iframe");
+		res = action.switchToFrame(res[0]);
+		console.log(res)
+		res = action.setValue("[data-tid*=input-response-A] input", "caterpillar");
+		console.log(res)
+		res = action.switchToParentFrame();
+		console.log(res)
+		res = action.click("[data-tid=button-goNext]");
+		console.log(res)
+		res = action.waitForClickable("[data-tid=button-goPrev]");
+		console.log(res)
+		res = action.click("[data-tid=button-goPrev]");
+		console.log(res)
+	},
+
+	// Perform question3
+	ENG_DIF_TC_996: function () {
+		res = action.click("[data-tid=button-goNext]");
+		console.log(res)
+		res = action.findElements("iframe");
+		res = action.switchToFrame(res[0]);
+		console.log(res)
+		res = action.dragAndDrop2("[data-tid=dragsource-option-O3]", "[data-tid=droptarget-option-C]");
+		console.log(res)
+		res = action.switchToParentFrame();
+		console.log(res)
+		res = action.click("[data-tid=button-checkAnswers]");
+		console.log(res)
+		res = action.waitForClickable("[data-tid=button-goPrev]");
+		console.log(res)
+		res = action.click("[data-tid=button-goPrev]");
+		console.log(res)
+		res = action.click("[data-tid=button-goNext]");
+		console.log(res)
+	},
+
+	// Submit activity and relaunch
+	ENG_DIF_TC_995: function () {
+		res = action.click("[data-tid=button-submitActivity]");
+		console.log(res)
+		res = action.click("[data-tid=breadcrumb-productTitle]");
+		console.log(res)
+		res = action.click("[data-tid=button-item-0-0]");
+		console.log(res)
+		res = action.waitForDisplayed("iframe");
+		console.log(res)
+		res = action.findElements("iframe");
+		res = action.switchToFrame(res[0]);
+		console.log(res)
+		res = action.waitForDisplayed("[id=player-container]");
+		console.log(res)
+		res = action.switchToParentFrame();
+		console.log(res)
+	},
+
+	// Reset and go back
+	ENG_DIF_TC_994: function () {
+		res = action.click("[data-tid=button-retakeActivity]");
+		console.log(res)
+		res = action.waitForDisplayed("iframe");
+		console.log(res)
+		res = action.findElements("iframe");
+		res = action.switchToFrame(res[0]);
+		console.log(res)
+		res = action.waitForDisplayed("[id=player-container]");
+		console.log(res)
+		res = action.switchToParentFrame();
+		console.log(res)
+		res = action.click("[data-tid=breadcrumb-productTitle]");
+		console.log(res)
+	}
 }
