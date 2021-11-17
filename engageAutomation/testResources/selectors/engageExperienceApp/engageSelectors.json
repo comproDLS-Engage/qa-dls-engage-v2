@@ -615,7 +615,7 @@
                 "resetSettingsCancelBtn": "[data-tid=button-secondary-reset-user-settings]",
                 "resetSettingsConfirmBtn": "[data-tid=button-primary-reset-user-settings]"
             },
-            "flipbook.page": {
+            "flipbook": {
                 "readerContainerWrapper": "[id='reader-container-wrapper']",
                 "pageLayoutDouble": "[id=readerpagedivB][class*=display-none]",
                 "notesDockContainer": "[id=dock-container] > [id=dialog-notes]",
