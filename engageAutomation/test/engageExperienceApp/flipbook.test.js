@@ -7,28 +7,26 @@ module.exports = {
 	//Validate that flipbook is launched (Desktop)
 	ENG_FLIP_TC_1: function () {
 		sts = flipbook.isInitialized();
-		assertion.assertEqual(sts, true, "flipbook status mismatch");
-		// assertion.assertEqual(sts.pageData.readerContainer, testdata.doublelayoutWidth, "Double Layout width text mismatch");
-		// assertion.assertEqual(sts.pageData.notesBtn, true, "notes button does not exist");
-		// assertion.assertEqual(sts.pageData.annotationsBtn, true, "Annotations button Button does not exist");
-		// assertion.assertEqual(sts.pageData.zoomInBtn, true, "zoom in button button does not exist");
-		// assertion.assertEqual(sts.pageData.zoomOutBtn, true, "zoom out button does not exist");
-		// assertion.assertEqual(sts.pageData.fitToScreenBtn, true, "fit to screen mismatch");
-		// assertion.assertEqual(sts.pageData.doublePageBtn, true, "double page button does not exist");
-		// assertion.assertEqual(sts.pageData.singlePageBtn, true, "single page button does not exist");
-		// assertion.assertEqual(sts.pageData.fullScreenBtn, true, "full screen button does not exist");
-		// assertion.assertEqual(sts.pageData.bookmarkBtn, true, "bookmark button does not exist");
-		// assertion.assertEqual(sts.pageData.TOCBtn, testdata.doubleLayoutTOC, "TOC button text does not match");
-		// assertion.assertEqual(sts.pageData.previousBtn, true, "previious button does not exist");
-		// assertion.assertEqual(sts.pageData.nextBtn, true, "Next button  does not exist");
-
+		assertion.assertEqual(sts.pageStatus, true, "flipbook page status mismatch");
+		assertion.assertEqual(sts.appShellPage.header, true, "appshell header status mismatch");
 	},
 
 	//Validate that clicking on the single page button launches the flipbook in single page
 	ENG_FLIP_TC_2: function (testdata) {
 		sts = flipbook.click_singlePageBtn();
-		assertion.assertEqual(sts, testdata.singlelayoutWidth, "Single Layout width text mismatch");
-		// assertion.assertEqual(sts.pageData.TOCBtn, testdata.singleLayoutTOC, "TOC button text does not match");
+		assertion.assertEqual(sts.pageLayoutDouble, false, "Double Layout width mismatch");
+		assertion.assertEqual(sts.notesBtn,'', "notes button does not exist");
+		assertion.assertEqual(sts.annotationsBtn,'', "Annotations button Button does not exist");
+		assertion.assertEqual(sts.zoomInBtn,'', "zoom in button button does not exist");
+		assertion.assertEqual(sts.zoomOutBtn,'', "zoom out button does not exist");
+		assertion.assertEqual(sts.fitToScreenBtn,'', "fit to screen mismatch");
+		assertion.assertEqual(sts.doublePageBtn,'', "double page button does not exist");
+		assertion.assertEqual(sts.singlePageBtn,'', "single page button does not exist");
+		assertion.assertEqual(sts.fullScreenBtn,'', "full screen button does not exist");
+		assertion.assertEqual(sts.bookmarkBtn,'', "bookmark button does not exist");
+		assertion.assertEqual(sts.TOCBtn, testdata.doubleLayoutTOC, "TOC button text does not match");
+		assertion.assertEqual(sts.previousBtn, '', "previious button does not exist");
+		assertion.assertEqual(sts.nextBtn,'', "Next button  does not exist");
 	},
 
 	//Validate clicking on the Notes button for a New User (blank notes)
@@ -188,6 +186,8 @@ module.exports = {
 	//after one zoom = 1796, 2205
 	ENG_FLIP_TC_18: function (testdata) {
 		sts = flipbook.click_zoomInBtn();
+		console.log("sts.width",sts.width)
+		console.log("testdata.singlelayoutDefaultWidth",testdata.singlelayoutDefaultWidth)
 		assertion.assert((sts.width > testdata.singlelayoutDefaultWidth), "Width comparison failed");
 		assertion.assert((sts.height > testdata.singlelayoutDefaultHeight), "Height comparison failed");
 
