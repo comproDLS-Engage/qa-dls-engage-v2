@@ -548,6 +548,39 @@
                     "resetButton_fontSize_small": "14px",
                     "applySettingsBtn_fontSize_small": "14px",
                     "applySettingsBtn_lineHeight_narrow": "19.2px"
+                },
+                "flipbook":
+                {
+                    "doublelayoutWidth": "width: 50%;",
+                    "singlelayoutWidth": "width: 100%;",
+                    "singlelayoutDefaultWidth": 1409,
+                    "singlelayoutDefaultHeight": 1730,
+                    "doubleLayoutTOC": "p. 2 - 3",
+                    "singleLayoutTOC": "p. 2",
+                    "myNotesTitle": "My Notes",
+                    "noNoteText": "Looks like you haven't added any notes yet. Click \"Add Note\" button to add notes on the page.",
+                    "addNoteBtn": "Add Note",
+                    "addNoteTitle": "Add Note",
+                    "editNoteTitle": "Edit Note",
+                    "pageNoLabel": "On Page:",
+                    "pageNoValue": "p. 2",
+                    "notesListPagenumber": "Page 2",
+                    "allPagesLabel": "All Pages",
+                    "noteListItemLabel": "p. 2",
+                    "addNotePlaceholder": "Type your notes here...",
+                    "deleteNoteModalTitle": "Delete Note?",
+                    "deleteNoteModalSubTitle": "You won't be able to recover this note later.",
+                    "deleteNoteModalDeleteBtn": "Delete",
+                    "cancelBtn": "Cancel",
+                    "saveBtn": "Save",
+                    "setNote": "test note automation 1",
+                    "setEditedNote": "test edited note automation",
+                    "setBookmark": "test bookmark automation",
+                    "setEditedBookmark": "test edited bookmark automation",
+                    "noBookmarkText": "Looks like you haven't added any bookmarks yet. Bookmark a page to save your spot for later.",
+                    "bookmarkThisPageBtn": "Bookmark This Page",
+                    "bookmarksTitle": "Bookmarks",
+                    "bookmarkNameLabel": "Bookmark Name"
                 }
             }
         }

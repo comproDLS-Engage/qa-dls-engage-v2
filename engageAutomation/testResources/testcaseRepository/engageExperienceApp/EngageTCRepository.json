@@ -354,6 +354,42 @@
           "description": "",
           "tags": "P1",
           "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_999",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_998",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_997",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_996",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_995",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DIF_TC_994",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
         }
       ]
     },
@@ -1778,7 +1814,7 @@
         }
       ]
     },
-     {
+    {
         "modulename": "Settings",
         "moduledetails": "",
         "testFile": "./test/engageExperienceApp/settings.test.js",
@@ -1959,6 +1995,127 @@
             }
 
         ]
+    },
+    {
+      "modulename": "Flipbook",
+      "moduledetails": "",
+      "testFile": "./test/engageExperienceApp/flipbook.test.js",
+      "testcase": [
+        {
+          "id": "ENG_FLIP_TC_1",
+          "description": "Validate that flipbook is launched (Desktop)",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_FLIP_TC_2",
+          "description": "Validate Clicking on single page launches the book in single page layout",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_FLIP_TC_3",
+          "description": "Validate clicking on the Notes button for a new flipbook launches Notes pane",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_FLIP_TC_4",
+          "description": "Validate that clicking on 'Add Note' button launches Add Note Text Area",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_FLIP_TC_5",
+          "description": "Validate on clicking Save button, notes set by the user are saved",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_FLIP_TC_6",
+          "description": "Click Close button in notes pane closes the pane",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_FLIP_TC_7",
+          "description": "Validate clicking on the Bookmark button for a new flipbook launches Bookmark pane",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_FLIP_TC_8",
+          "description": "Validate that clicking on 'Bookmark This Page' button launches bookmark text area",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_FLIP_TC_9",
+          "description": "Validate on clicking Save button, bookmarks set by the user are saved",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_FLIP_TC_10",
+          "description": "Click Close button in Bookmark pane closes the pane",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_FLIP_TC_11",
+          "description": "Validate clicking on the Notes button with already notes added launches the notes list",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_FLIP_TC_12",
+          "description": "Validate clicking on the Edit button, launches the edit notes textarea",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_FLIP_TC_13",
+          "description": "Notes - Validate clicking on the Delete button, launches the delete notes modal",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_FLIP_TC_14",
+          "description": "Validate clicking on the Bookmarks button with already Bookmarks added launches the Bookmarks list",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_FLIP_TC_15",
+          "description": "Validate clicking on the Edit button, launches the edit Bookmarks textarea",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_FLIP_TC_16",
+          "description": "Validate clicking on the Delete button, launches the delete Bookmarks modal",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_FLIP_TC_17",
+          "description": "Bookmark - Validate clicking on the Delete button, directly deletes the bookmark and launches list",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_FLIP_TC_18",
+          "description": "Validate that clicking on the Zoom in button increases the width and height of the image",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_FLIP_TC_19",
+          "description": "Validate that clicking on the Zoom Out button decreases the width and height of the image",
+          "tags": "P1",
+          "visualTest": "-"
+        }
+      ]
     }
   ]
 }
