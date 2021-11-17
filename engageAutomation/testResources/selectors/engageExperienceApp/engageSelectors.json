@@ -444,7 +444,7 @@
                 "showResponse_btn": "[data-tid=button-showResponses]",
                 "feedback_txt": "[data-tid=text-feedbackmessage]",
                 "showingCorrectAnswer_txt": "[data-tid=text-showingcorrectanswer]",
-                "restart_btn": "[data-tid=link-resetActivity],[data-tid=link-retakeactivity]"
+                "restart_btn": "[data-tid=button-resetActivity],[data-tid=button-retakeActivity]"
             },
             "viewBook": {
                 "bookCover": "[data-tid=image-bookCover]",
