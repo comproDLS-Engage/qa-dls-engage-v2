@@ -217,6 +217,14 @@
                         }
                     ],
                     "info": {}
+                },
+                "classInstructorUser4": {
+                    "email": "4-teacher@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "instructor",
+                    "name": "4 Teacher dev1",
+                    "class": [],
+                    "info": {}
                 }
             }
         },
