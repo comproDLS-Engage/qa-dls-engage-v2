@@ -67,10 +67,10 @@ app.get("/getvalue", function (request, response) {
 
     if (inputFile != "") {
         try {
-            response.send("Your Page  is generated with " + inputFile + ".js");
+            response.send("Your PageObject \"" + inputFile + ".page.js\" is genrated at \""+__dirname + "\\outputFile\\" + inputFile + '.page.js\"');
             // Traverse the selector json
             //Create the output Page
-            file = fs.createWriteStream(inputFile + '.page.js');
+            file = fs.createWriteStream(__dirname + "/outputFile/" + inputFile + '.page.js');
             for (let i = 1; i < pageSelectorFile.length; i++) {
                 for (let j = 1; j < pageSelectorFile.length; j++) {
                     pageSelectorGroup[i] = [];
@@ -166,7 +166,7 @@ app.listen(8080);
 console.log("Please launch http://localhost:8080 in your browser url");
 
 function generatePageSelectorJson(pageSelectorFile, inputFile) {
-    file1 = fs.createWriteStream('selector.json');
+    file1 = fs.createWriteStream(__dirname + "/outputFile/" + 'selector.json');
     file1.write("{\"" + inputFile + "\": \n{\n")
     for (var i = 0; i < pageSelectorFile.length; i++) {
         file1.write("\"" + pageSelectorFile[i].Label + "\" : \"" + pageSelectorFile[i].cssSelector + "\",\n")
@@ -448,7 +448,7 @@ function generateReturnPage(PageTemplate, returnValue) {
     }
     else {
 
-        file.write("res=action." + returnValueArray[0] + "(this." +  returnValueArray[1])
+        file.write("res=action." + returnValueArray[0] + "(this." + returnValueArray[1])
         if (returnValueArray.length > 2) {
             for (let i = 2; i < returnValueArray.length; i++)
                 file.write("," + returnValueArray[i])
