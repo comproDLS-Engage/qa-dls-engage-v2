@@ -17,7 +17,6 @@
     "addBookFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='addBookTest.json' --browserCapability=desktop-chrome-1366",
     "settingsFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='settingsTest.json' --browserCapability=desktop-chrome-1366",
     "flipbookTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='flipbook.json' --browserCapability=desktop-chrome-1366"
-
   },
   "keywords": [],
   "author": "",
@@ -46,6 +45,7 @@
     "csvtojson": "2.0.10",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
     "glob": "^7.1.6",
     "json-format": "1.0.1",
     "jsonexport": "^3.0.1",
