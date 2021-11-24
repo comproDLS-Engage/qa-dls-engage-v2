@@ -448,7 +448,7 @@ function generateReturnPage(PageTemplate, returnValue) {
     }
     else {
 
-        file.write("var res=action." + returnValueArray[0] + "(this." +  returnValueArray[1])
+        file.write("res=action." + returnValueArray[0] + "(this." +  returnValueArray[1])
         if (returnValueArray.length > 2) {
             for (let i = 2; i < returnValueArray.length; i++)
                 file.write("," + returnValueArray[i])
