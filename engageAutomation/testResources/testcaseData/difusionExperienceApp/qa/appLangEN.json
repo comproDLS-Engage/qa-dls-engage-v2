@@ -304,8 +304,8 @@
                 "unitViewActivity_option": "View Activities"
             },
             "activityPlayerPage": {
-                "correct_txt": "Well done",
-                "incorrect_txt": "Oops! Not quite correct.",
+                "correct_txt": "Correct",
+                "incorrect_txt": "Not Correct",
                 "finish": "Finish",
                 "submit": "Submit Answers",
                 "reset": "Reset Activity",
