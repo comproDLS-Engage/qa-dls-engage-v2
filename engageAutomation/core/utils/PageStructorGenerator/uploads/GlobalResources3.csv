@@ -1,0 +1,10 @@
+Label,cssSelector,tagName,group,relation,extraInfo,returnValue
+pageTitle,h1,button,,,,dashboard.page
+ProducttList,[data-tid*= button-product,button,,,pattern,
+pageSubTitle,h2,button,,,,resourceList
+moreOptionsBtn,button,button,,,pattern,"getAttribute, pageTitle, 2000, 5, undefined"
+cardTitle,p,p,,,pattern,
+cardSubTitle,p,button,,,pattern,"waitforDisplayed, pageTitle, 2000"
+cardImgIcon,img,button,,,pattern,createClass.page
+cardImgIcon1,img,input,,,,dashboard.page
+cardImgIcon2,img,button,,,,viewBook.page

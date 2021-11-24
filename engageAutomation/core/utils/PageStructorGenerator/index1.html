@@ -1,0 +1,65 @@
+<html>
+	<style>
+		.button {
+		  background-color: #4CAF50; /* Green */
+		  border: none;
+		  color: white;
+		  padding: 15px 32px;
+		  text-align: center;
+		  text-decoration: none;
+		  display: inline-block;
+		  font-size: 16px;
+		  margin: 4px 2px;
+		  cursor: pointer;
+		  background-color: #e7e7e7; color: black;
+		}
+		.prompt {
+            font-size: 18px;
+            color: brown;
+            font-weight: bold;
+            margin-bottom: 10px;
+			width: 20%;
+            float: left;
+			
+        }
+		.submit-name {
+            background-color: #4CAF50;
+            /* Green */
+            border: none;
+            left:600px;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+		</style>
+	<body>
+		<h1 style=" text-align: center; color: blue;" > Page Object Generator</h1>
+		
+		<span>
+			<h2 class="prompt" > Step: 1</h2>
+		</span>
+		<br>
+		<br>
+		<br>
+		<span>
+			<h2 class="prompt" > Please Upload the Selector File:</h2>
+		</span>
+		<div>
+		<form ref='uploadForm' 
+			id='uploadForm' 
+			action='/upload' 
+			method='post' 
+			class='prompt'
+			encType="multipart/form-data">
+			<label for="file">Choose file to upload</label>
+				<input type="file"  class='button' name="sampleFile" />
+				<input type='submit' class='submit-name' value='Click Upload' />
+		</form>	
+	</div>	
+	</body>
+</html>
