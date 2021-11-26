@@ -400,6 +400,10 @@
                 "choices": "div[data-tid*=input-click-option-]",
                 "selectedChoice": "svg[data-tid=icon-selected]"
             },
+            "multiMcq": {
+                "choices": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-tid*=input-click-option-sub-question-",
+                "selectedChoice": "svg[data-tid=icon-selected]"
+            },
             "FIB": {
                 "source": "[data-tid=dragsource-option-",
                 "target": "[data-tid=droptarget-option-"
