@@ -66,8 +66,8 @@
 		"deleteBookBtn": "[data-tid=button-book_delete]"
 	},
 	"addTitlePage": {
-		"nameTxtbox": "[id=Name]",
-		"descriptionTxtbox": "[id=Description]",
+		"nameTxtbox": "[id=book-title]",
+		"descriptionTxtbox": "[id=description]",
 		"imageUploadBtn": "[class=c-image-upload__file-input]",
 		"createTitleBtn": "[class=c-form-section] button[class*=action-button-padding]",
 		"bookDesignDropdown": "[class*=c-create-book__form__book-theme] [class*=mdc-select__anchor]",
@@ -76,7 +76,7 @@
 		"bookVisibilityList": "[class*=mdc-menu-surface--open] [class*=mdc-list-item__text]"
 	},
 	"addComponentPage": {
-		"titleTxtbox": "[id=Name]",
+		"titleTxtbox": "[id=component-title]",
 		"categoryTypeDropdown": "[class*=c-create-component__form__category-types] [class*=mdc-select__anchor]",
 		"categoryTypeList": "[class*=mdc-menu-surface--open] [class*=mdc-list-item__text]",
 		"lpLevelsDropdown": "[class=c-form-section] > div:nth-child(3) > div",
@@ -107,16 +107,17 @@
 		"modifyFolderOptionsBtn":"[data-tid=button-modify-folder-options]"
 	},
 	"addFolderPage": {
-		"nameTxtbox": "[id=Name]",
+		"nameTxtbox": "[id=folder-title]",
 		"addBtn": "[class*=c-form] button[class*=action-button-padding]",
 		"targetRoleDropdown": "[class=c-form-section] > div:nth-child(4) > div",
 		"targetRoleList": "[class*=mdc-menu-surface--open] [class*=mdc-list-item__text]",
 		"assignableDropdown": "[class=c-form-section] > div:nth-child(5) > div",
 		"assignableList": "[class*=mdc-menu-surface--open] [class*=mdc-list-item__text]",
-		"folderColor" : "[id=\"Folder strand color\"]",
-		"pageReference" :"[id=\"Page Reference\"]"
+		"folderColor" : "[id='strand-color']",
+		"pageReference" :"[id='page-reference']"
 	},
 	"addActivityPage": {
+		"nameTxtbox": "[id=activity-title]",
 		"completionCheckBox" : "[class=c-form-section__completion-container] [class*=c-form-section__completion-checkbox]",
 		"scoreCheckBox" :"[class=c-form-section__score-container] [class*=c-form-section__completion-checkbox]",
 		"targetRoleDropdown" : "[id=target-role]",
