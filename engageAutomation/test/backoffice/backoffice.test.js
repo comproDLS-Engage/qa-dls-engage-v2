@@ -328,7 +328,7 @@ module.exports = {
 		assertion.assertEqual(sts.length, "1", "Book count Mismatch");
 	},
 
-	//Set Optional fields on Add Learning Objective page
+	//Set Optional fields on Add Learning Object page
 	BK_TC_36: function (testdata) {
 		sts = addActivityPage.click_Completion_Checkbox();
 		assertion.assertEqual(sts, true, "completion checkbox status mismatch");
