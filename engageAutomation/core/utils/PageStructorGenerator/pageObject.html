@@ -6,15 +6,14 @@
     <style>
         .prompt {
             font-size: 16px;
-            color: brown;
+            color: black;
             font-weight: bold;
-            margin-bottom: 5px;
         }
 
         .container {
             display: block;
             position: relative;
-            padding-left: 600px;
+            padding-left: 100px;
             margin-bottom: 12px;
             cursor: pointer;
             font-size: 22px;
@@ -40,7 +39,7 @@
             display: block;
             position: relative;
             padding-left: 135px;
-            margin-bottom: 12px;
+            margin-bottom: 2px;
             cursor: pointer;
             font-size: 22px;
             -webkit-user-select: none;
@@ -51,8 +50,8 @@
         .container2 {
             display: block;
             position: relative;
-            padding-left: 700px;
-            margin-bottom: 12px;
+            padding-left: 200px;
+            margin-bottom: 5px;
             cursor: pointer;
             font-size: 22px;
             -webkit-user-select: none;
@@ -73,15 +72,16 @@
         }
 
         .button {
-            background-color: #f44336;
+            background-color:black;
             /* Green */
             border: none;
             color: white;
             padding: 15px 32px;
             text-align: center;
-            text-decoration: none;
+            text-decoration: underline;
             display: inline-block;
-            font-size: 16px;
+            font-size: 18px;
+            font-weight: bold;
         }
 
         .right-pane {
@@ -99,41 +99,40 @@
         }
 
         .submit-name {
-            background-color: #4CAF50;
+            background-color: black;
             /* Green */
             border: none;
             left:600px;
             color: white;
             padding: 15px 32px;
             text-align: center;
-            text-decoration: none;
+            text-decoration: underline;
             display: inline-block;
             font-size: 16px;
             margin: 4px 2px;
             cursor: pointer;
+            font-weight: bold;
         }
     </style>
 </head>
 
-<body>
-
+<body style="background-color:Lavender;">
+	<h1 style=" text-align: center; color: black; background-color:rgb(192, 187, 187);" > Page Object Generator (v0.2)</h1>
     <form method='GET' action="/getvalue">
         <div class="container3">
-
-            <div class="container1">
-                <div class="prompt left-pane">
-                    <span>
-                        <h2>Step 2: </h2>
-                        <h2>    Please give the name of Page object</h2>
-                    </span>
+            <h2>Step 2: </h2>
+            <div class="container1 prompt left-pane">
+          
+                    
+                        <h2>  Name of the Page Object*  </h2>
               
                 <input class="container3" type="text" id="inputFile" name="inputFile" />
-            </div>
+       
         </div>
-        <div class="prompt container4">
-            <span>
-                <h2>Generate Page Object</h2>
-            </span>
+        <br>
+        <br>
+        <div class="prompt">
+                <h2 >Check Options</h2>
 </div>
 <div>
     <label class="container"><input name="selectorJson" type="checkbox" value="selectorJson" checked="checked">selectorJson</label>
@@ -171,7 +170,7 @@
                 <label class="container"><input name="setValueFunction" type="checkbox" value="setValueFunction" checked="checked">setValueFunction</label>
             </div>
         </div>
-        <button class="submit-name container">Click for Generate Page</button>
+        <button class="submit-name container">Generate</button>
 
         </div>
     </form>
