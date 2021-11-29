@@ -93,6 +93,22 @@
                                 ]
                             }
                         ]
+                    },
+                    {
+                        "index": 1,
+                        "title": "Unit 2",
+                        "activityCount": "1",
+                        "folderCount": "0",
+                        "flipbookPageNum": "",
+                        "section": [
+                            {
+                                "index": 0,
+                                "name": "",
+                                "activity": [
+                                    "Native LO 2"
+                                ]
+                            }
+                        ]
                     }
                 ]
             },
