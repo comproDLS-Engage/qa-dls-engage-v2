@@ -1,6 +1,6 @@
 {
-    "Suite1": {
-        "Name": "UI validation of teacher experience with books and classes",
+    "Suite5": {
+        "Name": "UI validation of teacher experience with books and classes (High-Contrast Accessibility Settings)",
         "TestCaseRepo": [
             "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
         ],
@@ -10,10 +10,7 @@
                 "description": "",
                 "testFile": "./engageAutomation/core/runner/launchUrl.js",
                 "testData": []
-            }
-        ],
-        "BeforeEach": [],
-        "Test": [
+            },
             {
                 "id": "ENG_LAND_TC_1",
                 "description": "Landing page",
@@ -42,6 +39,30 @@
                         "jsonPath": "engage.login.user.validInstructorUser1"
                     }
                 ]
+            },
+            {
+                "id": "ENG_DIF_TC_39",
+                "description": "View profile tab on Settings page",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.08,
+                "testData": []
+            },
+            {
+                "id": "ENG_DIF_TC_41",
+                "description": "View accessibility tab on Settings page",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.08,
+                "testData": []
+            }
+        ],
+        "BeforeEach": [],
+        "Test": [
+            {
+                "id": "ENG_DIF_TC_56",
+                "description": "Change and Apply Accessibility Settings",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.08,
+                "testData": []
             },
             {
                 "id": "ENG_DIF_TC_52",
@@ -288,6 +309,13 @@
                 "testData": []
             },
             {
+                "id": "ENG_DIF_TC_58",
+                "description": "View billing tab on Settings page",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.08,
+                "testData": []
+            },
+            {
                 "id": "ENG_DIF_TC_41",
                 "description": "View accessibility tab on Settings page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
@@ -295,8 +323,8 @@
                 "testData": []
             },
             {
-                "id": "ENG_DIF_TC_58",
-                "description": "View billing tab on Settings page",
+                "id": "ENG_DIF_TC_57",
+                "description": "Reset to Default Accessibility Settings",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
                 "visualTolerance": 0.08,
                 "testData": []
@@ -312,8 +340,8 @@
             }
         ]
     },
-    "Suite2": {
-        "Name": "UI validation of teacher experience with no books and classes",
+    "Suite6": {
+        "Name": "UI validation of teacher experience with no books and classes (High-Contrast Accessibility Settings)",
         "TestCaseRepo": [
             "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
         ],
@@ -335,10 +363,7 @@
                 "description": "Login Page",
                 "testFile": "./test/engageExperienceApp/landing.test.js",
                 "testData": []
-            }
-        ],
-        "BeforeEach": [],
-        "Test": [
+            },
             {
                 "id": "ENG_IDEN_TC_7",
                 "description": "Dashboard Page",
@@ -351,6 +376,30 @@
                         "jsonPath": "engage.login.user.validInstructorUser2"
                     }
                 ]
+            },
+            {
+                "id": "ENG_DIF_TC_39",
+                "description": "View profile tab on Settings page",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.08,
+                "testData": []
+            },
+            {
+                "id": "ENG_DIF_TC_41",
+                "description": "View accessibility tab on Settings page",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.08,
+                "testData": []
+            }
+        ],
+        "BeforeEach": [],
+        "Test": [
+            {
+                "id": "ENG_DIF_TC_56",
+                "description": "Change and Apply Accessibility Settings",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.08,
+                "testData": []
             },
             {
                 "id": "ENG_DIF_TC_27",
@@ -517,6 +566,20 @@
         "AfterEach": [],
         "After": [
             {
+                "id": "ENG_DIF_TC_41",
+                "description": "View accessibility tab on Settings page",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.08,
+                "testData": []
+            },
+            {
+                "id": "ENG_DIF_TC_57",
+                "description": "Reset to Default Accessibility Settings",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.08,
+                "testData": []
+            },
+            {
                 "id": "ENG_DIF_TC_34",
                 "description": "Signout of the app",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
@@ -524,8 +587,8 @@
             }
         ]
     },
-    "Suite3": {
-        "Name": "UI validation of student experience with books and classes",
+    "Suite7": {
+        "Name": "UI validation of student experience with books and classes (High-Contrast Accessibility Settings)",
         "TestCaseRepo": [
             "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
         ],
@@ -547,10 +610,7 @@
                 "description": "Login Page",
                 "testFile": "./test/engageExperienceApp/landing.test.js",
                 "testData": []
-            }
-        ],
-        "BeforeEach": [],
-        "Test": [
+            },
             {
                 "id": "ENG_IDEN_TC_7",
                 "description": "Dashboard Page",
@@ -563,6 +623,30 @@
                         "jsonPath": "engage.login.user.validStudent1"
                     }
                 ]
+            },
+            {
+                "id": "ENG_DIF_TC_39",
+                "description": "View profile tab on Settings page",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.08,
+                "testData": []
+            },
+            {
+                "id": "ENG_DIF_TC_41",
+                "description": "View accessibility tab on Settings page",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.08,
+                "testData": []
+            }
+        ],
+        "BeforeEach": [],
+        "Test": [
+            {
+                "id": "ENG_DIF_TC_56",
+                "description": "Change and Apply Accessibility Settings",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.08,
+                "testData": []
             },
             {
                 "id": "ENG_DIF_TC_52",
@@ -712,6 +796,13 @@
                 "testData": []
             },
             {
+                "id": "ENG_DIF_TC_58",
+                "description": "View billing tab on Settings page",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.08,
+                "testData": []
+            },
+            {
                 "id": "ENG_DIF_TC_41",
                 "description": "View accessibility tab on Settings page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
@@ -719,8 +810,8 @@
                 "testData": []
             },
             {
-                "id": "ENG_DIF_TC_58",
-                "description": "View billing tab on Settings page",
+                "id": "ENG_DIF_TC_57",
+                "description": "Reset to Default Accessibility Settings",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
                 "visualTolerance": 0.08,
                 "testData": []
@@ -736,8 +827,8 @@
             }
         ]
     },
-    "Suite4": {
-        "Name": "UI validation of student experience with no books and classes",
+    "Suite8": {
+        "Name": "UI validation of student experience with no books and classes (High-Contrast Accessibility Settings)",
         "TestCaseRepo": [
             "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
         ],
@@ -759,10 +850,7 @@
                 "description": "Login Page",
                 "testFile": "./test/engageExperienceApp/landing.test.js",
                 "testData": []
-            }
-        ],
-        "BeforeEach": [],
-        "Test": [
+            },
             {
                 "id": "ENG_IDEN_TC_7",
                 "description": "Dashboard Page",
@@ -775,6 +863,30 @@
                         "jsonPath": "engage.login.user.validStudent2"
                     }
                 ]
+            },
+            {
+                "id": "ENG_DIF_TC_39",
+                "description": "View profile tab on Settings page",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.08,
+                "testData": []
+            },
+            {
+                "id": "ENG_DIF_TC_41",
+                "description": "View accessibility tab on Settings page",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.08,
+                "testData": []
+            }
+        ],
+        "BeforeEach": [],
+        "Test": [
+            {
+                "id": "ENG_DIF_TC_56",
+                "description": "Change and Apply Accessibility Settings",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.08,
+                "testData": []
             },
             {
                 "id": "ENG_DIF_TC_27",
@@ -943,114 +1055,29 @@
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
                 "visualTolerance": 0.08,
                 "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_34",
-                "description": "Signout of the app",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.08,
-                "testData": []
-            }
-        ],
-        "AfterEach": [],
-        "After": []
-    },
-    "Suite9": {
-        "Name": "UI validation of student experience with no books and classes",
-        "TestCaseRepo": [
-            "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
-        ],
-        "Before": [
-            {
-                "id": "launchUrl",
-                "description": "",
-                "testFile": "./engageAutomation/core/runner/launchUrl.js",
-                "testData": []
-            },
-            {
-                "id": "ENG_LAND_TC_1",
-                "description": "Landing page",
-                "testFile": "./test/engageExperienceApp/landing.test.js",
-                "testData": []
-            },
-            {
-                "id": "ENG_LAND_TC_3",
-                "description": "Login Page",
-                "testFile": "./test/engageExperienceApp/landing.test.js",
-                "testData": []
-            },
-            {
-                "id": "ENG_IDEN_TC_7",
-                "description": "Dashboard Page",
-                "testFile": "./test/engageExperienceApp/login.test.js",
-                "visualTest": true,
-                "visualTolerance": 0.08,
-                "testData": [
-                    {
-                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
-                        "jsonPath": "engage.login.user.validStudent4"
-                    }
-                ]
-            },
-            {
-                "id": "ENG_DIF_TC_19",
-                "description": "Classes page",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.1,
-                "testData": []
-            }
-        ],
-        "BeforeEach": [],
-        "Test": [
-            {
-                "id": "ENG_DIF_TC_999",
-                "description": "Launch native LO",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.01,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_998",
-                "description": "Perform question1",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.01,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_997",
-                "description": "Perform question2",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.01,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_996",
-                "description": "Perform question3",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.01,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_995",
-                "description": "Submit activity and relaunch",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.01,
-                "testData": []
             }
         ],
         "AfterEach": [],
         "After": [
             {
-                "id": "ENG_DIF_TC_994",
-                "description": "Reset and go back",
+                "id": "ENG_DIF_TC_41",
+                "description": "View accessibility tab on Settings page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.01,
+                "visualTolerance": 0.08,
+                "testData": []
+            },
+            {
+                "id": "ENG_DIF_TC_57",
+                "description": "Reset to Default Accessibility Settings",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.08,
                 "testData": []
             },
             {
                 "id": "ENG_DIF_TC_34",
                 "description": "Signout of the app",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.08,
                 "testData": []
             }
         ]

@@ -28,32 +28,42 @@
                     "password": "Compro@1111",
                     "role": "student",
                     "name": "etirrase-9139",
-                    "class": [
-                    ],
+                    "class": [],
                     "info": {}
+                },
+                "validStudent4": {
+                    "email": "qa_student006@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "student",
+                    "name": "qa_student006",
+                    "class": [],
+                    "country": "",
+                    "info": "Automation User.Do Not Touch."
                 },
                 "acceptanceteacher": {
                     "email": "qa_acceptanceteacher100@yopmail.com",
                     "password": "Compro@1234",
                     "role": "student",
                     "name": "qa teacher100",
-                    "class": [  
+                    "class": [
                         {
                             "key": "TFbA-6AP7",
                             "name": "acceptanceClass"
-                        }],
+                        }
+                    ],
                     "info": {}
                 },
                 "acceptanceStudent": {
-                    "email" :"qa_acceptanceStudent1@yopmail.com",
+                    "email": "qa_acceptanceStudent1@yopmail.com",
                     "password": "Compro@1234",
                     "role": "student",
                     "name": "qa student",
-                    "class": [  
+                    "class": [
                         {
                             "key": "TFbA-6AP7",
                             "name": "acceptanceClass"
-                        }],
+                        }
+                    ],
                     "info": {}
                 },
                 "validInstructorUser1": {
@@ -76,6 +86,15 @@
                     "name": "teacher 3",
                     "courses": [],
                     "info": "freash user without books or classes"
+                },
+                "validInstructorUser4": {
+                    "email": "qa_teacher006@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "instructor",
+                    "name": "qa_teacher006",
+                    "courses": [],
+                    "country": "",
+                    "info": "Automation User.Do Not Touch."
                 },
                 "classInstructorUser3": {
                     "email": "qa_teacherClass@yopmail.com",
@@ -121,12 +140,15 @@
                         }
                     ],
                     "info": {}
-                }             
+                }
             }
         },
         "codesAndKeys": {
             "schoolName": "Mount Allison School",
-            "invalid_OTP":["12046","000000"],
+            "invalid_OTP": [
+                "12046",
+                "000000"
+            ],
             "validSchoolKey": "NGL-FUW-GQL",
             "invalidSchoolKey": "NGL-FUW-123",
             "invalidClassKey": [
