@@ -4,21 +4,53 @@ const PageTemplate = require('./PageTemplate.json');
 const cssProperty = require('./property.json');
 var file, pageSelectorFile, arr = [], pageSelectorGroup = [], k;
 var parse = require('csv-parse');
+const fileUpload = require('express-fileupload');
+const { DH_CHECK_P_NOT_SAFE_PRIME } = require("constants");
+const PORT = 8000;
+var sampleFile;
+var uploadPath;
 
-var parser = parse({ columns: true }, function (err, records) {
-    pageSelectorFile = records;
-});
-fs.createReadStream(__dirname + '/flipbook1.csv').pipe(parser);
 
 
 //use the application off of express.
 var app = express();
+app.use(fileUpload());
 
-
-//define the route for "/"
 app.get("/", function (request, response) {
-    response.sendFile(__dirname + "/pageObject.html");
+    response.sendFile(__dirname + "/index1.html");
 });
+app.post('/upload', function (req, res) {
+
+
+    if (!req.files || Object.keys(req.files).length === 0) {
+        res.status(400).send('No files were uploaded.');
+        return;
+    }
+
+    console.log('req.files >>>', req.files); // eslint-disable-line
+
+    sampleFile = req.files.sampleFile;
+
+    uploadPath = __dirname + '/uploads/' + sampleFile.name;
+
+    sampleFile.mv(uploadPath, function (err) {
+        if (err) {
+            return res.status(500).send(err);
+        }
+
+        res.sendFile(__dirname + "/pageObject.html");
+        var parser = parse({ columns: true }, function (err, records) {
+            pageSelectorFile = records;
+        });
+        fs.createReadStream(uploadPath).pipe(parser);
+    });
+});
+
+app.listen(PORT, function () {
+    console.log('Express server listening on port ', PORT); // eslint-disable-line
+});
+//define the route for "/"
+
 
 app.get("/getvalue", function (request, response) {
     var inputFile = request.query.inputFile;
@@ -35,10 +67,10 @@ app.get("/getvalue", function (request, response) {
 
     if (inputFile != "") {
         try {
-            response.send("Your Page  is generated with " + inputFile + ".js");
+            response.send("Your PageObject \"" + inputFile + ".page.js\" is genrated at \""+__dirname + "\\outputFile\\" + inputFile + '.page.js\"');
             // Traverse the selector json
             //Create the output Page
-            file = fs.createWriteStream(inputFile + '.js');
+            file = fs.createWriteStream(__dirname + "/outputFile/" + inputFile + '.page.js');
             for (let i = 1; i < pageSelectorFile.length; i++) {
                 for (let j = 1; j < pageSelectorFile.length; j++) {
                     pageSelectorGroup[i] = [];
@@ -134,7 +166,7 @@ app.listen(8080);
 console.log("Please launch http://localhost:8080 in your browser url");
 
 function generatePageSelectorJson(pageSelectorFile, inputFile) {
-    file1 = fs.createWriteStream('selector.json');
+    file1 = fs.createWriteStream(__dirname + "/outputFile/" + 'selector.json');
     file1.write("{\"" + inputFile + "\": \n{\n")
     for (var i = 0; i < pageSelectorFile.length; i++) {
         file1.write("\"" + pageSelectorFile[i].Label + "\" : \"" + pageSelectorFile[i].cssSelector + "\",\n")
@@ -332,30 +364,31 @@ function generateClickFunctions(pageSelectorFile, key, pageSelectorGroup, PageTe
             }
 
 
-                if (((pageSelectorFile[k].tagName).toLowerCase().includes("button"))&& (!(pageSelectorFile[k].extraInfo).includes("pattern")) ) {
-                    file.write("\nclick_" + pageSelectorFile[k].Label + ": function () {\n" +
-                        "logger.logInto(stackTrace.get());\n" +
-                        "var res;\n" +
-                        "res = action.click(this." + pageSelectorFile[k].Label + ");\n" +
-                        "if (true == res) {\n logger.logInto(stackTrace.get(), \" " + pageSelectorFile[k].Label + " is clicked\");\n")
-                    if ((pageSelectorFile[k].returnValue) != "") {
-                        if ((pageSelectorFile[k].returnValue).toLowerCase().includes(".page"))
-                            file.write("res =require" + PageTemplate.returnValue[pageSelectorFile[k].returnValue] + ";\n")
-                        else
-                            file.write("res= this.getData_" + pageSelectorFile[k].returnValue + "();");
-
-                    }
-                    file.write(
-                        "}\nelse {\nlogger.logInto(stackTrace.get(), res +\"" + pageSelectorFile[k].Label + " is NOT clicked\", 'error');\n}\n")
-                    file.write("return res;\n},\n")
-
-
-                    // console.log("Click function write")
+            if (((pageSelectorFile[k].tagName).toLowerCase().includes("button")) && (!(pageSelectorFile[k].extraInfo).includes("pattern"))) {
+                file.write("\nclick_" + pageSelectorFile[k].Label + ": function () {\n" +
+                    "logger.logInto(stackTrace.get());\n" +
+                    "var res;\n" +
+                    "res = action.click(this." + pageSelectorFile[k].Label + ");\n" +
+                    "if (true == res) {\n logger.logInto(stackTrace.get(), \" " + pageSelectorFile[k].Label + " is clicked\");\n")
+                if ((pageSelectorFile[k].returnValue) != "") {
+                    generateReturnPage(PageTemplate, pageSelectorFile[k].returnValue);
+                    /*     if ((pageSelectorFile[k].returnValue).toLowerCase().includes(".page"))
+                             file.write("res =require" + PageTemplate.returnValue[pageSelectorFile[k].returnValue] + ";\n")
+                         else
+                             file.write("res= this.getData_" + pageSelectorFile[k].returnValue + "();");
+     */
                 }
+                file.write(
+                    "}\nelse {\nlogger.logInto(stackTrace.get(), res +\"" + pageSelectorFile[k].Label + " is NOT clicked\", 'error');\n}\n")
+                file.write("return res;\n},\n")
 
+
+                // console.log("Click function write")
             }
+
         }
-    
+    }
+
 }
 function generategroupClickfunction(pageSelectorGroup, selectorName, pageSelectorFileValue, PageTemplate) {
     var textcondition = null;
@@ -393,10 +426,7 @@ function Clickfunction(textcondition, selectorName, seletorRow, PageTemplate) {
         "break;\n}\n" +
         "}\nif (res == true) {\n  logger.logInto(stackTrace.get(), \" --" + selectorName + " clicked\");\n")
     if ((seletorRow.returnValue) != "") {
-        if ((seletorRow.returnValue).toLowerCase().includes(".page"))
-            file.write("res =require" + PageTemplate.returnValue[seletorRow.returnValue] + ";\n")
-        else
-            file.write("res= this.getData_" + seletorRow.returnValue + "();");
+        generateReturnPage(PageTemplate, seletorRow.returnValue);
 
     }
     file.write(
@@ -407,6 +437,26 @@ function Clickfunction(textcondition, selectorName, seletorRow, PageTemplate) {
     file.write("return res;\n},\n")
 }
 
+function generateReturnPage(PageTemplate, returnValue) {
+
+    const returnValueArray = returnValue.split(",");
+    if (returnValueArray.length == 1) {
+        if ((returnValue).toLowerCase().includes(".page"))
+            file.write("res =require" + PageTemplate.returnValue[returnValueArray[0]] + ";\n")
+        else
+            file.write("res= this.getData_" + returnValueArray[0] + "();");
+    }
+    else {
+
+        file.write("res=action." + returnValueArray[0] + "(this." + returnValueArray[1])
+        if (returnValueArray.length > 2) {
+            for (let i = 2; i < returnValueArray.length; i++)
+                file.write("," + returnValueArray[i])
+        }
+        file.write(");")
+    }
+
+}
 
 function generateSetValueFunctions(pageSelectorFile) {
     for (var i = 0; i < pageSelectorFile.length; i++) {

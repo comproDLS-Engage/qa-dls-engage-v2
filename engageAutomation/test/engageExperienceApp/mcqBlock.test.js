@@ -16,7 +16,7 @@ module.exports = {
 		}
 		else assertion.assertFail(sts);
 		sts = itemPlayerPage.getItemplayerInfo();
-		assertion.assertEqual(sts.mediaType, testdata[1].mediaType, "Media type mismatch");
+	//	assertion.assertEqual(sts.mediaType, testdata[1].mediaType, "Media type mismatch");
 		assertion.assertEqual(sts.quesText, testdata[1].text, "Question text mismatch");
 		assertion.assertEqual(sts.instructionText, testdata[1].instruction, "Instruction text mismatch");
 	},

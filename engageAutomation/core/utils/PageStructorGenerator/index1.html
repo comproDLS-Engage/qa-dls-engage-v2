@@ -1,0 +1,100 @@
+<html>
+	<style>
+		.button {
+		  background-color: black; 
+		  border: none;
+		  color: white;
+		  padding: 15px 32px;
+		  text-align: center;
+		  text-decoration: none;
+		  display: inline-block;
+		  font-size: 16px;
+		  margin: 4px 2px;
+		  cursor: pointer;
+		  background-color: #e7e7e7; color: black;
+		}
+		.left-pane {
+            width: 50%;
+            float: left;
+        }
+
+        .container {
+            display: block;
+            position: relative;
+            padding-left: 100px;
+            margin-bottom: 1px;
+            cursor: pointer;
+            font-size: 22px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+		.container3 {
+            display: block;
+            position: relative;
+            padding-left: 135px;
+            margin-bottom: 2px;
+            cursor: pointer;
+            font-size: 22px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+		.prompt {
+            font-size: 16px;
+            font-weight: bold;
+			width: 200%;
+			
+        }
+		.container1 {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+		.submit-name {
+            background-color: black;
+            /* Green */
+            border: none;
+            left:600px;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: underline	;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+			font-weight: bold;
+        }
+		</style>
+	<body  style="background-color:Lavender;">
+		<h1 style=" text-align: center; color: black; background-color:rgb(192, 187, 187);" > Page Object Generator (v0.2)</h1>
+		<div class="container3">
+		<h2 > Step 1:</h2>
+		<br>
+		<br>
+		<div class="container1 prompt left-pane">
+			
+			<h2 > Please Upload the Selector File:</h2>
+		</div>
+			<br>
+		<br>
+		<div>
+			
+		<form ref='uploadForm' 
+			id='uploadForm' 
+			action='/upload' 
+			method='post' 
+			style=" text-align: center; color: black; "
+			encType="multipart/form-data">
+			<div class="container1 prompt">
+			<h2>Choose file to upload  </h2>
+				<input type="file"  class='button' name="sampleFile" />
+				<input type='submit' class='submit-name' value='Proceed' />
+			</div>
+		</form>
+	
+	</body>
+</html>

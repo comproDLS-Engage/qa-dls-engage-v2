@@ -7,6 +7,7 @@ var res;
 module.exports = {
 
     buttonLoader: selectorFile.common.buttonLoader,
+    nameTxtbox: selectorFile.addActivityPage.nameTxtbox,
     completionCheckBox: selectorFile.addActivityPage.completionCheckBox,
     scoreCheckBox: selectorFile.addActivityPage.scoreCheckBox,
     targetRoleDropdown: selectorFile.addActivityPage.targetRoleDropdown,
@@ -17,7 +18,10 @@ module.exports = {
     },
 
     set_Name: function (text) {
-        return addFolderPage.set_Name(text);
+        logger.logInto(stackTrace.get());
+        res = action.setValue(this.nameTxtbox, text);
+        logger.logInto(stackTrace.get(), res);
+        return res;
     },
 
     click_Add_Button: function () {
