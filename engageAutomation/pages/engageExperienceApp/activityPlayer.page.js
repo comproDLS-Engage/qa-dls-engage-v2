@@ -1,189 +1,302 @@
 "use strict";
-const action = require('../../core/actionLibrary/baseActionLibrary.js');
-var selectorFile = jsonParserUtil.jsonParser(selectorDir);
-const basePlayerPage = require('./basePlayer.page.js');
-var res;
+var action = require('../../core/actionLibrary/baseActionLibrary.js')
+var selectorFile = jsonParserUtil.jsonParser(selectorDir)
+var appShellPage = require('./appShell.page.js')
 
 module.exports = {
+    infoBtn: selectorFile.css.ComproEngage.activityPlayer.infoBtn,
+    showDetailsBtn: selectorFile.css.ComproEngage.activityPlayer.showDetailsBtn,
+    quesNumber: selectorFile.css.ComproEngage.activityPlayer.quesNumber,
+    prevPageBtn: selectorFile.css.ComproEngage.activityPlayer.prevPageBtn,
+    nextPageBtn: selectorFile.css.ComproEngage.activityPlayer.nextPageBtn,
+    prevActivityBtn: selectorFile.css.ComproEngage.activityPlayer.prevActivityBtn,
+    nextActivityBtn: selectorFile.css.ComproEngage.activityPlayer.nextActivityBtn,
+    showAnswerBtn: selectorFile.css.ComproEngage.activityPlayer.showAnswerBtn,
+    showResponseBtn: selectorFile.css.ComproEngage.activityPlayer.showResponseBtn,
+    checkAnswerBtn: selectorFile.css.ComproEngage.activityPlayer.checkAnswerBtn,
+    submitActivityBtn: selectorFile.css.ComproEngage.activityPlayer.submitActivityBtn,
+    markCompleteBtn: selectorFile.css.ComproEngage.activityPlayer.markCompleteBtn,
+    retakeActivityBtn: selectorFile.css.ComproEngage.activityPlayer.retakeActivityBtn,
+    resetBtn: selectorFile.css.ComproEngage.activityPlayer.resetBtn,
+    completedTxt: selectorFile.css.ComproEngage.activityPlayer.completedTxt,
+    submittedTxt: selectorFile.css.ComproEngage.activityPlayer.submittedTxt,
+    submitGradeBtn: selectorFile.css.ComproEngage.activityPlayer.submitGradeBtn,
+    yourScoreLabel: selectorFile.css.ComproEngage.activityPlayer.yourScoreLabel,
+    yourScoreValue: selectorFile.css.ComproEngage.activityPlayer.yourScoreValue,
+    detailsPanelContainer: selectorFile.css.ComproEngage.activityPlayer.detailsPanelContainer,
+    panelHeading: selectorFile.css.ComproEngage.activityPlayer.panelHeading,
+    activityTitle: selectorFile.css.ComproEngage.activityPlayer.activityTitle,
+    activitySubtitle: selectorFile.css.ComproEngage.activityPlayer.activitySubtitle,
+    activityTypeIcon: selectorFile.css.ComproEngage.activityPlayer.activityTypeIcon,
+    activityType: selectorFile.css.ComproEngage.activityPlayer.activityType,
+    pageNumber: selectorFile.css.ComproEngage.activityPlayer.pageNumber,
+    expandCollapseBtn: selectorFile.css.ComproEngage.activityPlayer.expandCollapseBtn,
+    analyticsInfoContainer: selectorFile.css.ComproEngage.activityPlayer.analyticsInfoContainer,
 
-    infoTOC: selectorFile.css.ComproEngage.activitiyPlayer.infoTOC,
-    previousActivity_btn: selectorFile.css.ComproEngage.activitiyPlayer.previousActivity_btn,
-    nextActivity_btn: selectorFile.css.ComproEngage.activitiyPlayer.nextActivity_btn,
-    questionInfo: selectorFile.css.ComproEngage.activitiyPlayer.questionInfo,
-    submitActivity_btn: selectorFile.css.ComproEngage.activitiyPlayer.submitActivity_btn,
-    feedback_txt: selectorFile.css.ComproEngage.activitiyPlayer.feedback_txt,
-    showingCorrectAnswer_txt: selectorFile.css.ComproEngage.activitiyPlayer.showingCorrectAnswer_txt,
-    restart_btn: selectorFile.css.ComproEngage.activitiyPlayer.restart_btn,
 
-    
     isInitialized: function () {
+        var res;
         logger.logInto(stackTrace.get());
         action.waitForDocumentLoad();
-        action.waitForDisplayed(this.infoTOC);
-        res = this.getActivityPlayerData();
-        return res;
-    },
-
-    getActivityPlayerData: function () {
-        let data = basePlayerPage.getBasePlayerInfo();
-        data.infoTOC = (action.getElementCount(this.infoTOC) > 0) ? action.waitForDisplayed(this.infoTOC) : null;
-        data.checkAnswer_txt = (action.getElementCount(basePlayerPage.checkMyWork_btn) > 0) ? action.getText(basePlayerPage.checkMyWork_btn) : null;
-        data.questionInfo = (action.getElementCount(this.questionInfo) > 0) ? action.getText(this.questionInfo) : null;
-        data.submitActivity_isDisabled = (action.getElementCount(this.submitActivity_btn) > 0) ? action.getAttribute(this.submitActivity_btn, 'disabled') : null;
-        data.submitActivity_txt = (action.getElementCount(this.submitActivity_btn) > 0) ? action.getText(this.submitActivity_btn) : null;
-        data.previousActivity_txt = (action.getElementCount(this.previousActivity_btn) > 0) ? action.getText(this.previousActivity_btn) : null;
-        data.nextActivity_txt = (action.getElementCount(this.nextActivity_btn) > 0) ? action.getText(this.nextActivity_btn) : null;
-        data.showAnswer_txt = (action.getElementCount(basePlayerPage.showAnswer_btn) > 0) ? action.getText(basePlayerPage.showAnswer_btn) : null;
-        data.yourResponse_txt = (action.getElementCount(basePlayerPage.yourResponse_btn) > 0) ? action.getText(basePlayerPage.yourResponse_btn) : null;
-        return data;
-    },
-
-    clickPreviousQuestion: function () {
-        logger.logInto(stackTrace.get());
-        return basePlayerPage.click_Previous();
-    },
-
-    clickNextQuestion: function () {
-        logger.logInto(stackTrace.get());
-        return basePlayerPage.click_Skip();
-    },
-
-    clickCheckAnswer: function () {
-        logger.logInto(stackTrace.get());
-        return basePlayerPage.click_CheckMyWork();
-    },
-
-    clickShowAnswer: function () {
-        logger.logInto(stackTrace.get());
-        return basePlayerPage.click_ShowAnswer();
-    },
-
-    clickYourResponse: function () {
-        logger.logInto(stackTrace.get());
-        return basePlayerPage.click_YourResponse();
-    },
-
-    clickPreviousActivity: function () {
-        logger.logInto(stackTrace.get());
-        res = action.click(this.previousActivity_btn);
-        if (true == res) {
-            res = this.getActivityPlayerData();
-        } else {
-            res = res + " -- Error in clicking Previous Activity button";
-            logger.logInto(stackTrace.get(), res, 'error');
-        }
-        return res;
-    },
-
-    clickNextActivity: function () {
-        logger.logInto(stackTrace.get());
-        res = action.click(this.nextActivity_btn);
-        if (true == res) {
-            res = this.getActivityPlayerData();
-        } else {
-            res = res + " -- Error in clicking Next Activity button";
-            logger.logInto(stackTrace.get(), res, 'error');
-        }
-        return res;
-    },
-
-    clickSubmitActivity: function () {
-        logger.logInto(stackTrace.get());
-        res = action.click(this.submitActivity_btn);
-        if (true == res) {
-            res = this.getActivityPlayerData();
-        } else {
-            res = res + " -- Error in clicking Next Question button";
-            logger.logInto(stackTrace.get(), res, 'error');
-        }
-        return res;
-    },
-
-    getFeedbackInfo: function () {
-        var feedbackinfo = {
-            fdbackText: "",
-            buttonText: "",
-            showCorrectAnswerText: ""
-        }
-
-        res = action.getElementCount(this.feedback_txt);
-        if (res != 0) {
-            logger.logInto(stackTrace.get(), " -- Feedback text is available");
-            action.waitForDisplayed(this.feedback_txt);
-            feedbackinfo.fdbackText = action.getText(this.feedback_txt);
-            res = feedbackinfo;
-        } else {
-            res = res + " -- Feedback text is NOT available";
-            logger.logInto(stackTrace.get(), res, "error");
-        }
-        //showAnswer + feedback text
-        if (action.getElementCount(basePlayerPage.showAnswer_btn) == 1) {
-            feedbackinfo.buttonText = action.getText(basePlayerPage.showAnswer_btn);
-            res = feedbackinfo;
-        }
-        //showResponse + feedback text + Showing Correct Answer text
-        if (action.getElementCount(basePlayerPage.yourResponse_btn) == 1) {
-            feedbackinfo.buttonText = action.getText(basePlayerPage.yourResponse_btn);
-            feedbackinfo.showCorrectAnswerText = action.getText(this.showingCorrectAnswer_txt);
-            res = feedbackinfo;
-        }
-        return res;
-    },
-
-    clickRestartButton: function(){
-        logger.logInto(stackTrace.get());
-        //updated selector for running the acceptance test only (Rupsi)
-       // action.click("footer > div > div:nth-child(1)> div:nth-child(2)> div > button > span.containerApp-MuiButton-label > p");
-        action.waitForDisplayed(this.restart_btn)
-        res = action.click(this.restart_btn);
-        if (true == res) {
-            res = this.isInitialized();
-        } else {
-            res = res + " -- Error in clicking Restart button";
-            logger.logInto(stackTrace.get(), res, 'error');
-        }
-        return res;
-    },
-
-    ClickShowDetailsButton:function()
-    {
-         //updated selector for running the acceptance test only (Rupsi)
-        res= action.click("footer > div > div:nth-child(1)> div:nth-child(2)> div > button");
-         if (true == res) {
-            browser.pause(5000);
-            action.waitForDisplayed(this.restart_btn)
-            res =  (action.getElementCount(this.restart_btn) > 0) ? action.getText(this.restart_btn) : null;
-        } else {
-            res = res + " -- Error in clicking Restart button";
-            logger.logInto(stackTrace.get(), res, 'error');
-        }
-        return res;
-    }
-
-
-
-    // Not Required currently, may be used later
-    /*getQuestionInfo: function () {
-        var quesInfo = {
-            activeQues: undefined,
-            maxQues: undefined
+        res = {
+            pageStatus: action.waitForDisplayed(this.infoBtn),
+            appShellPage: appShellPage.isInitialized()
         };
-        res = action.waitForDisplayed(this.questionInfo);
-        if (res == true) {
-            let quesData = action.getText(this.questionInfo);
-            if (quesData.indexOf("of") > 0)
-                quesData = quesData.trim().split('of')
-            else if (quesData.indexOf("de") > 0)
-                quesData = quesData.trim().split('de')
-            else
-                quesData = [];
+        return res;
+    },
 
-            quesInfo.activeQues = Number(quesData[0]);
-            quesInfo.maxQues = Number(quesData[1]);
-        } else {
-            logger.logInto(stackTrace.get(), "Question Information Not available", "error");
+    getData_activityPlayer: function () {
+        logger.logInto(stackTrace.get());
+        console.log("mehta")
+        var obj;
+        obj = {
+            infoBtn: (action.getElementCount(this.infoBtn) > 0) ? action.getText(this.infoBtn) : null,
+            showDetailsBtn: (action.getElementCount(this.showDetailsBtn) > 0) ? action.getText(this.showDetailsBtn) : null,
+            quesNumber: (action.getElementCount(this.quesNumber) > 0) ? action.getText(this.quesNumber) : null,
+            prevPageBtn: (action.getElementCount(this.prevPageBtn) > 0) ? action.getText(this.prevPageBtn) : null,
+            nextPageBtn: (action.getElementCount(this.nextPageBtn) > 0) ? action.getText(this.nextPageBtn) : null,
+            prevActivityBtn: (action.getElementCount(this.prevActivityBtn) > 0) ? action.getText(this.prevActivityBtn) : null,
+            nextActivityBtn: (action.getElementCount(this.nextActivityBtn) > 0) ? action.getText(this.nextActivityBtn) : null,
+            showAnswerBtn: (action.getElementCount(this.showAnswerBtn) > 0) ? action.getText(this.showAnswerBtn) : null,
+            showResponseBtn: (action.getElementCount(this.showResponseBtn) > 0) ? action.getText(this.showResponseBtn) : null,
+            checkAnswerBtn: (action.getElementCount(this.checkAnswerBtn) > 0) ? action.getText(this.checkAnswerBtn) : null,
+            submitActivityBtn: (action.getElementCount(this.submitActivityBtn) > 0) ? action.getText(this.submitActivityBtn) : null,
+            markCompleteBtn: (action.getElementCount(this.markCompleteBtn) > 0) ? action.getText(this.markCompleteBtn) : null,
+            retakeActivityBtn: (action.getElementCount(this.retakeActivityBtn) > 0) ? action.getText(this.retakeActivityBtn) : null,
+            resetBtn: (action.getElementCount(this.resetBtn) > 0) ? action.getText(this.resetBtn) : null,
+            completedTxt: (action.getElementCount(this.completedTxt) > 0) ? action.getText(this.completedTxt) : null,
+            submittedTxt: (action.getElementCount(this.submittedTxt) > 0) ? action.getText(this.submittedTxt) : null,
+            submitGradeBtn: (action.getElementCount(this.submitGradeBtn) > 0) ? action.getText(this.submitGradeBtn) : null,
+            yourScoreLabel: (action.getElementCount(this.yourScoreLabel) > 0) ? action.getText(this.yourScoreLabel) : null,
+            yourScoreValue: (action.getElementCount(this.yourScoreValue) > 0) ? action.getText(this.yourScoreValue) : null,
         }
-        return quesInfo;
-    },*/
+        return obj;
+    },
+
+    getData_detailsPanel: function () {
+        logger.logInto(stackTrace.get());
+        var obj;
+        obj = {
+            panelHeading: (action.getElementCount(this.panelHeading) > 0) ? action.getText(this.panelHeading) : null,
+            activityTitle: (action.getElementCount(this.activityTitle) > 0) ? action.getText(this.activityTitle) : null,
+            activitySubtitle: (action.getElementCount(this.activitySubtitle) > 0) ? action.getText(this.activitySubtitle) : null,
+            activityTypeIcon: (action.getElementCount(this.activityTypeIcon) > 0) ? action.waitForExist(this.activityTypeIcon) : false,
+            activityType: (action.getElementCount(this.activityType) > 0) ? action.getText(this.activityType) : null,
+            pageNumber: (action.getElementCount(this.pageNumber) > 0) ? action.getText(this.pageNumber) : null,
+            expandCollapseBtn: (action.getElementCount(this.expandCollapseBtn) > 0) ? action.getText(this.expandCollapseBtn) : null,
+        }
+        return obj;
+    },
+
+
+    click_infoBtn: function () {
+        logger.logInto(stackTrace.get());
+        var res;
+        res = action.click(this.infoBtn);
+        if (true == res) {
+            logger.logInto(stackTrace.get(), " infoBtn is clicked");
+        }
+        else {
+            logger.logInto(stackTrace.get(), res + "infoBtn is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_showDetailsBtn: function () {
+        logger.logInto(stackTrace.get());
+        var res;
+        res = action.click(this.showDetailsBtn);
+        if (true == res) {
+            logger.logInto(stackTrace.get(), " showDetailsBtn is clicked");
+            res = action.getAttribute(this.detailsPanelContainer, "aria-hidden");
+        }
+        else {
+            logger.logInto(stackTrace.get(), res + "showDetailsBtn is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_prevPageBtn: function () {
+        logger.logInto(stackTrace.get());
+        var res;
+        res = action.click(this.prevPageBtn);
+        if (true == res) {
+            logger.logInto(stackTrace.get(), " prevPageBtn is clicked");
+            res = action.getText(this.quesNumber);
+        }
+        else {
+            logger.logInto(stackTrace.get(), res + "prevPageBtn is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_nextPageBtn: function () {
+        logger.logInto(stackTrace.get());
+        var res;
+        res = action.click(this.nextPageBtn);
+        if (true == res) {
+            logger.logInto(stackTrace.get(), " nextPageBtn is clicked");
+            res = action.getText(this.quesNumber);
+        }
+        else {
+            logger.logInto(stackTrace.get(), res + "nextPageBtn is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_prevActivityBtn: function () {
+        logger.logInto(stackTrace.get());
+        var res;
+        res = action.click(this.prevActivityBtn);
+        if (true == res) {
+            logger.logInto(stackTrace.get(), " prevActivityBtn is clicked");
+            res = this.getData_activityPlayer();
+        }
+        else {
+            logger.logInto(stackTrace.get(), res + "prevActivityBtn is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_nextActivityBtn: function () {
+        logger.logInto(stackTrace.get());
+        var res;
+        res = action.click(this.nextActivityBtn);
+        if (true == res) {
+            logger.logInto(stackTrace.get(), " nextActivityBtn is clicked");
+            res = this.getData_activityPlayer();
+        }
+        else {
+            logger.logInto(stackTrace.get(), res + "nextActivityBtn is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_showAnswerBtn: function () {
+        logger.logInto(stackTrace.get());
+        var res;
+        res = action.click(this.showAnswerBtn);
+        if (true == res) {
+            logger.logInto(stackTrace.get(), " showAnswerBtn is clicked");
+            res = action.waitForDisplayed(this.showResponseBtn);
+        }
+        else {
+            logger.logInto(stackTrace.get(), res + "showAnswerBtn is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_showResponseBtn: function () {
+        logger.logInto(stackTrace.get());
+        var res;
+        res = action.click(this.showResponseBtn);
+        if (true == res) {
+            logger.logInto(stackTrace.get(), " showResponseBtn is clicked");
+            res = action.waitForDisplayed(this.showAnswerBtn);
+        }
+        else {
+            logger.logInto(stackTrace.get(), res + "showResponseBtn is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_checkAnswerBtn: function () {
+        logger.logInto(stackTrace.get());
+        var res;
+        res = action.click(this.checkAnswerBtn);
+        console.log(res)
+        if (true == res) {
+            logger.logInto(stackTrace.get(), " checkAnswerBtn is clicked");
+            res = action.isEnabled(this.checkAnswerBtn);
+        }
+        else {
+            logger.logInto(stackTrace.get(), res + "checkAnswerBtn is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_submitActivityBtn: function () {
+        logger.logInto(stackTrace.get());
+        var res;
+        res = action.click(this.submitActivityBtn);
+        if (true == res) {
+            logger.logInto(stackTrace.get(), " submitActivityBtn is clicked");
+            res = this.getData_activityPlayer();
+        }
+        else {
+            logger.logInto(stackTrace.get(), res + "submitActivityBtn is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_markCompleteBtn: function () {
+        logger.logInto(stackTrace.get());
+        var res;
+        res = action.click(this.markCompleteBtn);
+        if (true == res) {
+            logger.logInto(stackTrace.get(), " markCompleteBtn is clicked");
+            res = action.isEnabled(this.completedTxt);
+        }
+        else {
+            logger.logInto(stackTrace.get(), res + "markCompleteBtn is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_retakeActivityBtn: function () {
+        logger.logInto(stackTrace.get());
+        var res;
+        res = action.click(this.retakeActivityBtn);
+        if (true == res) {
+            logger.logInto(stackTrace.get(), " retakeActivityBtn is clicked");
+            res = this.getData_activityPlayer();
+        }
+        else {
+            logger.logInto(stackTrace.get(), res + "retakeActivityBtn is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_resetBtn: function () {
+        logger.logInto(stackTrace.get());
+        var res;
+        res = action.click(this.resetBtn);
+        if (true == res) {
+            logger.logInto(stackTrace.get(), " resetBtn is clicked");
+        }
+        else {
+            logger.logInto(stackTrace.get(), res + "resetBtn is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_submitGradeBtn: function () {
+        logger.logInto(stackTrace.get());
+        var res;
+        res = action.click(this.submitGradeBtn);
+        if (true == res) {
+            logger.logInto(stackTrace.get(), " submitGradeBtn is clicked");
+            res = action.getText(this.submittedTxt);
+        }
+        else {
+            logger.logInto(stackTrace.get(), res + "submitGradeBtn is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_expandCollapseBtn: function () {
+        logger.logInto(stackTrace.get());
+        var res;
+        res = action.click(this.expandCollapseBtn);
+        if (true == res) {
+            logger.logInto(stackTrace.get(), " expandCollapseBtn is clicked");
+            res = action.getCSSProperty(this.analyticsInfoContainer, "visibility");
+        }
+        else {
+            logger.logInto(stackTrace.get(), res + "expandCollapseBtn is NOT clicked", 'error');
+        }
+        return res;
+    },
 
 }
+

@@ -675,6 +675,36 @@
                 "jumpToPageInput": "[data-tid=input-searchtextbox] input",
                 "jumpToPageBtn": "[data-tid=button-closeicon]",
                 "resourceTitle": "[data-tid*=text-resourcetitle-]"
+            },
+            "activityPlayer": {
+                "infoBtn": "[data-tid='button-openinfotoc']",
+                "showDetailsBtn": "[data-tid=button-activityinfopanelswitcher]",
+                "quesNumber": "[data-tid=text-currentquestion]",
+                "prevPageBtn": "[data-tid='button-goPrev']",
+                "nextPageBtn": "[data-tid='button-goNext']",
+                "prevActivityBtn": "[data-tid='button-previousActivity']",
+                "nextActivityBtn": "[data-tid='button-nextActivity']",
+                "showAnswerBtn": "[data-tid='button-showAnswers']",
+                "showResponseBtn": "[data-tid='button-showResponses']",
+                "checkAnswerBtn": "[data-tid='button-checkAnswers']",
+                "submitActivityBtn": "[data-tid='button-submitActivity']",
+                "markCompleteBtn": "[data-tid='button-markAsComplete']",
+                "retakeActivityBtn": "[data-tid='button-retakeActivity']",
+                "resetBtn": "[data-tid='button-reset']",
+                "completedTxt": "[data-tid='button-completed']",
+                "submittedTxt": "[data-tid='button-submittedOn']",
+                "submitGradeBtn": "[data-tid='button-submitGrade']",
+                "yourScoreLabel": "main",
+                "yourScoreValue": "main",
+                "detailsPanelContainer": "main > div > div:nth-child(1)",
+                "panelHeading": "[data-tid=panel-heading]",
+                "activityTitle": "[data-tid='text-title']",
+                "activitySubtitle": "[data-tid='text-subTitle']",
+                "activityTypeIcon": "[data-tid='icon-activitytype']",
+                "activityType": "[data-tid='text-activitytype']",
+                "pageNumber": "[data-tid='text-pagenumberinfo']",
+                "expandCollapseBtn": "[data-tid=icon-togglegroupexpansion]",
+                "analyticsInfoContainer": "[data-tid=container-analyticsinfo] > div > div:nth-child(2)"
             }
         }
     }
