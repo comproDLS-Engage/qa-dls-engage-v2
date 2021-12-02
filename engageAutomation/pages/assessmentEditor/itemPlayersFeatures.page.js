@@ -27,7 +27,6 @@ module.exports = {
 	instruction_input: selectorFile.css.editorTab.instruction_input,
 	addVideo_btn: selectorFile.css.editorTab.addVideo_btn,
 	videoURL_input: selectorFile.css.editorTab.videoURL_input,
-	videoType_btn:selectorFile.css.editorTab.videoType_btn,
 	videoCredit_input: selectorFile.css.editorTab.videoCredit_input,
 	media_input: selectorFile.css.editorTab.media_input,
 	addImage_btn: selectorFile.css.editorTab.addImage_btn,
@@ -60,7 +59,6 @@ module.exports = {
 	addOption_btn: selectorFile.css.editorTab.classify.addOption_btn,
 	editorsel: selectorFile.css.editorTab,
 	fibAnswerOption: selectorFile.css.editorTab.fib.fibAnswerOption,
-	createQuestion_btn:selectorFile.css.editorTab.createQuestion_btn,
 	//--MULTIPLE RESPONSE
 	isInitialized1: function (testdata) {
 		for (var i = 0; i < testdata.length; i++) {
@@ -402,7 +400,7 @@ module.exports = {
 		if (res == true) {
 			logger.logInto(stackTrace.get(), res + " -- Editor Tab is clicked");
 			res = action.click(this.editor_tab);
-			//res = this.getEditorPageData();
+			res = this.getEditorPageData();
 		}
 		else {
 			res = res + " -- Error in clicking Editor Tab";
@@ -468,7 +466,6 @@ module.exports = {
 		logger.logInto(stackTrace.get());
 		var itemPlayerSelected = this.itemPlayer_btn + itemPlayer + "]";
 		res = action.waitForDisplayed(itemPlayerSelected)
-		console.log(itemPlayerSelected)
 		res = action.click(itemPlayerSelected);
 		if (res == true) {
 			logger.logInto(stackTrace.get(), " -- Selected Question is clicked");
@@ -482,22 +479,7 @@ module.exports = {
 
 	click_AddQuestion_Dialog_Ok_Button: function () {
 		logger.logInto(stackTrace.get());
-		res = action.click(this.createQuestion_btn);
-		//swati - to be edited, browser.pause is temp
-		//BhxBrowser.pause(10000); // remove this and add wait for loader to not display - akhil
-		if (res == true) {
-			//action.waitForDisplayed(".//span[contains(@class, 'MuiSkeleton-wave')]", undefined, true)
-			logger.logInto(stackTrace.get(), " -- OK Button is clicked");
-		}
-		else {
-			res = res + " -- Error in clicking OK Button button";
-			logger.logInto(stackTrace.get(), res, 'error');
-		}
-		return res;
-	},
-	click_CreateQuestion_Button: function () {
-		logger.logInto(stackTrace.get());
-		res = action.click(this.createQuestion_btn);
+		res = action.click(this.ok_btn);
 		//swati - to be edited, browser.pause is temp
 		//BhxBrowser.pause(10000); // remove this and add wait for loader to not display - akhil
 		if (res == true) {
@@ -591,9 +573,6 @@ module.exports = {
 
 	setVideoMediaURL: function (videoURL) {
 		logger.logInto(stackTrace.get());
-		res= action.click(this.videoType_btn)
-		res=action.click("[role=\"listbox\"]>li:nth-child(1)")
-		action.waitForDisplayed(this.videoURL_input)
 		res = action.setValue(this.videoURL_input, videoURL);
 		if (res == true) {
 			logger.logInto(stackTrace.get(), " -- Video Media URL is entered");
