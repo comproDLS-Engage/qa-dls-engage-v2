@@ -11,9 +11,7 @@ module.exports = {
 		sts = itemPlayer.isInitialized();
 		assertion.assertEqual(sts.isSubmitted, false, "submit status mismatch");
 		sts = itemPlayer.getQuesIndex();
-		console.log(sts)
 		assertion.assertEqual((sts), "0", "Active question index mismatch");
-		console.log("rupsi")
 		sts = activityPlayerPage.getData_activityPlayer();
 		/*Rupsi
 		assertion.assertEqual(sts.checkmyWork_isExists, true, "check answer button status mismatch");

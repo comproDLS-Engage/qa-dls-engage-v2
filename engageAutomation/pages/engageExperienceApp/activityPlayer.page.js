@@ -47,7 +47,6 @@ module.exports = {
 
     getData_activityPlayer: function () {
         logger.logInto(stackTrace.get());
-        console.log("mehta")
         var obj;
         obj = {
             infoBtn: (action.getElementCount(this.infoBtn) > 0) ? action.getText(this.infoBtn) : null,
