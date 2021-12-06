@@ -69,7 +69,6 @@ app.get("/getvalue", function (request, response) {
             response.send("Your PageObject \"" + inputFile + ".page.js\" is genrated at \"" + __dirname + "\\outputFile\\" + inputFile + '.page.js\"');
             // Traverse the selector json
             //Create the output Page
-         
             file = fs.createWriteStream(__dirname + "/outputFile/" + inputFile + '.page.js');
             for (let i = 1; i < pageSelectorFile.length; i++) {
                 for (let j = 1; j < pageSelectorFile.length; j++) {
@@ -93,7 +92,8 @@ app.get("/getvalue", function (request, response) {
             }
             if (selectorJsonCheck) {
                 generatePageSelectorJson(pageSelectorFile, inputFile);
-            }
+           
+   }
             if (pageHeaderCheck) {
 
                 // Generate Page Header
@@ -392,6 +392,14 @@ function generateClickFunctions(pageSelectorFile, key, pageSelectorGroup, PageTe
 }
 function generategroupClickfunction(pageSelectorGroup, selectorName, pageSelectorFileValue, PageTemplate) {
     var textcondition = null;
+    var parentAvailable = null;
+    for (var j = 0; j < pageSelectorGroup.length; j++) {
+        if (((pageSelectorGroup[j].relation).toLowerCase().includes("parent"))) {
+            parentAvailable = pageSelectorGroup[j].Label;
+            break;
+        }
+    }
+
     for (var j = 0; j < pageSelectorGroup.length; j++) {
         if (((pageSelectorGroup[j].relation).toLowerCase().includes("condition"))) {
             textcondition = pageSelectorGroup[j].Label;
@@ -412,7 +420,33 @@ function generategroupClickfunction(pageSelectorGroup, selectorName, pageSelecto
     if (textcondition == null) {
         textcondition = selectorName;
     }
-    Clickfunction(textcondition, selectorName, pageSelectorFileValue, PageTemplate);
+    if (parentAvailable != null) {
+        Clickfunction(textcondition, selectorName, pageSelectorFileValue, PageTemplate);
+    }
+    else
+        Clickfunctionindex(textcondition, selectorName, pageSelectorFileValue, PageTemplate);
+}
+
+function Clickfunctionindex(textcondition, selectorName, seletorRow, PageTemplate) {
+    file.write("\nclick_" + selectorName + ": function (" + textcondition + "Name) {\n" +
+        "logger.logInto(stackTrace.get());\n" +
+        "var i, list, res;\n" +
+        "list = action.findElements(this." + selectorName + ");\n" +
+        "for (i = 0; i < list.length; i++) {\n" +
+        "if ((action.getText(this." + textcondition + "[i]))== " + textcondition + "Name) {\n " +
+        "res = action.click(list[i]);\n" +
+        "break;\n}\n" +
+        "}\nif (res == true) {\n  logger.logInto(stackTrace.get(), \" --" + selectorName + " clicked\");\n")
+    if ((seletorRow.returnValue) != "") {
+        generateReturnPage(PageTemplate, seletorRow.returnValue);
+
+    }
+    file.write(
+
+        "} \nelse\n" +
+        "logger.logInto(stackTrace.get(), \" --" + selectorName + " NOT clicked\", \"error\")\n");
+
+    file.write("return res;\n},\n")
 }
 
 function Clickfunction(textcondition, selectorName, seletorRow, PageTemplate) {
@@ -442,7 +476,7 @@ function generateReturnPage(PageTemplate, returnValue) {
     const returnValueArray = returnValue.split(",");
     if (returnValueArray.length == 1) {
         if ((returnValue).toLowerCase().includes(".page"))
-            file.write("res =require" + PageTemplate.returnValue[returnValueArray[0]] + ";\n")
+            file.write("res =require ('./" + returnValueArray[0] + "').isInitialized();\n")
         else
             file.write("res= this.getData_" + returnValueArray[0] + "();");
     }
@@ -524,6 +558,12 @@ function dataPatternGenerateWithParent(groupSelectorData, groupName, key) {
     selectedText = "";
     for (var j = 0; j < groupSelectorData.length; j++) {
         if (((groupSelectorData[j].relation).toLowerCase().includes("condition"))) {
+            selectedText = groupSelectorData[j].Label;
+            break;
+        }
+    }
+    for (var j = 0; j < groupSelectorData.length; j++) {
+        if (((groupSelectorData[j].relation).toLowerCase().includes("parent"))) {
             selectedText = groupSelectorData[j].Label;
             break;
         }
