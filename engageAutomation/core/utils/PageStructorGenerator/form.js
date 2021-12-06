@@ -245,7 +245,7 @@ function generateIsinitiazeFunction(pageSelectorFile, PageTemplate, param1) {
 
 function generateGetDatafunction(pageSelectorFile, key) {
     file.write(key + "_Data: function ()\n{  \n")
-    file.write("logger.logInto(stackTrace.get());\n var obj=[];\n obj = {\n")
+    file.write("logger.logInto(stackTrace.get());\n var obj;\n obj = {\n")
 
     for (var i = 0; i < pageSelectorFile.length; i++) {
         if ((pageSelectorFile[i].extraInfo).toLowerCase().includes("pattern")) {
@@ -277,7 +277,7 @@ function generategetCssPropertyData(pageSelectorFile, key, cssProperty) {
         }
     }
     if (cssPropertyState == true) {
-        file.write("getCssPropertyData: function ()\n{\n  logger.logInto(stackTrace.get()); \nvar obj=[];\n obj = {\n")
+        file.write("getCssPropertyData: function ()\n{\n  logger.logInto(stackTrace.get()); \nvar obj;\n obj = {\n")
 
         for (var i = 0; i < pageSelectorFile.length; i++) {
             if ((pageSelectorFile[i].extraInfo).toLowerCase().includes("cssproperty")) {
@@ -542,7 +542,7 @@ function generategroupDatafunction(group, groupName) {
 function dataPatternGenerate(pageSelectorFile, groupName) {
     file.write("getData_" + groupName + ": function ()\n{\n")
     file.write("logger.logInto(stackTrace.get());\n")
-    file.write("var obj=[];\n")
+    file.write("var obj;\n")
     file.write("obj = {\n")
     for (var i = 0; i < pageSelectorFile.length; i++) {
         if ((pageSelectorFile[i].extraInfo).toLowerCase().includes("pattern")) {
