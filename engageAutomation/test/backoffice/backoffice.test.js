@@ -390,7 +390,7 @@ module.exports = {
 			browser.url(testdata[i].url);
 			browser.pause(20000);
 			console.log("url launched...")
-			sts = action.waitForDisplayed("[class*=c-activity-launching]", undefined, true);
+			sts = action.waitForExist("[class*=c-activity-launching]", undefined, true);
 			assertion.assertEqual(sts, true, "Error! Activities stuck in processing state.");
 			for (j = 0; j < testdata[i].activity.length; j++) {
 				sts = learningPathPage.click_ActivityAuthor_Button_in_ActivityMenu(testdata[i].activity[j]);
@@ -399,6 +399,7 @@ module.exports = {
 				console.log("activity launched...")
 				sts = action.waitForClickable("div:nth-child(2) [data-tid=button-saveandreturn]");
 				assertion.assertEqual(sts, true);
+				browser.pause(3000)
 				sts = action.click("div:nth-child(2) [data-tid=button-saveandreturn]");
 				assertion.assertEqual(sts, true);
 				//sts = action.waitForDisplayed("[role=progressbar]", undefined, true);
@@ -407,7 +408,8 @@ module.exports = {
 				browser.pause(5000)
 				browser.switchWindow(global.appUrl);
 				console.log("url switched...")
-				sts = action.waitForDisplayed("[class*=c-activity-launching]", undefined, true);
+				browser.pause(2000)
+				sts = action.waitForExist("[class*=c-activity-launching]", 60000, true);
 				assertion.assertEqual(sts, true, "Error! Activities stuck in processing state.");
 			}
 			this.BK_TC_37();
