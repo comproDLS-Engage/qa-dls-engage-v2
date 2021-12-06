@@ -86,47 +86,87 @@ module.exports = {
     return obj;
   },
 
-  getData_actionCards: function () {
+  getData_actionCards: function (actionCardTitlesName) {
     logger.logInto(stackTrace.get());
     var obj = [];
     action.waitForDisplayed(this.actionCardTitles);
     var list = action.findElements(this.actionCardTitles);
-    for (var i = 0; i <= list.length; i++) {
-      obj[i] = {
-        actionCardTitles: (action.getElementCount(this.actionCardTitles + i + "]") > 0) ? action.getText(this.actionCardTitles + i + "]") : null,
-        actionCardSubtitles: (action.getElementCount(this.actionCardSubtitles + i + "]") > 0) ? action.getText(this.actionCardSubtitles + i + "]") : null,
-        actionCardBtns: (action.getElementCount(this.actionCardBtns + i + "]") > 0) ? action.getText(this.actionCardBtns + i + "]") : null,
+    if (actionCardTitlesName) {
+      for (var i = 0; i < list.length; i++) {
+        if (action.getText(this.actionCardTitles + i) == actionCardTitlesName) {
+          obj[0] = {
+            actionCardTitles: (action.getElementCount(this.actionCardTitles + i + "]") > 0) ? action.getText(this.actionCardTitles + i + "]") : null,
+            actionCardSubtitles: (action.getElementCount(this.actionCardSubtitles + i + "]") > 0) ? action.getText(this.actionCardSubtitles + i + "]") : null,
+            actionCardBtns: (action.getElementCount(this.actionCardBtns + i + "]") > 0) ? action.getText(this.actionCardBtns + i + "]") : null,
+          }
+          break;
+        }
+      }
+    } else {
+      for (var i = 0; i < list.length; i++) {
+        obj[i] = {
+          actionCardTitles: (action.getElementCount(this.actionCardTitles + i + "]") > 0) ? action.getText(this.actionCardTitles + i + "]") : null,
+          actionCardSubtitles: (action.getElementCount(this.actionCardSubtitles + i + "]") > 0) ? action.getText(this.actionCardSubtitles + i + "]") : null,
+          actionCardBtns: (action.getElementCount(this.actionCardBtns + i + "]") > 0) ? action.getText(this.actionCardBtns + i + "]") : null,
+        }
       }
     }
     return obj;
   },
 
-  getData_playlist: function () {
+  getData_playlist: function (playlistTitleName) {
     logger.logInto(stackTrace.get());
-    var obj;
+    var obj = [];
     action.waitForDisplayed(this.playlistTitle);
     var list = action.findElements(this.playlistTitle);
-    for (var i = 0; i <= list.length; i++) {
-      obj[i] = {
-        playlistTitle: (action.getElementCount(this.playlistTitle + i + "]") > 0) ? action.getText(this.playlistTitle + i + "]") : null,
-        playlistSubtitle: (action.getElementCount(this.playlistSubtitle + i + "]") > 0) ? action.getText(this.playlistSubtitle + i + "]") : null,
+    if (playlistTitleName) {
+      for (var i = 0; i < list.length; i++) {
+        if (action.getText(this.playlistTitle + i) == playlistTitleName) {
+          obj[0] = {
+            playlistTitle: (action.getElementCount(this.playlistTitle + i + "]") > 0) ? action.getText(this.playlistTitle + i + "]") : null,
+            playlistSubtitle: (action.getElementCount(this.playlistSubtitle + i + "]") > 0) ? action.getText(this.playlistSubtitle + i + "]") : null,
+          }
+          break;
+        }
+      }
+    } else {
+      for (var i = 0; i < list.length; i++) {
+        obj[i] = {
+          playlistTitle: (action.getElementCount(this.playlistTitle + i + "]") > 0) ? action.getText(this.playlistTitle + i + "]") : null,
+          playlistSubtitle: (action.getElementCount(this.playlistSubtitle + i + "]") > 0) ? action.getText(this.playlistSubtitle + i + "]") : null,
+        }
       }
     }
     return obj;
   },
 
-  getData_books: function () {
+  getData_books: function (bookTitleName) {
     logger.logInto(stackTrace.get());
-    var obj;
+    var obj = [];
     action.waitForDisplayed(this.bookTitle);
     var list = action.findElements(this.bookTitle);
-    for (var i = 0; i <= list.length; i++) {
-      obj[i] = {
-        bookTitle: (action.getElementCount(this.bookTitle + i + "]") > 0) ? action.getText(this.bookTitle + i + "]") : null,
-        bookSubtitle: (action.getElementCount(this.bookSubtitle + i + "]") > 0) ? action.getText(this.bookSubtitle + i + "]") : null,
-        bookMenuBtn: (action.getElementCount(this.bookMenuBtn + i + "]") > 0) ? action.getText(this.bookMenuBtn + i + "]") : null,
-        viewBookBtn: (action.getElementCount(this.viewBookBtn + i + "]") > 0) ? action.getText(this.viewBookBtn + i + "]") : null,
-        bookCover: (action.getElementCount(this.bookCover + i + "]") > 0) ? action.getText(this.bookCover + i + "]") : null,
+    if (bookTitleName) {
+      for (var i = 0; i < list.length; i++) {
+        if (action.getText(this.bookTitle + i) == bookTitleName) {
+          obj[0] = {
+            bookTitle: (action.getElementCount(this.bookTitle + i + "]") > 0) ? action.getText(this.bookTitle + i + "]") : null,
+            bookSubtitle: (action.getElementCount(this.bookSubtitle + i + "]") > 0) ? action.getText(this.bookSubtitle + i + "]") : null,
+            bookMenuBtn: (action.getElementCount(this.bookMenuBtn + i + "]") > 0) ? action.getText(this.bookMenuBtn + i + "]") : null,
+            viewBookBtn: (action.getElementCount(this.viewBookBtn + i + "]") > 0) ? action.getText(this.viewBookBtn + i + "]") : null,
+            bookCover: (action.getElementCount(this.bookCover + i + "]") > 0) ? action.getText(this.bookCover + i + "]") : null,
+          }
+          break;
+        }
+      }
+    } else {
+      for (var i = 0; i < list.length; i++) {
+        obj[i] = {
+          bookTitle: (action.getElementCount(this.bookTitle + i + "]") > 0) ? action.getText(this.bookTitle + i + "]") : null,
+          bookSubtitle: (action.getElementCount(this.bookSubtitle + i + "]") > 0) ? action.getText(this.bookSubtitle + i + "]") : null,
+          bookMenuBtn: (action.getElementCount(this.bookMenuBtn + i + "]") > 0) ? action.getText(this.bookMenuBtn + i + "]") : null,
+          viewBookBtn: (action.getElementCount(this.viewBookBtn + i + "]") > 0) ? action.getText(this.viewBookBtn + i + "]") : null,
+          bookCover: (action.getElementCount(this.bookCover + i + "]") > 0) ? action.getText(this.bookCover + i + "]") : null,
+        }
       }
     }
     return obj;
@@ -170,7 +210,7 @@ module.exports = {
 
   getData_resources: function (resourceTitleName) {
     logger.logInto(stackTrace.get());
-    var obj, i, arr = [];
+    var obj = [], i, arr = [];
     resourceTitle = action.findElements(this.resourceTitle)
     resourceSubtitle = action.findElements(this.resourceSubtitle)
     if (resourceTitleName) {
@@ -215,7 +255,6 @@ module.exports = {
     return recentlyViewed_activities_Arr;
   },
 
-
   click_createPlaylistBtn: function () {
     logger.logInto(stackTrace.get());
     var res;
@@ -236,7 +275,7 @@ module.exports = {
     res = action.click(this.addBookBtn);
     if (true == res) {
       logger.logInto(stackTrace.get(), " addBookBtn is clicked");
-      res = require('./addBook.page.js').isInitialized();
+      res = require('./addBook.page').isInitialized();
     }
     else {
       logger.logInto(stackTrace.get(), res + "addBookBtn is NOT clicked", 'error');
@@ -294,7 +333,7 @@ module.exports = {
     res = action.click(this.noBooks_addBookBtn);
     if (true == res) {
       logger.logInto(stackTrace.get(), " noBooks_addBookBtn is clicked");
-      res = require('./addBook.page.js').isInitialized();
+      res = require('./addBook.page').isInitialized();
     }
     else {
       logger.logInto(stackTrace.get(), res + "noBooks_addBookBtn is NOT clicked", 'error');
@@ -328,7 +367,7 @@ module.exports = {
     }
     if (res == true) {
       logger.logInto(stackTrace.get(), " --playlistTitle clicked");
-      res = require('./playlist.page.js').isInitialized();;
+      res = require('./playlist.page').isInitialized();
     }
     else
       logger.logInto(stackTrace.get(), " --playlistTitle NOT clicked", "error")
@@ -366,7 +405,7 @@ module.exports = {
     }
     if (res == true) {
       logger.logInto(stackTrace.get(), " --viewBookBtn clicked");
-      res = require('./viewBook.page.js').isInitialized();
+      res = require('./viewBook.page').isInitialized();
     }
     else
       logger.logInto(stackTrace.get(), " --viewBookBtn NOT clicked", "error")
@@ -385,7 +424,7 @@ module.exports = {
     }
     if (res == true) {
       logger.logInto(stackTrace.get(), " --bookCover clicked");
-      res = require('./viewBook.page.js').isInitialized();
+      res = require('./viewBook.page').isInitialized();
     }
     else
       logger.logInto(stackTrace.get(), " --bookCover NOT clicked", "error")
@@ -398,7 +437,7 @@ module.exports = {
     res = action.click(this.bookMenu_viewClassOption);
     if (true == res) {
       logger.logInto(stackTrace.get(), " bookMenu_viewClassOption is clicked");
-      res = require('./classDrawer.page.js').isInitialized();
+      res = require('./classDrawer.page').isInitialized();
     }
     else {
       logger.logInto(stackTrace.get(), res + "bookMenu_viewClassOption is NOT clicked", 'error');
@@ -412,7 +451,7 @@ module.exports = {
     res = action.click(this.bookMenu_createClassOption);
     if (true == res) {
       logger.logInto(stackTrace.get(), " bookMenu_createClassOption is clicked");
-      res = require('./createClass.page.js').isInitialized();
+      res = require('./createClass.page').isInitialized();
     }
     else {
       logger.logInto(stackTrace.get(), res + "bookMenu_createClassOption is NOT clicked", 'error');
@@ -440,7 +479,7 @@ module.exports = {
     res = action.click(this.bookMenu_openFlipbookOption);
     if (true == res) {
       logger.logInto(stackTrace.get(), " bookMenu_openFlipbookOption is clicked");
-      //res = require('./flipbook.page.js').isInitialized();;
+      //res = require('./flipbook.page').isInitialized();
     }
     else {
       logger.logInto(stackTrace.get(), res + "bookMenu_openFlipbookOption is NOT clicked", 'error');
@@ -510,7 +549,7 @@ module.exports = {
     res = action.click(this.viewAllBtn);
     if (true == res) {
       logger.logInto(stackTrace.get(), " viewAllBtn is clicked");
-      res = require('./browse.page.js').isInitialized();
+      res = require('./browse.page').isInitialized();
     }
     else {
       logger.logInto(stackTrace.get(), res + "viewAllBtn is NOT clicked", 'error');
@@ -530,7 +569,7 @@ module.exports = {
     }
     if (res == true) {
       logger.logInto(stackTrace.get(), " --resourceTitle clicked");
-      res = require('./browse.page.js').isInitialized();
+      res = require('./browse.page').isInitialized();
     }
     else
       logger.logInto(stackTrace.get(), " --resourceTitle NOT clicked", "error")
@@ -542,7 +581,7 @@ module.exports = {
     var i, list, res;
     list = action.findElements(this.recentlyViewed_activities);
     for (i = 0; i < list.length; i++) {
-      if ((action.getText(this.recentlyViewed_activities + i + "]")) == recentlyViewed_activitiesName) {
+      if ((action.getText(list[i])) == recentlyViewed_activitiesName) {
         res = action.click(list[i]);
         break;
       }

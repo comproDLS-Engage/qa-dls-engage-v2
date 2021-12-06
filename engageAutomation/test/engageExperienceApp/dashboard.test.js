@@ -28,9 +28,7 @@ module.exports = {
         assertion.assertEqual(sts.viewAllBtn, testdata.viewAll_btn, "View All button text mismatch");
         assertion.assertEqual(sts.recentlyViewedHeading, testdata.recentlyViewed_heading, "Recently Viewed heading text mismatch");
         sts = dashboardPage.getData_actionCards();
-        console.log(sts.length)
         for (let i = 0; i < sts.length; i++) { //sts.length has been used instead of testdata.actionCard.length to support smaller resolutions
-            console.log(sts[i])
             assertion.assertEqual(sts[i].actionCardTitles, testdata.actionCard[i].actionCardTitles, "Action Card title text mismatch");
             assertion.assertEqual(sts[i].actionCardSubtitles, testdata.actionCard[i].actionCardSubtitles, "Action Card subtitle text mismatch");
             assertion.assertEqual(sts[i].actionCardBtns, testdata.actionCard[i].actionCardBtns, "Action Card button text mismatch");
