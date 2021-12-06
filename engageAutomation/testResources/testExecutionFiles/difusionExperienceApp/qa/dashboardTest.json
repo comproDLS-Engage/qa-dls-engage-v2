@@ -305,12 +305,7 @@
                 "id": "ENG_DASH_TC_14",
                 "description": "",
                 "testFile": "./test/engageExperienceApp/dashboard.test.js",
-                "testData": [
-                    {
-                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
-                        "jsonPath": "book.name"
-                    }
-                ]
+                "testData": []
             },
             {
                 "id": "ENG_DASH_TC_12",
@@ -428,12 +423,7 @@
                 "id": "ENG_DASH_TC_14",
                 "description": "",
                 "testFile": "./test/engageExperienceApp/dashboard.test.js",
-                "testData": [
-                    {
-                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
-                        "jsonPath": "book.name"
-                    }
-                ]
+                "testData": []
             },
             {
                 "id": "ENG_DASH_TC_12",

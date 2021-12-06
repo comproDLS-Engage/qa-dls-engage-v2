@@ -1,405 +1,571 @@
 "use strict";
-var action = require('../../core/actionLibrary/baseActionLibrary.js');
-var appShell = require('./appShell.page');
-var selectorFile = jsonParserUtil.jsonParser(selectorDir);
-var res;
+var action = require('../../core/actionLibrary/baseActionLibrary.js')
+var selectorFile = jsonParserUtil.jsonParser(selectorDir)
+var appShellPage = require('./appShell.page.js')
 
 module.exports = {
 
-    pageTitle: selectorFile.css.ComproEngage.dashboardPage.pageTitle,
-    createPlaylist_Btn: selectorFile.css.ComproEngage.dashboardPage.createPlaylist_Btn,
-    addBook_Btn: selectorFile.css.ComproEngage.dashboardPage.addBook_Btn,
+  pageTitle: selectorFile.css.ComproEngage.dashboard.pageTitle,
+  createPlaylistBtn: selectorFile.css.ComproEngage.dashboard.createPlaylistBtn,
+  addBookBtn: selectorFile.css.ComproEngage.dashboard.addBookBtn,
+  cardSliderTitle: selectorFile.css.ComproEngage.dashboard.cardSliderTitle,
+  cardSliderSubtitle: selectorFile.css.ComproEngage.dashboard.cardSliderSubtitle,
+  cardSliderLeftBtn: selectorFile.css.ComproEngage.dashboard.cardSliderLeftBtn,
+  cardSliderRightBtn: selectorFile.css.ComproEngage.dashboard.cardSliderRightBtn,
+  actionCardTitles: selectorFile.css.ComproEngage.dashboard.actionCardTitles,
+  actionCardSubtitles: selectorFile.css.ComproEngage.dashboard.actionCardSubtitles,
+  actionCardBtns: selectorFile.css.ComproEngage.dashboard.actionCardBtns,
+  myBooksHeading: selectorFile.css.ComproEngage.dashboard.myBooksHeading,
+  noBooksTitle: selectorFile.css.ComproEngage.dashboard.noBooksTitle,
+  noBooksSubtitle: selectorFile.css.ComproEngage.dashboard.noBooksSubtitle,
+  noBooks_addBookBtn: selectorFile.css.ComproEngage.dashboard.noBooks_addBookBtn,
+  myPlaylistsHeading: selectorFile.css.ComproEngage.dashboard.myPlaylistsHeading,
+  noPlaylistsTitle: selectorFile.css.ComproEngage.dashboard.noPlaylistsTitle,
+  noPlaylistsSubTitle: selectorFile.css.ComproEngage.dashboard.noPlaylistsSubTitle,
+  noPlaylists_createBtn: selectorFile.css.ComproEngage.dashboard.noPlaylists_createBtn,
+  playlistTitle: selectorFile.css.ComproEngage.dashboard.playlistTitle,
+  playlistSubtitle: selectorFile.css.ComproEngage.dashboard.playlistSubtitle,
+  bookTitle: selectorFile.css.ComproEngage.dashboard.bookTitle,
+  bookSubtitle: selectorFile.css.ComproEngage.dashboard.bookSubtitle,
+  bookMenuBtn: selectorFile.css.ComproEngage.dashboard.bookMenuBtn,
+  viewBookBtn: selectorFile.css.ComproEngage.dashboard.viewBookBtn,
+  bookCover: selectorFile.css.ComproEngage.dashboard.bookCover,
+  bookMenu_viewClassOption: selectorFile.css.ComproEngage.dashboard.bookMenu_viewClassOption,
+  bookMenu_createClassOption: selectorFile.css.ComproEngage.dashboard.bookMenu_createClassOption,
+  bookMenu_removeOption: selectorFile.css.ComproEngage.dashboard.bookMenu_removeOption,
+  bookMenu_openFlipbookOption: selectorFile.css.ComproEngage.dashboard.bookMenu_openFlipbookOption,
+  removeBook_title: selectorFile.css.ComproEngage.dashboard.removeBook_title,
+  removeBook_subTitle: selectorFile.css.ComproEngage.dashboard.removeBook_subTitle,
+  removeBook_cancelBtn: selectorFile.css.ComproEngage.dashboard.removeBook_cancelBtn,
+  removeBook_removeBtn: selectorFile.css.ComproEngage.dashboard.removeBook_removeBtn,
+  createPlaylist_label: selectorFile.css.ComproEngage.dashboard.createPlaylist_label,
+  createPlaylist_input: selectorFile.css.ComproEngage.dashboard.createPlaylist_input,
+  createPlaylist_cancelBtn: selectorFile.css.ComproEngage.dashboard.createPlaylist_cancelBtn,
+  createPlaylist_createBtn: selectorFile.css.ComproEngage.dashboard.createPlaylist_createBtn,
+  exploreHeading: selectorFile.css.ComproEngage.dashboard.exploreHeading,
+  viewAllBtn: selectorFile.css.ComproEngage.dashboard.viewAllBtn,
+  resourceTitle: selectorFile.css.ComproEngage.dashboard.resourceTitle,
+  resourceSubtitle: selectorFile.css.ComproEngage.dashboard.resourceSubtitle,
+  recentlyViewedHeading: selectorFile.css.ComproEngage.dashboard.recentlyViewedHeading,
+  recentlyViewed_activities: selectorFile.css.ComproEngage.dashboard.recentlyViewed_activities,
 
-    //for blank dashboard
-    cardSliderTitle: selectorFile.css.ComproEngage.dashboardPage.cardSliderTitle,
-    cardSliderSubtitle: selectorFile.css.ComproEngage.dashboardPage.cardSliderSubtitle,
-    cardSliderLeftBtn: selectorFile.css.ComproEngage.dashboardPage.cardSliderLeftBtn,
-    cardSliderRightBtn: selectorFile.css.ComproEngage.dashboardPage.cardSliderRightBtn,
-    actionCardTitles: selectorFile.css.ComproEngage.dashboardPage.actionCardTitles,
-    actionCardSubtitles: selectorFile.css.ComproEngage.dashboardPage.actionCardSubtitles,
-    actionCardBtns: selectorFile.css.ComproEngage.dashboardPage.actionCardBtns,
-    myBooksHeading_Txt: selectorFile.css.ComproEngage.dashboardPage.myBooksHeading_Txt,
-    noBooks_title: selectorFile.css.ComproEngage.dashboardPage.noBooks_title,
-    noBooks_subTitle: selectorFile.css.ComproEngage.dashboardPage.noBooks_subTitle,
-    noBooks_btn: selectorFile.css.ComproEngage.dashboardPage.noBooks_btn,
-    myPlaylistsHeading_Txt: selectorFile.css.ComproEngage.dashboardPage.myPlaylistsHeading_Txt,
-    noPlaylists_title: selectorFile.css.ComproEngage.dashboardPage.noPlaylists_title,
-    noPlaylists_subTitle: selectorFile.css.ComproEngage.dashboardPage.noPlaylists_subTitle,
-    noPlaylists_btn: selectorFile.css.ComproEngage.dashboardPage.noPlaylists_btn,
+  isInitialized: function () {
+    var res;
+    logger.logInto(stackTrace.get());
+    action.waitForDocumentLoad();
+    res = {
+      pageStatus: action.waitForDisplayed(this.pageTitle),
+      appShellPage: appShellPage.isInitialized()
+    };
+    return res;
+  },
 
-    //My Books section
-    bookTitle: selectorFile.css.ComproEngage.dashboardPage.bookTitle,
-    bookEllipses: selectorFile.css.ComproEngage.dashboardPage.bookEllipses,
-    view_btn: selectorFile.css.ComproEngage.dashboardPage.view_btn,
-    removeBook_title: selectorFile.css.ComproEngage.dashboardPage.removeBook_title,
-    removeBook_subTitle: selectorFile.css.ComproEngage.dashboardPage.removeBook_subTitle,
-    removeBook_cancel: selectorFile.css.ComproEngage.dashboardPage.removeBook_cancel,
-    removeBook_remove: selectorFile.css.ComproEngage.dashboardPage.removeBook_remove,
-    bookMenu_viewClass: selectorFile.css.ComproEngage.dashboardPage.bookMenu_viewClass,
-    bookMenu_createClass: selectorFile.css.ComproEngage.dashboardPage.bookMenu_createClass,
-    bookMenu_remove: selectorFile.css.ComproEngage.dashboardPage.bookMenu_remove,
-    bookMenu_openFlipbook: selectorFile.css.ComproEngage.dashboardPage.bookMenu_openFlipbook,
+  getData_dashboardPage: function () {
+    logger.logInto(stackTrace.get());
+    var obj;
+    obj = {
+      pageTitle: (action.getElementCount(this.pageTitle) > 0) ? action.getText(this.pageTitle) : null,
+      createPlaylistBtn: (action.getElementCount(this.createPlaylistBtn) > 0) ? action.getText(this.createPlaylistBtn) : null,
+      addBookBtn: (action.getElementCount(this.addBookBtn) > 0) ? action.getText(this.addBookBtn) : null,
+      cardSliderTitle: (action.getElementCount(this.cardSliderTitle) > 0) ? action.getText(this.cardSliderTitle) : null,
+      cardSliderSubtitle: (action.getElementCount(this.cardSliderSubtitle) > 0) ? action.getText(this.cardSliderSubtitle) : null,
+      cardSliderLeftBtn: (action.getElementCount(this.cardSliderLeftBtn) > 0) ? action.getText(this.cardSliderLeftBtn) : null,
+      cardSliderRightBtn: (action.getElementCount(this.cardSliderRightBtn) > 0) ? action.getText(this.cardSliderRightBtn) : null,
+      myBooksHeading: (action.getElementCount(this.myBooksHeading) > 0) ? action.getText(this.myBooksHeading) : null,
+      noBooksTitle: (action.getElementCount(this.noBooksTitle) > 0) ? action.getText(this.noBooksTitle) : null,
+      noBooksSubtitle: (action.getElementCount(this.noBooksSubtitle) > 0) ? action.getText(this.noBooksSubtitle) : null,
+      noBooks_addBookBtn: (action.getElementCount(this.noBooks_addBookBtn) > 0) ? action.getText(this.noBooks_addBookBtn) : null,
+      myPlaylistsHeading: (action.getElementCount(this.myPlaylistsHeading) > 0) ? action.getText(this.myPlaylistsHeading) : null,
+      noPlaylistsTitle: (action.getElementCount(this.noPlaylistsTitle) > 0) ? action.getText(this.noPlaylistsTitle) : null,
+      noPlaylistsSubTitle: (action.getElementCount(this.noPlaylistsSubTitle) > 0) ? action.getText(this.noPlaylistsSubTitle) : null,
+      noPlaylists_createBtn: (action.getElementCount(this.noPlaylists_createBtn) > 0) ? action.getText(this.noPlaylists_createBtn) : null,
+      exploreHeading: (action.getElementCount(this.exploreHeading) > 0) ? action.getText(this.exploreHeading) : null,
+      viewAllBtn: (action.getElementCount(this.viewAllBtn) > 0) ? action.getText(this.viewAllBtn) : null,
+      recentlyViewedHeading: (action.getElementCount(this.recentlyViewedHeading) > 0) ? action.getText(this.recentlyViewedHeading) : null,
+    }
+    return obj;
+  },
 
-    //my playlist section
-    playlistTitle: selectorFile.css.ComproEngage.dashboardPage.playlistTitle,
-    playlistSubtitle: selectorFile.css.ComproEngage.dashboardPage.playlistSubtitle,
+  getData_actionCards: function () {
+    logger.logInto(stackTrace.get());
+    var obj = [];
+    action.waitForDisplayed(this.actionCardTitles);
+    var list = action.findElements(this.actionCardTitles);
+    for (var i = 0; i <= list.length; i++) {
+      obj[i] = {
+        actionCardTitles: (action.getElementCount(this.actionCardTitles + i + "]") > 0) ? action.getText(this.actionCardTitles + i + "]") : null,
+        actionCardSubtitles: (action.getElementCount(this.actionCardSubtitles + i + "]") > 0) ? action.getText(this.actionCardSubtitles + i + "]") : null,
+        actionCardBtns: (action.getElementCount(this.actionCardBtns + i + "]") > 0) ? action.getText(this.actionCardBtns + i + "]") : null,
+      }
+    }
+    return obj;
+  },
 
-    //recently viewed section
-    recentlyViewed_heading: selectorFile.css.ComproEngage.dashboardPage.recentlyViewed_heading,
+  getData_playlist: function () {
+    logger.logInto(stackTrace.get());
+    var obj;
+    action.waitForDisplayed(this.playlistTitle);
+    var list = action.findElements(this.playlistTitle);
+    for (var i = 0; i <= list.length; i++) {
+      obj[i] = {
+        playlistTitle: (action.getElementCount(this.playlistTitle + i + "]") > 0) ? action.getText(this.playlistTitle + i + "]") : null,
+        playlistSubtitle: (action.getElementCount(this.playlistSubtitle + i + "]") > 0) ? action.getText(this.playlistSubtitle + i + "]") : null,
+      }
+    }
+    return obj;
+  },
 
-    //explore section
-    exploreHeading: selectorFile.css.ComproEngage.dashboardPage.exploreHeading,
-    viewAll_btn: selectorFile.css.ComproEngage.dashboardPage.viewAll_btn,
-    resourceList: selectorFile.css.ComproEngage.dashboardPage.resourceList,
-    resourceTitle: selectorFile.css.ComproEngage.dashboardPage.resourceTitle,
+  getData_books: function () {
+    logger.logInto(stackTrace.get());
+    var obj;
+    action.waitForDisplayed(this.bookTitle);
+    var list = action.findElements(this.bookTitle);
+    for (var i = 0; i <= list.length; i++) {
+      obj[i] = {
+        bookTitle: (action.getElementCount(this.bookTitle + i + "]") > 0) ? action.getText(this.bookTitle + i + "]") : null,
+        bookSubtitle: (action.getElementCount(this.bookSubtitle + i + "]") > 0) ? action.getText(this.bookSubtitle + i + "]") : null,
+        bookMenuBtn: (action.getElementCount(this.bookMenuBtn + i + "]") > 0) ? action.getText(this.bookMenuBtn + i + "]") : null,
+        viewBookBtn: (action.getElementCount(this.viewBookBtn + i + "]") > 0) ? action.getText(this.viewBookBtn + i + "]") : null,
+        bookCover: (action.getElementCount(this.bookCover + i + "]") > 0) ? action.getText(this.bookCover + i + "]") : null,
+      }
+    }
+    return obj;
+  },
 
-    isInitialized: function () {
-        logger.logInto(stackTrace.get());
-        action.waitForDocumentLoad();
-        res = {
-            pageStatus: action.waitForDisplayed(this.pageTitle),
-            appShell: null
-        };
-        res.appShell = appShell.isInitialized();
-        return res;
-    },
+  getData_bookMenu: function () {
+    logger.logInto(stackTrace.get());
+    var obj;
+    obj = {
+      bookMenu_viewClassOption: (action.getElementCount(this.bookMenu_viewClassOption) > 0) ? action.getText(this.bookMenu_viewClassOption) : null,
+      bookMenu_createClassOption: (action.getElementCount(this.bookMenu_createClassOption) > 0) ? action.getText(this.bookMenu_createClassOption) : null,
+      bookMenu_removeOption: (action.getElementCount(this.bookMenu_removeOption) > 0) ? action.getText(this.bookMenu_removeOption) : null,
+      bookMenu_openFlipbookOption: (action.getElementCount(this.bookMenu_openFlipbookOption) > 0) ? action.getText(this.bookMenu_openFlipbookOption) : null,
+    }
+    return obj;
+  },
 
-    getDashboardPageData: function () {
-        logger.logInto(stackTrace.get());
-        let obj = {
-            pageTitle: (action.getElementCount(this.pageTitle) > 0) ? action.getText(this.pageTitle) : null,
-            createPlaylist_Txt: (action.getElementCount(this.createPlaylist_Btn) > 0) ? action.getText(this.createPlaylist_Btn) : null,
-            addBook_Txt: (action.getElementCount(this.addBook_Btn) > 0) ? action.getText(this.addBook_Btn) : null,
-            myBooksHeading_Txt: (action.getElementCount(this.myBooksHeading_Txt) > 0) ? action.getText(this.myBooksHeading_Txt) : null,
-            myPlaylistsHeading_Txt: (action.getElementCount(this.myPlaylistsHeading_Txt) > 0) ? action.getText(this.myPlaylistsHeading_Txt) : null,
-            recentlyViewed_heading: (action.getElementCount(this.recentlyViewed_heading) > 0) ? action.getText(this.recentlyViewed_heading) : null,
-            exploreHeading: (action.getElementCount(this.exploreHeading) > 0) ? action.getText(this.exploreHeading) : null,
-            viewAll_btn: (action.getElementCount(this.viewAll_btn) > 0) ? action.getText(this.viewAll_btn) : null,
+  getData_removeBookDialog: function () {
+    logger.logInto(stackTrace.get());
+    var obj;
+    obj = {
+      removeBook_title: (action.getElementCount(this.removeBook_title) > 0) ? action.getText(this.removeBook_title) : null,
+      removeBook_subTitle: (action.getElementCount(this.removeBook_subTitle) > 0) ? action.getText(this.removeBook_subTitle) : null,
+      removeBook_cancelBtn: (action.getElementCount(this.removeBook_cancelBtn) > 0) ? action.getText(this.removeBook_cancelBtn) : null,
+      removeBook_removeBtn: (action.getElementCount(this.removeBook_removeBtn) > 0) ? action.getText(this.removeBook_removeBtn) : null,
+    }
+    return obj;
+  },
 
-            noBooks_title: (action.getElementCount(this.noBooks_title) > 0) ? action.getText(this.noBooks_title) : null,
-            noBooks_subTitle: (action.getElementCount(this.noBooks_subTitle) > 0) ? action.getText(this.noBooks_subTitle) : null,
-            noBooks_btn: (action.getElementCount(this.noBooks_btn) > 0) ? action.getText(this.noBooks_btn) : null,
+  getData_createPlaylistDialog: function () {
+    logger.logInto(stackTrace.get());
+    var obj;
+    obj = {
+      createPlaylist_label: (action.getElementCount(this.createPlaylist_label) > 0) ? action.getText(this.createPlaylist_label) : null,
+      createPlaylist_input: (action.getElementCount(this.createPlaylist_input) > 0) ? action.getText(this.createPlaylist_input) : null,
+      createPlaylist_cancelBtn: (action.getElementCount(this.createPlaylist_cancelBtn) > 0) ? action.getText(this.createPlaylist_cancelBtn) : null,
+      createPlaylist_createBtn: (action.getElementCount(this.createPlaylist_createBtn) > 0) ? action.getText(this.createPlaylist_createBtn) : null,
+    }
+    return obj;
+  },
 
-            noPlaylists_title: (action.getElementCount(this.noPlaylists_title) > 0) ? action.getText(this.noPlaylists_title) : null,
-            noPlaylists_subTitle: (action.getElementCount(this.noPlaylists_subTitle) > 0) ? action.getText(this.noPlaylists_subTitle) : null,
-            noPlaylists_btn: (action.getElementCount(this.noPlaylists_btn) > 0) ? action.getText(this.noPlaylists_btn) : null,
-
-            cardSliderTitle: (action.getElementCount(this.cardSliderTitle) > 0) ? action.getText(this.cardSliderTitle) : null,
-            cardSliderSubtitle: (action.getElementCount(this.cardSliderSubtitle) > 0) ? action.getText(this.cardSliderSubtitle) : null,
-            cardSliderLeftBtn: (action.getElementCount(this.cardSliderLeftBtn) > 0) ? action.waitForDisplayed(this.cardSliderLeftBtn) : false,
-            cardSliderRightBtn: (action.getElementCount(this.cardSliderRightBtn) > 0) ? action.waitForDisplayed(this.cardSliderRightBtn) : false
+  getData_resources: function (resourceTitleName) {
+    logger.logInto(stackTrace.get());
+    var obj, i, arr = [];
+    resourceTitle = action.findElements(this.resourceTitle)
+    resourceSubtitle = action.findElements(this.resourceSubtitle)
+    if (resourceTitleName) {
+      for (var i = 0; i <= resourceTitle.length; i++) {
+        if (action.getText(this.resourceTitle[i]) == resourceTitleName) {
+          obj[0] = {
+            resourceTitle: (action.getElementCount(this.resourceTitle[i]) > 0) ? action.getText(this.resourceTitle[i]) : null,
+            resourceSubtitle: (action.getElementCount(this.resourceSubtitle[i]) > 0) ? action.getText(this.resourceSubtitle[i]) : null,
+          }
+          break;
         }
-        return obj;
-    },
+      }
+    } else {
+      for (var i = 0; i <= resourceTitle.length; i++) {
+        obj[i] = {
+          resourceTitle: (action.getElementCount(this.resourceTitle[i]) > 0) ? action.getText(this.resourceTitle[i]) : null,
+          resourceSubtitle: (action.getElementCount(this.resourceSubtitle[i]) > 0) ? action.getText(this.resourceSubtitle[i]) : null,
+        }
+      }
+    }
+    return obj;
+  },
 
-    getActionCardsData: function (str) {
-        logger.logInto(stackTrace.get());
-        let list, i, arr = [];
-        list = action.findElements(this.actionCardTitles);
-        if (str) {
-            for (i = 0; i < list.length; i++) {
-                if (action.getText(list[i]) == str) {
-                    arr[0] = {
-                        actionCardTitles: action.getText(this.actionCardTitles + i),
-                        actionCardSubtitles: action.getText(this.actionCardSubtitles + i),
-                        actionCardBtns: action.getText(this.actionCardBtns + i)
-                    }
-                    break;
-                }
-            }
-        }
-        else {
-            for (i = 0; i < list.length; i++) {
-                arr[i] = {
-                    actionCardTitles: action.getText(this.actionCardTitles + i),
-                    actionCardSubtitles: action.getText(this.actionCardSubtitles + i),
-                    actionCardBtns: action.getText(this.actionCardBtns + i)
-                }
-            }
-        }
-        return arr;
-    },
+  getData_recentlyViewedList: function () {
+    logger.logInto(stackTrace.get());
+    var obj;
+    obj = {
+      recentlyViewed_activities: this.recentlyViewed_activities_Data(),
+    }
+    return obj;
+  },
 
-    getBooksData: function (str) {
-        logger.logInto(stackTrace.get());
-        let list, i, arr = [];
-        list = action.findElements(this.bookTitle);
-        if (str) {
-            for (i = 0; i < list.length; i++) {
-                if (action.getText(list[i]) == str) {
-                    arr[0] = {
-                        bookTitle: action.getText(this.bookTitle + i)
-                        //view button:
-                        //book image:
-                        //bookSubtitle
-                    }
-                    break;
-                }
-            }
-        }
-        else {
-            for (i = 0; i < list.length; i++) {
-                arr[i] = {
-                    bookTitle: action.getText(this.bookTitle + i)
-                }
-            }
-        }
-        return arr;
-    },
+  recentlyViewed_activities_Data: function () {
+    logger.logInto(stackTrace.get());
+    var i, list;
+    var recentlyViewed_activities_Arr = [];
+    list = action.findElements(this.recentlyViewed_activities);
+    for (i = 0; i < list.length; i++) {
+      recentlyViewed_activities_Arr[i] = action.getText(list[i])
+    }
+    logger.logInto(stackTrace.get(), recentlyViewed_activities_Arr);
+    return recentlyViewed_activities_Arr;
+  },
 
-    getResourcesData: function (str) {
-        logger.logInto(stackTrace.get());
-        let list, i, arr = [];
-        list = action.findElements(this.resourceList);
-        if (str) {
-            for (i = 0; i < list.length; i++) {
-                if (action.getText(list[i]) == str) {
-                    arr[0] = {
-                        resourceTitle: action.getText(this.resourceTitle + i)
-                        //resourceSubtitle
-                    }
-                    break;
-                }
-            }
-        }
-        else {
-            for (i = 0; i < list.length; i++) {
-                arr[i] = {
-                    resourceTitle: action.getText(this.resourceTitle + i)
-                    //resourceSubtitle
-                }
-            }
-        }
-        return arr;
-    },
 
-    getPlaylistData: function (str) {
-        logger.logInto(stackTrace.get());
-        let list, i, arr = [];
-        list = action.findElements(this.playlistTitle);
-        if (str) {
-            for (i = 0; i < list.length; i++) {
-                if (action.getText(list[i]) == str) {
-                    arr[0] = {
-                        playlistTitle: action.getText(this.playlistTitle + i),
-                        playlistSubtitle: action.getText(this.playlistSubtitle + i)
-                    }
-                    break;
-                }
-            }
-        }
-        else {
-            for (i = 0; i < list.length; i++) {
-                arr[i] = {
-                    playlistTitle: action.getText(this.playlistTitle + i),
-                    playlistSubtitle: action.getText(this.playlistSubtitle + i)
-                }
-            }
-        }
-        return arr;
-    },
+  click_createPlaylistBtn: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.createPlaylistBtn);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " createPlaylistBtn is clicked");
+      res = this.getData_createPlaylistDialog();
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + "createPlaylistBtn is NOT clicked", 'error');
+    }
+    return res;
+  },
 
-    getRecentlyViewedData: function () {
+  click_addBookBtn: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.addBookBtn);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " addBookBtn is clicked");
+      res = require('./addBook.page.js').isInitialized();
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + "addBookBtn is NOT clicked", 'error');
+    }
+    return res;
+  },
 
-    },
+  click_cardSliderLeftBtn: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.cardSliderLeftBtn);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " cardSliderLeftBtn is clicked");
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + "cardSliderLeftBtn is NOT clicked", 'error');
+    }
+    return res;
+  },
 
-    clickAddBook: function () {
-        logger.logInto(stackTrace.get());
-        res = action.click(this.addBook_Btn);
-        if (res == true) {
-            logger.logInto(stackTrace.get(), " Add book button is clicked");
-            let addBook = require('./addBook.page');
-            res = addBook.isInitialized();
-        }
-        else {
-            res = res + " -- Error in clicking Add book Button";
-            logger.logInto(stackTrace.get(), res, "error");
-        }
-        return res;
-    },
+  click_cardSliderRightBtn: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.cardSliderRightBtn);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " cardSliderRightBtn is clicked");
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + "cardSliderRightBtn is NOT clicked", 'error');
+    }
+    return res;
+  },
 
-    clickViewButton: function (str) {
-        logger.logInto(stackTrace.get());
-        let i, list;
-        list = action.findElements(this.bookTitle);
-        for (i = 0; i < list.length; i++) {
-            if (action.getText(list[i]) == str) {
-                res = action.click(this.view_btn + i);
-                if (res == true) {
-                    let bookPage = require('./viewBook.page');
-                    res = bookPage.isInitialized();
-                    logger.logInto(stackTrace.get(), " -- View button clicked");
-                }
-                else {
-                    res = res + " -- Error in clicking View button"
-                    logger.logInto(stackTrace.get(), res, "error");
-                }
-                break;
-            }
-        }
-        return res;
-    },
+  click_actionCardBtns: function (actionCardTitlesName) {
+    logger.logInto(stackTrace.get());
+    var i, list, res;
+    list = action.findElements(this.actionCardBtns);
+    for (i = 0; i < list.length; i++) {
+      if ((action.getText(this.actionCardTitles + i + "]")) == actionCardTitlesName) {
+        res = action.click(list[i]);
+        break;
+      }
+    }
+    if (res == true) {
+      logger.logInto(stackTrace.get(), " --actionCardBtns clicked");
+    }
+    else
+      logger.logInto(stackTrace.get(), " --actionCardBtns NOT clicked", "error")
+    return res;
+  },
 
-    clickBookMenuOptions: function (str) {
-        logger.logInto(stackTrace.get());
-        let i, list;
-        res = undefined;
-        list = action.findElements(this.bookTitle);
-        for (i = 0; i < list.length; i++) {
-            if (action.getText(list[i]) == str) {
-                res = action.click(this.bookEllipses + i);
-                if (res == true) {
-                    res = this.getBookMenuData();
-                    logger.logInto(stackTrace.get(), " --Book Ellipses clicked");
-                }
-                else {
-                    res = res + " -- Error in clicking Book Ellipses"
-                    logger.logInto(stackTrace.get(), res, "error");
-                }
-                break;
-            }
-        }
-        return res;
-    },
+  click_noBooks_addBookBtn: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.noBooks_addBookBtn);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " noBooks_addBookBtn is clicked");
+      res = require('./addBook.page.js').isInitialized();
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + "noBooks_addBookBtn is NOT clicked", 'error');
+    }
+    return res;
+  },
 
-    getBookMenuData: function () {
-        logger.logInto(stackTrace.get());
-        action.waitForDisplayed(this.bookMenu_viewClass);
-        let obj = {
-            bookMenu_viewClass: (action.getElementCount(this.bookMenu_viewClass) > 0) ? action.getText(this.bookMenu_viewClass) : null,
-            bookMenu_createClass: (action.getElementCount(this.bookMenu_createClass) > 0) ? action.getText(this.bookMenu_createClass) : null,
-            bookMenu_remove: (action.getElementCount(this.bookMenu_remove) > 0) ? action.getText(this.bookMenu_remove) : null,
-            bookMenu_openFlipbook: (action.getElementCount(this.bookMenu_openFlipbook) > 0) ? action.getText(this.bookMenu_openFlipbook) : null,
-        }
-        return obj;
-    },
+  click_noPlaylists_createBtn: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.noPlaylists_createBtn);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " noPlaylists_createBtn is clicked");
+      res = this.getData_createPlaylistDialog();
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + "noPlaylists_createBtn is NOT clicked", 'error');
+    }
+    return res;
+  },
 
-    clickMenuViewClasses: function () {
-        logger.logInto(stackTrace.get());
-        res = action.click(this.bookMenu_viewClass);
-        if (res == true) {
-            let classDrawerPage = require('./classDrawer.page');
-            res = classDrawerPage.isInitialized();
-            logger.logInto(stackTrace.get(), " --View class clicked");
-        }
-        else {
-            res = res + " -- Error in clicking View class";
-            logger.logInto(stackTrace.get(), res, "error");
-        }
-        return res;
-    },
+  click_playlistTitle: function (playlistTitleName) {
+    logger.logInto(stackTrace.get());
+    var i, list, res;
+    list = action.findElements(this.playlistTitle);
+    for (i = 0; i < list.length; i++) {
+      if ((action.getText(this.playlistTitle + i + "]")) == playlistTitleName) {
+        res = action.click(list[i]);
+        break;
+      }
+    }
+    if (res == true) {
+      logger.logInto(stackTrace.get(), " --playlistTitle clicked");
+      res = require('./playlist.page.js').isInitialized();;
+    }
+    else
+      logger.logInto(stackTrace.get(), " --playlistTitle NOT clicked", "error")
+    return res;
+  },
 
-    clickMenuCreateNewClass: function () {
-        logger.logInto(stackTrace.get());
-        res = action.click(this.bookMenu_createClass);
-        if (res == true) {
-            var createClassPage = require('./createClass.page.js');
-            res = createClassPage.isInitialized();
-            logger.logInto(stackTrace.get(), " --Create class clicked");
-        }
-        else {
-            res = res + " -- Error in clicking create class";
-            logger.logInto(stackTrace.get(), res, "error");
-        }
-        return res;
-    },
+  click_bookMenuBtn: function (bookTitleName) {
+    logger.logInto(stackTrace.get());
+    var i, list, res;
+    list = action.findElements(this.bookMenuBtn);
+    for (i = 0; i < list.length; i++) {
+      if ((action.getText(this.bookTitle + i + "]")) == bookTitleName) {
+        res = action.click(list[i]);
+        break;
+      }
+    }
+    if (res == true) {
+      logger.logInto(stackTrace.get(), " --bookMenuBtn clicked");
+      res = this.getData_bookMenu();
+    }
+    else
+      logger.logInto(stackTrace.get(), " --bookMenuBtn NOT clicked", "error")
+    return res;
+  },
 
-    clickMenuRemoveBook: function () {
-        logger.logInto(stackTrace.get());
-        res = action.click(this.bookMenu_remove);
-        if (res == true) {
-            res = this.getRemoveBookData();
-            logger.logInto(stackTrace.get(), " --Remove from My books clicked");
-        }
-        else {
-            res = res + " -- Error in clicking Remove from My books"
-            logger.logInto(stackTrace.get(), res, "error");
-        }
-        return res;
-    },
+  click_viewBookBtn: function (bookTitleName) {
+    logger.logInto(stackTrace.get());
+    var i, list, res;
+    list = action.findElements(this.viewBookBtn);
+    for (i = 0; i < list.length; i++) {
+      if ((action.getText(this.bookTitle + i + "]")) == bookTitleName) {
+        res = action.click(list[i]);
+        break;
+      }
+    }
+    if (res == true) {
+      logger.logInto(stackTrace.get(), " --viewBookBtn clicked");
+      res = require('./viewBook.page.js').isInitialized();
+    }
+    else
+      logger.logInto(stackTrace.get(), " --viewBookBtn NOT clicked", "error")
+    return res;
+  },
 
-    getRemoveBookData: function () {
-        logger.logInto(stackTrace.get());
-        let obj = {
-            removeBook_title: (action.getElementCount(this.removeBook_title) > 0) ? action.getText(this.removeBook_title) : null,
-            removeBook_subTitle: (action.getElementCount(this.removeBook_subTitle) > 0) ? action.getText(this.removeBook_subTitle) : null,
-            removeBook_cancel: (action.getElementCount(this.removeBook_cancel) > 0) ? action.getText(this.removeBook_cancel) : null,
-            removeBook_remove: (action.getElementCount(this.removeBook_remove) > 0) ? action.getText(this.removeBook_remove) : null,
-        }
-        return obj;
-    },
+  click_bookCover: function (bookTitleName) {
+    logger.logInto(stackTrace.get());
+    var i, list, res;
+    list = action.findElements(this.bookCover);
+    for (i = 0; i < list.length; i++) {
+      if ((action.getText(this.bookTitle + i + "]")) == bookTitleName) {
+        res = action.click(list[i]);
+        break;
+      }
+    }
+    if (res == true) {
+      logger.logInto(stackTrace.get(), " --bookCover clicked");
+      res = require('./viewBook.page.js').isInitialized();
+    }
+    else
+      logger.logInto(stackTrace.get(), " --bookCover NOT clicked", "error")
+    return res;
+  },
 
-    clickRemoveBookDialogueBox_Cancel: function () {
-        logger.logInto(stackTrace.get());
-        res = action.click(this.removeBook_cancel);
-        if (true == res) {
-            res = this.getBooksData();
-            logger.logInto(stackTrace.get(), " --cancel button is clicked");
-        }
-        else {
-            res = res + " -- Error in clicking Notification Close Button";
-            logger.logInto(stackTrace.get(), res, 'error');
-        }
-        return res;
-    },
+  click_bookMenu_viewClassOption: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.bookMenu_viewClassOption);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " bookMenu_viewClassOption is clicked");
+      res = require('./classDrawer.page.js').isInitialized();
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + "bookMenu_viewClassOption is NOT clicked", 'error');
+    }
+    return res;
+  },
 
-    clickRemoveBookDialogueBox_Remove: function () {
-        logger.logInto(stackTrace.get());
-        res = action.click(this.removeBook_remove);
-        if (true == res) {
-            res = this.getBooksData();
-            logger.logInto(stackTrace.get(), " --Rmove button is clicked");
-        }
-        else {
-            res = res + " -- Error in clicking Notification Close Button";
-            logger.logInto(stackTrace.get(), res, 'error');
-        }
-        return res;
-    },
+  click_bookMenu_createClassOption: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.bookMenu_createClassOption);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " bookMenu_createClassOption is clicked");
+      res = require('./createClass.page.js').isInitialized();
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + "bookMenu_createClassOption is NOT clicked", 'error');
+    }
+    return res;
+  },
 
-    clickMenuOpenFlipbook: function () {
-        logger.logInto(stackTrace.get());
-        res = action.click(this.bookMenu_openFlipbook);
-        if (res == true) {
-            logger.logInto(stackTrace.get(), " -- Open Flipbook button clicked");
-        }
-        else {
-            res = res + " -- Error in clicking Open Flipbook button";
-            logger.logInto(stackTrace.get(), res, "error");
-        }
-        return res;
-    },
+  click_bookMenu_removeOption: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.bookMenu_removeOption);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " bookMenu_removeOption is clicked");
+      res = this.getData_removeBookDialog();
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + "bookMenu_removeOption is NOT clicked", 'error');
+    }
+    return res;
+  },
 
-    selectFlipbookFromList: function (str) {
-        logger.logInto(stackTrace.get());
+  click_bookMenu_openFlipbookOption: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.bookMenu_openFlipbookOption);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " bookMenu_openFlipbookOption is clicked");
+      //res = require('./flipbook.page.js').isInitialized();;
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + "bookMenu_openFlipbookOption is NOT clicked", 'error');
+    }
+    return res;
+  },
 
-        return res;
-    },
+  click_removeBook_cancelBtn: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.removeBook_cancelBtn);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " removeBook_cancelBtn is clicked");
+      res = action.waitForDisplayed(this.removeBook_cancelBtn, undefined, true);
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + "removeBook_cancelBtn is NOT clicked", 'error');
+    }
+    return res;
+  },
 
-    clickExploreResource: function (str) {
-        logger.logInto(stackTrace.get());
-        res = null;
-        let i, list;
-        list = action.findElements(this.resourceTitle);
-        for (i = 0; i < list.length; i++) {
-            if (action.getText(list[i]) == str) {
-                res = action.click(this.resourceList + i + "]");
-                if (res == true) {
-                    logger.logInto(stackTrace.get(), " -- Global Resource button clicked");
-                    var browse = require('./browse.page');
-                    res = browse.isInitialized();
-                    // add info of selected tab in res ?? - akhil
-                }
-                else {
-                    res = res + " -- Error in clicking Global Resource button";
-                    logger.logInto(stackTrace.get(), res, "error");
-                }
-                break;
-            }
-        }
-        return res;
-    },
+  click_removeBook_removeBtn: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.removeBook_removeBtn);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " removeBook_removeBtn is clicked");
+      res = this.getData_books();
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + "removeBook_removeBtn is NOT clicked", 'error');
+    }
+    return res;
+  },
+
+  click_createPlaylist_cancelBtn: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.createPlaylist_cancelBtn);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " createPlaylist_cancelBtn is clicked");
+      res = action.waitForDisplayed(this.createPlaylist_cancelBtn, undefined, true);
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + "createPlaylist_cancelBtn is NOT clicked", 'error');
+    }
+    return res;
+  },
+
+  click_createPlaylist_createBtn: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.createPlaylist_createBtn);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " createPlaylist_createBtn is clicked");
+      res = this.getData_playlist();
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + "createPlaylist_createBtn is NOT clicked", 'error');
+    }
+    return res;
+  },
+
+  click_viewAllBtn: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.viewAllBtn);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " viewAllBtn is clicked");
+      res = require('./browse.page.js').isInitialized();
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + "viewAllBtn is NOT clicked", 'error');
+    }
+    return res;
+  },
+
+  click_resourceTitle: function (resourceTitleName) {
+    logger.logInto(stackTrace.get());
+    var i, list, res;
+    list = action.findElements(this.resourceTitle);
+    for (i = 0; i < list.length; i++) {
+      if ((action.getText(list[i])) == resourceTitleName) {
+        res = action.click(list[i]);
+        break;
+      }
+    }
+    if (res == true) {
+      logger.logInto(stackTrace.get(), " --resourceTitle clicked");
+      res = require('./browse.page.js').isInitialized();
+    }
+    else
+      logger.logInto(stackTrace.get(), " --resourceTitle NOT clicked", "error")
+    return res;
+  },
+
+  click_recentlyViewed_activities: function (recentlyViewed_activitiesName) {
+    logger.logInto(stackTrace.get());
+    var i, list, res;
+    list = action.findElements(this.recentlyViewed_activities);
+    for (i = 0; i < list.length; i++) {
+      if ((action.getText(this.recentlyViewed_activities + i + "]")) == recentlyViewed_activitiesName) {
+        res = action.click(list[i]);
+        break;
+      }
+    }
+    if (res == true) {
+      logger.logInto(stackTrace.get(), " --recentlyViewed_activities clicked");
+    }
+    else
+      logger.logInto(stackTrace.get(), " --recentlyViewed_activities NOT clicked", "error")
+    return res;
+  },
+
+  set_createPlaylist_input: function (value) {
+    var res;
+    logger.logInto(stackTrace.get());
+    res = action.setValue(this.createPlaylist_input, value);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), "Value is entered in createPlaylist_input");
+    } else {
+      logger.logInto(stackTrace.get(), res + "Value is NOT entered in createPlaylist_input", 'error');
+    }
+    return res;
+  },
 
 }
-
 
