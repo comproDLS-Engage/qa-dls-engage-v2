@@ -2,7 +2,7 @@
 var data, datanode;
 
 function jsonParser(filepath) {
-	//console.log(filepath);
+	//console.log("parsing json");
 	try {
 		data = JSON.parse(fs.readFileSync(filepath));
 		//console.log("[USER] json file " + filepath + " parsed successfully.");
