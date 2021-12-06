@@ -437,7 +437,7 @@ function Clickfunctionindex(textcondition, selectorName, seletorRow, PageTemplat
         "var i, list, res;\n" +
         "list = action.findElements(this." + selectorName + ");\n" +
         "for (i = 0; i < list.length; i++) {\n" +
-        "if ((action.getText(this." + textcondition + "[i]))== " + textcondition + "Name) {\n " +
+        "if ((action.getText(this.list[i]))== " + textcondition + "Name) {\n " +
         "res = action.click(list[i]);\n" +
         "break;\n}\n" +
         "}\nif (res == true) {\n  logger.logInto(stackTrace.get(), \" --" + selectorName + " clicked\");\n")
