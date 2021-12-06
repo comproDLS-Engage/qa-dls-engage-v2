@@ -69,6 +69,7 @@ app.get("/getvalue", function (request, response) {
             response.send("Your PageObject \"" + inputFile + ".page.js\" is genrated at \"" + __dirname + "\\outputFile\\" + inputFile + '.page.js\"');
             // Traverse the selector json
             //Create the output Page
+
             file = fs.createWriteStream(__dirname + "/outputFile/" + inputFile + '.page.js');
             for (let i = 1; i < pageSelectorFile.length; i++) {
                 for (let j = 1; j < pageSelectorFile.length; j++) {
@@ -92,8 +93,7 @@ app.get("/getvalue", function (request, response) {
             }
             if (selectorJsonCheck) {
                 generatePageSelectorJson(pageSelectorFile, inputFile);
-           
-   }
+                      }
             if (pageHeaderCheck) {
 
                 // Generate Page Header
@@ -173,6 +173,10 @@ function generatePageSelectorJson(pageSelectorFile, inputFile) {
     }
     file1.write("\n}\n}")
 }
+
+
+
+
 //Genrate header of the page
 function generatePageHeader(PageTemplate, param1, param2, appShellPageCheck) {
     file.write("\"use strict\";\n")
@@ -241,7 +245,7 @@ function generateIsinitiazeFunction(pageSelectorFile, PageTemplate, param1) {
 
 function generateGetDatafunction(pageSelectorFile, key) {
     file.write(key + "_Data: function ()\n{  \n")
-    file.write("logger.logInto(stackTrace.get());\n var obj;\n obj = {\n")
+    file.write("logger.logInto(stackTrace.get());\n var obj=[];\n obj = {\n")
 
     for (var i = 0; i < pageSelectorFile.length; i++) {
         if ((pageSelectorFile[i].extraInfo).toLowerCase().includes("pattern")) {
@@ -273,7 +277,7 @@ function generategetCssPropertyData(pageSelectorFile, key, cssProperty) {
         }
     }
     if (cssPropertyState == true) {
-        file.write("getCssPropertyData: function ()\n{\n  logger.logInto(stackTrace.get()); \nvar obj;\n obj = {\n")
+        file.write("getCssPropertyData: function ()\n{\n  logger.logInto(stackTrace.get()); \nvar obj=[];\n obj = {\n")
 
         for (var i = 0; i < pageSelectorFile.length; i++) {
             if ((pageSelectorFile[i].extraInfo).toLowerCase().includes("cssproperty")) {
@@ -538,7 +542,7 @@ function generategroupDatafunction(group, groupName) {
 function dataPatternGenerate(pageSelectorFile, groupName) {
     file.write("getData_" + groupName + ": function ()\n{\n")
     file.write("logger.logInto(stackTrace.get());\n")
-    file.write("var obj;\n")
+    file.write("var obj=[];\n")
     file.write("obj = {\n")
     for (var i = 0; i < pageSelectorFile.length; i++) {
         if ((pageSelectorFile[i].extraInfo).toLowerCase().includes("pattern")) {
@@ -573,14 +577,14 @@ function dataPatternGenerateWithParent(groupSelectorData, groupName, key) {
     else
         file.write("getData_" + groupName + ": function ()\n{\n")
     file.write("logger.logInto(stackTrace.get());\n")
-    file.write("var obj;\n")
+    file.write("var obj=[];\n")
     file.write("action.waitForDisplayed(this." + groupSelectorData[key].Label + ");\n" +
         "var list = action.findElements(this." + groupSelectorData[key].Label + ");\n");
 
 
     if (selectedText) {
         file.write(" if (" + selectedText + "Name) {" +
-            "for (var i=0;i<=list.length;i++){\n" +
+            "for (var i=0;i<list.length;i++){\n" +
             "if (action.getText(this." + selectedText + " + i) == " + selectedText + "Name) {\n")
 
         file.write("obj[0] = {\n")
@@ -607,7 +611,7 @@ function dataPatternGenerateWithParent(groupSelectorData, groupName, key) {
     }
 
 
-    file.write("for (var i=0;i<=list.length;i++){\n obj[i] = {\n")
+    file.write("for (var i=0;i<list.length;i++){\n obj[i] = {\n")
     for (var i = 0; i < groupSelectorData.length; i++) {
 
         if ((groupSelectorData[i].extraInfo).toLowerCase().includes("pattern")) {
@@ -649,7 +653,7 @@ function dataPatternGenerateWithCondition(groupSelectorData, groupName, key) {
     else
         file.write("getData_" + groupName + ": function ()\n{\n")
     file.write("logger.logInto(stackTrace.get());\n")
-    file.write("var obj , i , arr = [];\n")
+    file.write("var obj =[], i , arr = [];\n")
     for (var i = 0; i < groupSelectorData.length; i++) {
         file.write(groupSelectorData[i].Label + "=action.findElements(this." + groupSelectorData[i].Label + ")\n");
     }
