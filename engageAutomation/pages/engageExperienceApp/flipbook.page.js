@@ -6,6 +6,7 @@ var appShellPage = require('./appShell.page.js')
 module.exports = {
 
   readerContainerWrapper: selectorFile.css.ComproEngage.flipbook.readerContainerWrapper,
+  pageLayoutSingle:selectorFile.css.ComproEngage.flipbook.pageLayoutSingle,
   pageLayoutDouble: selectorFile.css.ComproEngage.flipbook.pageLayoutDouble,
   notesDockContainer: selectorFile.css.ComproEngage.flipbook.notesDockContainer,
   notesBtn: selectorFile.css.ComproEngage.flipbook.notesBtn,
@@ -81,6 +82,7 @@ module.exports = {
     logger.logInto(stackTrace.get());
     var obj;
     obj = {
+      pageLayoutSingle: (action.getElementCount(this.pageLayoutSingle) > 0) ? action.waitForDisplayed(this.pageLayoutSingle) : false,
       pageLayoutDouble: (action.getElementCount(this.pageLayoutDouble) > 0) ? action.waitForDisplayed(this.pageLayoutDouble) : false,
       notesBtn: (action.getElementCount(this.notesBtn) > 0) ? action.getText(this.notesBtn) : null,
       annotationsBtn: (action.getElementCount(this.annotationsBtn) > 0) ? action.getText(this.annotationsBtn) : null,
@@ -188,6 +190,20 @@ module.exports = {
     return res;
   },
 
+  click_notesCloseBtn: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.notesCloseBtn);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " notesCloseBtn button is clicked");
+      res = action.waitForDisplayed(this.notesCloseBtn, undefined, true);
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + " notesCloseBtn button is not clicked", 'error');
+    }
+    return res;
+  },
+
   //Clicking on Delete Note button and get the data of the delete modal
   click_noteListDeleteBtn: function (noteListItemTextName) {
     logger.logInto(stackTrace.get());
@@ -220,48 +236,35 @@ module.exports = {
     return obj;
   },
 
-  click_notesDockBtn: function () {
+  click_deleteNoteCancelBtn: function () {
     logger.logInto(stackTrace.get());
     var res;
-    res = action.click(this.notesDockBtn);
+    res = action.click(this.deleteNoteCancelBtn);
     if (true == res) {
-      logger.logInto(stackTrace.get(), " notesDockBtn button is clicked");
-      res = action.waitForDisplayed(this.notesDockContainer); //manually added
+      logger.logInto(stackTrace.get(), " deleteNoteCancelBtn button is clicked");
+      res = this.getData_notesList();
     }
     else {
-      logger.logInto(stackTrace.get(), res + " notesDockBtn button is not clicked", 'error');
+      logger.logInto(stackTrace.get(), res + " deleteNoteCancelBtn button is not clicked", 'error');
     }
     return res;
   },
 
-  click_notesUndockBtn: function () {
+  click_deleteNoteDeleteBtn: function () {
     logger.logInto(stackTrace.get());
     var res;
-    res = action.click(this.notesUndockBtn);
+    res = action.click(this.deleteNoteDeleteBtn);
     if (true == res) {
-      logger.logInto(stackTrace.get(), " notesUndockBtn button is clicked");
-      res = action.waitForDisplayed(this.notesDockContainer, undefined, true);  //manually added
+      logger.logInto(stackTrace.get(), " deleteNoteDeleteBtn button is clicked");
+      res = this.getData_notesList();
     }
     else {
-      logger.logInto(stackTrace.get(), res + " notesUndockBtn button is not clicked", 'error');
+      logger.logInto(stackTrace.get(), res + " deleteNoteDeleteBtn button is not clicked", 'error');
     }
     return res;
   },
 
-  click_notesCloseBtn: function () {
-    logger.logInto(stackTrace.get());
-    var res;
-    res = action.click(this.notesCloseBtn);
-    if (true == res) {
-      logger.logInto(stackTrace.get(), " notesCloseBtn button is clicked");
-      res = action.waitForDisplayed(this.notesCloseBtn, undefined, true);
-    }
-    else {
-      logger.logInto(stackTrace.get(), res + " notesCloseBtn button is not clicked", 'error');
-    }
-    return res;
-  },
-
+  //Edit Note 
   click_noteListEditBtn: function (noteListItemTextName) {
     logger.logInto(stackTrace.get());
     var i, list, res;
@@ -275,35 +278,10 @@ module.exports = {
     if (res == true) {
       logger.logInto(stackTrace.get(), " --noteListEditBtn clicked");
       res = this.getData_addNotes();
+      //get data edit note?
     }
     else
       logger.logInto(stackTrace.get(), res + " --noteListEditBtn NOT clicked", "error")
-    return res;
-  },
-
-  click_notesPageValueLeft: function () {
-    logger.logInto(stackTrace.get());
-    var res;
-    res = action.click(this.notesPageValueLeft);
-    if (true == res) {
-      logger.logInto(stackTrace.get(), " notesPageValueLeft button is clicked");
-    }
-    else {
-      logger.logInto(stackTrace.get(), res + " notesPageValueLeft button is not clicked", 'error');
-    }
-    return res;
-  },
-
-  click_notesPageValueRight: function () {
-    logger.logInto(stackTrace.get());
-    var res;
-    res = action.click(this.notesPageValueRight);
-    if (true == res) {
-      logger.logInto(stackTrace.get(), " notesPageValueRight button is clicked");
-    }
-    else {
-      logger.logInto(stackTrace.get(), res + " notesPageValueRight button is not clicked", 'error');
-    }
     return res;
   },
 
@@ -335,34 +313,61 @@ module.exports = {
     return res;
   },
 
-  click_deleteNoteCancelBtn: function () {
+
+  //Notes extra
+  click_notesDockBtn: function () {
     logger.logInto(stackTrace.get());
     var res;
-    res = action.click(this.deleteNoteCancelBtn);
+    res = action.click(this.notesDockBtn);
     if (true == res) {
-      logger.logInto(stackTrace.get(), " deleteNoteCancelBtn button is clicked");
-      res = this.getData_notesList();
+      logger.logInto(stackTrace.get(), " notesDockBtn button is clicked");
+      res = action.waitForDisplayed(this.notesDockContainer); //manually added
     }
     else {
-      logger.logInto(stackTrace.get(), res + " deleteNoteCancelBtn button is not clicked", 'error');
+      logger.logInto(stackTrace.get(), res + " notesDockBtn button is not clicked", 'error');
     }
     return res;
   },
 
-  click_deleteNoteDeleteBtn: function () {
+  click_notesUndockBtn: function () {
     logger.logInto(stackTrace.get());
     var res;
-    res = action.click(this.deleteNoteDeleteBtn);
+    res = action.click(this.notesUndockBtn);
     if (true == res) {
-      logger.logInto(stackTrace.get(), " deleteNoteDeleteBtn button is clicked");
-      res = this.getData_notesList();
+      logger.logInto(stackTrace.get(), " notesUndockBtn button is clicked");
+      res = action.waitForDisplayed(this.notesDockContainer, undefined, true);  //manually added
     }
     else {
-      logger.logInto(stackTrace.get(), res + " deleteNoteDeleteBtn button is not clicked", 'error');
+      logger.logInto(stackTrace.get(), res + " notesUndockBtn button is not clicked", 'error');
     }
     return res;
   },
 
+  click_notesPageValueLeft: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.notesPageValueLeft);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " notesPageValueLeft button is clicked");
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + " notesPageValueLeft button is not clicked", 'error');
+    }
+    return res;
+  },
+
+  click_notesPageValueRight: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.notesPageValueRight);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " notesPageValueRight button is clicked");
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + " notesPageValueRight button is not clicked", 'error');
+    }
+    return res;
+  },
 
   //--------BOOKMARKS-------
   click_bookmarkCloseBtn: function () {
@@ -567,7 +572,7 @@ module.exports = {
   },
 
 
-
+  //-----TOOLBAR BUTTONS-----
   click_annotationsBtn: function () {
     logger.logInto(stackTrace.get());
     var res;
@@ -584,31 +589,40 @@ module.exports = {
 
   click_zoomInBtn: function () {
     logger.logInto(stackTrace.get());
-    var res;
+    var res, size;
     res = action.click(this.zoomInBtn);
     if (true == res) {
       logger.logInto(stackTrace.get(), " zoomInBtn button is clicked");
-      res = action.getCSSProperty(this.readerContainerWrapper, 'height');
+      size = {
+        width: action.getElementCount(this.readerContainerWrapper) > 0 ? action.getCSSProperty(this.readerContainerWrapper,'width').value : null,
+        height: action.getElementCount(this.readerContainerWrapper) > 0 ? action.getCSSProperty(this.readerContainerWrapper,'height').value : null
+      };
+      size.width = parseInt(size.width.match(/\d+/g)[0]);
+      size.height = parseInt(size.height.match(/\d+/g)[0]);
     }
     else {
       logger.logInto(stackTrace.get(), res + " zoomInBtn button is not clicked", 'error');
     }
-    console.log("res",res);
-    return res;
+    return size;
   },
 
   click_zoomOutBtn: function () {
     logger.logInto(stackTrace.get());
-    var res;
+    var res, size;
     res = action.click(this.zoomOutBtn);
     if (true == res) {
       logger.logInto(stackTrace.get(), " zoomOutBtn button is clicked");
-      res = action.getCSSProperty(this.readerContainerWrapper, 'height');
+      size = {
+        width: action.getElementCount(this.readerContainerWrapper) > 0 ? action.getCSSProperty(this.readerContainerWrapper,'width').value : null,
+        height: action.getElementCount(this.readerContainerWrapper) > 0 ? action.getCSSProperty(this.readerContainerWrapper,'height').value : null
+      };
+      size.width = parseInt(size.width.match(/\d+/g)[0]);
+      size.height = parseInt(size.height.match(/\d+/g)[0]);
     }
     else {
       logger.logInto(stackTrace.get(), res + " zoomOutBtn button is not clicked", 'error');
     }
-    return res;
+    return size;
   },
 
   click_fitToScreenBtn: function () {
@@ -645,13 +659,13 @@ module.exports = {
     res = action.click(this.singlePageBtn);
     if (true == res) {
       logger.logInto(stackTrace.get(), " singlePageBtn button is clicked");
-      res = this.getData_flipbookPage();
+      var singlelayoutWidth = (action.getElementCount(this.pageLayoutSingle) > 0) ? action.getAttribute(this.pageLayoutSingle,"style") : null;
     }
     else {
       logger.logInto(stackTrace.get(), res + " singlePageBtn button is not clicked", 'error');
     }
-    console.log("res click single",res)
-    return res;
+    console.log("readercintainer",singlelayoutWidth);
+    return singlelayoutWidth;
   },
 
   click_fullScreenBtn: function () {
