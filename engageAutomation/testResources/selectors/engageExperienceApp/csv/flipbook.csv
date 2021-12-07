@@ -47,6 +47,7 @@ bookmarkListItemName,[data-tid*='bookmark-list-item-name-,p,bookmarkList,parent,
 bookmarkListDeleteBtn,button[data-tid='btn-delete'],button,bookmarkList,,pattern,bookmarkList
 bookmarkListEditBtn,button[data-tid='btn-edit'],button,bookmarkList,,pattern,addBookmark
 bookmarkNameLabel,[data-tid='text-label-edit-bookmark'],p,addBookmark,,,
+bookmarkPageLabel,[data-tid='label-text-page-number'],p,addBookmark,,,
 bookmarkPageValueSingle,[data-tid=label-text-page-number-value],h6,addBookmark,,,
 bookmarkPageValueLeft,[data-tid=text-option-0],button,addBookmark,,,
 bookmarkPageValueRight,[data-tid=text-option-1],button,addBookmark,,,

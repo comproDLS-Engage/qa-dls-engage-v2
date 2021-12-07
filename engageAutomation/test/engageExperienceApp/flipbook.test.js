@@ -24,7 +24,7 @@ module.exports = {
 		assertion.assertEqual(sts.myNotesTitle, testdata.myNotesTitle, "My Notes title status mismatch");
 		assertion.assertEqual(sts.notesDockBtn,'', "My Notes title status mismatch");
 		assertion.assertEqual(sts.notesCloseBtn, '', "Close Button status mismatch");
-		assertion.assertEqual(sts.noNoteIcon, '', "No note Icon status mismatch");
+		assertion.assertEqual(sts.noNoteIcon, true, "No note Icon status mismatch");
 		assertion.assertEqual(sts.noNoteText, testdata.noNoteText, "No Note Text status mismatch");
 		assertion.assertEqual(sts.addNoteBtn, testdata.addNoteBtn, "Add Note Button Text status mismatch");
 	},
@@ -33,32 +33,30 @@ module.exports = {
 	ENG_FLIP_TC_4: function (testdata) {
 		sts = flipbook.click_addNoteBtn();
 		assertion.assertEqual(sts.addNotesTitle, testdata.addNoteTitle, "Add Notes title status mismatch");
-		assertion.assertEqual(sts.closeBtnNotes, true, "Notes close button status mismatch");
-		assertion.assertEqual(sts.pageNumberLabelNotes, testdata.pageNoLabel, "page number text mismatch");
-		assertion.assertEqual(sts.pageNumberValueNotes, testdata.pageNoValue, "page Value button text mismatch");
-		assertion.assertEqual(sts.cancelBtn, testdata.cancelBtn, "Cancel Button Text status mismatch");
-		assertion.assertEqual(sts.saveBtn, testdata.saveBtn, "Save Button status mismatch");
+		assertion.assertEqual(sts.notesPageLabel, testdata.pageNoLabel, "page number text mismatch");
+		assertion.assertEqual(sts.notesPageValueSingle, testdata.pageNoValue, "page Value button text mismatch");
+		assertion.assertEqual(sts.notesCancelBtn, testdata.cancelBtn, "Cancel Button Text status mismatch");
+		assertion.assertEqual(sts.notesSaveBtn, testdata.saveBtn, "Save Button status mismatch");
 	},
 
 	//Validate on clicking Save button, notes set by the user are saved
 	ENG_FLIP_TC_5: function (testdata) {
-		sts = flipbook.set_textAreaNotes(testdata);
+		sts = flipbook.set_notesTextArea(testdata);
 		assertion.assertEqual(sts, true, "status mismatch");
-		sts = flipbook.click_saveBtn();
+		sts = flipbook.click_notesSaveBtn();
 	},
 
 	//Click Close button in notes pane
 	ENG_FLIP_TC_6: function () {
-		sts = flipbook.click_closeBtn_notes();
+		sts = flipbook.click_notesCloseBtn();
+		assertion.assertEqual(sts, true, "status mismatch");
 	},
 
 	//Validate clicking on the Bookmark button for a new flipbook launches Bookmark pane
 	ENG_FLIP_TC_7: function (testdata) {
 		sts = flipbook.click_bookmarkBtn();
-		assertion.assertEqual(sts, true, "status mismatch");
-		sts = flipbook.getData_noBookmarks(testdata);
-		assertion.assertEqual(sts.bookmarksTitle, testdata.bookmarksTitle, "Bookmarks title status mismatch");
-		assertion.assertEqual(sts.closeBtnBookmarks, true, "Close Button status mismatch");
+		assertion.assertEqual(sts.myBookmarksTitle, testdata.bookmarksTitle, "Bookmarks title status mismatch");
+		assertion.assertEqual(sts.bookmarkCloseBtn, '', "Close Button status mismatch");
 		assertion.assertEqual(sts.noBookmarkIcon, true, "No Bookmark Icon status mismatch");
 		assertion.assertEqual(sts.noBookmarkText, testdata.noBookmarkText, "No Bookmark Text status mismatch");
 		assertion.assertEqual(sts.addBookmarkBtn, testdata.bookmarkThisPageBtn, "Add Bookmark Button Text status mismatch");
@@ -67,25 +65,24 @@ module.exports = {
 	//Validate that clicking on 'Bookmark This Page' button launches bookmark text area
 	ENG_FLIP_TC_8: function (testdata) {
 		sts = flipbook.click_addBookmarkBtn();
-		assertion.assertEqual(sts.bookmarksTitle, testdata.bookmarksTitle, "Bookmarks title status mismatch");
-		assertion.assertEqual(sts.closeBtnBookmarks, true, "Bookmarks close button status mismatch");
-		assertion.assertEqual(sts.pageNumberLabelBookmarks, testdata.pageNoLabel, "page number status mismatch");
-		assertion.assertEqual(sts.pageNumberValueBookmarks, testdata.pageNoValue, "pageNoValue button text mismatch");
 		assertion.assertEqual(sts.bookmarkNameLabel, testdata.bookmarkNameLabel, "Bookmarks Name status mismatch");
-		assertion.assertEqual(sts.cancelBtn, testdata.cancelBtn, "Cancel Button Text status mismatch");
-		assertion.assertEqual(sts.saveBtn, testdata.saveBtn, "Save Button status mismatch");
+		assertion.assertEqual(sts.bookmarkPageLabel, testdata.pageNoLabel, "Bookmarks Name status mismatch");
+		assertion.assertEqual(sts.bookmarkPageValueSingle, testdata.pageNoValue, "pageNoValue button text mismatch");
+		assertion.assertEqual(sts.bookmarkCancelBtn, testdata.cancelBtn, "Cancel Button Text status mismatch");
+		assertion.assertEqual(sts.bookmarkSaveBtn, testdata.saveBtn, "Save Button status mismatch");
 	},
 
 	//Validate on clicking Save button, bookmarks set by the user are saved
 	ENG_FLIP_TC_9: function (testdata) {
-		sts = flipbook.set_textBookmark(testdata);
+		sts = flipbook.set_bookmarkTextArea(testdata);
 		assertion.assertEqual(sts, true, "status mismatch");
-		sts = flipbook.click_saveBtn();
+		sts = flipbook.click_bookmarkSaveBtn();
 	},
 
 	//Click Close button in Bookmark pane closes the pane
 	ENG_FLIP_TC_10: function () {
-		sts = flipbook.click_closeBtnBookmarks();
+		sts = flipbook.click_bookmarkCloseBtn();
+		assertion.assertEqual(sts, true, "status mismatch");
 	},
 
 	//SUite 2 test cases
