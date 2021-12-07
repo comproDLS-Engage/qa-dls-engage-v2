@@ -1590,6 +1590,12 @@
           "description": "Validate on clicking \"Projectable\" resource in Explore menu, same tab is launched on Browse",
           "tags": "P1",
           "visualTest": "-"
+        },
+        {
+          "id": "ENG_DASH_TC_25",
+          "description": "Validate that playlist page is launched on clicking the playlist card",
+          "tags": "P1",
+          "visualTest": "-"
         }
       ]
     },
