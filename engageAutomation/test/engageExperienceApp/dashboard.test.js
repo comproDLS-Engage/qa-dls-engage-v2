@@ -156,7 +156,6 @@ module.exports = {
     ENG_DASH_TC_25: function (testdata) {
         sts = dashboardPage.click_playlistTitle(testdata);
         assertion.assertEqual(sts.pageStatus, true, "Playlist page status mismatch");
-        sts = appShellPage.getTabsListData();
         assertion.assertEqual(sts.appShell.header, true, "Playlist page header status mismatch");
     },
 
