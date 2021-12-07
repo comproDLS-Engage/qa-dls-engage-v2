@@ -264,9 +264,9 @@ module.exports = {
         appShell.ENG_SHELL_TC_11();
 
         dashboardPage.isInitialized();
-        sts = dashboardPage.getDashboardPageData();
+        sts = dashboardPage.getData_dashboardPage();
         assertion.assertEqual(sts.pageTitle, testdata[1].pageTitle, "Dashboard text mismatch");
-        sts=dashboardPage.getBooksData()
+        sts=dashboardPage.getData_books()
         assertion.assertEqual(sts[0].bookTitle, testdata[0], "Book Title Mismatch")
 
     },
