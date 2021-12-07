@@ -21,11 +21,10 @@ module.exports = {
 	//Validate clicking on the Notes button for a New User (blank notes)
 	ENG_FLIP_TC_3: function (testdata) {
 		sts = flipbook.click_notesBtn();
-		assertion.assertEqual(sts, true, "status mismatch");
-		sts = flipbook.getData_blankNotes(testdata);
 		assertion.assertEqual(sts.myNotesTitle, testdata.myNotesTitle, "My Notes title status mismatch");
-		assertion.assertEqual(sts.closeBtnNotes, true, "Close Button status mismatch");
-		assertion.assertEqual(sts.noNoteIcon, true, "No note Icon status mismatch");
+		assertion.assertEqual(sts.notesDockBtn,'', "My Notes title status mismatch");
+		assertion.assertEqual(sts.notesCloseBtn, '', "Close Button status mismatch");
+		assertion.assertEqual(sts.noNoteIcon, '', "No note Icon status mismatch");
 		assertion.assertEqual(sts.noNoteText, testdata.noNoteText, "No Note Text status mismatch");
 		assertion.assertEqual(sts.addNoteBtn, testdata.addNoteBtn, "Add Note Button Text status mismatch");
 	},

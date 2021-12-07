@@ -642,7 +642,7 @@
                 "notesDockBtn": "[data-tid=notebox-button-dock]",
                 "notesUndockBtn": "[data-tid=notebox-button-undock]",
                 "notesCloseBtn": "button[data-tid='notebox-button-cancel']",
-                "addNoteBtn": "button[data-tid='button-note-this-page']",
+                "addNoteBtn": "button[data-tid='button-add-note']",
                 "noNoteIcon": "img[data-tid='icon-no-note']",
                 "noNoteText": "[data-tid='text-no-note']",
                 "noteListItemLabel": "[data-tid*='note-list-item-label-",

@@ -112,6 +112,7 @@ module.exports = {
     else {
       logger.logInto(stackTrace.get(), res + " notesBtn button is not clicked", 'error');
     }
+    console.log("res",res)
     return res;
   },
 
@@ -664,7 +665,6 @@ module.exports = {
     else {
       logger.logInto(stackTrace.get(), res + " singlePageBtn button is not clicked", 'error');
     }
-    console.log("readercintainer",singlelayoutWidth);
     return singlelayoutWidth;
   },
 
