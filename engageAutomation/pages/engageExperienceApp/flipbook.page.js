@@ -73,6 +73,7 @@ module.exports = {
       pageStatus: action.waitForDisplayed(this.readerContainerWrapper),
       appShellPage: appShellPage.isInitialized()
     };
+    console.log("res",res)
     return res;
   },
 
@@ -97,6 +98,22 @@ module.exports = {
     return obj;
   },
 
+  //-------- NOTES ----------
+  click_notesBtn: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.notesBtn);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " notesBtn button is clicked");
+      res = this.getData_notesModal();
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + " notesBtn button is not clicked", 'error');
+    }
+    return res;
+  },
+
+  //Function that returns the notes modal elements  
   getData_notesModal: function () {
     logger.logInto(stackTrace.get());
     var obj;
@@ -128,6 +145,21 @@ module.exports = {
     return obj;
   },
 
+  //Clicking on Add Note button and get the data of the text area
+  click_addNoteBtn: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.addNoteBtn);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " addNoteBtn button is clicked");
+      res = this.getData_addNotes();
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + " addNoteBtn button is not clicked", 'error');
+    }
+    return res;
+  },
+
   getData_addNotes: function () {
     logger.logInto(stackTrace.get());
     var obj;
@@ -144,6 +176,38 @@ module.exports = {
     return obj;
   },
 
+  set_notesTextArea: function (value) {
+    var res;
+    logger.logInto(stackTrace.get());
+    res = action.setValue(this.notesTextArea, value);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), "Value is entered in notesTextArea");
+    } else {
+      logger.logInto(stackTrace.get(), res, 'error');
+    }
+    return res;
+  },
+
+  //Clicking on Delete Note button and get the data of the delete modal
+  click_noteListDeleteBtn: function (noteListItemTextName) {
+    logger.logInto(stackTrace.get());
+    var i, list, res;
+    list = action.findElements(this.noteListDeleteBtn);
+    for (i = 0; i < list.length; i++) {
+      if ((action.getText(this.noteListItemText + i + "]")) == noteListItemTextName) {
+        res = action.click(list[i]);
+        break;
+      }
+    }
+    if (res == true) {
+      logger.logInto(stackTrace.get(), " --noteListDeleteBtn clicked");
+      res = this.getData_deleteNotes();
+    }
+    else
+      logger.logInto(stackTrace.get(), res + " --noteListDeleteBtn NOT clicked", "error")
+    return res;
+  },
+
   getData_deleteNotes: function () {
     logger.logInto(stackTrace.get());
     var obj;
@@ -154,244 +218,6 @@ module.exports = {
       deleteNoteDeleteBtn: (action.getElementCount(this.deleteNoteDeleteBtn) > 0) ? action.getText(this.deleteNoteDeleteBtn) : null,
     }
     return obj;
-  },
-
-  getData_bookmarkModal: function () {
-    logger.logInto(stackTrace.get());
-    var obj;
-    obj = {
-      myBookmarksTitle: (action.getElementCount(this.myBookmarksTitle) > 0) ? action.getText(this.myBookmarksTitle) : null,
-      bookmarkCloseBtn: (action.getElementCount(this.bookmarkCloseBtn) > 0) ? action.getText(this.bookmarkCloseBtn) : null,
-      noBookmarkIcon: (action.getElementCount(this.noBookmarkIcon) > 0) ? action.waitForExist(this.noBookmarkIcon) : false,
-      noBookmarkText: (action.getElementCount(this.noBookmarkText) > 0) ? action.getText(this.noBookmarkText) : null,
-      addBookmarkBtn: (action.getElementCount(this.addBookmarkBtn) > 0) ? action.getText(this.addBookmarkBtn) : null,
-    }
-    return obj;
-  },
-
-  getData_bookmarkList: function () {
-    logger.logInto(stackTrace.get());
-    var obj;
-    action.waitForDisplayed(this.bookmarkListItemName);
-    var list = action.findElements(this.bookmarkListItemName);
-    for (var i = 0; i <= list.length; i++) {
-      obj[i] = {
-        bookmarkListItemLabel: (action.getElementCount(this.bookmarkListItemLabel + i + "]") > 0) ? action.getText(this.bookmarkListItemLabel + i + "]") : null,
-        bookmarkListItemName: (action.getElementCount(this.bookmarkListItemName + i + "]") > 0) ? action.getText(this.bookmarkListItemName + i + "]") : null,
-        bookmarkListDeleteBtn: (action.getElementCount(this.bookmarkListDeleteBtn + i + "]") > 0) ? action.getText(this.bookmarkListDeleteBtn + i + "]") : null,
-        bookmarkListEditBtn: (action.getElementCount(this.bookmarkListEditBtn + i + "]") > 0) ? action.getText(this.bookmarkListEditBtn + i + "]") : null,
-      }
-    }
-    return obj;
-  },
-
-  getData_addBookmark: function () {
-    logger.logInto(stackTrace.get());
-    var obj;
-    obj = {
-      bookmarkNameLabel: (action.getElementCount(this.bookmarkNameLabel) > 0) ? action.getText(this.bookmarkNameLabel) : null,
-      bookmarkPageValueSingle: (action.getElementCount(this.bookmarkPageValueSingle) > 0) ? action.getText(this.bookmarkPageValueSingle) : null,
-      bookmarkPageValueLeft: (action.getElementCount(this.bookmarkPageValueLeft) > 0) ? action.getText(this.bookmarkPageValueLeft) : null,
-      bookmarkPageValueRight: (action.getElementCount(this.bookmarkPageValueRight) > 0) ? action.getText(this.bookmarkPageValueRight) : null,
-      bookmarkTextArea: (action.getElementCount(this.bookmarkTextArea) > 0) ? action.getText(this.bookmarkTextArea) : null,
-      bookmarkCancelBtn: (action.getElementCount(this.bookmarkCancelBtn) > 0) ? action.getText(this.bookmarkCancelBtn) : null,
-      bookmarkSaveBtn: (action.getElementCount(this.bookmarkSaveBtn) > 0) ? action.getText(this.bookmarkSaveBtn) : null,
-    }
-    return obj;
-  },
-
-  getData_flipbookTOC: function () {
-    logger.logInto(stackTrace.get());
-    var obj;
-    obj = {
-      flipbookTitle: (action.getElementCount(this.flipbookTitle) > 0) ? action.getText(this.flipbookTitle) : null,
-      tableOfContentTitle: (action.getElementCount(this.tableOfContentTitle) > 0) ? action.getText(this.tableOfContentTitle) : null,
-      jumpToPageInput: (action.getElementCount(this.jumpToPageInput) > 0) ? action.getText(this.jumpToPageInput) : null,
-      jumpToPageBtn: (action.getElementCount(this.jumpToPageBtn) > 0) ? action.getText(this.jumpToPageBtn) : null,
-      resourceTitle: this.resourceTitle_Data(),
-    }
-    return obj;
-  },
-
-  resourceTitle_Data: function () {
-    logger.logInto(stackTrace.get());
-    var i, list;
-    var resourceTitle_Arr = [];
-    list = action.findElements(this.resourceTitle);
-    for (i = 0; i < list.length; i++) {
-      resourceTitle_Arr[i] = action.getText(list[i])
-    }
-    logger.logInto(stackTrace.get(), resourceTitle_Arr);
-    return resourceTitle_Arr;
-  },
-
-  click_notesBtn: function () {
-    logger.logInto(stackTrace.get());
-    var res;
-    res = action.click(this.notesBtn);
-    if (true == res) {
-      logger.logInto(stackTrace.get(), " notesBtn button is clicked");
-      res = this.getData_notesModal();
-    }
-    else {
-      logger.logInto(stackTrace.get(), res + " notesBtn button is not clicked", 'error');
-    }
-    return res;
-  },
-
-  click_annotationsBtn: function () {
-    logger.logInto(stackTrace.get());
-    var res;
-    res = action.click(this.annotationsBtn);
-    if (true == res) {
-      logger.logInto(stackTrace.get(), " annotationsBtn button is clicked");
-      //expected behaviour to be added
-    }
-    else {
-      logger.logInto(stackTrace.get(), res + " annotationsBtn button is not clicked", 'error');
-    }
-    return res;
-  },
-
-  click_zoomInBtn: function () {
-    logger.logInto(stackTrace.get());
-    var res;
-    res = action.click(this.zoomInBtn);
-    if (true == res) {
-      logger.logInto(stackTrace.get(), " zoomInBtn button is clicked");
-      res = action.getCSSProperty(this.readerContainerWrapper, 'height');
-    }
-    else {
-      logger.logInto(stackTrace.get(), res + " zoomInBtn button is not clicked", 'error');
-    }
-    console.log("res",res);
-    return res;
-  },
-
-  click_zoomOutBtn: function () {
-    logger.logInto(stackTrace.get());
-    var res;
-    res = action.click(this.zoomOutBtn);
-    if (true == res) {
-      logger.logInto(stackTrace.get(), " zoomOutBtn button is clicked");
-      res = action.getCSSProperty(this.readerContainerWrapper, 'height');
-    }
-    else {
-      logger.logInto(stackTrace.get(), res + " zoomOutBtn button is not clicked", 'error');
-    }
-    return res;
-  },
-
-  click_fitToScreenBtn: function () {
-    logger.logInto(stackTrace.get());
-    var res;
-    res = action.click(this.fitToScreenBtn);
-    if (true == res) {
-      logger.logInto(stackTrace.get(), " fitToScreenBtn button is clicked");
-      res = action.getCSSProperty(this.readerContainerWrapper, 'width');
-    }
-    else {
-      logger.logInto(stackTrace.get(), res + " fitToScreenBtn button is not clicked", 'error');
-    }
-    return res;
-  },
-
-  click_doublePageBtn: function () {
-    logger.logInto(stackTrace.get());
-    var res;
-    res = action.click(this.doublePageBtn);
-    if (true == res) {
-      logger.logInto(stackTrace.get(), " doublePageBtn button is clicked");
-      res = this.getData_flipbookPage();
-    }
-    else {
-      logger.logInto(stackTrace.get(), res + " doublePageBtn button is not clicked", 'error');
-    }
-    return res;
-  },
-
-  click_singlePageBtn: function () {
-    logger.logInto(stackTrace.get());
-    var res;
-    res = action.click(this.singlePageBtn);
-    if (true == res) {
-      logger.logInto(stackTrace.get(), " singlePageBtn button is clicked");
-      res = this.getData_flipbookPage();
-    }
-    else {
-      logger.logInto(stackTrace.get(), res + " singlePageBtn button is not clicked", 'error');
-    }
-    return res;
-  },
-
-  click_fullScreenBtn: function () {
-    logger.logInto(stackTrace.get());
-    var res;
-    res = action.click(this.fullScreenBtn);
-    if (true == res) {
-      logger.logInto(stackTrace.get(), " fullScreenBtn button is clicked");
-      res = action.getCSSProperty(this.fullScreenBtn, 'aria-label');
-    }
-    else {
-      logger.logInto(stackTrace.get(), res + " fullScreenBtn button is not clicked", 'error');
-    }
-    return res;
-  },
-
-  click_bookmarkBtn: function () {
-    logger.logInto(stackTrace.get());
-    var res;
-    res = action.click(this.bookmarkBtn);
-    if (true == res) {
-      logger.logInto(stackTrace.get(), " bookmarkBtn button is clicked");
-      res = this.getData_bookmarkModal();
-    }
-    else {
-      logger.logInto(stackTrace.get(), res + " bookmarkBtn button is not clicked", 'error');
-    }
-    return res;
-  },
-
-  click_TOCBtn: function () {
-    logger.logInto(stackTrace.get());
-    var res;
-    res = action.click(this.TOCBtn);
-    if (true == res) {
-      logger.logInto(stackTrace.get(), " TOCBtn button is clicked");
-      res = this.getData_flipbookTOC();
-    }
-    else {
-      logger.logInto(stackTrace.get(), res + " TOCBtn button is clicked", 'error');
-    }
-    return res;
-  },
-
-  click_previousBtn: function () {
-    logger.logInto(stackTrace.get());
-    var res;
-    res = action.click(this.previousBtn);
-    if (true == res) {
-      logger.logInto(stackTrace.get(), " previousBtn button is clicked");
-      res = this.getData_flipbookPage();
-    }
-    else {
-      logger.logInto(stackTrace.get(), res + " previousBtn button is not clicked", 'error');
-    }
-    return res;
-  },
-
-  click_nextBtn: function () {
-    logger.logInto(stackTrace.get());
-    var res;
-    res = action.click(this.nextBtn);
-    if (true == res) {
-      logger.logInto(stackTrace.get(), " nextBtn button is clicked");
-      res = this.getData_flipbookPage();
-    }
-    else {
-      logger.logInto(stackTrace.get(), res + " nextBtn button is not clicked", 'error');
-    }
-    return res;
   },
 
   click_notesDockBtn: function () {
@@ -433,39 +259,6 @@ module.exports = {
     else {
       logger.logInto(stackTrace.get(), res + " notesCloseBtn button is not clicked", 'error');
     }
-    return res;
-  },
-
-  click_addNoteBtn: function () {
-    logger.logInto(stackTrace.get());
-    var res;
-    res = action.click(this.addNoteBtn);
-    if (true == res) {
-      logger.logInto(stackTrace.get(), " addNoteBtn button is clicked");
-      res = this.getData_addNotes();
-    }
-    else {
-      logger.logInto(stackTrace.get(), res + " addNoteBtn button is not clicked", 'error');
-    }
-    return res;
-  },
-
-  click_noteListDeleteBtn: function (noteListItemTextName) {
-    logger.logInto(stackTrace.get());
-    var i, list, res;
-    list = action.findElements(this.noteListDeleteBtn);
-    for (i = 0; i < list.length; i++) {
-      if ((action.getText(this.noteListItemText + i + "]")) == noteListItemTextName) {
-        res = action.click(list[i]);
-        break;
-      }
-    }
-    if (res == true) {
-      logger.logInto(stackTrace.get(), " --noteListDeleteBtn clicked");
-      res = this.getData_deleteNotes();
-    }
-    else
-      logger.logInto(stackTrace.get(), res + " --noteListDeleteBtn NOT clicked", "error")
     return res;
   },
 
@@ -570,6 +363,8 @@ module.exports = {
     return res;
   },
 
+
+  //--------BOOKMARKS-------
   click_bookmarkCloseBtn: function () {
     logger.logInto(stackTrace.get());
     var res;
@@ -690,30 +485,33 @@ module.exports = {
     return res;
   },
 
-  click_jumpToPageBtn: function () {
+  getData_bookmarkModal: function () {
     logger.logInto(stackTrace.get());
-    var res;
-    res = action.click(this.jumpToPageBtn);
-    if (true == res) {
-      logger.logInto(stackTrace.get(), " jumpToPageBtn button is clicked");
-      res = this.getData_flipbookPage();
+    var obj;
+    obj = {
+      myBookmarksTitle: (action.getElementCount(this.myBookmarksTitle) > 0) ? action.getText(this.myBookmarksTitle) : null,
+      bookmarkCloseBtn: (action.getElementCount(this.bookmarkCloseBtn) > 0) ? action.getText(this.bookmarkCloseBtn) : null,
+      noBookmarkIcon: (action.getElementCount(this.noBookmarkIcon) > 0) ? action.waitForExist(this.noBookmarkIcon) : false,
+      noBookmarkText: (action.getElementCount(this.noBookmarkText) > 0) ? action.getText(this.noBookmarkText) : null,
+      addBookmarkBtn: (action.getElementCount(this.addBookmarkBtn) > 0) ? action.getText(this.addBookmarkBtn) : null,
     }
-    else {
-      logger.logInto(stackTrace.get(), res + " jumpToPageBtn button is not clicked", 'error');
-    }
-    return res;
+    return obj;
   },
 
-  set_notesTextArea: function (value) {
-    var res;
+  getData_bookmarkList: function () {
     logger.logInto(stackTrace.get());
-    res = action.setValue(this.notesTextArea, value);
-    if (true == res) {
-      logger.logInto(stackTrace.get(), "Value is entered in notesTextArea");
-    } else {
-      logger.logInto(stackTrace.get(), res, 'error');
+    var obj;
+    action.waitForDisplayed(this.bookmarkListItemName);
+    var list = action.findElements(this.bookmarkListItemName);
+    for (var i = 0; i <= list.length; i++) {
+      obj[i] = {
+        bookmarkListItemLabel: (action.getElementCount(this.bookmarkListItemLabel + i + "]") > 0) ? action.getText(this.bookmarkListItemLabel + i + "]") : null,
+        bookmarkListItemName: (action.getElementCount(this.bookmarkListItemName + i + "]") > 0) ? action.getText(this.bookmarkListItemName + i + "]") : null,
+        bookmarkListDeleteBtn: (action.getElementCount(this.bookmarkListDeleteBtn + i + "]") > 0) ? action.getText(this.bookmarkListDeleteBtn + i + "]") : null,
+        bookmarkListEditBtn: (action.getElementCount(this.bookmarkListEditBtn + i + "]") > 0) ? action.getText(this.bookmarkListEditBtn + i + "]") : null,
+      }
     }
-    return res;
+    return obj;
   },
 
   set_bookmarkTextArea: function (value) {
@@ -724,6 +522,222 @@ module.exports = {
       logger.logInto(stackTrace.get(), "Value is entered in bookmarkTextArea");
     } else {
       logger.logInto(stackTrace.get(), res, 'error');
+    }
+    return res;
+  },
+
+  getData_addBookmark: function () {
+    logger.logInto(stackTrace.get());
+    var obj;
+    obj = {
+      bookmarkNameLabel: (action.getElementCount(this.bookmarkNameLabel) > 0) ? action.getText(this.bookmarkNameLabel) : null,
+      bookmarkPageValueSingle: (action.getElementCount(this.bookmarkPageValueSingle) > 0) ? action.getText(this.bookmarkPageValueSingle) : null,
+      bookmarkPageValueLeft: (action.getElementCount(this.bookmarkPageValueLeft) > 0) ? action.getText(this.bookmarkPageValueLeft) : null,
+      bookmarkPageValueRight: (action.getElementCount(this.bookmarkPageValueRight) > 0) ? action.getText(this.bookmarkPageValueRight) : null,
+      bookmarkTextArea: (action.getElementCount(this.bookmarkTextArea) > 0) ? action.getText(this.bookmarkTextArea) : null,
+      bookmarkCancelBtn: (action.getElementCount(this.bookmarkCancelBtn) > 0) ? action.getText(this.bookmarkCancelBtn) : null,
+      bookmarkSaveBtn: (action.getElementCount(this.bookmarkSaveBtn) > 0) ? action.getText(this.bookmarkSaveBtn) : null,
+    }
+    return obj;
+  },
+
+  getData_flipbookTOC: function () {
+    logger.logInto(stackTrace.get());
+    var obj;
+    obj = {
+      flipbookTitle: (action.getElementCount(this.flipbookTitle) > 0) ? action.getText(this.flipbookTitle) : null,
+      tableOfContentTitle: (action.getElementCount(this.tableOfContentTitle) > 0) ? action.getText(this.tableOfContentTitle) : null,
+      jumpToPageInput: (action.getElementCount(this.jumpToPageInput) > 0) ? action.getText(this.jumpToPageInput) : null,
+      jumpToPageBtn: (action.getElementCount(this.jumpToPageBtn) > 0) ? action.getText(this.jumpToPageBtn) : null,
+      resourceTitle: this.resourceTitle_Data(),
+    }
+    return obj;
+  },
+
+  resourceTitle_Data: function () {
+    logger.logInto(stackTrace.get());
+    var i, list;
+    var resourceTitle_Arr = [];
+    list = action.findElements(this.resourceTitle);
+    for (i = 0; i < list.length; i++) {
+      resourceTitle_Arr[i] = action.getText(list[i])
+    }
+    logger.logInto(stackTrace.get(), resourceTitle_Arr);
+    return resourceTitle_Arr;
+  },
+
+
+
+  click_annotationsBtn: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.annotationsBtn);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " annotationsBtn button is clicked");
+      //expected behaviour to be added
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + " annotationsBtn button is not clicked", 'error');
+    }
+    return res;
+  },
+
+  click_zoomInBtn: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.zoomInBtn);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " zoomInBtn button is clicked");
+      res = action.getCSSProperty(this.readerContainerWrapper, 'height');
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + " zoomInBtn button is not clicked", 'error');
+    }
+    console.log("res",res);
+    return res;
+  },
+
+  click_zoomOutBtn: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.zoomOutBtn);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " zoomOutBtn button is clicked");
+      res = action.getCSSProperty(this.readerContainerWrapper, 'height');
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + " zoomOutBtn button is not clicked", 'error');
+    }
+    return res;
+  },
+
+  click_fitToScreenBtn: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.fitToScreenBtn);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " fitToScreenBtn button is clicked");
+      res = action.getCSSProperty(this.readerContainerWrapper, 'width');
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + " fitToScreenBtn button is not clicked", 'error');
+    }
+    return res;
+  },
+
+  click_doublePageBtn: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.doublePageBtn);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " doublePageBtn button is clicked");
+      res = this.getData_flipbookPage();
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + " doublePageBtn button is not clicked", 'error');
+    }
+    return res;
+  },
+
+  click_singlePageBtn: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.singlePageBtn);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " singlePageBtn button is clicked");
+      res = this.getData_flipbookPage();
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + " singlePageBtn button is not clicked", 'error');
+    }
+    console.log("res click single",res)
+    return res;
+  },
+
+  click_fullScreenBtn: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.fullScreenBtn);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " fullScreenBtn button is clicked");
+      res = action.getCSSProperty(this.fullScreenBtn, 'aria-label');
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + " fullScreenBtn button is not clicked", 'error');
+    }
+    return res;
+  },
+
+  click_bookmarkBtn: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.bookmarkBtn);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " bookmarkBtn button is clicked");
+      res = this.getData_bookmarkModal();
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + " bookmarkBtn button is not clicked", 'error');
+    }
+    return res;
+  },
+
+  click_TOCBtn: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.TOCBtn);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " TOCBtn button is clicked");
+      res = this.getData_flipbookTOC();
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + " TOCBtn button is clicked", 'error');
+    }
+    return res;
+  },
+
+  click_previousBtn: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.previousBtn);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " previousBtn button is clicked");
+      res = this.getData_flipbookPage();
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + " previousBtn button is not clicked", 'error');
+    }
+    return res;
+  },
+
+  click_nextBtn: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.nextBtn);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " nextBtn button is clicked");
+      res = this.getData_flipbookPage();
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + " nextBtn button is not clicked", 'error');
+    }
+    return res;
+  },
+
+
+
+
+  //-----JUMP TO PAGE------------
+  click_jumpToPageBtn: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.jumpToPageBtn);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " jumpToPageBtn button is clicked");
+      res = this.getData_flipbookPage();
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + " jumpToPageBtn button is not clicked", 'error');
     }
     return res;
   },
