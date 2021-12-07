@@ -655,7 +655,7 @@ function dataPatternGenerateWithCondition(groupSelectorData, groupName, key) {
     file.write("logger.logInto(stackTrace.get());\n")
     file.write("var obj =[], i , arr = [];\n")
     for (var i = 0; i < groupSelectorData.length; i++) {
-        file.write(groupSelectorData[i].Label + "=action.findElements(this." + groupSelectorData[i].Label + ")\n");
+        file.write("var"+ groupSelectorData[i].Label + "=action.findElements(this." + groupSelectorData[i].Label + ")\n");
     }
 
     file.write(" if (" + selectedText + "Name) {" +
@@ -666,9 +666,9 @@ function dataPatternGenerateWithCondition(groupSelectorData, groupName, key) {
     for (var i = 0; i < groupSelectorData.length; i++) {
         if ((groupSelectorData[i].extraInfo).toLowerCase().includes("pattern")) {
             if ((groupSelectorData[i].tagName).toLowerCase().includes("img") || (groupSelectorData[i].tagName).toLowerCase().includes("svg")) {
-                file.write(groupSelectorData[i].Label + ":(action.getElementCount(this." + groupSelectorData[i].Label + "[i]) > 0) ? action.waitForExist(this." + groupSelectorData[i].Label + "[i])  : false,\n");
+                file.write(groupSelectorData[i].Label + ":(action.getElementCount(" + groupSelectorData[i].Label + "[i]) > 0) ? action.waitForExist(this." + groupSelectorData[i].Label + "[i])  : false,\n");
             } else
-                file.write(groupSelectorData[i].Label + ":(action.getElementCount(this." + groupSelectorData[i].Label + "[i])  > 0) ? action.getText(this." + groupSelectorData[i].Label + "[i])  : null,\n");
+                file.write(groupSelectorData[i].Label + ":(action.getElementCount(" + groupSelectorData[i].Label + "[i])  > 0) ? action.getText(this." + groupSelectorData[i].Label + "[i])  : null,\n");
 
         }
     }
