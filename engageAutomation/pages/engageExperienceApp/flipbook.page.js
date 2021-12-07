@@ -54,6 +54,7 @@ module.exports = {
   bookmarkListDeleteBtn: selectorFile.css.ComproEngage.flipbook.bookmarkListDeleteBtn,
   bookmarkListEditBtn: selectorFile.css.ComproEngage.flipbook.bookmarkListEditBtn,
   bookmarkNameLabel: selectorFile.css.ComproEngage.flipbook.bookmarkNameLabel,
+  bookmarkPageLabel: selectorFile.css.ComproEngage.flipbook.bookmarkPageLabel,
   bookmarkPageValueSingle: selectorFile.css.ComproEngage.flipbook.bookmarkPageValueSingle,
   bookmarkPageValueLeft: selectorFile.css.ComproEngage.flipbook.bookmarkPageValueLeft,
   bookmarkPageValueRight: selectorFile.css.ComproEngage.flipbook.bookmarkPageValueRight,
@@ -112,7 +113,6 @@ module.exports = {
     else {
       logger.logInto(stackTrace.get(), res + " notesBtn button is not clicked", 'error');
     }
-    console.log("res",res)
     return res;
   },
 
@@ -128,22 +128,6 @@ module.exports = {
       addNoteBtn: (action.getElementCount(this.addNoteBtn) > 0) ? action.getText(this.addNoteBtn) : null,
       noNoteIcon: (action.getElementCount(this.noNoteIcon) > 0) ? action.waitForExist(this.noNoteIcon) : false,
       noNoteText: (action.getElementCount(this.noNoteText) > 0) ? action.getText(this.noNoteText) : null,
-    }
-    return obj;
-  },
-
-  getData_notesList: function () {
-    logger.logInto(stackTrace.get());
-    var obj;
-    action.waitForDisplayed(this.noteListItemText);
-    var list = action.findElements(this.noteListItemText);
-    for (var i = 0; i <= list.length; i++) {
-      obj[i] = {
-        noteListItemLabel: (action.getElementCount(this.noteListItemLabel + i + "]") > 0) ? action.getText(this.noteListItemLabel + i + "]") : null,
-        noteListItemText: (action.getElementCount(this.noteListItemText + i + "]") > 0) ? action.getText(this.noteListItemText + i + "]") : null,
-        noteListDeleteBtn: (action.getElementCount(this.noteListDeleteBtn + i + "]") > 0) ? action.getText(this.noteListDeleteBtn + i + "]") : null,
-        noteListEditBtn: (action.getElementCount(this.noteListEditBtn + i + "]") > 0) ? action.getText(this.noteListEditBtn + i + "]") : null,
-      }
     }
     return obj;
   },
@@ -179,6 +163,7 @@ module.exports = {
     return obj;
   },
 
+  //Function to set a value in the add note text area
   set_notesTextArea: function (value) {
     var res;
     logger.logInto(stackTrace.get());
@@ -191,6 +176,42 @@ module.exports = {
     return res;
   },
 
+  click_notesSaveBtn: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.notesSaveBtn);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " notesSaveBtn button is clicked");
+      res = this.getData_notesList();
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + " notesSaveBtn button is not clicked", 'error');
+    }
+    console.log("save res",res)
+    return res;
+  },
+
+  getData_notesList: function () {
+    logger.logInto(stackTrace.get());
+    var obj;
+    action.waitForDisplayed(this.noteListItemText);
+    var list = action.findElements(this.noteListItemText);
+    console.log("list",list);
+
+    for (var i = 0; i <= list.length; i++) {
+      console.log("i=",i);
+      console.log("selector",this.noteListItemLabel + i + "']");
+      obj[i] = {
+        noteListItemLabel: (action.getElementCount(this.noteListItemLabel + i + "']") > 0) ? action.getText(this.noteListItemLabel + i + "']") : null,
+        noteListItemText: (action.getElementCount(this.noteListItemText + i + "']") > 0) ? action.getText(this.noteListItemText + i + "']") : null,
+        noteListDeleteBtn: (action.getElementCount(this.noteListDeleteBtn + i + "']") > 0) ? action.getText(this.noteListDeleteBtn + i + "']") : null,
+        noteListEditBtn: (action.getElementCount(this.noteListEditBtn + i + "']") > 0) ? action.getText(this.noteListEditBtn + i + "']") : null,
+      }
+    }
+    return obj;
+  },
+
+  //Function to close Notes Modal
   click_notesCloseBtn: function () {
     logger.logInto(stackTrace.get());
     var res;
@@ -300,21 +321,6 @@ module.exports = {
     return res;
   },
 
-  click_notesSaveBtn: function () {
-    logger.logInto(stackTrace.get());
-    var res;
-    res = action.click(this.notesSaveBtn);
-    if (true == res) {
-      logger.logInto(stackTrace.get(), " notesSaveBtn button is clicked");
-      res = this.getData_notesList();
-    }
-    else {
-      logger.logInto(stackTrace.get(), res + " notesSaveBtn button is not clicked", 'error');
-    }
-    return res;
-  },
-
-
   //Notes extra
   click_notesDockBtn: function () {
     logger.logInto(stackTrace.get());
@@ -371,6 +377,110 @@ module.exports = {
   },
 
   //--------BOOKMARKS-------
+  click_bookmarkBtn: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.bookmarkBtn);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " bookmarkBtn button is clicked");
+      res = this.getData_bookmarkModal();
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + " bookmarkBtn button is not clicked", 'error');
+    }
+    return res;
+  },
+
+  //Function that returns the bookmark modal elements 
+  getData_bookmarkModal: function () {
+    logger.logInto(stackTrace.get());
+    var obj;
+    obj = {
+      myBookmarksTitle: (action.getElementCount(this.myBookmarksTitle) > 0) ? action.getText(this.myBookmarksTitle) : null,
+      bookmarkCloseBtn: (action.getElementCount(this.bookmarkCloseBtn) > 0) ? action.getText(this.bookmarkCloseBtn) : null,
+      noBookmarkIcon: (action.getElementCount(this.noBookmarkIcon) > 0) ? action.waitForExist(this.noBookmarkIcon) : false,
+      noBookmarkText: (action.getElementCount(this.noBookmarkText) > 0) ? action.getText(this.noBookmarkText) : null,
+      addBookmarkBtn: (action.getElementCount(this.addBookmarkBtn) > 0) ? action.getText(this.addBookmarkBtn) : null,
+    }
+    return obj;
+  },
+
+  //Clicking on Add Bookmark button and get the data of the text area
+  click_addBookmarkBtn: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.addBookmarkBtn);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " addBookmarkBtn button is clicked");
+      res = this.getData_addBookmark();
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + " addBookmarkBtn button is not clicked", 'error');
+    }
+    console.log("add bookmark data",res)
+    return res;
+  },
+
+  getData_addBookmark: function () {
+    logger.logInto(stackTrace.get());
+    var obj;
+    obj = {
+      bookmarkNameLabel: (action.getElementCount(this.bookmarkNameLabel) > 0) ? action.getText(this.bookmarkNameLabel) : null,
+      bookmarkPageLabel: (action.getElementCount(this.bookmarkPageLabel) > 0) ? action.getText(this.bookmarkPageLabel) : null,
+      bookmarkPageValueSingle: (action.getElementCount(this.bookmarkPageValueSingle) > 0) ? action.getText(this.bookmarkPageValueSingle) : null,
+      bookmarkPageValueLeft: (action.getElementCount(this.bookmarkPageValueLeft) > 0) ? action.getText(this.bookmarkPageValueLeft) : null,
+      bookmarkPageValueRight: (action.getElementCount(this.bookmarkPageValueRight) > 0) ? action.getText(this.bookmarkPageValueRight) : null,
+      bookmarkTextArea: (action.getElementCount(this.bookmarkTextArea) > 0) ? action.getText(this.bookmarkTextArea) : null,
+      bookmarkCancelBtn: (action.getElementCount(this.bookmarkCancelBtn) > 0) ? action.getText(this.bookmarkCancelBtn) : null,
+      bookmarkSaveBtn: (action.getElementCount(this.bookmarkSaveBtn) > 0) ? action.getText(this.bookmarkSaveBtn) : null,
+    }
+    return obj;
+  },
+
+  //Function to set a value in the add bookmark text area
+  set_bookmarkTextArea: function (value) {
+    var res;
+    logger.logInto(stackTrace.get());
+    res = action.setValue(this.bookmarkTextArea, value);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), "Value is entered in bookmarkTextArea");
+    } else {
+      logger.logInto(stackTrace.get(), res, 'error');
+    }
+    return res;
+  },
+
+  click_bookmarkSaveBtn: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.bookmarkSaveBtn);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " bookmarkSaveBtn button is clicked");
+      res = this.getData_bookmarkList();
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + " bookmarkSaveBtn button is not clicked", 'error');
+    }
+    return res;
+  },
+
+  getData_bookmarkList: function () {
+    logger.logInto(stackTrace.get());
+    var obj;
+    action.waitForDisplayed(this.bookmarkListItemName);
+    var list = action.findElements(this.bookmarkListItemName);
+    for (var i = 0; i <= list.length; i++) {
+      obj[i] = {
+        bookmarkListItemLabel: (action.getElementCount(this.bookmarkListItemLabel + i + "]") > 0) ? action.getText(this.bookmarkListItemLabel + i + "]") : null,
+        bookmarkListItemName: (action.getElementCount(this.bookmarkListItemName + i + "]") > 0) ? action.getText(this.bookmarkListItemName + i + "]") : null,
+        bookmarkListDeleteBtn: (action.getElementCount(this.bookmarkListDeleteBtn + i + "]") > 0) ? action.getText(this.bookmarkListDeleteBtn + i + "]") : null,
+        bookmarkListEditBtn: (action.getElementCount(this.bookmarkListEditBtn + i + "]") > 0) ? action.getText(this.bookmarkListEditBtn + i + "]") : null,
+      }
+    }
+    return obj;
+  },
+
+  //Function to close Bookmarks Modal
   click_bookmarkCloseBtn: function () {
     logger.logInto(stackTrace.get());
     var res;
@@ -385,19 +495,6 @@ module.exports = {
     return res;
   },
 
-  click_addBookmarkBtn: function () {
-    logger.logInto(stackTrace.get());
-    var res;
-    res = action.click(this.addBookmarkBtn);
-    if (true == res) {
-      logger.logInto(stackTrace.get(), " addBookmarkBtn button is clicked");
-      res = this.getData_addBookmark();
-    }
-    else {
-      logger.logInto(stackTrace.get(), res + " addBookmarkBtn button is not clicked", 'error');
-    }
-    return res;
-  },
 
   click_bookmarkListDeleteBtn: function (bookmarkListItemNameName) {
     logger.logInto(stackTrace.get());
@@ -475,76 +572,6 @@ module.exports = {
       logger.logInto(stackTrace.get(), res + " bookmarkCancelBtn button is not clicked", 'error');
     }
     return res;
-  },
-
-  click_bookmarkSaveBtn: function () {
-    logger.logInto(stackTrace.get());
-    var res;
-    res = action.click(this.bookmarkSaveBtn);
-    if (true == res) {
-      logger.logInto(stackTrace.get(), " bookmarkSaveBtn button is clicked");
-      res = this.getData_bookmarkList();
-    }
-    else {
-      logger.logInto(stackTrace.get(), res + " bookmarkSaveBtn button is not clicked", 'error');
-    }
-    return res;
-  },
-
-  getData_bookmarkModal: function () {
-    logger.logInto(stackTrace.get());
-    var obj;
-    obj = {
-      myBookmarksTitle: (action.getElementCount(this.myBookmarksTitle) > 0) ? action.getText(this.myBookmarksTitle) : null,
-      bookmarkCloseBtn: (action.getElementCount(this.bookmarkCloseBtn) > 0) ? action.getText(this.bookmarkCloseBtn) : null,
-      noBookmarkIcon: (action.getElementCount(this.noBookmarkIcon) > 0) ? action.waitForExist(this.noBookmarkIcon) : false,
-      noBookmarkText: (action.getElementCount(this.noBookmarkText) > 0) ? action.getText(this.noBookmarkText) : null,
-      addBookmarkBtn: (action.getElementCount(this.addBookmarkBtn) > 0) ? action.getText(this.addBookmarkBtn) : null,
-    }
-    return obj;
-  },
-
-  getData_bookmarkList: function () {
-    logger.logInto(stackTrace.get());
-    var obj;
-    action.waitForDisplayed(this.bookmarkListItemName);
-    var list = action.findElements(this.bookmarkListItemName);
-    for (var i = 0; i <= list.length; i++) {
-      obj[i] = {
-        bookmarkListItemLabel: (action.getElementCount(this.bookmarkListItemLabel + i + "]") > 0) ? action.getText(this.bookmarkListItemLabel + i + "]") : null,
-        bookmarkListItemName: (action.getElementCount(this.bookmarkListItemName + i + "]") > 0) ? action.getText(this.bookmarkListItemName + i + "]") : null,
-        bookmarkListDeleteBtn: (action.getElementCount(this.bookmarkListDeleteBtn + i + "]") > 0) ? action.getText(this.bookmarkListDeleteBtn + i + "]") : null,
-        bookmarkListEditBtn: (action.getElementCount(this.bookmarkListEditBtn + i + "]") > 0) ? action.getText(this.bookmarkListEditBtn + i + "]") : null,
-      }
-    }
-    return obj;
-  },
-
-  set_bookmarkTextArea: function (value) {
-    var res;
-    logger.logInto(stackTrace.get());
-    res = action.setValue(this.bookmarkTextArea, value);
-    if (true == res) {
-      logger.logInto(stackTrace.get(), "Value is entered in bookmarkTextArea");
-    } else {
-      logger.logInto(stackTrace.get(), res, 'error');
-    }
-    return res;
-  },
-
-  getData_addBookmark: function () {
-    logger.logInto(stackTrace.get());
-    var obj;
-    obj = {
-      bookmarkNameLabel: (action.getElementCount(this.bookmarkNameLabel) > 0) ? action.getText(this.bookmarkNameLabel) : null,
-      bookmarkPageValueSingle: (action.getElementCount(this.bookmarkPageValueSingle) > 0) ? action.getText(this.bookmarkPageValueSingle) : null,
-      bookmarkPageValueLeft: (action.getElementCount(this.bookmarkPageValueLeft) > 0) ? action.getText(this.bookmarkPageValueLeft) : null,
-      bookmarkPageValueRight: (action.getElementCount(this.bookmarkPageValueRight) > 0) ? action.getText(this.bookmarkPageValueRight) : null,
-      bookmarkTextArea: (action.getElementCount(this.bookmarkTextArea) > 0) ? action.getText(this.bookmarkTextArea) : null,
-      bookmarkCancelBtn: (action.getElementCount(this.bookmarkCancelBtn) > 0) ? action.getText(this.bookmarkCancelBtn) : null,
-      bookmarkSaveBtn: (action.getElementCount(this.bookmarkSaveBtn) > 0) ? action.getText(this.bookmarkSaveBtn) : null,
-    }
-    return obj;
   },
 
   getData_flipbookTOC: function () {
@@ -678,20 +705,6 @@ module.exports = {
     }
     else {
       logger.logInto(stackTrace.get(), res + " fullScreenBtn button is not clicked", 'error');
-    }
-    return res;
-  },
-
-  click_bookmarkBtn: function () {
-    logger.logInto(stackTrace.get());
-    var res;
-    res = action.click(this.bookmarkBtn);
-    if (true == res) {
-      logger.logInto(stackTrace.get(), " bookmarkBtn button is clicked");
-      res = this.getData_bookmarkModal();
-    }
-    else {
-      logger.logInto(stackTrace.get(), res + " bookmarkBtn button is not clicked", 'error');
     }
     return res;
   },

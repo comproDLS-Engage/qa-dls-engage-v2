@@ -671,6 +671,7 @@
                 "bookmarkListDeleteBtn": "button[data-tid='btn-delete']",
                 "bookmarkListEditBtn": "button[data-tid='btn-edit']",
                 "bookmarkNameLabel": "[data-tid='text-label-edit-bookmark']",
+                "bookmarkPageLabel": "[data-tid=label-text-page-number]",
                 "bookmarkPageValueSingle": "[data-tid=label-text-page-number-value]",
                 "bookmarkPageValueLeft": "[data-tid=text-option-0]",
                 "bookmarkPageValueRight": "[data-tid=text-option-1]",
