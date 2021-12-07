@@ -14,29 +14,17 @@ module.exports = {
 	//Validate that clicking on the single page button launches the flipbook in single page
 	ENG_FLIP_TC_2: function (testdata) {
 		sts = flipbook.click_singlePageBtn();
-		assertion.assertEqual(sts.pageLayoutDouble, false, "Double Layout width mismatch");
-		assertion.assertEqual(sts.notesBtn,'', "notes button does not exist");
-		assertion.assertEqual(sts.annotationsBtn,'', "Annotations button Button does not exist");
-		assertion.assertEqual(sts.zoomInBtn,'', "zoom in button button does not exist");
-		assertion.assertEqual(sts.zoomOutBtn,'', "zoom out button does not exist");
-		assertion.assertEqual(sts.fitToScreenBtn,'', "fit to screen mismatch");
-		assertion.assertEqual(sts.doublePageBtn,'', "double page button does not exist");
-		assertion.assertEqual(sts.singlePageBtn,'', "single page button does not exist");
-		assertion.assertEqual(sts.fullScreenBtn,'', "full screen button does not exist");
-		assertion.assertEqual(sts.bookmarkBtn,'', "bookmark button does not exist");
-		assertion.assertEqual(sts.TOCBtn, testdata.doubleLayoutTOC, "TOC button text does not match");
-		assertion.assertEqual(sts.previousBtn, '', "previious button does not exist");
-		assertion.assertEqual(sts.nextBtn,'', "Next button  does not exist");
+		assertion.assertEqual(sts, testdata.singlelayoutWidth, "Single Layout width text mismatch");
+
 	},
 
 	//Validate clicking on the Notes button for a New User (blank notes)
 	ENG_FLIP_TC_3: function (testdata) {
 		sts = flipbook.click_notesBtn();
-		assertion.assertEqual(sts, true, "status mismatch");
-		sts = flipbook.getData_blankNotes(testdata);
 		assertion.assertEqual(sts.myNotesTitle, testdata.myNotesTitle, "My Notes title status mismatch");
-		assertion.assertEqual(sts.closeBtnNotes, true, "Close Button status mismatch");
-		assertion.assertEqual(sts.noNoteIcon, true, "No note Icon status mismatch");
+		assertion.assertEqual(sts.notesDockBtn,'', "My Notes title status mismatch");
+		assertion.assertEqual(sts.notesCloseBtn, '', "Close Button status mismatch");
+		assertion.assertEqual(sts.noNoteIcon, '', "No note Icon status mismatch");
 		assertion.assertEqual(sts.noNoteText, testdata.noNoteText, "No Note Text status mismatch");
 		assertion.assertEqual(sts.addNoteBtn, testdata.addNoteBtn, "Add Note Button Text status mismatch");
 	},
@@ -181,13 +169,15 @@ module.exports = {
 	},
 
 	//Validate that clicking on the Zoom In button increases the width and height of the image
-	//Default launch width = 1409 px, height = 1730 px
+	//Default launch width = 1411 px, height = 1733 px
 
 	//after one zoom = 1796, 2205
 	ENG_FLIP_TC_18: function (testdata) {
 		sts = flipbook.click_zoomInBtn();
-		console.log("sts.width",sts.width)
-		console.log("testdata.singlelayoutDefaultWidth",testdata.singlelayoutDefaultWidth)
+		console.log("sts.width =",sts.width)
+		console.log("sts.height =",sts.height)
+		console.log("testdata.singlelayoutDefaultWidth =",testdata.singlelayoutDefaultWidth)
+		console.log("testdata.singlelayoutDefaultHeight = ",testdata.singlelayoutDefaultHeight)
 		assertion.assert((sts.width > testdata.singlelayoutDefaultWidth), "Width comparison failed");
 		assertion.assert((sts.height > testdata.singlelayoutDefaultHeight), "Height comparison failed");
 
@@ -198,6 +188,10 @@ module.exports = {
 	ENG_FLIP_TC_19: function (testdata) {
 		sts = flipbook.click_zoomOutBtn();
 		sts = flipbook.click_zoomOutBtn();
+		console.log("sts.width =",sts.width)
+		console.log("sts.height =",sts.height)
+		console.log("testdata.singlelayoutDefaultWidth =",testdata.singlelayoutDefaultWidth)
+		console.log("testdata.singlelayoutDefaultHeight = ",testdata.singlelayoutDefaultHeight)
 		assertion.assert((sts.width < testdata.singlelayoutDefaultWidth), "Width comparison failed");
 		assertion.assert((sts.height < testdata.singlelayoutDefaultHeight), "Height comparison failed");
 	}
