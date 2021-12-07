@@ -74,7 +74,7 @@ module.exports = {
 		else
 			question.isSubmitted = false;
 
-		action.waitForDisplayed(this.imageScelaton, true, 10000)
+		action.waitForDisplayed(this.imageScelaton, true, 20000)
 		if (action.getElementCount("div[index='" + qIndex + "'] " + this.videoMedia) == 1)
 			question.mediaType = "video";
 		else if (action.getElementCount("div[index='" + qIndex + "'] " + this.imageMedia) == 1)

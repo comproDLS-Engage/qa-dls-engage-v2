@@ -382,4 +382,44 @@ module.exports = {
 		assertion.assertEqual(sts, true, "Edit folder page status mismatch");
 	},
 
+	// launch url and republish native LO
+	BK_TC_999: function (testdata) {
+		var action = require('../../core/actionLibrary/baseActionLibrary.js');
+		var i, j;
+		for (i = 0; i < testdata.length; i++) {
+			browser.url(testdata[i].url);
+			browser.pause(20000);
+			console.log("url launched...")
+			sts = action.waitForExist("[class*=c-activity-launching]", undefined, true);
+			assertion.assertEqual(sts, true, "Error! Activities stuck in processing state.");
+			for (j = 0; j < testdata[i].activity.length; j++) {
+				sts = learningPathPage.click_ActivityAuthor_Button_in_ActivityMenu(testdata[i].activity[j]);
+				assertion.assertEqual(sts, true, "Error in clicking LO: " + sts);
+				browser.switchWindow('paint.backoffice.comprodls.com/');
+				console.log("activity launched...")
+				sts = action.waitForClickable("div:nth-child(2) [data-tid=button-saveandreturn]");
+				assertion.assertEqual(sts, true);
+				browser.pause(3000)
+				sts = action.click("div:nth-child(2) [data-tid=button-saveandreturn]");
+				assertion.assertEqual(sts, true);
+				//sts = action.waitForDisplayed("[role=progressbar]", undefined, true);
+				//assertion.assertEqual(sts, true);
+				console.log("activity saved...")
+				browser.pause(5000)
+				browser.switchWindow(global.appUrl);
+				console.log("url switched...")
+				browser.pause(2000)
+				sts = action.waitForExist("[class*=c-activity-launching]", 60000, true);
+				assertion.assertEqual(sts, true, "Error! Activities stuck in processing state.");
+			}
+			this.BK_TC_37();
+			this.BK_TC_38();
+			console.log("snapshot created...")
+			this.BK_TC_39();
+			console.log("component published...")
+		}
+
+	},
+
+
 }
