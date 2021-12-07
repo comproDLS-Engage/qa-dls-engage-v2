@@ -69,7 +69,7 @@ app.get("/getvalue", function (request, response) {
             response.send("Your PageObject \"" + inputFile + ".page.js\" is genrated at \"" + __dirname + "\\outputFile\\" + inputFile + '.page.js\"');
             // Traverse the selector json
             //Create the output Page
-         
+
             file = fs.createWriteStream(__dirname + "/outputFile/" + inputFile + '.page.js');
             for (let i = 1; i < pageSelectorFile.length; i++) {
                 for (let j = 1; j < pageSelectorFile.length; j++) {
@@ -93,7 +93,7 @@ app.get("/getvalue", function (request, response) {
             }
             if (selectorJsonCheck) {
                 generatePageSelectorJson(pageSelectorFile, inputFile);
-                      }
+            }
             if (pageHeaderCheck) {
 
                 // Generate Page Header
@@ -435,7 +435,7 @@ function Clickfunctionindex(textcondition, selectorName, seletorRow, PageTemplat
     file.write("\nclick_" + selectorName + ": function (" + textcondition + "Name) {\n" +
         "logger.logInto(stackTrace.get());\n" +
         "var i, list, res;\n" +
-        "list = action.findElements(this." + selectorName + ");\n" +
+        "list = action.findElements(this." + textcondition + ");\n" +
         "for (i = 0; i < list.length; i++) {\n" +
         "if ((action.getText(list[i]))== " + textcondition + "Name) {\n " +
         "res = action.click(list[i]);\n" +
@@ -506,6 +506,16 @@ function generateSetValueFunctions(pageSelectorFile) {
                 "else {\nlogger.logInto(stackTrace.get(), res + \"Value is NOT entered in " + pageSelectorFile[i].Label + "\", 'error');\n}\n" +
                 "return res;\n},\n")
         }
+        if ((pageSelectorFile[i].tagName).toLowerCase().includes("upload")) {
+            file.write("\nupload_" + pageSelectorFile[i].Label + ": function (testdata)" + "{\nvar res;" +
+                "\nlogger.logInto(stackTrace.get());\n" +
+                "res = action.uploadFile(testdata);\n" +
+                "if ((typeof res) === 'string') {\n" +
+                "res = action.setValue(this." + pageSelectorFile[i].Label + " , res);\n" +
+                "}\nlogger.logInto(stackTrace.get(), res);\n" +
+              "return res;\n},\n" )
+        }
+
     }
 }
 function generategroupDatafunction(group, groupName) {
@@ -653,9 +663,9 @@ function dataPatternGenerateWithCondition(groupSelectorData, groupName, key) {
     else
         file.write("getData_" + groupName + ": function ()\n{\n")
     file.write("logger.logInto(stackTrace.get());\n")
-    file.write("var obj , i , arr = [];\n")
+    file.write("var obj =[] , i , arr = [];\n")
     for (var i = 0; i < groupSelectorData.length; i++) {
-        file.write("var "+ groupSelectorData[i].Label + "=action.findElements(this." + groupSelectorData[i].Label + ")\n");
+        file.write("var " + groupSelectorData[i].Label + "=action.findElements(this." + groupSelectorData[i].Label + ")\n");
     }
 
     file.write(" if (" + selectedText + "Name) {" +
@@ -676,9 +686,9 @@ function dataPatternGenerateWithCondition(groupSelectorData, groupName, key) {
     for (var i = 0; i < groupSelectorData.length; i++) {
         if (!(groupSelectorData[i].extraInfo).toLowerCase().includes("pattern")) {
             if ((groupSelectorData[i].tagName).toLowerCase().includes("img") || (groupSelectorData[i].tagName).toLowerCase().includes("svg")) {
-                file.write("obj." + groupSelectorData[i].Label + "=(action.getElementCount(this." + groupSelectorData[i].Label + "[i]) > 0) ? action.waitForExist(this." + groupSelectorData[i].Label + "[i] )  : false\n");
+                file.write("obj." + groupSelectorData[i].Label + "=(action.getElementCount(" + groupSelectorData[i].Label + "[i]) > 0) ? action.waitForExist(" + groupSelectorData[i].Label + "[i] )  : false\n");
             } else
-                file.write("obj." + groupSelectorData[i].Label + "=(action.getElementCount(this." + groupSelectorData[i].Label + "[i])  > 0) ? action.getText(this." + groupSelectorData[i].Label + "[i])  : null\n");
+                file.write("obj." + groupSelectorData[i].Label + "=(action.getElementCount(" + groupSelectorData[i].Label + "[i])  > 0) ? action.getText(" + groupSelectorData[i].Label + "[i])  : null\n");
 
         }
     }
@@ -692,9 +702,9 @@ function dataPatternGenerateWithCondition(groupSelectorData, groupName, key) {
         if ((groupSelectorData[i].extraInfo).toLowerCase().includes("pattern")) {
             // console.log("groupName" + groupSelectorData[i].Label)
             if ((groupSelectorData[i].tagName).toLowerCase().includes("img") || (groupSelectorData[i].tagName).toLowerCase().includes("svg")) {
-                file.write(groupSelectorData[i].Label + ":(action.getElementCount(this." + groupSelectorData[i].Label + "[i]) > 0) ? action.waitForExist(this." + groupSelectorData[i].Label + "[i])  : false,\n");
+                file.write(groupSelectorData[i].Label + ":(action.getElementCount(" + groupSelectorData[i].Label + "[i]) > 0) ? action.waitForExist(" + groupSelectorData[i].Label + "[i])  : false,\n");
             } else
-                file.write(groupSelectorData[i].Label + ":(action.getElementCount(this." + groupSelectorData[i].Label + "[i])  > 0) ? action.getText(this." + groupSelectorData[i].Label + "[i])  : null,\n");
+                file.write(groupSelectorData[i].Label + ":(action.getElementCount(" + groupSelectorData[i].Label + "[i])  > 0) ? action.getText(" + groupSelectorData[i].Label + "[i])  : null,\n");
         }
     }
     file.write("}\n}\n")
@@ -704,9 +714,9 @@ function dataPatternGenerateWithCondition(groupSelectorData, groupName, key) {
     for (var i = 0; i < groupSelectorData.length; i++) {
         if (!(groupSelectorData[i].extraInfo).toLowerCase().includes("pattern")) {
             if ((groupSelectorData[i].tagName).toLowerCase().includes("img") || (groupSelectorData[i].tagName).toLowerCase().includes("svg")) {
-                file.write("obj." + groupSelectorData[i].Label + "=(action.getElementCount(this." + groupSelectorData[i].Label + "[i]) > 0) ? action.waitForExist(this." + groupSelectorData[i].Label + "[i])  : false\n");
+                file.write("obj." + groupSelectorData[i].Label + "=(action.getElementCount(" + groupSelectorData[i].Label + "[i]) > 0) ? action.waitForExist(" + groupSelectorData[i].Label + "[i])  : false\n");
             } else
-                file.write("obj." + groupSelectorData[i].Label + "=(action.getElementCount(this." + groupSelectorData[i].Label + "[i])  > 0) ? action.getText(this." + groupSelectorData[i].Label + "[i])  : null\n");
+                file.write("obj." + groupSelectorData[i].Label + "=(action.getElementCount(" + groupSelectorData[i].Label + "[i])  > 0) ? action.getText(" + groupSelectorData[i].Label + "[i])  : null\n");
 
         }
     }
