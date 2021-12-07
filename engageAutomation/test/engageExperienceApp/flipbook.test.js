@@ -89,85 +89,68 @@ module.exports = {
 	//Validate clicking on the Notes button with already created notes, launches the notes list
 	ENG_FLIP_TC_11: function (testdata) {
 		sts = flipbook.click_notesBtn();
-		assertion.assertEqual(sts, true, "status mismatch");
-		sts = flipbook.getData_myNotesList(testdata);
 		assertion.assertEqual(sts.myNotesTitle, testdata.myNotesTitle, "My Notes title status mismatch");
-		assertion.assertEqual(sts.notesDockBtn, true, "Dock Button status mismatch");
-		assertion.assertEqual(sts.closeBtnNotes, true, "Close Button status mismatch");
-		assertion.assertEqual(sts.myNotesPageProduct, testdata.notesListPagenumber, "Page number status mismatch");
-		assertion.assertEqual(sts.myNotesAllPagesProduct, testdata.allPagesLabel, "All pages Text status mismatch");
-		assertion.assertEqual(sts.noteListItemLabel, testdata.noteListItemLabel, "Item lAbel Text status mismatch");
-		assertion.assertEqual(sts.noteListDeleteBtn, true, "Delete button status mismatch");
-		assertion.assertEqual(sts.noteListEditBtn, true, "Edit button status mismatch");
-		assertion.assertEqual(sts.noteListItemText, testdata.setNote, "Note list Item Text mismatch");
+		assertion.assertEqual(sts.notesDockBtn,'', "My Notes title status mismatch");
+		assertion.assertEqual(sts.notesCloseBtn, '', "Close Button status mismatch");
 		assertion.assertEqual(sts.addNoteBtn, testdata.addNoteBtn, "Add Note Button Text status mismatch");
+		sts = flipbook.getData_notesList(testdata);
 	},
 
 	//Validate clicking on the Edit button, launches the edit notes textarea
 	ENG_FLIP_TC_12: function (testdata) {
-		sts = flipbook.click_editNoteBtn();
-		assertion.assertEqual(sts.editNotesTitle, testdata.editNotesTitle, "Edit Notes title status mismatch");
-		assertion.assertEqual(sts.closeBtnNotes, true, "Close Button status mismatch");
-		assertion.assertEqual(sts.pageNumberLabelNotes, testdata.pageNoLabel, "page number status mismatch");
-		assertion.assertEqual(sts.pageNumberValueNotes, testdata.pageNoValue, "pageNoValue button text mismatch");
-		assertion.assertEqual(sts.cancelBtn, testdata.cancelBtn, "Cancel Button Text status mismatch");
-		assertion.assertEqual(sts.saveBtn, testdata.saveBtn, "Save Button status mismatch");
+		sts = flipbook.click_noteListEditBtn(testdata.setNote);
+		assertion.assertEqual(sts.addNotesTitle, testdata.editNoteTitle, "Edit Notes title status mismatch");
+		assertion.assertEqual(sts.notesPageLabel, testdata.pageNoLabel, "page number status mismatch");
+		assertion.assertEqual(sts.notesPageValueSingle, testdata.pageNoValue, "pageNoValue button text mismatch");
+		assertion.assertEqual(sts.notesCancelBtn, testdata.cancelBtn, "Cancel Button Text status mismatch");
+		assertion.assertEqual(sts.notesSaveBtn, testdata.saveBtn, "Save Button status mismatch");
 	},
 
 	//Validate clicking on the Delete button on Notes, launches the delete notes modal
 	ENG_FLIP_TC_13: function (testdata) {
-		sts = flipbook.click_deleteNoteBtn();
-		assertion.assertEqual(sts.deleteNoteModalTitle, testdata.deleteNoteModalTitle, "Delete Notes title text mismatch");
-		assertion.assertEqual(sts.deleteNoteModalSubTitle, testdata.deleteNoteModalSubTitle, "Delete Notes Sub titletext mismatch");
-		assertion.assertEqual(sts.deleteNoteModalCancelBtn, testdata.cancelBtn, "Delete Notes Cancel button text mismatch");
-		assertion.assertEqual(sts.deleteNoteModalDeleteBtn, testdata.deleteNoteModalDeleteBtn, "Delete Notes Save button text mismatch");
+		sts = flipbook.click_noteListDeleteBtn(testdata.setEditedNote);
+		assertion.assertEqual(sts.deleteNoteTitle, testdata.deleteNoteModalTitle, "Delete Notes title text mismatch");
+		assertion.assertEqual(sts.deleteNoteSubTitle, testdata.deleteNoteModalSubTitle, "Delete Notes Sub titletext mismatch");
+		assertion.assertEqual(sts.deleteNoteCancelBtn, testdata.cancelBtn, "Delete Notes Cancel button text mismatch");
+		assertion.assertEqual(sts.deleteNoteDeleteBtn, testdata.deleteNoteModalDeleteBtn, "Delete Notes Save button text mismatch");
 	},
 
 	//Validate clicking on Delete button on modal deletes the message from the notes list
 	ENG_FLIP_TC_14: function () {
-		sts = flipbook.click_modalDeleteBtn();
+		sts = flipbook.click_deleteNoteDeleteBtn();
 	},
 
 	//Validate clicking on the Bookmarks button with already created Bookmarks, launches the bookmarks list
 	ENG_FLIP_TC_15: function (testdata) {
 		sts = flipbook.click_bookmarkBtn();
-		assertion.assertEqual(sts, true, "status mismatch");
-		sts = flipbook.getData_bookmarksList(testdata);
-		assertion.assertEqual(sts.bookmarksTitle, testdata.bookmarksTitle, "Bookmarks title status mismatch");
-		assertion.assertEqual(sts.closeBtnBookmarks, true, "Close Button status mismatch");
-		assertion.assertEqual(sts.bookmarkListItemLabel, testdata.noteListItemLabel, "Item Label Text status mismatch");
-		assertion.assertEqual(sts.bookmarkListDeleteBtn, true, "Delete button status mismatch");
-		assertion.assertEqual(sts.bookmarkListEditBtn, true, "Edit button status mismatch");
-		assertion.assertEqual(sts.bookmarkListItemName, testdata.setBookmark, "Bookmark list Item Name Text mismatch");
-		assertion.assertEqual(sts.addBookmarkBtn, testdata.bookmarkThisPageBtn, "Add Bookmark Button Text status mismatch");
+		assertion.assertEqual(sts.myBookmarksTitle, testdata.bookmarksTitle, "Bookmarks title status mismatch");
+		assertion.assertEqual(sts.bookmarkCloseBtn, '', "Close Button status mismatch");
+		assertion.assertEqual(sts.addBookmarkBtn, testdata.bookmarkThisPageBtn, "Item Label Text status mismatch");
+		sts = flipbook.getData_bookmarkList(testdata);
 	},
 
 	//Validate clicking on the Edit button, launches the edit bookmark textarea
 	ENG_FLIP_TC_16: function (testdata) {
-		sts = flipbook.click_editBookmarkBtn();
-		assertion.assertEqual(sts.editBookmarkTitle, testdata.bookmarksTitle, "Bookmarks title status mismatch");
-		assertion.assertEqual(sts.closeBtnBookmarks, true, "Bookmarks close button status mismatch");
-		assertion.assertEqual(sts.pageNumberLabelBookmarks, testdata.pageNoLabel, "page number status mismatch");
-		assertion.assertEqual(sts.pageNumberValueBookmarks, testdata.pageNoValue, "pageNoValue button text mismatch");
-		assertion.assertEqual(sts.bookmarkNameLabel, testdata.bookmarkNameLabel, "Bookmarks Name status mismatch");
-		assertion.assertEqual(sts.cancelBtn, testdata.cancelBtn, "Cancel Button Text status mismatch");
-		assertion.assertEqual(sts.saveBtn, testdata.saveBtn, "Save Button status mismatch");
+		sts = flipbook.click_bookmarkListEditBtn(testdata.setBookmark);
+		assertion.assertEqual(sts.bookmarkNameLabel, testdata.bookmarkNameLabel, "Bookmarks close button status mismatch");
+		assertion.assertEqual(sts.bookmarkPageLabel, testdata.pageNoLabel, "page number status mismatch");
+		assertion.assertEqual(sts.bookmarkPageValueSingle, testdata.pageNoValue, "pageNoValue button text mismatch");
+		assertion.assertEqual(sts.bookmarkCancelBtn, testdata.cancelBtn, "Cancel Button Text status mismatch");
+		assertion.assertEqual(sts.bookmarkSaveBtn, testdata.saveBtn, "Save Button status mismatch");
 	},
 
 	//Validate clicking on the Delete button on Bookmarks, deletes the BM directly and launches BM list or no BM list
 	ENG_FLIP_TC_17: function (testdata) {
-		sts = flipbook.click_deleteBookmarkBtn();
-		sts = flipbook.getData_noBookmarks();
-		assertion.assertEqual(sts.bookmarksTitle, testdata.bookmarksTitle, "Bookmarks title status mismatch");
-		assertion.assertEqual(sts.closeBtnBookmarks, true, "Close Button status mismatch");
-		assertion.assertEqual(sts.noBookmarkIcon, true, "No Bookmark Icon status mismatch");
-		assertion.assertEqual(sts.noBookmarkText, testdata.noBookmarkText, "No Bookmark Text status mismatch");
-		assertion.assertEqual(sts.addBookmarkBtn, testdata.bookmarkThisPageBtn, "Add Bookmark Button Text status mismatch");
+		sts = flipbook.click_bookmarkListDeleteBtn(testdata.setEditedBookmark);
+		// assertion.assertEqual(sts.bookmarksTitle, testdata.bookmarksTitle, "Bookmarks title status mismatch");
+		// assertion.assertEqual(sts.closeBtnBookmarks, true, "Close Button status mismatch");
+		// assertion.assertEqual(sts.noBookmarkIcon, true, "No Bookmark Icon status mismatch");
+		// assertion.assertEqual(sts.noBookmarkText, testdata.noBookmarkText, "No Bookmark Text status mismatch");
+		// assertion.assertEqual(sts.addBookmarkBtn, testdata.bookmarkThisPageBtn, "Add Bookmark Button Text status mismatch");
 	},
 
 	//Validate that clicking on the Zoom In button increases the width and height of the image
 	//Default launch width = 1411 px, height = 1733 px
-
 	//after one zoom = 1796, 2205
 	ENG_FLIP_TC_18: function (testdata) {
 		sts = flipbook.click_zoomInBtn();

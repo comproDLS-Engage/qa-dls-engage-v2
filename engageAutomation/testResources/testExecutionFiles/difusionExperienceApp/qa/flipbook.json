@@ -1,6 +1,6 @@
 {
-   "Suite1": {
-      "Name": "Creation of Notes and Bookmarks in a blank new flipbook in single page layout",
+   "Suite2": {
+      "Name": "Editing and Deletion of already created Notes and Bookmarks in single page layout",
       "TestCaseRepo": [
          "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
       ],
@@ -54,8 +54,8 @@
             ]
          },
          {
-            "id": "ENG_FLIP_TC_3",
-            "description": "Validate clicking on the Notes button for a new flipbook",
+            "id": "ENG_FLIP_TC_11",
+            "description": "Validate clicking on the Notes button with already created notes, launches the notes list",
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": [
                {
@@ -65,8 +65,8 @@
             ]
          },
          {
-            "id": "ENG_FLIP_TC_4",
-            "description": "Validate that clicking on 'Add Note' button launches Add Note Text Area",
+            "id": "ENG_FLIP_TC_12",
+            "description": "Validate clicking on the Edit button, launches the edit notes textarea",
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": [
                {
@@ -82,11 +82,29 @@
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath": "engage.appContent.flipbook.setNote"
-               },
+                  "jsonPath": "engage.appContent.flipbook.setEditedNote"
+               }
+            ]
+         },
+         {
+            "id": "ENG_FLIP_TC_13",
+            "description": "Validate clicking on the Delete button, launches the delete notes modal",
+            "testFile": "./test/engageExperienceApp/flipbook.test.js",
+            "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath": "engage.appContent.flipbook.setNote2"
+                  "jsonPath": "engage.appContent.flipbook"
+               }
+            ]
+         },
+         {
+            "id": "ENG_FLIP_TC_14",
+            "description": "Validate clicking on Delete button on modal deletes the message from the notes list",
+            "testFile": "./test/engageExperienceApp/flipbook.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.flipbook"
                }
             ]
          },
@@ -97,8 +115,8 @@
             "testData": []
          },
          {
-            "id": "ENG_FLIP_TC_7",
-            "description": "Validate clicking on the Bookmark button for a new flipbook launches Bookmark pane",
+            "id": "ENG_FLIP_TC_15",
+            "description": "Validate clicking on the Bookmarks button for a flipbook with added bookmarks launches the list",
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": [
                {
@@ -108,8 +126,8 @@
             ]
          },
          {
-            "id": "ENG_FLIP_TC_8",
-            "description": "Validate that clicking on 'Bookmark This Page' button launches bookmark text area",
+            "id": "ENG_FLIP_TC_16",
+            "description": "Validate clicking on the Edit button, launches the edit Bookmarks text area",
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": [
                {
@@ -125,19 +143,23 @@
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath": "engage.appContent.flipbook.setBookmark"
+                  "jsonPath": "engage.appContent.flipbook.setEditedBookmark"
                }
             ]
          },
          {
-            "id": "ENG_FLIP_TC_10",
-            "description": "Click Close button in Bookmark pane closes the pane",
+            "id": "ENG_FLIP_TC_17",
+            "description": "Validate clicking on the Delete button, deletes the Bookmark",
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
-            "testData": []
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.flipbook"
+               }
+            ]
          }
       ],
       "AfterEach": [],
       "After": []
    }
-
 }
