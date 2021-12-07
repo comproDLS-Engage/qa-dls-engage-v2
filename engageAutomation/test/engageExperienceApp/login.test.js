@@ -65,7 +65,6 @@ module.exports = {
         sts = require('../../pages/engageExperienceApp/dashboard.page.js').isInitialized();
         assertion.assertEqual(sts.pageStatus, true, "Dashboard page status mismatch");
         //there should be some other assertion as well to validate successfull login - akhil
-        sts = browser.url("https://engage-difusion-dev1.comprodls.com/flipbook-app/teacher/books/flipbookbooks1623327989701/products/fb11623328043437?pageLabel=2-3");
     },
 
     //Validate that the user is able to mask/unmask the password by clicking eye icon
@@ -158,5 +157,5 @@ module.exports = {
         assertion.assertEqual(sts.brandLogo_img_exists, true, "Reset Password Page Brand Logo Not Displayed")
     }
 
-   
+
 };
