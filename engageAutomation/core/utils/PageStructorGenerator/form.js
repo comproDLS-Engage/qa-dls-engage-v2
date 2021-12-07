@@ -69,7 +69,7 @@ app.get("/getvalue", function (request, response) {
             response.send("Your PageObject \"" + inputFile + ".page.js\" is genrated at \"" + __dirname + "\\outputFile\\" + inputFile + '.page.js\"');
             // Traverse the selector json
             //Create the output Page
-
+         
             file = fs.createWriteStream(__dirname + "/outputFile/" + inputFile + '.page.js');
             for (let i = 1; i < pageSelectorFile.length; i++) {
                 for (let j = 1; j < pageSelectorFile.length; j++) {
@@ -653,7 +653,7 @@ function dataPatternGenerateWithCondition(groupSelectorData, groupName, key) {
     else
         file.write("getData_" + groupName + ": function ()\n{\n")
     file.write("logger.logInto(stackTrace.get());\n")
-    file.write("var obj =[], i , arr = [];\n")
+    file.write("var obj , i , arr = [];\n")
     for (var i = 0; i < groupSelectorData.length; i++) {
         file.write(groupSelectorData[i].Label + "=action.findElements(this." + groupSelectorData[i].Label + ")\n");
     }
