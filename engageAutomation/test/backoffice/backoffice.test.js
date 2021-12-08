@@ -56,8 +56,8 @@ module.exports = {
 
 	// Validate that the view book page is launched on clicking the book card on the home page
 	BK_TC_4: function (testdata) {
-		sts = homePage.click_Book(testdata.name);
-		assertion.assert(sts.includes(testdata.name), "Book title mismatch. " + sts);
+		sts = homePage.click_Book(testdata);
+		assertion.assert(sts.includes(testdata), "Book title mismatch. " + sts);
 	},
 
 	// Validate that the delete book dialog box opens on clicking delete button on the components page
@@ -113,7 +113,7 @@ module.exports = {
 
 	// Validate that the component details page is launched on clicking the component card
 	BK_TC_10: function (testdata) {
-		sts = viewBookPage.click_Component(testdata.title);
+		sts = viewBookPage.click_Component(testdata);
 		assertion.assertEqual(sts, true, "Learning Path page status mismatch");
 	},
 
@@ -155,7 +155,7 @@ module.exports = {
 
 	// Validate that the sub-folder page is launched on clicking the folder on the learning path page
 	BK_TC_13: function (testdata) {
-		sts = learningPathPage.click_Folder(testdata.name);
+		sts = learningPathPage.click_Folder(testdata);
 		// assertion.assertEqual(sts, true, "Page status mismatch");
 	},
 
@@ -387,36 +387,63 @@ module.exports = {
 		var action = require('../../core/actionLibrary/baseActionLibrary.js');
 		var i, j;
 		for (i = 0; i < testdata.length; i++) {
-			browser.url(testdata[i].url);
-			browser.pause(20000);
-			console.log("url launched...")
-			sts = action.waitForExist("[class*=c-activity-launching]", undefined, true);
-			assertion.assertEqual(sts, true, "Error! Activities stuck in processing state.");
+			//browser.url(testdata[i].url);
+			sts = action.click("a[class*=mdc-top-app-bar__title]");
+			assertion.assertEqual(sts, true);
+			browser.pause(5000);
+			this.BK_TC_4(testdata[i].bookName);
+			this.BK_TC_10(testdata[i].component);
+			if (testdata[i].folderL1 != "" || testdata[i].folderL1 != undefined) {
+				this.BK_TC_13(testdata[i].folderL1);
+			}
+			if (testdata[i].folderL2 != "" || testdata[i].folderL2 != undefined) {
+				this.BK_TC_13(testdata[i].folderL2);
+			}
+			browser.pause(5000);
+			//console.log("url launched...")
+			sts = action.waitForExist("[class*=c-activity-launching],[class*=isBeingEdited]", undefined, true);
+			assertion.assertEqual(sts, true, "Error! Activities in processing state.");
 			for (j = 0; j < testdata[i].activity.length; j++) {
 				sts = learningPathPage.click_ActivityAuthor_Button_in_ActivityMenu(testdata[i].activity[j]);
 				assertion.assertEqual(sts, true, "Error in clicking LO: " + sts);
-				browser.switchWindow('paint.backoffice.comprodls.com/');
 				console.log("activity launched...")
+				browser.pause(5000)
+				browser.switchWindow('paint.backoffice.comprodls.com');
+				console.log("switch to editor...")
 				sts = action.waitForClickable("div:nth-child(2) [data-tid=button-saveandreturn]");
 				assertion.assertEqual(sts, true);
-				browser.pause(3000)
+				browser.pause(2000)
 				sts = action.click("div:nth-child(2) [data-tid=button-saveandreturn]");
 				assertion.assertEqual(sts, true);
-				//sts = action.waitForDisplayed("[role=progressbar]", undefined, true);
-				//assertion.assertEqual(sts, true);
-				console.log("activity saved...")
 				browser.pause(5000)
+				console.log("activity saved...")
 				browser.switchWindow(global.appUrl);
-				console.log("url switched...")
+				console.log("switch to backoffice...")
+				sts = action.waitForExist("[class*=c-activity-launching],[class*=isBeingEdited]", 60000, true);
+				assertion.assertEqual(sts, true, "Error! Activities in processing state.");
 				browser.pause(2000)
-				sts = action.waitForExist("[class*=c-activity-launching]", 60000, true);
-				assertion.assertEqual(sts, true, "Error! Activities stuck in processing state.");
 			}
+			/*this.BK_TC_42();
+			browser.pause(5000)
+			sts = action.getValue("[id=page-reference]");
+			if (sts != "11") {
+				sts = action.setValue("[id=page-reference]", "11");
+			}
+			else {
+				sts = action.setValue("[id=page-reference]", "12");
+			}
+			sts = action.waitForClickable("[class*=c-save-changes-button]");
+			assertion.assertEqual(sts, true);
+			browser.pause(2000)
+			sts = action.click("[class*=c-save-changes-button]");
+			assertion.assertEqual(sts, true, "Error in clicking save button");
+			browser.pause(20000)*/
 			this.BK_TC_37();
 			this.BK_TC_38();
 			console.log("snapshot created...")
 			this.BK_TC_39();
 			console.log("component published...")
+			this.BK_TC_26();
 		}
 
 	},

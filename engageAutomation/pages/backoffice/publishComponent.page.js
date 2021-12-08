@@ -31,7 +31,7 @@ module.exports = {
         if (res == true) {
             res = action.click(this.snapshotBtn);
             if (res == true) {
-                res = action.waitForClickable(this.publishBtn);
+                res = action.waitForClickable(this.publishBtn, 120000);
                 // res = action.isEnabled(this.publishBtn);
             }
             logger.logInto(stackTrace.get(), res);
