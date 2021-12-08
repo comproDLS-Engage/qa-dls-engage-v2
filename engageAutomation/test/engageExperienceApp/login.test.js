@@ -157,5 +157,5 @@ module.exports = {
         assertion.assertEqual(sts.brandLogo_img_exists, true, "Reset Password Page Brand Logo Not Displayed")
     }
 
-   
+
 };

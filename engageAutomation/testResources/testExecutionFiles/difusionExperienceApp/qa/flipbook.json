@@ -342,7 +342,7 @@
          },
          {
             "id": "ENG_FLIP_TC_16",
-            "description": "Validate clicking on the Edit button, launches the edit notes text area",
+            "description": "Validate clicking on the Edit button, launches the edit Bookmarks text area",
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": [
                {
