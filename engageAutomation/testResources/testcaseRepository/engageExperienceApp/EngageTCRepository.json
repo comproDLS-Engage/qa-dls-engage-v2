@@ -2120,6 +2120,24 @@
           "description": "Validate that clicking on the Zoom Out button decreases the width and height of the image",
           "tags": "P1",
           "visualTest": "-"
+        },
+        {
+          "id": "ENG_FLIP_TC_20",
+          "description": "Validate that clicking on TOC button, launches the TOC layover",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_FLIP_TC_21",
+          "description": "Validate entering the page number in input label after clicking the input field in TOC",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_FLIP_TC_22",
+          "description": "Validate clicking on Jump to page button lauches the entered page in flipbook",
+          "tags": "P1",
+          "visualTest": "-"
         }
       ]
     }

@@ -15,7 +15,6 @@ module.exports = {
 	ENG_FLIP_TC_2: function (testdata) {
 		sts = flipbook.click_singlePageBtn();
 		assertion.assertEqual(sts, testdata.singlelayoutWidth, "Single Layout width text mismatch");
-
 	},
 
 	//Validate clicking on the Notes button for a New User (blank notes)
@@ -160,7 +159,6 @@ module.exports = {
 		console.log("testdata.singlelayoutDefaultHeight = ",testdata.singlelayoutDefaultHeight)
 		assertion.assert((sts.width > testdata.singlelayoutDefaultWidth), "Width comparison failed");
 		assertion.assert((sts.height > testdata.singlelayoutDefaultHeight), "Height comparison failed");
-
 	},
 
 	//Validate that clicking on the Zoom Out button decreases the width and height of the image
@@ -174,5 +172,28 @@ module.exports = {
 		console.log("testdata.singlelayoutDefaultHeight = ",testdata.singlelayoutDefaultHeight)
 		assertion.assert((sts.width < testdata.singlelayoutDefaultWidth), "Width comparison failed");
 		assertion.assert((sts.height < testdata.singlelayoutDefaultHeight), "Height comparison failed");
-	}
+	},
+
+	//Validate that clicking on TOC button, launches the TOC layover
+	ENG_FLIP_TC_20: function (testdata) {
+		sts = flipbook.click_TOCBtn();
+		assertion.assertEqual(sts.flipbookTitle, testdata.flipbookTitle, " text mismatch");
+		assertion.assertEqual(sts.tableOfContentTitle, testdata.tableOfContentTitle, " text mismatch");
+		assertion.assertEqual(sts.jumpToPageBtn, '', "jumpToPageBtn text mismatch");
+	},
+
+	//Validate entering the page number in input label after clicking the input field in TOC
+	ENG_FLIP_TC_21: function (testdata) {
+		sts = flipbook.click_jumpToPageInput();
+		assertion.assertEqual(sts, true, "Input clicked mismatch");
+		sts = flipbook.set_jumpToPageInput(testdata);
+		assertion.assertEqual(sts, true, "status mismatch");
+	},
+
+	//Validate clicking on Jump to page button lauches the entered page in flipbook
+	ENG_FLIP_TC_22: function () {
+		sts = flipbook.click_jumpToPageBtn();
+		//assertion.assertEqual(sts, true, "Input clicked mismatch");
+	},
+	
 }

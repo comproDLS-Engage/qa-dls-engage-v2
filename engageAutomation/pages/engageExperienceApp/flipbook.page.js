@@ -608,17 +608,17 @@ module.exports = {
     return resourceTitle_Arr;
   },
 
-  click_jumpToPageBtn: function () {
+  click_jumpToPageInput: function () {
     logger.logInto(stackTrace.get());
     var res;
-    res = action.click(this.jumpToPageBtn);
+    res = action.click(this.jumpToPageInput);
     if (true == res) {
-      logger.logInto(stackTrace.get(), " jumpToPageBtn button is clicked");
-      res = this.getData_flipbookPage();
+      logger.logInto(stackTrace.get(), " TOCBtn button is clicked");
     }
     else {
-      logger.logInto(stackTrace.get(), res + " jumpToPageBtn button is not clicked", 'error');
+      logger.logInto(stackTrace.get(), res + " TOCBtn button is clicked", 'error');
     }
+    console.log("response - ",res)
     return res;
   },
 
@@ -630,6 +630,20 @@ module.exports = {
       logger.logInto(stackTrace.get(), "Value is entered in jumpToPageInput");
     } else {
       logger.logInto(stackTrace.get(), res, 'error');
+    }
+    return res;
+  },
+
+  click_jumpToPageBtn: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.jumpToPageBtn);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " jumpToPageBtn button is clicked");
+      res = this.getData_flipbookPage();
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + " jumpToPageBtn button is not clicked", 'error');
     }
     return res;
   },
