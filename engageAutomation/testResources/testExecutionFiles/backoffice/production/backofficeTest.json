@@ -113,7 +113,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
-						"jsonPath": "backoffice.book[0]"
+						"jsonPath": "backoffice.book[0].name"
 					}
 				]
 			},
@@ -124,7 +124,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
-						"jsonPath": "backoffice.component[2]"
+						"jsonPath": "backoffice.component[0]"
 					}
 				]
 			},
@@ -135,7 +135,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
-						"jsonPath": "backoffice.component[2]"
+						"jsonPath": "backoffice.component[0]"
 					}
 				]
 			},
@@ -168,7 +168,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
-						"jsonPath": "backoffice.component[0]"
+						"jsonPath": "backoffice.component[2]"
 					}
 				]
 			},
@@ -179,7 +179,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
-						"jsonPath": "backoffice.component[0]"
+						"jsonPath": "backoffice.component[2]"
 					}
 				]
 			}
@@ -224,7 +224,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
-						"jsonPath": "backoffice.book[0]"
+						"jsonPath": "backoffice.book[0].name"
 					}
 				]
 			}
@@ -238,7 +238,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
-						"jsonPath": "backoffice.component[0]"
+						"jsonPath": "backoffice.component[0].title"
 					}
 				]
 			},
@@ -266,7 +266,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
-						"jsonPath": "backoffice.folder[0]"
+						"jsonPath": "backoffice.folder[0].name"
 					}
 				]
 			},
@@ -294,7 +294,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
-						"jsonPath": "backoffice.folder[1]"
+						"jsonPath": "backoffice.folder[1].name"
 					}
 				]
 			}
@@ -340,7 +340,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
-						"jsonPath": "backoffice.book[0]"
+						"jsonPath": "backoffice.book[0].name"
 					}
 				]
 			},
@@ -351,7 +351,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
-						"jsonPath": "backoffice.component[0]"
+						"jsonPath": "backoffice.component[0].title"
 					}
 				]
 			},
@@ -362,7 +362,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
-						"jsonPath": "backoffice.folder[0]"
+						"jsonPath": "backoffice.folder[0].name"
 					}
 				]
 			},
@@ -373,7 +373,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
-						"jsonPath": "backoffice.folder[1]"
+						"jsonPath": "backoffice.folder[1].name"
 					}
 				]
 			}
@@ -425,42 +425,17 @@
 				]
 			},
 			{
-				"id": "ASE_QUN_TC_17",
-				"description": "Validate that the Next Button is enabled only after a question is added",
+				"id": "ASE_QUN_TC_9",
+				"description": "Validate the editor is selected in question pane and displayed.",
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": []
 			},
+			
 			{
-				"id": "ASE_QUN_TC_5",
-				"description": "Validate that alphanumeric text is supported in Question Title Text.",
+				"id": "ASE_QUN_TC_17",
+				"description": "Click on Editor tab",
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": [
-					{
-						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
-						"jsonPath": "editor.questions.MCQ[0].question1.questionTitle"
-					}
-				]
-			},
-			{
-				"id": "ASE_COM_TC_9",
-				"description": "Validate that student can add instruction for each question under the 'Question' section",
-				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-					{
-						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
-						"jsonPath": "editor.questions.MCQ[0].question1.questionInstruction"
-					}
-				]
-			},
-			{
-				"id": "ASE_COM_TC_42",
-				"description": "Validate if alpha-numeric text is allowed in the Question Text",
-				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-					{
-						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
-						"jsonPath": "editor.questions.MCQ[0].question1.questionText"
-					}
 				]
 			},
 			{
@@ -504,9 +479,16 @@
 			},
 			{
 				"id": "ASE_QUN_TC_9",
-				"description": "Validate that the Question can be added using Add Question button.",
+				"description": "Validate the editor is selected in question pane and displayed.",
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": []
+			},
+			{
+				"id": "ASE_QUN_TC_17",
+				"description": "Click on Editor tab",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+				]
 			},
 			{
 				"id": "ASE_QUN_TC_5",
@@ -582,7 +564,7 @@
 			},
 			{
 				"id": "ASE_QUN_TC_9",
-				"description": "Validate that the Question can be added using Add Question button.",
+				"description": "Validate the editor is selected in question pane and displayed.",
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": []
 			},
@@ -660,7 +642,7 @@
 			},
 			{
 				"id": "ASE_QUN_TC_9",
-				"description": "Validate that the Question can be added using Add Question button.",
+				"description": "Validate the editor is selected in question pane and displayed.",
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": []
 			},
@@ -738,7 +720,7 @@
 			},
 			{
 				"id": "ASE_QUN_TC_9",
-				"description": "Validate that the Question can be added using Add Question button.",
+				"description": "Validate the editor is selected in question pane and displayed.",
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": []
 			},
@@ -805,7 +787,7 @@
 			},
 			{
 				"id": "ASE_QUN_TC_9",
-				"description": "Validate that the Question can be added using Add Question button.",
+				"description": "Validate the editor is selected in question pane and displayed.",
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": []
 			},
@@ -881,39 +863,6 @@
 				"testData": []
 			},
 			{
-				"id": "ASE_QUN_TC_5",
-				"description": "Validate that alphanumeric text is supported in Question Title Text.",
-				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-					{
-						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
-						"jsonPath": "editor.questions.Matching[0].questionTitle"
-					}
-				]
-			},
-			{
-				"id": "ASE_COM_TC_9",
-				"description": "Validate that student can add instruction for each question under the 'Question' section",
-				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-					{
-						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
-						"jsonPath": "editor.questions.Matching[0].questionInstruction"
-					}
-				]
-			},
-			{
-				"id": "ASE_COM_TC_42",
-				"description": "Validate if alpha-numeric text is allowed in the Question Text",
-				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-					{
-						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
-						"jsonPath": "editor.questions.Matching[0].questionText"
-					}
-				]
-			},
-			{
 				"id": "ASE_MAT_TC_13",
 				"description": "Set Click Add Pair Button",
 				"testFile": "./test/assessmentEditor/editor.test.js",
@@ -960,7 +909,7 @@
 			},
 			{
 				"id": "ASE_QUN_TC_9",
-				"description": "Validate that the Question can be added using Add Question button.",
+				"description": "Validate the editor is selected in question pane and displayed.",
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": []
 			},
@@ -1038,7 +987,7 @@
 			},
 			{
 				"id": "ASE_QUN_TC_9",
-				"description": "Validate that the Question can be added using Add Question button.",
+				"description": "Validate the editor is selected in question pane and displayed.",
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": []
 			},
@@ -1198,7 +1147,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
-						"jsonPath": "backoffice.book[0]"
+						"jsonPath": "backoffice.book[0].name"
 					}
 				]
 			},
@@ -1209,7 +1158,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
-						"jsonPath": "backoffice.component[0]"
+						"jsonPath": "backoffice.component[0].title"
 					}
 				]
 			},
@@ -1220,7 +1169,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
-						"jsonPath": "backoffice.folder[0]"
+						"jsonPath": "backoffice.folder[0].name"
 					}
 				]
 			},
@@ -1231,7 +1180,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
-						"jsonPath": "backoffice.folder[1]"
+						"jsonPath": "backoffice.folder[1].name"
 					}
 				]
 			}
@@ -1323,7 +1272,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
-						"jsonPath": "backoffice.book[0]"
+						"jsonPath": "backoffice.book[0].name"
 					}
 				]
 			},
@@ -1334,7 +1283,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
-						"jsonPath": "backoffice.component[0]"
+						"jsonPath": "backoffice.component[0].title"
 					}
 				]
 			},
@@ -1345,7 +1294,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
-						"jsonPath": "backoffice.folder[0]"
+						"jsonPath": "backoffice.folder[0].name"
 					}
 				]
 			},
@@ -1356,7 +1305,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
-						"jsonPath": "backoffice.folder[1]"
+						"jsonPath": "backoffice.folder[1].name"
 					}
 				]
 			}
@@ -1467,7 +1416,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
-						"jsonPath": "backoffice.component[1]"
+						"jsonPath": "backoffice.component[1].title"
 					}
 				]
 			},
@@ -1495,7 +1444,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
-						"jsonPath": "backoffice.component[2]"
+						"jsonPath": "backoffice.component[2].title"
 					}
 				]
 			},
@@ -1557,7 +1506,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
-						"jsonPath": "backoffice.book[0]"
+						"jsonPath": "backoffice.book[0].name"
 					}
 				]
 			}
