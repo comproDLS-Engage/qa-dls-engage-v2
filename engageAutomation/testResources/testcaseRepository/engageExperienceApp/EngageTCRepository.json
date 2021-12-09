@@ -1615,6 +1615,12 @@
           "description": "Validate on clicking \"Projectable\" resource in Explore menu, same tab is launched on Browse",
           "tags": "P1",
           "visualTest": "-"
+        },
+        {
+          "id": "ENG_DASH_TC_25",
+          "description": "Validate that playlist page is launched on clicking the playlist card",
+          "tags": "P1",
+          "visualTest": "-"
         }
       ]
     },
@@ -2136,6 +2142,24 @@
         {
           "id": "ENG_FLIP_TC_19",
           "description": "Validate that clicking on the Zoom Out button decreases the width and height of the image",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_FLIP_TC_20",
+          "description": "Validate that clicking on TOC button, launches the TOC layover",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_FLIP_TC_21",
+          "description": "Validate entering the page number in input label after clicking the input field in TOC",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_FLIP_TC_22",
+          "description": "Validate clicking on Jump to page button lauches the entered page in flipbook",
           "tags": "P1",
           "visualTest": "-"
         }

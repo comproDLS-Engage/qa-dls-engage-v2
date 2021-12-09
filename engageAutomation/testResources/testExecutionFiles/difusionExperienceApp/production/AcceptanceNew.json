@@ -669,6 +669,12 @@
             ]
          },
          {
+            "id": "ENG_PLAY_TC_9",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
+            "testData": []
+         },
+         {
             "id": "ENG_SHELL_TC_11",
             "description": "",
             "testFile": "./test/engageExperienceApp/appShell.test.js",
