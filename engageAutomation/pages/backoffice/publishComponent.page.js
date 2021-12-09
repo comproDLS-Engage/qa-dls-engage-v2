@@ -15,7 +15,7 @@ module.exports = {
         logger.logInto(stackTrace.get());
         //action.waitForDocumentLoad();
         action.waitForDisplayed(this.loadingContainer);
-        action.waitForDisplayed(this.loadingContainer, undefined, true);
+        action.waitForDisplayed(this.loadingContainer, 120000, true);
         res = {
             lastPublishedVer: action.getText(this.lastPublishedVer),
             lastSnapshotVer: action.getText(this.lastSnapshotVer),
