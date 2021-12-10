@@ -120,7 +120,6 @@ module.exports = {
 			res = res + " -- Error in clicking Class Button";
 			logger.logInto(stackTrace.get(), res, 'error');
 		}
-		console.log("click classes res", res)
 		return res;
 	},
 

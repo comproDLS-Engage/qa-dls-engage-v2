@@ -1,6 +1,6 @@
 "use strict";
-const { RunnerOptionsFluent } = require('@applitools/eyes-webdriverio');
 var activityPlayerPage = require('../../pages/engageExperienceApp/activityPlayer.page.js');
+const itemPlayerPage = require('../../pages/engageExperienceApp/itemPlayer.page');
 var itemPlayer = require('../../pages/engageExperienceApp/itemPlayer.page');
 var sts;
 
@@ -79,10 +79,10 @@ module.exports = {
 	//Click Restart button in left pane
 	ENG_PLAY_TC_7: function () {
 		sts = activityPlayerPage.click_retakeActivityBtn();
-			/*rupsi
-		
-		assertion.assertEqual(sts.checkmyWork_isExists, true, "check answer button status mismatch");
-		assertion.assertEqual(sts.checkmyWork_isDisabled, "true", "button state mismatch");*/
+		sts = itemPlayerPage.isInitialized();
+		assertion.assertEqual(sts.isSubmitted, false, "submit status mismatch");
+		sts = activityPlayerPage.getData_activityPlayer();
+		assertion.assertEqual(sts.retakeActivityBtn, null, "Retake activity button text mismatch");
 	},
 
 	//Validate the activity player when quiz is launched for the student

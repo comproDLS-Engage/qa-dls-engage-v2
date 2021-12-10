@@ -10,8 +10,9 @@ module.exports = {
 
 	isInitialized: function () {
 		logger.logInto(stackTrace.get());
-		action.switchToFrame("[id*=iframe]");
-		let res = action.waitForDisplayed(this.choices);
+		//action.switchToFrame("[id*=iframe]");
+		action.switchToFrame(0);
+		let res = action.waitForExist(this.choices);
 		action.switchToParentFrame();
 		return res;
 	},
@@ -46,7 +47,7 @@ module.exports = {
 		var res, choiceSelector, selChoiceSelector, value;
 		for (let i = 0; i < mcqQuesData.length; i++) {
 			choiceSelector = this.choices + mcqQuesData[i][0] + "]";
-			selChoiceSelector = choiceSelector + " " + this.selectedChoice;
+			selChoiceSelector = choiceSelector + this.selectedChoice;
 			value = itemplayer.getFeedbackIconDetails(selChoiceSelector)
 			res = action.getElementCount(selChoiceSelector);
 			if (res == 1)

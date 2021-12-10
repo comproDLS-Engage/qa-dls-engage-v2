@@ -93,6 +93,15 @@ module.exports = {
 			res = action.getElementCount(quesSelector + " >" + this.correctIcon);
 			ret = action.getElementCount(quesSelector + " >" + this.incorrectIcon);
 		}
+		/*else if (quesType == 'multimcq') {
+			
+			let attrib1 = action.getAttribute(action.parentElement(quesSelector),"class");
+			let attrib2 = action.getAttribute(action.parentElement(this.correctIcon),"class");
+			if (attrib1 == attrib2)
+
+			res = action.getElementCount(quesSelector + " >" + this.correctIcon);
+			ret = action.getElementCount(quesSelector + " >" + this.incorrectIcon);
+		}*/
 		else {
 			res = action.getElementCount(quesSelector + " " + this.correctIcon);
 			ret = action.getElementCount(quesSelector + " " + this.incorrectIcon);

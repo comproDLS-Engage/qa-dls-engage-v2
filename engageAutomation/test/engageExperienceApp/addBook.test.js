@@ -616,7 +616,6 @@ module.exports = {
 
         sts = addBookPage.clickOnMoreSerachResult()
         assertion.typeOf(sts, 'object', new Error(sts));
-        console.log(sts)
         assertion.assertEqual(sts.booksList[0].bookTitle, testdata, "Book Title Mismatch: " + JSON.stringify(sts))
     }
 };
