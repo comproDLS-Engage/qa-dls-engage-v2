@@ -397,7 +397,7 @@ function generateClickFunctions(pageSelectorFile, key, pageSelectorGroup, PageTe
 function generategroupClickfunction(pageSelectorGroup, selectorName, pageSelectorFileValue, PageTemplate) {
     var textcondition = null;
     var parentAvailable = null;
-    var patternValue=null;
+    var patternValue = null;
     for (var j = 0; j < pageSelectorGroup.length; j++) {
         if (((pageSelectorGroup[j].relation).toLowerCase().includes("parent"))) {
             parentAvailable = pageSelectorGroup[j].Label;
@@ -427,14 +427,14 @@ function generategroupClickfunction(pageSelectorGroup, selectorName, pageSelecto
         for (var j = 0; j < pageSelectorGroup.length; j++) {
 
             if (((pageSelectorGroup[j].extraInfo).toLowerCase().includes("pattern"))) {
-                patternValue=true;
+                patternValue = true;
             }
         }
     }
     if (textcondition == null) {
         textcondition = selectorName;
     }
-    if (parentAvailable != null || patternValue==true) {
+    if (parentAvailable != null || patternValue == true) {
         Clickfunction(textcondition, selectorName, pageSelectorFileValue, PageTemplate);
     }
     else
@@ -444,14 +444,25 @@ function generategroupClickfunction(pageSelectorGroup, selectorName, pageSelecto
 function Clickfunctionindex(textcondition, selectorName, seletorRow, PageTemplate) {
     file.write("\nclick_" + selectorName + ": function (" + textcondition + "Name) {\n" +
         "logger.logInto(stackTrace.get());\n" +
-        "var i, res;\n" +
-        "var " + textcondition + "  = action.findElements(this." + textcondition + ");\n" +
-        "var " + selectorName + " = action.findElements(this." + selectorName + ");\n" +
-        "for (i = 0; i < " + textcondition + ".length; i++) {\n" +
-        "if ((action.getText(" + textcondition + "[i]))== " + textcondition + "Name) {\n " +
-        "res = action.click(" + selectorName + "[i]);\n" +
-        "break;\n}\n" +
-        "}\nif (res == true) {\n  logger.logInto(stackTrace.get(), \" --" + selectorName + " clicked\");\n")
+        "var i, res;\n")
+    if (textcondition != selectorName) {
+        file.write( "var " + textcondition + "  = action.findElements(this." + textcondition + ");\n" +
+            "var " + selectorName + " = action.findElements(this." + selectorName + ");\n" +
+            "for (i = 0; i < " + textcondition + ".length; i++) {\n" +
+            "if ((action.getText(" + textcondition + "[i]))== " + textcondition + "Name) {\n " +
+            "res = action.click(" + selectorName + "[i]);\n" +
+            "break;\n}\n" +
+            "}\nif (res == true) {\n  logger.logInto(stackTrace.get(), \" --" + selectorName + " clicked\");\n")
+    }
+    else {
+        file.write(
+            "var " + selectorName + " = action.findElements(this." + selectorName + ");\n" +
+            "for (i = 0; i < " + selectorName + ".length; i++) {\n" +
+            "if ((action.getText(" + selectorName + "[i]))== " + selectorName + "Name) {\n " +
+            "res = action.click(" + selectorName + "[i]);\n" +
+            "break;\n}\n" +
+            "}\nif (res == true) {\n  logger.logInto(stackTrace.get(), \" --" + selectorName + " clicked\");\n")
+    }
     if ((seletorRow.returnValue) != "") {
         generateReturnPage(PageTemplate, seletorRow.returnValue);
 
