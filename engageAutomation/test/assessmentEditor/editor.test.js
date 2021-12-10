@@ -353,8 +353,11 @@ module.exports = {
 		sts = EditorPlayer.clickPreviewBtn()
 		assertion.assertEqual(sts, true, "Preview button is not clicked");
 	},
-
+	//set question text for writing player
+	ASE_COM_TC_1000: function (testdata) {
+		sts = EditorPlayer.setQuestionTextinwriting(testdata)
+		assertion.assertEqual(sts, testdata, "Question text  mismatch");
 	
-
+	}
 
 }

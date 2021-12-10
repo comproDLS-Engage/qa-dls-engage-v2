@@ -50,6 +50,7 @@ module.exports = {
 	container_labelD: selectorFile.css.editorTab.DND.container_labelD,
 	container_labelE: selectorFile.css.editorTab.DND.container_labelE,
 	addBlank_btn: selectorFile.css.editorTab.DND_image.addBlank_btn,
+	questionText_input: selectorFile.css.editorTab.DND_image.questionText_input,
 	questionInputField: selectorFile.css.editorTab.questionInputField,
 	inputItem: selectorFile.css.editorTab.matching.inputItem,
 	inputMatchedItem: selectorFile.css.editorTab.matching.inputMatchedItem,
@@ -618,7 +619,27 @@ module.exports = {
 		}
 		return res;
 	},
+	//
+	setQuestionTextinwriting: function (questionTitle) {
+		console.log(questionTitle)
+	
+		logger.logInto(stackTrace.get());
+		action.waitForDisplayed(this.questionText_input)
+		browser.pause(2000)
+		res = action.clearValue(this.questionText_input);
+		res = action.addValue(this.questionText_input, questionTitle);
+		if (res == true) {
 
+			logger.logInto(stackTrace.get(), " -- Question Title is entered");
+			res = action.getValue(this.questionText_input)
+			console.log(res)
+		}
+		else {
+			res = res + " -- Question Title is NOT entered";
+			logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
 	//Adding 'IMAGE' as media
 	clickAddImageBtn: function () {
 		logger.logInto(stackTrace.get());
