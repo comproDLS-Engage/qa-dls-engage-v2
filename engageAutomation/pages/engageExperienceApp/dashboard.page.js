@@ -211,14 +211,14 @@ module.exports = {
   getData_resources: function (resourceTitleName) {
     logger.logInto(stackTrace.get());
     var obj = [], i, arr = [];
-    resourceTitle = action.findElements(this.resourceTitle)
-    resourceSubtitle = action.findElements(this.resourceSubtitle)
+    var resourceTitle = action.findElements(this.resourceTitle)
+    var resourceSubtitle = action.findElements(this.resourceSubtitle)
     if (resourceTitleName) {
       for (var i = 0; i <= resourceTitle.length; i++) {
-        if (action.getText(this.resourceTitle[i]) == resourceTitleName) {
+        if (action.getText(resourceTitle[i]) == resourceTitleName) {
           obj[0] = {
-            resourceTitle: (action.getElementCount(this.resourceTitle[i]) > 0) ? action.getText(this.resourceTitle[i]) : null,
-            resourceSubtitle: (action.getElementCount(this.resourceSubtitle[i]) > 0) ? action.getText(this.resourceSubtitle[i]) : null,
+            resourceTitle: (action.getElementCount(resourceTitle[i]) > 0) ? action.getText(resourceTitle[i]) : null,
+            resourceSubtitle: (action.getElementCount(resourceSubtitle[i]) > 0) ? action.getText(resourceSubtitle[i]) : null,
           }
           break;
         }
@@ -226,8 +226,8 @@ module.exports = {
     } else {
       for (var i = 0; i <= resourceTitle.length; i++) {
         obj[i] = {
-          resourceTitle: (action.getElementCount(this.resourceTitle[i]) > 0) ? action.getText(this.resourceTitle[i]) : null,
-          resourceSubtitle: (action.getElementCount(this.resourceSubtitle[i]) > 0) ? action.getText(this.resourceSubtitle[i]) : null,
+          resourceTitle: (action.getElementCount(resourceTitle[i]) > 0) ? action.getText(resourceTitle[i]) : null,
+          resourceSubtitle: (action.getElementCount(resourceSubtitle[i]) > 0) ? action.getText(resourceSubtitle[i]) : null,
         }
       }
     }
@@ -559,11 +559,11 @@ module.exports = {
 
   click_resourceTitle: function (resourceTitleName) {
     logger.logInto(stackTrace.get());
-    var i, list, res;
-    list = action.findElements(this.resourceTitle);
-    for (i = 0; i < list.length; i++) {
-      if ((action.getText(list[i])) == resourceTitleName) {
-        res = action.click(list[i]);
+    var i, res;
+    var resourceTitle = action.findElements(this.resourceTitle);
+    for (i = 0; i < resourceTitle.length; i++) {
+      if ((action.getText(resourceTitle[i])) == resourceTitleName) {
+        res = action.click(resourceTitle[i]);
         break;
       }
     }
