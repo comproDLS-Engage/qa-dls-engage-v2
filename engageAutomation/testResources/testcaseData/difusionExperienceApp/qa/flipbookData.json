@@ -1,0 +1,12 @@
+{
+	"engage": {
+		"flipbook": {
+			"fb1": {
+				"flipbookTitle": "fb1",
+				"tableOfContentTitle": "Table of Contents",
+				"resourceTitle:": "['Section 1.1','Section 1.2, '', '', '']",
+				"jumpToPageInput": "5"
+			}
+		}
+	}
+}

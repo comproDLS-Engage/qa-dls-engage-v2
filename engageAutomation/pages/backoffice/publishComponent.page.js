@@ -15,7 +15,7 @@ module.exports = {
         logger.logInto(stackTrace.get());
         //action.waitForDocumentLoad();
         action.waitForDisplayed(this.loadingContainer);
-        action.waitForDisplayed(this.loadingContainer, undefined, true);
+        action.waitForDisplayed(this.loadingContainer, 120000, true);
         res = {
             lastPublishedVer: action.getText(this.lastPublishedVer),
             lastSnapshotVer: action.getText(this.lastSnapshotVer),
@@ -31,7 +31,7 @@ module.exports = {
         if (res == true) {
             res = action.click(this.snapshotBtn);
             if (res == true) {
-                res = action.waitForClickable(this.publishBtn);
+                res = action.waitForClickable(this.publishBtn, 120000);
                 // res = action.isEnabled(this.publishBtn);
             }
             logger.logInto(stackTrace.get(), res);

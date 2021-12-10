@@ -407,6 +407,10 @@
                 "choices": "div[data-tid*=input-click-option-]",
                 "selectedChoice": "svg[data-tid=icon-selected]"
             },
+            "multiMcq": {
+                "choices": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-tid*=input-click-option-sub-question-",
+                "selectedChoice": "[aria-checked=true]"
+            },
             "FIB": {
                 "source": "[data-tid=dragsource-option-",
                 "target": "[data-tid=droptarget-option-"
@@ -647,8 +651,8 @@
                 "noNoteText": "[data-tid='text-no-note']",
                 "noteListItemLabel": "[data-tid*='note-list-item-label-",
                 "noteListItemText": "[data-tid*='text-note-list-",
-                "noteListDeleteBtn": "button[data-tid*='btn-delete-]",
-                "noteListEditBtn": "button[data-tid*='btn-edit-]",
+                "noteListDeleteBtn": "button[data-tid*='btn-delete-",
+                "noteListEditBtn": "button[data-tid*='btn-edit-",
                 "addNotesTitle": "[data-tid=label-text-notes-add-header],[data-tid=label-text-notes-edit-header]",
                 "notesPageLabel": "[data-tid=label-text-page-number]",
                 "notesPageValueSingle": "[data-tid=label-text-page-number-value]",
@@ -669,7 +673,7 @@
                 "bookmarkListItemLabel": "[data-tid*='bookmark-list-item-label-",
                 "bookmarkListItemName": "[data-tid*='bookmark-list-item-name-",
                 "bookmarkListDeleteBtn": "button[data-tid='btn-delete']",
-                "bookmarkListEditBtn": "button[data-tid='btn-edit']",
+                "bookmarkListEditBtn": "button[data-tid*='btn-edit-",
                 "bookmarkNameLabel": "[data-tid='text-label-edit-bookmark']",
                 "bookmarkPageLabel": "[data-tid=label-text-page-number]",
                 "bookmarkPageValueSingle": "[data-tid=label-text-page-number-value]",

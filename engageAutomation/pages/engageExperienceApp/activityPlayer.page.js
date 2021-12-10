@@ -203,7 +203,6 @@ module.exports = {
         logger.logInto(stackTrace.get());
         var res;
         res = action.click(this.checkAnswerBtn);
-        console.log(res)
         if (true == res) {
             logger.logInto(stackTrace.get(), " checkAnswerBtn is clicked");
             res = action.isEnabled(this.checkAnswerBtn);

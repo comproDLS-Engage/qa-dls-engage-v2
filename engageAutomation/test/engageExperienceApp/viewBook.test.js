@@ -130,7 +130,6 @@ module.exports = {
     //Non-Anchor Component - Validate that View Book page should display all the components present in the Book
     ENG_BOOK_TC_27: function () {
         sts = viewBookPage.getViewBookData();
-
         assertion.assertEqual(sts.bookCover, true, "Book cover status mismatch");
         assertion.assert((sts.component.list.length > 0), "Component list is empty on View Book page");
     },
