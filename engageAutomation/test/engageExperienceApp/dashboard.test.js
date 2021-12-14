@@ -98,10 +98,9 @@ module.exports = {
 
     //Validate on clicking "Open Flipbook" from Book dropdown menu, flipbook page is launched
     ENG_DASH_TC_18: function () {
-        sts = dashboardPage.click_bookMenu_openFlipbookOption(); //only bookname should be passed in testdata - akhil
-        assertion.assertEqual(sts, true);
-        //sts = require('../../pages/engageExperienceApp/flipbook.page').isInitialized();
-        //assertion.assertEqual(sts.pageStatus, true);
+        sts = dashboardPage.click_bookMenu_openFlipbookOption();
+        assertion.assertEqual(sts.pageStatus, true, "Flipbook page status mismatch");
+        assertion.assertEqual(sts.appShellPage.header, true, "Flipbook page header status mismatch");
     },
 
     //Validate on clicking "Interactive Activities" resource in Explore menu, same tab is launched on Browse

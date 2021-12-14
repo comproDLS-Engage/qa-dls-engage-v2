@@ -4,11 +4,27 @@ var sts;
 
 module.exports = {
 
-	//Validate that flipbook is launched (Desktop)
+	//Validate the state of flipbook when cover page is launched
 	ENG_FLIP_TC_1: function () {
-		sts = flipbook.isInitialized();
-		assertion.assertEqual(sts.pageStatus, true, "flipbook page status mismatch");
-		assertion.assertEqual(sts.appShellPage.header, true, "appshell header status mismatch");
+		sts = flipbook.getData_flipbookPage();
+		assertion.assertEqual(sts.pageLayoutSingle, true, "pageLayoutSingle status mismatch");
+		assertion.assertEqual(sts.pageLayoutDouble, false, "pageLayoutDouble status mismatch");
+		assertion.assertEqual(sts.penBtn, "", "penBtn status mismatch");
+		assertion.assertEqual(sts.highlighterBtn, "", "highlighterBtn status mismatch");
+		assertion.assertEqual(sts.eraserBtn, "", "eraserBtn status mismatch");
+		assertion.assertEqual(sts.undoBtn, null, "undoBtn status mismatch");
+		assertion.assertEqual(sts.redoBtn, null, "redoBtn status mismatch");
+		assertion.assertEqual(sts.notesBtn, "", "notesBtn status mismatch");
+		assertion.assertEqual(sts.zoomInBtn, "", "zoomInBtn status mismatch");
+		assertion.assertEqual(sts.zoomOutBtn, "", "zoomOutBtn status mismatch");
+		assertion.assertEqual(sts.fitToScreenBtn, "", "fitToScreenBtn status mismatch");
+		assertion.assertEqual(sts.doublePageBtn, null, "doublePageBtn status mismatch");
+		assertion.assertEqual(sts.singlePageBtn, null, "singlePageBtn status mismatch");
+		assertion.assertEqual(sts.fullScreenBtn, "", "fullScreenBtn status mismatch");
+		assertion.assertEqual(sts.bookmarkBtn, "", "bookmarkBtn status mismatch");
+		assertion.assert((sts.TOCBtn instanceof Error) === false, "TOCBtn status mismatch - " + sts.TOCBtn);
+		assertion.assertEqual(sts.previousBtn, "", "previousBtn status mismatch");
+		assertion.assertEqual(sts.nextBtn, "", "nextBtn status mismatch");
 	},
 
 	//Validate that clicking on the single page button launches the flipbook in single page

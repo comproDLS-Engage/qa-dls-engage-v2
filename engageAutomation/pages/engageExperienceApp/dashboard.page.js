@@ -479,7 +479,7 @@ module.exports = {
     res = action.click(this.bookMenu_openFlipbookOption);
     if (true == res) {
       logger.logInto(stackTrace.get(), " bookMenu_openFlipbookOption is clicked");
-      //res = require('./flipbook.page').isInitialized();
+      res = require('./flipbook.page').isInitialized();
     }
     else {
       logger.logInto(stackTrace.get(), res + "bookMenu_openFlipbookOption is NOT clicked", 'error');
