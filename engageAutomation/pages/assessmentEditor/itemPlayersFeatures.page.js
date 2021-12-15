@@ -27,7 +27,7 @@ module.exports = {
 	instruction_input: selectorFile.css.editorTab.instruction_input,
 	addVideo_btn: selectorFile.css.editorTab.addVideo_btn,
 	videoURL_input: selectorFile.css.editorTab.videoURL_input,
-	videoType_btn:selectorFile.css.editorTab.videoType_btn,
+	videoType_btn: selectorFile.css.editorTab.videoType_btn,
 	videoCredit_input: selectorFile.css.editorTab.videoCredit_input,
 	media_input: selectorFile.css.editorTab.media_input,
 	addImage_btn: selectorFile.css.editorTab.addImage_btn,
@@ -61,7 +61,12 @@ module.exports = {
 	addOption_btn: selectorFile.css.editorTab.classify.addOption_btn,
 	editorsel: selectorFile.css.editorTab,
 	fibAnswerOption: selectorFile.css.editorTab.fib.fibAnswerOption,
-	createQuestion_btn:selectorFile.css.editorTab.createQuestion_btn,
+	createQuestion_btn: selectorFile.css.editorTab.createQuestion_btn,
+	headerEdit_btn: selectorFile.css.editorTab.headerEdit_btn,
+	instructionEdit_btn: selectorFile.css.editorTab.instructionEdit_btn,
+	placeHolder_txt: selectorFile.css.editorTab.placeHolder_txt,
+	placeHolderHeader_txt: selectorFile.css.editorTab.placeHolderHeader_txt,
+	done_btn: selectorFile.css.editorTab.done_btn,
 	//--MULTIPLE RESPONSE
 	isInitialized1: function (testdata) {
 		for (var i = 0; i < testdata.length; i++) {
@@ -72,7 +77,59 @@ module.exports = {
 			}
 		}
 	},
+	setHeaderTextinPlaceHolder: function (testdata) {
+		logger.logInto(stackTrace.get());
+		res = action.click(this.headerEdit_btn);
+		action.waitForDisplayed(this.placeHolderHeader_txt)
+		action.clearValueDefault(this.placeHolderHeader_txt);
+		if (res == true) {
+			browser.pause(2000)
+			res = action.addValue(this.placeHolder_txt, testdata)
+			browser.pause(2000)
+			if (res == true) {
+				this.clickDonebtn();
+			}
+			logger.logInto(stackTrace.get(), " -- Add Pair Button is clicked");
+		}
+		else {
+			res = res + " -- Error in clicking Add Pir button";
+			logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
+	setInsTextinPlaceHolder: function (testdata) {
+		logger.logInto(stackTrace.get());
+		res = action.click(this.instructionEdit_btn);
+		if (res == true) {
 
+			res = action.addValue(this.placeHolder_txt, testdata)
+			browser.pause(2000)
+			if (res == true) {
+				this.clickDonebtn();
+			}
+			logger.logInto(stackTrace.get(), " -- Add Pair Button is clicked");
+		}
+		else {
+			res = res + " -- Error in clicking Add Pir button";
+			logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
+	clickDonebtn: function () {
+		logger.logInto(stackTrace.get());
+		res = action.waitForClickable(this.done_btn);
+		if (res == true) {
+			res = action.click(this.done_btn);
+			if (res == true) {
+				res = action.waitForDisplayed(this.done_btn, undefined, true);
+			}
+		}
+		else {
+			res = res + " -- done button is not clickable";
+			logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
 	clickSaveandReturnBtn: function () {
 		logger.logInto(stackTrace.get());
 		res = action.waitForClickable("[data-tid=button-saveandreturn]");
@@ -592,8 +649,8 @@ module.exports = {
 
 	setVideoMediaURL: function (videoURL) {
 		logger.logInto(stackTrace.get());
-		res= action.click(this.videoType_btn)
-		res=action.click("[role=\"listbox\"]>li:nth-child(1)")
+		res = action.click(this.videoType_btn)
+		res = action.click("[role=\"listbox\"]>li:nth-child(1)")
 		action.waitForDisplayed(this.videoURL_input)
 		res = action.setValue(this.videoURL_input, videoURL);
 		if (res == true) {
@@ -622,22 +679,22 @@ module.exports = {
 	//
 	setQuestionTextinwriting: function (questionTitle) {
 		console.log(questionTitle)
-	
+
 		logger.logInto(stackTrace.get());
 		action.waitForDisplayed(this.questionText_input)
 		browser.pause(2000)
-		res = action.clearValue(this.questionText_input);
+		res = action.clearValueDefault(this.questionText_input);
 		res = action.addValue(this.questionText_input, questionTitle);
 		if (res == true) {
 
 			logger.logInto(stackTrace.get(), " -- Question Title is entered");
-			res = action.getValue(this.questionText_input)
-			console.log(res)
+			
 		}
 		else {
 			res = res + " -- Question Title is NOT entered";
 			logger.logInto(stackTrace.get(), res, 'error');
 		}
+		browser.pause(2000)
 		return res;
 	},
 	//Adding 'IMAGE' as media
@@ -666,6 +723,7 @@ module.exports = {
 		action.waitForDisplayed(this.uploadedImage, 5000);
 		return res;
 	},
+
 
 	setImageCredit: function (imageCredit) {
 		logger.logInto(stackTrace.get());
