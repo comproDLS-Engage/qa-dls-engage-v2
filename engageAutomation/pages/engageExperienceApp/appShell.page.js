@@ -5,6 +5,7 @@ var res;
 
 module.exports = {
 
+	headerbandDiv: selectorFile.css.ComproEngage.appShell.headerbandDiv,
 	toggleSidebarBtn: selectorFile.css.ComproEngage.appShell.toggleSidebarBtn,
 	//Left Pane
 	custLogo: selectorFile.css.ComproEngage.appShell.custLogo,
@@ -48,7 +49,7 @@ module.exports = {
 		logger.logInto(stackTrace.get());
 		action.waitForDocumentLoad();
 		res = {
-			leftPane: action.waitForDisplayed(this.custLogo),
+			leftPane: action.waitForDisplayed(this.headerbandDiv),
 			header: (action.getElementCount(this.breadcrumbbackbtn) > 0) ? action.waitForDisplayed(this.breadcrumbbackbtn) : action.waitForDisplayed(this.selectedLanguage)
 		}
 		return res;

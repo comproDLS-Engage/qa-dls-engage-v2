@@ -46,9 +46,9 @@ module.exports = {
 		var obj = [];
 		var res, choiceSelector, selChoiceSelector, value;
 		for (let i = 0; i < mcqQuesData.length; i++) {
-			choiceSelector = this.choices + mcqQuesData[i][0] + "]";
+			choiceSelector = this.choices + mcqQuesData[i][0] + "] ";
 			selChoiceSelector = choiceSelector + this.selectedChoice;
-			value = itemplayer.getFeedbackIconDetails(selChoiceSelector)
+			value = itemplayer.getFeedbackIconDetails(choiceSelector)
 			res = action.getElementCount(selChoiceSelector);
 			if (res == 1)
 				obj[i] = [mcqQuesData[i][0], action.getText(choiceSelector), "select", value]
