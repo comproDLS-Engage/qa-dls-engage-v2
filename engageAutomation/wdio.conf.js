@@ -347,7 +347,54 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {<Object>} results object containing test results
      */
-    onComplete: function (exitCode, config, capabilities, results) {
+    onComplete: async function (exitCode, config, capabilities, results) {
+        if (argv.tesultsToken) {
+            const tesults = require('tesults');
+            const util = require('util');
+            const tesultsResults = util.promisify(tesults.results);
+            const jsonString = fs.readFileSync(process.cwd() + '/' + global.reportOutputDir + "/wdio-0-0-timeline-reporter.log", 'utf-8');
+            const logData = JSON.parse(jsonString);
+            var tesultsCases = [];
+            for (let i = 0; i < logData.suites.length; i++) {
+                for (let j = 0; j < logData.suites[i].tests.length; j++) {
+                    let testCase = {};
+                    testCase.name = logData.suites[i].tests[j].title;
+                    testCase.result = logData.suites[i].tests[j].state.substring(0, 4);
+                    //console.log(testCase.result)
+                    testCase.duration = logData.suites[i].duration;
+                    testCase.suite = logData.suites[i].title;
+                    tesultsCases.push(testCase);
+                }
+            }
+
+            let data = {
+                target: argv.tesutlsToken,
+                results: {
+                    cases: tesultsCases
+                }
+            }
+
+            let response;
+            try {
+                response = await tesultsResults(data)
+            } catch (err) {
+                console.log(err)
+            } finally {
+                console.log(response)
+            }
+        }
+        //console.log(data.results.cases)
+        // tesults.results(data, function (err, response) {
+        //     console.log("inside callback");
+        //     console.log(err)
+        //     console.log(response)
+        //     // err is undefined unless there is a library error
+        //     // response.success is a bool, true if results successfully uploaded, false otherwise
+        //     // response.message is a string, if success is false, check message to see reason
+        //     // response.warnings is an array of strings, if non empty then issues with file uploads
+        //     // response.errors is an array of strings, if success is true this is empty
+        // });
+
         //require('./core/utils/reportUpdater.js').indexFileUpdate();
         specGenerator.removingTempSpecs();
         if (argv.visual) {
