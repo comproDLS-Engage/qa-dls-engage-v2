@@ -353,7 +353,9 @@ exports.config = {
             const util = require('util');
             const tesultsResults = util.promisify(tesults.results);
             const jsonString = fs.readFileSync(process.cwd() + '/' + global.reportOutputDir + "/wdio-0-0-timeline-reporter.log", 'utf-8');
+            console.log(process.cwd() + '/' + global.reportOutputDir + "/wdio-0-0-timeline-reporter.log")
             const logData = JSON.parse(jsonString);
+            console.log(logData)
             var tesultsCases = [];
             for (let i = 0; i < logData.suites.length; i++) {
                 for (let j = 0; j < logData.suites[i].tests.length; j++) {
