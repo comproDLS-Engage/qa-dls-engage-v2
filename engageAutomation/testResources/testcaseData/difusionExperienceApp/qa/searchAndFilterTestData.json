@@ -39,7 +39,8 @@
                 "search_txt": "\"A la hora de dormir\"",
                 "expected_txt": "A la hora de dormir",
                 "searchResultCount": "1",
-                "tags":"B2"
+                "tags":"B2",
+                "playlist":["Playlist01"]
             }
 
         },

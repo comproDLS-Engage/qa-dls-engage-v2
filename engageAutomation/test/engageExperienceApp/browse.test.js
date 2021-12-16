@@ -130,12 +130,12 @@ module.exports = {
 
 	//Validate that clicking on 3 dot options for a resource displays a list of options available for the resource.
 	ENG_GLOB_TC_22: function (testdata) {
-		//resource name hardcoded - akanksha 
-		sts = browsePage.click_moreOptionsBtn("A la hora de dormir");
 		
-		assertion.assertEqual(sts.viewOption, testdata.viewOption, "viewOption Text Mismatch");
-		assertion.assertEqual(sts.addToPlaylistOption, testdata.addToPlaylistOption, "addToPlaylistOption Text Mismatch");
-		assertion.assertEqual(sts.shareOption, testdata.shareOption, "shareOption Text Mismatch");
+		sts = browsePage.click_moreOptionsBtn(testdata[0]);
+		//console.log(sts)
+		assertion.assertEqual(sts.viewOption, testdata[1].viewOption, "viewOption Text Mismatch");
+		assertion.assertEqual(sts.addToPlaylistOption, testdata[1].addToPlaylistOption, "addToPlaylistOption Text Mismatch");
+		assertion.assertEqual(sts.shareOption, testdata[1].shareOption, "shareOption Text Mismatch");
 
 	},
 
@@ -151,19 +151,15 @@ module.exports = {
 	ENG_GLOB_TC_24: function (testdata) {
 
 		sts = browsePage.click_addToPlaylistOption()
-		assertion.assertEqual(sts.listOfPlaylist, testdata, "listOfPlaylist count Mismatch");
-
+		assertion.assertEqual(sts.listOfPlaylist[0], testdata, "listOfPlaylist count Mismatch");
 	},
 
-	//function to click on resource ?? discuss
 	//Validate that clicking on a resource launches the Global Resources view page
-	// ENG_GLOB_TC_26: function (testdata) {
-	// 	sts = browsePage.click_moreOptionsBtn(testdata[0]);
-	// 	//tbd
-	// 	sts = browsePage.click_addToPlaylistOption()
-	// 	assertion.assertEqual(sts.listOfPlaylist, testdata, "View status Mismatch");
+	ENG_GLOB_TC_26: function (testdata) {
+		sts = browsePage.click_cardImgIcon(testdata[0]);
+		assertion.assertEqual(sts, true, "View status Mismatch");
 
-	// },
+	},
 
 	//Validate that searching can be done on basis of resource name
 	ENG_GLOB_TC_28: function (testdata) {
@@ -180,7 +176,7 @@ module.exports = {
 		sts = browsePage.getData_resourceList()
 		assertion.assertEqual(sts[0].cardTitle, testdata[0].expected_txt, "cardTitle Mismatch");
 		assertion.assertEqual(sts[0].cardSubTitle, testdata[0].tags, "cardSubTitle Mismatch");
-		//assertion.assertEqual(sts[0].cardImgIcon, true, "cardImgIcon status Mismatch");
+		assertion.assertEqual(sts[0].cardImgIcon, true, "cardImgIcon status Mismatch");
 		assertion.assertEqual(sts[0].moreOptionsBtn, '', "moreOptionsBtn text Mismatch");
 
 	},

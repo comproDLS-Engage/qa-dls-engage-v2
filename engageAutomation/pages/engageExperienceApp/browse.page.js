@@ -1,10 +1,9 @@
 "use strict";
-var action = require('../../core/actionLibrary/baseActionLibrary.js');
-var selectorFile = jsonParserUtil.jsonParser(selectorDir);
-var appShellPage = require('./appShell.page');
+var action = require('../../core/actionLibrary/baseActionLibrary.js')
+var selectorFile = jsonParserUtil.jsonParser(selectorDir)
+var appShellPage = require('./appShell.page.js')
 
 module.exports = {
-
     pageTitle: selectorFile.css.ComproEngage.browse.pageTitle,
     pageSubTitle: selectorFile.css.ComproEngage.browse.pageSubTitle,
     filtersBtn: selectorFile.css.ComproEngage.browse.filtersBtn,
@@ -19,12 +18,12 @@ module.exports = {
     cardTitle: selectorFile.css.ComproEngage.browse.cardTitle,
     cardSubTitle: selectorFile.css.ComproEngage.browse.cardSubTitle,
     cardImgIcon: selectorFile.css.ComproEngage.browse.cardImgIcon,
+    cardLockIcon: selectorFile.css.ComproEngage.browse.cardLockIcon,
     viewOption: selectorFile.css.ComproEngage.browse.viewOption,
     addToPlaylistOption: selectorFile.css.ComproEngage.browse.addToPlaylistOption,
     shareOption: selectorFile.css.ComproEngage.browse.shareOption,
     listOfPlaylist: selectorFile.css.ComproEngage.browse.listOfPlaylist,
     searchList: selectorFile.css.ComproEngage.browse.searchList,
-    searchList_resourceName : selectorFile.css.ComproEngage.browse.searchList_resourceName,
     showMoreResults: selectorFile.css.ComproEngage.browse.showMoreResults,
     noResultListItemTitle: selectorFile.css.ComproEngage.browse.noResultListItemTitle,
     noResultListItemSubtitle: selectorFile.css.ComproEngage.browse.noResultListItemSubtitle,
@@ -42,7 +41,8 @@ module.exports = {
     filterMenuClearAllBtn: selectorFile.css.ComproEngage.browse.filterMenuClearAllBtn,
     filterMenuApplyBtn: selectorFile.css.ComproEngage.browse.filterMenuApplyBtn,
 
-    isInitialized: function () {
+
+    isInitialized: function() {
         var res;
         logger.logInto(stackTrace.get());
         action.waitForDocumentLoad();
@@ -53,63 +53,97 @@ module.exports = {
         return res;
     },
 
-    getData_browsePage: function () {
+    getData_browsePage: function() {
         logger.logInto(stackTrace.get());
-        action.waitForDisplayed(this.searchIcon) //discuss
+        action.waitForDisplayed(this.searchIcon) //manually edited
         var obj;
         obj = {
             pageTitle: (action.getElementCount(this.pageTitle) > 0) ? action.getText(this.pageTitle) : null,
             pageSubTitle: (action.getElementCount(this.pageSubTitle) > 0) ? action.getText(this.pageSubTitle) : null,
-            searchIcon: (action.getElementCount(this.searchIcon) > 0) ? action.waitForDisplayed(this.searchIcon) : false,
             filtersBtn: (action.getElementCount(this.filtersBtn) > 0) ? action.getText(this.filtersBtn) : null,
             previousPageArrow: (action.getElementCount(this.previousPageArrow) > 0) ? action.getText(this.previousPageArrow) : null,
             nextPageArrow: (action.getElementCount(this.nextPageArrow) > 0) ? action.getText(this.nextPageArrow) : null,
             currentPage: (action.getElementCount(this.currentPage) > 0) ? action.getText(this.currentPage) : null,
             searchBox: (action.getElementCount(this.searchBox) > 0) ? action.getText(this.searchBox) : null,
+            searchIcon: (action.getElementCount(this.searchIcon) > 0) ? action.waitForDisplayed(this.searchIcon) : false,
             clearSearch: (action.getElementCount(this.clearSearch) > 0) ? action.getText(this.clearSearch) : null,
             searchCount: (action.getElementCount(this.searchCount) > 0) ? action.getText(this.searchCount) : null,
             searchPill: (action.getElementCount(this.searchPill) > 0) ? action.getText(this.searchPill) : null,
-            tabInfo: appShellPage.getTabsListData()  //manually edited
+            tabInfo: appShellPage.getTabsListData() //manually edited
         }
         return obj;
     },
 
-    getData_resourceCategory: function () {
+    getData_resourceCategory: function(resourceCategoryName) {
         logger.logInto(stackTrace.get());
-        var obj;
-        action.waitForDisplayed(this.resourceCategory);
-        var list = action.findElements(this.resourceCategory);
-        for (var i = 0; i <= list.length; i++) {
-            obj[i] = {
-                resourceCategory: (action.getElementCount(this.resourceCategory + i + "]") > 0) ? action.getText(this.resourceCategory + i + "]") : null,
-                viewAllBtn: (action.getElementCount(this.viewAllBtn + i + "]") > 0) ? action.getText(this.viewAllBtn + i + "]") : null,
+        var obj = [],
+            i, arr = [];
+        var resourceCategory = action.findElements(this.resourceCategory)
+        var viewAllBtn = action.findElements(this.viewAllBtn)
+        if (resourceCategoryName) {
+            for (var i = 0; i < resourceCategory.length; i++) {
+                if (action.getText(resourceCategory[i]) == resourceCategoryName) {
+                    obj[0] = {
+                        resourceCategory: (action.getElementCount(resourceCategory[i]) > 0) ? action.getText(resourceCategory[i]) : null,
+                        viewAllBtn: (action.getElementCount(viewAllBtn[i]) > 0) ? action.getText(viewAllBtn[i]) : null,
+                    }
+                    break;
+                }
+            }
+        } else {
+            for (var i = 0; i <= resourceCategory.length; i++) {
+                obj[i] = {
+                    resourceCategory: (action.getElementCount(resourceCategory[i]) > 0) ? action.getText(resourceCategory[i]) : null,
+                    viewAllBtn: (action.getElementCount(viewAllBtn[i]) > 0) ? action.getText(viewAllBtn[i]) : null,
+                }
             }
         }
         return obj;
     },
 
-    getData_resourceList: function () { //manual edit
+    getData_resourceList: function(cardTitleName) {
         logger.logInto(stackTrace.get());
-        var obj = []; //manual edit
-        action.waitForDisplayed(this.cardTitle);
-        var list = action.findElements(this.cardTitle);
+        var obj = [],
+            i, arr = [];
         var moreOptionsBtn = action.findElements(this.moreOptionsBtn)
+        var cardTitle = action.findElements(this.cardTitle)
         var cardSubTitle = action.findElements(this.cardSubTitle)
-        //console.log(this.cardImgIcon)
-        //var cardImgIcon = action.findElements(this.cardImgIcon)
-
-        for (var i = 0; i < list.length; i++) {
-            obj[i] = {
-                moreOptionsBtn: action.getText(moreOptionsBtn[i]),
-                cardTitle: action.getText(list[i]),
-                cardSubTitle: action.getText(cardSubTitle[i]),
-                //cardImgIcon: action.waitForExist(cardImgIcon[i])
+        var cardImgIcon = action.findElements(this.cardImgIcon)
+        var cardLockIcon = action.findElements(this.cardLockIcon)
+        if (cardTitleName) {
+            for (var i = 0; i < cardTitle.length; i++) {
+                if (action.getText(cardTitle[i]) == cardTitleName) {
+                    obj[0] = {
+                        moreOptionsBtn: (action.getElementCount(moreOptionsBtn[i]) > 0) ? action.getText(moreOptionsBtn[i]) : null,
+                        cardTitle: (action.getElementCount(cardTitle[i]) > 0) ? action.getText(cardTitle[i]) : null,
+                        cardSubTitle: (action.getElementCount(cardSubTitle[i]) > 0) ? action.getText(cardSubTitle[i]) : null,
+                        cardImgIcon: (action.getElementCount(cardImgIcon[i]) > 0) ? action.getText(cardImgIcon[i]) : null,
+                        cardLockIcon: (action.getElementCount(cardLockIcon[i]) > 0) ? action.waitForDisplayed(cardLockIcon[i]) : false,
+                    }
+                    break;
+                }
+            }
+        } else {
+            for (var i = 0; i < cardTitle.length; i++) {
+                obj[i] = {//manual for gettext //getElementCount not working
+                    // moreOptionsBtn: (action.getElementCount(cardTitle[i]) > 0) ? action.getText(moreOptionsBtn[i]) : null,
+                    // cardTitle: (action.getElementCount(cardTitle[i]) > 0) ? action.getText(cardTitle[i]): null,
+                    // cardSubTitle: (action.getElementCount(cardSubTitle[i]) > 0) ? action.getText(cardSubTitle[i]) : null,
+                    // cardImgIcon: (action.getElementCount(cardImgIcon[i]) > 0) ? action.waitForDisplayed(cardImgIcon[i]) : false,
+                    // cardLockIcon: (action.getElementCount(cardLockIcon[i]) > 0) ? action.waitForDisplayed(cardLockIcon[i]) : false,
+                    //manual edit
+                    moreOptionsBtn: action.getText(moreOptionsBtn[i]),
+                    cardTitle: action.getText(cardTitle[i]),
+                    cardSubTitle: action.getText(cardSubTitle[i]) ,
+                    cardImgIcon: action.waitForDisplayed(cardImgIcon[i]),
+                    cardLockIcon: action.waitForDisplayed(cardLockIcon[i]),
+                }
             }
         }
         return obj;
     },
 
-    getData_moreOptions: function () {
+    getData_moreOptions: function() {
         logger.logInto(stackTrace.get());
         var obj;
         obj = {
@@ -120,7 +154,7 @@ module.exports = {
         return obj;
     },
 
-    getData_addToPlaylist: function () {
+    getData_addToPlaylist: function() {
         logger.logInto(stackTrace.get());
         var obj;
         obj = {
@@ -129,7 +163,7 @@ module.exports = {
         return obj;
     },
 
-    listOfPlaylist_Data: function () {
+    listOfPlaylist_Data: function() {
         logger.logInto(stackTrace.get());
         var i, list;
         var listOfPlaylist_Arr = [];
@@ -141,7 +175,7 @@ module.exports = {
         return listOfPlaylist_Arr;
     },
 
-    getData_searchList: function () {
+    getData_searchList: function() {
         logger.logInto(stackTrace.get());
         var obj;
         obj = {
@@ -153,7 +187,7 @@ module.exports = {
         return obj;
     },
 
-    searchList_Data: function () {
+    searchList_Data: function() {
         logger.logInto(stackTrace.get());
         var i, list;
         var searchList_Arr = [];
@@ -165,18 +199,18 @@ module.exports = {
         return searchList_Arr;
     },
 
-    getData_searchNoResults: function () {
+    getData_searchNoResults: function() {
         logger.logInto(stackTrace.get());
         var obj;
         obj = {
-            search_NoResult_img: (action.getElementCount(this.search_NoResult_img) > 0) ? action.waitForExist(this.search_NoResult_img) : false,
+            search_NoResult_img: (action.getElementCount(this.search_NoResult_img) > 0) ? action.waitForDisplayed(this.search_NoResult_img) : false,
             search_NoResult_title: (action.getElementCount(this.search_NoResult_title) > 0) ? action.getText(this.search_NoResult_title) : null,
             search_NoResult_subTitle: (action.getElementCount(this.search_NoResult_subTitle) > 0) ? action.getText(this.search_NoResult_subTitle) : null,
         }
         return obj;
     },
 
-    getData_filterMenu: function () {
+    getData_filterMenu: function() {
         logger.logInto(stackTrace.get());
         var obj;
         obj = {
@@ -189,161 +223,160 @@ module.exports = {
         return obj;
     },
 
-    click_filtersBtn: function () {
+
+    click_filtersBtn: function() {
         logger.logInto(stackTrace.get());
         var res;
         res = action.click(this.filtersBtn);
         if (true == res) {
             logger.logInto(stackTrace.get(), " filtersBtn is clicked");
             res = this.getData_filterMenu();
-        }
-        else {
+        } else {
             logger.logInto(stackTrace.get(), res + "filtersBtn is NOT clicked", 'error');
         }
         return res;
     },
 
-    click_previousPageArrow: function () {
+    click_previousPageArrow: function() {
         logger.logInto(stackTrace.get());
         var res;
         res = action.click(this.previousPageArrow);
         if (true == res) {
             logger.logInto(stackTrace.get(), " previousPageArrow is clicked");
             res = this.getData_browsePage();
-        }
-        else {
+        } else {
             logger.logInto(stackTrace.get(), res + "previousPageArrow is NOT clicked", 'error');
         }
         return res;
     },
 
-    click_nextPageArrow: function () {
+    click_nextPageArrow: function() {
         logger.logInto(stackTrace.get());
         var res;
         res = action.click(this.nextPageArrow);
         if (true == res) {
             logger.logInto(stackTrace.get(), " nextPageArrow is clicked");
             res = this.getData_browsePage();
-        }
-        else {
+        } else {
             logger.logInto(stackTrace.get(), res + "nextPageArrow is NOT clicked", 'error');
         }
         return res;
     },
 
-    click_viewAllBtn: function (resourceCategoryName) {
+    click_viewAllBtn: function(resourceCategoryName) {
         logger.logInto(stackTrace.get());
-        var i, list, res;
-        list = action.findElements(this.viewAllBtn);
-        for (i = 0; i < list.length; i++) {
-            if ((action.getText(this.resourceCategory + i + "]")) == resourceCategoryName) {
-                res = action.click(list[i]);
+        var i, res;
+        var resourceCategory = action.findElements(this.resourceCategory);
+        var viewAllBtn = action.findElements(this.viewAllBtn);
+        for (i = 0; i < resourceCategory.length; i++) {
+            if ((action.getText(resourceCategory[i])) == resourceCategoryName) {
+                res = action.click(viewAllBtn[i]);
                 break;
             }
         }
         if (res == true) {
             logger.logInto(stackTrace.get(), " --viewAllBtn clicked");
             res = this.getData_resourceCategory();
-        }
-        else
+        } else
             logger.logInto(stackTrace.get(), " --viewAllBtn NOT clicked", "error")
         return res;
     },
 
-    click_moreOptionsBtn: function (cardTitleName) {
-        console.log(cardTitleName)
+    click_moreOptionsBtn: function(cardTitleName) {
         logger.logInto(stackTrace.get());
-        var i, list, res;
-        list = action.findElements(this.moreOptionsBtn);
-        for (i = 0; i < list.length; i++) {
-            
-            console.log(this.cardTitle)//discuss
-            console.log(this.cardTitle + i + "]")
-            console.log(action.getText(this.cardTitle + i + "]"))
-
-            if ((action.getText(this.cardTitle + i + "]")) == cardTitleName) {
-                res = action.click(list[i]);
+        var i, res;
+        var cardTitle = action.findElements(this.cardTitle);
+        var moreOptionsBtn = action.findElements(this.moreOptionsBtn);
+        for (i = 0; i < cardTitle.length; i++) {
+            if ((action.getText(cardTitle[i])) == cardTitleName) {
+                res = action.click(moreOptionsBtn[i]);
                 break;
             }
         }
         if (res == true) {
             logger.logInto(stackTrace.get(), " --moreOptionsBtn clicked");
             res = this.getData_moreOptions();
-        }
-        else
+        } else
             logger.logInto(stackTrace.get(), " --moreOptionsBtn NOT clicked", "error")
         return res;
     },
 
-    click_viewOption: function () {
+    click_cardImgIcon: function(cardTitleName) {
+        logger.logInto(stackTrace.get());
+        var i, res;
+        var cardTitle = action.findElements(this.cardTitle);
+        var cardImgIcon = action.findElements(this.cardImgIcon);
+        for (i = 0; i < cardTitle.length; i++) {
+            if ((action.getText(cardTitle[i])) == cardTitleName) {
+                res = action.click(cardImgIcon[i]);
+                break;
+            }
+        }
+        if (res == true) {
+            logger.logInto(stackTrace.get(), " --cardImgIcon clicked");
+        } else
+            logger.logInto(stackTrace.get(), " --cardImgIcon NOT clicked", "error")
+        return res;
+    },
+
+    click_viewOption: function() {
         logger.logInto(stackTrace.get());
         var res;
         res = action.click(this.viewOption);
         if (true == res) {
             logger.logInto(stackTrace.get(), " viewOption is clicked");
-        }
-        else {
+        } else {
             logger.logInto(stackTrace.get(), res + "viewOption is NOT clicked", 'error');
         }
         return res;
     },
 
-    click_addToPlaylistOption: function () {
+    click_addToPlaylistOption: function() {
         logger.logInto(stackTrace.get());
         var res;
         res = action.click(this.addToPlaylistOption);
         if (true == res) {
             logger.logInto(stackTrace.get(), " addToPlaylistOption is clicked");
             res = this.getData_addToPlaylist();
-        }
-        else {
+        } else {
             logger.logInto(stackTrace.get(), res + "addToPlaylistOption is NOT clicked", 'error');
         }
         return res;
     },
 
-    click_shareOption: function () {
+    click_shareOption: function() {
         logger.logInto(stackTrace.get());
         var res;
         res = action.click(this.shareOption);
         if (true == res) {
             logger.logInto(stackTrace.get(), " shareOption is clicked");
-        }
-        else {
+        } else {
             logger.logInto(stackTrace.get(), res + "shareOption is NOT clicked", 'error');
         }
         return res;
     },
 
-    click_listOfPlaylist: function (listOfPlaylistName) {
+    click_listOfPlaylist: function(listOfPlaylistName) {
         logger.logInto(stackTrace.get());
         var i, list, res;
         list = action.findElements(this.listOfPlaylist);
         for (i = 0; i < list.length; i++) {
-            if ((action.getText(this.listOfPlaylist + i + "]")) == listOfPlaylistName) {
+            if ((action.getText(list[i])) == listOfPlaylistName) {
                 res = action.click(list[i]);
                 break;
             }
         }
         if (res == true) {
             logger.logInto(stackTrace.get(), " --listOfPlaylist clicked");
-        }
-        else
+        } else
             logger.logInto(stackTrace.get(), " --listOfPlaylist NOT clicked", "error")
         return res;
     },
 
-
-    click_searchList: function (searchListName) {
-
+    click_searchList: function(searchListName) {
         logger.logInto(stackTrace.get());
         var i, list, res;
         list = action.findElements(this.searchList);
-        // var searchList_resourceName = action.findElements(this.searchList_resourceName)
-
-        // console.log(searchList_resourceName.length)
-        // console.log(list.length)
-
         for (i = 0; i < list.length; i++) {
             if (action.getText(list[i]) == searchListName) {
                 res = action.click(list[i]);
@@ -352,113 +385,103 @@ module.exports = {
         }
         if (res == true) {
             logger.logInto(stackTrace.get(), " --searchList clicked");
-            //res = this.getData_browsePage(); //discuss?
-        }
-        else
+        } else
             logger.logInto(stackTrace.get(), " --searchList NOT clicked", "error")
         return res;
     },
 
-    click_showMoreResults: function () {
+    click_showMoreResults: function() {
         logger.logInto(stackTrace.get());
         var res;
         res = action.click(this.showMoreResults);
         if (true == res) {
             logger.logInto(stackTrace.get(), " showMoreResults is clicked");
             res = this.getData_browsePage();
-        }
-        else {
+        } else {
             logger.logInto(stackTrace.get(), res + "showMoreResults is NOT clicked", 'error');
         }
         return res;
     },
 
-    click_clearSearch: function () {
+    click_clearSearch: function() {
         logger.logInto(stackTrace.get());
         var res;
         res = action.click(this.clearSearch);
         if (true == res) {
             logger.logInto(stackTrace.get(), " clearSearch is clicked");
             res = this.getData_browsePage();
-        }
-        else {
+        } else {
             logger.logInto(stackTrace.get(), res + "clearSearch is NOT clicked", 'error');
         }
         return res;
     },
 
-    click_closeSearchPill: function () {
+    click_closeSearchPill: function() {
         logger.logInto(stackTrace.get());
         var res;
         res = action.click(this.closeSearchPill);
         if (true == res) {
             logger.logInto(stackTrace.get(), " closeSearchPill is clicked");
             res = this.getData_browsePage();
-        }
-        else {
+        } else {
             logger.logInto(stackTrace.get(), res + "closeSearchPill is NOT clicked", 'error');
         }
         return res;
     },
 
-    click_goToPage: function (num) {
+    click_goToPage: function(num) { //manual edit
         logger.logInto(stackTrace.get());
         var res;
         res = action.click(this.goToPage + num);
         if (true == res) {
             logger.logInto(stackTrace.get(), " goToPage is clicked");
             res = this.getData_browsePage();
-        }
-        else {
+        } else {
             logger.logInto(stackTrace.get(), res + "goToPage is NOT clicked", 'error');
         }
         return res;
     },
 
-    click_filterMenuCloseBtn: function () {
+    click_filterMenuCloseBtn: function() {
         logger.logInto(stackTrace.get());
         var res;
         res = action.click(this.filterMenuCloseBtn);
         if (true == res) {
-            res= action.waitForDisplayed(this.filterMenuTitle,undefined,true)
             logger.logInto(stackTrace.get(), " filterMenuCloseBtn is clicked");
-        }
-        else {
+            res = action.waitForDisplayed(this.filterMenuCloseBtn, undefined, true);
+        } else {
             logger.logInto(stackTrace.get(), res + "filterMenuCloseBtn is NOT clicked", 'error');
         }
         return res;
     },
 
-    click_filterMenuClearAllBtn: function () {
+    click_filterMenuClearAllBtn: function() {
         logger.logInto(stackTrace.get());
         var res;
         res = action.click(this.filterMenuClearAllBtn);
         if (true == res) {
             logger.logInto(stackTrace.get(), " filterMenuClearAllBtn is clicked");
-        }
-        else {
+        } else {
             logger.logInto(stackTrace.get(), res + "filterMenuClearAllBtn is NOT clicked", 'error');
         }
         return res;
     },
 
-    click_filterMenuApplyBtn: function () {
+    click_filterMenuApplyBtn: function() {
         logger.logInto(stackTrace.get());
         var res;
         res = action.click(this.filterMenuApplyBtn);
         if (true == res) {
             logger.logInto(stackTrace.get(), " filterMenuApplyBtn is clicked");
-        }
-        else {
+        } else {
             logger.logInto(stackTrace.get(), res + "filterMenuApplyBtn is NOT clicked", 'error');
         }
         return res;
     },
 
-    set_searchBox: function (value) {
+    set_searchBox: function(value) {
         var res;
         logger.logInto(stackTrace.get());
-        action.click(this.searchBox)
         res = action.setValue(this.searchBox, value);
         if (true == res) {
             logger.logInto(stackTrace.get(), "Value is entered in searchBox");
@@ -468,7 +491,7 @@ module.exports = {
         return res;
     },
 
-    pressEnter: function () {
+    pressEnter: function () {//manual edit
         logger.logInto(stackTrace.get());
         var res = action.keyPress('Enter')
         if (res == true) {

@@ -624,6 +624,7 @@
                 {
                     "viewOption": "View",
                     "addToPlaylistOption": "Add to Playlist",
+                    "createPlaylist_label":"Create Playlist",
                     "shareOption": "Share"
                 },
                 "noResultListItemTitle": "No Results",
