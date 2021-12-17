@@ -356,8 +356,17 @@ exports.config = {
             const logData = JSON.parse(jsonString);
             var tesultsCases = [];
             let testCase = {};
+            testCase.name = logData.capabilities.platformName + "-" + logData.capabilities.browserName;
+            testCase.result = "pass";
+            testCase.duration = logData.duration;
+            testCase.suite = "[build]";
+            testCase._reportURL = "https://d29cns2xkhqbb2.cloudfront.net/" + argv.appType + "/" + argv.testEnv + "/" + argv.reportdir + "/index.html";
+            console.log(testCase)
+            tesultsCases.push(testCase);
+
             for (let i = 0; i < logData.suites.length; i++) {
                 for (let j = 0; j < logData.suites[i].tests.length; j++) {
+                    testCase = {};
                     testCase.name = logData.suites[i].tests[j].title;
                     testCase.result = logData.suites[i].tests[j].state.substring(0, 4);
                     //console.log(testCase.result)
@@ -365,17 +374,8 @@ exports.config = {
                     testCase.files = logData.suites[i].tests[j].screenshots;
                     testCase.suite = logData.suites[i].title;
                     tesultsCases.push(testCase);
-                    testCase = {};
                 }
             }
-            testCase.name = logData.capabilities.platformName + "-" + logData.capabilities.browserName;
-            testCase.result = "pass";
-            //console.log(testCase.result)
-            testCase.duration = logData.duration;
-            testCase.suite = "[build]";
-            testCase._reportURL = "https://d29cns2xkhqbb2.cloudfront.net/" + argv.appType + "/" + argv.testEnv + "/" + argv.reportdir + "/index.html";
-            console.log(testCase)
-            tesultsCases.push(testCase);
             //console.log(argv.tesultsToken)
             let data = {
                 target: argv.tesultsToken,
