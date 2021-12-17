@@ -375,7 +375,7 @@ exports.config = {
                     cases: tesultsCases
                 }
             }
-
+            console.log(data)
             let response;
             try {
                 response = await tesultsResults(data)
