@@ -368,9 +368,9 @@ exports.config = {
                     tesultsCases.push(testCase);
                 }
             }
-            console.log(tesultsCases.length)
+            console.log(argv.tesultsToken)
             let data = {
-                target: argv.tesutlsToken,
+                target: argv.tesultsToken,
                 results: {
                     cases: tesultsCases
                 }
