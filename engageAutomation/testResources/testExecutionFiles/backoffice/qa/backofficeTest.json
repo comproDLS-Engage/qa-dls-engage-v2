@@ -1579,6 +1579,23 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"jsonPath": "backoffice.activity[1]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_22",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			},
+			{
+				"id": "BK_TC_21",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
 						"jsonPath": "backoffice.activity[2]"
 					}
 				]
