@@ -78,10 +78,13 @@ module.exports = {
     //Validate that clicking on 'Remove' in dialog box removes the book from 'My Books'
     ENG_DASH_TC_15: function (testdata) {
         sts = dashboardPage.click_removeBook_removeBtn();
-        let i;
-        for (i = 0; i < sts.length; i++) {
-            assertion.assertNotEqual(sts[i].bookTitle, testdata, "Book title match found");
+        if (sts.length != undefined) {
+            for (var i = 0; i < sts.length; i++) {
+                assertion.assertNotEqual(sts[i].bookTitle, testdata, "Book title match found");
+            }
         }
+        else
+            assertion.assertFail("Error - " + sts)
     },
 
     //Validate on clicking "View Classes" from Book dropdown menu, class Pane is launched

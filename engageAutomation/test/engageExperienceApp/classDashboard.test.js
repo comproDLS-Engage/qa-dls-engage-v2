@@ -494,9 +494,8 @@ module.exports = {
 
 	ENG_INS_CLASS_TC_44: function () {
 		sts = teacherViewClassPage.clickViewBookbtn()
-
-		//console.log(sts)
-
+		assertion.assertEqual(sts.pageStatus, true, "View book page status mismatch");
+        assertion.assertEqual(sts.appShell.header, true, "View book page header status mismatch");
 	},
 	//rupsi	
 	//Class Restore - Validate the end date of class increase set for next year before restore.
