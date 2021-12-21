@@ -15,7 +15,7 @@
                 "loginLbl": "[data-tid=text-haveanaccount]",
                 "footerLbl": "[data-tid=text-poweredby]",
                 "footerImg": "[data-tid=image-comprodls]",
-                "footerVersion": ""
+                "appVersion": "[data-tid=text-versionInfo]"
             },
             "loginPage": {
                 "userName_tbox": "#login-user",
