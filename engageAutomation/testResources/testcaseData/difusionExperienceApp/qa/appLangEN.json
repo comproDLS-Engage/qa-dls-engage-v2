@@ -398,7 +398,7 @@
                     }
                 }
             },
-           "settings": {
+            "settings": {
                 "pageTitle": "Settings",
                 "pageSubTitle": "Update and change details about your account",
                 "tabList": [
@@ -550,8 +550,7 @@
                     "applySettingsBtn_lineHeight_narrow": "19.2px"
                 }
             },
-            "flipbook":
-            {
+            "flipbook": {
                 "doublelayoutWidth": "width: 50%;",
                 "singlelayoutWidth": "width: 100%;",
                 "singlelayoutDefaultWidth": 1411,

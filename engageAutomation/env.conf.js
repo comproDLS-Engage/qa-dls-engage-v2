@@ -31,7 +31,7 @@ global.resScreenshotDir = undefined;
 global.capabilities = undefined;
 global.maximizeWindow - undefined;
 global.capabilitiesFile = global.jsonParserUtil.jsonParser(path.join(process.cwd() + '/capabilities.json'));
-//global.specs = require('./core/utils/memoryfs.js')
+global.appVersion = undefined;
 
 
 // ====================================

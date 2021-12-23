@@ -134,9 +134,10 @@ module.exports = {
 		logger.logInto(stackTrace.get());
 		res = action.waitForClickable("[data-tid=button-saveandreturn]");
 		if (res == true) {
+			browser.pause(2000)
 			res = action.click("[data-tid=button-saveandreturn]");
 			if (res == true) {
-				res = action.waitForDisplayed("[role=progressbar]", undefined, true);
+				//res = action.waitForDisplayed("[role=progressbar]", undefined, true);
 				browser.pause(10000)
 			}
 		}
