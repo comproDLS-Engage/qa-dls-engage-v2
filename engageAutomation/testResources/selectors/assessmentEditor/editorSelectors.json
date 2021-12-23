@@ -61,6 +61,7 @@
 			"instructionEdit_btn":"[data-tid=button-preview-instruction]",
 			"placeHolder_txt":"div[role=textbox]",
 			"placeHolderHeader_txt":"div[role=textbox] h2",
+			"placeHolderIns_txt":"div[role=textbox] p",
 			"done_btn":"[data-tid=button-done]",
 			"multipleResponse": {
 				"checkboxOption_input": "[data-tid=checkbox-option-"

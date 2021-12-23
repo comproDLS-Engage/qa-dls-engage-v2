@@ -66,6 +66,7 @@ module.exports = {
 	instructionEdit_btn: selectorFile.css.editorTab.instructionEdit_btn,
 	placeHolder_txt: selectorFile.css.editorTab.placeHolder_txt,
 	placeHolderHeader_txt: selectorFile.css.editorTab.placeHolderHeader_txt,
+	placeHolderIns_txt:selectorFile.css.editorTab.placeHolderIns_txt,
 	done_btn: selectorFile.css.editorTab.done_btn,
 	//--MULTIPLE RESPONSE
 	isInitialized1: function (testdata) {
@@ -80,11 +81,10 @@ module.exports = {
 	setHeaderTextinPlaceHolder: function (testdata) {
 		logger.logInto(stackTrace.get());
 		res = action.click(this.headerEdit_btn);
-		action.waitForDisplayed(this.placeHolderHeader_txt)
 		action.clearValueDefault(this.placeHolderHeader_txt);
 		if (res == true) {
-			browser.pause(2000)
-			res = action.addValue(this.placeHolder_txt, testdata)
+			browser.pause(5000)
+			res = action.addValue(this.placeHolderHeader_txt, testdata)
 			browser.pause(2000)
 			if (res == true) {
 				this.clickDonebtn();
@@ -101,8 +101,8 @@ module.exports = {
 		logger.logInto(stackTrace.get());
 		res = action.click(this.instructionEdit_btn);
 		if (res == true) {
-
-			res = action.addValue(this.placeHolder_txt, testdata)
+			browser.pause(5000)
+			res = action.addValue(this.placeHolderIns_txt, testdata)
 			browser.pause(2000)
 			if (res == true) {
 				this.clickDonebtn();

@@ -361,11 +361,13 @@ module.exports = {
 	},
 	ASE_COM_TC_1001: function (testdata) {
 		sts = EditorPlayer.setHeaderTextinPlaceHolder(testdata)
+		console.log(sts)
 		assertion.assertEqual(sts, true, "Question text  mismatch");
 	
 	},
 	ASE_COM_TC_1002: function (testdata) {
 		sts=EditorPlayer.setInsTextinPlaceHolder(testdata)
+		console.log(sts)
 		assertion.assertEqual(sts, true, "Question text  mismatch");
 	
 	}
