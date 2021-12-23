@@ -158,4 +158,24 @@ module.exports = {
         assertion.assertEqual(sts.appShell.header, true, "Playlist page header status mismatch");
     },
 
+    //Validate that clicking on 'Create Playlist' button on Dashboard launches the Playlist Pop Up
+    ENG_DASH_TC_26: function (testdata) {
+        sts = dashboardPage.click_createPlaylistBtn(testdata);
+        assertion.assertEqual(sts.createPlaylist_label, true, "createPlaylist_label status mismatch");
+        assertion.assertEqual(sts.createPlaylist_input, true, "createPlaylist_input status mismatch");
+        assertion.assertEqual(sts.createPlaylist_cancelBtn, true, "createPlaylist_cancelBtn status mismatch");
+        assertion.assertEqual(sts.createPlaylist_createBtn, true, "createPlaylist_createBtn status mismatch");
+    },
+
+    //Validate that playlist is added on the dashboard on entering playlist name and clicking 'Create' button
+    ENG_DASH_TC_27: function (testdata) {
+        sts = dashboardPage.click_createPlaylist_createBtn(testdata);
+        assertion.assertEqual(sts[0].playlistTitle, true, "Playlist card not found");
+    },
+
+    //Validate that playlist is not added on the dashboard on clicking 'Cancel' button
+    ENG_DASH_TC_28: function (testdata) {
+        sts = dashboardPage.click_createPlaylist_cancelBtn(testdata);
+        assertion.assertEqual(sts, true, "createPlaylist_cancelBtn status mismatch");
+    },
 };
