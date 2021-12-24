@@ -192,11 +192,8 @@ function generateAppDataJson(pageSelectorFile, inputFile) {
 
                 if (pageSelectorFile[i].teacherAppLangEN == '')
                     continue;
-
-                if (pageSelectorFile[i].teacherAppLangEN.charAt(0) == '[') //to check for an array
-                    fileEN.write("\"" + pageSelectorFile[i].Label + "\" : " + pageSelectorFile[i].teacherAppLangEN + ",\n")
                 else
-                    fileEN.write("\"" + pageSelectorFile[i].Label + "\" : \"" + pageSelectorFile[i].teacherAppLangEN + "\",\n")
+                    fileEN.write("\"" + pageSelectorFile[i].Label + "\" : " + pageSelectorFile[i].teacherAppLangEN + ",\n")
             }
             fileEN.write("\n}")
         }
@@ -208,12 +205,9 @@ function generateAppDataJson(pageSelectorFile, inputFile) {
             for (var i = 0; i < pageSelectorFile.length; i++) {
 
                 if (pageSelectorFile[i].studentAppLangEN == '')
-                    continue;
-
-                if (pageSelectorFile[i].studentAppLangEN.charAt(0) == '[') //to check for an array
-                    fileEN.write("\"" + pageSelectorFile[i].Label + "\" : " + pageSelectorFile[i].studentAppLangEN + ",\n")
+                    continue;                    
                 else
-                    fileEN.write("\"" + pageSelectorFile[i].Label + "\" : \"" + pageSelectorFile[i].studentAppLangEN + "\",\n")
+                    fileEN.write("\"" + pageSelectorFile[i].Label + "\" : " + pageSelectorFile[i].studentAppLangEN + ",\n")
             }
             fileEN.write("\n}")
 
@@ -234,11 +228,8 @@ function generateAppDataJson(pageSelectorFile, inputFile) {
 
                 if (pageSelectorFile[i].teacherAppLangES == '')
                     continue;
-
-                if (pageSelectorFile[i].teacherAppLangES.charAt(0) == '[') //to check for an array
-                    fileES.write("\"" + pageSelectorFile[i].Label + "\" : " + pageSelectorFile[i].teacherAppLangES + ",\n")
                 else
-                    fileES.write("\"" + pageSelectorFile[i].Label + "\" : \"" + pageSelectorFile[i].teacherAppLangES + "\",\n")
+                    fileES.write("\"" + pageSelectorFile[i].Label + "\" : " + pageSelectorFile[i].teacherAppLangES + ",\n")
             }
             fileES.write("\n}")
 
@@ -251,12 +242,9 @@ function generateAppDataJson(pageSelectorFile, inputFile) {
             for (var i = 0; i < pageSelectorFile.length; i++) {
 
                 if (pageSelectorFile[i].studentAppLangES == '')
-                    continue;
-
-                if (pageSelectorFile[i].studentAppLangEN.charAt(0) == '[') //to check for an array
-                    fileES.write("\"" + pageSelectorFile[i].Label + "\" : " + pageSelectorFile[i].studentAppLangES + ",\n")
+                    continue;                    
                 else
-                    fileES.write("\"" + pageSelectorFile[i].Label + "\" : \"" + pageSelectorFile[i].studentAppLangES + "\",\n")
+                    fileES.write("\"" + pageSelectorFile[i].Label + "\" : " + pageSelectorFile[i].studentAppLangES + ",\n")
             }
             fileES.write("\n}")
         }

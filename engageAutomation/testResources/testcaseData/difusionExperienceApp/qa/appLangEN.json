@@ -581,6 +581,38 @@
                 "bookmarkThisPageBtn": "Bookmark This Page",
                 "bookmarksTitle": "Bookmarks",
                 "bookmarkNameLabel": "Bookmark Name"
+            },
+            "browse":
+            {
+                "pageTitle": "Browse",
+                "pageSubTitle": "Find all our digital books and their associated resources.",
+                "filtersBtn": "Filters:\nShow All",
+                "searchBox": "",
+                "tabList": ["Books", "Interactive Activities", "Videos", "Online Class", "Teacher Training", "Today in Class", "Projectables"],
+                "pageNumToJump": "2",
+                "moreOptions":
+                {
+                    "viewOption": "View",
+                    "addToPlaylistOption": "Add to Playlist",
+                    "createPlaylist_label":"Create Playlist",
+                    "shareOption": "Share"
+                },
+                "noResultListItemTitle": "No Results",
+                "noResultListItemSubtitle": "There aren't any resources available that match those terms.",
+                "noResultFound":
+                {
+                    "title": "No result found",
+                    "subTitle": "We didn't find anything matching your search or filters. Try your search again, or change your filters to update the results here."
+
+                },
+                "results_label": "results:",
+                "result_label": "result:",
+                "filter":{
+                    "filterMenuTitle":"Filters",
+                    "filterMenuFilterCount":"0 filters added",
+                    "filterMenuClearAllBtn":"Clear All",
+                    "filterMenuApplyBtn":"Apply Filters"
+                }
             }
         }
     }
