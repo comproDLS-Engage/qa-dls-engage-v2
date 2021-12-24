@@ -40,7 +40,7 @@ app.post('/upload', function (req, res) {
         res.sendFile(__dirname + "/pageObject.html");
         var parser = parse({ columns: true }, function (err, records) {
             pageSelectorFile = records;
-            columnName = parser.options.columns
+            columnName = parser.options.columns;
         });
         fs.createReadStream(uploadPath).pipe(parser);
     });
