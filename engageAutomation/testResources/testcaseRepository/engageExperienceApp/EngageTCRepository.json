@@ -2164,6 +2164,151 @@
           "visualTest": "-"
         }
       ]
+    },
+    {
+      "modulename": "Browse",
+      "moduledetails": "",
+      "testFile": "./test/engageExperienceApp/browse.test.js",
+      "testcase": [
+        {
+          "id": "ENG_GLOB_TC_10",
+          "description": "Validate that the resources are displayed on clicking the Interactive Activities tab",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_11",
+          "description": "Validate that the resources are displayed on clicking the Videos tab",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_12",
+          "description": "Validate that the resources are displayed on clicking the Online Classes tab",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_13",
+          "description": "Validate that the resources are displayed on clicking the Teacher Training tab",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_14",
+          "description": "Validate that the resources are displayed on clicking the Today in Class tab",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_15",
+          "description": "Validate that the resources are displayed on clicking the Projectable tab",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_16",
+          "description": "Validate content in Browse page",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_19",
+          "description": "Validate that clicking on a page number in a non categorized view displays the next list of resources.",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_20",
+          "description": "Validate that clicking on next arrows in a non categorized view displays the list of resources.",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_21",
+          "description": "Validate that clicking on previous arrows in a non categorized view displays the list of resources.",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_22",
+          "description": "Validate that clicking on 3 dot options for a resource displays a list of options available for the resource.",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_23",
+          "description": "Validate clicking on View on 3 dot options launches the resource.",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_24",
+          "description": "Validate that clicking on Add to playlist on 3 dot options lists the existing playlists and option to create a new playlist.",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_26",
+          "description": "Validate that clicking on a resource launches the Global Resources view page",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_28",
+          "description": "Validate that searching can be done on basis of resource name",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_36",
+          "description": "Validate that No Result Found is displayed in the drop down suggestion and in the screen when no resource matching the search criteria is fulfilled",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_37",
+          "description": "Validate that clicking on a resource from the search suggestion drop down list launches the resource.",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_37",
+          "description": "Validate that clicking on 'More search results for ..xyz' lists the resources based on search text.",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_38",
+          "description": "Validate that clicking on 'More search results for ..xyz' lists the resources based on search text.",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_39",
+          "description": "Validate that pressing Enter lists the resources based on search text.",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_41",
+          "description": "Validate that clicking on close serach button removes the search criteria",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_42",
+          "description": "Validate clicking on Filters displays the list of filter categories.",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_52",
+          "description": "Validate that clicking on cross icon on Filters screen closes the filter pop up.",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        }
+      ]
     }
   ]
 }
