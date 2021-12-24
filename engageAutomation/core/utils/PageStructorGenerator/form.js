@@ -2,7 +2,7 @@ var express = require("express");
 var fs = require('fs');
 const PageTemplate = require('./PageTemplate.json');
 const cssProperty = require('./property.json');
-var file, pageSelectorFile, arr = [], pageSelectorGroup = [], k;
+var file, pageSelectorFile, arr = [], pageSelectorGroup = [], k , columnName;
 var parse = require('csv-parse');
 const fileUpload = require('express-fileupload');
 const { DH_CHECK_P_NOT_SAFE_PRIME } = require("constants");
@@ -40,6 +40,7 @@ app.post('/upload', function (req, res) {
         res.sendFile(__dirname + "/pageObject.html");
         var parser = parse({ columns: true }, function (err, records) {
             pageSelectorFile = records;
+            columnName = parser.options.columns;
         });
         fs.createReadStream(uploadPath).pipe(parser);
     });
@@ -93,6 +94,7 @@ app.get("/getvalue", function (request, response) {
             }
             if (selectorJsonCheck) {
                 generatePageSelectorJson(pageSelectorFile, inputFile);
+                generateAppDataJson(pageSelectorFile, inputFile) //for app data generation
             }
             if (pageHeaderCheck) {
 
@@ -174,6 +176,93 @@ function generatePageSelectorJson(pageSelectorFile, inputFile) {
     file1.write("\n}\n}")
 }
 
+//test app data generator
+function generateAppDataJson(pageSelectorFile, inputFile) {
+    var fileEN, fileES;
+
+    if (typeof(columnName.find(o => o.name.includes('AppLangEN'))) == "object") { //check for AppLangEng
+        fileEN = fs.createWriteStream(__dirname + "/outputFile/" + 'appLangEN.json');
+         fileEN.write("{\"" + inputFile + "\": \n{");
+
+        if (typeof(columnName.find(o => o.name.includes('teacherAppLangEN'))) == "object") {
+
+            fileEN.write("\n" + "\"" + "teacher" + "\": \n{\n");
+
+            for (var i = 0; i < pageSelectorFile.length; i++) {
+
+                if (pageSelectorFile[i].teacherAppLangEN == '')
+                    continue;
+
+                if (pageSelectorFile[i].teacherAppLangEN.charAt(0) == '[') //to check for an array
+                    fileEN.write("\"" + pageSelectorFile[i].Label + "\" : " + pageSelectorFile[i].teacherAppLangEN + ",\n")
+                else
+                    fileEN.write("\"" + pageSelectorFile[i].Label + "\" : \"" + pageSelectorFile[i].teacherAppLangEN + "\",\n")
+            }
+            fileEN.write("\n}")
+        }
+
+        if (typeof(columnName.find(o => o.name.includes('studentAppLangEN'))) == "object") { 
+
+            fileEN.write(",\n" + "\"" + "student" + "\": \n{\n");
+
+            for (var i = 0; i < pageSelectorFile.length; i++) {
+
+                if (pageSelectorFile[i].studentAppLangEN == '')
+                    continue;
+
+                if (pageSelectorFile[i].studentAppLangEN.charAt(0) == '[') //to check for an array
+                    fileEN.write("\"" + pageSelectorFile[i].Label + "\" : " + pageSelectorFile[i].studentAppLangEN + ",\n")
+                else
+                    fileEN.write("\"" + pageSelectorFile[i].Label + "\" : \"" + pageSelectorFile[i].studentAppLangEN + "\",\n")
+            }
+            fileEN.write("\n}")
+
+        }
+        fileEN.write("\n}\n}")
+    }
+
+
+    if (typeof(columnName.find(o => o.name.includes('AppLangES'))) == "object") { //check for AppLang Spanish
+        fileES = fs.createWriteStream(__dirname + "/outputFile/" + 'appLangES.json');
+        fileES.write("{\"" + inputFile + "\": \n{");
+
+        if (typeof(columnName.find(o => o.name.includes('teacherAppLangES'))) == "object") {
+
+            fileES.write("\n" + "\"" + "teacher" + "\": \n{\n");
+
+            for (var i = 0; i < pageSelectorFile.length; i++) {
+
+                if (pageSelectorFile[i].teacherAppLangES == '')
+                    continue;
+
+                if (pageSelectorFile[i].teacherAppLangES.charAt(0) == '[') //to check for an array
+                    fileES.write("\"" + pageSelectorFile[i].Label + "\" : " + pageSelectorFile[i].teacherAppLangES + ",\n")
+                else
+                    fileES.write("\"" + pageSelectorFile[i].Label + "\" : \"" + pageSelectorFile[i].teacherAppLangES + "\",\n")
+            }
+            fileES.write("\n}")
+
+        }
+
+        if (typeof(columnName.find(o => o.name.includes('studentAppLangES'))) == "object") { 
+
+            fileES.write(",\n" + "\"" + "student" + "\": \n{\n");
+
+            for (var i = 0; i < pageSelectorFile.length; i++) {
+
+                if (pageSelectorFile[i].studentAppLangES == '')
+                    continue;
+
+                if (pageSelectorFile[i].studentAppLangEN.charAt(0) == '[') //to check for an array
+                    fileES.write("\"" + pageSelectorFile[i].Label + "\" : " + pageSelectorFile[i].studentAppLangES + ",\n")
+                else
+                    fileES.write("\"" + pageSelectorFile[i].Label + "\" : \"" + pageSelectorFile[i].studentAppLangES + "\",\n")
+            }
+            fileES.write("\n}")
+        }
+        fileES.write("\n}\n}")
+    }
+}
 
 
 

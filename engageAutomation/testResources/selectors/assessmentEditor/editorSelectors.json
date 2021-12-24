@@ -57,6 +57,12 @@
 			"inputOptions": "[data-tid*=input-option-",
 			"optionStyle_radio": "[data-tid=radio-optionstyle-",
 			"preview_btn": "#root > div > div > div > button[data-tid=button-preview]",
+			"headerEdit_btn":"[data-tid=button-preview-headertitle]",
+			"instructionEdit_btn":"[data-tid=button-preview-instruction]",
+			"placeHolder_txt":"div[role=textbox]",
+			"placeHolderHeader_txt":"div[role=textbox] h2",
+			"placeHolderIns_txt":"div[role=textbox] p",
+			"done_btn":"[data-tid=button-done]",
 			"multipleResponse": {
 				"checkboxOption_input": "[data-tid=checkbox-option-"
 			},
@@ -71,7 +77,7 @@
 			},
 			"DND_image": {
 				"addBlank_btn": "[data-tid=button-addblank]",
-				"questionText_input": "[data-tid=input-questiontext]"
+				"questionText_input": "[data-tid=input-questiontext] [data-text=\"true\"]"
 			},
 			"matching": {
 				"inputItem": "[data-tid=input-item-",
