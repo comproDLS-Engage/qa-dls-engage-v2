@@ -18,33 +18,42 @@ module.exports = {
                 assertion.assertEqual(sts1.sourceData[i][1], testdata[i][1], "Source text mismatch for " + sts1.sourceData[i]);
         }
     },
-    
+
     ENG_ITEM_FIB_TC_7: function (testdata) {
         //Validate FIBDrag & Drop Question Functionality for correct scenario
         sts = FIBDragandDrop.isInitialized(testdata);
-        for (var i = 0; i < sts.sourceData.length; i++) {
-            assertion.assertEqual(sts.targetData[i][1], testdata[i][3], "Target text mismatch for " + sts.targetData[i]);
-            assertion.assertEqual(sts.targetData[i][2], testdata[i][4], "Status mismatch for " + sts.targetData[i]);
+        if ((typeof (sts)) === "object") {
+            for (var i = 0; i < sts.sourceData.length; i++) {
+                assertion.assertEqual(sts.targetData[i][1], testdata[i][3], "Target text mismatch for " + sts.targetData[i]);
+                assertion.assertEqual(sts.targetData[i][2], testdata[i][4], "Status mismatch for " + sts.targetData[i]);
+            }
         }
+        else assertion.assertFail(sts);
     },
 
     ENG_ITEM_FIB_TC_8: function (testdata) {
         //Validate FIB Drag & Drop Question for partial correct scenario
         sts = FIBDragandDrop.isInitialized(testdata);
-        for (var i = 0; i < sts.sourceData.length; i++) {
-            assertion.assertEqual(sts.targetData[i][1], testdata[i][3], "Target text mismatch for " + sts.targetData[i]);
-            assertion.assertEqual(sts.targetData[i][2], testdata[i][4], "Status mismatch for " + sts.targetData[i]);
+        if ((typeof (sts)) === "object") {
+            for (var i = 0; i < sts.sourceData.length; i++) {
+                assertion.assertEqual(sts.targetData[i][1], testdata[i][3], "Target text mismatch for " + sts.targetData[i]);
+                assertion.assertEqual(sts.targetData[i][2], testdata[i][4], "Status mismatch for " + sts.targetData[i]);
+            }
         }
+        else assertion.assertFail(sts);
 
     },
 
     ENG_ITEM_FIB_TC_9: function (testdata) {
         //Validate FIB Drag & Drop Question for  incorrect scenario
         sts = FIBDragandDrop.isInitialized(testdata);
-        for (var i = 0; i < sts.sourceData.length; i++) {
-            assertion.assertEqual(sts.targetData[i][1], testdata[i][3], "Target text mismatch for " + sts.targetData[i]);
-            assertion.assertEqual(sts.targetData[i][2], testdata[i][4], "Status mismatch for " + sts.targetData[i]);
+        if ((typeof (sts)) === "object") {
+            for (var i = 0; i < sts.sourceData.length; i++) {
+                assertion.assertEqual(sts.targetData[i][1], testdata[i][3], "Target text mismatch for " + sts.targetData[i]);
+                assertion.assertEqual(sts.targetData[i][2], testdata[i][4], "Status mismatch for " + sts.targetData[i]);
+            }
         }
+        else assertion.assertFail(sts);
     },
 
     ENG_ITEM_FIB_TC_13: function (testdata) {
@@ -63,23 +72,29 @@ module.exports = {
 
     ENG_ITEM_FIB_TC_19: function (testdata) {
         sts = FIBDragandDrop.isInitialized(testdata);
-        for (var i = 0; i < sts.sourceData.length; i++) {
-            assertion.assertEqual(sts1.targetData[i][1], testdata[i][3], "Target text mismatch for " + sts1.targetData[i]);
-            assertion.assertEqual(sts.targetData[i][2], "", "Status mismatch for " + sts.targetData[i]);
+        if ((typeof (sts)) === "object") {
+            for (var i = 0; i < sts.sourceData.length; i++) {
+                assertion.assertEqual(sts1.targetData[i][1], testdata[i][3], "Target text mismatch for " + sts1.targetData[i]);
+                assertion.assertEqual(sts.targetData[i][2], "", "Status mismatch for " + sts.targetData[i]);
 
+            }
         }
+        else assertion.assertFail(sts);
     },
     //Validate FIB Drag and Drop question is launched
     ENG_ITEM_FIB_TC_20: function (testdata) {
         sts = FIBDragandDrop.isInitialized(testdata.answerKey);
         assertion.assertEqual(sts.sourceData.length, testdata.maxOptions, "Draggable option count mismatch");
-        for (var i = 0; i < sts.sourceData.length; i++) {
-            assertion.assertEqual(sts.targetData[i][1], "", "Target text mismatch for " + sts.targetData[i]);
-            assertion.assertEqual(sts.targetData[i][2], "", "Status mismatch for " + sts.targetData[i]);
+        if ((typeof (sts)) === "object") {
+            for (var i = 0; i < sts.sourceData.length; i++) {
+                assertion.assertEqual(sts.targetData[i][1], "", "Target text mismatch for " + sts.targetData[i]);
+                assertion.assertEqual(sts.targetData[i][2], "", "Status mismatch for " + sts.targetData[i]);
+            }
         }
+        else assertion.assertFail(sts);
         sts = itemPlayerPage.getItemplayerInfo();
-		assertion.assertEqual(sts.mediaType, testdata.mediaType, "Media type mismatch");
-		assertion.assertEqual(sts.quesText, testdata.text, "Question text mismatch");
-		assertion.assertEqual(sts.instructionText, testdata.instruction, "Instruction text mismatch");
+        assertion.assertEqual(sts.mediaType, testdata.mediaType, "Media type mismatch");
+        assertion.assertEqual(sts.quesText, testdata.text, "Question text mismatch");
+        assertion.assertEqual(sts.instructionText, testdata.instruction, "Instruction text mismatch");
     }
 }

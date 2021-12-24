@@ -6,24 +6,24 @@ var sts;
 
 module.exports = {
 
-	//Validate that appShell is launched (Desktop)
+	//Validate content of the appShell is launched (Desktop)
 	ENG_SHELL_TC_1: function (testdata) {
-		sts = appShell.isInitialized();
-		assertion.assertEqual(sts.pageStatus, true, "AppShell status mismatch");
-		assertion.assertEqual(sts.leftPane.custLogo_exists, true, "Difusion logo does not exist");
-		assertion.assertEqual(sts.leftPane.dashboardBtn, testdata.dashboardTxt, "Dashboard text mismatch");
-		assertion.assertEqual(sts.leftPane.browseBtn, testdata.browseTxt, "Browser text mismatch");
-		assertion.assertEqual(sts.leftPane.classesBtn, testdata.classesTxt, "Classes text mismatch");
-		assertion.assertEqual(sts.leftPane.helpBtn, testdata.helpTxt, "Help text mismatch");
-		assertion.assertEqual(sts.leftPane.settingsBtn, testdata.settingsTxt, "Settings text mismatch");
-		assertion.assertEqual(sts.leftPane.sidebarImg_exists, true, "Left Pane Image does not exist");
-		assertion.assertEqual(sts.leftPane.poweredbyTxt, testdata.poweredByTxt, "Powered By text mismatch");
-		assertion.assertEqual(sts.leftPane.comproLogo_exists, true, "Compro logo does not exist");
-		assertion.assert(sts.leftPane.versionTxt.includes(testdata.engageTxt), "Engage text mismatch");
-		assertion.assert(sts.leftPane.versionTxt.includes(testdata.technologyPreviewTxt), "Technology Preview text mismatch");
-		assertion.assertEqual(sts.header.notificationBtn_exists, true, "Notification Button does not exist");
-		assertion.assertEqual(sts.header.selectedLanguage, testdata.selectedLanguage, "Language Button does not exist");
-		assertion.assertEqual(sts.header.userProfileBtn_exists, true, "User Profile Button does not exist");
+		sts = appShell.getAppShellLeftPaneData();
+		assertion.assertEqual(sts.custLogo_exists, true, "Difusion logo does not exist");
+		assertion.assertEqual(sts.dashboardBtn, testdata.dashboardTxt, "Dashboard text mismatch");
+		assertion.assertEqual(sts.browseBtn, testdata.browseTxt, "Browser text mismatch");
+		assertion.assertEqual(sts.classesBtn, testdata.classesTxt, "Classes text mismatch");
+		assertion.assertEqual(sts.helpBtn, testdata.helpTxt, "Help text mismatch");
+		assertion.assertEqual(sts.settingsBtn, testdata.settingsTxt, "Settings text mismatch");
+		assertion.assertEqual(sts.sidebarImg_exists, true, "Left Pane Image does not exist");
+		assertion.assertEqual(sts.poweredbyTxt, testdata.poweredByTxt, "Powered By text mismatch");
+		assertion.assertEqual(sts.comproLogo_exists, true, "Compro logo does not exist");
+		assertion.assert(sts.versionTxt.includes(testdata.engageTxt), "Engage text mismatch");
+		assertion.assert(sts.versionTxt.includes(testdata.technologyPreviewTxt), "Technology Preview text mismatch");
+		sts = appShell.getAppShellHeaderData();
+		assertion.assertEqual(sts.notificationBtn_exists, true, "Notification Button does not exist");
+		assertion.assertEqual(sts.selectedLanguage, testdata.selectedLanguage, "Language Button does not exist");
+		assertion.assertEqual(sts.userProfileBtn_exists, true, "User Profile Button does not exist");
 	},
 
 	//Validate that clicking on the Dashboard button in left Navigation pane launches Dashboard page 

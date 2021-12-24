@@ -356,7 +356,19 @@ module.exports = {
 	//set question text for writing player
 	ASE_COM_TC_1000: function (testdata) {
 		sts = EditorPlayer.setQuestionTextinwriting(testdata)
-		assertion.assertEqual(sts, testdata, "Question text  mismatch");
+		assertion.assertEqual(sts, true, "Question text  mismatch");
+	
+	},
+	ASE_COM_TC_1001: function (testdata) {
+		sts = EditorPlayer.setHeaderTextinPlaceHolder(testdata)
+		console.log(sts)
+		assertion.assertEqual(sts, true, "Question text  mismatch");
+	
+	},
+	ASE_COM_TC_1002: function (testdata) {
+		sts=EditorPlayer.setInsTextinPlaceHolder(testdata)
+		console.log(sts)
+		assertion.assertEqual(sts, true, "Question text  mismatch");
 	
 	}
 

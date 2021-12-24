@@ -33,7 +33,7 @@
         {
           "questionIndex": 3,
           "buttonName": "writing",
-          "questionTitle": "Question 1",
+          "questionTitle": "Give the Answer after watching Vedio",
           "questionInstruction": "Listen to the Video carefully and enter the text on placeholder",
           "videoURL": "https://youtu.be/bUxd3jqCr94",
           "questionText": "Vuelve a escuchar los diálogos en español. ¿Qué crees que dicen? Toma notas.{{TextArea:A}}"
@@ -78,6 +78,7 @@
           "buttonName": "draganddropontoimage",
           "questionTitle": "Question 5",
           "questionText": "Drag the continents at their correct places on the world map",
+          "questionInstruction": "Drop the continents in correct places",
           "imagePath": "./testResources/testcaseData/assessmentEditor/media/WorldMap.jpg",
           "labelOptions": [
             "Asia", 

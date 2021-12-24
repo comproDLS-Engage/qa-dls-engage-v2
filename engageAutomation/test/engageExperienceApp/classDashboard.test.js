@@ -108,24 +108,14 @@ module.exports = {
 	},
 	//Validate that Create Class page is launched on clicking create class button
 	ENG_INS_CLASS_TC_6: function () {
-		//sts = classDashboardPage.isInitialized()
 		sts = classDashboardPage.click_CreateClass_Button();
-		assertion.assertEqual(sts, true, "Create Class Page not launched: " + JSON.stringify(sts))
-		sts = createClassPage.isInitialized();
 		if ((typeof (sts)) === "object") {
+			
 			assertion.assertEqual(sts.pageStatus, true, "Create Class Page not launched: " + JSON.stringify(sts))
 
 		} else {
 			assertion.assertFail(sts);
 		}
-	},
-	//Validate that on clicking a Class card on the My Classes Page, Class Dashboard is launched for that class
-	ENG_INS_CLASS_TC_7: function (testdata) {
-		sts = classDashboardPage.click_ClassCard(testdata)
-		assertion.assertEqual(sts, true, "Class Details page is not launched" ,sts.pageStatus)
-		sts = teacherViewClassPage.isInitialized();
-		assertion.assertEqual(sts.pageStatus, true, "Class Deatails page is not launched" + JSON.stringify(sts.pageStatus))
-
 	},
 
 	//Validate that clicking on menu button on a class card displays available menu options
@@ -142,6 +132,17 @@ module.exports = {
 			assertion.assertFail(sts);
 		}
 	},
+
+	//Validate that on clicking a Class card on the My Classes Page, Class Dashboard is launched for that class
+	ENG_INS_CLASS_TC_7: function (testdata) {
+		sts = classDashboardPage.click_ClassCard(testdata)
+		assertion.assertEqual(sts, true, "Class Details page is not launched" ,sts.pageStatus)
+		sts = teacherViewClassPage.isInitialized();
+		assertion.assertEqual(sts.pageStatus, true, "Class Deatails page is not launched" + JSON.stringify(sts.pageStatus))
+
+	},
+
+	
 	//Validate that clicking on Edit Class option from Class Menu launches Edit Class Workflow
 	ENG_INS_CLASS_TC_9: function (testdata) {
 		sts = teacherViewClassPage.clickClassOptionsButton()
@@ -494,9 +495,8 @@ module.exports = {
 
 	ENG_INS_CLASS_TC_44: function () {
 		sts = teacherViewClassPage.clickViewBookbtn()
-
-		//console.log(sts)
-
+		assertion.assertEqual(sts.pageStatus, true, "View book page status mismatch");
+        assertion.assertEqual(sts.appShell.header, true, "View book page header status mismatch");
 	},
 	//rupsi	
 	//Class Restore - Validate the end date of class increase set for next year before restore.

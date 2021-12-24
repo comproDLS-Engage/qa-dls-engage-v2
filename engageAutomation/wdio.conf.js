@@ -347,7 +347,54 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {<Object>} results object containing test results
      */
-    onComplete: function (exitCode, config, capabilities, results) {
+    onComplete: async function (exitCode, config, capabilities, results) {
+        if (argv.tesultsToken) {
+            const tesults = require('tesults');
+            const util = require('util');
+            const tesultsResults = util.promisify(tesults.results);
+            const jsonString = fs.readFileSync(process.cwd() + '/' + global.reportOutputDir + "/wdio-0-0-timeline-reporter.log", 'utf-8');
+            const logData = JSON.parse(jsonString);
+            var tesultsCases = [];
+            let testCase = {};
+            testCase.name = logData.capabilities.platformName + "-" + logData.capabilities.browserName;
+            testCase.result = "pass";
+            testCase.duration = logData.duration;
+            testCase.suite = "[build]";
+            testCase._reportURL = "https://d29cns2xkhqbb2.cloudfront.net/" + argv.appType + "/" + argv.testEnv + "/" + argv.reportdir + "/index.html";
+            testCase._appVersion = logData.appVersion;
+            console.log(testCase)
+            tesultsCases.push(testCase);
+
+            for (let i = 0; i < logData.suites.length; i++) {
+                for (let j = 0; j < logData.suites[i].tests.length; j++) {
+                    testCase = {};
+                    testCase.name = logData.suites[i].tests[j].title;
+                    testCase.result = logData.suites[i].tests[j].state.substring(0, 4);
+                    //console.log(testCase.result)
+                    testCase.duration = logData.suites[i].tests[j].duration;
+                    testCase.files = logData.suites[i].tests[j].screenshots;
+                    testCase.suite = logData.suites[i].title;
+                    tesultsCases.push(testCase);
+                }
+            }
+            //console.log(argv.tesultsToken)
+            let data = {
+                target: argv.tesultsToken,
+                results: {
+                    cases: tesultsCases
+                }
+            }
+            console.log(data.target)
+            let response;
+            try {
+                response = await tesultsResults(data)
+            } catch (err) {
+                console.log(err)
+            } finally {
+                console.log(response)
+            }
+        }
+
         //require('./core/utils/reportUpdater.js').indexFileUpdate();
         specGenerator.removingTempSpecs();
         if (argv.visual) {

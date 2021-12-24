@@ -49,8 +49,8 @@ module.exports = {
 		logger.logInto(stackTrace.get());
 		action.waitForDocumentLoad();
 		res = {
-			leftPane: action.waitForDisplayed(this.headerbandDiv),
-			header: (action.getElementCount(this.breadcrumbbackbtn) > 0) ? action.waitForDisplayed(this.breadcrumbbackbtn) : action.waitForDisplayed(this.selectedLanguage)
+			leftPane: (action.getElementCount(this.custLogo + "," + this.toggleSidebarBtn) > 0) ? true : false,
+			header: (action.getElementCount(this.headerbandDiv) > 0) ? true : false
 		}
 		return res;
 	},
@@ -346,32 +346,32 @@ module.exports = {
 		return res;
 	},
 
-	getTabsListData: function() {
-        let i, list;
-        let obj = {
-            list: null,
-            selected : null
-        };
-        let componentArr = [];
-        
-        list = action.findElements(this.tabList);
-        for (i = 0; i < list.length; i++) {
-            componentArr[i] = action.getText(list[i])
-            if(action.getAttribute(list[i], "aria-selected") == "true")
-            	obj.selected = componentArr[i];
-        }
-        obj.list = componentArr;
-        logger.logInto(stackTrace.get(), JSON.stringify(obj));
-        return obj;
-    },
+	getTabsListData: function () {
+		let i, list;
+		let obj = {
+			list: null,
+			selected: null
+		};
+		let componentArr = [];
 
-    clickSettingsButton: function() {
-        res = action.click(this.settingsBtn);
-        if (true == res) {
-            logger.logInto(stackTrace.get(), res + "Settings Button clicked");
-            res = require('./settings.page.js').isInitialized()
-        } else
-            logger.logInto(stackTrace.get(), res + " -- Error in clicking Settings Button", 'error');
-        return res;
-    }
+		list = action.findElements(this.tabList);
+		for (i = 0; i < list.length; i++) {
+			componentArr[i] = action.getText(list[i])
+			if (action.getAttribute(list[i], "aria-selected") == "true")
+				obj.selected = componentArr[i];
+		}
+		obj.list = componentArr;
+		logger.logInto(stackTrace.get(), JSON.stringify(obj));
+		return obj;
+	},
+
+	clickSettingsButton: function () {
+		res = action.click(this.settingsBtn);
+		if (true == res) {
+			logger.logInto(stackTrace.get(), res + "Settings Button clicked");
+			res = require('./settings.page.js').isInitialized()
+		} else
+			logger.logInto(stackTrace.get(), res + " -- Error in clicking Settings Button", 'error');
+		return res;
+	}
 };
