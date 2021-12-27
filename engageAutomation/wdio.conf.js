@@ -360,9 +360,9 @@ exports.config = {
             testCase.result = "pass";
             testCase.duration = logData.duration;
             testCase.suite = "[build]";
-            testCase._reportURL = "https://d29cns2xkhqbb2.cloudfront.net/" + argv.appType + "/" + argv.testEnv + "/" + argv.reportdir + "/index.html";
-            testCase._appVersion = logData.appVersion;
-            console.log(testCase)
+            //testCase._reportURL = "https://d29cns2xkhqbb2.cloudfront.net/" + argv.appType + "/" + argv.testEnv + "/" + argv.reportdir + "/index.html";
+            //testCase._appVersion = logData.appVersion;
+            //console.log(testCase)
             tesultsCases.push(testCase);
 
             for (let i = 0; i < logData.suites.length; i++) {
@@ -384,7 +384,7 @@ exports.config = {
                     cases: tesultsCases
                 }
             }
-            console.log(data.target)
+            //console.log(data.target)
             let response;
             try {
                 response = await tesultsResults(data)
