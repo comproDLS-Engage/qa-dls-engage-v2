@@ -370,6 +370,19 @@ module.exports = {
 		console.log(sts)
 		assertion.assertEqual(sts, true, "Question text  mismatch");
 	
+	},
+
+	ASE_COM_TC_1003: function () {
+		sts=EditorPlayer.clickNextBtn()
+		console.log(sts)
+		assertion.assertEqual(sts, true, "Next Question clicked");
+	
+	},
+	ASE_COM_TC_1004: function () {
+		sts=EditorPlayer.deleteMediabtn()
+		console.log(sts)
+		assertion.assertEqual(sts, true, "Delete Media Clicked");
+	
 	}
 
 }

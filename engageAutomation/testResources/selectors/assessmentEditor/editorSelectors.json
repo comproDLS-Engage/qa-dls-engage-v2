@@ -63,6 +63,8 @@
 			"placeHolderHeader_txt":"div[role=textbox] h2",
 			"placeHolderIns_txt":"div[role=textbox] p",
 			"done_btn":"[data-tid=button-done]",
+			"nextqun_btn":"[data-tid=button-nextquestion]",
+			"deleteMedia_btn":"[data-tid=button-deletemedia]",
 			"multipleResponse": {
 				"checkboxOption_input": "[data-tid=checkbox-option-"
 			},
@@ -77,7 +79,7 @@
 			},
 			"DND_image": {
 				"addBlank_btn": "[data-tid=button-addblank]",
-				"questionText_input": "[data-tid=input-questiontext] [data-text=\"true\"]"
+				"questionText_input": "[data-tid=input-questiontext] h6"
 			},
 			"matching": {
 				"inputItem": "[data-tid=input-item-",
