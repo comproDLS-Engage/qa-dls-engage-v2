@@ -130,7 +130,7 @@ module.exports = {
     var obj;
     obj = {
       playlistNameLabel: (action.getElementCount(this.playlistNameLabel) > 0) ? action.getText(this.playlistNameLabel) : null,
-      playlistNameInput: (action.getElementCount(this.playlistNameInput) > 0) ? action.getText(this.playlistNameInput) : null,
+      playlistNameInput: (action.getElementCount(this.playlistNameInput) > 0) ? action.getAttribute(this.playlistNameInput, "value") : null,
       editPlaylistCancelBtn: (action.getElementCount(this.editPlaylistCancelBtn) > 0) ? action.getText(this.editPlaylistCancelBtn) : null,
       editPlaylistSaveBtn: (action.getElementCount(this.editPlaylistSaveBtn) > 0) ? action.getText(this.editPlaylistSaveBtn) : null,
     }

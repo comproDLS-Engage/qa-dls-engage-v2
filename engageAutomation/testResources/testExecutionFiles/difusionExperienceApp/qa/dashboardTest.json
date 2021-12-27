@@ -55,7 +55,7 @@
                 "testData": [
                     {
                         "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                        "jsonPath": "engage.appContent.dashboard.teacher.globalResource[0].title"
+                        "jsonPath": "engage.appContent.dashboard.teacher.resourceTitle[0]"
                     }
                 ]
             },
@@ -66,7 +66,7 @@
                 "testData": [
                     {
                         "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                        "jsonPath": "engage.appContent.dashboard.teacher.globalResource[1].title"
+                        "jsonPath": "engage.appContent.dashboard.teacher.resourceTitle[1]"
                     }
                 ]
             },
@@ -77,7 +77,7 @@
                 "testData": [
                     {
                         "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                        "jsonPath": "engage.appContent.dashboard.teacher.globalResource[2].title"
+                        "jsonPath": "engage.appContent.dashboard.teacher.resourceTitle[2]"
                     }
                 ]
             },
@@ -88,7 +88,7 @@
                 "testData": [
                     {
                         "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                        "jsonPath": "engage.appContent.dashboard.teacher.globalResource[3].title"
+                        "jsonPath": "engage.appContent.dashboard.teacher.resourceTitle[3]"
                     }
                 ]
             },
@@ -99,7 +99,7 @@
                 "testData": [
                     {
                         "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                        "jsonPath": "engage.appContent.dashboard.teacher.globalResource[4].title"
+                        "jsonPath": "engage.appContent.dashboard.teacher.resourceTitle[4]"
                     }
                 ]
             },
@@ -110,7 +110,7 @@
                 "testData": [
                     {
                         "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                        "jsonPath": "engage.appContent.dashboard.teacher.globalResource[5].title"
+                        "jsonPath": "engage.appContent.dashboard.teacher.resourceTitle[5]"
                     }
                 ]
             }
@@ -194,7 +194,7 @@
                 "testData": [
                     {
                         "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                        "jsonPath": "engage.appContent.dashboard.student.globalResource[0].title"
+                        "jsonPath": "engage.appContent.dashboard.student.resourceTitle[0]"
                     }
                 ]
             },
@@ -205,7 +205,7 @@
                 "testData": [
                     {
                         "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                        "jsonPath": "engage.appContent.dashboard.student.globalResource[1].title"
+                        "jsonPath": "engage.appContent.dashboard.student.resourceTitle[1]"
                     }
                 ]
             }
