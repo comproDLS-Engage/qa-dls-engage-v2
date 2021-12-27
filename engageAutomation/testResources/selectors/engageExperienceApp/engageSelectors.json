@@ -155,21 +155,22 @@
                 "calenderYearList": "[contains(@class,'MuiPickersYear-')]",
                 "calenderYearListCount": "//div[contains(@class,'MuiPickersYear-')]"
             },
-            "browse": {
+            "browse":
+            {
                 "pageTitle": "[data-tid=text-pageTitle]",
                 "pageSubTitle": "[data-tid=text-pageSubTitle]",
                 "filtersBtn": "[data-tid=button-filter]",
                 "previousPageArrow": "[data-tid=button-pagination-next]",
                 "nextPageArrow": "[data-tid=button-pagination-previous]",
                 "currentPage": "[data-tid*=button-pagination][aria-current=true]",
-                "searchBox": "[data-tid=input-autocomplete-searchtextbox] input",
+                "searchBox": "input[type=text]",
                 "searchIcon": "[data-tid=icon-autocomplete-search]",
                 "resourceCategory": "[data-tid*=text-seaction-heading]",
                 "viewAllBtn": "[data-tid*=btn-viewAll]",
                 "moreOptionsBtn": "[data-tid*=button-contextMenu]",
-                "cardTitle": "[data-tid*=text-cardTitl]",
+                "cardTitle": "[data-tid*=text-cardTitle]",
                 "cardSubTitle": "[data-tid*=text-CardSubtile]",
-                "cardImage": "[data-tid*=image-card]",
+                "cardImgIcon": "[data-tid*=image-card]",
                 "cardLockIcon": "[data-tid*=icon-locked]",
                 "viewOption": "[data-tid*=menu-view]",
                 "addToPlaylistOption": "[data-tid*=menu-add-to-playlist]",
