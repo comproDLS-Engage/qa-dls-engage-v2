@@ -179,6 +179,16 @@
                     "id": "ASE_COM_TC_1002",
                     "description": "Set Instruction text from placeHolder",
                     "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1003",
+                    "description": "Next Question Clicked",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1004",
+                    "description": "Delete Media Clicked",
+                    "tags": "P1"
                 }
             ]
         }

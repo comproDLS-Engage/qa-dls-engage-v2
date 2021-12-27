@@ -187,11 +187,14 @@ function generateAppDataJson(pageSelectorFile, inputFile) {
         if (typeof(columnName.find(o => o.name.includes('teacherAppLangEN'))) == "object") {
 
             fileEN.write("\n" + "\"" + "teacher" + "\": \n{\n");
-
+            console.log(pageSelectorFile.length)
             for (var i = 0; i < pageSelectorFile.length; i++) {
-
                 if (pageSelectorFile[i].teacherAppLangEN == '')
                     continue;
+
+                else if(i == pageSelectorFile.length-2 ) //last record excluding header
+                    fileEN.write("\"" + pageSelectorFile[i].Label + "\" : " + pageSelectorFile[i].teacherAppLangEN + "\n")
+                
                 else
                     fileEN.write("\"" + pageSelectorFile[i].Label + "\" : " + pageSelectorFile[i].teacherAppLangEN + ",\n")
             }
@@ -205,7 +208,11 @@ function generateAppDataJson(pageSelectorFile, inputFile) {
             for (var i = 0; i < pageSelectorFile.length; i++) {
 
                 if (pageSelectorFile[i].studentAppLangEN == '')
-                    continue;                    
+                    continue;
+
+                else if(i == pageSelectorFile.length-2 ) //last record excluding header
+                    fileEN.write("\"" + pageSelectorFile[i].Label + "\" : " + pageSelectorFile[i].studentAppLangEN + "\n")                 
+                
                 else
                     fileEN.write("\"" + pageSelectorFile[i].Label + "\" : " + pageSelectorFile[i].studentAppLangEN + ",\n")
             }
@@ -228,6 +235,10 @@ function generateAppDataJson(pageSelectorFile, inputFile) {
 
                 if (pageSelectorFile[i].teacherAppLangES == '')
                     continue;
+
+                 else if(i == pageSelectorFile.length-2 ) //last record excluding header
+                    fileES.write("\"" + pageSelectorFile[i].Label + "\" : " + pageSelectorFile[i].teacherAppLangES + "\n") 
+                
                 else
                     fileES.write("\"" + pageSelectorFile[i].Label + "\" : " + pageSelectorFile[i].teacherAppLangES + ",\n")
             }
@@ -242,7 +253,11 @@ function generateAppDataJson(pageSelectorFile, inputFile) {
             for (var i = 0; i < pageSelectorFile.length; i++) {
 
                 if (pageSelectorFile[i].studentAppLangES == '')
-                    continue;                    
+                    continue;
+
+                else if(i == pageSelectorFile.length-2 ) //last record excluding header
+                   fileES.write("\"" + pageSelectorFile[i].Label + "\" : " + pageSelectorFile[i].studentAppLangES + "\n")                       
+               
                 else
                     fileES.write("\"" + pageSelectorFile[i].Label + "\" : " + pageSelectorFile[i].studentAppLangES + ",\n")
             }

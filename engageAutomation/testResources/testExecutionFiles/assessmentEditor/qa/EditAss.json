@@ -1,0 +1,282 @@
+{
+	"Suite_1": {
+		"Name": "Basic Workflow",
+		"TestCaseRepo": [
+			"./testResources/testcaseRepository/backOffice/backOfficeTCRepository.json",
+			"./testResources/testcaseRepository/assessmentEditor/editorTCRepository.json"
+		],
+		"Before": [
+			{
+				"id": "launchUrl",
+				"description": "",
+				"testFile": "./engageAutomation/core/runner/launchUrl.js",
+				"testData": []
+			},
+			{
+				"id": "BK_TC_1",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/qa/logindata.json",
+						"jsonPath": "backoffice.user.validUser1"
+					}
+				]
+			}
+		],
+		"BeforeEach": [],
+		"Test": [
+			{
+				"id": "ASE_QUN_TC_17",
+				"description": "Click on Editor tab",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_COM_TC_9",
+				"description": "Validate that student can add instruction for each question under the 'Question' section",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizDataEdit.json",
+						"jsonPath": "editor.questions.MultipleResponse[0].questionInstruction"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1004",
+				"description": "Next Question Clicked",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_COM_TC_75",
+				"description": "Click on Media button and Set Image Media",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizDataEdit.json",
+						"jsonPath": "editor.questions.MCQ[0].question1.imagePath"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1003",
+				"description": "Next Question Clicked",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_QUN_TC_5",
+				"description": "Validate that alphanumeric text is supported in Question Title Text.",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizDataEdit.json",
+						"jsonPath": "editor.questions.MultipleResponse[0].questionTitle"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_42",
+				"description": "Validate if alpha-numeric text is allowed in the Question Text",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizDataEdit.json",
+						"jsonPath": "editor.questions.MultipleResponse[0].questionText"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1003",
+				"description": "Next Question Clicked",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_COM_TC_1004",
+				"description": "Next Question Clicked",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_COM_TC_86",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizDataEdit.json",
+						"jsonPath": "editor.questions.TrueFalse[0].audioPath"
+					}
+				]
+			},
+		
+			{
+				"id": "ASE_COM_TC_92",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizDataEdit.json",
+						"jsonPath": "editor.questions.TrueFalse[0].audioCredit"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1003",
+				"description": "Next Question Clicked",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_DND_TC_9",
+				"description": "Validate that the user can add a label in the Response Template",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizDataEdit.json",
+						"jsonPath": "editor.questions.DragDropOnImage[0].labelOptions"
+					}
+				]
+			},
+			{
+				"id": "ASE_MCQ_TC_14",
+				"description": "Validate that Option is added in  questions",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizDataEdit.json",
+						"jsonPath": "editor.questions.DragDropOnImage[0].labelOptions"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1003",
+				"description": "Next Question Clicked",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+		
+			{
+				"id": "ASE_COM_TC_15",
+				"description": "Click on Media button and Set Image Media",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizDataEdit.json",
+						"jsonPath": "editor.questions.DragDropIntoText[0].videoURL"
+					}
+				]
+			},
+
+			{
+				"id": "ASE_COM_TC_1003",
+				"description": "Next Question Clicked",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_COM_TC_42",
+				"description": "Validate if alpha-numeric text is allowed in the Question Text",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizDataEdit.json",
+						"jsonPath": "editor.questions.FIB[0].questionText"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1003",
+				"description": "Next Question Clicked",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_MAT_TC_14",
+				"description": "Set Matching - Items",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizDataEdit.json",
+						"jsonPath": "editor.questions.Matching[0].items"
+					}
+				]
+			},
+			{
+				"id": "ASE_MAT_TC_15",
+				"description": "Set Matching - Right Items",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizDataEdit.json",
+						"jsonPath": "editor.questions.Matching[0].matchedItems"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1003",
+				"description": "Next Question Clicked",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_COM_TC_1004",
+				"description": "Delete Media button",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []	
+			},
+			{
+				"id": "ASE_COM_TC_75",
+				"description": "Click on Media button and Set Image Media",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizDataEdit.json",
+						"jsonPath": "editor.questions.Ordering[0].imagePath"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1003",
+				"description": "Next Question Clicked",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_COM_TC_1004",
+				"description": "Next Question Clicked",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_COM_TC_86",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizDataEdit.json",
+						"jsonPath": "editor.questions.Classify[0].audioPath"
+					}
+				]
+			},
+		
+			{
+				"id": "ASE_COM_TC_92",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizDataEdit.json",
+						"jsonPath": "editor.questions.Classify[0].audioCredit"
+					}
+				]
+			}
+		
+		],
+		"AfterEach": [],
+		"After": []
+	}
+	
+}

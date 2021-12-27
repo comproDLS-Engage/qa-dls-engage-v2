@@ -68,6 +68,8 @@ module.exports = {
 	placeHolderHeader_txt: selectorFile.css.editorTab.placeHolderHeader_txt,
 	placeHolderIns_txt:selectorFile.css.editorTab.placeHolderIns_txt,
 	done_btn: selectorFile.css.editorTab.done_btn,
+	nextqun_btn:selectorFile.css.editorTab.nextqun_btn,
+	deleteMedia_btn:selectorFile.css.editorTab.deleteMedia_btn,
 	//--MULTIPLE RESPONSE
 	isInitialized1: function (testdata) {
 		for (var i = 0; i < testdata.length; i++) {
@@ -77,6 +79,41 @@ module.exports = {
 				console.log(testdata[i][j] + ":" + res)
 			}
 		}
+	},
+
+	deleteMediabtn: function () {
+		logger.logInto(stackTrace.get());
+		res = action.waitForClickable(this.deleteMedia_btn);
+		if (res == true) {
+			browser.pause(2000)
+			res = action.click(this.deleteMedia_btn);
+			if (res == true) {
+				res = action.waitForDisplayed(this.addImage_btn);
+				//browser.pause(5000)
+			}
+		}
+		else {
+			res = res + " -- next button is not clickable";
+			logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
+	clickNextBtn: function () {
+		logger.logInto(stackTrace.get());
+		res = action.waitForClickable(this.nextqun_btn);
+		if (res == true) {
+			browser.pause(2000)
+			res = action.click(this.nextqun_btn);
+			if (res == true) {
+				//res = action.waitForDisplayed("[role=progressbar]", undefined, true);
+				browser.pause(5000)
+			}
+		}
+		else {
+			res = res + " -- next button is not clickable";
+			logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
 	},
 	setHeaderTextinPlaceHolder: function (testdata) {
 		logger.logInto(stackTrace.get());
@@ -180,10 +217,15 @@ module.exports = {
 	//--DRAG AND DRAG ONTO IMAGE
 	clickAddLabelBtn: function (labelOptions) { //why do we need the list of options, need to discuss - akhil
 		logger.logInto(stackTrace.get());
-		var count = labelOptions.length;
-		for (var i = 0; i < count; i++) {
+		var countLabel = labelOptions.length;
+		var optionlength = action.findElements("[data-tid*=container-label")
+		if (labelOptions.length > optionlength.length) {
+			countLabel = (labelOptions.length - optionlength.length)
+		}
+		for (var i = 0; i < countLabel; i++) {
 			res = action.click(this.addLabel_btn);
 		}
+	
 		if (res == true) {
 			logger.logInto(stackTrace.get(), " -- Add Label Button is clicked");
 		}
@@ -280,6 +322,17 @@ module.exports = {
 	//--MATCHING
 	setItems: function (items) {
 		logger.logInto(stackTrace.get());
+		var countLabel = items.length;
+		console.log(countLabel)
+		var optionlength = action.findElements("[data-tid*=input-item")
+		console.log(optionlength.length)
+		//if (items.length > optionlength.length) {
+			countLabel = (items.length - optionlength.length)
+			console.log(countLabel)
+		//}
+		for (var i = 0; i < (countLabel); i++) {
+			res = action.click("[data-tid=button-add]");
+		}
 		var itemsArr = [];
 		let getValueArray = []
 		for (var i = 1; i <= items.length; i++) {
@@ -590,6 +643,7 @@ module.exports = {
 	setQuestionTitle: function (questionTitle) {
 		logger.logInto(stackTrace.get());
 		action.waitForDisplayed(this.questionTitle_input)
+	   // action.clearValueDefault(this.questionTitle_input);
 		res = action.setValue(this.questionTitle_input, questionTitle);
 		if (res == true) {
 			logger.logInto(stackTrace.get(), " -- Question Title is entered");
@@ -779,6 +833,8 @@ module.exports = {
 	//Set Question Text
 	setQuestionText: function (questionText) {
 		logger.logInto(stackTrace.get());
+		//action.clearValue(this.questionInputField)
+		//action.clearValueDefault(this.questionInputField)
 		res = action.addValue(this.questionInputField, questionText);
 		if (res == true) {
 			logger.logInto(stackTrace.get(), " -- Question Text is entered");
