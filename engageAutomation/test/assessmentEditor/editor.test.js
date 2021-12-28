@@ -33,7 +33,7 @@ module.exports = {
 	//
 	ASE_QUN_TC_17: function () {
 		sts = EditorPlayer.clickEditorTab();
-		//assertion.assertEqual(sts, 'true', "Question tab is not selected");
+		assertion.assertEqual(sts, true, "Editor tab is not selected");
 	},
 	//Validate that a new question is added by clicking on the 'Add new Question' button on the left pane
 	ASE_COM_TC_4: function (testdata) {

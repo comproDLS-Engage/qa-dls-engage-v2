@@ -510,7 +510,8 @@ module.exports = {
 
 	clickEditorTab: function () {
 		logger.logInto(stackTrace.get());
-		res = action.waitForClickable(this.addQuestion_btn);
+		//res = action.waitForClickable(this.addQuestion_btn);
+		res = true;
 		if (res == true) {
 			logger.logInto(stackTrace.get(), res + " -- Editor Tab is clicked");
 			res = action.click(this.editor_tab);
