@@ -539,7 +539,7 @@ module.exports = {
 
 	// View index
 	ENG_DIF_TC_42: function () {
-		res = action.click("[class*=MuiAppBar] > div > div > div > div > div > div> button");
+		res = action.click("[data-tid=button-indextoc]");
 		console.log(res)
 		res = action.waitForDisplayed("[data-tid=button-closeinfotoc]");
 		console.log(res)
