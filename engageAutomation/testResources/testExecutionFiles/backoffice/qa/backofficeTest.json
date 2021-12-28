@@ -1759,77 +1759,6 @@
 			}
 		]
 	},
-	"Suite5": {
-		"Name": "Create and view access codes batch",
-		"TestCaseRepo": [
-			"./testResources/testcaseRepository/backOffice/backOfficeTCRepository.json"
-		],
-		"Before": [
-			{
-				"id": "launchUrl",
-				"description": "",
-				"testFile": "./engageAutomation/core/runner/launchUrl.js",
-				"testData": []
-			},
-			{
-				"id": "BK_TC_1",
-				"description": "",
-				"testFile": "./test/backoffice/backoffice.test.js",
-				"testData": [
-					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/logindata.json",
-						"jsonPath": "backoffice.user.validUser1"
-					}
-				]
-			}
-		],
-		"BeforeEach": [],
-		"Test": [
-			{
-				"id": "BK_TC_27",
-				"description": "",
-				"testFile": "./test/backoffice/backoffice.test.js",
-				"testData": []
-			},
-			{
-				"id": "BK_TC_28",
-				"description": "",
-				"testFile": "./test/backoffice/backoffice.test.js",
-				"testData": [
-					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
-						"jsonPath": [
-							"backoffice.book[0]",
-							"backoffice.accessCodeBatch[0]"
-						]
-					}
-				]
-			},
-			{
-				"id": "BK_TC_29",
-				"description": "",
-				"testFile": "./test/backoffice/backoffice.test.js",
-				"testData": [
-					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
-						"jsonPath": [
-							"backoffice.book[0]",
-							"backoffice.accessCodeBatch[0]"
-						]
-					}
-				]
-			}
-		],
-		"AfterEach": [],
-		"After": [
-			{
-				"id": "BK_TC_7",
-				"description": "",
-				"testFile": "./test/backoffice/backoffice.test.js",
-				"testData": []
-			}
-		]
-	},
 	"Suite6": {
 		"Name": "Deletion of delete activity, folders and components",
 		"TestCaseRepo": [
@@ -2134,57 +2063,6 @@
 				"description": "",
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": []
-			}
-		],
-		"AfterEach": [],
-		"After": [
-			{
-				"id": "BK_TC_7",
-				"description": "",
-				"testFile": "./test/backoffice/backoffice.test.js",
-				"testData": []
-			}
-		]
-	},
-	"Suite5t": {
-		"Name": "Create and view access codes batch",
-		"TestCaseRepo": [
-			"./testResources/testcaseRepository/backOffice/backOfficeTCRepository.json"
-		],
-		"Before": [
-			{
-				"id": "launchUrl",
-				"description": "",
-				"testFile": "./engageAutomation/core/runner/launchUrl.js",
-				"testData": []
-			},
-			{
-				"id": "BK_TC_1",
-				"description": "",
-				"testFile": "./test/backoffice/backoffice.test.js",
-				"testData": [
-					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/logindata.json",
-						"jsonPath": "backoffice.user.validUser1"
-					}
-				]
-			}
-		],
-		"BeforeEach": [],
-		"Test": [
-			{
-				"id": "BK_TC_29",
-				"description": "",
-				"testFile": "./test/backoffice/backoffice.test.js",
-				"testData": [
-					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
-						"jsonPath": [
-							"backoffice.book[0]",
-							"backoffice.accessCodeBatch[0]"
-						]
-					}
-				]
 			}
 		],
 		"AfterEach": [],
