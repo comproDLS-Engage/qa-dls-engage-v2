@@ -59,6 +59,14 @@ module.exports = {
 
 		//assertion.assertEqual(sts, true, "item Player btn is not clicked");
 	},
+	ASE_COM_TC_87: function (testdata) {
+		sts = EditorPlayer.clickAddVideoBtn();
+		assertion.assertEqual(sts, true, "Video btn is not clicked");
+		sts = EditorPlayer.audioUpload(testdata);
+		assertion.assertEqual(sts, true, "Video is not uploaded");
+
+		//assertion.assertEqual(sts, true, "item Player btn is not clicked");
+	},
 	//  Validate that user is able to add "Title/Credits" in Audio Media
 	ASE_COM_TC_92: function (testdata) {
 		sts = EditorPlayer.setAudioCredit(testdata);

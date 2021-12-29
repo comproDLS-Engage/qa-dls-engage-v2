@@ -44,6 +44,11 @@
                     "tags": "P1"
                 },
                 {
+                    "id": "ASE_COM_TC_87",
+                    "description": "Validate that user is able to add Video using Browse button",
+                    "tags": "P1"
+                },
+                {
                     "id": "ASE_COM_TC_92",
                     "description": "Validate that user is able to add 'Title/Credits' in Audio Media",
                     "tags": "P1"

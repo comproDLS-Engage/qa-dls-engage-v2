@@ -644,6 +644,7 @@ module.exports = {
 		logger.logInto(stackTrace.get());
 		action.waitForDisplayed(this.questionTitle_input)
 	   // action.clearValueDefault(this.questionTitle_input);
+	   browser.pause(5000)
 		res = action.setValue(this.questionTitle_input, questionTitle);
 		if (res == true) {
 			logger.logInto(stackTrace.get(), " -- Question Title is entered");
@@ -810,6 +811,16 @@ module.exports = {
 	audioUpload: function (audioPath) { // this is duplicate, we should combine imageupload and audioupload - akhil
 		// use browser.uploadFile to upload the test file
 		let remoteFilePath = browser.uploadFile(audioPath);
+		// set file path value in the input field
+		res = action.addValue(this.media_input, remoteFilePath);
+		action.waitForDisplayed(this.uploadedAudio, 5000);
+		//rupsi: return audio file
+		return res;
+	},
+
+	videoUpload: function (videoPath) { // this is duplicate, we should combine imageupload and audioupload - akhil
+		// use browser.uploadFile to upload the test file
+		let remoteFilePath = browser.uploadFile(videoPath);
 		// set file path value in the input field
 		res = action.addValue(this.media_input, remoteFilePath);
 		action.waitForDisplayed(this.uploadedAudio, 5000);
