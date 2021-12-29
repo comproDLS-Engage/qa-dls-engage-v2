@@ -31,14 +31,14 @@ module.exports = {
 		assertion.assertEqual(sts, 'true', "Question tab is not selected");
 	},
 	//
-	ASE_QUN_TC_17: function (testdata) {
+	ASE_QUN_TC_17: function () {
 		sts = EditorPlayer.clickEditorTab();
 		//assertion.assertEqual(sts, 'true', "Question tab is not selected");
 	},
 	//Validate that a new question is added by clicking on the 'Add new Question' button on the left pane
 	ASE_COM_TC_4: function (testdata) {
 		sts = EditorPlayer.clickAddQuestionBtn();
-		assertion.assertEqual(sts.editorCount, 10, "Question tab is not selected");
+		assertion.assertEqual(sts.editorCount, 11, "Question tab is not selected");
 	},
 	//Validate that alphanumeric text is supported in Question Title Text.
 	ASE_QUN_TC_5: function (testdata) {
@@ -51,7 +51,6 @@ module.exports = {
 		sts = EditorPlayer.selectItemPlayerBtn(testdata);
 		//assertion.assertEqual(sts, true, "item Player btn is not clicked");
 	},
-
 	ASE_COM_TC_86: function (testdata) {
 		sts = EditorPlayer.clickAddAudioBtn();
 		assertion.assertEqual(sts, true, "Audio btn is not clicked");
@@ -354,8 +353,23 @@ module.exports = {
 		sts = EditorPlayer.clickPreviewBtn()
 		assertion.assertEqual(sts, true, "Preview button is not clicked");
 	},
-
+	//set question text for writing player
+	ASE_COM_TC_1000: function (testdata) {
+		sts = EditorPlayer.setQuestionTextinwriting(testdata)
+		assertion.assertEqual(sts, true, "Question text  mismatch");
 	
-
+	},
+	ASE_COM_TC_1001: function (testdata) {
+		sts = EditorPlayer.setHeaderTextinPlaceHolder(testdata)
+		console.log(sts)
+		assertion.assertEqual(sts, true, "Question text  mismatch");
+	
+	},
+	ASE_COM_TC_1002: function (testdata) {
+		sts=EditorPlayer.setInsTextinPlaceHolder(testdata)
+		console.log(sts)
+		assertion.assertEqual(sts, true, "Question text  mismatch");
+	
+	}
 
 }

@@ -42,10 +42,11 @@ module.exports = {
 
                                         if (specName.length > 1) {
                                             //console.log(specName)
-                                            logData.capabilities.screenResolution = global.resolution
+                                            logData.capabilities.screenResolution = global.resolution;
 
-                                            logData.specs = [specName[specName.length - 1].replace(".js", ".json")]
-                                            logData.skipAssertion = (argv.skipAssertion) ? true : false
+                                            logData.specs = [specName[specName.length - 1].replace(".js", ".json")];
+                                            logData.skipAssertion = (argv.skipAssertion) ? true : false;
+                                            logData.appVersion = global.appVersion;
 
                                             //console.log("writing to file..." + reportLogPath)
                                             fs.writeFileSync(reportLogPath, JSON.stringify(logData));

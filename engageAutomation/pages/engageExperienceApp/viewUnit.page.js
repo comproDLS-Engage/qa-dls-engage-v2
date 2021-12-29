@@ -29,9 +29,8 @@ module.exports = {
         action.waitForDocumentLoad();
         res = {
             pageStatus: action.waitForDisplayed(this.unitThumbnail),
-            appShell: null
+            appShell: appShell.isInitialized()
         };
-        res.appShell = appShell.isInitialized();
         return res;
     },
 

@@ -2,9 +2,7 @@ var express = require("express");
 var fs = require('fs');
 const PageTemplate = require('./PageTemplate.json');
 const cssProperty = require('./property.json');
-var file, pageSelectorFile, arr = [],
-    pageSelectorGroup = [],
-    k, columnName;
+var file, pageSelectorFile, arr = [], pageSelectorGroup = [], k , columnName;
 var parse = require('csv-parse');
 const fileUpload = require('express-fileupload');
 const { DH_CHECK_P_NOT_SAFE_PRIME } = require("constants");
@@ -17,10 +15,10 @@ var uploadPath;
 var app = express();
 app.use(fileUpload());
 
-app.get("/", function(request, response) {
+app.get("/", function (request, response) {
     response.sendFile(__dirname + "/index1.html");
 });
-app.post('/upload', function(req, res) {
+app.post('/upload', function (req, res) {
 
 
     if (!req.files || Object.keys(req.files).length === 0) {
@@ -34,34 +32,27 @@ app.post('/upload', function(req, res) {
 
     uploadPath = __dirname + '/uploads/' + sampleFile.name;
 
-    sampleFile.mv(uploadPath, function(err) {
+    sampleFile.mv(uploadPath, function (err) {
         if (err) {
             return res.status(500).send(err);
         }
 
         res.sendFile(__dirname + "/pageObject.html");
-        var parser = parse({ columns: true }, function(err, records) {
-
+        var parser = parse({ columns: true }, function (err, records) {
             pageSelectorFile = records;
-            columnName = parser.options.columns
-
+            columnName = parser.options.columns;
         });
-
-        // console.log("parser")
-        // console.log(parser)
-
-
         fs.createReadStream(uploadPath).pipe(parser);
     });
 });
 
-app.listen(PORT, function() {
+app.listen(PORT, function () {
     console.log('Express server listening on port ', PORT); // eslint-disable-line
 });
 //define the route for "/"
 
 
-app.get("/getvalue", function(request, response) {
+app.get("/getvalue", function (request, response) {
     var inputFile = request.query.inputFile;
     var isInitializedcheck = request.query.isInitialized;
     var getDataCheck = request.query.getData;
@@ -103,7 +94,7 @@ app.get("/getvalue", function(request, response) {
             }
             if (selectorJsonCheck) {
                 generatePageSelectorJson(pageSelectorFile, inputFile);
-                generateAppDataJson(pageSelectorFile, inputFile)
+                generateAppDataJson(pageSelectorFile, inputFile) //for app data generation
             }
             if (pageHeaderCheck) {
 
@@ -114,8 +105,8 @@ app.get("/getvalue", function(request, response) {
                             generatePageHeader(PageTemplate, param1Check, param2Check, appShellPageCheck);
                         else
                             generatePageHeader(PageTemplate, param1Check, param2Check);
-                else
-                    generatePageHeader(PageTemplate, param1Check);
+                    else
+                        generatePageHeader(PageTemplate, param1Check);
                 else
                     generatePageHeader(PageTemplate);
             }
@@ -160,11 +151,13 @@ app.get("/getvalue", function(request, response) {
 
 
             file.end();
-        } catch (err) {
+        }
+        catch (err) {
             console.log(err)
         }
 
-    } else {
+    }
+    else {
         response.send("Please provide us input File");
     }
 });
@@ -183,6 +176,7 @@ function generatePageSelectorJson(pageSelectorFile, inputFile) {
     file1.write("\n}\n}")
 }
 
+//test app data generator
 function generateAppDataJson(pageSelectorFile, inputFile) {
     var fileEN, fileES;
 
@@ -193,16 +187,16 @@ function generateAppDataJson(pageSelectorFile, inputFile) {
         if (typeof(columnName.find(o => o.name.includes('teacherAppLangEN'))) == "object") {
 
             fileEN.write("\n" + "\"" + "teacher" + "\": \n{\n");
-
+            console.log(pageSelectorFile.length)
             for (var i = 0; i < pageSelectorFile.length; i++) {
-
                 if (pageSelectorFile[i].teacherAppLangEN == '')
                     continue;
 
-                if (pageSelectorFile[i].teacherAppLangEN.charAt(0) == '[') //to check for an array
-                    fileEN.write("\"" + pageSelectorFile[i].Label + "\" : " + pageSelectorFile[i].teacherAppLangEN + ",\n")
+                else if(i == pageSelectorFile.length-2 ) //last record excluding header
+                    fileEN.write("\"" + pageSelectorFile[i].Label + "\" : " + pageSelectorFile[i].teacherAppLangEN + "\n")
+                
                 else
-                    fileEN.write("\"" + pageSelectorFile[i].Label + "\" : \"" + pageSelectorFile[i].teacherAppLangEN + "\",\n")
+                    fileEN.write("\"" + pageSelectorFile[i].Label + "\" : " + pageSelectorFile[i].teacherAppLangEN + ",\n")
             }
             fileEN.write("\n}")
         }
@@ -216,10 +210,11 @@ function generateAppDataJson(pageSelectorFile, inputFile) {
                 if (pageSelectorFile[i].studentAppLangEN == '')
                     continue;
 
-                if (pageSelectorFile[i].studentAppLangEN.charAt(0) == '[') //to check for an array
-                    fileEN.write("\"" + pageSelectorFile[i].Label + "\" : " + pageSelectorFile[i].studentAppLangEN + ",\n")
+                else if(i == pageSelectorFile.length-2 ) //last record excluding header
+                    fileEN.write("\"" + pageSelectorFile[i].Label + "\" : " + pageSelectorFile[i].studentAppLangEN + "\n")                 
+                
                 else
-                    fileEN.write("\"" + pageSelectorFile[i].Label + "\" : \"" + pageSelectorFile[i].studentAppLangEN + "\",\n")
+                    fileEN.write("\"" + pageSelectorFile[i].Label + "\" : " + pageSelectorFile[i].studentAppLangEN + ",\n")
             }
             fileEN.write("\n}")
 
@@ -241,10 +236,11 @@ function generateAppDataJson(pageSelectorFile, inputFile) {
                 if (pageSelectorFile[i].teacherAppLangES == '')
                     continue;
 
-                if (pageSelectorFile[i].teacherAppLangES.charAt(0) == '[') //to check for an array
-                    fileES.write("\"" + pageSelectorFile[i].Label + "\" : " + pageSelectorFile[i].teacherAppLangES + ",\n")
+                 else if(i == pageSelectorFile.length-2 ) //last record excluding header
+                    fileES.write("\"" + pageSelectorFile[i].Label + "\" : " + pageSelectorFile[i].teacherAppLangES + "\n") 
+                
                 else
-                    fileES.write("\"" + pageSelectorFile[i].Label + "\" : \"" + pageSelectorFile[i].teacherAppLangES + "\",\n")
+                    fileES.write("\"" + pageSelectorFile[i].Label + "\" : " + pageSelectorFile[i].teacherAppLangES + ",\n")
             }
             fileES.write("\n}")
 
@@ -259,18 +255,17 @@ function generateAppDataJson(pageSelectorFile, inputFile) {
                 if (pageSelectorFile[i].studentAppLangES == '')
                     continue;
 
-                if (pageSelectorFile[i].studentAppLangEN.charAt(0) == '[') //to check for an array
-                    fileES.write("\"" + pageSelectorFile[i].Label + "\" : " + pageSelectorFile[i].studentAppLangES + ",\n")
+                else if(i == pageSelectorFile.length-2 ) //last record excluding header
+                   fileES.write("\"" + pageSelectorFile[i].Label + "\" : " + pageSelectorFile[i].studentAppLangES + "\n")                       
+               
                 else
-                    fileES.write("\"" + pageSelectorFile[i].Label + "\" : \"" + pageSelectorFile[i].studentAppLangES + "\",\n")
+                    fileES.write("\"" + pageSelectorFile[i].Label + "\" : " + pageSelectorFile[i].studentAppLangES + ",\n")
             }
             fileES.write("\n}")
         }
         fileES.write("\n}\n}")
     }
-
 }
-
 
 
 
@@ -329,7 +324,7 @@ function generateIsinitiazeFunction(pageSelectorFile, PageTemplate, param1) {
         }
     }
     if (flag == false) {
-        file.write("pageStatus:  action.waitForDisplayed(this." + pageSelectorFile[0].Label + "),\n") // to be decided about the by default label to be selected
+        file.write("pageStatus:  action.waitForDisplayed(this." + pageSelectorFile[0].Label + "),\n")// to be decided about the by default label to be selected
     }
     if (param1)
         file.write(PageTemplate.isInitialized[param1])
@@ -347,7 +342,8 @@ function generateGetDatafunction(pageSelectorFile, key) {
     for (var i = 0; i < pageSelectorFile.length; i++) {
         if ((pageSelectorFile[i].extraInfo).toLowerCase().includes("pattern")) {
             file.write(pageSelectorFile[i].Label + ": this." + pageSelectorFile[i].Label + "_Data(),\n")
-        } else {
+        }
+        else {
             if (pageSelectorFile[i].tagName.toLowerCase().includes("img") || pageSelectorFile[i].tagName.toLowerCase().includes("svg")) {
                 file.write(pageSelectorFile[i].Label + ":(action.getElementCount(this." + pageSelectorFile[i].Label + ") > 0) ? action.waitForDisplayed(this." + pageSelectorFile[i].Label + ") : false,\n");
             } else {
@@ -457,7 +453,8 @@ function generateClickFunctions(pageSelectorFile, key, pageSelectorGroup, PageTe
                     }
                 }
             }
-        } else {
+        }
+        else {
             if (((pageSelectorFile[k].tagName).toLowerCase().includes("button")) && ((pageSelectorFile[k].extraInfo).toLowerCase().includes("pattern")) && ((pageSelectorFile[k].group) == "")) {
                 Clickfunction(pageSelectorFile[k].Label, pageSelectorFile[k].Label, pageSelectorFile[k], PageTemplate)
             }
@@ -489,7 +486,6 @@ function generateClickFunctions(pageSelectorFile, key, pageSelectorGroup, PageTe
     }
 
 }
-
 function generategroupClickfunction(pageSelectorGroup, selectorName, pageSelectorFileValue, PageTemplate) {
     var textcondition = null;
     var parentAvailable = null;
@@ -532,7 +528,8 @@ function generategroupClickfunction(pageSelectorGroup, selectorName, pageSelecto
     }
     if (parentAvailable != null || patternValue == true) {
         Clickfunction(textcondition, selectorName, pageSelectorFileValue, PageTemplate);
-    } else
+    }
+    else
         Clickfunctionindex(textcondition, selectorName, pageSelectorFileValue, PageTemplate);
 }
 
@@ -541,14 +538,15 @@ function Clickfunctionindex(textcondition, selectorName, seletorRow, PageTemplat
         "logger.logInto(stackTrace.get());\n" +
         "var i, res;\n")
     if (textcondition != selectorName) {
-        file.write("var " + textcondition + "  = action.findElements(this." + textcondition + ");\n" +
+        file.write( "var " + textcondition + "  = action.findElements(this." + textcondition + ");\n" +
             "var " + selectorName + " = action.findElements(this." + selectorName + ");\n" +
             "for (i = 0; i < " + textcondition + ".length; i++) {\n" +
             "if ((action.getText(" + textcondition + "[i]))== " + textcondition + "Name) {\n " +
             "res = action.click(" + selectorName + "[i]);\n" +
             "break;\n}\n" +
             "}\nif (res == true) {\n  logger.logInto(stackTrace.get(), \" --" + selectorName + " clicked\");\n")
-    } else {
+    }
+    else {
         file.write(
             "var " + selectorName + " = action.findElements(this." + selectorName + ");\n" +
             "for (i = 0; i < " + selectorName + ".length; i++) {\n" +
@@ -599,7 +597,8 @@ function generateReturnPage(PageTemplate, returnValue) {
             file.write("res =require ('./" + returnValueArray[0] + "').isInitialized();\n")
         else
             file.write("res= this.getData_" + returnValueArray[0] + "();");
-    } else {
+    }
+    else {
 
         file.write("res=action." + returnValueArray[0] + "(this." + returnValueArray[1])
         if (returnValueArray.length > 2) {
@@ -633,7 +632,6 @@ function generateSetValueFunctions(pageSelectorFile) {
 
     }
 }
-
 function generategroupDatafunction(group, groupName) {
 
     var generate = false;
@@ -673,7 +671,8 @@ function dataPatternGenerate(pageSelectorFile, groupName) {
     for (var i = 0; i < pageSelectorFile.length; i++) {
         if ((pageSelectorFile[i].extraInfo).toLowerCase().includes("pattern")) {
             file.write(pageSelectorFile[i].Label + ": this." + pageSelectorFile[i].Label + "_Data(),\n")
-        } else {
+        }
+        else {
             if ((pageSelectorFile[i].tagName).toLowerCase().includes("img") || (pageSelectorFile[i].tagName).toLowerCase().includes("svg")) {
                 file.write(pageSelectorFile[i].Label + ":(action.getElementCount(this." + pageSelectorFile[i].Label + ") > 0) ? action.waitForDisplayed(this." + pageSelectorFile[i].Label + ") : false,\n");
             } else
@@ -683,7 +682,6 @@ function dataPatternGenerate(pageSelectorFile, groupName) {
     file.write("}\n return obj; \n},\n\n")
     listDataGenerate1(pageSelectorFile);
 }
-
 function dataPatternGenerateWithParent(groupSelectorData, groupName, key) {
     selectedText = "";
     for (var j = 0; j < groupSelectorData.length; j++) {

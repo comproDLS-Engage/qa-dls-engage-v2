@@ -106,7 +106,17 @@ module.exports = {
             return err;
         }
     },
-
+    clearValueDefault: function (selector) {
+        message = "element:" + selector + "value:";
+        try {
+            let result = $(selector).clearValue();
+            return result;
+        } catch (err) {
+            logger.logInto(stackTrace.get(), err.message, "error");
+            return err;
+        }
+    },
+    
     clearValue: function (selector) {
         message = "element:" + selector;
         try {

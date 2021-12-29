@@ -18,6 +18,7 @@ module.exports = {
 	languageSelector_dropdown_list: selectorFile.css.ComproEngage.landingPage.languageSelector_dropdown_list,
 	footerLbl: selectorFile.css.ComproEngage.landingPage.footerLbl,
 	footerImg: selectorFile.css.ComproEngage.landingPage.footerImg,
+	appVersion: selectorFile.css.ComproEngage.landingPage.appVersion,
 
 	isInitialized: function () {
 		logger.logInto(stackTrace.get());
@@ -41,7 +42,10 @@ module.exports = {
 			selectedLanguage: (action.getElementCount(this.selectedLang) > 0) ? action.getText(this.selectedLang) : null,
 			footerLabel: (action.getElementCount(this.footerLbl) > 0) ? action.getText(this.footerLbl) : null,
 			footerImage: (action.getElementCount(this.footerImg) > 0) ? action.waitForDisplayed(this.footerImg) : false,
+			appVersion: (action.getElementCount(this.appVersion) > 0) ? action.getText(this.appVersion) : null,
 		};
+		if (global.appVersion == undefined)
+			global.appVersion = obj.appVersion;
 		return obj;
 	},
 
@@ -98,4 +102,4 @@ module.exports = {
 		}
 		return res;
 	}
-}
+};

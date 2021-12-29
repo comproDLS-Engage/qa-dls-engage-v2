@@ -217,6 +217,11 @@
                     "id": "BK_TC_42",
                     "description": "Validate that edit folder page opens on clicking the modify options button",
                     "tags": "P1"
+                },
+                {
+                    "id": "BK_TC_999",
+                    "description": "launch url and republish native LO",
+                    "tags": "P1"
                 }
             ]
         }

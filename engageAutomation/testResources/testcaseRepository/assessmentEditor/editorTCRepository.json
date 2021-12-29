@@ -1,7 +1,7 @@
 {
     "appname": "Assessment Editor",
     "appdetails": "",
-    "selectorFile": "./core/selectors/assessmentEditor/editorSelectors.json",
+    "selectorFile": "./testResources/selectors/assessmentEditor/editorSelectors.json",
     "modules": [
         {
             "modulename": "Assessment Editor",
@@ -163,6 +163,21 @@
                 {
                     "id": "ASE_COM_TC_999",
                     "description": "Click on save and return",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1000",
+                    "description": "set question text",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1001",
+                    "description": "Set Header Title text from placeHolder",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1002",
+                    "description": "Set Instruction text from placeHolder",
                     "tags": "P1"
                 }
             ]

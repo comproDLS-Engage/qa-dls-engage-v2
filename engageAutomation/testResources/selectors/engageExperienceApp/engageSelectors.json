@@ -1,10 +1,7 @@
 {
-    "css":
-    {
-        "ComproEngage":
-        {
-            "landingPage":
-            {
+    "css": {
+        "ComproEngage": {
+            "landingPage": {
                 "headingText": "[data-tid='text-mainheading']",
                 "subheadingText": "[data-tid=text-subheading]",
                 "signupBtn": "[data-tid=button-register]",
@@ -18,10 +15,9 @@
                 "loginLbl": "[data-tid=text-haveanaccount]",
                 "footerLbl": "[data-tid=text-poweredby]",
                 "footerImg": "[data-tid=image-comprodls]",
-                "footerVersion": ""
+                "appVersion": "[data-tid=text-versionInfo]"
             },
-            "loginPage":
-            {
+            "loginPage": {
                 "userName_tbox": "#login-user",
                 "password_tbox": "#login-pass",
                 "login_btn": "[data-tid=button-login]",
@@ -44,18 +40,16 @@
                 "emailPasswordError": "[data-tid=text-info]",
                 "loginbtnState": "button[class*='TwtyK']"
             },
-            "SignUpPage":
-            {
+            "SignUpPage": {
                 "signUpEmailPage_btn": "[data-tid=button-signup]"
             },
-            "widgets":
-            {
+            "widgets": {
                 "loaderIcon": "[data-tid=image-loader]",
                 "snackbarInfo_txt": "[data-tid=text-info] p, [data-tid=text-error], [data-tid=text-success]",
                 "snackbarClose_btn": "[data-tid=button-close]"
             },
-            "appShell":
-            {
+            "appShell": {
+                "headerbandDiv": "header > div",
                 "toggleSidebarBtn": "[aria-label=toggle-sidebar]",
                 "custLogo": "[data-tid=image-headerLogo]",
                 "dashboardBtn": "[data-tid=button-dashboard]",
@@ -97,8 +91,7 @@
                 "newPlaylistOption": "[data-tid=button-newPlaylistOption]",
                 "component": "[data-tid*=button-product-"
             },
-            "dashboard":
-            {
+            "dashboard": {
                 "pageTitle": "[data-tid=text-pageTitle]",
                 "createPlaylistBtn": "[data-tid=button-CreatePlaylist]",
                 "addBookBtn": "[data-tid=button-addBook]",
@@ -143,15 +136,13 @@
                 "recentlyViewedHeading": "[data-tid=text-recentActivitiesTitle]",
                 "recentlyViewed_activities": "[data-tid*=text-name-recent-"
             },
-            "classDrawer":
-            {
+            "classDrawer": {
                 "classDrawerHeader": "[data-tid=text-drawerHeaderTitle]",
                 "classDrawerTitle": "[data-tid=text-ClassesTitle]",
                 "classDrawerSubTitle": "[data-tid=text-ClassesSubtitle]",
                 "classDrawerCloseBtn": "[data-tid=button-close]"
             },
-            "Calender":
-            {
+            "Calender": {
                 "calenderYear": "//h6[contains(@class,'MuiTypography-subtitle1')]",
                 "calenderCurrentMonth": "//div[contains(@class,'MuiPickersCalendarHeader')]/p",
                 "calenderLeftArrow": "//button[contains(@class,'MuiPickersCalendarHeader-iconButton')][1]",
@@ -203,8 +194,7 @@
                 "filterMenuClearAllBtn": "[data-tid=btn-filtermenu-label-clearall]",
                 "filterMenuApplyBtn": "[data-tid=button-apply-filter]"
             },
-            "myClassPage":
-            {
+            "myClassPage": {
                 "pageTitle": "main h1",
                 "pageSubTitle": "main div>span",
                 "pageIconNoClassArchived": "[data-tid=image-noClasses]",
@@ -234,7 +224,7 @@
                 "materialsOption": "div[style*='opacity: 1'] li[data-tid*='button-material']",
                 "viewClassOption": "div[style*='opacity: 1'] li[data-tid*='button-class']",
                 "progressOption": "div[style*='opacity: 1'] li[data-tid*='button-progress']",
-                "msgBar": "[data-tid='text-success']",
+                "msgBar": "[data-tid='text-success'] p",
                 "msgBarClose": "[data-tid=button-close]",
                 "classCard": "[data-tid=button-class-",
                 "futureTab": "[aria-label*=\"class card ",
@@ -248,8 +238,7 @@
                 "helpJoiningClass": "[data-tid=anchor-skip]",
                 "closebtn": "[data-tid=button-joincourseclose]"
             },
-            "createClassPage":
-            {
+            "createClassPage": {
                 "pageTitle": "[data-tid='text-pageTitle']",
                 "pageSubTitle": "[data-tid='text-pageSubTitle']",
                 "classHeader": "[data-tid='text-classheader']",
@@ -259,7 +248,7 @@
                 "title_txtbox": "#input-title",
                 "desc_lbl": "label[for='input-description']",
                 "desc_txtbox": "#input-description",
-                "title_lbl": "label[for='input-title']",
+                "title_lbl": "[data-tid=text-titleLabel]",
                 "startDate_txtbox": "#input-startDate",
                 "startDate_lbl": "label[for='input-startDate']",
                 "endDate_txtbox": "#input-endDate",
@@ -280,8 +269,7 @@
                 "bookCard": "label[class*='MuiFormControlLabel']:nth-child(",
                 "bookSkeleton": "span[class*='MuiSkeleton-text']:nth-child(1)"
             },
-            "addBookPage":
-            {
+            "addBookPage": {
                 "pageTitle": "[data-tid*='text-pageTitle']",
                 "pageSubTitle": "[data-tid*='text-pageSubTitle']",
                 "bookImgIcon": "[data-tid*=img-bookCover-",
@@ -302,13 +290,11 @@
                 "search_NoResult_subTitle": "[data-tid=text-noResultFoundBilinear]",
                 "searchPill": "[data-tid=chip-search]",
                 "closeSearchPill": "[data-tid=chip-search] svg",
-                "dashboard":
-                {
+                "dashboard": {
                     "bookAddedIcon": "[data-tid*=icon-added-",
                     "addBook_Btn": "[data-tid*=button-addBook-"
                 },
-                "browse":
-                {
+                "browse": {
                     "moreOptions": "[data-tid*=button-contextMenu-",
                     "viewClass_btn": "[data-tid*=button-viewClass-",
                     "createClass_btn": "[data-tid*=button-createClass-",
@@ -321,8 +307,7 @@
                     "goToPage": "[aria-label*='page ",
                     "currentPage": "[aria-label^='page"
                 },
-                "classWorkflow":
-                {
+                "classWorkflow": {
                     "myBooksTab": "[data-tid='button-product-0']",
                     "allBooksTab": "[data-tid='button-product-1']",
                     "addtoClassbtn": "[data-tid=\"button-Add to Class\"]",
@@ -337,8 +322,7 @@
                     "addBookbtn": "[data-tid*=button-add-"
                 }
             },
-            "successClassPage":
-            {
+            "successClassPage": {
                 "viewClass": "[data-tid='button-View Class']",
                 "backToHomeBtn": "[data-tid='button-backtohome']",
                 "success_img": "[alt='Success page']",
@@ -348,8 +332,7 @@
                 "copy_txt": "[data-tid='text-copy']",
                 "copy_btn": "[data-tid='button-copy'] span"
             },
-            "classDetailsStudent":
-            {
+            "classDetailsStudent": {
                 "bookCoverIcon": "[data-tid=image-bookCover]",
                 "className": "[data-tid=text-bandTitle]",
                 "BookName": "[data-tid='text-bandSubtitle]",
@@ -360,8 +343,7 @@
                 "classDatesLabel": "p[data-tid='text-metaLabel-0']",
                 "instructorLabel": "p[data-tid='text-metaLabel-1']"
             },
-            "teacherViewClassPage":
-            {
+            "teacherViewClassPage": {
                 "pageTitle": "[data-tid=text-pageTitle]",
                 "pageSubTitle": "[data-tid=text-pageSubtitle]",
                 "gradebookBtn": "[data-tid=button-gradebook]",
@@ -399,8 +381,7 @@
                 "viewMessagebtn": "[data-tid=button-message-",
                 "studentList": "[data-tid*=list-"
             },
-            "itemPlayer":
-            {
+            "itemPlayer": {
                 "correctIcon": "[data-tid=icon-correct]",
                 "incorrectIcon": "[data-tid=icon-incorrect]",
                 "questionText": "[data-tid=text-question]",
@@ -412,8 +393,7 @@
                 "activeQues": "div[class*=item-player-container] > div[style='height: 100%; display: block;'], div[class*=item-player-container] > div[style='height: 100%;']",
                 "imageScelaton": "img[src*=\"data:image\"]"
             },
-            "testPlayer":
-            {
+            "testPlayer": {
                 "checkMyWork_btn": "[class=buttons-container] [class=defaultBtn-check-mywork-icon] , [data-tid=button-checkAnswers],[data-tid=button-checkanswers], [data-tid=button-check]",
                 "next_btn": "[id=next], [data-tid=button-next], [data-tid=button-goNext]",
                 "previous_btn": "[id=previous], [data-tid=button-previous], [data-tid=button-goPrev]",
@@ -424,49 +404,45 @@
                 "showingCorrectAnswer_txt": "p[data-tid=text-showingcorrectanswer]",
                 "hint_btn": "[data-tid=button-hint]"
             },
-            "MCQB":
-            {
+            "MCQB": {
                 "choice": "div[data-tid=input-click-option-",
                 "choices": "div[data-tid*=input-click-option-]",
                 "selectedChoice": "svg[data-tid=icon-selected]"
             },
-            "FIB":
-            {
+            "multiMcq": {
+                "choices": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-tid*=input-click-option-sub-question-",
+                "selectedChoice": "[aria-checked=true]"
+            },
+            "FIB": {
                 "source": "[data-tid=dragsource-option-",
                 "target": "[data-tid=droptarget-option-"
             },
-            "FIBText":
-            {
+            "FIBText": {
                 "response": "[data-tid=input-response-",
                 "responses": "[data-tid*='input-response']"
             },
-            "dragAndDrop":
-            {
+            "dragAndDrop": {
                 "source": "[data-tid=dragsource-option-",
                 "target": "[data-tid=droptarget-option-",
                 "tapToZoom": "[data-tid='button-taptozoom']",
                 "zoomOverlay": "[class*='zoom-overlay']",
                 "zoomDialogClose_btn": "[data-tid='button-zoomdialogclose']"
             },
-            "MCMR":
-            {
+            "MCMR": {
                 "choice": "div[data-tid=input-click-option-",
                 "choices": "div[data-tid*=input-click-option-]",
                 "selectedChoice": "svg[data-tid=icon-selected]"
             },
-            "Matching":
-            {
+            "Matching": {
                 "left": "[data-tid*=input-left-item-",
                 "right": "[data-tid*=input-right-item-"
             },
-            "orderList":
-            {
+            "orderList": {
                 "option": "li[data-tid=input-drag-option-",
                 "options": "li[data-tid*=input-drag-option-]",
                 "listIndex": "li[data-tid]:nth-child("
             },
-            "activitiyPlayer":
-            {
+            "activitiyPlayer": {
                 "breadCrumbTitle": "[data-tid=breadcrumb-productTitle]",
                 "index_btn": "[data-tid=text-chaptertitle]",
                 "infoTOC": "[data-tid=button-openinfotoc]",
@@ -483,8 +459,7 @@
                 "showingCorrectAnswer_txt": "[data-tid=text-showingcorrectanswer]",
                 "restart_btn": "[data-tid=button-resetActivity],[data-tid=button-retakeActivity]"
             },
-            "viewBook":
-            {
+            "viewBook": {
                 "bookCover": "[data-tid=image-bookCover]",
                 "bookTitle": "[data-tid=text-bookTitle]",
                 "bookSubTitle": "[data-tid=text-bookSubtitle]",
@@ -519,8 +494,7 @@
                 "lastActivity_Continue": "[data-tid=button-lastActivityContinue]",
                 "flipbookList": "[data-tid*=button-flipbookProduct-"
             },
-            "viewUnit":
-            {
+            "viewUnit": {
                 "unitThumbnail": "[data-tid*=image-unit-thumbnail]",
                 "unitName": "[data-tid=text-chaptername]",
                 "unitNumber": "[data-tid=text-productname]",
@@ -539,8 +513,7 @@
                 "openFlipbook_moreOptions": "[data-tid=*menu-open-in-flipbook-",
                 "viewActivity_moreOptions": "[data-tid=*menu-view-activity-"
             },
-            "OnboardingUser":
-            {
+            "OnboardingUser": {
                 "logo": "[data-tid=image-brandlogo]",
                 "logout": "[data-tid='button-onboardinglogout']",
                 "back_button": "[data-tid=button-onboardingback]",
@@ -597,8 +570,7 @@
                 "insSuccess_proceedCreateClass_btn": "[data-tid=button-proceedandcreateclasses]",
                 "helper_txt": "#class-key-input-helper-text"
             },
-            "settings":
-            {
+            "settings": {
                 "pageTitle": "[data-tid=text-pageTitle]",
                 "pageSubTitle": "[data-tid=text-pageSubTitle]",
                 "pageHeading": "[data-tid=text-myDetailsHeading]",
@@ -656,19 +628,23 @@
                 "resetSettingsCancelBtn": "[data-tid=button-secondary-reset-user-settings]",
                 "resetSettingsConfirmBtn": "[data-tid=button-primary-reset-user-settings]"
             },
-            "flipbook.page":
-            {
+            "flipbook": {
                 "readerContainerWrapper": "[id='reader-container-wrapper']",
-                "pageLayoutDouble": "[id=readerpagedivB][class*=display-none]",
+                "pageLayoutSingle": "[id=readerpagedivA][style='width: 100%;']",
+                "pageLayoutDouble": "[id=readerpagedivB]:not([class*=display-none])",
+                "penBtn": "[data-tid='button-toolbar-item-0-0'][aria-disabled='false']",
+                "highlighterBtn": "[data-tid='button-toolbar-item-0-1'][aria-disabled='false']",
+                "eraserBtn": "[data-tid='button-toolbar-item-0-2'][aria-disabled='false']",
+                "undoBtn": "[data-tid='button-toolbar-item-0-3'][aria-disabled='false']",
+                "redoBtn": "[data-tid='button-toolbar-item-0-4'][aria-disabled='false']",
                 "notesDockContainer": "[id=dock-container] > [id=dialog-notes]",
-                "notesBtn": "[data-tid='button-toolbar-item-0-0']",
-                "annotationsBtn": "[data-tid='button-toolbar-item-0-1']",
-                "zoomInBtn": "[data-tid='button-toolbar-item-1-0']",
-                "zoomOutBtn": "[data-tid='button-toolbar-item-1-1']",
-                "fitToScreenBtn": "[data-tid='button-toolbar-item-1-2']",
-                "doublePageBtn": "[data-tid='button-toolbar-item-1-3']",
-                "singlePageBtn": "[data-tid='button-toolbar-item-1-4']",
-                "fullScreenBtn": "[data-tid='button-toolbar-item-1-5']",
+                "notesBtn": "[data-tid='button-toolbar-item-1-0']",
+                "zoomInBtn": "[data-tid='button-toolbar-item-1-1'][aria-disabled='false']",
+                "zoomOutBtn": "[data-tid='button-toolbar-item-1-2'][aria-disabled='false']",
+                "fitToScreenBtn": "[data-tid='button-toolbar-item-1-3'][aria-disabled='false']",
+                "doublePageBtn": "[data-tid='button-toolbar-item-1-4'][aria-disabled='false']",
+                "singlePageBtn": "[data-tid='button-toolbar-item-1-5'][aria-disabled='false']",
+                "fullScreenBtn": "[data-tid='button-toolbar-item-1-6'][aria-disabled='false']",
                 "bookmarkBtn": "[data-tid='button-toolbar-item-2-0']",
                 "TOCBtn": "[data-tid='button-toolbar-item-2-1']",
                 "previousBtn": "[data-tid='button-toolbar-item-2-2']",
@@ -677,13 +653,13 @@
                 "notesDockBtn": "[data-tid=notebox-button-dock]",
                 "notesUndockBtn": "[data-tid=notebox-button-undock]",
                 "notesCloseBtn": "button[data-tid='notebox-button-cancel']",
-                "addNoteBtn": "button[data-tid='button-note-this-page']",
+                "addNoteBtn": "button[data-tid='button-add-note']",
                 "noNoteIcon": "img[data-tid='icon-no-note']",
                 "noNoteText": "[data-tid='text-no-note']",
                 "noteListItemLabel": "[data-tid*='note-list-item-label-",
                 "noteListItemText": "[data-tid*='text-note-list-",
-                "noteListDeleteBtn": "button[data-tid*='btn-delete-]",
-                "noteListEditBtn": "button[data-tid*='btn-edit-]",
+                "noteListDeleteBtn": "button[data-tid*='btn-delete-",
+                "noteListEditBtn": "button[data-tid*='btn-edit-",
                 "addNotesTitle": "[data-tid=label-text-notes-add-header],[data-tid=label-text-notes-edit-header]",
                 "notesPageLabel": "[data-tid=label-text-page-number]",
                 "notesPageValueSingle": "[data-tid=label-text-page-number-value]",
@@ -704,8 +680,9 @@
                 "bookmarkListItemLabel": "[data-tid*='bookmark-list-item-label-",
                 "bookmarkListItemName": "[data-tid*='bookmark-list-item-name-",
                 "bookmarkListDeleteBtn": "button[data-tid='btn-delete']",
-                "bookmarkListEditBtn": "button[data-tid='btn-edit']",
+                "bookmarkListEditBtn": "button[data-tid='btn-edit-",
                 "bookmarkNameLabel": "[data-tid='text-label-edit-bookmark']",
+                "bookmarkPageLabel": "[data-tid='label-text-page-number']",
                 "bookmarkPageValueSingle": "[data-tid=label-text-page-number-value]",
                 "bookmarkPageValueLeft": "[data-tid=text-option-0]",
                 "bookmarkPageValueRight": "[data-tid=text-option-1]",
@@ -718,8 +695,49 @@
                 "jumpToPageBtn": "[data-tid=button-closeicon]",
                 "resourceTitle": "[data-tid*=text-resourcetitle-]"
             },
-            "activityPlayer":
-            {
+            "playlist": {
+                "playlistPageTitle": "[data-tid='text-playlistTitle']",
+                "playlistPageSubtitle": "[data-tid='text-playlistSubtitle']",
+                "playlistResourceCount": "[data-tid='text-playlistResourcesWithCount']",
+                "playlistCreatedOn": "[data-tid='text-playlistCreatedOn']",
+                "playlistOptionsBtn": "[data-tid='button-playlistOptions']",
+                "playlistShareBtn": "[data-tid='button-sharePlaylist']",
+                "browseAllResourcesBtn": "[data-tid='button-browseAllResources']",
+                "noPlaylistImage": "[data-tid='image-noPlaylist']",
+                "noPlaylistTitle": "[data-tid='text-title-noPlaylist']",
+                "noPlaylistSubtitle": "[data-tid='text-subtitle-noPlaylist']",
+                "itemIndex_Header": "[data-tid='text-serialNo']",
+                "itemName_Header": "[data-tid='text-listTitle']",
+                "itemType_Header": "[data-tid='text-listType']",
+                "itemTag_Header": "[data-tid='text-listTags']",
+                "itemIndex": "[data-tid*='text-itemIndex-",
+                "itemName": "[data-tid*='text-itemName-",
+                "itemType": "[data-tid*='text-itemType-",
+                "itemTag": "[data-tid*='text-itemTag-0-",
+                "itemMoreOptions": "[data-tid='button-contextMenu-",
+                "playlistFooterTitle": "[data-tid='text-footerTitle']",
+                "playlistFooterSubtitle": "[data-tid='text-footerSubtitle']",
+                "playlistBrowseResourcesBtn": "[data-tid='button-browseResources']",
+                "playlistReorderOption": "[data-tid='button-reorderPlaylist']",
+                "playlistEditOption": "[data-tid='button-editPlaylist']",
+                "playlistDeleteOption": "[data-tid='button-deletePlaylist']",
+                "editPlaylistNameLabel": "[data-tid='text-createPlaylistLabel']",
+                "editPlaylistNameInput": "[id='input-createPlaylist']",
+                "editPlaylistCancelBtn": "[data-tid='button-cancelCreatePlaylist']",
+                "editPlaylistSaveBtn": "[data-tid='button-savePlaylist']",
+                "deletePlaylistTitle": "[data-tid='text-title-deletePlaylist']",
+                "deletePlaylisSubtitle": "[data-tid='text-subTitle-deletePlaylist']",
+                "deletePlaylistCancelBtn": "[data-tid='button-secondary-deletePlaylist']",
+                "deletePlaylistDeleteBtn": "[data-tid='button-primary-deletePlaylist']",
+                "removeResourceTitle": "[data-tid='text-title-removeResource']",
+                "removeResourceSubtitle": "[data-tid='text-subTitle-removeResource']",
+                "removeResourceCancelBtn": "[data-tid='button-secondary-removeResource']",
+                "removeResourceRemoveBtn": "[data-tid='button-primary-removeResource']",
+                "viewOptionResourceItem": "[data-tid*='button-viewDetails-",
+                "shareOptionResourceItem": "[data-tid*='button-shareDetails-",
+                "removeOptionResourceItem": "[data-tid*='button-removeDetails-"
+            },
+            "activityPlayer": {
                 "infoBtn": "[data-tid='button-openinfotoc']",
                 "showDetailsBtn": "[data-tid=button-activityinfopanelswitcher]",
                 "quesNumber": "[data-tid=text-currentquestion]",

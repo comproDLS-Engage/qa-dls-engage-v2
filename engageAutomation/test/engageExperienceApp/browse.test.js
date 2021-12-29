@@ -156,7 +156,7 @@ module.exports = {
 
 	//Validate that clicking on a resource launches the Global Resources view page
 	ENG_GLOB_TC_26: function (testdata) {
-		sts = browsePage.click_cardImgIcon(testdata[0]);
+		sts = browsePage.click_cardImgIcon(testdata);
 		assertion.assertEqual(sts, true, "View status Mismatch");
 
 	},

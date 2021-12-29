@@ -13,7 +13,7 @@
                     {
                         "index": 0,
                         "title": "1. Unit 1",
-                        "activityCount": "2",
+                        "activityCount": "1",
                         "folderCount": "1",
                         "flipbookPageNum": "3",
                         "section": [
@@ -21,7 +21,6 @@
                                 "index": 0,
                                 "name": "Part 1",
                                 "activity": [
-                                    "Presentation 1",
                                     "Presentation 2"
                                 ]
                             },
@@ -47,7 +46,7 @@
                     {
                         "index": 0,
                         "title": "1. Unit 1",
-                        "activityCount": "2",
+                        "activityCount": "3",
                         "folderCount": "1",
                         "flipbookPageNum": "3",
                         "section": [
@@ -63,7 +62,6 @@
                                 "index": 1,
                                 "name": "Part2",
                                 "activity": [
-                                    "VDP Non-Scorable Activity",
                                     "Presentation Slides Activity"
                                 ]
                             }
@@ -90,6 +88,22 @@
                                 "name": "",
                                 "activity": [
                                     "Native LO 1"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "index": 1,
+                        "title": "Unit 2",
+                        "activityCount": "1",
+                        "folderCount": "0",
+                        "flipbookPageNum": "",
+                        "section": [
+                            {
+                                "index": 0,
+                                "name": "",
+                                "activity": [
+                                    "Native LO 2"
                                 ]
                             }
                         ]
