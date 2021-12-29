@@ -96,16 +96,17 @@ module.exports = {
         }
     },
 
-    getValue: function (selector, value) {
-        message = "element:" + selector + "value:" + value;
+    getValue: function (selector) {
+        message = "element:" + selector;
         try {
-            let result = $(selector).getValue(value);
+            let result = $(selector).getValue();
             return result;
         } catch (err) {
             logger.logInto(stackTrace.get(), err.message, "error");
             return err;
         }
     },
+
     clearValueDefault: function (selector) {
         message = "element:" + selector + "value:";
         try {
