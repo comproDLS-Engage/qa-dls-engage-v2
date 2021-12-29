@@ -42,18 +42,18 @@ module.exports = {
     filterMenuApplyBtn: selectorFile.css.ComproEngage.browse.filterMenuApplyBtn,
 
 
-    isInitialized: function() {
+    isInitialized: function () {
         var res;
         logger.logInto(stackTrace.get());
         action.waitForDocumentLoad();
         res = {
-            pageStatus: action.waitForDisplayed(this.pageTitle),
+            pageStatus: action.waitForDisplayed(this.cardTitle + "," + this.search_NoResult_img),
             appShellPage: appShellPage.isInitialized()
         };
         return res;
     },
 
-    getData_browsePage: function() {
+    getData_browsePage: function () {
         logger.logInto(stackTrace.get());
         action.waitForDisplayed(this.searchIcon) //manually edited
         var obj;
@@ -74,7 +74,7 @@ module.exports = {
         return obj;
     },
 
-    getData_resourceCategory: function(resourceCategoryName) {
+    getData_resourceCategory: function (resourceCategoryName) {
         logger.logInto(stackTrace.get());
         var obj = [],
             i, arr = [];
@@ -101,7 +101,7 @@ module.exports = {
         return obj;
     },
 
-    getData_resourceList: function(cardTitleName) {
+    getData_resourceList: function (cardTitleName) {
         logger.logInto(stackTrace.get());
         var obj = [],
             i, arr = [];
@@ -134,7 +134,7 @@ module.exports = {
                     //manual edit
                     moreOptionsBtn: action.getText(moreOptionsBtn[i]),
                     cardTitle: action.getText(cardTitle[i]),
-                    cardSubTitle: action.getText(cardSubTitle[i]) ,
+                    cardSubTitle: action.getText(cardSubTitle[i]),
                     cardImgIcon: action.waitForDisplayed(cardImgIcon[i]),
                     cardLockIcon: action.waitForDisplayed(cardLockIcon[i]),
                 }
@@ -143,7 +143,7 @@ module.exports = {
         return obj;
     },
 
-    getData_moreOptions: function() {
+    getData_moreOptions: function () {
         logger.logInto(stackTrace.get());
         var obj;
         obj = {
@@ -154,7 +154,7 @@ module.exports = {
         return obj;
     },
 
-    getData_addToPlaylist: function() {
+    getData_addToPlaylist: function () {
         logger.logInto(stackTrace.get());
         var obj;
         obj = {
@@ -163,7 +163,7 @@ module.exports = {
         return obj;
     },
 
-    listOfPlaylist_Data: function() {
+    listOfPlaylist_Data: function () {
         logger.logInto(stackTrace.get());
         var i, list;
         var listOfPlaylist_Arr = [];
@@ -175,7 +175,7 @@ module.exports = {
         return listOfPlaylist_Arr;
     },
 
-    getData_searchList: function() {
+    getData_searchList: function () {
         logger.logInto(stackTrace.get());
         var obj;
         obj = {
@@ -187,7 +187,7 @@ module.exports = {
         return obj;
     },
 
-    searchList_Data: function() {
+    searchList_Data: function () {
         logger.logInto(stackTrace.get());
         var i, list;
         var searchList_Arr = [];
@@ -199,7 +199,7 @@ module.exports = {
         return searchList_Arr;
     },
 
-    getData_searchNoResults: function() {
+    getData_searchNoResults: function () {
         logger.logInto(stackTrace.get());
         var obj;
         obj = {
@@ -210,7 +210,7 @@ module.exports = {
         return obj;
     },
 
-    getData_filterMenu: function() {
+    getData_filterMenu: function () {
         logger.logInto(stackTrace.get());
         var obj;
         obj = {
@@ -224,7 +224,7 @@ module.exports = {
     },
 
 
-    click_filtersBtn: function() {
+    click_filtersBtn: function () {
         logger.logInto(stackTrace.get());
         var res;
         res = action.click(this.filtersBtn);
@@ -237,7 +237,7 @@ module.exports = {
         return res;
     },
 
-    click_previousPageArrow: function() {
+    click_previousPageArrow: function () {
         logger.logInto(stackTrace.get());
         var res;
         res = action.click(this.previousPageArrow);
@@ -250,7 +250,7 @@ module.exports = {
         return res;
     },
 
-    click_nextPageArrow: function() {
+    click_nextPageArrow: function () {
         logger.logInto(stackTrace.get());
         var res;
         res = action.click(this.nextPageArrow);
@@ -263,7 +263,7 @@ module.exports = {
         return res;
     },
 
-    click_viewAllBtn: function(resourceCategoryName) {
+    click_viewAllBtn: function (resourceCategoryName) {
         logger.logInto(stackTrace.get());
         var i, res;
         var resourceCategory = action.findElements(this.resourceCategory);
@@ -282,7 +282,7 @@ module.exports = {
         return res;
     },
 
-    click_moreOptionsBtn: function(cardTitleName) {
+    click_moreOptionsBtn: function (cardTitleName) {
         logger.logInto(stackTrace.get());
         var i, res;
         var cardTitle = action.findElements(this.cardTitle);
@@ -301,7 +301,7 @@ module.exports = {
         return res;
     },
 
-    click_cardImgIcon: function(cardTitleName) {
+    click_cardImgIcon: function (cardTitleName) {
         logger.logInto(stackTrace.get());
         var i, res;
         var cardTitle = action.findElements(this.cardTitle);
@@ -319,7 +319,7 @@ module.exports = {
         return res;
     },
 
-    click_viewOption: function() {
+    click_viewOption: function () {
         logger.logInto(stackTrace.get());
         var res;
         res = action.click(this.viewOption);
@@ -331,7 +331,7 @@ module.exports = {
         return res;
     },
 
-    click_addToPlaylistOption: function() {
+    click_addToPlaylistOption: function () {
         logger.logInto(stackTrace.get());
         var res;
         res = action.click(this.addToPlaylistOption);
@@ -344,7 +344,7 @@ module.exports = {
         return res;
     },
 
-    click_shareOption: function() {
+    click_shareOption: function () {
         logger.logInto(stackTrace.get());
         var res;
         res = action.click(this.shareOption);
@@ -356,7 +356,7 @@ module.exports = {
         return res;
     },
 
-    click_listOfPlaylist: function(listOfPlaylistName) {
+    click_listOfPlaylist: function (listOfPlaylistName) {
         logger.logInto(stackTrace.get());
         var i, list, res;
         list = action.findElements(this.listOfPlaylist);
@@ -373,7 +373,7 @@ module.exports = {
         return res;
     },
 
-    click_searchList: function(searchListName) {
+    click_searchList: function (searchListName) {
         logger.logInto(stackTrace.get());
         var i, list, res;
         list = action.findElements(this.searchList);
@@ -390,7 +390,7 @@ module.exports = {
         return res;
     },
 
-    click_showMoreResults: function() {
+    click_showMoreResults: function () {
         logger.logInto(stackTrace.get());
         var res;
         res = action.click(this.showMoreResults);
@@ -403,7 +403,7 @@ module.exports = {
         return res;
     },
 
-    click_clearSearch: function() {
+    click_clearSearch: function () {
         logger.logInto(stackTrace.get());
         var res;
         res = action.click(this.clearSearch);
@@ -416,7 +416,7 @@ module.exports = {
         return res;
     },
 
-    click_closeSearchPill: function() {
+    click_closeSearchPill: function () {
         logger.logInto(stackTrace.get());
         var res;
         res = action.click(this.closeSearchPill);
@@ -429,7 +429,7 @@ module.exports = {
         return res;
     },
 
-    click_goToPage: function(num) { //manual edit
+    click_goToPage: function (num) { //manual edit
         logger.logInto(stackTrace.get());
         var res;
         res = action.click(this.goToPage + num);
@@ -442,7 +442,7 @@ module.exports = {
         return res;
     },
 
-    click_filterMenuCloseBtn: function() {
+    click_filterMenuCloseBtn: function () {
         logger.logInto(stackTrace.get());
         var res;
         res = action.click(this.filterMenuCloseBtn);
@@ -455,7 +455,7 @@ module.exports = {
         return res;
     },
 
-    click_filterMenuClearAllBtn: function() {
+    click_filterMenuClearAllBtn: function () {
         logger.logInto(stackTrace.get());
         var res;
         res = action.click(this.filterMenuClearAllBtn);
@@ -467,7 +467,7 @@ module.exports = {
         return res;
     },
 
-    click_filterMenuApplyBtn: function() {
+    click_filterMenuApplyBtn: function () {
         logger.logInto(stackTrace.get());
         var res;
         res = action.click(this.filterMenuApplyBtn);
@@ -479,7 +479,7 @@ module.exports = {
         return res;
     },
 
-    set_searchBox: function(value) {
+    set_searchBox: function (value) {
         var res;
         logger.logInto(stackTrace.get());
         res = action.setValue(this.searchBox, value);

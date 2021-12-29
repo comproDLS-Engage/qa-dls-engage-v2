@@ -154,6 +154,12 @@ module.exports = {
 		assertion.assertEqual(sts.listOfPlaylist[0], testdata, "listOfPlaylist count Mismatch");
 	},
 
+	//Validate that clicking on the playlist name adds the resource to the playlist
+	ENG_GLOB_TC_25: function (testdata) {
+		sts = browsePage.click_listOfPlaylist(testdata)
+		assertion.assertEqual(sts, true);
+	},
+
 	//Validate that clicking on a resource launches the Global Resources view page
 	ENG_GLOB_TC_26: function (testdata) {
 		sts = browsePage.click_cardImgIcon(testdata);

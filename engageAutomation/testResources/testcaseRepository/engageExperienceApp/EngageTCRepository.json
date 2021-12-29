@@ -802,12 +802,6 @@
           "visualTest": "-"
         },
         {
-          "id": "ENG_DASH_TC_1",
-          "description": "Validate that clicking on the 'Dashboard' button on the left navigation panel, the Dashboard page is launched",
-          "tags": "P1",
-          "visualTest": "-"
-        },
-        {
           "id": "ENG_SHELL_TC_11",
           "description": "Validate that click on breadcrumb back button on the header launch the previous page",
           "tags": "P1",
@@ -1621,6 +1615,24 @@
           "description": "Validate that playlist page is launched on clicking the playlist card",
           "tags": "P1",
           "visualTest": "-"
+        },
+        {
+          "id": "ENG_DASH_TC_26",
+          "description": "Validate that clicking on 'Create Playlist' button on Dashboard launches the Playlist Pop Up",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_DASH_TC_27",
+          "description": "Validate that playlist is added on the dashboard on entering playlist name and clicking 'Create' button",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_DASH_TC_28",
+          "description": "Validate that playlist is not added on the dashboard on clicking 'Cancel' button",
+          "tags": "P1",
+          "visualTest": "-"
         }
       ]
     },
@@ -2249,6 +2261,12 @@
           "visualTest": "-"
         },
         {
+          "id": "ENG_GLOB_TC_25",
+          "description": "Validate that clicking on the playlist name adds the resource to the playlist.",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
           "id": "ENG_GLOB_TC_26",
           "description": "Validate that clicking on a resource launches the Global Resources view page",
           "tags": "P1, Desktop",
@@ -2306,6 +2324,91 @@
           "id": "ENG_GLOB_TC_52",
           "description": "Validate that clicking on cross icon on Filters screen closes the filter pop up.",
           "tags": "P1, Desktop",
+          "visualTest": "-"
+        }
+      ]
+    },
+    {
+      "modulename": "Playlist",
+      "moduledetails": "",
+      "testFile": "./test/engageExperienceApp/playlist.test.js",
+      "testcase": [
+        {
+          "id": "ENG_PLIS_TC_1",
+          "description": "Validate the content of the playlist page",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLIS_TC_2",
+          "description": "Validate that clicking on the three dots launches a dropdown list of options",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLIS_TC_3",
+          "description": "Validate that clicking on 'Edit' button launches the Playlist pop up",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLIS_TC_4",
+          "description": "Validate that clicking on 'Delete' button launches the Delete confirmation pop up",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLIS_TC_5",
+          "description": "Validate that playlist name is updated on clicking 'Save' button",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLIS_TC_6",
+          "description": "Validate that playlist name is not updated on clicking 'Cancel' button",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLIS_TC_7",
+          "description": "Validate that clicking 'Delete' button on pop up deletes the playlist",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLIS_TC_8",
+          "description": "Validate that playlist is not deleted on clicking 'Cancel' button",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLIS_TC_9",
+          "description": "Validate that clicking on 'Browse All Resources' navigates to the 'Interactive Activities' in Browse Tab",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLIS_TC_10",
+          "description": "Validate clicking on 3 dots on any resource on the playlist page launches a dropdown list of options",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLIS_TC_11",
+          "description": "Validate clicking on Remove from playlist option launches the remove resource popup",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLIS_TC_12",
+          "description": "Validate that clicking 'Remove' button on pop up removes the resource from the playlist",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLIS_TC_13",
+          "description": "Validate that clicking 'Cancel' button on pop up does not remove the resource from the playlist",
+          "tags": "P1",
           "visualTest": "-"
         }
       ]
