@@ -247,7 +247,7 @@ module.exports = {
         res = action.click(this.retakeActivityBtn);
         if (true == res) {
             logger.logInto(stackTrace.get(), " retakeActivityBtn is clicked");
-            res = this.getData_activityPlayer();
+            res = action.waitForDisplayed(this.retakeActivityBtn, undefined, true);
         }
         else {
             logger.logInto(stackTrace.get(), res + "retakeActivityBtn is NOT clicked", 'error');

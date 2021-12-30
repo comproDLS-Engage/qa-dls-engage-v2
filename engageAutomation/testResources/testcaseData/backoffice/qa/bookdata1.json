@@ -3,7 +3,7 @@
         "book": [
             {
                 "type": "Book",
-                "name": "Quality Test Book 5",
+                "name": "QA Test Automation Book [DO NOT MODIFY]",
                 "coverImage": "./testResources/testcaseData/backOffice/qa/book_cover_compro_qa.png",
                 "description": "QA automation test description"
             }
@@ -12,9 +12,9 @@
             {
                 "type": "Learning Path",
                 "category": "Textbook",
-                "title": "Component for final validation",
-                "folderLevel": "3",
-                "autonumbering": "1-based"
+                "title": "Custom Component",
+                "folderLevel": "2",
+                "autonumbering": "None"
             },
             {
                 "type": "Bank",
@@ -31,7 +31,7 @@
         ],
         "folder": [
             {
-                "name": "QA Automation Test folder L1",
+                "name": "Unit 1",
                 "coverImage": ""
             },
             {
@@ -42,20 +42,7 @@
         "activity": [
             {
                 "type": "Native Engage Learning Object",
-                "name": "Native LO2"
-            },
-            {
-                "type": "Close Ended Learning Object",
-                "name": "QA Automation Test LO2 - close ended"
-            }
-        ],
-        "accessCodeBatch": [
-            {
-                "batchName": "QA automation test batch1",
-                "startDate": "01/01/2022",
-                "endDate": "01/31/2022",
-                "codeLimit": 50,
-                "status": "Active"
+                "name": "Native LO 1"
             }
         ]
     }

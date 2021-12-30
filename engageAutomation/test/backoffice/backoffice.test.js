@@ -242,8 +242,7 @@ module.exports = {
 
 	// Validate that clicking on the activity launches the activity preview
 	BK_TC_25: function (testdata) {
-		sts = viewLearningPathPage.click_Activity(testdata.name);
-		console.log(sts);
+		sts = viewLearningPathPage.click_Activity(testdata);
 		assertion.assertEqual(sts, true, "Preview status mismatch");
 	},
 

@@ -12,8 +12,11 @@ module.exports = {
 
 	//Validate the test player when quiz is launched
 	COM_PLAY_TC_1: function (testdata) {
-		sts = itemPlayer.isInitialized();	
-		console.log(JSON.stringify(sts));
+		sts = testPlayerPage.isInitialized();
+		if ((typeof (sts)) === "object") {
+			assertion.assertEqual(sts.checkmyWork_isExists, true, "checkmyWork_isExists status mismatch");
+		}
+		else assertion.assertFail(sts);
 	},
 
 	//Validate The Test Player When User Click "Next Question" Button

@@ -89,6 +89,7 @@ module.exports = {
         let i, list;
         list = action.findElements(this.activityList);
         for (i = 0; i < list.length; i++) {
+            //console.log(action.getText(list[i]))
             if (action.getText(list[i]).includes(name)) {
                 browser.pause(10000);
                 res = action.click(list[i]);

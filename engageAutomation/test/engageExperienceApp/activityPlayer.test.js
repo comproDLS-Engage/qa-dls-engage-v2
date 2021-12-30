@@ -79,8 +79,7 @@ module.exports = {
 	//Click Restart button in left pane
 	ENG_PLAY_TC_7: function () {
 		sts = activityPlayerPage.click_retakeActivityBtn();
-		sts = itemPlayerPage.isInitialized();
-		assertion.assertEqual(sts.isSubmitted, false, "submit status mismatch");
+		assertion.assertEqual(sts, true, "retake status mismatch");
 		sts = activityPlayerPage.getData_activityPlayer();
 		assertion.assertEqual(sts.retakeActivityBtn, null, "Retake activity button text mismatch");
 	},
