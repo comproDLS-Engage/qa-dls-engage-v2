@@ -2,6 +2,8 @@
 var settingsPage = require('../../pages/engageExperienceApp/settings.page.js');
 var appShellPage = require('../../pages/engageExperienceApp/appShell.page.js');
 var snackBarTest = require('./common.test.js');
+var appShellTest = require('./appShell.test.js');
+var billingPage = require('../../pages/engageExperienceApp/billing.page.js');
 var sts;
 
 module.exports = {
@@ -425,8 +427,6 @@ module.exports = {
 
 
     //Validate that clicking on Confirm button on Reset Default Settings Modal resets the applied settings to default behavior.
-    // this testcase should be split into 2 TCs - Akhil
-
     ENG_SETT_TC_40: function (testdata) {
 
         sts = settingsPage.click_resetSettingsConfirmBtn()
@@ -452,6 +452,101 @@ module.exports = {
         assertion.assertEqual(sts.resetSettingsSubTitle, testdata.resetSettingsSubTitle, "Reset Settings SubTitle Mismatch")
         assertion.assertEqual(sts.resetSettingsCancelBtn, testdata.resetSettingsCancelBtn, "Reset Settings Modal Cancel Button Mismatch")
         assertion.assertEqual(sts.resetSettingsConfirmBtn, testdata.resetSettingsConfirmBtn, "Reset Settings Modal Confirm Button Mismatch")
+
+    },
+
+    //Validate that clicking on Billing tab launches Billing page
+    ENG_SETT_TC_55: function (testdata) {
+        sts = appShellPage.selectTab(testdata.tabList[3])
+        assertion.assertEqual(sts, true, "Billing Tab Not Clicked: ")
+
+        sts = settingsPage.getSettingsPageData()
+    
+        assertion.typeOf(sts, 'object', new Error(sts));
+        assertion.assertEqual(sts.selectedTab, testdata.tabList[3], "Settings Page Profile Tab Not Selected: ")
+
+        sts = settingsPage.getBillingTabData()
+    
+        assertion.typeOf(sts, 'object', new Error(sts));
+        assertion.assertEqual(sts.pageHeading, testdata.Billing.pageHeading, "Billing Page Heading Mismatch: ")
+        assertion.assertEqual(sts.subscriptionSubtitle_text, testdata.Billing.subscriptionSubtitle_text, "Subscription Subtitle Text Mismatch: ")
+
+    },
+
+    //Validate the content of Billing tab for a free user
+    ENG_SETT_TC_56: function (testdata) {
+
+        sts = settingsPage.getBillingTabData()
+
+        assertion.typeOf(sts, 'object', new Error(sts));
+        assertion.assertEqual(sts.pageHeading, testdata.pageHeading, "Billing Page Heading Mismatch: ")
+        assertion.assertEqual(sts.subscriptionSubtitle_text, testdata.subscriptionSubtitle_text, "Subscription Subtitle Text Mismatch: ")
+        assertion.assertEqual(sts.free_text, testdata.free_text, "free Text Mismatch: ")
+        assertion.assertEqual(sts.getPremiumAccess_text, testdata.getPremiumAccess_text, "GetPremiumAccess Text Mismatch: ")
+        assertion.assertEqual(sts.getPremiumAccessSubtitle_text, testdata.getPremiumAccessSubtitle_text, "GetPremiumAccessSubtitle Text Mismatch: ")
+        assertion.assertEqual(sts.price_text, testdata.price_text, "Price Text Mismatch: ")
+        assertion.assertEqual(sts.upgradePlan_btn, testdata.upgradePlan_btn, "upgradePlan Button Text Mismatch: ")
+        assertion.assertEqual(sts.paymentMethod_text, testdata.paymentMethod_text, "PaymentMethod Text Mismatch: ")
+        assertion.assertEqual(sts.noPaymentMethod_text, testdata.noPaymentMethod_text, "noPaymentMethod Text Mismatch: ")
+        assertion.assertEqual(sts.noPaymentMethodSubtitle_text, testdata.noPaymentMethodSubtitle_text, "noPaymentMethodSubtitle Text Mismatch: ")
+        assertion.assertEqual(sts.billingMethod_text, testdata.billingMethod_text, "billingMethod Text Mismatch: ")
+        assertion.assertEqual(sts.noBillingInfo_text, testdata.noBillingInfo_text, "noBillingInfo Text Mismatch: ")
+
+    },
+
+    //Validate the content of Billing tab for a Premium user 
+    ENG_SETT_TC_57: function (testdata) {
+        sts = settingsPage.getBillingTabData()
+        console.log(sts)
+        assertion.typeOf(sts, 'object', new Error(sts));
+        assertion.assertEqual(sts.pageHeading, testdata.pageHeading, "Billing Page Heading Mismatch: ")
+        assertion.assertEqual(sts.subscriptionSubtitle_text, testdata.subscriptionSubtitle_text, "Subscription Subtitle Text Mismatch: ")
+        assertion.assertEqual(sts.premiumPlan_text, testdata.premiumPlan_text, "PremiumPlan Text Mismatch: ")
+        assertion.assertEqual(sts.active_text, testdata.active_text, "Active Text Mismatch: ")
+        assertion.assertEqual(sts.premiumPrice_text, testdata.premiumPrice_text, "premiumPrice Text Mismatch: ")
+        assertion.assertEqual(sts.autoRenewal_text, testdata.autoRenewal_text, "autoRenewal Text Mismatch: ")
+        assertion.assertEqual(sts.licensePeriod_text.trim(), testdata.licensePeriod_text, "licensePeriod Text Mismatch: ")
+        assertion.assertEqual(sts.licensePeriod_date, testdata.licensePeriod_date, "licensePeriod Date Mismatch: ")
+        assertion.assertEqual(sts.managePlan_btn, testdata.managePlan_btn, "managePlan Button Text Mismatch: ")
+        assertion.assertEqual(sts.changeCard_btn, testdata.changeCard_btn, "changeCard Button Text Mismatch: ")
+        assertion.assertEqual(sts.updateBillingAddress_btn, testdata.updateBillingAddress_btn, "updateBillingAddress Button Text Mismatch: ")
+
+    },
+
+    //Validate clicking on Upgrade plan button for a free user launches Select a plan page
+    ENG_SETT_TC_58: function () {
+        sts = settingsPage.click_upgradePlan_btn()
+        assertion.assertEqual(sts.pageStatus, true, "Billing Plan Page Status Mismatch")
+
+        sts = billingPage.click_close_btn()
+        assertion.assertEqual(sts, true, "Close button Status Mismatch")
+
+    },
+
+    //Validate clicking on Manage plan button launches Plan options page
+    ENG_SETT_TC_59: function () {
+        sts = settingsPage.click_managePlan_btn()
+        assertion.assertEqual(sts.pageStatus, true, "Plan Options Page Status Mismatch")
+
+        sts = appShellTest.ENG_SHELL_TC_11()
+
+    },
+
+    //Validate clicking on Change card button launches Plan options page
+    ENG_SETT_TC_60: function (testdata) {
+        sts = settingsPage.click_changeCard_btn()
+        assertion.assertEqual(sts.pageStatus, true, "Plan Options Page Status Mismatch")
+
+        sts = appShellTest.ENG_SHELL_TC_11()
+
+    },
+
+    //Validate clicking on Update button on Billing Information card launches Plan options page .
+    ENG_SETT_TC_61: function (testdata) { 
+        sts = settingsPage.click_updateBillingAddress_btn()
+        assertion.assertEqual(sts.pageStatus, true, "Plan Options Page Status Mismatch")
+
+        sts = appShellTest.ENG_SHELL_TC_11()
 
     }
 };

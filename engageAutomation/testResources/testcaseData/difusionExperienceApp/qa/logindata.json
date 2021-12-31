@@ -90,6 +90,24 @@
                     "class": [],
                     "info": {}
                 },
+               "validStudent5": {
+                    "email": "difusionqa.stud44@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "student",
+                    "name": "difusionqa stud44",
+                    "class": [],
+                    "country": "",
+                    "info": "Settings Free user"
+                },
+                "validStudent6": {
+                    "email": "difusionqa.stud43@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "student",
+                    "name": "difusionqa stud43",
+                    "class": [],
+                    "country": "",
+                    "info": "Settings Premium user"
+                },
                 "invalidUser1": {
                     "email": "etirrase@yopmail",
                     "password": "hfcghgufyhW#2",

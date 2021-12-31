@@ -629,7 +629,39 @@
                 "resetSettingsTitle": "[data-tid=text-title-reset-user-settings]",
                 "resetSettingsSubTitle": "[data-tid=text-subTitle-reset-user-settings]",
                 "resetSettingsCancelBtn": "[data-tid=button-secondary-reset-user-settings]",
-                "resetSettingsConfirmBtn": "[data-tid=button-primary-reset-user-settings]"
+                "resetSettingsConfirmBtn": "[data-tid=button-primary-reset-user-settings]",
+                                "subscription_text":"//h6[contains(text(),'Subscription')]",
+                "subscriptionSubtitle_text": "//*[contains(text(),'Billing and license')]",
+                "free_text":"//*[contains(text(),'Free')]",
+                "getPremiumAccess_text":"//*[contains(text(),'Get Premium Access')]",
+                "getPremiumAccessSubtitle_text":"//*[contains(text(),'You will get access')]",
+                "price_text":"//*[contains(text(),'Subscription for $24.99/year')]",
+                "upgradePlan_btn":"[data-tid=button-updateBillingAddress]",
+                "paymentMethod_text":"//*[contains(text(),'Payment Method')]",
+                "noPaymentMethod_text":"//*[contains(text(),'No payment method added yet')]",
+                "noPaymentMethodSubtitle_text":"//*[contains(text(),'When you add a payment method')]",
+                "billingMethod":"//*[contains(text(),'Billing Information')]",
+                "noBillingInfo_text":"//*[contains(text(),'No billing information')]",
+                "noBillingInfoSubtitle_text":"//*[contains(text(),'When you add your billing information')]",
+                "premiumPlan_text":"//*[contains(text(),'Premium Plan')]",
+                "active_text":"//*[contains(text(),'Active')]",
+                "premiumPrice_text":"//*[contains(text(),'$')]",
+                "autoRenewal_text":"//*[contains(text(),'Auto Renewal On')]",
+                "licensePeriod_text":"//*[contains(text(),'License Period')]",
+                "licensePeriod_date":"//*[contains(text(),'License Period')]/following-sibling::p",
+                "licensePeriod_date":"//*[contains(text(),'License Period')]/following-sibling::p",
+                "managePlan_btn":"[data-tid=button-managePlan]",
+                "changeCard_btn":"[data-tid=button-changeCard]",
+                "updateBillingAddress_btn":"[data-tid=button-updateBillingAddress]"
+
+            },
+            "billing":{
+                "upgradetoPremium_btn":"[data-tid=button-updateToPremium]",
+                "close_btn":"[data-tid=button-close]"
+
+            },
+            "planOptions":{
+                "cardNumber_text":"[data-tid=label-cardNumber]"
             },
             "flipbook": {
                 "readerContainerWrapper": "[id='reader-container-wrapper']",
