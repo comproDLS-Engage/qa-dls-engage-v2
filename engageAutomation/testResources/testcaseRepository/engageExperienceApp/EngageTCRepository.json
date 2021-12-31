@@ -2023,6 +2023,48 @@
           "description": "Validate that clicking on Reset Default Settings button Reset Default Settings pop up is launched.",
           "tags": "P1",
           "visualTest": "-"
+        },
+        {
+          "id": "ENG_SETT_TC_55",
+          "description": "Validate that clicking on Billing tab launches Billing page.",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SETT_TC_56",
+          "description": "Validate the content of Billing tab for a free user.",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SETT_TC_57",
+          "description": "Validate the content of Billing tab for a Premium user.",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SETT_TC_58",
+          "description": "Validate clicking on Upgrade plan button for a free user launches Select a plan page.",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SETT_TC_59",
+          "description": "Validate clicking on Manage plan button launches Plan options page.",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SETT_TC_60",
+          "description": "Validate clicking on Change card button launches Plan options page.",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SETT_TC_61",
+          "description": "Validate clicking on Update button on Billing Information card launches Plan options page.",
+          "tags": "P1",
+          "visualTest": "-"
         }
       ]
     },
