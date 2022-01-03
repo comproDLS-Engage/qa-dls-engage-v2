@@ -8,8 +8,8 @@ module.exports = {
 
 	isInitialized: function () {
 		logger.logInto(stackTrace.get());
-		action.switchToFrame(0);
-		let res = action.waitForExist(this.textbox);
+		action.switchToFrame("[id*=iframe]");
+		let res = action.waitForDisplayed(this.textbox);
 		action.switchToParentFrame();
 		return res;
 	},
@@ -40,16 +40,15 @@ module.exports = {
 	getData_writing: function (writingData) {
 		logger.logInto(stackTrace.get());
 		action.switchToFrame(0);
-		var obj = [];
+		var arr = [];
 		var res, textboxSelector;
 		for (let i = 0; i < writingData.length; i++) {
 			textboxSelector = this.textbox + writingData[i][0] + "] ";
 			res = action.getElementCount(textboxSelector);
 			if (res == 1)
-				obj[i] = [writingData[i][0], action.getValue(textboxSelector)]
-				// add return value for disabled/enabled state
+				arr[i] = [writingData[i][0], action.getValue(textboxSelector), action.getAttribute(textboxSelector, "readonly")]
 		}
 		action.switchToParentFrame();
-		return obj;
+		return arr;
 	}
 }

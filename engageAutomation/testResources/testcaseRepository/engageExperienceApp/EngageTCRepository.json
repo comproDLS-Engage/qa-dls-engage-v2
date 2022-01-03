@@ -2454,6 +2454,31 @@
           "visualTest": "-"
         }
       ]
+    },
+    {
+      "modulename": "Writing Player",
+      "moduledetails": "",
+      "testFile": "./test/engageExperienceApp/writing.test.js",
+      "testcase": [
+        {
+          "id": "ENG_ITEM_WRIT_TC_1",
+          "description": "Validate the writing question launch in default unattempted state",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ITEM_WRIT_TC_2",
+          "description": "Validate the writing question launch in submitted state",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ITEM_WRIT_TC_3",
+          "description": "Validate that the user can add the text in the textboxes of the writing question",
+          "tags": "P1",
+          "visualTest": "-"
+        }
+      ]
     }
   ]
 }
