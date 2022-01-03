@@ -169,10 +169,10 @@ module.exports = {
 	},
 	clickSaveandReturnBtn: function () {
 		logger.logInto(stackTrace.get());
-		res = action.waitForClickable("[data-tid=button-saveandreturn]");
+		res = action.waitForClickable("div:nth-child(2) [data-tid=button-saveandreturn]");
 		if (res == true) {
 			browser.pause(2000)
-			res = action.click("[data-tid=button-saveandreturn]");
+			res = action.click("div:nth-child(2) [data-tid=button-saveandreturn]");
 			if (res == true) {
 				//res = action.waitForDisplayed("[role=progressbar]", undefined, true);
 				browser.pause(10000)
@@ -918,6 +918,7 @@ module.exports = {
 		logger.logInto(stackTrace.get());
 		res = action.click(this.previewPublish_tab);
 		if (res == true) {
+			browser.pause(2000);
 			logger.logInto(stackTrace.get(), " -- Preview and Publish Tab is clicked");
 		}
 		else {
