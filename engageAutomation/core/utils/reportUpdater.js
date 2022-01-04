@@ -7,7 +7,7 @@ var functionalChangeLogFile = process.cwd() + '/' + global.reportOutputDir + "/c
 module.exports = {
 
     updateFunctionalObj: function() {
-        var logData, specName
+        var logData, specName, logDataObjToConsole;
         //console.log(functionalChangeLogFile)
         try {
 
@@ -30,6 +30,7 @@ module.exports = {
                                     console.log(err);
                                 } else {
                                     //if file not empty
+                                    logDataObjToConsole = logDataObj;
                                     if (logDataObj.length > 0) {
 
                                         logData = JSON.parse(logDataObj)
@@ -60,6 +61,8 @@ module.exports = {
 
                         } catch (error) {
                             console.log(error);
+                            console.log("logData-")
+                            console.log(logDataObjToConsole);
                         }
 
                     })
