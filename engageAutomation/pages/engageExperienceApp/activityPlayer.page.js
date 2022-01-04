@@ -244,9 +244,11 @@ module.exports = {
     click_retakeActivityBtn: function () {
         logger.logInto(stackTrace.get());
         var res;
+        action.waitForDisplayed(this.retakeActivityBtn)
         res = action.click(this.retakeActivityBtn);
         if (true == res) {
             logger.logInto(stackTrace.get(), " retakeActivityBtn is clicked");
+            console.log((action.waitForDisplayed(this.checkAnswerBtn,5000)))
             res = action.waitForDisplayed(this.retakeActivityBtn, undefined, true);
         }
         else {

@@ -741,6 +741,7 @@ module.exports = {
 		action.waitForDisplayed(this.questionText_input)
 		browser.pause(2000)
 		res = action.clearValueDefault(this.questionText_input);
+		res = action.clearValue(this.questionText_input);
 		res = action.addValue(this.questionText_input, questionTitle);
 		if (res == true) {
 
@@ -751,7 +752,7 @@ module.exports = {
 			res = res + " -- Question Title is NOT entered";
 			logger.logInto(stackTrace.get(), res, 'error');
 		}
-		browser.pause(2000)
+		browser.pause(10000)
 		return res;
 	},
 	//Adding 'IMAGE' as media
