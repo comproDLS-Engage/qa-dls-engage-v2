@@ -10,8 +10,7 @@
         "type": "writing",
         "mediaType": "",
         "scenario1": [
-          ["A","test text1"],
-          ["B","test text2"]
+          ["A","test text1"]
         ]
       }
     ]
