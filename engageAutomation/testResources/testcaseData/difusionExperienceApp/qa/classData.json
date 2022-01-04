@@ -4,9 +4,9 @@
 			"class1": {
 				"name": "Active Class",
 				"key": "vQ9n-qhQ8",
-				"classDuration": "May 26, 2021 - May 26, 2022",
+				"classDuration": "Oct 21, 2021 - Oct 20, 2022",
 				"instructor": {
-					"name": "vengqains5_new",
+					"name": "dev1 teacher",
 					"email": "vengqains5_new@yopmail.com"
 				},
 				"bookName": "PROYECTOS",
@@ -21,7 +21,7 @@
 				"key": "kzU6-26jW",
 				"classDuration": "May 26, 2022 - May 26, 2024",
 				"instructor": {
-					"name": "dev1 teacher",
+					"name": "engqains5_new",
 					"email": "dev1_teacher1@yopmail.com"
 				},
 				"bookName": "PROYECTOS",
@@ -35,7 +35,7 @@
 				"key": "GrqE-82UT",
 				"classDuration": "May 18 - May 18, 2021",
 				"instructor": {
-					"name": "dev1 teacher",
+					"name": "engqains5_new",
 					"email": "dev1_teacher1@yopmail.com"
 				},
 				"bookName": "PROYECTOS",
@@ -49,10 +49,10 @@
 				"key": "vQ9n-qhQ8",
 				"classDuration": "May 10, 2021 - May 10, 2023",
 				"instructor": {
-					"name": "vengqains5_new",
+					"name": "kulujaco-1294",
 					"email": "vengqains5_new@yopmail.com"
 				},
-				"bookName": "PROYECTOS",
+				"bookName": "No Book Associated",
 				"schoolName": "Mount Allison School",
 				"status": "Active",
 				"studentCount": 0,

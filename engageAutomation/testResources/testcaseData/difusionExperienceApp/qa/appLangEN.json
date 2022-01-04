@@ -239,10 +239,10 @@
                 "joinClassSubHeader": "If your teacher has enrolled you in a class, enter the class code.",
                 "enterClassCodeLabel": "Enter Class Code",
                 "classCodeInput": "Enter Class Code",
-                "classHelpText": "Your teacher provided class code should look like: iqig-Gq32. Be sure to check your email to see if your teacher sent you an invite.",
+                "classHelpText": "Your class code should look like: iqig-Gq32. Be sure to check your email to see if your teacher sent you an invite.",
                 "joinclassPopUpbtn": "Join Class",
                 "helpJoiningClass": "Help Joining Classes",
-                "titleErrorMsg": "Invalid class code. Please check the class code and try again. If the problem persists, please contact your Teacher.",
+                "titleErrorMsg": "You are already enrolled in this class. Please enter a different class code.",
                 "alreadyExistErrorMessage": "You are already enrolled in this class. Please enter a different class code."
             },
             "classDrawerPane": {
@@ -327,7 +327,7 @@
                     "pageHeading": "Enter your class code",
                     "subHeading": "Use the class code provided by your teacher or skip for now.",
                     "textboxMessage": "Enter Class Code",
-                    "helper_txt": "Your class code should look like: iqig-Gq32. Be sure to check your email to see if your teacher sent you an invite.",
+                    "helper_txt": "Your teacher provided class code should look like: iqig-Gq32. Be sure to check your email to see if your teacher sent you an invite.",
                     "submitBtn": "Continue",
                     "skipForNow": "Skip for now",
                     "invalidKeyMessage": "Invalid course key",
