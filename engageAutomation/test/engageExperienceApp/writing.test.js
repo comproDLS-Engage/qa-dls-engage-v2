@@ -11,9 +11,15 @@ module.exports = {
 	},
 
 	//Validate the writing question launch in submitted state
-	ENG_ITEM_WRIT_TC_2: function () {
-		sts = writingPlayer.getData_writing();
-		// assertion for disabled state of the textarea - akhil
+	ENG_ITEM_WRIT_TC_2: function (testdata) {
+		sts = writingPlayer.getData_writing(testdata);
+		console.log(sts)
+		if (sts.length > 0) {
+            for (var i = 0; i < sts.length; i++) {
+                assertion.assertEqual(sts[i][2], true, "Textbox state mismatch for " + sts[i][0]);
+            }
+        }
+        else assertion.assertFail(sts);
 	},
 
 	//Validate that the user can add the text in the textboxes of the writing question

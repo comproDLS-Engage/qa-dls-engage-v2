@@ -8,22 +8,23 @@ module.exports = {
 
 	isInitialized: function () {
 		logger.logInto(stackTrace.get());
+		action.waitForDisplayed("iframe[id*=iframe], iframe");
 		action.switchToFrame(0);
-		let res = action.waitForExist(this.textbox);
+		let res = action.waitForDisplayed(this.textbox);
 		action.switchToParentFrame();
 		return res;
 	},
 
 	set_textboxValue: function (writingData) {
 		logger.logInto(stackTrace.get());
-		action.switchToFrame(0);
 		let res, textboxSelector;
+		action.switchToFrame(0);
 		for (let i = 0; i < writingData.length; i++) {
 			textboxSelector = this.textbox + writingData[i][0] + "]";
 			res = action.getElementCount(textboxSelector);
-			if (res == 1 && writingData[i][2] == 'select') {
+			if (res == 1) {
 				res = action.setValue(textboxSelector, writingData[i][1]);
-				if (null == res) {
+				if (true == res) {
 					logger.logInto(stackTrace.get(), res + " -- value is entered");
 				}
 				else {
@@ -40,16 +41,15 @@ module.exports = {
 	getData_writing: function (writingData) {
 		logger.logInto(stackTrace.get());
 		action.switchToFrame(0);
-		var obj = [];
+		var arr = [];
 		var res, textboxSelector;
 		for (let i = 0; i < writingData.length; i++) {
 			textboxSelector = this.textbox + writingData[i][0] + "] ";
 			res = action.getElementCount(textboxSelector);
 			if (res == 1)
-				obj[i] = [writingData[i][0], action.getValue(textboxSelector)]
-				// add return value for disabled/enabled state
+				arr[i] = [writingData[i][0], action.getValue(textboxSelector), action.getAttribute(textboxSelector, "readonly")]
 		}
 		action.switchToParentFrame();
-		return obj;
+		return arr;
 	}
 }
