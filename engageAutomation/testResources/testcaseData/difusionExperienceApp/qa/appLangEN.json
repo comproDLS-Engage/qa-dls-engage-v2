@@ -7,7 +7,7 @@
                 "subheadingText": "Learn from anywhere, anytime. Instant access to all courses and activities.",
                 "signup_btnText": "Sign Up & Start Learning Today",
                 "login_btnText": "Log in",
-                "login_lblText": "Have an Account?",
+                "login_lblText": "Have an account?",
                 "footerLabel": "powered by"
             },
             "login": {
@@ -24,7 +24,7 @@
                 "dontHaveAccount_txt": "Don't have an account?",
                 "loginoption_txt": "Or continue with:",
                 "footerLabel": "powered by",
-                "invalidEmail_txt": "Please check your email address and try again.",
+                "invalidEmail_txt": "Please enter a valid email address (for example, name@example.com)",
                 "notRegisterUser_alert": "Please check your email address and password and try again."
             },
             "appShell": {

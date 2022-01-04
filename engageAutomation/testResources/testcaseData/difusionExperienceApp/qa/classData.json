@@ -135,7 +135,7 @@
 				"studentdetails": [
 					{
 						"Name": "qa student5",
-						"AvgScore": "0%",
+						"AvgScore": "-",
 						"CompletionScore": "0%"
 					},
 					{
