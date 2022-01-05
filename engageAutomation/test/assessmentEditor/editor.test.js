@@ -44,7 +44,7 @@ module.exports = {
 	ASE_QUN_TC_5: function (testdata) {
 		//EditorPlayer.isInitialized1(testdata[0])
 		sts = EditorPlayer.setQuestionTitle(testdata);
-		
+
 	},
 	//Validate the editor is selected in question pane and displayed.
 	ASE_COM_TC_120: function (testdata) {
@@ -81,7 +81,7 @@ module.exports = {
 
 	//Enter the Answer in FIB Value
 	ASE_FIB_TC_1: function (testdata) {
-		sts = EditorPlayer.setAnswer(testdata[0],testdata[1]);
+		sts = EditorPlayer.setAnswer(testdata[0], testdata[1]);
 		for (var i = 1; i <= testdata.length; i++) {
 			assertion.assertEqual(sts[i], testdata[1][i], "option" + i + " is not set correctly");
 		}
@@ -164,7 +164,7 @@ module.exports = {
 	},
 
 	//Validate that user is able to add option if total option count is less than 15
-	ASE_CLS_TC_13: function (testdata){
+	ASE_CLS_TC_13: function (testdata) {
 		sts = EditorPlayer.clickAddOptionBtn(testdata);
 		assertion.assertEqual(sts, true, "Add Option button is not clicked");
 	},
@@ -175,7 +175,7 @@ module.exports = {
 			assertion.assertEqual(sts[i], testdata[i], "Groups" + i + " is not set correctly");
 		}
 	},
-//Validate that alphanumeric characters are allowed in option Name.
+	//Validate that alphanumeric characters are allowed in option Name.
 	ASE_CLS_TC_21: function (testdata) {
 		sts = EditorPlayer.setClassifyOptions(testdata);
 		for (i = 1; i <= testdata.length; i++) {
@@ -184,7 +184,7 @@ module.exports = {
 	},
 	//Validate that user should be able to select group for an option.
 	ASE_CLS_TC_17: function (testdata) {
-		sts = EditorPlayer.selectGroupsForOptions(testdata[0],testdata[1],testdata[2]);
+		sts = EditorPlayer.selectGroupsForOptions(testdata[0], testdata[1], testdata[2]);
 		console.log(sts)
 		for (i = 1; i <= testdata.length; i++) {
 			assertion.assertEqual(sts[i], testdata[0][i], "Group option" + i + " is not set correctly");
@@ -210,8 +210,8 @@ module.exports = {
 		//assertion.assert((sts instanceof Error) === true, "Error in save and return - " + sts);
 		browser.switchWindow(global.appUrl);
 	},
-	
-	
+
+
 	//Click on Question Tab
 	/*ASE_SET_TC_15: function (testdata) {
 		sts = EditorPlayer.clickQuestionTab();
@@ -282,8 +282,8 @@ module.exports = {
 		assertion.assertEqual(sts, true, "question text is not set");
 	},
 
-	EDIT_TC_13: function () {
-		sts = EditorPlayer.clickAddAnswerBtn();
+	EDIT_TC_13: function (testdata) {
+		sts = EditorPlayer.clickAddAnswerMCQSRBtn(testdata[0]);
 		assertion.assertEqual(sts, true, "Answer button is not clicked");
 	},
 
@@ -365,32 +365,65 @@ module.exports = {
 	ASE_COM_TC_1000: function (testdata) {
 		sts = EditorPlayer.setQuestionTextinwriting(testdata)
 		assertion.assertEqual(sts, true, "Question text  mismatch");
-	
+
 	},
 	ASE_COM_TC_1001: function (testdata) {
 		sts = EditorPlayer.setHeaderTextinPlaceHolder(testdata)
 		console.log(sts)
 		assertion.assertEqual(sts, true, "Question text  mismatch");
-	
+
 	},
 	ASE_COM_TC_1002: function (testdata) {
-		sts=EditorPlayer.setInsTextinPlaceHolder(testdata)
+		sts = EditorPlayer.setInsTextinPlaceHolder(testdata)
 		console.log(sts)
 		assertion.assertEqual(sts, true, "Question text  mismatch");
-	
+
 	},
 
 	ASE_COM_TC_1003: function () {
-		sts=EditorPlayer.clickNextBtn()
+		sts = EditorPlayer.clickNextBtn()
 		console.log(sts)
 		assertion.assertEqual(sts, true, "Next Question clicked");
-	
+
 	},
 	ASE_COM_TC_1004: function () {
-		sts=EditorPlayer.deleteMediabtn()
+		sts = EditorPlayer.deleteMediabtn()
 		console.log(sts)
 		assertion.assertEqual(sts, true, "Delete Media Clicked");
-	
-	}
 
+	},
+	ASE_COM_TC_1005: function () {
+		sts = EditorPlayer.clickEditPrompt_Btn()
+		console.log(sts)
+		assertion.assertEqual(sts, true, "Edit Prompt button");
+	},
+	ASE_COM_TC_1006: function (testdata) {
+		sts = EditorPlayer.setPromptTextPlaceHolder(testdata)
+		console.log(sts)
+		assertion.assertEqual(sts, true, "Edit Prompt button");
+	},
+	ASE_COM_TC_1007: function (testdata) {
+		console.log(testdata)
+		console.log(testdata[0])
+		sts = EditorPlayer.clickeditSubQuestionbtn(testdata[0])
+		console.log(sts)
+		assertion.assertEqual(sts, true, "Edit Prompt button");
+	},
+	ASE_COM_TC_1009: function (testdata) {
+		sts = EditorPlayer.setSubQuestiontxt(testdata[1])
+		assertion.assertEqual(sts, true, "Edit Prompt button");
+	},
+	ASE_COM_TC_1008: function (testdata) {
+		sts = EditorPlayer.setOptiontxt(testdata)
+		console.log(sts)
+		assertion.assertEqual(sts, true, "Edit Prompt button");
+	},
+	ASE_COM_TC_1010: function () {
+		sts = EditorPlayer.clickTopBottombtn()
+		assertion.assertEqual(sts, true, "Top Bottpm button clicked");
+	},
+	ASE_COM_TC_1011: function () {
+		sts = EditorPlayer.clickLeftRightbtn()
+		assertion.assertEqual(sts, true, "Left Right option button clicked");
+	},
 }

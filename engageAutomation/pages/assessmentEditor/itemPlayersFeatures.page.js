@@ -70,6 +70,13 @@ module.exports = {
 	done_btn: selectorFile.css.editorTab.done_btn,
 	nextqun_btn:selectorFile.css.editorTab.nextqun_btn,
 	deleteMedia_btn:selectorFile.css.editorTab.deleteMedia_btn,
+	editPrompt_btn: selectorFile.css.editorTab.editPrompt_btn,
+	editSubQuestion_btn: selectorFile.css.editorTab.editSubQuestion_btn,
+	subOptionIndex: selectorFile.css.editorTab.subOptionIndex,
+	subOptionValue: selectorFile.css.editorTab.subOptionValue,
+	subOptiontext: selectorFile.css.editorTab.subOptiontext,
+	topsbottomOption: selectorFile.css.editorTab.topsbottomOption,
+	leftRightOption:selectorFile.css.editorTab.leftRightOption,
 	//--MULTIPLE RESPONSE
 	isInitialized1: function (testdata) {
 		for (var i = 0; i < testdata.length; i++) {
@@ -115,8 +122,27 @@ module.exports = {
 		}
 		return res;
 	},
+	clickEditPrompt_Btn: function () {
+		logger.logInto(stackTrace.get());
+		res = action.waitForClickable(this.editPrompt_btn);
+		if (res == true) {
+			browser.pause(2000)
+			res = action.click(this.editPrompt_btn);
+			if (res == true) {
+				//res = action.waitForDisplayed("[role=progressbar]", undefined, true);
+				browser.pause(5000)
+			}
+		}
+		else {
+			res = res + " -- Edit Prompt button is not clickable";
+			logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
 	setHeaderTextinPlaceHolder: function (testdata) {
 		logger.logInto(stackTrace.get());
+		browser.pause(5000)
+		action.waitForDisplayed(this.headerEdit_btn)
 		res = action.click(this.headerEdit_btn);
 		action.clearValueDefault(this.placeHolderHeader_txt);
 		if (res == true) {
@@ -152,6 +178,58 @@ module.exports = {
 		}
 		return res;
 	},
+	setPromptTextPlaceHolder: function (testdata) {
+		logger.logInto(stackTrace.get());
+
+		res = action.addValue(this.placeHolderIns_txt, testdata)
+		browser.pause(2000)
+		if (res == true) {
+			this.clickDonebtn();
+		}
+		logger.logInto(stackTrace.get(), " -- Add Pair Button is clicked");
+
+		return res;
+	},
+
+	setSubQuestiontxt: function (testdata) {
+		logger.logInto(stackTrace.get());
+
+		res = action.addValue(this.placeHolderIns_txt, testdata)
+		browser.pause(2000)
+		if (res == true) {
+			this.clickDonebtn();
+		}
+		logger.logInto(stackTrace.get(), " -- Add Pair Button is clicked");
+
+		return res;
+	},
+	setOptiontxt: function (testdata) {
+		console.log(testdata[2])
+		logger.logInto(stackTrace.get());
+		console.log(this.subOptionIndex + "\""+testdata[0] + "\"] " + this.subOptionValue + testdata[1] + "] " + this.subOptiontext)
+		res = action.setValue((this.subOptionIndex +"\""+testdata[0] + "\"] " + this.subOptionValue + testdata[1] + "] " + this.subOptiontext), testdata[2])
+		browser.pause(2000)
+		if (res == true) {
+			logger.logInto(stackTrace.get(), " -- Add Pair Button is clicked");
+		}
+			return res;
+	},
+	clickeditSubQuestionbtn: function (testdata) {
+		logger.logInto(stackTrace.get());
+		console.log(this.editSubQuestion_btn + testdata + "]")
+		res = action.waitForClickable(this.editSubQuestion_btn + testdata + "]>span:nth-child(1)");
+		if (res == true) {
+			res = action.click(this.editSubQuestion_btn + testdata + "]>span:nth-child(1)");
+			if (res == true) {
+				res = action.waitForDisplayed(this.done_btn);
+			}
+		}
+		else {
+			res = res + " -- done button is not clickable";
+			logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
 	clickDonebtn: function () {
 		logger.logInto(stackTrace.get());
 		res = action.waitForClickable(this.done_btn);
@@ -159,6 +237,38 @@ module.exports = {
 			res = action.click(this.done_btn);
 			if (res == true) {
 				res = action.waitForDisplayed(this.done_btn, undefined, true);
+			}
+		}
+		else {
+			res = res + " -- done button is not clickable";
+			logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
+	clickTopBottombtn: function () {
+		logger.logInto(stackTrace.get());
+		res = action.waitForClickable(this.topsbottomOption);
+		if (res == true) {
+			res = action.click(this.topsbottomOption);
+			if (res == true) {
+				browser.pause(5000)
+				res = action.waitForDisplayed(this.topsbottomOption);
+			}
+		}
+		else {
+			res = res + " -- done button is not clickable";
+			logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
+	clickLeftRightbtn: function () {
+		logger.logInto(stackTrace.get());
+		res = action.waitForClickable(this.leftRightOption);
+		if (res == true) {
+			res = action.click(this.leftRightOption);
+			if (res == true) {
+				browser.pause(5000)
+				res = action.waitForDisplayed(this.leftRightOption);
 			}
 		}
 		else {
@@ -859,7 +969,7 @@ module.exports = {
 	},
 
 	//Click on Add Answer Button
-	clickAddAnswerBtn: function () {
+	clickAddAnswerBtn: function (testdata) {
 		logger.logInto(stackTrace.get());
 		action.waitForDisplayed(this.addAnswer_btn);
 		res = action.click(this.addAnswer_btn);
@@ -872,7 +982,19 @@ module.exports = {
 		}
 		return res;
 	},
-
+	clickAddAnswerMCQSRBtn: function (testdata) {
+		logger.logInto(stackTrace.get());
+		action.waitForDisplayed(this.addAnswer_btn +"-"+testdata);
+		res = action.click(this.addAnswer_btn+"-"+testdata);
+		if (res == true) {
+			logger.logInto(stackTrace.get(), " -- Add Answer Button is clicked");
+		}
+		else {
+			res = res + " -- Error in clicking Add Answer button";
+			logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
 	//Used by MCQ, MCSR, TruFalse, DND, FIB That's why kept in common file
 	//Note that this function is not working for FIB for now
 	//Logged ENG-5502 for the same

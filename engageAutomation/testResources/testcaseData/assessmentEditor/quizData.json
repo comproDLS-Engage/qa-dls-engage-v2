@@ -29,6 +29,33 @@
           }
         }
       ],
+      "MCQSR": [
+        {
+            "questionIndex": 1,
+            "buttonName": "multiplechoicequestionset",
+            "questionTitle": "Question 1",
+            "questionInstruction": "Dans cette activité \n  Lisez des informations sur la prospérité de la ville de Nantes et voyez l'image d'un riche résident, armateur et marchand. Sur la base de ces informations, répondez aux questions suivantes.",
+            "videoURL": "https://www.youtube.com/watch?v=mxbodI60OT4",
+            "videoCredit": "mcq video #1",
+            "promptImagePath": "./testResources/testcaseData/assessmentEditor/media/MCQSR.png",
+            "promptText":"Nantes 2 s’embellit et s’agrandit \n Le quartier de La Fosse est sans contredit l’endroit le plus agréable, le plus riche et le plus actif de Nantes. Il commence à la place de la Bourse et s’étend sur une longueur de cinq cents toises. Ce qui ajoute à l’agrément de ce quartier, c’est l’admirable vue sur la Loire, ouverte de navires et de bateaux. Les maisons que l’on voit le long de ces quais répondent à l’opulence de ceux qui les habitent. Elles sont toutes bâties en pierre avec ferrades et balcons. Nous devons rendre justice au zèle de M. le Maire : car c’est par ses soins que la ville a pris une nouvelle face et s’est accrue d’un quart. Les maisons nouvelles qu’on bâtit tous les jours sont à moitié faites que le rez-de-chaussée est déjà occupé. Encore vingt ans de paix et d’un commerce actif, Nantes égalera, si elle ne les surpasse par la magnificence et l’étendue, les plus belles villes de l’Europe.",
+            "questionText": "Lisez et sélectionnez vos réponses:",
+            "subQuestionText":
+                              [["1", "Quelle activité semble être à l’origine de la richesse de Nantes ?"],
+                              [ "2","Quels métiers profi tent de cet enrichissement ?"]],
+              "options": [["0" ,"O1","Commerce "],
+                          ["0" ,"O2","Construction"],
+                          ["0" ,"O3","Construction de navires"],
+                          ["0" ,"O4","Toutes ces"],
+                          ["1" ,"O1","Commerce "],
+                          ["1" ,"O2","Construction"],
+                          ["1" ,"O3","Construction de navires"],
+                          ["1" ,"O4","Toutes ces"]],
+           
+            "optionStyle": "2"
+        
+        }
+      ],
       "writing": [
         {
           "questionIndex": 3,
