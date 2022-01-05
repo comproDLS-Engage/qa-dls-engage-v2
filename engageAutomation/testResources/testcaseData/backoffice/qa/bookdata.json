@@ -3,7 +3,7 @@
         "book": [
             {
                 "type": "Book",
-                "name": "QA Automation Test Book [DO NOT PUBLISH]",
+                "name": "QA Test Automation Book [DO NOT MODIFY]",
                 "coverImage": "./testResources/testcaseData/backOffice/qa/book_cover_compro_qa.png",
                 "description": "QA automation test description",
                 "bookDesign" : "Green",
@@ -14,7 +14,7 @@
             {
                 "type": "Learning Path",
                 "category": "Extra Activities",
-                "title": "QA Automation Test Learning Path - extra activities [DO NOT PUBLISH]",
+                "title": "Custom Component",
                 "folderLevel": "3",
                 "autonumbering": "1-based",
                 "targetRole":"All",
@@ -41,7 +41,7 @@
         ],
         "folder": [
             {
-                "name": "QA Automation Test folder L1",
+                "name": "Unit 1",
                 "coverImage": "./testResources/testcaseData/backOffice/qa/book_cover_compro_qa.png",
                 "targetRole":"All",
                 "assignable" :"True",
@@ -61,15 +61,15 @@
             {
                 "type": "Native Engage Learning Object",
                 "typeIndex": 0,
-                "name": "QA Automation Test LO1 - native",
+                "name": "Native LO 1",
                 "targetRole":"All",
                 "assignable" :"True",
                 "page" : "13"
             },
             {
-                "type": "Close Ended Learning Object",
+                "type": "Native Engage Learning Object",
                 "typeIndex": 0,
-                "name": "QA Automation Test LO2 - close ended"
+                "name": "Native LO - Writing"
             },
             {
                 "type": "Close Ended Learning Object",

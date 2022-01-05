@@ -1436,7 +1436,25 @@
         },
         {
           "id": "ENG_PLAY_TC_11",
-          "description": "Click show details button in activity Player",
+          "description": "Validate clicking on Show details button expands the details panel",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLAY_TC_12",
+          "description": "Validate clicking on Hide details button hides the details panel",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLAY_TC_13",
+          "description": "Validate that clicking on Next Activity button launches the next activity in the component",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLAY_TC_14",
+          "description": "Validate that clicking on Previous Activity button launches the previous activity of the component",
           "tags": "",
           "visualTest": "-"
         }

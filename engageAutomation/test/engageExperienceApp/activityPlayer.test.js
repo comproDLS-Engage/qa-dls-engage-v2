@@ -1,94 +1,102 @@
 "use strict";
-var activityPlayerPage = require('../../pages/engageExperienceApp/activityPlayer.page.js');
+const activityPlayerPage = require('../../pages/engageExperienceApp/activityPlayer.page');
 const itemPlayerPage = require('../../pages/engageExperienceApp/itemPlayer.page');
-var itemPlayer = require('../../pages/engageExperienceApp/itemPlayer.page');
 var sts;
 
 module.exports = {
 
-	//Validate the activity player when quiz is launched
-	ENG_PLAY_TC_1: function () {
-		sts = itemPlayer.isInitialized();
-		assertion.assertEqual(sts.isSubmitted, false, "submit status mismatch");
-		sts = itemPlayer.getQuesIndex();
-		assertion.assertEqual((sts), "0", "Active question index mismatch");
+	//Validate the unattempted state of a close ended activity
+	ENG_PLAY_TC_1: function (testdata) {
+		sts = itemPlayerPage.isInitialized();
+		assertion.assertEqual(sts.isSubmitted, false, "Activity submission status mismatch");
 		sts = activityPlayerPage.getData_activityPlayer();
-		/*Rupsi
-		assertion.assertEqual(sts.checkmyWork_isExists, true, "check answer button status mismatch");
-		assertion.assertEqual(sts.checkmyWork_isDisabled, "true", "button state mismatch");
-		assertion.assertEqual(sts.previous_isExists, false, "previous button status mismatch");*/
+		console.log(sts)
+		assertion.assertEqual(sts.infoBtn, testdata.infoBtn, "infoBtn status mismatch");
+		assertion.assertEqual(sts.showDetailsBtn, testdata.showDetailsBtn, "showDetailsBtn status mismatch");
+		assertion.assertEqual(sts.checkAnswerBtn, testdata.checkAnswerBtn, "checkAnswerBtn status mismatch");
+		assertion.assertEqual(sts.showAnswerBtn, null, "showAnswerBtn status mismatch");
+		assertion.assertEqual(sts.showResponseBtn, null, "checkAnswerBtn status mismatch");
+		assertion.assertEqual(sts.markCompleteBtn, null, "markCompleteBtn status mismatch");
+		assertion.assertEqual(sts.retakeActivityBtn, null, "retakeActivityBtn status mismatch");
+		assertion.assertEqual(sts.completedTxt, null, "completedTxt status mismatch");
+		assertion.assertEqual(sts.yourScoreLabel, null, "yourScoreLabel status mismatch");
+		assertion.assertEqual(sts.yourScoreValue, null, "yourScoreValue status mismatch");
+		assertion.assertEqual(sts.prevPageBtn, null, "prevPageBtn status mismatch");
+		if (sts.quesNumber == null) {
+			assertion.assertEqual(sts.nextPageBtn, null, "nextPageBtn status mismatch");
+			assertion.assertEqual(sts.prevActivityBtn, testdata.prevActivityBtn, "prevActivityBtn status mismatch");
+			if (sts.closeBtn == null)
+				assertion.assertEqual(sts.nextActivityBtn, testdata.nextActivityBtn, "nextActivityBtn status mismatch");
+			else
+				assertion.assertEqual(sts.closeBtn, testdata.closeBtn, "closeBtn status mismatch");
+		}
+		else {
+			assertion.assertEqual(sts.nextPageBtn, "", "nextPageBtn status mismatch");
+		}
+		//assertion.assertEqual(sts.submitActivityBtn, testdata.submitActivityBtn, "submitActivityBtn status mismatch");
 	},
 
-	
-	//Validate The Test Player When User Click "Next Question" Button
-	ENG_PLAY_TC_2: function (testdata) {
+
+	//Validate that clicking on next arrow button navigates to next question in the activity
+	ENG_PLAY_TC_2: function () {
+		let sts2 = activityPlayerPage.getData_activityPlayer();
+		console.log(sts2)
 		sts = activityPlayerPage.click_nextPageBtn();
-		//assertion.assertEqual(sts, true, "status mismatch");
-		sts = activityPlayerPage.getData_activityPlayer();
-		/*Rupsi
-		assertion.assertEqual(sts.previous_isExists, true, "previous button status mismatch");
-		assertion.assertEqual(sts.previous_isDisabled, null, "previous button state mismatch");*/
-		sts = parseInt(itemPlayer.getQuesIndex()) + 1;
-		assertion.assertEqual(sts, testdata.number, "question index mismatch");
+		assertion.assertEqual(parseInt(sts), parseInt(sts2.quesNumber) + 1, "question number mismatch");
 	},
 
-	//Validate the test player when user perform "Check My Work"
-	ENG_PLAY_TC_3: function (testdata) {
+	//Validate that user responses are submitted for the question in an Activity on clicking the Check Answer button
+	ENG_PLAY_TC_3: function () {
 		sts = activityPlayerPage.click_checkAnswerBtn();
-		assertion.assertEqual(sts, false, "status mismatch");
-	//	sts = activityPlayerPage.getFeedbackInfo();
-		//assertion.assertEqual(sts.fdbackText, testdata, "text mismatch");
+		assertion.assertEqual(sts, false, "checkAnswerBtn status mismatch");
 	},
 
-	//Validate the test player when user click Previous button in the second question.
-	/*ENG_PLAY_TC_4: function () {
-		sts = activityPlayerPage.clickPreviousQuestion();
-		assertion.assertEqual(sts, true, "status mismatch");
-		sts = activityPlayerPage.getActivityPlayerData();
-		//assertions to be added
-	},*/
+	//Validate that clicking on previous arrow button navigates to previous question in the activity
+	ENG_PLAY_TC_4: function () {
+		let sts2 = activityPlayerPage.getData_activityPlayer();
+		sts = activityPlayerPage.click_prevPageBtn();
+		assertion.assertEqual(sts, parseInt(sts2.quesNumber) - 1, "question number mismatch");
+	},
 
-	//Validate the test player when user click Show Answer button.
+	//Validate clicking on Show Answer button displays the answer of the question
 	ENG_PLAY_TC_5: function () {
-		sts = itemPlayer.getItemplayerInfo();
+		sts = itemPlayerPage.getItemplayerInfo();
 		let correctCount = sts.correctCount;
 		let incorrectCount = sts.incorrectCount;
 		sts = activityPlayerPage.click_showAnswerBtn();
-		assertion.assertEqual(sts, true, "status mismatch");
-		sts = activityPlayerPage.getData_activityPlayer();
-		sts = itemPlayer.getItemplayerInfo();
+		assertion.assertEqual(sts, true, "showResponseBtn status mismatch");
+		sts = itemPlayerPage.getItemplayerInfo();
 		assertion.assertEqual(sts.correctCount, correctCount + incorrectCount, "Correct count mismatch");
 		assertion.assertEqual(sts.incorrectCount, 0, "Incorrect count mismatch");
 	},
 
-	//Validate the test player when user click Your Response.
+	//Validate clicking on User Response button displays the user's answer submitted
 	ENG_PLAY_TC_6: function () {
-		sts = itemPlayer.getItemplayerInfo();
+		sts = itemPlayerPage.getItemplayerInfo();
 		let correctCount = sts.correctCount;
 		let incorrectCount = sts.incorrectCount;
-		sts = activityPlayerPage.click_showAnswerBtn();
-		assertion.assertEqual(sts, true, "status mismatch");
-		sts = activityPlayerPage.getData_activityPlayer();
 		sts = activityPlayerPage.click_showResponseBtn();
-		assertion.assertEqual(sts, true, "status mismatch");
-		sts = itemPlayer.getItemplayerInfo();
+		assertion.assertEqual(sts, true, "showAnswerBtn status mismatch");
+		sts = itemPlayerPage.getItemplayerInfo();
 		assertion.assertEqual(sts.correctCount, correctCount, "Correct count mismatch");
 		assertion.assertEqual(sts.incorrectCount, incorrectCount, "Incorrect count mismatch");
 	},
 
-	//Click Restart button in left pane
+	//Validate that activity is restored to unattempted state on clicking the Retake button
 	ENG_PLAY_TC_7: function () {
 		sts = activityPlayerPage.click_retakeActivityBtn();
-		assertion.assertEqual(sts, true, "retake status mismatch");
+		assertion.assertEqual(sts, true, "retakeActivityBtn status mismatch");
 		sts = activityPlayerPage.getData_activityPlayer();
-		assertion.assertEqual(sts.retakeActivityBtn, null, "Retake activity button text mismatch");
+		assertion.assertEqual(sts.retakeActivityBtn, null, "retakeActivityBtn status mismatch");
+		assertion.assertEqual(sts.yourScoreLabel, null, "yourScoreLabel status mismatch");
+		assertion.assertEqual(sts.yourScoreValue, null, "yourScoreValue status mismatch");
 	},
 
 	//Validate the activity player when quiz is launched for the student
-	ENG_PLAY_TC_8: function (testdata) {
-		sts = itemPlayer.isInitialized();
+	ENG_PLAY_TC_8: function () {
+		sts = itemPlayerPage.isInitialized();
 		assertion.assertEqual(sts.isSubmitted, true, "submit status mismatch");
-		sts = itemPlayer.getQuesIndex();
+		sts = itemPlayerPage.getQuesIndex();
 		assertion.assertEqual((sts), "0", "Active question index mismatch");
 		sts = activityPlayerPage.getData_activityPlayer();
 		/*rupsi
@@ -99,25 +107,46 @@ module.exports = {
 		// assertion.assertEqual(sts.fdbackText, testdata, "text mismatch");
 	},
 
-	//Validate the activity player when user click on Submit Answers button
+	//Validate that user responses are submitted for the Activity on clicking the Submit/Finish button
 	ENG_PLAY_TC_9: function () {
 		sts = activityPlayerPage.click_submitActivityBtn();
-	//	assertion.assertEqual(sts.submitActivity_isDisabled, "true", "status mismatch");
+		assertion.assertEqual(sts, true, "submitActivityBtn status mismatch");
+		sts = activityPlayerPage.getData_activityPlayer();
+		assertion.assertNotEqual(sts.retakeActivityBtn, null, "retakeActivityBtn status mismatch");
+		assertion.assertNotEqual(sts.yourScoreLabel, null, "yourScoreLabel status mismatch");
+		assertion.assertNotEqual(sts.yourScoreValue, null, "yourScoreValue status mismatch");
 	},
 
 	//Validate the activity player when Last question of quiz is launched
 	ENG_PLAY_TC_10: function (testdata) {
-		sts = itemPlayer.isInitialized();
+		sts = itemPlayerPage.isInitialized();
 		assertion.assertEqual(sts.isSubmitted, true, "submit status mismatch");
 		sts = activityPlayerPage.getData_activityPlayer();
 		assertion.assertEqual(sts.checkAnswerBtn, testdata[0].checkAnswer_txt, "submit status mismatch");
 		//assertion.assertEqual(sts.submitActivity_txt, testdata[1], "submit status mismatch");
 	},
-	
-	// Click show details button in activity Player
-	ENG_PLAY_TC_11: function (testdata) {
+
+	//Validate clicking on Show details button expands the details panel
+	ENG_PLAY_TC_11: function () {
 		sts = activityPlayerPage.click_showDetailsBtn();
-		assertion.assertEqual(sts, 'false', "restart button status mismatch");
+		assertion.assertEqual(sts, "false", "Details panel status mismatch");
 	},
 
+	//Validate clicking on Hide details button hides the details panel
+	ENG_PLAY_TC_12: function () {
+		sts = activityPlayerPage.click_showDetailsBtn();
+		assertion.assertEqual(sts, "true", "Details panel status mismatch");
+	},
+
+	//Validate that clicking on Next Activity button launches the next activity in the component
+	ENG_PLAY_TC_13: function () {
+		sts = activityPlayerPage.click_nextActivityBtn();
+		assertion.assertNotEqual(sts.prevActivityBtn, null, "prevActivityBtn status mismatch");
+	},
+
+	//Validate that clicking on Previous Activity button launches the previous activity of the component
+	ENG_PLAY_TC_14: function () {
+		sts = activityPlayerPage.click_prevActivityBtn();
+		assertion.assertNotEqual(sts.nextActivityBtn, null, "nextActivityBtn status mismatch");
+	},
 }

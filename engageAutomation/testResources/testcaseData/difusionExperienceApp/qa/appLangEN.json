@@ -301,6 +301,38 @@
                 "unitOpenFlipbook_option": "Open in Flipbook",
                 "unitViewActivity_option": "View Activities"
             },
+            "activityPlayer": {
+                "teacher": {
+                    "infoBtn": "",
+                    "showDetailsBtn": "Show Details",
+                    "prevActivityBtn": "Previous Activity",
+                    "nextActivityBtn": "Next Activity",
+                    "showAnswerBtn": "Show Answer",
+                    "showResponseBtn": "User Response",
+                    "checkAnswerBtn": "Check Answers",
+                    "submitActivityBtn": "Finish",
+                    "markCompleteBtn": null,
+                    "retakeActivityBtn": null,
+                    "closeBtn": "Close",
+                    "completedTxt": null,
+                    "yourScoreLabel": null
+                },
+                "student": {
+                    "infoBtn": "",
+                    "showDetailsBtn": "Show Details",
+                    "prevActivityBtn": "Previous Activity",
+                    "nextActivityBtn": "Next Activity",
+                    "showAnswerBtn": "Show Answer",
+                    "showResponseBtn": "User Response",
+                    "checkAnswerBtn": "Check Answers",
+                    "submitActivityBtn": "Submit Answers",
+                    "markCompleteBtn": "Mark Complete",
+                    "retakeActivityBtn": "Retake Activity",
+                    "closeBtn": "Close",
+                    "completedTxt": "Completed on",
+                    "yourScoreLabel": "Your Score:"
+                }
+            },
             "activityPlayerPage": {
                 "correct_txt": "Well done",
                 "incorrect_txt": "Oops! Not quite correct.",
