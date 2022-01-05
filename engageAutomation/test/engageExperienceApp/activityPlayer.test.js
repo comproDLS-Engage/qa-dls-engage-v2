@@ -5,23 +5,22 @@ var sts;
 
 module.exports = {
 
-	//Validate the unattempted state of a close ended activity
+	//Validate the unattempted state of a close ended activity for a student
 	ENG_PLAY_TC_1: function (testdata) {
 		sts = itemPlayerPage.isInitialized();
 		assertion.assertEqual(sts.isSubmitted, false, "Activity submission status mismatch");
 		sts = activityPlayerPage.getData_activityPlayer();
-		console.log(sts)
 		assertion.assertEqual(sts.infoBtn, testdata.infoBtn, "infoBtn status mismatch");
-		assertion.assertEqual(sts.showDetailsBtn, testdata.showDetailsBtn, "showDetailsBtn status mismatch");
+		assertion.assertEqual(sts.showDetailsBtn, testdata.showDetailsBtn[0], "Show details button status mismatch");
 		assertion.assertEqual(sts.checkAnswerBtn, testdata.checkAnswerBtn, "checkAnswerBtn status mismatch");
 		assertion.assertEqual(sts.showAnswerBtn, null, "showAnswerBtn status mismatch");
-		assertion.assertEqual(sts.showResponseBtn, null, "checkAnswerBtn status mismatch");
-		assertion.assertEqual(sts.markCompleteBtn, null, "markCompleteBtn status mismatch");
+		assertion.assertEqual(sts.showResponseBtn, null, "showResponseBtn status mismatch");
 		assertion.assertEqual(sts.retakeActivityBtn, null, "retakeActivityBtn status mismatch");
 		assertion.assertEqual(sts.completedTxt, null, "completedTxt status mismatch");
 		assertion.assertEqual(sts.yourScoreLabel, null, "yourScoreLabel status mismatch");
 		assertion.assertEqual(sts.yourScoreValue, null, "yourScoreValue status mismatch");
 		assertion.assertEqual(sts.prevPageBtn, null, "prevPageBtn status mismatch");
+		assertion.assertEqual(sts.detailsPanel, false, "detailsPanel status mismatch");
 		if (sts.quesNumber == null) {
 			assertion.assertEqual(sts.nextPageBtn, null, "nextPageBtn status mismatch");
 			assertion.assertEqual(sts.prevActivityBtn, testdata.prevActivityBtn, "prevActivityBtn status mismatch");
@@ -33,14 +32,12 @@ module.exports = {
 		else {
 			assertion.assertEqual(sts.nextPageBtn, "", "nextPageBtn status mismatch");
 		}
-		//assertion.assertEqual(sts.submitActivityBtn, testdata.submitActivityBtn, "submitActivityBtn status mismatch");
 	},
 
 
 	//Validate that clicking on next arrow button navigates to next question in the activity
 	ENG_PLAY_TC_2: function () {
 		let sts2 = activityPlayerPage.getData_activityPlayer();
-		console.log(sts2)
 		sts = activityPlayerPage.click_nextPageBtn();
 		assertion.assertEqual(parseInt(sts), parseInt(sts2.quesNumber) + 1, "question number mismatch");
 	},
@@ -92,19 +89,31 @@ module.exports = {
 		assertion.assertEqual(sts.yourScoreValue, null, "yourScoreValue status mismatch");
 	},
 
-	//Validate the activity player when quiz is launched for the student
-	ENG_PLAY_TC_8: function () {
+	//Validate the attempted/submitted state of a close ended activity
+	ENG_PLAY_TC_8: function (testdata) {
 		sts = itemPlayerPage.isInitialized();
 		assertion.assertEqual(sts.isSubmitted, true, "submit status mismatch");
-		sts = itemPlayerPage.getQuesIndex();
-		assertion.assertEqual((sts), "0", "Active question index mismatch");
 		sts = activityPlayerPage.getData_activityPlayer();
-		/*rupsi
-		assertion.assertEqual(sts.checkmyWork_isExists, true, "check answer button status mismatch");
-		assertion.assertEqual(sts.checkmyWork_isDisabled, "true", "button state mismatch");
-		assertion.assertEqual(sts.previous_isExists, false, "previous button status mismatch");*/
-		// sts = activityPlayerPage.getFeedbackInfo();
-		// assertion.assertEqual(sts.fdbackText, testdata, "text mismatch");
+		assertion.assertEqual(sts.infoBtn, testdata.infoBtn, "infoBtn status mismatch");
+		assertion.assertEqual(sts.checkAnswerBtn, testdata.checkAnswerBtn, "checkAnswerBtn status mismatch");
+		assertion.assertEqual(sts.showAnswerBtn, testdata.showAnswerBtn, "showAnswerBtn status mismatch");
+		assertion.assertEqual(sts.showResponseBtn, null, "showResponseBtn status mismatch");
+		assertion.assertEqual(sts.retakeActivityBtn, testdata.retakeActivityBtn, "retakeActivityBtn status mismatch");
+		assertion.assertEqual(sts.yourScoreLabel, testdata.yourScoreLabel, "yourScoreLabel status mismatch");
+		//assertion.assertEqual(sts.yourScoreValue, null, "yourScoreValue status mismatch");
+		assertion.assertEqual(sts.prevPageBtn, null, "prevPageBtn status mismatch");
+		assertion.assertEqual(sts.detailsPanel, false, "detailsPanel status mismatch");
+		if (sts.quesNumber == null) {
+			assertion.assertEqual(sts.nextPageBtn, null, "nextPageBtn status mismatch");
+			assertion.assertEqual(sts.prevActivityBtn, testdata.prevActivityBtn, "prevActivityBtn status mismatch");
+			if (sts.closeBtn == null)
+				assertion.assertEqual(sts.nextActivityBtn, testdata.nextActivityBtn, "nextActivityBtn status mismatch");
+			else
+				assertion.assertEqual(sts.closeBtn, testdata.closeBtn, "closeBtn status mismatch");
+		}
+		else {
+			assertion.assertEqual(sts.nextPageBtn, "", "nextPageBtn status mismatch");
+		}
 	},
 
 	//Validate that user responses are submitted for the Activity on clicking the Submit/Finish button
@@ -117,14 +126,14 @@ module.exports = {
 		assertion.assertNotEqual(sts.yourScoreValue, null, "yourScoreValue status mismatch");
 	},
 
-	//Validate the activity player when Last question of quiz is launched
+	/*//Validate the activity player when Last question of quiz is launched
 	ENG_PLAY_TC_10: function (testdata) {
 		sts = itemPlayerPage.isInitialized();
 		assertion.assertEqual(sts.isSubmitted, true, "submit status mismatch");
 		sts = activityPlayerPage.getData_activityPlayer();
 		assertion.assertEqual(sts.checkAnswerBtn, testdata[0].checkAnswer_txt, "submit status mismatch");
 		//assertion.assertEqual(sts.submitActivity_txt, testdata[1], "submit status mismatch");
-	},
+	},*/
 
 	//Validate clicking on Show details button expands the details panel
 	ENG_PLAY_TC_11: function () {
@@ -149,4 +158,18 @@ module.exports = {
 		sts = activityPlayerPage.click_prevActivityBtn();
 		assertion.assertNotEqual(sts.nextActivityBtn, null, "nextActivityBtn status mismatch");
 	},
+
+	//Validate clicking on info icon displays the TOC for the unit for which activity has been launched
+	ENG_PLAY_TC_15: function (testdata) {
+		sts = activityPlayerPage.click_infoBtn();
+		assertion.assertEqual(sts.closeInfoBtn, testdata.closeInfoBtn, "closeInfoBtn status mismatch");
+		assertion.assertEqual(sts.infoTocHeading, testdata.infoTocHeading, "infoTocHeading status mismatch");
+	},
+
+	//Validate clicking on cross icon closes the info TOC
+	ENG_PLAY_TC_16: function () {
+		sts = activityPlayerPage.click_closeInfoBtn();
+		assertion.assertEqual(sts, true, "closeInfoBtn status mismatch");
+	},
+
 }
