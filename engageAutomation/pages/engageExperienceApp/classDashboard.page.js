@@ -92,6 +92,8 @@ module.exports = {
 		res = action.click(this.addClassBtn);
 		if (res == true) {
 			logger.logInto(stackTrace.get(), res + " -- addClassBtn is clicked");
+			var createClassPage = require('./createClass.page.js');
+			res = createClassPage.isInitialized();
 		}
 		else {
 			res = res + " -- addClassBtn is NOT clicked";

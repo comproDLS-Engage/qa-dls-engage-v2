@@ -47,7 +47,7 @@ module.exports = {
         logger.logInto(stackTrace.get());
         action.waitForDocumentLoad();
         res = {
-            pageStatus: action.waitForDisplayed(this.cardTitle + "," + this.search_NoResult_img),
+            pageStatus: action.waitForDisplayed(this.pageTitle),
             appShellPage: appShellPage.isInitialized()
         };
         return res;

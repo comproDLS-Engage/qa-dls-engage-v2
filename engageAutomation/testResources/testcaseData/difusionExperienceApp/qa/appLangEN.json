@@ -7,7 +7,7 @@
                 "subheadingText": "Learn from anywhere, anytime. Instant access to all courses and activities.",
                 "signup_btnText": "Sign Up & Start Learning Today",
                 "login_btnText": "Log in",
-                "login_lblText": "Have an Account?",
+                "login_lblText": "Have an account?",
                 "footerLabel": "powered by"
             },
             "login": {
@@ -24,7 +24,7 @@
                 "dontHaveAccount_txt": "Don't have an account?",
                 "loginoption_txt": "Or continue with:",
                 "footerLabel": "powered by",
-                "invalidEmail_txt": "Please check your email address and try again.",
+                "invalidEmail_txt": "Please enter a valid email address (for example, name@example.com)",
                 "notRegisterUser_alert": "Please check your email address and password and try again."
             },
             "appShell": {
@@ -239,10 +239,10 @@
                 "joinClassSubHeader": "If your teacher has enrolled you in a class, enter the class code.",
                 "enterClassCodeLabel": "Enter Class Code",
                 "classCodeInput": "Enter Class Code",
-                "classHelpText": "Your teacher provided class code should look like: iqig-Gq32. Be sure to check your email to see if your teacher sent you an invite.",
+                "classHelpText": "Your class code should look like: iqig-Gq32. Be sure to check your email to see if your teacher sent you an invite.",
                 "joinclassPopUpbtn": "Join Class",
                 "helpJoiningClass": "Help Joining Classes",
-                "titleErrorMsg": "Invalid class code. Please check the class code and try again. If the problem persists, please contact your Teacher.",
+                "titleErrorMsg": "You are already enrolled in this class. Please enter a different class code.",
                 "alreadyExistErrorMessage": "You are already enrolled in this class. Please enter a different class code."
             },
             "classDrawerPane": {
@@ -359,7 +359,7 @@
                     "pageHeading": "Enter your class code",
                     "subHeading": "Use the class code provided by your teacher or skip for now.",
                     "textboxMessage": "Enter Class Code",
-                    "helper_txt": "Your class code should look like: iqig-Gq32. Be sure to check your email to see if your teacher sent you an invite.",
+                    "helper_txt": "Your teacher provided class code should look like: iqig-Gq32. Be sure to check your email to see if your teacher sent you an invite.",
                     "submitBtn": "Continue",
                     "skipForNow": "Skip for now",
                     "invalidKeyMessage": "Invalid course key",
