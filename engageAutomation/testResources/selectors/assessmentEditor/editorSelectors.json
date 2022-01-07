@@ -53,7 +53,7 @@
 			"uploadedAudio": "[data-tid=sliderContainer]",
 			"audioCredit_input": "[data-tid=input-audiocredit] input",
 			"questionInputField": "[class=DraftEditor-editorContainer] span span",
-			"addAnswer_btn": "[data-tid=button-addoption]",
+			"addAnswer_btn": "[data-tid=button-addoption",
 			"inputOptions": "[data-tid*=input-option-",
 			"optionStyle_radio": "[data-tid=radio-optionstyle-",
 			"preview_btn": "#root > div > div > div > button[data-tid=button-preview]",
@@ -70,6 +70,8 @@
 			"subOptionIndex":"div[data-rbd-droppable-context-id=",
 			"subOptionValue":"[data-rbd-draggable-id=",
 			"subOptiontext":"input[type=text]",
+			"topsbottomOption":"[data-tid=radio-topbottomlayout] span[class*=MuiButtonBase]",
+			"leftRightOption":"[data-tid=radio-leftrightlayout] span[class*=MuiButtonBase]",
 			"multipleResponse": {
 				"checkboxOption_input": "[data-tid=checkbox-option-"
 			},

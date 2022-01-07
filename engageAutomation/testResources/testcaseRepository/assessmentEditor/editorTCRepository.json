@@ -19,6 +19,11 @@
                     "tags": "P1"
                 },
                 {
+                    "id": "EDIT_TC_13",
+                    "description": "Click on Add Answer Button",
+                    "tags": "P1"
+                },
+                {
                     "id": "ASE_COM_TC_4",
                     "description": "Validate that a new question is added by clicking on the 'Add new Question' button on the left pane",
                     "tags": "P1"
@@ -193,6 +198,41 @@
                 {
                     "id": "ASE_COM_TC_1004",
                     "description": "Delete Media Clicked",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1005",
+                    "description": "Click Edit Prompt Button",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1006",
+                    "description": "Set Prompt textPlaceholder text",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1007",
+                    "description": "Click on SubQuestion button",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1008",
+                    "description": "Add Option text",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1009",
+                    "description": "Click on SubQuestion text",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1010",
+                    "description": "Click on Top bottom option",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1011",
+                    "description": "Click on Left right option",
                     "tags": "P1"
                 }
             ]
