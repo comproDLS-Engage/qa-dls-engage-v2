@@ -1463,6 +1463,54 @@
           "description": "Validate that clicking on Previous Activity button launches the previous activity of the component",
           "tags": "",
           "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLAY_TC_14",
+          "description": "Validate that clicking on Previous Activity button launches the previous activity of the component",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLAY_TC_15",
+          "description": "Validate clicking on info icon displays the TOC for the unit for which activity has been launched",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLAY_TC_16",
+          "description": "Validate clicking on cross icon closes the info TOC",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLAY_TC_17",
+          "description": "Validate that Submit Answers button is displayed for activity where either or both Contributes to Completion and Contributes to Score flag are true",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLAY_TC_18",
+          "description": "Validate that Finish button is displayed for activity where both Contributes to Completion and Contributes to Score flag are false",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLAY_TC_19",
+          "description": "Validate the unattempted state of an etext activity when contributes to completion flag is true",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLAY_TC_20",
+          "description": "Validate the unattempted state of an etext activity when contributes to completion flag is false",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLAY_TC_21",
+          "description": "Validate the unattempted state of html webbook",
+          "tags": "",
+          "visualTest": "-"
         }
       ]
     },

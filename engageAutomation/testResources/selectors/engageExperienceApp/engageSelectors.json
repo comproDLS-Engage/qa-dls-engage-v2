@@ -462,7 +462,7 @@
                 "completedTxt": "[data-tid='button-completed']",
                 "yourScoreLabel": "[data-tid=text-activityScoreInfo] p",
                 "yourScoreValue": "[data-tid=text-activityScoreInfo] h6",
-                "detailsPanelContainer": "main > div > div:nth-child(1)",
+                "detailsPanel": "main > div > div:nth-child(1)",
                 "panelHeading": "[data-tid=panel-heading]",
                 "activityTitle": "[data-tid='text-title']",
                 "activitySubtitle": "[data-tid='text-subTitle']",

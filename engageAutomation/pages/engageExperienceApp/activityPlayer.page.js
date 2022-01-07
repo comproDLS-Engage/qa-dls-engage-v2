@@ -22,7 +22,7 @@ module.exports = {
     completedTxt: selectorFile.css.ComproEngage.activityPlayer.completedTxt,
     yourScoreLabel: selectorFile.css.ComproEngage.activityPlayer.yourScoreLabel,
     yourScoreValue: selectorFile.css.ComproEngage.activityPlayer.yourScoreValue,
-    detailsPanelContainer: selectorFile.css.ComproEngage.activityPlayer.detailsPanelContainer,
+    detailsPanel: selectorFile.css.ComproEngage.activityPlayer.detailsPanel,
     panelHeading: selectorFile.css.ComproEngage.activityPlayer.panelHeading,
     activityTitle: selectorFile.css.ComproEngage.activityPlayer.activityTitle,
     activitySubtitle: selectorFile.css.ComproEngage.activityPlayer.activitySubtitle,
@@ -66,6 +66,7 @@ module.exports = {
             completedTxt: (action.getElementCount(this.completedTxt) > 0) ? action.getText(this.completedTxt) : null,
             yourScoreLabel: (action.getElementCount(this.yourScoreLabel) > 0) ? action.getText(this.yourScoreLabel) : null,
             yourScoreValue: (action.getElementCount(this.yourScoreValue) > 0) ? action.getText(this.yourScoreValue) : null,
+            detailsPanelHidden: (action.getElementCount(this.detailsPanel) > 0) ? action.getAttribute(this.detailsPanel, "aria-hidden") : null
         }
         return obj;
     },
@@ -116,7 +117,7 @@ module.exports = {
         res = action.click(this.showDetailsBtn);
         if (true == res) {
             logger.logInto(stackTrace.get(), " showDetailsBtn is clicked");
-            res = action.getAttribute(this.detailsPanelContainer, "aria-hidden");
+            res = action.getAttribute(this.detailsPanel, "aria-hidden");
         }
         else {
             logger.logInto(stackTrace.get(), res + "showDetailsBtn is NOT clicked", 'error');

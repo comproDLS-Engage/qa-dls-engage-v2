@@ -304,13 +304,24 @@
             "activityPlayer": {
                 "teacher": {
                     "infoBtn": "",
-                    "showDetailsBtn": "Show Details",
-                    "prevActivityBtn": "Previous Activity",
-                    "nextActivityBtn": "Next Activity",
+                    "showDetailsBtn": [
+                        "Show Details",
+                        "Hide Details"
+                    ],
+                    "prevPageBtn": "",
+                    "nextPageBtn": "",
+                    "prevActivityBtn": [
+                        "Previous Activity",
+                        "Previous"
+                    ],
+                    "nextActivityBtn": [
+                        "Next Activity",
+                        "Next"
+                    ],
                     "showAnswerBtn": "Show Answer",
                     "showResponseBtn": "User Response",
                     "checkAnswerBtn": "Check Answers",
-                    "submitActivityBtn": "Finish",
+                    "submitActivityBtn": null,
                     "markCompleteBtn": null,
                     "retakeActivityBtn": null,
                     "closeBtn": "Close",
@@ -319,13 +330,27 @@
                 },
                 "student": {
                     "infoBtn": "",
-                    "showDetailsBtn": "Show Details",
-                    "prevActivityBtn": "Previous Activity",
-                    "nextActivityBtn": "Next Activity",
+                    "showDetailsBtn": [
+                        "Show Details",
+                        "Hide Details"
+                    ],
+                    "prevPageBtn": "",
+                    "nextPageBtn": "",
+                    "prevActivityBtn": [
+                        "Previous Activity",
+                        "Previous"
+                    ],
+                    "nextActivityBtn": [
+                        "Next Activity",
+                        "Next"
+                    ],
                     "showAnswerBtn": "Show Answer",
                     "showResponseBtn": "User Response",
                     "checkAnswerBtn": "Check Answers",
-                    "submitActivityBtn": "Submit Answers",
+                    "submitActivityBtn": [
+                        "Submit Answers",
+                        "Finish"
+                    ],
                     "markCompleteBtn": "Mark Complete",
                     "retakeActivityBtn": "Retake Activity",
                     "closeBtn": "Close",
