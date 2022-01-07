@@ -58,7 +58,7 @@ module.exports = {
             passed: visualPassedTc,
             failed: visualFailedTc
         }
-        logData.appVersion = global.appVersion;
+        logDataobj.appVersion = global.appVersion;
         let filePath = rootDir + '/' + global.reportOutputDir + '/visual/' + testExecFile.split(".")[0] + '-visualReport-' + startTime + '.log';
         fs.openSync(filePath, 'w');
         fs.writeFileSync(filePath, JSON.stringify(logDataobj));
