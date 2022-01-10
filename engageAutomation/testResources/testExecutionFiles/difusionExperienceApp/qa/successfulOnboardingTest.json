@@ -47,7 +47,7 @@
                },
                {
                   "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath":"engage.appContent.onboarding.welcomePage"
+                  "jsonPath":"engage.appContent.onboarding"
                }
             ]
          },
@@ -91,9 +91,24 @@
          
       ],
       "After":[
+                {
+            "id":"ENG_SHELL_TC_8",
+            "description":"",
+            "testFile":"./test/engageExperienceApp/appShell.test.js",
+            "testData":[
+               {
+                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath":"engage.appContent.appShell"
+               },
+               {
+                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+                  "jsonPath":"engage.login.user.successfulStudentUser"
+               }
+            ]
+         },
          {
             "id":"ENG_SHELL_TC_9",
-            "description":"Validate that clicking on logout logs out from application",
+            "description":"",
             "testFile":"./test/engageExperienceApp/appShell.test.js",
             "testData":[
                
@@ -149,7 +164,7 @@
                },
                {
                   "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath":"engage.appContent.onboarding.welcomePage"
+                  "jsonPath":"engage.appContent.onboarding"
                }
             ]
          },
@@ -158,6 +173,10 @@
             "description":"",
             "testFile":"./test/engageExperienceApp/userOnboarding.test.js",
             "testData":[
+               {
+                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath":"engage.appContent.onboarding.schoolKeyPage"
+               }
                
             ]
          },
@@ -166,6 +185,10 @@
             "description":"",
             "testFile":"./test/engageExperienceApp/userOnboarding.test.js",
             "testData":[
+                {
+                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath":"engage.appContent.onboarding.teacherSuccessPage"
+               }
                
             ]
          },
@@ -185,9 +208,24 @@
          
       ],
       "After":[
+                {
+            "id":"ENG_SHELL_TC_8",
+            "description":"",
+            "testFile":"./test/engageExperienceApp/appShell.test.js",
+            "testData":[
+               {
+                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath":"engage.appContent.appShell"
+               },
+               {
+                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+                  "jsonPath":"engage.login.user.successfulInstructorUser"
+               }
+            ]
+         },
          {
             "id":"ENG_SHELL_TC_9",
-            "description":"Validate that clicking on logout logs out from application",
+            "description":"",
             "testFile":"./test/engageExperienceApp/appShell.test.js",
             "testData":[
                

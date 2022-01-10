@@ -17,6 +17,7 @@
     "addBookFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='addBookTest.json' --browserCapability=desktop-chrome-1366",
     "settingsFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='settingsTest.json' --browserCapability=desktop-chrome-1366",
     "flipbookTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='flipbook.json' --browserCapability=desktop-chrome-1366",
+    "successfulOnboardingTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='successfulOnboardingTest.json' --browserCapability=desktop-chrome-1366",
     "browseFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='browseTest.json' --browserCapability=desktop-chrome-1366",
     "playlistTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='playlistTest.json' --browserCapability=desktop-chrome-1366"
   },
