@@ -85,7 +85,7 @@
                 "successfulInstructorUser": {
                     "email": "difusionqa.teach46@yopmail.com",
                     "password": "Compro@1234",
-                    "role": "student",
+                    "role": "teacher",
                     "name": "difusionqa teach46",
                     "class": [],
                     "info": {}
