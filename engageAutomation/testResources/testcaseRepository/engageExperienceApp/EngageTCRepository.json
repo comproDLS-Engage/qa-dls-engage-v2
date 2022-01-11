@@ -1192,6 +1192,11 @@
           "id": "ENG_BOOK_TC_44",
           "description": "Validate that clicking on unit Detail TOC breadcrumb naviagtes to Book detail TOC page",
           "tags": "P1"
+        },
+        {
+          "id": "ENG_BOOK_TC_53",
+          "description": "Validate that clicking on the subfolder expand/collapse the subfolder",
+          "tags": "P1"
         }
       ]
     },

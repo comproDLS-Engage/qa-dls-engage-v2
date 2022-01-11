@@ -25,5 +25,5 @@ activityType,[data-tid='text-activitytype'],p,detailsPanel,,,,,
 pageNumber,[data-tid='text-pagenumberinfo'],p,detailsPanel,,,,,
 expandCollapseBtn,[data-tid=icon-togglegroupexpansion],button,detailsPanel,,,"getCSSProperty, analyticsInfoContainer, ""visibility""",,
 analyticsInfoContainer,[data-tid=container-analyticsinfo] > div > div:nth-child(2),div,,,,,,
-closeInfoBtn,[data-tid=button-closeinfotoc],button,infoTocPanel,,,"waitForDisplayed, closeBtn, undefined, true",,
-infoTocHeading,[data-tid=text-infotocheading],p,infoTocPanel,,,,,
+closeInfoBtn,[data-tid=button-closeinfotoc],button,infoTocPanel,,,"waitForDisplayed, closeBtn, undefined, true","""""",""""""
+infoTocHeading,[data-tid=text-infotocheading],p,infoTocPanel,,,,Activities,Activities

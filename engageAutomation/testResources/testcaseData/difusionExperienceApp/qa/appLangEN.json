@@ -326,7 +326,9 @@
                     "retakeActivityBtn": null,
                     "closeBtn": "Close",
                     "completedTxt": null,
-                    "yourScoreLabel": null
+                    "yourScoreLabel": null,
+                    "closeInfoBtn": "",
+                    "infoTocHeading": "Activities"
                 },
                 "student": {
                     "infoBtn": "",
@@ -355,17 +357,14 @@
                     "retakeActivityBtn": "Retake Activity",
                     "closeBtn": "Close",
                     "completedTxt": "Completed on",
-                    "yourScoreLabel": "Your Score:"
+                    "yourScoreLabel": "Your Score:",
+                    "closeInfoBtn": "",
+                    "infoTocHeading": "Activities"
                 }
             },
             "activityPlayerPage": {
                 "correct_txt": "Well done",
-                "incorrect_txt": "Oops! Not quite correct.",
-                "finish": "Finish",
-                "submit": "Submit Answers",
-                "reset": "Reset Activity",
-                "retake": "Retake Activity",
-                "checkAnswer_txt": "Check Answers"
+                "incorrect_txt": "Oops! Not quite correct."
             },
             "onboarding": {
                 "welcomePage": {
