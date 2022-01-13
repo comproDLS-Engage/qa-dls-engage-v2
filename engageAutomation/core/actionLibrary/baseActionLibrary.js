@@ -96,10 +96,10 @@ module.exports = {
         }
     },
 
-    getValue: function (selector, value) {
-        message = "element:" + selector + "value:" + value;
+    getValue: function (selector) {
+        message = "element:" + selector;
         try {
-            let result = $(selector).getValue(value);
+            let result = $(selector).getValue();
             return result;
         } catch (err) {
             logger.logInto(stackTrace.get(), err.message, "error");
@@ -107,6 +107,17 @@ module.exports = {
         }
     },
 
+    clearValueDefault: function (selector) {
+        message = "element:" + selector + "value:";
+        try {
+            let result = $(selector).clearValue();
+            return result;
+        } catch (err) {
+            logger.logInto(stackTrace.get(), err.message, "error");
+            return err;
+        }
+    },
+    
     clearValue: function (selector) {
         message = "element:" + selector;
         try {

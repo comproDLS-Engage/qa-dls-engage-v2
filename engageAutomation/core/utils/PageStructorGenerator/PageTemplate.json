@@ -9,37 +9,7 @@
   },
   "returnValue": 
     {
-      "activityPlayer.page": "('./activityPlayer.page.js').isInitialized()",
-      "addBook.page": "('./addBook.page.js').isInitialized()",
-      "appShell.page": "require('./appShell.page.js').isInitialized()",
-      "basePlayer.page": "('./basePlayer.page.js').isInitialized()",
-      "browse.page": "require('./browse.page.js').isInitialized()",
-      "calender.page": "('./calender.page.js').isInitialized()",
-      "classDashboard.page": "('./classDashboard.page.js').isInitialized()",
-      "classDrawer.page": "require('./classDrawer.page.js').isInitialized()",
-      "classify.itemPlayer.page": "('./classify.itemPlayer.page.js').isInitialized()",
-      "createClass.page": "('./createClass.page.js').isInitialized()",
-      "dashboard.page": "('./dashboard.page.js').isInitialized()",
-      "DNDonImage.itemPlayer.page": "('./DNDonImage.itemPlayer.page.js').isInitialized()",
-      "FIB.ItemPlayer.page": "require('./FIB.ItemPlayer.page.js').isInitialized()",
-      "FIBText.ItemPlayer.page": "('./FIBText.ItemPlayer.page.js').isInitialized()",
-      "header.page": "require('./header.page.js').isInitialized()",
-      "itemPlayer.page": "('./itemPlayer.page.js').isInitialized()",
-      "joinClass.page": "('./joinClass.page.js').isInitialized()",
-      "landing.page": "require('./landing.page.js').isInitialized()",
-      "login.page": "('./login.page.js').isInitialized()",
-      "matching.itemPlayer.page": "('./matching.itemPlayer.page.js').isInitialized()",
-      "mcmr.itemplayer.page": "('./mcmr.itemplayer.page.js').isInitialized()",
-      "mcqBlock.itemplayer.page": "('./mcqBlock.itemplayer.page.js').isInitialized()",
-      "orderlist.page": "('./orderlist.page.js').isInitialized()",
-      "settings.page": "require('./settings.page.js').isInitialized()",
-      "signup.page": "('./signup.page.js').isInitialized()",
-      "studentClassDetails.page": "require('./studentClassDetails.page.js').isInitialized()",
-      "successClass.page": "('./successClass.page.js').isInitialized()",
-      "teacherViewClass.page": "('./teacherViewClass.page.js').isInitialized()",
-      "userOnboarding.page": "require('./userOnboarding.page.js').isInitialized()",
-      "viewBook.page": "('./viewBook.page.js').isInitialized()",
-      "viewUnit.page": "('./viewUnit.page.js').isInitialized()"
+      
     }
   
   

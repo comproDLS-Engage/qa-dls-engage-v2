@@ -53,127 +53,125 @@
             "dashboard": {
                 "teacher": {
                     "pageTitle": "Dashboard",
-                    "createPlaylist_Txt": "Create Playlist",
-                    "addBook_Txt": "Add Book",
+                    "createPlaylistBtn": "Create Playlist",
+                    "addBookBtn": "Add Book",
                     "cardSliderTitle": "Getting started",
                     "cardSliderSubtitle": "Use your dashboard to pin your textbooks and create playlists to share with your class.",
-                    "myBooksHeading_Txt": "My Books",
-                    "recentlyViewed_heading": "Recently Viewed",
-                    "exploreHeading": "Explore",
-                    "viewAll_btn": "View All",
-                    "noBooks_title": "No Books added yet",
-                    "noBooks_subTitle": "Any books you save while browsing the catalog will be added here for you to view later.",
-                    "noBooks_btn": "Add Book",
-                    "myPlaylistsHeading_Txt": "My Playlists",
-                    "noPlaylists_title": "No Playlist created yet",
-                    "noPlaylists_subTitle": "Any playlists you create will be added here for you to view, share, and use in your classes.",
-                    "noPlaylists_btn": "Create Playlist",
-                    "actionCard": [
-                        {
-                            "actionCardTitles": "Adding Books",
-                            "actionCardSubtitles": "Save your class books to your dashboard to quickly access your book materials.",
-                            "actionCardBtns": "Add Book"
-                        },
-                        {
-                            "actionCardTitles": "Using Classes",
-                            "actionCardSubtitles": "Create a class to see student progress, view submitted work and create assignments.",
-                            "actionCardBtns": "Create Class"
-                        },
-                        {
-                            "actionCardTitles": "Using Playlists",
-                            "actionCardSubtitles": "Any playlists you create will be added here for you to view, share, and use in your classes.",
-                            "actionCardBtns": "Create Playlist"
-                        }
+                    "cardSliderLeftBtn": "",
+                    "cardSliderRightBtn": "",
+                    "actionCardTitles": [
+                        "Adding Books",
+                        "Using Classes",
+                        "Using Playlists"
                     ],
-                    "bookMenu_viewClass": "View Classes",
-                    "bookMenu_createClass": "Create New Class",
-                    "bookMenu_remove": "Remove from My Books",
-                    "bookMenu_openFlipbook": "Open Flipbook",
+                    "actionCardSubtitles": [
+                        "Save your class books to your dashboard to quickly access your book materials.",
+                        "Create a class to see student progress, view submitted work and create assignments.",
+                        "Any playlists you create will be added here for you to view, share, and use in your classes."
+                    ],
+                    "actionCardBtns": [
+                        "Add Book",
+                        "Create Class",
+                        "Create Playlist"
+                    ],
+                    "myBooksHeading": "My Books",
+                    "noBooksTitle": "No Books added yet",
+                    "noBooksSubtitle": "Any books you save while browsing the catalog will be added here for you to view later.",
+                    "noBooks_addBookBtn": "Add Book",
+                    "myPlaylistsHeading": "My Playlists",
+                    "noPlaylistsTitle": "No Playlist created yet",
+                    "noPlaylistsSubTitle": "Any playlists you create will be added here for you to view, share, and use in your classes.",
+                    "noPlaylists_createBtn": "Create Playlist",
+                    "viewBookBtn": "View",
+                    "bookMenu_viewClassOption": "View Classes",
+                    "bookMenu_createClassOption": "Create New Class",
+                    "bookMenu_removeOption": "Remove from My Books",
+                    "bookMenu_openFlipbookOption": "Open Flipbook",
                     "removeBook_title": "Remove from My Books?",
                     "removeBook_subTitle1": "This will remove the book - ",
                     "removeBook_subTitle2": " - from your My Books list.",
-                    "removeBook_cancel": "Cancel",
-                    "removeBook_remove": "Remove",
-                    "globalResource": [
-                        {
-                            "title": "Interactive Activities",
-                            "subtitle": "Find here hundreds of interactive exercises to improve your vocabulary."
-                        },
-                        {
-                            "title": "Videos",
-                            "subtitle": "New & trending video resources to pair with your lessons."
-                        },
-                        {
-                            "title": "Online Class",
-                            "subtitle": "Discover live training from other teachers."
-                        },
-                        {
-                            "title": "Teacher Training",
-                            "subtitle": "Resources to help you improve your classroom lessons."
-                        },
-                        {
-                            "title": "Today in Class",
-                            "subtitle": "See recent news to pair with lessons and activities."
-                        },
-                        {
-                            "title": "Projectables",
-                            "subtitle": "Top activities to project in your classroom."
-                        }
-                    ]
+                    "removeBook_cancelBtn": "Cancel",
+                    "removeBook_removeBtn": "Remove",
+                    "createPlaylist_label": "Playlist Name",
+                    "createPlaylist_input": "",
+                    "createPlaylist_cancelBtn": "Cancel",
+                    "createPlaylist_createBtn": "Create",
+                    "exploreHeading": "Explore",
+                    "viewAllBtn": "View All",
+                    "resourceTitle": [
+                        "Interactive Activities",
+                        "Videos",
+                        "Online Class",
+                        "Teacher Training",
+                        "Today in Class",
+                        "Projectables"
+                    ],
+                    "resourceSubtitle": [
+                        "Find here hundreds of interactive exercises to improve your vocabulary.",
+                        "New & trending video resources to pair with your lessons.",
+                        "Discover live training from other teachers.",
+                        "Resources to help you improve your classroom lessons.",
+                        "See recent news to pair with lessons and activities.",
+                        "Top activities to project in your classroom."
+                    ],
+                    "recentlyViewedHeading": "Recently Viewed"
                 },
                 "student": {
                     "pageTitle": "Dashboard",
-                    "createPlaylist_Txt": "Create Playlist",
-                    "addBook_Txt": "Add Book",
+                    "createPlaylistBtn": "Create Playlist",
+                    "addBookBtn": "Add Book",
                     "cardSliderTitle": "Getting started",
                     "cardSliderSubtitle": "Use your dashboard to pin your textbooks and create playlists.",
-                    "myBooksHeading_Txt": "My Books",
-                    "recentlyViewed_heading": "Recently Viewed",
-                    "exploreHeading": "Explore",
-                    "viewAll_btn": "View All",
-                    "noBooks_title": "No Books added yet",
-                    "noBooks_subTitle": "Any books you save while browsing the catalog will be added here for you to view later.",
-                    "noBooks_btn": "Add Book",
-                    "myPlaylistsHeading_Txt": "My Playlists",
-                    "noPlaylists_title": "No Playlist created yet",
-                    "noPlaylists_subTitle": "Any playlists you create will be added here for you to view.",
-                    "noPlaylists_btn": "Create Playlist",
-                    "actionCard": [
-                        {
-                            "actionCardTitles": "Adding Books",
-                            "actionCardSubtitles": "Save your class books to your dashboard to quickly access your book materials.",
-                            "actionCardBtns": "Add Book"
-                        },
-                        {
-                            "actionCardTitles": "Using Classes",
-                            "actionCardSubtitles": "Join a class to see progress and assignments of your class.",
-                            "actionCardBtns": "Join Class"
-                        },
-                        {
-                            "actionCardTitles": "Using Playlists",
-                            "actionCardSubtitles": "Any playlists you create will be added here for you to view.",
-                            "actionCardBtns": "Create Playlist"
-                        }
+                    "cardSliderLeftBtn": "",
+                    "cardSliderRightBtn": "",
+                    "actionCardTitles": [
+                        "Adding Books",
+                        "Using Classes",
+                        "Using Playlists"
                     ],
-                    "bookMenu_viewClass": "View Classes",
-                    "bookMenu_createClass": null,
-                    "bookMenu_remove": "Remove from My Books",
-                    "bookMenu_openFlipbook": "Open Flipbook",
+                    "actionCardSubtitles": [
+                        "Save your class books to your dashboard to quickly access your book materials.",
+                        "Join a class to see progress and assignments of your class.",
+                        "Any playlists you create will be added here for you to view."
+                    ],
+                    "actionCardBtns": [
+                        "Add Book",
+                        "Join Class",
+                        "Create Playlist"
+                    ],
+                    "myBooksHeading": "My Books",
+                    "noBooksTitle": "No Books added yet",
+                    "noBooksSubtitle": "Any books you save while browsing the catalog will be added here for you to view later.",
+                    "noBooks_addBookBtn": "Add Book",
+                    "myPlaylistsHeading": "My Playlists",
+                    "noPlaylistsTitle": "No Playlist created yet",
+                    "noPlaylistsSubTitle": "Any playlists you create will be added here for you to view.",
+                    "noPlaylists_createBtn": "Create Playlist",
+                    "viewBookBtn": "View",
+                    "bookMenu_viewClassOption": "View Classes",
+                    "bookMenu_createClassOption": null,
+                    "bookMenu_removeOption": "Remove from My Books",
+                    "bookMenu_openFlipbookOption": "Open Flipbook",
                     "removeBook_title": "Remove from My Books?",
                     "removeBook_subTitle1": "This will remove the book - ",
                     "removeBook_subTitle2": " - from your My Books list.",
-                    "removeBook_cancel": "Cancel",
-                    "removeBook_remove": "Remove",
-                    "globalResource": [
-                        {
-                            "title": "Interactive Activities",
-                            "subtitle": "Find here hundreds of interactive exercises to improve your vocabulary."
-                        },
-                        {
-                            "title": "Videos",
-                            "subtitle": "New & trending video resources to pair with your lessons."
-                        }
-                    ]
+                    "removeBook_cancelBtn": "Cancel",
+                    "removeBook_removeBtn": "Remove",
+                    "createPlaylist_label": "Playlist Name",
+                    "createPlaylist_input": true,
+                    "createPlaylist_cancelBtn": "Cancel",
+                    "createPlaylist_createBtn": "Create",
+                    "exploreHeading": "Explore",
+                    "viewAllBtn": "View All",
+                    "resourceTitle": [
+                        "Interactive Activities",
+                        "Videos"
+                    ],
+                    "resourceSubtitle": [
+                        "Find here hundreds of interactive exercises to improve your vocabulary.",
+                        "New & trending video resources to pair with your lessons."
+                    ],
+                    "recentlyViewedHeading": "Recently Viewed"
                 }
             },
             "createClassPage": {
@@ -548,40 +546,39 @@
                     "resetButton_fontSize_small": "14px",
                     "applySettingsBtn_fontSize_small": "14px",
                     "applySettingsBtn_lineHeight_narrow": "19.2px"
-                },
-                "flipbook":
-                {
-                    "doublelayoutWidth": "width: 50%;",
-                    "singlelayoutWidth": "width: 100%;",
-                    "singlelayoutDefaultWidth": 1409,
-                    "singlelayoutDefaultHeight": 1730,
-                    "doubleLayoutTOC": "p. 2 - 3",
-                    "singleLayoutTOC": "p. 2",
-                    "myNotesTitle": "My Notes",
-                    "noNoteText": "Looks like you haven't added any notes yet. Click \"Add Note\" button to add notes on the page.",
-                    "addNoteBtn": "Add Note",
-                    "addNoteTitle": "Add Note",
-                    "editNoteTitle": "Edit Note",
-                    "pageNoLabel": "On Page:",
-                    "pageNoValue": "p. 2",
-                    "notesListPagenumber": "Page 2",
-                    "allPagesLabel": "All Pages",
-                    "noteListItemLabel": "p. 2",
-                    "addNotePlaceholder": "Type your notes here...",
-                    "deleteNoteModalTitle": "Delete Note?",
-                    "deleteNoteModalSubTitle": "You won't be able to recover this note later.",
-                    "deleteNoteModalDeleteBtn": "Delete",
-                    "cancelBtn": "Cancel",
-                    "saveBtn": "Save",
-                    "setNote": "test note automation 1",
-                    "setEditedNote": "test edited note automation",
-                    "setBookmark": "test bookmark automation",
-                    "setEditedBookmark": "test edited bookmark automation",
-                    "noBookmarkText": "Looks like you haven't added any bookmarks yet. Bookmark a page to save your spot for later.",
-                    "bookmarkThisPageBtn": "Bookmark This Page",
-                    "bookmarksTitle": "Bookmarks",
-                    "bookmarkNameLabel": "Bookmark Name"
                 }
+            },
+            "flipbook": {
+                "doublelayoutWidth": "width: 50%;",
+                "singlelayoutWidth": "width: 100%;",
+                "singlelayoutDefaultWidth": 1411,
+                "singlelayoutDefaultHeight": 1733,
+                "doubleLayoutTOC": "p. 2 - 3",
+                "singleLayoutTOC": "p. 2",
+                "myNotesTitle": "My Notes",
+                "noNoteText": "Looks like you haven't added any notes yet. Click \"Add Note\" button to add notes on the page.",
+                "addNoteBtn": "Add Note",
+                "addNoteTitle": "Add Note",
+                "editNoteTitle": "Edit Note",
+                "pageNoLabel": "On Page:",
+                "pageNoValue": "p. 2",
+                "notesListPagenumber": "Page 2",
+                "allPagesLabel": "All Pages",
+                "noteListItemLabel": "p. 2",
+                "addNotePlaceholder": "Type your notes here...",
+                "deleteNoteModalTitle": "Delete Note?",
+                "deleteNoteModalSubTitle": "You won't be able to recover this note later.",
+                "deleteNoteModalDeleteBtn": "Delete",
+                "cancelBtn": "Cancel",
+                "saveBtn": "Save",
+                "setNote": "test note automation 1",
+                "setEditedNote": "test edited note automation",
+                "setBookmark": "test bookmark automation",
+                "setEditedBookmark": "test edited bookmark automation",
+                "noBookmarkText": "Looks like you haven't added any bookmarks yet. Bookmark a page to save your spot for later.",
+                "bookmarkThisPageBtn": "Bookmark This Page",
+                "bookmarksTitle": "Bookmarks",
+                "bookmarkNameLabel": "Bookmark Name"
             }
         }
     }

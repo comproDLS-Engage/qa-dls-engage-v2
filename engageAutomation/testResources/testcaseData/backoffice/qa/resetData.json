@@ -1,0 +1,41 @@
+{
+    "backoffice": {
+        "book": [
+            {
+                "type": "Book",
+                "name": "QA Test Book v0.10",
+                "coverImage": "./testResources/testcaseData/backOffice/qa/book_cover_compro_qa.png",
+                "description": ""
+            }
+        ],
+        "component": [
+            {
+                "type": "Learning Path",
+                "category": "Textbook",
+                "title": "Learning Path - extra activities",
+                "folderLevel": "3",
+                "autonumbering": "None"
+            }
+        ],
+        "folder": [
+            {
+                "name": "Test folder1 level1",
+                "coverImage": ""
+            },
+            {
+                "name": "Test folder1 level2",
+                "coverImage": ""
+            }
+        ],
+        "activity": [
+            {
+                "type": "Native Engage Learning Object",
+                "typeIndex": 0,
+                "name": "Native LO - new",
+                "targetRole":"All",
+                "assignable" :"True",
+                "page" : "13"
+            }
+        ]
+    }
+}

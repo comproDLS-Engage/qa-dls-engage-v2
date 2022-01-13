@@ -1,0 +1,35 @@
+{
+  "unit2_native1": {
+    "type": "Native Engage Learning Object",
+    "name": "Native LO 2",
+    "question": [
+      {
+        "number": 1,
+        "instruction": "",
+        "text": "",
+        "type": "multi-mcq",
+        "mediaType": "",
+        "answerKey": [
+          ["1-O1","Commerce ","select","correct"],
+          ["1-O2","Construction","",""],
+          ["1-O3","Construction de navires","",""],
+          ["1-O4","Toutes ces","",""],
+          ["2-O1","Commerce ","",""],
+          ["2-O2","Construction","select","correct"],
+          ["2-O3","Construction de navires","",""],
+          ["2-O4","Toutes ces","",""]
+        ],
+        "scenario1": [
+          ["1-O1","Commerce ","","correct"],
+          ["1-O2","Construction","",""],
+          ["1-O3","Construction de navires","select","incorrect"],
+          ["1-O4","Toutes ces","",""],
+          ["2-O1","Commerce ","",""],
+          ["2-O2","Construction","","correct"],
+          ["2-O3","Construction de navires","select","incorrect"],
+          ["2-O4","Toutes ces","",""]
+        ]
+      }
+    ]
+  }
+}

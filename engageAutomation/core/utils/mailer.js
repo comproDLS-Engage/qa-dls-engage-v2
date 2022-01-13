@@ -4,8 +4,7 @@ const fs = require("fs");
 var argv = require('yargs').argv;
 var folder = fs.readdirSync('../../output/reports/');
 var envData = JSON.parse(fs.readFileSync('../../env.json'));
-//argv.mailingList = 'akanksha.gairola@comprotechnologies.com'
-var errorMailingList = 'akanksha.gairola@comprotechnologies.com,akhil.aggarwal@comprotechnologies.com';
+var errorMailingList = 'akhil.aggarwal@comprotechnologies.com';
 var semaphoreJob = 'https://semaphoreci.com/comprodlsengage/' + argv.projectName + '/branches/' + argv.branchName + '/builds/' + argv.buildNumber;
 
 var funcReportDir = '../../output/reports/' + folder[0];
@@ -84,6 +83,7 @@ async function createMail(logData, reportUrl, mailTitle) {
     let testExecFile = logData.specs.toString();
     let tc_status = (tc_total == tc_passed) ? "passed" : "failed";
     let envDetail, output, subject, jobDetails;
+    let appVersion = logData.appVersion;
 
     if (logData.capabilities.pixelRatio == undefined) {
         envDetail = logData.capabilities.platformName.toUpperCase() + '<br>' + logData.capabilities.browserName.toUpperCase() + " " + logData.capabilities.browserVersion + "<br>" + logData.capabilities.screenResolution.width + "x" + logData.capabilities.screenResolution.height;
@@ -102,6 +102,7 @@ async function createMail(logData, reportUrl, mailTitle) {
         console.log("tc_failed = " + tc_failed);
         console.log("tc_skipped = " + tc_skipped);
         console.log("appUrl = " + appUrl);
+        console.log("appVersion = " + appVersion);
         console.log("envDetail = " + envDetail);
         console.log("detailedReport url = " + reportUrl);
         //console.log("detailedReport upload status = " + reportStatus);
@@ -112,7 +113,7 @@ async function createMail(logData, reportUrl, mailTitle) {
         tc_status = "error";
         mailingList = errorMailingList;
     } else {
-        output = '<!DOCTYPE html><html> <head><style> table, td { padding: 5px; border: 1.5px solid #D3D3D3; border-collapse: collapse; font-size: 14px; font-family: Arial; } </style> </head> <body><h2 style="font-family: Arial;"><strong>' + mailTitle + ' (' + argv.testEnv.toUpperCase() + ')</strong>&nbsp;</h2><table style="width: 500px;"><tbody><tr><td style="width:110px;"><strong>Build#</strong></td><td><span>' + argv.buildNumber + '</span></td></tr><tr><td><strong>Total Test</strong></td><td><strong><span style="color: #0000ff;">' + tc_total + '</span></strong></td></tr><tr><td><strong>Passed</strong></td><td><strong><span style="color: #3db67a;">' + tc_passed + '</span></strong></td></tr><tr><td><strong>Failed</strong></td><td><strong><span style="color: #ff0000;">' + tc_failed + '</span></strong></td></tr><tr><td><strong>Skipped</strong></td><td><strong><span style="color: #ff9900;">' + tc_skipped + '</span></strong></td></tr><tr><td><strong>Status</strong></td><td>' + tc_status.toUpperCase() + '</td></tr><tr><td><strong>Environment&nbsp;</strong></td><td>' + envDetail + '</td></tr><tr><td><strong>Test File&nbsp;</strong></td><td>' + testExecFile + '</td></tr><tr><td><strong>Application Url</strong></td><td><a href=' + appUrl + '><span>' + appUrl + '</span></a></td></tr><tr><td><strong>Detailed Report</strong></td><td style="white-space: nowrap;"><a href=' + reportUrl + '><span >' + reportUrl + '</span></a></td></tr></tbody></table>';
+        output = '<!DOCTYPE html><html> <head><style> table, td { padding: 5px; border: 1.5px solid #D3D3D3; border-collapse: collapse; font-size: 14px; font-family: Arial; } </style> </head> <body><h2 style="font-family: Arial;"><strong>' + mailTitle + ' (' + argv.testEnv.toUpperCase() + ')</strong>&nbsp;</h2><table style="width: 560px;"><tbody><tr><td style="width:140px;"><strong>Build#</strong></td><td><span>' + argv.buildNumber + '</span></td></tr><tr><td><strong>Total Test</strong></td><td><strong><span style="color: #0000ff;">' + tc_total + '</span></strong></td></tr><tr><td><strong>Passed</strong></td><td><strong><span style="color: #3db67a;">' + tc_passed + '</span></strong></td></tr><tr><td><strong>Failed</strong></td><td><strong><span style="color: #ff0000;">' + tc_failed + '</span></strong></td></tr><tr><td><strong>Skipped</strong></td><td><strong><span style="color: #ff9900;">' + tc_skipped + '</span></strong></td></tr><tr><td><strong>Status</strong></td><td>' + tc_status.toUpperCase() + '</td></tr><tr><td><strong>Environment&nbsp;</strong></td><td>' + envDetail + '</td></tr><tr><td><strong>Test File&nbsp;</strong></td><td>' + testExecFile + '</td></tr><tr><td><strong>Application Url</strong></td><td><a href=' + appUrl + '><span>' + appUrl + '</span></a></td></tr><tr><td><strong>Application Version&nbsp;</strong></td><td>' + appVersion + '</td></tr><tr><td><strong>Detailed Report</strong></td><td style="white-space: nowrap;"><a href=' + reportUrl + '><span >' + reportUrl + '</span></a></td></tr></tbody></table>';
         if (tc_status == "passed")
             subject = "✔️ " + argv.appType + " | " + argv.testEnv.toUpperCase() + " | " + folder[0] + " | " + tc_status.toUpperCase();
         else

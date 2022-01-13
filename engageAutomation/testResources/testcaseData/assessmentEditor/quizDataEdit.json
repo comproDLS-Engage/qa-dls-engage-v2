@@ -1,0 +1,178 @@
+{
+  "editor": {
+    "title": "Automation Quiz",
+    "questions": {
+      "MCQ": [
+        {
+          "question1": {
+            "questionIndex": 1,
+            "buttonName": "mutiplechoice",
+            "questionTitle": "Question 1",
+            "questionInstruction": "See the image carefully and answer the question",
+            "videoURL": "https://www.youtube.com/watch?v=mxbodI60OT4",
+            "videoCredit": "mcq video #1",
+            "imagePath": "./testResources/testcaseData/assessmentEditor/media/Cell1.png",
+            "questionText": "Which organelle is called powerhouse of the cell?",
+            "options": ["Mitochondria","Nucleus","Golgi Bodies","Ribosomes"],
+            "optionStyle": "2"
+          }
+        }
+      ],
+      "writing": [
+        {
+          "questionIndex": 3,
+          "buttonName": "writing",
+          "questionTitle": "Give the Answer after watching Vedio",
+          "questionInstruction": "Listen to the Video carefully and enter the text on placeholder",
+          "videoURL": "https://youtu.be/bUxd3jqCr94",
+          "questionText": "Vuelve a escuchar los diálogos en español. ¿Qué crees que dicen? Toma notas.{{TextArea:A}}"
+        }
+      ],
+      "TrueFalse": [
+        {
+          "questionIndex": 3,
+          "buttonName": "trueorfalse",
+          "questionTitle": "Question 3",
+          "questionInstruction": "Listen to the audio carefully and choose the correct option of the given below question",
+          "audioPath": "./testResources/testcaseData/assessmentEditor/media/Xiaomi.mp3",
+          "audioCredit": "Audio",
+          "questionText": "Is this an Mi original ringtone?"
+        }
+      ],
+      "MultipleResponse": [
+        {
+          "questionIndex": 4,
+          "buttonName": "multipleresponse",
+          "questionTitle": "Question 4",
+          "questionInstruction": "See the image carefully and choose the correct option(s)",
+          "imagePath": "./testResources/testcaseData/assessmentEditor/media/Plant.jpg",
+          "imageCredit": "Plant Diagram",
+          "questionText": " Choose the correct one",
+          "options": [
+            "Roots",
+            "Soil",
+            "Stem",
+            "Leaves"
+          ],
+          "correctOptions": [
+            1,
+            3,
+            4
+          ]
+        }
+      ],
+      "DragDropOnImage": [
+        {
+          "questionIndex": 5,
+          "buttonName": "draganddropontoimage",
+          "questionTitle": "Question 5",
+          "questionText": "Drag the continents at their correct places o the provided Image",
+          "questionInstruction": "Drop the continents in correct places",
+          "imagePath": "./testResources/testcaseData/assessmentEditor/media/WorldMap.jpg",
+          "labelOptions": [
+            "Asia", 
+            "Africa", 
+            "Europe", 
+            "North America",
+            "South America",
+            "Australia"
+          ]
+        }
+      ],
+      "DragDropIntoText": [
+        {
+          "questionIndex": 6,
+          "buttonName": "draganddropintotext",
+          "questionTitle": "Question 6",
+          "questionInstruction": "Drag the pills at their correct places in the sentence.",
+          "videoURL": "./testResources/testcaseData/assessmentEditor/media/abc.mp4",
+          "videoCredit": "Thirsty Crow",
+          "questionText": 
+            "Once there was a,{{Blank:A}}. He was very,{{Blank:B}}.He flew here and there in search of,{{Blank:C}}.He saw a pot"
+          ,
+          "options": [
+            "crow", 
+            "thirsty",
+            "water"
+          ]
+        }
+      ],
+      "FIB": [
+        {
+          "questionIndex": 7,
+          "buttonName": "fillintheblanks",
+          "questionTitle": "Question 7",
+          "questionInstruction": "Fill the blanks with the correct options. Type the correct text",
+          "questionText": ", Perform the Action {{Blank:F}}",
+          "options": ["A1","B1","C1","D1","E1","F1"],
+          "optionValue":[
+            "had happened", 
+            "had gone",
+            "were",
+            "were left",
+            "had",
+            "correctly"
+          ]
+        }
+      ],
+      "Ordering": [
+        {
+          "questionIndex": 8,
+          "buttonName": "ordering",
+          "questionTitle": "Question 8",
+          "imagePath": "./testResources/testcaseData/assessmentEditor/media/Mughal.jpg",
+          "questionInstruction": "See the image and reorder the options in correct sequence.",
+          "questionText": "Arrange the incidents in sequence",
+          "options": [
+            "Babur’s attack on India",
+            "Akbar’s birth",
+            "Construction of the Taj Mahal",
+            "Aurangzeb’s death"
+          ]
+        }
+      ],
+      "Matching": [
+        {
+          "questionIndex": 9,
+          "buttonName": "matching",
+          "questionTitle": "Question 9",
+          "questionInstruction": "See the image and match the suitable word",
+          "questionText": "Match the following countries with their corresponding capitals",
+          "items": [
+            "China",
+            "Japan",
+            "New Zealand",
+            "Which is not capital of any country"
+
+          ],
+          "matchedItems": [
+            "Beijing",
+            "Tokyo",
+            "Wellington",
+            "Mumbai"
+          ]
+        }
+      ],
+      "Classify": [
+        {
+          "questionIndex": 10,
+          "buttonName": "classify",
+          "questionTitle": "Question 10",
+          "questionInstruction": "View the video and place the items in the correct categories.",
+          "videoURL": "https://www.youtube.com/watch?v=Vk461NU7wbg",
+          "audioPath": "./testResources/testcaseData/assessmentEditor/media/Xiaomi.mp3",
+          "audioCredit": "Audio",
+          "questionText": "Classify in to categories",
+          "groups": ["herbivores","carnivores","omnivores"],
+          "options": ["cow","human","tiger","sheep","cat","bear"],
+          "groupsIcon": ["O1","O2","O3","O4","O5","O6"],
+          "setGroups": ["A","C","B","A","C","A"]
+        }
+      ]
+    }
+  },
+  "paint": {
+    "email": "sg1@yopmail.com",
+    "password": "Welcome@1"
+  }
+}

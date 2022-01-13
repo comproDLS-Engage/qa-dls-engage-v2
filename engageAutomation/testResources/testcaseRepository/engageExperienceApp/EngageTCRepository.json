@@ -802,12 +802,6 @@
           "visualTest": "-"
         },
         {
-          "id": "ENG_DASH_TC_1",
-          "description": "Validate that clicking on the 'Dashboard' button on the left navigation panel, the Dashboard page is launched",
-          "tags": "P1",
-          "visualTest": "-"
-        },
-        {
           "id": "ENG_SHELL_TC_11",
           "description": "Validate that click on breadcrumb back button on the header launch the previous page",
           "tags": "P1",
@@ -1296,6 +1290,31 @@
       ]
     },
     {
+      "modulename": "Item Player - Multi MCQ",
+      "moduledetails": "",
+      "testFile": "./test/engageExperienceApp/multimcq.test.js",
+      "testcase": [
+        {
+          "id": "ENG_ITEM_MMCQ_TC_1",
+          "description": "Validate the Multi MCSR question launch in default unattempted state",
+          "tags": "P3",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ITEM_MMCQ_TC_2",
+          "description": "Validate that the user can select an option in multiple sub-questions while performing the question",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ITEM_MMCQ_TC_3",
+          "description": "Validate MCMR question functionality for Correct scenario",
+          "tags": "P1",
+          "visualTest": "-"
+        }
+      ]
+    },
+    {
       "modulename": "Base TestPlayer",
       "moduledetails": "",
       "testFile": "./test/engageExperienceApp/basePlayer.test.js",
@@ -1590,6 +1609,30 @@
           "description": "Validate on clicking \"Projectable\" resource in Explore menu, same tab is launched on Browse",
           "tags": "P1",
           "visualTest": "-"
+        },
+        {
+          "id": "ENG_DASH_TC_25",
+          "description": "Validate that playlist page is launched on clicking the playlist card",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_DASH_TC_26",
+          "description": "Validate that clicking on 'Create Playlist' button on Dashboard launches the Playlist Pop Up",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_DASH_TC_27",
+          "description": "Validate that playlist is added on the dashboard on entering playlist name and clicking 'Create' button",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_DASH_TC_28",
+          "description": "Validate that playlist is not added on the dashboard on clicking 'Cancel' button",
+          "tags": "P1",
+          "visualTest": "-"
         }
       ]
     },
@@ -1815,186 +1858,227 @@
       ]
     },
     {
-        "modulename": "Settings",
-        "moduledetails": "",
-        "testFile": "./test/engageExperienceApp/settings.test.js",
-        "testcase": [
-            {
-                "id": "ENG_SETT_TC_1",
-                "description": "Validate that Profile tab is selected by default when settings page is launched",
-                "tags": "P1",
-                "visualTest": true
-            },
-            {
-                "id": "ENG_SETT_TC_2",
-                "description": "Validate that clicking on Profile tab launches Profile page",
-                "tags": "P1",
-                "visualTest": "-"
-            },
-            {
-                "id": "ENG_SETT_TC_3",
-                "description": "Validate that clicking on Password tab launches Password page",
-                "tags": "P1",
-                "visualTest": "-"
-            },
-            {
-                "id": "ENG_SETT_TC_4",
-                "description": "Validate that clicking on Accessibility tab launches Accessibility page",
-                "tags": "P1",
-                "visualTest": "-"
-            },
-            {
-                "id": "ENG_SETT_TC_5",
-                "description": "Validate the content of Profile tab",
-                "tags": "P1",
-                "visualTest": "-"
-            },
-            {
-                "id": "ENG_SETT_TC_6",
-                "description": "Validate the content of Password tab",
-                "tags": "P1",
-                "visualTest": "-"
-            },
-            {
-                "id": "ENG_SETT_TC_7",
-                "description": "Validate the content of Accessibility tab",
-                "tags": "P1",
-                "visualTest": "-"
-            },
-            {
-                "id": "ENG_SETT_TC_8",
-                "description": "Validate that email ID textbox is not editable",
-                "tags": "P1",
-                "visualTest": "-"
-            },
-            {
-                "id": "ENG_SETT_TC_9",
-                "description": "Validate that user can modify the First name.",
-                "tags": "P1",
-                "visualTest": "-"
-            },
-            {
-                "id": "ENG_SETT_TC_10",
-                "description": "Validate that user can modify the Last name",
-                "tags": "P1",
-                "visualTest": "-"
-            },
-            {
-                "id": "ENG_SETT_TC_11",
-                "description": "Validate that user can select country from the drop down suggestions",
-                "tags": "P1",
-                "visualTest": "-"
-            },
-            {
-                "id": "ENG_SETT_TC_12",
-                "description": "Validate that clicking on cross button clears the country name from the text box",
-                "tags": "P1",
-                "visualTest": "-"
-            },
-            {
-                "id": "ENG_SETT_TC_13",
-                "description": "Validate the error message if First name is left blank",
-                "tags": "P1",
-                "visualTest": "-"
-            },
-            {
-                "id": "ENG_SETT_TC_14",
-                "description": "Validate the error message if Last name is left blank",
-                "tags": "P1",
-                "visualTest": "-"
-            },
-            {
-                "id": "ENG_SETT_TC_15",
-                "description": "Validate that user can update the Password",
-                "tags": "P1",
-                "visualTest": "-"
-            },
-            {
-                "id": "ENG_SETT_TC_16",
-                "description": "Validate the error messages if all Password textboxes are left blank",
-                "tags": "P1",
-                "visualTest": "-"
-            },
-            {
-                "id": "ENG_SETT_TC_17",
-                "description": "Validate the message if Current Password is incorrect",
-                "tags": "P1",
-                "visualTest": "-"
-            },
-            {
-                "id": "ENG_SETT_TC_18",
-                "description": "Validate the error message if New Password and Confirm Passwords do not match",
-                "tags": "P1",
-                "visualTest": "-"
-            },
-            {
-                "id": "ENG_SETT_TC_19",
-                "description": "Validate clicking on toggle password eye button displays the Password",
-                "tags": "P1",
-                "visualTest": "-"
-            },
-            {
-                "id": "ENG_SETT_TC_23",
-                "description": "Validate that font size of the application is updated when the Font Size is increased.",
-                "tags": "P1",
-                "visualTest": "-"
-            },
-            {
-                "id": "ENG_SETT_TC_24",
-                "description": "Validate that font size of the application is updated when the Font Size decreased.",
-                "tags": "P1",
-                "visualTest": "-"
-            },
-            {
-                "id": "ENG_SETT_TC_25",
-                "description": "Validate that Line Spacing of the application is updated when the Line Spacing is increased.",
-                "tags": "P1",
-                "visualTest": "-"
-            },
-            {
-                "id": "ENG_SETT_TC_26",
-                "description": "Validate that Line Spacing of the application is updated when the Line Spacing is decreased.",
-                "tags": "P1",
-                "visualTest": "-"
-            },
-            {
-                "id": "ENG_SETT_TC_27",
-                "description": "Validate that High contrast theme is applied in the application when High Contrast is toggled ON.",
-                "tags": "P1",
-                "visualTest": "-"
-            },
-            {
-                "id": "ENG_SETT_TC_28",
-                "description": "Validate that OpenDyslexic Font is applied in the application when OpenDyslexic Font is toggled ON.",
-                "tags": "P1",
-                "visualTest": "-"
-            },
-            {
-                "id": "ENG_SETT_TC_29",
-                "description": "Validate that Underline Links are applied in the application when Underline Links is toggled ON.",
-                "tags": "P1",
-                "visualTest": "-"
-            },
-            {
-                "id": "ENG_SETT_TC_37",
-                "description": "Validate that clicking on Apply Settings updates the application on the basis of settings modified.",
-                "tags": "P1",
-                "visualTest": "-"
-            },
-            {
-                "id": "ENG_SETT_TC_40",
-                "description": "Validate that clicking on Confirm button on Reset Default Settings Modal resets the applied settings to default behavior.",
-                "tags": "P1",
-                "visualTest": "-"
-            },
-            {
-                "id": "ENG_SETT_TC_54",
-                "description": "Validate that clicking on Reset Default Settings button Reset Default Settings pop up is launched.",
-                "tags": "P1",
-                "visualTest": "-"
-            }
-
-        ]
+      "modulename": "Settings",
+      "moduledetails": "",
+      "testFile": "./test/engageExperienceApp/settings.test.js",
+      "testcase": [
+        {
+          "id": "ENG_SETT_TC_1",
+          "description": "Validate that Profile tab is selected by default when settings page is launched",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_SETT_TC_2",
+          "description": "Validate that clicking on Profile tab launches Profile page",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SETT_TC_3",
+          "description": "Validate that clicking on Password tab launches Password page",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SETT_TC_4",
+          "description": "Validate that clicking on Accessibility tab launches Accessibility page",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SETT_TC_5",
+          "description": "Validate the content of Profile tab",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SETT_TC_6",
+          "description": "Validate the content of Password tab",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SETT_TC_7",
+          "description": "Validate the content of Accessibility tab",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SETT_TC_8",
+          "description": "Validate that email ID textbox is not editable",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SETT_TC_9",
+          "description": "Validate that user can modify the First name.",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SETT_TC_10",
+          "description": "Validate that user can modify the Last name",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SETT_TC_11",
+          "description": "Validate that user can select country from the drop down suggestions",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SETT_TC_12",
+          "description": "Validate that clicking on cross button clears the country name from the text box",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SETT_TC_13",
+          "description": "Validate the error message if First name is left blank",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SETT_TC_14",
+          "description": "Validate the error message if Last name is left blank",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SETT_TC_15",
+          "description": "Validate that user can update the Password",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SETT_TC_16",
+          "description": "Validate the error messages if all Password textboxes are left blank",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SETT_TC_17",
+          "description": "Validate the message if Current Password is incorrect",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SETT_TC_18",
+          "description": "Validate the error message if New Password and Confirm Passwords do not match",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SETT_TC_19",
+          "description": "Validate clicking on toggle password eye button displays the Password",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SETT_TC_23",
+          "description": "Validate that font size of the application is updated when the Font Size is increased.",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SETT_TC_24",
+          "description": "Validate that font size of the application is updated when the Font Size decreased.",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SETT_TC_25",
+          "description": "Validate that Line Spacing of the application is updated when the Line Spacing is increased.",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SETT_TC_26",
+          "description": "Validate that Line Spacing of the application is updated when the Line Spacing is decreased.",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SETT_TC_27",
+          "description": "Validate that High contrast theme is applied in the application when High Contrast is toggled ON.",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SETT_TC_28",
+          "description": "Validate that OpenDyslexic Font is applied in the application when OpenDyslexic Font is toggled ON.",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SETT_TC_29",
+          "description": "Validate that Underline Links are applied in the application when Underline Links is toggled ON.",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SETT_TC_37",
+          "description": "Validate that clicking on Apply Settings updates the application on the basis of settings modified.",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SETT_TC_40",
+          "description": "Validate that clicking on Confirm button on Reset Default Settings Modal resets the applied settings to default behavior.",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SETT_TC_54",
+          "description": "Validate that clicking on Reset Default Settings button Reset Default Settings pop up is launched.",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SETT_TC_55",
+          "description": "Validate that clicking on Billing tab launches Billing page.",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SETT_TC_56",
+          "description": "Validate the content of Billing tab for a free user.",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SETT_TC_57",
+          "description": "Validate the content of Billing tab for a Premium user.",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SETT_TC_58",
+          "description": "Validate clicking on Upgrade plan button for a free user launches Select a plan page.",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SETT_TC_59",
+          "description": "Validate clicking on Manage plan button launches Plan options page.",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SETT_TC_60",
+          "description": "Validate clicking on Change card button launches Plan options page.",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SETT_TC_61",
+          "description": "Validate clicking on Update button on Billing Information card launches Plan options page.",
+          "tags": "P1",
+          "visualTest": "-"
+        }
+      ]
     },
     {
       "modulename": "Flipbook",
@@ -2112,6 +2196,285 @@
         {
           "id": "ENG_FLIP_TC_19",
           "description": "Validate that clicking on the Zoom Out button decreases the width and height of the image",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_FLIP_TC_20",
+          "description": "Validate that clicking on TOC button, launches the TOC layover",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_FLIP_TC_21",
+          "description": "Validate entering the page number in input label after clicking the input field in TOC",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_FLIP_TC_22",
+          "description": "Validate clicking on Jump to page button lauches the entered page in flipbook",
+          "tags": "P1",
+          "visualTest": "-"
+        }
+      ]
+    },
+    {
+      "modulename": "Browse",
+      "moduledetails": "",
+      "testFile": "./test/engageExperienceApp/browse.test.js",
+      "testcase": [
+        {
+          "id": "ENG_GLOB_TC_10",
+          "description": "Validate that the resources are displayed on clicking the Interactive Activities tab",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_11",
+          "description": "Validate that the resources are displayed on clicking the Videos tab",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_12",
+          "description": "Validate that the resources are displayed on clicking the Online Classes tab",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_13",
+          "description": "Validate that the resources are displayed on clicking the Teacher Training tab",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_14",
+          "description": "Validate that the resources are displayed on clicking the Today in Class tab",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_15",
+          "description": "Validate that the resources are displayed on clicking the Projectable tab",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_16",
+          "description": "Validate content in Browse page",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_19",
+          "description": "Validate that clicking on a page number in a non categorized view displays the next list of resources.",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_20",
+          "description": "Validate that clicking on next arrows in a non categorized view displays the list of resources.",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_21",
+          "description": "Validate that clicking on previous arrows in a non categorized view displays the list of resources.",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_22",
+          "description": "Validate that clicking on 3 dot options for a resource displays a list of options available for the resource.",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_23",
+          "description": "Validate clicking on View on 3 dot options launches the resource.",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_24",
+          "description": "Validate that clicking on Add to playlist on 3 dot options lists the existing playlists and option to create a new playlist.",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_25",
+          "description": "Validate that clicking on the playlist name adds the resource to the playlist.",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_26",
+          "description": "Validate that clicking on a resource launches the Global Resources view page",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_28",
+          "description": "Validate that searching can be done on basis of resource name",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_36",
+          "description": "Validate that No Result Found is displayed in the drop down suggestion and in the screen when no resource matching the search criteria is fulfilled",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_37",
+          "description": "Validate that clicking on a resource from the search suggestion drop down list launches the resource.",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_37",
+          "description": "Validate that clicking on 'More search results for ..xyz' lists the resources based on search text.",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_38",
+          "description": "Validate that clicking on 'More search results for ..xyz' lists the resources based on search text.",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_39",
+          "description": "Validate that pressing Enter lists the resources based on search text.",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_41",
+          "description": "Validate that clicking on close serach button removes the search criteria",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_42",
+          "description": "Validate clicking on Filters displays the list of filter categories.",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_52",
+          "description": "Validate that clicking on cross icon on Filters screen closes the filter pop up.",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        }
+      ]
+    },
+    {
+      "modulename": "Playlist",
+      "moduledetails": "",
+      "testFile": "./test/engageExperienceApp/playlist.test.js",
+      "testcase": [
+        {
+          "id": "ENG_PLIS_TC_1",
+          "description": "Validate the content of the playlist page",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLIS_TC_2",
+          "description": "Validate that clicking on the three dots launches a dropdown list of options",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLIS_TC_3",
+          "description": "Validate that clicking on 'Edit' button launches the Playlist pop up",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLIS_TC_4",
+          "description": "Validate that clicking on 'Delete' button launches the Delete confirmation pop up",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLIS_TC_5",
+          "description": "Validate that playlist name is updated on clicking 'Save' button",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLIS_TC_6",
+          "description": "Validate that playlist name is not updated on clicking 'Cancel' button",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLIS_TC_7",
+          "description": "Validate that clicking 'Delete' button on pop up deletes the playlist",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLIS_TC_8",
+          "description": "Validate that playlist is not deleted on clicking 'Cancel' button",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLIS_TC_9",
+          "description": "Validate that clicking on 'Browse All Resources' navigates to the 'Interactive Activities' in Browse Tab",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLIS_TC_10",
+          "description": "Validate clicking on 3 dots on any resource on the playlist page launches a dropdown list of options",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLIS_TC_11",
+          "description": "Validate clicking on Remove from playlist option launches the remove resource popup",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLIS_TC_12",
+          "description": "Validate that clicking 'Remove' button on pop up removes the resource from the playlist",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLIS_TC_13",
+          "description": "Validate that clicking 'Cancel' button on pop up does not remove the resource from the playlist",
+          "tags": "P1",
+          "visualTest": "-"
+        }
+      ]
+    },
+    {
+      "modulename": "Writing Player",
+      "moduledetails": "",
+      "testFile": "./test/engageExperienceApp/writing.test.js",
+      "testcase": [
+        {
+          "id": "ENG_ITEM_WRIT_TC_1",
+          "description": "Validate the writing question launch in default unattempted state",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ITEM_WRIT_TC_2",
+          "description": "Validate the writing question launch in submitted state",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ITEM_WRIT_TC_3",
+          "description": "Validate that the user can add the text in the textboxes of the writing question",
           "tags": "P1",
           "visualTest": "-"
         }

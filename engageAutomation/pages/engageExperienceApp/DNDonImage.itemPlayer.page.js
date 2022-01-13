@@ -45,6 +45,7 @@ module.exports = {
         logger.logInto(stackTrace.get());
         let option = "div[index='" + qIndex + "'] " + "[data-tid*='target-option']";
         var targetMap = [];
+        action.waitForDisplayed(option)
         let optionLength = action.findElements(option).length;
         for (let i = 0; i < optionLength; i++) {
             var dndSelector = "div[index='" + qIndex + "'] " + this.target + dndQuesData[i][2] + "] ";

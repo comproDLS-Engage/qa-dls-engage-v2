@@ -7,7 +7,7 @@ var functionalChangeLogFile = process.cwd() + '/' + global.reportOutputDir + "/c
 module.exports = {
 
     updateFunctionalObj: function() {
-        var logData, specName
+        var logData, specName, logDataObjToConsole;
         //console.log(functionalChangeLogFile)
         try {
 
@@ -30,6 +30,7 @@ module.exports = {
                                     console.log(err);
                                 } else {
                                     //if file not empty
+                                    logDataObjToConsole = logDataObj;
                                     if (logDataObj.length > 0) {
 
                                         logData = JSON.parse(logDataObj)
@@ -42,10 +43,11 @@ module.exports = {
 
                                         if (specName.length > 1) {
                                             //console.log(specName)
-                                            logData.capabilities.screenResolution = global.resolution
+                                            logData.capabilities.screenResolution = global.resolution;
 
-                                            logData.specs = [specName[specName.length - 1].replace(".js", ".json")]
-                                            logData.skipAssertion = (argv.skipAssertion) ? true : false
+                                            logData.specs = [specName[specName.length - 1].replace(".js", ".json")];
+                                            logData.skipAssertion = (argv.skipAssertion) ? true : false;
+                                            logData.appVersion = global.appVersion;
 
                                             //console.log("writing to file..." + reportLogPath)
                                             fs.writeFileSync(reportLogPath, JSON.stringify(logData));
@@ -59,6 +61,8 @@ module.exports = {
 
                         } catch (error) {
                             console.log(error);
+                            console.log("logData-")
+                            console.log(logDataObjToConsole);
                         }
 
                     })

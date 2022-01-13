@@ -8,7 +8,7 @@ module.exports = {
 	ENG_DIF_TC_1: function () {
 		res = action.click("[class*=Drawer-paperAnchorRight] [class*=Button-edgeEnd]");
 		console.log(res)
-		res = action.click("[data-tid=button-view-1]");
+		res = action.click("[data-tid=button-view-0]");
 		console.log(res)
 		//action.waitForDocumentLoad();
 		res = action.waitForDisplayed("[data-tid=image-chapter-0]");
@@ -352,15 +352,15 @@ module.exports = {
 	ENG_DIF_TC_25: function () {
 		res = action.click("[data-tid*=button-next]");
 		console.log(res)
-		res = action.waitForDisplayed("iframe");
-		console.log(res)
-		res = action.findElements("iframe");
-		res = action.switchToFrame(res[0]);
-		console.log(res)
-		res = action.waitForDisplayed("[id=page]");
+		// res = action.waitForDisplayed("iframe");
+		// console.log(res)
+		// res = action.findElements("iframe");
+		// res = action.switchToFrame(res[0]);
+		// console.log(res)
+		res = action.waitForDisplayed("[id=page],[id=container-non-lo");
 		console.log(res)
 		action.waitForDocumentLoad();
-		res = action.switchToParentFrame();
+		//res = action.switchToParentFrame();
 		console.log(res)
 	},
 
@@ -539,7 +539,7 @@ module.exports = {
 
 	// View index
 	ENG_DIF_TC_42: function () {
-		res = action.click("[class*=MuiAppBar] > div > div > div > div > div > div> button");
+		res = action.click("[data-tid=button-indextoc]");
 		console.log(res)
 		res = action.waitForDisplayed("[data-tid=button-closeinfotoc]");
 		console.log(res)
@@ -645,7 +645,7 @@ module.exports = {
 
 	// View book page (locked book)
 	ENG_DIF_TC_52: function () {
-		res = action.click("[data-tid=button-view-2]");
+		res = action.click("[data-tid=button-view-1]");
 		console.log(res)
 		res = action.waitForDisplayed("[data-tid=image-no-access]");
 		console.log(res)

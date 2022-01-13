@@ -7,7 +7,7 @@
                 "subheadingText": "Learn from anywhere, anytime. Instant access to all courses and activities.",
                 "signup_btnText": "Sign Up & Start Learning Today",
                 "login_btnText": "Log in",
-                "login_lblText": "Have an Account?",
+                "login_lblText": "Have an account?",
                 "footerLabel": "powered by"
             },
             "login": {
@@ -24,7 +24,7 @@
                 "dontHaveAccount_txt": "Don't have an account?",
                 "loginoption_txt": "Or continue with:",
                 "footerLabel": "powered by",
-                "invalidEmail_txt": "Please check your email address and try again.",
+                "invalidEmail_txt": "Please enter a valid email address (for example, name@example.com)",
                 "notRegisterUser_alert": "Please check your email address and password and try again."
             },
             "appShell": {
@@ -53,127 +53,125 @@
             "dashboard": {
                 "teacher": {
                     "pageTitle": "Dashboard",
-                    "createPlaylist_Txt": "Create Playlist",
-                    "addBook_Txt": "Add Book",
+                    "createPlaylistBtn": "Create Playlist",
+                    "addBookBtn": "Add Book",
                     "cardSliderTitle": "Getting started",
                     "cardSliderSubtitle": "Use your dashboard to pin your textbooks and create playlists to share with your class.",
-                    "myBooksHeading_Txt": "My Books",
-                    "recentlyViewed_heading": "Recently Viewed",
-                    "exploreHeading": "Explore",
-                    "viewAll_btn": "View All",
-                    "noBooks_title": "No Books added yet",
-                    "noBooks_subTitle": "Any books you save while browsing the catalog will be added here for you to view later.",
-                    "noBooks_btn": "Add Book",
-                    "myPlaylistsHeading_Txt": "My Playlists",
-                    "noPlaylists_title": "No Playlist created yet",
-                    "noPlaylists_subTitle": "Any playlists you create will be added here for you to view, share, and use in your classes.",
-                    "noPlaylists_btn": "Create Playlist",
-                    "actionCard": [
-                        {
-                            "actionCardTitles": "Adding Books",
-                            "actionCardSubtitles": "Save your class books to your dashboard to quickly access your book materials.",
-                            "actionCardBtns": "Add Book"
-                        },
-                        {
-                            "actionCardTitles": "Using Classes",
-                            "actionCardSubtitles": "Create a class to see student progress, view submitted work and create assignments.",
-                            "actionCardBtns": "Create Class"
-                        },
-                        {
-                            "actionCardTitles": "Using Playlists",
-                            "actionCardSubtitles": "Any playlists you create will be added here for you to view, share, and use in your classes.",
-                            "actionCardBtns": "Create Playlist"
-                        }
+                    "cardSliderLeftBtn": "",
+                    "cardSliderRightBtn": "",
+                    "actionCardTitles": [
+                        "Adding Books",
+                        "Using Classes",
+                        "Using Playlists"
                     ],
-                    "bookMenu_viewClass": "View Classes",
-                    "bookMenu_createClass": "Create New Class",
-                    "bookMenu_remove": "Remove from My Books",
-                    "bookMenu_openFlipbook": "Open Flipbook",
+                    "actionCardSubtitles": [
+                        "Save your class books to your dashboard to quickly access your book materials.",
+                        "Create a class to see student progress, view submitted work and create assignments.",
+                        "Any playlists you create will be added here for you to view, share, and use in your classes."
+                    ],
+                    "actionCardBtns": [
+                        "Add Book",
+                        "Create Class",
+                        "Create Playlist"
+                    ],
+                    "myBooksHeading": "My Books",
+                    "noBooksTitle": "No Books added yet",
+                    "noBooksSubtitle": "Any books you save while browsing the catalog will be added here for you to view later.",
+                    "noBooks_addBookBtn": "Add Book",
+                    "myPlaylistsHeading": "My Playlists",
+                    "noPlaylistsTitle": "No Playlist created yet",
+                    "noPlaylistsSubTitle": "Any playlists you create will be added here for you to view, share, and use in your classes.",
+                    "noPlaylists_createBtn": "Create Playlist",
+                    "viewBookBtn": "View",
+                    "bookMenu_viewClassOption": "View Classes",
+                    "bookMenu_createClassOption": "Create New Class",
+                    "bookMenu_removeOption": "Remove from My Books",
+                    "bookMenu_openFlipbookOption": "Open Flipbook",
                     "removeBook_title": "Remove from My Books?",
                     "removeBook_subTitle1": "This will remove the book - ",
                     "removeBook_subTitle2": " - from your My Books list.",
-                    "removeBook_cancel": "Cancel",
-                    "removeBook_remove": "Remove",
-                    "globalResource": [
-                        {
-                            "title": "Interactive Activities",
-                            "subtitle": "Find here hundreds of interactive exercises to improve your vocabulary."
-                        },
-                        {
-                            "title": "Videos",
-                            "subtitle": "New & trending video resources to pair with your lessons."
-                        },
-                        {
-                            "title": "Online Class",
-                            "subtitle": "Discover live training from other teachers."
-                        },
-                        {
-                            "title": "Teacher Training",
-                            "subtitle": "Resources to help you improve your classroom lessons."
-                        },
-                        {
-                            "title": "Today in Class",
-                            "subtitle": "See recent news to pair with lessons and activities."
-                        },
-                        {
-                            "title": "Projectables",
-                            "subtitle": "Top activities to project in your classroom."
-                        }
-                    ]
+                    "removeBook_cancelBtn": "Cancel",
+                    "removeBook_removeBtn": "Remove",
+                    "createPlaylist_label": "Playlist Name",
+                    "createPlaylist_input": "",
+                    "createPlaylist_cancelBtn": "Cancel",
+                    "createPlaylist_createBtn": "Create",
+                    "exploreHeading": "Explore",
+                    "viewAllBtn": "View All",
+                    "resourceTitle": [
+                        "Interactive Activities",
+                        "Videos",
+                        "Online Class",
+                        "Teacher Training",
+                        "Today in Class",
+                        "Projectables"
+                    ],
+                    "resourceSubtitle": [
+                        "Find here hundreds of interactive exercises to improve your vocabulary.",
+                        "New & trending video resources to pair with your lessons.",
+                        "Discover live training from other teachers.",
+                        "Resources to help you improve your classroom lessons.",
+                        "See recent news to pair with lessons and activities.",
+                        "Top activities to project in your classroom."
+                    ],
+                    "recentlyViewedHeading": "Recently Viewed"
                 },
                 "student": {
                     "pageTitle": "Dashboard",
-                    "createPlaylist_Txt": "Create Playlist",
-                    "addBook_Txt": "Add Book",
+                    "createPlaylistBtn": "Create Playlist",
+                    "addBookBtn": "Add Book",
                     "cardSliderTitle": "Getting started",
                     "cardSliderSubtitle": "Use your dashboard to pin your textbooks and create playlists.",
-                    "myBooksHeading_Txt": "My Books",
-                    "recentlyViewed_heading": "Recently Viewed",
-                    "exploreHeading": "Explore",
-                    "viewAll_btn": "View All",
-                    "noBooks_title": "No Books added yet",
-                    "noBooks_subTitle": "Any books you save while browsing the catalog will be added here for you to view later.",
-                    "noBooks_btn": "Add Book",
-                    "myPlaylistsHeading_Txt": "My Playlists",
-                    "noPlaylists_title": "No Playlist created yet",
-                    "noPlaylists_subTitle": "Any playlists you create will be added here for you to view.",
-                    "noPlaylists_btn": "Create Playlist",
-                    "actionCard": [
-                        {
-                            "actionCardTitles": "Adding Books",
-                            "actionCardSubtitles": "Save your class books to your dashboard to quickly access your book materials.",
-                            "actionCardBtns": "Add Book"
-                        },
-                        {
-                            "actionCardTitles": "Using Classes",
-                            "actionCardSubtitles": "Join a class to see progress and assignments of your class.",
-                            "actionCardBtns": "Join Class"
-                        },
-                        {
-                            "actionCardTitles": "Using Playlists",
-                            "actionCardSubtitles": "Any playlists you create will be added here for you to view.",
-                            "actionCardBtns": "Create Playlist"
-                        }
+                    "cardSliderLeftBtn": "",
+                    "cardSliderRightBtn": "",
+                    "actionCardTitles": [
+                        "Adding Books",
+                        "Using Classes",
+                        "Using Playlists"
                     ],
-                    "bookMenu_viewClass": "View Classes",
-                    "bookMenu_createClass": null,
-                    "bookMenu_remove": "Remove from My Books",
-                    "bookMenu_openFlipbook": "Open Flipbook",
+                    "actionCardSubtitles": [
+                        "Save your class books to your dashboard to quickly access your book materials.",
+                        "Join a class to see progress and assignments of your class.",
+                        "Any playlists you create will be added here for you to view."
+                    ],
+                    "actionCardBtns": [
+                        "Add Book",
+                        "Join Class",
+                        "Create Playlist"
+                    ],
+                    "myBooksHeading": "My Books",
+                    "noBooksTitle": "No Books added yet",
+                    "noBooksSubtitle": "Any books you save while browsing the catalog will be added here for you to view later.",
+                    "noBooks_addBookBtn": "Add Book",
+                    "myPlaylistsHeading": "My Playlists",
+                    "noPlaylistsTitle": "No Playlist created yet",
+                    "noPlaylistsSubTitle": "Any playlists you create will be added here for you to view.",
+                    "noPlaylists_createBtn": "Create Playlist",
+                    "viewBookBtn": "View",
+                    "bookMenu_viewClassOption": "View Classes",
+                    "bookMenu_createClassOption": null,
+                    "bookMenu_removeOption": "Remove from My Books",
+                    "bookMenu_openFlipbookOption": "Open Flipbook",
                     "removeBook_title": "Remove from My Books?",
                     "removeBook_subTitle1": "This will remove the book - ",
                     "removeBook_subTitle2": " - from your My Books list.",
-                    "removeBook_cancel": "Cancel",
-                    "removeBook_remove": "Remove",
-                    "globalResource": [
-                        {
-                            "title": "Interactive Activities",
-                            "subtitle": "Find here hundreds of interactive exercises to improve your vocabulary."
-                        },
-                        {
-                            "title": "Videos",
-                            "subtitle": "New & trending video resources to pair with your lessons."
-                        }
-                    ]
+                    "removeBook_cancelBtn": "Cancel",
+                    "removeBook_removeBtn": "Remove",
+                    "createPlaylist_label": "Playlist Name",
+                    "createPlaylist_input": true,
+                    "createPlaylist_cancelBtn": "Cancel",
+                    "createPlaylist_createBtn": "Create",
+                    "exploreHeading": "Explore",
+                    "viewAllBtn": "View All",
+                    "resourceTitle": [
+                        "Interactive Activities",
+                        "Videos"
+                    ],
+                    "resourceSubtitle": [
+                        "Find here hundreds of interactive exercises to improve your vocabulary.",
+                        "New & trending video resources to pair with your lessons."
+                    ],
+                    "recentlyViewedHeading": "Recently Viewed"
                 }
             },
             "createClassPage": {
@@ -241,10 +239,10 @@
                 "joinClassSubHeader": "If your teacher has enrolled you in a class, enter the class code.",
                 "enterClassCodeLabel": "Enter Class Code",
                 "classCodeInput": "Enter Class Code",
-                "classHelpText": "Your teacher provided class code should look like: iqig-Gq32. Be sure to check your email to see if your teacher sent you an invite.",
+                "classHelpText": "Your class code should look like: iqig-Gq32. Be sure to check your email to see if your teacher sent you an invite.",
                 "joinclassPopUpbtn": "Join Class",
                 "helpJoiningClass": "Help Joining Classes",
-                "titleErrorMsg": "Invalid class code. Please check the class code and try again. If the problem persists, please contact your Teacher.",
+                "titleErrorMsg": "You are already enrolled in this class. Please enter a different class code.",
                 "alreadyExistErrorMessage": "You are already enrolled in this class. Please enter a different class code."
             },
             "classDrawerPane": {
@@ -312,10 +310,9 @@
                 "retake": "Retake Activity",
                 "checkAnswer_txt": "Check Answers"
             },
-            "onboarding": {
+           "onboarding": {
                 "welcomePage": {
-                    "pageHeading": "Welcome, Onboarding User",
-                    "userName": "Onboarding User",
+                    "pageHeading": "Welcome, ",
                     "message": "Let's get started. Select the role that best describes you.",
                     "continueBtn": "Continue",
                     "signOut": "Logout"
@@ -339,13 +336,25 @@
                 },
                 "schoolKeyPage": {
                     "pageHeading": "Join Your School",
-                    "message": "Use the school key provided by your school or skip for now.",
-                    "textboxMessage": "Enter School Key",
+                    "subHeading": "Use the school key provided by your school or skip for now.",
+                    "message": "Enter School Key",
                     "helper_txt": "Your school key should look like: ABC-DEF-GHI. Please contact your school admin if you don’t have school key.",
                     "submitBtn": "Continue",
                     "skipForNow": "Skip for now",
                     "invalidKeyMessage": "Invalid school key",
                     "back_btn": "Back (select a different role)"
+                },
+                "studentSuccessPage":{
+                    "pageHeading": "You're All Set!",
+                    "pageSubHeading1": "You are registered as a student. Click continue to explore materials or join a class.",
+                    "startLearning": "Continue",
+                    "signOut": "Logout"
+                },
+                "teacherSuccessPage":{
+                    "pageHeading": "You're All Set!",
+                    "pageSubHeading1": "You are registered as a teacher. Click continue to explore materials and create classes.",
+                    "proceedBtn": "Continue",
+                    "signOut": "Logout"
                 }
             },
             "addBookPage": {
@@ -398,13 +407,14 @@
                     }
                 }
             },
-           "settings": {
+            "settings": {
                 "pageTitle": "Settings",
                 "pageSubTitle": "Update and change details about your account",
                 "tabList": [
                     "Profile",
                     "Password",
-                    "Accessibility"
+                    "Accessibility",
+                    "Billing"
                 ],
                 "Profile": {
                     "pageHeading": "Edit Profile",
@@ -431,6 +441,29 @@
                     "samplePara_text": "Check it out! Here's an example body paragraph. Toggle the font size to make this text larger or smaller. Saving these changes will update the text across the entire app.",
                     "reset_button": "Reset Default Settings",
                     "accessbility_button": "Apply Settings"
+                },
+                "Billing":{
+                    "pageHeading": "Subscription",
+                    "subscriptionSubtitle_text":"Billing and license information for your current plan.",
+                    "premiumPlan_text":"Premium Plan",
+                    "active_text":"Active",
+                    "premiumPrice_text":"$24.99/year",
+                    "autoRenewal_text":"Auto Renewal On",
+                    "licensePeriod_text":"License Period:",
+                    "licensePeriod_date":"Dec 30, 2021 - Dec 29, 2022",
+                    "managePlan_btn":"Manage Plan",
+                    "changeCard_btn":"Change Card",
+                    "updateBillingAddress_btn":"Update",
+                    "free_text":"Free",
+                    "getPremiumAccess_text":"Get Premium Access",
+                    "getPremiumAccessSubtitle_text":"You will get access on all our books and resources.",
+                    "price_text":"Subscription for $24.99/year",
+                    "upgradePlan_btn":"Upgrade Plan",
+                    "paymentMethod_text":"Payment Method",
+                    "noPaymentMethod_text":"No payment method added yet",
+                    "noPaymentMethodSubtitle_text":"When you add a payment method while making a purchase, it will appear here.",
+                    "billingMethod_text":"Billing Information",
+                    "noBillingInfo_text":"No billing information added yet"                    
                 },
                 "ErrorMessages": {
                     "currentPasswordError_text": "Please enter current password",
@@ -548,39 +581,147 @@
                     "resetButton_fontSize_small": "14px",
                     "applySettingsBtn_fontSize_small": "14px",
                     "applySettingsBtn_lineHeight_narrow": "19.2px"
+                }
+            },
+            "flipbook": {
+                "doublelayoutWidth": "width: 50%;",
+                "singlelayoutWidth": "width: 100%;",
+                "singlelayoutDefaultWidth": 1411,
+                "singlelayoutDefaultHeight": 1733,
+                "doubleLayoutTOC": "p. 2 - 3",
+                "singleLayoutTOC": "p. 2",
+                "myNotesTitle": "My Notes",
+                "noNoteText": "Looks like you haven't added any notes yet. Click \"Add Note\" button to add notes on the page.",
+                "addNoteBtn": "Add Note",
+                "addNoteTitle": "Add Note",
+                "editNoteTitle": "Edit Note",
+                "pageNoLabel": "On Page:",
+                "pageNoValue": "p. 2",
+                "notesListPagenumber": "Page 2",
+                "allPagesLabel": "All Pages",
+                "noteListItemLabel": "p. 2",
+                "addNotePlaceholder": "Type your notes here...",
+                "deleteNoteModalTitle": "Delete Note?",
+                "deleteNoteModalSubTitle": "You won't be able to recover this note later.",
+                "deleteNoteModalDeleteBtn": "Delete",
+                "cancelBtn": "Cancel",
+                "saveBtn": "Save",
+                "setNote": "test note automation 1",
+                "setEditedNote": "test edited note automation",
+                "setBookmark": "test bookmark automation",
+                "setEditedBookmark": "test edited bookmark automation",
+                "noBookmarkText": "Looks like you haven't added any bookmarks yet. Bookmark a page to save your spot for later.",
+                "bookmarkThisPageBtn": "Bookmark This Page",
+                "bookmarksTitle": "Bookmarks",
+                "bookmarkNameLabel": "Bookmark Name"
+            },
+            "browse": {
+                "pageTitle": "Browse",
+                "pageSubTitle": "Find all our digital books and their associated resources.",
+                "filtersBtn": "Filters:\nShow All",
+                "searchBox": "",
+                "tabList": [
+                    "Books",
+                    "Interactive Activities",
+                    "Videos",
+                    "Online Class",
+                    "Teacher Training",
+                    "Today in Class",
+                    "Projectables"
+                ],
+                "pageNumToJump": "2",
+                "moreOptions": {
+                    "viewOption": "View",
+                    "addToPlaylistOption": "Add to Playlist",
+                    "createPlaylist_label": "Create Playlist",
+                    "shareOption": "Share"
                 },
-                "flipbook":
-                {
-                    "doublelayoutWidth": "width: 50%;",
-                    "singlelayoutWidth": "width: 100%;",
-                    "singlelayoutDefaultWidth": 1409,
-                    "singlelayoutDefaultHeight": 1730,
-                    "doubleLayoutTOC": "p. 2 - 3",
-                    "singleLayoutTOC": "p. 2",
-                    "myNotesTitle": "My Notes",
-                    "noNoteText": "Looks like you haven't added any notes yet. Click \"Add Note\" button to add notes on the page.",
-                    "addNoteBtn": "Add Note",
-                    "addNoteTitle": "Add Note",
-                    "editNoteTitle": "Edit Note",
-                    "pageNoLabel": "On Page:",
-                    "pageNoValue": "p. 2",
-                    "notesListPagenumber": "Page 2",
-                    "allPagesLabel": "All Pages",
-                    "noteListItemLabel": "p. 2",
-                    "addNotePlaceholder": "Type your notes here...",
-                    "deleteNoteModalTitle": "Delete Note?",
-                    "deleteNoteModalSubTitle": "You won't be able to recover this note later.",
-                    "deleteNoteModalDeleteBtn": "Delete",
-                    "cancelBtn": "Cancel",
-                    "saveBtn": "Save",
-                    "setNote": "test note automation 1",
-                    "setEditedNote": "test edited note automation",
-                    "setBookmark": "test bookmark automation",
-                    "setEditedBookmark": "test edited bookmark automation",
-                    "noBookmarkText": "Looks like you haven't added any bookmarks yet. Bookmark a page to save your spot for later.",
-                    "bookmarkThisPageBtn": "Bookmark This Page",
-                    "bookmarksTitle": "Bookmarks",
-                    "bookmarkNameLabel": "Bookmark Name"
+                "noResultListItemTitle": "No Results",
+                "noResultListItemSubtitle": "There aren't any resources available that match those terms.",
+                "noResultFound": {
+                    "title": "No result found",
+                    "subTitle": "We didn't find anything matching your search or filters. Try your search again, or change your filters to update the results here."
+                },
+                "results_label": "results:",
+                "result_label": "result:",
+                "filter": {
+                    "filterMenuTitle": "Filters",
+                    "filterMenuFilterCount": "0 filters added",
+                    "filterMenuClearAllBtn": "Clear All",
+                    "filterMenuApplyBtn": "Apply Filters"
+                }
+            },
+            "playlist": {
+                "teacher": {
+                    "playlistPageSubtitle": "Playlist",
+                    "playlistResourceCount": " Resource",
+                    "playlistCreatedOn": "Created",
+                    "playlistOptionsBtn": "",
+                    "playlistShareBtn": "Share",
+                    "browseAllResourcesBtn": "Browse All Resources",
+                    "noPlaylistImage": true,
+                    "noPlaylistTitle": "Add a few resources to your playlist!",
+                    "noPlaylistSubtitle": "You can add resources to this list to share with your classes, or just to have on hand for you when you need them. Start adding to your list.",
+                    "itemIndex_Header": "#",
+                    "itemName_Header": "Title",
+                    "itemType_Header": "Type",
+                    "itemTag_Header": "Tags",
+                    "playlistFooterTitle": "Add to your playlist",
+                    "playlistFooterSubtitle": "Browse all resources to find more to add to your playlist.",
+                    "playlistBrowseResourcesBtn": "Browse Resources",
+                    "playlistReorderOption": "Reorder",
+                    "playlistEditOption": "Edit",
+                    "playlistDeleteOption": "Delete",
+                    "playlistNameLabel": "Playlist Name",
+                    "editPlaylistCancelBtn": "Cancel",
+                    "editPlaylistSaveBtn": "Save",
+                    "deletePlaylistTitle": "Delete Playlist?",
+                    "deletePlaylistSubtitle": "This will remove the entire list of resources from your dashboard. You will need to create new playlist to add them again.",
+                    "deletePlaylistCancelBtn": "Cancel",
+                    "deletePlaylistDeleteBtn": "Delete",
+                    "removeResourceTitle": "Remove Resource?",
+                    "removeResourceSubtitle1": "This will remove the resource - ",
+                    "removeResourceSubtitle2": " - from this playlist.",
+                    "removeResourceCancelBtn": "Cancel",
+                    "removeResourceRemoveBtn": "Remove",
+                    "viewOptionResourceItem": "View",
+                    "shareOptionResourceItem": "Share",
+                    "removeOptionResourceItem": "Remove from Playlist"
+                },
+                "student": {
+                    "playlistPageSubtitle": "Playlist",
+                    "playlistResourceCount": " Resource",
+                    "playlistCreatedOn": "Created",
+                    "playlistOptionsBtn": "",
+                    "playlistShareBtn": null,
+                    "browseAllResourcesBtn": "Browse All Resources",
+                    "noPlaylistImage": true,
+                    "noPlaylistTitle": "Add a few resources to your playlist!",
+                    "noPlaylistSubtitle": "You can add resources to this list to share with your classes, or just to have on hand for you when you need them. Start adding to your list.",
+                    "itemIndex_Header": "#",
+                    "itemName_Header": "Title",
+                    "itemType_Header": "Type",
+                    "itemTag_Header": "Tags",
+                    "playlistFooterTitle": "Add to your playlist",
+                    "playlistFooterSubtitle": "Browse all resources to find more to add to your playlist.",
+                    "playlistBrowseResourcesBtn": "Browse Resources",
+                    "playlistReorderOption": "Reorder",
+                    "playlistEditOption": "Edit",
+                    "playlistDeleteOption": "Delete",
+                    "playlistNameLabel": "Playlist Name",
+                    "editPlaylistCancelBtn": "Cancel",
+                    "editPlaylistSaveBtn": "Save",
+                    "deletePlaylistTitle": "Delete Playlist?",
+                    "deletePlaylistSubtitle": "This will remove the entire list of resources from your dashboard. You will need to create new playlist to add them again.",
+                    "deletePlaylistCancelBtn": "Cancel",
+                    "deletePlaylistDeleteBtn": "Delete",
+                    "removeResourceTitle": "Remove Resource?",
+                    "removeResourceSubtitle": "This will remove the resource - Practice Exam 1 - from this playlist.",
+                    "removeResourceCancelBtn": "Cancel",
+                    "removeResourceRemoveBtn": "Remove",
+                    "viewOptionResourceItem": "View",
+                    "shareOptionResourceItem": null,
+                    "removeOptionResourceItem": "Remove from Playlist"
                 }
             }
         }

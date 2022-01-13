@@ -32,7 +32,10 @@
             "id": "ENG_SHELL_TC_4",
             "description": "",
             "testFile": "./test/engageExperienceApp/appShell.test.js",
-            "testData": []
+            "testData": [  {
+               "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+               "jsonPath": "engage.appContent.myClassPage"
+            }]
          },
          {
             "id": "ENG_INS_CLASS_TC_7",
@@ -133,7 +136,10 @@
             "id": "ENG_SHELL_TC_4",
             "description": "",
             "testFile": "./test/engageExperienceApp/appShell.test.js",
-            "testData": []
+            "testData": [  {
+               "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+               "jsonPath": "engage.appContent.myClassPage"
+            }]
          },
          {
             "id": "ENG_INS_CLASS_TC_7",
@@ -234,7 +240,10 @@
             "id": "ENG_SHELL_TC_4",
             "description": "",
             "testFile": "./test/engageExperienceApp/appShell.test.js",
-            "testData": []
+            "testData": [{
+               "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+               "jsonPath": "engage.appContent.myClassPage"
+            }]
          },
          {
             "id": "ENG_INS_CLASS_TC_7",

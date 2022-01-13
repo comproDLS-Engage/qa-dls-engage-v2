@@ -19,6 +19,11 @@
                     "tags": "P1"
                 },
                 {
+                    "id": "EDIT_TC_13",
+                    "description": "Click on Add Answer Button",
+                    "tags": "P1"
+                },
+                {
                     "id": "ASE_COM_TC_4",
                     "description": "Validate that a new question is added by clicking on the 'Add new Question' button on the left pane",
                     "tags": "P1"
@@ -41,6 +46,11 @@
                 {
                     "id": "ASE_COM_TC_86",
                     "description": "Validate that user is able to add Audio using Browse button",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_87",
+                    "description": "Validate that user is able to add Video using Browse button",
                     "tags": "P1"
                 },
                 {
@@ -163,6 +173,66 @@
                 {
                     "id": "ASE_COM_TC_999",
                     "description": "Click on save and return",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1000",
+                    "description": "set question text",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1001",
+                    "description": "Set Header Title text from placeHolder",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1002",
+                    "description": "Set Instruction text from placeHolder",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1003",
+                    "description": "Next Question Clicked",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1004",
+                    "description": "Delete Media Clicked",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1005",
+                    "description": "Click Edit Prompt Button",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1006",
+                    "description": "Set Prompt textPlaceholder text",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1007",
+                    "description": "Click on SubQuestion button",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1008",
+                    "description": "Add Option text",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1009",
+                    "description": "Click on SubQuestion text",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1010",
+                    "description": "Click on Top bottom option",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1011",
+                    "description": "Click on Left right option",
                     "tags": "P1"
                 }
             ]

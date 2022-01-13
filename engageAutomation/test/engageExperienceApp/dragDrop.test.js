@@ -8,28 +8,37 @@ module.exports = {
     //Validate Drag & Drop Question for Correct scenario
     ENG_ITEM_DND_TC_1: function (testdata) {
         sts = dragAndDrop.isInitialized(testdata);
-        for (var i = 0; i < sts.sourceData.length; i++) {
-            assertion.assertEqual(sts.targetData[i][1], testdata[i][3], "Target text mismatch for " + sts.targetData[i]);
-            assertion.assertEqual(sts.targetData[i][2], testdata[i][4], "Status mismatch for " + sts.targetData[i]);
+        if ((typeof (sts)) === "object") {
+            for (var i = 0; i < sts.sourceData.length; i++) {
+                assertion.assertEqual(sts.targetData[i][1], testdata[i][3], "Target text mismatch for " + sts.targetData[i]);
+                assertion.assertEqual(sts.targetData[i][2], testdata[i][4], "Status mismatch for " + sts.targetData[i]);
+            }
         }
+        else assertion.assertFail(sts);
     },
 
     //Validate Drag & Drop Question for partial correct scenario
     ENG_ITEM_DND_TC_2: function (testdata) {
         sts = dragAndDrop.isInitialized(testdata);
-        for (var i = 0; i < sts.sourceData.length; i++) {
-            assertion.assertEqual(sts.targetData[i][1], testdata[i][3], "Target text mismatch for " + sts.targetData[i]);
-            assertion.assertEqual(sts.targetData[i][2], testdata[i][4], "Status mismatch for " + sts.targetData[i]);
+        if ((typeof (sts)) === "object") {
+            for (var i = 0; i < sts.sourceData.length; i++) {
+                assertion.assertEqual(sts.targetData[i][1], testdata[i][3], "Target text mismatch for " + sts.targetData[i]);
+                assertion.assertEqual(sts.targetData[i][2], testdata[i][4], "Status mismatch for " + sts.targetData[i]);
+            }
         }
+        else assertion.assertFail(sts);
     },
 
     //Validate Drag & Drop Question for incorrect scenario
     ENG_ITEM_DND_TC_3: function (testdata) {
         sts = dragAndDrop.isInitialized(testdata);
-        for (var i = 0; i < sts.sourceData.length; i++) {
-            assertion.assertEqual(sts.targetData[i][1], testdata[i][3], "Target text mismatch for " + sts.targetData[i]);
-            assertion.assertEqual(sts.targetData[i][2], testdata[i][4], "Status mismatch for " + sts.targetData[i]);
+        if ((typeof (sts)) === "object") {
+            for (var i = 0; i < sts.sourceData.length; i++) {
+                assertion.assertEqual(sts.targetData[i][1], testdata[i][3], "Target text mismatch for " + sts.targetData[i]);
+                assertion.assertEqual(sts.targetData[i][2], testdata[i][4], "Status mismatch for " + sts.targetData[i]);
+            }
         }
+        else assertion.assertFail(sts);
     },
 
     //Validate Drag & Drop Functionality using Click option
@@ -48,11 +57,9 @@ module.exports = {
 
     //Validate Drag & Drop Question Functionality using drag drop option
     ENG_ITEM_DND_TC_17: function (testdata) {
-        console.log(testdata)
         sts = dragAndDrop.dragAndDrop(testdata);
         assertion.assertEqual(sts, true, sts);
         sts1 = dragAndDrop.isInitialized(testdata);
-        console.log(sts1)
         for (var i = 0; i < sts1.sourceData.length; i++) {
             assertion.assertEqual(sts1.targetData[i][1], testdata[i][3], "Target text mismatch for " + sts1.targetData[i]);
             if (testdata[i][1] == "")
@@ -77,13 +84,13 @@ module.exports = {
         sts = dragAndDrop.isInitialized(testdata.answerKey);
         assertion.assertEqual(sts.sourceData.length, testdata.maxOptions, "Draggable option count mismatch");
         for (var i = 0; i < sts.sourceData.length; i++) {
-           assertion.assertEqual(sts.targetData[i][1], "", "Target text mismatch for " + sts.targetData[i]);
-           assertion.assertEqual(sts.targetData[i][2], "", "Status mismatch for " + sts.targetData[i]);
+            assertion.assertEqual(sts.targetData[i][1], "", "Target text mismatch for " + sts.targetData[i]);
+            assertion.assertEqual(sts.targetData[i][2], "", "Status mismatch for " + sts.targetData[i]);
         }
-        sts = itemPlayerPage.getItemplayerInfo();
-		assertion.assertEqual(sts.mediaType, testdata.mediaType, "Media type mismatch");
-		assertion.assertEqual(sts.quesText, testdata.text, "Question text mismatch");
-		assertion.assertEqual(sts.instructionText, testdata.instruction, "Instruction text mismatch");
+        // sts = itemPlayerPage.getItemplayerInfo();
+        // assertion.assertEqual(sts.mediaType, testdata.mediaType, "Media type mismatch");
+        // assertion.assertEqual(sts.quesText, testdata.text, "Question text mismatch");
+        // assertion.assertEqual(sts.instructionText, testdata.instruction, "Instruction text mismatch");
     },
 
     //Validate That "Tap To Zoom" Option Is Available In The Mobile Mode In The DND Question - (Portrait, Landscape)
@@ -97,7 +104,7 @@ module.exports = {
         sts = dragAndDrop.clickTaptoZoom();
         assertion.assertEqual(sts, true, "Zoom dialog is opened");
     },
-    
+
     //Validate That The Close Button On The Top Closes The Dialogue Box - (Portrait, Landscape)
     ENG_ITEM_DND_TC_23: function () {
         sts = dragAndDrop.closeZoom();

@@ -14,10 +14,11 @@ module.exports = {
         logger.logInto(stackTrace.get());
         var qIndex = itemplayer.getQuesIndex();
         action.switchToFrame(0);
-        var option = "div[index='" + (qIndex) + "']";
-        res = action.getElementCount(option + " [class*='draghandle']");
-        ret = action.getElementCount(option + " [data-tid*=icon]");
-        if (res > 0 || ret > 0) {
+        var option = "div[index='" + (qIndex) + "'] " + this.options;
+        //res = action.getElementCount(option + " [class*='draghandle']");
+        //ret = action.getElementCount(option + " [data-tid*=icon]");
+        res = action.waitForDisplayed(option);
+        if (res == true) {
             res = this.getorderlistData(qIndex, oliData)
         }
         else {

@@ -369,7 +369,7 @@
                },
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
-                  "jsonPath": "book.component[0].unit[0].section[0].activity[1]"
+                  "jsonPath": "book.component[0].unit[0].section[0].activity[0]"
                }
             ]
          },

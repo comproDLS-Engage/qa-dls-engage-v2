@@ -347,7 +347,60 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {<Object>} results object containing test results
      */
-    onComplete: function (exitCode, config, capabilities, results) {
+    onComplete: async function (exitCode, config, capabilities, results) {
+        if (argv.tesultsToken) {
+            const tesults = require('tesults');
+            const util = require('util');
+            const tesultsResults = util.promisify(tesults.results);
+            const jsonString = fs.readFileSync(process.cwd() + '/' + global.reportOutputDir + "/wdio-0-0-timeline-reporter.log", 'utf-8');
+            const logData = JSON.parse(jsonString);
+            var tesultsCases = [];
+            let testCase = {};
+            testCase.name = "Test Run Summary"
+            testCase.result = (logData.state.failed > 0) ? "fail" : "pass";
+            testCase.duration = logData.duration;
+            testCase.suite = "[build]";
+            //testCase._Passed = logData.state.passed;
+            //testCase._Failed = logData.state.failed;
+            //testCase._Skipped = logData.state.skipped;
+            testCase._Environment = logData.capabilities.platformName.toUpperCase() + '\n' + logData.capabilities.browserName.toUpperCase() + " " + logData.capabilities.browserVersion + "\n" + logData.capabilities.screenResolution.width + "x" + logData.capabilities.screenResolution.height;
+            testCase._TestFile = logData.specs[0];
+            testCase._ReportURL = "https://d29cns2xkhqbb2.cloudfront.net/" + argv.appType + "/" + argv.testEnv + "/" + argv.reportdir + "/index.html";
+            testCase._AppURL = global.appUrl;
+            testCase._AppVersion = logData.appVersion;
+            console.log(testCase)
+            tesultsCases.push(testCase);
+
+            for (let i = 0; i < logData.suites.length; i++) {
+                for (let j = 0; j < logData.suites[i].tests.length; j++) {
+                    testCase = {};
+                    testCase.name = logData.suites[i].tests[j].title;
+                    testCase.result = logData.suites[i].tests[j].state.substring(0, 4);
+                    //console.log(testCase.result)
+                    testCase.duration = logData.suites[i].tests[j].duration;
+                    //testCase.files = logData.suites[i].tests[j].screenshots;
+                    testCase.suite = logData.suites[i].title;
+                    tesultsCases.push(testCase);
+                }
+            }
+            //console.log(argv.tesultsToken)
+            let data = {
+                target: argv.tesultsToken,
+                results: {
+                    cases: tesultsCases
+                }
+            }
+            //console.log(data.target)
+            let response;
+            try {
+                response = await tesultsResults(data)
+            } catch (err) {
+                console.log(err)
+            } finally {
+                console.log(response)
+            }
+        }
+
         //require('./core/utils/reportUpdater.js').indexFileUpdate();
         specGenerator.removingTempSpecs();
         if (argv.visual) {

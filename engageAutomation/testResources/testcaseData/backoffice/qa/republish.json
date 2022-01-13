@@ -1,0 +1,25 @@
+{
+    "component": [
+        {
+            "url": "https://backoffice-difusion-dev1.comprodls.com/#/books/qatestbookv0101637913254767/components/learningpathextraactivities1637913368488/learning-path/1637916360141",
+            "bookName": "QA Test Book v0.10",
+            "component": "Learning Path - extra activities",
+            "folderL1": "Test folder1 level1",
+            "folderL2": "Test folder1 level2",
+            "activity": [
+                "LO2 - Open Ended",
+                "LO4 - Young Learner MCQ"
+            ]
+        },
+        {
+            "url": "https://backoffice-difusion-dev1.comprodls.com/#/books/qabook151633525116717/components/learningpathactivityplayer1637557617153/learning-path/1637557668618",
+            "bookName": "QA Book 15",
+            "component": "Learning Path Activity Player",
+            "folderL1": "F1",
+            "folderL2": "",
+            "activity": [
+                "MCSQR"
+            ]
+        }
+    ]
+}

@@ -5,65 +5,71 @@ var appShellPage = require('./appShell.page.js')
 
 module.exports = {
 
-  readerContainerWrapper: selectorFile.css.ComproEngage.flipbook.page.readerContainerWrapper,
-  pageLayoutDouble: selectorFile.css.ComproEngage.flipbook.page.pageLayoutDouble,
-  notesDockContainer: selectorFile.css.ComproEngage.flipbook.page.notesDockContainer,
-  notesBtn: selectorFile.css.ComproEngage.flipbook.page.notesBtn,
-  annotationsBtn: selectorFile.css.ComproEngage.flipbook.page.annotationsBtn,
-  zoomInBtn: selectorFile.css.ComproEngage.flipbook.page.zoomInBtn,
-  zoomOutBtn: selectorFile.css.ComproEngage.flipbook.page.zoomOutBtn,
-  fitToScreenBtn: selectorFile.css.ComproEngage.flipbook.page.fitToScreenBtn,
-  doublePageBtn: selectorFile.css.ComproEngage.flipbook.page.doublePageBtn,
-  singlePageBtn: selectorFile.css.ComproEngage.flipbook.page.singlePageBtn,
-  fullScreenBtn: selectorFile.css.ComproEngage.flipbook.page.fullScreenBtn,
-  bookmarkBtn: selectorFile.css.ComproEngage.flipbook.page.bookmarkBtn,
-  TOCBtn: selectorFile.css.ComproEngage.flipbook.page.TOCBtn,
-  previousBtn: selectorFile.css.ComproEngage.flipbook.page.previousBtn,
-  nextBtn: selectorFile.css.ComproEngage.flipbook.page.nextBtn,
-  myNotesTitle: selectorFile.css.ComproEngage.flipbook.page.myNotesTitle,
-  notesDockBtn: selectorFile.css.ComproEngage.flipbook.page.notesDockBtn,
-  notesUndockBtn: selectorFile.css.ComproEngage.flipbook.page.notesUndockBtn,
-  notesCloseBtn: selectorFile.css.ComproEngage.flipbook.page.notesCloseBtn,
-  addNoteBtn: selectorFile.css.ComproEngage.flipbook.page.addNoteBtn,
-  noNoteIcon: selectorFile.css.ComproEngage.flipbook.page.noNoteIcon,
-  noNoteText: selectorFile.css.ComproEngage.flipbook.page.noNoteText,
-  noteListItemLabel: selectorFile.css.ComproEngage.flipbook.page.noteListItemLabel,
-  noteListItemText: selectorFile.css.ComproEngage.flipbook.page.noteListItemText,
-  noteListDeleteBtn: selectorFile.css.ComproEngage.flipbook.page.noteListDeleteBtn,
-  noteListEditBtn: selectorFile.css.ComproEngage.flipbook.page.noteListEditBtn,
-  addNotesTitle: selectorFile.css.ComproEngage.flipbook.page.addNotesTitle,
-  notesPageLabel: selectorFile.css.ComproEngage.flipbook.page.notesPageLabel,
-  notesPageValueSingle: selectorFile.css.ComproEngage.flipbook.page.notesPageValueSingle,
-  notesPageValueLeft: selectorFile.css.ComproEngage.flipbook.page.notesPageValueLeft,
-  notesPageValueRight: selectorFile.css.ComproEngage.flipbook.page.notesPageValueRight,
-  notesTextArea: selectorFile.css.ComproEngage.flipbook.page.notesTextArea,
-  notesCancelBtn: selectorFile.css.ComproEngage.flipbook.page.notesCancelBtn,
-  notesSaveBtn: selectorFile.css.ComproEngage.flipbook.page.notesSaveBtn,
-  deleteNoteTitle: selectorFile.css.ComproEngage.flipbook.page.deleteNoteTitle,
-  deleteNoteSubTitle: selectorFile.css.ComproEngage.flipbook.page.deleteNoteSubTitle,
-  deleteNoteCancelBtn: selectorFile.css.ComproEngage.flipbook.page.deleteNoteCancelBtn,
-  deleteNoteDeleteBtn: selectorFile.css.ComproEngage.flipbook.page.deleteNoteDeleteBtn,
-  myBookmarksTitle: selectorFile.css.ComproEngage.flipbook.page.myBookmarksTitle,
-  bookmarkCloseBtn: selectorFile.css.ComproEngage.flipbook.page.bookmarkCloseBtn,
-  noBookmarkIcon: selectorFile.css.ComproEngage.flipbook.page.noBookmarkIcon,
-  noBookmarkText: selectorFile.css.ComproEngage.flipbook.page.noBookmarkText,
-  addBookmarkBtn: selectorFile.css.ComproEngage.flipbook.page.addBookmarkBtn,
-  bookmarkListItemLabel: selectorFile.css.ComproEngage.flipbook.page.bookmarkListItemLabel,
-  bookmarkListItemName: selectorFile.css.ComproEngage.flipbook.page.bookmarkListItemName,
-  bookmarkListDeleteBtn: selectorFile.css.ComproEngage.flipbook.page.bookmarkListDeleteBtn,
-  bookmarkListEditBtn: selectorFile.css.ComproEngage.flipbook.page.bookmarkListEditBtn,
-  bookmarkNameLabel: selectorFile.css.ComproEngage.flipbook.page.bookmarkNameLabel,
-  bookmarkPageValueSingle: selectorFile.css.ComproEngage.flipbook.page.bookmarkPageValueSingle,
-  bookmarkPageValueLeft: selectorFile.css.ComproEngage.flipbook.page.bookmarkPageValueLeft,
-  bookmarkPageValueRight: selectorFile.css.ComproEngage.flipbook.page.bookmarkPageValueRight,
-  bookmarkTextArea: selectorFile.css.ComproEngage.flipbook.page.bookmarkTextArea,
-  bookmarkCancelBtn: selectorFile.css.ComproEngage.flipbook.page.bookmarkCancelBtn,
-  bookmarkSaveBtn: selectorFile.css.ComproEngage.flipbook.page.bookmarkSaveBtn,
-  flipbookTitle: selectorFile.css.ComproEngage.flipbook.page.flipbookTitle,
-  tableOfContentTitle: selectorFile.css.ComproEngage.flipbook.page.tableOfContentTitle,
-  jumpToPageInput: selectorFile.css.ComproEngage.flipbook.page.jumpToPageInput,
-  jumpToPageBtn: selectorFile.css.ComproEngage.flipbook.page.jumpToPageBtn,
-  resourceTitle: selectorFile.css.ComproEngage.flipbook.page.resourceTitle,
+  readerContainerWrapper: selectorFile.css.ComproEngage.flipbook.readerContainerWrapper,
+  pageLayoutSingle: selectorFile.css.ComproEngage.flipbook.pageLayoutSingle,
+  pageLayoutDouble: selectorFile.css.ComproEngage.flipbook.pageLayoutDouble,
+  penBtn: selectorFile.css.ComproEngage.flipbook.penBtn,
+  highlighterBtn: selectorFile.css.ComproEngage.flipbook.highlighterBtn,
+  eraserBtn: selectorFile.css.ComproEngage.flipbook.eraserBtn,
+  undoBtn: selectorFile.css.ComproEngage.flipbook.undoBtn,
+  redoBtn: selectorFile.css.ComproEngage.flipbook.redoBtn,
+  notesDockContainer: selectorFile.css.ComproEngage.flipbook.notesDockContainer,
+  notesBtn: selectorFile.css.ComproEngage.flipbook.notesBtn,
+  zoomInBtn: selectorFile.css.ComproEngage.flipbook.zoomInBtn,
+  zoomOutBtn: selectorFile.css.ComproEngage.flipbook.zoomOutBtn,
+  fitToScreenBtn: selectorFile.css.ComproEngage.flipbook.fitToScreenBtn,
+  doublePageBtn: selectorFile.css.ComproEngage.flipbook.doublePageBtn,
+  singlePageBtn: selectorFile.css.ComproEngage.flipbook.singlePageBtn,
+  fullScreenBtn: selectorFile.css.ComproEngage.flipbook.fullScreenBtn,
+  bookmarkBtn: selectorFile.css.ComproEngage.flipbook.bookmarkBtn,
+  TOCBtn: selectorFile.css.ComproEngage.flipbook.TOCBtn,
+  previousBtn: selectorFile.css.ComproEngage.flipbook.previousBtn,
+  nextBtn: selectorFile.css.ComproEngage.flipbook.nextBtn,
+  myNotesTitle: selectorFile.css.ComproEngage.flipbook.myNotesTitle,
+  notesDockBtn: selectorFile.css.ComproEngage.flipbook.notesDockBtn,
+  notesUndockBtn: selectorFile.css.ComproEngage.flipbook.notesUndockBtn,
+  notesCloseBtn: selectorFile.css.ComproEngage.flipbook.notesCloseBtn,
+  addNoteBtn: selectorFile.css.ComproEngage.flipbook.addNoteBtn,
+  noNoteIcon: selectorFile.css.ComproEngage.flipbook.noNoteIcon,
+  noNoteText: selectorFile.css.ComproEngage.flipbook.noNoteText,
+  noteListItemLabel: selectorFile.css.ComproEngage.flipbook.noteListItemLabel,
+  noteListItemText: selectorFile.css.ComproEngage.flipbook.noteListItemText,
+  noteListDeleteBtn: selectorFile.css.ComproEngage.flipbook.noteListDeleteBtn,
+  noteListEditBtn: selectorFile.css.ComproEngage.flipbook.noteListEditBtn,
+  addNotesTitle: selectorFile.css.ComproEngage.flipbook.addNotesTitle,
+  notesPageLabel: selectorFile.css.ComproEngage.flipbook.notesPageLabel,
+  notesPageValueSingle: selectorFile.css.ComproEngage.flipbook.notesPageValueSingle,
+  notesPageValueLeft: selectorFile.css.ComproEngage.flipbook.notesPageValueLeft,
+  notesPageValueRight: selectorFile.css.ComproEngage.flipbook.notesPageValueRight,
+  notesTextArea: selectorFile.css.ComproEngage.flipbook.notesTextArea,
+  notesCancelBtn: selectorFile.css.ComproEngage.flipbook.notesCancelBtn,
+  notesSaveBtn: selectorFile.css.ComproEngage.flipbook.notesSaveBtn,
+  deleteNoteTitle: selectorFile.css.ComproEngage.flipbook.deleteNoteTitle,
+  deleteNoteSubTitle: selectorFile.css.ComproEngage.flipbook.deleteNoteSubTitle,
+  deleteNoteCancelBtn: selectorFile.css.ComproEngage.flipbook.deleteNoteCancelBtn,
+  deleteNoteDeleteBtn: selectorFile.css.ComproEngage.flipbook.deleteNoteDeleteBtn,
+  myBookmarksTitle: selectorFile.css.ComproEngage.flipbook.myBookmarksTitle,
+  bookmarkCloseBtn: selectorFile.css.ComproEngage.flipbook.bookmarkCloseBtn,
+  noBookmarkIcon: selectorFile.css.ComproEngage.flipbook.noBookmarkIcon,
+  noBookmarkText: selectorFile.css.ComproEngage.flipbook.noBookmarkText,
+  addBookmarkBtn: selectorFile.css.ComproEngage.flipbook.addBookmarkBtn,
+  bookmarkListItemLabel: selectorFile.css.ComproEngage.flipbook.bookmarkListItemLabel,
+  bookmarkListItemName: selectorFile.css.ComproEngage.flipbook.bookmarkListItemName,
+  bookmarkListDeleteBtn: selectorFile.css.ComproEngage.flipbook.bookmarkListDeleteBtn,
+  bookmarkListEditBtn: selectorFile.css.ComproEngage.flipbook.bookmarkListEditBtn,
+  bookmarkNameLabel: selectorFile.css.ComproEngage.flipbook.bookmarkNameLabel,
+  bookmarkPageLabel: selectorFile.css.ComproEngage.flipbook.bookmarkPageLabel,
+  bookmarkPageValueSingle: selectorFile.css.ComproEngage.flipbook.bookmarkPageValueSingle,
+  bookmarkPageValueLeft: selectorFile.css.ComproEngage.flipbook.bookmarkPageValueLeft,
+  bookmarkPageValueRight: selectorFile.css.ComproEngage.flipbook.bookmarkPageValueRight,
+  bookmarkTextArea: selectorFile.css.ComproEngage.flipbook.bookmarkTextArea,
+  bookmarkCancelBtn: selectorFile.css.ComproEngage.flipbook.bookmarkCancelBtn,
+  bookmarkSaveBtn: selectorFile.css.ComproEngage.flipbook.bookmarkSaveBtn,
+  flipbookTitle: selectorFile.css.ComproEngage.flipbook.flipbookTitle,
+  tableOfContentTitle: selectorFile.css.ComproEngage.flipbook.tableOfContentTitle,
+  jumpToPageInput: selectorFile.css.ComproEngage.flipbook.jumpToPageInput,
+  jumpToPageBtn: selectorFile.css.ComproEngage.flipbook.jumpToPageBtn,
+  resourceTitle: selectorFile.css.ComproEngage.flipbook.resourceTitle,
 
   isInitialized: function () {
     var res;
@@ -80,9 +86,14 @@ module.exports = {
     logger.logInto(stackTrace.get());
     var obj;
     obj = {
-      pageLayoutDouble: (action.getElementCount(this.pageLayoutDouble) > 0) ? action.waitForDisplayed(this.pageLayoutDouble) : null,
+      pageLayoutSingle: (action.getElementCount(this.pageLayoutSingle) > 0) ? action.waitForDisplayed(this.pageLayoutSingle) : false,
+      pageLayoutDouble: (action.getElementCount(this.pageLayoutDouble) > 0) ? action.waitForDisplayed(this.pageLayoutDouble) : false,
+      penBtn: (action.getElementCount(this.penBtn) > 0) ? action.getText(this.penBtn) : null,
+      highlighterBtn: (action.getElementCount(this.highlighterBtn) > 0) ? action.getText(this.highlighterBtn) : null,
+      eraserBtn: (action.getElementCount(this.eraserBtn) > 0) ? action.getText(this.eraserBtn) : null,
+      undoBtn: (action.getElementCount(this.undoBtn) > 0) ? action.getText(this.undoBtn) : null,
+      redoBtn: (action.getElementCount(this.redoBtn) > 0) ? action.getText(this.redoBtn) : null,
       notesBtn: (action.getElementCount(this.notesBtn) > 0) ? action.getText(this.notesBtn) : null,
-      annotationsBtn: (action.getElementCount(this.annotationsBtn) > 0) ? action.getText(this.annotationsBtn) : null,
       zoomInBtn: (action.getElementCount(this.zoomInBtn) > 0) ? action.getText(this.zoomInBtn) : null,
       zoomOutBtn: (action.getElementCount(this.zoomOutBtn) > 0) ? action.getText(this.zoomOutBtn) : null,
       fitToScreenBtn: (action.getElementCount(this.fitToScreenBtn) > 0) ? action.getText(this.fitToScreenBtn) : null,
@@ -97,6 +108,22 @@ module.exports = {
     return obj;
   },
 
+  //-------- NOTES ----------
+  click_notesBtn: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.notesBtn);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " notesBtn button is clicked");
+      res = this.getData_notesModal();
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + " notesBtn button is not clicked", 'error');
+    }
+    return res;
+  },
+
+  //Function that returns the notes modal elements  
   getData_notesModal: function () {
     logger.logInto(stackTrace.get());
     var obj;
@@ -112,20 +139,19 @@ module.exports = {
     return obj;
   },
 
-  getData_notesList: function () {
+  //Clicking on 'Add Note' button and get the data of the text area
+  click_addNoteBtn: function () {
     logger.logInto(stackTrace.get());
-    var obj;
-    action.waitForDisplayed(this.noteListItemText);
-    var list = action.findElements(this.noteListItemText);
-    for (var i = 0; i <= list.length; i++) {
-      obj[i] = {
-        noteListItemLabel: (action.getElementCount(this.noteListItemLabel + i + "]") > 0) ? action.getText(this.noteListItemLabel + i + "]") : null,
-        noteListItemText: (action.getElementCount(this.noteListItemText + i + "]") > 0) ? action.getText(this.noteListItemText + i + "]") : null,
-        noteListDeleteBtn: (action.getElementCount(this.noteListDeleteBtn + i + "]") > 0) ? action.getText(this.noteListDeleteBtn + i + "]") : null,
-        noteListEditBtn: (action.getElementCount(this.noteListEditBtn + i + "]") > 0) ? action.getText(this.noteListEditBtn + i + "]") : null,
-      }
+    var res;
+    res = action.click(this.addNoteBtn);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " addNoteBtn button is clicked");
+      res = this.getData_addNotes();
     }
-    return obj;
+    else {
+      logger.logInto(stackTrace.get(), res + " addNoteBtn button is not clicked", 'error');
+    }
+    return res;
   },
 
   getData_addNotes: function () {
@@ -144,6 +170,118 @@ module.exports = {
     return obj;
   },
 
+  //Function to set a value in the add note text area
+  set_notesTextArea: function (value) {
+    var res;
+    logger.logInto(stackTrace.get());
+    res = action.setValue(this.notesTextArea, value);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), "Value is entered in notesTextArea");
+    } else {
+      logger.logInto(stackTrace.get(), res, 'error');
+    }
+    return res;
+  },
+
+  click_notesSaveBtn: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.notesSaveBtn);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " notesSaveBtn button is clicked");
+      //res = this.getData_notesList();
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + " notesSaveBtn button is not clicked", 'error');
+    }
+    return res;
+  },
+
+  getData_notesList: function () {
+    logger.logInto(stackTrace.get());
+    var obj = {};
+    action.waitForDisplayed(this.noteListItemText);
+    var list = action.findElements(this.noteListItemText);
+    for (var i = 0; i < list.length; i++) {
+      obj[i] = {
+        noteListItemLabel: (action.getElementCount(this.noteListItemLabel + i + "']") > 0) ? action.getText(this.noteListItemLabel + i + "']") : null,
+        noteListItemText: (action.getElementCount(this.noteListItemText + i + "']") > 0) ? action.getText(this.noteListItemText + i + "']") : null,
+        noteListDeleteBtn: (action.getElementCount(this.noteListDeleteBtn + i + "']") > 0) ? action.getText(this.noteListDeleteBtn + i + "']") : null,
+        noteListEditBtn: (action.getElementCount(this.noteListEditBtn + i + "']") > 0) ? action.getText(this.noteListEditBtn + i + "']") : null,
+      }
+    }
+    return obj;
+  },
+
+  //Edit Note---
+  click_noteListEditBtn: function (noteListItemTextName) {
+    logger.logInto(stackTrace.get());
+    var i, list, res;
+    list = action.findElements(this.noteListEditBtn);
+    for (i = 0; i < list.length; i++) {
+      if ((action.getText(this.noteListItemText + i + "']")) == noteListItemTextName) {
+        res = action.click(list[i]);
+        break;
+      }
+    }
+    if (res == true) {
+      logger.logInto(stackTrace.get(), " --noteListEditBtn clicked");
+      res = this.getData_addNotes();
+    }
+    else
+      logger.logInto(stackTrace.get(), res + " --noteListEditBtn NOT clicked", "error")
+    return res;
+  },
+
+  click_notesCancelBtn: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.notesCancelBtn);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " notesCancelBtn button is clicked");
+      res = this.getData_notesList();
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + " notesCancelBtn button is not clicked", 'error');
+    }
+    return res;
+  },
+
+  //Function to close Notes Modal
+  click_notesCloseBtn: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.notesCloseBtn);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " notesCloseBtn button is clicked");
+      res = action.waitForDisplayed(this.notesCloseBtn, undefined, true);
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + " notesCloseBtn button is not clicked", 'error');
+    }
+    return res;
+  },
+
+  //Clicking on Delete Note button and get the data of the delete modal
+  click_noteListDeleteBtn: function (noteListItemTextName) {
+    logger.logInto(stackTrace.get());
+    var i, list, res;
+    list = action.findElements(this.noteListDeleteBtn);
+    for (i = 0; i < list.length; i++) {
+      if ((action.getText(this.noteListItemText + i + "']")) == noteListItemTextName) {
+        res = action.click(list[i]);
+        break;
+      }
+    }
+    if (res == true) {
+      logger.logInto(stackTrace.get(), " --noteListDeleteBtn clicked");
+      res = this.getData_deleteNotes();
+    }
+    else
+      logger.logInto(stackTrace.get(), res + " --noteListDeleteBtn NOT clicked", "error")
+    return res;
+  },
+
   getData_deleteNotes: function () {
     logger.logInto(stackTrace.get());
     var obj;
@@ -156,6 +294,105 @@ module.exports = {
     return obj;
   },
 
+  click_deleteNoteCancelBtn: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.deleteNoteCancelBtn);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " deleteNoteCancelBtn button is clicked");
+      res = this.getData_notesList();
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + " deleteNoteCancelBtn button is not clicked", 'error');
+    }
+    return res;
+  },
+
+  click_deleteNoteDeleteBtn: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.deleteNoteDeleteBtn);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " deleteNoteDeleteBtn button is clicked");
+      //res = this.getData_notesList();
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + " deleteNoteDeleteBtn button is not clicked", 'error');
+    }
+    return res;
+  },
+
+  //Notes other functions
+  click_notesDockBtn: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.notesDockBtn);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " notesDockBtn button is clicked");
+      res = action.waitForDisplayed(this.notesDockContainer); //manually added
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + " notesDockBtn button is not clicked", 'error');
+    }
+    return res;
+  },
+
+  click_notesUndockBtn: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.notesUndockBtn);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " notesUndockBtn button is clicked");
+      res = action.waitForDisplayed(this.notesDockContainer, undefined, true);  //manually added
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + " notesUndockBtn button is not clicked", 'error');
+    }
+    return res;
+  },
+
+  click_notesPageValueLeft: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.notesPageValueLeft);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " notesPageValueLeft button is clicked");
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + " notesPageValueLeft button is not clicked", 'error');
+    }
+    return res;
+  },
+
+  click_notesPageValueRight: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.notesPageValueRight);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " notesPageValueRight button is clicked");
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + " notesPageValueRight button is not clicked", 'error');
+    }
+    return res;
+  },
+
+  //--------BOOKMARKS-------
+  click_bookmarkBtn: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.bookmarkBtn);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " bookmarkBtn button is clicked");
+      res = this.getData_bookmarkModal();
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + " bookmarkBtn button is not clicked", 'error');
+    }
+    return res;
+  },
+
+  //Function that returns the bookmark modal elements 
   getData_bookmarkModal: function () {
     logger.logInto(stackTrace.get());
     var obj;
@@ -169,20 +406,19 @@ module.exports = {
     return obj;
   },
 
-  getData_bookmarkList: function () {
+  //Clicking on Add Bookmark button and get the data of the text area
+  click_addBookmarkBtn: function () {
     logger.logInto(stackTrace.get());
-    var obj;
-    action.waitForDisplayed(this.bookmarkListItemName);
-    var list = action.findElements(this.bookmarkListItemName);
-    for (var i = 0; i <= list.length; i++) {
-      obj[i] = {
-        bookmarkListItemLabel: (action.getElementCount(this.bookmarkListItemLabel + i + "]") > 0) ? action.getText(this.bookmarkListItemLabel + i + "]") : null,
-        bookmarkListItemName: (action.getElementCount(this.bookmarkListItemName + i + "]") > 0) ? action.getText(this.bookmarkListItemName + i + "]") : null,
-        bookmarkListDeleteBtn: (action.getElementCount(this.bookmarkListDeleteBtn + i + "]") > 0) ? action.getText(this.bookmarkListDeleteBtn + i + "]") : null,
-        bookmarkListEditBtn: (action.getElementCount(this.bookmarkListEditBtn + i + "]") > 0) ? action.getText(this.bookmarkListEditBtn + i + "]") : null,
-      }
+    var res;
+    res = action.click(this.addBookmarkBtn);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " addBookmarkBtn button is clicked");
+      res = this.getData_addBookmark();
     }
-    return obj;
+    else {
+      logger.logInto(stackTrace.get(), res + " addBookmarkBtn button is not clicked", 'error');
+    }
+    return res;
   },
 
   getData_addBookmark: function () {
@@ -190,6 +426,7 @@ module.exports = {
     var obj;
     obj = {
       bookmarkNameLabel: (action.getElementCount(this.bookmarkNameLabel) > 0) ? action.getText(this.bookmarkNameLabel) : null,
+      bookmarkPageLabel: (action.getElementCount(this.bookmarkPageLabel) > 0) ? action.getText(this.bookmarkPageLabel) : null,
       bookmarkPageValueSingle: (action.getElementCount(this.bookmarkPageValueSingle) > 0) ? action.getText(this.bookmarkPageValueSingle) : null,
       bookmarkPageValueLeft: (action.getElementCount(this.bookmarkPageValueLeft) > 0) ? action.getText(this.bookmarkPageValueLeft) : null,
       bookmarkPageValueRight: (action.getElementCount(this.bookmarkPageValueRight) > 0) ? action.getText(this.bookmarkPageValueRight) : null,
@@ -198,6 +435,160 @@ module.exports = {
       bookmarkSaveBtn: (action.getElementCount(this.bookmarkSaveBtn) > 0) ? action.getText(this.bookmarkSaveBtn) : null,
     }
     return obj;
+  },
+
+  //Function to set a value in the add bookmark text area
+  set_bookmarkTextArea: function (value) {
+    var res;
+    logger.logInto(stackTrace.get());
+    res = action.setValue(this.bookmarkTextArea, value);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), "Value is entered in bookmarkTextArea");
+    } else {
+      logger.logInto(stackTrace.get(), res, 'error');
+    }
+    return res;
+  },
+
+  click_bookmarkSaveBtn: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.bookmarkSaveBtn);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " bookmarkSaveBtn button is clicked");
+      //res = this.getData_bookmarkList();
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + " bookmarkSaveBtn button is not clicked", 'error');
+    }
+    return res;
+  },
+
+  getData_bookmarkList: function () {
+    logger.logInto(stackTrace.get());
+    var obj = {};
+    action.waitForDisplayed(this.bookmarkListItemName);
+    var list = action.findElements(this.bookmarkListItemName);
+    for (var i = 0; i < list.length; i++) {
+      obj[i] = {
+        bookmarkListItemLabel: (action.getElementCount(this.bookmarkListItemLabel + i + "']") > 0) ? action.getText(this.bookmarkListItemLabel + i + "']") : null,
+        bookmarkListItemName: (action.getElementCount(this.bookmarkListItemName + i + "']") > 0) ? action.getText(this.bookmarkListItemName + i + "']") : null,
+        bookmarkListDeleteBtn: (action.getElementCount(this.bookmarkListDeleteBtn + i + "']") > 0) ? action.getText(this.bookmarkListDeleteBtn + i + "']") : null,
+        bookmarkListEditBtn: (action.getElementCount(this.bookmarkListEditBtn + i + "']") > 0) ? action.getText(this.bookmarkListEditBtn + i + "']") : null,
+      }
+    }
+    return obj;
+  },
+
+  //Edit Bookmark----
+  click_bookmarkListEditBtn: function (bookmarkListItemNameName) {
+    logger.logInto(stackTrace.get());
+    var i, list, res;
+    list = action.findElements(this.bookmarkListEditBtn);
+    for (i = 0; i < list.length; i++) {
+      if ((action.getText(this.bookmarkListItemName + i + "']")) == bookmarkListItemNameName) {
+        res = action.click(list[i]);
+        break;
+      }
+    }
+    if (res == true) {
+      logger.logInto(stackTrace.get(), " --bookmarkListEditBtn clicked");
+      res = this.getData_addBookmark();
+    }
+    else
+      logger.logInto(stackTrace.get(), res + " --bookmarkListEditBtn NOT clicked", "error")
+    return res;
+  },
+
+  click_bookmarkCancelBtn: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.bookmarkCancelBtn);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " bookmarkCancelBtn button is clicked");
+      res = this.getData_bookmarkList();
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + " bookmarkCancelBtn button is not clicked", 'error');
+    }
+    return res;
+  },
+
+  //Function to close Bookmarks Modal
+  click_bookmarkCloseBtn: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.bookmarkCloseBtn);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " bookmarkCloseBtn button is clicked");
+      res = action.waitForDisplayed(this.bookmarkCloseBtn, undefined, true);
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + " bookmarkCloseBtn button is not clicked", 'error');
+    }
+    return res;
+  },
+
+  //Function to delete bookmark
+  click_bookmarkListDeleteBtn: function (bookmarkListItemNameName) {
+    logger.logInto(stackTrace.get());
+    var i, list, res;
+    list = action.findElements(this.bookmarkListDeleteBtn);
+    for (i = 0; i < list.length; i++) {
+      if ((action.getText(this.bookmarkListItemName + i + "']")) == bookmarkListItemNameName) {
+        res = action.click(list[i]);
+        break;
+      }
+    }
+    if (res == true) {
+      logger.logInto(stackTrace.get(), " --bookmarkListDeleteBtn clicked");
+      //res = this.getData_bookmarkList();
+    }
+    else
+      logger.logInto(stackTrace.get(), res + " --bookmarkListDeleteBtn NOT clicked", "error")
+    return res;
+  },
+
+  //Bookmarks other functions
+  click_bookmarkPageValueLeft: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.bookmarkPageValueLeft);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " bookmarkPageValueLeft button is clicked");
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + " bookmarkPageValueLeft button is not clicked", 'error');
+    }
+    return res;
+  },
+
+  click_bookmarkPageValueRight: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.bookmarkPageValueRight);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " bookmarkPageValueRight button is clicked");
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + " bookmarkPageValueRight button is not clicked", 'error');
+    }
+    return res;
+  },
+
+  //----TOC----
+  click_TOCBtn: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.TOCBtn);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " TOCBtn button is clicked");
+      res = this.getData_flipbookTOC();
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + " TOCBtn button is clicked", 'error');
+    }
+    return res;
   },
 
   getData_flipbookTOC: function () {
@@ -225,20 +616,47 @@ module.exports = {
     return resourceTitle_Arr;
   },
 
-  click_notesBtn: function () {
+  click_jumpToPageInput: function () {
     logger.logInto(stackTrace.get());
     var res;
-    res = action.click(this.notesBtn);
+    res = action.click(this.jumpToPageInput);
     if (true == res) {
-      logger.logInto(stackTrace.get(), " notesBtn button is clicked");
-      res = this.getData_notesModal();
+      logger.logInto(stackTrace.get(), " TOCBtn button is clicked");
     }
     else {
-      logger.logInto(stackTrace.get(), res + " notesBtn button is not clicked", 'error');
+      logger.logInto(stackTrace.get(), res + " TOCBtn button is clicked", 'error');
+    }
+    console.log("response - ",res)
+    return res;
+  },
+
+  set_jumpToPageInput: function (value) {
+    var res;
+    logger.logInto(stackTrace.get());
+    res = action.setValue(this.jumpToPageInput, value);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), "Value is entered in jumpToPageInput");
+    } else {
+      logger.logInto(stackTrace.get(), res, 'error');
     }
     return res;
   },
 
+  click_jumpToPageBtn: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.jumpToPageBtn);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " jumpToPageBtn button is clicked");
+      res = this.getData_flipbookPage();
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + " jumpToPageBtn button is not clicked", 'error');
+    }
+    return res;
+  },
+
+  //-----TOOLBAR BUTTONS-----
   click_annotationsBtn: function () {
     logger.logInto(stackTrace.get());
     var res;
@@ -255,30 +673,40 @@ module.exports = {
 
   click_zoomInBtn: function () {
     logger.logInto(stackTrace.get());
-    var res;
+    var res, size;
     res = action.click(this.zoomInBtn);
     if (true == res) {
       logger.logInto(stackTrace.get(), " zoomInBtn button is clicked");
-      res = action.getCSSProperty(this.readerContainerWrapper, 'height');
+      size = {
+        width: action.getElementCount(this.readerContainerWrapper) > 0 ? action.getCSSProperty(this.readerContainerWrapper,'width').value : null,
+        height: action.getElementCount(this.readerContainerWrapper) > 0 ? action.getCSSProperty(this.readerContainerWrapper,'height').value : null
+      };
+      size.width = parseInt(size.width.match(/\d+/g)[0]);
+      size.height = parseInt(size.height.match(/\d+/g)[0]);
     }
     else {
       logger.logInto(stackTrace.get(), res + " zoomInBtn button is not clicked", 'error');
     }
-    return res;
+    return size;
   },
 
   click_zoomOutBtn: function () {
     logger.logInto(stackTrace.get());
-    var res;
+    var res, size;
     res = action.click(this.zoomOutBtn);
     if (true == res) {
       logger.logInto(stackTrace.get(), " zoomOutBtn button is clicked");
-      res = action.getCSSProperty(this.readerContainerWrapper, 'height');
+      size = {
+        width: action.getElementCount(this.readerContainerWrapper) > 0 ? action.getCSSProperty(this.readerContainerWrapper,'width').value : null,
+        height: action.getElementCount(this.readerContainerWrapper) > 0 ? action.getCSSProperty(this.readerContainerWrapper,'height').value : null
+      };
+      size.width = parseInt(size.width.match(/\d+/g)[0]);
+      size.height = parseInt(size.height.match(/\d+/g)[0]);
     }
     else {
       logger.logInto(stackTrace.get(), res + " zoomOutBtn button is not clicked", 'error');
     }
-    return res;
+    return size;
   },
 
   click_fitToScreenBtn: function () {
@@ -315,12 +743,12 @@ module.exports = {
     res = action.click(this.singlePageBtn);
     if (true == res) {
       logger.logInto(stackTrace.get(), " singlePageBtn button is clicked");
-      res = this.getData_flipbookPage();
+      var singlelayoutWidth = (action.getElementCount(this.pageLayoutSingle) > 0) ? action.getAttribute(this.pageLayoutSingle,"style") : null;
     }
     else {
       logger.logInto(stackTrace.get(), res + " singlePageBtn button is not clicked", 'error');
     }
-    return res;
+    return singlelayoutWidth;
   },
 
   click_fullScreenBtn: function () {
@@ -333,34 +761,6 @@ module.exports = {
     }
     else {
       logger.logInto(stackTrace.get(), res + " fullScreenBtn button is not clicked", 'error');
-    }
-    return res;
-  },
-
-  click_bookmarkBtn: function () {
-    logger.logInto(stackTrace.get());
-    var res;
-    res = action.click(this.bookmarkBtn);
-    if (true == res) {
-      logger.logInto(stackTrace.get(), " bookmarkBtn button is clicked");
-      res = this.getData_bookmarkModal();
-    }
-    else {
-      logger.logInto(stackTrace.get(), res + " bookmarkBtn button is not clicked", 'error');
-    }
-    return res;
-  },
-
-  click_TOCBtn: function () {
-    logger.logInto(stackTrace.get());
-    var res;
-    res = action.click(this.TOCBtn);
-    if (true == res) {
-      logger.logInto(stackTrace.get(), " TOCBtn button is clicked");
-      res = this.getData_flipbookTOC();
-    }
-    else {
-      logger.logInto(stackTrace.get(), res + " TOCBtn button is clicked", 'error');
     }
     return res;
   },
@@ -391,353 +791,7 @@ module.exports = {
       logger.logInto(stackTrace.get(), res + " nextBtn button is not clicked", 'error');
     }
     return res;
-  },
-
-  click_notesDockBtn: function () {
-    logger.logInto(stackTrace.get());
-    var res;
-    res = action.click(this.notesDockBtn);
-    if (true == res) {
-      logger.logInto(stackTrace.get(), " notesDockBtn button is clicked");
-      res = action.waitForDisplayed(this.notesDockContainer); //manually added
-    }
-    else {
-      logger.logInto(stackTrace.get(), res + " notesDockBtn button is not clicked", 'error');
-    }
-    return res;
-  },
-
-  click_notesUndockBtn: function () {
-    logger.logInto(stackTrace.get());
-    var res;
-    res = action.click(this.notesUndockBtn);
-    if (true == res) {
-      logger.logInto(stackTrace.get(), " notesUndockBtn button is clicked");
-      res = action.waitForDisplayed(this.notesDockContainer, undefined, true);  //manually added
-    }
-    else {
-      logger.logInto(stackTrace.get(), res + " notesUndockBtn button is not clicked", 'error');
-    }
-    return res;
-  },
-
-  click_notesCloseBtn: function () {
-    logger.logInto(stackTrace.get());
-    var res;
-    res = action.click(this.notesCloseBtn);
-    if (true == res) {
-      logger.logInto(stackTrace.get(), " notesCloseBtn button is clicked");
-      res = action.waitForDisplayed(this.notesCloseBtn, undefined, true);
-    }
-    else {
-      logger.logInto(stackTrace.get(), res + " notesCloseBtn button is not clicked", 'error');
-    }
-    return res;
-  },
-
-  click_addNoteBtn: function () {
-    logger.logInto(stackTrace.get());
-    var res;
-    res = action.click(this.addNoteBtn);
-    if (true == res) {
-      logger.logInto(stackTrace.get(), " addNoteBtn button is clicked");
-      res = this.getData_addNotes();
-    }
-    else {
-      logger.logInto(stackTrace.get(), res + " addNoteBtn button is not clicked", 'error');
-    }
-    return res;
-  },
-
-  click_noteListDeleteBtn: function (noteListItemTextName) {
-    logger.logInto(stackTrace.get());
-    var i, list, res;
-    list = action.findElements(this.noteListDeleteBtn);
-    for (i = 0; i < list.length; i++) {
-      if ((action.getText(this.noteListItemText + i + "]")) == noteListItemTextName) {
-        res = action.click(list[i]);
-        break;
-      }
-    }
-    if (res == true) {
-      logger.logInto(stackTrace.get(), " --noteListDeleteBtn clicked");
-      res = this.getData_deleteNotes();
-    }
-    else
-      logger.logInto(stackTrace.get(), res + " --noteListDeleteBtn NOT clicked", "error")
-    return res;
-  },
-
-  click_noteListEditBtn: function (noteListItemTextName) {
-    logger.logInto(stackTrace.get());
-    var i, list, res;
-    list = action.findElements(this.noteListEditBtn);
-    for (i = 0; i < list.length; i++) {
-      if ((action.getText(this.noteListItemText + i + "]")) == noteListItemTextName) {
-        res = action.click(list[i]);
-        break;
-      }
-    }
-    if (res == true) {
-      logger.logInto(stackTrace.get(), " --noteListEditBtn clicked");
-      res = this.getData_addNotes();
-    }
-    else
-      logger.logInto(stackTrace.get(), res + " --noteListEditBtn NOT clicked", "error")
-    return res;
-  },
-
-  click_notesPageValueLeft: function () {
-    logger.logInto(stackTrace.get());
-    var res;
-    res = action.click(this.notesPageValueLeft);
-    if (true == res) {
-      logger.logInto(stackTrace.get(), " notesPageValueLeft button is clicked");
-    }
-    else {
-      logger.logInto(stackTrace.get(), res + " notesPageValueLeft button is not clicked", 'error');
-    }
-    return res;
-  },
-
-  click_notesPageValueRight: function () {
-    logger.logInto(stackTrace.get());
-    var res;
-    res = action.click(this.notesPageValueRight);
-    if (true == res) {
-      logger.logInto(stackTrace.get(), " notesPageValueRight button is clicked");
-    }
-    else {
-      logger.logInto(stackTrace.get(), res + " notesPageValueRight button is not clicked", 'error');
-    }
-    return res;
-  },
-
-  click_notesCancelBtn: function () {
-    logger.logInto(stackTrace.get());
-    var res;
-    res = action.click(this.notesCancelBtn);
-    if (true == res) {
-      logger.logInto(stackTrace.get(), " notesCancelBtn button is clicked");
-      res = this.getData_notesList();
-    }
-    else {
-      logger.logInto(stackTrace.get(), res + " notesCancelBtn button is not clicked", 'error');
-    }
-    return res;
-  },
-
-  click_notesSaveBtn: function () {
-    logger.logInto(stackTrace.get());
-    var res;
-    res = action.click(this.notesSaveBtn);
-    if (true == res) {
-      logger.logInto(stackTrace.get(), " notesSaveBtn button is clicked");
-      res = this.getData_notesList();
-    }
-    else {
-      logger.logInto(stackTrace.get(), res + " notesSaveBtn button is not clicked", 'error');
-    }
-    return res;
-  },
-
-  click_deleteNoteCancelBtn: function () {
-    logger.logInto(stackTrace.get());
-    var res;
-    res = action.click(this.deleteNoteCancelBtn);
-    if (true == res) {
-      logger.logInto(stackTrace.get(), " deleteNoteCancelBtn button is clicked");
-      res = this.getData_notesList();
-    }
-    else {
-      logger.logInto(stackTrace.get(), res + " deleteNoteCancelBtn button is not clicked", 'error');
-    }
-    return res;
-  },
-
-  click_deleteNoteDeleteBtn: function () {
-    logger.logInto(stackTrace.get());
-    var res;
-    res = action.click(this.deleteNoteDeleteBtn);
-    if (true == res) {
-      logger.logInto(stackTrace.get(), " deleteNoteDeleteBtn button is clicked");
-      res = this.getData_notesList();
-    }
-    else {
-      logger.logInto(stackTrace.get(), res + " deleteNoteDeleteBtn button is not clicked", 'error');
-    }
-    return res;
-  },
-
-  click_bookmarkCloseBtn: function () {
-    logger.logInto(stackTrace.get());
-    var res;
-    res = action.click(this.bookmarkCloseBtn);
-    if (true == res) {
-      logger.logInto(stackTrace.get(), " bookmarkCloseBtn button is clicked");
-      res = action.waitForDisplayed(this.bookmarkCloseBtn, undefined, true);
-    }
-    else {
-      logger.logInto(stackTrace.get(), res + " bookmarkCloseBtn button is not clicked", 'error');
-    }
-    return res;
-  },
-
-  click_addBookmarkBtn: function () {
-    logger.logInto(stackTrace.get());
-    var res;
-    res = action.click(this.addBookmarkBtn);
-    if (true == res) {
-      logger.logInto(stackTrace.get(), " addBookmarkBtn button is clicked");
-      res = this.getData_addBookmark();
-    }
-    else {
-      logger.logInto(stackTrace.get(), res + " addBookmarkBtn button is not clicked", 'error');
-    }
-    return res;
-  },
-
-  click_bookmarkListDeleteBtn: function (bookmarkListItemNameName) {
-    logger.logInto(stackTrace.get());
-    var i, list, res;
-    list = action.findElements(this.bookmarkListDeleteBtn);
-    for (i = 0; i < list.length; i++) {
-      if ((action.getText(this.bookmarkListItemName + i + "]")) == bookmarkListItemNameName) {
-        res = action.click(list[i]);
-        break;
-      }
-    }
-    if (res == true) {
-      logger.logInto(stackTrace.get(), " --bookmarkListDeleteBtn clicked");
-      res = this.getData_bookmarkList();
-    }
-    else
-      logger.logInto(stackTrace.get(), res + " --bookmarkListDeleteBtn NOT clicked", "error")
-    return res;
-  },
-
-  click_bookmarkListEditBtn: function (bookmarkListItemNameName) {
-    logger.logInto(stackTrace.get());
-    var i, list, res;
-    list = action.findElements(this.bookmarkListEditBtn);
-    for (i = 0; i < list.length; i++) {
-      if ((action.getText(this.bookmarkListItemName + i + "]")) == bookmarkListItemNameName) {
-        res = action.click(list[i]);
-        break;
-      }
-    }
-    if (res == true) {
-      logger.logInto(stackTrace.get(), " --bookmarkListEditBtn clicked");
-      res = this.getData_addBookmark();
-    }
-    else
-      logger.logInto(stackTrace.get(), res + " --bookmarkListEditBtn NOT clicked", "error")
-    return res;
-  },
-
-  click_bookmarkPageValueLeft: function () {
-    logger.logInto(stackTrace.get());
-    var res;
-    res = action.click(this.bookmarkPageValueLeft);
-    if (true == res) {
-      logger.logInto(stackTrace.get(), " bookmarkPageValueLeft button is clicked");
-    }
-    else {
-      logger.logInto(stackTrace.get(), res + " bookmarkPageValueLeft button is not clicked", 'error');
-    }
-    return res;
-  },
-
-  click_bookmarkPageValueRight: function () {
-    logger.logInto(stackTrace.get());
-    var res;
-    res = action.click(this.bookmarkPageValueRight);
-    if (true == res) {
-      logger.logInto(stackTrace.get(), " bookmarkPageValueRight button is clicked");
-    }
-    else {
-      logger.logInto(stackTrace.get(), res + " bookmarkPageValueRight button is not clicked", 'error');
-    }
-    return res;
-  },
-
-  click_bookmarkCancelBtn: function () {
-    logger.logInto(stackTrace.get());
-    var res;
-    res = action.click(this.bookmarkCancelBtn);
-    if (true == res) {
-      logger.logInto(stackTrace.get(), " bookmarkCancelBtn button is clicked");
-      res = this.getData_bookmarkList();
-    }
-    else {
-      logger.logInto(stackTrace.get(), res + " bookmarkCancelBtn button is not clicked", 'error');
-    }
-    return res;
-  },
-
-  click_bookmarkSaveBtn: function () {
-    logger.logInto(stackTrace.get());
-    var res;
-    res = action.click(this.bookmarkSaveBtn);
-    if (true == res) {
-      logger.logInto(stackTrace.get(), " bookmarkSaveBtn button is clicked");
-      res = this.getData_bookmarkList();
-    }
-    else {
-      logger.logInto(stackTrace.get(), res + " bookmarkSaveBtn button is not clicked", 'error');
-    }
-    return res;
-  },
-
-  click_jumpToPageBtn: function () {
-    logger.logInto(stackTrace.get());
-    var res;
-    res = action.click(this.jumpToPageBtn);
-    if (true == res) {
-      logger.logInto(stackTrace.get(), " jumpToPageBtn button is clicked");
-      res = this.getData_flipbookPage();
-    }
-    else {
-      logger.logInto(stackTrace.get(), res + " jumpToPageBtn button is not clicked", 'error');
-    }
-    return res;
-  },
-
-  set_notesTextArea: function (value) {
-    var res;
-    logger.logInto(stackTrace.get());
-    res = action.setValue(this.notesTextArea, value);
-    if (true == res) {
-      logger.logInto(stackTrace.get(), "Value is entered in notesTextArea");
-    } else {
-      logger.logInto(stackTrace.get(), res, 'error');
-    }
-    return res;
-  },
-
-  set_bookmarkTextArea: function (value) {
-    var res;
-    logger.logInto(stackTrace.get());
-    res = action.setValue(this.bookmarkTextArea, value);
-    if (true == res) {
-      logger.logInto(stackTrace.get(), "Value is entered in bookmarkTextArea");
-    } else {
-      logger.logInto(stackTrace.get(), res, 'error');
-    }
-    return res;
-  },
-
-  set_jumpToPageInput: function (value) {
-    var res;
-    logger.logInto(stackTrace.get());
-    res = action.setValue(this.jumpToPageInput, value);
-    if (true == res) {
-      logger.logInto(stackTrace.get(), "Value is entered in jumpToPageInput");
-    } else {
-      logger.logInto(stackTrace.get(), res, 'error');
-    }
-    return res;
-  },
+  }
 
 }
 

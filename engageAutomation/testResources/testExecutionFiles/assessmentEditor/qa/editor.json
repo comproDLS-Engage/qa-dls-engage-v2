@@ -26,7 +26,6 @@
 		],
 		"BeforeEach": [],
 		"Test": [
-			
 			{
 				"id": "ASE_COM_TC_120",
 				"description": "Validate the editor is selected in question pane and displayed.",
@@ -44,12 +43,32 @@
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": []
 			},
-			
 			{
 				"id": "ASE_QUN_TC_17",
 				"description": "Click on Editor tab",
 				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_QUN_TC_5",
+				"description": "Validate that alphanumeric text is supported in Question Title Text.",
+				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQ[0].question1.questionTitle"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_42",
+				"description": "Validate if alpha-numeric text is allowed in the Question Text",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQ[0].question1.questionText"
+					}
 				]
 			},
 			{
@@ -101,8 +120,7 @@
 				"id": "ASE_QUN_TC_17",
 				"description": "Click on Editor tab",
 				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-				]
+				"testData": []
 			},
 			{
 				"id": "ASE_QUN_TC_5",
@@ -261,24 +279,24 @@
 				"testData": []
 			},
 			{
-				"id": "ASE_QUN_TC_5",
-				"description": "Validate that alphanumeric text is supported in Question Title Text.",
-				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-					{
-						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
-						"jsonPath": "editor.questions.DragDropOnImage[0].questionTitle"
-					}
-				]
-			},
-			{
-				"id": "ASE_COM_TC_42",
-				"description": "Validate if alpha-numeric text is allowed in the Question Text",
+				"id": "ASE_COM_TC_1001",
+				"description": "Click on Editor tab",
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
 						"jsonPath": "editor.questions.DragDropOnImage[0].questionText"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1002",
+				"description": "Click on Editor tab",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.DragDropOnImage[0].questionInstruction"
 					}
 				]
 			},
@@ -483,6 +501,28 @@
 				"testData": []
 			},
 			{
+				"id": "ASE_COM_TC_1001",
+				"description": "Click on Editor tab",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.Matching[0].questionText"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1002",
+				"description": "Click on Editor tab",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.Matching[0].questionInstruction"
+					}
+				]
+			},
+			{
 				"id": "ASE_MAT_TC_14",
 				"description": "Set Matching - Items",
 				"testFile": "./test/assessmentEditor/editor.test.js",
@@ -606,30 +646,8 @@
 				"testData": []
 			},
 			{
-				"id": "ASE_QUN_TC_5",
-				"description": "Validate that alphanumeric text is supported in Question Title Text.",
-				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-					{
-						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
-						"jsonPath": "editor.questions.Classify[0].questionTitle"
-					}
-				]
-			},
-			{
-				"id": "ASE_COM_TC_9",
-				"description": "Validate that student can add instruction for each question under the 'Question' section",
-				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-					{
-						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
-						"jsonPath": "editor.questions.Classify[0].questionInstruction"
-					}
-				]
-			},
-			{
-				"id": "ASE_COM_TC_42",
-				"description": "Validate if alpha-numeric text is allowed in the Question Text",
+				"id": "ASE_COM_TC_1001",
+				"description": "Click on Editor tab",
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": [
 					{
@@ -638,6 +656,18 @@
 					}
 				]
 			},
+			{
+				"id": "ASE_COM_TC_1002",
+				"description": "Click on Editor tab",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.Classify[0].questionInstruction"
+					}
+				]
+			},
+		
 			{
 				"id": "ASE_COM_TC_15",
 				"description": "Click on Media button and Set Image Media",
@@ -704,6 +734,364 @@
 					{
 						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
 						"jsonPath": "editor.questions.Classify[0].groups"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_4",
+				"description": "Validate that a new question is added by clicking on the 'Add new Question' button on the left pane",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_COM_TC_120",
+				"description": "Validate the editor is selected in question pane and displayed.",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQSR[0].buttonName"
+					}
+				]
+			},
+			{
+				"id": "ASE_QUN_TC_9",
+				"description": "Validate the editor is selected in question pane and displayed.",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_COM_TC_1001",
+				"description": "Click on Editor tab",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQSR[0].questionText"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1002",
+				"description": "Click on Editor tab",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQSR[0].questionInstruction"
+					}
+				]
+			},
+
+			{
+				"id": "ASE_COM_TC_1005",
+				"description": "Click on Editor tab",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+				]
+			},
+			{
+				"id": "ASE_COM_TC_75",
+				"description": "Click on Media button and Set Image Media",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQSR[0].promptImagePath"
+					}
+				]
+			},
+
+			{
+				"id": "ASE_COM_TC_1006",
+				"description": "Click on Editor tab",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQSR[0].promptText"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1007",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQSR[0].subQuestionText[0]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1009",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQSR[0].subQuestionText[0]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1008",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQSR[0].options[0]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1008",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQSR[0].options[1]"
+					}
+				]
+			},
+			{
+				"id": "EDIT_TC_13",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQSR[0].subQuestionText[0]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1008",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQSR[0].options[2]"
+					}
+				]
+			},
+			{
+				"id": "EDIT_TC_13",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQSR[0].subQuestionText[0]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1008",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQSR[0].options[3]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1007",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQSR[0].subQuestionText[1]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1009",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQSR[0].subQuestionText[1]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1008",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQSR[0].options[4]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1008",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQSR[0].options[5]"
+					}
+				]
+			},
+			{
+				"id": "EDIT_TC_13",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQSR[0].subQuestionText[1]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1008",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQSR[0].options[6]"
+					}
+				]
+			},
+			{
+				"id": "EDIT_TC_13",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQSR[0].subQuestionText[1]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1008",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQSR[0].options[7]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1011",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+				
+				]
+			}
+		],
+		"AfterEach": [],
+		"After": []
+	},
+	"Suite_2": {
+		"Name": "Basic Workflow of Writing Player",
+		"TestCaseRepo": [
+			"./testResources/testcaseRepository/backOffice/backOfficeTCRepository.json",
+			"./testResources/testcaseRepository/assessmentEditor/editorTCRepository.json"
+		],
+		"Before": [
+			{
+				"id": "launchUrl",
+				"description": "",
+				"testFile": "./engageAutomation/core/runner/launchUrl.js",
+				"testData": []
+			},
+			{
+				"id": "BK_TC_1",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backOffice/qa/logindata.json",
+						"jsonPath": "backoffice.user.validUser1"
+					}
+				]
+			}
+		],
+		"BeforeEach": [],
+		"Test": [
+			{
+				"id": "ASE_COM_TC_120",
+				"description": "Validate the editor is selected in question pane and displayed.",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.writing[0].buttonName"
+					}
+				]
+			},
+			{
+				"id": "ASE_QUN_TC_9",
+				"description": "Validate the editor is selected in question pane and displayed.",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_QUN_TC_17",
+				"description": "Click on Editor tab",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_COM_TC_1001",
+				"description": "Click on Editor tab",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.writing[0].questionTitle"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1002",
+				"description": "Click on Editor tab",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.writing[0].questionInstruction"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_15",
+				"description": "Click on Media button and Set Image Media",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.writing[0].videoURL"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1000",
+				"description": "Enter the question text",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.writing[0].questionText"
 					}
 				]
 			}
