@@ -69,7 +69,7 @@
 		"nameTxtbox": "[id=book-title]",
 		"descriptionTxtbox": "[id=description]",
 		"imageUploadBtn": "[class=c-image-upload__file-input]",
-		"createTitleBtn": "[class=c-form-section] button[class*=action-button-padding]",
+		"createTitleBtn": "[class*=c-form] button[class*=action-button-padding]",
 		"bookDesignDropdown": "[class*=c-create-book__form__book-theme] [class*=mdc-select__anchor]",
 		"bookDesignList": "[class*=mdc-menu-surface--open] [class*=mdc-list-item__text]",
 		"bookVisibilityDropdown": "[class*=c-create-book__form__visibility] [class*=mdc-select__anchor]",
