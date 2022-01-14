@@ -15,6 +15,7 @@ module.exports = {
     resourceCategory: selectorFile.css.ComproEngage.browse.resourceCategory,
     viewAllBtn: selectorFile.css.ComproEngage.browse.viewAllBtn,
     moreOptionsBtn: selectorFile.css.ComproEngage.browse.moreOptionsBtn,
+    cardSkeleton: selectorFile.css.ComproEngage.browse.cardSkeleton,
     cardTitle: selectorFile.css.ComproEngage.browse.cardTitle,
     cardSubTitle: selectorFile.css.ComproEngage.browse.cardSubTitle,
     cardImgIcon: selectorFile.css.ComproEngage.browse.cardImgIcon,
@@ -285,6 +286,7 @@ module.exports = {
     click_moreOptionsBtn: function (cardTitleName) {
         logger.logInto(stackTrace.get());
         var i, res;
+        action.waitForDisplayed(this.cardSkeleton, undefined, true);
         var cardTitle = action.findElements(this.cardTitle);
         var moreOptionsBtn = action.findElements(this.moreOptionsBtn);
         for (i = 0; i < cardTitle.length; i++) {

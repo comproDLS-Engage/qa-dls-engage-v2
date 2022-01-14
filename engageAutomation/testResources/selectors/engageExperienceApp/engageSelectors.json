@@ -167,6 +167,7 @@
                 "resourceCategory": "[data-tid*=text-seaction-heading]",
                 "viewAllBtn": "[data-tid*=btn-viewAll]",
                 "moreOptionsBtn": "[data-tid*=button-contextMenu]",
+                "cardSkeleton": "[class*=MuiSkeleton]",
                 "cardTitle": "[data-tid*=text-cardTitle]",
                 "cardSubTitle": "[data-tid*=text-CardSubtile]",
                 "cardImgIcon": "[data-tid*=image-card]",

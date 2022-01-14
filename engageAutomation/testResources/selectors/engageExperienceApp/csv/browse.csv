@@ -10,6 +10,7 @@ searchIcon,[data-tid=icon-autocomplete-search],svg,browsePage,,,
 resourceCategory,[data-tid*=text-seaction-heading],h2,resourceCategory,parent,pattern,
 viewAllBtn,[data-tid*=btn-viewAll],button,resourceCategory,,pattern,resourceCategory
 moreOptionsBtn,[data-tid*=button-contextMenu],button,resourceList,,pattern,moreOptions
+cardSkeleton,[class*=MuiSkeleton],span,,,,
 cardTitle,[data-tid*=text-cardTitl],p,resourceList,condition,pattern,
 cardSubTitle,[data-tid*=text-CardSubtile],p,resourceList,,pattern,
 cardImage,[data-tid*=image-card],img,resourceList,parent,pattern,
