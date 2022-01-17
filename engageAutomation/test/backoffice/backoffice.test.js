@@ -242,8 +242,7 @@ module.exports = {
 
 	// Validate that clicking on the activity launches the activity preview
 	BK_TC_25: function (testdata) {
-		sts = viewLearningPathPage.click_Activity(testdata.name);
-		console.log(sts);
+		sts = viewLearningPathPage.click_Activity(testdata);
 		assertion.assertEqual(sts, true, "Preview status mismatch");
 	},
 
@@ -293,7 +292,6 @@ module.exports = {
 	BK_TC_30: function (testdata) {
 		sts = learningPathPage.click_ActivityAuthor_Button_in_ActivityMenu(testdata.name);
 		assertion.assertEqual(sts, true, "Error in clicking LO");
-		//assertion.assert((typeof sts === "string" && sts.includes("Launching")), "Dialog text mismatch. " + sts);
 	},
 
 	// Validate that the searched LO is displayed on searching the LO in the Library

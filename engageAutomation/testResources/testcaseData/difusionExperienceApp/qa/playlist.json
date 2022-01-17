@@ -1,0 +1,9 @@
+{
+    "engage":{
+        "playlist":{
+            "name":"test automation playlist1",
+            "editName": "test automation playlist2",
+            "resourceName":"A la hora de dormir"
+        }
+    }
+}

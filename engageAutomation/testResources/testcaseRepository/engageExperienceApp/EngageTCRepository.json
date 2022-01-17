@@ -802,12 +802,6 @@
           "visualTest": "-"
         },
         {
-          "id": "ENG_DASH_TC_1",
-          "description": "Validate that clicking on the 'Dashboard' button on the left navigation panel, the Dashboard page is launched",
-          "tags": "P1",
-          "visualTest": "-"
-        },
-        {
           "id": "ENG_SHELL_TC_11",
           "description": "Validate that click on breadcrumb back button on the header launch the previous page",
           "tags": "P1",
@@ -1198,6 +1192,11 @@
           "id": "ENG_BOOK_TC_44",
           "description": "Validate that clicking on unit Detail TOC breadcrumb naviagtes to Book detail TOC page",
           "tags": "P1"
+        },
+        {
+          "id": "ENG_BOOK_TC_53",
+          "description": "Validate that clicking on the subfolder expand/collapse the subfolder",
+          "tags": "P1"
         }
       ]
     },
@@ -1256,6 +1255,12 @@
       "moduledetails": "",
       "testFile": "./test/engageExperienceApp/classify.test.js",
       "testcase": [
+        {
+          "id": "ENG_ITEM_CLA_TC_1",
+          "description": "Validate the unattempted state of the player",
+          "tags": "P1",
+          "visualTest": "-"
+        },
         {
           "id": "ENG_ITEM_CLA_TC_2",
           "description": "Validate that user is able to place option pill inside the Group using drag and drop",
@@ -1442,7 +1447,73 @@
         },
         {
           "id": "ENG_PLAY_TC_11",
-          "description": "Click show details button in activity Player",
+          "description": "Validate clicking on Show details button expands the details panel",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLAY_TC_12",
+          "description": "Validate clicking on Hide details button hides the details panel",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLAY_TC_13",
+          "description": "Validate that clicking on Next Activity button launches the next activity in the component",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLAY_TC_14",
+          "description": "Validate that clicking on Previous Activity button launches the previous activity of the component",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLAY_TC_14",
+          "description": "Validate that clicking on Previous Activity button launches the previous activity of the component",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLAY_TC_15",
+          "description": "Validate clicking on info icon displays the TOC for the unit for which activity has been launched",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLAY_TC_16",
+          "description": "Validate clicking on cross icon closes the info TOC",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLAY_TC_17",
+          "description": "Validate that Submit Answers button is displayed for activity where either or both Contributes to Completion and Contributes to Score flag are true",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLAY_TC_18",
+          "description": "Validate that Finish button is displayed for activity where both Contributes to Completion and Contributes to Score flag are false",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLAY_TC_19",
+          "description": "Validate the unattempted state of an etext activity when contributes to completion flag is true",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLAY_TC_20",
+          "description": "Validate the unattempted state of an etext activity when contributes to completion flag is false",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLAY_TC_21",
+          "description": "Validate the unattempted state of html webbook",
           "tags": "",
           "visualTest": "-"
         }
@@ -1619,6 +1690,24 @@
         {
           "id": "ENG_DASH_TC_25",
           "description": "Validate that playlist page is launched on clicking the playlist card",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_DASH_TC_26",
+          "description": "Validate that clicking on 'Create Playlist' button on Dashboard launches the Playlist Pop Up",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_DASH_TC_27",
+          "description": "Validate that playlist is added on the dashboard on entering playlist name and clicking 'Create' button",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_DASH_TC_28",
+          "description": "Validate that playlist is not added on the dashboard on clicking 'Cancel' button",
           "tags": "P1",
           "visualTest": "-"
         }
@@ -2023,6 +2112,48 @@
           "description": "Validate that clicking on Reset Default Settings button Reset Default Settings pop up is launched.",
           "tags": "P1",
           "visualTest": "-"
+        },
+        {
+          "id": "ENG_SETT_TC_55",
+          "description": "Validate that clicking on Billing tab launches Billing page.",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SETT_TC_56",
+          "description": "Validate the content of Billing tab for a free user.",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SETT_TC_57",
+          "description": "Validate the content of Billing tab for a Premium user.",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SETT_TC_58",
+          "description": "Validate clicking on Upgrade plan button for a free user launches Select a plan page.",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SETT_TC_59",
+          "description": "Validate clicking on Manage plan button launches Plan options page.",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SETT_TC_60",
+          "description": "Validate clicking on Change card button launches Plan options page.",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SETT_TC_61",
+          "description": "Validate clicking on Update button on Billing Information card launches Plan options page.",
+          "tags": "P1",
+          "visualTest": "-"
         }
       ]
     },
@@ -2160,6 +2291,267 @@
         {
           "id": "ENG_FLIP_TC_22",
           "description": "Validate clicking on Jump to page button lauches the entered page in flipbook",
+          "tags": "P1",
+          "visualTest": "-"
+        }
+      ]
+    },
+    {
+      "modulename": "Browse",
+      "moduledetails": "",
+      "testFile": "./test/engageExperienceApp/browse.test.js",
+      "testcase": [
+        {
+          "id": "ENG_GLOB_TC_10",
+          "description": "Validate that the resources are displayed on clicking the Interactive Activities tab",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_11",
+          "description": "Validate that the resources are displayed on clicking the Videos tab",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_12",
+          "description": "Validate that the resources are displayed on clicking the Online Classes tab",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_13",
+          "description": "Validate that the resources are displayed on clicking the Teacher Training tab",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_14",
+          "description": "Validate that the resources are displayed on clicking the Today in Class tab",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_15",
+          "description": "Validate that the resources are displayed on clicking the Projectable tab",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_16",
+          "description": "Validate content in Browse page",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_19",
+          "description": "Validate that clicking on a page number in a non categorized view displays the next list of resources.",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_20",
+          "description": "Validate that clicking on next arrows in a non categorized view displays the list of resources.",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_21",
+          "description": "Validate that clicking on previous arrows in a non categorized view displays the list of resources.",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_22",
+          "description": "Validate that clicking on 3 dot options for a resource displays a list of options available for the resource.",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_23",
+          "description": "Validate clicking on View on 3 dot options launches the resource.",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_24",
+          "description": "Validate that clicking on Add to playlist on 3 dot options lists the existing playlists and option to create a new playlist.",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_25",
+          "description": "Validate that clicking on the playlist name adds the resource to the playlist.",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_26",
+          "description": "Validate that clicking on a resource launches the Global Resources view page",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_28",
+          "description": "Validate that searching can be done on basis of resource name",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_36",
+          "description": "Validate that No Result Found is displayed in the drop down suggestion and in the screen when no resource matching the search criteria is fulfilled",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_37",
+          "description": "Validate that clicking on a resource from the search suggestion drop down list launches the resource.",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_37",
+          "description": "Validate that clicking on 'More search results for ..xyz' lists the resources based on search text.",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_38",
+          "description": "Validate that clicking on 'More search results for ..xyz' lists the resources based on search text.",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_39",
+          "description": "Validate that pressing Enter lists the resources based on search text.",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_41",
+          "description": "Validate that clicking on close serach button removes the search criteria",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_42",
+          "description": "Validate clicking on Filters displays the list of filter categories.",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_52",
+          "description": "Validate that clicking on cross icon on Filters screen closes the filter pop up.",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        }
+      ]
+    },
+    {
+      "modulename": "Playlist",
+      "moduledetails": "",
+      "testFile": "./test/engageExperienceApp/playlist.test.js",
+      "testcase": [
+        {
+          "id": "ENG_PLIS_TC_1",
+          "description": "Validate the content of the playlist page",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLIS_TC_2",
+          "description": "Validate that clicking on the three dots launches a dropdown list of options",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLIS_TC_3",
+          "description": "Validate that clicking on 'Edit' button launches the Playlist pop up",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLIS_TC_4",
+          "description": "Validate that clicking on 'Delete' button launches the Delete confirmation pop up",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLIS_TC_5",
+          "description": "Validate that playlist name is updated on clicking 'Save' button",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLIS_TC_6",
+          "description": "Validate that playlist name is not updated on clicking 'Cancel' button",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLIS_TC_7",
+          "description": "Validate that clicking 'Delete' button on pop up deletes the playlist",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLIS_TC_8",
+          "description": "Validate that playlist is not deleted on clicking 'Cancel' button",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLIS_TC_9",
+          "description": "Validate that clicking on 'Browse All Resources' navigates to the 'Interactive Activities' in Browse Tab",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLIS_TC_10",
+          "description": "Validate clicking on 3 dots on any resource on the playlist page launches a dropdown list of options",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLIS_TC_11",
+          "description": "Validate clicking on Remove from playlist option launches the remove resource popup",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLIS_TC_12",
+          "description": "Validate that clicking 'Remove' button on pop up removes the resource from the playlist",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLIS_TC_13",
+          "description": "Validate that clicking 'Cancel' button on pop up does not remove the resource from the playlist",
+          "tags": "P1",
+          "visualTest": "-"
+        }
+      ]
+    },
+    {
+      "modulename": "Writing Player",
+      "moduledetails": "",
+      "testFile": "./test/engageExperienceApp/writing.test.js",
+      "testcase": [
+        {
+          "id": "ENG_ITEM_WRIT_TC_1",
+          "description": "Validate the writing question launch in default unattempted state",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ITEM_WRIT_TC_2",
+          "description": "Validate the writing question launch in submitted state",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ITEM_WRIT_TC_3",
+          "description": "Validate that the user can add the text in the textboxes of the writing question",
           "tags": "P1",
           "visualTest": "-"
         }

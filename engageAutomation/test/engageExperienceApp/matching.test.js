@@ -75,8 +75,8 @@ module.exports = {
         }
         sts = itemPlayerPage.getItemplayerInfo();
         assertion.assertEqual(sts.mediaType, testdata.mediaType, "Media type mismatch");
-        assertion.assertEqual(sts.quesText, testdata.text, "Question text mismatch");
-        assertion.assertEqual(sts.instructionText, testdata.instruction, "Instruction text mismatch");
+        //assertion.assertEqual(sts.quesText, testdata.text, "Question text mismatch");
+        //assertion.assertEqual(sts.instructionText, testdata.instruction, "Instruction text mismatch");
     },
 
 }

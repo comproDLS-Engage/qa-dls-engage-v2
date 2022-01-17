@@ -356,12 +356,18 @@ exports.config = {
             const logData = JSON.parse(jsonString);
             var tesultsCases = [];
             let testCase = {};
-            testCase.name = logData.capabilities.platformName + "-" + logData.capabilities.browserName;
-            testCase.result = "pass";
+            testCase.name = "Test Run Summary"
+            testCase.result = (logData.state.failed > 0) ? "fail" : "pass";
             testCase.duration = logData.duration;
             testCase.suite = "[build]";
-            testCase._reportURL = "https://d29cns2xkhqbb2.cloudfront.net/" + argv.appType + "/" + argv.testEnv + "/" + argv.reportdir + "/index.html";
-            testCase._appVersion = logData.appVersion;
+            //testCase._Passed = logData.state.passed;
+            //testCase._Failed = logData.state.failed;
+            //testCase._Skipped = logData.state.skipped;
+            testCase._Environment = logData.capabilities.platformName.toUpperCase() + '\n' + logData.capabilities.browserName.toUpperCase() + " " + logData.capabilities.browserVersion + "\n" + logData.capabilities.screenResolution.width + "x" + logData.capabilities.screenResolution.height;
+            testCase._TestFile = logData.specs[0];
+            testCase._ReportURL = "https://d29cns2xkhqbb2.cloudfront.net/" + argv.appType + "/" + argv.testEnv + "/" + argv.reportdir + "/index.html";
+            testCase._AppURL = global.appUrl;
+            testCase._AppVersion = logData.appVersion;
             console.log(testCase)
             tesultsCases.push(testCase);
 
@@ -372,7 +378,7 @@ exports.config = {
                     testCase.result = logData.suites[i].tests[j].state.substring(0, 4);
                     //console.log(testCase.result)
                     testCase.duration = logData.suites[i].tests[j].duration;
-                    testCase.files = logData.suites[i].tests[j].screenshots;
+                    //testCase.files = logData.suites[i].tests[j].screenshots;
                     testCase.suite = logData.suites[i].title;
                     tesultsCases.push(testCase);
                 }
@@ -384,7 +390,7 @@ exports.config = {
                     cases: tesultsCases
                 }
             }
-            console.log(data.target)
+            //console.log(data.target)
             let response;
             try {
                 response = await tesultsResults(data)

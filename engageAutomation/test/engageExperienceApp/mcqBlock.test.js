@@ -7,18 +7,18 @@ module.exports = {
 
 	//Validate UI Of Block MCQ Question In Unattempted State
 	ENG_ITEM_MCQB_TC_1: function (testdata) {
-		sts = mcqbPage.isInitialized(testdata[0]);
+		sts = mcqbPage.isInitialized(testdata);
 		if ((typeof (sts)) === "object") {
-			assertion.assertEqual(sts.length, testdata[0].length, "Options count mismatch");
+			assertion.assertEqual(sts.length, testdata.length, "Options count mismatch");
 			for (var i = 0; i < sts.length; i++) {
 				assertion.assertEqual(sts[i][3], "", "MCQB data for index " + i + " is - " + sts[i]);
 			}
 		}
 		else assertion.assertFail(sts);
-		sts = itemPlayerPage.getItemplayerInfo();
-	//	assertion.assertEqual(sts.mediaType, testdata[1].mediaType, "Media type mismatch");
-		assertion.assertEqual(sts.quesText, testdata[1].text, "Question text mismatch");
-		assertion.assertEqual(sts.instructionText, testdata[1].instruction, "Instruction text mismatch");
+		//sts = itemPlayerPage.getItemplayerInfo();
+		//assertion.assertEqual(sts.mediaType, testdata[1].mediaType, "Media type mismatch");
+		//assertion.assertEqual(sts.quesText, testdata[1].text, "Question text mismatch");
+		//assertion.assertEqual(sts.instructionText, testdata[1].instruction, "Instruction text mismatch");
 	},
 
 	//Validate Block MCQ Question Functionality For Correct Scenario

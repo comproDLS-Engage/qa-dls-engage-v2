@@ -66,7 +66,17 @@ module.exports = {
 	instructionEdit_btn: selectorFile.css.editorTab.instructionEdit_btn,
 	placeHolder_txt: selectorFile.css.editorTab.placeHolder_txt,
 	placeHolderHeader_txt: selectorFile.css.editorTab.placeHolderHeader_txt,
+	placeHolderIns_txt:selectorFile.css.editorTab.placeHolderIns_txt,
 	done_btn: selectorFile.css.editorTab.done_btn,
+	nextqun_btn:selectorFile.css.editorTab.nextqun_btn,
+	deleteMedia_btn:selectorFile.css.editorTab.deleteMedia_btn,
+	editPrompt_btn: selectorFile.css.editorTab.editPrompt_btn,
+	editSubQuestion_btn: selectorFile.css.editorTab.editSubQuestion_btn,
+	subOptionIndex: selectorFile.css.editorTab.subOptionIndex,
+	subOptionValue: selectorFile.css.editorTab.subOptionValue,
+	subOptiontext: selectorFile.css.editorTab.subOptiontext,
+	topsbottomOption: selectorFile.css.editorTab.topsbottomOption,
+	leftRightOption:selectorFile.css.editorTab.leftRightOption,
 	//--MULTIPLE RESPONSE
 	isInitialized1: function (testdata) {
 		for (var i = 0; i < testdata.length; i++) {
@@ -77,14 +87,67 @@ module.exports = {
 			}
 		}
 	},
-	setHeaderTextinPlaceHolder: function (testdata) {
+
+	deleteMediabtn: function () {
 		logger.logInto(stackTrace.get());
-		res = action.click(this.headerEdit_btn);
-		action.waitForDisplayed(this.placeHolderHeader_txt)
-		action.clearValueDefault(this.placeHolderHeader_txt);
+		res = action.waitForClickable(this.deleteMedia_btn);
 		if (res == true) {
 			browser.pause(2000)
-			res = action.addValue(this.placeHolder_txt, testdata)
+			res = action.click(this.deleteMedia_btn);
+			if (res == true) {
+				res = action.waitForDisplayed(this.addImage_btn);
+				//browser.pause(5000)
+			}
+		}
+		else {
+			res = res + " -- next button is not clickable";
+			logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
+	clickNextBtn: function () {
+		logger.logInto(stackTrace.get());
+		res = action.waitForClickable(this.nextqun_btn);
+		if (res == true) {
+			browser.pause(2000)
+			res = action.click(this.nextqun_btn);
+			if (res == true) {
+				//res = action.waitForDisplayed("[role=progressbar]", undefined, true);
+				browser.pause(5000)
+			}
+		}
+		else {
+			res = res + " -- next button is not clickable";
+			logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
+	clickEditPrompt_Btn: function () {
+		logger.logInto(stackTrace.get());
+		res = action.waitForClickable(this.editPrompt_btn);
+		if (res == true) {
+			browser.pause(2000)
+			res = action.click(this.editPrompt_btn);
+			if (res == true) {
+				//res = action.waitForDisplayed("[role=progressbar]", undefined, true);
+				browser.pause(5000)
+			}
+		}
+		else {
+			res = res + " -- Edit Prompt button is not clickable";
+			logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
+	setHeaderTextinPlaceHolder: function (testdata) {
+		logger.logInto(stackTrace.get());
+		browser.pause(5000)
+		action.waitForDisplayed(this.headerEdit_btn)
+		res = action.click(this.headerEdit_btn);
+		action.clearValueDefault(this.placeHolderHeader_txt);
+		if (res == true) {
+			browser.pause(5000)
+			res = action.addValue(this.placeHolderHeader_txt, testdata)
 			browser.pause(2000)
 			if (res == true) {
 				this.clickDonebtn();
@@ -101,8 +164,8 @@ module.exports = {
 		logger.logInto(stackTrace.get());
 		res = action.click(this.instructionEdit_btn);
 		if (res == true) {
-
-			res = action.addValue(this.placeHolder_txt, testdata)
+			browser.pause(5000)
+			res = action.addValue(this.placeHolderIns_txt, testdata)
 			browser.pause(2000)
 			if (res == true) {
 				this.clickDonebtn();
@@ -111,6 +174,58 @@ module.exports = {
 		}
 		else {
 			res = res + " -- Error in clicking Add Pir button";
+			logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
+	setPromptTextPlaceHolder: function (testdata) {
+		logger.logInto(stackTrace.get());
+
+		res = action.addValue(this.placeHolderIns_txt, testdata)
+		browser.pause(2000)
+		if (res == true) {
+			this.clickDonebtn();
+		}
+		logger.logInto(stackTrace.get(), " -- Add Pair Button is clicked");
+
+		return res;
+	},
+
+	setSubQuestiontxt: function (testdata) {
+		logger.logInto(stackTrace.get());
+
+		res = action.addValue(this.placeHolderIns_txt, testdata)
+		browser.pause(2000)
+		if (res == true) {
+			this.clickDonebtn();
+		}
+		logger.logInto(stackTrace.get(), " -- Add Pair Button is clicked");
+
+		return res;
+	},
+	setOptiontxt: function (testdata) {
+		console.log(testdata[2])
+		logger.logInto(stackTrace.get());
+		console.log(this.subOptionIndex + "\""+testdata[0] + "\"] " + this.subOptionValue + testdata[1] + "] " + this.subOptiontext)
+		res = action.setValue((this.subOptionIndex +"\""+testdata[0] + "\"] " + this.subOptionValue + testdata[1] + "] " + this.subOptiontext), testdata[2])
+		browser.pause(2000)
+		if (res == true) {
+			logger.logInto(stackTrace.get(), " -- Add Pair Button is clicked");
+		}
+			return res;
+	},
+	clickeditSubQuestionbtn: function (testdata) {
+		logger.logInto(stackTrace.get());
+		console.log(this.editSubQuestion_btn + testdata + "]")
+		res = action.waitForClickable(this.editSubQuestion_btn + testdata + "]>span:nth-child(1)");
+		if (res == true) {
+			res = action.click(this.editSubQuestion_btn + testdata + "]>span:nth-child(1)");
+			if (res == true) {
+				res = action.waitForDisplayed(this.done_btn);
+			}
+		}
+		else {
+			res = res + " -- done button is not clickable";
 			logger.logInto(stackTrace.get(), res, 'error');
 		}
 		return res;
@@ -130,12 +245,44 @@ module.exports = {
 		}
 		return res;
 	},
+	clickTopBottombtn: function () {
+		logger.logInto(stackTrace.get());
+		res = action.waitForClickable(this.topsbottomOption);
+		if (res == true) {
+			res = action.click(this.topsbottomOption);
+			if (res == true) {
+				browser.pause(5000)
+				res = action.waitForDisplayed(this.topsbottomOption);
+			}
+		}
+		else {
+			res = res + " -- done button is not clickable";
+			logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
+	clickLeftRightbtn: function () {
+		logger.logInto(stackTrace.get());
+		res = action.waitForClickable(this.leftRightOption);
+		if (res == true) {
+			res = action.click(this.leftRightOption);
+			if (res == true) {
+				browser.pause(5000)
+				res = action.waitForDisplayed(this.leftRightOption);
+			}
+		}
+		else {
+			res = res + " -- done button is not clickable";
+			logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
 	clickSaveandReturnBtn: function () {
 		logger.logInto(stackTrace.get());
-		res = action.waitForClickable("[data-tid=button-saveandreturn]");
+		res = action.waitForClickable("div:nth-child(2) [data-tid=button-saveandreturn]");
 		if (res == true) {
 			browser.pause(2000)
-			res = action.click("[data-tid=button-saveandreturn]");
+			res = action.click("div:nth-child(2) [data-tid=button-saveandreturn]");
 			if (res == true) {
 				//res = action.waitForDisplayed("[role=progressbar]", undefined, true);
 				browser.pause(10000)
@@ -180,10 +327,15 @@ module.exports = {
 	//--DRAG AND DRAG ONTO IMAGE
 	clickAddLabelBtn: function (labelOptions) { //why do we need the list of options, need to discuss - akhil
 		logger.logInto(stackTrace.get());
-		var count = labelOptions.length;
-		for (var i = 0; i < count; i++) {
+		var countLabel = labelOptions.length;
+		var optionlength = action.findElements("[data-tid*=container-label")
+		if (labelOptions.length > optionlength.length) {
+			countLabel = (labelOptions.length - optionlength.length)
+		}
+		for (var i = 0; i < countLabel; i++) {
 			res = action.click(this.addLabel_btn);
 		}
+	
 		if (res == true) {
 			logger.logInto(stackTrace.get(), " -- Add Label Button is clicked");
 		}
@@ -280,6 +432,17 @@ module.exports = {
 	//--MATCHING
 	setItems: function (items) {
 		logger.logInto(stackTrace.get());
+		var countLabel = items.length;
+		console.log(countLabel)
+		var optionlength = action.findElements("[data-tid*=input-item")
+		console.log(optionlength.length)
+		//if (items.length > optionlength.length) {
+			countLabel = (items.length - optionlength.length)
+			console.log(countLabel)
+		//}
+		for (var i = 0; i < (countLabel); i++) {
+			res = action.click("[data-tid=button-add]");
+		}
 		var itemsArr = [];
 		let getValueArray = []
 		for (var i = 1; i <= items.length; i++) {
@@ -457,7 +620,8 @@ module.exports = {
 
 	clickEditorTab: function () {
 		logger.logInto(stackTrace.get());
-		res = action.waitForClickable(this.addQuestion_btn);
+		//res = action.waitForClickable(this.addQuestion_btn);
+		res = true;
 		if (res == true) {
 			logger.logInto(stackTrace.get(), res + " -- Editor Tab is clicked");
 			res = action.click(this.editor_tab);
@@ -590,6 +754,8 @@ module.exports = {
 	setQuestionTitle: function (questionTitle) {
 		logger.logInto(stackTrace.get());
 		action.waitForDisplayed(this.questionTitle_input)
+	   // action.clearValueDefault(this.questionTitle_input);
+	   browser.pause(5000)
 		res = action.setValue(this.questionTitle_input, questionTitle);
 		if (res == true) {
 			logger.logInto(stackTrace.get(), " -- Question Title is entered");
@@ -685,6 +851,7 @@ module.exports = {
 		action.waitForDisplayed(this.questionText_input)
 		browser.pause(2000)
 		res = action.clearValueDefault(this.questionText_input);
+		res = action.clearValue(this.questionText_input);
 		res = action.addValue(this.questionText_input, questionTitle);
 		if (res == true) {
 
@@ -695,7 +862,7 @@ module.exports = {
 			res = res + " -- Question Title is NOT entered";
 			logger.logInto(stackTrace.get(), res, 'error');
 		}
-		browser.pause(2000)
+		browser.pause(10000)
 		return res;
 	},
 	//Adding 'IMAGE' as media
@@ -763,6 +930,16 @@ module.exports = {
 		return res;
 	},
 
+	videoUpload: function (videoPath) { // this is duplicate, we should combine imageupload and audioupload - akhil
+		// use browser.uploadFile to upload the test file
+		let remoteFilePath = browser.uploadFile(videoPath);
+		// set file path value in the input field
+		res = action.addValue(this.media_input, remoteFilePath);
+		action.waitForDisplayed(this.uploadedAudio, 5000);
+		//rupsi: return audio file
+		return res;
+	},
+
 	setAudioCredit: function (audioCredit) {
 		logger.logInto(stackTrace.get());
 		res = action.setValue(this.audioCredit_input, audioCredit); // use setValue instead of addValue - akhil
@@ -779,6 +956,8 @@ module.exports = {
 	//Set Question Text
 	setQuestionText: function (questionText) {
 		logger.logInto(stackTrace.get());
+		//action.clearValue(this.questionInputField)
+		//action.clearValueDefault(this.questionInputField)
 		res = action.addValue(this.questionInputField, questionText);
 		if (res == true) {
 			logger.logInto(stackTrace.get(), " -- Question Text is entered");
@@ -790,7 +969,7 @@ module.exports = {
 	},
 
 	//Click on Add Answer Button
-	clickAddAnswerBtn: function () {
+	clickAddAnswerBtn: function (testdata) {
 		logger.logInto(stackTrace.get());
 		action.waitForDisplayed(this.addAnswer_btn);
 		res = action.click(this.addAnswer_btn);
@@ -803,7 +982,19 @@ module.exports = {
 		}
 		return res;
 	},
-
+	clickAddAnswerMCQSRBtn: function (testdata) {
+		logger.logInto(stackTrace.get());
+		action.waitForDisplayed(this.addAnswer_btn +"-"+testdata);
+		res = action.click(this.addAnswer_btn+"-"+testdata);
+		if (res == true) {
+			logger.logInto(stackTrace.get(), " -- Add Answer Button is clicked");
+		}
+		else {
+			res = res + " -- Error in clicking Add Answer button";
+			logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
 	//Used by MCQ, MCSR, TruFalse, DND, FIB That's why kept in common file
 	//Note that this function is not working for FIB for now
 	//Logged ENG-5502 for the same
@@ -850,6 +1041,7 @@ module.exports = {
 		logger.logInto(stackTrace.get());
 		res = action.click(this.previewPublish_tab);
 		if (res == true) {
+			browser.pause(2000);
 			logger.logInto(stackTrace.get(), " -- Preview and Publish Tab is clicked");
 		}
 		else {

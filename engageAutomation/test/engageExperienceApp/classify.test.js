@@ -5,21 +5,33 @@ var testplayer = require('../../pages/engageExperienceApp/basePlayer.page.js');
 const itemPlayerPage = require('../../pages/engageExperienceApp/itemPlayer.page.js');
 var sts, sts1;
 module.exports = {
+    ENG_ITEM_CLA_TC_1: function (testdata) {
+        //Validate the unattempt state of the player
+        sts = classify.isInitialized(testdata[0], testdata[1]);
+        if ((typeof (sts)) === "object") {
+            for (var i = 0; i < sts.sourceData.length; i++) {
+                assertion.assertEqual(sts.targetData.key1[i][1], "", "Target text mismatch for " + sts.targetData.key1[i][1]);
+                assertion.assertEqual(sts.targetData.key1[i][2], "", "Status mismatch for " + sts.targetData.key1[i][1]);
+            }
+        }
+        else assertion.assertFail(sts);
+    },
+
     //Validate that user is able to place option pill inside the Group using drag and drop
     ENG_ITEM_CLA_TC_2: function (testdata) {
-        sts = itemPlayerPage.getItemplayerInfo();
-        assertion.assertEqual(sts.mediaType, testdata[1].mediaType, "Media type mismatch");
-        assertion.assertEqual(sts.quesText, testdata[1].text, "Question text mismatch");
-        assertion.assertEqual(sts.instructionText, testdata[1].instruction, "Instruction text mismatch");
-        sts = classify.dragAndDrop(testdata[0]);
+        // sts = itemPlayerPage.getItemplayerInfo();
+        // assertion.assertEqual(sts.mediaType, testdata[1].mediaType, "Media type mismatch");
+        // assertion.assertEqual(sts.quesText, testdata[1].text, "Question text mismatch");
+        // assertion.assertEqual(sts.instructionText, testdata[1].instruction, "Instruction text mismatch");
+        sts = classify.dragAndDrop(testdata);
         assertion.assertEqual(sts, true, sts);
-        sts1 = classify.isInitialized(testdata[0]);
+        sts1 = classify.isInitialized(testdata);
         for (var i = 0; i < sts1.sourceData.length; i++) {
-            assertion.assertEqual(sts1.targetData.key1[i][1], testdata[0].key1[i][3], "Target text mismatch for " + sts1.targetData.key1[i][1]);
-            if (testdata[0].key1[i][1] == "")
-                assertion.assertEqual(sts1.sourceData[i][1], testdata[0].key1[i][3], "Source text mismatch for " + sts1.sourceData[i]);
+            assertion.assertEqual(sts1.targetData.key1[i][1], testdata.key1[i][3], "Target text mismatch for " + sts1.targetData.key1[i][1]);
+            if (testdata.key1[i][1] == "")
+                assertion.assertEqual(sts1.sourceData[i][1], testdata.key1[i][3], "Source text mismatch for " + sts1.sourceData[i]);
             else
-                assertion.assertEqual(sts1.sourceData[i][1], testdata[0].key1[i][1], "Source text mismatch for " + sts1.sourceData[i]);
+                assertion.assertEqual(sts1.sourceData[i][1], testdata.key1[i][1], "Source text mismatch for " + sts1.sourceData[i]);
         }
     },
 

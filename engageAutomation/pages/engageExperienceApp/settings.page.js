@@ -64,8 +64,31 @@ module.exports = {
     resetSettingsSubTitle: selectorFile.css.ComproEngage.settings.resetSettingsSubTitle,
     resetSettingsCancelBtn: selectorFile.css.ComproEngage.settings.resetSettingsCancelBtn,
     resetSettingsConfirmBtn: selectorFile.css.ComproEngage.settings.resetSettingsConfirmBtn,
+    //billing
+    subscription_text: selectorFile.css.ComproEngage.settings.subscription_text,
+    subscriptionSubtitle_text: selectorFile.css.ComproEngage.settings.subscriptionSubtitle_text,
+    free_text: selectorFile.css.ComproEngage.settings.free_text,
+    getPremiumAccess_text: selectorFile.css.ComproEngage.settings.getPremiumAccess_text,
+    getPremiumAccessSubtitle_text: selectorFile.css.ComproEngage.settings.getPremiumAccessSubtitle_text,
+    price_text: selectorFile.css.ComproEngage.settings.price_text,
+    upgradePlan_btn: selectorFile.css.ComproEngage.settings.upgradePlan_btn,
+    paymentMethod_text: selectorFile.css.ComproEngage.settings.paymentMethod_text,
+    noPaymentMethod_text: selectorFile.css.ComproEngage.settings.noPaymentMethod_text,
+    noPaymentMethodSubtitle_text: selectorFile.css.ComproEngage.settings.noPaymentMethodSubtitle_text,
+    billingMethod: selectorFile.css.ComproEngage.settings.billingMethod,
+    noBillingInfo_text: selectorFile.css.ComproEngage.settings.noBillingInfo_text,
+    noBillingInfoSubtitle_text: selectorFile.css.ComproEngage.settings.noBillingInfoSubtitle_text,
+    premiumPlan_text: selectorFile.css.ComproEngage.settings.premiumPlan_text,
+    active_text: selectorFile.css.ComproEngage.settings.active_text,
+    premiumPrice_text: selectorFile.css.ComproEngage.settings.premiumPrice_text,
+    autoRenewal_text: selectorFile.css.ComproEngage.settings.autoRenewal_text,
+    licensePeriod_text: selectorFile.css.ComproEngage.settings.licensePeriod_text,
+    licensePeriod_date: selectorFile.css.ComproEngage.settings.licensePeriod_date,
+    managePlan_btn: selectorFile.css.ComproEngage.settings.managePlan_btn,
+    changeCard_btn: selectorFile.css.ComproEngage.settings.changeCard_btn,
+    updateBillingAddress_btn: selectorFile.css.ComproEngage.settings.updateBillingAddress_btn,
 
-    isInitialized: function () {
+    isInitialized: function() {
         let res;
         logger.logInto(stackTrace.get());
         action.waitForDocumentLoad();
@@ -76,7 +99,7 @@ module.exports = {
         return res;
     },
 
-    getSettingsPageData: function () {
+    getSettingsPageData: function() {
         logger.logInto(stackTrace.get());
         let obj = {
             pageStatus: action.waitForDisplayed(this.pageTitle),
@@ -92,7 +115,7 @@ module.exports = {
         return obj;
     },
 
-    getProfileTabData: function () {
+    getProfileTabData: function() {
         logger.logInto(stackTrace.get());
         let obj = {
             pageHeading: action.getElementCount(this.pageHeading) > 0 ? action.getText(this.pageHeading) : null,
@@ -111,7 +134,7 @@ module.exports = {
         return obj;
     },
 
-    setFirstName: function (name) {
+    setFirstName: function(name) {
         let res;
         logger.logInto(stackTrace.get());
         res = action.setValue(this.firstName_input, name);
@@ -124,7 +147,7 @@ module.exports = {
         return res;
     },
 
-    setLastName: function (lastname) {
+    setLastName: function(lastname) {
         let res;
         logger.logInto(stackTrace.get());
         res = action.setValue(this.lastName_input, lastname);
@@ -137,7 +160,7 @@ module.exports = {
         return res;
     },
 
-    setCountry: function (countryName) {
+    setCountry: function(countryName) {
         let res;
         logger.logInto(stackTrace.get());
         res = action.click(this.country_input)
@@ -157,7 +180,7 @@ module.exports = {
         return res;
     },
 
-    clickClose: function () {
+    clickClose: function() {
         let res;
         logger.logInto(stackTrace.get());
         res = action.moveTo(this.country_input, 0, 0)
@@ -174,7 +197,7 @@ module.exports = {
         return res;
     },
 
-    clickUpdateSettingsProfile: function () {
+    clickUpdateSettingsProfile: function() {
         let res;
         logger.logInto(stackTrace.get());
         res = action.click(this.changeProfile_button);
@@ -187,7 +210,7 @@ module.exports = {
         return res;
     },
 
-    getErrorMessages: function () {
+    getErrorMessages: function() {
         logger.logInto(stackTrace.get());
         let obj = {
             //profile
@@ -202,7 +225,7 @@ module.exports = {
         return obj;
     },
 
-    getPasswordTabData: function () {
+    getPasswordTabData: function() {
         logger.logInto(stackTrace.get());
         let obj = {
             //password
@@ -221,7 +244,7 @@ module.exports = {
         return obj;
     },
 
-    setCurrentPassword: function (password) {
+    setCurrentPassword: function(password) {
         let res;
         logger.logInto(stackTrace.get());
         res = action.setValue(this.currentPassword_input, password);
@@ -234,7 +257,7 @@ module.exports = {
         return res;
     },
 
-    setNewPassword: function (password) {
+    setNewPassword: function(password) {
         let res;
         logger.logInto(stackTrace.get());
         res = action.setValue(this.password_input, password);
@@ -247,7 +270,7 @@ module.exports = {
         return res;
     },
 
-    setConfirmPassword: function (password) {
+    setConfirmPassword: function(password) {
         let res;
         logger.logInto(stackTrace.get());
         res = action.setValue(this.confirmPassword_input, password);
@@ -287,7 +310,7 @@ module.exports = {
     //     return res;
     // },
 
-    clickUpdateSettingsPassword: function () {
+    clickUpdateSettingsPassword: function() {
         let res;
         logger.logInto(stackTrace.get());
         res = action.click(this.changePassword_button);
@@ -300,7 +323,7 @@ module.exports = {
         return res;
     },
 
-    getAccessibilityTabData: function () {
+    getAccessibilityTabData: function() {
         logger.logInto(stackTrace.get());
         let obj = {
             pageHeading: action.getElementCount(this.pageHeading) > 0 ? action.getText(this.pageHeading) : null,
@@ -331,7 +354,7 @@ module.exports = {
         return obj;
     },
 
-    getCssPropertyData: function () {
+    getCssPropertyData: function() {
         logger.logInto(stackTrace.get());
         action.scrollIntoView(this.pageHeading)
         let obj = {
@@ -387,7 +410,7 @@ module.exports = {
         return obj;
     },
 
-    getResetSettingsModalData: function () {
+    getResetSettingsModalData: function() {
         logger.logInto(stackTrace.get());
         let obj = {
             resetSettingsTitle: action.getElementCount(this.resetSettingsTitle) > 0 ? action.getText(this.resetSettingsTitle) : null,
@@ -399,7 +422,7 @@ module.exports = {
         return obj;
     },
 
-    click_fontSizeDec: function (count) {
+    click_fontSizeDec: function(count) {
         logger.logInto(stackTrace.get());
         let res, itr;
         for (itr = 0; itr < count; itr++) {
@@ -414,7 +437,7 @@ module.exports = {
         return res;
     },
 
-    click_fontSizeInc: function (count) {
+    click_fontSizeInc: function(count) {
         logger.logInto(stackTrace.get());
         let res, itr;
         for (itr = 0; itr < count; itr++) {
@@ -428,7 +451,7 @@ module.exports = {
         return res;
     },
 
-    click_lineSpaceDec: function (count) {
+    click_lineSpaceDec: function(count) {
         logger.logInto(stackTrace.get());
         let res, itr;
         for (itr = 0; itr < count; itr++) {
@@ -442,7 +465,7 @@ module.exports = {
         return res;
     },
 
-    click_lineSpaceInc: function (count) {
+    click_lineSpaceInc: function(count) {
         logger.logInto(stackTrace.get());
         let res, itr;
         for (itr = 0; itr < count; itr++) {
@@ -456,7 +479,7 @@ module.exports = {
         return res;
     },
 
-    click_highContrastToggleBtn: function () {
+    click_highContrastToggleBtn: function() {
         let res;
         logger.logInto(stackTrace.get());
         res = action.click(this.highContrastToggleBtn);
@@ -468,7 +491,7 @@ module.exports = {
         return res;
     },
 
-    click_dylexicFontToggleBtn: function () {
+    click_dylexicFontToggleBtn: function() {
         let res;
         logger.logInto(stackTrace.get());
         res = action.click(this.dylexicFontToggleBtn);
@@ -480,7 +503,7 @@ module.exports = {
         return res;
     },
 
-    click_underlineLinksToggleBtn: function () {
+    click_underlineLinksToggleBtn: function() {
         let res;
         logger.logInto(stackTrace.get());
         res = action.click(this.underlinelinksToggleBtn);
@@ -492,7 +515,7 @@ module.exports = {
         return res;
     },
 
-    click_moreDetailsBtn: function () {
+    click_moreDetailsBtn: function() {
         let res;
         logger.logInto(stackTrace.get());
         res = action.click(this.moreDetailsBtn);
@@ -505,7 +528,7 @@ module.exports = {
         return res;
     },
 
-    click_resetButton: function () {
+    click_resetButton: function() {
         let res;
         logger.logInto(stackTrace.get());
         res = action.click(this.resetButton);
@@ -518,7 +541,7 @@ module.exports = {
         return res;
     },
 
-    click_applySettingsButton: function () {
+    click_applySettingsButton: function() {
         let res;
         logger.logInto(stackTrace.get());
         res = action.click(this.applySettingsBtn);
@@ -530,7 +553,7 @@ module.exports = {
         return res;
     },
 
-    click_resetSettingsConfirmBtn: function () {
+    click_resetSettingsConfirmBtn: function() {
         let res;
         logger.logInto(stackTrace.get());
         res = action.click(this.resetSettingsConfirmBtn);
@@ -542,7 +565,7 @@ module.exports = {
         return res;
     },
 
-    click_resetSettingsCancelBtn: function () {
+    click_resetSettingsCancelBtn: function() {
         let res;
         logger.logInto(stackTrace.get());
         res = action.click(this.resetSettingsCancelBtn);
@@ -553,6 +576,92 @@ module.exports = {
         }
         return res;
 
-    }
+    },
+
+    getBillingTabData: function() {
+        logger.logInto(stackTrace.get());
+        let obj = {
+            pageHeading: action.getElementCount(this.subscription_text) > 0 ? action.getText(this.subscription_text) : null,
+            subscriptionSubtitle_text: action.getElementCount(this.subscriptionSubtitle_text) > 0 ? action.getText(this.subscriptionSubtitle_text) : null,
+            free_text: action.getElementCount(this.free_text) > 0 ? action.getText(this.free_text) : null,
+            getPremiumAccess_text: action.getElementCount(this.getPremiumAccess_text) > 0 ? action.getText(this.getPremiumAccess_text) : null,
+            getPremiumAccessSubtitle_text: action.getElementCount(this.getPremiumAccessSubtitle_text) > 0 ? action.getText(this.getPremiumAccessSubtitle_text) : null,
+            price_text: action.getElementCount(this.price_text) > 0 ? action.getText(this.price_text) : null,
+            upgradePlan_btn: action.getElementCount(this.upgradePlan_btn) > 0 ? action.getText(this.upgradePlan_btn) : null,
+            paymentMethod_text: action.getElementCount(this.paymentMethod_text) > 0 ? action.getText(this.paymentMethod_text) : null,
+            noPaymentMethod_text: action.getElementCount(this.noPaymentMethod_text) > 0 ? action.getText(this.noPaymentMethod_text) : null,
+            noPaymentMethodSubtitle_text: action.getElementCount(this.noPaymentMethodSubtitle_text) > 0 ? action.getText(this.noPaymentMethodSubtitle_text) : null,
+            billingMethod_text: action.getElementCount(this.billingMethod) > 0 ? action.getText(this.billingMethod) : null,
+            noBillingInfo_text: action.getElementCount(this.noBillingInfo_text) > 0 ? action.getText(this.noBillingInfo_text) : null,
+            premiumPlan_text: action.getElementCount(this.premiumPlan_text) > 0 ? action.getText(this.premiumPlan_text) : null,
+            active_text: action.getElementCount(this.active_text) > 0 ? action.getText(this.active_text) : null,
+            premiumPrice_text: action.getElementCount(this.premiumPrice_text) > 0 ? action.getText(this.premiumPrice_text) : null,
+            autoRenewal_text: action.getElementCount(this.autoRenewal_text) > 0 ? action.getText(this.autoRenewal_text) : null,
+            licensePeriod_text: action.getElementCount(this.licensePeriod_text) > 0 ? action.getText(this.licensePeriod_text) : null,
+            licensePeriod_date: action.getElementCount(this.licensePeriod_date) > 0 ? action.getText(this.licensePeriod_date) : null,
+            managePlan_btn: action.getElementCount(this.managePlan_btn) > 0 ? action.getText(this.managePlan_btn) : null,
+            changeCard_btn: action.getElementCount(this.changeCard_btn) > 0 ? action.getText(this.changeCard_btn) : null,
+            updateBillingAddress_btn: action.getElementCount(this.updateBillingAddress_btn) > 0 ? action.getText(this.updateBillingAddress_btn) : null
+            
+        }
+        return obj;
+    },
+
+    click_upgradePlan_btn: function() {
+        let res;
+        logger.logInto(stackTrace.get());
+        res = action.click(this.upgradePlan_btn);
+        if (true == res) {
+            logger.logInto(stackTrace.get(), " upgradePlan button is clicked");
+            res = require('./billing.page.js').isInitialized();
+        } else {
+            logger.logInto(stackTrace.get(), res, 'error');
+        }
+        return res;
+
+    },
+
+    click_managePlan_btn: function() {
+        let res;
+        logger.logInto(stackTrace.get());
+        res = action.click(this.managePlan_btn);
+        if (true == res) {
+            logger.logInto(stackTrace.get(), " managePlan button is clicked");
+            res = require('./planOptions.page.js').isInitialized();
+        } else {
+            logger.logInto(stackTrace.get(), res, 'error');
+        }
+        return res;
+
+    },
+
+    click_changeCard_btn: function() {
+        let res;
+        logger.logInto(stackTrace.get());
+        res = action.click(this.changeCard_btn);
+        if (true == res) {
+            logger.logInto(stackTrace.get(), " changeCard button is clicked");
+            res = require('./planOptions.page.js').isInitialized();
+        } else {
+            logger.logInto(stackTrace.get(), res, 'error');
+        }
+        return res;
+
+    },
+
+    click_updateBillingAddress_btn: function() {
+        let res;
+        logger.logInto(stackTrace.get());
+        res = action.click(this.changeCard_btn);
+        if (true == res) {
+            logger.logInto(stackTrace.get(), " updateBillingAddress button is clicked");
+            res = require('./planOptions.page.js').isInitialized();
+        } else {
+            logger.logInto(stackTrace.get(), res, 'error');
+        }
+        return res;
+
+    },
+
 
 }
