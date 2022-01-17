@@ -24,7 +24,7 @@
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
-                  "jsonPath": "engage.login.user.validInstructorUser1"
+                  "jsonPath": "engage.login.user.classInstructorUser3"
                }
             ]
          },
@@ -69,12 +69,12 @@
          },
          {
             "id": "ENG_FLIP_TC_2",
-            "description": "",
+            "description": "Validate Clicking on single page launches the book in single page layout",
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath": "engage.appContent.flipbook"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/flipbookData.json",
+                  "jsonPath": "engage.flipbook.fb1"
                }
             ]
          },
@@ -84,8 +84,8 @@
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath": "engage.appContent.flipbook"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/flipbookData.json",
+                  "jsonPath": "engage.flipbook.fb1"
                }
             ]
          },
@@ -95,8 +95,8 @@
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath": "engage.appContent.flipbook"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/flipbookData.json",
+                  "jsonPath": "engage.flipbook.fb1"
                }
             ]
          }
