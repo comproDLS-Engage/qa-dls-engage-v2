@@ -6,7 +6,7 @@
                     "email": "qa_student003@yopmail.com",
                     "password": "Compro@1234",
                     "role": "student",
-                    "name": "etirrase-9139",
+                    "name": "qa_student003",
                     "class": [
                         {
                             "key": "AEYP-p9hk",
@@ -27,8 +27,38 @@
                     "email": "qa_student004@yopmail.com",
                     "password": "Compro@1111",
                     "role": "student",
-                    "name": "etirrase-9139",
+                    "name": "qa_student004",
                     "class": [
+                    ],
+                    "info": {}
+                },
+                "invalidUser1": {
+                    "email": "etirrase@yopmail",
+                    "password": "hfcghgufyhW#2",
+                    "role": "student",
+                    "name": "etirrase-9139",
+                    "courses": [
+                        "course1"
+                    ],
+                    "info": {}
+                },
+                "invalidUser2": {
+                    "email": "etirrase@yopm.in",
+                    "password": "Compro1234",
+                    "role": "student",
+                    "name": "etirrase-9139",
+                    "courses": [
+                        "course1"
+                    ],
+                    "info": {}
+                },
+                "invalidUser3": {
+                    "email": "etirrase-9139@yopmail.com",
+                    "password": "h@@hW#2",
+                    "role": "student",
+                    "name": "etirrase-9139",
+                    "courses": [
+                        "course1"
                     ],
                     "info": {}
                 },
@@ -59,8 +89,8 @@
                 "validInstructorUser1": {
                     "email": "qa_teacher003@yopmail.com",
                     "password": "Compro@1234",
-                    "role": "qateacher003",
-                    "name": "kulujaco-1294",
+                    "role": "instructor",
+                    "name": "qa_teacher003",
                     "courses": [
                         {
                             "key": "VYd6-QDXo",

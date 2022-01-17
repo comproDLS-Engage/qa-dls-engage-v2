@@ -33,6 +33,14 @@
                 "search_txt": "@@Hello",
                 "expected_txt": "No Results There aren't any resources available that match those terms.",
                 "searchResultCount": "0"
+            },
+            "searchScenario6":
+            {
+                "search_txt": "\"A la hora de dormir\"",
+                "expected_txt": "A la hora de dormir",
+                "searchResultCount": "1",
+                "tags":"B2",
+                "playlist":["Playlist01"]
             }
 
         },
