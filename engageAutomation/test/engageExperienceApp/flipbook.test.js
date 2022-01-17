@@ -46,16 +46,17 @@ module.exports = {
 		sts = flipbook.click_addNoteBtn();
 		assertion.assertEqual(sts.addNotesTitle, testdata.addNoteTitle, "Add Notes title status mismatch");
 		assertion.assertEqual(sts.notesPageLabel, testdata.pageNoLabel, "page number text mismatch");
-		assertion.assertEqual(sts.notesPageValueSingle, testdata.pageNoValue, "page Value button text mismatch");
+		assertion.assert(sts.notesPageValueSingle.includes(testdata.pageNoValue), "Page Value button text mismatch");
 		assertion.assertEqual(sts.notesCancelBtn, testdata.cancelBtn, "Cancel Button Text status mismatch");
 		assertion.assertEqual(sts.notesSaveBtn, testdata.saveBtn, "Save Button status mismatch");
 	},
 
-	//Validate on clicking Save button, notes set by the user are saved
+	//Validate setting and saving of notes by user
 	ENG_FLIP_TC_5: function (testdata) {
 		sts = flipbook.set_notesTextArea(testdata);
 		assertion.assertEqual(sts, true, "status mismatch");
 		sts = flipbook.click_notesSaveBtn();
+		assertion.assertEqual(sts, true, "status mismatch");
 	},
 
 	//Click Close button in notes pane
@@ -180,7 +181,7 @@ module.exports = {
 		console.log("default height before click =",sts.height)
 		sts2 = flipbook.click_zoomOutBtn();
 		console.log("new width after click 1 =",sts2.width)
-		console.log("new height after click 1 =",sts2.height)
+		console.log("new height after click 1 =",sts.height)
 		assertion.assert((sts2.width < sts.width), "Width comparison failed");
 		assertion.assert((sts2.width < sts.width), "Height comparison failed");
 	},
