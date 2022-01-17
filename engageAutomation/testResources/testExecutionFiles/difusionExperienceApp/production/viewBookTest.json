@@ -29,7 +29,7 @@
             "testFile": "./test/engageExperienceApp/login.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
                   "jsonPath": "engage.login.user.validInstructorUser1"
                }
             ]
@@ -40,7 +40,7 @@
             "testFile": "./test/engageExperienceApp/dashboard.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/QA Test Automation BookTOC.json",
                   "jsonPath": "book.name"
                }
             ]
@@ -60,11 +60,11 @@
             "testFile": "./test/engageExperienceApp/viewBook.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
                   "jsonPath": "engage.appContent.bookViewTOC"
                },
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/QA Test Automation BookTOC.json",
                   "jsonPath": "book.component[0].unit[0].section[0].activity[0]"
                }
             ]
@@ -99,11 +99,11 @@
             "testFile": "./test/engageExperienceApp/viewBook.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/QA Test Automation BookTOC.json",
                   "jsonPath": "book.name"
                },
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
                   "jsonPath": "engage.appContent.myClassPage.classHeading"
                }
             ]
@@ -126,7 +126,7 @@
             "testFile": "./test/engageExperienceApp/viewBook.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
                   "jsonPath": "engage.appContent.bookViewTOC"
                }
             ]
@@ -137,11 +137,11 @@
             "testFile": "./test/engageExperienceApp/viewBook.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
                   "jsonPath": "engage.appContent.bookViewTOC"
                },
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/QA Test Automation BookTOC.json",
                   "jsonPath": "book"
                }
             ]
@@ -158,7 +158,7 @@
             "testFile": "./test/engageExperienceApp/viewBook.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
                   "jsonPath": "engage.appContent.bookViewTOC"
                }
             ]
@@ -169,11 +169,11 @@
             "testFile": "./test/engageExperienceApp/viewBook.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
                   "jsonPath": "engage.appContent.bookViewTOC"
                },
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/QA Test Automation BookTOC.json",
                   "jsonPath": "book"
                }
             ]
@@ -190,7 +190,7 @@
             "testFile": "./test/engageExperienceApp/viewBook.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
                   "jsonPath": "engage.appContent.bookViewTOC"
                }
             ]
@@ -207,11 +207,11 @@
             "testFile": "./test/engageExperienceApp/viewBook.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/QA Test Automation BookTOC.json",
                   "jsonPath": "book.component[2].name.EN"
                },
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/QA Test Automation BookTOC.json",
                   "jsonPath": "book.component[2].unit"
                }
             ]
@@ -222,7 +222,7 @@
             "testFile": "./test/engageExperienceApp/viewBook.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/QA Test Automation BookTOC.json",
                   "jsonPath": "book.component[2].unit[0].title"
                }
             ]
@@ -251,7 +251,7 @@
             "testFile": "./test/engageExperienceApp/viewUnit.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/QA Test Automation BookTOC.json",
                   "jsonPath": "book.component[2].unit[0].section[0].activity[0]"
                }
             ]
@@ -268,7 +268,7 @@
             "testFile": "./test/engageExperienceApp/viewUnit.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/QA Test Automation BookTOC.json",
                   "jsonPath": "book.component[2].unit[1].title"
                }
             ]
@@ -279,7 +279,7 @@
             "testFile": "./test/engageExperienceApp/viewUnit.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/QA Test Automation BookTOC.json",
                   "jsonPath": "book.component[2].unit[0].title"
                }
             ]

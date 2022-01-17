@@ -13,8 +13,8 @@
                     {
                         "index": 0,
                         "title": "1. Unit 1",
-                        "activityCount": "1",
-                        "folderCount": "1",
+                        "activityCount": "3",
+                        "folderCount": "2",
                         "flipbookPageNum": "3",
                         "section": [
                             {
@@ -26,7 +26,7 @@
                             },
                             {
                                 "index": 1,
-                                "name": "Part2",
+                                "name": "Part 2",
                                 "activity": [
                                     "Etext Activity -1",
                                     "HTML Webbook Activity-1"
@@ -95,7 +95,7 @@
                     {
                         "index": 1,
                         "title": "Unit 2",
-                        "activityCount": "1",
+                        "activityCount": "2",
                         "folderCount": "0",
                         "flipbookPageNum": "",
                         "section": [
@@ -103,7 +103,8 @@
                                 "index": 0,
                                 "name": "",
                                 "activity": [
-                                    "Native LO 2"
+                                    "Native LO 2",
+                                    "Native LO writing"
                                 ]
                             }
                         ]
