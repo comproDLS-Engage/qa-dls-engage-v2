@@ -640,10 +640,6 @@
                 }
             },
             "flipbook": {
-                "doublelayoutWidth": "width: 50%;",
-                "singlelayoutWidth": "width: 100%;",
-                "singlelayoutDefaultWidth": 1411,
-                "singlelayoutDefaultHeight": 1733,
                 "doubleLayoutTOC": "p. 2 - 3",
                 "singleLayoutTOC": "p. 2",
                 "myNotesTitle": "My Notes",

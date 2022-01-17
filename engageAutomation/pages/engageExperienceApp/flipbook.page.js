@@ -8,9 +8,6 @@ module.exports = {
   readerContainerWrapper: selectorFile.css.ComproEngage.flipbook.readerContainerWrapper,
   pageLayoutSingle: selectorFile.css.ComproEngage.flipbook.pageLayoutSingle,
   pageLayoutDouble: selectorFile.css.ComproEngage.flipbook.pageLayoutDouble,
-  penBtn: selectorFile.css.ComproEngage.flipbook.penBtn,
-  highlighterBtn: selectorFile.css.ComproEngage.flipbook.highlighterBtn,
-  eraserBtn: selectorFile.css.ComproEngage.flipbook.eraserBtn,
   undoBtn: selectorFile.css.ComproEngage.flipbook.undoBtn,
   redoBtn: selectorFile.css.ComproEngage.flipbook.redoBtn,
   notesDockContainer: selectorFile.css.ComproEngage.flipbook.notesDockContainer,
@@ -88,9 +85,6 @@ module.exports = {
     obj = {
       pageLayoutSingle: (action.getElementCount(this.pageLayoutSingle) > 0) ? action.waitForDisplayed(this.pageLayoutSingle) : false,
       pageLayoutDouble: (action.getElementCount(this.pageLayoutDouble) > 0) ? action.waitForDisplayed(this.pageLayoutDouble) : false,
-      penBtn: (action.getElementCount(this.penBtn) > 0) ? action.getText(this.penBtn) : null,
-      highlighterBtn: (action.getElementCount(this.highlighterBtn) > 0) ? action.getText(this.highlighterBtn) : null,
-      eraserBtn: (action.getElementCount(this.eraserBtn) > 0) ? action.getText(this.eraserBtn) : null,
       undoBtn: (action.getElementCount(this.undoBtn) > 0) ? action.getText(this.undoBtn) : null,
       redoBtn: (action.getElementCount(this.redoBtn) > 0) ? action.getText(this.redoBtn) : null,
       notesBtn: (action.getElementCount(this.notesBtn) > 0) ? action.getText(this.notesBtn) : null,
@@ -669,6 +663,18 @@ module.exports = {
       logger.logInto(stackTrace.get(), res + " annotationsBtn button is not clicked", 'error');
     }
     return res;
+  },
+
+  get_flipbookPanelSize: function () {
+    logger.logInto(stackTrace.get());
+    var res, size;
+    size = {
+      width: action.getElementCount(this.readerContainerWrapper) > 0 ? action.getCSSProperty(this.readerContainerWrapper,'width').value : null,
+      height: action.getElementCount(this.readerContainerWrapper) > 0 ? action.getCSSProperty(this.readerContainerWrapper,'height').value : null
+    };
+    size.width = parseInt(size.width.match(/\d+/g)[0]);
+    size.height = parseInt(size.height.match(/\d+/g)[0]);
+    return size;
   },
 
   click_zoomInBtn: function () {
