@@ -66,17 +66,18 @@ module.exports = {
 	instructionEdit_btn: selectorFile.css.editorTab.instructionEdit_btn,
 	placeHolder_txt: selectorFile.css.editorTab.placeHolder_txt,
 	placeHolderHeader_txt: selectorFile.css.editorTab.placeHolderHeader_txt,
-	placeHolderIns_txt:selectorFile.css.editorTab.placeHolderIns_txt,
+	placeHolderIns_txt: selectorFile.css.editorTab.placeHolderIns_txt,
 	done_btn: selectorFile.css.editorTab.done_btn,
-	nextqun_btn:selectorFile.css.editorTab.nextqun_btn,
-	deleteMedia_btn:selectorFile.css.editorTab.deleteMedia_btn,
+	nextqun_btn: selectorFile.css.editorTab.nextqun_btn,
+	deleteMedia_btn: selectorFile.css.editorTab.deleteMedia_btn,
 	editPrompt_btn: selectorFile.css.editorTab.editPrompt_btn,
 	editSubQuestion_btn: selectorFile.css.editorTab.editSubQuestion_btn,
 	subOptionIndex: selectorFile.css.editorTab.subOptionIndex,
 	subOptionValue: selectorFile.css.editorTab.subOptionValue,
 	subOptiontext: selectorFile.css.editorTab.subOptiontext,
 	topsbottomOption: selectorFile.css.editorTab.topsbottomOption,
-	leftRightOption:selectorFile.css.editorTab.leftRightOption,
+	leftRightOption: selectorFile.css.editorTab.leftRightOption,
+	scoreInputBox: selectorFile.css.editorTab.scoreInputBox,
 	//--MULTIPLE RESPONSE
 	isInitialized1: function (testdata) {
 		for (var i = 0; i < testdata.length; i++) {
@@ -87,7 +88,21 @@ module.exports = {
 			}
 		}
 	},
-
+	setScorePlaceHolder: function (testdata) {
+		logger.logInto(stackTrace.get());
+		res = action.waitForDisplayed(this.scoreInputBox);
+		if (res == true) 
+			res = action.setValue(this.scoreInputBox, testdata)
+			browser.pause(2000)
+			if (res == true) {
+				logger.logInto(stackTrace.get(), " -- Value is added in Score");
+			}
+		else {
+			res = res + " -- Error in Value added in Score";
+			logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
 	deleteMediabtn: function () {
 		logger.logInto(stackTrace.get());
 		res = action.waitForClickable(this.deleteMedia_btn);
@@ -206,13 +221,13 @@ module.exports = {
 	setOptiontxt: function (testdata) {
 		console.log(testdata[2])
 		logger.logInto(stackTrace.get());
-		console.log(this.subOptionIndex + "\""+testdata[0] + "\"] " + this.subOptionValue + testdata[1] + "] " + this.subOptiontext)
-		res = action.setValue((this.subOptionIndex +"\""+testdata[0] + "\"] " + this.subOptionValue + testdata[1] + "] " + this.subOptiontext), testdata[2])
+		console.log(this.subOptionIndex + "\"" + testdata[0] + "\"] " + this.subOptionValue + testdata[1] + "] " + this.subOptiontext)
+		res = action.setValue((this.subOptionIndex + "\"" + testdata[0] + "\"] " + this.subOptionValue + testdata[1] + "] " + this.subOptiontext), testdata[2])
 		browser.pause(2000)
 		if (res == true) {
 			logger.logInto(stackTrace.get(), " -- Add Pair Button is clicked");
 		}
-			return res;
+		return res;
 	},
 	clickeditSubQuestionbtn: function (testdata) {
 		logger.logInto(stackTrace.get());
@@ -335,7 +350,7 @@ module.exports = {
 		for (var i = 0; i < countLabel; i++) {
 			res = action.click(this.addLabel_btn);
 		}
-	
+
 		if (res == true) {
 			logger.logInto(stackTrace.get(), " -- Add Label Button is clicked");
 		}
@@ -437,8 +452,8 @@ module.exports = {
 		var optionlength = action.findElements("[data-tid*=input-item")
 		console.log(optionlength.length)
 		//if (items.length > optionlength.length) {
-			countLabel = (items.length - optionlength.length)
-			console.log(countLabel)
+		countLabel = (items.length - optionlength.length)
+		console.log(countLabel)
 		//}
 		for (var i = 0; i < (countLabel); i++) {
 			res = action.click("[data-tid=button-add]");
@@ -754,8 +769,8 @@ module.exports = {
 	setQuestionTitle: function (questionTitle) {
 		logger.logInto(stackTrace.get());
 		action.waitForDisplayed(this.questionTitle_input)
-	   // action.clearValueDefault(this.questionTitle_input);
-	   browser.pause(5000)
+		// action.clearValueDefault(this.questionTitle_input);
+		browser.pause(5000)
 		res = action.setValue(this.questionTitle_input, questionTitle);
 		if (res == true) {
 			logger.logInto(stackTrace.get(), " -- Question Title is entered");
@@ -856,7 +871,7 @@ module.exports = {
 		if (res == true) {
 
 			logger.logInto(stackTrace.get(), " -- Question Title is entered");
-			
+
 		}
 		else {
 			res = res + " -- Question Title is NOT entered";
@@ -984,8 +999,8 @@ module.exports = {
 	},
 	clickAddAnswerMCQSRBtn: function (testdata) {
 		logger.logInto(stackTrace.get());
-		action.waitForDisplayed(this.addAnswer_btn +"-"+testdata);
-		res = action.click(this.addAnswer_btn+"-"+testdata);
+		action.waitForDisplayed(this.addAnswer_btn + "-" + testdata);
+		res = action.click(this.addAnswer_btn + "-" + testdata);
 		if (res == true) {
 			logger.logInto(stackTrace.get(), " -- Add Answer Button is clicked");
 		}

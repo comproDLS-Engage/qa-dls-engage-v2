@@ -38,7 +38,7 @@ module.exports = {
 	//Validate that a new question is added by clicking on the 'Add new Question' button on the left pane
 	ASE_COM_TC_4: function (testdata) {
 		sts = EditorPlayer.clickAddQuestionBtn();
-		assertion.assertEqual(sts.editorCount, 11, "Question tab is not selected");
+		assertion.assertEqual(sts.editorCount, 12, "Question tab is not selected");
 	},
 	//Validate that alphanumeric text is supported in Question Title Text.
 	ASE_QUN_TC_5: function (testdata) {
@@ -424,6 +424,10 @@ module.exports = {
 	},
 	ASE_COM_TC_1011: function () {
 		sts = EditorPlayer.clickLeftRightbtn()
+		assertion.assertEqual(sts, true, "Left Right option button clicked");
+	},
+	ASE_COM_TC_1012: function (testdata) {
+		sts = EditorPlayer.setScorePlaceHolder(testdata)
 		assertion.assertEqual(sts, true, "Left Right option button clicked");
 	},
 }

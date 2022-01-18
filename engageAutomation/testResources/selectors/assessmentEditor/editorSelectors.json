@@ -72,6 +72,7 @@
 			"subOptiontext":"input[type=text]",
 			"topsbottomOption":"[data-tid=radio-topbottomlayout] span[class*=MuiButtonBase]",
 			"leftRightOption":"[data-tid=radio-leftrightlayout] span[class*=MuiButtonBase]",
+			"scoreInputBox":"[data-tid=input-score] input",
 			"multipleResponse": {
 				"checkboxOption_input": "[data-tid=checkbox-option-"
 			},

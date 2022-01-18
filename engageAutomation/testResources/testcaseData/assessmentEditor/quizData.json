@@ -8,6 +8,7 @@
             "questionIndex": 1,
             "buttonName": "mutiplechoice",
             "questionTitle": "Question 1",
+            "score":"1",
             "questionInstruction": "See the image carefully and answer the question",
             "videoURL": "https://www.youtube.com/watch?v=mxbodI60OT4",
             "videoCredit": "mcq video #1",
@@ -34,6 +35,7 @@
             "questionIndex": 1,
             "buttonName": "multiplechoicequestionset",
             "questionTitle": "Question 1",
+            "score":"1",
             "questionInstruction": "Dans cette activité \n  Lisez des informations sur la prospérité de la ville de Nantes et voyez l'image d'un riche résident, armateur et marchand. Sur la base de ces informations, répondez aux questions suivantes.",
             "videoURL": "https://www.youtube.com/watch?v=mxbodI60OT4",
             "videoCredit": "mcq video #1",
@@ -59,6 +61,7 @@
       "writing": [
         {
           "questionIndex": 3,
+          "score":"1",
           "buttonName": "writing",
           "questionTitle": "Give the Answer after watching Vedio",
           "questionInstruction": "Listen to the Video carefully and enter the text on placeholder",
@@ -70,6 +73,7 @@
         {
           "questionIndex": 3,
           "buttonName": "trueorfalse",
+          "score":"1",
           "questionTitle": "Question 3",
           "questionInstruction": "Listen to the audio carefully and choose the correct option of the given below question",
           "audioPath": "./testResources/testcaseData/assessmentEditor/media/Ringtone.mp3",
@@ -81,6 +85,7 @@
         {
           "questionIndex": 4,
           "buttonName": "multipleresponse",
+          "score":"3",
           "questionTitle": "Question 4",
           "questionInstruction": "See the image carefully and choose the correct option(s)",
           "imagePath": "./testResources/testcaseData/assessmentEditor/media/Plant.jpg",
@@ -104,6 +109,7 @@
           "questionIndex": 5,
           "buttonName": "draganddropontoimage",
           "questionTitle": "Question 5",
+          "score":"5",
           "questionText": "Drag the continents at their correct places on the world map",
           "questionInstruction": "Drop the continents in correct places",
           "imagePath": "./testResources/testcaseData/assessmentEditor/media/WorldMap.jpg",
@@ -121,6 +127,7 @@
           "questionIndex": 6,
           "buttonName": "draganddropintotext",
           "questionTitle": "Question 6",
+          "score":"3",
           "questionInstruction": "Drag the pills at their correct places in the sentence.",
           "videoURL": "https://www.youtube.com/watch?v=uwzViw-T0-A",
           "videoCredit": "Thirsty Crow",
@@ -139,6 +146,7 @@
           "questionIndex": 7,
           "buttonName": "fillintheblanks",
           "questionTitle": "Question 7",
+          "score":"5",
           "questionInstruction": "Fill the blanks with the correct options.",
           "questionText": "He walked along the road, wondering what,{{Blank:A}},( happen ) and where all the people,{{Blank:B}},( go ). The streets,{{Blank:C}},( be ) deserted, and the stalls,{{Blank:D}},( be leave ) as they,{{Blank:E}},( be ), with fruit and vegetables arranged in neat rows.",
           "options": ["A1","B1","C1","D1","E1"],
@@ -155,6 +163,7 @@
         {
           "questionIndex": 8,
           "buttonName": "ordering",
+          "score":"4",
           "questionTitle": "Question 8",
           "imagePath": "./testResources/testcaseData/assessmentEditor/media/WorldMap.jpg",
           "questionInstruction": "See the image and reorder the options in correct sequence.",
@@ -171,6 +180,7 @@
         {
           "questionIndex": 9,
           "buttonName": "matching",
+          "score":"3",
           "questionTitle": "Question 9",
           "questionInstruction": "See the image and match the suitable word",
           "questionText": "Match the following countries with their corresponding capitals",
@@ -191,6 +201,7 @@
           "questionIndex": 10,
           "buttonName": "classify",
           "questionTitle": "Question 10",
+          "score":"6",
           "questionInstruction": "View the video and place the items in the correct categories.",
           "videoURL": "https://www.youtube.com/watch?v=Vk461NU7wbg",
           "questionText": "Classify in to categories",
