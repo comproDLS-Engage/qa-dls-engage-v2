@@ -45,7 +45,7 @@ module.exports = {
     //Validate that clicking on 'View' button of an added book launched the Book details page
     ENG_DASH_TC_11: function (testdata) {
         sts = dashboardPage.click_viewBookBtn(testdata);
-        assertion.assertEqual(sts.res.pageStatus, true, "View Book page status mismatch");
+        assertion.assertEqual(sts.pageStatus, true, "View Book page status mismatch");
         assertion.assertEqual(sts.appShell.header, true, "View Book page header status mismatch");
     },
 

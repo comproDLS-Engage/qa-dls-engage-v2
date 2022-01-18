@@ -1,6 +1,5 @@
 {
-    "unit1_native2":
-    {
+  "unit1_native2": {
     "type": "Native Engage Learning Object",
     "name": "Native LO2",
     "question": [
@@ -262,4 +261,5 @@
           }              
         }
     ]
-}}
+  }
+}

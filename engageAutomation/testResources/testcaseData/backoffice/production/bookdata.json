@@ -3,7 +3,7 @@
         "book": [
             {
                 "type": "Book",
-                "name": "QA Automation Test Book [DO NOT PUBLISH]",
+                "name": "QA Test Automation Book [DO NOT PUBLISH]",
                 "coverImage": "./testResources/testcaseData/backOffice/qa/book_cover_compro_qa.png",
                 "description": "QA automation test description",
                 "bookDesign": "Green",
@@ -67,9 +67,9 @@
                 "page": "13"
             },
             {
-                "type": "Close Ended Learning Object",
+                "type": "Native Engage Learning Object",
                 "typeIndex": 0,
-                "name": "QA Automation Test LO2 - close ended"
+                "name": "QA Automation Test LO1 - Writing"
             },
             {
                 "type": "Close Ended Learning Object",

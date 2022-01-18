@@ -1192,6 +1192,11 @@
           "id": "ENG_BOOK_TC_44",
           "description": "Validate that clicking on unit Detail TOC breadcrumb naviagtes to Book detail TOC page",
           "tags": "P1"
+        },
+        {
+          "id": "ENG_BOOK_TC_53",
+          "description": "Validate that clicking on the subfolder expand/collapse the subfolder",
+          "tags": "P1"
         }
       ]
     },
@@ -1250,6 +1255,12 @@
       "moduledetails": "",
       "testFile": "./test/engageExperienceApp/classify.test.js",
       "testcase": [
+        {
+          "id": "ENG_ITEM_CLA_TC_1",
+          "description": "Validate the unattempted state of the player",
+          "tags": "P1",
+          "visualTest": "-"
+        },
         {
           "id": "ENG_ITEM_CLA_TC_2",
           "description": "Validate that user is able to place option pill inside the Group using drag and drop",
@@ -1436,7 +1447,73 @@
         },
         {
           "id": "ENG_PLAY_TC_11",
-          "description": "Click show details button in activity Player",
+          "description": "Validate clicking on Show details button expands the details panel",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLAY_TC_12",
+          "description": "Validate clicking on Hide details button hides the details panel",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLAY_TC_13",
+          "description": "Validate that clicking on Next Activity button launches the next activity in the component",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLAY_TC_14",
+          "description": "Validate that clicking on Previous Activity button launches the previous activity of the component",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLAY_TC_14",
+          "description": "Validate that clicking on Previous Activity button launches the previous activity of the component",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLAY_TC_15",
+          "description": "Validate clicking on info icon displays the TOC for the unit for which activity has been launched",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLAY_TC_16",
+          "description": "Validate clicking on cross icon closes the info TOC",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLAY_TC_17",
+          "description": "Validate that Submit Answers button is displayed for activity where either or both Contributes to Completion and Contributes to Score flag are true",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLAY_TC_18",
+          "description": "Validate that Finish button is displayed for activity where both Contributes to Completion and Contributes to Score flag are false",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLAY_TC_19",
+          "description": "Validate the unattempted state of an etext activity when contributes to completion flag is true",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLAY_TC_20",
+          "description": "Validate the unattempted state of an etext activity when contributes to completion flag is false",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_PLAY_TC_21",
+          "description": "Validate the unattempted state of html webbook",
           "tags": "",
           "visualTest": "-"
         }

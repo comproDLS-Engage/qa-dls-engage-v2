@@ -118,7 +118,7 @@ module.exports = {
                 if (res == true) {
                     res = action.click(this.proceedBtn);
                     if (res == true) {
-                        if (index == 9)
+                        if (index == 12)
                             res = require('./linkFromLibrary.page.js').isInitialized();
                         else
                             res = require('./addActivity.page.js').isInitialized();

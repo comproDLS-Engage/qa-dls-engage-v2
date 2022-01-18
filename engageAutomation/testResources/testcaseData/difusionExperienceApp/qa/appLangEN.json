@@ -301,19 +301,74 @@
                 "unitOpenFlipbook_option": "Open in Flipbook",
                 "unitViewActivity_option": "View Activities"
             },
+            "activityPlayer": {
+                "teacher": {
+                    "infoBtn": "",
+                    "showDetailsBtn": [
+                        "Show Details",
+                        "Hide Details"
+                    ],
+                    "prevPageBtn": "",
+                    "nextPageBtn": "",
+                    "prevActivityBtn": [
+                        "Previous Activity",
+                        "Previous"
+                    ],
+                    "nextActivityBtn": [
+                        "Next Activity",
+                        "Next"
+                    ],
+                    "showAnswerBtn": "Show Answer",
+                    "showResponseBtn": "User Response",
+                    "checkAnswerBtn": "Check Answers",
+                    "submitActivityBtn": null,
+                    "markCompleteBtn": null,
+                    "retakeActivityBtn": null,
+                    "closeBtn": "Close",
+                    "completedTxt": null,
+                    "yourScoreLabel": null,
+                    "closeInfoBtn": "",
+                    "infoTocHeading": "Activities"
+                },
+                "student": {
+                    "infoBtn": "",
+                    "showDetailsBtn": [
+                        "Show Details",
+                        "Hide Details"
+                    ],
+                    "prevPageBtn": "",
+                    "nextPageBtn": "",
+                    "prevActivityBtn": [
+                        "Previous Activity",
+                        "Previous"
+                    ],
+                    "nextActivityBtn": [
+                        "Next Activity",
+                        "Next"
+                    ],
+                    "showAnswerBtn": "Show Answer",
+                    "showResponseBtn": "User Response",
+                    "checkAnswerBtn": "Check Answers",
+                    "submitActivityBtn": [
+                        "Submit Answers",
+                        "Finish"
+                    ],
+                    "markCompleteBtn": "Mark Complete",
+                    "retakeActivityBtn": "Retake Activity",
+                    "closeBtn": "Close",
+                    "completedTxt": "Completed on",
+                    "yourScoreLabel": "Your Score:",
+                    "closeInfoBtn": "",
+                    "infoTocHeading": "Activities"
+                }
+            },
             "activityPlayerPage": {
                 "correct_txt": "Well done",
-                "incorrect_txt": "Oops! Not quite correct.",
-                "finish": "Finish",
-                "submit": "Submit Answers",
-                "reset": "Reset Activity",
-                "retake": "Retake Activity",
-                "checkAnswer_txt": "Check Answers"
+                "incorrect_txt": "Oops! Not quite correct."
             },
-            "onboarding": {
+           "onboarding": {
                 "welcomePage": {
-                    "pageHeading": "Welcome, Onboarding User",
-                    "userName": "Onboarding User",
+                    "pageHeading": "Welcome, ",
                     "message": "Let's get started. Select the role that best describes you.",
                     "continueBtn": "Continue",
                     "signOut": "Logout"
@@ -327,7 +382,7 @@
                     "pageHeading": "Enter your class code",
                     "subHeading": "Use the class code provided by your teacher or skip for now.",
                     "textboxMessage": "Enter Class Code",
-                    "helper_txt": "Your teacher provided class code should look like: iqig-Gq32. Be sure to check your email to see if your teacher sent you an invite.",
+                    "helper_txt": "Your class code should look like: iqig-Gq32. Be sure to check your email to see if your teacher sent you an invite.",
                     "submitBtn": "Continue",
                     "skipForNow": "Skip for now",
                     "invalidKeyMessage": "Invalid course key",
@@ -337,13 +392,25 @@
                 },
                 "schoolKeyPage": {
                     "pageHeading": "Join Your School",
-                    "message": "Use the school key provided by your school or skip for now.",
-                    "textboxMessage": "Enter School Key",
+                    "subHeading": "Use the school key provided by your school or skip for now.",
+                    "message": "Enter School Key",
                     "helper_txt": "Your school key should look like: ABC-DEF-GHI. Please contact your school admin if you don’t have school key.",
                     "submitBtn": "Continue",
                     "skipForNow": "Skip for now",
                     "invalidKeyMessage": "Invalid school key",
                     "back_btn": "Back (select a different role)"
+                },
+                "studentSuccessPage":{
+                    "pageHeading": "You're All Set!",
+                    "pageSubHeading1": "You are registered as a student. Click continue to explore materials or join a class.",
+                    "startLearning": "Continue",
+                    "signOut": "Logout"
+                },
+                "teacherSuccessPage":{
+                    "pageHeading": "You're All Set!",
+                    "pageSubHeading1": "You are registered as a teacher. Click continue to explore materials and create classes.",
+                    "proceedBtn": "Continue",
+                    "signOut": "Logout"
                 }
             },
             "addBookPage": {
@@ -573,19 +640,15 @@
                 }
             },
             "flipbook": {
-                "doublelayoutWidth": "width: 50%;",
-                "singlelayoutWidth": "width: 100%;",
-                "singlelayoutDefaultWidth": 1411,
-                "singlelayoutDefaultHeight": 1733,
                 "doubleLayoutTOC": "p. 2 - 3",
                 "singleLayoutTOC": "p. 2",
                 "myNotesTitle": "My Notes",
-                "noNoteText": "Looks like you haven't added any notes yet. Click \"Add Note\" button to add notes on the page.",
+                "noNoteText": "Looks like you haven't added any notes yet on this page. Click \"Add Note\" button to add notes on the page.",
                 "addNoteBtn": "Add Note",
                 "addNoteTitle": "Add Note",
                 "editNoteTitle": "Edit Note",
                 "pageNoLabel": "On Page:",
-                "pageNoValue": "p. 2",
+                "pageNoValue": "p",
                 "notesListPagenumber": "Page 2",
                 "allPagesLabel": "All Pages",
                 "noteListItemLabel": "p. 2",
@@ -595,10 +658,6 @@
                 "deleteNoteModalDeleteBtn": "Delete",
                 "cancelBtn": "Cancel",
                 "saveBtn": "Save",
-                "setNote": "test note automation 1",
-                "setEditedNote": "test edited note automation",
-                "setBookmark": "test bookmark automation",
-                "setEditedBookmark": "test edited bookmark automation",
                 "noBookmarkText": "Looks like you haven't added any bookmarks yet. Bookmark a page to save your spot for later.",
                 "bookmarkThisPageBtn": "Bookmark This Page",
                 "bookmarksTitle": "Bookmarks",

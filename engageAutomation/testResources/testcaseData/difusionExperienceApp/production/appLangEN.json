@@ -7,7 +7,7 @@
                 "subheadingText": "Learn from anywhere, anytime. Instant access to all courses and activities.",
                 "signup_btnText": "Sign Up & Start Learning Today",
                 "login_btnText": "Log in",
-                "login_lblText": "Have an Account?",
+                "login_lblText": "Have an account?",
                 "footerLabel": "powered by"
             },
             "login": {
@@ -24,7 +24,7 @@
                 "dontHaveAccount_txt": "Don't have an account?",
                 "loginoption_txt": "Or continue with:",
                 "footerLabel": "powered by",
-                "invalidEmail_txt": "Please check your email address and try again.",
+                "invalidEmail_txt": "Please enter a valid email address (for example, name@example.com)",
                 "notRegisterUser_alert": "Please check your email address and password and try again."
             },
             "appShell": {
@@ -239,10 +239,10 @@
                 "joinClassSubHeader": "If your teacher has enrolled you in a class, enter the class code.",
                 "enterClassCodeLabel": "Enter Class Code",
                 "classCodeInput": "Enter Class Code",
-                "classHelpText": "Your teacher provided class code should look like: iqig-Gq32. Be sure to check your email to see if your teacher sent you an invite.",
+                "classHelpText": "Your class code should look like: iqig-Gq32. Be sure to check your email to see if your teacher sent you an invite.",
                 "joinclassPopUpbtn": "Join Class",
                 "helpJoiningClass": "Help Joining Classes",
-                "titleErrorMsg": "Invalid class code. Please check the class code and try again. If the problem persists, please contact your Teacher.",
+                "titleErrorMsg": "You are already enrolled in this class. Please enter a different class code.",
                 "alreadyExistErrorMessage": "You are already enrolled in this class. Please enter a different class code."
             },
             "classDrawerPane": {
@@ -301,19 +301,74 @@
                 "unitOpenFlipbook_option": "Open in Flipbook",
                 "unitViewActivity_option": "View Activities"
             },
+            "activityPlayer": {
+                "teacher": {
+                    "infoBtn": "",
+                    "showDetailsBtn": [
+                        "Show Details",
+                        "Hide Details"
+                    ],
+                    "prevPageBtn": "",
+                    "nextPageBtn": "",
+                    "prevActivityBtn": [
+                        "Previous Activity",
+                        "Previous"
+                    ],
+                    "nextActivityBtn": [
+                        "Next Activity",
+                        "Next"
+                    ],
+                    "showAnswerBtn": "Show Answer",
+                    "showResponseBtn": "User Response",
+                    "checkAnswerBtn": "Check Answers",
+                    "submitActivityBtn": null,
+                    "markCompleteBtn": null,
+                    "retakeActivityBtn": null,
+                    "closeBtn": "Close",
+                    "completedTxt": null,
+                    "yourScoreLabel": null,
+                    "closeInfoBtn": "",
+                    "infoTocHeading": "Activities"
+                },
+                "student": {
+                    "infoBtn": "",
+                    "showDetailsBtn": [
+                        "Show Details",
+                        "Hide Details"
+                    ],
+                    "prevPageBtn": "",
+                    "nextPageBtn": "",
+                    "prevActivityBtn": [
+                        "Previous Activity",
+                        "Previous"
+                    ],
+                    "nextActivityBtn": [
+                        "Next Activity",
+                        "Next"
+                    ],
+                    "showAnswerBtn": "Show Answer",
+                    "showResponseBtn": "User Response",
+                    "checkAnswerBtn": "Check Answers",
+                    "submitActivityBtn": [
+                        "Submit Answers",
+                        "Finish"
+                    ],
+                    "markCompleteBtn": "Mark Complete",
+                    "retakeActivityBtn": "Retake Activity",
+                    "closeBtn": "Close",
+                    "completedTxt": "Completed on",
+                    "yourScoreLabel": "Your Score:",
+                    "closeInfoBtn": "",
+                    "infoTocHeading": "Activities"
+                }
+            },
             "activityPlayerPage": {
                 "correct_txt": "Well done",
-                "incorrect_txt": "Oops! Not quite correct.",
-                "finish": "Finish",
-                "submit": "Submit Answers",
-                "reset": "Reset Activity",
-                "retake": "Retake Activity",
-                "checkAnswer_txt": "Check Answers"
+                "incorrect_txt": "Oops! Not quite correct."
             },
-            "onboarding": {
+           "onboarding": {
                 "welcomePage": {
-                    "pageHeading": "Welcome, Onboarding User",
-                    "userName": "Onboarding User",
+                    "pageHeading": "Welcome, ",
                     "message": "Let's get started. Select the role that best describes you.",
                     "continueBtn": "Continue",
                     "signOut": "Logout"
@@ -337,13 +392,25 @@
                 },
                 "schoolKeyPage": {
                     "pageHeading": "Join Your School",
-                    "message": "Use the school key provided by your school or skip for now.",
-                    "textboxMessage": "Enter School Key",
+                    "subHeading": "Use the school key provided by your school or skip for now.",
+                    "message": "Enter School Key",
                     "helper_txt": "Your school key should look like: ABC-DEF-GHI. Please contact your school admin if you don’t have school key.",
                     "submitBtn": "Continue",
                     "skipForNow": "Skip for now",
                     "invalidKeyMessage": "Invalid school key",
                     "back_btn": "Back (select a different role)"
+                },
+                "studentSuccessPage":{
+                    "pageHeading": "You're All Set!",
+                    "pageSubHeading1": "You are registered as a student. Click continue to explore materials or join a class.",
+                    "startLearning": "Continue",
+                    "signOut": "Logout"
+                },
+                "teacherSuccessPage":{
+                    "pageHeading": "You're All Set!",
+                    "pageSubHeading1": "You are registered as a teacher. Click continue to explore materials and create classes.",
+                    "proceedBtn": "Continue",
+                    "signOut": "Logout"
                 }
             },
             "addBookPage": {
@@ -402,7 +469,8 @@
                 "tabList": [
                     "Profile",
                     "Password",
-                    "Accessibility"
+                    "Accessibility",
+                    "Billing"
                 ],
                 "Profile": {
                     "pageHeading": "Edit Profile",
@@ -429,6 +497,29 @@
                     "samplePara_text": "Check it out! Here's an example body paragraph. Toggle the font size to make this text larger or smaller. Saving these changes will update the text across the entire app.",
                     "reset_button": "Reset Default Settings",
                     "accessbility_button": "Apply Settings"
+                },
+                "Billing":{
+                    "pageHeading": "Subscription",
+                    "subscriptionSubtitle_text":"Billing and license information for your current plan.",
+                    "premiumPlan_text":"Premium Plan",
+                    "active_text":"Active",
+                    "premiumPrice_text":"$24.99/year",
+                    "autoRenewal_text":"Auto Renewal On",
+                    "licensePeriod_text":"License Period:",
+                    "licensePeriod_date":"Dec 30, 2021 - Dec 29, 2022",
+                    "managePlan_btn":"Manage Plan",
+                    "changeCard_btn":"Change Card",
+                    "updateBillingAddress_btn":"Update",
+                    "free_text":"Free",
+                    "getPremiumAccess_text":"Get Premium Access",
+                    "getPremiumAccessSubtitle_text":"You will get access on all our books and resources.",
+                    "price_text":"Subscription for $24.99/year",
+                    "upgradePlan_btn":"Upgrade Plan",
+                    "paymentMethod_text":"Payment Method",
+                    "noPaymentMethod_text":"No payment method added yet",
+                    "noPaymentMethodSubtitle_text":"When you add a payment method while making a purchase, it will appear here.",
+                    "billingMethod_text":"Billing Information",
+                    "noBillingInfo_text":"No billing information added yet"                    
                 },
                 "ErrorMessages": {
                     "currentPasswordError_text": "Please enter current password",
@@ -579,6 +670,115 @@
                 "bookmarkThisPageBtn": "Bookmark This Page",
                 "bookmarksTitle": "Bookmarks",
                 "bookmarkNameLabel": "Bookmark Name"
+            },
+            "browse": {
+                "pageTitle": "Browse",
+                "pageSubTitle": "Find all our digital books and their associated resources.",
+                "filtersBtn": "Filters:\nShow All",
+                "searchBox": "",
+                "tabList": [
+                    "Books",
+                    "Interactive Activities",
+                    "Videos",
+                    "Online Class",
+                    "Teacher Training",
+                    "Today in Class",
+                    "Projectables"
+                ],
+                "pageNumToJump": "2",
+                "moreOptions": {
+                    "viewOption": "View",
+                    "addToPlaylistOption": "Add to Playlist",
+                    "createPlaylist_label": "Create Playlist",
+                    "shareOption": "Share"
+                },
+                "noResultListItemTitle": "No Results",
+                "noResultListItemSubtitle": "There aren't any resources available that match those terms.",
+                "noResultFound": {
+                    "title": "No result found",
+                    "subTitle": "We didn't find anything matching your search or filters. Try your search again, or change your filters to update the results here."
+                },
+                "results_label": "results:",
+                "result_label": "result:",
+                "filter": {
+                    "filterMenuTitle": "Filters",
+                    "filterMenuFilterCount": "0 filters added",
+                    "filterMenuClearAllBtn": "Clear All",
+                    "filterMenuApplyBtn": "Apply Filters"
+                }
+            },
+            "playlist": {
+                "teacher": {
+                    "playlistPageSubtitle": "Playlist",
+                    "playlistResourceCount": " Resource",
+                    "playlistCreatedOn": "Created",
+                    "playlistOptionsBtn": "",
+                    "playlistShareBtn": "Share",
+                    "browseAllResourcesBtn": "Browse All Resources",
+                    "noPlaylistImage": true,
+                    "noPlaylistTitle": "Add a few resources to your playlist!",
+                    "noPlaylistSubtitle": "You can add resources to this list to share with your classes, or just to have on hand for you when you need them. Start adding to your list.",
+                    "itemIndex_Header": "#",
+                    "itemName_Header": "Title",
+                    "itemType_Header": "Type",
+                    "itemTag_Header": "Tags",
+                    "playlistFooterTitle": "Add to your playlist",
+                    "playlistFooterSubtitle": "Browse all resources to find more to add to your playlist.",
+                    "playlistBrowseResourcesBtn": "Browse Resources",
+                    "playlistReorderOption": "Reorder",
+                    "playlistEditOption": "Edit",
+                    "playlistDeleteOption": "Delete",
+                    "playlistNameLabel": "Playlist Name",
+                    "editPlaylistCancelBtn": "Cancel",
+                    "editPlaylistSaveBtn": "Save",
+                    "deletePlaylistTitle": "Delete Playlist?",
+                    "deletePlaylistSubtitle": "This will remove the entire list of resources from your dashboard. You will need to create new playlist to add them again.",
+                    "deletePlaylistCancelBtn": "Cancel",
+                    "deletePlaylistDeleteBtn": "Delete",
+                    "removeResourceTitle": "Remove Resource?",
+                    "removeResourceSubtitle1": "This will remove the resource - ",
+                    "removeResourceSubtitle2": " - from this playlist.",
+                    "removeResourceCancelBtn": "Cancel",
+                    "removeResourceRemoveBtn": "Remove",
+                    "viewOptionResourceItem": "View",
+                    "shareOptionResourceItem": "Share",
+                    "removeOptionResourceItem": "Remove from Playlist"
+                },
+                "student": {
+                    "playlistPageSubtitle": "Playlist",
+                    "playlistResourceCount": " Resource",
+                    "playlistCreatedOn": "Created",
+                    "playlistOptionsBtn": "",
+                    "playlistShareBtn": null,
+                    "browseAllResourcesBtn": "Browse All Resources",
+                    "noPlaylistImage": true,
+                    "noPlaylistTitle": "Add a few resources to your playlist!",
+                    "noPlaylistSubtitle": "You can add resources to this list to share with your classes, or just to have on hand for you when you need them. Start adding to your list.",
+                    "itemIndex_Header": "#",
+                    "itemName_Header": "Title",
+                    "itemType_Header": "Type",
+                    "itemTag_Header": "Tags",
+                    "playlistFooterTitle": "Add to your playlist",
+                    "playlistFooterSubtitle": "Browse all resources to find more to add to your playlist.",
+                    "playlistBrowseResourcesBtn": "Browse Resources",
+                    "playlistReorderOption": "Reorder",
+                    "playlistEditOption": "Edit",
+                    "playlistDeleteOption": "Delete",
+                    "playlistNameLabel": "Playlist Name",
+                    "editPlaylistCancelBtn": "Cancel",
+                    "editPlaylistSaveBtn": "Save",
+                    "deletePlaylistTitle": "Delete Playlist?",
+                    "deletePlaylistSubtitle": "This will remove the entire list of resources from your dashboard. You will need to create new playlist to add them again.",
+                    "deletePlaylistCancelBtn": "Cancel",
+                    "deletePlaylistDeleteBtn": "Delete",
+                    "removeResourceTitle": "Remove Resource?",
+                    "removeResourceSubtitle": "This will remove the resource - Practice Exam 1 - from this playlist.",
+                    "removeResourceCancelBtn": "Cancel",
+                    "removeResourceRemoveBtn": "Remove",
+                    "viewOptionResourceItem": "View",
+                    "shareOptionResourceItem": null,
+                    "removeOptionResourceItem": "Remove from Playlist"
+                }
             }
         }
     }

@@ -1,17 +1,14 @@
 "use strict";
 var flipbook = require('../../pages/engageExperienceApp/flipBook.page.js');
-var sts;
+var sts, sts2;
 
 module.exports = {
 
-	//Validate the state of flipbook when cover page is launched
+	//Validate the state of flipbook when FLIPBOOK page is launched
 	ENG_FLIP_TC_1: function () {
 		sts = flipbook.getData_flipbookPage();
-		assertion.assertEqual(sts.pageLayoutSingle, true, "pageLayoutSingle status mismatch");
-		assertion.assertEqual(sts.pageLayoutDouble, false, "pageLayoutDouble status mismatch");
-		assertion.assertEqual(sts.penBtn, "", "penBtn status mismatch");
-		assertion.assertEqual(sts.highlighterBtn, "", "highlighterBtn status mismatch");
-		assertion.assertEqual(sts.eraserBtn, "", "eraserBtn status mismatch");
+		assertion.assertEqual(sts.pageLayoutSingle, false, "pageLayoutSingle status mismatch");
+		assertion.assertEqual(sts.pageLayoutDouble, true, "pageLayoutDouble status mismatch");
 		assertion.assertEqual(sts.undoBtn, null, "undoBtn status mismatch");
 		assertion.assertEqual(sts.redoBtn, null, "redoBtn status mismatch");
 		assertion.assertEqual(sts.notesBtn, "", "notesBtn status mismatch");
@@ -19,7 +16,7 @@ module.exports = {
 		assertion.assertEqual(sts.zoomOutBtn, "", "zoomOutBtn status mismatch");
 		assertion.assertEqual(sts.fitToScreenBtn, "", "fitToScreenBtn status mismatch");
 		assertion.assertEqual(sts.doublePageBtn, null, "doublePageBtn status mismatch");
-		assertion.assertEqual(sts.singlePageBtn, null, "singlePageBtn status mismatch");
+		assertion.assertEqual(sts.singlePageBtn, "", "singlePageBtn status mismatch");
 		assertion.assertEqual(sts.fullScreenBtn, "", "fullScreenBtn status mismatch");
 		assertion.assertEqual(sts.bookmarkBtn, "", "bookmarkBtn status mismatch");
 		assertion.assert((sts.TOCBtn instanceof Error) === false, "TOCBtn status mismatch - " + sts.TOCBtn);
@@ -49,16 +46,17 @@ module.exports = {
 		sts = flipbook.click_addNoteBtn();
 		assertion.assertEqual(sts.addNotesTitle, testdata.addNoteTitle, "Add Notes title status mismatch");
 		assertion.assertEqual(sts.notesPageLabel, testdata.pageNoLabel, "page number text mismatch");
-		assertion.assertEqual(sts.notesPageValueSingle, testdata.pageNoValue, "page Value button text mismatch");
+		assertion.assert(sts.notesPageValueSingle.includes(testdata.pageNoValue), "Page Value button text mismatch");
 		assertion.assertEqual(sts.notesCancelBtn, testdata.cancelBtn, "Cancel Button Text status mismatch");
 		assertion.assertEqual(sts.notesSaveBtn, testdata.saveBtn, "Save Button status mismatch");
 	},
 
-	//Validate on clicking Save button, notes set by the user are saved
+	//Validate setting and saving of notes by user
 	ENG_FLIP_TC_5: function (testdata) {
 		sts = flipbook.set_notesTextArea(testdata);
 		assertion.assertEqual(sts, true, "status mismatch");
 		sts = flipbook.click_notesSaveBtn();
+		assertion.assertEqual(sts, true, "status mismatch");
 	},
 
 	//Click Close button in notes pane
@@ -165,29 +163,27 @@ module.exports = {
 	},
 
 	//Validate that clicking on the Zoom In button increases the width and height of the image
-	//Default launch width = 1411 px, height = 1733 px
-	//after one zoom = 1796, 2205
 	ENG_FLIP_TC_18: function (testdata) {
-		sts = flipbook.click_zoomInBtn();
-		console.log("sts.width =",sts.width)
-		console.log("sts.height =",sts.height)
-		console.log("testdata.singlelayoutDefaultWidth =",testdata.singlelayoutDefaultWidth)
-		console.log("testdata.singlelayoutDefaultHeight = ",testdata.singlelayoutDefaultHeight)
-		assertion.assert((sts.width > testdata.singlelayoutDefaultWidth), "Width comparison failed");
-		assertion.assert((sts.height > testdata.singlelayoutDefaultHeight), "Height comparison failed");
+		sts = flipbook.get_flipbookPanelSize();
+		console.log("default width before click =",sts.width)
+		console.log("default height before click =",sts.height)
+		sts2 = flipbook.click_zoomInBtn();
+		console.log("new width after click =",sts2.width)
+		console.log("new height after click =",sts2.height)
+		assertion.assert((sts2.width > sts.width), "Width comparison failed");
+		assertion.assert((sts2.height > sts.height), "Height comparison failed");
 	},
 
 	//Validate that clicking on the Zoom Out button decreases the width and height of the image
-	//after one zoom out = 1276, 1567
 	ENG_FLIP_TC_19: function (testdata) {
-		sts = flipbook.click_zoomOutBtn();
-		sts = flipbook.click_zoomOutBtn();
-		console.log("sts.width =",sts.width)
-		console.log("sts.height =",sts.height)
-		console.log("testdata.singlelayoutDefaultWidth =",testdata.singlelayoutDefaultWidth)
-		console.log("testdata.singlelayoutDefaultHeight = ",testdata.singlelayoutDefaultHeight)
-		assertion.assert((sts.width < testdata.singlelayoutDefaultWidth), "Width comparison failed");
-		assertion.assert((sts.height < testdata.singlelayoutDefaultHeight), "Height comparison failed");
+		sts = flipbook.get_flipbookPanelSize();
+		console.log("default width before click =",sts.width)
+		console.log("default height before click =",sts.height)
+		sts2 = flipbook.click_zoomOutBtn();
+		console.log("new width after click 1 =",sts2.width)
+		console.log("new height after click 1 =",sts.height)
+		assertion.assert((sts2.width < sts.width), "Width comparison failed");
+		assertion.assert((sts2.width < sts.width), "Height comparison failed");
 	},
 
 	//Validate that clicking on TOC button, launches the TOC layover

@@ -3,11 +3,11 @@
         "book": [
             {
                 "type": "Book",
-                "name": "QA Automation Test Book [DO NOT PUBLISH]",
+                "name": "QA Test Automation Book [DO NOT PUBLISH]",
                 "coverImage": "./testResources/testcaseData/backOffice/qa/book_cover_compro_qa.png",
                 "description": "QA automation test description",
-                "bookDesign" : "Green",
-                "visibility" : "True"
+                "bookDesign": "Green",
+                "visibility": "True"
             }
         ],
         "component": [
@@ -17,9 +17,9 @@
                 "title": "QA Automation Test Learning Path - extra activities [DO NOT PUBLISH]",
                 "folderLevel": "3",
                 "autonumbering": "1-based",
-                "targetRole":"All",
-                "visibility" :"True",
-                "assignable":"True"
+                "targetRole": "All",
+                "visibility": "True",
+                "assignable": "True"
             },
             {
                 "type": "Bank",
@@ -27,34 +27,34 @@
                 "title": "QA Automation Test Bank - resources [DO NOT PUBLISH]",
                 "folderLevel": "2",
                 "autonumbering": "0-based",
-                "targetRole":"All",
-                "visibility" :"True",
-                "assignable":"False"
+                "targetRole": "All",
+                "visibility": "True",
+                "assignable": "False"
             },
             {
                 "type": "Flipbook",
                 "category": "--none--",
                 "title": "QA Automation Test Flipbook - none [DO NOT PUBLISH]",
-                "targetRole":"All",
-                "visibility" :"True"
+                "targetRole": "All",
+                "visibility": "True"
             }
         ],
         "folder": [
             {
                 "name": "QA Automation Test folder L1",
                 "coverImage": "./testResources/testcaseData/backOffice/qa/book_cover_compro_qa.png",
-                "targetRole":"All",
-                "assignable" :"True",
-                "color" : "#d20f0f",
-                "page" : "10"
+                "targetRole": "All",
+                "assignable": "True",
+                "color": "#d20f0f",
+                "page": "10"
             },
             {
                 "name": "QA Automation Test folder L2",
                 "coverImage": "./testResources/testcaseData/backOffice/qa/book_cover_compro_qa.png",
-                "targetRole":"All",
-                "assignable" :"True",
-                "color" : "#158e19",
-                "page" : "12"
+                "targetRole": "All",
+                "assignable": "True",
+                "color": "#158e19",
+                "page": "12"
             }
         ],
         "activity": [
@@ -62,14 +62,14 @@
                 "type": "Native Engage Learning Object",
                 "typeIndex": 0,
                 "name": "QA Automation Test LO1 - native",
-                "targetRole":"All",
-                "assignable" :"True",
-                "page" : "13"
+                "targetRole": "All",
+                "assignable": "True",
+                "page": "13"
             },
             {
-                "type": "Close Ended Learning Object",
+                "type": "Native Engage Learning Object",
                 "typeIndex": 0,
-                "name": "QA Automation Test LO2 - close ended"
+                "name": "QA Automation Test LO1 - Writing"
             },
             {
                 "type": "Close Ended Learning Object",

@@ -118,8 +118,8 @@ module.exports = {
         for (i = 0; i < list.length; i++) {
             if (str.includes(action.getText(list[i]))) {
                 res = action.click(list[i]);
+                break;
             }
-            break;
         }
         logger.logInto(stackTrace.get(), res);
         return res;
