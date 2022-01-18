@@ -1,0 +1,12 @@
+Label,cssSelector,tagName,group,relation,extraInfo,returnValue,teacherAppLangEN,studentAppLangEN
+pageTitle,[data-tid=resourcePlayer-title],h2,,,isInitilized,,,
+pageSubTitle,[data-tid=resourcePlayer-subtitle],h5,,,,,"""Download Resource""","""Download Resource"""
+labelHeading,[data-tid=text-label-heading],p,,,,,"""Download file to view this resource on your computer.""","""Download file to view this resource on your computer."""
+downloadBtn,[data-tid=button-primary],button,,,,isInitilized,,
+downloadInfo,"//*[contains(text(),'Download Information')]",p,,,,,"""Download Information""","""Download Information"""
+fileLabel,[data-tid=label-name-0],p,,,,,"""File""","""File"""
+fileValue,[data-tid=text-value-0],p,,,,,,
+typeLabel,[data-tid=label-name-1],p,,,,,"""Type""","""Type"""
+typeValue,[data-tid=text-value-1],p,,,,,,
+sizeLabel,[data-tid=label-name-2],p,,,,,"""Size""","""Size"""
+sizeValue,[data-tid=text-value-2],p,,,,,,
