@@ -216,12 +216,8 @@
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath": "engage.appContent.flipbook.setNote"
-               },
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath": "engage.appContent.flipbook.setNote2"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/flipbookData.json",
+                  "jsonPath": "engage.flipbook.fb1.setNote"
                }
             ]
          },
@@ -259,8 +255,8 @@
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath": "engage.appContent.flipbook.setBookmark"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/flipbookData.json",
+                  "jsonPath": "engage.flipbook.fb1.setBookmark"
                }
             ]
          },

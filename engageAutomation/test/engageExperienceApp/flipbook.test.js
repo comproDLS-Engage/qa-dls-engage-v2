@@ -98,7 +98,7 @@ module.exports = {
 		assertion.assertEqual(sts, true, "status mismatch");
 	},
 
-	//SUite 2 test cases
+	//Suite 2 test cases
 	//Validate clicking on the Notes button with already created notes, launches the notes list
 	ENG_FLIP_TC_11: function (testdata) {
 		sts = flipbook.click_notesBtn();
@@ -111,12 +111,12 @@ module.exports = {
 
 	//Validate clicking on the Edit button, launches the edit notes textarea
 	ENG_FLIP_TC_12: function (testdata) {
-		sts = flipbook.click_noteListEditBtn(testdata.setNote);
-		assertion.assertEqual(sts.addNotesTitle, testdata.editNoteTitle, "Edit Notes title status mismatch");
-		assertion.assertEqual(sts.notesPageLabel, testdata.pageNoLabel, "page number status mismatch");
-		assertion.assertEqual(sts.notesPageValueSingle, testdata.pageNoValue, "pageNoValue button text mismatch");
-		assertion.assertEqual(sts.notesCancelBtn, testdata.cancelBtn, "Cancel Button Text status mismatch");
-		assertion.assertEqual(sts.notesSaveBtn, testdata.saveBtn, "Save Button status mismatch");
+		sts = flipbook.click_noteListEditBtn(testdata[0]);
+		assertion.assertEqual(sts.addNotesTitle, testdata[1].editNoteTitle, "Edit Notes title status mismatch");
+		assertion.assertEqual(sts.notesPageLabel, testdata[1].pageNoLabel, "page number status mismatch");
+		assertion.assert(sts.notesPageValueSingle.includes(testdata[1].pageNoValue), "Page Value button text mismatch");
+		assertion.assertEqual(sts.notesCancelBtn, testdata[1].cancelBtn, "Cancel Button Text status mismatch");
+		assertion.assertEqual(sts.notesSaveBtn, testdata[1].saveBtn, "Save Button status mismatch");
 	},
 
 	//Validate clicking on the Delete button on Notes, launches the delete notes modal

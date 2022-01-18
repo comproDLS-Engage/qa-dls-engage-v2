@@ -174,6 +174,7 @@ module.exports = {
     } else {
       logger.logInto(stackTrace.get(), res, 'error');
     }
+    console.log("set note",res)
     return res;
   },
 
@@ -212,7 +213,8 @@ module.exports = {
     logger.logInto(stackTrace.get());
     var i, list, res;
     list = action.findElements(this.noteListEditBtn);
-    for (i = 0; i < list.length; i++) {
+    //temp****************** i=0
+    for (i = 2; i < list.length; i++) {
       if ((action.getText(this.noteListItemText + i + "']")) == noteListItemTextName) {
         res = action.click(list[i]);
         break;
@@ -261,7 +263,8 @@ module.exports = {
     logger.logInto(stackTrace.get());
     var i, list, res;
     list = action.findElements(this.noteListDeleteBtn);
-    for (i = 0; i < list.length; i++) {
+    //temp****************** i=0
+    for (i = 2; i < list.length; i++) {
       if ((action.getText(this.noteListItemText + i + "']")) == noteListItemTextName) {
         res = action.click(list[i]);
         break;
@@ -479,7 +482,7 @@ module.exports = {
     logger.logInto(stackTrace.get());
     var i, list, res;
     list = action.findElements(this.bookmarkListEditBtn);
-    for (i = 0; i < list.length; i++) {
+    for (i = 2; i < list.length; i++) {
       if ((action.getText(this.bookmarkListItemName + i + "']")) == bookmarkListItemNameName) {
         res = action.click(list[i]);
         break;
@@ -528,7 +531,7 @@ module.exports = {
     logger.logInto(stackTrace.get());
     var i, list, res;
     list = action.findElements(this.bookmarkListDeleteBtn);
-    for (i = 0; i < list.length; i++) {
+    for (i = 1; i < list.length; i++) {
       if ((action.getText(this.bookmarkListItemName + i + "']")) == bookmarkListItemNameName) {
         res = action.click(list[i]);
         break;
