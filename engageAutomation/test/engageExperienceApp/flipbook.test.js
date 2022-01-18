@@ -205,7 +205,17 @@ module.exports = {
 	//Validate clicking on Jump to page button lauches the entered page in flipbook
 	ENG_FLIP_TC_22: function () {
 		sts = flipbook.click_jumpToPageBtn();
-		//assertion.assertEqual(sts, true, "Input clicked mismatch");
+		assertion.assertEqual(sts.notesBtn, "", "notesBtn status mismatch");
+		assertion.assertEqual(sts.zoomInBtn, "", "zoomInBtn status mismatch");
+		assertion.assertEqual(sts.zoomOutBtn, "", "zoomOutBtn status mismatch");
+		assertion.assertEqual(sts.fitToScreenBtn, "", "fitToScreenBtn status mismatch");
+		assertion.assertEqual(sts.doublePageBtn, null, "doublePageBtn status mismatch");
+		assertion.assertEqual(sts.singlePageBtn, "", "singlePageBtn status mismatch");
+		assertion.assertEqual(sts.fullScreenBtn, "", "fullScreenBtn status mismatch");
+		assertion.assertEqual(sts.bookmarkBtn, "", "bookmarkBtn status mismatch");
+		assertion.assert((sts.TOCBtn instanceof Error) === false, "TOCBtn status mismatch - " + sts.TOCBtn);
+		assertion.assertEqual(sts.previousBtn, "", "previousBtn status mismatch");
+		assertion.assertEqual(sts.nextBtn, "", "nextBtn status mismatch");
 	},
 	
 }

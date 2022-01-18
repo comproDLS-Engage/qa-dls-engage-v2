@@ -295,7 +295,7 @@
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
-                  "jsonPath": "engage.login.user.classInstructorUser4"
+                  "jsonPath": "engage.login.user.classInstructorUser3"
                }
             ]
          },
@@ -349,8 +349,8 @@
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath": "engage.appContent.flipbook"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/flipbookData.json",
+                  "jsonPath": "engage.flipbook.fb1"
                }
             ]
          },
@@ -372,6 +372,10 @@
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/flipbookData.json",
+                  "jsonPath": "engage.flipbook.fb1.setNote"
+               },
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
                   "jsonPath": "engage.appContent.flipbook"
                }
             ]
@@ -433,7 +437,7 @@
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/flipbookData.json",
-                  "jsonPath": "engage.appContent.flipbook"
+                  "jsonPath": "engage.flipbook.fb1"
                }
             ]
          },
@@ -488,7 +492,7 @@
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
-                  "jsonPath": "engage.login.user.classInstructorUser4"
+                  "jsonPath": "engage.login.user.classInstructorUser3"
                }
             ]
          },
@@ -542,8 +546,8 @@
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath": "engage.appContent.flipbook"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/flipbookData.json",
+                  "jsonPath": "engage.flipbook.fb1"
                }
             ]
          },
