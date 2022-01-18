@@ -80,7 +80,7 @@ module.exports = {
 		sts = flipbook.click_addBookmarkBtn();
 		assertion.assertEqual(sts.bookmarkNameLabel, testdata.bookmarkNameLabel, "Bookmarks Name status mismatch");
 		assertion.assertEqual(sts.bookmarkPageLabel, testdata.pageNoLabel, "Bookmarks Name status mismatch");
-		assertion.assertEqual(sts.bookmarkPageValueSingle, testdata.pageNoValue, "pageNoValue button text mismatch");
+		assertion.assert(sts.bookmarkPageValueSingle.includes(testdata.pageNoValue), "Page Value button text mismatch");
 		assertion.assertEqual(sts.bookmarkCancelBtn, testdata.cancelBtn, "Cancel Button Text status mismatch");
 		assertion.assertEqual(sts.bookmarkSaveBtn, testdata.saveBtn, "Save Button status mismatch");
 	},
