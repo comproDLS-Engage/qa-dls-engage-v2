@@ -783,7 +783,7 @@ function dataPatternGenerateWithCondition(groupSelectorData, groupName, key) {
     }
 
     file.write(" if (" + selectedText + "Name) {" +
-        "for (var i=0;i<=" + selectedText + ".length;i++){\n" +
+        "for (var i=0;i<" + selectedText + ".length;i++){\n" +
         "if (action.getText(" + selectedText + "[i]) == " + selectedText + "Name) {\n")
 
     file.write("obj[0] = {\n")
@@ -810,7 +810,7 @@ function dataPatternGenerateWithCondition(groupSelectorData, groupName, key) {
     //}
 
 
-    file.write("for (var i=0;i<=" + selectedText + ".length;i++){\n obj[i] = {\n")
+    file.write("for (var i=0;i<" + selectedText + ".length;i++){\n obj[i] = {\n")
     for (var i = 0; i < groupSelectorData.length; i++) {
 
         if ((groupSelectorData[i].extraInfo).toLowerCase().includes("pattern")) {
