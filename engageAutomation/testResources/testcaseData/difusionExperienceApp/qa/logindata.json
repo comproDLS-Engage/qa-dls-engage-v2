@@ -243,6 +243,15 @@
                     "name": "4 Teacher dev1",
                     "class": [],
                     "info": {}
+                },
+                "flipbookUser": {
+                    "email": "flipbook_automation@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "instructor",
+                    "name": "flipbook automation",
+                    "class": [
+                    ],
+                    "info": {}
                 }
             }
         },

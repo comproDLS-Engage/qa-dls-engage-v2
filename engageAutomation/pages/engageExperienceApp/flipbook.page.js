@@ -174,7 +174,6 @@ module.exports = {
     } else {
       logger.logInto(stackTrace.get(), res, 'error');
     }
-    console.log("set note",res)
     return res;
   },
 
@@ -205,6 +204,7 @@ module.exports = {
         noteListEditBtn: (action.getElementCount(this.noteListEditBtn + i + "']") > 0) ? action.getText(this.noteListEditBtn + i + "']") : null,
       }
     }
+    console.log("note list - ",obj)
     return obj;
   },
 
@@ -213,8 +213,7 @@ module.exports = {
     logger.logInto(stackTrace.get());
     var i, list, res;
     list = action.findElements(this.noteListEditBtn);
-    //temp****************** i=0
-    for (i = 2; i < list.length; i++) {
+    for (i = 0; i < list.length; i++) {
       if ((action.getText(this.noteListItemText + i + "']")) == noteListItemTextName) {
         res = action.click(list[i]);
         break;
@@ -264,7 +263,7 @@ module.exports = {
     var i, list, res;
     list = action.findElements(this.noteListDeleteBtn);
     //temp****************** i=0
-    for (i = 2; i < list.length; i++) {
+    for (i = 0; i < list.length; i++) {
       if ((action.getText(this.noteListItemText + i + "']")) == noteListItemTextName) {
         res = action.click(list[i]);
         break;
@@ -474,6 +473,7 @@ module.exports = {
         bookmarkListEditBtn: (action.getElementCount(this.bookmarkListEditBtn + i + "']") > 0) ? action.getText(this.bookmarkListEditBtn + i + "']") : null,
       }
     }
+    console.log("bookmark list",obj)
     return obj;
   },
 
@@ -482,7 +482,7 @@ module.exports = {
     logger.logInto(stackTrace.get());
     var i, list, res;
     list = action.findElements(this.bookmarkListEditBtn);
-    for (i = 1; i < list.length; i++) {
+    for (i = 0; i < list.length; i++) {
       if ((action.getText(this.bookmarkListItemName + i + "']")) == bookmarkListItemNameName) {
         res = action.click(list[i]);
         break;
@@ -623,7 +623,6 @@ module.exports = {
     else {
       logger.logInto(stackTrace.get(), res + " TOCBtn button is clicked", 'error');
     }
-    console.log("response - ",res)
     return res;
   },
 
