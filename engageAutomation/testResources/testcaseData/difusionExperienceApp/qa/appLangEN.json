@@ -685,7 +685,11 @@
                     "downloadInfo": "Download Information",
                     "fileLabel": "File",
                     "typeLabel": "Type",
-                    "sizeLabel": "Size"
+                    "sizeLabel": "Size",
+                    "downloadBtnWord":"Download Word",
+                    "downloadBtnZIP":"Download ZIP",
+                    "downloadBtnPDF":"Download PDF",
+                    "downloadBtnSheet":"Download Excel"
 
                 },
                 "student":
@@ -695,7 +699,12 @@
                     "downloadInfo": "Download Information",
                     "fileLabel": "File",
                     "typeLabel": "Type",
-                    "sizeLabel": "Size"
+                    "sizeLabel": "Size",
+                    "downloadBtnWord":"Download Word",
+                    "downloadBtnZIP":"Download ZIP",
+                    "downloadBtnPDF":"Download PDF",
+                     "downloadBtnSheet":"Download Excel"
+
 
                 }
             }

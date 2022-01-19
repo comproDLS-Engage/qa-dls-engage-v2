@@ -112,7 +112,10 @@
             },
             {
                 "index": 3,
-                "name": "Book Resources",
+                "name": {
+                    "EN": "Book Resources",
+                    "ES": "Book Resources"
+                },
                 "nameES": "Book Resources",
                 "unit": [
                     {
@@ -127,6 +130,34 @@
                                 "name": "",
                                 "activity": [
                                     "Practice Exam 1"
+                                ]
+                            },
+                            {
+                                "index": 1,
+                                "name": "",
+                                "activity": [
+                                    "Download word"
+                                ]
+                            }, 
+                            {
+                                "index": 2,
+                                "name": "",
+                                "activity": [
+                                    "Download zip"
+                                ]
+                            },
+                            {
+                                "index": 3,
+                                "name": "",
+                                "activity": [
+                                    "Download pdf"
+                                ]
+                            },
+                            {
+                                "index": 4,
+                                "name": "",
+                                "activity": [
+                                    "Download excel"
                                 ]
                             }
                         ]

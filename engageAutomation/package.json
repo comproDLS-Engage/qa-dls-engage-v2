@@ -17,7 +17,8 @@
     "addBookFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='addBookTest.json' --browserCapability=desktop-chrome-1366",
     "settingsFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='settingsTest.json' --browserCapability=desktop-chrome-1366",
     "settingsFeatureTestBill": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='settingsTestACC.json' --browserCapability=desktop-chrome-1366",
-    "browseFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='browseTest.json' --browserCapability=desktop-chrome-1366"
+    "browseFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='browseTest.json' --browserCapability=desktop-chrome-1366",
+    "downloadPlayerTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='downloadPlayerTest.json' --browserCapability=desktop-chrome-1366"
   },
   "keywords": [],
   "author": "",
@@ -37,7 +38,7 @@
     "browserstack-local": "^1.4.8",
     "chai": "4.2.0",
     "chrome": "^0.1.0",
-    "chromedriver": "^96.0.0",
+    "chromedriver": "^97.0.0",
     "combine-image": "1.0.3",
     "csvtojson": "2.0.10",
     "glob": "^7.1.6",

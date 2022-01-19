@@ -30,6 +30,7 @@ module.exports = {
 
     downloadPlayer_Data: function() {
         logger.logInto(stackTrace.get());
+        action.waitForDisplayed(this.pageTitle);
         var obj;
         obj = {
             pageTitle: (action.getElementCount(this.pageTitle) > 0) ? action.getText(this.pageTitle) : null,
@@ -54,7 +55,7 @@ module.exports = {
         res = action.click(this.downloadBtn);
         if (true == res) {
             logger.logInto(stackTrace.get(), " downloadBtn is clicked");
-            res = this.getData_isInitilized();
+            res = this.isInitialized();
         } else {
             logger.logInto(stackTrace.get(), res + "downloadBtn is NOT clicked", 'error');
         }

@@ -506,7 +506,7 @@
                 "removeBook_subtitle": "[data-tid=text-subTitle-removeBook]",
                 "removeBookDialogCancel": "[data-tid=button-secondary-removeBook]",
                 "removeBookDialogRemove": "[data-tid=button-primary-removeBook]",
-                "unit": "[data-tid*=button-chapter-",
+                "unit": "[data-tid*=button-chapter] , [data-tid*=text-folderName-]",
                 "unitTitle": "[data-tid*=text-chapterTitle-",
                 "unitNumber": "[data-tid*=text-chapterNumber-",
                 "unitPage": "[data-tid*=text-chapterPage-",
@@ -843,7 +843,7 @@
             "downloadPlayer":
             {
                 "pageTitle": "[data-tid=resourcePlayer-title]",
-                "pageSubTitle": "[data-tid=resourcePlayer-subtitle]",
+                "pageSubTitle": "h6[data-tid=resourcePlayer-subtitle]",
                 "labelHeading": "[data-tid=text-label-heading]",
                 "downloadBtn": "[data-tid=button-primary]",
                 "downloadInfo": "//*[contains(text(),'Download Information')]",
