@@ -473,7 +473,7 @@ module.exports = {
         bookmarkListEditBtn: (action.getElementCount(this.bookmarkListEditBtn + i + "']") > 0) ? action.getText(this.bookmarkListEditBtn + i + "']") : null,
       }
     }
-    console.log("bookmark list",obj)
+    console.log("bookmark list -- ",obj)
     return obj;
   },
 
@@ -539,7 +539,7 @@ module.exports = {
     }
     if (res == true) {
       logger.logInto(stackTrace.get(), " --bookmarkListDeleteBtn clicked");
-      //res = this.getData_bookmarkList();
+      res = this.getData_bookmarkList();
     }
     else
       logger.logInto(stackTrace.get(), res + " --bookmarkListDeleteBtn NOT clicked", "error")

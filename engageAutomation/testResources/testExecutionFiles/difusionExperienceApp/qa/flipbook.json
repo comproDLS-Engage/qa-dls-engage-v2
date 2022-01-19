@@ -196,7 +196,7 @@
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/flipbookData.json",
-                  "jsonPath": "engage.flipbook.fb1."
+                  "jsonPath": "engage.flipbook.fb1"
                },
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",

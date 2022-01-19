@@ -4,6 +4,7 @@ var sts, sts2;
 
 module.exports = {
 
+	//11, 14, 15,17
 	//Validate the state of flipbook when FLIPBOOK page is launched
 	ENG_FLIP_TC_1: function () {
 		sts = flipbook.getData_flipbookPage();
