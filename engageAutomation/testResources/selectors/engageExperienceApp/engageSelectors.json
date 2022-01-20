@@ -496,7 +496,7 @@
                 "removeBook_subtitle": "[data-tid=text-subTitle-removeBook]",
                 "removeBookDialogCancel": "[data-tid=button-secondary-removeBook]",
                 "removeBookDialogRemove": "[data-tid=button-primary-removeBook]",
-                "unit": "[data-tid*=button-chapter-",
+                "unit": "[data-tid*=button-chapter-] , [data-tid*=text-folderName-]",
                 "unitTitle": "[data-tid*=text-chapterTitle-",
                 "unitNumber": "[data-tid*=text-chapterNumber-",
                 "unitPage": "[data-tid*=text-chapterPage-",
@@ -786,6 +786,20 @@
                 "viewOptionResourceItem": "[data-tid*=button-viewDetails]",
                 "shareOptionResourceItem": "[data-tid*=button-shareDetails]",
                 "removeOptionResourceItem": "[data-tid*=button-removeDetails]"
+            },
+             "downloadPlayer":
+            {
+                "pageTitle": "[data-tid=resourcePlayer-title]",
+                "pageSubTitle": "h6[data-tid=resourcePlayer-subtitle]",
+                "labelHeading": "[data-tid=text-label-heading]",
+                "downloadBtn": "[data-tid=button-primary]",
+                "downloadInfo": "//*[contains(text(),'Download Information')]",
+                "fileLabel": "[data-tid=label-name-0]",
+                "fileValue": "[data-tid=text-value-0]",
+                "typeLabel": "[data-tid=label-name-1]",
+                "typeValue": "[data-tid=text-value-1]",
+                "sizeLabel": "[data-tid=label-name-2]",
+                "sizeValue": "[data-tid=text-value-2]"
             }
         }
     }

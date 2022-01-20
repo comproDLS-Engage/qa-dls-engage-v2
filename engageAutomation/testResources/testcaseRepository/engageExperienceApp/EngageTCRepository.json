@@ -2556,6 +2556,67 @@
           "visualTest": "-"
         }
       ]
+    },
+     {
+      "modulename": "Download Player",
+      "moduledetails": "",
+      "testFile": "./test/engageExperienceApp/downloadPlayer.test.js",
+      "testcase": [
+        {
+          "id": "ENG_DWNLD_PLYR_TC_1",
+          "description": "Validate the content of download player ",
+          "tags": "P1",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_DWNLD_PLYR_TC_2",
+          "description": "Validate that clicking on download button for downloads the Word resource",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_DWNLD_PLYR_TC_3",
+          "description": "Validate that clicking on download button for downloads the ZIP resource",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_DWNLD_PLYR_TC_4",
+          "description": "Validate that clicking on download button for downloads the PDF resource",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_DWNLD_PLYR_TC_5",
+          "description": "Validate the download player for Word Resource",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_DWNLD_PLYR_TC_6",
+          "description": "Validate the download player for ZIP resource",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_DWNLD_PLYR_TC_7",
+          "description": "Validate the download player for PDF resource",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_DWNLD_PLYR_TC_8",
+          "description": "Validate the download player for Spreadhseet Resource",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_DWNLD_PLYR_TC_9",
+          "description": "Validate that clicking on download button for downloads the Spreadsheet resource",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        }
+      ]
     }
   ]
 }
