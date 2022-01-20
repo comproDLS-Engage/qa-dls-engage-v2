@@ -314,7 +314,6 @@ module.exports = {
     else {
       logger.logInto(stackTrace.get(), res + " deleteNoteDeleteBtn button is not clicked", 'error');
     }
-    console.log("click_deleteNoteDeleteBtn - ",res)
     return res;
   },
 
@@ -473,7 +472,6 @@ module.exports = {
         bookmarkListEditBtn: (action.getElementCount(this.bookmarkListEditBtn + i + "']") > 0) ? action.getText(this.bookmarkListEditBtn + i + "']") : null,
       }
     }
-    console.log("bookmark list -- ",obj)
     return obj;
   },
 

@@ -167,8 +167,8 @@ module.exports = {
 	//Validate clicking on the Delete button on Bookmarks, deletes the BM directly 
 	ENG_FLIP_TC_17: function (testdata) {
 		sts = flipbook.click_bookmarkListDeleteBtn(testdata[0].setEditedBookmark);
-		assertion.assertEqual(sts.bookmarksTitle, testdata[1].bookmarksTitle, "Bookmarks title status mismatch");
-		assertion.assertEqual(sts.closeBtnBookmarks, true, "Close Button status mismatch");
+		assertion.assertEqual(sts.myBookmarksTitle, testdata[1].bookmarksTitle, "Bookmarks title status mismatch");
+		assertion.assertEqual(sts.bookmarkCloseBtn, true, "Close Button status mismatch");
 		assertion.assertEqual(sts.addBookmarkBtn, testdata[1].bookmarkThisPageBtn, "Add Bookmark Button Text status mismatch");
 		//Since no Bookmarks are left after deleting the created Bookmark:
 		assertion.assertEqual(sts.noBookmarkIcon, true, "No Bookmark Icon status mismatch");
