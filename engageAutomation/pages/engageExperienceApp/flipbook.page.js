@@ -204,7 +204,6 @@ module.exports = {
         noteListEditBtn: (action.getElementCount(this.noteListEditBtn + i + "']") > 0) ? action.getText(this.noteListEditBtn + i + "']") : null,
       }
     }
-    console.log("note list - ",obj)
     return obj;
   },
 
@@ -262,7 +261,6 @@ module.exports = {
     logger.logInto(stackTrace.get());
     var i, list, res;
     list = action.findElements(this.noteListDeleteBtn);
-    //temp****************** i=0
     for (i = 0; i < list.length; i++) {
       if ((action.getText(this.noteListItemText + i + "']")) == noteListItemTextName) {
         res = action.click(list[i]);
@@ -311,10 +309,12 @@ module.exports = {
     if (true == res) {
       logger.logInto(stackTrace.get(), " deleteNoteDeleteBtn button is clicked");
       //res = this.getData_notesList();
+      res = this.getData_notesModal();
     }
     else {
       logger.logInto(stackTrace.get(), res + " deleteNoteDeleteBtn button is not clicked", 'error');
     }
+    console.log("click_deleteNoteDeleteBtn - ",res)
     return res;
   },
 
@@ -539,7 +539,8 @@ module.exports = {
     }
     if (res == true) {
       logger.logInto(stackTrace.get(), " --bookmarkListDeleteBtn clicked");
-      res = this.getData_bookmarkList();
+      //res = this.getData_bookmarkList();
+      res = this.getData_bookmarkModal();
     }
     else
       logger.logInto(stackTrace.get(), res + " --bookmarkListDeleteBtn NOT clicked", "error")
@@ -800,6 +801,5 @@ module.exports = {
     }
     return res;
   }
-
 }
 

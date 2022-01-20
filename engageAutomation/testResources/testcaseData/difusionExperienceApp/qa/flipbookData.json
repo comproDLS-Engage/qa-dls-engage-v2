@@ -13,7 +13,20 @@
 				"doublelayoutWidth": "width: 50%;",
                 "singlelayoutWidth": "width: 100%;",
                 "singlelayoutDefaultWidth": 1415,
-                "singlelayoutDefaultHeight": 1600
+                "singlelayoutDefaultHeight": 1600,
+				"notelistBeforeEdit": [
+					"Pre existing note",
+					"test note automation 1"
+				],
+				"notelistAfterEdit": [
+					"test edited note automation"
+				],
+				"bookmarklistBeforeEdit": [
+					"test bookmark automation 1"
+				],
+				"bookmarklistAfterEdit": [
+					"test edited bookmark automation"
+				]
 			}
 		}
 	}

@@ -4,7 +4,7 @@ var sts, sts2;
 
 module.exports = {
 
-	//11, 14, 15,17
+	//14,17
 	//Validate the state of flipbook when FLIPBOOK page is launched
 	ENG_FLIP_TC_1: function () {
 		sts = flipbook.getData_flipbookPage();
@@ -104,11 +104,15 @@ module.exports = {
 	//Validate clicking on the Notes button with already created notes, launches the notes list
 	ENG_FLIP_TC_11: function (testdata) {
 		sts = flipbook.click_notesBtn();
-		assertion.assertEqual(sts.myNotesTitle, testdata.myNotesTitle, "My Notes title status mismatch");
+		assertion.assertEqual(sts.myNotesTitle, testdata[0].myNotesTitle, "My Notes title status mismatch");
 		assertion.assertEqual(sts.notesDockBtn,'', "My Notes title status mismatch");
 		assertion.assertEqual(sts.notesCloseBtn, '', "Close Button status mismatch");
-		assertion.assertEqual(sts.addNoteBtn, testdata.addNoteBtn, "Add Note Button Text status mismatch");
-		sts = flipbook.getData_notesList(testdata);
+		assertion.assertEqual(sts.addNoteBtn, testdata[0].addNoteBtn, "Add Note Button Text status mismatch");
+		sts = flipbook.getData_notesList();
+		assertion.typeOf(sts, 'object', new Error(sts));
+		// for (let i = 0; i < sts.length; i++) { 
+        //     assertion.assertEqual(sts[i].noteListItemText, testdata[1].notelistBeforeEdit[i], "Note list Item Text mismatch");
+        // }
 	},
 
 	//Validate clicking on the Edit button on Notes, launches the edit notes textarea
@@ -131,8 +135,14 @@ module.exports = {
 	},
 
 	//Validate clicking on Delete button on modal deletes the message from the notes list
-	ENG_FLIP_TC_14: function () {
+	ENG_FLIP_TC_14: function (testdata) {
 		sts = flipbook.click_deleteNoteDeleteBtn();
+		assertion.assertEqual(sts.myNotesTitle, testdata.myNotesTitle, "My Notes title status mismatch");
+		assertion.assertEqual(sts.notesCloseBtn, '', "Close Button status mismatch");
+		assertion.assertEqual(sts.addNoteBtn, testdata.addNoteBtn, "Add Note Button Text status mismatch");
+		//Since no Notes are left after deleting the created note:
+		assertion.assertEqual(sts.noNoteIcon, true, "No note Icon status mismatch");
+		assertion.assertEqual(sts.noNoteText, testdata.noNoteText, "No Note Text status mismatch");
 	},
 
 	//Validate clicking on the Bookmarks button with already created Bookmarks, launches the bookmarks list
@@ -142,6 +152,7 @@ module.exports = {
 		assertion.assertEqual(sts.bookmarkCloseBtn, '', "Close Button status mismatch");
 		assertion.assertEqual(sts.addBookmarkBtn, testdata.bookmarkThisPageBtn, "Item Label Text status mismatch");
 		sts = flipbook.getData_bookmarkList(testdata);
+		assertion.typeOf(sts, 'object', new Error(sts));
 	},
 
 	//Validate clicking on the Edit button, launches the edit bookmark textarea
@@ -157,11 +168,12 @@ module.exports = {
 	//Validate clicking on the Delete button on Bookmarks, deletes the BM directly 
 	ENG_FLIP_TC_17: function (testdata) {
 		sts = flipbook.click_bookmarkListDeleteBtn(testdata[0].setEditedBookmark);
-		// assertion.assertEqual(sts.bookmarksTitle, testdata.bookmarksTitle, "Bookmarks title status mismatch");
-		// assertion.assertEqual(sts.closeBtnBookmarks, true, "Close Button status mismatch");
-		// assertion.assertEqual(sts.noBookmarkIcon, true, "No Bookmark Icon status mismatch");
-		// assertion.assertEqual(sts.noBookmarkText, testdata.noBookmarkText, "No Bookmark Text status mismatch");
-		// assertion.assertEqual(sts.addBookmarkBtn, testdata.bookmarkThisPageBtn, "Add Bookmark Button Text status mismatch");
+		assertion.assertEqual(sts.bookmarksTitle, testdata.bookmarksTitle, "Bookmarks title status mismatch");
+		assertion.assertEqual(sts.closeBtnBookmarks, true, "Close Button status mismatch");
+		assertion.assertEqual(sts.addBookmarkBtn, testdata.bookmarkThisPageBtn, "Add Bookmark Button Text status mismatch");
+		//Since no Bookmarks are left after deleting the created Bookmark:
+		assertion.assertEqual(sts.noBookmarkIcon, true, "No Bookmark Icon status mismatch");
+		assertion.assertEqual(sts.noBookmarkText, testdata.noBookmarkText, "No Bookmark Text status mismatch");
 	},
 
 	//Validate that clicking on the Zoom In button increases the width and height of the image
