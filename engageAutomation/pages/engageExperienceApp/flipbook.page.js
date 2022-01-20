@@ -531,7 +531,7 @@ module.exports = {
     logger.logInto(stackTrace.get());
     var i, list, res;
     list = action.findElements(this.bookmarkListDeleteBtn);
-    for (i = 1; i < list.length; i++) {
+    for (i = 0; i < list.length; i++) {
       if ((action.getText(this.bookmarkListItemName + i + "']")) == bookmarkListItemNameName) {
         res = action.click(list[i]);
         break;

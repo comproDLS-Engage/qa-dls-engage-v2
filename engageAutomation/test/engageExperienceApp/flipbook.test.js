@@ -4,7 +4,6 @@ var sts, sts2;
 
 module.exports = {
 
-	//14,17
 	//Validate the state of flipbook when FLIPBOOK page is launched
 	ENG_FLIP_TC_1: function () {
 		sts = flipbook.getData_flipbookPage();
@@ -168,22 +167,18 @@ module.exports = {
 	//Validate clicking on the Delete button on Bookmarks, deletes the BM directly 
 	ENG_FLIP_TC_17: function (testdata) {
 		sts = flipbook.click_bookmarkListDeleteBtn(testdata[0].setEditedBookmark);
-		assertion.assertEqual(sts.bookmarksTitle, testdata.bookmarksTitle, "Bookmarks title status mismatch");
+		assertion.assertEqual(sts.bookmarksTitle, testdata[1].bookmarksTitle, "Bookmarks title status mismatch");
 		assertion.assertEqual(sts.closeBtnBookmarks, true, "Close Button status mismatch");
-		assertion.assertEqual(sts.addBookmarkBtn, testdata.bookmarkThisPageBtn, "Add Bookmark Button Text status mismatch");
+		assertion.assertEqual(sts.addBookmarkBtn, testdata[1].bookmarkThisPageBtn, "Add Bookmark Button Text status mismatch");
 		//Since no Bookmarks are left after deleting the created Bookmark:
 		assertion.assertEqual(sts.noBookmarkIcon, true, "No Bookmark Icon status mismatch");
-		assertion.assertEqual(sts.noBookmarkText, testdata.noBookmarkText, "No Bookmark Text status mismatch");
+		assertion.assertEqual(sts.noBookmarkText, testdata[1].noBookmarkText, "No Bookmark Text status mismatch");
 	},
 
 	//Validate that clicking on the Zoom In button increases the width and height of the image
 	ENG_FLIP_TC_18: function (testdata) {
 		sts = flipbook.get_flipbookPanelSize();
-		console.log("default width before click =",sts.width)
-		console.log("default height before click =",sts.height)
 		sts2 = flipbook.click_zoomInBtn();
-		console.log("new width after click =",sts2.width)
-		console.log("new height after click =",sts2.height)
 		assertion.assert((sts2.width > sts.width), "Width comparison failed");
 		assertion.assert((sts2.height > sts.height), "Height comparison failed");
 	},
@@ -191,11 +186,7 @@ module.exports = {
 	//Validate that clicking on the Zoom Out button decreases the width and height of the image
 	ENG_FLIP_TC_19: function (testdata) {
 		sts = flipbook.get_flipbookPanelSize();
-		console.log("default width before click =",sts.width)
-		console.log("default height before click =",sts.height)
 		sts2 = flipbook.click_zoomOutBtn();
-		console.log("new width after click 1 =",sts2.width)
-		console.log("new height after click 1 =",sts.height)
 		assertion.assert((sts2.width < sts.width), "Width comparison failed");
 		assertion.assert((sts2.width < sts.width), "Height comparison failed");
 	},

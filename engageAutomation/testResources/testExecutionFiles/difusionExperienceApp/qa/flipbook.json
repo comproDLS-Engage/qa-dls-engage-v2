@@ -1,4 +1,275 @@
 {
+   "Suite1": {
+      "Name": "Validation of layouts / zoom in/ full screen in flipbook",
+      "TestCaseRepo": [
+         "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
+      ],
+      "Before": [
+         {
+            "id": "launchUrl",
+            "description": "",
+            "testFile": "./engageAutomation/core/runner/launchUrl.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_LAND_TC_3",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/landing.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_IDEN_TC_7",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/login.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+                  "jsonPath": "engage.login.user.flipbookUser"
+               }
+            ]
+         },
+         {
+             "id": "ENG_DASH_TC_12",
+             "description": "",
+             "testFile": "./test/engageExperienceApp/dashboard.test.js",
+             "testData": [
+                 {
+                     "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                     "jsonPath": "book.name"
+                 },
+                 {
+                     "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                     "jsonPath": "engage.appContent.dashboard.teacher"
+                 }
+             ]
+         },
+         {
+            "id": "ENG_DASH_TC_18",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/dashboard.test.js",
+            "testData": [
+                {
+                    "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                    "jsonPath": "book.name"
+                },
+                {
+                    "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                    "jsonPath": "engage.appContent.dashboard.teacher"
+                }
+            ]
+         }
+      ],
+      "BeforeEach": [],
+      "Test": [
+         {
+            "id": "ENG_FLIP_TC_1",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/flipbook.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_FLIP_TC_2",
+            "description": "Validate Clicking on single page launches the book in single page layout",
+            "testFile": "./test/engageExperienceApp/flipbook.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/flipbookData.json",
+                  "jsonPath": "engage.flipbook.fb1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_FLIP_TC_18",
+            "description": "Validate that clicking on the Zoom in button increases the width and height of the image",
+            "testFile": "./test/engageExperienceApp/flipbook.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/flipbookData.json",
+                  "jsonPath": "engage.flipbook.fb1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_FLIP_TC_19",
+            "description": "Validate that clicking on the Zoom Out button decreases the width and height of the image",
+            "testFile": "./test/engageExperienceApp/flipbook.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/flipbookData.json",
+                  "jsonPath": "engage.flipbook.fb1"
+               }
+            ]
+         }
+      ],
+      "AfterEach": [],
+      "After": []
+   },
+   "Suite2": {
+      "Name": "Creation of Notes and Bookmarks in a blank new flipbook in single page layout",
+      "TestCaseRepo": [
+         "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
+      ],
+      "Before": [
+         {
+            "id": "launchUrl",
+            "description": "",
+            "testFile": "./engageAutomation/core/runner/launchUrl.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_LAND_TC_3",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/landing.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_IDEN_TC_7",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/login.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+                  "jsonPath": "engage.login.user.flipbookUser"
+               }
+            ]
+         },
+         {
+            "id": "ENG_DASH_TC_12",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/dashboard.test.js",
+            "testData": [
+                {
+                    "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                    "jsonPath": "book.name"
+                },
+                {
+                    "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                    "jsonPath": "engage.appContent.dashboard.teacher"
+                }
+            ]
+        },
+        {
+           "id": "ENG_DASH_TC_18",
+           "description": "",
+           "testFile": "./test/engageExperienceApp/dashboard.test.js",
+           "testData": [
+               {
+                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                   "jsonPath": "book.name"
+               },
+               {
+                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                   "jsonPath": "engage.appContent.dashboard.teacher"
+               }
+           ]
+        }
+      ],
+      "BeforeEach": [],
+      "Test": [
+         {
+            "id": "ENG_FLIP_TC_1",
+            "description": "Validate that flipbook is launched (Desktop)",
+            "testFile": "./test/engageExperienceApp/flipbook.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.flipbook"
+               }
+            ]
+         },
+         {
+            "id": "ENG_FLIP_TC_2",
+            "description": "Validate Clicking on single page launches the book in single page layout",
+            "testFile": "./test/engageExperienceApp/flipbook.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/flipbookData.json",
+                  "jsonPath": "engage.flipbook.fb1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_FLIP_TC_3",
+            "description": "Validate clicking on the Notes button for a new flipbook",
+            "testFile": "./test/engageExperienceApp/flipbook.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.flipbook"
+               }
+            ]
+         },
+         {
+            "id": "ENG_FLIP_TC_4",
+            "description": "Validate that clicking on 'Add Note' button launches Add Note Text Area",
+            "testFile": "./test/engageExperienceApp/flipbook.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.flipbook"
+               }
+            ]
+         },
+         {
+            "id": "ENG_FLIP_TC_5",
+            "description": "Validate on clicking Save button, notes set by the user are saved",
+            "testFile": "./test/engageExperienceApp/flipbook.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/flipbookData.json",
+                  "jsonPath": "engage.flipbook.fb1.setNote"
+               }
+            ]
+         },
+         {
+            "id": "ENG_FLIP_TC_6",
+            "description": "Click Close button in notes pane",
+            "testFile": "./test/engageExperienceApp/flipbook.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_FLIP_TC_7",
+            "description": "Validate clicking on the Bookmark button for a new flipbook launches Bookmark pane",
+            "testFile": "./test/engageExperienceApp/flipbook.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.flipbook"
+               }
+            ]
+         },
+         {
+            "id": "ENG_FLIP_TC_8",
+            "description": "Validate that clicking on 'Bookmark This Page' button launches bookmark text area",
+            "testFile": "./test/engageExperienceApp/flipbook.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.flipbook"
+               }
+            ]
+         },
+         {
+            "id": "ENG_FLIP_TC_9",
+            "description": "Validate on clicking Save button, bookmarks set by the user are saved",
+            "testFile": "./test/engageExperienceApp/flipbook.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/flipbookData.json",
+                  "jsonPath": "engage.flipbook.fb1.setBookmark"
+               }
+            ]
+         },
+         {
+            "id": "ENG_FLIP_TC_10",
+            "description": "Click Close button in Bookmark pane closes the pane",
+            "testFile": "./test/engageExperienceApp/flipbook.test.js",
+            "testData": []
+         }
+      ],
+      "AfterEach": [],
+      "After": []
+   },
    "Suite3": {
       "Name": "Editing and Deletion of already created Notes and Bookmarks in single page layout",
       "TestCaseRepo": [
@@ -207,6 +478,122 @@
                   "jsonPath": "engage.appContent.flipbook"
                }
             ]
+         }
+      ],
+      "AfterEach": [],
+      "After": []
+   },
+   "Suite4": {
+      "Name": "Use Case to click on TOC button and jump to new page in flipbook",
+      "TestCaseRepo": [
+         "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
+      ],
+      "Before": [
+         {
+            "id": "launchUrl",
+            "description": "",
+            "testFile": "./engageAutomation/core/runner/launchUrl.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_LAND_TC_3",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/landing.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_IDEN_TC_7",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/login.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+                  "jsonPath": "engage.login.user.flipbookUser"
+               }
+            ]
+         },
+         {
+            "id": "ENG_DASH_TC_12",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/dashboard.test.js",
+            "testData": [
+                {
+                    "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                    "jsonPath": "book.name"
+                },
+                {
+                    "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                    "jsonPath": "engage.appContent.dashboard.teacher"
+                }
+            ]
+        },
+        {
+           "id": "ENG_DASH_TC_18",
+           "description": "",
+           "testFile": "./test/engageExperienceApp/dashboard.test.js",
+           "testData": [
+               {
+                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                   "jsonPath": "book.name"
+               },
+               {
+                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                   "jsonPath": "engage.appContent.dashboard.teacher"
+               }
+           ]
+        }
+      ],
+      "BeforeEach": [],
+      "Test": [
+         {
+            "id": "ENG_FLIP_TC_1",
+            "description": "Validate that flipbook is launched (Desktop)",
+            "testFile": "./test/engageExperienceApp/flipbook.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.flipbook"
+               }
+            ]
+         },
+         {
+            "id": "ENG_FLIP_TC_2",
+            "description": "Validate Clicking on single page launches the book in single page layout",
+            "testFile": "./test/engageExperienceApp/flipbook.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/flipbookData.json",
+                  "jsonPath": "engage.flipbook.fb1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_FLIP_TC_20",
+            "description": "Validate that clicking on TOC button, launches the TOC layover",
+            "testFile": "./test/engageExperienceApp/flipbook.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/flipbookData.json",
+                  "jsonPath": "engage.flipbook.fb1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_FLIP_TC_21",
+            "description": "Validate entering the page number in input label after clicking the input field in TOC",
+            "testFile": "./test/engageExperienceApp/flipbook.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/flipbookData.json",
+                  "jsonPath": "engage.flipbook.fb1.jumpToPageInput"
+               }
+            ]
+         },
+         {
+            "id": "ENG_FLIP_TC_22",
+            "description": "Validate clicking on Jump to page button lauches the entered page in flipbook",
+            "testFile": "./test/engageExperienceApp/flipbook.test.js",
+            "testData": [ ]
          }
       ],
       "AfterEach": [],
