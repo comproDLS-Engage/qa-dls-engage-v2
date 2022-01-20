@@ -19,7 +19,8 @@
     "flipbookTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='flipbook.json' --browserCapability=desktop-chrome-1366",
     "successfulOnboardingTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='successfulOnboardingTest.json' --browserCapability=desktop-chrome-1366",
     "browseFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='browseTest.json' --browserCapability=desktop-chrome-1366",
-    "playlistTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='playlistTest.json' --browserCapability=desktop-chrome-1366"
+    "playlistTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='playlistTest.json' --browserCapability=desktop-chrome-1366",
+    "downloadPlayerTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='downloadPlayerTest.json' --browserCapability=desktop-chrome-1366"
   },
   "keywords": [],
   "author": "",
@@ -39,7 +40,7 @@
     "browserstack-local": "^1.4.8",
     "chai": "4.3.4",
     "chrome": "^0.1.0",
-    "chromedriver": "latest",
+    "chromedriver": "^97.0.0",
     "combine-image": "1.0.3",
     "css-selector-parser": "^1.4.1",
     "css-selector-tools": "^1.0.9",

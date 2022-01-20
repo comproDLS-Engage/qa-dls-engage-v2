@@ -771,6 +771,38 @@
                     "shareOptionResourceItem": null,
                     "removeOptionResourceItem": "Remove from Playlist"
                 }
+            },
+            "downloadPlayer":
+            {
+                "teacher":
+                {
+                    "pageSubTitle": "Download Resource",
+                    "labelHeading": "Download file to view this resource on your computer.",
+                    "downloadInfo": "Download Information",
+                    "fileLabel": "File",
+                    "typeLabel": "Type",
+                    "sizeLabel": "Size",
+                    "downloadBtnWord":"Download Word",
+                    "downloadBtnZIP":"Download ZIP",
+                    "downloadBtnPDF":"Download PDF",
+                    "downloadBtnSheet":"Download Excel"
+
+                },
+                "student":
+                {
+                    "pageSubTitle": "Download Resource",
+                    "labelHeading": "Download file to view this resource on your computer.",
+                    "downloadInfo": "Download Information",
+                    "fileLabel": "File",
+                    "typeLabel": "Type",
+                    "sizeLabel": "Size",
+                    "downloadBtnWord":"Download Word",
+                    "downloadBtnZIP":"Download ZIP",
+                    "downloadBtnPDF":"Download PDF",
+                     "downloadBtnSheet":"Download Excel"
+
+
+                }
             }
         }
     }

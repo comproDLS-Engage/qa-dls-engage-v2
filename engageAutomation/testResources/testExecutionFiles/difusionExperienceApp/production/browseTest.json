@@ -579,17 +579,6 @@
             ]
          },
          {
-            "id":"ENG_GLOB_TC_12",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/browse.test.js",
-            "testData":[
-               {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
-                  "jsonPath":"engage.appContent.browse"
-               }
-            ]
-         },
-         {
             "id":"ENG_GLOB_TC_42",
             "description":"",
             "testFile":"./test/engageExperienceApp/browse.test.js",
