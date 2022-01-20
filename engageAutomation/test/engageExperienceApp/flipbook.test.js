@@ -211,7 +211,7 @@ module.exports = {
 		assertion.assertEqual(sts.zoomInBtn, "", "zoomInBtn status mismatch");
 		assertion.assertEqual(sts.zoomOutBtn, "", "zoomOutBtn status mismatch");
 		assertion.assertEqual(sts.fitToScreenBtn, "", "fitToScreenBtn status mismatch");
-		assertion.assertEqual(sts.doublePageBtn, null, "doublePageBtn status mismatch");
+		assertion.assertEqual(sts.doublePageBtn, "", "doublePageBtn status mismatch");
 		assertion.assertEqual(sts.singlePageBtn, "", "singlePageBtn status mismatch");
 		assertion.assertEqual(sts.fullScreenBtn, "", "fullScreenBtn status mismatch");
 		assertion.assertEqual(sts.bookmarkBtn, "", "bookmarkBtn status mismatch");
