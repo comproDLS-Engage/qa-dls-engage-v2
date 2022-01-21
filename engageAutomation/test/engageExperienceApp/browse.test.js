@@ -131,13 +131,13 @@ module.exports = {
 	ENG_GLOB_TC_23: function () {
 		sts = browsePage.click_viewOption();
 		assertion.assertEqual(sts.pageStatus, true, "Activity page status mismatch");
-        assertion.assertEqual(sts.appShellPage.header, true, "Activity page header status mismatch")
+        assertion.assertEqual(sts.appShellPage.header, true, "Activity page header status mismatch");
 	},
 
 	//Validate that clicking on Add to playlist on 3 dot options lists the existing playlists and option to create a new playlist.
 	ENG_GLOB_TC_24: function (testdata) {
 		sts = browsePage.click_addToPlaylistOption();
-		assertion.assertEqual(sts.listOfPlaylist[0], testdata, "listOfPlaylist count Mismatch");
+		assertion.assertEqual(sts.listOfPlaylist[0], testdata, "Create playlist text mismatch");
 	},
 
 	//Validate that clicking on the playlist name adds the resource to the playlist
@@ -149,7 +149,8 @@ module.exports = {
 	//Validate that clicking on the card image launches the resource/book
 	ENG_GLOB_TC_26: function (testdata) {
 		sts = browsePage.click_cardImage(testdata);
-		assertion.assertEqual(sts, true, "View status Mismatch");
+		assertion.assertEqual(sts.pageStatus, true, "Activity page status mismatch");
+        assertion.assertEqual(sts.appShellPage.header, true, "Activity page header status mismatch");
 	},
 
 	//Validate that searching can be done on basis of resource name

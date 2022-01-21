@@ -215,6 +215,7 @@ module.exports = {
         logger.logInto(stackTrace.get());
         var i, list;
         var listOfPlaylist_Arr = [];
+        action.waitForDisplayed(this.listOfPlaylist);
         list = action.findElements(this.listOfPlaylist);
         for (i = 0; i < list.length; i++) {
             listOfPlaylist_Arr[i] = action.getText(list[i])
@@ -270,7 +271,6 @@ module.exports = {
         }
         return obj;
     },
-
 
     click_filtersBtn: function () {
         logger.logInto(stackTrace.get());
