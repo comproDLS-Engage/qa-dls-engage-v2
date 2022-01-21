@@ -65,7 +65,7 @@ module.exports = {
         return res;
     },
 
-    getData_browsePage: function () {
+        getData_browsePage: function () {
         logger.logInto(stackTrace.get());
         action.waitForDisplayed(this.cardSkeleton, undefined, true); //manually edited
         var obj;
@@ -463,7 +463,7 @@ module.exports = {
         }
         if (res == true) {
             logger.logInto(stackTrace.get(), " --addBookBtn clicked");
-            res = action.waitForDisplayed(this.addBookBtn, undefined, true);
+            res = action.waitForDisplayed(list[i], undefined, true);
         }
         else
             logger.logInto(stackTrace.get(), " --addBookBtn NOT clicked", "error")
@@ -537,7 +537,7 @@ module.exports = {
         res = action.click(this.removeFromMyBooksOption);
         if (true == res) {
             logger.logInto(stackTrace.get(), " removeFromMyBooksOption is clicked");
-            res = require('./ dashboard.page').getData_removeBookDialog();
+            res = require('./dashboard.page').getData_removeBookDialog();
         }
         else {
             logger.logInto(stackTrace.get(), res + "removeFromMyBooksOption is NOT clicked", 'error');

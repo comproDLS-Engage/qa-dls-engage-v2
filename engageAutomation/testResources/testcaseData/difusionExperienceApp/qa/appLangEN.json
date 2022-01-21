@@ -366,7 +366,7 @@
                 "correct_txt": "Well done",
                 "incorrect_txt": "Oops! Not quite correct."
             },
-           "onboarding": {
+            "onboarding": {
                 "welcomePage": {
                     "pageHeading": "Welcome, ",
                     "message": "Let's get started. Select the role that best describes you.",
@@ -400,13 +400,13 @@
                     "invalidKeyMessage": "Invalid school key",
                     "back_btn": "Back (select a different role)"
                 },
-                "studentSuccessPage":{
+                "studentSuccessPage": {
                     "pageHeading": "You're All Set!",
                     "pageSubHeading1": "You are registered as a student. Click continue to explore materials or join a class.",
                     "startLearning": "Continue",
                     "signOut": "Logout"
                 },
-                "teacherSuccessPage":{
+                "teacherSuccessPage": {
                     "pageHeading": "You're All Set!",
                     "pageSubHeading1": "You are registered as a teacher. Click continue to explore materials and create classes.",
                     "proceedBtn": "Continue",
@@ -498,28 +498,28 @@
                     "reset_button": "Reset Default Settings",
                     "accessbility_button": "Apply Settings"
                 },
-                "Billing":{
+                "Billing": {
                     "pageHeading": "Subscription",
-                    "subscriptionSubtitle_text":"Billing and license information for your current plan.",
-                    "premiumPlan_text":"Premium Plan",
-                    "active_text":"Active",
-                    "premiumPrice_text":"$24.99/year",
-                    "autoRenewal_text":"Auto Renewal On",
-                    "licensePeriod_text":"License Period:",
-                    "licensePeriod_date":"Dec 30, 2021 - Dec 29, 2022",
-                    "managePlan_btn":"Manage Plan",
-                    "changeCard_btn":"Change Card",
-                    "updateBillingAddress_btn":"Update",
-                    "free_text":"Free",
-                    "getPremiumAccess_text":"Get Premium Access",
-                    "getPremiumAccessSubtitle_text":"You will get access on all our books and resources.",
-                    "price_text":"Subscription for $24.99/year",
-                    "upgradePlan_btn":"Upgrade Plan",
-                    "paymentMethod_text":"Payment Method",
-                    "noPaymentMethod_text":"No payment method added yet",
-                    "noPaymentMethodSubtitle_text":"When you add a payment method while making a purchase, it will appear here.",
-                    "billingMethod_text":"Billing Information",
-                    "noBillingInfo_text":"No billing information added yet"                    
+                    "subscriptionSubtitle_text": "Billing and license information for your current plan.",
+                    "premiumPlan_text": "Premium Plan",
+                    "active_text": "Active",
+                    "premiumPrice_text": "$24.99/year",
+                    "autoRenewal_text": "Auto Renewal On",
+                    "licensePeriod_text": "License Period:",
+                    "licensePeriod_date": "Dec 30, 2021 - Dec 29, 2022",
+                    "managePlan_btn": "Manage Plan",
+                    "changeCard_btn": "Change Card",
+                    "updateBillingAddress_btn": "Update",
+                    "free_text": "Free",
+                    "getPremiumAccess_text": "Get Premium Access",
+                    "getPremiumAccessSubtitle_text": "You will get access on all our books and resources.",
+                    "price_text": "Subscription for $24.99/year",
+                    "upgradePlan_btn": "Upgrade Plan",
+                    "paymentMethod_text": "Payment Method",
+                    "noPaymentMethod_text": "No payment method added yet",
+                    "noPaymentMethodSubtitle_text": "When you add a payment method while making a purchase, it will appear here.",
+                    "billingMethod_text": "Billing Information",
+                    "noBillingInfo_text": "No billing information added yet"
                 },
                 "ErrorMessages": {
                     "currentPasswordError_text": "Please enter current password",
@@ -691,7 +691,10 @@
                     "addToPlaylistOption": "Add to Playlist",
                     "shareOption": "Share",
                     "viewBtn": "View",
-                    "addBookBtn": "",
+                    "addBookBtn": [
+                        "",
+                        "Add Book"
+                    ],
                     "bookMoreOptionsBtn": "",
                     "viewClassOption": "View Classes",
                     "createNewClassOption": "Create New Class",
@@ -733,7 +736,9 @@
                     "addToPlaylistOption": "Add to Playlist",
                     "shareOption": null,
                     "viewBtn": "View",
-                    "addBookBtn": "",
+                    "addBookBtn": [
+                        ""
+                    ],
                     "bookMoreOptionsBtn": "",
                     "viewClassOption": "View Classes",
                     "createNewClassOption": null,
@@ -828,36 +833,30 @@
                     "removeOptionResourceItem": "Remove from Playlist"
                 }
             },
-            "downloadPlayer":
-            {
-                "teacher":
-                {
+            "downloadPlayer": {
+                "teacher": {
                     "pageSubTitle": "Download Resource",
                     "labelHeading": "Download file to view this resource on your computer.",
                     "downloadInfo": "Download Information",
                     "fileLabel": "File",
                     "typeLabel": "Type",
                     "sizeLabel": "Size",
-                    "downloadBtnWord":"Download Word",
-                    "downloadBtnZIP":"Download ZIP",
-                    "downloadBtnPDF":"Download PDF",
-                    "downloadBtnSheet":"Download Excel"
-
+                    "downloadBtnWord": "Download Word",
+                    "downloadBtnZIP": "Download ZIP",
+                    "downloadBtnPDF": "Download PDF",
+                    "downloadBtnSheet": "Download Excel"
                 },
-                "student":
-                {
+                "student": {
                     "pageSubTitle": "Download Resource",
                     "labelHeading": "Download file to view this resource on your computer.",
                     "downloadInfo": "Download Information",
                     "fileLabel": "File",
                     "typeLabel": "Type",
                     "sizeLabel": "Size",
-                    "downloadBtnWord":"Download Word",
-                    "downloadBtnZIP":"Download ZIP",
-                    "downloadBtnPDF":"Download PDF",
-                     "downloadBtnSheet":"Download Excel"
-
-
+                    "downloadBtnWord": "Download Word",
+                    "downloadBtnZIP": "Download ZIP",
+                    "downloadBtnPDF": "Download PDF",
+                    "downloadBtnSheet": "Download Excel"
                 }
             }
         }
