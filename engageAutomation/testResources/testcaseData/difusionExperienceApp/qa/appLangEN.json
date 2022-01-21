@@ -664,37 +664,93 @@
                 "bookmarkNameLabel": "Bookmark Name"
             },
             "browse": {
-                "pageTitle": "Browse",
-                "pageSubTitle": "Find all our digital books and their associated resources.",
-                "filtersBtn": "Filters:\nShow All",
-                "searchBox": "",
-                "tabList": [
-                    "Books",
-                    "Interactive Activities",
-                    "Videos",
-                    "Online Class",
-                    "Teacher Training",
-                    "Today in Class",
-                    "Projectables"
-                ],
-                "pageNumToJump": "2",
-                "moreOptions": {
+                "teacher": {
+                    "pageTitle": [
+                        "Browse",
+                        "Add your books",
+                        "Add books to your class"
+                    ],
+                    "pageSubTitle": [
+                        "Find all our digital books and their associated resources.",
+                        "Select your books to add to your My Books list. Once added, you'll be able to view all book materials directly from the dashboard.",
+                        "Select books from either your list (My Books) or the full catalog (All Books) to associate materials with your class."
+                    ],
+                    "tabList": [
+                        "Books",
+                        "Interactive Activities",
+                        "Videos",
+                        "Online Class",
+                        "Teacher Training",
+                        "Today in Class",
+                        "Projectables"
+                    ],
+                    "filtersBtn": "Filters:\nShow All",
+                    "viewAllBtn": "View All",
+                    "moreOptionsBtn": "",
                     "viewOption": "View",
                     "addToPlaylistOption": "Add to Playlist",
-                    "createPlaylist_label": "Create Playlist",
-                    "shareOption": "Share"
-                },
-                "noResultListItemTitle": "No Results",
-                "noResultListItemSubtitle": "There aren't any resources available that match those terms.",
-                "noResultFound": {
-                    "title": "No result found",
-                    "subTitle": "We didn't find anything matching your search or filters. Try your search again, or change your filters to update the results here."
-                },
-                "results_label": "results:",
-                "result_label": "result:",
-                "filter": {
+                    "shareOption": "Share",
+                    "viewBtn": "View",
+                    "addBookBtn": "",
+                    "bookMoreOptionsBtn": "",
+                    "viewClassOption": "View Classes",
+                    "createNewClassOption": "Create New Class",
+                    "addToMyBooksOption": "Add to My Books",
+                    "removeFromMyBooksOption": "Remove fo My Books",
+                    "openFlipbookOption": "Open Flipbook",
+                    "listOfPlaylist": "Create Playlist",
+                    "showMoreResults": "More search results for ",
+                    "noResultListItemTitle": "No Results",
+                    "noResultListItemSubtitle": "There aren't any resources available that match those terms.",
+                    "searchCount": " result",
+                    "search_NoResult_img": true,
+                    "search_NoResult_title": "No result found",
+                    "search_NoResult_subTitle": "We didn't find anything matching your search or filters. Try your search again, or change your filters to update the results here.",
                     "filterMenuTitle": "Filters",
-                    "filterMenuFilterCount": "0 filters added",
+                    "filterMenuCloseBtn": "",
+                    "filterMenuFilterCount": " filters added",
+                    "filterMenuClearAllBtn": "Clear All",
+                    "filterMenuApplyBtn": "Apply Filters"
+                },
+                "student": {
+                    "pageTitle": [
+                        "Browse",
+                        "Add your books"
+                    ],
+                    "pageSubTitle": [
+                        "Find all our digital books and their associated resources.",
+                        "Select your books to add to your My Books list. Once added, you'll be able to view all book materials directly from the dashboard."
+                    ],
+                    "tabList": [
+                        "Books",
+                        "Interactive Activities",
+                        "Videos"
+                    ],
+                    "filtersBtn": "Filters:\nShow All",
+                    "viewAllBtn": "View All",
+                    "moreOptionsBtn": "",
+                    "viewOption": "View",
+                    "addToPlaylistOption": "Add to Playlist",
+                    "shareOption": null,
+                    "viewBtn": "View",
+                    "addBookBtn": "",
+                    "bookMoreOptionsBtn": "",
+                    "viewClassOption": "View Classes",
+                    "createNewClassOption": null,
+                    "addToMyBooksOption": "Add to My Books",
+                    "removeFromMyBooksOption": "Remove fo My Books",
+                    "openFlipbookOption": "Open Flipbook",
+                    "listOfPlaylist": "Create Playlist",
+                    "showMoreResults": "More search results for ",
+                    "noResultListItemTitle": "No Results",
+                    "noResultListItemSubtitle": "There aren't any resources available that match those terms.",
+                    "searchCount": " result",
+                    "search_NoResult_img": true,
+                    "search_NoResult_title": "No result found",
+                    "search_NoResult_subTitle": "We didn't find anything matching your search or filters. Try your search again, or change your filters to update the results here.",
+                    "filterMenuTitle": "Filters",
+                    "filterMenuCloseBtn": "",
+                    "filterMenuFilterCount": " filters added",
                     "filterMenuClearAllBtn": "Clear All",
                     "filterMenuApplyBtn": "Apply Filters"
                 }

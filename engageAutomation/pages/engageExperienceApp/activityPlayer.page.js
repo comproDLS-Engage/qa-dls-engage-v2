@@ -39,7 +39,7 @@ module.exports = {
         logger.logInto(stackTrace.get());
         action.waitForDocumentLoad();
         res = {
-            pageStatus: action.waitForDisplayed(this.infoBtn),
+            pageStatus: action.waitForDisplayed(this.infoBtn + "," + this.showDetailsBtn),
             appShellPage: appShellPage.isInitialized()
         };
         return res;

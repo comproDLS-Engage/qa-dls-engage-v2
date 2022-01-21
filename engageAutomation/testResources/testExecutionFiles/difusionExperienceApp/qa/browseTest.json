@@ -1,538 +1,473 @@
 {
-   "Suite1":{
-      "Name":"Validation of Browse feature via Teacher",
-      "TestCaseRepo":[
+   "Suite1": {
+      "Name": "Validation of Browse feature via Teacher",
+      "TestCaseRepo": [
          "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
       ],
-      "Before":[
+      "Before": [
          {
-            "id":"launchUrl",
-            "description":"",
-            "testFile":"./engageAutomation/core/runner/launchUrl.js",
-            "testData":[
-               
-            ]
+            "id": "launchUrl",
+            "description": "",
+            "testFile": "./engageAutomation/core/runner/launchUrl.js",
+            "testData": []
          },
          {
-            "id":"ENG_LAND_TC_1",
-            "description":"Landing page",
-            "testFile":"./test/engageExperienceApp/landing.test.js",
-            "testData":[
-               
-            ]
+            "id": "ENG_LAND_TC_1",
+            "description": "Landing page",
+            "testFile": "./test/engageExperienceApp/landing.test.js",
+            "testData": []
          },
          {
-            "id":"ENG_LAND_TC_3",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/landing.test.js",
-            "testData":[
-               
-            ]
+            "id": "ENG_LAND_TC_3",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/landing.test.js",
+            "testData": []
          },
          {
-            "id":"ENG_IDEN_TC_7",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/login.test.js",
-            "testData":[
+            "id": "ENG_IDEN_TC_7",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/login.test.js",
+            "testData": [
                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
-                  "jsonPath":"engage.login.user.validInstructorUser1"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+                  "jsonPath": "engage.login.user.validInstructorUser1"
                }
             ]
          },
          {
-            "id":"ENG_SHELL_TC_3",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/appShell.test.js",
-            "testData":[
-               
-            ]
+            "id": "ENG_SHELL_TC_3",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/appShell.test.js",
+            "testData": []
          }
       ],
-      "BeforeEach":[
-         
-      ],
-      "Test":[
+      "BeforeEach": [],
+      "Test": [
          {
-            "id":"ENG_GLOB_TC_10",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/browse.test.js",
-            "testData":[
+            "id": "ENG_GLOB_TC_16",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/browse.test.js",
+            "testData": [
                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath":"engage.appContent.browse"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.browse.teacher"
                }
             ]
          },
          {
-            "id":"ENG_GLOB_TC_16",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/browse.test.js",
-            "testData":[
+            "id": "ENG_GLOB_TC_10",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/browse.test.js",
+            "testData": [
                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath":"engage.appContent.browse"
-               }
-            ]
-         }, 
-         {
-            "id":"ENG_GLOB_TC_22",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/browse.test.js",
-            "testData":[
-               {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/searchAndFilterTestData.json",
-                  "jsonPath":"engage.searchAndFilter.searchScenario6.expected_txt"
-               },
-                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath":"engage.appContent.browse.moreOptions"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.browse.teacher"
                }
             ]
          },
          {
-            "id":"ENG_GLOB_TC_24",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/browse.test.js",
-            "testData":[
+            "id": "ENG_GLOB_TC_22",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/browse.test.js",
+            "testData": [
                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath":"engage.appContent.browse.moreOptions.createPlaylist_label"
-               }
-            ]
-         },
-         {
-            "id":"ENG_GLOB_TC_23",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/browse.test.js",
-            "testData":[
-            ]
-         },
-         {
-            "id":"ENG_SHELL_TC_11",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/appShell.test.js",
-            "testData":[
-
-            ]
-         },
-         {
-            "id":"ENG_GLOB_TC_28",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/browse.test.js",
-            "testData":[
-               {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/searchAndFilterTestData.json",
-                  "jsonPath":"engage.searchAndFilter.searchScenario6"
-               },
-                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath":"engage.appContent.browse"
-               }
-            ]
-         },
-         {
-            "id":"ENG_GLOB_TC_41",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/browse.test.js",
-            "testData":[
-               
-            ]
-         },
-         {
-            "id":"ENG_GLOB_TC_36",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/browse.test.js",
-            "testData":[
-               {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/searchAndFilterTestData.json",
-                  "jsonPath":"engage.searchAndFilter.searchScenario5"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/searchAndFilterTestData.json",
+                  "jsonPath": "engage.searchAndFilter.searchScenario6.expected_txt"
                },
                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath":"engage.appContent.browse"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.browse.teacher"
                }
             ]
          },
          {
-            "id":"ENG_GLOB_TC_41",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/browse.test.js",
-            "testData":[
-               
-            ]
-         },
-         {
-            "id":"ENG_GLOB_TC_37",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/browse.test.js",
-            "testData":[
+            "id": "ENG_GLOB_TC_24",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/browse.test.js",
+            "testData": [
                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/searchAndFilterTestData.json",
-                  "jsonPath":"engage.searchAndFilter.searchScenario6"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.browse.teacher.listOfPlaylist"
                }
             ]
          },
          {
-            "id":"ENG_SHELL_TC_11",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/appShell.test.js",
-            "testData":[
-
-            ]
+            "id": "ENG_GLOB_TC_23",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/browse.test.js",
+            "testData": []
          },
          {
-            "id":"ENG_GLOB_TC_38",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/browse.test.js",
-            "testData":[
+            "id": "ENG_SHELL_TC_11",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/appShell.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_GLOB_TC_28",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/browse.test.js",
+            "testData": [
                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/searchAndFilterTestData.json",
-                  "jsonPath":"engage.searchAndFilter.searchScenario6"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/searchAndFilterTestData.json",
+                  "jsonPath": "engage.searchAndFilter.searchScenario6"
                },
-                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath":"engage.appContent.browse"
-               }
-            ]
-         },
-         {
-            "id":"ENG_GLOB_TC_41",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/browse.test.js",
-            "testData":[
-               
-            ]
-         },
-         {
-            "id":"ENG_GLOB_TC_19",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/browse.test.js",
-            "testData":[
                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath":[
-                     "engage.appContent.browse",
-                     "engage.appContent.browse.tabList[1]"
-                  ]
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.browse.teacher"
                }
             ]
          },
          {
-            "id":"ENG_GLOB_TC_20",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/browse.test.js",
-            "testData":[
+            "id": "ENG_GLOB_TC_41",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/browse.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_GLOB_TC_36",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/browse.test.js",
+            "testData": [
                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath":[
-                     "engage.appContent.browse",
-                     "engage.appContent.browse.tabList[1]"
-                  ]
-               }
-            ]
-         },
-         {
-            "id":"ENG_GLOB_TC_21",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/browse.test.js",
-            "testData":[
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/searchAndFilterTestData.json",
+                  "jsonPath": "engage.searchAndFilter.searchScenario5"
+               },
                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath":[
-                     "engage.appContent.browse",
-                     "engage.appContent.browse.tabList[1]"
-                  ]
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.browse.teacher"
                }
             ]
          },
          {
-            "id":"ENG_GLOB_TC_11",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/browse.test.js",
-            "testData":[
+            "id": "ENG_GLOB_TC_41",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/browse.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_GLOB_TC_37",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/browse.test.js",
+            "testData": [
                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath":"engage.appContent.browse"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/searchAndFilterTestData.json",
+                  "jsonPath": "engage.searchAndFilter.searchScenario6"
                }
             ]
          },
          {
-            "id":"ENG_GLOB_TC_12",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/browse.test.js",
-            "testData":[
+            "id": "ENG_SHELL_TC_11",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/appShell.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_GLOB_TC_38",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/browse.test.js",
+            "testData": [
                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath":"engage.appContent.browse"
-               }
-            ]
-         },
-         {
-            "id":"ENG_GLOB_TC_13",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/browse.test.js",
-            "testData":[
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/searchAndFilterTestData.json",
+                  "jsonPath": "engage.searchAndFilter.searchScenario6"
+               },
                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath":"engage.appContent.browse"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.browse.teacher"
                }
             ]
          },
          {
-            "id":"ENG_GLOB_TC_14",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/browse.test.js",
-            "testData":[
+            "id": "ENG_GLOB_TC_41",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/browse.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_GLOB_TC_19",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/browse.test.js",
+            "testData": [
                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath":"engage.appContent.browse"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/searchAndFilterTestData.json",
+                  "jsonPath": "engage.pagination.jumpToPage"
                }
             ]
          },
          {
-            "id":"ENG_GLOB_TC_15",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/browse.test.js",
-            "testData":[
+            "id": "ENG_GLOB_TC_20",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/browse.test.js",
+            "testData": [
+            ]
+         },
+         {
+            "id": "ENG_GLOB_TC_21",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/browse.test.js",
+            "testData": [
+            ]
+         },
+         {
+            "id": "ENG_GLOB_TC_11",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/browse.test.js",
+            "testData": [
                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath":"engage.appContent.browse"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.browse.teacher"
                }
             ]
          },
          {
-            "id":"ENG_GLOB_TC_42",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/browse.test.js",
-            "testData":[
+            "id": "ENG_GLOB_TC_12",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/browse.test.js",
+            "testData": [
                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath":"engage.appContent.browse.filter"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.browse.teacher"
                }
             ]
          },
          {
-            "id":"ENG_GLOB_TC_52",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/browse.test.js",
-            "testData":[
+            "id": "ENG_GLOB_TC_13",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/browse.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.browse.teacher"
+               }
             ]
+         },
+         {
+            "id": "ENG_GLOB_TC_14",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/browse.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.browse.teacher"
+               }
+            ]
+         },
+         {
+            "id": "ENG_GLOB_TC_15",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/browse.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.browse.teacher"
+               }
+            ]
+         },
+         {
+            "id": "ENG_GLOB_TC_42",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/browse.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.browse.teacher"
+               }
+            ]
+         },
+         {
+            "id": "ENG_GLOB_TC_52",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/browse.test.js",
+            "testData": []
          }
       ],
-      "AfterEach":[
-         
-      ],
-      "After":[
+      "AfterEach": [],
+      "After": [
          {
-            "id":"ENG_SHELL_TC_8",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/appShell.test.js",
-            "testData":[
-               
-            ]
+            "id": "ENG_SHELL_TC_8",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/appShell.test.js",
+            "testData": []
          },
          {
-            "id":"ENG_SHELL_TC_9",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/appShell.test.js",
-            "testData":[
-               
-            ]
+            "id": "ENG_SHELL_TC_9",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/appShell.test.js",
+            "testData": []
          }
       ]
    },
-   "Suite2":{
-      "Name":"Validation of Browse feature via Student",
-      "TestCaseRepo":[
+   "Suite2": {
+      "Name": "Validation of Browse feature via Student",
+      "TestCaseRepo": [
          "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
       ],
-      "Before":[
+      "Before": [
          {
-            "id":"launchUrl",
-            "description":"",
-            "testFile":"./engageAutomation/core/runner/launchUrl.js",
-            "testData":[
-               
-            ]
+            "id": "launchUrl",
+            "description": "",
+            "testFile": "./engageAutomation/core/runner/launchUrl.js",
+            "testData": []
          },
          {
-            "id":"ENG_LAND_TC_1",
-            "description":"Landing page",
-            "testFile":"./test/engageExperienceApp/landing.test.js",
-            "testData":[
-               
-            ]
+            "id": "ENG_LAND_TC_1",
+            "description": "Landing page",
+            "testFile": "./test/engageExperienceApp/landing.test.js",
+            "testData": []
          },
          {
-            "id":"ENG_LAND_TC_3",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/landing.test.js",
-            "testData":[
-               
-            ]
+            "id": "ENG_LAND_TC_3",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/landing.test.js",
+            "testData": []
          },
          {
-            "id":"ENG_IDEN_TC_7",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/login.test.js",
-            "testData":[
+            "id": "ENG_IDEN_TC_7",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/login.test.js",
+            "testData": [
                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
-                  "jsonPath":"engage.login.user.validStudent1"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+                  "jsonPath": "engage.login.user.validStudent1"
                }
             ]
          },
          {
-            "id":"ENG_SHELL_TC_3",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/appShell.test.js",
-            "testData":[
-               
-            ]
+            "id": "ENG_SHELL_TC_3",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/appShell.test.js",
+            "testData": []
          }
       ],
-      "BeforeEach":[
-         
-      ],
-      "Test":[
+      "BeforeEach": [],
+      "Test": [
          {
-            "id":"ENG_GLOB_TC_10",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/browse.test.js",
-            "testData":[
+            "id": "ENG_GLOB_TC_10",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/browse.test.js",
+            "testData": [
                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath":"engage.appContent.browse"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.browse"
                }
             ]
          },
          {
-            "id":"ENG_GLOB_TC_16",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/browse.test.js",
-            "testData":[
+            "id": "ENG_GLOB_TC_16",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/browse.test.js",
+            "testData": [
                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath":"engage.appContent.browse"
-               }
-            ]
-         }, 
-         {
-            "id":"ENG_GLOB_TC_26",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/browse.test.js",
-            "testData":[
-               {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/searchAndFilterTestData.json",
-                  "jsonPath":"engage.searchAndFilter.searchScenario6.expected_txt"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.browse"
                }
             ]
          },
          {
-            "id":"ENG_SHELL_TC_11",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/appShell.test.js",
-            "testData":[
-
-            ]
-         },
-         {
-            "id":"ENG_GLOB_TC_28",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/browse.test.js",
-            "testData":[
+            "id": "ENG_GLOB_TC_26",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/browse.test.js",
+            "testData": [
                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/searchAndFilterTestData.json",
-                  "jsonPath":"engage.searchAndFilter.searchScenario6"
-               },
-                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath":"engage.appContent.browse"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/searchAndFilterTestData.json",
+                  "jsonPath": "engage.searchAndFilter.searchScenario6.expected_txt"
                }
             ]
          },
          {
-            "id":"ENG_GLOB_TC_41",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/browse.test.js",
-            "testData":[
-               
-            ]
+            "id": "ENG_SHELL_TC_11",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/appShell.test.js",
+            "testData": []
          },
          {
-            "id":"ENG_GLOB_TC_36",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/browse.test.js",
-            "testData":[
+            "id": "ENG_GLOB_TC_28",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/browse.test.js",
+            "testData": [
                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/searchAndFilterTestData.json",
-                  "jsonPath":"engage.searchAndFilter.searchScenario5"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/searchAndFilterTestData.json",
+                  "jsonPath": "engage.searchAndFilter.searchScenario6"
                },
                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath":"engage.appContent.browse"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.browse"
                }
             ]
          },
          {
-            "id":"ENG_GLOB_TC_41",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/browse.test.js",
-            "testData":[
-               
-            ]
+            "id": "ENG_GLOB_TC_41",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/browse.test.js",
+            "testData": []
          },
          {
-            "id":"ENG_GLOB_TC_37",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/browse.test.js",
-            "testData":[
+            "id": "ENG_GLOB_TC_36",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/browse.test.js",
+            "testData": [
                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/searchAndFilterTestData.json",
-                  "jsonPath":"engage.searchAndFilter.searchScenario6"
-               }
-            ]
-         },
-         {
-            "id":"ENG_SHELL_TC_11",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/appShell.test.js",
-            "testData":[
-
-            ]
-         },
-         {
-            "id":"ENG_GLOB_TC_38",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/browse.test.js",
-            "testData":[
-               {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/searchAndFilterTestData.json",
-                  "jsonPath":"engage.searchAndFilter.searchScenario6"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/searchAndFilterTestData.json",
+                  "jsonPath": "engage.searchAndFilter.searchScenario5"
                },
-                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath":"engage.appContent.browse"
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.browse"
                }
             ]
          },
          {
-            "id":"ENG_GLOB_TC_41",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/browse.test.js",
-            "testData":[
-               
+            "id": "ENG_GLOB_TC_41",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/browse.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_GLOB_TC_37",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/browse.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/searchAndFilterTestData.json",
+                  "jsonPath": "engage.searchAndFilter.searchScenario6"
+               }
             ]
          },
          {
-            "id":"ENG_GLOB_TC_19",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/browse.test.js",
-            "testData":[
+            "id": "ENG_SHELL_TC_11",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/appShell.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_GLOB_TC_38",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/browse.test.js",
+            "testData": [
                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath":[
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/searchAndFilterTestData.json",
+                  "jsonPath": "engage.searchAndFilter.searchScenario6"
+               },
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.browse"
+               }
+            ]
+         },
+         {
+            "id": "ENG_GLOB_TC_41",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/browse.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_GLOB_TC_19",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/browse.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": [
                      "engage.appContent.browse",
                      "engage.appContent.browse.tabList[1]"
                   ]
@@ -540,13 +475,13 @@
             ]
          },
          {
-            "id":"ENG_GLOB_TC_20",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/browse.test.js",
-            "testData":[
+            "id": "ENG_GLOB_TC_20",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/browse.test.js",
+            "testData": [
                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath":[
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": [
                      "engage.appContent.browse",
                      "engage.appContent.browse.tabList[1]"
                   ]
@@ -554,13 +489,13 @@
             ]
          },
          {
-            "id":"ENG_GLOB_TC_21",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/browse.test.js",
-            "testData":[
+            "id": "ENG_GLOB_TC_21",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/browse.test.js",
+            "testData": [
                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath":[
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": [
                      "engage.appContent.browse",
                      "engage.appContent.browse.tabList[1]"
                   ]
@@ -568,65 +503,58 @@
             ]
          },
          {
-            "id":"ENG_GLOB_TC_11",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/browse.test.js",
-            "testData":[
+            "id": "ENG_GLOB_TC_11",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/browse.test.js",
+            "testData": [
                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath":"engage.appContent.browse"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.browse"
                }
             ]
          },
          {
-            "id":"ENG_GLOB_TC_12",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/browse.test.js",
-            "testData":[
+            "id": "ENG_GLOB_TC_12",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/browse.test.js",
+            "testData": [
                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath":"engage.appContent.browse"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.browse"
                }
             ]
          },
          {
-            "id":"ENG_GLOB_TC_42",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/browse.test.js",
-            "testData":[
+            "id": "ENG_GLOB_TC_42",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/browse.test.js",
+            "testData": [
                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath":"engage.appContent.browse.filter"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.browse.filter"
                }
             ]
          },
          {
-            "id":"ENG_GLOB_TC_52",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/browse.test.js",
-            "testData":[
-            ]
+            "id": "ENG_GLOB_TC_52",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/browse.test.js",
+            "testData": []
          }
       ],
-      "AfterEach":[
-         
-      ],
-      "After":[
+      "AfterEach": [],
+      "After": [
          {
-            "id":"ENG_SHELL_TC_8",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/appShell.test.js",
-            "testData":[
-               
-            ]
+            "id": "ENG_SHELL_TC_8",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/appShell.test.js",
+            "testData": []
          },
          {
-            "id":"ENG_SHELL_TC_9",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/appShell.test.js",
-            "testData":[
-               
-            ]
+            "id": "ENG_SHELL_TC_9",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/appShell.test.js",
+            "testData": []
          }
       ]
    }

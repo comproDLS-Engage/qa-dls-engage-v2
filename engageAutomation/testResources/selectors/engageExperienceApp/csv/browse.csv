@@ -1,38 +1,49 @@
-Label,cssSelector,tagName,group,relation,extraInfo,returnValue
-pageTitle,[data-tid=text-pageTitle],h1,browsePage,,,
-pageSubTitle,[data-tid=text-pageSubTitle],h2,browsePage,,,
-filtersBtn,[data-tid=button-filter],button,browsePage,,,filterMenu
-previousPageArrow,[data-tid=button-pagination-next],button,browsePage,,,browsePage
-nextPageArrow,[data-tid=button-pagination-previous],button,browsePage,,,browsePage
-currentPage,[data-tid*=button-pagination][aria-current=true],div,browsePage,,,
-searchBox,[data-tid=input-autocomplete-searchtextbox] input,input,browsePage,,,
-searchIcon,[data-tid=icon-autocomplete-search],svg,browsePage,,,
-resourceCategory,[data-tid*=text-seaction-heading],h2,resourceCategory,parent,pattern,
-viewAllBtn,[data-tid*=btn-viewAll],button,resourceCategory,,pattern,resourceCategory
-moreOptionsBtn,[data-tid*=button-contextMenu],button,resourceList,,pattern,moreOptions
-cardSkeleton,[class*=MuiSkeleton],span,,,,
-cardTitle,[data-tid*=text-cardTitl],p,resourceList,condition,pattern,
-cardSubTitle,[data-tid*=text-CardSubtile],p,resourceList,,pattern,
-cardImage,[data-tid*=image-card],img,resourceList,parent,pattern,
-cardLockIcon,[data-tid*=icon-locked],svg,resourceList,,pattern,
-viewOption,[data-tid*=menu-view],button,moreOptions,,,
-addToPlaylistOption,[data-tid*=menu-add-to-playlist],button,moreOptions,,,addToPlaylist
-shareOption,[data-tid*=menu-share],button,moreOptions,,,
-listOfPlaylist,"[data-tid*=menu-addToNewPlaylist],[data-tid*=menu-addToPlaylist]",button,addToPlaylist,,pattern,
-searchList,[data-tid*=list-item-]:not([data-tid=list-item-show-more-result]) > p,button,searchList,,pattern,browsePage
-showMoreResults,[data-tid=list-item-show-more-result],button,searchList,,,browsePage
-noResultListItemTitle,[data-tid=text-title-no-search-result-found],h6,searchList,,,
-noResultListItemSubtitle,[data-tid=text-subtitle-no-search-result-found],p,searchList,,,
-clearSearch,[data-tid=icon-close-serach],button,browsePage,,,browsePage
-searchCount,[data-tid=label-search-result],p,browsePage,,,
-search_NoResult_img,[data-tid=icon-nostudent],img,searchNoResults,,,
-search_NoResult_title,[data-tid=text-noResultFound],h5,searchNoResults,,,
-search_NoResult_subTitle,[data-tid=text-noResultFoundBilinear],p,searchNoResults,,,
-searchPill,[data-tid=chip-search],div,browsePage,,,
-closeSearchPill,[class*=Chip-deleteIcon],button,,,,browsePage
-goToPage,[data-tid=button-pagination-,button,,,,browsePage
-filterMenuTitle,[data-tid=filtermenu-title-filters],h6,filterMenu,,,
-filterMenuCloseBtn,[data-tid=filtermenu-button-cancel],button,filterMenu,,,"waitForDisplayed,filterMenuCloseBtn,undefined, true"
-filterMenuFilterCount,[data-tid=filtermenu-text-applied-filter-count],p,filterMenu,,,
-filterMenuClearAllBtn,[data-tid=btn-filtermenu-label-clearall],button,filterMenu,,,
-filterMenuApplyBtn,[data-tid=button-apply-filter],button,filterMenu,,,
+Label,cssSelector,tagName,group,relation,extraInfo,returnValue,teacherAppLangEN,studentAppLangEN
+cardSkeleton,[class*=MuiSkeleton],span,,,,,,
+pageTitle,[data-tid=text-pageTitle],h1,browsePage,,,,"[""Browse"",""Add your books"",""Add books to your class""]","[""Browse"",""Add your books""]"
+pageSubTitle,[data-tid=text-pageSubTitle],h2,browsePage,,,,"[""Find all our digital books and their associated resources."",""Select your books to add to your My Books list. Once added, you'll be able to view all book materials directly from the dashboard."",""Select books from either your list (My Books) or the full catalog (All Books) to associate materials with your class.""]","[""Find all our digital books and their associated resources."",""Select your books to add to your My Books list. Once added, you'll be able to view all book materials directly from the dashboard.""]"
+filtersBtn,[data-tid=button-filter],button,browsePage,,,filterMenu,"""Filters:\nShow All""","""Filters:\nShow All"""
+previousPageArrow,[data-tid=button-pagination-next],button,browsePage,,,browsePage,,
+nextPageArrow,[data-tid=button-pagination-previous],button,browsePage,,,browsePage,,
+currentPage,[data-tid*=button-pagination][aria-current=true],div,browsePage,,,,,
+searchBox,input[type=text],input,browsePage,,,,,
+searchIcon,[data-tid=icon-autocomplete-search],svg,browsePage,,,,,
+resourceCategory,[data-tid*=text-seaction-heading-,h2,resourceCategory,parent,pattern,,,
+viewAllBtn,[data-tid*=btn-viewAll-,button,resourceCategory,,pattern,resourceCategory,"""View All""","""View All"""
+cardTitle,[data-tid*='text-cardTitle-,p,resourceList,parent,pattern,,,
+cardSubTitle,[data-tid*='text-CardSubtile-,p,resourceList,,pattern,,,
+cardImage,[data-tid*='image-card-,button,resourceList,,pattern,activityPlayer.page,,
+cardLockIcon,[data-tid*='icon-locked-,svg,resourceList,,pattern,,,
+moreOptionsBtn,[data-tid*='button-contextMenu-,button,resourceList,,pattern,moreOptions,"""""",""""""
+viewOption,[data-tid*=menu-view],button,moreOptions,,,activityPlayer.page,"""View""","""View"""
+addToPlaylistOption,[data-tid*=menu-add-to-playlist],button,moreOptions,,,addToPlaylist,"""Add to Playlist""","""Add to Playlist"""
+shareOption,[data-tid*=menu-share],button,moreOptions,,,,"""Share""",null
+bookTitle,[data-tid*=text-bookTitle-,p,bookList,parent,pattern,,,
+bookSubTitle,[data-tid*=text-bookSubtitle-,p,bookList,,pattern,,,
+bookImage,[data-tid*=img-bookCover-,button,bookList,,pattern,viewBook.page,,
+viewBtn,[data-tid*=button-view-,button,bookList,,pattern,viewBook.page,"""View""","""View"""
+addBookBtn,[data-tid*=button-add-,button,bookList,,pattern,"waitForDisplayed,addBookBtn,undefined, true","""""",""""""
+bookMoreOptionsBtn,[data-tid*=button-contextMenu-,button,bookList,,pattern,bookMoreOptions,"""""",""""""
+viewClassOption,[data-tid*=button-viewClass],button,bookMoreOptions,,,classDrawer.page,"""View Classes""","""View Classes"""
+createNewClassOption,[data-tid*=button-createClass],button,bookMoreOptions,,,createClass.page,"""Create New Class""",null
+addToMyBooksOption,[data-tid*=button-add],button,bookMoreOptions,,,"waitForDisplayed, addToMyBooksOption, undefined, true","""Add to My Books""","""Add to My Books"""
+removeFromMyBooksOption,[data-tid*=button-remove],button,bookMoreOptions,,,require('./dashboard.page').getData_removeBookDialog();,"""Remove fo My Books""","""Remove fo My Books"""
+openFlipbookOption,[data-tid*=button-openFlipbook],button,bookMoreOptions,,,flipbook.page,"""Open Flipbook""","""Open Flipbook"""
+listOfPlaylist,"[data-tid*=menu-addToNewPlaylist],[data-tid*=menu-addToPlaylist]",button,addToPlaylist,,pattern,,"""Create Playlist""","""Create Playlist"""
+searchList,[data-tid*=list-item-]:not([data-tid=list-item-show-more-result]) > p,button,searchList,,pattern,"waitForDocumentLoad,",,
+showMoreResults,[data-tid=list-item-show-more-result],button,searchList,,,browsePage,"""More search results for ""","""More search results for """
+noResultListItemTitle,[data-tid=text-title-no-search-result-found],h6,searchList,,,,"""No Results""","""No Results"""
+noResultListItemSubtitle,[data-tid=text-subtitle-no-search-result-found],p,searchList,,,,"""There aren't any resources available that match those terms.""","""There aren't any resources available that match those terms."""
+clearSearch,[data-tid=icon-close-serach],button,browsePage,,,browsePage,,
+searchCount,[data-tid=label-search-result],p,browsePage,,,,""" result:""",""" result:"""
+search_NoResult_img,[data-tid=icon-nostudent],img,searchNoResults,,,,true,true
+search_NoResult_title,[data-tid=text-noResultFound],h5,searchNoResults,,,,"""No result found""","""No result found"""
+search_NoResult_subTitle,[data-tid=text-noResultFoundBilinear],p,searchNoResults,,,,"""We didn't find anything matching your search or filters. Try your search again, or change your filters to update the results here.""","""We didn't find anything matching your search or filters. Try your search again, or change your filters to update the results here."""
+searchPill,[data-tid=chip-search],div,browsePage,,,,,
+closeSearchPill,[class*=Chip-deleteIcon],button,,,,browsePage,,
+goToPage,[data-tid=button-pagination-,button,,,,browsePage,,
+filterMenuTitle,[data-tid=filtermenu-title-filters],h6,filterMenu,,,,"""Filters""","""Filters"""
+filterMenuCloseBtn,[data-tid=filtermenu-button-cancel],button,filterMenu,,,"waitForDisplayed,filterMenuCloseBtn,undefined, true","""""",""""""
+filterMenuFilterCount,[data-tid=filtermenu-text-applied-filter-count],p,filterMenu,,,,""" filters added""",""" filters added"""
+filterMenuClearAllBtn,[data-tid=btn-filtermenu-label-clearall],button,filterMenu,,,,"""Clear All""","""Clear All"""
+filterMenuApplyBtn,[data-tid=button-apply-filter],button,filterMenu,,,,"""Apply Filters""","""Apply Filters"""
