@@ -507,7 +507,7 @@ module.exports = {
     res = action.click(this.removeBook_removeBtn);
     if (true == res) {
       logger.logInto(stackTrace.get(), " removeBook_removeBtn is clicked");
-      res = this.getData_books();
+      res = action.waitForDisplayed(this.removeBook_removeBtn, undefined, true);
     }
     else {
       logger.logInto(stackTrace.get(), res + "removeBook_removeBtn is NOT clicked", 'error');

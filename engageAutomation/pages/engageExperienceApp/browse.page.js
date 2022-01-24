@@ -704,7 +704,17 @@ module.exports = {
         return res;
     },
 
-    pressEnter: function () {//manual edit
+    click_removeBook_cancelBtn: function () { //manual edit
+        logger.logInto(stackTrace.get());
+        return require('./dashboard.page').click_removeBook_cancelBtn();
+      },
+    
+      click_removeBook_removeBtn: function () { //manual edit
+        logger.logInto(stackTrace.get());
+        return require('./dashboard.page').click_removeBook_removeBtn();
+      },
+
+    pressEnter: function () { //manual edit
         logger.logInto(stackTrace.get());
         var res = action.keyPress('Enter')
         if (res == true) {
@@ -716,7 +726,7 @@ module.exports = {
 
     },
 
-    getResourceIndex: function () {//manual edit
+    getResourceIndex: function () { //manual edit
         logger.logInto(stackTrace.get());
         var cardTitle = action.findElements(this.cardTitle);
         var rIndex = [], res;

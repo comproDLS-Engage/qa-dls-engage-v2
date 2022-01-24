@@ -38,7 +38,6 @@ module.exports = {
 
     /****************************Browse Book Testcases*************************************************/
 
-
     //Validate that clicking on more options displays a list of options available
     ENG_ADDBOOK_TC_23: function (testdata) {
         sts = browsePage.click_bookMoreOptionsBtn(testdata[0]);
@@ -138,22 +137,6 @@ module.exports = {
 
     },*/
 
-    /*//Validate that clicking on previous arrow launches the previous page in books tab
-    ENG_ADDBOOK_TC_31: function (testdata) {
-        sts = addBookPage.clickPreviousArrowButton();
-
-        assertion.typeOf(sts, 'object', new Error(sts));
-        assertion.assertEqual(sts.pageTitle, testdata.pageTitle, "Page title Mismatch: " + JSON.stringify(sts))
-        assertion.assertEqual(sts.pageSubTitle, testdata.pageDescription, "Page subtitle Mismatch: " + JSON.stringify(sts))
-        assertion.assertEqual(sts.previousPageArrow, true, "Previous Arrow Not displayed")
-        assertion.assertEqual(sts.previousPageArrow, true, "Previous Arrow Not displayed")
-        assertion.assertEqual(sts.bookInfo.moreOptions, true, "More Options Not Displayed ")
-        assertion.assertEqual(sts.tabsList.list[0], testdata.tab_0, "Books Tab Text Mismatch")
-        assertion.assertEqual(sts.tabsList.selected, testdata.tab_0, "Books Tab Not Selected")
-
-    },*/
-
-
     //Validate the content of books page launched from Browse
     ENG_ADDBOOK_TC_32: function (testdata) {
         sts = browsePage.getData_browsePage();
@@ -178,36 +161,17 @@ module.exports = {
         assertion.assertEqual(sts.removeBook_removeBtn, testdata[1].removeBook_removeBtn, "Menu Remove Remove status mismatch");
     },
 
-
     //Validate that clicking on 'Cancel' in dialog box retains the book in 'My Books'
     ENG_ADDBOOK_TC_34: function () {
-        sts = dashboardPage.click_removeBook_cancelBtn();
+        sts = browsePage.click_removeBook_cancelBtn();
         assertion.assertEqual(sts, true, "Cancel button status mismatch");
     },
 
     //Validate that clicking on 'Remove' in dialog box removes the book from 'My Books'
-    ENG_DASH_TC_15: function (testdata) {
-        sts = dashboardPage.click_removeBook_removeBtn();
-        if (sts.length != undefined) {
-            for (var i = 0; i < sts.length; i++) {
-                assertion.assertNotEqual(sts[i].bookTitle, testdata, "Book title match found");
-            }
-        }
-        else
-            assertion.assertFail("Error - " + sts)
+    ENG_ADDBOOK_TC_31: function (testdata) {
+        sts = browsePage.click_removeBook_removeBtn();
+        assertion.assertEqual(sts, true, "Remove button status mismatch");
     },
-
-    /*//Validate that clicking on Cancel from My Books does not remove the book to My Books in Dashboard
-    ENG_ADDBOOK_TC_34: function (testdata) {
-        sts = addBookPage.clickRemoveFromMyBooks();
-        assertion.assertEqual(sts.removeBook_title, testdata[0].removeBookTitle, "Remove Book Pop up Dialog Title Mismatch");
-        assertion.assertEqual(sts.removeBook_subtitle, testdata[0].message1 + testdata[1].name + testdata[0].message2, "Remove Book Pop up Dialog SubTitle Mismatch");
-        assertion.assertEqual(sts.removeBookDialogCancel, testdata[0].cancel_btn, "Remove Book Pop up Dialog Cancel Text Mismatch");
-        assertion.assertEqual(sts.removeBookDialogRemove, testdata[0].remove_btn, "Remove Book Pop up Dialog Remove Text Mismatch");
-
-        sts = addBookPage.clickCancel_RemoveBookDialog()
-        assertion.assertEqual(sts, true, "Cancel Not Clicked");
-    },*/
 
     /****************************Browse Book Testcases*************************************************/
 
