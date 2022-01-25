@@ -29,6 +29,7 @@ module.exports = {
     bookImage: selectorFile.css.ComproEngage.browse.bookImage,
     viewBtn: selectorFile.css.ComproEngage.browse.viewBtn,
     addBookBtn: selectorFile.css.ComproEngage.browse.addBookBtn,
+    addedIcon: selectorFile.css.ComproEngage.browse.addedIcon,
     bookMoreOptionsBtn: selectorFile.css.ComproEngage.browse.bookMoreOptionsBtn,
     viewClassOption: selectorFile.css.ComproEngage.browse.viewClassOption,
     createNewClassOption: selectorFile.css.ComproEngage.browse.createNewClassOption,
@@ -463,7 +464,7 @@ module.exports = {
         }
         if (res == true) {
             logger.logInto(stackTrace.get(), " --addBookBtn clicked");
-            res = action.waitForDisplayed(list[i], undefined, true);
+            res = action.waitForDisplayed(this.addedIcon + i + "]");
         }
         else
             logger.logInto(stackTrace.get(), " --addBookBtn NOT clicked", "error")

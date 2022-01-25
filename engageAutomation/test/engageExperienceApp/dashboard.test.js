@@ -39,7 +39,7 @@ module.exports = {
     ENG_DASH_TC_7: function () {
         sts = dashboardPage.click_addBookBtn();
         assertion.assertEqual(sts.pageStatus, true, "Add book page status mismatch");
-        assertion.assertEqual(sts.appShell.header, true, "Add book page header status mismatch");
+        assertion.assertEqual(sts.appShellPage.header, true, "Add book page header status mismatch");
     },
 
     //Validate that clicking on 'View' button of an added book launched the Book details page

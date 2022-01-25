@@ -22,12 +22,13 @@ bookTitle,[data-tid*=text-bookTitle-,p,bookList,parent,pattern,,,
 bookSubTitle,[data-tid*=text-bookSubtitle-,p,bookList,,pattern,,,
 bookImage,[data-tid*=img-bookCover-,button,bookList,,pattern,viewBook.page,,
 viewBtn,[data-tid*=button-view-,button,bookList,,pattern,viewBook.page,"""View""","""View"""
-addBookBtn,[data-tid*=button-add-,button,bookList,,pattern,"waitForDisplayed,addBookBtn+i+"]",undefined, true","["""",""Add Book""]","[""""]"
+addBookBtn,[data-tid*=button-addBook-,button,bookList,,pattern,"waitForDisplayed,addedIcon+i+"]",undefined, true","["""",""Add Book""]","[""""]"
+addedIcon,[data-tid*=icon-added-,svg,,,,,,,
 bookMoreOptionsBtn,[data-tid*=button-contextMenu-,button,bookList,,pattern,bookMoreOptions,"""""",""""""
 viewClassOption,[data-tid*=button-viewClass],button,bookMoreOptions,,,classDrawer.page,"""View Classes""","""View Classes"""
 createNewClassOption,[data-tid*=button-createClass],button,bookMoreOptions,,,createClass.page,"""Create New Class""",null
 addToMyBooksOption,[data-tid*=button-add],button,bookMoreOptions,,,"waitForDisplayed, addToMyBooksOption, undefined, true","""Add to My Books""","""Add to My Books"""
-removeFromMyBooksOption,[data-tid*=button-remove],button,bookMoreOptions,,,require('./dashboard.page').getData_removeBookDialog();,"""Remove fo My Books""","""Remove fo My Books"""
+removeFromMyBooksOption,[data-tid*=button-remove],button,bookMoreOptions,,,require('./dashboard.page').getData_removeBookDialog();,"""Remove from My Books""","""Remove from My Books"""
 openFlipbookOption,[data-tid*=button-openFlipbook],button,bookMoreOptions,,,flipbook.page,"""Open Flipbook""","""Open Flipbook"""
 listOfPlaylist,"[data-tid*=menu-addToNewPlaylist],[data-tid*=menu-addToPlaylist]",button,addToPlaylist,,pattern,,"""Create Playlist""","""Create Playlist"""
 searchList,[data-tid*=list-item-]:not([data-tid=list-item-show-more-result]) > p,button,searchList,,pattern,"waitForDocumentLoad,",,

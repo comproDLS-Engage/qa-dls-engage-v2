@@ -2387,7 +2387,7 @@
         },
         {
           "id": "ENG_GLOB_TC_26",
-          "description": "Validate that clicking on a resource launches the Global Resources view page",
+          "description": "Validate that clicking on the resource image launches the resource",
           "tags": "P1, Desktop",
           "visualTest": "-"
         },
@@ -2411,19 +2411,13 @@
         },
         {
           "id": "ENG_GLOB_TC_37",
-          "description": "Validate that clicking on 'More search results for ..xyz' lists the resources based on search text.",
+          "description": "Validate that clicking on a resource from the search suggestion drop down list launches the resource",
           "tags": "P1, Desktop",
           "visualTest": "-"
         },
         {
           "id": "ENG_GLOB_TC_38",
           "description": "Validate that clicking on 'More search results for ..xyz' lists the resources based on search text.",
-          "tags": "P1, Desktop",
-          "visualTest": "-"
-        },
-        {
-          "id": "ENG_GLOB_TC_39",
-          "description": "Validate that pressing Enter lists the resources based on search text.",
           "tags": "P1, Desktop",
           "visualTest": "-"
         },
@@ -2440,8 +2434,92 @@
           "visualTest": "-"
         },
         {
-          "id": "ENG_GLOB_TC_52",
+          "id": "ENG_GLOB_TC_53",
           "description": "Validate that clicking on cross icon on Filters screen closes the filter pop up.",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_57",
+          "description": "Validate the content of add book page launched from Dashboard",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_58",
+          "description": "Validate that clicking on '+' button adds the book to My Books",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_59",
+          "description": "Validate that clicking on the book image launches the book",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_60",
+          "description": "Validate that clicking on the View button launches the book",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_61",
+          "description": "Validate the content of books page launched from Browse",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_62",
+          "description": "Validate that clicking on more options button displays a list of options available for a book",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_63",
+          "description": "Validate that clicking on View Classes option launches Class Drawer",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_64",
+          "description": "Validate that clicking on Add to My Books adds the book to My Books and display a snackbar message",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_65",
+          "description": "Validate that clicking on Open flipbook launches the flipbook associated with the book",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_66",
+          "description": "Validate that clicking on Remove from My Books launches a pop up with label 'Remove from My Books?'",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_67",
+          "description": "Validate that clicking on 'Cancel' in dialog box retains the book in 'My Books'",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_68",
+          "description": "Validate that clicking on 'Remove' in dialog box removes the book from 'My Books'",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_69",
+          "description": "Validate that clicking on Create New Class launches create class workflow where book is added to Class Books",
+          "tags": "P1, Desktop",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GLOB_TC_70",
+          "description": "Validate that searching a text lists maximum 5 suggestions matching the search text",
           "tags": "P1, Desktop",
           "visualTest": "-"
         }

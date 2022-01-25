@@ -275,7 +275,7 @@ module.exports = {
     res = action.click(this.addBookBtn);
     if (true == res) {
       logger.logInto(stackTrace.get(), " addBookBtn is clicked");
-      res = require('./addBook.page').isInitialized();
+      res = require('./browse.page').isInitialized();
     }
     else {
       logger.logInto(stackTrace.get(), res + "addBookBtn is NOT clicked", 'error');
