@@ -827,243 +827,57 @@
       "testFile": "./test/engageExperienceApp/addBook.test.js",
       "testcase": [
         {
-          "id": "ENG_ADDBOOK_TC_2",
-          "description": "Validate the content of add book page launched from Dashboard",
+          "id": "ENG_ADDB_TC_2",
+          "description": "Validate the content of add book page launched from Class workflow",
           "tags": "",
           "visualTest": "-"
         },
         {
-          "id": "ENG_ADDBOOK_TC_4",
-          "description": "Validate the my books page content",
+          "id": "ENG_ADDB_TC_3",
+          "description": "Validate the My Books tab selected when click on my book tab",
           "tags": "",
           "visualTest": "-"
         },
         {
-          "id": "ENG_ADDBOOK_TC_5",
-          "description": "Validate the all books page content",
+          "id": "ENG_ADDB_TC_4",
+          "description": "Validate the All Books tab selected when click on my book tab",
           "tags": "",
           "visualTest": "-"
         },
         {
-          "id": "ENG_ADDBOOK_TC_6",
-          "description": "Validate the my book tab selected when click on my book tab",
-          "tags": "",
-          "visualTest": "-"
-        },
-        {
-          "id": "ENG_ADDBOOK_TC_7",
-          "description": "Validate the all book tab selected when click on all book tab",
-          "tags": "",
-          "visualTest": "-"
-        },
-        {
-          "id": "ENG_ADDBOOK_TC_8",
+          "id": "ENG_ADDB_TC_5",
           "description": "Validate that create class page is launched after click on add to class button",
           "tags": "",
           "visualTest": "-"
         },
         {
-          "id": "ENG_ADDBOOK_TC_9",
+          "id": "ENG_ADDB_TC_6",
           "description": "Validate the create class page is launched and book is not changed after click on Cancel and go Back button",
           "tags": "",
           "visualTest": "-"
         },
         {
-          "id": "ENG_ADDBOOK_TC_10",
+          "id": "ENG_ADDB_TC_7",
           "description": "Validate the create class page is launched and no book is added after click on Cancel and go Back button",
           "tags": "",
           "visualTest": "-"
         },
         {
-          "id": "ENG_ADDBOOK_TC_11",
-          "description": "Validate the bottom label when no book added in a class",
-          "tags": "",
-          "visualTest": "-"
-        },
-        {
-          "id": "ENG_ADDBOOK_TC_12",
+          "id": "ENG_ADDB_TC_8",
           "description": "Validate the book is added on clicking of add book button of a specific book",
           "tags": "",
           "visualTest": "-"
         },
         {
-          "id": "ENG_ADDBOOK_TC_13",
-          "description": "Validate the book details in bottom Label when book is added",
+          "id": "ENG_ADDB_TC_9",
+          "description": "Validate the book is remove from class when click on cross icon on bottom label",
           "tags": "",
           "visualTest": "-"
         },
         {
-          "id": "ENG_ADDBOOK_TC_14",
-          "description": "Validate the book is remove from class when click on cross icon on button Label",
+          "id": "ENG_ADDB_TC_10",
+          "description": "Validate the error message when click on add to class button without adding any book",
           "tags": "",
-          "visualTest": "-"
-        },
-        {
-          "id": "ENG_ADDBOOK_TC_15",
-          "description": "Validate the book is removed after clicking on \"Added\" button of a book which is already added",
-          "tags": "",
-          "visualTest": "-"
-        },
-        {
-          "id": "ENG_ADDBOOK_TC_16",
-          "description": "Validate the error message when click on add to class button without adding any class",
-          "tags": "",
-          "visualTest": "-"
-        },
-        {
-          "id": "ENG_ADDBOOK_TC_19",
-          "description": "Validate the content when no book is added on my book tab",
-          "tags": "",
-          "visualTest": "-"
-        },
-        {
-          "id": "ENG_ADDBOOK_TC_21",
-          "description": "Validate that clicking on '+' button adds the book to My Books",
-          "tags": "P1",
-          "visualTest": "-"
-        },
-        {
-          "id": "ENG_ADDBOOK_TC_20",
-          "description": "Validate that clicking on Book Thumbnail launches the book View page",
-          "tags": "P1",
-          "visualTest": "-"
-        },
-        {
-          "id": "ENG_ADDBOOK_TC_21",
-          "description": "Validate that clicking on Book Thumbnail launches the book View page",
-          "tags": "P1",
-          "visualTest": "-"
-        },
-        {
-          "id": "ENG_ADDBOOK_TC_22",
-          "description": "Validate clicking on the breadcrumb on add book page launches the dashboard page",
-          "tags": "P1",
-          "visualTest": "-"
-        },
-        {
-          "id": "ENG_ADDBOOK_TC_23",
-          "description": "Validate that clicking on more options displays a list of options available",
-          "tags": "P1",
-          "visualTest": "-"
-        },
-        {
-          "id": "ENG_ADDBOOK_TC_24",
-          "description": "Validate that clicking on View Classes launches Class Drawer",
-          "tags": "P1",
-          "visualTest": "-"
-        },
-        {
-          "id": "ENG_ADDBOOK_TC_25",
-          "description": "Validate that clicking on Add to My Books adds the book to My Books in Dashboard",
-          "tags": "P1",
-          "visualTest": "-"
-        },
-        {
-          "id": "ENG_ADDBOOK_TC_26",
-          "description": "Validate that clicking on Open flipbook launches the flipbook associated with the book",
-          "tags": "P1",
-          "visualTest": "-"
-        },
-        {
-          "id": "ENG_ADDBOOK_TC_27",
-          "description": "Validate that clicking on Open flipbook displays a list of flipbooks associated with the book",
-          "tags": "P1",
-          "visualTest": "-"
-        },
-        {
-          "id": "ENG_ADDBOOK_TC_28",
-          "description": "Validate that clicking on Create New Class launches create class workflow where book is added to Class Books",
-          "tags": "P1",
-          "visualTest": "-"
-        },
-        {
-          "id": "ENG_ADDBOOK_TC_29",
-          "description": "Validate that clicking on a page number launches the list of books",
-          "tags": "P1",
-          "visualTest": "-"
-        },
-        {
-          "id": "ENG_ADDBOOK_TC_30",
-          "description": "Validate that clicking on next arrow launches the next page in books tab",
-          "tags": "P1",
-          "visualTest": "-"
-        },
-        {
-          "id": "ENG_ADDBOOK_TC_31",
-          "description": "Validate that clicking on previous arrow launches the previous page in books tab",
-          "tags": "P1",
-          "visualTest": "-"
-        },
-        {
-          "id": "ENG_ADDBOOK_TC_32",
-          "description": "Validate the content of books page launched from Browse",
-          "tags": "P1",
-          "visualTest": "-"
-        },
-        {
-          "id": "ENG_ADDBOOK_TC_33",
-          "description": "Validate that clicking on Remove from My Books removes the book to My Books in Dashboard",
-          "tags": "P1",
-          "visualTest": "-"
-        },
-        {
-          "id": "ENG_ADDBOOK_TC_34",
-          "description": "Validate that clicking on Cancel from My Books does not remove the book to My Books in Dashboard",
-          "tags": "P1",
-          "visualTest": "-"
-        },
-        {
-          "id": "ENG_ADDBOOK_TC_35",
-          "description": "Validate the serach for partial text of resource's name.",
-          "tags": "P1",
-          "visualTest": "-"
-        },
-        {
-          "id": "ENG_ADDBOOK_TC_36",
-          "description": "Validate the serach for complete text of resource's name",
-          "tags": "P1",
-          "visualTest": "-"
-        },
-        {
-          "id": "ENG_ADDBOOK_TC_37",
-          "description": "Validate the search for alpha numeric text",
-          "tags": "P1",
-          "visualTest": "-"
-        },
-        {
-          "id": "ENG_ADDBOOK_TC_38",
-          "description": "Validate that a search text lists maximum 5 suggestions matching the search text",
-          "tags": "P1",
-          "visualTest": "-"
-        },
-        {
-          "id": "ENG_ADDBOOK_TC_39",
-          "description": "Validate that No Result Found screen is displayed when no resource matching the search crietria is fulfilled",
-          "tags": "P1",
-          "visualTest": "-"
-        },
-        {
-          "id": "ENG_ADDBOOK_TC_40",
-          "description": "Validate that clicking on close search pill icon, the search results are cleared",
-          "tags": "P1",
-          "visualTest": "-"
-        },
-        {
-          "id": "ENG_ADDBOOK_TC_41",
-          "description": "Validate that clicking on a resource from the search suggestion drop down list launches the resource",
-          "tags": "P1",
-          "visualTest": "-"
-        },
-        {
-          "id": "ENG_ADDBOOK_TC_44",
-          "description": "Validate the content of add book page launched from Class workflow",
-          "tags": "P1",
-          "visualTest": "-"
-        },
-        {
-          "id": "ENG_ADDBOOK_TC_99",
-          "description": "Validate the Search of  book Name on  the add Book List page.",
-          "tags": "P1",
           "visualTest": "-"
         }
       ]

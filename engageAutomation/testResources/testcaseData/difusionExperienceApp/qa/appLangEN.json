@@ -413,54 +413,24 @@
                     "signOut": "Logout"
                 }
             },
-            "addBookPage": {
-                "dashboard": {
-                    "pageTitle": "Add your books",
-                    "pageDescription": "Select your books to add to your My Books list. Once added, you'll be able to view all book materials directly from the dashboard.",
-                    "view_btn": "View"
-                },
-                "browse": {
-                    "pageTitle": "Browse",
-                    "pageDescription": "Find all our digital books and their associated resources.",
-                    "tab_0": "Books",
-                    "searchPlaceholder": "Search Books...",
-                    "view_btn": "View",
-                    "moreOptions": {
-                        "viewClass_btn": "View Classes",
-                        "createClass_btn": "Create New Class",
-                        "addToMyBooks_btn": "Add to My Books",
-                        "openFlipbook_btn": "Open Flipbook",
-                        "removeFromMyBooks_btn": "Remove from My Books"
-                    },
-                    "snackBarMessages": {
-                        "addToMyBooks": "1 book has been added to My Books.",
-                        "removeFromMyBooks": "1 book has been removed from My Books."
-                    }
-                },
-                "classes": {
-                    "pageTitle": "Add books to your class",
-                    "pageSubTitle": "Select books from either your list (My Books) or the full catalog (All Books) to associate materials with your class.",
-                    "myBooksTab": "My Books",
-                    "allBooksTab": "All Books",
-                    "addtoClassbtn": "Add to Class",
-                    "cancelAndGoBackbtn": "Cancel & Go Back",
-                    "noBooklbl": "No Books Added",
-                    "bookAddedlbl": "Books Added:",
-                    "noBookerror": "No Books Added : At least one book needs to be selected",
-                    "addBookbtntxt": "Add Book",
-                    "addedBookbtntxt": "Added",
-                    "noBookTitle": "No Books added yet",
-                    "noBookSubTitle": "Any books you save while browsing the catalog will be added here for you to view later."
-                },
-                "search": {
-                    "searchPlaceholder": "Search...",
-                    "results": "results:",
-                    "result": "result:",
-                    "noItemFoundTitle": "No Results\nThere aren't any resources available that match those terms.",
-                    "noResultFound": {
-                        "title": "No result found",
-                        "subTitle": "We didn't find anything matching your search or filters. Try your search again, or change your filters to update the results here."
-                    }
+            "addBook": {
+                "teacher": {
+                    "addBookPageTitle": "Add books to your class",
+                    "addBookPageSubtitle": "Select books from either your list (My Books) or the full catalog (All Books) to associate materials with your class.",
+                    "bookCoverImg": true,
+                    "addBookBtn": "Add Book",
+                    "addToClassBtn": "Add to Class",
+                    "cancelBtn": "Cancel & Go Back",
+                    "noBookLabel": [
+                        "No Books Added",
+                        "No Books Added : At least one book needs to be selected"
+                    ],
+                    "bookLabel": "Books Added:",
+                    "removeBookBtn": "",
+                    "tabList": [
+                        "My Books",
+                        "All Books"
+                    ]
                 }
             },
             "settings": {

@@ -36,7 +36,7 @@
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
             "jsonPath": "engage.appContent.myClassPage"
-         }
+          }
         ]
       }
     ],
@@ -99,7 +99,7 @@
         "testData": []
       },
       {
-        "id": "ENG_ADDBOOK_TC_12",
+        "id": "ENG_ADDB_TC_8",
         "description": "",
         "testFile": "./test/engageExperienceApp/addBook.test.js",
         "testData": [
@@ -109,12 +109,12 @@
           },
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-            "jsonPath": "engage.appContent.addBookPage.classes"
+            "jsonPath": "engage.appContent.addBook.teacher"
           }
         ]
       },
       {
-        "id": "ENG_ADDBOOK_TC_8",
+        "id": "ENG_ADDB_TC_5",
         "description": "",
         "testFile": "./test/engageExperienceApp/addBook.test.js",
         "testData": [
@@ -205,7 +205,7 @@
         "testData": []
       },
       {
-        "id": "ENG_ADDBOOK_TC_8",
+        "id": "ENG_ADDB_TC_5",
         "description": "",
         "testFile": "./test/engageExperienceApp/addBook.test.js",
         "testData": [
@@ -289,7 +289,7 @@
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
             "jsonPath": "engage.appContent.myClassPage"
-         }
+          }
         ]
       }
     ],
@@ -369,7 +369,7 @@
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
             "jsonPath": "engage.appContent.myClassPage"
-         }
+          }
         ]
       }
     ],
@@ -481,7 +481,7 @@
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
             "jsonPath": "engage.appContent.myClassPage"
-         }
+          }
         ]
       },
       {
@@ -569,7 +569,7 @@
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
             "jsonPath": "engage.appContent.myClassPage"
-         }
+          }
         ]
       },
       {
@@ -640,7 +640,7 @@
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
             "jsonPath": "engage.appContent.myClassPage"
-         }
+          }
         ]
       }
     ],
@@ -760,7 +760,7 @@
         "testData": []
       },
       {
-        "id": "ENG_ADDBOOK_TC_12",
+        "id": "ENG_ADDB_TC_8",
         "description": "",
         "testFile": "./test/engageExperienceApp/addBook.test.js",
         "testData": [
@@ -770,12 +770,12 @@
           },
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-            "jsonPath": "engage.appContent.addBookPage.classes"
+            "jsonPath": "engage.appContent.addBook.teacher"
           }
         ]
       },
       {
-        "id": "ENG_ADDBOOK_TC_8",
+        "id": "ENG_ADDB_TC_5",
         "description": "",
         "testFile": "./test/engageExperienceApp/addBook.test.js",
         "testData": [
@@ -914,7 +914,7 @@
         "testData": []
       },
       {
-        "id": "ENG_ADDBOOK_TC_8",
+        "id": "ENG_ADDB_TC_5",
         "description": "",
         "testFile": "./test/engageExperienceApp/addBook.test.js",
         "testData": [
@@ -1041,7 +1041,7 @@
         "testData": []
       },
       {
-        "id": "ENG_ADDBOOK_TC_8",
+        "id": "ENG_ADDB_TC_5",
         "description": "",
         "testFile": "./test/engageExperienceApp/addBook.test.js",
         "testData": [
@@ -1129,7 +1129,7 @@
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
             "jsonPath": "engage.appContent.myClassPage"
-         }
+          }
         ]
       },
       {
@@ -1217,7 +1217,7 @@
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
             "jsonPath": "engage.appContent.myClassPage"
-         }
+          }
         ]
       },
       {
