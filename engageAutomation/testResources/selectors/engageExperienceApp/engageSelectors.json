@@ -290,7 +290,7 @@
                 "addBookBtn": "[data-tid*=button-add-",
                 "addToClassBtn": "[data-tid='button-Add to Class']",
                 "cancelBtn": "[data-tid='button-cancel']",
-                "noBookLabel": "[data-tid='text-noBookLabel']",
+                "noBookLabel": "[data-tid*=text-noBookLabel]",
                 "bookLabel": "[data-tid='text-bookLabel']",
                 "bookValue": "[data-tid='text-bookValue']",
                 "removeBookBtn": "[data-tid='icon-close']"

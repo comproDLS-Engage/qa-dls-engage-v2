@@ -20,23 +20,23 @@ module.exports = {
             assertion.assertEqual(sts.removeBookBtn, testdata.removeBookBtn, "removeBookBtn mismatch");
         }
         sts = appShell.getTabsListData();
-        assertion.assertEqual(sts.selected, testdata.tabsList[0], "Selected tab mismatch");
+        assertion.assertEqual(sts.selected, testdata.tabList[0], "Selected tab mismatch");
     },
 
     //Validate the "My Books" tab selected when click on my book tab
     ENG_ADDB_TC_3: function (testdata) {
-        sts = appShell.selectTab(testdata.tabsList[0]);
+        sts = appShell.selectTab(testdata.tabList[0]);
         assertion.assertEqual(sts, true, "Select tab error");
         sts = appShell.getTabsListData();
-        assertion.assertEqual(sts.selected, testdata.tabsList[0], "Selected tab mismatch");
+        assertion.assertEqual(sts.selected, testdata.tabList[0], "Selected tab mismatch");
     },
 
     //Validate the "All Books" tab selected when click on my book tab
     ENG_ADDB_TC_4: function (testdata) {
-        sts = appShell.selectTab(testdata.tabsList[1]);
+        sts = appShell.selectTab(testdata.tabList[1]);
         assertion.assertEqual(sts, true, "Select tab error");
         sts = appShell.getTabsListData();
-        assertion.assertEqual(sts.selected, testdata.tabsList[1], "Selected tab mismatch");
+        assertion.assertEqual(sts.selected, testdata.tabList[1], "Selected tab mismatch");
     },
 
     //Validate that create class page is launched after click on add to class button
@@ -109,7 +109,7 @@ module.exports = {
     //Validate the error message when click on add to class button without adding any book
     ENG_ADDB_TC_10: function (testdata) {
         sts = addBookPage.click_addToClassBtn();
-        assertion.assertEqual(sts.pageStatus, false, "Create Class Page is launched: ");
+        assertion.assert((sts.pageStatus instanceof Error) === true, "Create Class Page is launched: " + sts.pageStatus);
         sts = addBookPage.getData_addBookPage();
         assertion.assertEqual(sts.noBookLabel, testdata.noBookLabel[1], "noBookLabel mismatch");
     },
