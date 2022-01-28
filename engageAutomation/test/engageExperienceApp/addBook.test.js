@@ -92,20 +92,6 @@ module.exports = {
         assertion.assertEqual(sts.bookValue, null, "bookValue mismatch");
     },
 
-    /*//Validate the book is removed after clicking on "Added" button of a book which is already added
-    ENG_ADDBOOK_TC_15: function (testdata) {
-        sts = addBookPage.click_addBook(testdata[1])
-        if ((typeof (sts)) === "object") {
-            assertion.assertEqual(sts.booksList[0].bookTitle, testdata[1], "Book label is mismatched: " + JSON.stringify(sts))
-            assertion.assertEqual(sts.bookInfo.addBookbtntxt, testdata[0].addBookbtntxt, "book text is mismatched: " + JSON.stringify(sts))
-            assertion.assertEqual(sts.noBooklbl, testdata[0].noBooklbl, "Book label is mismatched: " + JSON.stringify(sts))
-            assertion.assertEqual(sts.bookAddedtxt, null, "book text is mismatched: " + JSON.stringify(sts))
-            assertion.assertEqual(sts.bookdeletebottomIcon, null, "Cross icon is not selected: " + JSON.stringify(sts))
-        } else {
-            assertion.assertFail(sts);
-        }
-    },*/
-
     //Validate the error message when click on add to class button without adding any book
     ENG_ADDB_TC_10: function (testdata) {
         sts = addBookPage.click_addToClassBtn();
