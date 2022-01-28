@@ -328,7 +328,13 @@
                     "completedTxt": null,
                     "yourScoreLabel": null,
                     "closeInfoBtn": "",
-                    "infoTocHeading": "Activities"
+                    "infoTocHeading": "Activities",
+                    "feedbackText": [
+                        "Well done",
+                        "Correct",
+                        "Oops! Not quite correct.",
+                        "Not Correct"
+                    ]
                 },
                 "student": {
                     "infoBtn": "",
@@ -359,7 +365,13 @@
                     "completedTxt": "Completed on",
                     "yourScoreLabel": "Your Score:",
                     "closeInfoBtn": "",
-                    "infoTocHeading": "Activities"
+                    "infoTocHeading": "Activities",
+                    "feedbackText": [
+                        "Well done",
+                        "Correct",
+                        "Oops! Not quite correct.",
+                        "Not Correct"
+                    ]
                 }
             },
             "activityPlayerPage": {

@@ -33,6 +33,7 @@ module.exports = {
     analyticsInfoContainer: selectorFile.css.ComproEngage.activityPlayer.analyticsInfoContainer,
     closeInfoBtn: selectorFile.css.ComproEngage.activityPlayer.closeInfoBtn,
     infoTocHeading: selectorFile.css.ComproEngage.activityPlayer.infoTocHeading,
+    feedbackText: selectorFile.css.ComproEngage.activityPlayer.feedbackText,
 
     isInitialized: function () {
         var res;
@@ -66,7 +67,8 @@ module.exports = {
             completedTxt: (action.getElementCount(this.completedTxt) > 0) ? action.getText(this.completedTxt) : null,
             yourScoreLabel: (action.getElementCount(this.yourScoreLabel) > 0) ? action.getText(this.yourScoreLabel) : null,
             yourScoreValue: (action.getElementCount(this.yourScoreValue) > 0) ? action.getText(this.yourScoreValue) : null,
-            detailsPanelHidden: (action.getElementCount(this.detailsPanel) > 0) ? action.getAttribute(this.detailsPanel, "aria-hidden") : null
+            detailsPanelHidden: (action.getElementCount(this.detailsPanel) > 0) ? action.getAttribute(this.detailsPanel, "aria-hidden") : null,
+            feedbackText: (action.getElementCount(this.feedbackText) > 0) ? action.getText(this.feedbackText) : null
         }
         return obj;
     },
