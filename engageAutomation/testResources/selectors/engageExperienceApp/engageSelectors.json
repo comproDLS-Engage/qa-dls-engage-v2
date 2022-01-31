@@ -446,7 +446,8 @@
                 "expandCollapseBtn": "[data-tid=icon-togglegroupexpansion]",
                 "analyticsInfoContainer": "[data-tid=container-analyticsinfo] > div > div:nth-child(2)",
                 "closeInfoBtn": "[data-tid=button-closeinfotoc]",
-                "infoTocHeading": "[data-tid=text-infotocheading]"
+                "infoTocHeading": "[data-tid=text-infotocheading]",
+                "feedbackText": "[data-tid=text-feedbackmessage]"
             },
             "activitiyPlayer": {
                 "feedback_txt": "[data-tid=text-feedbackmessage]",

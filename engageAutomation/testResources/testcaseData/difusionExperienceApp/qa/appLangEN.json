@@ -318,7 +318,7 @@
                         "Next Activity",
                         "Next"
                     ],
-                    "showAnswerBtn": "Show Answer",
+                    "showAnswerBtn": "Show Answers",
                     "showResponseBtn": "User Response",
                     "checkAnswerBtn": "Check Answers",
                     "submitActivityBtn": null,
@@ -328,7 +328,13 @@
                     "completedTxt": null,
                     "yourScoreLabel": null,
                     "closeInfoBtn": "",
-                    "infoTocHeading": "Activities"
+                    "infoTocHeading": "Activities",
+                    "feedbackText": [
+                        "Well done",
+                        "Correct",
+                        "Oops! Not quite correct.",
+                        "Not Correct"
+                    ]
                 },
                 "student": {
                     "infoBtn": "",
@@ -346,7 +352,7 @@
                         "Next Activity",
                         "Next"
                     ],
-                    "showAnswerBtn": "Show Answer",
+                    "showAnswerBtn": "Show Answers",
                     "showResponseBtn": "User Response",
                     "checkAnswerBtn": "Check Answers",
                     "submitActivityBtn": [
@@ -359,7 +365,13 @@
                     "completedTxt": "Completed on",
                     "yourScoreLabel": "Your Score:",
                     "closeInfoBtn": "",
-                    "infoTocHeading": "Activities"
+                    "infoTocHeading": "Activities",
+                    "feedbackText": [
+                        "Well done",
+                        "Correct",
+                        "Oops! Not quite correct.",
+                        "Not Correct"
+                    ]
                 }
             },
             "activityPlayerPage": {

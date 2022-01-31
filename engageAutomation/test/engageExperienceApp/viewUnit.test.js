@@ -98,7 +98,7 @@ module.exports = {
     //Validate that clicking on the subfolder expand/collapse the subfolder
     ENG_BOOK_TC_53: function (testdata) {
         sts = unitDetailPage.expandCollapseFolder(testdata);
-        assertion.assertEqual(sts, true, sts);
+        assertion.assertEqual(sts, true, "folder not found: ");
     }
 
 };
