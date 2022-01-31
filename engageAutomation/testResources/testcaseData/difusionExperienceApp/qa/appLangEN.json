@@ -318,7 +318,7 @@
                         "Next Activity",
                         "Next"
                     ],
-                    "showAnswerBtn": "Show Answer",
+                    "showAnswerBtn": "Show Answers",
                     "showResponseBtn": "User Response",
                     "checkAnswerBtn": "Check Answers",
                     "submitActivityBtn": null,
@@ -352,7 +352,7 @@
                         "Next Activity",
                         "Next"
                     ],
-                    "showAnswerBtn": "Show Answer",
+                    "showAnswerBtn": "Show Answers",
                     "showResponseBtn": "User Response",
                     "checkAnswerBtn": "Check Answers",
                     "submitActivityBtn": [
