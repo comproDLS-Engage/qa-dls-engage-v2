@@ -386,6 +386,7 @@ module.exports = {
     }
     if (res == true) {
       logger.logInto(stackTrace.get(), " --bookMenuBtn clicked");
+      action.waitForDisplayed(this.bookMenu_viewClassOption);
       res = this.getData_bookMenu();
     }
     else

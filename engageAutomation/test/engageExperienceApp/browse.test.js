@@ -168,8 +168,7 @@ module.exports = {
 
 		if (sts.tabInfo.selected == sts.tabInfo.list[0]) {
 			sts = browsePage.getData_bookList();
-			assertion.assertEqual(sts[0].bookTitle, testdata[0].bookTitle, "bookTitle Mismatch");
-			assertion.assertEqual(sts[0].bookSubTitle, testdata[0].bookSubTitle, "bookSubTitle Mismatch");
+			assertion.assertEqual(sts[0].bookTitle, testdata[0].expected_txt, "bookTitle Mismatch");
 			assertion.assertEqual(sts[0].bookImage, true, "bookImage status Mismatch");
 		}
 		else {
