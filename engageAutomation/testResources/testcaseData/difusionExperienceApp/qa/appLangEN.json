@@ -643,7 +643,8 @@
                 "noBookmarkText": "Looks like you haven't added any bookmarks yet. Bookmark a page to save your spot for later.",
                 "bookmarkThisPageBtn": "Bookmark This Page",
                 "bookmarksTitle": "Bookmarks",
-                "bookmarkNameLabel": "Bookmark Name"
+                "bookmarkNameLabel": "Bookmark Name",
+                "tableOfContentTitle": "Table of Contents"
             },
             "browse": {
                 "teacher": {

@@ -3,7 +3,6 @@
 		"flipbook": {
 			"fb1": {
 				"flipbookTitle": "Flipbook",
-				"tableOfContentTitle": "Table of Contents",
 				"resourceTitle:": "['Section 1.1','Section 1.2, '', '', '']",
 				"jumpToPageInput": "4",
 				"setNote": "test note automation 1",

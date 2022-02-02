@@ -194,8 +194,8 @@ module.exports = {
 	//Validate that clicking on TOC button, launches the TOC layover
 	ENG_FLIP_TC_20: function (testdata) {
 		sts = flipbook.click_TOCBtn();
-		assertion.assertEqual(sts.flipbookTitle, testdata.flipbookTitle, " text mismatch");
-		assertion.assertEqual(sts.tableOfContentTitle, testdata.tableOfContentTitle, " text mismatch");
+		assertion.assertEqual(sts.flipbookTitle, testdata[0].flipbookTitle, " text mismatch");
+		assertion.assertEqual(sts.tableOfContentTitle, testdata[1].tableOfContentTitle, " text mismatch");
 		assertion.assertEqual(sts.jumpToPageBtn, '', "jumpToPageBtn text mismatch");
 	},
 
