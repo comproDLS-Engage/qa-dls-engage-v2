@@ -30,21 +30,33 @@ module.exports = {
 			else
 				assertion.assertEqual(sts.closeBtn, testdata.closeBtn, "closeBtn status mismatch");
 		}
-		else if (parseInt(sts.quesNumber) == 1) {
-			assertion.assertEqual(sts.nextPageBtn, "", "nextPageBtn status mismatch");
-			assertion.assertEqual(sts.prevPageBtn, null, "prevPageBtn status mismatch");
-			assertion.assertEqual(sts.prevActivityBtn, testdata.prevActivityBtn[0], "prevActivityBtn status mismatch");
-			assertion.assertEqual(sts.nextActivityBtn, null, "nextActivityBtn status mismatch");
-			if (sts.closeBtn != null)
-				assertion.assertEqual(sts.closeBtn, testdata.closeBtn, "closeBtn status mismatch");
-		}
 		else {
-			assertion.assertEqual(sts.nextPageBtn, "", "nextPageBtn status mismatch");
-			assertion.assertEqual(sts.prevPageBtn, "", "prevPageBtn status mismatch");
-			assertion.assertEqual(sts.prevActivityBtn, null, "prevActivityBtn status mismatch");
-			assertion.assertEqual(sts.nextActivityBtn, null, "nextActivityBtn status mismatch");
-			if (sts.closeBtn != null)
-				assertion.assertEqual(sts.closeBtn, testdata.closeBtn, "closeBtn status mismatch");
+			let q = sts.quesNumber.split(" ");
+			if (q[0] == '1') {
+				assertion.assertEqual(sts.nextPageBtn, "", "nextPageBtn status mismatch");
+				assertion.assertEqual(sts.prevPageBtn, null, "prevPageBtn status mismatch");
+				assertion.assertEqual(sts.prevActivityBtn, testdata.prevActivityBtn[0], "prevActivityBtn status mismatch");
+				assertion.assertEqual(sts.nextActivityBtn, null, "nextActivityBtn status mismatch");
+				if (sts.closeBtn != null)
+					assertion.assertEqual(sts.closeBtn, testdata.closeBtn, "closeBtn status mismatch");
+			}
+			else if (q[0] == q[2]) {
+				assertion.assertEqual(sts.nextPageBtn, null, "nextPageBtn status mismatch");
+				assertion.assertEqual(sts.prevPageBtn, "", "prevPageBtn status mismatch");
+				assertion.assertEqual(sts.prevActivityBtn, null, "prevActivityBtn status mismatch");
+				if (sts.closeBtn == null)
+					assertion.assertEqual(sts.nextActivityBtn, testdata.nextActivityBtn[0], "nextActivityBtn status mismatch");
+				else
+					assertion.assertEqual(sts.closeBtn, testdata.closeBtn, "closeBtn status mismatch");
+			}
+			else {
+				assertion.assertEqual(sts.nextPageBtn, "", "nextPageBtn status mismatch");
+				assertion.assertEqual(sts.prevPageBtn, "", "prevPageBtn status mismatch");
+				assertion.assertEqual(sts.prevActivityBtn, null, "prevActivityBtn status mismatch");
+				assertion.assertEqual(sts.nextActivityBtn, null, "nextActivityBtn status mismatch");
+				if (sts.closeBtn != null)
+					assertion.assertEqual(sts.closeBtn, testdata.closeBtn, "closeBtn status mismatch");
+			}
 		}
 	},
 
@@ -132,21 +144,33 @@ module.exports = {
 			else
 				assertion.assertEqual(sts.closeBtn, testdata.closeBtn, "closeBtn status mismatch");
 		}
-		else if (parseInt(sts.quesNumber) == 1) {
-			assertion.assertEqual(sts.nextPageBtn, "", "nextPageBtn status mismatch");
-			assertion.assertEqual(sts.prevPageBtn, null, "prevPageBtn status mismatch");
-			assertion.assertEqual(sts.prevActivityBtn, testdata.prevActivityBtn[0], "prevActivityBtn status mismatch");
-			assertion.assertEqual(sts.nextActivityBtn, null, "nextActivityBtn status mismatch");
-			if (sts.closeBtn != null)
-				assertion.assertEqual(sts.closeBtn, testdata.closeBtn, "closeBtn status mismatch");
-		}
 		else {
-			assertion.assertEqual(sts.nextPageBtn, "", "nextPageBtn status mismatch");
-			assertion.assertEqual(sts.prevPageBtn, "", "prevPageBtn status mismatch");
-			assertion.assertEqual(sts.prevActivityBtn, null, "prevActivityBtn status mismatch");
-			assertion.assertEqual(sts.nextActivityBtn, null, "nextActivityBtn status mismatch");
-			if (sts.closeBtn != null)
-				assertion.assertEqual(sts.closeBtn, testdata.closeBtn, "closeBtn status mismatch");
+			let q = sts.quesNumber.split(" ");
+			if (q[0] == '1') {
+				assertion.assertEqual(sts.nextPageBtn, "", "nextPageBtn status mismatch");
+				assertion.assertEqual(sts.prevPageBtn, null, "prevPageBtn status mismatch");
+				assertion.assertEqual(sts.prevActivityBtn, testdata.prevActivityBtn[0], "prevActivityBtn status mismatch");
+				assertion.assertEqual(sts.nextActivityBtn, null, "nextActivityBtn status mismatch");
+				if (sts.closeBtn != null)
+					assertion.assertEqual(sts.closeBtn, testdata.closeBtn, "closeBtn status mismatch");
+			}
+			else if (q[0] == q[2]) {
+				assertion.assertEqual(sts.nextPageBtn, null, "nextPageBtn status mismatch");
+				assertion.assertEqual(sts.prevPageBtn, "", "prevPageBtn status mismatch");
+				assertion.assertEqual(sts.prevActivityBtn, null, "prevActivityBtn status mismatch");
+				if (sts.closeBtn == null)
+					assertion.assertEqual(sts.nextActivityBtn, testdata.nextActivityBtn[0], "nextActivityBtn status mismatch");
+				else
+					assertion.assertEqual(sts.closeBtn, testdata.closeBtn, "closeBtn status mismatch");
+			}
+			else {
+				assertion.assertEqual(sts.nextPageBtn, "", "nextPageBtn status mismatch");
+				assertion.assertEqual(sts.prevPageBtn, "", "prevPageBtn status mismatch");
+				assertion.assertEqual(sts.prevActivityBtn, null, "prevActivityBtn status mismatch");
+				assertion.assertEqual(sts.nextActivityBtn, null, "nextActivityBtn status mismatch");
+				if (sts.closeBtn != null)
+					assertion.assertEqual(sts.closeBtn, testdata.closeBtn, "closeBtn status mismatch");
+			}
 		}
 	},
 
