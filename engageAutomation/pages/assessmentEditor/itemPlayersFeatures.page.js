@@ -296,11 +296,11 @@ module.exports = {
 		logger.logInto(stackTrace.get());
 		res = action.waitForClickable("div:nth-child(2) [data-tid=button-saveandreturn]");
 		if (res == true) {
-			browser.pause(2000)
+			browser.pause(5000)
 			res = action.click("div:nth-child(2) [data-tid=button-saveandreturn]");
 			if (res == true) {
 				//res = action.waitForDisplayed("[role=progressbar]", undefined, true);
-				browser.pause(10000)
+				browser.pause(40000)
 			}
 		}
 		else {
