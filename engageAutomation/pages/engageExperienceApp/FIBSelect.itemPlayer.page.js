@@ -6,8 +6,9 @@ var res;
 
 module.exports = {
 
-    response: selectorFile.css.ComproEngage.FIBdropdown.response,
-    responses: selectorFile.css.ComproEngage.FIBdropdown.responses,
+    response: selectorFile.css.ComproEngage.FIBSelect.response,
+    responses: selectorFile.css.ComproEngage.FIBSelect.responses,
+    responseOption: selectorFile.css.ComproEngage.FIBSelect.responseOption,
 
     isInitialized: function () {
         logger.logInto(stackTrace.get());
@@ -42,7 +43,7 @@ module.exports = {
 
             /*res = action.click(ddSelector);
             if (true == res) {
-                res = action.click("[class*=mdc-menu-surface--open] ul li[data-value=" + fibQuesData[i][1]);
+                res = action.click(this.responseOption + fibQuesData[i][1]);
                 logger.logInto(stackTrace.get(), res);
             }
             else {

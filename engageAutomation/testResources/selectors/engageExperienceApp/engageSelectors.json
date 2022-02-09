@@ -394,9 +394,10 @@
                 "response": "[data-tid=input-response-",
                 "responses": "[data-tid*='input-response']"
             },
-            "FIBdropdown": {
+            "FIBSelect": {
                 "response": "[data-tid=input-response-",
-                "responses": "[data-tid*='input-response']"
+                "responses": "[data-tid*='input-response']",
+                "responseOption": "[data-tid=select-responseoption-"
             },
             "dragAndDrop": {
                 "source": "[data-tid=dragsource-option-",
