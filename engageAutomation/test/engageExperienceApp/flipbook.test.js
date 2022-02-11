@@ -1,5 +1,5 @@
 "use strict";
-var flipbook = require('../../pages/engageExperienceApp/flipBook.page.js');
+var flipbook = require('../../pages/engageExperienceApp/flipbook.page.js');
 var sts, sts2;
 
 module.exports = {
