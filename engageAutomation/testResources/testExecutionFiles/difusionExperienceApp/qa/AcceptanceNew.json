@@ -49,28 +49,28 @@
             "testData": []
          },
          {
-            "id": "ENG_ADDBOOK_TC_99",
+            "id": "ENG_GLOB_TC_28",
             "description": "",
-            "testFile": "./test/engageExperienceApp/addBook.test.js",
+            "testFile": "./test/engageExperienceApp/browse.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/classData.json",
-                  "jsonPath": "engage.courses.newValidClasswithspecialCharacter.bookName"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/searchAndFilterTestData.json",
+                  "jsonPath": "engage.searchAndFilter.searchScenario2"
+               },
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.browse.teacher"
                }
             ]
          },
          {
-            "id": "ENG_ADDBOOK_TC_21",
+            "id": "ENG_GLOB_TC_58",
             "description": "",
-            "testFile": "./test/engageExperienceApp/addBook.test.js",
+            "testFile": "./test/engageExperienceApp/browse.test.js",
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/classData.json",
                   "jsonPath": "engage.courses.newValidClasswithspecialCharacter.bookName"
-               },
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath": "engage.appContent.dashboard.teacher"
                }
             ]
          },
@@ -470,28 +470,28 @@
             "testData": []
          },
          {
-            "id": "ENG_ADDBOOK_TC_99",
+            "id": "ENG_GLOB_TC_28",
             "description": "",
-            "testFile": "./test/engageExperienceApp/addBook.test.js",
+            "testFile": "./test/engageExperienceApp/browse.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/classData.json",
-                  "jsonPath": "engage.courses.newValidClasswithspecialCharacter.bookName"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/searchAndFilterTestData.json",
+                  "jsonPath": "engage.searchAndFilter.searchScenario2"
+               },
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.browse.teacher"
                }
             ]
          },
          {
-            "id": "ENG_ADDBOOK_TC_21",
+            "id": "ENG_GLOB_TC_58",
             "description": "",
-            "testFile": "./test/engageExperienceApp/addBook.test.js",
+            "testFile": "./test/engageExperienceApp/browse.test.js",
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/classData.json",
                   "jsonPath": "engage.courses.newValidClasswithspecialCharacter.bookName"
-               },
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath": "engage.appContent.dashboard.student"
                }
             ]
          },

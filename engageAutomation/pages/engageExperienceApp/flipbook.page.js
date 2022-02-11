@@ -309,6 +309,7 @@ module.exports = {
     if (true == res) {
       logger.logInto(stackTrace.get(), " deleteNoteDeleteBtn button is clicked");
       //res = this.getData_notesList();
+      res = this.getData_notesModal();
     }
     else {
       logger.logInto(stackTrace.get(), res + " deleteNoteDeleteBtn button is not clicked", 'error');
@@ -537,6 +538,7 @@ module.exports = {
     if (res == true) {
       logger.logInto(stackTrace.get(), " --bookmarkListDeleteBtn clicked");
       //res = this.getData_bookmarkList();
+      res = this.getData_bookmarkModal();
     }
     else
       logger.logInto(stackTrace.get(), res + " --bookmarkListDeleteBtn NOT clicked", "error")
@@ -620,7 +622,6 @@ module.exports = {
     else {
       logger.logInto(stackTrace.get(), res + " TOCBtn button is clicked", 'error');
     }
-    console.log("response - ",res)
     return res;
   },
 
@@ -798,6 +799,5 @@ module.exports = {
     }
     return res;
   }
-
 }
 

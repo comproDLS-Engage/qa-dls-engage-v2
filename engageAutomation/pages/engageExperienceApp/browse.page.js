@@ -4,6 +4,8 @@ var selectorFile = jsonParserUtil.jsonParser(selectorDir)
 var appShellPage = require('./appShell.page.js')
 
 module.exports = {
+
+    cardSkeleton: selectorFile.css.ComproEngage.browse.cardSkeleton,
     pageTitle: selectorFile.css.ComproEngage.browse.pageTitle,
     pageSubTitle: selectorFile.css.ComproEngage.browse.pageSubTitle,
     filtersBtn: selectorFile.css.ComproEngage.browse.filtersBtn,
@@ -14,15 +16,26 @@ module.exports = {
     searchIcon: selectorFile.css.ComproEngage.browse.searchIcon,
     resourceCategory: selectorFile.css.ComproEngage.browse.resourceCategory,
     viewAllBtn: selectorFile.css.ComproEngage.browse.viewAllBtn,
-    moreOptionsBtn: selectorFile.css.ComproEngage.browse.moreOptionsBtn,
-    cardSkeleton: selectorFile.css.ComproEngage.browse.cardSkeleton,
     cardTitle: selectorFile.css.ComproEngage.browse.cardTitle,
     cardSubTitle: selectorFile.css.ComproEngage.browse.cardSubTitle,
-    cardImgIcon: selectorFile.css.ComproEngage.browse.cardImgIcon,
+    cardImage: selectorFile.css.ComproEngage.browse.cardImage,
     cardLockIcon: selectorFile.css.ComproEngage.browse.cardLockIcon,
+    moreOptionsBtn: selectorFile.css.ComproEngage.browse.moreOptionsBtn,
     viewOption: selectorFile.css.ComproEngage.browse.viewOption,
     addToPlaylistOption: selectorFile.css.ComproEngage.browse.addToPlaylistOption,
     shareOption: selectorFile.css.ComproEngage.browse.shareOption,
+    bookTitle: selectorFile.css.ComproEngage.browse.bookTitle,
+    bookSubTitle: selectorFile.css.ComproEngage.browse.bookSubTitle,
+    bookImage: selectorFile.css.ComproEngage.browse.bookImage,
+    viewBtn: selectorFile.css.ComproEngage.browse.viewBtn,
+    addBookBtn: selectorFile.css.ComproEngage.browse.addBookBtn,
+    addedIcon: selectorFile.css.ComproEngage.browse.addedIcon,
+    bookMoreOptionsBtn: selectorFile.css.ComproEngage.browse.bookMoreOptionsBtn,
+    viewClassOption: selectorFile.css.ComproEngage.browse.viewClassOption,
+    createNewClassOption: selectorFile.css.ComproEngage.browse.createNewClassOption,
+    addToMyBooksOption: selectorFile.css.ComproEngage.browse.addToMyBooksOption,
+    removeFromMyBooksOption: selectorFile.css.ComproEngage.browse.removeFromMyBooksOption,
+    openFlipbookOption: selectorFile.css.ComproEngage.browse.openFlipbookOption,
     listOfPlaylist: selectorFile.css.ComproEngage.browse.listOfPlaylist,
     searchList: selectorFile.css.ComproEngage.browse.searchList,
     showMoreResults: selectorFile.css.ComproEngage.browse.showMoreResults,
@@ -42,21 +55,20 @@ module.exports = {
     filterMenuClearAllBtn: selectorFile.css.ComproEngage.browse.filterMenuClearAllBtn,
     filterMenuApplyBtn: selectorFile.css.ComproEngage.browse.filterMenuApplyBtn,
 
-
     isInitialized: function () {
         var res;
         logger.logInto(stackTrace.get());
         action.waitForDocumentLoad();
         res = {
-            pageStatus: action.waitForDisplayed(this.pageTitle),
+            pageStatus: action.waitForDisplayed(this.searchBox),
             appShellPage: appShellPage.isInitialized()
         };
         return res;
     },
 
-    getData_browsePage: function () {
+        getData_browsePage: function () {
         logger.logInto(stackTrace.get());
-        action.waitForDisplayed(this.searchIcon) //manually edited
+        action.waitForDisplayed(this.cardSkeleton, undefined, true); //manually edited
         var obj;
         obj = {
             pageTitle: (action.getElementCount(this.pageTitle) > 0) ? action.getText(this.pageTitle) : null,
@@ -77,25 +89,24 @@ module.exports = {
 
     getData_resourceCategory: function (resourceCategoryName) {
         logger.logInto(stackTrace.get());
-        var obj = [],
-            i, arr = [];
-        var resourceCategory = action.findElements(this.resourceCategory)
-        var viewAllBtn = action.findElements(this.viewAllBtn)
+        var obj = [];
+        action.waitForDisplayed(this.resourceCategory);
+        var list = action.findElements(this.resourceCategory);
         if (resourceCategoryName) {
-            for (var i = 0; i < resourceCategory.length; i++) {
-                if (action.getText(resourceCategory[i]) == resourceCategoryName) {
+            for (var i = 0; i < list.length; i++) {
+                if (action.getText(this.resourceCategory + i) == resourceCategoryName) {
                     obj[0] = {
-                        resourceCategory: (action.getElementCount(resourceCategory[i]) > 0) ? action.getText(resourceCategory[i]) : null,
-                        viewAllBtn: (action.getElementCount(viewAllBtn[i]) > 0) ? action.getText(viewAllBtn[i]) : null,
+                        resourceCategory: (action.getElementCount(this.resourceCategory + i + "]") > 0) ? action.getText(this.resourceCategory + i + "]") : null,
+                        viewAllBtn: (action.getElementCount(this.viewAllBtn + i + "]") > 0) ? action.getText(this.viewAllBtn + i + "]") : null,
                     }
                     break;
                 }
             }
         } else {
-            for (var i = 0; i <= resourceCategory.length; i++) {
+            for (var i = 0; i < list.length; i++) {
                 obj[i] = {
-                    resourceCategory: (action.getElementCount(resourceCategory[i]) > 0) ? action.getText(resourceCategory[i]) : null,
-                    viewAllBtn: (action.getElementCount(viewAllBtn[i]) > 0) ? action.getText(viewAllBtn[i]) : null,
+                    resourceCategory: (action.getElementCount(this.resourceCategory + i + "]") > 0) ? action.getText(this.resourceCategory + i + "]") : null,
+                    viewAllBtn: (action.getElementCount(this.viewAllBtn + i + "]") > 0) ? action.getText(this.viewAllBtn + i + "]") : null,
                 }
             }
         }
@@ -104,40 +115,30 @@ module.exports = {
 
     getData_resourceList: function (cardTitleName) {
         logger.logInto(stackTrace.get());
-        var obj = [],
-            i, arr = [];
-        var moreOptionsBtn = action.findElements(this.moreOptionsBtn)
-        var cardTitle = action.findElements(this.cardTitle)
-        var cardSubTitle = action.findElements(this.cardSubTitle)
-        var cardImgIcon = action.findElements(this.cardImgIcon)
-        var cardLockIcon = action.findElements(this.cardLockIcon)
+        var obj = [];
+        action.waitForDisplayed(this.cardTitle);
+        var list = this.getResourceIndex();
         if (cardTitleName) {
-            for (var i = 0; i < cardTitle.length; i++) {
-                if (action.getText(cardTitle[i]) == cardTitleName) {
+            for (var i = 0; i < list.length; i++) {
+                if (action.getText(this.cardTitle + list[i]) == cardTitleName) {
                     obj[0] = {
-                        moreOptionsBtn: (action.getElementCount(moreOptionsBtn[i]) > 0) ? action.getText(moreOptionsBtn[i]) : null,
-                        cardTitle: (action.getElementCount(cardTitle[i]) > 0) ? action.getText(cardTitle[i]) : null,
-                        cardSubTitle: (action.getElementCount(cardSubTitle[i]) > 0) ? action.getText(cardSubTitle[i]) : null,
-                        cardImgIcon: (action.getElementCount(cardImgIcon[i]) > 0) ? action.getText(cardImgIcon[i]) : null,
-                        cardLockIcon: (action.getElementCount(cardLockIcon[i]) > 0) ? action.waitForDisplayed(cardLockIcon[i]) : false,
+                        cardTitle: (action.getElementCount(this.cardTitle + list[i]) > 0) ? action.getText(this.cardTitle + list[i]) : null,
+                        cardSubTitle: (action.getElementCount(this.cardSubTitle + list[i]) > 0) ? action.getText(this.cardSubTitle + list[i]) : null,
+                        cardImage: (action.getElementCount(this.cardImage + list[i]) > 0) ? action.waitForDisplayed(this.cardImage + list[i]) : null,
+                        cardLockIcon: (action.getElementCount(this.cardLockIcon + list[i]) > 0) ? action.waitForDisplayed(this.cardLockIcon + list[i]) : false,
+                        moreOptionsBtn: (action.getElementCount(this.moreOptionsBtn + list[i]) > 0) ? action.getText(this.moreOptionsBtn + list[i]) : null,
                     }
                     break;
                 }
             }
         } else {
-            for (var i = 0; i < cardTitle.length; i++) {
-                obj[i] = {//manual for gettext //getElementCount not working
-                    // moreOptionsBtn: (action.getElementCount(cardTitle[i]) > 0) ? action.getText(moreOptionsBtn[i]) : null,
-                    // cardTitle: (action.getElementCount(cardTitle[i]) > 0) ? action.getText(cardTitle[i]): null,
-                    // cardSubTitle: (action.getElementCount(cardSubTitle[i]) > 0) ? action.getText(cardSubTitle[i]) : null,
-                    // cardImgIcon: (action.getElementCount(cardImgIcon[i]) > 0) ? action.waitForDisplayed(cardImgIcon[i]) : false,
-                    // cardLockIcon: (action.getElementCount(cardLockIcon[i]) > 0) ? action.waitForDisplayed(cardLockIcon[i]) : false,
-                    //manual edit
-                    moreOptionsBtn: action.getText(moreOptionsBtn[i]),
-                    cardTitle: action.getText(cardTitle[i]),
-                    cardSubTitle: action.getText(cardSubTitle[i]),
-                    cardImgIcon: action.waitForDisplayed(cardImgIcon[i]),
-                    cardLockIcon: action.waitForDisplayed(cardLockIcon[i]),
+            for (var i = 0; i < list.length; i++) {
+                obj[i] = {
+                    cardTitle: (action.getElementCount(this.cardTitle + list[i]) > 0) ? action.getText(this.cardTitle + list[i]) : null,
+                    cardSubTitle: (action.getElementCount(this.cardSubTitle + list[i]) > 0) ? action.getText(this.cardSubTitle + list[i]) : null,
+                    cardImage: (action.getElementCount(this.cardImage + list[i]) > 0) ? action.waitForDisplayed(this.cardImage + list[i]) : null,
+                    cardLockIcon: (action.getElementCount(this.cardLockIcon + list[i]) > 0) ? action.waitForDisplayed(this.cardLockIcon + list[i]) : false,
+                    moreOptionsBtn: (action.getElementCount(this.moreOptionsBtn + list[i]) > 0) ? action.getText(this.moreOptionsBtn + list[i]) : null,
                 }
             }
         }
@@ -155,6 +156,53 @@ module.exports = {
         return obj;
     },
 
+    getData_bookList: function (bookTitleName) {
+        logger.logInto(stackTrace.get());
+        var obj = [];
+        action.waitForDisplayed(this.bookTitle);
+        var list = action.findElements(this.bookTitle);
+        if (bookTitleName) {
+            for (var i = 0; i < list.length; i++) {
+                if (action.getText(this.bookTitle + i) == bookTitleName) {
+                    obj[0] = {
+                        bookTitle: (action.getElementCount(this.bookTitle + i + "]") > 0) ? action.getText(this.bookTitle + i + "]") : null,
+                        bookSubTitle: (action.getElementCount(this.bookSubTitle + i + "]") > 0) ? action.getText(this.bookSubTitle + i + "]") : null,
+                        bookImage: (action.getElementCount(this.bookImage + i + "]") > 0) ? action.waitForDisplayed(this.bookImage + i + "]") : null,
+                        viewBtn: (action.getElementCount(this.viewBtn + i + "]") > 0) ? action.getText(this.viewBtn + i + "]") : null,
+                        addBookBtn: (action.getElementCount(this.addBookBtn + i + "]") > 0) ? action.getText(this.addBookBtn + i + "]") : null,
+                        bookMoreOptionsBtn: (action.getElementCount(this.bookMoreOptionsBtn + i + "]") > 0) ? action.getText(this.bookMoreOptionsBtn + i + "]") : null,
+                    }
+                    break;
+                }
+            }
+        } else {
+            for (var i = 0; i < list.length; i++) {
+                obj[i] = {
+                    bookTitle: (action.getElementCount(this.bookTitle + i + "]") > 0) ? action.getText(this.bookTitle + i + "]") : null,
+                    bookSubTitle: (action.getElementCount(this.bookSubTitle + i + "]") > 0) ? action.getText(this.bookSubTitle + i + "]") : null,
+                    bookImage: (action.getElementCount(this.bookImage + i + "]") > 0) ? action.waitForDisplayed(this.bookImage + i + "]") : null,
+                    viewBtn: (action.getElementCount(this.viewBtn + i + "]") > 0) ? action.getText(this.viewBtn + i + "]") : null,
+                    addBookBtn: (action.getElementCount(this.addBookBtn + i + "]") > 0) ? action.getText(this.addBookBtn + i + "]") : null,
+                    bookMoreOptionsBtn: (action.getElementCount(this.bookMoreOptionsBtn + i + "]") > 0) ? action.getText(this.bookMoreOptionsBtn + i + "]") : null,
+                }
+            }
+        }
+        return obj;
+    },
+
+    getData_bookMoreOptions: function () {
+        logger.logInto(stackTrace.get());
+        var obj;
+        obj = {
+            viewClassOption: (action.getElementCount(this.viewClassOption) > 0) ? action.getText(this.viewClassOption) : null,
+            createNewClassOption: (action.getElementCount(this.createNewClassOption) > 0) ? action.getText(this.createNewClassOption) : null,
+            addToMyBooksOption: (action.getElementCount(this.addToMyBooksOption) > 0) ? action.getText(this.addToMyBooksOption) : null,
+            removeFromMyBooksOption: (action.getElementCount(this.removeFromMyBooksOption) > 0) ? action.getText(this.removeFromMyBooksOption) : null,
+            openFlipbookOption: (action.getElementCount(this.openFlipbookOption) > 0) ? action.getText(this.openFlipbookOption) : null,
+        }
+        return obj;
+    },
+
     getData_addToPlaylist: function () {
         logger.logInto(stackTrace.get());
         var obj;
@@ -168,6 +216,7 @@ module.exports = {
         logger.logInto(stackTrace.get());
         var i, list;
         var listOfPlaylist_Arr = [];
+        action.waitForDisplayed(this.listOfPlaylist);
         list = action.findElements(this.listOfPlaylist);
         for (i = 0; i < list.length; i++) {
             listOfPlaylist_Arr[i] = action.getText(list[i])
@@ -224,7 +273,6 @@ module.exports = {
         return obj;
     },
 
-
     click_filtersBtn: function () {
         logger.logInto(stackTrace.get());
         var res;
@@ -232,7 +280,8 @@ module.exports = {
         if (true == res) {
             logger.logInto(stackTrace.get(), " filtersBtn is clicked");
             res = this.getData_filterMenu();
-        } else {
+        }
+        else {
             logger.logInto(stackTrace.get(), res + "filtersBtn is NOT clicked", 'error');
         }
         return res;
@@ -245,7 +294,8 @@ module.exports = {
         if (true == res) {
             logger.logInto(stackTrace.get(), " previousPageArrow is clicked");
             res = this.getData_browsePage();
-        } else {
+        }
+        else {
             logger.logInto(stackTrace.get(), res + "previousPageArrow is NOT clicked", 'error');
         }
         return res;
@@ -258,7 +308,8 @@ module.exports = {
         if (true == res) {
             logger.logInto(stackTrace.get(), " nextPageArrow is clicked");
             res = this.getData_browsePage();
-        } else {
+        }
+        else {
             logger.logInto(stackTrace.get(), res + "nextPageArrow is NOT clicked", 'error');
         }
         return res;
@@ -278,46 +329,47 @@ module.exports = {
         if (res == true) {
             logger.logInto(stackTrace.get(), " --viewAllBtn clicked");
             res = this.getData_resourceCategory();
-        } else
+        }
+        else
             logger.logInto(stackTrace.get(), " --viewAllBtn NOT clicked", "error")
+        return res;
+    },
+
+    click_cardImage: function (cardTitleName) {
+        logger.logInto(stackTrace.get());
+        var i, list, res;
+        list = this.getResourceIndex();
+        for (i = 0; i < list.length; i++) {
+            if ((action.getText(this.cardTitle + list[i])) == cardTitleName) {
+                res = action.click(this.cardImage + list[i]);
+                break;
+            }
+        }
+        if (res == true) {
+            logger.logInto(stackTrace.get(), " --cardImage clicked");
+            res = require('./activityPlayer.page').isInitialized();
+        }
+        else
+            logger.logInto(stackTrace.get(), " --cardImage NOT clicked", "error")
         return res;
     },
 
     click_moreOptionsBtn: function (cardTitleName) {
         logger.logInto(stackTrace.get());
-        var i, res;
-        action.waitForDisplayed(this.cardSkeleton, undefined, true);
-        var cardTitle = action.findElements(this.cardTitle);
-        var moreOptionsBtn = action.findElements(this.moreOptionsBtn);
-        for (i = 0; i < cardTitle.length; i++) {
-            if ((action.getText(cardTitle[i])) == cardTitleName) {
-                res = action.click(moreOptionsBtn[i]);
+        var i, list, res;
+        list = this.getResourceIndex();
+        for (i = 0; i < list.length; i++) {
+            if ((action.getText(this.cardTitle + list[i])) == cardTitleName) {
+                res = action.click(this.moreOptionsBtn + list[i]);
                 break;
             }
         }
         if (res == true) {
             logger.logInto(stackTrace.get(), " --moreOptionsBtn clicked");
             res = this.getData_moreOptions();
-        } else
-            logger.logInto(stackTrace.get(), " --moreOptionsBtn NOT clicked", "error")
-        return res;
-    },
-
-    click_cardImgIcon: function (cardTitleName) {
-        logger.logInto(stackTrace.get());
-        var i, res;
-        var cardTitle = action.findElements(this.cardTitle);
-        var cardImgIcon = action.findElements(this.cardImgIcon);
-        for (i = 0; i < cardTitle.length; i++) {
-            if ((action.getText(cardTitle[i])) == cardTitleName) {
-                res = action.click(cardImgIcon[i]);
-                break;
-            }
         }
-        if (res == true) {
-            logger.logInto(stackTrace.get(), " --cardImgIcon clicked");
-        } else
-            logger.logInto(stackTrace.get(), " --cardImgIcon NOT clicked", "error")
+        else
+            logger.logInto(stackTrace.get(), " --moreOptionsBtn NOT clicked", "error")
         return res;
     },
 
@@ -327,7 +379,9 @@ module.exports = {
         res = action.click(this.viewOption);
         if (true == res) {
             logger.logInto(stackTrace.get(), " viewOption is clicked");
-        } else {
+            res = require('./activityPlayer.page').isInitialized();
+        }
+        else {
             logger.logInto(stackTrace.get(), res + "viewOption is NOT clicked", 'error');
         }
         return res;
@@ -340,7 +394,8 @@ module.exports = {
         if (true == res) {
             logger.logInto(stackTrace.get(), " addToPlaylistOption is clicked");
             res = this.getData_addToPlaylist();
-        } else {
+        }
+        else {
             logger.logInto(stackTrace.get(), res + "addToPlaylistOption is NOT clicked", 'error');
         }
         return res;
@@ -352,8 +407,155 @@ module.exports = {
         res = action.click(this.shareOption);
         if (true == res) {
             logger.logInto(stackTrace.get(), " shareOption is clicked");
-        } else {
+        }
+        else {
             logger.logInto(stackTrace.get(), res + "shareOption is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_bookImage: function (bookTitleName) {
+        logger.logInto(stackTrace.get());
+        var i, list, res;
+        list = action.findElements(this.bookImage);
+        for (i = 0; i < list.length; i++) {
+            if ((action.getText(this.bookTitle + i + "]")) == bookTitleName) {
+                res = action.click(list[i]);
+                break;
+            }
+        }
+        if (res == true) {
+            logger.logInto(stackTrace.get(), " --bookImage clicked");
+            res = require('./viewBook.page').isInitialized();
+        }
+        else
+            logger.logInto(stackTrace.get(), " --bookImage NOT clicked", "error")
+        return res;
+    },
+
+    click_viewBtn: function (bookTitleName) {
+        logger.logInto(stackTrace.get());
+        var i, list, res;
+        list = action.findElements(this.viewBtn);
+        for (i = 0; i < list.length; i++) {
+            if ((action.getText(this.bookTitle + i + "]")) == bookTitleName) {
+                res = action.click(list[i]);
+                break;
+            }
+        }
+        if (res == true) {
+            logger.logInto(stackTrace.get(), " --viewBtn clicked");
+            res = require('./viewBook.page').isInitialized();
+        }
+        else
+            logger.logInto(stackTrace.get(), " --viewBtn NOT clicked", "error")
+        return res;
+    },
+
+    click_addBookBtn: function (bookTitleName) {
+        logger.logInto(stackTrace.get());
+        var i, list, res;
+        list = action.findElements(this.addBookBtn);
+        for (i = 0; i < list.length; i++) {
+            if ((action.getText(this.bookTitle + i + "]")) == bookTitleName) {
+                res = action.click(list[i]);
+                break;
+            }
+        }
+        if (res == true) {
+            logger.logInto(stackTrace.get(), " --addBookBtn clicked");
+            res = action.waitForDisplayed(this.addedIcon + i + "]");
+        }
+        else
+            logger.logInto(stackTrace.get(), " --addBookBtn NOT clicked", "error")
+        return res;
+    },
+
+    click_bookMoreOptionsBtn: function (bookTitleName) {
+        logger.logInto(stackTrace.get());
+        var i, list, res;
+        list = action.findElements(this.bookMoreOptionsBtn);
+        for (i = 0; i < list.length; i++) {
+            if ((action.getText(this.bookTitle + i + "]")) == bookTitleName) {
+                res = action.click(list[i]);
+                break;
+            }
+        }
+        if (res == true) {
+            logger.logInto(stackTrace.get(), " --bookMoreOptionsBtn clicked");
+            res = this.getData_bookMoreOptions();
+        }
+        else
+            logger.logInto(stackTrace.get(), " --bookMoreOptionsBtn NOT clicked", "error")
+        return res;
+    },
+
+    click_viewClassOption: function () {
+        logger.logInto(stackTrace.get());
+        var res;
+        res = action.click(this.viewClassOption);
+        if (true == res) {
+            logger.logInto(stackTrace.get(), " viewClassOption is clicked");
+            res = require('./classDrawer.page').isInitialized();
+        }
+        else {
+            logger.logInto(stackTrace.get(), res + "viewClassOption is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_createNewClassOption: function () {
+        logger.logInto(stackTrace.get());
+        var res;
+        res = action.click(this.createNewClassOption);
+        if (true == res) {
+            logger.logInto(stackTrace.get(), " createNewClassOption is clicked");
+            res = require('./createClass.page').isInitialized();
+        }
+        else {
+            logger.logInto(stackTrace.get(), res + "createNewClassOption is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_addToMyBooksOption: function () {
+        logger.logInto(stackTrace.get());
+        var res;
+        res = action.click(this.addToMyBooksOption);
+        if (true == res) {
+            logger.logInto(stackTrace.get(), " addToMyBooksOption is clicked");
+            res = action.waitForDisplayed(this.addToMyBooksOption, undefined, true);
+        }
+        else {
+            logger.logInto(stackTrace.get(), res + "addToMyBooksOption is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_removeFromMyBooksOption: function () {
+        logger.logInto(stackTrace.get());
+        var res;
+        res = action.click(this.removeFromMyBooksOption);
+        if (true == res) {
+            logger.logInto(stackTrace.get(), " removeFromMyBooksOption is clicked");
+            res = require('./dashboard.page').getData_removeBookDialog();
+        }
+        else {
+            logger.logInto(stackTrace.get(), res + "removeFromMyBooksOption is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_openFlipbookOption: function () {
+        logger.logInto(stackTrace.get());
+        var res;
+        res = action.click(this.openFlipbookOption);
+        if (true == res) {
+            logger.logInto(stackTrace.get(), " openFlipbookOption is clicked");
+            res = require('./flipbook.page').isInitialized();
+        }
+        else {
+            logger.logInto(stackTrace.get(), res + "openFlipbookOption is NOT clicked", 'error');
         }
         return res;
     },
@@ -370,7 +572,8 @@ module.exports = {
         }
         if (res == true) {
             logger.logInto(stackTrace.get(), " --listOfPlaylist clicked");
-        } else
+        }
+        else
             logger.logInto(stackTrace.get(), " --listOfPlaylist NOT clicked", "error")
         return res;
     },
@@ -380,14 +583,16 @@ module.exports = {
         var i, list, res;
         list = action.findElements(this.searchList);
         for (i = 0; i < list.length; i++) {
-            if (action.getText(list[i]) == searchListName) {
+            if ((action.getText(list[i])) == searchListName) {
                 res = action.click(list[i]);
                 break;
             }
         }
         if (res == true) {
             logger.logInto(stackTrace.get(), " --searchList clicked");
-        } else
+            res = action.waitForDocumentLoad();
+        }
+        else
             logger.logInto(stackTrace.get(), " --searchList NOT clicked", "error")
         return res;
     },
@@ -399,7 +604,8 @@ module.exports = {
         if (true == res) {
             logger.logInto(stackTrace.get(), " showMoreResults is clicked");
             res = this.getData_browsePage();
-        } else {
+        }
+        else {
             logger.logInto(stackTrace.get(), res + "showMoreResults is NOT clicked", 'error');
         }
         return res;
@@ -412,7 +618,8 @@ module.exports = {
         if (true == res) {
             logger.logInto(stackTrace.get(), " clearSearch is clicked");
             res = this.getData_browsePage();
-        } else {
+        }
+        else {
             logger.logInto(stackTrace.get(), res + "clearSearch is NOT clicked", 'error');
         }
         return res;
@@ -425,7 +632,8 @@ module.exports = {
         if (true == res) {
             logger.logInto(stackTrace.get(), " closeSearchPill is clicked");
             res = this.getData_browsePage();
-        } else {
+        }
+        else {
             logger.logInto(stackTrace.get(), res + "closeSearchPill is NOT clicked", 'error');
         }
         return res;
@@ -438,7 +646,8 @@ module.exports = {
         if (true == res) {
             logger.logInto(stackTrace.get(), " goToPage is clicked");
             res = this.getData_browsePage();
-        } else {
+        }
+        else {
             logger.logInto(stackTrace.get(), res + "goToPage is NOT clicked", 'error');
         }
         return res;
@@ -451,7 +660,8 @@ module.exports = {
         if (true == res) {
             logger.logInto(stackTrace.get(), " filterMenuCloseBtn is clicked");
             res = action.waitForDisplayed(this.filterMenuCloseBtn, undefined, true);
-        } else {
+        }
+        else {
             logger.logInto(stackTrace.get(), res + "filterMenuCloseBtn is NOT clicked", 'error');
         }
         return res;
@@ -463,7 +673,8 @@ module.exports = {
         res = action.click(this.filterMenuClearAllBtn);
         if (true == res) {
             logger.logInto(stackTrace.get(), " filterMenuClearAllBtn is clicked");
-        } else {
+        }
+        else {
             logger.logInto(stackTrace.get(), res + "filterMenuClearAllBtn is NOT clicked", 'error');
         }
         return res;
@@ -475,7 +686,8 @@ module.exports = {
         res = action.click(this.filterMenuApplyBtn);
         if (true == res) {
             logger.logInto(stackTrace.get(), " filterMenuApplyBtn is clicked");
-        } else {
+        }
+        else {
             logger.logInto(stackTrace.get(), res + "filterMenuApplyBtn is NOT clicked", 'error');
         }
         return res;
@@ -493,7 +705,17 @@ module.exports = {
         return res;
     },
 
-    pressEnter: function () {//manual edit
+    click_removeBook_cancelBtn: function () { //manual edit
+        logger.logInto(stackTrace.get());
+        return require('./dashboard.page').click_removeBook_cancelBtn();
+      },
+    
+      click_removeBook_removeBtn: function () { //manual edit
+        logger.logInto(stackTrace.get());
+        return require('./dashboard.page').click_removeBook_removeBtn();
+      },
+
+    pressEnter: function () { //manual edit
         logger.logInto(stackTrace.get());
         var res = action.keyPress('Enter')
         if (res == true) {
@@ -505,4 +727,17 @@ module.exports = {
 
     },
 
+    getResourceIndex: function () { //manual edit
+        logger.logInto(stackTrace.get());
+        var cardTitle = action.findElements(this.cardTitle);
+        var rIndex = [], res;
+        if (cardTitle.length > 0) {
+            for (var i = 0; i < cardTitle.length; i++) {
+                res = action.getAttribute(cardTitle[i], "data-tid");
+                res = res.split('-');
+                rIndex[i] = res[2];
+            }
+        }
+        return rIndex;
+    }
 }

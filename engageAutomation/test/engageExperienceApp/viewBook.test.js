@@ -35,7 +35,7 @@ module.exports = {
     ENG_BOOK_TC_4: function (testdata) {
         sts = viewBookPage.clickRemoveBook();
         assertion.assertEqual(sts.removeBook_title, testdata[0].removeBook_title, "Remove Book Pop up Title Mismatch");
-        assertion.assertEqual(sts.removeBook_subtitle, testdata[0].removeBook_subtitle1 + testdata[1].name + testdata[0].removeBook_subtitle2, "Remove Book Pop up description Mismatch");
+        assertion.assertEqual(sts.removeBook_subtitle, testdata[0].removeBook_subtitle1 + testdata[1] + testdata[0].removeBook_subtitle2, "Remove Book Pop up description Mismatch");
         assertion.assertEqual(sts.removeBookDialogCancel, testdata[0].removeBookDialogCancel, "Remove Book Pop up Cancel Button Mismatch");
         assertion.assertEqual(sts.removeBookDialogRemove, testdata[0].removeBookDialogRemove, "Remove Book Pop up Remove Button Mismatch");
     },

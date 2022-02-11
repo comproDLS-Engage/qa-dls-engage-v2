@@ -39,7 +39,7 @@ module.exports = {
     ENG_DASH_TC_7: function () {
         sts = dashboardPage.click_addBookBtn();
         assertion.assertEqual(sts.pageStatus, true, "Add book page status mismatch");
-        assertion.assertEqual(sts.appShell.header, true, "Add book page header status mismatch");
+        assertion.assertEqual(sts.appShellPage.header, true, "Add book page header status mismatch");
     },
 
     //Validate that clicking on 'View' button of an added book launched the Book details page
@@ -78,6 +78,8 @@ module.exports = {
     //Validate that clicking on 'Remove' in dialog box removes the book from 'My Books'
     ENG_DASH_TC_15: function (testdata) {
         sts = dashboardPage.click_removeBook_removeBtn();
+        assertion.assertEqual(sts, true, "Remove button status mismatch");
+        sts = dashboardPage.getData_books();
         if (sts.length != undefined) {
             for (var i = 0; i < sts.length; i++) {
                 assertion.assertNotEqual(sts[i].bookTitle, testdata, "Book title match found");
