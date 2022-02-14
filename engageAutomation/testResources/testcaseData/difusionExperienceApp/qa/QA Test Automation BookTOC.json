@@ -131,34 +131,10 @@
                                 "index": 0,
                                 "name": "",
                                 "activity": [
-                                    "Practice Exam 1"
-                                ]
-                            },
-                            {
-                                "index": 1,
-                                "name": "",
-                                "activity": [
-                                    "Download word"
-                                ]
-                            }, 
-                            {
-                                "index": 2,
-                                "name": "",
-                                "activity": [
-                                    "Download zip"
-                                ]
-                            },
-                            {
-                                "index": 3,
-                                "name": "",
-                                "activity": [
-                                    "Download pdf"
-                                ]
-                            },
-                            {
-                                "index": 4,
-                                "name": "",
-                                "activity": [
+                                    "Practice Exam 1",
+                                    "Download word",
+                                    "Download zip",
+                                    "Download pdf",
                                     "Download excel"
                                 ]
                             }

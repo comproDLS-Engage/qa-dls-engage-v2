@@ -1,0 +1,32 @@
+{
+	"engage": {
+		"flipbook": {
+			"fb1": {
+				"flipbookTitle": "Flipbook",
+				"resourceTitle:": "['Section 1.1','Section 1.2, '', '', '']",
+				"jumpToPageInput": "4",
+				"setNote": "test note automation 1",
+                "setEditedNote": "test edited note automation",
+                "setBookmark": "test bookmark automation 1",
+                "setEditedBookmark": "test edited bookmark automation",
+				"doublelayoutWidth": "width: 50%;",
+                "singlelayoutWidth": "width: 100%;",
+                "singlelayoutDefaultWidth": 1415,
+                "singlelayoutDefaultHeight": 1600,
+				"notelistBeforeEdit": [
+					"Pre existing note",
+					"test note automation 1"
+				],
+				"notelistAfterEdit": [
+					"test edited note automation"
+				],
+				"bookmarklistBeforeEdit": [
+					"test bookmark automation 1"
+				],
+				"bookmarklistAfterEdit": [
+					"test edited bookmark automation"
+				]
+			}
+		}
+	}
+}

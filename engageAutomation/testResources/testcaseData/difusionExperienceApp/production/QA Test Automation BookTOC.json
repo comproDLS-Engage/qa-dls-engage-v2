@@ -13,8 +13,8 @@
                     {
                         "index": 0,
                         "title": "1. Unit 1",
-                        "activityCount": "3",
-                        "folderCount": "2",
+                        "activityCount": "1",
+                        "folderCount": "1",
                         "flipbookPageNum": "3",
                         "section": [
                             {
@@ -95,7 +95,7 @@
                     {
                         "index": 1,
                         "title": "Unit 2",
-                        "activityCount": "2",
+                        "activityCount": "1",
                         "folderCount": "0",
                         "flipbookPageNum": "",
                         "section": [
@@ -104,7 +104,8 @@
                                 "name": "",
                                 "activity": [
                                     "Native LO 2",
-                                    "Native LO writing"
+                                    "Native LO writing",
+                                    "Native LO 3"
                                 ]
                             }
                         ]
@@ -113,7 +114,10 @@
             },
             {
                 "index": 3,
-                "name": "Book Resources",
+                "name": {
+                    "EN": "Book Resources",
+                    "ES": "Book Resources"
+                },
                 "nameES": "Book Resources",
                 "unit": [
                     {
@@ -128,6 +132,34 @@
                                 "name": "",
                                 "activity": [
                                     "Practice Exam 1"
+                                ]
+                            },
+                            {
+                                "index": 1,
+                                "name": "",
+                                "activity": [
+                                    "Download word"
+                                ]
+                            },
+                            {
+                                "index": 2,
+                                "name": "",
+                                "activity": [
+                                    "Download zip"
+                                ]
+                            },
+                            {
+                                "index": 3,
+                                "name": "",
+                                "activity": [
+                                    "Download pdf"
+                                ]
+                            },
+                            {
+                                "index": 4,
+                                "name": "",
+                                "activity": [
+                                    "Download excel"
                                 ]
                             }
                         ]
