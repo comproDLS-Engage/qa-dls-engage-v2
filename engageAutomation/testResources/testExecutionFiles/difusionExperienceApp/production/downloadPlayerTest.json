@@ -30,7 +30,7 @@
                 "testData": [
                     {
                         "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
-                        "jsonPath": "engage.login.user.validStudent5"
+                        "jsonPath": "engage.login.user.validStudent1"
                     }
                 ]
             },

@@ -24,38 +24,38 @@
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
-                  "jsonPath": "engage.login.user.flipbookUser"
+                  "jsonPath": "engage.login.user.validInstructorUser1"
                }
             ]
          },
          {
-             "id": "ENG_DASH_TC_12",
-             "description": "",
-             "testFile": "./test/engageExperienceApp/dashboard.test.js",
-             "testData": [
-                 {
-                     "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
-                     "jsonPath": "book.name"
-                 },
-                 {
-                     "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                     "jsonPath": "engage.appContent.dashboard.teacher"
-                 }
-             ]
+            "id": "ENG_DASH_TC_12",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/dashboard.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                  "jsonPath": "book.name"
+               },
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.dashboard.teacher"
+               }
+            ]
          },
          {
             "id": "ENG_DASH_TC_18",
             "description": "",
             "testFile": "./test/engageExperienceApp/dashboard.test.js",
             "testData": [
-                {
-                    "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
-                    "jsonPath": "book.name"
-                },
-                {
-                    "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                    "jsonPath": "engage.appContent.dashboard.teacher"
-                }
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                  "jsonPath": "book.name"
+               },
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.dashboard.teacher"
+               }
             ]
          }
       ],
@@ -129,7 +129,7 @@
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
-                  "jsonPath": "engage.login.user.flipbookUser"
+                  "jsonPath": "engage.login.user.validInstructorUser1"
                }
             ]
          },
@@ -138,31 +138,31 @@
             "description": "",
             "testFile": "./test/engageExperienceApp/dashboard.test.js",
             "testData": [
-                {
-                    "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
-                    "jsonPath": "book.name"
-                },
-                {
-                    "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                    "jsonPath": "engage.appContent.dashboard.teacher"
-                }
-            ]
-        },
-        {
-           "id": "ENG_DASH_TC_18",
-           "description": "",
-           "testFile": "./test/engageExperienceApp/dashboard.test.js",
-           "testData": [
                {
-                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
-                   "jsonPath": "book.name"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                  "jsonPath": "book.name"
                },
                {
-                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                   "jsonPath": "engage.appContent.dashboard.teacher"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.dashboard.teacher"
                }
-           ]
-        }
+            ]
+         },
+         {
+            "id": "ENG_DASH_TC_18",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/dashboard.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                  "jsonPath": "book.name"
+               },
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.dashboard.teacher"
+               }
+            ]
+         }
       ],
       "BeforeEach": [],
       "Test": [
@@ -295,7 +295,7 @@
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
-                  "jsonPath": "engage.login.user.flipbookUser"
+                  "jsonPath": "engage.login.user.validInstructorUser1"
                }
             ]
          },
@@ -304,31 +304,31 @@
             "description": "",
             "testFile": "./test/engageExperienceApp/dashboard.test.js",
             "testData": [
-                {
-                    "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
-                    "jsonPath": "book.name"
-                },
-                {
-                    "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                    "jsonPath": "engage.appContent.dashboard.teacher"
-                }
-            ]
-        },
-        {
-           "id": "ENG_DASH_TC_18",
-           "description": "",
-           "testFile": "./test/engageExperienceApp/dashboard.test.js",
-           "testData": [
                {
-                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
-                   "jsonPath": "book.name"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                  "jsonPath": "book.name"
                },
                {
-                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                   "jsonPath": "engage.appContent.dashboard.teacher"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.dashboard.teacher"
                }
-           ]
-        }
+            ]
+         },
+         {
+            "id": "ENG_DASH_TC_18",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/dashboard.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                  "jsonPath": "book.name"
+               },
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.dashboard.teacher"
+               }
+            ]
+         }
       ],
       "BeforeEach": [],
       "Test": [
@@ -508,7 +508,7 @@
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
-                  "jsonPath": "engage.login.user.flipbookUser"
+                  "jsonPath": "engage.login.user.validInstructorUser1"
                }
             ]
          },
@@ -517,31 +517,31 @@
             "description": "",
             "testFile": "./test/engageExperienceApp/dashboard.test.js",
             "testData": [
-                {
-                    "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
-                    "jsonPath": "book.name"
-                },
-                {
-                    "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                    "jsonPath": "engage.appContent.dashboard.teacher"
-                }
-            ]
-        },
-        {
-           "id": "ENG_DASH_TC_18",
-           "description": "",
-           "testFile": "./test/engageExperienceApp/dashboard.test.js",
-           "testData": [
                {
-                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
-                   "jsonPath": "book.name"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                  "jsonPath": "book.name"
                },
                {
-                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                   "jsonPath": "engage.appContent.dashboard.teacher"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.dashboard.teacher"
                }
-           ]
-        }
+            ]
+         },
+         {
+            "id": "ENG_DASH_TC_18",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/dashboard.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                  "jsonPath": "book.name"
+               },
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.dashboard.teacher"
+               }
+            ]
+         }
       ],
       "BeforeEach": [],
       "Test": [
@@ -597,7 +597,7 @@
             "id": "ENG_FLIP_TC_22",
             "description": "Validate clicking on Jump to page button lauches the entered page in flipbook",
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
-            "testData": [ ]
+            "testData": []
          }
       ],
       "AfterEach": [],
