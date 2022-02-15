@@ -318,7 +318,7 @@
                         "Next Activity",
                         "Next"
                     ],
-                    "showAnswerBtn": "Show Answer",
+                    "showAnswerBtn": "Show Answers",
                     "showResponseBtn": "User Response",
                     "checkAnswerBtn": "Check Answers",
                     "submitActivityBtn": null,
@@ -328,7 +328,13 @@
                     "completedTxt": null,
                     "yourScoreLabel": null,
                     "closeInfoBtn": "",
-                    "infoTocHeading": "Activities"
+                    "infoTocHeading": "Activities",
+                    "feedbackText": [
+                        "Well done",
+                        "Correct",
+                        "Oops! Not quite correct.",
+                        "Not Correct"
+                    ]
                 },
                 "student": {
                     "infoBtn": "",
@@ -346,7 +352,7 @@
                         "Next Activity",
                         "Next"
                     ],
-                    "showAnswerBtn": "Show Answer",
+                    "showAnswerBtn": "Show Answers",
                     "showResponseBtn": "User Response",
                     "checkAnswerBtn": "Check Answers",
                     "submitActivityBtn": [
@@ -359,7 +365,13 @@
                     "completedTxt": "Completed on",
                     "yourScoreLabel": "Your Score:",
                     "closeInfoBtn": "",
-                    "infoTocHeading": "Activities"
+                    "infoTocHeading": "Activities",
+                    "feedbackText": [
+                        "Well done",
+                        "Correct",
+                        "Oops! Not quite correct.",
+                        "Not Correct"
+                    ]
                 }
             },
             "activityPlayerPage": {
@@ -413,54 +425,24 @@
                     "signOut": "Logout"
                 }
             },
-            "addBookPage": {
-                "dashboard": {
-                    "pageTitle": "Add your books",
-                    "pageDescription": "Select your books to add to your My Books list. Once added, you'll be able to view all book materials directly from the dashboard.",
-                    "view_btn": "View"
-                },
-                "browse": {
-                    "pageTitle": "Browse",
-                    "pageDescription": "Find all our digital books and their associated resources.",
-                    "tab_0": "Books",
-                    "searchPlaceholder": "Search Books...",
-                    "view_btn": "View",
-                    "moreOptions": {
-                        "viewClass_btn": "View Classes",
-                        "createClass_btn": "Create New Class",
-                        "addToMyBooks_btn": "Add to My Books",
-                        "openFlipbook_btn": "Open Flipbook",
-                        "removeFromMyBooks_btn": "Remove from My Books"
-                    },
-                    "snackBarMessages": {
-                        "addToMyBooks": "1 book has been added to My Books.",
-                        "removeFromMyBooks": "1 book has been removed from My Books."
-                    }
-                },
-                "classes": {
-                    "pageTitle": "Add books to your class",
-                    "pageSubTitle": "Select books from either your list (My Books) or the full catalog (All Books) to associate materials with your class.",
-                    "myBooksTab": "My Books",
-                    "allBooksTab": "All Books",
-                    "addtoClassbtn": "Add to Class",
-                    "cancelAndGoBackbtn": "Cancel & Go Back",
-                    "noBooklbl": "No Books Added",
-                    "bookAddedlbl": "Books Added:",
-                    "noBookerror": "No Books Added : At least one book needs to be selected",
-                    "addBookbtntxt": "Add Book",
-                    "addedBookbtntxt": "Added",
-                    "noBookTitle": "No Books added yet",
-                    "noBookSubTitle": "Any books you save while browsing the catalog will be added here for you to view later."
-                },
-                "search": {
-                    "searchPlaceholder": "Search...",
-                    "results": "results:",
-                    "result": "result:",
-                    "noItemFoundTitle": "No Results\nThere aren't any resources available that match those terms.",
-                    "noResultFound": {
-                        "title": "No result found",
-                        "subTitle": "We didn't find anything matching your search or filters. Try your search again, or change your filters to update the results here."
-                    }
+            "addBook": {
+                "teacher": {
+                    "addBookPageTitle": "Add books to your class",
+                    "addBookPageSubtitle": "Select books from either your list (My Books) or the full catalog (All Books) to associate materials with your class.",
+                    "bookCoverImg": true,
+                    "addBookBtn": "Add Book",
+                    "addToClassBtn": "Add to Class",
+                    "cancelBtn": "Cancel & Go Back",
+                    "noBookLabel": [
+                        "No Books Added",
+                        "No Books Added : At least one book needs to be selected"
+                    ],
+                    "bookLabel": "Books Added:",
+                    "removeBookBtn": "",
+                    "tabList": [
+                        "My Books",
+                        "All Books"
+                    ]
                 }
             },
             "settings": {
@@ -498,28 +480,28 @@
                     "reset_button": "Reset Default Settings",
                     "accessbility_button": "Apply Settings"
                 },
-                "Billing":{
+                "Billing": {
                     "pageHeading": "Subscription",
-                    "subscriptionSubtitle_text":"Billing and license information for your current plan.",
-                    "premiumPlan_text":"Premium Plan",
-                    "active_text":"Active",
-                    "premiumPrice_text":"$24.99/year",
-                    "autoRenewal_text":"Auto Renewal On",
-                    "licensePeriod_text":"License Period:",
-                    "licensePeriod_date":"Dec 30, 2021 - Dec 29, 2022",
-                    "managePlan_btn":"Manage Plan",
-                    "changeCard_btn":"Change Card",
-                    "updateBillingAddress_btn":"Update",
-                    "free_text":"Free",
-                    "getPremiumAccess_text":"Get Premium Access",
-                    "getPremiumAccessSubtitle_text":"You will get access on all our books and resources.",
-                    "price_text":"Subscription for $24.99/year",
-                    "upgradePlan_btn":"Upgrade Plan",
-                    "paymentMethod_text":"Payment Method",
-                    "noPaymentMethod_text":"No payment method added yet",
-                    "noPaymentMethodSubtitle_text":"When you add a payment method while making a purchase, it will appear here.",
-                    "billingMethod_text":"Billing Information",
-                    "noBillingInfo_text":"No billing information added yet"                    
+                    "subscriptionSubtitle_text": "Billing and license information for your current plan.",
+                    "premiumPlan_text": "Premium Plan",
+                    "active_text": "Active",
+                    "premiumPrice_text": "$24.99/year",
+                    "autoRenewal_text": "Auto Renewal On",
+                    "licensePeriod_text": "License Period:",
+                    "licensePeriod_date": "Dec 30, 2021 - Dec 29, 2022",
+                    "managePlan_btn": "Manage Plan",
+                    "changeCard_btn": "Change Card",
+                    "updateBillingAddress_btn": "Update",
+                    "free_text": "Free",
+                    "getPremiumAccess_text": "Get Premium Access",
+                    "getPremiumAccessSubtitle_text": "You will get access on all our books and resources.",
+                    "price_text": "Subscription for $24.99/year",
+                    "upgradePlan_btn": "Upgrade Plan",
+                    "paymentMethod_text": "Payment Method",
+                    "noPaymentMethod_text": "No payment method added yet",
+                    "noPaymentMethodSubtitle_text": "When you add a payment method while making a purchase, it will appear here.",
+                    "billingMethod_text": "Billing Information",
+                    "noBillingInfo_text": "No billing information added yet"
                 },
                 "ErrorMessages": {
                     "currentPasswordError_text": "Please enter current password",
@@ -556,8 +538,8 @@
                     "button1_font": "work sans",
                     "button1_lineHeight": "22.4px",
                     "button1_fontSize": "16px",
-                    "button1_textDecoration": "none solid rgba(0, 0, 0, 0.87)",
-                    "button1_color": "rgba(0,0,0,0.87)",
+                    "button1_textDecoration": "none solid rgba(41,37,36,1)",
+                    "button1_color": "rgba(41,37,36,1)",
                     "button2_font": "work sans",
                     "button2_lineHeight": "22.4px",
                     "button2_fontSize": "16px",
@@ -597,8 +579,8 @@
                     "button1_font": "opendyslexicalta",
                     "button1_lineHeight_XL": "25.6px",
                     "button1_fontSize_XL": "20px",
-                    "button1_textDecoration": "underline solid rgba(0, 0, 0, 0.87)",
-                    "button1_color": "rgba(0,0,0,0.87)",
+                    "button1_textDecoration": "underline solid rgba(41, 37, 36)",
+                    "button1_color": "rgba(41,37,36,1)",
                     "button2_font": "opendyslexicalta",
                     "button2_lineHeight_XL": "25.6px",
                     "button2_fontSize_XL": "20px",
@@ -640,10 +622,6 @@
                 }
             },
             "flipbook": {
-                "doublelayoutWidth": "width: 50%;",
-                "singlelayoutWidth": "width: 100%;",
-                "singlelayoutDefaultWidth": 1411,
-                "singlelayoutDefaultHeight": 1733,
                 "doubleLayoutTOC": "p. 2 - 3",
                 "singleLayoutTOC": "p. 2",
                 "myNotesTitle": "My Notes",
@@ -652,7 +630,7 @@
                 "addNoteTitle": "Add Note",
                 "editNoteTitle": "Edit Note",
                 "pageNoLabel": "On Page:",
-                "pageNoValue": "p. 2",
+                "pageNoValue": "p.",
                 "notesListPagenumber": "Page 2",
                 "allPagesLabel": "All Pages",
                 "noteListItemLabel": "p. 2",
@@ -662,47 +640,105 @@
                 "deleteNoteModalDeleteBtn": "Delete",
                 "cancelBtn": "Cancel",
                 "saveBtn": "Save",
-                "setNote": "test note automation 1",
-                "setEditedNote": "test edited note automation",
-                "setBookmark": "test bookmark automation",
-                "setEditedBookmark": "test edited bookmark automation",
                 "noBookmarkText": "Looks like you haven't added any bookmarks yet. Bookmark a page to save your spot for later.",
                 "bookmarkThisPageBtn": "Bookmark This Page",
                 "bookmarksTitle": "Bookmarks",
-                "bookmarkNameLabel": "Bookmark Name"
+                "bookmarkNameLabel": "Bookmark Name",
+                "tableOfContentTitle": "Table of Contents"
             },
             "browse": {
-                "pageTitle": "Browse",
-                "pageSubTitle": "Find all our digital books and their associated resources.",
-                "filtersBtn": "Filters:\nShow All",
-                "searchBox": "",
-                "tabList": [
-                    "Books",
-                    "Interactive Activities",
-                    "Videos",
-                    "Online Class",
-                    "Teacher Training",
-                    "Today in Class",
-                    "Projectables"
-                ],
-                "pageNumToJump": "2",
-                "moreOptions": {
+                "teacher": {
+                    "pageTitle": [
+                        "Browse",
+                        "Add your books",
+                        "Add books to your class"
+                    ],
+                    "pageSubTitle": [
+                        "Find all our digital books and their associated resources.",
+                        "Select your books to add to your My Books list. Once added, you'll be able to view all book materials directly from the dashboard.",
+                        "Select books from either your list (My Books) or the full catalog (All Books) to associate materials with your class."
+                    ],
+                    "tabList": [
+                        "Books",
+                        "Interactive Activities",
+                        "Videos",
+                        "Online Class",
+                        "Teacher Training",
+                        "Today in Class",
+                        "Projectables"
+                    ],
+                    "filtersBtn": "Filters:\nShow All",
+                    "viewAllBtn": "View All",
+                    "moreOptionsBtn": "",
                     "viewOption": "View",
                     "addToPlaylistOption": "Add to Playlist",
-                    "createPlaylist_label": "Create Playlist",
-                    "shareOption": "Share"
-                },
-                "noResultListItemTitle": "No Results",
-                "noResultListItemSubtitle": "There aren't any resources available that match those terms.",
-                "noResultFound": {
-                    "title": "No result found",
-                    "subTitle": "We didn't find anything matching your search or filters. Try your search again, or change your filters to update the results here."
-                },
-                "results_label": "results:",
-                "result_label": "result:",
-                "filter": {
+                    "shareOption": "Share",
+                    "viewBtn": "View",
+                    "addBookBtn": [
+                        "",
+                        "Add Book"
+                    ],
+                    "bookMoreOptionsBtn": "",
+                    "viewClassOption": "View Classes",
+                    "createNewClassOption": "Create New Class",
+                    "addToMyBooksOption": "Add to My Books",
+                    "removeFromMyBooksOption": "Remove from My Books",
+                    "openFlipbookOption": "Open Flipbook",
+                    "listOfPlaylist": "Create Playlist",
+                    "showMoreResults": "More search results for ",
+                    "noResultListItemTitle": "No Results",
+                    "noResultListItemSubtitle": "There aren't any resources available that match those terms.",
+                    "searchCount": " result",
+                    "search_NoResult_img": true,
+                    "search_NoResult_title": "No result found",
+                    "search_NoResult_subTitle": "We didn't find anything matching your search or filters. Try your search again, or change your filters to update the results here.",
                     "filterMenuTitle": "Filters",
-                    "filterMenuFilterCount": "0 filters added",
+                    "filterMenuCloseBtn": "",
+                    "filterMenuFilterCount": " filters added",
+                    "filterMenuClearAllBtn": "Clear All",
+                    "filterMenuApplyBtn": "Apply Filters"
+                },
+                "student": {
+                    "pageTitle": [
+                        "Browse",
+                        "Add your books"
+                    ],
+                    "pageSubTitle": [
+                        "Find all our digital books and their associated resources.",
+                        "Select your books to add to your My Books list. Once added, you'll be able to view all book materials directly from the dashboard."
+                    ],
+                    "tabList": [
+                        "Books",
+                        "Interactive Activities",
+                        "Videos"
+                    ],
+                    "filtersBtn": "Filters:\nShow All",
+                    "viewAllBtn": "View All",
+                    "moreOptionsBtn": "",
+                    "viewOption": "View",
+                    "addToPlaylistOption": "Add to Playlist",
+                    "shareOption": null,
+                    "viewBtn": "View",
+                    "addBookBtn": [
+                        ""
+                    ],
+                    "bookMoreOptionsBtn": "",
+                    "viewClassOption": "View Classes",
+                    "createNewClassOption": null,
+                    "addToMyBooksOption": "Add to My Books",
+                    "removeFromMyBooksOption": "Remove fo My Books",
+                    "openFlipbookOption": "Open Flipbook",
+                    "listOfPlaylist": "Create Playlist",
+                    "showMoreResults": "More search results for ",
+                    "noResultListItemTitle": "No Results",
+                    "noResultListItemSubtitle": "There aren't any resources available that match those terms.",
+                    "searchCount": " result",
+                    "search_NoResult_img": true,
+                    "search_NoResult_title": "No result found",
+                    "search_NoResult_subTitle": "We didn't find anything matching your search or filters. Try your search again, or change your filters to update the results here.",
+                    "filterMenuTitle": "Filters",
+                    "filterMenuCloseBtn": "",
+                    "filterMenuFilterCount": " filters added",
                     "filterMenuClearAllBtn": "Clear All",
                     "filterMenuApplyBtn": "Apply Filters"
                 }
@@ -778,6 +814,32 @@
                     "viewOptionResourceItem": "View",
                     "shareOptionResourceItem": null,
                     "removeOptionResourceItem": "Remove from Playlist"
+                }
+            },
+            "downloadPlayer": {
+                "teacher": {
+                    "pageSubTitle": "Download Resource",
+                    "labelHeading": "Download file to view this resource on your computer.",
+                    "downloadInfo": "Download Information",
+                    "fileLabel": "File",
+                    "typeLabel": "Type",
+                    "sizeLabel": "Size",
+                    "downloadBtnWord": "Download Word",
+                    "downloadBtnZIP": "Download ZIP",
+                    "downloadBtnPDF": "Download PDF",
+                    "downloadBtnSheet": "Download Excel"
+                },
+                "student": {
+                    "pageSubTitle": "Download Resource",
+                    "labelHeading": "Download file to view this resource on your computer.",
+                    "downloadInfo": "Download Information",
+                    "fileLabel": "File",
+                    "typeLabel": "Type",
+                    "sizeLabel": "Size",
+                    "downloadBtnWord": "Download Word",
+                    "downloadBtnZIP": "Download ZIP",
+                    "downloadBtnPDF": "Download PDF",
+                    "downloadBtnSheet": "Download Excel"
                 }
             }
         }

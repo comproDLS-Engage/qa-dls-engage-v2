@@ -18,7 +18,7 @@
 			},
 			"class2": {
 				"name": "Archived Class",
-				"key": "x628-z9x4",
+				"key": "k2Rv-t974",
 				"classDuration": "Aug 22 - Aug 26, 2022",
 				"instructor": {
 					"name": "vengqains5_new",
@@ -32,7 +32,7 @@
 			},
 			"class3": {
 				"name": "future Class",
-				"key": "kzU6-26jW",
+				"key": "k2Rv-t974",
 				"classDuration": "Aug 19,2021 - Jul 23, 2022",
 				"instructor": {
 					"name": "kulujaco-1294",
@@ -135,6 +135,21 @@
 				"status": "Archieved",
 				"studentCount": "",
 				"info": "Existing archieved Course"
+			},
+			"activeclass": {
+				"name": "Quality Book 1",
+				"key": "vQ9n-qhQ8",
+				"classDuration": "Jul 19, 2021 - Jul 18, 2022",
+				"instructor": {
+					"name": "dev2 Teach1",
+					"email": "vengqains5_new@yopmail.com"
+				},
+				"bookName": "Quality Test Book 1",
+				"bookIndex":"0",
+				"schoolName": "Mount Allison School",
+				"status": "Active",
+				"studentCount": 0,
+				"info": "Existing Active Course"
 			}
 		}
 	}

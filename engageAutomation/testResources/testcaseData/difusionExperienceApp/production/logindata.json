@@ -32,6 +32,15 @@
                     ],
                     "info": {}
                 },
+                "validStudent3": {
+                    "email": "qa_student003@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "student",
+                    "name": "qa_student003",
+                    "class": [
+                    ],
+                    "info": {}
+                },
                 "invalidUser1": {
                     "email": "etirrase@yopmail",
                     "password": "hfcghgufyhW#2",
@@ -116,9 +125,9 @@
                     "info": {}
                 },
                 "noClassStudent": {
-                    "email": "noClassStudent@yopmail.com",
+                    "email": "noClassStudentNew@yopmail.com",
                     "password": "Compro@1234",
-                    "name": "No Class",
+                    "name": "no Class1",
                     "role": "student",
                     "class": [],
                     "info": {}
