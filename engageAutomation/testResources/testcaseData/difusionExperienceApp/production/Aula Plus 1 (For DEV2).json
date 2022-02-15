@@ -1,0 +1,190 @@
+{
+    "book": {
+        "name": "Aula Plus 1",
+        "description": "Curso De Espanol A1",
+        "component": [
+            {
+                "index": 0,
+                "name": {
+                    "EN": "Manual Web",
+                    "ES": "Manual Web"
+                },
+                "unit": [
+                    {
+                        "index": 0,
+                        "title": "0. En el aula",
+                        "activityCount": "6",
+                        "folderCount": "",
+                        "flipbookPageNum": "10",
+                        "section": [
+                            {
+                                "index": 0,
+                                "name": "",
+                                "activity": [
+                                    "1. Me llamo Anderson. ¿Y tú?",
+                                    "2. Sonidos",
+                                    "3. Hola, ¿qué tal?",
+                                    "4. ¿Cómo se escribe?",
+                                    "5. Las cosas de la clase",
+                                    "6. ¿Qué significa \"vale\"?"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "index": 1,
+                        "title": "1. Nosotros y nosotras",
+                        "activityCount": "7",
+                        "folderCount": "",
+                        "flipbookPageNum": "14",
+                        "section": [
+                            {
+                                "index": 0,
+                                "name": "",
+                                "activity": []
+                            }
+                        ]
+                    },
+                    {
+                        "index": 2,
+                        "title": "2. Quiero aprender español",
+                        "activityCount": "15",
+                        "folderCount": "",
+                        "flipbookPageNum": "28",
+                        "section": [
+                            {
+                                "index": 0,
+                                "name": "",
+                                "activity": []
+                            }
+                        ]
+                    },
+                    {
+                        "index": 3,
+                        "title": "3. ¿Dónde está Santiago?",
+                        "activityCount": "16",
+                        "folderCount": "",
+                        "flipbookPageNum": "42",
+                        "section": [
+                            {
+                                "index": 0,
+                                "name": "",
+                                "activity": []
+                            }
+                        ]
+                    },
+                    {
+                        "index": 4,
+                        "title": "4. ¿Cuál prefieres?",
+                        "activityCount": "17",
+                        "folderCount": "",
+                        "flipbookPageNum": "56",
+                        "section": [
+                            {
+                                "index": 0,
+                                "name": "",
+                                "activity": []
+                            }
+                        ]
+                    },
+                    {
+                        "index": 5,
+                        "title": "5. Tus amigos son mis amigos",
+                        "activityCount": "17",
+                        "folderCount": "",
+                        "flipbookPageNum": "70",
+                        "section": [
+                            {
+                                "index": 0,
+                                "name": "",
+                                "activity": []
+                            }
+                        ]
+                    },
+                    {
+                        "index": 6,
+                        "title": "6. Día a día",
+                        "activityCount": "16",
+                        "folderCount": "",
+                        "flipbookPageNum": "84",
+                        "section": [
+                            {
+                                "index": 0,
+                                "name": "",
+                                "activity": []
+                            }
+                        ]
+                    },
+                    {
+                        "index": 7,
+                        "title": "7. ¡A comer!",
+                        "activityCount": "14",
+                        "folderCount": "",
+                        "flipbookPageNum": "98",
+                        "section": [
+                            {
+                                "index": 0,
+                                "name": "",
+                                "activity": []
+                            }
+                        ]
+                    },
+                    {
+                        "index": 8,
+                        "title": "8. El barrio ideal",
+                        "activityCount": "13",
+                        "folderCount": "",
+                        "flipbookPageNum": "112",
+                        "section": [
+                            {
+                                "index": 0,
+                                "name": "",
+                                "activity": []
+                            }
+                        ]
+                    },
+                    {
+                        "index": 9,
+                        "title": "9. ¿Sabes conducir?",
+                        "activityCount": "14",
+                        "folderCount": "",
+                        "flipbookPageNum": "126",
+                        "section": [
+                            {
+                                "index": 0,
+                                "name": "",
+                                "activity": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "index": 1,
+                "name": {
+                    "EN": "Recursos",
+                    "ES": "Recursos"
+                },
+                "unit": [
+                    {
+                        "index": 0,
+                        "title": "Unidad 0",
+                        "activityCount": "",
+                        "folderCount": "",
+                        "flipbookPageNum": "",
+                        "section": [
+                            {
+                                "index": 0,
+                                "name": "Resources",
+                                "activity": [
+                                    "Unidad 0 - Pistas audio",
+                                    "Unidad 0 - Fichas proyectables"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

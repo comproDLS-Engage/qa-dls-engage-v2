@@ -23,7 +23,7 @@
             "testFile": "./test/engageExperienceApp/login.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
                   "jsonPath": "engage.login.user.validInstructorUser1"
                }
             ]
@@ -34,11 +34,11 @@
             "testFile": "./test/engageExperienceApp/dashboard.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/QA Test Automation BookTOC.json",
                   "jsonPath": "book.name"
                },
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
                   "jsonPath": "engage.appContent.dashboard.teacher"
                }
             ]
@@ -49,11 +49,11 @@
             "testFile": "./test/engageExperienceApp/dashboard.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/QA Test Automation BookTOC.json",
                   "jsonPath": "book.name"
                },
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
                   "jsonPath": "engage.appContent.dashboard.teacher"
                }
             ]
@@ -73,7 +73,7 @@
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/flipbookData.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/flipbookData.json",
                   "jsonPath": "engage.flipbook.fb1"
                }
             ]
@@ -84,7 +84,7 @@
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/flipbookData.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/flipbookData.json",
                   "jsonPath": "engage.flipbook.fb1"
                }
             ]
@@ -95,7 +95,7 @@
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/flipbookData.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/flipbookData.json",
                   "jsonPath": "engage.flipbook.fb1"
                }
             ]
@@ -128,7 +128,7 @@
             "testFile": "./test/engageExperienceApp/login.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
                   "jsonPath": "engage.login.user.validInstructorUser1"
                }
             ]
@@ -139,11 +139,11 @@
             "testFile": "./test/engageExperienceApp/dashboard.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/QA Test Automation BookTOC.json",
                   "jsonPath": "book.name"
                },
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
                   "jsonPath": "engage.appContent.dashboard.teacher"
                }
             ]
@@ -154,11 +154,11 @@
             "testFile": "./test/engageExperienceApp/dashboard.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/QA Test Automation BookTOC.json",
                   "jsonPath": "book.name"
                },
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
                   "jsonPath": "engage.appContent.dashboard.teacher"
                }
             ]
@@ -172,7 +172,7 @@
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
                   "jsonPath": "engage.appContent.flipbook"
                }
             ]
@@ -183,7 +183,7 @@
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/flipbookData.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/flipbookData.json",
                   "jsonPath": "engage.flipbook.fb1"
                }
             ]
@@ -194,7 +194,7 @@
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
                   "jsonPath": "engage.appContent.flipbook"
                }
             ]
@@ -205,7 +205,7 @@
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
                   "jsonPath": "engage.appContent.flipbook"
                }
             ]
@@ -216,7 +216,7 @@
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/flipbookData.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/flipbookData.json",
                   "jsonPath": "engage.flipbook.fb1.setNote"
                }
             ]
@@ -233,7 +233,7 @@
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
                   "jsonPath": "engage.appContent.flipbook"
                }
             ]
@@ -244,7 +244,7 @@
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
                   "jsonPath": "engage.appContent.flipbook"
                }
             ]
@@ -255,7 +255,7 @@
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/flipbookData.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/flipbookData.json",
                   "jsonPath": "engage.flipbook.fb1.setBookmark"
                }
             ]
@@ -294,7 +294,7 @@
             "testFile": "./test/engageExperienceApp/login.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
                   "jsonPath": "engage.login.user.validInstructorUser1"
                }
             ]
@@ -305,11 +305,11 @@
             "testFile": "./test/engageExperienceApp/dashboard.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/QA Test Automation BookTOC.json",
                   "jsonPath": "book.name"
                },
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
                   "jsonPath": "engage.appContent.dashboard.teacher"
                }
             ]
@@ -320,11 +320,11 @@
             "testFile": "./test/engageExperienceApp/dashboard.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/QA Test Automation BookTOC.json",
                   "jsonPath": "book.name"
                },
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
                   "jsonPath": "engage.appContent.dashboard.teacher"
                }
             ]
@@ -338,7 +338,7 @@
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
                   "jsonPath": "engage.appContent.flipbook"
                }
             ]
@@ -349,7 +349,7 @@
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/flipbookData.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/flipbookData.json",
                   "jsonPath": "engage.flipbook.fb1"
                }
             ]
@@ -360,11 +360,11 @@
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
                   "jsonPath": "engage.appContent.flipbook"
                },
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/flipbookData.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/flipbookData.json",
                   "jsonPath": "engage.flipbook.fb1"
                }
             ]
@@ -375,11 +375,11 @@
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/flipbookData.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/flipbookData.json",
                   "jsonPath": "engage.flipbook.fb1"
                },
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
                   "jsonPath": "engage.appContent.flipbook"
                }
             ]
@@ -390,7 +390,7 @@
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/flipbookData.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/flipbookData.json",
                   "jsonPath": "engage.flipbook.fb1.setEditedNote"
                }
             ]
@@ -401,11 +401,11 @@
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/flipbookData.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/flipbookData.json",
                   "jsonPath": "engage.flipbook.fb1"
                },
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
                   "jsonPath": "engage.appContent.flipbook"
                }
             ]
@@ -416,7 +416,7 @@
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
                   "jsonPath": "engage.appContent.flipbook"
                }
             ]
@@ -433,7 +433,7 @@
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
                   "jsonPath": "engage.appContent.flipbook"
                }
             ]
@@ -444,11 +444,11 @@
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/flipbookData.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/flipbookData.json",
                   "jsonPath": "engage.flipbook.fb1"
                },
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
                   "jsonPath": "engage.appContent.flipbook"
                }
             ]
@@ -459,7 +459,7 @@
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/flipbookData.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/flipbookData.json",
                   "jsonPath": "engage.flipbook.fb1.setEditedBookmark"
                }
             ]
@@ -470,11 +470,11 @@
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/flipbookData.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/flipbookData.json",
                   "jsonPath": "engage.flipbook.fb1"
                },
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
                   "jsonPath": "engage.appContent.flipbook"
                }
             ]
@@ -507,7 +507,7 @@
             "testFile": "./test/engageExperienceApp/login.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
                   "jsonPath": "engage.login.user.validInstructorUser1"
                }
             ]
@@ -518,11 +518,11 @@
             "testFile": "./test/engageExperienceApp/dashboard.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/QA Test Automation BookTOC.json",
                   "jsonPath": "book.name"
                },
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
                   "jsonPath": "engage.appContent.dashboard.teacher"
                }
             ]
@@ -533,11 +533,11 @@
             "testFile": "./test/engageExperienceApp/dashboard.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/QA Test Automation BookTOC.json",
                   "jsonPath": "book.name"
                },
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
                   "jsonPath": "engage.appContent.dashboard.teacher"
                }
             ]
@@ -551,7 +551,7 @@
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
                   "jsonPath": "engage.appContent.flipbook"
                }
             ]
@@ -562,7 +562,7 @@
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/flipbookData.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/flipbookData.json",
                   "jsonPath": "engage.flipbook.fb1"
                }
             ]
@@ -573,11 +573,11 @@
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/flipbookData.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/flipbookData.json",
                   "jsonPath": "engage.flipbook.fb1"
                },
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
                   "jsonPath": "engage.appContent.flipbook"
                }
             ]
@@ -588,7 +588,7 @@
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/flipbookData.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/flipbookData.json",
                   "jsonPath": "engage.flipbook.fb1.jumpToPageInput"
                }
             ]

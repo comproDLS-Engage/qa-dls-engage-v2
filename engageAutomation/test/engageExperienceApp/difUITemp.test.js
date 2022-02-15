@@ -727,13 +727,13 @@ module.exports = {
 		console.log(res)
 		res = action.waitForDisplayed("[data-tid=image-chapter-0]");
 		console.log(res)
-		res = action.click("[data-tid=button-product-4]");
+		res = action.click("[data-tid=button-product-2]");
 		console.log(res)
-		res = action.click("[data-tid=button-chapter-0]");
+		res = action.click("[data-tid=button-chapter-1]");
 		console.log(res)
-		res = action.waitForDisplayed("[data-tid=image-unit-thumbnail-0]");
+		res = action.waitForDisplayed("[data-tid=image-unit-thumbnail-1]");
 		console.log(res)
-		res = action.click("[data-tid=button-item-0-0]");
+		res = action.click("[data-tid=button-item-0-2]");
 		console.log(res)
 		res = action.waitForDisplayed("iframe");
 		console.log(res)
@@ -806,9 +806,11 @@ module.exports = {
 	ENG_DIF_TC_995: function () {
 		res = action.click("[data-tid=button-submitActivity]");
 		console.log(res)
+		res = action.waitForDisplayed("[data-tid=button-retakeActivity]");
+		console.log(res)
 		res = action.click("[data-tid=breadcrumb-productTitle]");
 		console.log(res)
-		res = action.click("[data-tid=button-item-0-0]");
+		res = action.click("[data-tid=button-item-0-2]");
 		console.log(res)
 		res = action.waitForDisplayed("iframe");
 		console.log(res)

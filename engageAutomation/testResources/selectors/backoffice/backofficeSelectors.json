@@ -28,7 +28,7 @@
 		"goBackBtn": "button[data-ng-click=closewindow()]",
 		"bannerText": "[class*=mdc-banner__text]",
 		"bannerCloseBtn": "[class=c-banner__close]",
-		"proceedBtn": "[data-tid=button-item-type-launch] div",
+		"proceedBtn": "[data-tid=button-item-type-launch]",
 		"buttonLoader": "[class=c-button__spinner]",
 		"emptyStateBtn": "[class*=c-empty-state-button]",
 		"publishBtn": "[data-tid=button-publish-book-component]"
@@ -36,7 +36,7 @@
 	"homePage": {
 		"headingText": "[class*=c-nav__heading-text]",
 		"newTitleBtn": "[data-tid=button-newtitle]",
-		"titleTypeList": "[class*=mdc-list-item__primary-text]",
+		"titleTypeList": "li[class='mdc-list-item c-list-item']",
 		"bookCount": "[class*=book-count]",
 		"bookList": "[data-tid*=button-book-detail]:not([style='display: none;']) [class*=c-card__title]",
 		"libraryBtn": "button[data-tid=button-library]",

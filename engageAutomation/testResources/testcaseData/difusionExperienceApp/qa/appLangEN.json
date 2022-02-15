@@ -579,7 +579,7 @@
                     "button1_font": "opendyslexicalta",
                     "button1_lineHeight_XL": "25.6px",
                     "button1_fontSize_XL": "20px",
-                    "button1_textDecoration": "underline solid rgba(41, 37, 36)",
+                    "button1_textDecoration": "underline solid rgb(41, 37, 36)",
                     "button1_color": "rgba(41,37,36,1)",
                     "button2_font": "opendyslexicalta",
                     "button2_lineHeight_XL": "25.6px",
