@@ -2,7 +2,6 @@
 const itemplayer = require('./itemPlayer.page.js');
 const action = require('../../core/actionLibrary/baseActionLibrary');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
-var res;
 
 module.exports = {
 
@@ -14,7 +13,7 @@ module.exports = {
         logger.logInto(stackTrace.get());
 		//action.switchToFrame("[id*=iframe]");
 		action.switchToFrame(0);
-		let res = action.waitForExist(this.responses);
+		let res = action.waitForClickable(this.responses);
 		action.switchToParentFrame();
 		return res;
     },
@@ -27,21 +26,19 @@ module.exports = {
         for (let i = 0; i < optionLength; i++) {
             var ddSelector = this.response + fibQuesData[i][0] + "]";
             var value = itemplayer.getFeedbackIconDetails(ddSelector);
-            targetArr[i] = [fibQuesData[i][0], action.getValue(ddSelector + " [class*=' mdc-select__selected-text']"), value];
+            targetArr[i] = [fibQuesData[i][0], action.getText(ddSelector + " [class*=' mdc-select__selected-text']"), value];
         }
         action.switchToParentFrame();
-        console.log(targetArr);
         return targetArr;
     },
 
     selectValue: function (fibQuesData) {
         logger.logInto(stackTrace.get());
         action.switchToFrame(0);
-        for (let i = 0; i < fibQuesData.length; i++) {
-            var ddSelector = this.response + fibQuesData[i][0] + "]";
-            res = action.selectByAttribute(ddSelector + " [class*=mdc-menu-surface--open] ul", "data-value", fibQuesData[i][1]);
-
-            /*res = action.click(ddSelector);
+        let res, i;
+        for (i = 0; i < fibQuesData.length; i++) {
+            var ddSelector = this.response + fibQuesData[i][0] + "] div";
+            res = action.click(ddSelector);
             if (true == res) {
                 res = action.click(this.responseOption + fibQuesData[i][1]);
                 logger.logInto(stackTrace.get(), res);
@@ -49,7 +46,7 @@ module.exports = {
             else {
                 res = res + " -- Target text placeholder " + fibQuesData[i][0] + " is NOT clicked";
                 logger.logInto(stackTrace.get(), res, 'error');
-            }*/
+            }
         }
         action.switchToParentFrame();
         return res;

@@ -395,9 +395,9 @@
                 "responses": "[data-tid*='input-response']"
             },
             "FIBSelect": {
-                "response": "[data-tid=input-response-",
-                "responses": "[data-tid*='input-response']",
-                "responseOption": "[data-tid=select-responseoption-"
+                "response": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-tid=input-response-",
+                "responses": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-tid*='input-response']",
+                "responseOption": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [class*=mdc-menu-surface--open] [data-tid=select-responseoption-"
             },
             "dragAndDrop": {
                 "source": "[data-tid=dragsource-option-",
