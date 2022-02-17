@@ -68,7 +68,7 @@ module.exports = {
     select_TitleType_and_Proceed: function (type) {
         logger.logInto(stackTrace.get());
         res = null;
-        let i, list, list2;
+        let i, list;
         list = action.findElements(this.titleTypeList);
         for (i = 0; i < list.length; i++) {
             if (action.getAttribute(list[i],"data-value").includes(type)) {
