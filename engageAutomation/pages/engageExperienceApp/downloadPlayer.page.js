@@ -4,59 +4,60 @@ var selectorFile = jsonParserUtil.jsonParser(selectorDir)
 var appShellPage = require('./appShell.page.js')
 
 module.exports = {
-    pageTitle: selectorFile.css.ComproEngage.downloadPlayer.pageTitle,
-    pageSubTitle: selectorFile.css.ComproEngage.downloadPlayer.pageSubTitle,
-    labelHeading: selectorFile.css.ComproEngage.downloadPlayer.labelHeading,
+
+    downPlayer_img: selectorFile.css.ComproEngage.downloadPlayer.downPlayer_img,
+    downPlayer_title: selectorFile.css.ComproEngage.downloadPlayer.downPlayer_title,
+    resourceLabel: selectorFile.css.ComproEngage.downloadPlayer.resourceLabel,
+    downPlayer_subtitle: selectorFile.css.ComproEngage.downloadPlayer.downPlayer_subtitle,
     downloadBtn: selectorFile.css.ComproEngage.downloadPlayer.downloadBtn,
-    downloadInfo: selectorFile.css.ComproEngage.downloadPlayer.downloadInfo,
+    downInfoLabel: selectorFile.css.ComproEngage.downloadPlayer.downInfoLabel,
     fileLabel: selectorFile.css.ComproEngage.downloadPlayer.fileLabel,
-    fileValue: selectorFile.css.ComproEngage.downloadPlayer.fileValue,
+    fileName: selectorFile.css.ComproEngage.downloadPlayer.fileName,
     typeLabel: selectorFile.css.ComproEngage.downloadPlayer.typeLabel,
-    typeValue: selectorFile.css.ComproEngage.downloadPlayer.typeValue,
+    fileType: selectorFile.css.ComproEngage.downloadPlayer.fileType,
     sizeLabel: selectorFile.css.ComproEngage.downloadPlayer.sizeLabel,
-    sizeValue: selectorFile.css.ComproEngage.downloadPlayer.sizeValue,
+    fileSize: selectorFile.css.ComproEngage.downloadPlayer.fileSize,
 
-
-    isInitialized: function() {
+    isInitialized: function () {
         var res;
         logger.logInto(stackTrace.get());
         action.waitForDocumentLoad();
         res = {
-            pageStatus: action.waitForDisplayed(this.pageTitle),
+            pageStatus: action.waitForDisplayed(this.downPlayer_img),
             appShellPage: appShellPage.isInitialized()
         };
         return res;
     },
 
-    downloadPlayer_Data: function() {
+    getData_downloadPlayer: function () {
         logger.logInto(stackTrace.get());
-        action.waitForDisplayed(this.pageTitle);
         var obj;
         obj = {
-            pageTitle: (action.getElementCount(this.pageTitle) > 0) ? action.getText(this.pageTitle) : null,
-            pageSubTitle: (action.getElementCount(this.pageSubTitle) > 0) ? action.getText(this.pageSubTitle) : null,
-            labelHeading: (action.getElementCount(this.labelHeading) > 0) ? action.getText(this.labelHeading) : null,
+            downPlayer_img: (action.getElementCount(this.downPlayer_img) > 0) ? action.waitForDisplayed(this.downPlayer_img) : false,
+            downPlayer_title: (action.getElementCount(this.downPlayer_title) > 0) ? action.getText(this.downPlayer_title) : null,
+            resourceLabel: (action.getElementCount(this.resourceLabel) > 0) ? action.getText(this.resourceLabel) : null,
+            downPlayer_subtitle: (action.getElementCount(this.downPlayer_subtitle) > 0) ? action.getText(this.downPlayer_subtitle) : null,
             downloadBtn: (action.getElementCount(this.downloadBtn) > 0) ? action.getText(this.downloadBtn) : null,
-            downloadInfo: (action.getElementCount(this.downloadInfo) > 0) ? action.getText(this.downloadInfo) : null,
+            downInfoLabel: (action.getElementCount(this.downInfoLabel) > 0) ? action.getText(this.downInfoLabel) : null,
             fileLabel: (action.getElementCount(this.fileLabel) > 0) ? action.getText(this.fileLabel) : null,
-            fileValue: (action.getElementCount(this.fileValue) > 0) ? action.getText(this.fileValue) : null,
+            fileName: (action.getElementCount(this.fileName) > 0) ? action.getText(this.fileName) : null,
             typeLabel: (action.getElementCount(this.typeLabel) > 0) ? action.getText(this.typeLabel) : null,
-            typeValue: (action.getElementCount(this.typeValue) > 0) ? action.getText(this.typeValue) : null,
+            fileType: (action.getElementCount(this.fileType) > 0) ? action.getText(this.fileType) : null,
             sizeLabel: (action.getElementCount(this.sizeLabel) > 0) ? action.getText(this.sizeLabel) : null,
-            sizeValue: (action.getElementCount(this.sizeValue) > 0) ? action.getText(this.sizeValue) : null,
+            fileSize: (action.getElementCount(this.fileSize) > 0) ? action.getText(this.fileSize) : null,
+            downloadBtn_isClickable: (action.getElementCount(this.downloadBtn) > 0) ? action.isClickable(this.downloadBtn) : null //manually added
         }
         return obj;
     },
 
-
-    click_downloadBtn: function() {
+    click_downloadBtn: function () {
         logger.logInto(stackTrace.get());
         var res;
         res = action.click(this.downloadBtn);
         if (true == res) {
             logger.logInto(stackTrace.get(), " downloadBtn is clicked");
-            res = this.isInitialized();
-        } else {
+        }
+        else {
             logger.logInto(stackTrace.get(), res + "downloadBtn is NOT clicked", 'error');
         }
         return res;

@@ -818,28 +818,36 @@
             },
             "downloadPlayer": {
                 "teacher": {
-                    "pageSubTitle": "Download Resource",
-                    "labelHeading": "Download file to view this resource on your computer.",
-                    "downloadInfo": "Download Information",
+                    "downPlayer_img": true,
+                    "downPlayer_title": "Download word",
+                    "resourceLabel": "Download Resource",
+                    "downPlayer_subtitle": "Download file to view this resource on your computer.",
+                    "downloadBtn": [
+                        "Download Word",
+                        "Download ZIP",
+                        "Download PDF",
+                        "Download Excel"
+                    ],
+                    "downInfoLabel": "Download Information",
                     "fileLabel": "File",
                     "typeLabel": "Type",
-                    "sizeLabel": "Size",
-                    "downloadBtnWord": "Download Word",
-                    "downloadBtnZIP": "Download ZIP",
-                    "downloadBtnPDF": "Download PDF",
-                    "downloadBtnSheet": "Download Excel"
+                    "sizeLabel": "Size"
                 },
                 "student": {
-                    "pageSubTitle": "Download Resource",
-                    "labelHeading": "Download file to view this resource on your computer.",
-                    "downloadInfo": "Download Information",
+                    "downPlayer_img": true,
+                    "downPlayer_title": "Download word",
+                    "resourceLabel": "Download Resource",
+                    "downPlayer_subtitle": "Download file to view this resource on your computer.",
+                    "downloadBtn": [
+                        "Download Word",
+                        "Download ZIP",
+                        "Download PDF",
+                        "Download Excel"
+                    ],
+                    "downInfoLabel": "Download Information",
                     "fileLabel": "File",
                     "typeLabel": "Type",
-                    "sizeLabel": "Size",
-                    "downloadBtnWord": "Download Word",
-                    "downloadBtnZIP": "Download ZIP",
-                    "downloadBtnPDF": "Download PDF",
-                    "downloadBtnSheet": "Download Excel"
+                    "sizeLabel": "Size"
                 }
             }
         }

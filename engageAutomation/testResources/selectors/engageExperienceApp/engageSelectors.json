@@ -766,19 +766,19 @@
                 "shareOptionResourceItem": "[data-tid*=button-shareDetails]",
                 "removeOptionResourceItem": "[data-tid*=button-removeDetails]"
             },
-             "downloadPlayer":
-            {
-                "pageTitle": "[data-tid=resourcePlayer-title]",
-                "pageSubTitle": "h6[data-tid=resourcePlayer-subtitle]",
-                "labelHeading": "[data-tid=text-label-heading]",
-                "downloadBtn": "[data-tid=button-primary]",
-                "downloadInfo": "//*[contains(text(),'Download Information')]",
-                "fileLabel": "[data-tid=label-name-0]",
-                "fileValue": "[data-tid=text-value-0]",
-                "typeLabel": "[data-tid=label-name-1]",
-                "typeValue": "[data-tid=text-value-1]",
-                "sizeLabel": "[data-tid=label-name-2]",
-                "sizeValue": "[data-tid=text-value-2]"
+            "downloadPlayer": {
+                "downPlayer_img": "[data-tid=image-resourceDownloader]",
+                "downPlayer_title": "[data-tid='resourcePlayer-title']",
+                "resourceLabel": "h6[data-tid='resourcePlayer-subtitle']",
+                "downPlayer_subtitle": "[data-tid='text-label-heading']",
+                "downloadBtn": "[data-tid='button-primary']",
+                "downInfoLabel": "[data-tid='text-downloadInformation']",
+                "fileLabel": "[data-tid='label-name-0']",
+                "fileName": "[data-tid='text-value-0']",
+                "typeLabel": "[data-tid='label-name-1']",
+                "fileType": "[data-tid='text-value-1']",
+                "sizeLabel": "[data-tid='label-name-2']",
+                "fileSize": "[data-tid='text-value-2']"
             }
         }
     }
