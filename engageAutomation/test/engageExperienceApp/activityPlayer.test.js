@@ -188,7 +188,7 @@ module.exports = {
 	},
 
 	//Validate that Finish or Submit button is not displayed in the last question of a closed ended activity to a teacher
-	ENG_PLAY_TC_10: function (testdata) {
+	ENG_PLAY_TC_10: function () {
 		sts = activityPlayerPage.getData_activityPlayer();
 		assertion.assertEqual(sts.submitActivityBtn, null, "submitActivityBtn status mismatch");
 	},
