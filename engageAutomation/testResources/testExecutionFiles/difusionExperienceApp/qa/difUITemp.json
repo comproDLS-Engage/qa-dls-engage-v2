@@ -54,7 +54,7 @@
                 "id": "ENG_DIF_TC_53",
                 "description": "Activate book popup",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.05,
+                "visualTolerance": 0.06,
                 "testData": []
             },
             {
@@ -124,7 +124,7 @@
                 "id": "ENG_DIF_TC_31",
                 "description": "info popup on the Activity page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.01,
+                "visualTolerance": 0.02,
                 "testData": []
             },
             {
@@ -575,7 +575,7 @@
                 "id": "ENG_DIF_TC_53",
                 "description": "Activate book popup",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.05,
+                "visualTolerance": 0.06,
                 "testData": []
             },
             {
@@ -645,7 +645,7 @@
                 "id": "ENG_DIF_TC_31",
                 "description": "info popup on Activity page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.01,
+                "visualTolerance": 0.02,
                 "testData": []
             },
             {
