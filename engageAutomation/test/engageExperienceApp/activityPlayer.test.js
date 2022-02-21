@@ -236,10 +236,10 @@ module.exports = {
 		assertion.assertEqual(sts.submitActivityBtn, testdata.submitActivityBtn[0], "submitActivityBtn mismatch");
 	},
 
-	//Validate that Finish button is displayed for activity where both Contributes to Completion and Contributes to Score flag are false
+	//Validate that Submit Answers button is displayed for activity where both Contributes to Completion and Contributes to Score flag are false
 	ENG_PLAY_TC_18: function (testdata) {
 		sts = activityPlayerPage.getData_activityPlayer();
-		assertion.assertEqual(sts.submitActivityBtn, testdata.submitActivityBtn[1], "submitActivityBtn mismatch");
+		assertion.assertEqual(sts.submitActivityBtn, testdata.submitActivityBtn[0], "submitActivityBtn mismatch");
 	},
 
 	//Validate the unattempted state of an etext activity when contributes to completion flag is true
