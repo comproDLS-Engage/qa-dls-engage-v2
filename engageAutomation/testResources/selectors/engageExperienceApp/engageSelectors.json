@@ -475,6 +475,7 @@
                 "removeBook_subtitle": "[data-tid=text-subTitle-removeBook]",
                 "removeBookDialogCancel": "[data-tid=button-secondary-removeBook]",
                 "removeBookDialogRemove": "[data-tid=button-primary-removeBook]",
+                "unitSkeleton": "[class*=MuiSkeleton]",
                 "unit": "[data-tid*=button-chapter-] , [data-tid*=text-folderName-]",
                 "unitTitle": "[data-tid*=text-chapterTitle-",
                 "unitNumber": "[data-tid*=text-chapterNumber-",

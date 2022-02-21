@@ -29,6 +29,7 @@ module.exports = {
     lastActivity_name: selectorFile.css.ComproEngage.viewBook.lastActivity_name,
     lastActivity_Dismiss: selectorFile.css.ComproEngage.viewBook.lastActivity_Dismiss,
     lastActivity_Continue: selectorFile.css.ComproEngage.viewBook.lastActivity_Continue,
+    unitSkeleton: selectorFile.css.ComproEngage.viewBook.unitSkeleton,
     unit: selectorFile.css.ComproEngage.viewBook.unit,
     unitTitle: selectorFile.css.ComproEngage.viewBook.unitTitle,
     unitNumber: selectorFile.css.ComproEngage.viewBook.unitNumber,
@@ -78,7 +79,7 @@ module.exports = {
     getUnitsData: function (str) {
         logger.logInto(stackTrace.get());
         let list, i, arr = [];
-        action.waitForDisplayed(this.unit);
+        action.waitForDisplayed(this.unitSkeleton, undefined, true);
         list = action.findElements(this.unit);
         if (str) {
             for (i = 0; i < list.length; i++) {
