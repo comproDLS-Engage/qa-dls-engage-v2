@@ -36,7 +36,7 @@
 	"homePage": {
 		"headingText": "[class*=c-nav__heading-text]",
 		"newTitleBtn": "[data-tid=button-newtitle]",
-		"titleTypeList": "[data-tid*=input-add]",
+		"titleTypeList": "[data-tid*=input-select]",
 		"bookCount": "[class*=book-count]",
 		"bookList": "[data-tid*=button-book-detail]:not([style='display: none;']) [class*=c-card__title]",
 		"libraryBtn": "button[data-tid=button-library]",
@@ -61,8 +61,8 @@
 	},
 	"viewBookPage": {
 		"componentList": "[data-tid*=button-component-detail] [class*=c-card__title]",
-		"addComponentBtn": "[data-tid='button-ADD COMPONENT']",
-		"componentTypeList": "[class=c-item-type-launcher] [class*=c-list-item__primary-text]",
+		"addComponentBtn": "[data-tid='button-ADD COMPONENT'], [data-tid=button-add-component]",
+		"componentTypeList": "[data-tid*=input-select] [class*=c-list-item__primary-text]",
 		"deleteBookBtn": "[data-tid=button-book_delete]"
 	},
 	"addTitlePage": {
@@ -71,9 +71,9 @@
 		"imageUploadBtn": "[data-tid=input-cover-image] input",
 		"createTitleBtn": "[data-tid=button-add-book]",
 		"bookDesignDropdown": "[data-tid=input-book-theme]",
-		"bookDesignList": "[class*=mdc-menu-surface--open] [class*=mdc-list-item__text]",
+		"bookDesignList": "[class*=mdc-menu-surface--open] [data-tid*=text]",
 		"bookVisibilityDropdown": "[data-tid=input-visibility]",
-		"bookVisibilityList": "[class*=mdc-menu-surface--open] [class*=mdc-list-item__text]"
+		"bookVisibilityList": "[class*=mdc-menu-surface--open] [data-tid*=text]"
 	},
 	"addComponentPage": {
 		"titleTxtbox": "[id=component-title]",
