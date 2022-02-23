@@ -14,7 +14,7 @@
 		"pageHeaderImg": "[class*=c-page-header__icon] img",
 		"loadingContainer": "[class=c-progressbar-container]",
 		"formTitle": "[class*=c-form__title]",
-		"closeBtn": "[class=c-no-frame__close]",
+		"closeBtn": "[data-tid=button-close-form]",
 		"confirmDialog": "[class*=mdc-dialog--open] [data-mdc-dialog-action=yes]",
 		"cancelDialog": "[class*=mdc-dialog--open] [data-mdc-dialog-action=close]",
 		"dialogContent": "[class*=mdc-dialog--open] [id=my-dialog-content] div",
