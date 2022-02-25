@@ -772,7 +772,7 @@
                 "downPlayer_title": "[data-tid='resourcePlayer-title']",
                 "resourceLabel": "h6[data-tid='resourcePlayer-subtitle']",
                 "downPlayer_subtitle": "[data-tid='text-label-heading']",
-                "downloadBtn": "[data-tid='button-primary']",
+                "downloadBtn": "[data-tid='button-download']",
                 "downInfoLabel": "[data-tid='text-downloadInformation']",
                 "fileLabel": "[data-tid='label-name-0']",
                 "fileName": "[data-tid='text-value-0']",
