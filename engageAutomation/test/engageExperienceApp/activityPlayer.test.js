@@ -304,7 +304,7 @@ module.exports = {
 		assertion.assertEqual(sts.pageStatus, true, "Page status mismatch");
 		sts = activityPlayerPage.getData_activityPlayer();
 		assertion.assertEqual(sts.infoBtn, testdata.infoBtn, "infoBtn status mismatch");
-		assertion.assertEqual(sts.showDetailsBtn, null, "Show details button status mismatch");
+		assertion.assertEqual(sts.showDetailsBtn, testdata.showDetailsBtn[0], "Show details button status mismatch");
 		assertion.assertEqual(sts.markCompleteBtn, null, "markCompleteBtn status mismatch");
 		assertion.assertEqual(sts.checkAnswerBtn, null, "checkAnswerBtn status mismatch");
 		assertion.assertEqual(sts.showAnswerBtn, null, "showAnswerBtn status mismatch");
