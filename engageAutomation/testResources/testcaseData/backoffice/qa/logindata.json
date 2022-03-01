@@ -2,10 +2,10 @@
     "backoffice": {
         "user": {
             "validUser1": {
-                "email": "vimal.mishra@comprotechnologies.com",
+                "email": "akhil.aggarwal@comprotechnologies.com",
                 "password": "Welcome@1",
                 "role": "",
-                "name": "vimal mishra",
+                "name": "Akhil Aggarwal",
                 "info": {}
             }
         }

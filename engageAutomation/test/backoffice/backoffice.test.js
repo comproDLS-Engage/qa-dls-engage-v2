@@ -220,7 +220,7 @@ module.exports = {
 	// Validate that the activity is deleted on clicking delete button in the dialog box
 	BK_TC_22: function () {
 		sts = common.click_confirmDialog_Button();
-		assertion.assert((typeof sts === "string" && sts.includes("deleted successfully")), "Snackbar messsage mismatch. " + sts);
+		assertion.assert((typeof sts === "string" && sts.includes("Deleted Successfully")), "Snackbar messsage mismatch. " + sts);
 	},
 
 	// Validate that clicking on the Level 2 breadcrumb launches learning path page

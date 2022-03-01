@@ -396,9 +396,9 @@
                 "responses": "[data-tid*='input-response']"
             },
             "FIBSelect": {
-                "response": "[data-tid=input-response-",
-                "responses": "[data-tid*='input-response']",
-                "responseOption": "[data-tid=select-responseoption-"
+                "response": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-tid=input-response-",
+                "responses": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-tid*='input-response']",
+                "responseOption": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [class*=mdc-menu-surface--open] [data-tid=select-responseoption-"
             },
             "dragAndDrop": {
                 "source": "[data-tid=dragsource-option-",
@@ -476,6 +476,7 @@
                 "removeBook_subtitle": "[data-tid=text-subTitle-removeBook]",
                 "removeBookDialogCancel": "[data-tid=button-secondary-removeBook]",
                 "removeBookDialogRemove": "[data-tid=button-primary-removeBook]",
+                "unitSkeleton": "[class*=MuiSkeleton]",
                 "unit": "[data-tid*=button-chapter-] , [data-tid*=text-folderName-]",
                 "unitTitle": "[data-tid*=text-chapterTitle-",
                 "unitNumber": "[data-tid*=text-chapterNumber-",
@@ -831,7 +832,7 @@
                 "past_count": "[data-tid=chip-pastAssignmentCount]",
                 "past_noAssignmentTitle": "[data-tid=text-title-noPast]",
                 "past_noAssignmentSubTitle": "[data-tid=text-subtitle-noPast]",
-                "assignmentCard":"[data-tid*=button-assignmentCard-",
+                "assignmentCard": "[data-tid*=button-assignmentCard-",
                 "assignmentName": "[data-tid*=text-assignmentTitle-",
                 "assignmentDueDate": "[data-tid*=text-assignmentDueDate-",
                 "assignmentTunedIn": "[data-tid*=text-studentTurnedIn-",
@@ -1011,6 +1012,20 @@
                 "activity_icon": "[data-tid=button-indextoc] svg",
                 "activity_lbl": "[data-tid=text-chaptertitle]",
                 "showDetails_btn": "[data-tid=button-activityinfopanelswitcher]"
+            },
+            "downloadPlayer": {
+                "downPlayer_img": "[data-tid=image-resourceDownloader]",
+                "downPlayer_title": "[data-tid='resourcePlayer-title']",
+                "resourceLabel": "h6[data-tid='resourcePlayer-subtitle']",
+                "downPlayer_subtitle": "[data-tid='text-label-heading']",
+                "downloadBtn": "[data-tid='button-download']",
+                "downInfoLabel": "[data-tid='text-downloadInformation']",
+                "fileLabel": "[data-tid='label-name-0']",
+                "fileName": "[data-tid='text-value-0']",
+                "typeLabel": "[data-tid='label-name-1']",
+                "fileType": "[data-tid='text-value-1']",
+                "sizeLabel": "[data-tid='label-name-2']",
+                "fileSize": "[data-tid='text-value-2']"
             }
         }
     }

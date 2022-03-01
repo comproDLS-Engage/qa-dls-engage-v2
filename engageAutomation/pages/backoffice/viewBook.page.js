@@ -25,12 +25,7 @@ module.exports = {
 
     click_AddComponent_Button: function () {
         logger.logInto(stackTrace.get());
-        if (action.isClickable(this.emptyStateBtn)) {
-            res = action.click(this.emptyStateBtn);
-        }
-        else {
-            res = action.click(this.addComponentBtn);
-        }
+        res = action.click(this.addComponentBtn);
         if (res == true) {
             res = action.waitForDisplayed(this.proceedBtn);
         }

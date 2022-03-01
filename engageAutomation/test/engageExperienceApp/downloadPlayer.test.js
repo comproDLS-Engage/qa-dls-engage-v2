@@ -4,92 +4,90 @@ var sts;
 
 module.exports = {
 
-	//Validate the content of download player 
-	ENG_DWNLD_PLYR_TC_1: function (testdata) {
-		sts = downloadPlayer.downloadPlayer_Data();
-	
-		assertion.assertEqual(sts.pageSubTitle, testdata.pageSubTitle,"pageSubTitle mismatch");
-		assertion.assertEqual(sts.labelHeading, testdata.labelHeading,"labelHeading mismatch");
-		assertion.assertEqual(sts.downloadInfo, testdata.downloadInfo,"downloadInfo mismatch");
-		assertion.assertEqual(sts.fileLabel, testdata.fileLabel,"fileLabel mismatch");
-		assertion.assertEqual(sts.typeLabel, testdata.typeLabel,"typeLabel mismatch");
-		assertion.assertEqual(sts.sizeLabel, testdata.sizeLabel,"sizeLabel mismatch");
-		
-		
-	},
-
-	//Validate that clicking on download button for downloads the Word resource
-	ENG_DWNLD_PLYR_TC_2: function () {
+	//Validate that clicking on the download button downloads the resource file
+	ENG_DOWN_TC_1: function () {
 		sts = downloadPlayer.click_downloadBtn();
-		assertion.assertEqual(sts.pageStatus, true, "Click Download Player button mismatch");
-		
+		assertion.assertEqual(sts, true, "Download button status mismatch");
 	},
 
-	//Validate that clicking on download button for downloads the ZIP resource
-	ENG_DWNLD_PLYR_TC_3: function () {
-		sts = downloadPlayer.click_downloadBtn();
-		assertion.assertEqual(sts.pageStatus, true, "Click Download Player button mismatch");
+	//Validate the content of download player for Word Resource
+	ENG_DOWN_TC_2: function (testdata) {
+		sts = downloadPlayer.isInitialized();
+		assertion.assertEqual(sts.pageStatus, true, "pageStatus mismatch");
+		sts = downloadPlayer.getData_downloadPlayer();
+		assertion.assertEqual(sts.downPlayer_img, testdata[0].downPlayer_img, "downPlayer_img status mismatch");
+		assertion.assertEqual(sts.resourceLabel, testdata[0].resourceLabel, "resourceLabel mismatch");
+		assertion.assertEqual(sts.downPlayer_subtitle, testdata[0].downPlayer_subtitle, "downPlayer_subtitle mismatch");
+		assertion.assertEqual(sts.downInfoLabel, testdata[0].downInfoLabel, "downInfoLabel mismatch");
+		assertion.assertEqual(sts.fileLabel, testdata[0].fileLabel, "fileLabel mismatch");
+		assertion.assertEqual(sts.typeLabel, testdata[0].typeLabel, "typeLabel mismatch");
+		assertion.assertEqual(sts.sizeLabel, testdata[0].sizeLabel, "sizeLabel mismatch");
+		assertion.assertEqual(sts.downloadBtn_isClickable, true, "downloadBtn_isClickable status mismatch");
+		assertion.assertEqual(sts.downPlayer_title, testdata[1].pageTitle, "downPlayer_title mismatch");
+		assertion.assertEqual(sts.downloadBtn, testdata[0].downloadBtn[0], "downloadBtn mismatch");
+		assertion.assertEqual(sts.fileName, testdata[1].fileName, "fileName mismatch");
+		assertion.assertEqual(sts.fileType, testdata[1].fileType, "fileType mismatch");
+		assertion.assertEqual(sts.fileSize, testdata[1].fileSize, "fileSize mismatch");
 	},
 
-	//Validate that clicking on download button for downloads the PDF resource
-	ENG_DWNLD_PLYR_TC_4: function () {
-		sts = downloadPlayer.click_downloadBtn();
-		assertion.assertEqual(sts.pageStatus, true, "Click Download Player button mismatch");
+	//Validate the content of download player for ZIP Resource
+	ENG_DOWN_TC_3: function (testdata) {
+		sts = downloadPlayer.isInitialized();
+		assertion.assertEqual(sts.pageStatus, true, "pageStatus mismatch");
+		sts = downloadPlayer.getData_downloadPlayer();
+		assertion.assertEqual(sts.downPlayer_img, testdata[0].downPlayer_img, "downPlayer_img status mismatch");
+		assertion.assertEqual(sts.resourceLabel, testdata[0].resourceLabel, "resourceLabel mismatch");
+		assertion.assertEqual(sts.downPlayer_subtitle, testdata[0].downPlayer_subtitle, "downPlayer_subtitle mismatch");
+		assertion.assertEqual(sts.downInfoLabel, testdata[0].downInfoLabel, "downInfoLabel mismatch");
+		assertion.assertEqual(sts.fileLabel, testdata[0].fileLabel, "fileLabel mismatch");
+		assertion.assertEqual(sts.typeLabel, testdata[0].typeLabel, "typeLabel mismatch");
+		assertion.assertEqual(sts.sizeLabel, testdata[0].sizeLabel, "sizeLabel mismatch");
+		assertion.assertEqual(sts.downloadBtn_isClickable, true, "downloadBtn_isClickable status mismatch");
+		assertion.assertEqual(sts.downPlayer_title, testdata[1].pageTitle, "downPlayer_title mismatch");
+		assertion.assertEqual(sts.downloadBtn, testdata[0].downloadBtn[1], "downloadBtn mismatch");
+		assertion.assertEqual(sts.fileName, testdata[1].fileName, "fileName mismatch");
+		assertion.assertEqual(sts.fileType, testdata[1].fileType, "fileType mismatch");
+		assertion.assertEqual(sts.fileSize, testdata[1].fileSize, "fileSize mismatch");
 	},
 
-	//Validate that clicking on download button for downloads the Spreadsheet resource
-	ENG_DWNLD_PLYR_TC_9: function () {
-		sts = downloadPlayer.click_downloadBtn();
-		assertion.assertEqual(sts.pageStatus, true, "Click Download Player button mismatch");
+	//Validate the content of download player for PDF Resource
+	ENG_DOWN_TC_4: function (testdata) {
+		sts = downloadPlayer.isInitialized();
+		assertion.assertEqual(sts.pageStatus, true, "pageStatus mismatch");
+		sts = downloadPlayer.getData_downloadPlayer();
+		assertion.assertEqual(sts.downPlayer_img, testdata[0].downPlayer_img, "downPlayer_img status mismatch");
+		assertion.assertEqual(sts.resourceLabel, testdata[0].resourceLabel, "resourceLabel mismatch");
+		assertion.assertEqual(sts.downPlayer_subtitle, testdata[0].downPlayer_subtitle, "downPlayer_subtitle mismatch");
+		assertion.assertEqual(sts.downInfoLabel, testdata[0].downInfoLabel, "downInfoLabel mismatch");
+		assertion.assertEqual(sts.fileLabel, testdata[0].fileLabel, "fileLabel mismatch");
+		assertion.assertEqual(sts.typeLabel, testdata[0].typeLabel, "typeLabel mismatch");
+		assertion.assertEqual(sts.sizeLabel, testdata[0].sizeLabel, "sizeLabel mismatch");
+		assertion.assertEqual(sts.downloadBtn_isClickable, true, "downloadBtn_isClickable status mismatch");
+		assertion.assertEqual(sts.downPlayer_title, testdata[1].pageTitle, "downPlayer_title mismatch");
+		assertion.assertEqual(sts.downloadBtn, testdata[0].downloadBtn[2], "downloadBtn mismatch");
+		assertion.assertEqual(sts.fileName, testdata[1].fileName, "fileName mismatch");
+		assertion.assertEqual(sts.fileType, testdata[1].fileType, "fileType mismatch");
+		assertion.assertEqual(sts.fileSize, testdata[1].fileSize, "fileSize mismatch");
 	},
 
-	//Validate the download player for Word Resource
-	ENG_DWNLD_PLYR_TC_5: function (testdata) {
-		sts = downloadPlayer.downloadPlayer_Data();
-
-		assertion.assertEqual(sts.pageTitle, testdata[0].pageTitle, "pageTitle mismatch");
-		assertion.assertEqual(sts.downloadBtn, testdata[1].downloadBtnWord,"downloadBtn mismatch");
-		assertion.assertEqual(sts.fileValue, testdata[0].fileValue,"fileValue mismatch");
-		assertion.assertEqual(sts.typeValue, testdata[0].typeValue,"typeValue mismatch");
-		assertion.assertEqual(sts.sizeValue, testdata[0].sizeValue,"sizeValue mismatch");
-		
-	},
-
-	//Validate the download player for ZIP Resource
-	ENG_DWNLD_PLYR_TC_6: function (testdata) {
-		sts = downloadPlayer.downloadPlayer_Data();
-
-		assertion.assertEqual(sts.pageTitle, testdata[0].pageTitle, "pageTitle mismatch");
-		assertion.assertEqual(sts.downloadBtn, testdata[1].downloadBtnZIP,"downloadBtn mismatch");
-		assertion.assertEqual(sts.fileValue, testdata[0].fileValue,"fileValue mismatch");
-		assertion.assertEqual(sts.typeValue, testdata[0].typeValue,"typeValue mismatch");
-		assertion.assertEqual(sts.sizeValue, testdata[0].sizeValue,"sizeValue mismatch");
-		
-	},
-
-	//Validate the download player for PDF Resource
-	ENG_DWNLD_PLYR_TC_7: function (testdata) {
-		sts = downloadPlayer.downloadPlayer_Data();
-
-		assertion.assertEqual(sts.pageTitle, testdata[0].pageTitle, "pageTitle mismatch");
-		assertion.assertEqual(sts.downloadBtn, testdata[1].downloadBtnPDF,"downloadBtn mismatch");
-		assertion.assertEqual(sts.fileValue, testdata[0].fileValue,"fileValue mismatch");
-		assertion.assertEqual(sts.typeValue, testdata[0].typeValue,"typeValue mismatch");
-		assertion.assertEqual(sts.sizeValue, testdata[0].sizeValue,"sizeValue mismatch");
-		
-	},
-
-	//Validate the download player for Spreadhseet Resource
-	ENG_DWNLD_PLYR_TC_8: function (testdata) {
-		sts = downloadPlayer.downloadPlayer_Data();
-
-		assertion.assertEqual(sts.pageTitle, testdata[0].pageTitle, "pageTitle mismatch");
-		assertion.assertEqual(sts.downloadBtn, testdata[1].downloadBtnSheet,"downloadBtn mismatch");
-		assertion.assertEqual(sts.fileValue, testdata[0].fileValue,"fileValue mismatch");
-		assertion.assertEqual(sts.typeValue, testdata[0].typeValue,"typeValue mismatch");
-		assertion.assertEqual(sts.sizeValue, testdata[0].sizeValue,"sizeValue mismatch");
-		
+	//Validate the content of download player for Spreadsheet Resource
+	ENG_DOWN_TC_5: function (testdata) {
+		sts = downloadPlayer.isInitialized();
+		assertion.assertEqual(sts.pageStatus, true, "pageStatus mismatch");
+		sts = downloadPlayer.getData_downloadPlayer();
+		assertion.assertEqual(sts.downPlayer_img, testdata[0].downPlayer_img, "downPlayer_img status mismatch");
+		assertion.assertEqual(sts.resourceLabel, testdata[0].resourceLabel, "resourceLabel mismatch");
+		assertion.assertEqual(sts.downPlayer_subtitle, testdata[0].downPlayer_subtitle, "downPlayer_subtitle mismatch");
+		assertion.assertEqual(sts.downInfoLabel, testdata[0].downInfoLabel, "downInfoLabel mismatch");
+		assertion.assertEqual(sts.fileLabel, testdata[0].fileLabel, "fileLabel mismatch");
+		assertion.assertEqual(sts.typeLabel, testdata[0].typeLabel, "typeLabel mismatch");
+		assertion.assertEqual(sts.sizeLabel, testdata[0].sizeLabel, "sizeLabel mismatch");
+		assertion.assertEqual(sts.downloadBtn_isClickable, true, "downloadBtn_isClickable status mismatch");
+		assertion.assertEqual(sts.downPlayer_title, testdata[1].pageTitle, "downPlayer_title mismatch");
+		assertion.assertEqual(sts.downloadBtn, testdata[0].downloadBtn[3], "downloadBtn mismatch");
+		assertion.assertEqual(sts.fileName, testdata[1].fileName, "fileName mismatch");
+		assertion.assertEqual(sts.fileType, testdata[1].fileType, "fileType mismatch");
+		assertion.assertEqual(sts.fileSize, testdata[1].fileSize, "fileSize mismatch");
 	}
-
 
 }

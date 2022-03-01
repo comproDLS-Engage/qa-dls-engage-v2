@@ -221,6 +221,7 @@ module.exports = {
 		logger.logInto(stackTrace.get());
 		res = action.click(this.userProfileBtn);
 		if (true == res) {
+			action.waitForDisplayed(this.userName);
 			res = this.getProfileData();
 		}
 		else {

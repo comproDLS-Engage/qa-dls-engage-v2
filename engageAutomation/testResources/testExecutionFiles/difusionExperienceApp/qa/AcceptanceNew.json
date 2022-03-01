@@ -124,11 +124,7 @@
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
-                  "jsonPath": "book.component[2].unit[0].title"
-               },
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
-                  "jsonPath": "book.component[2].unit[0].section[0]"
+                  "jsonPath": "book.component[2].unit[1].title"
                }
             ]
          },
@@ -139,7 +135,7 @@
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
-                  "jsonPath": "book.component[2].unit[0].section[0].activity[0]"
+                  "jsonPath": "book.component[2].unit[1].section[0].activity[0]"
                }
             ]
          },
@@ -155,193 +151,53 @@
             ]
          },
          {
-            "id": "ENG_ITEM_MCQB_TC_1",
+            "id": "ENG_ITEM_MMCQ_TC_1",
             "description": "",
-            "testFile": "./test/engageExperienceApp/mcqBlock.test.js",
+            "testFile": "./test/engageExperienceApp/multimcq.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_ITEM_MMCQ_TC_2",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/multimcq.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[0].answerKey"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/multiMcqData.json",
+                  "jsonPath": "unit2_native1.question[0].answerKey"
                }
             ]
          },
          {
-            "id": "ENG_PLAY_TC_2",
+            "id": "ENG_PLAY_TC_3",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_ITEM_MMCQ_TC_3",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/multimcq.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/multiMcqData.json",
+                  "jsonPath": "unit2_native1.question[0].answerKey"
+               }
+            ]
+         },
+         {
+            "id": "ENG_PLAY_TC_10",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_PLAY_TC_8",
             "description": "",
             "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[1]"
-               }
-            ]
-         },
-         {
-            "id": "ENG_ITEM_MCMR_TC_1",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/mcmr.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[1].answerKey"
-               }
-            ]
-         },
-         {
-            "id": "ENG_PLAY_TC_2",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[2]"
-               }
-            ]
-         },
-         {
-            "id": "ENG_ITEM_MCQB_TC_1",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/mcqBlock.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[2].answerKey"
-               }
-            ]
-         },
-         {
-            "id": "ENG_PLAY_TC_2",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[3]"
-               }
-            ]
-         },
-         {
-            "id": "ENG_ITEM_DND_TC_20",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/dragDrop.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[3]"
-               }
-            ]
-         },
-         {
-            "id": "ENG_PLAY_TC_2",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[4]"
-               }
-            ]
-         },
-         {
-            "id": "ENG_ITEM_FIB_TC_20",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/FIB.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[4]"
-               }
-            ]
-         },
-         {
-            "id": "ENG_PLAY_TC_2",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[5]"
-               }
-            ]
-         },
-         {
-            "id": "ENG_ITEM_FIBTEXT_TC_2",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/FIBText.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[5]"
-               }
-            ]
-         },
-         {
-            "id": "ENG_PLAY_TC_2",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[6]"
-               }
-            ]
-         },
-         {
-            "id": "ENG_ITEM_MATCH_TC_1",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/matching.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[6]"
-               }
-            ]
-         },
-         {
-            "id": "ENG_PLAY_TC_2",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[7]"
-               }
-            ]
-         },
-         {
-            "id": "ENG_ITEM_OLI_TC_1",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/orderlist.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[7].answerKey"
-               }
-            ]
-         },
-         {
-            "id": "ENG_PLAY_TC_2",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[8]"
-               }
-            ]
-         },
-         {
-            "id": "ENG_ITEM_CLA_TC_1",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/classify.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[8].answerKey"
-               },
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[8].type"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.activityPlayer.teacher"
                }
             ]
          },
@@ -539,11 +395,7 @@
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
-                  "jsonPath": "book.component[2].unit[0].title"
-               },
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
-                  "jsonPath": "book.component[2].unit[0].section[0]"
+                  "jsonPath": "book.component[2].unit[1].title"
                }
             ]
          },
@@ -554,7 +406,7 @@
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
-                  "jsonPath": "book.component[2].unit[0].section[0].activity[0]"
+                  "jsonPath": "book.component[2].unit[1].section[0].activity[0]"
                }
             ]
          }
@@ -573,564 +425,7 @@
             ]
          },
          {
-            "id": "ENG_ITEM_MCQB_TC_1",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/mcqBlock.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[0].answerKey"
-               }
-            ]
-         },
-         {
-            "id": "ENG_ITEM_MCQB_TC_8",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/mcqBlock.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[0].answerKey"
-               }
-            ]
-         },
-         {
-            "id": "ENG_PLAY_TC_3",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath": "engage.appContent.activityPlayerPage.correct_txt"
-               }
-            ]
-         },
-         {
-            "id": "ENG_ITEM_MCQB_TC_5",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/mcqBlock.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[0].answerKey"
-               }
-            ]
-         },
-         {
-            "id": "ENG_PLAY_TC_2",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[1]"
-               }
-            ]
-         },
-         {
-            "id": "ENG_ITEM_MCMR_TC_1",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/mcmr.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[1].answerKey"
-               }
-            ]
-         },
-         {
-            "id": "ENG_ITEM_MCMR_TC_3",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/mcmr.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[1].answerKey"
-               }
-            ]
-         },
-         {
-            "id": "ENG_PLAY_TC_3",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath": "engage.appContent.activityPlayerPage.correct_txt"
-               }
-            ]
-         },
-         {
-            "id": "ENG_ITEM_MCMR_TC_5",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/mcmr.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[1].answerKey"
-               }
-            ]
-         },
-         {
-            "id": "ENG_PLAY_TC_2",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[2]"
-               }
-            ]
-         },
-         {
-            "id": "ENG_ITEM_MCQB_TC_1",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/mcqBlock.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[2].answerKey"
-               }
-            ]
-         },
-         {
-            "id": "ENG_ITEM_MCQB_TC_8",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/mcqBlock.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[2].answerKey"
-               }
-            ]
-         },
-         {
-            "id": "ENG_PLAY_TC_3",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath": "engage.appContent.activityPlayerPage.correct_txt"
-               }
-            ]
-         },
-         {
-            "id": "ENG_ITEM_MCQB_TC_5",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/mcqBlock.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[2].answerKey"
-               }
-            ]
-         },
-         {
-            "id": "ENG_PLAY_TC_2",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[3]"
-               }
-            ]
-         },
-         {
-            "id": "ENG_ITEM_DND_TC_20",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/dragDrop.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[3]"
-               }
-            ]
-         },
-         {
-            "id": "ENG_ITEM_DND_TC_7",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/dragDrop.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[3].answerKey"
-               }
-            ]
-         },
-         {
-            "id": "ENG_PLAY_TC_3",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath": "engage.appContent.activityPlayerPage.correct_txt"
-               }
-            ]
-         },
-         {
-            "id": "ENG_ITEM_DND_TC_1",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/dragDrop.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[3].answerKey"
-               }
-            ]
-         },
-         {
-            "id": "ENG_PLAY_TC_2",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[4]"
-               }
-            ]
-         },
-         {
-            "id": "ENG_ITEM_FIB_TC_20",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/FIB.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[4]"
-               }
-            ]
-         },
-         {
-            "id": "ENG_ITEM_FIB_TC_3",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/FIB.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[4].answerKey"
-               }
-            ]
-         },
-         {
-            "id": "ENG_PLAY_TC_3",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath": "engage.appContent.activityPlayerPage.correct_txt"
-               }
-            ]
-         },
-         {
-            "id": "ENG_ITEM_FIB_TC_7",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/FIB.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[4].answerKey"
-               }
-            ]
-         },
-         {
-            "id": "ENG_PLAY_TC_2",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[5]"
-               }
-            ]
-         },
-         {
-            "id": "ENG_ITEM_FIBTEXT_TC_2",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/FIBText.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[5]"
-               }
-            ]
-         },
-         {
-            "id": "ENG_ITEM_FIBTEXT_TC_3",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/FIBText.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[5].answerKey"
-               }
-            ]
-         },
-         {
-            "id": "ENG_PLAY_TC_3",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath": "engage.appContent.activityPlayerPage.correct_txt"
-               }
-            ]
-         },
-         {
-            "id": "ENG_ITEM_FIBTEXT_TC_5",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/FIBText.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[5].answerKey"
-               }
-            ]
-         },
-         {
-            "id": "ENG_PLAY_TC_2",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[6]"
-               }
-            ]
-         },
-         {
-            "id": "ENG_ITEM_MATCH_TC_1",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/matching.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[6]"
-               }
-            ]
-         },
-         {
-            "id": "ENG_ITEM_MATCH_TC_2",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/matching.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[6].answerKey"
-               }
-            ]
-         },
-         {
-            "id": "ENG_PLAY_TC_3",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath": "engage.appContent.activityPlayerPage.correct_txt"
-               }
-            ]
-         },
-         {
-            "id": "ENG_ITEM_MATCH_TC_5",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/matching.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[6].answerKey"
-               }
-            ]
-         },
-         {
-            "id": "ENG_PLAY_TC_2",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[7]"
-               }
-            ]
-         },
-         {
-            "id": "ENG_ITEM_OLI_TC_1",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/orderlist.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[7].answerKey"
-               }
-            ]
-         },
-         {
-            "id": "ENG_ITEM_OLI_TC_9",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/orderlist.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[7].answerKey"
-               }
-            ]
-         },
-         {
-            "id": "ENG_PLAY_TC_3",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath": "engage.appContent.activityPlayerPage.correct_txt"
-               }
-            ]
-         },
-         {
-            "id": "ENG_ITEM_OLI_TC_5",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/orderlist.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[7].answerKey"
-               }
-            ]
-         },
-         {
-            "id": "ENG_PLAY_TC_2",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[8]"
-               }
-            ]
-         },
-         {
-            "id": "ENG_ITEM_CLA_TC_1",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/classify.test.js",
-            "visualTest": false,
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[8].answerKey"
-               },
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[8].type"
-               }
-            ]
-         },
-         {
-            "id": "ENG_ITEM_CLA_TC_2",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/classify.test.js",
-            "visualTest": false,
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[8].answerKey"
-               }
-            ]
-         },
-         {
-            "id": "ENG_PLAY_TC_3",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath": "engage.appContent.activityPlayerPage.correct_txt"
-               }
-            ]
-         },
-         {
-            "id": "ENG_ITEM_CLA_TC_4",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/classify.test.js",
-            "visualTest": false,
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[8].answerKey"
-               },
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
-                  "jsonPath": "unit1_native2.question[8].type"
-               }
-            ]
-         },
-         {
-            "id": "ENG_PLAY_TC_17",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath": "engage.appContent.activityPlayer.student"
-               }
-            ]
-         },
-         {
-            "id": "ENG_PLAY_TC_9",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
-            "testData": []
-         },
-         {
-            "id": "ENG_PLAY_TC_11",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath": "engage.appContent.activityPlayerPage.retake"
-               }
-            ]
-         },
-         {
-            "id": "ENG_PLAY_TC_7",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
-            "testData": []
-         },
-         {
-            "id": "ENG_SHELL_TC_11",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/appShell.test.js",
-            "testData": []
-         },
-         {
-            "id": "ENG_BOOK_TC_25",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/viewUnit.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
-                  "jsonPath": "book.component[2].unit[1].title"
-               }
-            ]
-         },
-         {
-            "id": "ENG_BOOK_TC_21",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/viewUnit.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
-                  "jsonPath": "book.component[2].unit[1].section[0].activity[0]"
-               }
-            ]
-         },
-         {
-            "id": "ENG_PLAY_TC_1",
+            "id": "ENG_PLAY_TC_18",
             "description": "",
             "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
             "testData": [
@@ -1161,12 +456,7 @@
             "id": "ENG_PLAY_TC_3",
             "description": "",
             "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath": "engage.appContent.activityPlayerPage.correct_txt"
-               }
-            ]
+            "testData": []
          },
          {
             "id": "ENG_ITEM_MMCQ_TC_3",
@@ -1186,10 +476,38 @@
             "testData": []
          },
          {
+            "id": "ENG_PLAY_TC_8",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.activityPlayer.student"
+               }
+            ]
+         },
+         {
             "id": "ENG_PLAY_TC_7",
             "description": "",
             "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
             "testData": []
+         },
+         {
+            "id": "ENG_SHELL_TC_11",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/appShell.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_BOOK_TC_26",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/viewUnit.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                  "jsonPath": "book.component[2].unit[0].title"
+               }
+            ]
          }
       ],
       "AfterEach": [],

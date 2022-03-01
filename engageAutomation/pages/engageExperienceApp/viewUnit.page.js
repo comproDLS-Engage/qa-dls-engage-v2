@@ -28,7 +28,7 @@ module.exports = {
         logger.logInto(stackTrace.get());
         action.waitForDocumentLoad();
         res = {
-            pageStatus: action.waitForDisplayed(this.unitThumbnail),
+            pageStatus: action.waitForDisplayed(this.unitName),
             appShell: appShell.isInitialized()
         };
         return res;
@@ -118,6 +118,7 @@ module.exports = {
         for (i = 0; i < list.length; i++) {
             if (str.includes(action.getText(list[i]))) {
                 res = action.click(list[i]);
+                browser.pause(1000);
                 break;
             }
         }

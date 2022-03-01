@@ -188,7 +188,7 @@ module.exports = {
 	},
 
 	//Validate that Finish or Submit button is not displayed in the last question of a closed ended activity to a teacher
-	ENG_PLAY_TC_10: function (testdata) {
+	ENG_PLAY_TC_10: function () {
 		sts = activityPlayerPage.getData_activityPlayer();
 		assertion.assertEqual(sts.submitActivityBtn, null, "submitActivityBtn status mismatch");
 	},
@@ -236,10 +236,10 @@ module.exports = {
 		assertion.assertEqual(sts.submitActivityBtn, testdata.submitActivityBtn[0], "submitActivityBtn mismatch");
 	},
 
-	//Validate that Finish button is displayed for activity where both Contributes to Completion and Contributes to Score flag are false
+	//Validate that Submit Answers button is displayed for activity where both Contributes to Completion and Contributes to Score flag are false
 	ENG_PLAY_TC_18: function (testdata) {
 		sts = activityPlayerPage.getData_activityPlayer();
-		assertion.assertEqual(sts.submitActivityBtn, testdata.submitActivityBtn[1], "submitActivityBtn mismatch");
+		assertion.assertEqual(sts.submitActivityBtn, testdata.submitActivityBtn[0], "submitActivityBtn mismatch");
 	},
 
 	//Validate the unattempted state of an etext activity when contributes to completion flag is true
@@ -304,7 +304,7 @@ module.exports = {
 		assertion.assertEqual(sts.pageStatus, true, "Page status mismatch");
 		sts = activityPlayerPage.getData_activityPlayer();
 		assertion.assertEqual(sts.infoBtn, testdata.infoBtn, "infoBtn status mismatch");
-		assertion.assertEqual(sts.showDetailsBtn, null, "Show details button status mismatch");
+		assertion.assertEqual(sts.showDetailsBtn, testdata.showDetailsBtn[0], "Show details button status mismatch");
 		assertion.assertEqual(sts.markCompleteBtn, null, "markCompleteBtn status mismatch");
 		assertion.assertEqual(sts.checkAnswerBtn, null, "checkAnswerBtn status mismatch");
 		assertion.assertEqual(sts.showAnswerBtn, null, "showAnswerBtn status mismatch");
