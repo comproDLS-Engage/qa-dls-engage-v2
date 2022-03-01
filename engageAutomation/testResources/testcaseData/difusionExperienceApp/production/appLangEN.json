@@ -378,7 +378,7 @@
                 "correct_txt": "Well done",
                 "incorrect_txt": "Oops! Not quite correct."
             },
-           "onboarding": {
+            "onboarding": {
                 "welcomePage": {
                     "pageHeading": "Welcome, ",
                     "message": "Let's get started. Select the role that best describes you.",
@@ -412,13 +412,13 @@
                     "invalidKeyMessage": "Invalid school key",
                     "back_btn": "Back (select a different role)"
                 },
-                "studentSuccessPage":{
+                "studentSuccessPage": {
                     "pageHeading": "You're All Set!",
                     "pageSubHeading1": "You are registered as a student. Click continue to explore materials or join a class.",
                     "startLearning": "Continue",
                     "signOut": "Logout"
                 },
-                "teacherSuccessPage":{
+                "teacherSuccessPage": {
                     "pageHeading": "You're All Set!",
                     "pageSubHeading1": "You are registered as a teacher. Click continue to explore materials and create classes.",
                     "proceedBtn": "Continue",
@@ -840,6 +840,32 @@
                     "downloadBtnZIP": "Download ZIP",
                     "downloadBtnPDF": "Download PDF",
                     "downloadBtnSheet": "Download Excel"
+                },
+                "assignmentListDetails": {
+                    "teacher": {
+                        "Assignment_title": "Create assignment for your class",
+                        "Assignment_subtitle": "Any assignments created will be listed here.",
+                        "addNew_btn": "Add New",
+                        "inProgress_lbl": "In-Progress",
+                        "inProgress_noAssignmentTitle": "No assignments coming up",
+                        "inProgress_noAssignmentSubTitle": "Create assignments for your class and view them here.",
+                        "upcoming_lbl": "Upcoming",
+                        "upcoming_noAssignmentTitle": "No upcoming assignments",
+                        "upcoming_noAssignmentSubTitle": "Any assignments scheduled for future will be listed here.",
+                        "past_lbl": "Past",
+                        "past_noAssignmentTitle": "No past due assignments",
+                        "past_noAssignmentSubTitle": "Any assignments past the due date will be listed here.",
+                        "deletedialogueHeader": "Delete Assignment from Class?",
+                        "deletedialoguesubHeader1": "This will remove the assignment \"",
+                        "deletedialoguesubHeader2": "\" from your class Class Assignment.",
+                        "cancel_btn": "Cancel",
+                        "delete_btn": "Delete"
+                    }
+                },
+                "selectActivity": {
+                    "teacher": {
+                        "page_header": "Create Assignment - Select activities"
+                    }
                 }
             }
         }

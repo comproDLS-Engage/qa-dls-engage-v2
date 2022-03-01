@@ -51,7 +51,7 @@
                 "acceptanceteacher": {
                     "email": "acceptanceTeacher@yopmail.com",
                     "password": "Compro@1234",
-                    "role": "student",
+                    "role": "teacher",
                     "name": "acceptance Teacher",
                     "class": [
                         {
@@ -216,18 +216,18 @@
                     "info": {}
                 },
                 "classInstructorUser3": {
-                    "email": "qa_teacher1@yopmail.com",
+                    "email": "dev1_teacher001@yopmail.com",
                     "password": "Compro@1234",
                     "role": "instructor",
                     "name": "qa teacher9",
                     "class": [
                         {
                             "key": "TFbA-6AP7",
-                            "name": "class2"
+                            "name": "Assignment Automation"
                         },
                         {
                             "key": "TFbA-6AP7",
-                            "name": "class1"
+                            "name": "Class Assignment test"
                         },
                         {
                             "key": "TFbA-6AP7",

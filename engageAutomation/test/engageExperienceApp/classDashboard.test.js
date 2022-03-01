@@ -566,4 +566,15 @@ module.exports = {
 				assertion.assertFail(sts);
 			}
 	},
+	ENG_INS_CLASS_TC_103: function (testdata) {
+		sts = teacherViewClassPage.clickAssignmentsTab()
+		//console.log(sts)
+		if ((typeof (sts)) === "object") {
+			assertion.assertEqual(sts.pageStatus, true, "Assignment Tab is not selected " + JSON.stringify(sts))
+
+		} else {
+			assertion.assertFail(sts);
+		}
+
+	},
 };

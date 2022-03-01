@@ -1,0 +1,34 @@
+Label,cssSelector,tagName,group,relation,extraInfo,returnValue,teacherAppLangEN
+Assignment_title,[data-tid=heading-assignments],h2,assignmentListPage,,,,"""Create assignment for your class"""
+Assignment_subtitle,[data-tid=subheading-assignments],p,assignmentListPage,,,,"""Any assignments created will be listed here."""
+addNew_btn,[data-tid=button-createAssignment],button,assignmentListPage,,isInitilized,componentList,"""Add New"""
+inProgress_lbl,[data-tid=label-inProgressAssignment],h2,assignmentListPage,,,,"""In-Progress"""
+inProgress_count,[data-tid=chip-inProgressAssignmentCount],div,assignmentListPage,,,,
+inProgress_noAssignmentTitle,[data-tid=text-title-noInProgress],div,assignmentListPage,,,,"""No assignments coming up"""
+inProgress_noAssignmentSubTitle,[data-tid=text-subtitle-noInProgress],div,assignmentListPage,,,,"""Create assignments for your class and view them here."""
+upcoming_lbl,[data-tid=text-upcomingAssignment],h2,assignmentListPage,,,,"""Upcoming"""
+upcoming_count,[data-tid=chip-upcomingAssignmentCount],div,assignmentListPage,,,,
+upcoming_noAssignmentTitle,[data-tid=text-title-noUpcoming],,assignmentListPage,,,,"""No upcoming assignments"""
+upcoming_noAssignmentSubTitle,[data-tid=text-subtitle-noUpcoming],,assignmentListPage,,,,"""Any assignments scheduled for future will be listed here."""
+past_lbl,[data-tid=label-pastAssignment],h2,assignmentListPage,,,,"""Past"""
+past_count,[data-tid=chip-pastAssignmentCount],div,assignmentListPage,,,,
+past_noAssignmentTitle,[data-tid=text-title-noPast],,assignmentListPage,,,,"""No past due assignments"""
+past_noAssignmentSubTitle,[data-tid=text-subtitle-noPast],,assignmentListPage,,,,"""Any assignments past the due date will be listed here."""
+assignmentName,[data-tid*=text-assignmentTitle-,div,assignmentCard,condition,pattern,,
+assignmentDueDate,[data-tid*=text-assignmentDueDate-,div,assignmentCard,,pattern,,
+assignmentTunedIn,[data-tid*=text-studentTurnedIn-,div,assignmentCard,,pattern,,
+assignmentScoreIcon,[data-tid*=icon-classAvgScore-,div,assignmentCard,,pattern,,
+assignmentScore,[data-tid*=text-classAvgScore-,div,assignmentCard,,pattern,,
+dueDatepill,[data-tid*=chip-dueDaysPill-,div,assignmentCard,,pattern,,
+viewProgress_btn,[data-tid*=button-ViewProgress-,button,assignmentCard,,pattern,assignmentDetails.page,
+editAssignment_btn,[data-tid*=button-editAssignment-,button,assignmentCard,,pattern,editAssignment.page,
+cloneAssignment_btn,[data-tid*=button-cloneAssignment-,button,assignmentCard,,pattern,cloneAssignment.page,
+deleteAssignment_btn,[data-tid*=button-deleteAssignment-,button,assignmentCard,,pattern,deleteDialogue,
+componentHeader,[data-tid=text-subMenuHeader],div,componentList,,,assignmentListDetails.page,
+componentTeacherOnlyIcon,[data-tid*=chip-teacherOnly-,div,componentList,,pattern,,
+componentList,ul[role=menu] [data-tid*=button-,button,componentList,parent,pattern,selectActivity.page,
+deletedialogueHeader,[data-tid=text-title-removeAssignment],div,deleteDialogue,,,,"""Delete Assignment from Class?"""
+deletedialoguesubHeader1,[data-tid=text-subTitle-removeAssignment],div,deleteDialogue,,,,"""This will remove the assignment \"""""
+deletedialoguesubHeader2,[data-tid=text-subTitle-removeAssignment],div,deleteDialogue,,,,"""\"" from your class Class Assignment."""
+cancel_btn,[data-tid=button-secondary-removeAssignment],button,deleteDialogue,,,assignmentList.page,"""Cancel"""
+delete_btn,[data-tid=button-primary-removeAssignment],button,deleteDialogue,,,assignmentList.page,"""Delete"""
