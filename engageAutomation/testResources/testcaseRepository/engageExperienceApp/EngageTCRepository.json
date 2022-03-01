@@ -2722,13 +2722,13 @@
         },
         {
           "id": "ENG_ASSDETAILS_TC_8",
-          "description": "Validate the click on save and Clone Label button",
+          "description": "Validate the click on Clone Label button",
           "tags": "P2",
           "visualTest": "-"
         },
         {
           "id": "ENG_ASSDETAILS_TC_9",
-          "description": "Validate Name update on edit Assignment Page",
+          "description": "Validate the update on the name textbox",
           "tags": "P2",
           "visualTest": "-"
         },
