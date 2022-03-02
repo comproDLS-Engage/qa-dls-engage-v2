@@ -71,11 +71,9 @@ module.exports = {
 		console.log(res)
 		res = action.click("[data-tid=button-product-0]");
 		console.log(res)
-		// res = action.waitForDocumentLoad();
-		// browser.pause(3000);
-		// console.log(res)
 		res = action.waitForDisplayed("[class*=MuiSkeleton]", undefined, true);
 		console.log(res)
+		browser.pause(3000);
 	},
 
 	// View book page (not added)
@@ -101,66 +99,54 @@ module.exports = {
 		console.log(res)
 		res = action.click("[data-tid=button-product-1]");
 		console.log(res)
-		// res = action.waitForDisplayed("[data-tid=button-filter]")
-		// browser.pause(3000);
-		// console.log(res)
 		res = action.waitForDisplayed("[class*=MuiSkeleton]", undefined, true);
 		console.log(res)
+		browser.pause(3000);
 	},
 
 	// Browse page with videos tab
 	ENG_DIF_TC_7: function () {
 		res = action.click("[data-tid=button-product-2]");
 		console.log(res)
-		// res = action.waitForDisplayed("[data-tid=button-filter]")
-		// browser.pause(3000);
-		// console.log(res)
 		res = action.waitForDisplayed("[class*=MuiSkeleton]", undefined, true);
 		console.log(res)
+		browser.pause(3000);
 	},
 
 	// Browse page with online classes tab
 	ENG_DIF_TC_8: function () {
 		res = action.click("[data-tid=button-product-3]");
 		console.log(res)
-		// res = action.waitForDisplayed("[data-tid=button-filter]")
-		// browser.pause(3000);
-		// console.log(res)
 		res = action.waitForDisplayed("[class*=MuiSkeleton]", undefined, true);
 		console.log(res)
+		browser.pause(3000);
 	},
 
 	// Browse page with teacher training tab
 	ENG_DIF_TC_9: function () {
 		res = action.click("[data-tid=button-product-4]");
 		console.log(res)
-		// res = action.waitForDisplayed("[data-tid=button-filter]")
-		// browser.pause(3000);
-		// console.log(res)
 		res = action.waitForDisplayed("[class*=MuiSkeleton]", undefined, true);
 		console.log(res)
+		browser.pause(3000);
 	},
 
 	// Browse page with today in class tab
 	ENG_DIF_TC_10: function () {
 		res = action.click("[data-tid=button-product-5]");
 		console.log(res)
-		// res = action.waitForDisplayed("[data-tid=button-filter]")
-		// browser.pause(3000);
-		// console.log(res)
 		res = action.waitForDisplayed("[class*=MuiSkeleton]", undefined, true);
 		console.log(res)
+		browser.pause(3000);
 	},
 
 	// Browse page with projectable tab
 	ENG_DIF_TC_11: function () {
 		res = action.click("[data-tid=button-product-6]");
 		console.log(res)
-		// res = action.waitForDisplayed("[data-tid=button-filter]")
-		// browser.pause(3000);
-		// console.log(res)
 		res = action.waitForDisplayed("[class*=MuiSkeleton]", undefined, true);
 		console.log(res)
+		browser.pause(3000);
 	},
 
 	// View all Projectables
