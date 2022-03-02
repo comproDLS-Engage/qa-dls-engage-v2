@@ -1,0 +1,7 @@
+Label,cssSelector,tagName,group,relation,extraInfo,returnValue,teacherAppLangEN
+eye_icon,[id=eye-show_svg__Path],svg,studentViewPage,,,,
+Student View,[id=viewAsStudentBannerContainer] p,p,studentViewPage,,isInitialized,,"""Student View"""
+cancel,[data-tid=button-closestudentview],button,studentViewPage,,,,
+activity_icon,[data-tid=button-indextoc] svg,svg,studentViewPage,,,,
+activity_lbl,[data-tid=text-chaptertitle] svg,button,studentViewPage,,,,"""Activity List"""
+showDetails_btn,[data-tid=button-activityinfopanelswitcher],button,studentViewPage,,,,"""Show Details"""

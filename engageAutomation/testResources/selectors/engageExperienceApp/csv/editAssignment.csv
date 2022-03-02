@@ -1,0 +1,13 @@
+Label,cssSelector,tagName,group,relation,extraInfo,returnValue,teacherAppLangEN
+editAssignmentHeader,[data-tid='text-drawerHeaderTitle'],h4,editAssignmentPage,,,,"""Edit Assignment"""
+close_btn,[data-tid='button-close'],button,editAssignmentPage,,,assignmentDetails.page,
+assignmentName_lbl,[data-tid='text-assignmentNameLabel'],p,editAssignmentPage,,,,"""Assignment Name"""
+assignmentName_txtbox,[id='input-assignmentName'],input,editAssignmentPage,,,,
+startDate_lbl,[data-tid='text-startDateLabel'],p,editAssignmentPage,,,,"""Start Date"""
+startDate_txtbox,[id='input-startDate'],input,editAssignmentPage,,,,
+startDate_icon,[data-tid='icon-startDateCalendar'],button,editAssignmentPage,,,,
+dueDate_lbl,[data-tid='text-dueDateLabel'],p,editAssignmentPage,,,,"""Due Date"""
+dueDate_txtbox,[id='input-dueDate'],input,editAssignmentPage,,,,
+dueDate_icon,[class='MuiBadge-root-5199 sc-hmzhuo iQlGDZ']//*[name()='svg'],button,editAssignmentPage,,,,
+Cancel,[normalize-space()='Cancel'],button,editAssignmentPage,,,assignmentDetails.page,"""Cancel"""
+Save & Close,[normalize-space()='Save & Close'],button,editAssignmentPage,,,assignmentDetails.page,"""Save & Close"""

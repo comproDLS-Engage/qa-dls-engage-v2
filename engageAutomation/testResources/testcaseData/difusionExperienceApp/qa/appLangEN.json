@@ -849,6 +849,154 @@
                     "typeLabel": "Type",
                     "sizeLabel": "Size"
                 }
+            },
+            "assignmentList": {
+                "teacher": {
+                    "createAssignmentsbtn_inbox": "Create Assignments",
+                    "Assignment_title": "Create assignment for your class",
+                    "Assignment_subtitle": "Any assignments created will be listed here.",
+                    "blankAssignment_title": "Create assignment for your class",
+                    "blankAssignment_subtitle": "Any assignments created will be listed here.",
+                    "createAssignments_btn": "Create an Assignment",
+                    "addNew_btn": "Add New",
+                    "inProgress_lbl": "In-Progress",
+                    "inProgress_noAssignmentTitle": "No assignments coming up",
+                    "inProgress_noAssignmentSubTitle": "Create assignments for your class and view them here.",
+                    "upcoming_lbl": "Upcoming",
+                    "upcoming_noAssignmentTitle": "No upcoming assignments",
+                    "upcoming_noAssignmentSubTitle": "Any assignments scheduled for future will be listed here.",
+                    "past_lbl": "Past",
+                    "past_noAssignmentTitle": "No past due assignments",
+                    "past_noAssignmentSubTitle": "Any assignments past the due date will be listed here.",
+                    "viewProgressIcon": "View Progress",
+                    "componentHeader": "Assign Activities from",
+                    "editAssignmentlabel": "Edit Assignment",
+                    "cloneAssignmentlabel": "Clone Assignment",
+                    "deleteAssignmentlabel": "Delete Assignment",
+                    "viewProgresslabel": "View Progress",
+                    "viewAllbtn": "View All",
+                    "deletedialogueHeader": "Delete Assignment from Class?",
+                    "deletedialoguesubHeader1": "This will remove the assignment \"",
+                    "deletedialoguesubHeader2": "\" from your class Class Assignment.",
+                    "cancel_btn": "Cancel",
+                    "delete_btn": "Delete"
+                }
+            },
+            "createAssignment": {
+                "teacher": {
+                    "assignment_title": "Create Assignment -",
+                    "activity_lbl": "Activity List",
+                    "activityCount_lbl": "Activity",
+                    "addActivity_lbl": "Add Activities",
+                    "activity_number": "#",
+                    "activitylist_lbl": "Activity",
+                    "activityUnit_lbl": "Unit",
+                    "assignment_lbl": "Assignment Name",
+                    "assignment_txtbox": "input-assignmentName",
+                    "startDatelbl": "Start Date",
+                    "endDatelbl": "Due Date",
+                    "showAdvanceOption": "Show Advanced Options",
+                    "advancedOption": "Advanced Options",
+                    "allowLateSubmission_lbl": "Allow Late Submission",
+                    "preventfromSkipping_lbl": "Prevent from Skipping",
+                    "disableShowAnswers_lbl": "Disable Show Answers",
+                    "includeProgressBar_lbl": "Include Progress Bar",
+                    "futureEditNotSupportedHeading": "Future Edits are not Supported",
+                    "futureEditNotSupportedSubHeading": "Note that once you post the assignment to your class, the \"Advanced Options\" cannot be edited.",
+                    "hideAdvancedOption": "Hide Advanced Options",
+                    "cancel_btn": "Cancel",
+                    "assign_btn": "Assign",
+                    "close_btn": "close",
+                    "deleteActivity_header": "Delete Activity?",
+                    "deleteActivity_subheader": "This will delete the activity �Native LO C-T S-T� from this assignment.",
+                    "deleteActivity_btn": "delete",
+                    "cancelActivityDialogue_btn": "Cancel",
+                    "assignmentSubmitDialogueSubHeader": "Posting this assignment will notify students. Once you confirm, the Activity List and Advanced Options cannot be edited.",
+                    "activitylbl": "Activity List",
+                    "classToAssignlbl": "Class to Assign",
+                    "confirmAssign": "Confirm & Assign",
+                    "current": " (Current)"
+                }
+            },
+            "assignmentDetails": {
+                "teacher": {
+                    "assignment_name": "Open Ended Assignment",
+                    "activity_lbl": "Activities",
+                    "avgScore_lbl": "Class Avg Score:",
+                    "dueDateDeatils_lbl": "Due",
+                    "studentsTab": "Students",
+                    "ActivityListTab": "Activity List",
+                    "search_textbox_placeholder": "Search�",
+                    "student_count": "Student | result(s)",
+                    "noStudent_header": "No students are enrolled in the class",
+                    "noStudent_Subheader": "Add Students to your class in order to track their progress.",
+                    "name_lbl": "Name",
+                    "progress_lbl": "Progress",
+                    "turnedIn_lbl": "Turned In",
+                    "score_lbl": "Score",
+                    "viewasStudent": "View as Student",
+                    "startDate_lbl": "Start Date",
+                    "dueDate_lbl": "Due Date",
+                    "allowLateSubmission_lbl": "Allow Late Submission",
+                    "preventfromSkipping_lbl": "Prevent from Skipping",
+                    "disableShowAnswers_lbl": "Disable Show Answers",
+                    "includeProgressBar_lbl": "Include Progress Bar",
+                    "editAssignmentlbl": "Edit Assignment",
+                    "cloneAssignmentlbl": "Clone Assignment",
+                    "deleteAssignmentlbl": "Delete Assignment",
+                    "deletemsg":"Success \nAssignment has been successfully deleted.",
+                    "editmsg":"Success \nYour changes have been saved successfully."
+                }
+            },
+            "selectActivity": {
+                "teacher": {
+                    "page_header": "Create Assignment - Select activities",
+                    "cancel_btn": "Cancel",
+                    "continuetoDetails_btn": "Continue to Details"
+                }
+            },
+            "editAssignment": {
+                "teacher": {
+                    "editAssignmentHeader": "Edit Assignment",
+                    "assignmentName_lbl": "Assignment Name",
+                    "startDate_lbl": "Start Date",
+                    "dueDate_lbl": "Due Date",
+                    "Cancel": "Cancel",
+                    "Save & Close": "Save & Close"
+                }
+            },
+            "viewAsStudentAssignment": {
+                "teacher": {
+                    "studentView": "Student View",
+                    "activity_lbl": "Activity List",
+                    "showDetails_btn": "Show Details"
+                }
+            },
+            "assignmentListDetails": {
+                "teacher": {
+                    "Assignment_title": "Assignments",
+                    "Assignment_subtitle": "View in-progress, upcoming and past assignments",
+                    "addNew_btn": "Add New",
+                    "inProgress_lbl": "In-Progress",
+                    "inProgress_noAssignmentTitle": "No assignments coming up",
+                    "inProgress_noAssignmentSubTitle": "Create assignments for your class and view them here.",
+                    "upcoming_lbl": "Upcoming",
+                    "upcoming_noAssignmentTitle": "No upcoming assignments",
+                    "upcoming_noAssignmentSubTitle": "Any assignments scheduled for future will be listed here.",
+                    "past_lbl": "Past",
+                    "past_noAssignmentTitle": "No past due assignments",
+                    "past_noAssignmentSubTitle": "Any assignments past the due date will be listed here.",
+                    "deletedialogueHeader": "Delete Assignment from Class?",
+                    "deletedialoguesubHeader1": "This will remove the assignment \"",
+                    "deletedialoguesubHeader2": "\" from your class Class Assignment.",
+                    "cancel_btn": "Cancel",
+                    "delete_btn": "Delete",
+                    "tabList": [
+                        "In-Progress",
+                        "Upcoming",
+                        "Past"
+                    ]
+                }
             }
         }
     }

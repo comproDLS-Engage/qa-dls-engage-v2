@@ -1,0 +1,56 @@
+Label,cssSelector,tagName,group,relation,extraInfo,returnValue,teacherAppLangEN
+assignment_name,[data-tid=text-assignmentTitle],h4,assignmentDetails,,,,"""Open Ended Assignment"""
+activity_icon,[data-tid=icon-activityCount],svg,assignmentDetails,,,,
+activity_lbl,[data-tid=text-activityCount],p,assignmentDetails,,,,"""Activities"""
+avgScore_icon,[data-tid=icon-classAvgScore],svg,assignmentDetails,,,,
+avgScore_lbl,[data-tid=text-classAvgScore],p,assignmentDetails,,,,"""Class Avg Score:"""
+dueDate_icon,[data-tid=icon-assignmentDueDate],svg,assignmentDetails,,,,
+dueDate_lbl,[data-tid=text-assignmentDueDate],p,assignmentDetails,,,,"""Due"""
+turnedInValue,[data-tid=text-studentTurnedIn],p,assignmentDetails,,,,
+dueDate_pill,[data-tid=text-studentTurnedIn],span,assignmentDetails,,,,
+turnedIn_bar,[data-tid=text-studentTurnedIn],div,assignmentDetails,,,,
+studentsTab,button[data-tid='button-product-0'],button,assignmentDetails,,,,"""Students"""
+ActivityListTab,button[data-tid='button-product-1'],button,studentList,,,,"""Activity List"""
+search_textbox_placeholder,input[placeholder='Search...'],input,studentList,,,,"""Search…"""
+search_icon,[data-tid=icon-autocomplete-search],svg,studentList,,,,
+student_count,[data-tid='label-result'],p,studentList,,,,"""Student | result(s)"""
+noStudent_header,[data-tid=text-title-No Students],div,studentList,,,,"""No students are enrolled in the class"""
+noStudent_Subheader,[data-tid=text-subtitle-No Students],div,studentList,,,,"""Add Students to your class in order to track their progress."""
+noStudent_icon,[data-tid=image-No Students],svg,studentList,,,,
+name_lbl,,span,studentList,,,,"""Name"""
+progress_lbl,[data-tid='value-text-heading-progress'],p,studentList,,,,"""Progress"""
+turnedIn_lbl,[data-tid='value-text-heading-turnedIn'],p,studentList,,,,"""Turned In"""
+score_lbl,[data-tid='value-text-heading-score'],p,studentList,,,,"""Score"""
+studentCard,[data-tid*='list-,button,studentCard,parent,pattern,,
+studentName,[data-tid*='text-name-,p,studentCard,condition,pattern,,
+progress_icon,,svg,studentCard,,pattern,,
+progress_value,[data-tid=text-progress-,p,studentCard,,pattern,,
+turnedIn_value,[data-tid='text-duedate-0'],p,studentCard,,pattern,,
+score,[data-tid='text-score-0'],p,studentCard,,pattern,,
+viewasStudent,[data-tid=button-studentView],button,assignmentDetails,,,,"""View As Student"""
+viewasStudent_icon,[data-tid=button-studentView] svg,span,assignmentDetails,,,,
+viewasStudentmoreoption,[data-tid=button-assignmentOptions],button,assignmentDetails,,,,
+startDate_lbl,[data-tid=label-startDate],p,assignmentDetails,,,,"""Start Date"""
+startDate_icon,[data-tid=icon-calendarIcon-startDate],svg,assignmentDetails,,,,
+startDate_value,[data-tid=text-startDate],p,assignmentDetails,,,,
+dueDate_lbl,[data-tid=label-dueDate],p,assignmentDetails,,,,"""Due Date"""
+dueDate_icon,[data-tid=con-calendarIcon-dueDate],svg,assignmentDetails,,,,
+dueDate_value,[data-tid=text-dueDate],p,assignmentDetails,,,,
+allowLateSubmission_lbl,[data-tid=label-late_submission],span,assignmentDetails,,,,"""Allow Late Submission"""
+allowLateSubmission_btn,[data-tid=input-input-late_submission] input[type='checkbox'],span,assignmentDetails,,,,
+allowLateSubmission_info,[data-tid=icon-infoIcon-late_submission],svg,assignmentDetails,,,,
+preventfromSkipping_lbl,[data-tid=label-prevent_skipping],span,assignmentDetails,,,,"""Prevent from Skipping"""
+preventfromSkipping_btn,[data-tid='input-input-prevent_skipping'] input[type='checkbox'],span,assignmentDetails,,,,
+preventfromSkipping_info,[data-tid=icon-infoIcon-prevent_skipping],svg,assignmentDetails,,,,
+disableShowAnswers_lbl,[data-tid=label-show_answers],span,assignmentDetails,,,,"""Disable Show Answers"""
+disableShowAnswers_btn,[data-tid='input-input-show_answers'] input[type='checkbox'],span,assignmentDetails,,,,
+disableShowAnswers_info,[data-tid=icon-infoIcon-show_answers],svg,assignmentDetails,,,,
+includeProgressBar_lbl,[data-tid=label-progress_bar],span,assignmentDetails,,,,"""Include Progress Bar"""
+includeProgressBar_btn,[data-tid='input-input-progress_bar'] input[type='checkbox'],span,assignmentDetails,,,,
+includeProgressBar_info,[data-tid=icon-infoIcon-progress_bar],svg,assignmentDetails,,,,
+editAssignmentIcon,[data-tid=button-editAssignment] svg,svg,assignmentDetailsmoreOption,,,,
+editAssignmentlbl,[data-tid=button-editAssignment] p,button,assignmentDetailsmoreOption,,,,"""Edit Assignment"""
+cloneAssignmentIcon,[data-tid=button-cloneAssignment] svg,svg,assignmentDetailsmoreOption,,,,
+cloneAssignmentlbl,[data-tid=button-cloneAssignment] p,button,assignmentDetailsmoreOption,,,,"""Clone Assignment"""
+deleteAssignmentIcon,[data-tid=button-deleteAssignment] svg,svg,assignmentDetailsmoreOption,,,,
+deleteAssignmentlbl,"[data-tid=button-deleteAssignment] p""",button,assignmentDetailsmoreOption,,,,"""Delete Assignment"""

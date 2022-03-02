@@ -1,0 +1,13 @@
+Label,cssSelector,tagName,group,relation,extraInfo,returnValue,teacherAppLangEN
+page_header,[data-tid=text-HeaderTitle],div,pageData,,,,Create Assignment - Select activities
+book_icon,[data-tid=image-bookCover],img,pageData,,,,
+book_title,[data-tid=text-booktitle],p,pageData,,,,
+component_Name,[data-tid=tab-selectedproduct],div,pageData,,,,
+selectedActivity,[data-tid=text-selectedActivityCount],div,pageData,,,,
+selectActivityCount,[data-tid=icon-selectedActivityCount],div,pageData,,,,
+cancel_btn,[data-tid=button-cancelButton],button,pageData,,,selectActivity.page,
+continuetoDetails_btn,[data-tid=button-ProceedButton],button,pageData,,,createAssignmentPage,
+parentfolderofActivity,[data-tid*=checkbox-sectiontitle],button,activityList,,pattern,,
+subfolderofActivity,[data-tid*=checkbox-resourcetitle],button,activityList,,pattern,,
+parentfolderofActivityText,[data-tid*=text-sectiontitle],,activityList,,pattern,,
+subfolderofActivityText,[data-tid*=text-resourcetitle],,activityList,,pattern,,

@@ -1,0 +1,65 @@
+Label,cssSelector,tagName,group,relation,extraInfo,returnValue,teacherAppLangEN
+assignment_title," .MuiTypography-root-4669.MuiTypography-h6-4679.MuiTypography-noWrap-4688.MuiTypography-alignCenter-4685,",h6,createAssignment,,isInitilized,,"""Create Assignment -"""
+activity_lbl,"[data-tid=text-activityList],",h6,createAssignment,,,,"""Activity List"""
+activityCount_icon,"[data-tid=icon-activityCount],",svg,createAssignment,,,,
+activityCount_lbl,"[data-tid=text-activityCount],",p,createAssignment,,,,"""Activity"""
+addActivity_icon,"[data-tid=button-addActivitiesButton] svg,",svg,createAssignment,,,,
+addActivity_lbl,"[data-tid=button-addActivitiesButton],",button,createAssignment,,,selectActivity.page,"""Add Activities"""
+activity_number,"[data-tid='text-sno'],",p,createAssignment,,,,"""#"""
+activitylist_lbl,"[data-tid='text-activity'],",p,createAssignment,,,,"""Activity"""
+activityUnit_lbl,"[data-tid='text-unit'],",p,createAssignment,,,,"""Unit"""
+activity_card," .MuiListItem-root-4886.jss5284,",li,activitList,parent,pattern,,
+activityNumber,"[data-tid*=text-sno-,",div,activitList,,pattern,,
+activity_name_icon," svg,",svg,activitList,,pattern,,
+activity_name,"[data-tid*=text-activity-,",p,activitList,condition,pattern,,
+activity_unit,"[data-tid*=text-unit-,",span,activitList,,pattern,,
+activity_delete_icon,"[data-tid*=button-deleteActivity,",button,activitList,,pattern,deleteDialogue,
+assignment_lbl,"[data-tid=text-assignmentNameLabel],",label,createAssignment,,,,"""Assignment Name"""
+assignment_txtbox,"[id=input-assignmentName],",input,createAssignment,,,,"""input-assignmentName"""
+startDate_lbl,"[data-tid=text-startDateLabel],",span,createAssignment,,,,"""Start Date"""
+startDate_icon,"[data-tid=icon-startDateCalendar],",button,createAssignment,,,,
+startDate_txtBox," #input-startDate,",input,createAssignment,,,,
+endDate_lbl,"[data-tid=text-dueDateLabel],",span,createAssignment,,,,"""Due Date"""
+endDate_icon,"[data-tid=icon-dueDateCalendar],",button,createAssignment,,,,
+endDate_txtBox," #input-dueDate,",input,createAssignment,,,,
+showAdvanceOption,"[data-tid=button-showHideActivites],",button,createAssignment,,,advanceOption,"""Show Advanced Options"""
+advancedOption,"[data-tid=text-advancedOptions],",h6,advanceOption,,,,"""Advanced Options"""
+allowLateSubmission_lbl,"[data-tid=label-late_submission],",span,advanceOption,,,,"""Allow Late Submission"""
+allowLateSubmission_btn,"[data-tid=input-input-late_submission] input[type='checkbox'],",span,advanceOption,,,,
+allowLateSubmission_info,"[data-tid=icon-infoIcon-late_submission],",div,advanceOption,,,,
+preventfromSkipping_lbl,"[data-tid=label-prevent_skipping],",span,advanceOption,,,,"""Prevent from Skipping"""
+preventfromSkipping_btn,"[data-tid='input-input-prevent_skipping'] input[type='checkbox'],",span,advanceOption,,,,
+preventfromSkipping_info,"[data-tid=icon-infoIcon-prevent_skipping],",svg,advanceOption,,,,
+disableShowAnswers_lbl,"[data-tid=label-show_answers],",span,advanceOption,,,,"""Disable Show Answers"""
+disableShowAnswers_btn,"[data-tid='input-input-show_answers'] input[type='checkbox'],",span,advanceOption,,,,
+disableShowAnswers_info,"[data-tid=icon-infoIcon-show_answers],",svg,advanceOption,,,,
+includeProgressBar_lbl,"[data-tid=label-progress_bar],",span,advanceOption,,,,"""Include Progress Bar"""
+includeProgressBar_btn,"[data-tid='input-input-progress_bar'] input[type='checkbox'],",span,advanceOption,,,,
+futureEditNotSupported_icon,"[data-tid=icon-infoIcon-progress_bar],",span,advanceOption,,,,
+futureEditNotSupportedHeading,"[data-tid=text-suggestionBoxTitle],",span,advanceOption,,,,"""Future Edits are not Supported"""
+futureEditNotSupportedSubHeading,"[data-tid=text-suggestionBoxSubtitle],",div,advanceOption,,,,"""Note that once you post the assignment to your class, the ""Advanced Options"" cannot be edited."""
+hideAdvancedOption,"[data-tid=button-showHideActivites],",span,advanceOption,,,,"""Hide Advanced Options"""
+cancel_btn,"[data-tid=button-cancelAssignment],",button,createAssignment,,,assignmentListTeacher.page,"""Cancel"""
+assign_btn,"[data-tid=button-assignAssignment],",button,createAssignment,,,assignmentListTeacher.page,"""Assign"""
+close_btn,"[data-tid=button-close],",button,createAssignment,,,assignmentListTeacher.page,"""close"""
+deleteActivity_header,"[id=modal-title],",div,deleteDialogue,,,,"""Delete Activity?"""
+deleteActivity_subheader,"[data-tid=text-subTitle-deleteActivity],",div,deleteDialogue,,,,"""This will delete the activity “Native LO C-T S-T” from this assignment."""
+deleteActivity_btn,"[data-tid=button-primary-deleteActivity],",button,deleteDialogue,,,"waitForDisplayed, this.isinitialized","""delete"""
+cancelActivityDialogue_btn,[data-tid=button-secondary-deleteActivity],button,deleteDialogue,,,,"""Cancel"""
+assignmentSubmitDialogueHeader,[data-tid=text-title-assignment-submit-dialog],div,submitDialogue,,,,
+assignmentSubmitDialogueSubHeader,[data-tid=text-subTitle-assignment-submit-dialog],div,submitDialogue,,,,
+activityIcon,[data-tid=icon-item-0],div,submitDialogue,,,,
+activitylbl,[data-tid=text-label-0],div,submitDialogue,,,,Activity List
+activityCount,[data-tid=text-value-0],div,submitDialogue,,,,
+classToAssignIcon,[data-tid=icon-item-1],div,submitDialogue,,,,
+classToAssignlbl,[data-tid=text-label-1],div,submitDialogue,,,,Class to Assign
+classToAssignCount,[data-tid=text-value-1],div,submitDialogue,,,,
+startDateIcon,[data-tid=icon-item-3],div,submitDialogue,,,,
+startDatelbl,[data-tid=text-label-3],div,submitDialogue,,,,Start Date
+startDateCount,[data-tid=text-value-3],div,submitDialogue,,,,
+endDateIcon,[data-tid=icon-item-4],div,submitDialogue,,,,
+endDatelbl,[data-tid=text-label-4],div,submitDialogue,,,,Due Date
+endDateCount,[data-tid=text-value-4],div,submitDialogue,,,,
+cancel,[data-tid=button-secondary-assignment-submit-dialog],button,submitDialogue,,,"waitForDisplayed, this.isinitialized",Cancel
+confirm&Assign,[data-tid=button-primary-assignment-submit-dialog],button,submitDialogue,,,assignmentListTeacher.page,Confirm & Assign
+classList,[id*=input-radio-,button,classList,,pattern,,
