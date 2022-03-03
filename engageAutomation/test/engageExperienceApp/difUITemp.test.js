@@ -10,8 +10,9 @@ module.exports = {
 		console.log(res)
 		res = action.click("[data-tid=button-view-0]");
 		console.log(res)
-		//action.waitForDocumentLoad();
-		res = action.waitForDisplayed("[data-tid=image-chapter-0]");
+		res = action.waitForDisplayed("[data-tid=image-bookCover]");
+		console.log(res)
+		res = action.waitForDisplayed("[class*=MuiSkeleton]", undefined, true);
 		console.log(res)
 	},
 
@@ -19,8 +20,7 @@ module.exports = {
 	ENG_DIF_TC_2: function () {
 		res = action.click("[data-tid=button-chapter-0]");
 		console.log(res)
-		//action.waitForDocumentLoad();
-		res = action.waitForDisplayed("[data-tid=image-unit-thumbnail-0]");
+		res = action.waitForDisplayed("[class*=MuiSkeleton]", undefined, true);
 		console.log(res)
 	},
 
@@ -38,7 +38,6 @@ module.exports = {
 		console.log(res)
 		res = action.waitForDisplayed("[id=page]");
 		console.log(res)
-		action.waitForDocumentLoad();
 		res = action.switchToParentFrame();
 		console.log(res)
 	},
@@ -66,23 +65,24 @@ module.exports = {
 			res = action.click("[data-tid=button-dashboard]");
 			console.log(res)
 		}
-		//action.waitForDocumentLoad();
 		res = action.click("[data-tid=btn-label-viewall]");
 		console.log(res)
 		res = action.waitForDisplayed("[data-tid=button-product-0]");
 		console.log(res)
 		res = action.click("[data-tid=button-product-0]");
 		console.log(res)
-		res = action.waitForDocumentLoad();
-		browser.pause(3000);
+		res = action.waitForDisplayed("[class*=MuiSkeleton]", undefined, true);
 		console.log(res)
+		browser.pause(3000);
 	},
 
 	// View book page (not added)
 	ENG_DIF_TC_5: function () {
 		res = action.click("[data-tid=button-view-0]");
 		console.log(res)
-		res = action.waitForDisplayed("[data-tid=image-chapter-0]");
+		res = action.waitForDisplayed("[data-tid=image-bookCover]");
+		console.log(res)
+		res = action.waitForDisplayed("[class*=MuiSkeleton]", undefined, true);
 		console.log(res)
 		//action.click("[data-tid=button-product-2]");
 		//res = action.waitForDisplayed("[data-tid=button-next-unit]");
@@ -99,74 +99,61 @@ module.exports = {
 		console.log(res)
 		res = action.click("[data-tid=button-product-1]");
 		console.log(res)
-		res = action.waitForDocumentLoad();
+		res = action.waitForDisplayed("[class*=MuiSkeleton]", undefined, true);
 		console.log(res)
-		res = action.waitForDisplayed("[data-tid=button-filter]")
 		browser.pause(3000);
-		console.log(res)
 	},
 
 	// Browse page with videos tab
 	ENG_DIF_TC_7: function () {
 		res = action.click("[data-tid=button-product-2]");
 		console.log(res)
-		res = action.waitForDocumentLoad();
+		res = action.waitForDisplayed("[class*=MuiSkeleton]", undefined, true);
 		console.log(res)
-		res = action.waitForDisplayed("[data-tid=button-filter]")
 		browser.pause(3000);
-		console.log(res)
 	},
 
 	// Browse page with online classes tab
 	ENG_DIF_TC_8: function () {
 		res = action.click("[data-tid=button-product-3]");
 		console.log(res)
-		res = action.waitForDocumentLoad();
+		res = action.waitForDisplayed("[class*=MuiSkeleton]", undefined, true);
 		console.log(res)
-		res = action.waitForDisplayed("[data-tid=button-filter]")
 		browser.pause(3000);
-		console.log(res)
 	},
 
 	// Browse page with teacher training tab
 	ENG_DIF_TC_9: function () {
 		res = action.click("[data-tid=button-product-4]");
 		console.log(res)
-		res = action.waitForDocumentLoad();
+		res = action.waitForDisplayed("[class*=MuiSkeleton]", undefined, true);
 		console.log(res)
-		res = action.waitForDisplayed("[data-tid=button-filter]")
 		browser.pause(3000);
-		console.log(res)
 	},
 
 	// Browse page with today in class tab
 	ENG_DIF_TC_10: function () {
 		res = action.click("[data-tid=button-product-5]");
 		console.log(res)
-		res = action.waitForDocumentLoad();
+		res = action.waitForDisplayed("[class*=MuiSkeleton]", undefined, true);
 		console.log(res)
-		res = action.waitForDisplayed("[data-tid=button-filter]")
 		browser.pause(3000);
-		console.log(res)
 	},
 
 	// Browse page with projectable tab
 	ENG_DIF_TC_11: function () {
 		res = action.click("[data-tid=button-product-6]");
 		console.log(res)
-		res = action.waitForDocumentLoad();
+		res = action.waitForDisplayed("[class*=MuiSkeleton]", undefined, true);
 		console.log(res)
-		res = action.waitForDisplayed("[data-tid=button-filter]")
 		browser.pause(3000);
-		console.log(res)
 	},
 
 	// View all Projectables
 	ENG_DIF_TC_12: function () {
 		res = action.click("[data-tid=btn-viewAll-0]");
 		console.log(res)
-		res = action.waitForDocumentLoad();
-		browser.pause(3000);
+		res = action.waitForDisplayed("[class*=MuiSkeleton]", undefined, true);
 		console.log(res)
 	},
 
@@ -218,8 +205,6 @@ module.exports = {
 		//action.waitForDisplayed("[data-tid=image-bookCover]");
 		res = action.waitForDisplayed("img[src*=Compro]");
 		console.log(res)
-		res = action.waitForDocumentLoad();
-		console.log(res)
 	},
 
 	// Student tab on teacher view class page
@@ -237,8 +222,6 @@ module.exports = {
 		console.log(res)
 		res = action.click("[data-tid=button-editClass]");
 		console.log(res)
-		res = action.waitForDocumentLoad();
-		console.log(res)
 		res = action.waitForDisplayed("[data-tid=image-bookCover]");
 		console.log(res)
 	},
@@ -254,8 +237,6 @@ module.exports = {
 		}
 		console.log(res)
 		res = action.click("[data-tid=button-Save]");
-		console.log(res)
-		res = action.waitForDocumentLoad();
 		console.log(res)
 		res = action.waitForDisplayed("img[src*=Compro]");
 		console.log(res)
@@ -282,17 +263,13 @@ module.exports = {
 			res = action.click("[data-tid=button-classes]");
 			console.log(res)
 		}
-		res = action.waitForDocumentLoad();
-		console.log(res)
-		res = action.waitForDisplayed("[data-tid=text-pageTitle]");
+		res = action.waitForDisplayed("[data-tid=button-add],[data-tid=button-joincourse]");
 		console.log(res)
 	},
 
 	// Create Class page
 	ENG_DIF_TC_20: function () {
 		res = action.click("[data-tid=button-add]");
-		console.log(res)
-		res = action.waitForDocumentLoad();
 		console.log(res)
 		res = action.waitForDisplayed("[data-tid=button-assignBook]");
 		console.log(res)
@@ -301,8 +278,6 @@ module.exports = {
 	// Book materials page
 	ENG_DIF_TC_21: function () {
 		res = action.click("[data-tid=button-assignBook]");
-		console.log(res)
-		res = action.waitForDocumentLoad();
 		console.log(res)
 		res = action.waitForDisplayed("[data-tid='button-Add to Class']");
 		console.log(res)
@@ -314,8 +289,6 @@ module.exports = {
 		console.log(res)
 		res = action.click("[data-tid='button-Add to Class']");
 		console.log(res)
-		res = action.waitForDocumentLoad();
-		console.log(res)
 		res = action.waitForDisplayed("[data-tid=image-bookCover]");
 		console.log(res)
 	},
@@ -325,10 +298,6 @@ module.exports = {
 		res = action.setValue("[id=input-title]", "test automation class");
 		console.log(res)
 		res = action.click("[data-tid='button-cancel']");
-		console.log(res)
-		//action.click("[data-tid='button-cancel']");
-		//action.click("[data-tid='button-cancel']");
-		res = action.waitForDocumentLoad();
 		console.log(res)
 		res = action.waitForDisplayed("[data-tid=button-add]");
 		console.log(res)
@@ -344,7 +313,7 @@ module.exports = {
 		console.log(res)
 		res = action.waitForDisplayed("[data-tid=image-bookCover]");
 		console.log(res)
-		res = action.waitForDisplayed("[data-tid=image-chapter-0]");
+		res = action.waitForDisplayed("[class*=MuiSkeleton]", undefined, true);
 		console.log(res)
 	},
 
@@ -359,16 +328,12 @@ module.exports = {
 		// console.log(res)
 		res = action.waitForDisplayed("[id=page],[id=container-non-lo");
 		console.log(res)
-		action.waitForDocumentLoad();
 		//res = action.switchToParentFrame();
-		console.log(res)
 	},
 
 	// Join Class page
 	ENG_DIF_TC_26: function () {
 		res = action.click("[data-tid=button-joincourse]");
-		console.log(res)
-		res = action.waitForDocumentLoad();
 		console.log(res)
 		res = action.waitForDisplayed("[data-tid=button-continue]");
 		console.log(res)
@@ -378,8 +343,6 @@ module.exports = {
 	// Add book page from Getting Started
 	ENG_DIF_TC_27: function () {
 		res = action.click("[data-tid=button-actionCardBtn-0]");
-		console.log(res)
-		res = action.waitForDocumentLoad();
 		console.log(res)
 		res = action.waitForDisplayed("button > span > div > img");
 		console.log(res)
@@ -391,8 +354,6 @@ module.exports = {
 		console.log(res)
 		res = action.click("[data-tid=dropdownitem-1]");
 		console.log(res)
-		res = action.waitForDocumentLoad();
-		console.log(res)
 	},
 
 	// Resource Bank page
@@ -401,8 +362,6 @@ module.exports = {
 		console.log(res)
 		//res = action.click("[data-tid=button-chapter-0]");
 		//console.log(res)
-		res = action.waitForDocumentLoad();
-		console.log(res)
 	},
 
 	// Flipbook page
@@ -412,9 +371,7 @@ module.exports = {
 		//browser.back();
 		//res = action.click("[data-tid=btn-open-in-flipbook]");
 		console.log(res)
-		res = action.waitForDocumentLoad();
-		console.log(res)
-		res = action.waitForDisplayed("div > img");
+		res = action.waitForDisplayed("[id=readerpagedivA]");
 		console.log(res)
 	},
 
@@ -430,7 +387,7 @@ module.exports = {
 		console.log(res)
 	},
 
-	// Assignment tab on Teacher view class page
+	// Assignment tab on Teacher view class page (No assignment)
 	ENG_DIF_TC_32: function () {
 		res = action.click("[data-tid=button-product-1]");
 		console.log(res)
@@ -719,13 +676,125 @@ module.exports = {
 		console.log(res)
 	},
 
+	// Teacher gradebook page
+	ENG_DIF_TC_59: function () {
+		res = action.click("[data-tid=button-gradebook]");
+		console.log(res)
+		res = action.waitForDisplayed("[data-tid=list-0]");
+		console.log(res)
+	},
+
+	// Student progress page
+	ENG_DIF_TC_60: function () {
+		res = action.click("[data-tid=list-0]");
+		console.log(res)
+		res = action.waitForDisplayed("[id*=doughnutCanvas-card]");
+		console.log(res)
+	},
+
+
+/*
+	// Click Create Assignment button and launch activities page
+	ENG_DIF_TC_59: function () {
+		res = action.click("[data-tid=button-createAssignment]");
+		console.log(res)
+		res = action.click("[data-tid=button-2]");
+		console.log(res)
+		res = action.waitForDisplayed("[data-tid=text-selectedActivityCount]");
+		console.log(res)
+	},
+
+	// Create Assignment page
+	ENG_DIF_TC_58: function () {
+		res = action.click("[data-tid=checkbox-resourcetitle-0-0]");
+		console.log(res)
+		res = action.click("[data-tid=button-ProceedButton]");
+		console.log(res)
+		res = action.waitForDisplayed("[data-tid=button-assignAssignment]");
+		console.log(res)
+	},
+
+	// Create assignment confirmation dialog
+	ENG_DIF_TC_58: function () {
+		res = action.setValue("[id=input-assignmentName]", "Test automation assignment");
+		console.log(res)
+		res = action.click("[data-tid=button-assignAssignment]");
+		console.log(res)
+		res = action.waitForDisplayed("[data-tid=button-primary-assignment-submit-dialog]");
+		console.log(res)
+	},
+
+	// Assignment tab on Teacher view class page after adding assignment
+	ENG_DIF_TC_58: function () {
+		res = action.click("[data-tid=button-primary-assignment-submit-dialog]");
+		console.log(res)
+		res = action.waitForDisplayed("[data-tid=button-assignmentCard-00]");
+		console.log(res)
+	},
+
+	// View Assignment page for Teacher
+	ENG_DIF_TC_58: function () {
+		res = action.click("[data-tid=button-assignmentCard-00]");
+		console.log(res)
+		res = action.waitForDisplayed("[data-tid=button-studentView]");
+		console.log(res)
+	},
+
+	// View Assignment as Student
+	ENG_DIF_TC_58: function () {
+		res = action.click("[data-tid=button-studentView]");
+		console.log(res)
+		res = action.waitForDisplayed("[id=viewAsStudentBannerContainer]");
+		console.log(res)
+		res = action.waitForDisplayed("iframe");
+		console.log(res)
+		res = action.findElements("iframe");
+		res = action.switchToFrame(res[0]);
+		console.log(res)
+		res = action.waitForDisplayed("[id=page]");
+		console.log(res)
+		action.waitForDocumentLoad();
+		res = action.switchToParentFrame();
+		console.log(res)
+	},
+	
+	// Delete assignment dialog
+	ENG_DIF_TC_58: function () {
+		res = action.click("[data-tid=button-closestudentview]");
+		console.log(res)
+		res = action.click("[data-tid=button-assignmentOptions]");
+		console.log(res)
+		res = action.click("[data-tid=button-deleteAssignment]");
+		console.log(res)
+		res = action.waitForDisplayed("[data-tid=button-primary-removeAssignment]");
+		console.log(res)
+	},
+
+	// Assignment tab on Teacher view class page after delete assignment
+	ENG_DIF_TC_58: function () {
+		res = action.click("[data-tid=button-primary-removeAssignment]");
+		console.log(res)
+		res = action.waitForDisplayed("[data-tid=image-no-assignments]");
+		console.log(res)
+	},
+
+	
+
+	// Download Player page
+	ENG_DIF_TC_58: function () {
+		res = action.click("[data-tid=list-0]");
+		console.log(res)
+		res = action.waitForDisplayed("[id*=doughnutCanvas-card]");
+		console.log(res)
+	},
+*/
 	// --------------------------------- Test cases for Native LO and Avallain LO --------------------------------- //
 	// ------------------------------------------------------------------------------------------------------------ //
 	// Launch native LO
 	ENG_DIF_TC_999: function () {
 		res = action.click("[data-tid=button-class-0]");
 		console.log(res)
-		res = action.waitForDisplayed("[data-tid=image-chapter-0]");
+		res = action.waitForDisplayed("[class*=MuiSkeleton]", undefined, true);
 		console.log(res)
 		res = action.click("[data-tid=button-product-2]");
 		console.log(res)
