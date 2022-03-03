@@ -20,6 +20,8 @@ module.exports = {
 	ENG_DIF_TC_2: function () {
 		res = action.click("[data-tid=button-chapter-0]");
 		console.log(res)
+		res = action.waitForDocumentLoad();
+		console.log(res)
 		res = action.waitForDisplayed("[class*=MuiSkeleton]", undefined, true);
 		console.log(res)
 	},
@@ -155,6 +157,7 @@ module.exports = {
 		console.log(res)
 		res = action.waitForDisplayed("[class*=MuiSkeleton]", undefined, true);
 		console.log(res)
+		browser.pause(3000);
 	},
 
 	// Open filter sidebar
@@ -367,9 +370,6 @@ module.exports = {
 	// Flipbook page
 	ENG_DIF_TC_30: function () {
 		res = action.click("[data-tid=button-openFlipbook]");
-		console.log(res)
-		//browser.back();
-		//res = action.click("[data-tid=btn-open-in-flipbook]");
 		console.log(res)
 		res = action.waitForDisplayed("[id=readerpagedivA]");
 		console.log(res)
