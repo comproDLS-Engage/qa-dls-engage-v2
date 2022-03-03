@@ -2537,68 +2537,68 @@
           "id": "ENG_ASSLIST_TC_1",
           "description": "Validate the data of assignment list page",
           "tags": "P2",
-          "visualTest": "-"
+         "visualTest": true
         },
         {
           "id": "ENG_ASSLIST_TC_2",
           "description": "Validate the click on add new button",
           "tags": "P2",
-          "visualTest": "-"
+         "visualTest": true
         },
         {
           "id": "ENG_ASSLIST_TC_3",
           "description": "Validate the click on component",
           "tags": "P2",
-          "visualTest": "-"
+         "visualTest": true
         },
         {
           "id": "ENG_ASSLIST_TC_4",
           "description": "Validate the click on create assignment page on inbox tab",
           "tags": "P2",
-          "visualTest": "-"
+         "visualTest": true
         },
        
         {
           "id": "ENG_ASSLIST_TC_5",
           "description": "Validate the data of assignment card on assignment details page",
           "tags": "P2",
-          "visualTest": "-"
+         "visualTest": true
         },
         {
           "id": "ENG_ASSLIST_TC_6",
           "description": "Validate the click on assignment card",
           "tags": "P2",
-          "visualTest": "-"
+         "visualTest": true
         },
         {
           "id": "ENG_ASSLIST_TC_7",
           "description": "Validate the Data of assignment List Page when assignment is added",
           "tags": "P2",
-          "visualTest": "-"
+         "visualTest": true
         },
         {
           "id": "ENG_ASSLIST_TC_8",
           "description": "Validate the Click on the more option of assignment",
           "tags": "P2",
-          "visualTest": "-"
+         "visualTest": true
         },
         {
           "id": "ENG_ASSLIST_TC_9",
           "description": "Validate the Click on the Delete Lable of assignment",
           "tags": "P2",
-          "visualTest": "-"
+         "visualTest": true
         },
         {
           "id": "ENG_ASSLIST_TC_10",
           "description": "Validate the Assignment List Page Launched",
           "tags": "P2",
-          "visualTest": "-"
+         "visualTest": true
         },
         {
           "id": "ENG_ASSLIST_TC_11",
           "description": "Validate the click on cancel button of delete dialogue",
           "tags": "P2",
-          "visualTest": "-"
+         "visualTest": true
         }
       ]
     },
@@ -2612,19 +2612,19 @@
           "id": "ENG_SLCTACTIVITY_TC_1",
           "description": "Validate the data on select activity Page",
           "tags": "P2",
-          "visualTest": "-"
+         "visualTest": true
         },
         {
           "id": "ENG_SLCTACTIVITY_TC_2",
           "description": "Validate the click on checkbox of parent folder of component",
           "tags": "P2",
-          "visualTest": "-"
+         "visualTest": true
         },
         {
           "id": "ENG_SLCTACTIVITY_TC_3",
           "description": "Validate the click on continue button",
           "tags": "P2",
-          "visualTest": "-"
+         "visualTest": true
         }
         
       ]
@@ -2639,37 +2639,37 @@
           "id": "ENG_CREATEASS_TC_1",
           "description": "Validate the update of assignment name in alpha numeric character",
           "tags": "P2",
-          "visualTest": "-"
+         "visualTest": true
         },
         {
           "id": "ENG_CREATEASS_TC_2",
           "description": "Validate the click of assign button",
           "tags": "P2",
-          "visualTest": "-"
+         "visualTest": true
         },   
         {
           "id": "ENG_CREATEASS_TC_3",
           "description": "Validate the click on confirm assignmeent on submit assignment page",
           "tags": "P2",
-          "visualTest": "-"
+         "visualTest": true
         },
         {
           "id": "ENG_CREATEASS_TC_4",
           "description": "Validate the content of create assignment Page",
           "tags": "P2",
-          "visualTest": "-"
+         "visualTest": true
         },
         {
           "id": "ENG_CREATEASS_TC_5",
           "description": "Validate the click on cancel button create assignment Page",
           "tags": "P2",
-          "visualTest": "-"
+         "visualTest": true
         },
         {
           "id": "ENG_CREATEASS_TC_6",
           "description": "Validate the click of show advanced option",
           "tags": "P2",
-          "visualTest": "-"
+         "visualTest": true
         }
       ]
     },
@@ -2682,85 +2682,85 @@
           "id": "ENG_ASSDETAILS_TC_1",
           "description": "Validate the content of assignment details page",
           "tags": "P2",
-          "visualTest": "-"
+         "visualTest": true
         },
         {
           "id": "ENG_ASSDETAILS_TC_2",
           "description": "Validate the click on more option of assignment details page",
           "tags": "P2",
-          "visualTest": "-"
+         "visualTest": true
         },
         {
           "id": "ENG_ASSDETAILS_TC_3",
           "description": "Validate the click on delete assignment from the list",
           "tags": "P2",
-          "visualTest": "-"
+         "visualTest": true
         },
         {
           "id": "ENG_ASSDETAILS_TC_4",
           "description": "Validate the click on delete button",
           "tags": "P2",
-          "visualTest": "-"
+         "visualTest": true
         },
         {
           "id": "ENG_ASSDETAILS_TC_5",
           "description": "Validate the click on Edit Assignment Label",
           "tags": "P2",
-          "visualTest": "-"
+         "visualTest": true
         },
         {
           "id": "ENG_ASSDETAILS_TC_6",
           "description": "Validate the update the text of assginment Title",
           "tags": "P2",
-          "visualTest": "-"
+         "visualTest": true
         },
         {
           "id": "ENG_ASSDETAILS_TC_7",
           "description": "Validate the click on save and close button",
           "tags": "P2",
-          "visualTest": "-"
+         "visualTest": true
         },
         {
           "id": "ENG_ASSDETAILS_TC_8",
           "description": "Validate the click on Clone Label button",
           "tags": "P2",
-          "visualTest": "-"
+         "visualTest": true
         },
         {
           "id": "ENG_ASSDETAILS_TC_9",
           "description": "Validate the update on the name textbox",
           "tags": "P2",
-          "visualTest": "-"
+         "visualTest": true
         },
         {
           "id": "ENG_ASSDETAILS_TC_10",
           "description": "Validate the select on class name",
           "tags": "P2",
-          "visualTest": "-"
+         "visualTest": true
         },
         {
           "id": "ENG_ASSDETAILS_TC_11",
           "description": "Validate the Click on View As student button",
           "tags": "P2",
-          "visualTest": "-"
+         "visualTest": true
         },
         {
           "id": "ENG_ASSDETAILS_TC_12",
           "description": "Validate the View as Student Page Data",
           "tags": "P2",
-          "visualTest": "-"
+         "visualTest": true
         },
         {
           "id": "ENG_ASSDETAILS_TC_13",
           "description": "Validate the close on student View Page",
           "tags": "P2",
-          "visualTest": "-"
+         "visualTest": true
         },
         {
           "id": "ENG_ASSDETAILS_TC_14",
           "description": "Validate the clck of cancel button on edit assignment page",
           "tags": "P2",
-          "visualTest": "-"
+         "visualTest": true
         }
       ]
     },
@@ -2773,71 +2773,71 @@
           "id": "ENG_ASSLISTDETAILS_TC_1",
           "description": "Validate the click on upcoming assignment",
           "tags": "P2",
-          "visualTest": "-"
+         "visualTest": true
         },
         {
           "id": "ENG_ASSLISTDETAILS_TC_2",
           "description": "Validate the click on past assignment",
           "tags": "P2",
-          "visualTest": "-"
+         "visualTest": true
         },
         {
           "id": "ENG_ASSLISTDETAILS_TC_3",
           "description": "Validate the click on in-progress assignment",
           "tags": "P2",
-          "visualTest": "-"
+         "visualTest": true
         },
         {
           "id": "ENG_ASSLISTDETAILS_TC_4",
           "description": "Validate the blank inprogress assignment page",
           "tags": "P2",
-          "visualTest": "-"
+         "visualTest": true
         },
         {
           "id": "ENG_ASSLISTDETAILS_TC_5",
           "description": "Validate the blank upcoming assignment page",
           "tags": "P2",
-          "visualTest": "-"
+         "visualTest": true
         },
         {
           "id": "ENG_ASSLISTDETAILS_TC_6",
           "description": "Validate the blank past assignment page",
           "tags": "P2",
-          "visualTest": "-"
+         "visualTest": true
         },
         {
           "id": "ENG_ASSLISTDETAILS_TC_7",
           "description": "Validate the content of assignment list details page",
           "tags": "P2",
-          "visualTest": "-"
+         "visualTest": true
         },
         {
           "id": "ENG_ASSLISTDETAILS_TC_8",
           "description": "validate the details of assignment card",
           "tags": "P2",
-          "visualTest": "-"
+         "visualTest": true
         },
         {
           "id": "ENG_ASSLISTDETAILS_TC_9",
           "description": "validate the click on edit assignment button",
           "tags": "P2",
-          "visualTest": "-"
+         "visualTest": true
         },
         {
           "id": "ENG_ASSLISTDETAILS_TC_10",
           "description": "validate the click on clone assignment button",
           "tags": "P2",
-          "visualTest": "-"
+         "visualTest": true
         },{
           "id": "ENG_ASSLISTDETAILS_TC_11",
           "description": "validate the click on delete assignment button",
           "tags": "P2",
-          "visualTest": "-"
+         "visualTest": true
         },{
           "id": "ENG_ASSLISTDETAILS_TC_12",
           "description": "validate the click on view progress assignment button",
           "tags": "P2",
-          "visualTest": "-"
+         "visualTest": true
         }
       ]
     }
