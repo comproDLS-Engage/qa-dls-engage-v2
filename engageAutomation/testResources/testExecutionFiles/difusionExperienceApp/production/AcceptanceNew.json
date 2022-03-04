@@ -1068,6 +1068,17 @@
             ]
          },
          {
+            "id": "ENG_PLAY_TC_2",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/nativeQuizData.json",
+                  "jsonPath": "unit1_native2.question[9]"
+               }
+            ]
+         },
+         {
             "id": "ENG_PLAY_TC_17",
             "description": "",
             "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
@@ -1185,6 +1196,8 @@
             "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
             "testData": []
          },
+         
+       
          {
             "id": "ENG_PLAY_TC_7",
             "description": "",
