@@ -877,6 +877,8 @@ module.exports = {
 		console.log(res)
 		res = action.waitForDisplayed("[data-tid=button-retakeActivity]");
 		console.log(res)
+		res = action.waitForDisplayed("[data-tid=text-activityScoreInfo]");
+		console.log(res)
 		res = action.click("[data-tid=breadcrumb-productTitle]");
 		console.log(res)
 		res = action.click("[data-tid=button-item-0-2]");
@@ -895,6 +897,8 @@ module.exports = {
 	// Reset and go back
 	ENG_DIF_TC_994: function () {
 		res = action.click("[data-tid=button-retakeActivity]");
+		console.log(res)
+		res = action.waitForDisplayed("[data-tid='button-checkAnswers']");
 		console.log(res)
 		res = action.waitForDisplayed("iframe");
 		console.log(res)
