@@ -259,7 +259,27 @@
             ["C","omnivores","incorrect"]
             ]
           }              
-        }
+      },
+      {
+        "number": 10,
+        "instruction": "",
+        "text": "",
+        "type": "fibselect",
+        "mediaType": "",
+        "maxOptions": 2,
+        "answerKey": [
+          ["A","3","John","correct"],
+          ["B","2","Jane","correct"]
+        ],
+        "scenario1": [
+          ["A","0","-","incorrect"],
+          ["B","4","Joan","incorrect"]
+        ],
+        "scenario2": [
+          ["A","4","Adam","incorrect"],
+          ["B","3","Sarah","incorrect"]
+        ]
+      }
     ]
   }
 }
