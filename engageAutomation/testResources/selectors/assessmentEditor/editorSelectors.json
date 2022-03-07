@@ -11,7 +11,7 @@
 			"itemPlayer_btn": "[data-tid*=questiontype-button-"
 		},
 		"editorTab": {
-			"createQuestion_btn":"[data-tid=button-createquestion]",
+			"createQuestion_btn": "[data-tid=button-createquestion]",
 			"questionHeader": "h5[class*=MuiTypography-noWrap]",
 			"panel1Name": "[data-tid=button-toggleansweraccordion] h6",
 			"quesTitleLbl": "[for=\"question-title-input\"]",
@@ -43,7 +43,7 @@
 			"instruction_input": "[data-tid=input-instruction] input",
 			"addVideo_btn": "[data-tid=button-addvideo]",
 			"videoURL_input": "[data-tid=input-videourl] input",
-			"videoType_btn":"#video_native_select",
+			"videoType_btn": "#video_native_select",
 			"videoCredit_input": "[data-tid=input-videocredit] input",
 			"media_input": "[type=file]",
 			"addImage_btn": "[data-tid=button-addimage]",
@@ -57,22 +57,23 @@
 			"inputOptions": "[data-tid*=input-option-",
 			"optionStyle_radio": "[data-tid=radio-optionstyle-",
 			"preview_btn": "#root > div > div > div > button[data-tid=button-preview]",
-			"headerEdit_btn":"[data-tid=button-preview-headertitle]",
-			"instructionEdit_btn":"[data-tid=button-preview-instruction]",
-			"placeHolder_txt":"div[role=textbox]",
-			"placeHolderHeader_txt":"div[role=textbox] h2",
-			"placeHolderIns_txt":"div[role=textbox] p",
-			"done_btn":"[data-tid=button-done]",
-			"nextqun_btn":"[data-tid=button-nextquestion]",
-			"deleteMedia_btn":"[data-tid=button-deletemedia]",
-			"editPrompt_btn":"[data-tid=button-preview-prompt]",
-			"editSubQuestion_btn":"[data-tid=button-preview-subquestion-",
-			"subOptionIndex":"div[data-rbd-droppable-context-id=",
-			"subOptionValue":"[data-rbd-draggable-id=",
-			"subOptiontext":"input[type=text]",
-			"topsbottomOption":"[data-tid=radio-topbottomlayout] span[class*=MuiButtonBase]",
-			"leftRightOption":"[data-tid=radio-leftrightlayout] span[class*=MuiButtonBase]",
-			"scoreInputBox":"[data-tid=input-score] input",
+			"headerEdit_btn": "[data-tid=button-preview-headertitle]",
+			"instructionEdit_btn": "[data-tid=button-preview-instruction]",
+			"placeHolder_txt": "div[role=textbox]",
+			"placeHolderHeader_txt": "div[role=textbox] h2",
+			"placeHolderIns_txt": "div[role=textbox] p",
+			"done_btn": "[data-tid=button-done]",
+			"nextqun_btn": "[data-tid=button-nextquestion]",
+			"deleteMedia_btn": "[data-tid=button-deletemedia]",
+			"editPrompt_btn": "[data-tid=button-preview-prompt]",
+			"editSubQuestion_btn": "[data-tid=button-preview-subquestion-",
+			"subOptionIndex": "div[data-rbd-droppable-context-id=",
+			"subOptionValue": "[data-rbd-draggable-id=",
+			"subOptiontext": "input[type=text]",
+			"topsbottomOption": "[data-tid=radio-topbottomlayout] span[class*=MuiButtonBase]",
+			"leftRightOption": "[data-tid=radio-leftrightlayout] span[class*=MuiButtonBase]",
+			"scoreInputBox": "[data-tid=input-score] input",
+			"addAnswerbtn":"[data-tid=button-addanswers]",
 			"multipleResponse": {
 				"checkboxOption_input": "[data-tid=checkbox-option-"
 			},
@@ -103,6 +104,12 @@
 			},
 			"fib": {
 				"fibAnswerOption": "[data-tid*=input-option-"
+			},
+			"fibdropdown": {
+				"uniqueOption": "input[value=individual-options]",
+				"commonOption": "input[value=common-options]",
+				"inputOption":"[data-tid*=input-text-",
+				"responseOption":"[data-tid*=select-correctoption-"
 			}
 		}
 	}

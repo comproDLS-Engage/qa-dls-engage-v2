@@ -239,6 +239,31 @@
                     "id": "ASE_COM_TC_1012",
                     "description": "Add the score in the activity player",
                     "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1013",
+                    "description": "Click Add Answer Button",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_FIBDROPDOWN_TC_1013",
+                    "description": "Click on unique for each blank",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_FIBDROPDOWN_TC_1014",
+                    "description": "Click on Comman for all blanks",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_FIBDROPDOWN_TC_1015",
+                    "description": "Set the text on the input options",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_FIBDROPDOWN_TC_1016",
+                    "description": "Set the text on the reponse options",
+                    "tags": "P1"
                 }
             ]
         }
