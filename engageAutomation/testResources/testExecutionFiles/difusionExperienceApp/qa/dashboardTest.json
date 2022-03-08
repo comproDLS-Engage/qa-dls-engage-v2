@@ -55,7 +55,7 @@
                 "testData": [
                     {
                         "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                        "jsonPath": "engage.appContent.assignmentList.teacher.resourceTitle[0]"
+                        "jsonPath": "engage.appContent.dashboard.teacher.resourceTitle[0]"
                     }
                 ]
             },

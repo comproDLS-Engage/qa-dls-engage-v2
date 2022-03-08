@@ -208,7 +208,7 @@ module.exports = {
 	// Validate that the folder is deleted on clicking delete button in the dialog box
 	BK_TC_20: function () {
 		sts = common.click_confirmDialog_Button();
-		assertion.assert((typeof sts === "string" && sts.includes("Selected items Deleted Successfully.")), "Snackbar messsage mismatch. " + sts);
+		assertion.assert((typeof sts === "string" && sts.includes("Selected item Deleted Successfully.")), "Snackbar messsage mismatch. " + sts);
 	},
 
 	// Validate that the delete activity dialog box opens on clicking delete button in the activity menu

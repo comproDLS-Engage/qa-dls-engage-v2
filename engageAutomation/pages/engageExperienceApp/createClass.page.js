@@ -45,7 +45,7 @@ module.exports = {
         // action.waitForDocumentLoad();
         let pageStatus = action.waitForDisplayed(this.title_lbl)
         //wait for displayed book is also loaded
-        action.waitForDisplayed(this.bookSkeleton, true, 30000)
+        action.waitForDisplayed(this.bookSkeleton, 30000, true)
         res = this.get_PageData();
         res.pageStatus = pageStatus;
         return res;

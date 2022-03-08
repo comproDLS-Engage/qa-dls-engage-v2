@@ -79,6 +79,7 @@ module.exports = {
     getUnitsData: function (str) {
         logger.logInto(stackTrace.get());
         let list, i, arr = [];
+        action.waitForDisplayed(this.unitSkeleton);
         action.waitForDisplayed(this.unitSkeleton, undefined, true);
         list = action.findElements(this.unit);
         if (str) {
