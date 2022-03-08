@@ -1,0 +1,102 @@
+{
+    "Suite9": {
+        "Name": "UI validation of student experience with no books and classes",
+        "TestCaseRepo": [
+            "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
+        ],
+        "Before": [
+            {
+                "id": "launchUrl",
+                "description": "",
+                "testFile": "./engageAutomation/core/runner/launchUrl.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_LAND_TC_1",
+                "description": "Landing page",
+                "testFile": "./test/engageExperienceApp/landing.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_LAND_TC_3",
+                "description": "Login Page",
+                "testFile": "./test/engageExperienceApp/landing.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_IDEN_TC_7",
+                "description": "Dashboard Page",
+                "testFile": "./test/engageExperienceApp/login.test.js",
+                "visualTest": true,
+                "visualTolerance": 0.08,
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+                        "jsonPath": "engage.login.user.validStudent4"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_DIF_TC_19",
+                "description": "Classes page",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.1,
+                "testData": []
+            }
+        ],
+        "BeforeEach": [],
+        "Test": [
+            {
+                "id": "ENG_DIF_TC_999",
+                "description": "Launch native LO",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.01,
+                "testData": []
+            },
+            {
+                "id": "ENG_DIF_TC_998",
+                "description": "Perform question1",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.01,
+                "testData": []
+            },
+            {
+                "id": "ENG_DIF_TC_997",
+                "description": "Perform question2",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.01,
+                "testData": []
+            },
+            {
+                "id": "ENG_DIF_TC_996",
+                "description": "Perform question3",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.01,
+                "testData": []
+            },
+            {
+                "id": "ENG_DIF_TC_995",
+                "description": "Submit activity and relaunch",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.01,
+                "testData": []
+            }
+        ],
+        "AfterEach": [],
+        "After": [
+            {
+                "id": "ENG_DIF_TC_994",
+                "description": "Reset and go back",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.01,
+                "testData": []
+            },
+            {
+                "id": "ENG_DIF_TC_34",
+                "description": "Signout of the app",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "testData": []
+            }
+        ]
+    }
+}
