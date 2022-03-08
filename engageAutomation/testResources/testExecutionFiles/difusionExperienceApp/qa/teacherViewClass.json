@@ -24,7 +24,7 @@
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
-                  "jsonPath": "engage.login.user.classInstructorUser3"
+                  "jsonPath": "engage.login.user.classInstructorUser5"
                }
             ]
          },
@@ -44,7 +44,7 @@
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
-                  "jsonPath": "engage.login.user.classInstructorUser3.class[0].name"
+                  "jsonPath": "engage.login.user.classInstructorUser5.class[0].name"
                }
             ]
          }
@@ -91,7 +91,7 @@
                },
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
-                  "jsonPath": "engage.login.user.classInstructorUser3"
+                  "jsonPath": "engage.login.user.classInstructorUser5"
                }
             ]
          },
@@ -128,7 +128,7 @@
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
-                  "jsonPath": "engage.login.user.classInstructorUser3"
+                  "jsonPath": "engage.login.user.classInstructorUser5"
                }
             ]
          },
@@ -148,7 +148,7 @@
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
-                  "jsonPath": "engage.login.user.classInstructorUser3.class[1].name"
+                  "jsonPath": "engage.login.user.classInstructorUser5.class[1].name"
                }
             ]
          },
@@ -195,7 +195,7 @@
                },
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
-                  "jsonPath": "engage.login.user.classInstructorUser3"
+                  "jsonPath": "engage.login.user.classInstructorUser5"
                }
             ]
          },
@@ -232,7 +232,7 @@
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
-                  "jsonPath": "engage.login.user.classInstructorUser3"
+                  "jsonPath": "engage.login.user.classInstructorUser5"
                }
             ]
          },
@@ -252,7 +252,7 @@
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
-                  "jsonPath": "engage.login.user.classInstructorUser3.class[2].name"
+                  "jsonPath": "engage.login.user.classInstructorUser5.class[2].name"
                }
             ]
          },
@@ -297,7 +297,7 @@
                },
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
-                  "jsonPath": "engage.login.user.classInstructorUser3"
+                  "jsonPath": "engage.login.user.classInstructorUser5"
                }
             ]
          },
