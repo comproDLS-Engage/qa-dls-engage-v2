@@ -78,6 +78,11 @@ module.exports = {
 	topsbottomOption: selectorFile.css.editorTab.topsbottomOption,
 	leftRightOption: selectorFile.css.editorTab.leftRightOption,
 	scoreInputBox: selectorFile.css.editorTab.scoreInputBox,
+	uniqueOption: selectorFile.css.editorTab.fibdropdown.uniqueOption,
+	commonOption: selectorFile.css.editorTab.fibdropdown.commonOption,
+	inputOption: selectorFile.css.editorTab.fibdropdown.inputOption,
+	responseOption: selectorFile.css.editorTab.fibdropdown.responseOption,
+	addAnswerbtn:selectorFile.css.editorTab.addAnswerbtn,
 	//--MULTIPLE RESPONSE
 	isInitialized1: function (testdata) {
 		for (var i = 0; i < testdata.length; i++) {
@@ -91,12 +96,12 @@ module.exports = {
 	setScorePlaceHolder: function (testdata) {
 		logger.logInto(stackTrace.get());
 		res = action.waitForDisplayed(this.scoreInputBox);
-		if (res == true) 
+		if (res == true)
 			res = action.setValue(this.scoreInputBox, testdata)
-			browser.pause(2000)
-			if (res == true) {
-				logger.logInto(stackTrace.get(), " -- Value is added in Score");
-			}
+		browser.pause(2000)
+		if (res == true) {
+			logger.logInto(stackTrace.get(), " -- Value is added in Score");
+		}
 		else {
 			res = res + " -- Error in Value added in Score";
 			logger.logInto(stackTrace.get(), res, 'error');
@@ -134,6 +139,65 @@ module.exports = {
 		else {
 			res = res + " -- next button is not clickable";
 			logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
+	clickUniqueOption: function () {
+		logger.logInto(stackTrace.get());
+		res = action.click(this.uniqueOption);
+		if (res == true) {
+			res = res + " -- unique Option button is not clickable";
+			browser.pause(2000)
+			action.click("div[class*=MuiDialogActions-spacing] button:nth-child(2)")
+			browser.pause(5000)
+		}
+		else {
+			res = res + " -- unique Option button is not clickable";
+			logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
+	clickCommonOption: function () {
+		logger.logInto(stackTrace.get());
+		res = action.click(this.commonOption);
+		if (res == true) {
+			browser.pause(2000)
+			
+			res = res + " -- common Option button is  clickable";
+			res=action.click("[data-tid=button-agree]")
+			
+		}
+		else {
+			res = res + " -- common Option button is not clickable";
+			logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
+
+	setinputOptionText: function (testdata) {
+		logger.logInto(stackTrace.get());
+		for (var i = 0; i < testdata.length; i++) {
+			var inputSelector = this.inputOption + testdata[i][0] +"] input "
+			res = action.setValue(inputSelector, testdata[i][1])
+			if (res == true) {
+				logger.logInto(stackTrace.get(), " -- input Value Data is added");
+			}
+			else
+				logger.logInto(stackTrace.get(), " -- input Value Data is not added");
+		}
+		return res;
+	},
+	setresponseOptionText: function (testdata) {
+		logger.logInto(stackTrace.get());
+		for (var i = 0; i < testdata.length; i++) {
+			var responseSelector = this.responseOption + testdata[i][0] +"] div[id=simple-select]"
+			res = action.click(responseSelector)
+			if (res == true) {
+				action.click("li[data-value="+testdata[i][1])
+				logger.logInto(stackTrace.get(), " -- input Value Data is added");
+			}
+			else
+				logger.logInto(stackTrace.get(), " -- input Value Data is not added");
 		}
 		return res;
 	},
@@ -231,7 +295,6 @@ module.exports = {
 	},
 	clickeditSubQuestionbtn: function (testdata) {
 		logger.logInto(stackTrace.get());
-		console.log(this.editSubQuestion_btn + testdata + "]")
 		res = action.waitForClickable(this.editSubQuestion_btn + testdata + "]>span:nth-child(1)");
 		if (res == true) {
 			res = action.click(this.editSubQuestion_btn + testdata + "]>span:nth-child(1)");
@@ -988,6 +1051,19 @@ module.exports = {
 		logger.logInto(stackTrace.get());
 		action.waitForDisplayed(this.addAnswer_btn);
 		res = action.click(this.addAnswer_btn);
+		if (res == true) {
+			logger.logInto(stackTrace.get(), " -- Add Answer Button is clicked");
+		}
+		else {
+			res = res + " -- Error in clicking Add Answer button";
+			logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
+	clickAddAnswerBtnComman: function (testdata) {
+		logger.logInto(stackTrace.get());
+		action.waitForDisplayed(this.addAnswerbtn);
+		res = action.click(this.addAnswerbtn);
 		if (res == true) {
 			logger.logInto(stackTrace.get(), " -- Add Answer Button is clicked");
 		}

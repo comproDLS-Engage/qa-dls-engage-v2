@@ -430,4 +430,24 @@ module.exports = {
 		sts = EditorPlayer.setScorePlaceHolder(testdata)
 		assertion.assertEqual(sts, true, "Left Right option button clicked");
 	},
+	ASE_COM_TC_1013: function () {
+		sts = EditorPlayer.clickAddAnswerBtnComman()
+		assertion.assertEqual(sts, true, "Add Answer button clicked");
+	},
+	ASE_FIBDROPDOWN_TC_1013: function (testdata) {
+		sts = EditorPlayer.clickUniqueOption(testdata)
+		assertion.assertEqual(sts, true, "unique option button clicked");
+	},
+	ASE_FIBDROPDOWN_TC_1014: function () {
+		sts = EditorPlayer.clickCommonOption()
+		assertion.assertEqual(sts, true, "common option button clicked");
+	},
+	ASE_FIBDROPDOWN_TC_1015: function (testdata) {
+		sts = EditorPlayer.setinputOptionText(testdata)
+		assertion.assertEqual(sts, true, "input option is not added");
+	},
+	ASE_FIBDROPDOWN_TC_1016: function (testdata) {
+		sts = EditorPlayer.setresponseOptionText(testdata)
+		assertion.assertEqual(sts, true, "response option is not added");
+	},
 }

@@ -159,6 +159,45 @@
           ]
         }
       ],
+      "FIBDropdown": [
+        {
+          "question1": {
+          "questionIndex": 7,
+          "buttonName": "fibdropdown",
+          "questionTitle": "FIB Questions with unique answers",
+          "score":"5",
+          "questionInstruction": "Fill the blanks with the correct options.",
+          "questionText": "1. The capital of India is {{Blank:A}}\n 2. {{Blank:B}} was the father of Humayu.\n 3. Taj Mahal was built by {{Blank:C}}",
+         "options":[
+         [ "A-O1" , "New Delhi"], 
+         [ "A-O2" , "Bombay"], 
+         ["B-O3" , "Akbar"], 
+         ["B-O4" , "Babar"],
+         ["C-O5" , "Jahangir"], 
+         ["C-O6" , "Shah Jahan"]
+          ]
+        },
+      "question2": {
+        "questionIndex": 7,
+          "buttonName": "fibdropdown",
+          "questionTitle": "FIB Questions with common answers",
+          "score":"5",
+          "questionInstruction": "Fill the blanks with the correct options.",
+          "questionText": "1. There was {{Blank:A}} crow in the garden.  \n 2. My brother is {{Blank:B}} lawyer. \n  3. He lives in {{Blank:C}} USA. \n 4. {{Blank:D}} apple a day, keeps {{Blank:E}} doctor away.",
+          "options":[
+          ["O1" , "a"], 
+          ["O2" , "an"],
+          ["O3" , "the"]
+          ],
+          "response":
+          [ ["A" , "O3"], 
+           [ "B" , "O1"],
+           [ "C" , "O3"],
+            ["D" , "O2"], 
+            ["E" , "O3"]]
+      }
+    }
+      ],
       "Ordering": [
         {
           "questionIndex": 8,
