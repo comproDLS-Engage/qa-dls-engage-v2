@@ -839,7 +839,7 @@
                     "resourceLabel": "Download Resource",
                     "downPlayer_subtitle": "Download file to view this resource on your computer.",
                     "downloadBtn": [
-                        "Download Word",
+                        "Download Document",
                         "Download ZIP",
                         "Download PDF",
                         "Download Excel"

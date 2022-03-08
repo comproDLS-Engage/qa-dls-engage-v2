@@ -562,7 +562,9 @@ module.exports = {
     logger.logInto(stackTrace.get());
     var i, res;
     var resourceTitle = action.findElements(this.resourceTitle);
+    console.log(resourceTitleName)
     for (i = 0; i < resourceTitle.length; i++) {
+      console.log(action.getText(resourceTitle[i]))
       if ((action.getText(resourceTitle[i])) == resourceTitleName) {
         res = action.click(resourceTitle[i]);
         break;
