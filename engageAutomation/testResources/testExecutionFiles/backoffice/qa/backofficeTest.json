@@ -20,7 +20,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/logindata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/logindata.json",
 						"jsonPath": "backoffice.user.validUser1"
 					}
 				]
@@ -31,7 +31,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.book[0]"
 					}
 				]
@@ -42,7 +42,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.book[0]"
 					}
 				]
@@ -90,7 +90,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/logindata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/logindata.json",
 						"jsonPath": "backoffice.user.validUser1"
 					}
 				]
@@ -101,7 +101,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.book[0]"
 					}
 				]
@@ -112,7 +112,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.book[0]"
 					}
 				]
@@ -123,7 +123,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.component[0]"
 					}
 				]
@@ -134,7 +134,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.component[0]"
 					}
 				]
@@ -145,7 +145,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.component[1]"
 					}
 				]
@@ -156,7 +156,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.component[1]"
 					}
 				]
@@ -167,7 +167,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.component[2]"
 					}
 				]
@@ -178,7 +178,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.component[2]"
 					}
 				]
@@ -212,7 +212,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/logindata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/logindata.json",
 						"jsonPath": "backoffice.user.validUser1"
 					}
 				]
@@ -223,7 +223,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.book[0]"
 					}
 				]
@@ -237,7 +237,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.component[0]"
 					}
 				]
@@ -254,7 +254,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.folder[0]"
 					}
 				]
@@ -265,7 +265,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.folder[0].name"
 					}
 				]
@@ -282,7 +282,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.folder[1]"
 					}
 				]
@@ -293,7 +293,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.folder[1].name"
 					}
 				]
@@ -328,7 +328,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/logindata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/logindata.json",
 						"jsonPath": "backoffice.user.validUser1"
 					}
 				]
@@ -339,7 +339,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.book[0]"
 					}
 				]
@@ -350,7 +350,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.component[0]"
 					}
 				]
@@ -361,7 +361,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.folder[0].name"
 					}
 				]
@@ -372,7 +372,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.folder[1].name"
 					}
 				]
@@ -386,7 +386,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.activity[0]"
 					}
 				]
@@ -397,7 +397,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.activity[0]"
 					}
 				]
@@ -408,7 +408,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.activity[0]"
 					}
 				]
@@ -1536,7 +1536,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/logindata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/logindata.json",
 						"jsonPath": "backoffice.user.validUser1"
 					}
 				]
@@ -1547,7 +1547,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.book[0]"
 					}
 				]
@@ -1558,7 +1558,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.component[0]"
 					}
 				]
@@ -1569,7 +1569,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.folder[0].name"
 					}
 				]
@@ -1580,7 +1580,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.folder[1].name"
 					}
 				]
@@ -1594,7 +1594,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.activity[0]"
 					}
 				]
@@ -1884,7 +1884,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/logindata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/logindata.json",
 						"jsonPath": "backoffice.user.validUser1"
 					}
 				]
@@ -1895,7 +1895,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.book[0]"
 					}
 				]
@@ -1906,7 +1906,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.component[0]"
 					}
 				]
@@ -1917,7 +1917,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.folder[0].name"
 					}
 				]
@@ -1928,7 +1928,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.folder[1].name"
 					}
 				]
@@ -1942,7 +1942,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.activity[2]"
 					}
 				]
@@ -1953,7 +1953,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.activity[2]"
 					}
 				]
@@ -1964,7 +1964,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.activity[2]"
 					}
 				]
@@ -1975,7 +1975,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.activity[2]"
 					}
 				]
@@ -2010,7 +2010,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/logindata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/logindata.json",
 						"jsonPath": "backoffice.user.validUser1"
 					}
 				]
@@ -2021,7 +2021,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.book[0]"
 					}
 				]
@@ -2032,7 +2032,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.component[0]"
 					}
 				]
@@ -2043,7 +2043,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.folder[0].name"
 					}
 				]
@@ -2054,7 +2054,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.folder[1].name"
 					}
 				]
@@ -2068,7 +2068,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.activity[1]"
 					}
 				]
@@ -2079,7 +2079,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.activity[1]"
 					}
 				]
@@ -2090,7 +2090,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.activity[1]"
 					}
 				]
@@ -2203,7 +2203,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/logindata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/logindata.json",
 						"jsonPath": "backoffice.user.validUser1"
 					}
 				]
@@ -2214,7 +2214,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.book[0]"
 					}
 				]
@@ -2225,7 +2225,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.component[0]"
 					}
 				]
@@ -2236,7 +2236,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.folder[0].name"
 					}
 				]
@@ -2247,7 +2247,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.folder[1].name"
 					}
 				]
@@ -2261,7 +2261,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.activity[0]"
 					}
 				]
@@ -2278,7 +2278,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.activity[1]"
 					}
 				]
@@ -2295,7 +2295,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.activity[2]"
 					}
 				]
@@ -2318,7 +2318,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.folder[1]"
 					}
 				]
@@ -2341,7 +2341,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.folder[0]"
 					}
 				]
@@ -2358,7 +2358,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.component[0]"
 					}
 				]
@@ -2375,7 +2375,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.component[1]"
 					}
 				]
@@ -2386,7 +2386,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.component[1]"
 					}
 				]
@@ -2403,7 +2403,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.component[2]"
 					}
 				]
@@ -2414,7 +2414,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.component[2]"
 					}
 				]
@@ -2454,7 +2454,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/logindata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/logindata.json",
 						"jsonPath": "backoffice.user.validUser1"
 					}
 				]
@@ -2465,7 +2465,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.book[0]"
 					}
 				]
@@ -2479,7 +2479,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.book[0]"
 					}
 				]
