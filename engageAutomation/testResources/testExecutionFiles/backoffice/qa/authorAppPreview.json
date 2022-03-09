@@ -2,7 +2,7 @@
     "Suite1": {
         "Name": "Preview of native LO with all item players in assessment author app",
         "TestCaseRepo": [
-			"./testResources/testcaseRepository/backOffice/backOfficeTCRepository.json",
+			"./testResources/testcaseRepository/backoffice/backofficeTCRepository.json",
 			"./testResources/testcaseRepository/assessmentEditor/editorTCRepository.json",
             "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
 		],

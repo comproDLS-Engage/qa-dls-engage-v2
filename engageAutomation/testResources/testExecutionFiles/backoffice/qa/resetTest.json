@@ -2,7 +2,7 @@
 	"Suite1": {
 		"Name": "Deletion of the activity",
 		"TestCaseRepo": [
-			"./testResources/testcaseRepository/backOffice/backOfficeTCRepository.json"
+			"./testResources/testcaseRepository/backoffice/backofficeTCRepository.json"
 		],
 		"Before": [
 			{
@@ -100,7 +100,7 @@
 	"Suite2": {
 		"Name": "Creation of a native LO with all item players",
 		"TestCaseRepo": [
-			"./testResources/testcaseRepository/backOffice/backOfficeTCRepository.json",
+			"./testResources/testcaseRepository/backoffice/backofficeTCRepository.json",
 			"./testResources/testcaseRepository/assessmentEditor/editorTCRepository.json"
 		],
 		"Before": [
@@ -916,7 +916,7 @@
 	"Suite3": {
 		"Name": "Save native LO",
 		"TestCaseRepo": [
-			"./testResources/testcaseRepository/backOffice/backOfficeTCRepository.json",
+			"./testResources/testcaseRepository/backoffice/backofficeTCRepository.json",
 			"./testResources/testcaseRepository/assessmentEditor/editorTCRepository.json"
 		],
 		"Before": [

@@ -2,7 +2,7 @@
 	"Suite1": {
 		"Name": "Create snapshot and preview Engage and Publish component",
 		"TestCaseRepo": [
-			"./testResources/testcaseRepository/backoffice/backOfficeTCRepository.json",
+			"./testResources/testcaseRepository/backoffice/backofficeTCRepository.json",
 			"./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
 		],
 		"Before": [

@@ -2,7 +2,7 @@
 	"Suite1": {
 		"Name": "Republish activities",
 		"TestCaseRepo": [
-			"./testResources/testcaseRepository/backOffice/backOfficeTCRepository.json"
+			"./testResources/testcaseRepository/backoffice/backofficeTCRepository.json"
 		],
 		"Before": [
 			{

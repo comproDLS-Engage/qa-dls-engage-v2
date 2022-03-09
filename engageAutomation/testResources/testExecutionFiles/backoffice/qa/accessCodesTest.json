@@ -2,7 +2,7 @@
     "Suite5": {
 		"Name": "Create and view access codes batch",
 		"TestCaseRepo": [
-			"./testResources/testcaseRepository/backOffice/backOfficeTCRepository.json"
+			"./testResources/testcaseRepository/backoffice/backofficeTCRepository.json"
 		],
 		"Before": [
 			{
@@ -73,7 +73,7 @@
 	"Suite5t": {
 		"Name": "Create and view access codes batch",
 		"TestCaseRepo": [
-			"./testResources/testcaseRepository/backOffice/backOfficeTCRepository.json"
+			"./testResources/testcaseRepository/backoffice/backofficeTCRepository.json"
 		],
 		"Before": [
 			{

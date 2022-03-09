@@ -2,7 +2,7 @@
 	"Suite1": {
 		"Name": "Creation of a book",
 		"TestCaseRepo": [
-			"./testResources/testcaseRepository/backOffice/backOfficeTCRepository.json"
+			"./testResources/testcaseRepository/backoffice/backofficeTCRepository.json"
 		],
 		"Before": [
 			{
@@ -72,7 +72,7 @@
 	"Suite2": {
 		"Name": "Creation of a components in the book",
 		"TestCaseRepo": [
-			"./testResources/testcaseRepository/backOffice/backOfficeTCRepository.json"
+			"./testResources/testcaseRepository/backoffice/backofficeTCRepository.json"
 		],
 		"Before": [
 			{
@@ -197,7 +197,7 @@
 	"Suite3": {
 		"Name": "Creation of folders",
 		"TestCaseRepo": [
-			"./testResources/testcaseRepository/backOffice/backOfficeTCRepository.json"
+			"./testResources/testcaseRepository/backoffice/backofficeTCRepository.json"
 		],
 		"Before": [
 			{
@@ -312,7 +312,7 @@
 	"Suite4a": {
 		"Name": "Creation of a native LO with all item players",
 		"TestCaseRepo": [
-			"./testResources/testcaseRepository/backOffice/backOfficeTCRepository.json",
+			"./testResources/testcaseRepository/backoffice/backofficeTCRepository.json",
 			"./testResources/testcaseRepository/assessmentEditor/editorTCRepository.json"
 		],
 		"Before": [
@@ -1520,7 +1520,7 @@
 	"Suite4b": {
 		"Name": "Edit native LO with all item players",
 		"TestCaseRepo": [
-			"./testResources/testcaseRepository/backOffice/backOfficeTCRepository.json",
+			"./testResources/testcaseRepository/backoffice/backofficeTCRepository.json",
 			"./testResources/testcaseRepository/assessmentEditor/editorTCRepository.json"
 		],
 		"Before": [
@@ -1868,7 +1868,7 @@
 	"Suite4c": {
 		"Name": "Creation of an LO linked from Library",
 		"TestCaseRepo": [
-			"./testResources/testcaseRepository/backOffice/backOfficeTCRepository.json",
+			"./testResources/testcaseRepository/backoffice/backofficeTCRepository.json",
 			"./testResources/testcaseRepository/assessmentEditor/editorTCRepository.json"
 		],
 		"Before": [
@@ -1994,7 +1994,7 @@
 	"Suite4d": {
 		"Name": "Creation of an open ended LO - writing player",
 		"TestCaseRepo": [
-			"./testResources/testcaseRepository/backOffice/backOfficeTCRepository.json",
+			"./testResources/testcaseRepository/backoffice/backofficeTCRepository.json",
 			"./testResources/testcaseRepository/assessmentEditor/editorTCRepository.json"
 		],
 		"Before": [
@@ -2188,7 +2188,7 @@
 	"Suite6": {
 		"Name": "Deletion of delete activity, folders and components",
 		"TestCaseRepo": [
-			"./testResources/testcaseRepository/backOffice/backOfficeTCRepository.json"
+			"./testResources/testcaseRepository/backoffice/backofficeTCRepository.json"
 		],
 		"Before": [
 			{
@@ -2439,7 +2439,7 @@
 	"Suite7": {
 		"Name": "Deletion of the book",
 		"TestCaseRepo": [
-			"./testResources/testcaseRepository/backOffice/backOfficeTCRepository.json"
+			"./testResources/testcaseRepository/backoffice/backofficeTCRepository.json"
 		],
 		"Before": [
 			{
