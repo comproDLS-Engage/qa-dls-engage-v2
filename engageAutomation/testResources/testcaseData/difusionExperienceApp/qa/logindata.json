@@ -236,6 +236,27 @@
                     ],
                     "info": {}
                 },
+                "classInstructorUser5": {
+                    "email": "qa_teacher1@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "instructor",
+                    "name": "qa teacher9",
+                    "class": [
+                        {
+                            "key": "TFbA-6AP7",
+                            "name": "class2"
+                        },
+                        {
+                            "key": "TFbA-6AP7",
+                            "name": "class1"
+                        },
+                        {
+                            "key": "TFbA-6AP7",
+                            "name": "class3"
+                        }
+                    ],
+                    "info": {}
+                },
                 "classInstructorUser4": {
                     "email": "4-teacher@yopmail.com",
                     "password": "Compro@1234",
