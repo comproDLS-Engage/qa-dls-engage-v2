@@ -4,7 +4,7 @@
             {
                 "type": "Book",
                 "name": "QA Test Book v0.10",
-                "coverImage": "./testResources/testcaseData/backOffice/qa/book_cover_compro_qa.png",
+                "coverImage": "./testResources/testcaseData/backoffice/qa/book_cover_compro_qa.png",
                 "description": ""
             }
         ],

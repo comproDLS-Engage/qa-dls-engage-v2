@@ -4,7 +4,7 @@
             {
                 "type": "BOOK",
                 "name": "QA Test Automation Book [DO NOT PUBLISH]",
-                "coverImage": "./testResources/testcaseData/backOffice/qa/book_cover_compro_qa.png",
+                "coverImage": "./testResources/testcaseData/backoffice/qa/book_cover_compro_qa.png",
                 "description": "QA automation test description",
                 "bookDesign": "Green",
                 "visibility": "True"
@@ -42,7 +42,7 @@
         "folder": [
             {
                 "name": "QA Automation Test folder L1",
-                "coverImage": "./testResources/testcaseData/backOffice/qa/book_cover_compro_qa.png",
+                "coverImage": "./testResources/testcaseData/backoffice/qa/book_cover_compro_qa.png",
                 "targetRole": "All",
                 "assignable": "True",
                 "color": "#d20f0f",
@@ -50,7 +50,7 @@
             },
             {
                 "name": "QA Automation Test folder L2",
-                "coverImage": "./testResources/testcaseData/backOffice/qa/book_cover_compro_qa.png",
+                "coverImage": "./testResources/testcaseData/backoffice/qa/book_cover_compro_qa.png",
                 "targetRole": "All",
                 "assignable": "True",
                 "color": "#158e19",
