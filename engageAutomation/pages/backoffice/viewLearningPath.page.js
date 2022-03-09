@@ -20,6 +20,13 @@ module.exports = {
     itemCheckboxes: selectorFile.viewLearningPathPage.itemCheckboxes,
     activityMenuActivityAuthorBtn: selectorFile.viewLearningPathPage.activityMenuActivityAuthorBtn,
     modifyFolderOptionsBtn: selectorFile.viewLearningPathPage.modifyFolderOptionsBtn,
+    levels: selectorFile.viewLearningPathPage.levels,
+    autonumbering: selectorFile.viewLearningPathPage.autonumbering,
+    category: selectorFile.viewLearningPathPage.category,
+    visibility: selectorFile.viewLearningPathPage.visibility,
+    targetRole: selectorFile.viewLearningPathPage.targetRole,
+    assignable: selectorFile.viewLearningPathPage.assignable,
+    seeMoreLessBtn: selectorFile.common.seeMoreLessBtn,
 
     isInitialized: function () {
         logger.logInto(stackTrace.get());
@@ -28,6 +35,20 @@ module.exports = {
         action.waitForDisplayed(this.loadingContainer, undefined, true);
         let res = action.waitForDisplayed(this.deleteComponentBtn);
         return res;
+    },
+
+    getComponentParamDetails: function () {
+        logger.logInto(stackTrace.get());
+        action.click(this.seeMoreLessBtn);
+        var obj = {
+			levels: (action.getElementCount(this.levels) > 0) ? action.getText(this.levels) : false,
+			autonumbering: (action.getElementCount(this.autonumbering) > 0) ? action.getText(this.autonumbering) : null,
+			category: (action.getElementCount(this.category) > 0) ? action.getText(this.category) : null,
+            visibility: (action.getElementCount(this.visibility) > 0) ? action.getText(this.visibility) : null,
+            targetRole: (action.getElementCount(this.targetRole) > 0) ? action.getText(this.targetRole) : null,
+            assignable: (action.getElementCount(this.assignable) > 0) ? action.getText(this.assignable) : null
+		};
+		return obj;
     },
 
     click_AddFolder_Button: function () {

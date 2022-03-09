@@ -56,8 +56,12 @@ module.exports = {
 
 	// Validate that the view book page is launched on clicking the book card on the home page
 	BK_TC_4: function (testdata) {
-		sts = homePage.click_Book(testdata);
-		assertion.assert(sts.includes(testdata), "Book title mismatch. " + sts);
+		sts = homePage.click_Book(testdata.name);
+		assertion.assert(sts.includes(testdata.name), "Book title mismatch. " + sts);
+		sts = viewBookPage.getBookParamDetails();
+		assertion.assertEqual(sts.description, testdata.description, "book description mismatch");
+		assertion.assertEqual(sts.bookDesign, testdata.bookDesign, "book design mismatch");
+		assertion.assertEqual(sts.visibility, testdata.visibility, "book visibility mismatch");
 	},
 
 	// Validate that the delete book dialog box opens on clicking delete button on the components page
@@ -113,8 +117,15 @@ module.exports = {
 
 	// Validate that the component details page is launched on clicking the component card
 	BK_TC_10: function (testdata) {
-		sts = viewBookPage.click_Component(testdata);
+		sts = viewBookPage.click_Component(testdata.title);
 		assertion.assertEqual(sts, true, "Learning Path page status mismatch");
+		sts = viewLearningPathPage.getComponentParamDetails();
+		assertion.assertEqual(sts.levels, testdata.folderLevel, "component levels mismatch");
+		assertion.assertEqual(sts.autonumbering, testdata.autonumbering, "component design mismatch");
+		assertion.assertEqual(sts.category, testdata.category, "component category mismatch");
+		assertion.assertEqual(sts.visibility, testdata.visibility, "component visibility mismatch");
+		assertion.assertEqual(sts.targetRole, testdata.targetRole, "component targetRole mismatch");
+		assertion.assertEqual(sts.assignable, testdata.assignable, "component assignable mismatch");
 	},
 
 	// Validate that add folder page opens on clicking the add folder button

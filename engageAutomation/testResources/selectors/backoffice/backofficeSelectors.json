@@ -31,7 +31,8 @@
 		"proceedBtn": "[data-tid=button-item-type-launch]",
 		"buttonLoader": "[class=c-button__spinner]",
 		"emptyStateBtn": "[class*=c-empty-state-button]",
-		"publishBtn": "[data-tid=button-publish-book-component]"
+		"publishBtn": "[data-tid=button-publish-book-component]",
+		"seeMoreLessBtn": "[data-tid=button-see-more-less]"
 	},
 	"homePage": {
 		"headingText": "[class*=c-nav__heading-text]",
@@ -63,7 +64,10 @@
 		"componentList": "[data-tid*=button-component-detail] [class*=c-card__title]",
 		"addComponentBtn": "[data-tid='button-ADD COMPONENT'], [data-tid=button-add-component]",
 		"componentTypeList": "[data-tid*=input-select] [class*=c-list-item__primary-text]",
-		"deleteBookBtn": "[data-tid=button-book_delete]"
+		"deleteBookBtn": "[data-tid=button-book_delete]",
+		"description": "[data-tid=text-content-details-value-0]",
+		"bookDesign": "[data-tid=text-content-details-value-1]",
+		"visibility": "[data-tid=text-content-details-value-2]"
 	},
 	"addTitlePage": {
 		"nameTxtbox": "[id=book-title]",
@@ -104,7 +108,13 @@
 		"activityMenuActivityAuthorBtn": "[class*=mdc-menu-surface--open] [data-tid*=button-Activity]",
 		"itemCheckboxes": "[data-tid*=button-folder-details] > div > div",
 		"deleteItemBtn": "[id=deletSlectedItem]",
-		"modifyFolderOptionsBtn":"[data-tid=button-modify-folder-options]"
+		"modifyFolderOptionsBtn":"[data-tid=button-modify-folder-options]",
+		"levels": "[data-tid=text-content-details-value-0]",
+		"autonumbering": "[data-tid=text-content-details-value-1]",
+		"category": "[data-tid=text-content-details-value-2]",
+		"visibility": "[data-tid=text-content-details-value-3]",
+		"targetRole": "[data-tid=text-content-details-value-4]",
+		"assignable": "[data-tid=text-content-details-value-5]"
 	},
 	"addFolderPage": {
 		"nameTxtbox": "[id=folder-title]",
