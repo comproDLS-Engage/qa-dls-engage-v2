@@ -32,7 +32,8 @@
 		"buttonLoader": "[class=c-button__spinner]",
 		"emptyStateBtn": "[class*=c-empty-state-button]",
 		"publishBtn": "[data-tid=button-publish-book-component]",
-		"seeMoreLessBtn": "[data-tid=button-see-more-less]"
+		"seeMoreLessBtn": "[data-tid=button-see-more-less]",
+		"appVersion": "[class*=version]"
 	},
 	"homePage": {
 		"headingText": "[class*=c-nav__heading-text]",
@@ -87,13 +88,15 @@
 		"lpLevelsList": "[class*=mdc-menu-surface--open] [class*=mdc-list-item__text]",
 		"autonumberingDropdown": "[class=c-form-section] > div:nth-child(4) > div",
 		"autonumberingList": "[class*=mdc-menu-surface--open] [class*=mdc-list-item__text]",
-		"addBtn": "[class*=c-form] button[class*=action-button-padding]",
+		"addBtn": "[class*=c-action-button] [data-tid=button-add-component]",
 		"visibilityDropdown": "[class=c-form-section] > div:nth-child(6) > div",
 		"visibilityList": "[class*=mdc-menu-surface--open] [class*=mdc-list-item__text]",
 		"targetRoleDropdown": "[class=c-form-section] > div:nth-child(7) > div",
 		"targetRoleList": "[class*=mdc-menu-surface--open] [class*=mdc-list-item__text]",
 		"assignableDropdown": "[class=c-form-section] > div:nth-child(8) > div",
-		"assignableList": "[class*=mdc-menu-surface--open] [class*=mdc-list-item__text]"
+		"assignableList": "[class*=mdc-menu-surface--open] [class*=mdc-list-item__text]",
+		"enableTrackingDropdown": "[id=enable-progress-tracking]",
+		"enableTrackingList": "[class*=mdc-menu-surface--open] [data-tid*=text-]"
 	},
 	"viewLearningPathPage": {
 		"folderList": "[data-tid*=button-folder-details] [class=c-list-item__primary-text]",
@@ -102,7 +105,7 @@
 		"addActivityBtn": "[data-tid='button-ADD COMPONENT']",
 		"deleteComponentBtn": "[data-tid=button-delete-component]",
 		"activityCategoryList": "[class=c-list-primary-text]",
-		"activityTypeList": "[class=c-radio-label]",
+		"activityTypeList": "[data-tid*=input-category-] > span",
 		"activityMenuBtn": "[data-tid=button-display-activity-menu]",
 		"activityMenuDeleteBtn": "[class*=mdc-menu-surface--open] [data-tid=button-Delete]",
 		"activityMenuActivityAuthorBtn": "[class*=mdc-menu-surface--open] [data-tid*=button-Activity]",
@@ -131,7 +134,8 @@
 		"completionCheckBox" : "[class=c-form-section__completion-container] [class*=c-form-section__completion-checkbox]",
 		"scoreCheckBox" :"[class=c-form-section__score-container] [class*=c-form-section__completion-checkbox]",
 		"targetRoleDropdown" : "[id=target-role]",
-		"assignableDropdown" :"[id=assignability]"
+		"assignableDropdown" :"[id=assignability]",
+		"loUploadBtn": "[data-tid=input-lo-upload]"
 	},
 	"publishComponentPage": {
 		"snapshotBtn": "[data-tid*='button-Create New Snapshot']",

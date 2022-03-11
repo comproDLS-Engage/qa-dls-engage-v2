@@ -12,6 +12,7 @@ module.exports = {
     scoreCheckBox: selectorFile.addActivityPage.scoreCheckBox,
     targetRoleDropdown: selectorFile.addActivityPage.targetRoleDropdown,
     assignableDropdown: selectorFile.addActivityPage.assignableDropdown,
+    loUploadBtn: selectorFile.addActivityPage.loUploadBtn,
 
     isInitialized: function () {
         return addFolderPage.isInitialized();
@@ -100,6 +101,20 @@ module.exports = {
 
     set_Page_Reference: function (value) {
         return addFolderPage.set_Page_Reference(value);
-    }
+    },
+
+    uploadFile: function (path) {
+        logger.logInto(stackTrace.get());
+        if (path == "" || path == undefined)
+            res = true;
+        else {
+            res = action.uploadFile(path);
+            if ((typeof res) === 'string') {
+                res = action.setValue(this.loUploadBtn, res);
+            }
+            logger.logInto(stackTrace.get(), res);
+        }
+        return res;
+    },
 
 }

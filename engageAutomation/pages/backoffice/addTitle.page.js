@@ -76,13 +76,13 @@ module.exports = {
             res = true;
         else {
             res = action.click(this.bookDesignDropdown);
-            action.waitForDisplayed(this.bookDesignList);
+            action.waitForDisplayed(this.bookDesignList, undefined, undefined, undefined, 500);
             if (res == true) {
                 let i, list;
                 list = action.findElements(this.bookDesignList);
                 for (i = 0; i < list.length; i++) {
                     if (action.getText(list[i]).includes(name)) {
-                        res = action.click(action.parentElement(list[i]));
+                        res = action.click(list[i]);
                         break;
                     }
                     res = "book design not found ";
@@ -100,13 +100,13 @@ module.exports = {
             res = true;
         else {
             res = action.click(this.bookVisibilityDropdown);
-            action.waitForDisplayed(this.bookVisibilityList);
+            action.waitForDisplayed(this.bookVisibilityList, undefined, undefined, undefined, 500);
             if (res == true) {
                 let i, list;
                 list = action.findElements(this.bookVisibilityList);
                 for (i = 0; i < list.length; i++) {
                     if (action.getText(list[i]).includes(name)) {
-                        res = action.click(action.parentElement(list[i]));
+                        res = action.click(list[i]);
                         break;
                     }
                     res = "book visibility not found ";

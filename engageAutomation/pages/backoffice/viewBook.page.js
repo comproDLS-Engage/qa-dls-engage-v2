@@ -31,7 +31,7 @@ module.exports = {
         logger.logInto(stackTrace.get());
         action.click(this.seeMoreLessBtn);
         var obj = {
-			description: (action.getElementCount(this.description) > 0) ? action.getText(this.description) : false,
+			description: (action.getElementCount(this.description) > 0) ? action.getText(this.description) : null,
 			bookDesign: (action.getElementCount(this.bookDesign) > 0) ? action.getText(this.bookDesign) : null,
 			visibility: (action.getElementCount(this.visibility) > 0) ? action.getText(this.visibility) : null
 		};

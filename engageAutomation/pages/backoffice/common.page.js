@@ -28,7 +28,7 @@ module.exports = {
                 res = action.getText(this.snackbarLbl);
                 action.click(this.snackbarBtn);
             }
-            browser.pause(10000);
+            browser.pause(5000);
         }
         logger.logInto(stackTrace.get(), res);
         return res;
@@ -59,7 +59,7 @@ module.exports = {
         logger.logInto(stackTrace.get());
         res = action.click(this.breadcrumbLevel1);
         if (res == true) {
-            res = require('./componentList.page.js').isInitialized();
+            res = require('./viewBook.page.js').isInitialized();
         }
         logger.logInto(stackTrace.get(), res);
         return res;
@@ -69,7 +69,7 @@ module.exports = {
         logger.logInto(stackTrace.get());
         res = action.click(this.breadcrumbLevel2);
         if (res == true) {
-            res = require('./learningPath.page.js').isInitialized();
+            res = require('./viewLearningPath.page.js').isInitialized();
         }
         logger.logInto(stackTrace.get(), res);
         return res;
