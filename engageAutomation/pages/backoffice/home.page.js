@@ -33,12 +33,15 @@ module.exports = {
     searchBtn: selectorFile.homePage.searchBtn,
     bookIcon: selectorFile.homePage.bookIcon,
     globalResourceIcon: selectorFile.homePage.globalResourceIcon,
+    appVersion: selectorFile.common.appVersion,
 
     isInitialized: function () {
         logger.logInto(stackTrace.get());
         // /action.waitForDocumentLoad();
         action.waitForDisplayed(this.loadingContainer, undefined, true);
         res = action.waitForDisplayed(this.headingText);
+        if (global.appVersion == undefined)
+            global.appVersion = action.getText(this.appVersion);
         browser.pause(5000)
         return res;
     },
@@ -71,7 +74,7 @@ module.exports = {
         let i, list;
         list = action.findElements(this.titleTypeList);
         for (i = 0; i < list.length; i++) {
-            if (action.getAttribute(list[i],"data-value").includes(type)) {
+            if (action.getAttribute(list[i], "data-value").includes(type)) {
                 res = action.click(list[i]);
                 if (res == true) {
                     res = action.click(this.proceedBtn);

@@ -13,6 +13,10 @@ module.exports = {
     loadingContainer: selectorFile.common.loadingContainer,
     deleteBookBtn: selectorFile.viewBookPage.deleteBookBtn,
     dialogContent: selectorFile.common.dialogContent,
+    description: selectorFile.viewBookPage.description,
+    bookDesign: selectorFile.viewBookPage.bookDesign,
+    visibility: selectorFile.viewBookPage.visibility,
+    seeMoreLessBtn: selectorFile.common.seeMoreLessBtn,
 
     isInitialized: function () {
         logger.logInto(stackTrace.get());
@@ -21,6 +25,17 @@ module.exports = {
         action.waitForDisplayed(this.loadingContainer, undefined, true);
         res = action.getText(selectorFile.common.pageTitle);
         return res;
+    },
+
+    getBookParamDetails: function () {
+        logger.logInto(stackTrace.get());
+        action.click(this.seeMoreLessBtn);
+        var obj = {
+			description: (action.getElementCount(this.description) > 0) ? action.getText(this.description) : null,
+			bookDesign: (action.getElementCount(this.bookDesign) > 0) ? action.getText(this.bookDesign) : null,
+			visibility: (action.getElementCount(this.visibility) > 0) ? action.getText(this.visibility) : null
+		};
+		return obj;
     },
 
     click_AddComponent_Button: function () {

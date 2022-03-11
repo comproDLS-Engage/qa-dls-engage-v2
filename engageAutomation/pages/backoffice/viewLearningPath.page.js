@@ -20,6 +20,13 @@ module.exports = {
     itemCheckboxes: selectorFile.viewLearningPathPage.itemCheckboxes,
     activityMenuActivityAuthorBtn: selectorFile.viewLearningPathPage.activityMenuActivityAuthorBtn,
     modifyFolderOptionsBtn: selectorFile.viewLearningPathPage.modifyFolderOptionsBtn,
+    levels: selectorFile.viewLearningPathPage.levels,
+    autonumbering: selectorFile.viewLearningPathPage.autonumbering,
+    category: selectorFile.viewLearningPathPage.category,
+    visibility: selectorFile.viewLearningPathPage.visibility,
+    targetRole: selectorFile.viewLearningPathPage.targetRole,
+    assignable: selectorFile.viewLearningPathPage.assignable,
+    seeMoreLessBtn: selectorFile.common.seeMoreLessBtn,
 
     isInitialized: function () {
         logger.logInto(stackTrace.get());
@@ -28,6 +35,20 @@ module.exports = {
         action.waitForDisplayed(this.loadingContainer, undefined, true);
         let res = action.waitForDisplayed(this.deleteComponentBtn);
         return res;
+    },
+
+    getComponentParamDetails: function () {
+        logger.logInto(stackTrace.get());
+        action.click(this.seeMoreLessBtn);
+        var obj = {
+            levels: (action.getElementCount(this.levels) > 0) ? action.getText(this.levels) : null,
+            autonumbering: (action.getElementCount(this.autonumbering) > 0) ? action.getText(this.autonumbering) : null,
+            category: (action.getElementCount(this.category) > 0) ? action.getText(this.category) : null,
+            visibility: (action.getElementCount(this.visibility) > 0) ? action.getText(this.visibility) : null,
+            targetRole: (action.getElementCount(this.targetRole) > 0) ? action.getText(this.targetRole) : null,
+            assignable: (action.getElementCount(this.assignable) > 0) ? action.getText(this.assignable) : null
+        };
+        return obj;
     },
 
     click_AddFolder_Button: function () {
@@ -106,30 +127,21 @@ module.exports = {
         return res;
     },
 
-    select_ActivityType_and_Proceed: function (index) {
+    select_ActivityType_and_Proceed: function (id) {
         logger.logInto(stackTrace.get());
         let res = null;
-        let i, list;
-        list = action.findElements(this.activityTypeList);
-        for (i = 0; i < list.length; i++) {
-            //if (action.getText(list[i]) == type) {
-            if (i == index) {
-                res = action.click(list[i]);
-                if (res == true) {
-                    res = action.click(this.proceedBtn);
-                    if (res == true) {
-                        if (index == 12)
-                            res = require('./linkFromLibrary.page.js').isInitialized();
-                        else
-                            res = require('./addActivity.page.js').isInitialized();
-                        browser.pause(5000);
-                    }
-                }
-                break;
+        res = action.click("[data-tid=input-" + id);
+        if (res == true) {
+            res = action.click(this.proceedBtn);
+            if (res == true) {
+                if (id == "category-4-option-0")
+                    res = require('./linkFromLibrary.page.js').isInitialized();
+                else
+                    res = require('./addActivity.page.js').isInitialized();
+                browser.pause(5000);
             }
-            //res = "activity type \"" + type + "\" not found";
-            res = "activity index \"" + index + "\" not found";
         }
+        //res = "activity type \"" + type + "\" not found";
         logger.logInto(stackTrace.get(), res);
         return res;
     },

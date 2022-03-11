@@ -4,7 +4,7 @@
             {
                 "type": "BOOK",
                 "name": "QA Test Automation Book [DO NOT PUBLISH]",
-                "coverImage": "./testResources/testcaseData/backOffice/qa/book_cover_compro_qa.png",
+                "coverImage": "./testResources/testcaseData/backoffice/qa/book_cover_compro_qa.png",
                 "description": "QA automation test description",
                 "bookDesign": "Green",
                 "visibility": "True"
@@ -24,12 +24,13 @@
             {
                 "type": "Bank",
                 "category": "Resources",
-                "title": "QA Automation Test Bank - resources [DO NOT PUBLISH]",
+                "title": "QA Automation Test Bank (Tracking False) [DO NOT PUBLISH]",
                 "folderLevel": "2",
                 "autonumbering": "0-based",
                 "targetRole": "All",
                 "visibility": "True",
-                "assignable": "False"
+                "assignable": "False",
+                "enableTracking": "None"
             },
             {
                 "type": "Flipbook",
@@ -37,12 +38,23 @@
                 "title": "QA Automation Test Flipbook - none [DO NOT PUBLISH]",
                 "targetRole": "All",
                 "visibility": "True"
+            },
+            {
+                "type": "Bank",
+                "category": "--none--",
+                "title": "QA Automation Test Bank (Tracking True) [DO NOT PUBLISH]",
+                "folderLevel": "3",
+                "autonumbering": "None",
+                "targetRole": "All",
+                "visibility": "True",
+                "assignable": "True",
+                "enableTracking": "Student"
             }
         ],
         "folder": [
             {
                 "name": "QA Automation Test folder L1",
-                "coverImage": "./testResources/testcaseData/backOffice/qa/book_cover_compro_qa.png",
+                "coverImage": "",
                 "targetRole": "All",
                 "assignable": "True",
                 "color": "#d20f0f",
@@ -50,7 +62,7 @@
             },
             {
                 "name": "QA Automation Test folder L2",
-                "coverImage": "./testResources/testcaseData/backOffice/qa/book_cover_compro_qa.png",
+                "coverImage": "",
                 "targetRole": "All",
                 "assignable": "True",
                 "color": "#158e19",
@@ -60,7 +72,7 @@
         "activity": [
             {
                 "type": "Native Engage Learning Object",
-                "typeIndex": 0,
+                "id": "category-0-option-0",
                 "name": "QA Automation Test LO1 - native",
                 "targetRole": "All",
                 "assignable": "True",
@@ -68,14 +80,26 @@
             },
             {
                 "type": "Native Engage Learning Object",
-                "typeIndex": 0,
+                "id": "category-0-option-0",
                 "name": "QA Automation Test LO1 - Writing"
             },
             {
                 "type": "Close Ended Learning Object",
-                "typeIndex": 12,
+                "id": "category-4-option-0",
                 "name": "QA Automation Test LO3 - close ended linked from Library",
-                "fileName": "au_plus_1_iexe_exam_9"
+                "file": "au_plus_1_iexe_exam_9"
+            },
+            {
+                "type": "Video",
+                "id": "category-2-option-0",
+                "name": "QA Automation rich video",
+                "file": "./testResources/testcaseData/backoffice/qa/rich-video.mp4"
+            },
+            {
+                "type": "PDF",
+                "id": "category-3-option-2",
+                "name": "QA Automation download pdf",
+                "file": "./testResources/testcaseData/backoffice/qa/Lorem Ipsum.pdf"
             }
         ],
         "accessCodeBatch": [

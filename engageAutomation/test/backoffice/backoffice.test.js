@@ -17,7 +17,7 @@ var sts;
 
 module.exports = {
 
-	// Validate that use is able to login to the back office application
+	// Validate that user is able to login to the back office application
 	BK_TC_1: function (testdata) {
 		sts = loginPage.isInitialized();
 		assertion.assertEqual(sts, true, "Login page status mismatch");
@@ -56,8 +56,12 @@ module.exports = {
 
 	// Validate that the view book page is launched on clicking the book card on the home page
 	BK_TC_4: function (testdata) {
-		sts = homePage.click_Book(testdata);
-		assertion.assert(sts.includes(testdata), "Book title mismatch. " + sts);
+		sts = homePage.click_Book(testdata.name);
+		assertion.assert(sts.includes(testdata.name), "Book title mismatch. " + sts);
+		sts = viewBookPage.getBookParamDetails();
+		assertion.assertEqual(sts.description, testdata.description, "book description mismatch");
+		assertion.assertEqual(sts.bookDesign, testdata.bookDesign, "book design mismatch");
+		assertion.assertEqual(sts.visibility, testdata.visibility, "book visibility mismatch");
 	},
 
 	// Validate that the delete book dialog box opens on clicking delete button on the components page
@@ -100,6 +104,10 @@ module.exports = {
 			sts = addCompPage.select_Assignable(testdata.assignable);
 			assertion.assertEqual(sts, true, "Assignable status mismatch");
 		}
+		if (testdata.type == "Bank") {
+			sts = addCompPage.select_enableTracking(testdata.enableTracking);
+			assertion.assertEqual(sts, true, "enableTracking status mismatch");
+		}
 		sts = addCompPage.select_CategoryType(testdata.category);
 		assertion.assertEqual(sts, true, "Category status mismatch");
 		sts = addCompPage.select_TargetRole(testdata.targetRole);
@@ -113,8 +121,17 @@ module.exports = {
 
 	// Validate that the component details page is launched on clicking the component card
 	BK_TC_10: function (testdata) {
-		sts = viewBookPage.click_Component(testdata);
+		sts = viewBookPage.click_Component(testdata.title);
 		assertion.assertEqual(sts, true, "Learning Path page status mismatch");
+		sts = viewLearningPathPage.getComponentParamDetails();
+		if (testdata.type != "Flipbook") {
+			assertion.assertEqual(sts.levels, testdata.folderLevel, "component levels mismatch");
+			assertion.assertEqual(sts.autonumbering, testdata.autonumbering, "component design mismatch");
+			assertion.assertEqual(sts.assignable, testdata.assignable, "component assignable mismatch");
+		}
+		assertion.assertEqual(sts.category, testdata.category, "component category mismatch");
+		assertion.assertEqual(sts.visibility, testdata.visibility, "component visibility mismatch");
+		assertion.assertEqual(sts.targetRole, testdata.targetRole, "component targetRole mismatch");
 	},
 
 	// Validate that add folder page opens on clicking the add folder button
@@ -164,7 +181,7 @@ module.exports = {
 	BK_TC_14: function (testdata) {
 		sts = learningPathPage.click_AddActivity_Button();
 		assertion.assertEqual(sts, true, "Add learning object options status mismatch");
-		sts = learningPathPage.select_ActivityType_and_Proceed(testdata.typeIndex);
+		sts = learningPathPage.select_ActivityType_and_Proceed(testdata.id);
 		assertion.assertEqual(sts, true, "Add activity page status mismatch");
 	},
 
@@ -172,12 +189,13 @@ module.exports = {
 	BK_TC_15: function (testdata) {
 		sts = addActivityPage.set_Name(testdata.name);
 		assertion.assertEqual(sts, true, "Name status mismatch");
+		if (testdata.id.includes("category-2") || testdata.id.includes("category-3")) {
+			sts = addActivityPage.uploadFile(testdata.file);
+			assertion.assertEqual(sts, true, "file upload status mismatch");
+		}
 		sts = addActivityPage.click_Add_Button();
 		assertion.assertEqual(sts, true, "Add button status mismatch");
-		//browser.switchWindow('https://backoffice-difusion-dev1.comprodls.com/');
-		//assertion.assert((typeof sts === "string" && sts.includes(testdata.name)), "Snackbar messsage mismatch. " + sts);
-		//assertion.assert((typeof sts === "string" && sts.includes("created successfully")), "Snackbar messsage mismatch. " + sts);
-		if (testdata.typeIndex == 0)
+		if (testdata.id == "category-0-option-0")
 			browser.switchWindow('paint.backoffice.comprodls.com/');
 	},
 
@@ -208,7 +226,7 @@ module.exports = {
 	// Validate that the folder is deleted on clicking delete button in the dialog box
 	BK_TC_20: function () {
 		sts = common.click_confirmDialog_Button();
-		assertion.assert((typeof sts === "string" && sts.includes("Selected item Deleted Successfully.")), "Snackbar messsage mismatch. " + sts);
+		assertion.assert((typeof sts === "string" && sts.includes("Deleted Successfully")), "Snackbar messsage mismatch. " + sts);
 	},
 
 	// Validate that the delete activity dialog box opens on clicking delete button in the activity menu
@@ -296,13 +314,13 @@ module.exports = {
 
 	// Validate that the searched LO is displayed on searching the LO in the Library
 	BK_TC_31: function (testdata) {
-		sts = libraryPage.searchLO_byName(testdata.fileName);
+		sts = libraryPage.searchLO_byName(testdata.file);
 		assertion.assertEqual(sts, true, "Error in searching LO");
 	},
 
 	// Validate that the add activity page appears after selecting the LO and clicking on next button
 	BK_TC_32: function (testdata) {
-		sts = libraryPage.select_Resource_and_Proceed(testdata.fileName);
+		sts = libraryPage.select_Resource_and_Proceed(testdata.file);
 		assertion.assertEqual(sts, true, "Error in searching LO");
 	},
 

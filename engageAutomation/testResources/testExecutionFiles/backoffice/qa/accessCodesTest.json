@@ -2,7 +2,7 @@
     "Suite5": {
 		"Name": "Create and view access codes batch",
 		"TestCaseRepo": [
-			"./testResources/testcaseRepository/backOffice/backOfficeTCRepository.json"
+			"./testResources/testcaseRepository/backoffice/backofficeTCRepository.json"
 		],
 		"Before": [
 			{
@@ -17,7 +17,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/logindata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/logindata.json",
 						"jsonPath": "backoffice.user.validUser1"
 					}
 				]
@@ -37,7 +37,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": [
 							"backoffice.book[0]",
 							"backoffice.accessCodeBatch[0]"
@@ -51,7 +51,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": [
 							"backoffice.book[0]",
 							"backoffice.accessCodeBatch[0]"
@@ -73,7 +73,7 @@
 	"Suite5t": {
 		"Name": "Create and view access codes batch",
 		"TestCaseRepo": [
-			"./testResources/testcaseRepository/backOffice/backOfficeTCRepository.json"
+			"./testResources/testcaseRepository/backoffice/backofficeTCRepository.json"
 		],
 		"Before": [
 			{
@@ -88,7 +88,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/logindata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/logindata.json",
 						"jsonPath": "backoffice.user.validUser1"
 					}
 				]
@@ -102,7 +102,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/qa/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": [
 							"backoffice.book[0]",
 							"backoffice.accessCodeBatch[0]"
