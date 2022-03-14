@@ -46,14 +46,14 @@
 			},
 			
 			"class4": {
-				"name": "course1",
+				"name": "Class - Book 4",
 				"key": "vQ9n-qhQ8",
 				"classDuration": "May 10, 2021 - May 10, 2023",
 				"instructor": {
-					"name": "vengqains5_new",
-					"email": "vengqains5_new@yopmail.com"
+					"name": "Quality, Teacher 10",
+					"email": "qa_teacher10@yopmail.com"
 				},
-				"bookName": "PROYECTOS",
+				"bookName": "Quality TestBook 4",
 				"schoolName": "Mount Allison School",
 				"status": "Active",
 				"studentCount": 0,
@@ -76,7 +76,7 @@
 			},
 			"newInvalidClass": {
 				"name": "create invalid Class with name & :\"{} = _+,.?<: character",
-				"key": "",
+				"key": "rtff-d",
 				"startDate": "",
 				"endDate": "",
 				"instructor": {
@@ -122,19 +122,58 @@
 				"studentCount": "0",
 				"info": "testdata for editing newValidCourse and archiving the updated course"
 			},
-			"archivedClass": {
-				"name": "Archived Class",
-				"key": "x628-z9x4",
-				"classDuration": "May 17 - May 17, 2021",
+			"anchroredClass": {
+				"name": "class1",
+				"key": "PVb3-s9J7",
+				"classDuration": "Aug 09, 2021 - Aug 08, 2022",
 				"instructor": {
-					"name": "vengqains5_new",
-					"email": "vengqains5_new@yopmail.com"
+					"name": "qa teacher9",
+					"email": "qa_teacher1@yopmail.com"
 				},
-				"bookName": "PROYECTOS",
-				"schoolName": "Mount Allison School",
-				"status": "Archieved",
-				"studentCount": "",
-				"info": "Existing archieved Course"
+				"bookName": "Aula Plus 1 (For DEV2 - DONT TOUCH)",
+				"status": "Active",
+				"studentCount": "2",
+				"studentdetails": [
+					{
+						"Name": "dev2 student",
+						"AvgScore": null,
+						"CompletionScore": null
+					}
+				]
+			},
+			"nonAnchroredClass": {
+				"name": "class2",
+				"key": "TzF9-g2ab",
+				"classDuration": "Aug 09, 2021 - Aug 08, 2022",
+				"instructor": {
+					"name": "qa teacher9",
+					"email": "qa_teacher1@yopmail.com"
+				},
+				"bookName": "QA Test Automation Book [DO NOT MODIFY]",
+				"status": "Active",
+				"studentCount": "3",
+				"studentdetails": [
+					
+					{
+						"Name": "dev2 student",
+						"AvgScore": "null",
+						"CompletionScore": null
+					}
+				]
+			},
+			"nonStudentClass": {
+				"name": "class3",
+				"key": "EnRQ-VPHJ",
+				"classDuration": "Aug 09, 2021 - Aug 23, 2022",
+				"instructor": {
+					"name": "qa teacher9",
+					"email": "qa_teacher1@yopmail.com"
+				},
+				"bookName": "QA Test Automation Book [DO NOT MODIFY]",
+				"status": "Active",
+				"studentCount": null,
+				"studentdetails": [
+				]
 			},
 			"activeclass": {
 				"name": "Quality Book 1",
