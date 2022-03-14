@@ -469,7 +469,7 @@
         "testFile": "./test/engageExperienceApp/mcqBlock.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/nativeQuizData.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
             "jsonPath": "unit1_native2.question[0].answerKey"
           }
         ]
@@ -480,7 +480,7 @@
         "testFile": "./test/engageExperienceApp/mcqBlock.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/nativeQuizData.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
             "jsonPath": "unit1_native2.question[0].answerKey"
           }
         ]
@@ -491,7 +491,7 @@
         "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/nativeQuizData.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
             "jsonPath": "unit1_native2.question[1]"
           }
         ]
@@ -502,7 +502,7 @@
         "testFile": "./test/engageExperienceApp/mcmr.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/nativeQuizData.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
             "jsonPath": "unit1_native2.question[1].answerKey"
           }
         ]
@@ -513,7 +513,7 @@
         "testFile": "./test/engageExperienceApp/mcmr.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/nativeQuizData.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
             "jsonPath": "unit1_native2.question[1].answerKey"
           }
         ]
@@ -524,7 +524,7 @@
         "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/nativeQuizData.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
             "jsonPath": "unit1_native2.question[2]"
           }
         ]
@@ -535,7 +535,7 @@
         "testFile": "./test/engageExperienceApp/mcqBlock.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/nativeQuizData.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
             "jsonPath": "unit1_native2.question[2].answerKey"
           }
         ]
@@ -546,7 +546,7 @@
         "testFile": "./test/engageExperienceApp/mcqBlock.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/nativeQuizData.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
             "jsonPath": "unit1_native2.question[2].answerKey"
           }
         ]
@@ -557,7 +557,7 @@
         "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/nativeQuizData.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
             "jsonPath": "unit1_native2.question[3]"
           }
         ]
@@ -568,7 +568,7 @@
         "testFile": "./test/engageExperienceApp/dragDrop.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/nativeQuizData.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
             "jsonPath": "unit1_native2.question[3]"
           }
         ]
@@ -579,7 +579,7 @@
         "testFile": "./test/engageExperienceApp/dragDrop.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/nativeQuizData.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
             "jsonPath": "unit1_native2.question[3].answerKey"
           }
         ]
@@ -590,7 +590,7 @@
         "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/nativeQuizData.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
             "jsonPath": "unit1_native2.question[4]"
           }
         ]
@@ -601,7 +601,7 @@
         "testFile": "./test/engageExperienceApp/FIB.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/nativeQuizData.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
             "jsonPath": "unit1_native2.question[4]"
           }
         ]
@@ -612,7 +612,7 @@
         "testFile": "./test/engageExperienceApp/FIB.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/nativeQuizData.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
             "jsonPath": "unit1_native2.question[4].answerKey"
           }
         ]
@@ -623,7 +623,7 @@
         "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/nativeQuizData.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
             "jsonPath": "unit1_native2.question[5]"
           }
         ]
@@ -634,7 +634,7 @@
         "testFile": "./test/engageExperienceApp/FIBText.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/nativeQuizData.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
             "jsonPath": "unit1_native2.question[5]"
           }
         ]
@@ -645,7 +645,7 @@
         "testFile": "./test/engageExperienceApp/FIBText.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/nativeQuizData.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
             "jsonPath": "unit1_native2.question[5].answerKey"
           }
         ]
@@ -656,7 +656,7 @@
         "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/nativeQuizData.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
             "jsonPath": "unit1_native2.question[6]"
           }
         ]
@@ -667,7 +667,7 @@
         "testFile": "./test/engageExperienceApp/matching.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/nativeQuizData.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
             "jsonPath": "unit1_native2.question[6]"
           }
         ]
@@ -678,7 +678,7 @@
         "testFile": "./test/engageExperienceApp/matching.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/nativeQuizData.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
             "jsonPath": "unit1_native2.question[6].answerKey"
           }
         ]
@@ -689,7 +689,7 @@
         "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/nativeQuizData.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
             "jsonPath": "unit1_native2.question[7]"
           }
         ]
@@ -700,7 +700,7 @@
         "testFile": "./test/engageExperienceApp/orderlist.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/nativeQuizData.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
             "jsonPath": "unit1_native2.question[7].answerKey"
           }
         ]
@@ -711,7 +711,7 @@
         "testFile": "./test/engageExperienceApp/orderlist.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/nativeQuizData.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
             "jsonPath": "unit1_native2.question[7].answerKey"
           }
         ]
@@ -722,7 +722,7 @@
         "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/nativeQuizData.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
             "jsonPath": "unit1_native2.question[8]"
           }
         ]
@@ -734,11 +734,11 @@
         "visualTest": false,
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/nativeQuizData.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
             "jsonPath": "unit1_native2.question[8].answerKey"
           },
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/nativeQuizData.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
             "jsonPath": "unit1_native2.question[8].type"
           }
         ]
@@ -750,7 +750,7 @@
         "visualTest": false,
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/nativeQuizData.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
             "jsonPath": "unit1_native2.question[8].answerKey"
           }
         ]
@@ -761,7 +761,7 @@
         "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/nativeQuizData.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
             "jsonPath": "unit1_native2.question[8]"
           }
         ]
@@ -772,7 +772,7 @@
         "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
             "jsonPath": "engage.appContent.activityPlayer.student"
           }
         ]
@@ -789,7 +789,7 @@
         "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
             "jsonPath": "engage.appContent.activityPlayerPage.retake"
           }
         ]

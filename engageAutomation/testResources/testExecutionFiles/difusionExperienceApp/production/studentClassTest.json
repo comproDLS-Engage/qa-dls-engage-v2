@@ -82,7 +82,7 @@
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/classData.json",
-            "jsonPath": "engage.courses.class2.key"
+            "jsonPath": "engage.courses.newInvalidClass.key"
           },
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",

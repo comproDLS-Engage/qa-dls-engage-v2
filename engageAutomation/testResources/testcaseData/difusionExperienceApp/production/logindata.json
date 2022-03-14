@@ -28,8 +28,7 @@
                     "password": "Compro@1111",
                     "role": "student",
                     "name": "qa_student004",
-                    "class": [
-                    ],
+                    "class": [],
                     "info": {}
                 },
                 "validStudent3": {
@@ -37,8 +36,7 @@
                     "password": "Compro@1234",
                     "role": "student",
                     "name": "qa_student003",
-                    "class": [
-                    ],
+                    "class": [],
                     "info": {}
                 },
                 "invalidUser1": {
@@ -76,23 +74,25 @@
                     "password": "Compro@1234",
                     "role": "student",
                     "name": "qa teacher100",
-                    "class": [  
+                    "class": [
                         {
                             "key": "TFbA-6AP7",
                             "name": "acceptanceClass"
-                        }],
+                        }
+                    ],
                     "info": {}
                 },
                 "acceptanceStudent": {
-                    "email" :"qa_acceptanceStudent2@yopmail.com",
+                    "email": "qa_acceptanceStudent2@yopmail.com",
                     "password": "Compro@1234",
                     "role": "student",
                     "name": "qa student",
-                    "class": [  
+                    "class": [
                         {
                             "key": "TFbA-6AP7",
                             "name": "acceptanceClass"
-                        }],
+                        }
+                    ],
                     "info": {}
                 },
                 "validInstructorUser1": {
@@ -117,11 +117,45 @@
                     "info": "freash user without books or classes"
                 },
                 "classInstructorUser3": {
+                    "email": "dev2_teacher17Jan@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "instructor",
+                    "name": "qa teacher001",
+                    "class": [
+                        {
+                            "key": "TFbA-6AP7",
+                            "name": "Assignment Automation"
+                        },
+                        {
+                            "key": "TFbA-6AP7",
+                            "name": "Class Assignment test"
+                        },
+                        {
+                            "key": "TFbA-6AP7",
+                            "name": "class3"
+                        }
+                    ],
+                    "info": {}
+                },
+                "classInstructorUser5": {
                     "email": "qa_teacherClass@yopmail.com",
                     "password": "Compro@1234",
                     "role": "instructor",
                     "name": "qa teacher001",
-                    "class": [],
+                    "class": [
+                        {
+                            "key": "AEYP",
+                            "name": "class2"
+                        },
+                        {
+                            "key": "AEYP",
+                            "name": "class1"
+                        },
+                        {
+                            "key": "AEYP",
+                            "name": "class3_new"
+                        }
+                    ],
                     "info": {}
                 },
                 "noClassStudent": {
@@ -160,12 +194,15 @@
                         }
                     ],
                     "info": {}
-                }             
+                }
             }
         },
         "codesAndKeys": {
             "schoolName": "Mount Allison School",
-            "invalid_OTP":["12046","000000"],
+            "invalid_OTP": [
+                "12046",
+                "000000"
+            ],
             "validSchoolKey": "NGL-FUW-GQL",
             "invalidSchoolKey": "NGL-FUW-123",
             "invalidClassKey": [
