@@ -13,22 +13,13 @@
         "component": [
             {
                 "type": "Learning Path",
-                "category": "Textbook",
+                "category": "--none--",
                 "title": "Custom Component",
                 "folderLevel": "2",
-                "autonumbering": "None"
-            },
-            {
-                "type": "Bank",
-                "category": "Resources",
-                "title": "QA Automation Test Bank - resources [DO NOT PUBLISH]",
-                "folderLevel": "2",
-                "autonumbering": "0-based"
-            },
-            {
-                "type": "Flipbook",
-                "category": "--none--",
-                "title": "QA Automation Test Flipbook - none [DO NOT PUBLISH]"
+                "autonumbering": "None",
+                "targetRole": "All",
+                "visibility": "True",
+                "assignable": "True"
             }
         ],
         "folder": [
