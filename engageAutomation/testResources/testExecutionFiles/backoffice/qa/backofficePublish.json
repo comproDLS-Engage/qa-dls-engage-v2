@@ -30,7 +30,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/publishData.json",
-						"jsonPath": "backoffice.book[0].name"
+						"jsonPath": "backoffice.book[0]"
 					}
 				]
 			},
@@ -41,7 +41,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/publishData.json",
-						"jsonPath": "backoffice.component[0].title"
+						"jsonPath": "backoffice.component[0]"
 					}
 				]
 			},

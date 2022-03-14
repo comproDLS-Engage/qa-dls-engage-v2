@@ -139,7 +139,7 @@
                     },
                     {
                         "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
-                        "jsonPath": "engage.appContent.browse.moreOptions"
+                        "jsonPath": "engage.appContent.browse.teacher"
                     }
                 ]
             },
@@ -150,7 +150,7 @@
                 "testData": [
                     {
                         "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
-                        "jsonPath": "engage.appContent.browse.moreOptions.createPlaylist_label"
+                        "jsonPath": "engage.appContent.browse.teacher.listOfPlaylist"
                     }
                 ]
             },
