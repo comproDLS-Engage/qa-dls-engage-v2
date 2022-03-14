@@ -60,7 +60,7 @@
         "activity": [
             {
                 "type": "Native Engage Learning Object",
-                "typeIndex": 0,
+                "id": "category-0-option-0",
                 "name": "QA Automation Test LO1 - native",
                 "targetRole": "All",
                 "assignable": "True",
@@ -68,14 +68,26 @@
             },
             {
                 "type": "Native Engage Learning Object",
-                "typeIndex": 0,
+                "id": "category-0-option-0",
                 "name": "QA Automation Test LO1 - Writing"
             },
             {
                 "type": "Close Ended Learning Object",
-                "typeIndex": 12,
+                "id": "category-4-option-0",
                 "name": "QA Automation Test LO3 - close ended linked from Library",
-                "fileName": "au_plus_1_iexe_exam_9"
+                "file": "au_plus_1_iexe_exam_9"
+            },
+            {
+                "type": "Video",
+                "id": "category-2-option-0",
+                "name": "QA Automation rich video",
+                "file": "./testResources/testcaseData/backoffice/qa/rich-video.mp4"
+            },
+            {
+                "type": "PDF",
+                "id": "category-3-option-2",
+                "name": "QA Automation download pdf",
+                "file": "./testResources/testcaseData/backoffice/qa/Lorem Ipsum.pdf"
             }
         ],
         "accessCodeBatch": [
