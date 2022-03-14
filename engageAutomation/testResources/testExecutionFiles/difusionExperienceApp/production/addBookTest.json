@@ -24,7 +24,7 @@
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
-            "jsonPath": "engage.login.user.classInstructorUser3"
+            "jsonPath": "engage.login.user.validInstructorUser1"
           }
         ]
       },
@@ -189,7 +189,7 @@
           },
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
-            "jsonPath": "engage.login.user.classInstructorUser3"
+            "jsonPath": "engage.login.user.validInstructorUser1"
           }
         ]
       },

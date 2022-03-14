@@ -1,0 +1,49 @@
+{
+    "backoffice": {
+        "book": [
+            {
+                "type": "Book",
+                "name": "QA Test Automation Book [DO NOT MODIFY]",
+                "coverImage": "./testResources/testcaseData/backoffice/qa/book_cover_compro_qa.png",
+                "description": "QA automation test description"
+            }
+        ],
+        "component": [
+            {
+                "type": "Learning Path",
+                "category": "Textbook",
+                "title": "Custom Component",
+                "folderLevel": "2",
+                "autonumbering": "None"
+            },
+            {
+                "type": "Bank",
+                "category": "Resources",
+                "title": "QA Automation Test Bank - resources [DO NOT PUBLISH]",
+                "folderLevel": "2",
+                "autonumbering": "0-based"
+            },
+            {
+                "type": "Flipbook",
+                "category": "--none--",
+                "title": "QA Automation Test Flipbook - none [DO NOT PUBLISH]"
+            }
+        ],
+        "folder": [
+            {
+                "name": "Unit 1",
+                "coverImage": ""
+            },
+            {
+                "name": "QA Automation Test folder L2",
+                "coverImage": ""
+            }
+        ],
+        "activity": [
+            {
+                "type": "Native Engage Learning Object",
+                "name": "Native LO 1"
+            }
+        ]
+    }
+}

@@ -2,7 +2,7 @@
 	"Suite1": {
 		"Name": "Creation of a book",
 		"TestCaseRepo": [
-			"./testResources/testcaseRepository/backOffice/backOfficeTCRepository.json"
+			"./testResources/testcaseRepository/backoffice/backofficeTCRepository.json"
 		],
 		"Before": [
 			{
@@ -20,7 +20,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/logindata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/production/logindata.json",
 						"jsonPath": "backoffice.user.validUser1"
 					}
 				]
@@ -31,7 +31,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
 						"jsonPath": "backoffice.book[0]"
 					}
 				]
@@ -42,7 +42,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
 						"jsonPath": "backoffice.book[0]"
 					}
 				]
@@ -72,7 +72,7 @@
 	"Suite2": {
 		"Name": "Creation of a components in the book",
 		"TestCaseRepo": [
-			"./testResources/testcaseRepository/backOffice/backOfficeTCRepository.json"
+			"./testResources/testcaseRepository/backoffice/backofficeTCRepository.json"
 		],
 		"Before": [
 			{
@@ -90,7 +90,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/logindata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/production/logindata.json",
 						"jsonPath": "backoffice.user.validUser1"
 					}
 				]
@@ -101,7 +101,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
 						"jsonPath": "backoffice.book[0]"
 					}
 				]
@@ -112,8 +112,8 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
-						"jsonPath": "backoffice.book[0].name"
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
+						"jsonPath": "backoffice.book[0]"
 					}
 				]
 			},
@@ -123,7 +123,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
 						"jsonPath": "backoffice.component[0]"
 					}
 				]
@@ -134,7 +134,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
 						"jsonPath": "backoffice.component[0]"
 					}
 				]
@@ -145,7 +145,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
 						"jsonPath": "backoffice.component[1]"
 					}
 				]
@@ -156,7 +156,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
 						"jsonPath": "backoffice.component[1]"
 					}
 				]
@@ -167,7 +167,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
 						"jsonPath": "backoffice.component[2]"
 					}
 				]
@@ -178,8 +178,30 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
 						"jsonPath": "backoffice.component[2]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_8",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
+						"jsonPath": "backoffice.component[3]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_9",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
+						"jsonPath": "backoffice.component[3]"
 					}
 				]
 			}
@@ -197,7 +219,7 @@
 	"Suite3": {
 		"Name": "Creation of folders",
 		"TestCaseRepo": [
-			"./testResources/testcaseRepository/backOffice/backOfficeTCRepository.json"
+			"./testResources/testcaseRepository/backoffice/backofficeTCRepository.json"
 		],
 		"Before": [
 			{
@@ -212,7 +234,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/logindata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/production/logindata.json",
 						"jsonPath": "backoffice.user.validUser1"
 					}
 				]
@@ -223,8 +245,8 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
-						"jsonPath": "backoffice.book[0].name"
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
+						"jsonPath": "backoffice.book[0]"
 					}
 				]
 			}
@@ -237,8 +259,8 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
-						"jsonPath": "backoffice.component[0].title"
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
+						"jsonPath": "backoffice.component[0]"
 					}
 				]
 			},
@@ -254,7 +276,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
 						"jsonPath": "backoffice.folder[0]"
 					}
 				]
@@ -265,7 +287,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
 						"jsonPath": "backoffice.folder[0].name"
 					}
 				]
@@ -282,7 +304,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
 						"jsonPath": "backoffice.folder[1]"
 					}
 				]
@@ -293,8 +315,58 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
 						"jsonPath": "backoffice.folder[1].name"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_16",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
+						"jsonPath": "backoffice.book[0]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_10",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
+						"jsonPath": "backoffice.component[1]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_11",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			},
+			{
+				"id": "BK_TC_12",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
+						"jsonPath": "backoffice.folder[0]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_13",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
+						"jsonPath": "backoffice.folder[0].name"
 					}
 				]
 			}
@@ -312,7 +384,7 @@
 	"Suite4a": {
 		"Name": "Creation of a native LO with all item players",
 		"TestCaseRepo": [
-			"./testResources/testcaseRepository/backOffice/backOfficeTCRepository.json",
+			"./testResources/testcaseRepository/backoffice/backofficeTCRepository.json",
 			"./testResources/testcaseRepository/assessmentEditor/editorTCRepository.json"
 		],
 		"Before": [
@@ -328,7 +400,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/logindata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/production/logindata.json",
 						"jsonPath": "backoffice.user.validUser1"
 					}
 				]
@@ -339,8 +411,8 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
-						"jsonPath": "backoffice.book[0].name"
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
+						"jsonPath": "backoffice.book[0]"
 					}
 				]
 			},
@@ -350,8 +422,8 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
-						"jsonPath": "backoffice.component[0].title"
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
+						"jsonPath": "backoffice.component[0]"
 					}
 				]
 			},
@@ -361,7 +433,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
 						"jsonPath": "backoffice.folder[0].name"
 					}
 				]
@@ -372,7 +444,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
 						"jsonPath": "backoffice.folder[1].name"
 					}
 				]
@@ -386,7 +458,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
 						"jsonPath": "backoffice.activity[0]"
 					}
 				]
@@ -397,7 +469,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
 						"jsonPath": "backoffice.activity[0]"
 					}
 				]
@@ -408,7 +480,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
 						"jsonPath": "backoffice.activity[0]"
 					}
 				]
@@ -437,6 +509,28 @@
 				"testData": []
 			},
 			{
+				"id": "ASE_QUN_TC_5",
+				"description": "Validate that alphanumeric text is supported in Question Title Text.",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQ[0].question1.questionTitle"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_42",
+				"description": "Validate if alpha-numeric text is allowed in the Question Text",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQ[0].question1.questionText"
+					}
+				]
+			},
+			{
 				"id": "ASE_MCQ_TC_14",
 				"description": "Validate that Option is added in  questions",
 				"testFile": "./test/assessmentEditor/editor.test.js",
@@ -455,6 +549,17 @@
 					{
 						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
 						"jsonPath": "editor.questions.MCQ[0].question1.imagePath"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1012",
+				"description": "Add the score in the activity player",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQ[0].question1.score"
 					}
 				]
 			},
@@ -543,6 +648,17 @@
 				]
 			},
 			{
+				"id": "ASE_COM_TC_1012",
+				"description": "Add the score in the activity player",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MultipleResponse[0].score"
+					}
+				]
+			},
+			{
 				"id": "ASE_COM_TC_4",
 				"description": "Validate that a new question is added by clicking on the 'Add new Question' button on the left pane",
 				"testFile": "./test/assessmentEditor/editor.test.js",
@@ -617,6 +733,17 @@
 					{
 						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
 						"jsonPath": "editor.questions.TrueFalse[0].audioCredit"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1012",
+				"description": "Add the score in the activity player",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.TrueFalse[0].score"
 					}
 				]
 			},
@@ -699,6 +826,17 @@
 				]
 			},
 			{
+				"id": "ASE_COM_TC_1012",
+				"description": "Add the score in the activity player",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.DragDropOnImage[0].score"
+					}
+				]
+			},
+			{
 				"id": "ASE_COM_TC_4",
 				"description": "Validate that a new question is added by clicking on the 'Add new Question' button on the left pane",
 				"testFile": "./test/assessmentEditor/editor.test.js",
@@ -762,6 +900,17 @@
 					{
 						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
 						"jsonPath": "editor.questions.DragDropIntoText[0].options"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1012",
+				"description": "Add the score in the activity player",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.DragDropIntoText[0].score"
 					}
 				]
 			},
@@ -837,6 +986,17 @@
 				]
 			},
 			{
+				"id": "ASE_COM_TC_1012",
+				"description": "Add the score in the activity player",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.FIB[0].score"
+					}
+				]
+			},
+			{
 				"id": "ASE_COM_TC_4",
 				"description": "Validate that a new question is added by clicking on the 'Add new Question' button on the left pane",
 				"testFile": "./test/assessmentEditor/editor.test.js",
@@ -906,6 +1066,17 @@
 					{
 						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
 						"jsonPath": "editor.questions.Matching[0].matchedItems"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1012",
+				"description": "Add the score in the activity player",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.Matching[0].score"
 					}
 				]
 			},
@@ -984,6 +1155,17 @@
 					{
 						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
 						"jsonPath": "editor.questions.Ordering[0].options"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1012",
+				"description": "Add the score in the activity player",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.Ordering[0].score"
 					}
 				]
 			},
@@ -1103,6 +1285,288 @@
 				]
 			},
 			{
+				"id": "ASE_COM_TC_1012",
+				"description": "Add the score in the activity player",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.Classify[0].score"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_4",
+				"description": "Validate that a new question is added by clicking on the 'Add new Question' button on the left pane",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_COM_TC_120",
+				"description": "Validate the editor is selected in question pane and displayed.",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQSR[0].buttonName"
+					}
+				]
+			},
+			{
+				"id": "ASE_QUN_TC_9",
+				"description": "Validate the editor is selected in question pane and displayed.",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_COM_TC_1001",
+				"description": "Click on Editor tab",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQSR[0].questionText"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1002",
+				"description": "Click on Editor tab",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQSR[0].questionInstruction"
+					}
+				]
+			},
+
+			{
+				"id": "ASE_COM_TC_1005",
+				"description": "Click on Edit Prompt button",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+				]
+			},
+			{
+				"id": "ASE_COM_TC_75",
+				"description": "Click on Media button and Set Image Media",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQSR[0].promptImagePath"
+					}
+				]
+			},
+
+			{
+				"id": "ASE_COM_TC_1006",
+				"description": "Click on Editor tab",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQSR[0].promptText"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1007",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQSR[0].subQuestionText[0]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1009",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQSR[0].subQuestionText[0]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1008",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQSR[0].options[0]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1008",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQSR[0].options[1]"
+					}
+				]
+			},
+			{
+				"id": "EDIT_TC_13",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQSR[0].subQuestionText[0]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1008",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQSR[0].options[2]"
+					}
+				]
+			},
+			{
+				"id": "EDIT_TC_13",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQSR[0].subQuestionText[0]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1008",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQSR[0].options[3]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1007",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQSR[0].subQuestionText[1]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1009",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQSR[0].subQuestionText[1]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1008",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQSR[0].options[4]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1008",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQSR[0].options[5]"
+					}
+				]
+			},
+			{
+				"id": "EDIT_TC_13",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQSR[0].subQuestionText[1]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1008",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQSR[0].options[6]"
+					}
+				]
+			},
+			{
+				"id": "EDIT_TC_13",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQSR[0].subQuestionText[1]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1008",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQSR[0].options[7]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1012",
+				"description": "Add the score in the activity player",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQSR[0].score"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1011",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+				
+				]
+			},
+			{
 				"id": "ASE_COM_TC_998",
 				"description": "Click Preview tab",
 				"testFile": "./test/assessmentEditor/editor.test.js",
@@ -1128,7 +1592,7 @@
 	"Suite4b": {
 		"Name": "Edit native LO with all item players",
 		"TestCaseRepo": [
-			"./testResources/testcaseRepository/backOffice/backOfficeTCRepository.json",
+			"./testResources/testcaseRepository/backoffice/backofficeTCRepository.json",
 			"./testResources/testcaseRepository/assessmentEditor/editorTCRepository.json"
 		],
 		"Before": [
@@ -1144,7 +1608,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/logindata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/production/logindata.json",
 						"jsonPath": "backoffice.user.validUser1"
 					}
 				]
@@ -1155,8 +1619,8 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
-						"jsonPath": "backoffice.book[0].name"
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
+						"jsonPath": "backoffice.book[0]"
 					}
 				]
 			},
@@ -1166,8 +1630,8 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
-						"jsonPath": "backoffice.component[0].title"
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
+						"jsonPath": "backoffice.component[0]"
 					}
 				]
 			},
@@ -1177,7 +1641,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
 						"jsonPath": "backoffice.folder[0].name"
 					}
 				]
@@ -1188,7 +1652,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
 						"jsonPath": "backoffice.folder[1].name"
 					}
 				]
@@ -1202,7 +1666,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
 						"jsonPath": "backoffice.activity[0]"
 					}
 				]
@@ -1338,8 +1802,8 @@
 				"testData": []
 			},
 			{
-				"id": "ASE_COM_TC_15",
-				"description": "Click on Media button and Set Image Media",
+				"id": "ASE_COM_TC_87",
+				"description": "",
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": [
 					{
@@ -1362,6 +1826,21 @@
 					{
 						"dataFile": "./testResources/testcaseData/assessmentEditor/quizDataEdit.json",
 						"jsonPath": "editor.questions.FIB[0].questionText"
+					}
+				]
+			},
+			{
+				"id": "ASE_FIB_TC_1",
+				"description": "Enter the Answer in FIB Value",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizDataEdit.json",
+						"jsonPath": "editor.questions.FIB[0].options"
+					},
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizDataEdit.json",
+						"jsonPath": "editor.questions.FIB[0].optionValue"
 					}
 				]
 			},
@@ -1476,7 +1955,7 @@
 	"Suite4c": {
 		"Name": "Creation of an LO linked from Library",
 		"TestCaseRepo": [
-			"./testResources/testcaseRepository/backOffice/backOfficeTCRepository.json",
+			"./testResources/testcaseRepository/backoffice/backofficeTCRepository.json",
 			"./testResources/testcaseRepository/assessmentEditor/editorTCRepository.json"
 		],
 		"Before": [
@@ -1492,7 +1971,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/logindata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/production/logindata.json",
 						"jsonPath": "backoffice.user.validUser1"
 					}
 				]
@@ -1503,8 +1982,8 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
-						"jsonPath": "backoffice.book[0].name"
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
+						"jsonPath": "backoffice.book[0]"
 					}
 				]
 			},
@@ -1514,8 +1993,8 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
-						"jsonPath": "backoffice.component[0].title"
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
+						"jsonPath": "backoffice.component[0]"
 					}
 				]
 			},
@@ -1525,7 +2004,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
 						"jsonPath": "backoffice.folder[0].name"
 					}
 				]
@@ -1536,7 +2015,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
 						"jsonPath": "backoffice.folder[1].name"
 					}
 				]
@@ -1550,7 +2029,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
 						"jsonPath": "backoffice.activity[2]"
 					}
 				]
@@ -1561,7 +2040,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
 						"jsonPath": "backoffice.activity[2]"
 					}
 				]
@@ -1572,7 +2051,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
 						"jsonPath": "backoffice.activity[2]"
 					}
 				]
@@ -1583,7 +2062,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
 						"jsonPath": "backoffice.activity[2]"
 					}
 				]
@@ -1602,7 +2081,7 @@
 	"Suite4d": {
 		"Name": "Creation of an open ended LO - writing player",
 		"TestCaseRepo": [
-			"./testResources/testcaseRepository/backOffice/backOfficeTCRepository.json",
+			"./testResources/testcaseRepository/backoffice/backofficeTCRepository.json",
 			"./testResources/testcaseRepository/assessmentEditor/editorTCRepository.json"
 		],
 		"Before": [
@@ -1618,7 +2097,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/logindata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/production/logindata.json",
 						"jsonPath": "backoffice.user.validUser1"
 					}
 				]
@@ -1629,8 +2108,8 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
-						"jsonPath": "backoffice.book[0].name"
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
+						"jsonPath": "backoffice.book[0]"
 					}
 				]
 			},
@@ -1640,8 +2119,8 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
-						"jsonPath": "backoffice.component[0].title"
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
+						"jsonPath": "backoffice.component[0]"
 					}
 				]
 			},
@@ -1651,7 +2130,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
 						"jsonPath": "backoffice.folder[0].name"
 					}
 				]
@@ -1662,7 +2141,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
 						"jsonPath": "backoffice.folder[1].name"
 					}
 				]
@@ -1676,7 +2155,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
 						"jsonPath": "backoffice.activity[1]"
 					}
 				]
@@ -1687,7 +2166,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
 						"jsonPath": "backoffice.activity[1]"
 					}
 				]
@@ -1698,7 +2177,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
 						"jsonPath": "backoffice.activity[1]"
 					}
 				]
@@ -1793,10 +2272,10 @@
 			}
 		]
 	},
-	"Suite6": {
-		"Name": "Deletion of delete activity, folders and components",
+	"Suite5": {
+		"Name": "Deletion of activities",
 		"TestCaseRepo": [
-			"./testResources/testcaseRepository/backOffice/backOfficeTCRepository.json"
+			"./testResources/testcaseRepository/backoffice/backofficeTCRepository.json"
 		],
 		"Before": [
 			{
@@ -1811,7 +2290,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/logindata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/production/logindata.json",
 						"jsonPath": "backoffice.user.validUser1"
 					}
 				]
@@ -1822,8 +2301,8 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
-						"jsonPath": "backoffice.book[0].name"
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
+						"jsonPath": "backoffice.book[0]"
 					}
 				]
 			},
@@ -1833,8 +2312,8 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
-						"jsonPath": "backoffice.component[0].title"
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
+						"jsonPath": "backoffice.component[0]"
 					}
 				]
 			},
@@ -1844,7 +2323,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
 						"jsonPath": "backoffice.folder[0].name"
 					}
 				]
@@ -1855,7 +2334,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
 						"jsonPath": "backoffice.folder[1].name"
 					}
 				]
@@ -1869,7 +2348,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
 						"jsonPath": "backoffice.activity[0]"
 					}
 				]
@@ -1886,7 +2365,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
 						"jsonPath": "backoffice.activity[1]"
 					}
 				]
@@ -1903,7 +2382,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
 						"jsonPath": "backoffice.activity[2]"
 					}
 				]
@@ -1913,20 +2392,84 @@
 				"description": "",
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": []
-			},
+			}
+		],
+		"AfterEach": [],
+		"After": [
 			{
-				"id": "BK_TC_24",
+				"id": "BK_TC_7",
 				"description": "",
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": []
+			}
+		]
+	},
+	"Suite6": {
+		"Name": "Deletion of folders",
+		"TestCaseRepo": [
+			"./testResources/testcaseRepository/backoffice/backofficeTCRepository.json"
+		],
+		"Before": [
+			{
+				"id": "launchUrl",
+				"description": "",
+				"testFile": "./engageAutomation/core/runner/launchUrl.js",
+				"testData": []
 			},
+			{
+				"id": "BK_TC_1",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/production/logindata.json",
+						"jsonPath": "backoffice.user.validUser1"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_4",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
+						"jsonPath": "backoffice.book[0]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_10",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
+						"jsonPath": "backoffice.component[0]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_13",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
+						"jsonPath": "backoffice.folder[0].name"
+					}
+				]
+			}
+		],
+		"BeforeEach": [],
+		"Test": [
 			{
 				"id": "BK_TC_19",
 				"description": "",
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
 						"jsonPath": "backoffice.folder[1]"
 					}
 				]
@@ -1949,7 +2492,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
 						"jsonPath": "backoffice.folder[0]"
 					}
 				]
@@ -1961,12 +2504,116 @@
 				"testData": []
 			},
 			{
+				"id": "BK_TC_24",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			},
+			{
+				"id": "BK_TC_16",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
+						"jsonPath": "backoffice.book[0]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_10",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
+						"jsonPath": "backoffice.component[1]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_19",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
+						"jsonPath": "backoffice.folder[0]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_20",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			}
+		],
+		"AfterEach": [],
+		"After": [
+			{
+				"id": "BK_TC_7",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			}
+		]
+	},
+	"Suite7": {
+		"Name": "Deletion of components",
+		"TestCaseRepo": [
+			"./testResources/testcaseRepository/backoffice/backofficeTCRepository.json"
+		],
+		"Before": [
+			{
+				"id": "launchUrl",
+				"description": "",
+				"testFile": "./engageAutomation/core/runner/launchUrl.js",
+				"testData": []
+			},
+			{
+				"id": "BK_TC_1",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/production/logindata.json",
+						"jsonPath": "backoffice.user.validUser1"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_4",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
+						"jsonPath": "backoffice.book[0]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_10",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
+						"jsonPath": "backoffice.component[0]"
+					}
+				]
+			}
+		],
+		"BeforeEach": [],
+		"Test": [
+			{
 				"id": "BK_TC_17",
 				"description": "",
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
 						"jsonPath": "backoffice.component[0]"
 					}
 				]
@@ -1983,8 +2630,8 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
-						"jsonPath": "backoffice.component[1].title"
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
+						"jsonPath": "backoffice.component[1]"
 					}
 				]
 			},
@@ -1994,7 +2641,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
 						"jsonPath": "backoffice.component[1]"
 					}
 				]
@@ -2011,8 +2658,8 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
-						"jsonPath": "backoffice.component[2].title"
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
+						"jsonPath": "backoffice.component[2]"
 					}
 				]
 			},
@@ -2022,8 +2669,36 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
 						"jsonPath": "backoffice.component[2]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_18",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			},
+			{
+				"id": "BK_TC_10",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
+						"jsonPath": "backoffice.component[3]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_17",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
+						"jsonPath": "backoffice.component[3]"
 					}
 				]
 			},
@@ -2044,10 +2719,10 @@
 			}
 		]
 	},
-	"Suite7": {
+	"Suite8": {
 		"Name": "Deletion of the book",
 		"TestCaseRepo": [
-			"./testResources/testcaseRepository/backOffice/backOfficeTCRepository.json"
+			"./testResources/testcaseRepository/backoffice/backofficeTCRepository.json"
 		],
 		"Before": [
 			{
@@ -2062,7 +2737,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/logindata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/production/logindata.json",
 						"jsonPath": "backoffice.user.validUser1"
 					}
 				]
@@ -2073,8 +2748,8 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
-						"jsonPath": "backoffice.book[0].name"
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
+						"jsonPath": "backoffice.book[0]"
 					}
 				]
 			}
@@ -2087,7 +2762,7 @@
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backOffice/production/bookdata.json",
+						"dataFile": "./testResources/testcaseData/backoffice/production/bookdata.json",
 						"jsonPath": "backoffice.book[0]"
 					}
 				]
