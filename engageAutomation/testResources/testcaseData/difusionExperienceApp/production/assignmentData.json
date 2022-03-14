@@ -1,0 +1,37 @@
+{
+    "engage": {
+        "className":"Class Assignment test",
+        "assignmentName": {
+            "name1": "Automation Test",
+            "name2": "",
+            "name3": "",
+            "editName": "Automation Test Edit",
+            "cloneName": "Clone: Automation Test"
+        },
+        "book": {
+            "name": "QA Test Automation Book [DO NOT MODIFY]",
+            "componentList": [
+                {
+                    "componentname": "Textbook"
+                },
+                {
+                    "componentname": "Extra Activities"
+                },
+                {
+                    "componentname": "Custom Component"
+                },
+                {
+                    "componentname": "LP1",
+                    
+                    "folder": {
+                        "name": "1. Scorable",
+                        "activityList": {
+                            "activity1": "Close Ended Native",
+                            "activity2": "Open Ended Native"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

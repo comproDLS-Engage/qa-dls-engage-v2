@@ -51,7 +51,7 @@
                 "acceptanceteacher": {
                     "email": "acceptanceTeacher@yopmail.com",
                     "password": "Compro@1234",
-                    "role": "student",
+                    "role": "teacher",
                     "name": "acceptance Teacher",
                     "class": [
                         {
@@ -216,6 +216,27 @@
                     "info": {}
                 },
                 "classInstructorUser3": {
+                    "email": "dev1_teacher002@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "instructor",
+                    "name": "qa teacher9",
+                    "class": [
+                        {
+                            "key": "TFbA-6AP7",
+                            "name": "Assignment Automation"
+                        },
+                        {
+                            "key": "TFbA-6AP7",
+                            "name": "Class Assignment test"
+                        },
+                        {
+                            "key": "TFbA-6AP7",
+                            "name": "class3"
+                        }
+                    ],
+                    "info": {}
+                },
+                "classInstructorUser5": {
                     "email": "qa_teacher1@yopmail.com",
                     "password": "Compro@1234",
                     "role": "instructor",
@@ -242,6 +263,15 @@
                     "role": "instructor",
                     "name": "4 Teacher dev1",
                     "class": [],
+                    "info": {}
+                },
+                "flipbookUser": {
+                    "email": "flipbook_automation@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "instructor",
+                    "name": "flipbook automation",
+                    "class": [
+                    ],
                     "info": {}
                 }
             }

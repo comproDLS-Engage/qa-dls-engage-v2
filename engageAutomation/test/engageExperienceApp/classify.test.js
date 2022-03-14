@@ -5,6 +5,18 @@ var testplayer = require('../../pages/engageExperienceApp/basePlayer.page.js');
 const itemPlayerPage = require('../../pages/engageExperienceApp/itemPlayer.page.js');
 var sts, sts1;
 module.exports = {
+    ENG_ITEM_CLA_TC_1: function (testdata) {
+        //Validate the unattempt state of the player
+        sts = classify.isInitialized(testdata[0], testdata[1]);
+        if ((typeof (sts)) === "object") {
+            for (var i = 0; i < sts.sourceData.length; i++) {
+                assertion.assertEqual(sts.targetData.key1[i][1], "", "Target text mismatch for " + sts.targetData.key1[i][1]);
+                assertion.assertEqual(sts.targetData.key1[i][2], "", "Status mismatch for " + sts.targetData.key1[i][1]);
+            }
+        }
+        else assertion.assertFail(sts);
+    },
+
     //Validate that user is able to place option pill inside the Group using drag and drop
     ENG_ITEM_CLA_TC_2: function (testdata) {
         // sts = itemPlayerPage.getItemplayerInfo();

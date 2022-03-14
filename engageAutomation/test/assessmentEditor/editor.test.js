@@ -38,7 +38,7 @@ module.exports = {
 	//Validate that a new question is added by clicking on the 'Add new Question' button on the left pane
 	ASE_COM_TC_4: function (testdata) {
 		sts = EditorPlayer.clickAddQuestionBtn();
-		assertion.assertEqual(sts.editorCount, 11, "Question tab is not selected");
+		assertion.assertEqual(sts.editorCount, 12, "Question tab is not selected");
 	},
 	//Validate that alphanumeric text is supported in Question Title Text.
 	ASE_QUN_TC_5: function (testdata) {
@@ -425,5 +425,29 @@ module.exports = {
 	ASE_COM_TC_1011: function () {
 		sts = EditorPlayer.clickLeftRightbtn()
 		assertion.assertEqual(sts, true, "Left Right option button clicked");
+	},
+	ASE_COM_TC_1012: function (testdata) {
+		sts = EditorPlayer.setScorePlaceHolder(testdata)
+		assertion.assertEqual(sts, true, "Left Right option button clicked");
+	},
+	ASE_COM_TC_1013: function () {
+		sts = EditorPlayer.clickAddAnswerBtnComman()
+		assertion.assertEqual(sts, true, "Add Answer button clicked");
+	},
+	ASE_FIBDROPDOWN_TC_1013: function (testdata) {
+		sts = EditorPlayer.clickUniqueOption(testdata)
+		assertion.assertEqual(sts, true, "unique option button clicked");
+	},
+	ASE_FIBDROPDOWN_TC_1014: function () {
+		sts = EditorPlayer.clickCommonOption()
+		assertion.assertEqual(sts, true, "common option button clicked");
+	},
+	ASE_FIBDROPDOWN_TC_1015: function (testdata) {
+		sts = EditorPlayer.setinputOptionText(testdata)
+		assertion.assertEqual(sts, true, "input option is not added");
+	},
+	ASE_FIBDROPDOWN_TC_1016: function (testdata) {
+		sts = EditorPlayer.setresponseOptionText(testdata)
+		assertion.assertEqual(sts, true, "response option is not added");
 	},
 }

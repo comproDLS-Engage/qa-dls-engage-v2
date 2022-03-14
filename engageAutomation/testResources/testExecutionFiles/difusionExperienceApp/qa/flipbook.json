@@ -12,6 +12,12 @@
             "testData": []
          },
          {
+             "id": "ENG_LAND_TC_1",
+             "description": "",
+             "testFile": "./test/engageExperienceApp/landing.test.js",
+             "testData": []
+         },
+         {
             "id": "ENG_LAND_TC_3",
             "description": "",
             "testFile": "./test/engageExperienceApp/landing.test.js",
@@ -29,25 +35,34 @@
             ]
          },
          {
-             "id": "ENG_DASH_TC_12",
-             "description": "",
-             "testFile": "./test/engageExperienceApp/dashboard.test.js",
-             "testData": [
-                 {
-                     "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
-                     "jsonPath": "book.name"
-                 },
-                 {
-                     "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                     "jsonPath": "engage.appContent.dashboard.teacher"
-                 }
-             ]
+            "id": "ENG_DASH_TC_12",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/dashboard.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                  "jsonPath": "book.name"
+               },
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.dashboard.teacher"
+               }
+            ]
          },
          {
-             "id": "ENG_DASH_TC_18",
-             "description": "",
-             "testFile": "./test/engageExperienceApp/dashboard.test.js",
-             "testData": []
+            "id": "ENG_DASH_TC_18",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/dashboard.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                  "jsonPath": "book.name"
+               },
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.dashboard.teacher"
+               }
+            ]
          }
       ],
       "BeforeEach": [],
@@ -60,12 +75,12 @@
          },
          {
             "id": "ENG_FLIP_TC_2",
-            "description": "",
+            "description": "Validate Clicking on single page launches the book in single page layout",
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath": "engage.appContent.flipbook"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/flipbookData.json",
+                  "jsonPath": "engage.flipbook.fb1"
                }
             ]
          },
@@ -75,8 +90,8 @@
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath": "engage.appContent.flipbook"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/flipbookData.json",
+                  "jsonPath": "engage.flipbook.fb1"
                }
             ]
          },
@@ -86,8 +101,8 @@
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath": "engage.appContent.flipbook"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/flipbookData.json",
+                  "jsonPath": "engage.flipbook.fb1"
                }
             ]
          }
@@ -108,6 +123,12 @@
             "testData": []
          },
          {
+             "id": "ENG_LAND_TC_1",
+             "description": "",
+             "testFile": "./test/engageExperienceApp/landing.test.js",
+             "testData": []
+         },
+         {
             "id": "ENG_LAND_TC_3",
             "description": "",
             "testFile": "./test/engageExperienceApp/landing.test.js",
@@ -120,7 +141,37 @@
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
-                  "jsonPath": "engage.login.user.classInstructorUser4"
+                  "jsonPath": "engage.login.user.validInstructorUser1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_DASH_TC_12",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/dashboard.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                  "jsonPath": "book.name"
+               },
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.dashboard.teacher"
+               }
+            ]
+         },
+         {
+            "id": "ENG_DASH_TC_18",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/dashboard.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                  "jsonPath": "book.name"
+               },
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.dashboard.teacher"
                }
             ]
          }
@@ -144,8 +195,8 @@
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath": "engage.appContent.flipbook"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/flipbookData.json",
+                  "jsonPath": "engage.flipbook.fb1"
                }
             ]
          },
@@ -177,12 +228,8 @@
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath": "engage.appContent.flipbook.setNote"
-               },
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath": "engage.appContent.flipbook.setNote2"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/flipbookData.json",
+                  "jsonPath": "engage.flipbook.fb1.setNote"
                }
             ]
          },
@@ -220,8 +267,8 @@
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath": "engage.appContent.flipbook.setBookmark"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/flipbookData.json",
+                  "jsonPath": "engage.flipbook.fb1.setBookmark"
                }
             ]
          },
@@ -248,6 +295,12 @@
             "testData": []
          },
          {
+             "id": "ENG_LAND_TC_1",
+             "description": "",
+             "testFile": "./test/engageExperienceApp/landing.test.js",
+             "testData": []
+         },
+         {
             "id": "ENG_LAND_TC_3",
             "description": "",
             "testFile": "./test/engageExperienceApp/landing.test.js",
@@ -260,7 +313,37 @@
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
-                  "jsonPath": "engage.login.user.classInstructorUser4"
+                  "jsonPath": "engage.login.user.validInstructorUser1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_DASH_TC_12",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/dashboard.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                  "jsonPath": "book.name"
+               },
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.dashboard.teacher"
+               }
+            ]
+         },
+         {
+            "id": "ENG_DASH_TC_18",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/dashboard.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                  "jsonPath": "book.name"
+               },
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.dashboard.teacher"
                }
             ]
          }
@@ -284,8 +367,8 @@
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath": "engage.appContent.flipbook"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/flipbookData.json",
+                  "jsonPath": "engage.flipbook.fb1"
                }
             ]
          },
@@ -297,6 +380,10 @@
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
                   "jsonPath": "engage.appContent.flipbook"
+               },
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/flipbookData.json",
+                  "jsonPath": "engage.flipbook.fb1"
                }
             ]
          },
@@ -306,6 +393,10 @@
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": [
                {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/flipbookData.json",
+                  "jsonPath": "engage.flipbook.fb1"
+               },
+               {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
                   "jsonPath": "engage.appContent.flipbook"
                }
@@ -313,12 +404,12 @@
          },
          {
             "id": "ENG_FLIP_TC_5",
-            "description": "Validate on clicking Save button, notes set by the user are saved",
+            "description": "Validate setting (entering note in textbox) and saving of notes by user",
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath": "engage.appContent.flipbook.setEditedNote"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/flipbookData.json",
+                  "jsonPath": "engage.flipbook.fb1.setEditedNote"
                }
             ]
          },
@@ -327,6 +418,10 @@
             "description": "Validate clicking on the Delete button, launches the delete notes modal",
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/flipbookData.json",
+                  "jsonPath": "engage.flipbook.fb1"
+               },
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
                   "jsonPath": "engage.appContent.flipbook"
@@ -352,7 +447,7 @@
          },
          {
             "id": "ENG_FLIP_TC_15",
-            "description": "Validate clicking on the Bookmarks button for a flipbook with added bookmarks launches the list",
+            "description": "Validate clicking on the Bookmarks button with already added Bookmarks, launches the bookmark list",
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": [
                {
@@ -367,6 +462,10 @@
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": [
                {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/flipbookData.json",
+                  "jsonPath": "engage.flipbook.fb1"
+               },
+               {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
                   "jsonPath": "engage.appContent.flipbook"
                }
@@ -374,12 +473,12 @@
          },
          {
             "id": "ENG_FLIP_TC_9",
-            "description": "Validate on clicking Save button, bookmarks set by the user are saved",
+            "description": "Validate setting (entering bookmark in textbox) and saving of bookmark by user",
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath": "engage.appContent.flipbook.setEditedBookmark"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/flipbookData.json",
+                  "jsonPath": "engage.flipbook.fb1.setEditedBookmark"
                }
             ]
          },
@@ -388,6 +487,10 @@
             "description": "Validate clicking on the Delete button, deletes the Bookmark",
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/flipbookData.json",
+                  "jsonPath": "engage.flipbook.fb1"
+               },
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
                   "jsonPath": "engage.appContent.flipbook"
@@ -411,6 +514,12 @@
             "testData": []
          },
          {
+             "id": "ENG_LAND_TC_1",
+             "description": "",
+             "testFile": "./test/engageExperienceApp/landing.test.js",
+             "testData": []
+         },
+         {
             "id": "ENG_LAND_TC_3",
             "description": "",
             "testFile": "./test/engageExperienceApp/landing.test.js",
@@ -423,7 +532,37 @@
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
-                  "jsonPath": "engage.login.user.classInstructorUser4"
+                  "jsonPath": "engage.login.user.validInstructorUser1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_DASH_TC_12",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/dashboard.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                  "jsonPath": "book.name"
+               },
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.dashboard.teacher"
+               }
+            ]
+         },
+         {
+            "id": "ENG_DASH_TC_18",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/dashboard.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                  "jsonPath": "book.name"
+               },
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.dashboard.teacher"
                }
             ]
          }
@@ -447,8 +586,8 @@
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath": "engage.appContent.flipbook"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/flipbookData.json",
+                  "jsonPath": "engage.flipbook.fb1"
                }
             ]
          },
@@ -460,6 +599,10 @@
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/flipbookData.json",
                   "jsonPath": "engage.flipbook.fb1"
+               },
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.flipbook"
                }
             ]
          },
@@ -478,7 +621,7 @@
             "id": "ENG_FLIP_TC_22",
             "description": "Validate clicking on Jump to page button lauches the entered page in flipbook",
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
-            "testData": [ ]
+            "testData": []
          }
       ],
       "AfterEach": [],

@@ -196,7 +196,7 @@ module.exports = {
 		assertion.assertEqual(sts, true, JSON.stringify(sts))
 		sts = joinClassPage.get_joinClassPopUpData()
 		if ((typeof (sts)) === "object") {
-			assertion.assertEqual(sts.classHelpText, testdata[1].titleErrorMsg, "Title error message is mismatched" + JSON.stringify(sts))
+			assertion.assertEqual(sts.classHelpText, testdata[1].classHelpText, "Title error message is mismatched" + JSON.stringify(sts))
 
 		} else {
 			assertion.assertFail(sts);

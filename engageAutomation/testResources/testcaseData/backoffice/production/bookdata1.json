@@ -1,0 +1,42 @@
+{
+    "backoffice": {
+        "book": [
+            {
+                "type": "Book",
+                "name": "QA Test Automation Book [DO NOT MODIFY]",
+                "coverImage": "./testResources/testcaseData/backoffice/production/book_cover_compro_qa.png",
+                "description": "DO NOT MODIFY",
+                "bookDesign": "Red",
+                "visibility": "True"
+            }
+        ],
+        "component": [
+            {
+                "type": "Learning Path",
+                "category": "--none--",
+                "title": "Custom Component",
+                "folderLevel": "2",
+                "autonumbering": "None",
+                "targetRole": "All",
+                "visibility": "True",
+                "assignable": "True"
+            }
+        ],
+        "folder": [
+            {
+                "name": "Unit 1",
+                "coverImage": ""
+            },
+            {
+                "name": "QA Automation Test folder L2",
+                "coverImage": ""
+            }
+        ],
+        "activity": [
+            {
+                "type": "Native Engage Learning Object",
+                "name": "Native LO 1"
+            }
+        ]
+    }
+}

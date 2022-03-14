@@ -93,6 +93,12 @@ module.exports = {
         assertion.assertEqual(sts.bookSubTitle, testdata[1].description, "Book Description Mismatch");
         assertion.assertEqual(sts.viewClass, testdata[0].viewClasses, "View Class Text Mismatch");
         assertion.assertEqual(sts.openFlipbook_btn, testdata[0].openFlipbook, "Open Flipbook Button text Mismatch");
-    }*/
+    },*/
+
+    //Validate that clicking on the subfolder expand/collapse the subfolder
+    ENG_BOOK_TC_53: function (testdata) {
+        sts = unitDetailPage.expandCollapseFolder(testdata);
+        assertion.assertEqual(sts, true, "folder not found: ");
+    }
 
 };

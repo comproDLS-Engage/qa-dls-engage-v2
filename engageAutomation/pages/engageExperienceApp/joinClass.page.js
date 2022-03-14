@@ -62,6 +62,7 @@ module.exports = {
 		logger.logInto(stackTrace.get());
 		action.waitForDisplayed(this.joinclassPopUpbtn);
 		res = action.click(this.joinclassPopUpbtn);
+		browser.pause(4000)
 		if (res == true) {
 			logger.logInto(stackTrace.get(), res + " -- joinclassPopUpbtn is clicked");
 		}

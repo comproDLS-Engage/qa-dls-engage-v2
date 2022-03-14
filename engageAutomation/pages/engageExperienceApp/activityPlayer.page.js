@@ -4,6 +4,7 @@ var selectorFile = jsonParserUtil.jsonParser(selectorDir)
 var appShellPage = require('./appShell.page.js')
 
 module.exports = {
+
     infoBtn: selectorFile.css.ComproEngage.activityPlayer.infoBtn,
     showDetailsBtn: selectorFile.css.ComproEngage.activityPlayer.showDetailsBtn,
     quesNumber: selectorFile.css.ComproEngage.activityPlayer.quesNumber,
@@ -17,13 +18,11 @@ module.exports = {
     submitActivityBtn: selectorFile.css.ComproEngage.activityPlayer.submitActivityBtn,
     markCompleteBtn: selectorFile.css.ComproEngage.activityPlayer.markCompleteBtn,
     retakeActivityBtn: selectorFile.css.ComproEngage.activityPlayer.retakeActivityBtn,
-    resetBtn: selectorFile.css.ComproEngage.activityPlayer.resetBtn,
+    closeBtn: selectorFile.css.ComproEngage.activityPlayer.closeBtn,
     completedTxt: selectorFile.css.ComproEngage.activityPlayer.completedTxt,
-    submittedTxt: selectorFile.css.ComproEngage.activityPlayer.submittedTxt,
-    submitGradeBtn: selectorFile.css.ComproEngage.activityPlayer.submitGradeBtn,
     yourScoreLabel: selectorFile.css.ComproEngage.activityPlayer.yourScoreLabel,
     yourScoreValue: selectorFile.css.ComproEngage.activityPlayer.yourScoreValue,
-    detailsPanelContainer: selectorFile.css.ComproEngage.activityPlayer.detailsPanelContainer,
+    detailsPanel: selectorFile.css.ComproEngage.activityPlayer.detailsPanel,
     panelHeading: selectorFile.css.ComproEngage.activityPlayer.panelHeading,
     activityTitle: selectorFile.css.ComproEngage.activityPlayer.activityTitle,
     activitySubtitle: selectorFile.css.ComproEngage.activityPlayer.activitySubtitle,
@@ -32,14 +31,16 @@ module.exports = {
     pageNumber: selectorFile.css.ComproEngage.activityPlayer.pageNumber,
     expandCollapseBtn: selectorFile.css.ComproEngage.activityPlayer.expandCollapseBtn,
     analyticsInfoContainer: selectorFile.css.ComproEngage.activityPlayer.analyticsInfoContainer,
-
+    closeInfoBtn: selectorFile.css.ComproEngage.activityPlayer.closeInfoBtn,
+    infoTocHeading: selectorFile.css.ComproEngage.activityPlayer.infoTocHeading,
+    feedbackText: selectorFile.css.ComproEngage.activityPlayer.feedbackText,
 
     isInitialized: function () {
         var res;
         logger.logInto(stackTrace.get());
         action.waitForDocumentLoad();
         res = {
-            pageStatus: action.waitForDisplayed(this.infoBtn),
+            pageStatus: action.waitForDisplayed(this.infoBtn + "," + this.showDetailsBtn),
             appShellPage: appShellPage.isInitialized()
         };
         return res;
@@ -62,12 +63,12 @@ module.exports = {
             submitActivityBtn: (action.getElementCount(this.submitActivityBtn) > 0) ? action.getText(this.submitActivityBtn) : null,
             markCompleteBtn: (action.getElementCount(this.markCompleteBtn) > 0) ? action.getText(this.markCompleteBtn) : null,
             retakeActivityBtn: (action.getElementCount(this.retakeActivityBtn) > 0) ? action.getText(this.retakeActivityBtn) : null,
-            resetBtn: (action.getElementCount(this.resetBtn) > 0) ? action.getText(this.resetBtn) : null,
+            closeBtn: (action.getElementCount(this.closeBtn) > 0) ? action.getText(this.closeBtn) : null,
             completedTxt: (action.getElementCount(this.completedTxt) > 0) ? action.getText(this.completedTxt) : null,
-            submittedTxt: (action.getElementCount(this.submittedTxt) > 0) ? action.getText(this.submittedTxt) : null,
-            submitGradeBtn: (action.getElementCount(this.submitGradeBtn) > 0) ? action.getText(this.submitGradeBtn) : null,
             yourScoreLabel: (action.getElementCount(this.yourScoreLabel) > 0) ? action.getText(this.yourScoreLabel) : null,
             yourScoreValue: (action.getElementCount(this.yourScoreValue) > 0) ? action.getText(this.yourScoreValue) : null,
+            detailsPanelHidden: (action.getElementCount(this.detailsPanel) > 0) ? action.getAttribute(this.detailsPanel, "aria-hidden") : null,
+            feedbackText: (action.getElementCount(this.feedbackText) > 0) ? action.getText(this.feedbackText) : null
         }
         return obj;
     },
@@ -79,10 +80,20 @@ module.exports = {
             panelHeading: (action.getElementCount(this.panelHeading) > 0) ? action.getText(this.panelHeading) : null,
             activityTitle: (action.getElementCount(this.activityTitle) > 0) ? action.getText(this.activityTitle) : null,
             activitySubtitle: (action.getElementCount(this.activitySubtitle) > 0) ? action.getText(this.activitySubtitle) : null,
-            activityTypeIcon: (action.getElementCount(this.activityTypeIcon) > 0) ? action.waitForExist(this.activityTypeIcon) : false,
+            activityTypeIcon: (action.getElementCount(this.activityTypeIcon) > 0) ? action.waitForDisplayed(this.activityTypeIcon) : false,
             activityType: (action.getElementCount(this.activityType) > 0) ? action.getText(this.activityType) : null,
             pageNumber: (action.getElementCount(this.pageNumber) > 0) ? action.getText(this.pageNumber) : null,
             expandCollapseBtn: (action.getElementCount(this.expandCollapseBtn) > 0) ? action.getText(this.expandCollapseBtn) : null,
+        }
+        return obj;
+    },
+
+    getData_infoTocPanel: function () {
+        logger.logInto(stackTrace.get());
+        var obj;
+        obj = {
+            closeInfoBtn: (action.getElementCount(this.closeInfoBtn) > 0) ? action.getText(this.closeInfoBtn) : null,
+            infoTocHeading: (action.getElementCount(this.infoTocHeading) > 0) ? action.getText(this.infoTocHeading) : null,
         }
         return obj;
     },
@@ -94,6 +105,7 @@ module.exports = {
         res = action.click(this.infoBtn);
         if (true == res) {
             logger.logInto(stackTrace.get(), " infoBtn is clicked");
+            res = this.getData_infoTocPanel();
         }
         else {
             logger.logInto(stackTrace.get(), res + "infoBtn is NOT clicked", 'error');
@@ -107,7 +119,7 @@ module.exports = {
         res = action.click(this.showDetailsBtn);
         if (true == res) {
             logger.logInto(stackTrace.get(), " showDetailsBtn is clicked");
-            res = action.getAttribute(this.detailsPanelContainer, "aria-hidden");
+            res = action.getAttribute(this.detailsPanel, "aria-hidden");
         }
         else {
             logger.logInto(stackTrace.get(), res + "showDetailsBtn is NOT clicked", 'error');
@@ -219,7 +231,7 @@ module.exports = {
         res = action.click(this.submitActivityBtn);
         if (true == res) {
             logger.logInto(stackTrace.get(), " submitActivityBtn is clicked");
-            res = this.getData_activityPlayer();
+            res = action.waitForDisplayed(this.submitActivityBtn, undefined, true);
         }
         else {
             logger.logInto(stackTrace.get(), res + "submitActivityBtn is NOT clicked", 'error');
@@ -244,11 +256,9 @@ module.exports = {
     click_retakeActivityBtn: function () {
         logger.logInto(stackTrace.get());
         var res;
-        action.waitForDisplayed(this.retakeActivityBtn)
         res = action.click(this.retakeActivityBtn);
         if (true == res) {
             logger.logInto(stackTrace.get(), " retakeActivityBtn is clicked");
-            console.log((action.waitForDisplayed(this.checkAnswerBtn,5000)))
             res = action.waitForDisplayed(this.retakeActivityBtn, undefined, true);
         }
         else {
@@ -257,29 +267,16 @@ module.exports = {
         return res;
     },
 
-    click_resetBtn: function () {
+    click_closeBtn: function () {
         logger.logInto(stackTrace.get());
         var res;
-        res = action.click(this.resetBtn);
+        res = action.click(this.closeBtn);
         if (true == res) {
-            logger.logInto(stackTrace.get(), " resetBtn is clicked");
+            logger.logInto(stackTrace.get(), " closeBtn is clicked");
+            res = action.waitForDisplayed(this.closeBtn, undefined, true);
         }
         else {
-            logger.logInto(stackTrace.get(), res + "resetBtn is NOT clicked", 'error');
-        }
-        return res;
-    },
-
-    click_submitGradeBtn: function () {
-        logger.logInto(stackTrace.get());
-        var res;
-        res = action.click(this.submitGradeBtn);
-        if (true == res) {
-            logger.logInto(stackTrace.get(), " submitGradeBtn is clicked");
-            res = action.getText(this.submittedTxt);
-        }
-        else {
-            logger.logInto(stackTrace.get(), res + "submitGradeBtn is NOT clicked", 'error');
+            logger.logInto(stackTrace.get(), res + "closeBtn is NOT clicked", 'error');
         }
         return res;
     },
@@ -298,5 +295,18 @@ module.exports = {
         return res;
     },
 
-}
+    click_closeInfoBtn: function () {
+        logger.logInto(stackTrace.get());
+        var res;
+        res = action.click(this.closeInfoBtn);
+        if (true == res) {
+            logger.logInto(stackTrace.get(), " closeInfoBtn is clicked");
+            res = action.waitForDisplayed(this.closeBtn, undefined, true);
+        }
+        else {
+            logger.logInto(stackTrace.get(), res + "closeInfoBtn is NOT clicked", 'error');
+        }
+        return res;
+    },
 
+}

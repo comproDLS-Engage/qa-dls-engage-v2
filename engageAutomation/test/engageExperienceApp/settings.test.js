@@ -497,7 +497,6 @@ module.exports = {
     //Validate the content of Billing tab for a Premium user 
     ENG_SETT_TC_57: function (testdata) {
         sts = settingsPage.getBillingTabData()
-        console.log(sts)
         assertion.typeOf(sts, 'object', new Error(sts));
         assertion.assertEqual(sts.pageHeading, testdata.pageHeading, "Billing Page Heading Mismatch: ")
         assertion.assertEqual(sts.subscriptionSubtitle_text, testdata.subscriptionSubtitle_text, "Subscription Subtitle Text Mismatch: ")

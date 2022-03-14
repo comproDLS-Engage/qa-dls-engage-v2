@@ -35,6 +35,7 @@ module.exports = {
     studentCompletionScore: selectorFile.css.ComproEngage.teacherViewClassPage.studentCompletionScore,
     viewProgressbtn: selectorFile.css.ComproEngage.teacherViewClassPage.viewProgressbtn,
     viewMessagebtn: selectorFile.css.ComproEngage.teacherViewClassPage.viewMessagebtn,
+    assignmentsTab:selectorFile.css.ComproEngage.teacherViewClassPage.assignmentsTab,
 
     isInitialized: function () {
         logger.logInto(stackTrace.get());

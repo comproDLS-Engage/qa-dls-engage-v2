@@ -21,6 +21,8 @@ module.exports = {
     targetRoleList: selectorFile.addComponentPage.targetRoleList,
     assignableDropdown: selectorFile.addComponentPage.assignableDropdown,
     assignableList: selectorFile.addComponentPage.assignableList,
+    enableTrackingDropdown: selectorFile.addComponentPage.enableTrackingDropdown,
+    enableTrackingList: selectorFile.addComponentPage.enableTrackingList,
 
     isInitialized: function () {
         logger.logInto(stackTrace.get());
@@ -39,7 +41,7 @@ module.exports = {
     select_CategoryType: function (name) {
         logger.logInto(stackTrace.get());
         res = action.click(this.categoryTypeDropdown);
-        action.waitForDisplayed(this.categoryTypeList);
+        action.waitForDisplayed(this.categoryTypeList, undefined, undefined, undefined, 500);
         if (res == true) {
             let i, list;
             list = action.findElements(this.categoryTypeList);
@@ -59,7 +61,7 @@ module.exports = {
     select_LearningPathLevel: function (value) {
         logger.logInto(stackTrace.get());
         res = action.click(this.lpLevelsDropdown);
-        action.waitForDisplayed(this.lpLevelsList);
+        action.waitForDisplayed(this.lpLevelsList, undefined, undefined, undefined, 500);
         if (res == true) {
             let i, list;
             list = action.findElements(this.lpLevelsList);
@@ -79,7 +81,7 @@ module.exports = {
     select_Autonumbering: function (value) {
         logger.logInto(stackTrace.get());
         res = action.click(this.autonumberingDropdown);
-        action.waitForDisplayed(this.autonumberingList);
+        action.waitForDisplayed(this.autonumberingList, undefined, undefined, undefined, 500);
         if (res == true) {
             let i, list;
             list = action.findElements(this.autonumberingList);
@@ -120,7 +122,7 @@ module.exports = {
             res = true;
         else {
             res = action.click(this.visibilityDropdown);
-            action.waitForDisplayed(this.visibilityList);
+            action.waitForDisplayed(this.visibilityList, undefined, undefined, undefined, 500);
             if (res == true) {
                 let i, list;
                 list = action.findElements(this.visibilityList);
@@ -143,7 +145,7 @@ module.exports = {
             res = true;
         else {
             res = action.click(this.targetRoleDropdown);
-            action.waitForDisplayed(this.targetRoleList);
+            action.waitForDisplayed(this.targetRoleList, undefined, undefined, undefined, 500);
             if (res == true) {
                 let i, list;
                 list = action.findElements(this.targetRoleList);
@@ -166,7 +168,7 @@ module.exports = {
             res = true;
         else {
             res = action.click(this.assignableDropdown);
-            action.waitForDisplayed(this.assignableList);
+            action.waitForDisplayed(this.assignableList, undefined, undefined, undefined, 500);
             if (res == true) {
                 let i, list;
                 list = action.findElements(this.assignableList);
@@ -176,6 +178,29 @@ module.exports = {
                         break;
                     }
                     res = "Assignable value not found ";
+                }
+            }
+            logger.logInto(stackTrace.get(), res);
+        }
+        return res;
+    },
+
+    select_enableTracking: function (value) {
+        logger.logInto(stackTrace.get());
+        if (value == "" || value == undefined)
+            res = true;
+        else {
+            res = action.click(this.enableTrackingDropdown);
+            action.waitForDisplayed(this.enableTrackingList, undefined, undefined, undefined, 500);
+            if (res == true) {
+                let i, list;
+                list = action.findElements(this.enableTrackingList);
+                for (i = 0; i < list.length; i++) {
+                    if (action.getText(list[i]).includes(value)) {
+                        res = action.click(action.parentElement(list[i]));
+                        break;
+                    }
+                    res = "Enable Progress tracking value not found ";
                 }
             }
             logger.logInto(stackTrace.get(), res);

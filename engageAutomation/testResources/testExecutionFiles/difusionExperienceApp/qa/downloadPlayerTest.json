@@ -1,0 +1,196 @@
+{
+    "Suite1": {
+        "Name": "Validation of download player | Teacher",
+        "TestCaseRepo": [
+            "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
+        ],
+        "Before": [
+            {
+                "id": "launchUrl",
+                "description": "",
+                "testFile": "./engageAutomation/core/runner/launchUrl.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_LAND_TC_1",
+                "description": "Landing page",
+                "testFile": "./test/engageExperienceApp/landing.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_LAND_TC_3",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/landing.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_IDEN_TC_7",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/login.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+                        "jsonPath": "engage.login.user.validInstructorUser1"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_DASH_TC_11",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/dashboard.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                        "jsonPath": "book.name"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_BOOK_TC_10",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/viewBook.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                        "jsonPath": "book.component[3].name.EN"
+                    },
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                        "jsonPath": "book.component[3].unit"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_BOOK_TC_21",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/viewUnit.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                        "jsonPath": "book.component[3].unit[0].section[0].activity[1]"
+                    }
+                ]
+            }
+        ],
+        "BeforeEach": [],
+        "Test": [
+            {
+                "id": "ENG_DOWN_TC_2",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/downloadPlayer.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                        "jsonPath": "engage.appContent.downloadPlayer.student"
+                    },
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/downloadPlayerData.json",
+                        "jsonPath": "engage.resources.word"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_DOWN_TC_1",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/downloadPlayer.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_PLAY_TC_13",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_DOWN_TC_3",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/downloadPlayer.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                        "jsonPath": "engage.appContent.downloadPlayer.student"
+                    },
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/downloadPlayerData.json",
+                        "jsonPath": "engage.resources.zip"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_DOWN_TC_1",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/downloadPlayer.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_PLAY_TC_13",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_DOWN_TC_4",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/downloadPlayer.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                        "jsonPath": "engage.appContent.downloadPlayer.student"
+                    },
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/downloadPlayerData.json",
+                        "jsonPath": "engage.resources.pdf"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_DOWN_TC_1",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/downloadPlayer.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_PLAY_TC_13",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_DOWN_TC_5",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/downloadPlayer.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                        "jsonPath": "engage.appContent.downloadPlayer.student"
+                    },
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/downloadPlayerData.json",
+                        "jsonPath": "engage.resources.sheet"
+                    }
+                ]
+            }
+        ],
+        "AfterEach": [],
+        "After": [
+            {
+                "id": "ENG_SHELL_TC_11",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/appShell.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_SHELL_TC_8",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/appShell.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_SHELL_TC_9",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/appShell.test.js",
+                "testData": []
+            }
+        ]
+    }
+}

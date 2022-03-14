@@ -1,0 +1,30 @@
+Label,cssSelector,tagName,group,relation,extraInfo,returnValue,teacherAppLangEN,studentAppLangEN
+infoBtn,[data-tid='button-openinfotoc'],button,activityPlayer,,,infoTocPanel,"""""",""""""
+showDetailsBtn,[data-tid=button-activityinfopanelswitcher],button,activityPlayer,,,"getAttribute, detailsPanel, ""aria-hidden""","[""Show Details"",""Hide Details""]","[""Show Details"",""Hide Details""]"
+quesNumber,[data-tid=text-currentquestion],p,activityPlayer,,,,,
+prevPageBtn,[data-tid='button-goPrev'],button,activityPlayer,,,"getText, quesNumber","""""",""""""
+nextPageBtn,[data-tid='button-goNext'],button,activityPlayer,,,"getText, quesNumber","""""",""""""
+prevActivityBtn,[data-tid='button-previousActivity'],button,activityPlayer,,,activityPlayer,"[""Previous Activity"",""Previous""]","[""Previous Activity"",""Previous""]"
+nextActivityBtn,[data-tid='button-nextActivity'],button,activityPlayer,,,activityPlayer,"[""Next Activity"",""Next""]","[""Next Activity"",""Next""]"
+showAnswerBtn,[data-tid='button-showAnswers'],button,activityPlayer,,,"waitForDisplayed, showResponseBtn","""Show Answers""","""Show Answers"""
+showResponseBtn,[data-tid='button-showResponses'],button,activityPlayer,,,"waitForDisplayed, showAnswerBtn","""User Response""","""User Response"""
+checkAnswerBtn,[data-tid='button-checkAnswers'],button,activityPlayer,,,"isEnabled, checkAnswerBtn","""Check Answers""","""Check Answers"""
+submitActivityBtn,[data-tid='button-submitActivity'],button,activityPlayer,,,"waitForDisplayed, submitActivityBtn, undefined, true",null,"[""Submit Answers"",""Finish""]"
+markCompleteBtn,[data-tid='button-markAsComplete'],button,activityPlayer,,,"isEnabled, completedTxt",null,"""Mark Complete"""
+retakeActivityBtn,[data-tid='button-retakeActivity'],button,activityPlayer,,,"waitForDisplayed, retakeActivityBtn, undefined, true",null,"""Retake Activity"""
+closeBtn,[data-tid=button-close],button,activityPlayer,,,"waitForDisplayed, closeBtn, undefined, true","""Close""","""Close"""
+completedTxt,[data-tid='button-completed'],p,activityPlayer,,,,null,"""Completed on"""
+yourScoreLabel,[data-tid=text-activityScoreInfo] p,p,activityPlayer,,,,null,"""Your Score:"""
+yourScoreValue,[data-tid=text-activityScoreInfo] h6,h6,activityPlayer,,,,,
+detailsPanel,main > div > div:nth-child(1),div,activityPlayer,,,,,
+panelHeading,[data-tid=panel-heading],p,detailsPanel,,,,,
+activityTitle,[data-tid='text-title'],h2,detailsPanel,,,,,
+activitySubtitle,[data-tid='text-subTitle'],p,detailsPanel,,,,,
+activityTypeIcon,[data-tid='icon-activitytype'],svg,detailsPanel,,,,,
+activityType,[data-tid='text-activitytype'],p,detailsPanel,,,,,
+pageNumber,[data-tid='text-pagenumberinfo'],p,detailsPanel,,,,,
+expandCollapseBtn,[data-tid=icon-togglegroupexpansion],button,detailsPanel,,,"getCSSProperty, analyticsInfoContainer, ""visibility""",,
+analyticsInfoContainer,[data-tid=container-analyticsinfo] > div > div:nth-child(2),div,,,,,,
+closeInfoBtn,[data-tid=button-closeinfotoc],button,infoTocPanel,,,"waitForDisplayed, closeBtn, undefined, true","""""",""""""
+infoTocHeading,[data-tid=text-infotocheading],p,infoTocPanel,,,,"""Activities""","""Activities"""
+feedbackText,[data-tid=text-feedbackmessage],h6,activityPlayer,,,,"[""Well done"", ""Correct"", ""Oops! Not quite correct."", ""Not Correct""]","[""Well done"", ""Correct"", ""Oops! Not quite correct."", ""Not Correct""]"

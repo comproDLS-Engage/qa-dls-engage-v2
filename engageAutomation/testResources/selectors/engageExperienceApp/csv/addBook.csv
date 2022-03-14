@@ -1,0 +1,13 @@
+Label,cssSelector,tagName,group,relation,extraInfo,returnValue,teacherAppLangEN
+addBookPageTitle,[data-tid='text-pageTitle'],h1,addBookPage,,,,"""Add books to your class"""
+addBookPageSubtitle,[data-tid='text-pageSubTitle'],h2,addBookPage,,,,"""Select books from either your list (My Books) or the full catalog (All Books) to associate materials with your class."""
+bookCoverImg,[data-tid*=img-bookCover-,img,bookList,,pattern,,true
+bookTitle,[data-tid*=text-bookTitle-,p,bookList,parent,pattern,,
+bookSubtitle,[data-tid*=text-bookSubtitle-,p,bookList,,pattern,,
+addBookBtn,[data-tid*=button-add-,button,bookList,,pattern,addBookPage,"""Add Book"""
+addToClassBtn,[data-tid='button-Add to Class'],button,addBookPage,,,createClass.page,"""Add to Class"""
+cancelBtn,[data-tid='button-cancel'],button,addBookPage,,,createClass.page,"""Cancel & Go Back"""
+noBookLabel,[data-tid*=text-noBookLabel],p,addBookPage,,,,"""No Books Added"""
+bookLabel,[data-tid='text-bookLabel'],p,addBookPage,,,,"""Books Added:"""
+bookValue,[data-tid='text-bookValue'],div,addBookPage,,,,
+removeBookBtn,[data-tid='icon-close'],button,addBookPage,,,addBookPage,""""""

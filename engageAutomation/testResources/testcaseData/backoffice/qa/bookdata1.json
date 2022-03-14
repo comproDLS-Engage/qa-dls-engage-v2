@@ -4,29 +4,22 @@
             {
                 "type": "Book",
                 "name": "QA Test Automation Book [DO NOT MODIFY]",
-                "coverImage": "./testResources/testcaseData/backOffice/qa/book_cover_compro_qa.png",
-                "description": "QA automation test description"
+                "coverImage": "./testResources/testcaseData/backoffice/qa/book_cover_compro_qa.png",
+                "description": "DO NOT MODIFY",
+                "bookDesign": "Red",
+                "visibility": "True"
             }
         ],
         "component": [
             {
                 "type": "Learning Path",
-                "category": "Textbook",
+                "category": "--none--",
                 "title": "Custom Component",
                 "folderLevel": "2",
-                "autonumbering": "None"
-            },
-            {
-                "type": "Bank",
-                "category": "Resources",
-                "title": "QA Automation Test Bank - resources [DO NOT PUBLISH]",
-                "folderLevel": "2",
-                "autonumbering": "0-based"
-            },
-            {
-                "type": "Flipbook",
-                "category": "--none--",
-                "title": "QA Automation Test Flipbook - none [DO NOT PUBLISH]"
+                "autonumbering": "None",
+                "targetRole": "All",
+                "visibility": "True",
+                "assignable": "True"
             }
         ],
         "folder": [

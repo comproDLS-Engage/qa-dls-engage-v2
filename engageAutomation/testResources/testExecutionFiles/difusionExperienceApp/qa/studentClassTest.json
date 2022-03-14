@@ -82,7 +82,7 @@
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/classData.json",
-            "jsonPath": "engage.courses.class2.key"
+            "jsonPath": "engage.courses.newInvalidClass.key"
           },
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
@@ -331,7 +331,7 @@
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/classData.json",
-            "jsonPath": "engage.courses.class1"
+            "jsonPath": "engage.courses.activeclass"
           },
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/classData.json",

@@ -275,7 +275,7 @@ module.exports = {
     res = action.click(this.addBookBtn);
     if (true == res) {
       logger.logInto(stackTrace.get(), " addBookBtn is clicked");
-      res = require('./addBook.page').isInitialized();
+      res = require('./browse.page').isInitialized();
     }
     else {
       logger.logInto(stackTrace.get(), res + "addBookBtn is NOT clicked", 'error');
@@ -386,6 +386,7 @@ module.exports = {
     }
     if (res == true) {
       logger.logInto(stackTrace.get(), " --bookMenuBtn clicked");
+      action.waitForDisplayed(this.bookMenu_viewClassOption);
       res = this.getData_bookMenu();
     }
     else
@@ -507,7 +508,7 @@ module.exports = {
     res = action.click(this.removeBook_removeBtn);
     if (true == res) {
       logger.logInto(stackTrace.get(), " removeBook_removeBtn is clicked");
-      res = this.getData_books();
+      res = action.waitForDisplayed(this.removeBook_removeBtn, undefined, true);
     }
     else {
       logger.logInto(stackTrace.get(), res + "removeBook_removeBtn is NOT clicked", 'error');
@@ -561,7 +562,9 @@ module.exports = {
     logger.logInto(stackTrace.get());
     var i, res;
     var resourceTitle = action.findElements(this.resourceTitle);
+    console.log(resourceTitleName)
     for (i = 0; i < resourceTitle.length; i++) {
+      console.log(action.getText(resourceTitle[i]))
       if ((action.getText(resourceTitle[i])) == resourceTitleName) {
         res = action.click(resourceTitle[i]);
         break;

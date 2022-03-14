@@ -1,0 +1,13 @@
+Label,cssSelector,tagName,group,relation,extraInfo,returnValue,teacherAppLangEN,studentAppLangEN
+downPlayer_img,[data-tid=image-resourceDownloader],img,downloadPlayer,,,,true,true
+downPlayer_title,[data-tid='resourcePlayer-title'],h2,downloadPlayer,,,,"""Download word""","""Download word"""
+resourceLabel,h6[data-tid='resourcePlayer-subtitle'],h6,downloadPlayer,,,,"""Download Resource""","""Download Resource"""
+downPlayer_subtitle,[data-tid='text-label-heading'],p,downloadPlayer,,,,"""Download file to view this resource on your computer.""","""Download file to view this resource on your computer."""
+downloadBtn,[data-tid='button-download'],button,downloadPlayer,,,,"[""Download Word"", ""Download ZIP"", ""Download PDF"",""Download Excel""]","[""Download Word"", ""Download ZIP"", ""Download PDF"",""Download Excel""]"
+downInfoLabel,[data-tid='text-downloadInformation'],p,downloadPlayer,,,,"""Download Information""","""Download Information"""
+fileLabel,[data-tid='label-name-0'],p,downloadPlayer,,,,"""File""","""File"""
+fileName,[data-tid='text-value-0'],p,downloadPlayer,,,,,
+typeLabel,[data-tid='label-name-1'],p,downloadPlayer,,,,"""Type""","""Type"""
+fileType,[data-tid='text-value-1'],p,downloadPlayer,,,,,
+sizeLabel,[data-tid='label-name-2'],p,downloadPlayer,,,,"""Size""","""Size"""
+fileSize,[data-tid='text-value-2'],p,downloadPlayer,,,,,
