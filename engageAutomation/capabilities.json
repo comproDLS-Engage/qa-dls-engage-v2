@@ -5,14 +5,14 @@
                 "maxInstances": 5,
                 "browserName": "chrome",
                 "goog:chromeOptions": {
-                    "args": ["--log-level=3", "--port=9516"]
+                    "args": ["--log-level=3"]
                 }
             }
         ],
         "resolution": "1920x1080",
         "maximizeWindow": false,
         "hostname": "localhost",
-        "portNumber": 9516,
+        "portNumber": 4444,
         "webServicePath": "/",
         "webDriverService": "chromedriver"
     },
