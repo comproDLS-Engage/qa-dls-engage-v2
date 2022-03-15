@@ -5,7 +5,7 @@
                 "maxInstances": 5,
                 "browserName": "chrome",
                 "goog:chromeOptions": {
-                    "args": ["--log-level=3"]
+                    "args": ["--port=4444","--log-level=3"]
                 }
             }
         ],
