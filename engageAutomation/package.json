@@ -62,7 +62,7 @@
     "rimraf": "^3.0.2",
     "selenium-webdriver": "^4.0.0",
     "tesults": "^1.1.1",
-    "wdio-chromedriver-service": "^7.3.0",
+    "wdio-chromedriver-service": "7.2.8",
     "wdio-novus-visual-regression-service": "^1.2.5",
     "wdio-timeline-reporter": "^5.1.4",
     "winston": "^3.2.1",
