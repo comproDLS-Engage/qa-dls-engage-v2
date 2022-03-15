@@ -114,6 +114,8 @@ module.exports = {
 		assertion.assertEqual(sts, true, "Target Role status mismatch");
 		sts = addCompPage.select_Visibility(testdata.visibility);
 		assertion.assertEqual(sts, true, "Visibility status mismatch");
+		sts = addCompPage.select_freeAvailability(testdata.freeAvailability);
+		assertion.assertEqual(sts, true, "Freely available to roles status mismatch");
 		sts = addCompPage.click_Add_Button();
 		//assertion.assert((typeof sts === "string" && sts.includes("Component \"" + testdata.title + "\" is created")), "Banner messsage mismatch. " + sts);
 		assertion.assert((typeof sts === "string" && sts.includes("Your new Component is being setup.")), "Banner messsage mismatch. " + sts);

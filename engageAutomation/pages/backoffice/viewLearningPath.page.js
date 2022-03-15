@@ -112,11 +112,11 @@ module.exports = {
         for (i = 0; i < list.length; i++) {
             //console.log(action.getText(list[i]))
             if (action.getText(list[i]).includes(name)) {
-                browser.pause(10000);
                 res = action.click(list[i]);
                 if (res == true) {
-                    res = action.waitForDisplayed(this.loadingContainer, undefined, true);
-                    browser.pause(5000)
+                    action.waitForDisplayed(this.loadingContainer, undefined, true);
+                    res = action.waitForDisplayed("iframe[id*=iframe], iframe");
+                    browser.pause(2000)
                 }
                 break;
             }
