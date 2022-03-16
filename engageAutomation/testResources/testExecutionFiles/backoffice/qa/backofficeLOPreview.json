@@ -30,7 +30,7 @@
                 "testData": [
                     {
                         "dataFile": "./testResources/testcaseData/backoffice/qa/bookdata1.json",
-                        "jsonPath": "backoffice.book[0].name"
+                        "jsonPath": "backoffice.book[0]"
                     }
                 ]
             },
@@ -41,7 +41,7 @@
                 "testData": [
                     {
                         "dataFile": "./testResources/testcaseData/backoffice/qa/bookdata1.json",
-                        "jsonPath": "backoffice.component[0].title"
+                        "jsonPath": "backoffice.component[0]"
                     }
                 ]
             },
@@ -467,6 +467,174 @@
                     {
                         "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/nativeQuizData.json",
                         "jsonPath": "unit1_native2.question[8].type"
+                    }
+                ]
+            },
+            {
+                "id": "BK_TC_26",
+                "description": "",
+                "testFile": "./test/backoffice/backoffice.test.js",
+                "testData": []
+            }
+        ],
+        "AfterEach": [],
+        "After": [
+            {
+                "id": "BK_TC_7",
+                "description": "",
+                "testFile": "./test/backoffice/backoffice.test.js",
+                "testData": []
+            }
+        ]
+    },
+    "Suite2": {
+        "Name": "Preview of scorable and non scorable activities",
+        "TestCaseRepo": [
+            "./testResources/testcaseRepository/backoffice/backofficeTCRepository.json",
+            "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
+        ],
+        "Before": [
+            {
+                "id": "launchUrl",
+                "description": "",
+                "testFile": "./engageAutomation/core/runner/launchUrl.js",
+                "testData": []
+            },
+            {
+                "id": "BK_TC_1",
+                "description": "",
+                "testFile": "./test/backoffice/backoffice.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/backoffice/qa/logindata.json",
+                        "jsonPath": "backoffice.user.validUser1"
+                    }
+                ]
+            },
+            {
+                "id": "BK_TC_4",
+                "description": "",
+                "testFile": "./test/backoffice/backoffice.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/backoffice/qa/bookdata1.json",
+                        "jsonPath": "backoffice.book[0]"
+                    }
+                ]
+            },
+            {
+                "id": "BK_TC_10",
+                "description": "",
+                "testFile": "./test/backoffice/backoffice.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/backoffice/qa/bookdata1.json",
+                        "jsonPath": "backoffice.component[4]"
+                    }
+                ]
+            },
+            {
+                "id": "BK_TC_13",
+                "description": "",
+                "testFile": "./test/backoffice/backoffice.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/backoffice/qa/bookdata1.json",
+                        "jsonPath": "backoffice.folder[2].name"
+                    }
+                ]
+            }
+        ],
+        "BeforeEach": [],
+        "Test": [
+            {
+                "id": "BK_TC_25",
+                "description": "",
+                "testFile": "./test/backoffice/backoffice.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/backoffice/qa/bookdata1.json",
+                        "jsonPath": "backoffice.activity[1].name"
+                    }
+                ]
+            },
+            {
+                "id": "COM_PLAY_TC_1",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/basePlayer.test.js",
+                "testData": []
+            },
+            {
+                "id": "BK_TC_26",
+                "description": "",
+                "testFile": "./test/backoffice/backoffice.test.js",
+                "testData": []
+            },
+            {
+                "id": "BK_TC_25",
+                "description": "",
+                "testFile": "./test/backoffice/backoffice.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/backoffice/qa/bookdata1.json",
+                        "jsonPath": "backoffice.activity[2].name"
+                    }
+                ]
+            },
+            {
+                "id": "COM_PLAY_TC_1",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/basePlayer.test.js",
+                "testData": []
+            },
+            {
+                "id": "BK_TC_26",
+                "description": "",
+                "testFile": "./test/backoffice/backoffice.test.js",
+                "testData": []
+            },
+            {
+                "id": "BK_TC_24",
+                "description": "",
+                "testFile": "./test/backoffice/backoffice.test.js",
+                "testData": []
+            },
+            {
+                "id": "BK_TC_13",
+                "description": "",
+                "testFile": "./test/backoffice/backoffice.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/backoffice/qa/bookdata1.json",
+                        "jsonPath": "backoffice.folder[3].name"
+                    }
+                ]
+            },
+            {
+                "id": "BK_TC_25",
+                "description": "",
+                "testFile": "./test/backoffice/backoffice.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/backoffice/qa/bookdata1.json",
+                        "jsonPath": "backoffice.activity[3].name"
+                    }
+                ]
+            },
+            {
+                "id": "BK_TC_26",
+                "description": "",
+                "testFile": "./test/backoffice/backoffice.test.js",
+                "testData": []
+            },
+            {
+                "id": "BK_TC_25",
+                "description": "",
+                "testFile": "./test/backoffice/backoffice.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/backoffice/qa/bookdata1.json",
+                        "jsonPath": "backoffice.activity[4].name"
                     }
                 ]
             },

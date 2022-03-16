@@ -835,6 +835,12 @@
           "description": "Validate that clicking on the Settings button in left Navigation pane launches Settings page",
           "tags": "P1",
           "visualTest": true
+        },
+        {
+          "id": "ENG_SHELL_TC_18",
+          "description": "Validate that clicking on the Assign button on the header launches the create assignment page",
+          "tags": "P1",
+          "visualTest": true
         }
       ]
     },

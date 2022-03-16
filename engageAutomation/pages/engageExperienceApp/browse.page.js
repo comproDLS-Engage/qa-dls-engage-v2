@@ -361,6 +361,7 @@ module.exports = {
         for (i = 0; i < list.length; i++) {
             if ((action.getText(this.cardTitle + list[i])) == cardTitleName) {
                 res = action.click(this.moreOptionsBtn + list[i]);
+                action.waitForDisplayed(action.parentElement(this.viewOption));
                 break;
             }
         }

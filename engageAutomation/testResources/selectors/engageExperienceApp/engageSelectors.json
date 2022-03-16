@@ -89,7 +89,9 @@
                 "inviteStudentText": "/html/body/div[4]/div[3]/div/div[1]/div[1]/h6",
                 "addToPlaylistBtn": "[data-tid=button-addToPlaylist]",
                 "newPlaylistOption": "[data-tid=button-newPlaylistOption]",
-                "component": "[data-tid*=button-product-"
+                "component": "[data-tid*=button-product-",
+                "assignBtn": "[data-tid=button-assign]",
+                "shareBtn": "[data-tid=button-share]"
             },
             "dashboard": {
                 "pageTitle": "[data-tid=text-pageTitle]",

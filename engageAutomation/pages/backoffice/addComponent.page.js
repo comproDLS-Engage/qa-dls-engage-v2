@@ -21,6 +21,8 @@ module.exports = {
     targetRoleList: selectorFile.addComponentPage.targetRoleList,
     assignableDropdown: selectorFile.addComponentPage.assignableDropdown,
     assignableList: selectorFile.addComponentPage.assignableList,
+    freeAvailabilityDropdown: selectorFile.addComponentPage.freeAvailabilityDropdown,
+    freeAvailabilityList: selectorFile.addComponentPage.freeAvailabilityList,
     enableTrackingDropdown: selectorFile.addComponentPage.enableTrackingDropdown,
     enableTrackingList: selectorFile.addComponentPage.enableTrackingList,
 
@@ -38,7 +40,7 @@ module.exports = {
         return res;
     },
 
-    select_CategoryType: function (name) {
+    select_CategoryType: function (value) {
         logger.logInto(stackTrace.get());
         res = action.click(this.categoryTypeDropdown);
         action.waitForDisplayed(this.categoryTypeList, undefined, undefined, undefined, 500);
@@ -47,11 +49,11 @@ module.exports = {
             list = action.findElements(this.categoryTypeList);
             for (i = 0; i < list.length; i++) {
                 //console.log(action.getText(list[i]))
-                if (action.getText(list[i]).includes(name)) {
+                if (action.getText(list[i]).includes(value)) {
                     res = action.click(action.parentElement(list[i]));
                     break;
                 }
-                res = "category not found ";
+                res = value + " not found ";
             }
         }
         logger.logInto(stackTrace.get(), res);
@@ -71,7 +73,7 @@ module.exports = {
                     res = action.click(action.parentElement(list[i]));
                     break;
                 }
-                res = "learning path value not found ";
+                res = value + " not found ";
             }
         }
         logger.logInto(stackTrace.get(), res);
@@ -91,7 +93,7 @@ module.exports = {
                     res = action.click(action.parentElement(list[i]));
                     break;
                 }
-                res = "autonumbering value not found ";
+                res = value + " not found ";
             }
         }
         logger.logInto(stackTrace.get(), res);
@@ -131,7 +133,7 @@ module.exports = {
                         res = action.click(action.parentElement(list[i]));
                         break;
                     }
-                    res = "visibility value not found ";
+                    res = value + " not found ";
                 }
             }
             logger.logInto(stackTrace.get(), res);
@@ -154,7 +156,7 @@ module.exports = {
                         res = action.click(action.parentElement(list[i]));
                         break;
                     }
-                    res = "Target Role value not found ";
+                    res = value + " not found ";
                 }
             }
             logger.logInto(stackTrace.get(), res);
@@ -177,7 +179,30 @@ module.exports = {
                         res = action.click(action.parentElement(list[i]));
                         break;
                     }
-                    res = "Assignable value not found ";
+                    res = value + " not found ";
+                }
+            }
+            logger.logInto(stackTrace.get(), res);
+        }
+        return res;
+    },
+
+    select_freeAvailability: function (value) {
+        logger.logInto(stackTrace.get());
+        if (value == "" || value == undefined)
+            res = true;
+        else {
+            res = action.click(this.freeAvailabilityDropdown);
+            action.waitForDisplayed(this.freeAvailabilityList, undefined, undefined, undefined, 500);
+            if (res == true) {
+                let i, list;
+                list = action.findElements(this.freeAvailabilityList);
+                for (i = 0; i < list.length; i++) {
+                    if (action.getText(list[i]).includes(value)) {
+                        res = action.click(action.parentElement(list[i]));
+                        break;
+                    }
+                    res = value + " not found ";
                 }
             }
             logger.logInto(stackTrace.get(), res);
@@ -200,7 +225,7 @@ module.exports = {
                         res = action.click(action.parentElement(list[i]));
                         break;
                     }
-                    res = "Enable Progress tracking value not found ";
+                    res = value + " not found ";
                 }
             }
             logger.logInto(stackTrace.get(), res);
