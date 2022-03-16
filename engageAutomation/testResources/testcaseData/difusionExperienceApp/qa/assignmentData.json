@@ -1,10 +1,10 @@
 {
     "engage": {
-        "className":"Class Assignment test",
+        "className": "Class Assignment test",
         "assignmentName": {
-            "name1": "Automation Test",
-            "name2": "",
-            "name3": "",
+            "name1": "Closed Ended Assignment",
+            "name2": "Open Ended Assignment",
+            "name3": "Non Scorable Assignment",
             "editName": "Automation Test Edit",
             "cloneName": "Clone: Automation Test"
         },
@@ -22,14 +22,29 @@
                 },
                 {
                     "componentname": "LP1",
-                    
-                    "folder": {
-                        "name": "1. Scorable",
-                        "activityList": {
-                            "activity1": "Close Ended Native",
-                            "activity2": "Open Ended Native"
+                    "folder": [
+                        {
+                            "name": "1. Scorable",
+                            "activityList": {
+                                "activity1": "Close Ended Native",
+                                "activity2": "Open Ended Native"
+                            }
+                        },
+                        {
+                            "name": "2. Non Scorable",
+                            "activityList": {
+                                "activity1": "Rich media - video",
+                                "activity2": "Rich media - audio",
+                                "activity3": "Download document",
+                                "activity4": "Download ppt",
+                                "activity5": "Download zip",
+                                "activity6": "Download pdf",
+                                "activity7": "Download xls",
+                                "activity8": "Etext",
+                                "activity9": "Html webbook"
+                            }
                         }
-                    }
+                    ]
                 }
             ]
         }

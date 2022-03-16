@@ -1011,7 +1011,8 @@
                 "cancel": "[data-tid=button-closestudentview]",
                 "activity_icon": "[data-tid=button-indextoc] svg",
                 "activity_lbl": "[data-tid=text-chaptertitle]",
-                "showDetails_btn": "[data-tid=button-activityinfopanelswitcher]"
+                "showDetails_btn": "[data-tid=button-activityinfopanelswitcher]",
+                "closeAssignment_btn":"[data-tid=button-closeAssignment]"
             },
             "downloadPlayer": {
                 "downPlayer_img": "[data-tid=image-resourceDownloader]",
