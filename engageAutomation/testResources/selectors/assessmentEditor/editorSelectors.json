@@ -110,6 +110,14 @@
 				"commonOption": "input[value=common-options]",
 				"inputOption":"[data-tid*=input-text-",
 				"responseOption":"[data-tid*=select-correctoption-"
+			},
+			"writing":{
+				"rowNumber":"",
+				"characterLimit":"",
+				"placeHolderText":"",
+				"allowrichTextMedia":"",
+				"allowFileAttachment":""
+
 			}
 		}
 	}

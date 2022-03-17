@@ -82,7 +82,7 @@ module.exports = {
 	commonOption: selectorFile.css.editorTab.fibdropdown.commonOption,
 	inputOption: selectorFile.css.editorTab.fibdropdown.inputOption,
 	responseOption: selectorFile.css.editorTab.fibdropdown.responseOption,
-	addAnswerbtn:selectorFile.css.editorTab.addAnswerbtn,
+	addAnswerbtn: selectorFile.css.editorTab.addAnswerbtn,
 	//--MULTIPLE RESPONSE
 	isInitialized1: function (testdata) {
 		for (var i = 0; i < testdata.length; i++) {
@@ -162,10 +162,10 @@ module.exports = {
 		res = action.click(this.commonOption);
 		if (res == true) {
 			browser.pause(2000)
-			
+
 			res = res + " -- common Option button is  clickable";
-			res=action.click("[data-tid=button-agree]")
-			
+			res = action.click("[data-tid=button-agree]")
+
 		}
 		else {
 			res = res + " -- common Option button is not clickable";
@@ -177,7 +177,7 @@ module.exports = {
 	setinputOptionText: function (testdata) {
 		logger.logInto(stackTrace.get());
 		for (var i = 0; i < testdata.length; i++) {
-			var inputSelector = this.inputOption + testdata[i][0] +"] input "
+			var inputSelector = this.inputOption + testdata[i][0] + "] input "
 			res = action.setValue(inputSelector, testdata[i][1])
 			if (res == true) {
 				logger.logInto(stackTrace.get(), " -- input Value Data is added");
@@ -190,10 +190,10 @@ module.exports = {
 	setresponseOptionText: function (testdata) {
 		logger.logInto(stackTrace.get());
 		for (var i = 0; i < testdata.length; i++) {
-			var responseSelector = this.responseOption + testdata[i][0] +"] div[id=simple-select]"
+			var responseSelector = this.responseOption + testdata[i][0] + "] div[id=simple-select]"
 			res = action.click(responseSelector)
 			if (res == true) {
-				action.click("li[data-value="+testdata[i][1])
+				action.click("li[data-value=" + testdata[i][1])
 				logger.logInto(stackTrace.get(), " -- input Value Data is added");
 			}
 			else
@@ -244,6 +244,7 @@ module.exports = {
 		res = action.click(this.instructionEdit_btn);
 		if (res == true) {
 			browser.pause(5000)
+			res = action.clearValueDefault(this.placeHolderIns_txt)
 			res = action.addValue(this.placeHolderIns_txt, testdata)
 			browser.pause(2000)
 			if (res == true) {
@@ -898,6 +899,7 @@ module.exports = {
 		res = action.click("[role=\"listbox\"]>li:nth-child(1)")
 		action.waitForDisplayed(this.videoURL_input)
 		res = action.setValue(this.videoURL_input, videoURL);
+		browser.pause(5000)
 		if (res == true) {
 			logger.logInto(stackTrace.get(), " -- Video Media URL is entered");
 			// return status of the video preview - akhil
@@ -959,7 +961,77 @@ module.exports = {
 		}
 		return res;
 	},
+	//----- textArea configuration Writing Player
+	setRowsNumber: function (rowNumber, i) {
+		console.log(rowNumber)
 
+		logger.logInto(stackTrace.get());
+		res = action.clearValue(this.rowNumber + i);
+		res = action.addValue(this.rowNumber + i, rowNumber);
+		if (res == true) {
+			logger.logInto(stackTrace.get(), " -- rowNumber is entered");
+		}
+		else {
+			res = res + " -- rowNumber is NOT entered";
+			logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
+	setCharacterLimit: function (characterLimit, i) {
+		console.log(characterLimit)
+
+		logger.logInto(stackTrace.get());
+		res = action.clearValue(this.characterLimit + i);
+		res = action.addValue(this.characterLimit + i, characterLimit);
+		if (res == true) {
+			logger.logInto(stackTrace.get(), " -- characterLimit is entered");
+		}
+		else {
+			res = res + " -- characterLimit is NOT entered";
+			logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
+	setPlaceHolderText: function (placeHolderText, i) {
+		console.log(placeHolderText)
+
+		logger.logInto(stackTrace.get());
+		res = action.clearValue(this.placeHolderText + i);
+		res = action.addValue(this.placeHolderText + i, placeHolderText);
+		if (res == true) {
+			logger.logInto(stackTrace.get(), " -- placeHolderText is entered");
+		}
+		else {
+			res = res + " -- placeHolderText is NOT entered";
+			logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
+	click_AllowRichTextMedia: function (i) {
+		logger.logInto(stackTrace.get());
+		res = action.click(this.allowrichTextMedia + i);
+		if (res == true) {
+			logger.logInto(stackTrace.get(), " -- allowrichTextMedia is clicked");
+		}
+		else {
+			res = res + " -- Error in clicking allowrichTextMedia";
+			logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
+
+	click_AllowFileAttachment: function (i) {
+		logger.logInto(stackTrace.get());
+		res = action.click(this.allowFileAttachment + i);
+		if (res == true) {
+			logger.logInto(stackTrace.get(), " -- allowFileAttachment is clicked");
+		}
+		else {
+			res = res + " -- Error in clicking allowFileAttachment";
+			logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
 	imageUpload: function (imagePath) {
 		//let filePath = path.join(tcDataDir, imagePath);
 		// use browser.uploadFile to upload the test file
@@ -1003,6 +1075,7 @@ module.exports = {
 		let remoteFilePath = browser.uploadFile(audioPath);
 		// set file path value in the input field
 		res = action.addValue(this.media_input, remoteFilePath);
+		browser.pause(5000)
 		action.waitForDisplayed(this.uploadedAudio, 5000);
 		//rupsi: return audio file
 		return res;
@@ -1121,8 +1194,6 @@ module.exports = {
 		for (var i = 0; i < options.length; i++) {
 
 			var optionSelector = this.fibAnswerOption + options[i] + "] input";
-			console.log(optionSelector)
-			console.log(optionValue[i])
 			optionsarr[i] = action.setValue(optionSelector, optionValue[i]);
 			getValueArray[i] = action.getValue(optionSelector)
 		}
