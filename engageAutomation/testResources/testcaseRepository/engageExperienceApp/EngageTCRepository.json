@@ -2641,6 +2641,12 @@
           "description": "Validate the click on continue button",
           "tags": "P2",
           "visualTest": true
+        },
+        {
+          "id": "ENG_SLCTACTIVITY_TC_4",
+          "description": "Validate the click on checkbox of  activity of a component",
+          "tags": "P2",
+          "visualTest": true
         }
       ]
     },
