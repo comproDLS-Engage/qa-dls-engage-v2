@@ -120,6 +120,7 @@ module.exports = {
   //Function that returns the notes modal elements  
   getData_notesModal: function () {
     logger.logInto(stackTrace.get());
+    action.waitForDisplayed(this.addNoteBtn); //manually edited
     var obj;
     obj = {
       myNotesTitle: (action.getElementCount(this.myNotesTitle) > 0) ? action.getText(this.myNotesTitle) : null,
