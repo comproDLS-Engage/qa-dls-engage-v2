@@ -447,19 +447,20 @@ module.exports = {
 		assertion.assertEqual(sts, true, "Row Number is not added");
 	},
 	ASE_WRITING_TC_2: function (testdata) {
-		sts = EditorPlayer.setCharacterLimit(testdata[0],testdata[1])
+		sts = EditorPlayer.setCharacterLimit(testdata[0],testdata[2])
 		assertion.assertEqual(sts, true, "CharacterLimit is not added");
 	},
 	ASE_WRITING_TC_3: function (testdata) {
-		sts = EditorPlayer.setPlaceHolderText(testdata[0],testdata[1])
+		sts = EditorPlayer.setPlaceHolderText(testdata[0],testdata[3])
 		assertion.assertEqual(sts, true, "placeHolderText is not added");
 	},
 	ASE_WRITING_TC_4: function (testdata) {
-		sts = EditorPlayer.click_AllowRichTextMedia(testdata)
+		console.log(testdata)
+		sts = EditorPlayer.click_AllowRichTextMedia(testdata[0])
 		assertion.assertEqual(sts, true, "allowrichTextMedia is not checked");
 	},
 	ASE_WRITING_TC_5: function (testdata) {
-		sts = EditorPlayer.click_AllowFileAttachment(testdata)
+		sts = EditorPlayer.click_AllowFileAttachment(testdata[0])
 		assertion.assertEqual(sts, true, "allowFileAttachment is not checked");
 	},
 }

@@ -83,6 +83,11 @@ module.exports = {
 	inputOption: selectorFile.css.editorTab.fibdropdown.inputOption,
 	responseOption: selectorFile.css.editorTab.fibdropdown.responseOption,
 	addAnswerbtn: selectorFile.css.editorTab.addAnswerbtn,
+	rowNumber:selectorFile.css.editorTab.writing.rowNumber,
+	characterLimit:selectorFile.css.editorTab.writing.characterLimit,
+	placeHolderText:selectorFile.css.editorTab.writing.placeHolderText,
+	allowrichTextMedia:selectorFile.css.editorTab.writing.allowrichTextMedia,
+	allowFileAttachment:selectorFile.css.editorTab.writing.allowFileAttachment,
 	//--MULTIPLE RESPONSE
 	isInitialized1: function (testdata) {
 		for (var i = 0; i < testdata.length; i++) {
@@ -930,9 +935,10 @@ module.exports = {
 		logger.logInto(stackTrace.get());
 		action.waitForDisplayed(this.questionText_input)
 		browser.pause(2000)
-		res = action.clearValueDefault(this.questionText_input);
-		res = action.clearValue(this.questionText_input);
+		action.clearValueDefault(this.questionText_input)
+		browser.pause(2000)
 		res = action.addValue(this.questionText_input, questionTitle);
+		browser.pause(2000)
 		if (res == true) {
 
 			logger.logInto(stackTrace.get(), " -- Question Title is entered");
@@ -962,12 +968,12 @@ module.exports = {
 		return res;
 	},
 	//----- textArea configuration Writing Player
-	setRowsNumber: function (rowNumber, i) {
+	setRowsNumber: function (i, rowNumber) {
 		console.log(rowNumber)
 
 		logger.logInto(stackTrace.get());
-		res = action.clearValue(this.rowNumber + i);
-		res = action.addValue(this.rowNumber + i, rowNumber);
+		res = action.clearValue(this.rowNumber + i + "] input");
+		res = action.addValue(this.rowNumber + i + "] input", rowNumber);
 		if (res == true) {
 			logger.logInto(stackTrace.get(), " -- rowNumber is entered");
 		}
@@ -977,12 +983,11 @@ module.exports = {
 		}
 		return res;
 	},
-	setCharacterLimit: function (characterLimit, i) {
-		console.log(characterLimit)
+	setCharacterLimit: function (i, characterLimit) {
 
 		logger.logInto(stackTrace.get());
-		res = action.clearValue(this.characterLimit + i);
-		res = action.addValue(this.characterLimit + i, characterLimit);
+		res = action.clearValue(this.characterLimit + i+"] input");
+		res = action.addValue(this.characterLimit + i+"] input", characterLimit);
 		if (res == true) {
 			logger.logInto(stackTrace.get(), " -- characterLimit is entered");
 		}
@@ -992,12 +997,11 @@ module.exports = {
 		}
 		return res;
 	},
-	setPlaceHolderText: function (placeHolderText, i) {
-		console.log(placeHolderText)
+	setPlaceHolderText: function (i, placeHolderText) {
 
 		logger.logInto(stackTrace.get());
-		res = action.clearValue(this.placeHolderText + i);
-		res = action.addValue(this.placeHolderText + i, placeHolderText);
+		res = action.clearValue(this.placeHolderText + i +"] input");
+		res = action.addValue(this.placeHolderText + i +"] input", placeHolderText);
 		if (res == true) {
 			logger.logInto(stackTrace.get(), " -- placeHolderText is entered");
 		}
@@ -1009,7 +1013,8 @@ module.exports = {
 	},
 	click_AllowRichTextMedia: function (i) {
 		logger.logInto(stackTrace.get());
-		res = action.click(this.allowrichTextMedia + i);
+		res = action.click(this.allowrichTextMedia + i +"] input");
+		browser.pause(2000)
 		if (res == true) {
 			logger.logInto(stackTrace.get(), " -- allowrichTextMedia is clicked");
 		}
@@ -1022,7 +1027,8 @@ module.exports = {
 
 	click_AllowFileAttachment: function (i) {
 		logger.logInto(stackTrace.get());
-		res = action.click(this.allowFileAttachment + i);
+		res = action.click(this.allowFileAttachment + i +"] input");
+		browser.pause(4000)
 		if (res == true) {
 			logger.logInto(stackTrace.get(), " -- allowFileAttachment is clicked");
 		}

@@ -1386,6 +1386,50 @@
 						"jsonPath": "editor.questions.writing[0].questionText"
 					}
 				]
+			},
+			{
+				"id": "ASE_WRITING_TC_1",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.writing[0].textAreaConf[0]"
+					}
+				]
+			},
+			{
+				"id": "ASE_WRITING_TC_2",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.writing[0].textAreaConf[0]"
+					}
+				]
+			},
+			{
+				"id": "ASE_WRITING_TC_3",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.writing[0].textAreaConf[0]"
+					}
+				]
+			},
+			{
+				"id": "ASE_WRITING_TC_5",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.writing[0].textAreaConf[0]"
+					}
+				]
 			}
 		],
 		"AfterEach": [],
