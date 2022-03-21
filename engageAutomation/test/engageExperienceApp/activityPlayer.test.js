@@ -11,7 +11,7 @@ module.exports = {
 		assertion.assertEqual(sts.isSubmitted, false, "Activity submission status mismatch");
 		sts = activityPlayerPage.getData_activityPlayer();
 		assertion.assertEqual(sts.infoBtn, testdata.infoBtn, "infoBtn status mismatch");
-		assertion.assertEqual(sts.showDetailsBtn, testdata.showDetailsBtn[0], "Show details button status mismatch");
+		assertion.assertEqual(sts.showDetailsBtn, testdata.showDetailsBtn[0], "showDetailsBtn status mismatch");
 		assertion.assertEqual(sts.checkAnswerBtn, testdata.checkAnswerBtn, "checkAnswerBtn status mismatch");
 		assertion.assertEqual(sts.showAnswerBtn, null, "showAnswerBtn status mismatch");
 		assertion.assertEqual(sts.showResponseBtn, null, "showResponseBtn status mismatch");
@@ -248,7 +248,7 @@ module.exports = {
 		assertion.assertEqual(sts.pageStatus, true, "Page status mismatch");
 		sts = activityPlayerPage.getData_activityPlayer();
 		assertion.assertEqual(sts.infoBtn, testdata.infoBtn, "infoBtn status mismatch");
-		assertion.assertEqual(sts.showDetailsBtn, testdata.showDetailsBtn[0], "Show details button status mismatch");
+		assertion.assertEqual(sts.showDetailsBtn, testdata.showDetailsBtn[0], "showDetailsBtn status mismatch");
 		assertion.assertEqual(sts.markCompleteBtn, null, "markCompleteBtn status mismatch");
 		assertion.assertEqual(sts.checkAnswerBtn, null, "checkAnswerBtn status mismatch");
 		assertion.assertEqual(sts.showAnswerBtn, null, "showAnswerBtn status mismatch");
@@ -276,7 +276,7 @@ module.exports = {
 		assertion.assertEqual(sts.isSubmitted, false, "Activity submission status mismatch");
 		sts = activityPlayerPage.getData_activityPlayer();
 		assertion.assertEqual(sts.infoBtn, testdata.infoBtn, "infoBtn status mismatch");
-		assertion.assertEqual(sts.showDetailsBtn, testdata.showDetailsBtn[0], "Show details button status mismatch");
+		assertion.assertEqual(sts.showDetailsBtn, testdata.showDetailsBtn[0], "showDetailsBtn status mismatch");
 		assertion.assertEqual(sts.markCompleteBtn, null, "markCompleteBtn status mismatch");
 		assertion.assertEqual(sts.checkAnswerBtn, null, "checkAnswerBtn status mismatch");
 		assertion.assertEqual(sts.showAnswerBtn, null, "showAnswerBtn status mismatch");
@@ -304,7 +304,7 @@ module.exports = {
 		assertion.assertEqual(sts.pageStatus, true, "Page status mismatch");
 		sts = activityPlayerPage.getData_activityPlayer();
 		assertion.assertEqual(sts.infoBtn, testdata.infoBtn, "infoBtn status mismatch");
-		assertion.assertEqual(sts.showDetailsBtn, testdata.showDetailsBtn[0], "Show details button status mismatch");
+		assertion.assertEqual(sts.showDetailsBtn, testdata.showDetailsBtn[0], "showDetailsBtn status mismatch");
 		assertion.assertEqual(sts.markCompleteBtn, null, "markCompleteBtn status mismatch");
 		assertion.assertEqual(sts.checkAnswerBtn, null, "checkAnswerBtn status mismatch");
 		assertion.assertEqual(sts.showAnswerBtn, null, "showAnswerBtn status mismatch");
@@ -323,6 +323,182 @@ module.exports = {
 		else {
 			assertion.assertEqual(sts.nextActivityBtn, testdata.nextActivityBtn[1], "nextActivityBtn status mismatch");
 			assertion.assertEqual(sts.closeBtn, null, "closeBtn status mismatch");
+		}
+	},
+
+	//Validate that clicking on Mark as Complete button displays Competed On information in the footer
+	ENG_PLAY_TC_22: function () {
+		sts = activityPlayerPage.click_markCompleteBtn();
+		assertion.assertEqual(sts, false, "Completed text status mismatch");
+	},
+
+	//Validate clicking on Close Assignment button closes the assignment and previous page is displayed
+	ENG_PLAY_TC_23: function () {
+		sts = activityPlayerPage.click_closeAssignmentBtn();
+		assertion.assertEqual(sts, true, "Close assignment button status mismatch");
+	},
+
+	//Validate the unattempted state of a close ended activity when launched from assignment
+	ENG_PLAY_TC_24: function (testdata) {
+		sts = itemPlayerPage.isInitialized();
+		assertion.assertEqual(sts.isSubmitted, false, "Activity submission status mismatch");
+		sts = activityPlayerPage.getData_activityPlayer();
+		assertion.assertEqual(sts.infoBtn, testdata.infoBtn, "infoBtn status mismatch");
+		assertion.assertEqual(sts.showDetailsBtn, testdata.showDetailsBtn[0], "showDetailsBtn status mismatch");
+		assertion.assertEqual(sts.checkAnswerBtn, null, "checkAnswerBtn status mismatch");
+		assertion.assertEqual(sts.showAnswerBtn, null, "showAnswerBtn status mismatch");
+		assertion.assertEqual(sts.showResponseBtn, null, "showResponseBtn status mismatch");
+		assertion.assertEqual(sts.retakeActivityBtn, null, "retakeActivityBtn status mismatch");
+		assertion.assertEqual(sts.completedTxt, null, "completedTxt status mismatch");
+		assertion.assertEqual(sts.yourScoreLabel, null, "yourScoreLabel status mismatch");
+		assertion.assertEqual(sts.yourScoreValue, null, "yourScoreValue status mismatch");
+		assertion.assertEqual(sts.detailsPanelHidden, "true", "detailsPanel status mismatch");
+		assertion.assertEqual(sts.feedbackText, null, "feedbackText status mismatch");
+		if (sts.quesNumber == null) {
+			assertion.assertEqual(sts.nextPageBtn, null, "nextPageBtn status mismatch");
+			assertion.assertEqual(sts.prevPageBtn, null, "prevPageBtn status mismatch");
+			assertion.assertEqual(sts.prevActivityBtn, testdata.prevActivityBtn[0], "prevActivityBtn status mismatch");
+			if (sts.closeAssignmentBtn == null)
+				assertion.assertEqual(sts.nextActivityBtn, testdata.nextActivityBtn[0], "nextActivityBtn status mismatch");
+			else
+				assertion.assertEqual(sts.closeAssignmentBtn, testdata.closeAssignmentBtn, "closeAssignmentBtn status mismatch");
+		}
+		else {
+			let q = sts.quesNumber.split(" ");
+			if (q[0] == '1') {
+				assertion.assertEqual(sts.nextPageBtn, "", "nextPageBtn status mismatch");
+				assertion.assertEqual(sts.prevPageBtn, null, "prevPageBtn status mismatch");
+				assertion.assertEqual(sts.prevActivityBtn, testdata.prevActivityBtn[0], "prevActivityBtn status mismatch");
+				assertion.assertEqual(sts.nextActivityBtn, null, "nextActivityBtn status mismatch");
+				if (sts.closeAssignmentBtn != null)
+					assertion.assertEqual(sts.closeAssignmentBtn, testdata.closeAssignmentBtn, "closeAssignmentBtn status mismatch");
+			}
+			else if (q[0] == q[2]) {
+				assertion.assertEqual(sts.nextPageBtn, null, "nextPageBtn status mismatch");
+				assertion.assertEqual(sts.prevPageBtn, "", "prevPageBtn status mismatch");
+				assertion.assertEqual(sts.prevActivityBtn, null, "prevActivityBtn status mismatch");
+				if (sts.closeAssignmentBtn == null)
+					assertion.assertEqual(sts.nextActivityBtn, testdata.nextActivityBtn[0], "nextActivityBtn status mismatch");
+				else
+					assertion.assertEqual(sts.closeAssignmentBtn, testdata.closeAssignmentBtn, "closeAssignmentBtn status mismatch");
+			}
+			else {
+				assertion.assertEqual(sts.nextPageBtn, "", "nextPageBtn status mismatch");
+				assertion.assertEqual(sts.prevPageBtn, "", "prevPageBtn status mismatch");
+				assertion.assertEqual(sts.prevActivityBtn, null, "prevActivityBtn status mismatch");
+				assertion.assertEqual(sts.nextActivityBtn, null, "nextActivityBtn status mismatch");
+				if (sts.closeAssignmentBtn != null)
+					assertion.assertEqual(sts.closeAssignmentBtn, testdata.closeAssignmentBtn, "closeAssignmentBtn status mismatch");
+			}
+		}
+	},
+
+	//Validate the attempted state of a close ended activity when launched from assignment
+	ENG_PLAY_TC_25: function (testdata) {
+		let sts2 = itemPlayerPage.isInitialized();
+		assertion.assertEqual(sts2.isSubmitted, true, "submit status mismatch");
+		sts = activityPlayerPage.getData_activityPlayer();
+		assertion.assertEqual(sts.infoBtn, testdata.infoBtn, "infoBtn status mismatch");
+		assertion.assertEqual(sts.checkAnswerBtn, null, "checkAnswerBtn status mismatch");
+		assertion.assertEqual(sts.showAnswerBtn, null, "showAnswerBtn status mismatch");
+		assertion.assertEqual(sts.showResponseBtn, null, "showResponseBtn status mismatch");
+		assertion.assertEqual(sts.retakeActivityBtn, testdata.retakeActivityBtn, "retakeActivityBtn status mismatch");
+		assertion.assertEqual(sts.yourScoreLabel, testdata.yourScoreLabel, "yourScoreLabel status mismatch");
+		//assertion.assertEqual(sts.yourScoreValue, null, "yourScoreValue status mismatch");
+		assertion.assertEqual(sts.detailsPanelHidden, "true", "detailsPanel status mismatch");
+		assertion.assertNotEqual(sts.feedbackText, null, "feedbackText status mismatch");
+		if (sts.quesNumber == null) {
+			assertion.assertEqual(sts.nextPageBtn, null, "nextPageBtn status mismatch");
+			assertion.assertEqual(sts.prevPageBtn, null, "prevPageBtn status mismatch");
+			assertion.assertEqual(sts.prevActivityBtn, testdata.prevActivityBtn[0], "prevActivityBtn status mismatch");
+			if (sts.closeAssignmentBtn == null)
+				assertion.assertEqual(sts.nextActivityBtn, testdata.nextActivityBtn[0], "nextActivityBtn status mismatch");
+			else
+				assertion.assertEqual(sts.closeAssignmentBtn, testdata.closeAssignmentBtn, "closeAssignmentBtn status mismatch");
+		}
+		else {
+			let q = sts.quesNumber.split(" ");
+			if (q[0] == '1') {
+				assertion.assertEqual(sts.nextPageBtn, "", "nextPageBtn status mismatch");
+				assertion.assertEqual(sts.prevPageBtn, null, "prevPageBtn status mismatch");
+				assertion.assertEqual(sts.prevActivityBtn, testdata.prevActivityBtn[0], "prevActivityBtn status mismatch");
+				assertion.assertEqual(sts.nextActivityBtn, null, "nextActivityBtn status mismatch");
+				if (sts.closeAssignmentBtn != null)
+					assertion.assertEqual(sts.closeAssignmentBtn, testdata.closeAssignmentBtn, "closeAssignmentBtn status mismatch");
+			}
+			else if (q[0] == q[2]) {
+				assertion.assertEqual(sts.nextPageBtn, null, "nextPageBtn status mismatch");
+				assertion.assertEqual(sts.prevPageBtn, "", "prevPageBtn status mismatch");
+				assertion.assertEqual(sts.prevActivityBtn, null, "prevActivityBtn status mismatch");
+				if (sts.closeAssignmentBtn == null)
+					assertion.assertEqual(sts.nextActivityBtn, testdata.nextActivityBtn[0], "nextActivityBtn status mismatch");
+				else
+					assertion.assertEqual(sts.closeAssignmentBtn, testdata.closeAssignmentBtn, "closeAssignmentBtn status mismatch");
+			}
+			else {
+				assertion.assertEqual(sts.nextPageBtn, "", "nextPageBtn status mismatch");
+				assertion.assertEqual(sts.prevPageBtn, "", "prevPageBtn status mismatch");
+				assertion.assertEqual(sts.prevActivityBtn, null, "prevActivityBtn status mismatch");
+				assertion.assertEqual(sts.nextActivityBtn, null, "nextActivityBtn status mismatch");
+				if (sts.closeAssignmentBtn != null)
+					assertion.assertEqual(sts.closeAssignmentBtn, testdata.closeAssignmentBtn, "closeAssignmentBtn status mismatch");
+			}
+		}
+	},
+
+	//Validate the unattempted state of a non scorable activity when launched from assignment
+	ENG_PLAY_TC_26: function (testdata) {
+		sts = activityPlayerPage.isInitialized();
+		assertion.assertEqual(sts.pageStatus, true, "Page status mismatch");
+		sts = activityPlayerPage.getData_activityPlayer();
+		assertion.assertEqual(sts.infoBtn, testdata.infoBtn, "infoBtn status mismatch");
+		assertion.assertEqual(sts.showDetailsBtn, testdata.showDetailsBtn[0], "showDetailsBtn status mismatch");
+		assertion.assertEqual(sts.markCompleteBtn, testdata.markCompleteBtn, "markCompleteBtn status mismatch");
+		assertion.assertEqual(sts.checkAnswerBtn, null, "checkAnswerBtn status mismatch");
+		assertion.assertEqual(sts.showAnswerBtn, null, "showAnswerBtn status mismatch");
+		assertion.assertEqual(sts.showResponseBtn, null, "showResponseBtn status mismatch");
+		assertion.assertEqual(sts.retakeActivityBtn, null, "retakeActivityBtn status mismatch");
+		assertion.assertEqual(sts.completedTxt, null, "completedTxt status mismatch");
+		assertion.assertEqual(sts.yourScoreLabel, null, "yourScoreLabel status mismatch");
+		assertion.assertEqual(sts.yourScoreValue, null, "yourScoreValue status mismatch");
+		assertion.assertEqual(sts.prevPageBtn, null, "prevPageBtn status mismatch");
+		assertion.assertEqual(sts.nextPageBtn, null, "nextPageBtn status mismatch");
+		assertion.assertEqual(sts.detailsPanelHidden, "true", "detailsPanel status mismatch");
+		assertion.assertEqual(sts.feedbackText, null, "feedbackText status mismatch");
+		assertion.assertEqual(sts.prevActivityBtn, testdata.prevActivityBtn[0], "prevActivityBtn status mismatch");
+		if (sts.nextActivityBtn == null)
+			assertion.assertEqual(sts.closeAssignmentBtn, testdata.closeAssignmentBtn, "closeAssignmentBtn status mismatch");
+		else {
+			assertion.assertEqual(sts.nextActivityBtn, testdata.nextActivityBtn[0], "nextActivityBtn status mismatch");
+			assertion.assertEqual(sts.closeAssignmentBtn, null, "closeAssignmentBtn status mismatch");
+		}
+	},
+
+	//Validate the attempted state of a non scorable activity when launched from assignment
+	ENG_PLAY_TC_27: function (testdata) {
+		sts = activityPlayerPage.isInitialized();
+		assertion.assertEqual(sts.pageStatus, true, "Page status mismatch");
+		sts = activityPlayerPage.getData_activityPlayer();
+		assertion.assertEqual(sts.infoBtn, testdata.infoBtn, "infoBtn status mismatch");
+		assertion.assertEqual(sts.showDetailsBtn, testdata.showDetailsBtn[0], "showDetailsBtn status mismatch");
+		assertion.assertEqual(sts.markCompleteBtn, null, "markCompleteBtn status mismatch");
+		assertion.assertEqual(sts.checkAnswerBtn, null, "checkAnswerBtn status mismatch");
+		assertion.assertEqual(sts.showAnswerBtn, null, "showAnswerBtn status mismatch");
+		assertion.assertEqual(sts.showResponseBtn, null, "showResponseBtn status mismatch");
+		assertion.assertEqual(sts.retakeActivityBtn, null, "retakeActivityBtn status mismatch");
+		assertion.assertEqual(sts.completedTxt, testdata.completedTxt, "completedTxt status mismatch");
+		assertion.assertEqual(sts.yourScoreLabel, null, "yourScoreLabel status mismatch");
+		assertion.assertEqual(sts.yourScoreValue, null, "yourScoreValue status mismatch");
+		assertion.assertEqual(sts.prevPageBtn, null, "prevPageBtn status mismatch");
+		assertion.assertEqual(sts.nextPageBtn, null, "nextPageBtn status mismatch");
+		assertion.assertEqual(sts.detailsPanelHidden, "true", "detailsPanel status mismatch");
+		assertion.assertEqual(sts.feedbackText, null, "feedbackText status mismatch");
+		assertion.assertEqual(sts.prevActivityBtn, testdata.prevActivityBtn[0], "prevActivityBtn status mismatch");
+		if (sts.nextActivityBtn == null)
+			assertion.assertEqual(sts.closeAssignmentBtn, testdata.closeAssignmentBtn, "closeAssignmentBtn status mismatch");
+		else {
+			assertion.assertEqual(sts.nextActivityBtn, testdata.nextActivityBtn[0], "nextActivityBtn status mismatch");
+			assertion.assertEqual(sts.closeAssignmentBtn, null, "closeAssignmentBtn status mismatch");
 		}
 	},
 }

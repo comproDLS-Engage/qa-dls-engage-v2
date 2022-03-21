@@ -28,3 +28,4 @@ analyticsInfoContainer,[data-tid=container-analyticsinfo] > div > div:nth-child(
 closeInfoBtn,[data-tid=button-closeinfotoc],button,infoTocPanel,,,"waitForDisplayed, closeBtn, undefined, true","""""",""""""
 infoTocHeading,[data-tid=text-infotocheading],p,infoTocPanel,,,,"""Activities""","""Activities"""
 feedbackText,[data-tid=text-feedbackmessage],h6,activityPlayer,,,,"[""Well done"", ""Correct"", ""Oops! Not quite correct."", ""Not Correct""]","[""Well done"", ""Correct"", ""Oops! Not quite correct."", ""Not Correct""]"
+closeAssignmentBtn,[data-tid=button-closeAssignment],button,activityPlayer,,,"waitForDisplayed, closeAssignmentBtn, undefined, true",,"""Close Assignment"""

@@ -371,7 +371,8 @@
                         "Correct",
                         "Oops! Not quite correct.",
                         "Not Correct"
-                    ]
+                    ],
+                    "closeAssignmentBtn": "Close Assignment"
                 }
             },
             "activityPlayerPage": {

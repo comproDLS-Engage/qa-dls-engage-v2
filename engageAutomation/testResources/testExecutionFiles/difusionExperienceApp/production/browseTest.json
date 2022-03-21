@@ -700,7 +700,7 @@
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
-                  "jsonPath": "engage.login.user.validInstructorUser1"
+                  "jsonPath": "engage.login.user.validInstructorUser2"
                }
             ]
          },
@@ -725,12 +725,27 @@
             ]
          },
          {
+            "id": "ENG_GLOB_TC_28",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/browse.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/searchAndFilterTestData.json",
+                  "jsonPath": "engage.searchAndFilter.searchScenario1"
+               },
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.browse.teacher"
+               }
+            ]
+         },
+         {
             "id": "ENG_GLOB_TC_62",
             "description": "",
             "testFile": "./test/engageExperienceApp/browse.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/Aula Plus 1 (For DEV2).json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/QA Test Automation BookTOC.json",
                   "jsonPath": "book.name"
                },
                {
@@ -751,7 +766,7 @@
             "testFile": "./test/engageExperienceApp/browse.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/Aula Plus 1 (For DEV2).json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/QA Test Automation BookTOC.json",
                   "jsonPath": "book.name"
                },
                {
@@ -772,7 +787,7 @@
             "testFile": "./test/engageExperienceApp/browse.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/Aula Plus 1 (For DEV2).json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/QA Test Automation BookTOC.json",
                   "jsonPath": "book.name"
                },
                {
@@ -799,7 +814,7 @@
             "testFile": "./test/engageExperienceApp/browse.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/Aula Plus 1 (For DEV2).json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/QA Test Automation BookTOC.json",
                   "jsonPath": "book.name"
                },
                {
@@ -814,7 +829,7 @@
             "testFile": "./test/engageExperienceApp/browse.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/Aula Plus 1 (For DEV2).json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/QA Test Automation BookTOC.json",
                   "jsonPath": "book.name"
                },
                {
@@ -835,7 +850,7 @@
             "testFile": "./test/engageExperienceApp/browse.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/Aula Plus 1 (For DEV2).json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/QA Test Automation BookTOC.json",
                   "jsonPath": "book.name"
                },
                {
@@ -854,7 +869,7 @@
                   "jsonPath": "engage.appContent.createClassPage"
                },
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/Aula Plus 1 (For DEV2).json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/QA Test Automation BookTOC.json",
                   "jsonPath": "book.name"
                }
             ]

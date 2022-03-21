@@ -335,7 +335,7 @@ module.exports = {
 	},
 
 	//Validate that clicking on Add to My Books adds the book to My Books and display a snackbar message
-	ENG_GLOB_TC_64: function (testdata) {
+	ENG_GLOB_TC_64: function () {
 		sts = browsePage.click_addToMyBooksOption();
 		assertion.assertEqual(sts, true, "Add to my books mismatch");
 		sts = common.get_Snackbar_Message_Text();
