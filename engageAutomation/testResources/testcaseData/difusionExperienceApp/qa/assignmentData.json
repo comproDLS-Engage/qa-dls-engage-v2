@@ -1,4 +1,43 @@
 {
+    "completedAssignmentList": [
+        {
+                      "assignment1":"Completed Quiz 2",
+                      "activityList": [
+                          {
+                              "activityName": "one question quiz",
+                              "activityStatus": "Submitted: Mar 17, 2022",
+                              "activityScore": "100%",
+                              "activityAttempts": "1"
+                          },
+                          {
+                              "activityName": "More than 5 MB",
+                              "activityStatus": "Submitted: Mar 15, 2022",
+                              "activityScore": "100%",
+                              "activityAttempts": "1"
+                          }
+              ]
+        },
+                      
+        { 
+                 "assignment2":"Completed Quiz",
+                "activityList": [
+                          {
+                              "activityName": "one question quiz",
+                              "activityStatus": "Submitted: Mar 17, 2022",
+                              "activityScore": "100%",
+                              "activityAttempts": "1"
+                          },
+                          {
+                              "activityName": "More than 5 MB",
+                              "activityStatus": "Submitted: Mar 15, 2022",
+                              "activityScore": "100%",
+                              "activityAttempts": "1"
+                          }
+                        ]
+                      }
+              
+        ],
+        
     "engage": {
         "className": "Class Assignment test",
         "assignmentName": {

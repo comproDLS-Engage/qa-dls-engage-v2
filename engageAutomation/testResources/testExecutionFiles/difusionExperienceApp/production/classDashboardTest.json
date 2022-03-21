@@ -24,7 +24,7 @@
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
-            "jsonPath": "engage.login.user.classInstructorUser3"
+            "jsonPath": "engage.login.user.classInstructorUser5"
           }
         ]
       },
@@ -240,7 +240,7 @@
           },
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
-            "jsonPath": "engage.login.user.classInstructorUser3"
+            "jsonPath": "engage.login.user.classInstructorUser5"
           }
         ]
       },
@@ -729,7 +729,7 @@
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
-            "jsonPath": "engage.login.user.classInstructorUser3"
+            "jsonPath": "engage.login.user.classInstructorUser5"
           }
         ]
       }
@@ -851,7 +851,7 @@
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
-            "jsonPath": "engage.login.user.classInstructorUser3"
+            "jsonPath": "engage.login.user.classInstructorUser5"
           }
         ]
       }
@@ -990,7 +990,7 @@
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
-            "jsonPath": "engage.login.user.classInstructorUser3"
+            "jsonPath": "engage.login.user.classInstructorUser5"
           }
         ]
       }
@@ -1376,7 +1376,7 @@
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
-            "jsonPath": "engage.login.user.classInstructorUser3"
+            "jsonPath": "engage.login.user.classInstructorUser5"
           }
         ]
       }
