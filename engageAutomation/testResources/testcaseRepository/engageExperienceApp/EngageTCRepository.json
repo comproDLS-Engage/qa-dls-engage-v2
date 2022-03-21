@@ -1390,6 +1390,42 @@
           "description": "Validate the unattempted state of html webbook",
           "tags": "",
           "visualTest": true
+        },
+        {
+          "id": "ENG_PLAY_TC_22",
+          "description": "Validate that clicking on Mark as Complete button displays Competed On information in the footer",
+          "tags": "",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_PLAY_TC_23",
+          "description": "Validate clicking on Close Assignment button closes the assignment and previous page is displayed",
+          "tags": "",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_PLAY_TC_24",
+          "description": "Validate the unattempted state of a close ended activity when launched from assignment",
+          "tags": "",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_PLAY_TC_25",
+          "description": "Validate the attempted state of a close ended activity when launched from assignment",
+          "tags": "",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_PLAY_TC_26",
+          "description": "Validate the unattempted state of a non scorable activity when launched from assignment",
+          "tags": "",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_PLAY_TC_27",
+          "description": "Validate the attempted state of a non scorable activity when launched from assignment",
+          "tags": "",
+          "visualTest": true
         }
       ]
     },

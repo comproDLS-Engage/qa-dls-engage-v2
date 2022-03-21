@@ -455,7 +455,8 @@
                 "analyticsInfoContainer": "[data-tid=container-analyticsinfo] > div > div:nth-child(2)",
                 "closeInfoBtn": "[data-tid=button-closeinfotoc]",
                 "infoTocHeading": "[data-tid=text-infotocheading]",
-                "feedbackText": "[data-tid=text-feedbackmessage]"
+                "feedbackText": "[data-tid=text-feedbackmessage]",
+                "closeAssignmentBtn" : "[data-tid=button-closeAssignment]"
             },
             "activitiyPlayer": {
                 "feedback_txt": "[data-tid=text-feedbackmessage]",

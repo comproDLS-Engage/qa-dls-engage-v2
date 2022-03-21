@@ -34,6 +34,7 @@ module.exports = {
     closeInfoBtn: selectorFile.css.ComproEngage.activityPlayer.closeInfoBtn,
     infoTocHeading: selectorFile.css.ComproEngage.activityPlayer.infoTocHeading,
     feedbackText: selectorFile.css.ComproEngage.activityPlayer.feedbackText,
+    closeAssignmentBtn: selectorFile.css.ComproEngage.activityPlayer.closeAssignmentBtn,
 
     isInitialized: function () {
         var res;
@@ -68,7 +69,8 @@ module.exports = {
             yourScoreLabel: (action.getElementCount(this.yourScoreLabel) > 0) ? action.getText(this.yourScoreLabel) : null,
             yourScoreValue: (action.getElementCount(this.yourScoreValue) > 0) ? action.getText(this.yourScoreValue) : null,
             detailsPanelHidden: (action.getElementCount(this.detailsPanel) > 0) ? action.getAttribute(this.detailsPanel, "aria-hidden") : null,
-            feedbackText: (action.getElementCount(this.feedbackText) > 0) ? action.getText(this.feedbackText) : null
+            feedbackText: (action.getElementCount(this.feedbackText) > 0) ? action.getText(this.feedbackText) : null,
+            closeAssignmentBtn: (action.getElementCount(this.closeAssignmentBtn) > 0) ? action.getText(this.closeAssignmentBtn) : null,
         }
         return obj;
     },
@@ -309,4 +311,19 @@ module.exports = {
         return res;
     },
 
+    click_closeAssignmentBtn: function () {
+        logger.logInto(stackTrace.get());
+        var res;
+        res = action.click(this.closeAssignmentBtn);
+        if (true == res) {
+            logger.logInto(stackTrace.get(), " closeAssignmentBtn is clicked");
+            res = action.waitForDisplayed(this.closeAssignmentBtn, undefined, true);
+        }
+        else {
+            logger.logInto(stackTrace.get(), res + "closeAssignmentBtn is NOT clicked", 'error');
+        }
+        return res;
+    },
+
 }
+
