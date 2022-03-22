@@ -202,7 +202,7 @@ exports.config = {
             embedImage: true,
             images: {
                 quality: 40,
-                resize: true,
+                resize: false,
                 reductionRatio: 1
             },
             screenshotStrategy: 'before:click'
