@@ -2,10 +2,16 @@
     "engage": {
         "resources": {
             "word": {
-                "pageTitle": "Download word",
+                "pageTitle": "Download document",
                 "fileName": "Lorem Ipsum.docx",
                 "fileType": "Document",
                 "fileSize": "16.36 KB"
+            },
+            "ppt": {
+                "pageTitle": "Download ppt",
+                "fileName": "Lorem Ipsum.ppt",
+                "fileType": "Document",
+                "fileSize": "34.56 KB"
             },
             "zip": {
                 "pageTitle": "Download zip",
@@ -20,7 +26,7 @@
                 "fileSize": "62.3 KB"
             },
             "sheet": {
-                "pageTitle": "Download excel",
+                "pageTitle": "Download xls",
                 "fileName": "Lorem Ipsum.xlsx",
                 "fileType": "Excel",
                 "fileSize": "8.48 KB"
