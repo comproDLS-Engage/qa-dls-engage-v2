@@ -18,8 +18,8 @@
                 "appVersion": "[data-tid=text-versionInfo]"
             },
             "loginPage": {
-                "userName_tbox": "#login-user",
-                "password_tbox": "#login-pass",
+                "userName_tbox": "[data-tid=input-email] input",
+                "password_tbox": "[data-tid=input-password] input",
                 "login_btn": "[data-tid=button-login]",
                 "loginbtn_txt": "[data-tid=button-login] p",
                 "google_btn": "[data-tid=button-federatedlogingoogle]",
