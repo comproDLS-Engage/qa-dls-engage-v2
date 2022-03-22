@@ -124,12 +124,14 @@
 	"addFolderPage": {
 		"nameTxtbox": "[id=folder-title]",
 		"addBtn": "[class*=c-form] button[class*=action-button-padding]",
-		"targetRoleDropdown": "[class=c-form-section] > div:nth-child(4) > div",
+		"targetRoleDropdown": "[id=target-role]",
 		"targetRoleList": "[class*=mdc-menu-surface--open] [class*=mdc-list-item__text]",
-		"assignableDropdown": "[class=c-form-section] > div:nth-child(5) > div",
+		"assignableDropdown": "[id=assignable]",
 		"assignableList": "[class*=mdc-menu-surface--open] [class*=mdc-list-item__text]",
 		"folderColor" : "[id='strand-color']",
-		"pageReference" :"[id='page-reference']"
+		"pageReference" :"[id='page-reference']",
+		"folderTypeDropdown": "[id=folder-type]",
+		"folderTypeList": "[class*=mdc-menu-surface--open] [class*=mdc-list-item__text]"
 	},
 	"addActivityPage": {
 		"nameTxtbox": "[id=activity-title]",
@@ -137,7 +139,8 @@
 		"scoreCheckBox" :"[class=c-form-section__score-container] [class*=c-form-section__completion-checkbox]",
 		"targetRoleDropdown" : "[id=target-role]",
 		"assignableDropdown" :"[id=assignability]",
-		"loUploadBtn": "[data-tid=input-lo-upload]"
+		"loUploadBtn": "[data-tid=input-lo-upload]",
+		"activityThemeOptions": "[data-tid*=input-select-visual-]"
 	},
 	"publishComponentPage": {
 		"snapshotBtn": "[data-tid*='button-Create New Snapshot']",

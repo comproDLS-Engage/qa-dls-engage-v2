@@ -146,22 +146,16 @@ module.exports = {
 	BK_TC_12: function (testdata) {
 		sts = addFolderPage.set_Name(testdata.name);
 		assertion.assertEqual(sts, true, "Name status mismatch");
-		if (testdata.coverImage != "") {
-			sts = addFolderPage.upload_CoverImage(testdata.coverImage);
-			assertion.assertEqual(sts, true, "Upload cover image status mismatch");
-		}
-		if (testdata.targetRole != "") {
-			sts = addFolderPage.select_TargetRole(testdata.targetRole);
-			assertion.assertEqual(sts, true, "Target Role status mismatch");
-		}
-		if (testdata.assignable != "") {
-			sts = addFolderPage.select_Assignable(testdata.assignable);
-			assertion.assertEqual(sts, true, "Assignable status mismatch");
-		}
-		if (testdata.color != "") {
-			sts = addFolderPage.set_Folder_Color(testdata.color);
-			assertion.assertEqual(sts, true, "Folder color status mismatch");
-		}
+		sts = addFolderPage.upload_CoverImage(testdata.coverImage);
+		assertion.assertEqual(sts, true, "Upload cover image status mismatch");
+		sts = addFolderPage.select_TargetRole(testdata.targetRole);
+		assertion.assertEqual(sts, true, "Target Role status mismatch");
+		sts = addFolderPage.select_Assignable(testdata.assignable);
+		assertion.assertEqual(sts, true, "Assignable status mismatch");
+		sts = addFolderPage.set_Folder_Color(testdata.color);
+		assertion.assertEqual(sts, true, "Folder color status mismatch");
+		sts = addFolderPage.select_Folder_Type(testdata.folderType);
+		assertion.assertEqual(sts, true, "folderType status mismatch");
 		if (testdata.page == "") {
 			testdata.page = Math.floor(Math.random() * 10);
 		}
@@ -359,6 +353,8 @@ module.exports = {
 		assertion.assertEqual(sts, true, "assignable status mismatch");
 		sts = addActivityPage.set_Page_Reference(testdata.page);
 		assertion.assertEqual(sts, true, "page reference status mismatch");
+		sts = addActivityPage.select_ActivityTheme(testdata.activityTheme);
+		assertion.assertEqual(sts, true, "activityTheme status mismatch");
 	},
 
 	//Click Preview and Publish button on Component viewer Page
