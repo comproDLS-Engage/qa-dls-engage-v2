@@ -8,7 +8,6 @@ module.exports = {
 	ENG_CONT_TC_1: function () {
 		contentPlayer.isInitialized();
 		sts = contentPlayer.getData_contentPlayer();
-		console.log(sts)
 		assertion.assertEqual(sts.videoPlayerExists, true, "videoPlayerExists status mismatch");
 	},
 
@@ -23,7 +22,6 @@ module.exports = {
 	ENG_CONT_TC_3: function () {
 		contentPlayer.isInitialized();
 		sts = contentPlayer.getData_contentPlayer();
-		console.log(sts)
 		assertion.assertEqual(sts.etextExists, true, "etextExists status mismatch");
 	},
 
@@ -31,7 +29,6 @@ module.exports = {
 	ENG_CONT_TC_4: function () {
 		contentPlayer.isInitialized();
 		sts = contentPlayer.getData_contentPlayer();
-		console.log(sts)
 		assertion.assertEqual(sts.webbookExists, true, "webbookExists status mismatch");
 	},
 
