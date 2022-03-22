@@ -318,6 +318,28 @@
                 "classDatesLabel": "p[data-tid='text-metaLabel-0']",
                 "instructorLabel": "p[data-tid='text-metaLabel-1']"
             },
+            "studentClassDashboard": {
+                "bookCoverIcon" : "[data-tid=image-bookCover]",
+                "className" : "[data-tid=text-bandTitle]",
+                "BookName" : "[data-tid=text-bandSubtitle]",
+                "classDurationIcon" : "[data-tid=icon-meta-0]",
+                "classDuration" : "[data-tid=text-metaValue-0]",
+                "classDatesLabel" : "p[data-tid='text-metaLabel-0']",
+                "instructorIcon" : "[data-tid=icon-meta-1]",
+                "instrutorName" : "p[data-tid='text-metaValue-1']",
+                "instructorLabel" : "p[data-tid='text-metaLabel-1']",
+                "openFlipbookBtn" : "[data-tid='button-openFlipbook']",
+                "otherDetailsBtn" : "[data-tid='button-otherDetails']",
+                "assignmentsLbl" : "[data-tid='text-heading-assignments']",
+                "overviewBtn" : "[data-tid='button-view-assignments']",
+                "dueBtn" : "[data-tid='button-product-0']",
+                "dueNumberChip" : "[data-tid='chip-Due']",
+                "upcomingBtn" : "[data-tid='button-product-1']",
+                "completeBtn" : "[data-tid='button-product-2']",
+                "assignmentTitle" : "[data-tid*='text-assignmentTitle-",
+                "assignmentActivities" : "[data-tid*='text-assignmentActivities-",
+                "dueDaysChip" : "[data-tid*=chip-dueDaysPill-"
+                },
             "teacherViewClassPage": {
                 "pageTitle": "[data-tid=text-pageTitle]",
                 "pageSubTitle": "[data-tid=text-pageSubtitle]",
@@ -772,7 +794,7 @@
                 "removeOptionResourceItem": "[data-tid*=button-removeDetails]"
             },
             "assignmentList": {
-                "createAssignmentsbtn_inbox": "[data-tid=button-actionCardBtn-1]",
+                "createAssignmentsbtn_inbox": "[data-tid=button-actionCardBtn-0]",
                 "blankAssignment_img": "[data-tid=image-no-assignments]",
                 "blankAssignment_title": "[data-tid=text-title-no-assignments]",
                 "blankAssignment_subtitle": "[data-tid=text-subtitle-no-assignments]",
@@ -1038,6 +1060,40 @@
                 "etextExists": "[data-tid=container-eText-Player]",
                 "webbookExists": "[data-tid=container-productviewer] iframe",
                 "scrollToTopBtn": "[data-tid=button-scrollToTop]:not([style*=hidden])"
+            },
+            "AssignmentListDetailsPage_student": {
+                "assignmentDetailPageTitle" : "[data-tid=text-pageTitle]",
+                "assignmentDetailPageSubtitle" : "[data-tid=text-pageSubTitle]",
+                "dueAssignmentBtn" : "[data-tid=button-product-0]",
+                "dueAssignmentCount" : "[data-tid=chip-Due]",
+                "due_noAssignmentTitle" : "[data-tid='text-title-No Students']",
+                "due_noAssignmentSubTitle" : "[data-tid='text-subtitle-No Students']",
+                "upcomingAssignmentBtn" : "[data-tid=button-product-1]",
+                "upcoming_noAssignmentTitle" : "[data-tid='text-title-No Students']",
+                "upcoming_noAssignmentSubTitle" : "[data-tid='text-subtitle-No Students']",
+                "completedAssignmentBtn" : "[data-tid=button-product-2]",
+                "completed_noAssignmentTitle" : "[data-tid='text-title-No Students']",
+                "completed_noAssignmentSubTitle" : "[data-tid='text-subtitle-No Students']",
+                "completeSearchIcon" : "[data-tid=icon-autocomplete-search]",
+                "completeSearchTextBox" : "[data-tid=input-autocomplete-searchtextbox]",
+                "completeResultLbl" : "[data-tid=label-result]",
+                "assignmentName" : "[data-tid*=text-assignmentName-",
+                "activityIcon" : "[data-tid*=icon-activity-",
+                "assignmentActivityCount" : "[data-tid*=text-activity-",
+                "scoreIcon" : "[data-tid*=icon-score-",
+                "scoreLabel" : "[data-tid*=text-score-",
+                "dateIcon" : "[data-tid*=icon-startDueDate-",
+                "dateLabel" : "[data-tid*=text-startDueDate-",
+                "dueDaysPill" : "[data-tid*=chip-dueDaysPill-",
+                "activityProgressText" : "[data-tid*=text-activitiesProgress-",
+                "showActivitiesBtn" : "[data-tid*=text-toggle-expansion-",
+                "collapsibleActvitiesLbl" : "[data-tid*=text-collapseBandHeader-activities-",
+                "collapsibleScoreLbl" : "[data-tid*=text-collapseBandHeader-score-",
+                "collapsibleAttemptsLbl" : "[data-tid*=text-collapseBandHeader-attempts-",
+                "activityName" : "[data-tid*=text-activityName-",
+                "activityStatus" : "[data-tid*=text-activityProgressStatus-",
+                "activityScore" : "[data-tid*=text-score-",
+                "activityAttempt" : "[data-tid*=text-attempts-"
             }
         }
     }

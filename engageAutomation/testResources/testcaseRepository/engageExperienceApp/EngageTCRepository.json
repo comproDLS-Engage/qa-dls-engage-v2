@@ -653,6 +653,11 @@
           "id": "ENG_INS_CLASS_TC_103",
           "description": " Validate the click on Assignment Tab",
           "tags": "P1"
+        },
+        {
+          "id": "ENG_STU_CLASS_TC_104",
+          "description": " Click on overview button",
+          "tags": "P1"
         }
       ]
     },
@@ -2933,6 +2938,79 @@
           "description": "validate the click on view progress assignment button",
           "tags": "P2",
           "visualTest": true
+        }
+      ]
+    },
+    {
+      "modulename": "Assignment - Student",
+      "moduledetails": "",
+      "testFile": "./test/engageExperienceApp/assignmentStudentList.test.js",
+      "testcase": [
+        {
+          "id": "ENG_ASSLIST_STU_TC_1",
+          "description": "Validate the content on blank Due assignment page",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ASSLIST_STU_TC_2",
+          "description": "Validate the content on blank Upcoming assignment page",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ASSLIST_STU_TC_3",
+          "description": "Validate the content on blank Completed assignment page",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ASSLIST_STU_TC_4",
+          "description": "Validate the click on Due assignment tab on assignment page",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ASSLIST_STU_TC_5",
+          "description": "Validate the click on Upcoming assignment tab on assignment page",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ASSLIST_STU_TC_6",
+          "description": "Validate the click on Completed assignment tab on assignment page",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ASSLIST_STU_TC_7",
+          "description": "Validate the content of student assignment list details page",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ASSLIST_STU_TC_8",
+          "description": "Validate the details of assignment list",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ASSLIST_STU_TC_9",
+          "description": "Validate the click on 'Show Activities' button",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ASSLIST_STU_TC_10",
+          "description": "Validate the click on any activity",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ASSLIST_STU_TC_13",
+          "description": "Validate the data after click on 'Show Activities' button",
+          "tags": "P2",
+          "visualTest": "-"
         }
       ]
     }

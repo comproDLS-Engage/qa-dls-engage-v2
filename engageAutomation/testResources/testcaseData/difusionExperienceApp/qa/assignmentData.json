@@ -86,6 +86,71 @@
                     ]
                 }
             ]
+        },
+        "assignmentList": {
+            "student": {
+                "dueAssignmentNames": [
+                    {
+                        "assignmentName": "Class Test - Quiz"
+                    },
+                    {
+                        "assignmentName": "Class Test - Grading"
+                    }
+                ],
+                "upcomingAssignmentNames": [
+                    {
+                        "assignmentName":"Diwali Assignment"
+                    }
+                ],
+                "completedAssignment": [
+                    {
+                        "assignmentName":"Completed Quiz 2",
+                        "activityList": [
+                            {
+                                "activityName": "one question quiz",
+                                "activityStatus": "Submitted: Mar 17, 2022",
+                                "activityScore": "100%",
+                                "activityAttempts": "1"
+                            },
+                            {
+                                "activityName": "More than 5 MB",
+                                "activityStatus": "Submitted: Mar 15, 2022",
+                                "activityScore": "100%",
+                                "activityAttempts": "1"
+                            }
+                        ]
+                    },           
+                    { 
+                        "assignmentName":"Completed Quiz",
+                        "activityList": [
+                            {
+                                "activityName": "More than 5 MB",
+                                "activityStatus": "Submitted: Mar 15, 2022",
+                                "activityScore": "100%",
+                                "activityAttempts": "1"
+                            }
+                        ]
+                    },
+                    {
+                        "assignmentName":"Complete Download Assignment",
+                        "activityList": [
+                            {
+                                "activityName": "Close Ended Native"
+                            }
+                        ]
+                    }
+            ],
+            "completedAssignmentPerform": [
+                    {
+                        "assignmentName":"Closed Ended Assignment",
+                        "activityList": [
+                            {
+                                "activityName": "Close Ended Native"
+                            }
+                        ]
+                    }
+                ]
+            }
         }
     }
 }

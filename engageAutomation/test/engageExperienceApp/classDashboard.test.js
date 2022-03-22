@@ -1,5 +1,6 @@
 "use strict";
 var classDashboardPage = require('../../pages/engageExperienceApp/classDashboard.page.js');
+var studentClassDashboard = require('../../pages/engageExperienceApp/studentClassDashboard.page.js');
 var createClassPage = require('../../pages/engageExperienceApp/createClass.page.js');
 var successClassPage = require('../../pages/engageExperienceApp/successClass.page.js');
 const dashboardPage = require('../../pages/engageExperienceApp/dashboard.page.js');
@@ -138,7 +139,7 @@ module.exports = {
 		sts = classDashboardPage.click_ClassCard(testdata)
 		assertion.assertEqual(sts, true, "Class Details page is not launched" ,sts.pageStatus)
 		sts = teacherViewClassPage.isInitialized();
-		assertion.assertEqual(sts.pageStatus, true, "Class Deatails page is not launched" + JSON.stringify(sts.pageStatus))
+		assertion.assertEqual(sts, true, "Class Deatails page is not launched" + JSON.stringify(sts.pageStatus))
 
 	},
 
@@ -160,7 +161,7 @@ module.exports = {
 	//Validate that clicking on inbox option from Class Menu launches class details page with inbox tab selected
 	ENG_INS_CLASS_TC_10: function (testdata) {
 		sts = classDashboardPage.click_inboxOption();
-		//console.log(sts)
+		console.log(sts)
 		if ((typeof (sts)) === "object") {
 			assertion.assertEqual(sts.selectedProduct, testdata.inboxOption_txt, "Add Student Page is not displayed: " + JSON.stringify(sts.pageStatus))
 		} else {
@@ -311,7 +312,7 @@ module.exports = {
 	//check how to use in execution file
 	ENG_INS_CLASS_TC_23: function () {
 		sts = successClassPage.click_ViewClass_Button()
-		assertion.assertEqual(sts.pageStatus, true, "Dashboard Page status mismatch ")
+		assertion.assertEqual(sts, true, "Dashboard Page status mismatch ")
 
 	},
 
@@ -371,9 +372,10 @@ module.exports = {
 	//Edit Class: Validate that the class details are updated on clicking the save button on Edit Class Page
 	ENG_INS_CLASS_TC_34: function (testdata) {
 		sts = createClassPage.click_Save_Button();
+		console.log(sts)
 		if ((typeof (sts)) === "object") {
 			assertion.assertEqual(sts.msg, testdata.editMsgBar_txt, "Message Bar Not Displayed: " + JSON.stringify(sts.msg))
-			assertion.assertEqual(sts.pageStatus, true, "My Class Page Not Displayed: " + JSON.stringify(sts.pageStatus))
+			//assertion.assertEqual(sts.pageStatus, true, "My Class Page Not Displayed: " + JSON.stringify(sts.pageStatus))
 
 		} else {
 			assertion.assertFail(sts);
@@ -568,7 +570,7 @@ module.exports = {
 	},
 	ENG_INS_CLASS_TC_103: function (testdata) {
 		sts = teacherViewClassPage.clickAssignmentsTab()
-		//console.log(sts)
+		console.log(sts)
 		if ((typeof (sts)) === "object") {
 			assertion.assertEqual(sts.pageStatus, true, "Assignment Tab is not selected " + JSON.stringify(sts))
 
@@ -576,5 +578,8 @@ module.exports = {
 			assertion.assertFail(sts);
 		}
 
+	},
+	ENG_STU_CLASS_TC_104: function () {
+		sts = studentClassDashboard.click_overviewBtn();
 	},
 };
