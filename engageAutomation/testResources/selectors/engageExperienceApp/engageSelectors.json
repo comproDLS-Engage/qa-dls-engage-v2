@@ -1030,6 +1030,14 @@
                 "fileType": "[data-tid='text-value-1']",
                 "sizeLabel": "[data-tid='label-name-2']",
                 "fileSize": "[data-tid='text-value-2']"
+            },
+            "contentPlayer": {
+                "container": "[data-tid=container-productviewer]",
+                "videoPlayerExists": "[id=video-container]",
+                "audioPlayerExists": "[class*=audio]",
+                "etextExists": "[data-tid=container-eText-Player]",
+                "webbookExists": "[data-tid=container-productviewer] iframe",
+                "scrollToTopBtn": "[data-tid=button-scrollToTop]:not([style*=hidden])"
             }
         }
     }

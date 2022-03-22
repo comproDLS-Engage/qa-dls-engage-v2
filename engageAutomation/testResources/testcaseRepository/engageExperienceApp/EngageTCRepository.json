@@ -2583,6 +2583,43 @@
       ]
     },
     {
+      "modulename": "Content Player",
+      "moduledetails": "",
+      "testFile": "./test/engageExperienceApp/contentPlayer.test.js",
+      "testcase": [
+        {
+          "id": "ENG_CONT_TC_1",
+          "description": "Validate that video player is launched on clicking the video activity",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_CONT_TC_2",
+          "description": "Validate that audio player is launched on clicking the audio activity",
+          "tags": "P1, Desktop",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_CONT_TC_3",
+          "description": "Validate that etext is launched on clicking the etext activity",
+          "tags": "P1, Desktop",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_CONT_TC_4",
+          "description": "Validate that html webbook is launched on clicking the html webbook activity",
+          "tags": "P1, Desktop",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_CONT_TC_5",
+          "description": "Validate that page is scrolled to top on clicking the scroll to top button",
+          "tags": "P1, Desktop",
+          "visualTest": true
+        }
+      ]
+    },
+    {
       "modulename": "Assignment - Teacher",
       "moduledetails": "",
       "testFile": "./test/engageExperienceApp/assignmentListTeacher.test.js",

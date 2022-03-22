@@ -12,10 +12,10 @@
             "testData": []
          },
          {
-             "id": "ENG_LAND_TC_1",
-             "description": "",
-             "testFile": "./test/engageExperienceApp/landing.test.js",
-             "testData": []
+            "id": "ENG_LAND_TC_1",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/landing.test.js",
+            "testData": []
          },
          {
             "id": "ENG_LAND_TC_3",
@@ -707,8 +707,7 @@
             "id": "ENG_ITEM_FIBSEL_TC_1",
             "description": "",
             "testFile": "./test/engageExperienceApp/fibselect.test.js",
-            "testData": [
-            ]
+            "testData": []
          },
          {
             "id": "ENG_ITEM_FIBSEL_TC_2",
@@ -788,10 +787,10 @@
             "testData": []
          },
          {
-             "id": "ENG_LAND_TC_1",
-             "description": "",
-             "testFile": "./test/engageExperienceApp/landing.test.js",
-             "testData": []
+            "id": "ENG_LAND_TC_1",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/landing.test.js",
+            "testData": []
          },
          {
             "id": "ENG_LAND_TC_3",
@@ -1386,8 +1385,7 @@
             "id": "ENG_ITEM_FIBSEL_TC_1",
             "description": "",
             "testFile": "./test/engageExperienceApp/fibselect.test.js",
-            "testData": [
-            ]
+            "testData": []
          },
          {
             "id": "ENG_ITEM_FIBSEL_TC_2",
@@ -1570,10 +1568,10 @@
             "testData": []
          },
          {
-             "id": "ENG_LAND_TC_1",
-             "description": "",
-             "testFile": "./test/engageExperienceApp/landing.test.js",
-             "testData": []
+            "id": "ENG_LAND_TC_1",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/landing.test.js",
+            "testData": []
          },
          {
             "id": "ENG_LAND_TC_3",
@@ -1755,7 +1753,7 @@
       ]
    },
    "Suite4": {
-      "Name": "Non-Scorable Activity - etext webbook | Student",
+      "Name": "Non-Scorable Activities | Student",
       "TestCaseRepo": [
          "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
       ],
@@ -1767,10 +1765,10 @@
             "testData": []
          },
          {
-             "id": "ENG_LAND_TC_1",
-             "description": "",
-             "testFile": "./test/engageExperienceApp/landing.test.js",
-             "testData": []
+            "id": "ENG_LAND_TC_1",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/landing.test.js",
+            "testData": []
          },
          {
             "id": "ENG_LAND_TC_3",
@@ -1807,11 +1805,11 @@
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
-                  "jsonPath": "book.component[0].name.EN"
+                  "jsonPath": "book.component[4].name.EN"
                },
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
-                  "jsonPath": "book.component[0].unit"
+                  "jsonPath": "book.component[4].unit"
                }
             ]
          },
@@ -1822,20 +1820,47 @@
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
-                  "jsonPath": "book.component[0].unit[0].title"
+                  "jsonPath": "book.component[4].unit[1].title"
                }
             ]
-         },
+         }
+      ],
+      "BeforeEach": [],
+      "Test": [
          {
-            "id": "ENG_BOOK_TC_53",
+            "id": "ENG_BOOK_TC_21",
             "description": "",
             "testFile": "./test/engageExperienceApp/viewUnit.test.js",
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
-                  "jsonPath": "book.component[0].unit[0].section[1].name"
+                  "jsonPath": "book.component[4].unit[1].section[0].activity[0]"
                }
             ]
+         },
+         {
+            "id": "ENG_CONT_TC_1",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/contentPlayer.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_PLAY_TC_13",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_CONT_TC_2",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/contentPlayer.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_SHELL_TC_11",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/appShell.test.js",
+            "testData": []
          },
          {
             "id": "ENG_BOOK_TC_21",
@@ -1844,13 +1869,16 @@
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
-                  "jsonPath": "book.component[0].unit[0].section[1].activity[0]"
+                  "jsonPath": "book.component[4].unit[1].section[0].activity[7]"
                }
             ]
-         }
-      ],
-      "BeforeEach": [],
-      "Test": [
+         },
+         {
+            "id": "ENG_CONT_TC_3",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/contentPlayer.test.js",
+            "testData": []
+         },
          {
             "id": "ENG_PLAY_TC_19",
             "description": "",
@@ -1883,6 +1911,12 @@
             "id": "ENG_PLAY_TC_13",
             "description": "",
             "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_CONT_TC_4",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/contentPlayer.test.js",
             "testData": []
          },
          {

@@ -851,6 +851,14 @@
                     "sizeLabel": "Size"
                 }
             },
+            "contentPlayer": {
+                "teacher": {
+                    "scrollToTopBtn": ""
+                },
+                "student": {
+                    "scrollToTopBtn": ""
+                }
+            },
             "assignmentList": {
                 "teacher": {
                     "createAssignmentsbtn_inbox": "Create Assignments",
