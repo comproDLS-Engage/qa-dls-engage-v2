@@ -343,7 +343,7 @@ module.exports = {
 		sts = itemPlayerPage.isInitialized();
 		assertion.assertEqual(sts.isSubmitted, false, "Activity submission status mismatch");
 		sts = activityPlayerPage.getData_activityPlayer();
-		assertion.assertEqual(sts.infoBtn, testdata.infoBtn, "infoBtn status mismatch");
+		assertion.assertEqual(sts.infoBtn, null, "infoBtn status mismatch");
 		assertion.assertEqual(sts.showDetailsBtn, testdata.showDetailsBtn[0], "showDetailsBtn status mismatch");
 		assertion.assertEqual(sts.checkAnswerBtn, null, "checkAnswerBtn status mismatch");
 		assertion.assertEqual(sts.showAnswerBtn, null, "showAnswerBtn status mismatch");
@@ -357,7 +357,7 @@ module.exports = {
 		if (sts.quesNumber == null) {
 			assertion.assertEqual(sts.nextPageBtn, null, "nextPageBtn status mismatch");
 			assertion.assertEqual(sts.prevPageBtn, null, "prevPageBtn status mismatch");
-			assertion.assertEqual(sts.prevActivityBtn, testdata.prevActivityBtn[0], "prevActivityBtn status mismatch");
+			assertion.assertEqual(sts.prevActivityBtn, null, "prevActivityBtn status mismatch");
 			if (sts.closeAssignmentBtn == null)
 				assertion.assertEqual(sts.nextActivityBtn, testdata.nextActivityBtn[0], "nextActivityBtn status mismatch");
 			else
@@ -368,7 +368,7 @@ module.exports = {
 			if (q[0] == '1') {
 				assertion.assertEqual(sts.nextPageBtn, "", "nextPageBtn status mismatch");
 				assertion.assertEqual(sts.prevPageBtn, null, "prevPageBtn status mismatch");
-				assertion.assertEqual(sts.prevActivityBtn, testdata.prevActivityBtn[0], "prevActivityBtn status mismatch");
+				assertion.assertEqual(sts.prevActivityBtn, null, "prevActivityBtn status mismatch");
 				assertion.assertEqual(sts.nextActivityBtn, null, "nextActivityBtn status mismatch");
 				if (sts.closeAssignmentBtn != null)
 					assertion.assertEqual(sts.closeAssignmentBtn, testdata.closeAssignmentBtn, "closeAssignmentBtn status mismatch");
@@ -398,7 +398,7 @@ module.exports = {
 		let sts2 = itemPlayerPage.isInitialized();
 		assertion.assertEqual(sts2.isSubmitted, true, "submit status mismatch");
 		sts = activityPlayerPage.getData_activityPlayer();
-		assertion.assertEqual(sts.infoBtn, testdata.infoBtn, "infoBtn status mismatch");
+		assertion.assertEqual(sts.infoBtn, null, "infoBtn status mismatch");
 		assertion.assertEqual(sts.checkAnswerBtn, null, "checkAnswerBtn status mismatch");
 		assertion.assertEqual(sts.showAnswerBtn, null, "showAnswerBtn status mismatch");
 		assertion.assertEqual(sts.showResponseBtn, null, "showResponseBtn status mismatch");
@@ -421,7 +421,7 @@ module.exports = {
 			if (q[0] == '1') {
 				assertion.assertEqual(sts.nextPageBtn, "", "nextPageBtn status mismatch");
 				assertion.assertEqual(sts.prevPageBtn, null, "prevPageBtn status mismatch");
-				assertion.assertEqual(sts.prevActivityBtn, testdata.prevActivityBtn[0], "prevActivityBtn status mismatch");
+				assertion.assertEqual(sts.prevActivityBtn, null, "prevActivityBtn status mismatch");
 				assertion.assertEqual(sts.nextActivityBtn, null, "nextActivityBtn status mismatch");
 				if (sts.closeAssignmentBtn != null)
 					assertion.assertEqual(sts.closeAssignmentBtn, testdata.closeAssignmentBtn, "closeAssignmentBtn status mismatch");
@@ -451,7 +451,7 @@ module.exports = {
 		sts = activityPlayerPage.isInitialized();
 		assertion.assertEqual(sts.pageStatus, true, "Page status mismatch");
 		sts = activityPlayerPage.getData_activityPlayer();
-		assertion.assertEqual(sts.infoBtn, testdata.infoBtn, "infoBtn status mismatch");
+		assertion.assertEqual(sts.infoBtn, null, "infoBtn status mismatch");
 		assertion.assertEqual(sts.showDetailsBtn, testdata.showDetailsBtn[0], "showDetailsBtn status mismatch");
 		assertion.assertEqual(sts.markCompleteBtn, testdata.markCompleteBtn, "markCompleteBtn status mismatch");
 		assertion.assertEqual(sts.checkAnswerBtn, null, "checkAnswerBtn status mismatch");
@@ -465,7 +465,7 @@ module.exports = {
 		assertion.assertEqual(sts.nextPageBtn, null, "nextPageBtn status mismatch");
 		assertion.assertEqual(sts.detailsPanelHidden, "true", "detailsPanel status mismatch");
 		assertion.assertEqual(sts.feedbackText, null, "feedbackText status mismatch");
-		assertion.assertEqual(sts.prevActivityBtn, testdata.prevActivityBtn[0], "prevActivityBtn status mismatch");
+		assertion.assertEqual(sts.prevActivityBtn, null, "prevActivityBtn status mismatch");
 		if (sts.nextActivityBtn == null)
 			assertion.assertEqual(sts.closeAssignmentBtn, testdata.closeAssignmentBtn, "closeAssignmentBtn status mismatch");
 		else {
@@ -479,14 +479,14 @@ module.exports = {
 		sts = activityPlayerPage.isInitialized();
 		assertion.assertEqual(sts.pageStatus, true, "Page status mismatch");
 		sts = activityPlayerPage.getData_activityPlayer();
-		assertion.assertEqual(sts.infoBtn, testdata.infoBtn, "infoBtn status mismatch");
+		assertion.assertEqual(sts.infoBtn, null, "infoBtn status mismatch");
 		assertion.assertEqual(sts.showDetailsBtn, testdata.showDetailsBtn[0], "showDetailsBtn status mismatch");
 		assertion.assertEqual(sts.markCompleteBtn, null, "markCompleteBtn status mismatch");
 		assertion.assertEqual(sts.checkAnswerBtn, null, "checkAnswerBtn status mismatch");
 		assertion.assertEqual(sts.showAnswerBtn, null, "showAnswerBtn status mismatch");
 		assertion.assertEqual(sts.showResponseBtn, null, "showResponseBtn status mismatch");
 		assertion.assertEqual(sts.retakeActivityBtn, null, "retakeActivityBtn status mismatch");
-		assertion.assertEqual(sts.completedTxt, testdata.completedTxt, "completedTxt status mismatch");
+		assertion.assert(sts.completedTxt.includes(testdata.completedTxt), "completedTxt status mismatch");
 		assertion.assertEqual(sts.yourScoreLabel, null, "yourScoreLabel status mismatch");
 		assertion.assertEqual(sts.yourScoreValue, null, "yourScoreValue status mismatch");
 		assertion.assertEqual(sts.prevPageBtn, null, "prevPageBtn status mismatch");

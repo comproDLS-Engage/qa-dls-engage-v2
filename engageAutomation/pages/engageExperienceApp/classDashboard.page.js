@@ -229,7 +229,7 @@ module.exports = {
 		if (res == true) {
 
 			//teacherViewClass = require('./teacherViewClass.page.js');
-			res = teacherViewClassPage.isInitialized();
+			res = teacherViewClassPage.getViewClassPageData();
 		}
 		else {
 			res = res + " -- inboxBtn is NOT clicked";
@@ -242,7 +242,7 @@ module.exports = {
 		res = action.click(this.assignmentsOption);
 		if (res == true) {
 			//var	teacherViewClass = require('./teacherViewClass.page.js');
-			res = teacherViewClassPage.isInitialized();
+			res = teacherViewClassPage.getViewClassPageData();
 		}
 		else {
 			res = res + " -- archievedBtn is NOT clicked";
@@ -255,7 +255,7 @@ module.exports = {
 		res = action.click(this.studentsOption);
 		if (res == true) {
 			//teacherViewClass = require('./teacherViewClass.page.js');
-			res = teacherViewClassPage.isInitialized();
+			res = teacherViewClassPage.getViewClassPageData();
 		}
 		else {
 			res = res + " -- restoreBtn is NOT clicked";

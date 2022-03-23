@@ -41,12 +41,13 @@ module.exports = {
         logger.logInto(stackTrace.get());
         action.waitForDocumentLoad();
         let pageStatus = action.waitForDisplayed(this.productTabBtns + 0 + "]");
-        res = this.getViewClassPageData();
-        res.pageStatus = pageStatus;
-        return res;
+      //  res = this.getViewClassPageData();
+       // res.pageStatus = pageStatus;
+        return pageStatus;
     },
 
     getViewClassPageData: function () {
+        action.waitForDocumentLoad();
         logger.logInto(stackTrace.get());
         obj = {
             className: (action.getElementCount(this.pageTitle) > 0) ? action.getText(this.pageTitle) : null,
@@ -87,6 +88,7 @@ module.exports = {
 
         obj.productList = productData;
         obj.bookComponentList = bookComponentData;
+        console.log(obj)
         return obj;
     },
 
@@ -176,7 +178,7 @@ module.exports = {
         res = action.click(this.assignmentsTab);
         if (res == true) {
             logger.logInto(stackTrace.get(), "-- Assignment Tab is clicked");
-            res = this.isInitialized();
+            res =require ('./assignmentListTeacher.page').isInitialized();
         }
         else {
             res = res + "-- Error in clicking Assignment Tab";
@@ -265,7 +267,7 @@ module.exports = {
     },
 
     getStudentPageData: function () {
-        pageData = this.isInitialized();
+        pageData = this.getViewClassPageData();
         obj = {
             noStudentIcon: (action.getElementCount(this.noStudentIcon) > 0) ? action.waitForExist(this.noStudentIcon) : null,
             noStudentTitle: (action.getElementCount(this.noStudentTitle) > 0) ? action.getText(this.noStudentTitle) : null,

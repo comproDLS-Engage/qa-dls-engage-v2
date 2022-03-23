@@ -889,6 +889,29 @@
                     "deletedialoguesubHeader2": "\" from your class Class Assignment.",
                     "cancel_btn": "Cancel",
                     "delete_btn": "Delete"
+                },
+                "student": {
+                    "assignmentDetailPageTitle" : "Assignments",
+                    "assignmentDetailPageSubtitle" : "View current and completed assignments",
+                    "dueAssignmentBtn" : "Due",
+                    "dueAssignmentCount" : "3",
+                    "due_noAssignmentTitle" : "No Assignments Due",
+                    "due_noAssignmentSubTitle" : "You have no assignments due in this class.",
+                    "upcomingAssignmentBtn" : "Upcoming",
+                    "upcoming_noAssignmentTitle" : "No Upcoming Assignments",
+                    "upcoming_noAssignmentSubTitle" : "Any future assignment set by your teacher will appear here.",
+                    "completedAssignmentBtn" : "Completed",
+                    "completed_noAssignmentTitle" : "No Assignments Found",
+                    "completed_noAssignmentSubTitle" : "You have no assignments completed in this class.",
+                    "showActivitiesBtn" : "Show Activities",
+                    "collapsibleActvitiesLbl": "Activities",
+                    "collapsibleScoreLbl": "Score",
+                    "collapsibleAttemptsLbl": "Attempts",
+                    "tabList": [
+                        "Due",
+                        "Upcoming",
+                        "Completed"
+                    ]
                 }
             },
             "createAssignment": {
@@ -1005,6 +1028,24 @@
                         "Upcoming",
                         "Past"
                     ]
+                }
+            },
+            "studentClassDashboard": {
+                "student": {
+                    "bookCoverIcon" : "TRUE",
+                    "className" : "Class 1",
+                    "BookName" : "QA free book - 2022",
+                    "classDuration" : "Feb 21, 2022 - Feb 20, 2023",
+                    "classDatesLabel" : "Class Dates",
+                    "instrutorName" : "assignment automation Teacher",
+                    "instructorLabel" : "Instructor",
+                    "openFlipbookBtn" : "Open Flipbook",
+                    "assignmentsLbl" : "Assignments",
+                    "overviewBtn" : "Overview",
+                    "dueBtn" : "Due",
+                    "dueNumberChip" : 2,
+                    "upcomingBtn" : "Upcoming",
+                    "completeBtn" : "Completed"
                 }
             }
         }
