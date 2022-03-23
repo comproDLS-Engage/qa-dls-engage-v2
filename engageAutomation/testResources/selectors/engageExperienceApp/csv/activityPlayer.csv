@@ -16,7 +16,7 @@ closeBtn,[data-tid=button-close],button,activityPlayer,,,"waitForDisplayed, clos
 completedTxt,[data-tid='button-completed'],p,activityPlayer,,,,null,"""Completed on"""
 yourScoreLabel,[data-tid=text-activityScoreInfo] p,p,activityPlayer,,,,null,"""Your Score:"""
 yourScoreValue,[data-tid=text-activityScoreInfo] h6,h6,activityPlayer,,,,,
-detailsPanel,main > div > div:nth-child(1),div,activityPlayer,,,,,
+detailsPanel,[data-tid=container-leftPanel],div,activityPlayer,,,,,
 panelHeading,[data-tid=panel-heading],p,detailsPanel,,,,,
 activityTitle,[data-tid='text-title'],h2,detailsPanel,,,,,
 activitySubtitle,[data-tid='text-subTitle'],p,detailsPanel,,,,,
