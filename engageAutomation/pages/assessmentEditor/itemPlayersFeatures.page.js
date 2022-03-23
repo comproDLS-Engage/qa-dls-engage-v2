@@ -78,6 +78,7 @@ module.exports = {
 	topsbottomOption: selectorFile.css.editorTab.topsbottomOption,
 	leftRightOption: selectorFile.css.editorTab.leftRightOption,
 	scoreInputBox: selectorFile.css.editorTab.scoreInputBox,
+	addSubqun_btn:selectorFile.css.editorTab.addSubqun_btn,
 	uniqueOption: selectorFile.css.editorTab.fibdropdown.uniqueOption,
 	commonOption: selectorFile.css.editorTab.fibdropdown.commonOption,
 	inputOption: selectorFile.css.editorTab.fibdropdown.inputOption,
@@ -325,6 +326,21 @@ module.exports = {
 		}
 		else {
 			res = res + " -- done button is not clickable";
+			logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
+	clickAddSubquestion: function () {
+		logger.logInto(stackTrace.get());
+		res = action.waitForClickable(this.addSubqun_btn);
+		if (res == true) {
+			res = action.click(this.addSubqun_btn);
+			if (res == true) {
+				res = action.waitForDisplayed(this.addSubqun_btn, true);
+			}
+		}
+		else {
+			res = res + " -- addSubqun_btn is not clickable";
 			logger.logInto(stackTrace.get(), res, 'error');
 		}
 		return res;

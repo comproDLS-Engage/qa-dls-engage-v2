@@ -426,6 +426,10 @@ module.exports = {
 		sts = EditorPlayer.clickDonebtn()
 		assertion.assertEqual(sts, true, "Done button clicked");
 	},
+	ASE_COM_TC_1015: function () {
+		sts = EditorPlayer.clickAddSubquestion()
+		assertion.assertEqual(sts, true, "Done button clicked");
+	},
 	ASE_FIBDROPDOWN_TC_1013: function (testdata) {
 		sts = EditorPlayer.clickUniqueOption(testdata)
 		assertion.assertEqual(sts, true, "unique option button clicked");

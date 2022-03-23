@@ -262,8 +262,65 @@
           "setGroups": ["A","C","B","A","C","A"]
         }
       ]
-    }
-  },
+    },
+    "kidsQuestion":{
+      "MCQSR": [
+        {
+            "questionIndex": 1,
+            "buttonName": "multiplechoicequestionset",
+            "questionTitle": "Look at the following figure and count number.",
+            "score":"1",
+            "questionInstruction": "Look the picture and choose the option",
+            "videoURL": "",
+            "videoCredit": "",
+            "audioPath": "",
+            "audioCredit": "",
+            "imagePath": "",
+            "promptImagePath": "./testResources/testcaseData/assessmentEditor/media/kids2.png",
+            "promptText":"",
+            "questionText": "Look at the following figure and count number.",
+            "subQuestionText":
+                              [["1", "How many rectangles are there ?"],
+                              [ "2","How many triangles are there ?"],
+                              [ "3","How many Squares are there ?"]
+                            ],
+              "options": [["0" ,"O1","1 "],
+                          ["0" ,"O2","2"],
+                          ["0" ,"O3","3"],
+                          ["1" ,"O1","1"],
+                          ["1" ,"O2","2"],
+                          ["1" ,"O3","5"],
+                          ["2" ,"O1","3"],
+                          ["2" ,"O2","2"],
+                          ["2" ,"O3","5"]
+        ],
+           
+            "optionStyle": "2"
+        
+        }],
+    "FIBDropdown": [
+      {
+        "questionIndex": 7,
+        "buttonName": "fibdropdown",
+        "questionTitle": "Look the picture and choose the option",
+        "score":"5",
+        "promptImagePath": "./testResources/testcaseData/assessmentEditor/media/kids1.png",
+        "questionInstruction": "Fill the blanks with the correct options.",
+        "questionInstructionEdit": "Check the Picture and update the field",
+        "questionText": "In the Image {{Blank:A}} Trinagles, {{Blank:B}} Circle , {{Blank:C}} Rectangle",
+        "options":[
+          ["O1" , "3"], 
+          ["O2" , "2"],
+          ["O3" , "1"]
+          ],
+          "response":
+          [ ["A" , "O2"], 
+           [ "B" , "O1"],
+           [ "C" , "O3"]]
+      
+      }]
+  }
+},
   "paint": {
     "email": "sg1@yopmail.com",
     "password": "Welcome@1"
