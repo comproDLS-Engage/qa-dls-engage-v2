@@ -1032,11 +1032,11 @@
                 "fileSize": "[data-tid='text-value-2']"
             },
             "contentPlayer": {
-                "container": "[data-tid=container-productviewer]",
+                "container": "[data-tid=container-productviewer],[data-tid=container-assignmentviewer]",
                 "videoPlayerExists": "[id=video-container]",
                 "audioPlayerExists": "[class*=audio]",
                 "etextExists": "[data-tid=container-eText-Player]",
-                "webbookExists": "[data-tid=container-productviewer] iframe",
+                "webbookExists": "[data-tid=container-productviewer] iframe,[data-tid=container-assignmentviewer] iframe",
                 "scrollToTopBtn": "[data-tid=button-scrollToTop]:not([style*=hidden])"
             }
         }
