@@ -28,6 +28,7 @@ module.exports = {
 		assertion.assertEqual(sts.fileName, testdata[1].fileName, "fileName mismatch");
 		assertion.assertEqual(sts.fileType, testdata[1].fileType, "fileType mismatch");
 		assertion.assertEqual(sts.fileSize, testdata[1].fileSize, "fileSize mismatch");
+		assertion.assertEqual(sts.viewBtn, null, "viewBtn mismatch");
 	},
 
 	//Validate the content of download player for ZIP Resource
@@ -48,6 +49,7 @@ module.exports = {
 		assertion.assertEqual(sts.fileName, testdata[1].fileName, "fileName mismatch");
 		assertion.assertEqual(sts.fileType, testdata[1].fileType, "fileType mismatch");
 		assertion.assertEqual(sts.fileSize, testdata[1].fileSize, "fileSize mismatch");
+		assertion.assertEqual(sts.viewBtn, null, "viewBtn mismatch");
 	},
 
 	//Validate the content of download player for PDF Resource
@@ -68,6 +70,7 @@ module.exports = {
 		assertion.assertEqual(sts.fileName, testdata[1].fileName, "fileName mismatch");
 		assertion.assertEqual(sts.fileType, testdata[1].fileType, "fileType mismatch");
 		assertion.assertEqual(sts.fileSize, testdata[1].fileSize, "fileSize mismatch");
+		assertion.assertEqual(sts.viewBtn, testdata[0].viewBtn, "viewBtn mismatch");
 	},
 
 	//Validate the content of download player for Spreadsheet Resource
@@ -88,6 +91,7 @@ module.exports = {
 		assertion.assertEqual(sts.fileName, testdata[1].fileName, "fileName mismatch");
 		assertion.assertEqual(sts.fileType, testdata[1].fileType, "fileType mismatch");
 		assertion.assertEqual(sts.fileSize, testdata[1].fileSize, "fileSize mismatch");
+		assertion.assertEqual(sts.viewBtn, null, "viewBtn mismatch");
 	}
 
 }
