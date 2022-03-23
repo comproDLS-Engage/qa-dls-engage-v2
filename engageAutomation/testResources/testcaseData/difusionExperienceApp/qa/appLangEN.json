@@ -832,7 +832,8 @@
                     "downInfoLabel": "Download Information",
                     "fileLabel": "File",
                     "typeLabel": "Type",
-                    "sizeLabel": "Size"
+                    "sizeLabel": "Size",
+                    "viewBtn": "View PDF"
                 },
                 "student": {
                     "downPlayer_img": true,
@@ -848,7 +849,8 @@
                     "downInfoLabel": "Download Information",
                     "fileLabel": "File",
                     "typeLabel": "Type",
-                    "sizeLabel": "Size"
+                    "sizeLabel": "Size",
+                    "viewBtn": "View PDF"
                 }
             },
             "contentPlayer": {

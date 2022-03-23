@@ -11,3 +11,4 @@ typeLabel,[data-tid='label-name-1'],p,downloadPlayer,,,,"""Type""","""Type"""
 fileType,[data-tid='text-value-1'],p,downloadPlayer,,,,,
 sizeLabel,[data-tid='label-name-2'],p,downloadPlayer,,,,"""Size""","""Size"""
 fileSize,[data-tid='text-value-2'],p,downloadPlayer,,,,,
+viewBtn,[data-tid='button-view'],button,downloadPlayer,,,,"""View PDF""","""View PDF"""

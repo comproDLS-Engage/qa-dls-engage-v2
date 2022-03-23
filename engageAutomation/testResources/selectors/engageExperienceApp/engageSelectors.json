@@ -466,7 +466,7 @@
                 "completedTxt": "[data-tid='button-completed']",
                 "yourScoreLabel": "[data-tid=text-activityScoreInfo] p",
                 "yourScoreValue": "[data-tid=text-activityScoreInfo] h6",
-                "detailsPanel": "main > div > div:nth-child(1)",
+                "detailsPanel": "[data-tid=container-leftPanel]",
                 "panelHeading": "[data-tid=panel-heading]",
                 "activityTitle": "[data-tid='text-title']",
                 "activitySubtitle": "[data-tid='text-subTitle']",
@@ -1051,7 +1051,8 @@
                 "typeLabel": "[data-tid='label-name-1']",
                 "fileType": "[data-tid='text-value-1']",
                 "sizeLabel": "[data-tid='label-name-2']",
-                "fileSize": "[data-tid='text-value-2']"
+                "fileSize": "[data-tid='text-value-2']",
+                "viewBtn": "[data-tid='button-view']"
             },
             "contentPlayer": {
                 "container": "[data-tid=container-productviewer],[data-tid=container-assignmentviewer]",
