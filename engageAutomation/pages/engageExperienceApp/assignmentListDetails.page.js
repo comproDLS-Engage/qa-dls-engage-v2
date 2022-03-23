@@ -49,6 +49,7 @@ module.exports = {
   getData_assignmentListPage: function () {
     logger.logInto(stackTrace.get());
     var obj;
+    action.waitForDocumentLoad();
     obj = {
       Assignment_title: (action.getElementCount(this.Assignment_title) > 0) ? action.getText(this.Assignment_title) : null,
       Assignment_subtitle: (action.getElementCount(this.Assignment_subtitle) > 0) ? action.getText(this.Assignment_subtitle) : null,
