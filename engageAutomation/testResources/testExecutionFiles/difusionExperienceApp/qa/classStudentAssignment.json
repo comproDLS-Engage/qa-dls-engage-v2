@@ -292,7 +292,7 @@
       {
         "id": "ENG_ASSLIST_STU_TC_13",
         "description": "Validate clicking on Show Activities button of a selected Assignment and get activity list",
-        "testFile": "./test/engageExperienceApp/assignmentListDetails_students.test.js",
+        "testFile": "./test/engageExperienceApp/assignmentStudentList.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/assignmentData.json",

@@ -2631,19 +2631,19 @@
       "testcase": [
         {
           "id": "ENG_ASSLIST_TC_1",
-          "description": "Validate the data of assignment list page",
+          "description": "Validate the content of Blank create assignment page",
           "tags": "P2",
           "visualTest": true
         },
         {
           "id": "ENG_ASSLIST_TC_2",
-          "description": "Validate the click on add new button",
+          "description": "Validate the Click on Add new Button",
           "tags": "P2",
           "visualTest": true
         },
         {
           "id": "ENG_ASSLIST_TC_3",
-          "description": "Validate the click on component",
+          "description": "Validate the Click on Component Name",
           "tags": "P2",
           "visualTest": true
         },
@@ -2685,7 +2685,7 @@
         },
         {
           "id": "ENG_ASSLIST_TC_10",
-          "description": "Validate the Assignment List Page Launched",
+          "description": "Validate the Click on in progress Arrow",
           "tags": "P2",
           "visualTest": true
         },
@@ -2808,7 +2808,7 @@
         },
         {
           "id": "ENG_ASSDETAILS_TC_6",
-          "description": "Validate the update the text of assginment Title",
+          "description": "Validate the Assignment Title Update",
           "tags": "P2",
           "visualTest": true
         },
