@@ -231,12 +231,12 @@ module.exports = {
 
 	// Edit and save class changes
 	ENG_DIF_TC_18: function () {
-		res = action.getValue("[id=input-title]");
+		res = action.getValue("[data-tid=input-title]");
 		if (res == "class0") {
-			res = action.setValue("[id=input-title]", "class1");
+			res = action.setValue("[data-tid=input-title]", "class1");
 		}
 		else {
-			res = action.setValue("[id=input-title]", "class0");
+			res = action.setValue("[data-tid=input-title]", "class0");
 		}
 		console.log(res)
 		res = action.click("[data-tid=button-Save]");
@@ -298,7 +298,7 @@ module.exports = {
 
 	// Cancel and go back to Classes page
 	ENG_DIF_TC_23: function () {
-		res = action.setValue("[id=input-title]", "test automation class");
+		res = action.setValue("[data-tid=input-title]", "test automation class");
 		console.log(res)
 		res = action.click("[data-tid='button-cancel']");
 		console.log(res)
@@ -516,7 +516,7 @@ module.exports = {
 	ENG_DIF_TC_44: function () {
 		res = action.waitForDisplayed("[data-tid=text-createPlaylistLabel]");
 		console.log(res)
-		res = action.setValue("[id=input-createPlaylist]", "qa automation test playlist1")
+		res = action.setValue("[data-tid=input-createPlaylist]", "qa automation test playlist1")
 		console.log(res)
 		res = action.click("button[type=submit]");
 		console.log(res)
@@ -612,7 +612,7 @@ module.exports = {
 	ENG_DIF_TC_53: function () {
 		res = action.click("[data-tid=button-accessKeyBtn]");
 		console.log(res)
-		res = action.waitForDisplayed("[id=input-access-code]");
+		res = action.waitForDisplayed("[data-tid=input-access-code]");
 		console.log(res)
 	},
 
@@ -716,7 +716,7 @@ module.exports = {
 
 	// Create assignment confirmation dialog
 	ENG_DIF_TC_58: function () {
-		res = action.setValue("[id=input-assignmentName]", "Test automation assignment");
+		res = action.setValue("[data-tid=input-assignmentName]", "Test automation assignment");
 		console.log(res)
 		res = action.click("[data-tid=button-assignAssignment]");
 		console.log(res)
