@@ -493,7 +493,7 @@ module.exports = {
 		assertion.assertEqual(sts.nextPageBtn, null, "nextPageBtn status mismatch");
 		assertion.assertEqual(sts.detailsPanelHidden, "true", "detailsPanel status mismatch");
 		assertion.assertEqual(sts.feedbackText, null, "feedbackText status mismatch");
-		assertion.assertEqual(sts.prevActivityBtn, testdata.prevActivityBtn[0], "prevActivityBtn status mismatch");
+		assertion.assert(testdata.prevActivityBtn[0].includes(sts.prevActivityBtn), "prevActivityBtn status mismatch");
 		if (sts.nextActivityBtn == null)
 			assertion.assertEqual(sts.closeAssignmentBtn, testdata.closeAssignmentBtn, "closeAssignmentBtn status mismatch");
 		else {
