@@ -74,6 +74,7 @@
 			"leftRightOption": "[data-tid=radio-leftrightlayout] span[class*=MuiButtonBase]",
 			"scoreInputBox": "[data-tid=input-score] input",
 			"addAnswerbtn":"[data-tid=button-addanswers]",
+			"addSubqun_btn":"[data-tid=button-addsubquestion]",
 			"multipleResponse": {
 				"checkboxOption_input": "[data-tid=checkbox-option-"
 			},
