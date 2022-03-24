@@ -65,7 +65,7 @@
 		"componentList": "[data-tid*=button-component-detail] [class*=c-card__title]",
 		"addComponentBtn": "[data-tid='button-ADD COMPONENT'], [data-tid=button-add-component]",
 		"componentTypeList": "[data-tid*=input-select] [class*=c-list-item__primary-text]",
-		"deleteBookBtn": "[data-tid=button-book_delete]",
+		"deleteBookBtn": "[data-tid=button-book_delete],[data-tid*=button-delete-]",
 		"description": "[data-tid=text-content-details-value-0]",
 		"bookDesign": "[data-tid=text-content-details-value-1]",
 		"visibility": "[data-tid=text-content-details-value-2]"
@@ -74,11 +74,15 @@
 		"nameTxtbox": "[id=book-title]",
 		"descriptionTxtbox": "[id=description]",
 		"imageUploadBtn": "[data-tid=input-cover-image] input",
-		"createTitleBtn": "[data-tid=button-add-book]",
+		"createTitleBtn": "[data-tid*=button-add]",
 		"bookDesignDropdown": "[data-tid=input-book-theme]",
 		"bookDesignList": "[class*=mdc-menu-surface--open] [data-tid*=text]",
-		"bookVisibilityDropdown": "[data-tid=input-visibility]",
-		"bookVisibilityList": "[class*=mdc-menu-surface--open] [data-tid*=text]"
+		"visibilityDropdown": "[data-tid=input-visibility]",
+		"visibilityList": "[class*=mdc-menu-surface--open] [data-tid*=text]",
+		"targetRoleDropdown": "[id=target-role]",
+		"targetRoleList": "[class*=mdc-menu-surface--open] [data-tid*=text]",
+		"categoryDropdown": "[id=category]",
+		"categoryList": "[class*=mdc-menu-surface--open] [data-tid*=text]"
 	},
 	"addComponentPage": {
 		"titleTxtbox": "[id=component-title]",
