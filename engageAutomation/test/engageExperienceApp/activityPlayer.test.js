@@ -315,7 +315,7 @@ module.exports = {
 		assertion.assertEqual(sts.yourScoreValue, null, "yourScoreValue status mismatch");
 		assertion.assertEqual(sts.prevPageBtn, null, "prevPageBtn status mismatch");
 		assertion.assertEqual(sts.nextPageBtn, null, "nextPageBtn status mismatch");
-		assertion.assertEqual(sts.detailsPanelHidden, null, "detailsPanel status mismatch");
+		assertion.assertEqual(sts.detailsPanelHidden, "true", "detailsPanel status mismatch");
 		assertion.assertEqual(sts.feedbackText, null, "feedbackText status mismatch");
 		assertion.assertEqual(sts.prevActivityBtn, testdata.prevActivityBtn[1], "prevActivityBtn status mismatch");
 		if (sts.nextActivityBtn == null)
