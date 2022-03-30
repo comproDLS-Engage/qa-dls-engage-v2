@@ -316,6 +316,8 @@ module.exports = {
 		console.log(res)
 		res = action.waitForDisplayed("[data-tid=image-bookCover]");
 		console.log(res)
+		res = action.waitForDisplayed("[data-tid=image-image-noAssignments]");
+		console.log(res)
 		res = action.waitForDisplayed("[class*=MuiSkeleton]", undefined, true);
 		console.log(res)
 	},
