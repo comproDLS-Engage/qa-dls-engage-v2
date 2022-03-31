@@ -1388,6 +1388,12 @@
 				]
 			},
 			{
+				"id": "ASE_COM_TC_1014",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
 				"id": "ASE_WRITING_TC_1",
 				"description": "",
 				"testFile": "./test/assessmentEditor/editor.test.js",

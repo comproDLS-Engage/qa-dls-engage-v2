@@ -75,6 +75,9 @@
 			"scoreInputBox": "[data-tid=input-score] input",
 			"addAnswerbtn":"[data-tid=button-addanswers]",
 			"addSubqun_btn":"[data-tid=button-addsubquestion]",
+			"responseEdit":"[data-tid=button-preview-responsearea] svg",
+			"responseTextArea":"[data-tid=input-ck-texteditor] [role=textbox]",
+			"textAreabtn":"button:nth-child(9) > svg",
 			"multipleResponse": {
 				"checkboxOption_input": "[data-tid=checkbox-option-"
 			},
