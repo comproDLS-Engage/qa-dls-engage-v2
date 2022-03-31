@@ -89,6 +89,9 @@ module.exports = {
 	placeHolderText:selectorFile.css.editorTab.writing.placeHolderText,
 	allowrichTextMedia:selectorFile.css.editorTab.writing.allowrichTextMedia,
 	allowFileAttachment:selectorFile.css.editorTab.writing.allowFileAttachment,
+	responseEdit:selectorFile.css.editorTab.responseEdit,
+	responseTextArea:selectorFile.css.editorTab.responseTextArea,
+	textAreabtn:selectorFile.css.editorTab.textAreabtn,
 	//--MULTIPLE RESPONSE
 	isInitialized1: function (testdata) {
 		for (var i = 0; i < testdata.length; i++) {
@@ -920,7 +923,7 @@ module.exports = {
 		res = action.click("[role=\"listbox\"]>li:nth-child(1)")
 		action.waitForDisplayed(this.videoURL_input)
 		res = action.setValue(this.videoURL_input, videoURL);
-		browser.pause(5000)
+		browser.pause(10000)
 		if (res == true) {
 			logger.logInto(stackTrace.get(), " -- Video Media URL is entered");
 			// return status of the video preview - akhil
@@ -949,15 +952,16 @@ module.exports = {
 		console.log(questionTitle)
 
 		logger.logInto(stackTrace.get());
-		action.waitForDisplayed(this.questionText_input)
 		browser.pause(2000)
-		action.clearValueDefault(this.questionText_input)
+		action.click(this.responseEdit)
+		action.clearValueDefault(this.responseTextArea)
 		browser.pause(2000)
-		res = action.addValue(this.questionText_input, questionTitle);
+		res = action.setValue(this.responseTextArea, questionTitle);
 		browser.pause(2000)
 		if (res == true) {
 
 			logger.logInto(stackTrace.get(), " -- Question Title is entered");
+			action.click(this.textAreabtn)
 
 		}
 		else {
