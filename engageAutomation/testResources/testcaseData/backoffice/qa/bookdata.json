@@ -8,6 +8,13 @@
                 "description": "QA automation test description",
                 "bookDesign": "Green",
                 "visibility": "True"
+            },
+            {
+                "type": "GLOBAL_RESOURCES",
+                "name": "QA Test Automation Global Resource [DO NOT PUBLISH]",
+                "category": "Interactive Activities",
+                "visibility": "True",
+                "targetRole": "All"
             }
         ],
         "component": [
