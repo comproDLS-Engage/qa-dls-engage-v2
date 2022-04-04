@@ -21,7 +21,9 @@
     "browseFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='browseTest.json' --browserCapability=desktop-chrome-1366",
     "playlistTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='playlistTest.json' --browserCapability=desktop-chrome-1366",
     "downloadPlayerTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='downloadPlayerTest.json' --browserCapability=desktop-chrome-1366",
-    "assignmentIntructorFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='classTeacherAssignment.json' --windowWidth=1600 --windowHeight=900"
+    "assignmentInstructorFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile=classTeacherAssignment.json --windowWidth=1600 --windowHeight=900",
+    "assignmentStudentFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='classStudentAssignment.json' --windowWidth=1600 --windowHeight=900"
+
   },
   "keywords": [],
   "author": "",
