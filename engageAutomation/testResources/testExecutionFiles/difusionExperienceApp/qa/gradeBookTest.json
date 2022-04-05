@@ -39,10 +39,7 @@
             "jsonPath": "engage.appContent.myClassPage"
           }
         ]
-      }
-    ],
-    "BeforeEach": [],
-    "Test": [
+      },
       {
         "id": "ENG_INS_CLASS_TC_7",
         "description": "",
@@ -60,7 +57,10 @@
         "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": [
         ]
-      },
+      }
+    ],
+    "BeforeEach": [],
+    "Test": [
       {
         "id": "ENG_GRADEBOOK_TC_1",
         "description": "",
@@ -120,10 +120,7 @@
             "jsonPath": "engage.appContent.myClassPage"
           }
         ]
-      }
-    ],
-    "BeforeEach": [],
-    "Test": [
+      },
       {
         "id": "ENG_INS_CLASS_TC_7",
         "description": "",
@@ -134,7 +131,10 @@
             "jsonPath": "engage.login.user.classInstructorUser3.class[3].name"
           }
         ]
-      },
+      }
+    ],
+    "BeforeEach": [],
+    "Test": [
       {
         "id": "ENG_INS_CLASS_TC_104",
         "description": "",
