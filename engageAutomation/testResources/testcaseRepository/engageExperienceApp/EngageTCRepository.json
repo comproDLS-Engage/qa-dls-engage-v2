@@ -658,6 +658,11 @@
           "id": "ENG_STU_CLASS_TC_104",
           "description": " Click on overview button",
           "tags": "P1"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_104",
+          "description": " Click on the gradebook button of teacher view class page ",
+          "tags": "P1"
         }
       ]
     },
@@ -3009,6 +3014,49 @@
         {
           "id": "ENG_ASSLIST_STU_TC_13",
           "description": "Validate the data after click on 'Show Activities' button",
+          "tags": "P2",
+          "visualTest": "-"
+        }
+      ]
+    },
+    {
+      "modulename": "GradeBook",
+      "moduledetails": "",
+      "testFile": "./test/engageExperienceApp/gradeBook.test.js",
+      "testcase": [
+        {
+          "id": "ENG_GRADEBOOK_TC_1",
+          "description": "Validate the GradeBook Page is launched",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GRADEBOOK_TC_2",
+          "description": "Validate the content on Blank GradeBook Page",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GRADEBOOK_TC_3",
+          "description": "Validate the content on GradeBook Page",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GRADEBOOK_TC_4",
+          "description": "Validate the Product List in GradeBook",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GRADEBOOK_TC_5",
+          "description": "Click on the Student Name",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GRADEBOOK_TC_6",
+          "description": "Validate the Student List in GradeBook",
           "tags": "P2",
           "visualTest": "-"
         }

@@ -6,6 +6,7 @@ var successClassPage = require('../../pages/engageExperienceApp/successClass.pag
 const dashboardPage = require('../../pages/engageExperienceApp/dashboard.page.js');
 var calender = require('../../pages/engageExperienceApp/calender.page.js');
 var classDrawerpage = require('../../pages/engageExperienceApp/classDrawer.page.js');
+var gradeBookPage = require('../../pages/engageExperienceApp/gradeBook.page.js');
 const { add } = require('winston');
 const teacherViewClassPage = require('../../pages/engageExperienceApp/teacherViewClass.page.js');
 var sts;
@@ -581,5 +582,15 @@ module.exports = {
 	},
 	ENG_STU_CLASS_TC_104: function () {
 		sts = studentClassDashboard.click_overviewBtn();
+	},
+	//Click GradeBok btn
+	ENG_INS_CLASS_TC_104: function () {
+		sts = teacherViewClassPage.clickGradeBookbtn();
+		if ((typeof (sts)) === "object") {
+			assertion.assertEqual(sts.pageStatus, true, "Assignment Tab is not selected " + JSON.stringify(sts))
+
+		} else {
+			assertion.assertFail(sts);
+		}
 	},
 };

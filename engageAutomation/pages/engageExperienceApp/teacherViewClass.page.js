@@ -2,6 +2,7 @@
 var action = require('../../core/actionLibrary/baseActionLibrary.js');
 const createClassPage = require('./createClass.page.js');
 const bookDetailsPage = require('./viewBook.page.js');
+var gradeBookPage = require('./gradeBook.page.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
 var res, obj,pageData;
 var componentSelector, languageCount, i;
@@ -175,6 +176,7 @@ module.exports = {
     //clicking on Assignment Tab
     clickAssignmentsTab: function () {
         logger.logInto(stackTrace.get());
+        action.waitForDisplayed(this.assignmentsTab);
         res = action.click(this.assignmentsTab);
         if (res == true) {
             logger.logInto(stackTrace.get(), "-- Assignment Tab is clicked");
@@ -265,7 +267,19 @@ module.exports = {
         }
         return res;
     },
-
+    clickGradeBookbtn: function () {
+        logger.logInto(stackTrace.get());
+        res = action.click(this.gradebookBtn);
+        if (res == true) {
+            logger.logInto(stackTrace.get(), "-- gradebookBtn is clicked");
+            res = gradeBookPage.isInitialized();
+        }
+        else {
+            res = res + "-- Error in clicking gradebookBtn";
+            logger.logInto(stackTrace.get(), res, 'error');
+        }
+        return res;
+    },
     getStudentPageData: function () {
         pageData = this.getViewClassPageData();
         obj = {

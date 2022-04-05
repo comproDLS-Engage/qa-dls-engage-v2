@@ -1,0 +1,190 @@
+{
+
+  "Suite1": {
+    "Name": "Validation the content of class where blank gradebook is displayed",
+    "TestCaseRepo": [
+      "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
+    ],
+    "Before": [
+      {
+        "id": "launchUrl",
+        "description": "",
+        "testFile": "./engageAutomation/core/runner/launchUrl.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_LAND_TC_3",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/landing.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_IDEN_TC_7",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/login.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "jsonPath": "engage.login.user.classInstructorUser3"
+          }
+        ]
+      },
+      {
+        "id": "ENG_SHELL_TC_4",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/appShell.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.myClassPage"
+          }
+        ]
+      }
+    ],
+    "BeforeEach": [],
+    "Test": [
+      {
+        "id": "ENG_INS_CLASS_TC_7",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "jsonPath": "engage.login.user.classInstructorUser3.class[4].name"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_CLASS_TC_104",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
+        "testData": [
+        ]
+      },
+      {
+        "id": "ENG_GRADEBOOK_TC_1",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/gradeBook.test.js",
+        "testData": [
+        ]
+      },
+      {
+        "id": "ENG_GRADEBOOK_TC_2",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/gradeBook.test.js",
+        "testData": [
+          {"dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.gradeBook.teacher"}
+        ]
+      }
+    ],
+    "AfterEach": [],
+    "After": []
+  },
+  "Suite2": {
+    "Name": "Validation the content of class where gradebook is displayed",
+    "TestCaseRepo": [
+      "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
+    ],
+    "Before": [
+      {
+        "id": "launchUrl",
+        "description": "",
+        "testFile": "./engageAutomation/core/runner/launchUrl.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_LAND_TC_3",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/landing.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_IDEN_TC_7",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/login.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "jsonPath": "engage.login.user.classInstructorUser3"
+          }
+        ]
+      },
+      {
+        "id": "ENG_SHELL_TC_4",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/appShell.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.myClassPage"
+          }
+        ]
+      }
+    ],
+    "BeforeEach": [],
+    "Test": [
+      {
+        "id": "ENG_INS_CLASS_TC_7",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "jsonPath": "engage.login.user.classInstructorUser3.class[3].name"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_CLASS_TC_104",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
+        "testData": [
+        ]
+      },
+      {
+        "id": "ENG_GRADEBOOK_TC_1",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/gradeBook.test.js",
+        "testData": [
+        ]
+      },
+      {
+        "id": "ENG_GRADEBOOK_TC_3",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/gradeBook.test.js",
+        "testData": [
+          {"dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.gradeBook.teacher"}
+        ]
+      },
+      {
+        "id": "ENG_GRADEBOOK_TC_4",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/gradeBook.test.js",
+        "testData": [
+        ]
+      },
+      {
+        "id": "ENG_GRADEBOOK_TC_6",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/gradeBook.test.js",
+        "testData": [
+        ]
+      },
+      {
+        "id": "ENG_GRADEBOOK_TC_5",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/gradeBook.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "jsonPath": "engage.login.user.classInstructorUser3.class[3].studentName1"
+          }
+        ]
+      }
+    ],
+    "AfterEach": [],
+    "After": []
+  }
+}

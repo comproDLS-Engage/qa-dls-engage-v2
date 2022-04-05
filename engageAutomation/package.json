@@ -7,7 +7,7 @@
     "test": "./node_modules/.bin/wdio wdio.conf.js",
     "landingFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='landingTest.json' --windowWidth=1600 --windowHeight=900",
     "loginFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='loginTest.json' --windowWidth=1600 --windowHeight=900",
-    "basicFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=production --testExecFile='AcceptanceNew.json' --windowWidth=1600 --windowHeight=900",
+    "basicFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='AcceptanceNew.json' --windowWidth=1600 --windowHeight=900",
     "appShellFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='appShellTest.json' --windowWidth=1600 --windowHeight=900",
     "classIntructorFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=production --testExecFile='classDashboardTest.json' --windowWidth=1600 --windowHeight=900",
     "dashboardFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='dashboardTest.json' --windowWidth=1600 --windowHeight=900",
@@ -22,8 +22,8 @@
     "playlistTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='playlistTest.json' --browserCapability=desktop-chrome-1366",
     "downloadPlayerTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='downloadPlayerTest.json' --browserCapability=desktop-chrome-1366",
     "assignmentInstructorFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile=classTeacherAssignment.json --windowWidth=1600 --windowHeight=900",
-    "assignmentStudentFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='classStudentAssignment.json' --windowWidth=1600 --windowHeight=900"
-
+    "assignmentStudentFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='classStudentAssignment.json' --windowWidth=1600 --windowHeight=900",
+    "gradeBookFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='gradeBookTest.json' --windowWidth=1600 --windowHeight=900"
   },
   "keywords": [],
   "author": "",

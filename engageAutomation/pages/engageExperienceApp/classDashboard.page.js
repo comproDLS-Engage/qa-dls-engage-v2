@@ -268,7 +268,7 @@ module.exports = {
 		res = action.click(this.gradeBookOption);
 		if (res == true) {
 			//teacherViewClass = require('./teacherViewClass.page.js');
-			res = teacherViewClassPage.isInitialized();
+			//res = teacherViewClassPage.isInitialized();
 		}
 		else {
 			res = res + " -- addStudentsOption button is NOT clicked";
