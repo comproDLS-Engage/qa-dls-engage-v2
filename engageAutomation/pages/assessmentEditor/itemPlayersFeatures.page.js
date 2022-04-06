@@ -92,6 +92,7 @@ module.exports = {
 	responseEdit:selectorFile.css.editorTab.responseEdit,
 	responseTextArea:selectorFile.css.editorTab.responseTextArea,
 	textAreabtn:selectorFile.css.editorTab.textAreabtn,
+	shufflingCheckBox:selectorFile.css.editorTab.shufflingCheckBox,
 	//--MULTIPLE RESPONSE
 	isInitialized1: function (testdata) {
 		for (var i = 0; i < testdata.length; i++) {
@@ -1266,6 +1267,21 @@ module.exports = {
 		else
 			res = res + "-- Set up tab is NOT availabe"
 		return res;
-	}
+	},
+	clickshufflingCheckBox: function () {
+		logger.logInto(stackTrace.get());
+		res = action.waitForClickable(this.shufflingCheckBox);
+		if (res == true) {
+			res = action.click(this.shufflingCheckBox);
+			if (res == true) {
+				logger.logInto(stackTrace.get(), " -- shufflingCheckBox is checked");
+			}
+		}
+		else {
+			res = res + " -- shufflingCheckBox is not checked";
+			logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
 
 }

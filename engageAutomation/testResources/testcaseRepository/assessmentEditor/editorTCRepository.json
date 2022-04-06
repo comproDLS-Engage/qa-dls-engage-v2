@@ -256,6 +256,11 @@
                     "tags": "P1"
                 },
                 {
+                    "id": "ASE_COM_TC_1016",
+                    "description": "Click Shuffling Checkbox button",
+                    "tags": "P1"
+                },
+                {
                     "id": "ASE_FIBDROPDOWN_TC_1013",
                     "description": "Click on unique for each blank",
                     "tags": "P1"

@@ -105,6 +105,13 @@
 				]
 			},
 			{
+				"id": "ASE_COM_TC_1016",
+				"description": "Click Shuffling Checkbox",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+				]
+			},
+			{
 				"id": "ASE_COM_TC_4",
 				"description": "Validate that a new question is added by clicking on the 'Add new Question' button on the left pane",
 				"testFile": "./test/assessmentEditor/editor.test.js",
@@ -199,6 +206,14 @@
 					}
 				]
 			},
+			
+			{
+				"id": "ASE_COM_TC_1016",
+				"description": "Click Shuffling Checkbox",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+				]
+			},
 			{
 				"id": "ASE_COM_TC_4",
 				"description": "Validate that a new question is added by clicking on the 'Add new Question' button on the left pane",
@@ -286,6 +301,13 @@
 						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
 						"jsonPath": "editor.questions.TrueFalse[0].score"
 					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1016",
+				"description": "Click Shuffling Checkbox",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
 				]
 			},
 			{
@@ -378,6 +400,13 @@
 				]
 			},
 			{
+				"id": "ASE_COM_TC_1016",
+				"description": "Click Shuffling Checkbox",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+				]
+			},
+			{
 				"id": "ASE_COM_TC_4",
 				"description": "Validate that a new question is added by clicking on the 'Add new Question' button on the left pane",
 				"testFile": "./test/assessmentEditor/editor.test.js",
@@ -453,6 +482,13 @@
 						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
 						"jsonPath": "editor.questions.DragDropIntoText[0].score"
 					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1016",
+				"description": "Click Shuffling Checkbox",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
 				]
 			},
 			{
@@ -837,6 +873,13 @@
 				]
 			},
 			{
+				"id": "ASE_COM_TC_1016",
+				"description": "Click Shuffling Checkbox",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+				]
+			},
+			{
 				"id": "ASE_COM_TC_4",
 				"description": "Validate that a new question is added by clicking on the 'Add new Question' button on the left pane",
 				"testFile": "./test/assessmentEditor/editor.test.js",
@@ -1100,6 +1143,13 @@
 				]
 			},
 			{
+				"id": "ASE_COM_TC_1016",
+				"description": "Click Shuffling Checkbox",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+				]
+			},
+			{
 				"id": "ASE_COM_TC_1011",
 				"description": "",
 				"testFile": "./test/assessmentEditor/editor.test.js",
@@ -1183,6 +1233,13 @@
 						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
 						"jsonPath": "editor.questions.FIBDropdown[0]question1.score"
 					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1016",
+				"description": "Click Shuffling Checkbox",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
 				]
 			},
 			{
@@ -1287,6 +1344,13 @@
 						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
 						"jsonPath": "editor.questions.FIBDropdown[0]question2.score"
 					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1016",
+				"description": "Click Shuffling Checkbox",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
 				]
 			}
 		],

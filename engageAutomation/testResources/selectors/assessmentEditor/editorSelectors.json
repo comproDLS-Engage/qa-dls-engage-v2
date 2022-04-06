@@ -78,6 +78,7 @@
 			"responseEdit":"[data-tid=button-preview-responsearea] svg",
 			"responseTextArea":"[data-tid=input-ck-texteditor] [role=textbox]",
 			"textAreabtn":"button:nth-child(9) > svg",
+			"shufflingCheckBox":"[data-tid=checkbox-shuffleoptions]",
 			"multipleResponse": {
 				"checkboxOption_input": "[data-tid=checkbox-option-"
 			},
