@@ -262,6 +262,17 @@
 				]
 			},
 			{
+				"id": "BK_TC_35",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
+						"jsonPath": "backoffice.book[0]"
+					}
+				]
+			},
+			{
 				"id": "BK_TC_4",
 				"description": "",
 				"testFile": "./test/backoffice/backoffice.test.js",
@@ -428,6 +439,17 @@
 				]
 			},
 			{
+				"id": "BK_TC_35",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
+						"jsonPath": "backoffice.book[0]"
+					}
+				]
+			},
+			{
 				"id": "BK_TC_4",
 				"description": "",
 				"testFile": "./test/backoffice/backoffice.test.js",
@@ -457,17 +479,6 @@
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
 						"jsonPath": "backoffice.folder[0].name"
-					}
-				]
-			},
-			{
-				"id": "BK_TC_13",
-				"description": "",
-				"testFile": "./test/backoffice/backoffice.test.js",
-				"testData": [
-					{
-						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.folder[1].name"
 					}
 				]
 			}
@@ -586,6 +597,12 @@
 				]
 			},
 			{
+				"id": "ASE_COM_TC_1016",
+				"description": "Click Shuffling Checkbox",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
 				"id": "ASE_COM_TC_4",
 				"description": "Validate that a new question is added by clicking on the 'Add new Question' button on the left pane",
 				"testFile": "./test/assessmentEditor/editor.test.js",
@@ -681,6 +698,12 @@
 				]
 			},
 			{
+				"id": "ASE_COM_TC_1016",
+				"description": "Click Shuffling Checkbox",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
 				"id": "ASE_COM_TC_4",
 				"description": "Validate that a new question is added by clicking on the 'Add new Question' button on the left pane",
 				"testFile": "./test/assessmentEditor/editor.test.js",
@@ -768,6 +791,12 @@
 						"jsonPath": "editor.questions.TrueFalse[0].score"
 					}
 				]
+			},
+			{
+				"id": "ASE_COM_TC_1016",
+				"description": "Click Shuffling Checkbox",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
 			},
 			{
 				"id": "ASE_COM_TC_4",
@@ -859,6 +888,12 @@
 				]
 			},
 			{
+				"id": "ASE_COM_TC_1016",
+				"description": "Click Shuffling Checkbox",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
 				"id": "ASE_COM_TC_4",
 				"description": "Validate that a new question is added by clicking on the 'Add new Question' button on the left pane",
 				"testFile": "./test/assessmentEditor/editor.test.js",
@@ -935,6 +970,12 @@
 						"jsonPath": "editor.questions.DragDropIntoText[0].score"
 					}
 				]
+			},
+			{
+				"id": "ASE_COM_TC_1016",
+				"description": "Click Shuffling Checkbox",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
 			},
 			{
 				"id": "ASE_COM_TC_4",
@@ -1236,7 +1277,6 @@
 					}
 				]
 			},
-		
 			{
 				"id": "ASE_COM_TC_15",
 				"description": "Click on Media button and Set Image Media",
@@ -1318,6 +1358,12 @@
 				]
 			},
 			{
+				"id": "ASE_COM_TC_1016",
+				"description": "Click Shuffling Checkbox",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
 				"id": "ASE_COM_TC_4",
 				"description": "Validate that a new question is added by clicking on the 'Add new Question' button on the left pane",
 				"testFile": "./test/assessmentEditor/editor.test.js",
@@ -1362,13 +1408,11 @@
 					}
 				]
 			},
-
 			{
 				"id": "ASE_COM_TC_1005",
 				"description": "Click on Edit Prompt button",
 				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-				]
+				"testData": []
 			},
 			{
 				"id": "ASE_COM_TC_75",
@@ -1381,7 +1425,6 @@
 					}
 				]
 			},
-
 			{
 				"id": "ASE_COM_TC_1006",
 				"description": "Click on Editor tab",
@@ -1581,12 +1624,16 @@
 				]
 			},
 			{
+				"id": "ASE_COM_TC_1016",
+				"description": "Click Shuffling Checkbox",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
 				"id": "ASE_COM_TC_1011",
 				"description": "",
 				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-				
-				]
+				"testData": []
 			},
 			{
 				"id": "ASE_COM_TC_4",
@@ -1667,6 +1714,12 @@
 				]
 			},
 			{
+				"id": "ASE_COM_TC_1016",
+				"description": "Click Shuffling Checkbox",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
 				"id": "ASE_COM_TC_4",
 				"description": "Validate that a new question is added by clicking on the 'Add new Question' button on the left pane",
 				"testFile": "./test/assessmentEditor/editor.test.js",
@@ -1726,15 +1779,13 @@
 				"id": "ASE_FIBDROPDOWN_TC_1014",
 				"description": "Click the Common option",
 				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-				]
+				"testData": []
 			},
 			{
 				"id": "ASE_COM_TC_1013",
 				"description": "Click the Common option",
 				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-				]
+				"testData": []
 			},
 			{
 				"id": "ASE_FIBDROPDOWN_TC_1015",
@@ -1758,7 +1809,6 @@
 					}
 				]
 			},
-			
 			{
 				"id": "ASE_COM_TC_1012",
 				"description": "Add the score in the activity player",
@@ -1769,6 +1819,12 @@
 						"jsonPath": "editor.questions.FIBDropdown[0]question2.score"
 					}
 				]
+			},
+			{
+				"id": "ASE_COM_TC_1016",
+				"description": "Click Shuffling Checkbox",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
 			},
 			{
 				"id": "ASE_COM_TC_998",
@@ -2212,7 +2268,6 @@
 					}
 				]
 			},
-				
 			{
 				"id": "ASE_COM_TC_1014",
 				"description": "",
@@ -2242,7 +2297,6 @@
 					}
 				]
 			},
-			
 			{
 				"id": "ASE_COM_TC_1014",
 				"description": "",
