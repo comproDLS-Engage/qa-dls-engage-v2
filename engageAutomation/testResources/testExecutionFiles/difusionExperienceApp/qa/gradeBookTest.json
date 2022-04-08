@@ -160,7 +160,7 @@
       },
       {
         "id": "ENG_GRADEBOOK_TC_4",
-        "description": "",
+        "description": "Validate the Product List in GradeBook",
         "testFile": "./test/engageExperienceApp/gradeBook.test.js",
         "testData": [
         ]

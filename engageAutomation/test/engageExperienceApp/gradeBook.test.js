@@ -29,25 +29,25 @@ module.exports = {
    ENG_GRADEBOOK_TC_3: function (testdata) {
       sts = gradeBookPage.getData_gradeBook()
       console.log(sts) 
-      assertion.assertEqual(sts.pageTitle, testdata.pageTitle, "pageTitle is Not displayed: " + JSON.stringify(sts))
-      assertion.assert(sts.pageSubTitle.includes(testdata.pageSubTitle), "pageSubTitle is Not displayed: " + JSON.stringify(sts))
-      assertion.assertEqual(sts.graphHeader, testdata.graphHeader, "graphHeader is Not displayed: " + JSON.stringify(sts))
-      assertion.assertEqual(sts.download_btn, testdata.download_btn, "download_btn is Not displayed: " + JSON.stringify(sts))
-      assertion.assertEqual(sts.sendtoemail_btn, testdata.sendtoemail_btn, "sendtoemail_btn is Not displayed: " + JSON.stringify(sts))
-      assertion.assertEqual(sts.graphImage, true, "graphImage is Not displayed: " + JSON.stringify(sts))
-      assertion.assertEqual(sts.averageScoreLegend, testdata.averageScoreLegend, "averageScoreLegend is Not displayed: " + JSON.stringify(sts))
-      assertion.assertEqual(sts.averageCompletionLegend, testdata.averageCompletionLegend, "averageCompletionLegend is Not displayed: " + JSON.stringify(sts))
-      assertion.assertEqual(sts.above70_lbl, testdata.above70_lbl, "above70_lbl is Not displayed: " + JSON.stringify(sts))
-      assertion.assertEqual(sts.below70_lbl, testdata.below70_lbl, "below70_lbl is Not displayed: " + JSON.stringify(sts))
-      assertion.assertEqual(sts.averageScore_lbl, testdata.averageScore_lbl, "above70_lbl is Not displayed: " + JSON.stringify(sts))
-      assertion.assertEqual(sts.averageCompletion_lbl, testdata.averageCompletion_lbl, "averageCompletion_lbl is Not displayed: " + JSON.stringify(sts))
-      assertion.assertEqual(sts.serachBox, true, "serachBox is Not displayed: " + JSON.stringify(sts))
-      assertion.assertEqual(sts.searchStudentPlaceholder, testdata.searchStudentPlaceholder, "searchStudentPlaceholder is Not displayed: " + JSON.stringify(sts))
-      assertion.assertEqual(sts.name_lbl, testdata.name_lbl, "name_lbl is Not displayed: " + JSON.stringify(sts))
-      assertion.assertEqual(sts.lastActive_lbl, testdata.lastActive_lbl, "lastActive_lbl is Not displayed: " + JSON.stringify(sts))
-      assertion.assertEqual(sts.time_lbl, testdata.time_lbl, "time_lbl is Not displayed: " + JSON.stringify(sts))
-      assertion.assertEqual(sts.score_lbl, testdata.score_lbl, "score_lbl is Not displayed: " + JSON.stringify(sts))
-      assertion.assertEqual(sts.completion_lbl, testdata.completion_lbl, "score_lbl is Not displayed: " + JSON.stringify(sts))
+      assertion.assertEqual(sts.pageTitle, testdata.pageTitle, "pageTitle is Not displayed");
+      assertion.assert(sts.pageSubTitle.includes(testdata.pageSubTitle), "pageSubTitle is Not displayed");
+      assertion.assertEqual(sts.graphHeader, testdata.graphHeader, "graphHeader is Not displayed");
+      assertion.assertEqual(sts.download_btn, testdata.download_btn, "download_btn is Not displayed");
+      assertion.assertEqual(sts.sendtoemail_btn, testdata.sendtoemail_btn, "sendtoemail_btn is Not displayed");
+      assertion.assertEqual(sts.graphImage, true, "graphImage is Not displayed");
+      assertion.assertEqual(sts.averageScoreLegend, testdata.averageScoreLegend, "averageScoreLegend is Not displayed");
+      assertion.assertEqual(sts.averageCompletionLegend, testdata.averageCompletionLegend, "averageCompletionLegend is Not displayed");
+      assertion.assertEqual(sts.above70_lbl, testdata.above70_lbl, "above70_lbl is Not displayed");
+      assertion.assertEqual(sts.below70_lbl, testdata.below70_lbl, "below70_lbl is Not displayed");
+      assertion.assertEqual(sts.averageScore_lbl, testdata.averageScore_lbl, "above70_lbl is Not displayed");
+      assertion.assertEqual(sts.averageCompletion_lbl, testdata.averageCompletion_lbl, "averageCompletion_lbl is Not displayed");
+      assertion.assertEqual(sts.searchBox, true, "serachBox is Not displayed");
+      assertion.assertEqual(sts.searchStudentPlaceholder, testdata.searchStudentPlaceholder, "searchStudentPlaceholder is Not displayed");
+      assertion.assertEqual(sts.name_lbl, testdata.name_lbl, "name_lbl is Not displayed");
+      assertion.assertEqual(sts.lastActive_lbl, testdata.lastActive_lbl, "lastActive_lbl is Not displayed");
+      assertion.assertEqual(sts.time_lbl, testdata.time_lbl, "time_lbl is Not displayed");
+      assertion.assertEqual(sts.score_lbl, testdata.score_lbl, "score_lbl is Not displayed");
+      assertion.assertEqual(sts.completion_lbl, testdata.completion_lbl, "score_lbl is Not displayed");
    },
 
    //Validate the Product List in GradeBook

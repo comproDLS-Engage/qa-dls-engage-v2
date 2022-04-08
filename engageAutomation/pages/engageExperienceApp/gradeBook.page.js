@@ -23,7 +23,7 @@ module.exports = {
   averageScore_lbl: selectorFile.css.ComproEngage.gradeBook.averageScore_lbl,
   averageCompletion_lbl: selectorFile.css.ComproEngage.gradeBook.averageCompletion_lbl,
   students_lbl: selectorFile.css.ComproEngage.gradeBook.students_lbl,
-  serachBox: selectorFile.css.ComproEngage.gradeBook.serachBox,
+  searchBox: selectorFile.css.ComproEngage.gradeBook.searchBox,
   searchStudentPlaceholder: selectorFile.css.ComproEngage.gradeBook.searchStudentPlaceholder,
   name_lbl: selectorFile.css.ComproEngage.gradeBook.name_lbl,
   lastActive_lbl: selectorFile.css.ComproEngage.gradeBook.lastActive_lbl,
@@ -64,7 +64,7 @@ module.exports = {
       averageScore_lbl: (action.getElementCount(this.averageScore_lbl) > 0) ? action.getText(this.averageScore_lbl) : null,
       averageCompletion_lbl: (action.getElementCount(this.averageCompletion_lbl) > 0) ? action.getText(this.averageCompletion_lbl) : null,
       students_lbl: (action.getElementCount(this.students_lbl) > 0) ? action.getText(this.students_lbl) : null,
-      serachBox: (action.getElementCount(this.serachBox) > 0) ? action.waitForDisplayed(this.serachBox) : false,
+      searchBox: (action.getElementCount(this.searchBox) > 0) ? action.waitForDisplayed(this.searchBox) : false,
       searchStudentPlaceholder: (action.getElementCount(this.searchStudentPlaceholder) > 0) ? action.getAttribute(this.searchStudentPlaceholder, "placeholder") : null,
       name_lbl: (action.getElementCount(this.name_lbl) > 0) ? action.getText(this.name_lbl) : null,
       lastActive_lbl: (action.getElementCount(this.lastActive_lbl) > 0) ? action.getText(this.lastActive_lbl) : null,
@@ -112,6 +112,7 @@ module.exports = {
         }
       }
     }
+    console.log("obj tc4 -",obj)
     return obj;
   },
 

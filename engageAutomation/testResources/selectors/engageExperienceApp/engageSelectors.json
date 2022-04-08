@@ -1116,7 +1116,7 @@
                 "averageScore_lbl": "[data-tid='value-average-score']",
                 "averageCompletion_lbl": "[data-tid='value-average-completion']",
                 "students_lbl": "[data-tid=label-students]",
-                "serachBox": "[data-tid=icon-autocomplete-search]",
+                "searchBox": "[data-tid=icon-autocomplete-search]",
                 "searchStudentPlaceholder": "//input[@placeholder='Search Students...']",
                 "name_lbl": "[data-tid='value-name']",
                 "lastActive_lbl": "[data-tid='value-last-active']",
