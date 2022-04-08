@@ -9,7 +9,7 @@ module.exports = {
    //Validate the GradeBook Page is launched
    ENG_GRADEBOOK_TC_1: function (testdata) {
       sts = gradeBookPage.isInitialized()
-      assertion.assertEqual(sts.pageStatus, true, "GradeBook Page not launched: " + JSON.stringify(sts))
+      assertion.assertEqual(sts.pageStatus, true, "Dashboard page status mismatch")
    },
 
    //Validate the content on Blank GradeBook Page
