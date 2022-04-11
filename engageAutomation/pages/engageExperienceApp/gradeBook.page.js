@@ -85,6 +85,7 @@ module.exports = {
       studentList_Arr[i] = action.getText(list[i])
     }
     logger.logInto(stackTrace.get(), studentList_Arr);
+    console.log("Tc6 student arr",studentList_Arr)
     return studentList_Arr;
   },
 
@@ -159,6 +160,7 @@ module.exports = {
     }
     else
       logger.logInto(stackTrace.get(), " --studentList NOT clicked", "error")
+    console.log("res tc5",res)
     return res;
   },
 

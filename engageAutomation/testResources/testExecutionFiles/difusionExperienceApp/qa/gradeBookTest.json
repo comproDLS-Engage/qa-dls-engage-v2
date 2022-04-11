@@ -159,6 +159,24 @@
         ]
       },
       {
+        "id": "ENG_GRADEBOOK_TC_7",
+        "description": "Validate the content on GradeBook Page",
+        "testFile": "./test/engageExperienceApp/gradeBook.test.js",
+        "testData": [
+          {"dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.appShell.featureNotAvailable_alert"}
+        ]
+      },
+      {
+        "id": "ENG_GRADEBOOK_TC_8",
+        "description": "Validate the content on GradeBook Page",
+        "testFile": "./test/engageExperienceApp/gradeBook.test.js",
+        "testData": [
+          {"dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.appShell.featureNotAvailable_alert"}
+        ]
+      },
+      {
         "id": "ENG_GRADEBOOK_TC_4",
         "description": "Validate the Product List in GradeBook",
         "testFile": "./test/engageExperienceApp/gradeBook.test.js",

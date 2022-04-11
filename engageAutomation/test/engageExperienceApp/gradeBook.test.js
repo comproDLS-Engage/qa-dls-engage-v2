@@ -28,7 +28,7 @@ module.exports = {
    //Validate the content on GradeBook Page
    ENG_GRADEBOOK_TC_3: function (testdata) {
       sts = gradeBookPage.getData_gradeBook()
-      console.log(sts) 
+      console.log("gradebookdata - ",sts) 
       assertion.assertEqual(sts.pageTitle, testdata.pageTitle, "pageTitle is Not displayed");
       assertion.assert(sts.pageSubTitle.includes(testdata.pageSubTitle), "pageSubTitle is Not displayed");
       assertion.assertEqual(sts.graphHeader, testdata.graphHeader, "graphHeader is Not displayed");
@@ -66,5 +66,22 @@ module.exports = {
       // Will add asserion when required.
       console.log(sts)
    },
+
+   //Validate that clicking on 'Download' button displays a snackbar message
+	ENG_GRADEBOOK_TC_7: function (testdata) {
+		sts = gradeBookPage.click_download_btn();
+		assertion.assertEqual(sts, true, "Download button clicked");
+      sts = require('../../test/engageExperienceApp/common.test.js').get_Snackbar_Message_Text();
+		assertion.assert(sts,testdata, "Snackbar message mismatch: " + sts);
+	},
+
+   //Validate that clicking on 'Send to email' button displays a snackbar message
+	ENG_GRADEBOOK_TC_8: function (testdata) {
+		sts = gradeBookPage.click_sendtoemail_btn();
+		assertion.assertEqual(sts, true, "Send to email button clicked");
+      sts = require('../../test/engageExperienceApp/common.test.js').get_Snackbar_Message_Text();
+		assertion.assert(sts,testdata, "Snackbar message mismatch: " + sts);
+	},
+
    
 }
