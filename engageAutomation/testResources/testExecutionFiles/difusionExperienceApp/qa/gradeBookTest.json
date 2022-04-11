@@ -160,7 +160,7 @@
       },
       {
         "id": "ENG_GRADEBOOK_TC_7",
-        "description": "Validate the content on GradeBook Page",
+        "description": "Validate that clicking on 'Download' button displays a snackbar message",
         "testFile": "./test/engageExperienceApp/gradeBook.test.js",
         "testData": [
           {"dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
@@ -169,7 +169,7 @@
       },
       {
         "id": "ENG_GRADEBOOK_TC_8",
-        "description": "Validate the content on GradeBook Page",
+        "description": "Validate that clicking on 'Send to email' button displays a snackbar message",
         "testFile": "./test/engageExperienceApp/gradeBook.test.js",
         "testData": [
           {"dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
@@ -185,9 +185,13 @@
       },
       {
         "id": "ENG_GRADEBOOK_TC_6",
-        "description": "",
+        "description": "Validate the Student List in GradeBook",
         "testFile": "./test/engageExperienceApp/gradeBook.test.js",
         "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/gradebookData.json",
+            "jsonPath": "engage.class[0].students"
+          }
         ]
       },
       {

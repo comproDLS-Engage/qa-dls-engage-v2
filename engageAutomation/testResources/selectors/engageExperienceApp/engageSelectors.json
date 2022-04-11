@@ -1103,8 +1103,8 @@
                 "noGradeBookTitle": "[data-tid='no-students-title']",
                 "noGradeBookSubTitle": "[data-tid='no-student-bilinear']",
                 "download_btn": "[data-tid=button-downloadGradebook]",
-                "graphHeader": "[data-tid=title-graph]",
                 "sendtoemail_btn": "[data-tid=button-sendToEmail]",
+                "graphHeader": "[data-tid=title-graph]",
                 "graphImage": "[data-tid=class-analytics-graph]",
                 "averageScoreLegend": "[data-tid=label-avgScore] p",
                 "averageCompletionLegend": "[data-tid=label-avgCompletion] p",
@@ -1123,7 +1123,7 @@
                 "time_lbl": "[data-tid='value-time']",
                 "score_lbl": "[data-tid='value-score']",
                 "completion_lbl": "[data-tid='value-completion']",
-                "studentList": "[data-tid*=text-name-0-"
+                "studentList": "[data-tid*=text-name-"
             },
             "gradeBookStudent": {
                 "pageTitle": "[data-tid='text-pageTitle']",

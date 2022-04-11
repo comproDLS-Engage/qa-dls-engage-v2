@@ -28,7 +28,7 @@ module.exports = {
    //Validate the content on GradeBook Page
    ENG_GRADEBOOK_TC_3: function (testdata) {
       sts = gradeBookPage.getData_gradeBook()
-      console.log("gradebookdata - ",sts) 
+      //console.log("gradebookdata - ",sts) 
       assertion.assertEqual(sts.pageTitle, testdata.pageTitle, "pageTitle is Not displayed");
       assertion.assert(sts.pageSubTitle.includes(testdata.pageSubTitle), "pageSubTitle is Not displayed");
       assertion.assertEqual(sts.graphHeader, testdata.graphHeader, "graphHeader is Not displayed");
@@ -56,15 +56,18 @@ module.exports = {
       // Will add asserion when required.
     },
 
-   //Click on the Student Name
+   //Validate clicking on the Student Name
    ENG_GRADEBOOK_TC_5: function (testdata) {
       sts = gradeBookPage.click_studentList(testdata);
-      assertion.assertEqual(sts.pageStatus, true, "GradeBook Student Page not launched: " + JSON.stringify(sts))
+      assertion.assertEqual(sts.pageStatus, true, "GradeBook Student Page not launched: ");
    },
-   ENG_GRADEBOOK_TC_6: function () {
+
+   //Validate the Student List in GradeBook
+   ENG_GRADEBOOK_TC_6: function (testdata) {
       sts = gradeBookPage.studentList_Data();
-      // Will add asserion when required.
-      console.log(sts)
+      for (let i = 0; i < sts.length; i++) {
+         assertion.assertEqual(sts[i], testdata[i], "GradeBook Student Page not launched: ");
+      }
    },
 
    //Validate that clicking on 'Download' button displays a snackbar message

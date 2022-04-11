@@ -82,10 +82,9 @@ module.exports = {
     var studentList_Arr = [];
     list = action.findElements(this.studentList);
     for (i = 0; i < list.length; i++) {
-      studentList_Arr[i] = action.getText(list[i])
+      studentList_Arr[i] = action.getText(this.studentList + i + "-0]")
     }
     logger.logInto(stackTrace.get(), studentList_Arr);
-    console.log("Tc6 student arr",studentList_Arr)
     return studentList_Arr;
   },
 
@@ -113,7 +112,7 @@ module.exports = {
         }
       }
     }
-    console.log("obj tc4 -",obj)
+    //console.log("obj tc4 -",obj)
     return obj;
   },
 
