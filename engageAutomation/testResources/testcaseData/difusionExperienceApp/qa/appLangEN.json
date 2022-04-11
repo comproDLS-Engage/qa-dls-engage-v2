@@ -48,7 +48,8 @@
                 "addToPlaylist": "Add to Playlist",
                 "chapterTitleTxt": "Jump to Section",
                 "invalidEmail_txt": "Please check your email address and try again.",
-                "notRegisterUser_alert": "Please check your email address and password and try again."
+                "notRegisterUser_alert": "Please check your email address and password and try again.",
+                "featureNotAvailable_alert": "Feature not available or active for this version."
             },
             "dashboard": {
                 "teacher": {

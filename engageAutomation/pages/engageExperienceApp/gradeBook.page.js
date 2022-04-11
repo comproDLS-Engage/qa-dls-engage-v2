@@ -23,7 +23,7 @@ module.exports = {
   averageScore_lbl: selectorFile.css.ComproEngage.gradeBook.averageScore_lbl,
   averageCompletion_lbl: selectorFile.css.ComproEngage.gradeBook.averageCompletion_lbl,
   students_lbl: selectorFile.css.ComproEngage.gradeBook.students_lbl,
-  serachBox: selectorFile.css.ComproEngage.gradeBook.serachBox,
+  searchBox: selectorFile.css.ComproEngage.gradeBook.searchBox,
   searchStudentPlaceholder: selectorFile.css.ComproEngage.gradeBook.searchStudentPlaceholder,
   name_lbl: selectorFile.css.ComproEngage.gradeBook.name_lbl,
   lastActive_lbl: selectorFile.css.ComproEngage.gradeBook.lastActive_lbl,
@@ -54,8 +54,8 @@ module.exports = {
       noGradeBookTitle: (action.getElementCount(this.noGradeBookTitle) > 0) ? action.getText(this.noGradeBookTitle) : null,
       noGradeBookSubTitle: (action.getElementCount(this.noGradeBookSubTitle) > 0) ? action.getText(this.noGradeBookSubTitle) : null,
       download_btn: (action.getElementCount(this.download_btn) > 0) ? action.getText(this.download_btn) : null,
-      graphHeader: (action.getElementCount(this.graphHeader) > 0) ? action.getText(this.graphHeader) : null,
       sendtoemail_btn: (action.getElementCount(this.sendtoemail_btn) > 0) ? action.getText(this.sendtoemail_btn) : null,
+      graphHeader: (action.getElementCount(this.graphHeader) > 0) ? action.getText(this.graphHeader) : null,
       graphImage: (action.getElementCount(this.graphImage) > 0) ? action.waitForDisplayed(this.graphImage) : false,
       averageScoreLegend: (action.getElementCount(this.averageScoreLegend) > 0) ? action.getText(this.averageScoreLegend) : null,
       averageCompletionLegend: (action.getElementCount(this.averageCompletionLegend) > 0) ? action.getText(this.averageCompletionLegend) : null,
@@ -64,7 +64,7 @@ module.exports = {
       averageScore_lbl: (action.getElementCount(this.averageScore_lbl) > 0) ? action.getText(this.averageScore_lbl) : null,
       averageCompletion_lbl: (action.getElementCount(this.averageCompletion_lbl) > 0) ? action.getText(this.averageCompletion_lbl) : null,
       students_lbl: (action.getElementCount(this.students_lbl) > 0) ? action.getText(this.students_lbl) : null,
-      serachBox: (action.getElementCount(this.serachBox) > 0) ? action.waitForDisplayed(this.serachBox) : false,
+      searchBox: (action.getElementCount(this.searchBox) > 0) ? action.waitForDisplayed(this.searchBox) : false,
       searchStudentPlaceholder: (action.getElementCount(this.searchStudentPlaceholder) > 0) ? action.getAttribute(this.searchStudentPlaceholder, "placeholder") : null,
       name_lbl: (action.getElementCount(this.name_lbl) > 0) ? action.getText(this.name_lbl) : null,
       lastActive_lbl: (action.getElementCount(this.lastActive_lbl) > 0) ? action.getText(this.lastActive_lbl) : null,
@@ -82,7 +82,7 @@ module.exports = {
     var studentList_Arr = [];
     list = action.findElements(this.studentList);
     for (i = 0; i < list.length; i++) {
-      studentList_Arr[i] = action.getText(list[i])
+      studentList_Arr[i] = action.getText(this.studentList + i + "-0]")
     }
     logger.logInto(stackTrace.get(), studentList_Arr);
     return studentList_Arr;
@@ -112,6 +112,7 @@ module.exports = {
         }
       }
     }
+    //console.log("obj tc4 -",obj)
     return obj;
   },
 
@@ -158,6 +159,7 @@ module.exports = {
     }
     else
       logger.logInto(stackTrace.get(), " --studentList NOT clicked", "error")
+    console.log("res tc5",res)
     return res;
   },
 

@@ -1103,8 +1103,8 @@
                 "noGradeBookTitle": "[data-tid='no-students-title']",
                 "noGradeBookSubTitle": "[data-tid='no-student-bilinear']",
                 "download_btn": "[data-tid=button-downloadGradebook]",
-                "graphHeader": "[data-tid=title-graph]",
                 "sendtoemail_btn": "[data-tid=button-sendToEmail]",
+                "graphHeader": "[data-tid=title-graph]",
                 "graphImage": "[data-tid=class-analytics-graph]",
                 "averageScoreLegend": "[data-tid=label-avgScore] p",
                 "averageCompletionLegend": "[data-tid=label-avgCompletion] p",
@@ -1116,14 +1116,14 @@
                 "averageScore_lbl": "[data-tid='value-average-score']",
                 "averageCompletion_lbl": "[data-tid='value-average-completion']",
                 "students_lbl": "[data-tid=label-students]",
-                "serachBox": "[data-tid=icon-autocomplete-search]",
+                "searchBox": "[data-tid=icon-autocomplete-search]",
                 "searchStudentPlaceholder": "//input[@placeholder='Search Students...']",
                 "name_lbl": "[data-tid='value-name']",
                 "lastActive_lbl": "[data-tid='value-last-active']",
                 "time_lbl": "[data-tid='value-time']",
                 "score_lbl": "[data-tid='value-score']",
                 "completion_lbl": "[data-tid='value-completion']",
-                "studentList": "[data-tid*=text-name-0-"
+                "studentList": "[data-tid*=text-name-"
             },
             "gradeBookStudent": {
                 "pageTitle": "[data-tid='text-pageTitle']",

@@ -82,7 +82,7 @@
     "After": []
   },
   "Suite2": {
-    "Name": "Validation the content of class where gradebook is displayed",
+    "Name": "Validation of the content of class where gradebook analytics are displayed",
     "TestCaseRepo": [
       "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
     ],
@@ -144,14 +144,14 @@
       },
       {
         "id": "ENG_GRADEBOOK_TC_1",
-        "description": "",
+        "description": "Validate the GradeBook Page is launched",
         "testFile": "./test/engageExperienceApp/gradeBook.test.js",
         "testData": [
         ]
       },
       {
         "id": "ENG_GRADEBOOK_TC_3",
-        "description": "",
+        "description": "Validate the content on GradeBook Page",
         "testFile": "./test/engageExperienceApp/gradeBook.test.js",
         "testData": [
           {"dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
@@ -159,17 +159,39 @@
         ]
       },
       {
+        "id": "ENG_GRADEBOOK_TC_7",
+        "description": "Validate that clicking on 'Download' button displays a snackbar message",
+        "testFile": "./test/engageExperienceApp/gradeBook.test.js",
+        "testData": [
+          {"dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.appShell.featureNotAvailable_alert"}
+        ]
+      },
+      {
+        "id": "ENG_GRADEBOOK_TC_8",
+        "description": "Validate that clicking on 'Send to email' button displays a snackbar message",
+        "testFile": "./test/engageExperienceApp/gradeBook.test.js",
+        "testData": [
+          {"dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.appShell.featureNotAvailable_alert"}
+        ]
+      },
+      {
         "id": "ENG_GRADEBOOK_TC_4",
-        "description": "",
+        "description": "Validate the Product List in GradeBook",
         "testFile": "./test/engageExperienceApp/gradeBook.test.js",
         "testData": [
         ]
       },
       {
         "id": "ENG_GRADEBOOK_TC_6",
-        "description": "",
+        "description": "Validate the Student List in GradeBook",
         "testFile": "./test/engageExperienceApp/gradeBook.test.js",
         "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/gradebookData.json",
+            "jsonPath": "engage.class[0].students"
+          }
         ]
       },
       {
