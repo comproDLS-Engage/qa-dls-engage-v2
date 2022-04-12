@@ -116,7 +116,6 @@ module.exports = {
     return obj;
   },
 
-
   click_download_btn: function () {
     logger.logInto(stackTrace.get());
     var res;
@@ -161,7 +160,7 @@ module.exports = {
       logger.logInto(stackTrace.get(), " --studentList NOT clicked", "error")
     console.log("res tc5",res)
     return res;
-  },
+  }
 
 }
 
