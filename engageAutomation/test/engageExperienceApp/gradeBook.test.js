@@ -1,5 +1,6 @@
 "use strict";
 var gradeBookPage = require('../../pages/engageExperienceApp/gradeBook.page.js');
+var studentGradeBookPage = require('../../pages/engageExperienceApp/gradeBookStudent.page.js');
 var appShell = require('../../pages/engageExperienceApp/appShell.page');
 const { confirmPassword_input } = require('../../pages/engageExperienceApp/settings.page.js');
 var sts;
@@ -85,6 +86,25 @@ module.exports = {
       sts = require('../../test/engageExperienceApp/common.test.js').get_Snackbar_Message_Text();
 		assertion.assert(sts,testdata, "Snackbar message mismatch: " + sts);
 	},
+
+   //---*** STUDENT VIEW GRADEBOOK -----
+
+   //Validate the content on Student GradeBook Page
+   ENG_GRADEBOOK_TC_9: function (testdata) {
+      sts = studentGradeBookPage.getData_gradeBookStudentView()
+      console.log("student view testdata - ",testdata) 
+      assertion.assertEqual(sts.pageTitle, testdata.pageTitle, "pageTitle is Not displayed");
+      assertion.assert(sts.pageSubTitle.includes(testdata.pageSubTitle), "pageSubTitle is Not displayed");
+      assertion.assertEqual(sts.download_btn, testdata.download_btn, "download_btn is Not displayed");
+      assertion.assertEqual(sts.sendtoemail_btn, testdata.sendtoemail_btn, "sendtoemail_btn is Not displayed");
+      assertion.assert(sts.totalTimeSpent_lbl.includes(testdata.totalTimeSpent_lbl), "totalTimeSpent_lbl is Not displayed");
+      assertion.assertEqual(sts.score_lbl, testdata.score_lbl, "score_lbl is Not displayed");
+      assertion.assertEqual(sts.completion_lbl, testdata.completion_lbl, "score_lbl is Not displayed");
+      //assertion.assert(sts.classAnalyticsCompletion_lbl.includes(testdata.classAnalyticsCompletion_lbl), "classAnalyticsCompletion_lbl is Not displayed");
+      //assertion.assert(sts.classAnalyticsScore_lbl.includes(testdata.classAnalyticsScore_lbl), "classAnalyticsScore_lbl is Not displayed");
+      assertion.assertEqual(sts.lesson_title, testdata.lesson_title, "lesson_title is Not displayed");
+      assertion.assertEqual(sts.lesson_Subtitle, testdata.lesson_Subtitle, "lesson_Subtitle is Not displayed");
+   }
 
    
 }

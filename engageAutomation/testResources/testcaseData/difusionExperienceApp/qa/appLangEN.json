@@ -1077,10 +1077,9 @@
             },
             "gradeBookStudent": {
                 "teacher": {
-                    "pageTitle": "Gradebook",
-                    "pageSubTitle": "Class Dates: ",
+                    "pageTitle": "dev1 student100",
+                    "pageSubTitle": "Last Active: ",
                     "download_btn": "Download",
-                    "graphHeader": "Average Score and Average Completion",
                     "sendtoemail_btn": "Send to email",
                     "totalTimeSpent_lbl": "Total Time Spent: ",
                     "score_lbl": "Score",

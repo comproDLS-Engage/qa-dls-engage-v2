@@ -3071,6 +3071,12 @@
           "description": "Validate that clicking on 'Send to email' button displays a snackbar message",
           "tags": "P2",
           "visualTest": "-"
+        },
+        {
+          "id": "ENG_GRADEBOOK_TC_9",
+          "description": "Validate the content on Student View GradeBook Page",
+          "tags": "P2",
+          "visualTest": "-"
         }
       ]
     }

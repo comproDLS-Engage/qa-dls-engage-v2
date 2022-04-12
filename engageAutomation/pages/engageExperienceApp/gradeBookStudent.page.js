@@ -56,18 +56,22 @@ module.exports = {
       pageTitle: (action.getElementCount(this.pageTitle) > 0) ? action.getText(this.pageTitle) : null,
       pageSubTitle: (action.getElementCount(this.pageSubTitle) > 0) ? action.getText(this.pageSubTitle) : null,
       download_btn: (action.getElementCount(this.download_btn) > 0) ? action.getText(this.download_btn) : null,
-      graphHeader: (action.getElementCount(this.graphHeader) > 0) ? action.getText(this.graphHeader) : null,
       sendtoemail_btn: (action.getElementCount(this.sendtoemail_btn) > 0) ? action.getText(this.sendtoemail_btn) : null,
       totalTimeSpent_lbl: (action.getElementCount(this.totalTimeSpent_lbl) > 0) ? action.getText(this.totalTimeSpent_lbl) : null,
+      
       score_lbl: (action.getElementCount(this.score_lbl) > 0) ? action.getText(this.score_lbl) : null,
       scoreChart_icon: (action.getElementCount(this.scoreChart_icon) > 0) ? action.waitForDisplayed(this.scoreChart_icon) : false,
-      completionChart_icon: (action.getElementCount(this.completionChart_icon) > 0) ? action.waitForDisplayed(this.completionChart_icon) : false,
       completion_lbl: (action.getElementCount(this.completion_lbl) > 0) ? action.getText(this.completion_lbl) : null,
+      completionChart_icon: (action.getElementCount(this.completionChart_icon) > 0) ? action.waitForDisplayed(this.completionChart_icon) : false,
+      
+    //to be fixed by dev
       classAnalyticsCompletion_lbl: (action.getElementCount(this.classAnalyticsCompletion_lbl) > 0) ? action.getText(this.classAnalyticsCompletion_lbl) : null,
       classAnalyticsScore_lbl: (action.getElementCount(this.classAnalyticsScore_lbl) > 0) ? action.getText(this.classAnalyticsScore_lbl) : null,
+      
       lesson_title: (action.getElementCount(this.lesson_title) > 0) ? action.getText(this.lesson_title) : null,
       lesson_Subtitle: (action.getElementCount(this.lesson_Subtitle) > 0) ? action.getText(this.lesson_Subtitle) : null,
     }
+    console.log("return sts - ",obj)
     return obj;
   },
 
