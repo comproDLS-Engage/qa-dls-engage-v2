@@ -104,7 +104,18 @@ module.exports = {
       //assertion.assert(sts.classAnalyticsScore_lbl.includes(testdata.classAnalyticsScore_lbl), "classAnalyticsScore_lbl is Not displayed");
       assertion.assertEqual(sts.lesson_title, testdata.lesson_title, "lesson_title is Not displayed");
       assertion.assertEqual(sts.lesson_Subtitle, testdata.lesson_Subtitle, "lesson_Subtitle is Not displayed");
-   }
+   },
+
+   //Validate the click on 'Show Activities' button
+   ENG_GRADEBOOK_TC_10: function (testdata) {
+      sts = studentGradeBookPage.click_showActivities_btn(testdata[0]);
+      for (let i = 0; i < sts.length; i++) {
+         assertion.assertEqual(sts[i].activityName, testdata[1][i].activityName, "Activity name Text mismatch");
+         //assertion.assertEqual(sts[i].activityStatus, testdata[1][i].activityStatus, "Activity status mismatch");
+         //  assertion.assertEqual(sts[i].activityScore, testdata[1][i].activityScore, "Activity name Text mismatch");
+         // assertion.assertEqual(sts[i].activityAttempts, testdata[1][i].activityAttempts, "Activity name Text mismatch");
+      }
+   },
 
    
 }

@@ -28,11 +28,11 @@ module.exports = {
   totalTime_lbl: selectorFile.css.ComproEngage.gradeBookStudent.totalTime_lbl,
   activityCount: selectorFile.css.ComproEngage.gradeBookStudent.activityCount,
   CompletionCount: selectorFile.css.ComproEngage.gradeBookStudent.CompletionCount,
-  showActivities_btn: selectorFile.css.ComproEngage.gradeBookStudent.showActivities_btn,
-  activity_lbl: selectorFile.css.ComproEngage.gradeBookStudent.activity_lbl,
-  score_activity_lbl: selectorFile.css.ComproEngage.gradeBookStudent.score_activity_lbl,
-  attempt_lbl: selectorFile.css.ComproEngage.gradeBookStudent.attempt_lbl,
-  timeSpent_lbl: selectorFile.css.ComproEngage.gradeBookStudent.timeSpent_lbl,
+  showHideActivities_btn: selectorFile.css.ComproEngage.gradeBookStudent.showHideActivities_btn,
+  collapsibleActvityLbl: selectorFile.css.ComproEngage.gradeBookStudent.collapsibleActvityLbl,
+  collapsibleScoreLbl: selectorFile.css.ComproEngage.gradeBookStudent.collapsibleScoreLbl,
+  collapsibleAttemptsLbl: selectorFile.css.ComproEngage.gradeBookStudent.collapsibleAttemptsLbl,
+  collapsibleTimeSpentLbl: selectorFile.css.ComproEngage.gradeBookStudent.collapsibleTimeSpentLbl,
   activityName: selectorFile.css.ComproEngage.gradeBookStudent.activityName,
   moreOption: selectorFile.css.ComproEngage.gradeBookStudent.moreOption,
   gradePill: selectorFile.css.ComproEngage.gradeBookStudent.gradePill,
@@ -145,10 +145,10 @@ module.exports = {
     logger.logInto(stackTrace.get());
     var obj;
     obj = {
-      activity_lbl: (action.getElementCount(this.activity_lbl) > 0) ? action.getText(this.activity_lbl) : null,
-      score_activity_lbl: (action.getElementCount(this.score_activity_lbl) > 0) ? action.getText(this.score_activity_lbl) : null,
-      attempt_lbl: (action.getElementCount(this.attempt_lbl) > 0) ? action.getText(this.attempt_lbl) : null,
-      timeSpent_lbl: (action.getElementCount(this.timeSpent_lbl) > 0) ? action.getText(this.timeSpent_lbl) : null,
+      collapsibleActvityLbl: (action.getElementCount(this.collapsibleActvityLbl) > 0) ? action.getText(this.collapsibleActvityLbl) : null,
+      collapsibleScoreLbl: (action.getElementCount(this.collapsibleScoreLbl) > 0) ? action.getText(this.collapsibleScoreLbl) : null,
+      collapsibleAttemptsLbl: (action.getElementCount(this.collapsibleAttemptsLbl) > 0) ? action.getText(this.collapsibleAttemptsLbl) : null,
+      collapsibleTimeSpentLbl: (action.getElementCount(this.collapsibleTimeSpentLbl) > 0) ? action.getText(this.collapsibleTimeSpentLbl) : null,
     }
     return obj;
   },
@@ -208,10 +208,10 @@ module.exports = {
     return res;
   },
 
-  click_showActivities_btn: function (folder_TitleName) {
+  click_showHideActivities_btn: function (folder_TitleName) {
     logger.logInto(stackTrace.get());
     var i, list, res;
-    list = action.findElements(this.showActivities_btn);
+    list = action.findElements(this.showHideActivities_btn);
     for (i = 0; i < list.length; i++) {
       if ((action.getText(this.folder_Title + i + "]")) == folder_TitleName) {
         res = action.click(list[i]);
@@ -219,11 +219,11 @@ module.exports = {
       }
     }
     if (res == true) {
-      logger.logInto(stackTrace.get(), " --showActivities_btn clicked");
+      logger.logInto(stackTrace.get(), " --showHideActivities_btn clicked");
       res = this.getData_showActivity();
     }
     else
-      logger.logInto(stackTrace.get(), " --showActivities_btn NOT clicked", "error")
+      logger.logInto(stackTrace.get(), " --showHideActivities_btn NOT clicked", "error")
     return res;
   },
 
