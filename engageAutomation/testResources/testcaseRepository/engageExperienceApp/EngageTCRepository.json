@@ -3077,6 +3077,12 @@
           "description": "Validate the content on Student View GradeBook Page",
           "tags": "P2",
           "visualTest": "-"
+        },
+        {
+          "id": "ENG_GRADEBOOK_TC_10",
+          "description": "Validate the click on 'Show Activities' button",
+          "tags": "P2",
+          "visualTest": "-"
         }
       ]
     }

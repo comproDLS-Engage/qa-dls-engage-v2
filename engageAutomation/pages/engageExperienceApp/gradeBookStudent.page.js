@@ -71,7 +71,7 @@ module.exports = {
       lesson_title: (action.getElementCount(this.lesson_title) > 0) ? action.getText(this.lesson_title) : null,
       lesson_Subtitle: (action.getElementCount(this.lesson_Subtitle) > 0) ? action.getText(this.lesson_Subtitle) : null,
     }
-    console.log("return sts - ",obj)
+    //console.log("return sts - ",obj)
     return obj;
   },
 
@@ -137,18 +137,6 @@ module.exports = {
           showActivities_btn: (action.getElementCount(this.showActivities_btn + i + "]") > 0) ? action.getText(this.showActivities_btn + i + "]") : null,
         }
       }
-    }
-    return obj;
-  },
-
-  getData_showActivity: function () {
-    logger.logInto(stackTrace.get());
-    var obj;
-    obj = {
-      collapsibleActvityLbl: (action.getElementCount(this.collapsibleActvityLbl) > 0) ? action.getText(this.collapsibleActvityLbl) : null,
-      collapsibleScoreLbl: (action.getElementCount(this.collapsibleScoreLbl) > 0) ? action.getText(this.collapsibleScoreLbl) : null,
-      collapsibleAttemptsLbl: (action.getElementCount(this.collapsibleAttemptsLbl) > 0) ? action.getText(this.collapsibleAttemptsLbl) : null,
-      collapsibleTimeSpentLbl: (action.getElementCount(this.collapsibleTimeSpentLbl) > 0) ? action.getText(this.collapsibleTimeSpentLbl) : null,
     }
     return obj;
   },
@@ -225,6 +213,22 @@ module.exports = {
     else
       logger.logInto(stackTrace.get(), " --showHideActivities_btn NOT clicked", "error")
     return res;
+  },
+
+  getData_showActivity: function () {
+    logger.logInto(stackTrace.get());
+    browser.pause(2000);
+    //Data-tids to be updated by dev, for now all data-tids are duplicate
+    var list = action.findElements(this.collapsibleActvityLbl);
+    for (var i=0; i<list.length; i++) {
+        obj[i] = {
+          collapsibleActvityLbl: (action.getElementCount(this.collapsibleActvityLbl) > 0) ? action.getText(this.collapsibleActvityLbl) : null,
+          collapsibleScoreLbl: (action.getElementCount(this.collapsibleScoreLbl) > 0) ? action.getText(this.collapsibleScoreLbl) : null,
+          collapsibleAttemptsLbl: (action.getElementCount(this.collapsibleAttemptsLbl) > 0) ? action.getText(this.collapsibleAttemptsLbl) : null,
+          collapsibleTimeSpentLbl: (action.getElementCount(this.collapsibleTimeSpentLbl) > 0) ? action.getText(this.collapsibleTimeSpentLbl) : null
+        }
+    }
+    return obj; 
   },
 
   click_moreOption: function (activityNameName) {

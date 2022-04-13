@@ -7,6 +7,21 @@
                     "4 student dev",
                     "dev1 student100",
                     "qa stu200"
+                ],
+                "folderName": "4. eText",
+                "activityList": [
+                    {
+                        "activityName": "eText",
+                        "activityScore": "-",
+                        "activityAttempts": "-",
+                        "activityTimeSpent": "0 sec"
+                    },
+                    {
+                        "activityName": "eText 2",
+                        "activityScore": "-",
+                        "activityAttempts": "-",
+                        "activityTimeSpent": "0 sec"
+                    }
                 ]
             }
         ]

@@ -92,7 +92,7 @@ module.exports = {
    //Validate the content on Student GradeBook Page
    ENG_GRADEBOOK_TC_9: function (testdata) {
       sts = studentGradeBookPage.getData_gradeBookStudentView()
-      console.log("student view testdata - ",testdata) 
+      //console.log("student view testdata - ",testdata) 
       assertion.assertEqual(sts.pageTitle, testdata.pageTitle, "pageTitle is Not displayed");
       assertion.assert(sts.pageSubTitle.includes(testdata.pageSubTitle), "pageSubTitle is Not displayed");
       assertion.assertEqual(sts.download_btn, testdata.download_btn, "download_btn is Not displayed");
@@ -108,7 +108,7 @@ module.exports = {
 
    //Validate the click on 'Show Activities' button
    ENG_GRADEBOOK_TC_10: function (testdata) {
-      sts = studentGradeBookPage.click_showActivities_btn(testdata[0]);
+      sts = studentGradeBookPage.click_showHideActivities_btn(testdata[0]);
       for (let i = 0; i < sts.length; i++) {
          assertion.assertEqual(sts[i].activityName, testdata[1][i].activityName, "Activity name Text mismatch");
          //assertion.assertEqual(sts[i].activityStatus, testdata[1][i].activityStatus, "Activity status mismatch");

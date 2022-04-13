@@ -170,9 +170,11 @@
         "id": "ENG_GRADEBOOK_TC_8",
         "description": "Validate that clicking on 'Send to email' button displays a snackbar message",
         "testFile": "./test/engageExperienceApp/gradeBook.test.js",
-        "testData": [
-          {"dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-            "jsonPath": "engage.appContent.appShell.featureNotAvailable_alert"}
+        "testData": [ 
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.appShell.featureNotAvailable_alert"
+          }
         ]
       },
       {
@@ -319,6 +321,21 @@
         "description": "Validate the Product List in Student GradeBook",
         "testFile": "./test/engageExperienceApp/gradeBook.test.js",
         "testData": [
+        ]
+      },
+      {
+        "id": "ENG_GRADEBOOK_TC_10",
+        "description": "Validate the click on 'Show Activities' button",
+        "testFile": "./test/engageExperienceApp/gradeBook.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/gradebookData.json",
+            "jsonPath": "engage.class[0].folderName"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/gradebookData.json",
+            "jsonPath": "engage.class[0].activityList"
+          }
         ]
       }
       
