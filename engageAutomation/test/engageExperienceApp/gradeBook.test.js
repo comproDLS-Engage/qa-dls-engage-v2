@@ -106,8 +106,24 @@ module.exports = {
       assertion.assertEqual(sts.lesson_Subtitle, testdata.lesson_Subtitle, "lesson_Subtitle is Not displayed");
    },
 
+   //Validate the Unit Details of a book
+   ENG_GRADEBOOK_TC_11: function (testdata) {
+      sts = studentGradeBookPage.getData_UnitDetails(testdata[0])
+      assertion.assertEqual(sts.folder_Title, testdata.folder_Title, "folder_Title is Not displayed");
+      for (let i = 0; i < sts.length; i++) {
+         assertion.assertEqual(sts[i].score_icon,true, "score_icon is Not displayed");
+         assertion.assertEqual(sts[i].completion_icon, true, "completion_icon is Not displayed");
+         assertion.assertEqual(sts[i].totalTime_icon, true, "totalTime_icon is Not displayed");
+         assertion.assert((sts[i].score_Unit_lbl).includes(testdata[1][i].score_Unit_lbl), "score_Unit_lbl is Not displayed: ");
+         assertion.assert((sts[i].completion__Unit_lbl).includes(testdata[1][i].completion__Unit_lbl), "completion__Unit_lbl is Not displayed: ");
+         assertion.assert((sts[i].totalTime_lbl).includes(testdata[1][i].totalTime_lbl), "totalTime_lbl is Not displayed: ");
+      }
+   },
+
    //Validate the click on 'Show Activities' button
    ENG_GRADEBOOK_TC_10: function (testdata) {
+      //console.log("testdata[0] -",testdata[0])
+      //console.log("testdata[1] -",testdata[1])
       sts = studentGradeBookPage.click_showHideActivities_btn(testdata[0]);
       for (let i = 0; i < sts.length; i++) {
          assertion.assertEqual(sts[i].activityName, testdata[1][i].activityName, "Activity name Text mismatch");

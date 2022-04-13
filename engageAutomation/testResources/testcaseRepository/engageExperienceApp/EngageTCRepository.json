@@ -3083,6 +3083,12 @@
           "description": "Validate the click on 'Show Activities' button",
           "tags": "P2",
           "visualTest": "-"
+        },
+        {
+          "id": "ENG_GRADEBOOK_TC_11",
+          "description": "Validate the unit details of a book",
+          "tags": "P2",
+          "visualTest": "-"
         }
       ]
     }
