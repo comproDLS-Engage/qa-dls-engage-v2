@@ -41,6 +41,20 @@
                                 "CompletionCount": "1 of 2 completed",
                                 "showHideActivities_btn": "Show Activites"
                             }
+                        ],
+                        "activityList": [
+                            {
+                                "activityName": "Multiple Question",
+                                "activityScore": "-",
+                                "activityAttempts": "-",
+                                "activityTimeSpent": "0 sec"
+                            },
+                            {
+                                "activityName": "More than 5 MB",
+                                "activityScore": "-",
+                                "activityAttempts": "-",
+                                "activityTimeSpent": "0 sec"
+                            }
                         ]
                     }
                 ]
