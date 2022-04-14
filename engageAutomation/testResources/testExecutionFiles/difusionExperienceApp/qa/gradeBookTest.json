@@ -143,6 +143,17 @@
             "jsonPath": "engage.appContent.gradeBookStudent.teacher"
           }
         ]
+      },
+      {
+        "id": "ENG_GRADEBOOK_TC_12",
+        "description": "Validate the click on 'More options' button",
+        "testFile": "./test/engageExperienceApp/gradeBook.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/gradebookData.json",
+            "jsonPath": "engage.class[0].bookUnitDetails[0].folderName"
+          }
+        ]
       }
       
     ],

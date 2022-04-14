@@ -137,5 +137,10 @@ module.exports = {
       sts = studentGradeBookPage.getData_activityDetails(testdata[0]);
    },
 
+   //Validate the click on 'More Options' button
+   ENG_GRADEBOOK_TC_12: function (testdata) {
+      sts = studentGradeBookPage.click_moreOption(testdata[0]);
+   },
+
    
 }

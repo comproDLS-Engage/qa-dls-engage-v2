@@ -3089,6 +3089,12 @@
           "description": "Validate the click on 'Show Activities' button",
           "tags": "P2",
           "visualTest": "-"
+        },
+        {
+          "id": "ENG_GRADEBOOK_TC_12",
+          "description": "Validate the click on 'More options' button",
+          "tags": "P2",
+          "visualTest": "-"
         }
       ]
     }
