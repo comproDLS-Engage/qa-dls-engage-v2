@@ -1094,10 +1094,10 @@
                     "activityCount": "Activity",
                     "CompletionCount": "completed",
                     "showActivities_btn": "Show Activities",
-                    "activity_lbl": "Activity",
-                    "score_activity_lbl": "Score",
-                    "attempt_lbl": "Attempts",
-                    "timeSpent_lbl": "Time Spent"
+                    "collapsibleActvityLbl": "Activity",
+                    "collapsibleScoreLbl": "Score",
+                    "collapsibleAttemptsLbl": "Attempts",
+                    "collapsibleTimeSpentLbl": "Time Spent"
                 }
             }
         }

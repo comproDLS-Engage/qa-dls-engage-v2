@@ -108,8 +108,10 @@ module.exports = {
 
    //Validate the Unit Details of a book
    ENG_GRADEBOOK_TC_11: function (testdata) {
+      // console.log("testdata[0] -",testdata[0])
+      // console.log("testdata[1] -",testdata[1])
       sts = studentGradeBookPage.getData_UnitDetails(testdata[0])
-      assertion.assertEqual(sts.folder_Title, testdata.folder_Title, "folder_Title is Not displayed");
+      assertion.assertEqual(sts.lessons_Title_lbl, testdata[0].folder_Title, "folder_Title is Not displayed");
       for (let i = 0; i < sts.length; i++) {
          assertion.assertEqual(sts[i].score_icon,true, "score_icon is Not displayed");
          assertion.assertEqual(sts[i].completion_icon, true, "completion_icon is Not displayed");
@@ -117,19 +119,22 @@ module.exports = {
          assertion.assert((sts[i].score_Unit_lbl).includes(testdata[1][i].score_Unit_lbl), "score_Unit_lbl is Not displayed: ");
          assertion.assert((sts[i].completion__Unit_lbl).includes(testdata[1][i].completion__Unit_lbl), "completion__Unit_lbl is Not displayed: ");
          assertion.assert((sts[i].totalTime_lbl).includes(testdata[1][i].totalTime_lbl), "totalTime_lbl is Not displayed: ");
+         //assertion.assertEqual(sts[i].activityCount_icon,true, "activityCount_icon is Not displayed");
+         assertion.assertEqual(sts[i].activityCount_lbl,testdata[1][i].activityCount_lbl, "activityCount_lbl is Not displayed");
+         assertion.assertEqual(sts[i].CompletionCount,testdata[1][i].CompletionCount, "score_icon is Not displayed");
       }
    },
 
    //Validate the click on 'Show Activities' button
    ENG_GRADEBOOK_TC_10: function (testdata) {
-      //console.log("testdata[0] -",testdata[0])
-      //console.log("testdata[1] -",testdata[1])
+      console.log("testdata[0] -",testdata[0])
+      console.log("testdata[1] -",testdata[1])
       sts = studentGradeBookPage.click_showHideActivities_btn(testdata[0]);
       for (let i = 0; i < sts.length; i++) {
-         assertion.assertEqual(sts[i].activityName, testdata[1][i].activityName, "Activity name Text mismatch");
-         //assertion.assertEqual(sts[i].activityStatus, testdata[1][i].activityStatus, "Activity status mismatch");
-         //  assertion.assertEqual(sts[i].activityScore, testdata[1][i].activityScore, "Activity name Text mismatch");
-         // assertion.assertEqual(sts[i].activityAttempts, testdata[1][i].activityAttempts, "Activity name Text mismatch");
+         assertion.assertEqual(sts[i].collapsibleActivityLbl, testdata[1].collapsibleActvityLbl, "collapsibleActvityLbl mismatch");
+         assertion.assertEqual(sts[i].collapsibleScoreLbl, testdata[1].collapsibleScoreLbl, "collapsibleScoreLbl mismatch");
+         assertion.assertEqual(sts[i].collapsibleAttemptsLbl, testdata[1].collapsibleAttemptsLbl, "collapsibleAttemptsLbl Text mismatch");
+         assertion.assertEqual(sts[i].collapsibleTimeSpentLbl, testdata[1].collapsibleTimeSpentLbl, "collapsibleTimeSpentLbl Text mismatch");
       }
    },
 

@@ -19,23 +19,25 @@ module.exports = {
   classAnalyticsScore_lbl: selectorFile.css.ComproEngage.gradeBookStudent.classAnalyticsScore_lbl,
   lesson_title: selectorFile.css.ComproEngage.gradeBookStudent.lesson_title,
   lesson_Subtitle: selectorFile.css.ComproEngage.gradeBookStudent.lesson_Subtitle,
-  folder_Title: selectorFile.css.ComproEngage.gradeBookStudent.folder_Title,
   //unit details
+  lessons_Title_lbl: selectorFile.css.ComproEngage.gradeBookStudent.lessons_Title_lbl,
   score_icon: selectorFile.css.ComproEngage.gradeBookStudent.score_icon,
   score_Unit_lbl: selectorFile.css.ComproEngage.gradeBookStudent.score_Unit_lbl,
-  nonScorableChip: selectorFile.css.ComproEngage.gradeBookStudent.nonScorableChip,
   completion_icon: selectorFile.css.ComproEngage.gradeBookStudent.completion_icon,
   completion__Unit_lbl: selectorFile.css.ComproEngage.gradeBookStudent.completion__Unit_lbl,
   totalTime_icon: selectorFile.css.ComproEngage.gradeBookStudent.totalTime_icon,
   totalTime_lbl: selectorFile.css.ComproEngage.gradeBookStudent.totalTime_lbl,
-  activityCount: selectorFile.css.ComproEngage.gradeBookStudent.activityCount,
+  nonScorableChip: selectorFile.css.ComproEngage.gradeBookStudent.nonScorableChip,
+  activityCount_icon: selectorFile.css.ComproEngage.gradeBookStudent.activityCount_icon,
+  activityCount_lbl: selectorFile.css.ComproEngage.gradeBookStudent.activityCount_lbl,
   CompletionCount: selectorFile.css.ComproEngage.gradeBookStudent.CompletionCount,
-
   showHideActivities_btn: selectorFile.css.ComproEngage.gradeBookStudent.showHideActivities_btn,
-  collapsibleActvityLbl: selectorFile.css.ComproEngage.gradeBookStudent.collapsibleActvityLbl,
+
+  collapsibleActivityLbl: selectorFile.css.ComproEngage.gradeBookStudent.collapsibleActivityLbl,
   collapsibleScoreLbl: selectorFile.css.ComproEngage.gradeBookStudent.collapsibleScoreLbl,
   collapsibleAttemptsLbl: selectorFile.css.ComproEngage.gradeBookStudent.collapsibleAttemptsLbl,
   collapsibleTimeSpentLbl: selectorFile.css.ComproEngage.gradeBookStudent.collapsibleTimeSpentLbl,
+
   activityName: selectorFile.css.ComproEngage.gradeBookStudent.activityName,
   moreOption: selectorFile.css.ComproEngage.gradeBookStudent.moreOption,
   gradePill: selectorFile.css.ComproEngage.gradeBookStudent.gradePill,
@@ -102,26 +104,29 @@ module.exports = {
     return obj;
   },
 
+  //Unit details - PASS
   getData_UnitDetails: function (folder_TitleName) {
     logger.logInto(stackTrace.get());
     var obj = [];
-    action.waitForDisplayed(this.folder_Title);
-    var list = action.findElements(this.folder_Title);
+    action.waitForDisplayed(this.lessons_Title_lbl);
+    var list = action.findElements(this.lessons_Title_lbl);
     if (folder_TitleName) {
       for (var i = 0; i < list.length; i++) {
-        if (action.getText(this.folder_Title + i) == folder_TitleName) {
+        if (action.getText(this.lessons_Title_lbl + i) == folder_TitleName) {
           obj[0] = {
-            folder_Title: (action.getElementCount(this.folder_Title + i + "]") > 0) ? action.getText(this.folder_Title + i + "]") : null,
-            score_icon: (action.getElementCount(this.score_icon + i + "-score]") > 0) ? action.waitForDisplayed(this.score_icon + i + "-score]") : null,
-            score_Unit_lbl: (action.getElementCount(this.score_Unit_lbl + i + "-score]") > 0) ? action.getText(this.score_Unit_lbl + i + "-score]") : null,
+            lessons_Title_lbl: (action.getElementCount(this.lessons_Title_lbl + i + "]") > 0) ? action.getText(this.lessons_Title_lbl + i + "]") : null,
+            score_icon: (action.getElementCount(this.score_icon + i + "]") > 0) ? action.waitForDisplayed(this.score_icon + i + "]") : null,
+            score_Unit_lbl: (action.getElementCount(this.score_Unit_lbl + i + "]") > 0) ? action.getText(this.score_Unit_lbl + i + "]") : null,
             //nonScorableChip: (action.getElementCount(this.nonScorableChip) > 0) ? action.getText(this.nonScorableChip + i + "]") : null,
-            completion_icon: (action.getElementCount(this.completion_icon + i + "-completion]") > 0) ? action.waitForDisplayed(this.completion_icon + i + "]") : false,
-            completion__Unit_lbl: (action.getElementCount(this.completion__Unit_lbl + i + "-completion]") > 0) ? action.getText(this.completion__Unit_lbl + i + "-completion]") : null,
-            totalTime_icon: (action.getElementCount(this.totalTime_icon + i + "-totalTime]") > 0) ? action.waitForDisplayed(this.totalTime_icon + i + "-totalTime]") : false,
-            totalTime_lbl: (action.getElementCount(this.totalTime_lbl + i + "-totalTime]") > 0) ? action.getText(this.totalTime_lbl + i + "-totalTime]") : null,
-            // activityCount: (action.getElementCount(this.activityCount + i + "]") > 0) ? action.getText(this.activityCount + i + "]") : null,
-            // CompletionCount: (action.getElementCount(this.CompletionCount + i + "]") > 0) ? action.getText(this.CompletionCount + i + "]") : null,
-            // showActivities_btn: (action.getElementCount(this.showActivities_btn + i + "]") > 0) ? action.getText(this.showActivities_btn + i + "]") : null,
+            completion_icon: (action.getElementCount(this.completion_icon + i + "]") > 0) ? action.waitForDisplayed(this.completion_icon + i + "]") : false,
+            completion__Unit_lbl: (action.getElementCount(this.completion__Unit_lbl + i + "]") > 0) ? action.getText(this.completion__Unit_lbl + i + "]") : null,
+            totalTime_icon: (action.getElementCount(this.totalTime_icon + i + "]") > 0) ? action.waitForDisplayed(this.totalTime_icon + i + "]") : false,
+            totalTime_lbl: (action.getElementCount(this.totalTime_lbl + i + "]") > 0) ? action.getText(this.totalTime_lbl + i + "]") : null,
+            //CHECK
+            //activityCount_icon: (action.getElementCount(this.activityCount_icon + i + "]") > 0) ? action.getText(this.activityCount_icon + i + "]") : null,
+            activityCount_lbl: (action.getElementCount(this.activityCount_lbl + i + "]") > 0) ? action.getText(this.activityCount_lbl + i + "]") : null,
+            CompletionCount: (action.getElementCount(this.CompletionCount + i + "]") > 0) ? action.getText(this.CompletionCount + i + "]") : null,
+            showHideActivities_btn: (action.getElementCount(this.showHideActivities_btn + i + "]") > 0) ? action.getText(this.showHideActivities_btn + i + "]") : null,
           }
           break;
         }
@@ -129,20 +134,22 @@ module.exports = {
     } else {
       for (var i = 0; i < list.length; i++) {
         obj[i] = {
-          folder_Title: (action.getElementCount(this.folder_Title + i + "]") > 0) ? action.getText(this.folder_Title + i + "]") : null,
-          score_icon: (action.getElementCount(this.score_icon + i + "-score]") > 0) ? action.getText(this.score_icon + i + "-score]") : null,
-          score_Unit_lbl: (action.getElementCount(this.score_Unit_lbl + i + "-score]") > 0) ? action.getText(this.score_Unit_lbl + i + "-score]") : null,
+          lessons_Title_lbl: (action.getElementCount(this.lessons_Title_lbl + i + "]") > 0) ? action.getText(this.lessons_Title_lbl + i + "]") : null,
+          score_icon: (action.getElementCount(this.score_icon + i + "]") > 0) ? action.getText(this.score_icon + i + "]") : null,
+          score_Unit_lbl: (action.getElementCount(this.score_Unit_lbl + i + "]") > 0) ? action.getText(this.score_Unit_lbl + i + "]") : null,
           //nonScorableChip: (action.getElementCount(this.nonScorableChip) > 0) ? action.getText(this.nonScorableChip + i + "]") : null,
-          completion_icon: (action.getElementCount(this.completion_icon + i + "-completion]") > 0) ? action.waitForDisplayed(this.completion_icon + i + "-completion]") : false,
-          completion__Unit_lbl: (action.getElementCount(this.completion__Unit_lbl + i + "-completion]") > 0) ? action.getText(this.completion__Unit_lbl + i + "-completion]") : null,
-          totalTime_icon: (action.getElementCount(this.totalTime_icon + i + "-totalTime]") > 0) ? action.waitForDisplayed(this.totalTime_icon + i + "-totalTime]") : false,
-          totalTime_lbl: (action.getElementCount(this.totalTime_lbl + i + "-totalTime]") > 0) ? action.getText(this.totalTime_lbl + i + "-totalTime]") : null,
-          // activityCount: (action.getElementCount(this.activityCount + i + "]") > 0) ? action.getText(this.activityCount + i + "]") : null,
-          // CompletionCount: (action.getElementCount(this.CompletionCount + i + "]") > 0) ? action.getText(this.CompletionCount + i + "]") : null,
-          // showActivities_btn: (action.getElementCount(this.showActivities_btn + i + "]") > 0) ? action.getText(this.showActivities_btn + i + "]") : null,
+          completion_icon: (action.getElementCount(this.completion_icon + i + "]") > 0) ? action.waitForDisplayed(this.completion_icon + i + "]") : false,
+          completion__Unit_lbl: (action.getElementCount(this.completion__Unit_lbl + i + "]") > 0) ? action.getText(this.completion__Unit_lbl + i + "]") : null,
+          totalTime_icon: (action.getElementCount(this.totalTime_icon + i + "]") > 0) ? action.waitForDisplayed(this.totalTime_icon + i + "]") : false,
+          totalTime_lbl: (action.getElementCount(this.totalTime_lbl + i + "]") > 0) ? action.getText(this.totalTime_lbl + i + "]") : null,
+          //activityCount_icon: (action.getElementCount(this.activityCount_icon + i + "]") > 0) ? action.getText(this.activityCount_icon + i + "]") : null,
+          activityCount_lbl: (action.getElementCount(this.activityCount_lbl + i + "]") > 0) ? action.getText(this.activityCount_lbl + i + "]") : null,
+          CompletionCount: (action.getElementCount(this.CompletionCount + i + "]") > 0) ? action.getText(this.CompletionCount + i + "]") : null,
+          showHideActivities_btn: (action.getElementCount(this.showHideActivities_btn + i + "]") > 0) ? action.getText(this.showHideActivities_btn + i + "]") : null,
         }
       }
     }
+    //console.log("sts - ",obj)
     return obj;
   },
 
@@ -208,14 +215,15 @@ module.exports = {
     var i, list, res;
     list = action.findElements(this.showHideActivities_btn);
     for (i = 0; i < list.length; i++) {
-      if ((action.getText(this.folder_Title + i + "]")) == folder_TitleName) {
+      if ((action.getText(this.lessons_Title_lbl + i + "]")) == folder_TitleName) {
         res = action.click(list[i]);
         break;
       }
     }
     if (res == true) {
+      console.log("clicked")
       logger.logInto(stackTrace.get(), " --showHideActivities_btn clicked");
-      res = this.getData_showActivity();
+      res = this.getData_showActivity(folder_TitleName);
     }
     else
       logger.logInto(stackTrace.get(), " --showHideActivities_btn NOT clicked", "error")
@@ -223,23 +231,56 @@ module.exports = {
   },
 
   //Function to get Activity List in each folder
-  getData_showActivity: function () {
+  getData_showActivity: function (folder_TitleName) {
+    console.log("folder_TitleName",folder_TitleName)
     logger.logInto(stackTrace.get());
-    var obj=[];
-    //Data-tids to be updated by dev, for now all data-tids are duplicate
-    var list = action.findElements(this.collapsibleActvityLbl);
-    console.log("list",list.length)
-    for (var i=0; i<list.length; i++) {
-        obj[i] = {
-          collapsibleActvityLbl: (action.getElementCount(this.collapsibleActvityLbl) > 0) ? action.getText(this.collapsibleActvityLbl) : null,
-          collapsibleScoreLbl: (action.getElementCount(this.collapsibleScoreLbl) > 0) ? action.getText(this.collapsibleScoreLbl) : null,
-          collapsibleAttemptsLbl: (action.getElementCount(this.collapsibleAttemptsLbl) > 0) ? action.getText(this.collapsibleAttemptsLbl) : null,
-          collapsibleTimeSpentLbl: (action.getElementCount(this.collapsibleTimeSpentLbl) > 0) ? action.getText(this.collapsibleTimeSpentLbl) : null
+    var obj = [];
+    action.waitForDisplayed(this.lessons_Title_lbl);
+    var list = action.findElements(this.lessons_Title_lbl);
+    if (folder_TitleName) {
+      console.log("list",list.length)
+      for (var i = 0; i < list.length; i++) {
+        console.log("lessons_Title_lbl + i -",action.getText(this.lessons_Title_lbl + i));
+        if (action.getText(this.lessons_Title_lbl + i) == folder_TitleName) {
+          obj[0] = {
+            collapsibleActivityLbl: (action.getElementCount(this.collapsibleActivityLbl + i + "]") > 0) ? action.getText(this.collapsibleActivityLbl + i + "]") : null,
+            collapsibleScoreLbl: (action.getElementCount(this.collapsibleScoreLbl + i + "]") > 0) ? action.getText(this.collapsibleScoreLbl + i + "]") : null,
+            collapsibleAttemptsLbl: (action.getElementCount(this.collapsibleAttemptsLbl + i + "]") > 0) ? action.getText(this.collapsibleAttemptsLbl + i + "]") : null,
+            collapsibleTimeSpentLbl: (action.getElementCount(this.collapsibleTimeSpentLbl + i + "]") > 0) ? action.getText(this.collapsibleTimeSpentLbl + i + "]") : null
+          }
+          break;
         }
+      }
+    } else {
+      for (var i = 0; i < list.length; i++) {
+        obj[i] = {
+          collapsibleActivityLbl: (action.getElementCount(this.collapsibleActivityLbl + i + "]") > 0) ? action.getText(this.collapsibleActivityLbl + i + "]") : null,
+          collapsibleScoreLbl: (action.getElementCount(this.collapsibleScoreLbl + i + "]") > 0) ? action.getText(this.collapsibleScoreLbl + i + "]") : null,
+          collapsibleAttemptsLbl: (action.getElementCount(this.collapsibleAttemptsLbl + i + "]") > 0) ? action.getText(this.collapsibleAttemptsLbl + i + "]") : null,
+          collapsibleTimeSpentLbl: (action.getElementCount(this.collapsibleTimeSpentLbl + i + "]") > 0) ? action.getText(this.collapsibleTimeSpentLbl + i + "]") : null
+        }
+      }
     }
     console.log("acitivity names",obj)
-    return obj; 
+    return obj;
   },
+  // getData_showActivity: function () {
+  //   logger.logInto(stackTrace.get());
+  //   var obj=[];
+  //   //Data-tids to be updated by dev, for now all data-tids are duplicate
+  //   var list = action.findElements(this.collapsibleActivityLbl);
+  //   console.log("list",list.length)
+  //   for (var i=0; i<list.length; i++) {
+  //       obj[i] = {
+  //         collapsibleActivityLbl: (action.getElementCount(this.collapsibleActivityLbl) > 0) ? action.getText(this.collapsibleActivityLbl) : null,
+  //         collapsibleScoreLbl: (action.getElementCount(this.collapsibleScoreLbl) > 0) ? action.getText(this.collapsibleScoreLbl) : null,
+  //         collapsibleAttemptsLbl: (action.getElementCount(this.collapsibleAttemptsLbl) > 0) ? action.getText(this.collapsibleAttemptsLbl) : null,
+  //         collapsibleTimeSpentLbl: (action.getElementCount(this.collapsibleTimeSpentLbl) > 0) ? action.getText(this.collapsibleTimeSpentLbl) : null
+  //       }
+  //   }
+  //   console.log("acitivity names",obj)
+  //   return obj; 
+  // },
 
   click_moreOption: function (activityNameName) {
     logger.logInto(stackTrace.get());
