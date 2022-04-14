@@ -40,8 +40,7 @@ module.exports = {
 
   activityName: selectorFile.css.ComproEngage.gradeBookStudent.activityName,
   moreOption: selectorFile.css.ComproEngage.gradeBookStudent.moreOption,
-  gradePill: selectorFile.css.ComproEngage.gradeBookStudent.gradePill,
-
+  gradePendingPill: selectorFile.css.ComproEngage.gradeBookStudent.gradePendingPill,
 
   isInitialized: function () {
     var res;

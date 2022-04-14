@@ -1159,9 +1159,9 @@
                 "collapsibleScoreLbl": "[data-tid*=label-score-",
                 "collapsibleAttemptsLbl": "[data-tid*=label-attempts-",
                 "collapsibleTimeSpentLbl": "[data-tid*=label-timeSpent-",
-                "activityName": "",
-                "moreOption": "",
-                "gradePill": ""
+                "activityName": "[data-tid*=text-activity-name-",
+                "moreOption": "[data-tid*=button-moreOptions-",
+                "gradePendingPill": "[data-tid*=chip-gradingPill-"
             }
         }
     }
