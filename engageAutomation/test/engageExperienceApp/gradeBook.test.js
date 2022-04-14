@@ -134,6 +134,7 @@ module.exports = {
          assertion.assertEqual(sts[i].collapsibleAttemptsLbl, testdata[1].collapsibleAttemptsLbl, "collapsibleAttemptsLbl Text mismatch");
          assertion.assertEqual(sts[i].collapsibleTimeSpentLbl, testdata[1].collapsibleTimeSpentLbl, "collapsibleTimeSpentLbl Text mismatch");
       }
+      sts = studentGradeBookPage.getData_activityDetails(testdata[0]);
    },
 
    

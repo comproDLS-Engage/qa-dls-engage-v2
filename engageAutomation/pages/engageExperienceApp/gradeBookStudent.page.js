@@ -179,34 +179,6 @@ module.exports = {
     return res;
   },
 
-  getData_activityDetails: function (activityNameName) {
-    logger.logInto(stackTrace.get());
-    var obj = [];
-    action.waitForDisplayed(this.activityName);
-    var list = action.findElements(this.activityName);
-    if (activityNameName) {
-      for (var i = 0; i < list.length; i++) {
-        if (action.getText(this.activityName + i) == activityNameName) {
-          obj[0] = {
-            activityName: (action.getElementCount(this.activityName + i + "]") > 0) ? action.getText(this.activityName + i + "]") : null,
-            moreOption: (action.getElementCount(this.moreOption + i + "]") > 0) ? action.getText(this.moreOption + i + "]") : null,
-            gradePill: (action.getElementCount(this.gradePill + i + "]") > 0) ? action.getText(this.gradePill + i + "]") : null,
-          }
-          break;
-        }
-      }
-    } else {
-      for (var i = 0; i < list.length; i++) {
-        obj[i] = {
-          activityName: (action.getElementCount(this.activityName + i + "]") > 0) ? action.getText(this.activityName + i + "]") : null,
-          moreOption: (action.getElementCount(this.moreOption + i + "]") > 0) ? action.getText(this.moreOption + i + "]") : null,
-          gradePill: (action.getElementCount(this.gradePill + i + "]") > 0) ? action.getText(this.gradePill + i + "]") : null,
-        }
-      }
-    }
-    return obj;
-  },
-
   //Click function for 'Show Acivities' button
   click_showHideActivities_btn: function (folder_TitleName) {
     logger.logInto(stackTrace.get());
@@ -227,7 +199,7 @@ module.exports = {
     return res;
   },
 
-  //Function to get Activity List in each folder
+  //Function to get Collapsible Labels after clicking Show Activities in each folder
   getData_showActivity_labels: function (folder_TitleName) {
     logger.logInto(stackTrace.get());
     var obj = [];
@@ -255,6 +227,38 @@ module.exports = {
         }
       }
     }
+    return obj;
+  },
+
+  //Function to get Activity List and Other options/pills after clicking Show Activities in each folder
+  getData_activityDetails: function (folder_TitleName) {
+    console.log("foldername -",folder_TitleName)
+    logger.logInto(stackTrace.get());
+    var obj = [];
+    action.waitForDisplayed(this.lessons_Title_lbl);
+    var list = action.findElements(this.lessons_Title_lbl);
+    if (folder_TitleName) {
+      console.log("list length -",list.length)
+      for (var i = 0; i < list.length; i++) {
+        if (action.getText(this.lessons_Title_lbl + i) == folder_TitleName) {
+          obj[0] = {
+            activityName: (action.getElementCount(this.activityName + i + "]") > 0) ? action.getText(this.activityName + i + "]") : null,
+            moreOption: (action.getElementCount(this.moreOption + i + "]") > 0) ? action.getText(this.moreOption + i + "]") : null,
+            gradePill: (action.getElementCount(this.gradePill + i + "]") > 0) ? action.getText(this.gradePill + i + "]") : null,
+          }
+          break;
+        }
+      }
+    } else {
+      for (var i = 0; i < list.length; i++) {
+        obj[i] = {
+          activityName: (action.getElementCount(this.activityName + i + "]") > 0) ? action.getText(this.activityName + i + "]") : null,
+          moreOption: (action.getElementCount(this.moreOption + i + "]") > 0) ? action.getText(this.moreOption + i + "]") : null,
+          gradePill: (action.getElementCount(this.gradePill + i + "]") > 0) ? action.getText(this.gradePill + i + "]") : null,
+        }
+      }
+    }
+    console.log("obj - ",obj)
     return obj;
   },
 
