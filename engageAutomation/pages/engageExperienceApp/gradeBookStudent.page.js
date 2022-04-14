@@ -155,6 +155,7 @@ module.exports = {
     var res;
     res = action.click(this.download_btn);
     if (true == res) {
+      browser.pause(2000);
       logger.logInto(stackTrace.get(), " download_btn is clicked");
     }
     else {
@@ -169,6 +170,7 @@ module.exports = {
     var res;
     res = action.click(this.sendtoemail_btn);
     if (true == res) {
+      browser.pause(2000);
       logger.logInto(stackTrace.get(), " sendtoemail_btn is clicked");
     }
     else {

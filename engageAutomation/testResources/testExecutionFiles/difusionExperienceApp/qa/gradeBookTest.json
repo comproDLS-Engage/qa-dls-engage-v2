@@ -115,7 +115,7 @@
         ]
       },
       {
-        "id": "ENG_GRADEBOOK_TC_11",
+        "id": "ENG_GRADEBOOK_TC_10",
         "description": "Validate the Unit Details of a book (Scorable)",
         "testFile": "./test/engageExperienceApp/gradeBook.test.js",
         "testData": [
@@ -130,7 +130,7 @@
         ]
       },
       {
-        "id": "ENG_GRADEBOOK_TC_10",
+        "id": "ENG_GRADEBOOK_TC_11",
         "description": "Validate the click on 'Show Activities' button",
         "testFile": "./test/engageExperienceApp/gradeBook.test.js",
         "testData": [

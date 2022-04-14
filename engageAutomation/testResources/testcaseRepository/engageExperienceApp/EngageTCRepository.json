@@ -3080,13 +3080,13 @@
         },
         {
           "id": "ENG_GRADEBOOK_TC_10",
-          "description": "Validate the click on 'Show Activities' button",
+          "description": "Validate the Unit Details of a book (Scorable)",
           "tags": "P2",
           "visualTest": "-"
         },
         {
           "id": "ENG_GRADEBOOK_TC_11",
-          "description": "Validate the unit details of a book",
+          "description": "Validate the click on 'Show Activities' button",
           "tags": "P2",
           "visualTest": "-"
         }

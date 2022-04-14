@@ -107,7 +107,7 @@ module.exports = {
    },
 
    //Validate the Unit Details of a book
-   ENG_GRADEBOOK_TC_11: function (testdata) {
+   ENG_GRADEBOOK_TC_10: function (testdata) {
       // console.log("testdata[0] -",testdata[0])
       // console.log("testdata[1] -",testdata[1])
       sts = studentGradeBookPage.getData_UnitDetails(testdata[0])
@@ -126,7 +126,7 @@ module.exports = {
    },
 
    //Validate the click on 'Show Activities' button
-   ENG_GRADEBOOK_TC_10: function (testdata) {
+   ENG_GRADEBOOK_TC_11: function (testdata) {
       sts = studentGradeBookPage.click_showHideActivities_btn(testdata[0]);
       for (let i = 0; i < sts.length; i++) {
          assertion.assertEqual(sts[i].collapsibleActivityLbl, testdata[1].collapsibleActvityLbl, "collapsibleActvityLbl mismatch");
