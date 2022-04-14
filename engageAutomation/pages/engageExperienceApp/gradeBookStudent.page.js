@@ -220,7 +220,7 @@ module.exports = {
     }
     if (res == true) {
       logger.logInto(stackTrace.get(), " --showHideActivities_btn clicked");
-      res = this.getData_showActivity(folder_TitleName);
+      res = this.getData_showActivity_labels(folder_TitleName);
     }
     else
       logger.logInto(stackTrace.get(), " --showHideActivities_btn NOT clicked", "error")
@@ -228,7 +228,7 @@ module.exports = {
   },
 
   //Function to get Activity List in each folder
-  getData_showActivity: function (folder_TitleName) {
+  getData_showActivity_labels: function (folder_TitleName) {
     logger.logInto(stackTrace.get());
     var obj = [];
     action.waitForDisplayed(this.lessons_Title_lbl);
