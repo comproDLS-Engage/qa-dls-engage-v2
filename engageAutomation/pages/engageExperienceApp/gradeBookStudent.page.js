@@ -63,16 +63,13 @@ module.exports = {
       download_btn: (action.getElementCount(this.download_btn) > 0) ? action.getText(this.download_btn) : null,
       sendtoemail_btn: (action.getElementCount(this.sendtoemail_btn) > 0) ? action.getText(this.sendtoemail_btn) : null,
       totalTimeSpent_lbl: (action.getElementCount(this.totalTimeSpent_lbl) > 0) ? action.getText(this.totalTimeSpent_lbl) : null,
-      
       score_lbl: (action.getElementCount(this.score_lbl) > 0) ? action.getText(this.score_lbl) : null,
       scoreChart_icon: (action.getElementCount(this.scoreChart_icon) > 0) ? action.waitForDisplayed(this.scoreChart_icon) : false,
       completion_lbl: (action.getElementCount(this.completion_lbl) > 0) ? action.getText(this.completion_lbl) : null,
       completionChart_icon: (action.getElementCount(this.completionChart_icon) > 0) ? action.waitForDisplayed(this.completionChart_icon) : false,
-      
       //to be fixed by dev
       classAnalyticsCompletion_lbl: (action.getElementCount(this.classAnalyticsCompletion_lbl) > 0) ? action.getText(this.classAnalyticsCompletion_lbl) : null,
       classAnalyticsScore_lbl: (action.getElementCount(this.classAnalyticsScore_lbl) > 0) ? action.getText(this.classAnalyticsScore_lbl) : null,
-      
       lesson_title: (action.getElementCount(this.lesson_title) > 0) ? action.getText(this.lesson_title) : null,
       lesson_Subtitle: (action.getElementCount(this.lesson_Subtitle) > 0) ? action.getText(this.lesson_Subtitle) : null,
     }
@@ -221,7 +218,6 @@ module.exports = {
       }
     }
     if (res == true) {
-      console.log("clicked")
       logger.logInto(stackTrace.get(), " --showHideActivities_btn clicked");
       res = this.getData_showActivity(folder_TitleName);
     }
@@ -232,15 +228,12 @@ module.exports = {
 
   //Function to get Activity List in each folder
   getData_showActivity: function (folder_TitleName) {
-    console.log("folder_TitleName",folder_TitleName)
     logger.logInto(stackTrace.get());
     var obj = [];
     action.waitForDisplayed(this.lessons_Title_lbl);
     var list = action.findElements(this.lessons_Title_lbl);
     if (folder_TitleName) {
-      console.log("list",list.length)
       for (var i = 0; i < list.length; i++) {
-        console.log("lessons_Title_lbl + i -",action.getText(this.lessons_Title_lbl + i));
         if (action.getText(this.lessons_Title_lbl + i) == folder_TitleName) {
           obj[0] = {
             collapsibleActivityLbl: (action.getElementCount(this.collapsibleActivityLbl + i + "]") > 0) ? action.getText(this.collapsibleActivityLbl + i + "]") : null,
@@ -261,26 +254,8 @@ module.exports = {
         }
       }
     }
-    console.log("acitivity names",obj)
     return obj;
   },
-  // getData_showActivity: function () {
-  //   logger.logInto(stackTrace.get());
-  //   var obj=[];
-  //   //Data-tids to be updated by dev, for now all data-tids are duplicate
-  //   var list = action.findElements(this.collapsibleActivityLbl);
-  //   console.log("list",list.length)
-  //   for (var i=0; i<list.length; i++) {
-  //       obj[i] = {
-  //         collapsibleActivityLbl: (action.getElementCount(this.collapsibleActivityLbl) > 0) ? action.getText(this.collapsibleActivityLbl) : null,
-  //         collapsibleScoreLbl: (action.getElementCount(this.collapsibleScoreLbl) > 0) ? action.getText(this.collapsibleScoreLbl) : null,
-  //         collapsibleAttemptsLbl: (action.getElementCount(this.collapsibleAttemptsLbl) > 0) ? action.getText(this.collapsibleAttemptsLbl) : null,
-  //         collapsibleTimeSpentLbl: (action.getElementCount(this.collapsibleTimeSpentLbl) > 0) ? action.getText(this.collapsibleTimeSpentLbl) : null
-  //       }
-  //   }
-  //   console.log("acitivity names",obj)
-  //   return obj; 
-  // },
 
   click_moreOption: function (activityNameName) {
     logger.logInto(stackTrace.get());
