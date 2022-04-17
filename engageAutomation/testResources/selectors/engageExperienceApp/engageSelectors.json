@@ -1139,7 +1139,7 @@
                 "completion_lbl": "[data-tid='text-card-heading-card1']",
                 "classAnalyticsCompletion_lbl": "[data-tid=label-class-analytics]",
                 "classAnalyticsScore_lbl": "",
-                "lesson_title": "[data-tid='text-title-lessons']",
+                "unit_title": "[data-tid='text-title-units']",
                 "lesson_Subtitle": "[data-tid='text-subtitle-lessons']",
 
                 "lessons_Title_lbl": "[data-tid*=label-unit-title-",
@@ -1161,7 +1161,7 @@
                 "collapsibleTimeSpentLbl": "[data-tid*=label-timeSpent-",
                 "activityName": "[data-tid*=text-activity-name-",
                 "moreOption": "[data-tid*=button-moreOptions-",
-                "gradePendingPill": "[data-tid*=chip-gradingPill-"
+                "gradePendingPill": "[data-tid=chip-gradingPill]"
             }
         }
     }
