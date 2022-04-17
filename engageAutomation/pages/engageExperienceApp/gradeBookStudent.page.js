@@ -13,11 +13,11 @@ module.exports = {
   totalTimeSpent_lbl: selectorFile.css.ComproEngage.gradeBookStudent.totalTimeSpent_lbl,
   score_lbl: selectorFile.css.ComproEngage.gradeBookStudent.score_lbl,
   scoreChart_icon: selectorFile.css.ComproEngage.gradeBookStudent.scoreChart_icon,
-  completionChart_icon: selectorFile.css.ComproEngage.gradeBookStudent.completionChart_icon,
-  completion_lbl: selectorFile.css.ComproEngage.gradeBookStudent.completion_lbl,
-  classAnalyticsCompletion_lbl: selectorFile.css.ComproEngage.gradeBookStudent.classAnalyticsCompletion_lbl,
   classAnalyticsScore_lbl: selectorFile.css.ComproEngage.gradeBookStudent.classAnalyticsScore_lbl,
-  lesson_title: selectorFile.css.ComproEngage.gradeBookStudent.lesson_title,
+  completion_lbl: selectorFile.css.ComproEngage.gradeBookStudent.completion_lbl,
+  completionChart_icon: selectorFile.css.ComproEngage.gradeBookStudent.completionChart_icon,
+  classAnalyticsCompletion_lbl: selectorFile.css.ComproEngage.gradeBookStudent.classAnalyticsCompletion_lbl,
+  unit_title: selectorFile.css.ComproEngage.gradeBookStudent.unit_title,
   lesson_Subtitle: selectorFile.css.ComproEngage.gradeBookStudent.lesson_Subtitle,
   //unit details
   lessons_Title_lbl: selectorFile.css.ComproEngage.gradeBookStudent.lessons_Title_lbl,
@@ -64,15 +64,13 @@ module.exports = {
       totalTimeSpent_lbl: (action.getElementCount(this.totalTimeSpent_lbl) > 0) ? action.getText(this.totalTimeSpent_lbl) : null,
       score_lbl: (action.getElementCount(this.score_lbl) > 0) ? action.getText(this.score_lbl) : null,
       scoreChart_icon: (action.getElementCount(this.scoreChart_icon) > 0) ? action.waitForDisplayed(this.scoreChart_icon) : false,
+      classAnalyticsScore_lbl: (action.getElementCount(this.classAnalyticsScore_lbl) > 0) ? action.getText(this.classAnalyticsScore_lbl) : null,
       completion_lbl: (action.getElementCount(this.completion_lbl) > 0) ? action.getText(this.completion_lbl) : null,
       completionChart_icon: (action.getElementCount(this.completionChart_icon) > 0) ? action.waitForDisplayed(this.completionChart_icon) : false,
-      //to be fixed by dev
       classAnalyticsCompletion_lbl: (action.getElementCount(this.classAnalyticsCompletion_lbl) > 0) ? action.getText(this.classAnalyticsCompletion_lbl) : null,
-      classAnalyticsScore_lbl: (action.getElementCount(this.classAnalyticsScore_lbl) > 0) ? action.getText(this.classAnalyticsScore_lbl) : null,
-      lesson_title: (action.getElementCount(this.lesson_title) > 0) ? action.getText(this.lesson_title) : null,
+      unit_title: (action.getElementCount(this.unit_title) > 0) ? action.getText(this.unit_title) : null,
       lesson_Subtitle: (action.getElementCount(this.lesson_Subtitle) > 0) ? action.getText(this.lesson_Subtitle) : null,
     }
-    //console.log("return sts - ",obj)
     return obj;
   },
 
@@ -192,7 +190,8 @@ module.exports = {
     }
     if (res == true) {
       logger.logInto(stackTrace.get(), " --showHideActivities_btn clicked");
-      res = this.getData_showActivity_labels(folder_TitleName);
+      //res = this.getData_showActivity_labels(folder_TitleName);
+      res = this.getData_activityDetails(i);
     }
     else
       logger.logInto(stackTrace.get(), " --showHideActivities_btn NOT clicked", "error")
@@ -231,31 +230,16 @@ module.exports = {
   },
 
   //Function to get Activity List and Other options/pills after clicking Show Activities in each folder
-  getData_activityDetails: function (folder_TitleName) {
-    console.log("foldername -",folder_TitleName)
+  getData_activityDetails: function (index) {
     logger.logInto(stackTrace.get());
     var obj = [];
-    action.waitForDisplayed(this.lessons_Title_lbl);
-    var list = action.findElements(this.lessons_Title_lbl);
-    if (folder_TitleName) {
-      console.log("list length -",list.length)
-      for (var i = 0; i < list.length; i++) {
-        if (action.getText(this.lessons_Title_lbl + i) == folder_TitleName) {
-          obj[0] = {
-            activityName: (action.getElementCount(this.activityName + i + "]") > 0) ? action.getText(this.activityName + i + "]") : null,
-            moreOption: (action.getElementCount(this.moreOption + i + "]") > 0) ? action.getText(this.moreOption + i + "]") : null,
-            gradePill: (action.getElementCount(this.gradePill + i + "]") > 0) ? action.getText(this.gradePill + i + "]") : null,
-          }
-          break;
-        }
-      }
-    } else {
-      for (var i = 0; i < list.length; i++) {
-        obj[i] = {
-          activityName: (action.getElementCount(this.activityName + i + "]") > 0) ? action.getText(this.activityName + i + "]") : null,
-          moreOption: (action.getElementCount(this.moreOption + i + "]") > 0) ? action.getText(this.moreOption + i + "]") : null,
-          gradePill: (action.getElementCount(this.gradePill + i + "]") > 0) ? action.getText(this.gradePill + i + "]") : null,
-        }
+    action.waitForDisplayed(this.activityName);
+    var list = action.findElements(this.activityName+index);
+    for (var i = 0; i < list.length; i++) {
+      obj[i] = {
+        activityName: (action.getElementCount(this.activityName + index + "-" + i + "]") > 0) ? action.getText(this.activityName + index + "-" + i + "]") : null,
+        moreOption: (action.getElementCount(this.moreOption + index + "-" + i + "]") > 0) ? action.getText(this.moreOption +index + "-" + i + "]") : null,
+        gradePill: (action.getElementCount(this.gradePill) > 0) ? action.getText(this.gradePill) : null,
       }
     }
     console.log("obj - ",obj)
@@ -278,7 +262,6 @@ module.exports = {
     else
       logger.logInto(stackTrace.get(), " --moreOption NOT clicked", "error")
     return res;
-  },
-
+  }
 }
 

@@ -1135,10 +1135,10 @@
                 "totalTimeSpent_lbl": "[data-tid='text-time-spent']",
                 "score_lbl": "[data-tid='text-card-heading-card0']",
                 "scoreChart_icon": "#doughnutCanvas-card0",
-                "completionChart_icon": "#doughnutCanvas-card1",
+                "classAnalyticsScore_lbl": "[data-tid=label-class-average-score-1]",
                 "completion_lbl": "[data-tid='text-card-heading-card1']",
-                "classAnalyticsCompletion_lbl": "[data-tid=label-class-analytics]",
-                "classAnalyticsScore_lbl": "",
+                "completionChart_icon": "#doughnutCanvas-card1",
+                "classAnalyticsCompletion_lbl": "[data-tid=label-class-average-completion-1]",
                 "unit_title": "[data-tid='text-title-units']",
                 "lesson_Subtitle": "[data-tid='text-subtitle-lessons']",
 
