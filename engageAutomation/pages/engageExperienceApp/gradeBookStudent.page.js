@@ -53,6 +53,7 @@ module.exports = {
     return res;
   },
 
+  //Function for returning the main static content on Student GradeBook Page
   getData_gradeBookStudentView: function () {
     logger.logInto(stackTrace.get());
     var obj;
@@ -71,6 +72,7 @@ module.exports = {
       unit_title: (action.getElementCount(this.unit_title) > 0) ? action.getText(this.unit_title) : null,
       lesson_Subtitle: (action.getElementCount(this.lesson_Subtitle) > 0) ? action.getText(this.lesson_Subtitle) : null,
     }
+    //console.log("obj -",obj)
     return obj;
   },
 
@@ -98,7 +100,7 @@ module.exports = {
     return obj;
   },
 
-  //Unit details - PASS
+  //Function for returning the Unit details
   getData_UnitDetails: function (folder_TitleName) {
     logger.logInto(stackTrace.get());
     var obj = [];
@@ -116,8 +118,7 @@ module.exports = {
             completion__Unit_lbl: (action.getElementCount(this.completion__Unit_lbl + i + "]") > 0) ? action.getText(this.completion__Unit_lbl + i + "]") : null,
             totalTime_icon: (action.getElementCount(this.totalTime_icon + i + "]") > 0) ? action.waitForDisplayed(this.totalTime_icon + i + "]") : false,
             totalTime_lbl: (action.getElementCount(this.totalTime_lbl + i + "]") > 0) ? action.getText(this.totalTime_lbl + i + "]") : null,
-            //CHECK
-            //activityCount_icon: (action.getElementCount(this.activityCount_icon + i + "]") > 0) ? action.getText(this.activityCount_icon + i + "]") : null,
+            activityCount_icon: (action.getElementCount(this.activityCount_icon + i + "]") > 0) ? action.waitForDisplayed(this.activityCount_icon + i + "]") : false,
             activityCount_lbl: (action.getElementCount(this.activityCount_lbl + i + "]") > 0) ? action.getText(this.activityCount_lbl + i + "]") : null,
             CompletionCount: (action.getElementCount(this.CompletionCount + i + "]") > 0) ? action.getText(this.CompletionCount + i + "]") : null,
             showHideActivities_btn: (action.getElementCount(this.showHideActivities_btn + i + "]") > 0) ? action.getText(this.showHideActivities_btn + i + "]") : null,
@@ -136,14 +137,14 @@ module.exports = {
           completion__Unit_lbl: (action.getElementCount(this.completion__Unit_lbl + i + "]") > 0) ? action.getText(this.completion__Unit_lbl + i + "]") : null,
           totalTime_icon: (action.getElementCount(this.totalTime_icon + i + "]") > 0) ? action.waitForDisplayed(this.totalTime_icon + i + "]") : false,
           totalTime_lbl: (action.getElementCount(this.totalTime_lbl + i + "]") > 0) ? action.getText(this.totalTime_lbl + i + "]") : null,
-          //activityCount_icon: (action.getElementCount(this.activityCount_icon + i + "]") > 0) ? action.getText(this.activityCount_icon + i + "]") : null,
+          activityCount_icon: (action.getElementCount(this.activityCount_icon + i + "]") > 0) ? action.getText(this.activityCount_icon + i + "]") : null,
           activityCount_lbl: (action.getElementCount(this.activityCount_lbl + i + "]") > 0) ? action.getText(this.activityCount_lbl + i + "]") : null,
           CompletionCount: (action.getElementCount(this.CompletionCount + i + "]") > 0) ? action.getText(this.CompletionCount + i + "]") : null,
           showHideActivities_btn: (action.getElementCount(this.showHideActivities_btn + i + "]") > 0) ? action.getText(this.showHideActivities_btn + i + "]") : null,
         }
       }
     }
-    //console.log("sts - ",obj)
+    console.log("unit details sts - ",obj)
     return obj;
   },
 

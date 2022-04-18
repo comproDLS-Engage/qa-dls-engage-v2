@@ -87,19 +87,20 @@ module.exports = {
 		assertion.assert(sts,testdata, "Snackbar message mismatch: " + sts);
 	},
 
-   //---*** STUDENT VIEW GRADEBOOK -----
+   //---*** STUDENT VIEW GRADEBOOK ***-----
 
    //Validate the content on Student GradeBook Page
    ENG_GRADEBOOK_TC_9: function (testdata) {
       sts = studentGradeBookPage.getData_gradeBookStudentView()
-      //console.log("student view testdata - ",testdata) 
       assertion.assertEqual(sts.pageTitle, testdata.pageTitle, "pageTitle is Not displayed");
       assertion.assert(sts.pageSubTitle.includes(testdata.pageSubTitle), "pageSubTitle is Not displayed");
       assertion.assertEqual(sts.download_btn, testdata.download_btn, "download_btn is Not displayed");
       assertion.assertEqual(sts.sendtoemail_btn, testdata.sendtoemail_btn, "sendtoemail_btn is Not displayed");
       assertion.assert(sts.totalTimeSpent_lbl.includes(testdata.totalTimeSpent_lbl), "totalTimeSpent_lbl is Not displayed");
       assertion.assertEqual(sts.score_lbl, testdata.score_lbl, "score_lbl is Not displayed");
-      assertion.assertEqual(sts.completion_lbl, testdata.completion_lbl, "score_lbl is Not displayed");
+      assertion.assertEqual(sts.scoreChart_icon, true, "scoreChart_icon is Not displayed");
+      assertion.assertEqual(sts.completion_lbl, testdata.completion_lbl, "completion_lbl is Not displayed");
+      assertion.assertEqual(sts.completionChart_icon, true, "completionChart_icon is Not displayed");
       assertion.assert(sts.classAnalyticsCompletion_lbl.includes(testdata.classAnalyticsCompletion_lbl), "classAnalyticsCompletion_lbl is Not displayed");
       assertion.assert(sts.classAnalyticsScore_lbl.includes(testdata.classAnalyticsScore_lbl), "classAnalyticsScore_lbl is Not displayed");
       assertion.assertEqual(sts.unit_title, testdata.lesson_title, "lesson_title is Not displayed");
@@ -108,8 +109,8 @@ module.exports = {
 
    //Validate the Unit Details of a book
    ENG_GRADEBOOK_TC_10: function (testdata) {
-      // console.log("testdata[0] -",testdata[0])
-      // console.log("testdata[1] -",testdata[1])
+      console.log("testdata[0] -",testdata[0])
+      console.log("testdata[1] -",testdata[1])
       sts = studentGradeBookPage.getData_UnitDetails(testdata[0])
       assertion.assertEqual(sts.lessons_Title_lbl, testdata[0].folder_Title, "folder_Title is Not displayed");
       for (let i = 0; i < sts.length; i++) {
@@ -119,9 +120,10 @@ module.exports = {
          assertion.assert((sts[i].score_Unit_lbl).includes(testdata[1][i].score_Unit_lbl), "score_Unit_lbl is Not displayed: ");
          assertion.assert((sts[i].completion__Unit_lbl).includes(testdata[1][i].completion__Unit_lbl), "completion__Unit_lbl is Not displayed: ");
          assertion.assert((sts[i].totalTime_lbl).includes(testdata[1][i].totalTime_lbl), "totalTime_lbl is Not displayed: ");
-         //assertion.assertEqual(sts[i].activityCount_icon,true, "activityCount_icon is Not displayed");
+         assertion.assertEqual(sts[i].activityCount_icon,true, "activityCount_icon is Not displayed");
          assertion.assertEqual(sts[i].activityCount_lbl,testdata[1][i].activityCount_lbl, "activityCount_lbl is Not displayed");
          assertion.assertEqual(sts[i].CompletionCount,testdata[1][i].CompletionCount, "score_icon is Not displayed");
+         assertion.assertEqual(sts[i].showHideActivities_btn,testdata[1][i].showHideActivities_btn, "showHideActivities_btn is Not displayed");
       }
    },
 
