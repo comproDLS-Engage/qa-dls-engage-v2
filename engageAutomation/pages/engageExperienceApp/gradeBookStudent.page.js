@@ -72,7 +72,6 @@ module.exports = {
       unit_title: (action.getElementCount(this.unit_title) > 0) ? action.getText(this.unit_title) : null,
       lesson_Subtitle: (action.getElementCount(this.lesson_Subtitle) > 0) ? action.getText(this.lesson_Subtitle) : null,
     }
-    //console.log("obj -",obj)
     return obj;
   },
 
@@ -113,7 +112,7 @@ module.exports = {
             lessons_Title_lbl: (action.getElementCount(this.lessons_Title_lbl + i + "]") > 0) ? action.getText(this.lessons_Title_lbl + i + "]") : null,
             score_icon: (action.getElementCount(this.score_icon + i + "]") > 0) ? action.waitForDisplayed(this.score_icon + i + "]") : null,
             score_Unit_lbl: (action.getElementCount(this.score_Unit_lbl + i + "]") > 0) ? action.getText(this.score_Unit_lbl + i + "]") : null,
-            //nonScorableChip: (action.getElementCount(this.nonScorableChip) > 0) ? action.getText(this.nonScorableChip + i + "]") : null,
+            //nonScorableChip: (action.getElementCount(this.nonScorableChip+ i + "]") > 0) ? action.getText(this.nonScorableChip + i + "]") : null,
             completion_icon: (action.getElementCount(this.completion_icon + i + "]") > 0) ? action.waitForDisplayed(this.completion_icon + i + "]") : false,
             completion__Unit_lbl: (action.getElementCount(this.completion__Unit_lbl + i + "]") > 0) ? action.getText(this.completion__Unit_lbl + i + "]") : null,
             totalTime_icon: (action.getElementCount(this.totalTime_icon + i + "]") > 0) ? action.waitForDisplayed(this.totalTime_icon + i + "]") : false,
@@ -132,7 +131,7 @@ module.exports = {
           lessons_Title_lbl: (action.getElementCount(this.lessons_Title_lbl + i + "]") > 0) ? action.getText(this.lessons_Title_lbl + i + "]") : null,
           score_icon: (action.getElementCount(this.score_icon + i + "]") > 0) ? action.getText(this.score_icon + i + "]") : null,
           score_Unit_lbl: (action.getElementCount(this.score_Unit_lbl + i + "]") > 0) ? action.getText(this.score_Unit_lbl + i + "]") : null,
-          //nonScorableChip: (action.getElementCount(this.nonScorableChip) > 0) ? action.getText(this.nonScorableChip + i + "]") : null,
+          //nonScorableChip: (action.getElementCount(this.nonScorableChip+ i + "]")  > 0) ? action.getText(this.nonScorableChip + i + "]") : null,
           completion_icon: (action.getElementCount(this.completion_icon + i + "]") > 0) ? action.waitForDisplayed(this.completion_icon + i + "]") : false,
           completion__Unit_lbl: (action.getElementCount(this.completion__Unit_lbl + i + "]") > 0) ? action.getText(this.completion__Unit_lbl + i + "]") : null,
           totalTime_icon: (action.getElementCount(this.totalTime_icon + i + "]") > 0) ? action.waitForDisplayed(this.totalTime_icon + i + "]") : false,
@@ -144,7 +143,6 @@ module.exports = {
         }
       }
     }
-    console.log("unit details sts - ",obj)
     return obj;
   },
 
@@ -154,7 +152,7 @@ module.exports = {
     var res;
     res = action.click(this.download_btn);
     if (true == res) {
-      browser.pause(2000);
+      browser.pause(3000);
       logger.logInto(stackTrace.get(), " download_btn is clicked");
     }
     else {

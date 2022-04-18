@@ -109,8 +109,6 @@ module.exports = {
 
    //Validate the Unit Details of a book
    ENG_GRADEBOOK_TC_10: function (testdata) {
-      console.log("testdata[0] -",testdata[0])
-      console.log("testdata[1] -",testdata[1])
       sts = studentGradeBookPage.getData_UnitDetails(testdata[0])
       assertion.assertEqual(sts.lessons_Title_lbl, testdata[0].folder_Title, "folder_Title is Not displayed");
       for (let i = 0; i < sts.length; i++) {
