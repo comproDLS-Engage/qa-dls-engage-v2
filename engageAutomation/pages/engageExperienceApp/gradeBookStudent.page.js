@@ -197,6 +197,23 @@ module.exports = {
     return res;
   },
 
+  //Function to get Activity List and Other options/pills after clicking Show Activities in each folder
+  getData_activityDetails: function (index) {
+    logger.logInto(stackTrace.get());
+    var obj = [];
+    action.waitForDisplayed(this.activityName);
+    var list = action.findElements(this.activityName+index);
+    for (var i = 0; i < list.length; i++) {
+      obj[i] = {
+        activityName: (action.getElementCount(this.activityName + index + "-" + i + "]") > 0) ? action.getText(this.activityName + index + "-" + i + "]") : null,
+        moreOption: (action.getElementCount(this.moreOption + index + "-" + i + "]") > 0) ? action.getText(this.moreOption +index + "-" + i + "]") : null,
+        gradePill: (action.getElementCount(this.gradePill) > 0) ? action.getText(this.gradePill) : null,
+      }
+    }
+    console.log("getData_activityDetails obj - ",obj)
+    return obj;
+  },
+
   //Function to get Collapsible Labels after clicking Show Activities in each folder
   getData_showActivity_labels: function (folder_TitleName) {
     logger.logInto(stackTrace.get());
@@ -225,23 +242,6 @@ module.exports = {
         }
       }
     }
-    return obj;
-  },
-
-  //Function to get Activity List and Other options/pills after clicking Show Activities in each folder
-  getData_activityDetails: function (index) {
-    logger.logInto(stackTrace.get());
-    var obj = [];
-    action.waitForDisplayed(this.activityName);
-    var list = action.findElements(this.activityName+index);
-    for (var i = 0; i < list.length; i++) {
-      obj[i] = {
-        activityName: (action.getElementCount(this.activityName + index + "-" + i + "]") > 0) ? action.getText(this.activityName + index + "-" + i + "]") : null,
-        moreOption: (action.getElementCount(this.moreOption + index + "-" + i + "]") > 0) ? action.getText(this.moreOption +index + "-" + i + "]") : null,
-        gradePill: (action.getElementCount(this.gradePill) > 0) ? action.getText(this.gradePill) : null,
-      }
-    }
-    console.log("obj - ",obj)
     return obj;
   },
 

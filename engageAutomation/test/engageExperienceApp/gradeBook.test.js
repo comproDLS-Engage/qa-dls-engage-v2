@@ -128,13 +128,18 @@ module.exports = {
    //Validate the click on 'Show Activities' button
    ENG_GRADEBOOK_TC_11: function (testdata) {
       sts = studentGradeBookPage.click_showHideActivities_btn(testdata[0]);
-      // for (let i = 0; i < sts.length; i++) {
-      //    // assertion.assertEqual(sts[i].collapsibleActivityLbl, testdata[1].collapsibleActvityLbl, "collapsibleActvityLbl mismatch");
-      //    // assertion.assertEqual(sts[i].collapsibleScoreLbl, testdata[1].collapsibleScoreLbl, "collapsibleScoreLbl mismatch");
-      //    // assertion.assertEqual(sts[i].collapsibleAttemptsLbl, testdata[1].collapsibleAttemptsLbl, "collapsibleAttemptsLbl Text mismatch");
-      //    // assertion.assertEqual(sts[i].collapsibleTimeSpentLbl, testdata[1].collapsibleTimeSpentLbl, "collapsibleTimeSpentLbl Text mismatch");
-      // }
-      //sts = studentGradeBookPage.getData_activityDetails(testdata[0]);
+      for (let i = 0; i < sts.length; i++) {
+         assertion.assertEqual(sts[i].activityName, testdata[2][i].activityName, "activityName mismatch");
+         assertion.assertEqual(sts[i].moreOption, testdata[2][i].moreOption, "moreOption mismatch");
+         assertion.assertEqual(sts[i].gradePill, testdata[2][i].gradePill, "gradePill Text mismatch");
+      }
+      sts = studentGradeBookPage.getData_showActivity_labels(testdata[0])
+      for (let i = 0; i < sts.length; i++) {
+         assertion.assertEqual(sts[i].collapsibleActivityLbl, testdata[1].collapsibleActvityLbl, "collapsibleActivityLbl mismatch");
+         assertion.assertEqual(sts[i].collapsibleScoreLbl, testdata[1].collapsibleScoreLbl, "collapsibleScoreLbl mismatch");
+         assertion.assertEqual(sts[i].collapsibleAttemptsLbl, testdata[1].collapsibleAttemptsLbl, "collapsibleAttemptsLbl Text mismatch");
+         assertion.assertEqual(sts[i].collapsibleTimeSpentLbl, testdata[1].collapsibleTimeSpentLbl, "collapsibleTimeSpentLbl Text mismatch");
+      }
    },
 
    //Validate the click on 'More Options' button
