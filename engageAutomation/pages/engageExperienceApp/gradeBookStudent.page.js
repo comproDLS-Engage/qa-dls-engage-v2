@@ -189,7 +189,6 @@ module.exports = {
     }
     if (res == true) {
       logger.logInto(stackTrace.get(), " --showHideActivities_btn clicked");
-      //res = this.getData_showActivity_labels(folder_TitleName);
       res = this.getData_activityDetails(i);
     }
     else
@@ -202,15 +201,16 @@ module.exports = {
     logger.logInto(stackTrace.get());
     var obj = [];
     action.waitForDisplayed(this.activityName);
+    browser.pause(3000);
     var list = action.findElements(this.activityName+index);
     for (var i = 0; i < list.length; i++) {
       obj[i] = {
         activityName: (action.getElementCount(this.activityName + index + "-" + i + "]") > 0) ? action.getText(this.activityName + index + "-" + i + "]") : null,
-        moreOption: (action.getElementCount(this.moreOption + index + "-" + i + "]") > 0) ? action.getText(this.moreOption +index + "-" + i + "]") : null,
-        gradePill: (action.getElementCount(this.gradePill) > 0) ? action.getText(this.gradePill) : null,
+        moreOption: (action.getElementCount(this.moreOption + index + "-" + i + "]") > 0) ? action.waitForDisplayed(this.moreOption +index + "-" + i + "]") : false,
+        gradePill: (action.getElementCount(this.gradePill + index + "-" + i + "]") > 0) ? action.getText(this.gradePill + index + "-" + i + "]") : null,
       }
     }
-    console.log("getData_activityDetails obj - ",obj)
+    //console.log("getData_activityDetails obj - ",obj)
     return obj;
   },
 
@@ -245,12 +245,18 @@ module.exports = {
     return obj;
   },
 
-  click_moreOption: function (activityNameName) {
+  click_moreOption: function (activityNameName, unitActivity) {
     logger.logInto(stackTrace.get());
-    var i, list, res;
-    list = action.findElements(this.moreOption);
+    var i, list, res, index;
+    list = action.findElements(this.activityName);
     for (i = 0; i < list.length; i++) {
-      if ((action.getText(this.activityName + i + "]")) == activityNameName) {
+      if ((action.getText(this.lessons_Title_lbl + i + "]")) == activityNameName) {
+        index = i;
+        break;
+      }
+    }
+    for (i = 0; i < list.length; i++) {
+      if ((action.getText(this.activityName + index + "-" +  + i + "]")) == unitActivity) {
         res = action.click(list[i]);
         break;
       }

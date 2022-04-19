@@ -144,7 +144,8 @@ module.exports = {
 
    //Validate the click on 'More Options' button
    ENG_GRADEBOOK_TC_12: function (testdata) {
-      sts = studentGradeBookPage.click_moreOption(testdata[0]);
+      console.log("testdata - ",testdata)
+      sts = studentGradeBookPage.click_moreOption(testdata[0],testdata[1]);
    },
 
    
