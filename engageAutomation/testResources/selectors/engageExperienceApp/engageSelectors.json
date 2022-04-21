@@ -422,7 +422,7 @@
             "FIBSelect": {
                 "response": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-tid=input-response-",
                 "responses": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-tid*='input-response']",
-                "responseOption": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [class*=mdc-menu-surface--open] [data-tid=select-responseoption-"
+                "responseOption": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [class*=mdc-menu-surface--open] [data-tid*=select-responseoption][data-value="
             },
             "dragAndDrop": {
                 "source": "[data-tid=dragsource-option-",

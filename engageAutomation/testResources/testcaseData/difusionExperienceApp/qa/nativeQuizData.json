@@ -613,19 +613,19 @@
         "mediaType": "",
         "maxOptions": 3,
         "answerKey": [
-          ["A","2","New Delhi","correct"],
-          ["B","2","Akbar","correct"],
-          ["C","3","Shah Jahan","correct"]
+          ["A","O1","New Delhi","correct"],
+          ["B","O3","Akbar","correct"],
+          ["C","O6","Shah Jahan","correct"]
         ],
         "scenario1": [
-          ["A","1","-","incorrect"],
-          ["B","3","Babar","incorrect"],
-          ["C","3","Shah Jahan","correct"]
+          ["A","none","-","incorrect"],
+          ["B","O4","Babar","incorrect"],
+          ["C","O6","Shah Jahan","correct"]
         ],
         "scenario2": [
-          ["A","3","Bombay","incorrect"],
-          ["B","1","-","incorrect"],
-          ["C","2","Jahangir","incorrect"]
+          ["A","O2","Bombay","incorrect"],
+          ["B","none","-","incorrect"],
+          ["C","O5","Jahangir","incorrect"]
         ]
       },
       {
@@ -636,25 +636,25 @@
         "mediaType": "",
         "maxOptions": 4,
         "answerKey": [
-          ["A","2","a","correct"],
-          ["B","2","a","correct"],
-          ["C","4","the","correct"],
-          ["D","3","an","correct"],
-          ["E","4","the","correct"]
+          ["A","O1","a","correct"],
+          ["B","O1","a","correct"],
+          ["C","O3","the","correct"],
+          ["D","O2","an","correct"],
+          ["E","O3","the","correct"]
         ],
         "scenario1": [
-          ["A","1","-","incorrect"],
-          ["B","3","an","incorrect"],
-          ["C","4","the","incorrect"],
-          ["D","1","-","incorrect"],
-          ["E","1","-","incorrect"]
+          ["A","none","-","incorrect"],
+          ["B","O2","an","incorrect"],
+          ["C","O3","the","incorrect"],
+          ["D","none","-","incorrect"],
+          ["E","none","-","incorrect"]
         ],
         "scenario2": [
-          ["A","4","the","incorrect"],
-          ["B","3","an","incorrect"],
-          ["C","3","an","incorrect"],
-          ["D","2","a","incorrect"],
-          ["E","2","a","incorrect"]
+          ["A","O3","the","incorrect"],
+          ["B","O2","an","incorrect"],
+          ["C","O2","an","incorrect"],
+          ["D","O1","a","incorrect"],
+          ["E","O1","a","incorrect"]
         ]
       }
     ]
