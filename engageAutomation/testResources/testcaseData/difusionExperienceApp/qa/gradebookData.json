@@ -45,15 +45,17 @@
                         "activityList": [
                             {
                                 "activityName": "Multiple Question",
-                                "activityScore": "-",
-                                "activityAttempts": "-",
-                                "activityTimeSpent": "0 sec"
+                                "activityScore": "0%",
+                                "activityAttempts": "1",
+                                "activityTimeSpent": "5 mins",
+                                "moreOption": true
                             },
                             {
                                 "activityName": "More than 5 MB",
                                 "activityScore": "-",
                                 "activityAttempts": "-",
-                                "activityTimeSpent": "0 sec"
+                                "activityTimeSpent": "0 sec",
+                                "moreOption": false
                             }
                         ]
                     }
