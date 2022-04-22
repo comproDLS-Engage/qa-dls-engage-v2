@@ -1,6 +1,6 @@
 "use strict";
 var action = require('../../core/actionLibrary/baseActionLibrary.js')
-var selectorFile = jsonParserUtil.jsonParser(selectorDir)
+var selectorFile =  jsonParserUtil.jsonParser(selectorDir)
 var appShellPage = require('./appShell.page.js')
 
 module.exports = {
@@ -55,49 +55,49 @@ module.exports = {
     filterMenuClearAllBtn: selectorFile.css.ComproEngage.browse.filterMenuClearAllBtn,
     filterMenuApplyBtn: selectorFile.css.ComproEngage.browse.filterMenuApplyBtn,
 
-    isInitialized: function () {
+    isInitialized: async function () {
         var res;
-        logger.logInto(stackTrace.get());
-        action.waitForDocumentLoad();
+        await logger.logInto(stackTrace.get());
+        await action.waitForDocumentLoad();
         res = {
-            pageStatus: action.waitForDisplayed(this.searchBox),
-            appShellPage: appShellPage.isInitialized()
+            pageStatus: await action.waitForDisplayed(this.searchBox),
+            appShellPage: await appShellPage.isInitialized()
         };
         return res;
     },
 
-        getData_browsePage: function () {
-        logger.logInto(stackTrace.get());
-        action.waitForDisplayed(this.cardSkeleton, undefined, true); //manually edited
+        getData_browsePage: async function () {
+        await logger.logInto(stackTrace.get());
+        await action.waitForDisplayed(this.cardSkeleton, undefined, true); //manually edited
         var obj;
         obj = {
-            pageTitle: (action.getElementCount(this.pageTitle) > 0) ? action.getText(this.pageTitle) : null,
-            pageSubTitle: (action.getElementCount(this.pageSubTitle) > 0) ? action.getText(this.pageSubTitle) : null,
-            filtersBtn: (action.getElementCount(this.filtersBtn) > 0) ? action.getText(this.filtersBtn) : null,
-            previousPageArrow: (action.getElementCount(this.previousPageArrow) > 0) ? action.getText(this.previousPageArrow) : null,
-            nextPageArrow: (action.getElementCount(this.nextPageArrow) > 0) ? action.getText(this.nextPageArrow) : null,
-            currentPage: (action.getElementCount(this.currentPage) > 0) ? action.getText(this.currentPage) : null,
-            searchBox: (action.getElementCount(this.searchBox) > 0) ? action.getText(this.searchBox) : null,
-            searchIcon: (action.getElementCount(this.searchIcon) > 0) ? action.waitForDisplayed(this.searchIcon) : false,
-            clearSearch: (action.getElementCount(this.clearSearch) > 0) ? action.getText(this.clearSearch) : null,
-            searchCount: (action.getElementCount(this.searchCount) > 0) ? action.getText(this.searchCount) : null,
-            searchPill: (action.getElementCount(this.searchPill) > 0) ? action.getText(this.searchPill) : null,
-            tabInfo: appShellPage.getTabsListData() //manually edited
+            pageTitle: ((await action.getElementCount(this.pageTitle)) > 0) ? await action.getText(this.pageTitle) : null,
+            pageSubTitle: ((await action.getElementCount(this.pageSubTitle)) > 0) ? await action.getText(this.pageSubTitle) : null,
+            filtersBtn: ((await action.getElementCount(this.filtersBtn)) > 0) ? await action.getText(this.filtersBtn) : null,
+            previousPageArrow: ((await action.getElementCount(this.previousPageArrow)) > 0) ? await action.getText(this.previousPageArrow) : null,
+            nextPageArrow: ((await action.getElementCount(this.nextPageArrow)) > 0) ? await action.getText(this.nextPageArrow) : null,
+            currentPage: ((await action.getElementCount(this.currentPage)) > 0) ? await action.getText(this.currentPage) : null,
+            searchBox: ((await action.getElementCount(this.searchBox)) > 0) ? await action.getText(this.searchBox) : null,
+            searchIcon: ((await action.getElementCount(this.searchIcon)) > 0) ? await action.waitForDisplayed(this.searchIcon) : false,
+            clearSearch: ((await action.getElementCount(this.clearSearch)) > 0) ? await action.getText(this.clearSearch) : null,
+            searchCount: ((await action.getElementCount(this.searchCount)) > 0) ? await action.getText(this.searchCount) : null,
+            searchPill: ((await action.getElementCount(this.searchPill)) > 0) ? await action.getText(this.searchPill) : null,
+            tabInfo: await appShellPage.getTabsListData() //manually edited
         }
         return obj;
     },
 
-    getData_resourceCategory: function (resourceCategoryName) {
-        logger.logInto(stackTrace.get());
+    getData_resourceCategory: async function (resourceCategoryName) {
+        await logger.logInto(stackTrace.get());
         var obj = [];
-        action.waitForDisplayed(this.resourceCategory);
-        var list = action.findElements(this.resourceCategory);
+        await action.waitForDisplayed(this.resourceCategory);
+        var list = await action.findElements(this.resourceCategory);
         if (resourceCategoryName) {
             for (var i = 0; i < list.length; i++) {
-                if (action.getText(this.resourceCategory + i) == resourceCategoryName) {
+                if ((await action.getText(this.resourceCategory + i)) == resourceCategoryName) {
                     obj[0] = {
-                        resourceCategory: (action.getElementCount(this.resourceCategory + i + "]") > 0) ? action.getText(this.resourceCategory + i + "]") : null,
-                        viewAllBtn: (action.getElementCount(this.viewAllBtn + i + "]") > 0) ? action.getText(this.viewAllBtn + i + "]") : null,
+                        resourceCategory: ((await action.getElementCount(this.resourceCategory + i + "]")) > 0) ? await action.getText(this.resourceCategory + i + "]") : null,
+                        viewAllBtn: ((await action.getElementCount(this.viewAllBtn + i + "]")) > 0) ? await action.getText(this.viewAllBtn + i + "]") : null,
                     }
                     break;
                 }
@@ -105,28 +105,28 @@ module.exports = {
         } else {
             for (var i = 0; i < list.length; i++) {
                 obj[i] = {
-                    resourceCategory: (action.getElementCount(this.resourceCategory + i + "]") > 0) ? action.getText(this.resourceCategory + i + "]") : null,
-                    viewAllBtn: (action.getElementCount(this.viewAllBtn + i + "]") > 0) ? action.getText(this.viewAllBtn + i + "]") : null,
+                    resourceCategory: ((await action.getElementCount(this.resourceCategory + i + "]")) > 0) ? await action.getText(this.resourceCategory + i + "]") : null,
+                    viewAllBtn: ((await action.getElementCount(this.viewAllBtn + i + "]")) > 0) ? await action.getText(this.viewAllBtn + i + "]") : null,
                 }
             }
         }
         return obj;
     },
 
-    getData_resourceList: function (cardTitleName) {
-        logger.logInto(stackTrace.get());
+    getData_resourceList: async function (cardTitleName) {
+        await logger.logInto(stackTrace.get());
         var obj = [];
-        action.waitForDisplayed(this.cardTitle);
-        var list = this.getResourceIndex();
+        await action.waitForDisplayed(this.cardTitle);
+        var list = await this.getResourceIndex();
         if (cardTitleName) {
             for (var i = 0; i < list.length; i++) {
-                if (action.getText(this.cardTitle + list[i]) == cardTitleName) {
+                if ((await action.getText(this.cardTitle + list[i])) == cardTitleName) {
                     obj[0] = {
-                        cardTitle: (action.getElementCount(this.cardTitle + list[i]) > 0) ? action.getText(this.cardTitle + list[i]) : null,
-                        cardSubTitle: (action.getElementCount(this.cardSubTitle + list[i]) > 0) ? action.getText(this.cardSubTitle + list[i]) : null,
-                        cardImage: (action.getElementCount(this.cardImage + list[i]) > 0) ? action.waitForDisplayed(this.cardImage + list[i]) : null,
-                        cardLockIcon: (action.getElementCount(this.cardLockIcon + list[i]) > 0) ? action.waitForDisplayed(this.cardLockIcon + list[i]) : false,
-                        moreOptionsBtn: (action.getElementCount(this.moreOptionsBtn + list[i]) > 0) ? action.getText(this.moreOptionsBtn + list[i]) : null,
+                        cardTitle: ((await action.getElementCount(this.cardTitle + list[i])) > 0) ? await action.getText(this.cardTitle + list[i]) : null,
+                        cardSubTitle: ((await action.getElementCount(this.cardSubTitle + list[i])) > 0) ? await action.getText(this.cardSubTitle + list[i]) : null,
+                        cardImage: ((await action.getElementCount(this.cardImage + list[i])) > 0) ? await action.waitForDisplayed(this.cardImage + list[i]) : null,
+                        cardLockIcon: ((await action.getElementCount(this.cardLockIcon + list[i])) > 0) ? await action.waitForDisplayed(this.cardLockIcon + list[i]) : false,
+                        moreOptionsBtn: ((await action.getElementCount(this.moreOptionsBtn + list[i])) > 0) ? await action.getText(this.moreOptionsBtn + list[i]) : null,
                     }
                     break;
                 }
@@ -134,43 +134,43 @@ module.exports = {
         } else {
             for (var i = 0; i < list.length; i++) {
                 obj[i] = {
-                    cardTitle: (action.getElementCount(this.cardTitle + list[i]) > 0) ? action.getText(this.cardTitle + list[i]) : null,
-                    cardSubTitle: (action.getElementCount(this.cardSubTitle + list[i]) > 0) ? action.getText(this.cardSubTitle + list[i]) : null,
-                    cardImage: (action.getElementCount(this.cardImage + list[i]) > 0) ? action.waitForDisplayed(this.cardImage + list[i]) : null,
-                    cardLockIcon: (action.getElementCount(this.cardLockIcon + list[i]) > 0) ? action.waitForDisplayed(this.cardLockIcon + list[i]) : false,
-                    moreOptionsBtn: (action.getElementCount(this.moreOptionsBtn + list[i]) > 0) ? action.getText(this.moreOptionsBtn + list[i]) : null,
+                    cardTitle: ((await action.getElementCount(this.cardTitle + list[i])) > 0) ? await action.getText(this.cardTitle + list[i]) : null,
+                    cardSubTitle: ((await action.getElementCount(this.cardSubTitle + list[i])) > 0) ? await action.getText(this.cardSubTitle + list[i]) : null,
+                    cardImage: ((await action.getElementCount(this.cardImage + list[i])) > 0) ? await action.waitForDisplayed(this.cardImage + list[i]) : null,
+                    cardLockIcon: ((await action.getElementCount(this.cardLockIcon + list[i])) > 0) ? await action.waitForDisplayed(this.cardLockIcon + list[i]) : false,
+                    moreOptionsBtn: ((await action.getElementCount(this.moreOptionsBtn + list[i])) > 0) ? await action.getText(this.moreOptionsBtn + list[i]) : null,
                 }
             }
         }
         return obj;
     },
 
-    getData_moreOptions: function () {
-        logger.logInto(stackTrace.get());
+    getData_moreOptions: async function () {
+        await logger.logInto(stackTrace.get());
         var obj;
         obj = {
-            viewOption: (action.getElementCount(this.viewOption) > 0) ? action.getText(this.viewOption) : null,
-            addToPlaylistOption: (action.getElementCount(this.addToPlaylistOption) > 0) ? action.getText(this.addToPlaylistOption) : null,
-            shareOption: (action.getElementCount(this.shareOption) > 0) ? action.getText(this.shareOption) : null,
+            viewOption: ((await action.getElementCount(this.viewOption)) > 0) ? await action.getText(this.viewOption) : null,
+            addToPlaylistOption: ((await action.getElementCount(this.addToPlaylistOption)) > 0) ? await action.getText(this.addToPlaylistOption) : null,
+            shareOption: ((await action.getElementCount(this.shareOption)) > 0) ? await action.getText(this.shareOption) : null,
         }
         return obj;
     },
 
-    getData_bookList: function (bookTitleName) {
-        logger.logInto(stackTrace.get());
+    getData_bookList: async function (bookTitleName) {
+        await logger.logInto(stackTrace.get());
         var obj = [];
-        action.waitForDisplayed(this.bookTitle);
-        var list = action.findElements(this.bookTitle);
+        await action.waitForDisplayed(this.bookTitle);
+        var list = await action.findElements(this.bookTitle);
         if (bookTitleName) {
             for (var i = 0; i < list.length; i++) {
-                if (action.getText(this.bookTitle + i) == bookTitleName) {
+                if ((await action.getText(this.bookTitle + i)) == bookTitleName) {
                     obj[0] = {
-                        bookTitle: (action.getElementCount(this.bookTitle + i + "]") > 0) ? action.getText(this.bookTitle + i + "]") : null,
-                        bookSubTitle: (action.getElementCount(this.bookSubTitle + i + "]") > 0) ? action.getText(this.bookSubTitle + i + "]") : null,
-                        bookImage: (action.getElementCount(this.bookImage + i + "]") > 0) ? action.waitForDisplayed(this.bookImage + i + "]") : null,
-                        viewBtn: (action.getElementCount(this.viewBtn + i + "]") > 0) ? action.getText(this.viewBtn + i + "]") : null,
-                        addBookBtn: (action.getElementCount(this.addBookBtn + i + "]") > 0) ? action.getText(this.addBookBtn + i + "]") : null,
-                        bookMoreOptionsBtn: (action.getElementCount(this.bookMoreOptionsBtn + i + "]") > 0) ? action.getText(this.bookMoreOptionsBtn + i + "]") : null,
+                        bookTitle: ((await action.getElementCount(this.bookTitle + i + "]")) > 0) ? await action.getText(this.bookTitle + i + "]") : null,
+                        bookSubTitle: ((await action.getElementCount(this.bookSubTitle + i + "]")) > 0) ? await action.getText(this.bookSubTitle + i + "]") : null,
+                        bookImage: ((await action.getElementCount(this.bookImage + i + "]")) > 0) ? await action.waitForDisplayed(this.bookImage + i + "]") : null,
+                        viewBtn: ((await action.getElementCount(this.viewBtn + i + "]")) > 0) ? await action.getText(this.viewBtn + i + "]") : null,
+                        addBookBtn: ((await action.getElementCount(this.addBookBtn + i + "]")) > 0) ? await action.getText(this.addBookBtn + i + "]") : null,
+                        bookMoreOptionsBtn: ((await action.getElementCount(this.bookMoreOptionsBtn + i + "]")) > 0) ? await action.getText(this.bookMoreOptionsBtn + i + "]") : null,
                     }
                     break;
                 }
@@ -178,564 +178,564 @@ module.exports = {
         } else {
             for (var i = 0; i < list.length; i++) {
                 obj[i] = {
-                    bookTitle: (action.getElementCount(this.bookTitle + i + "]") > 0) ? action.getText(this.bookTitle + i + "]") : null,
-                    bookSubTitle: (action.getElementCount(this.bookSubTitle + i + "]") > 0) ? action.getText(this.bookSubTitle + i + "]") : null,
-                    bookImage: (action.getElementCount(this.bookImage + i + "]") > 0) ? action.waitForDisplayed(this.bookImage + i + "]") : null,
-                    viewBtn: (action.getElementCount(this.viewBtn + i + "]") > 0) ? action.getText(this.viewBtn + i + "]") : null,
-                    addBookBtn: (action.getElementCount(this.addBookBtn + i + "]") > 0) ? action.getText(this.addBookBtn + i + "]") : null,
-                    bookMoreOptionsBtn: (action.getElementCount(this.bookMoreOptionsBtn + i + "]") > 0) ? action.getText(this.bookMoreOptionsBtn + i + "]") : null,
+                    bookTitle: ((await action.getElementCount(this.bookTitle + i + "]")) > 0) ? await action.getText(this.bookTitle + i + "]") : null,
+                    bookSubTitle: ((await action.getElementCount(this.bookSubTitle + i + "]")) > 0) ? await action.getText(this.bookSubTitle + i + "]") : null,
+                    bookImage: ((await action.getElementCount(this.bookImage + i + "]")) > 0) ? await action.waitForDisplayed(this.bookImage + i + "]") : null,
+                    viewBtn: ((await action.getElementCount(this.viewBtn + i + "]")) > 0) ? await action.getText(this.viewBtn + i + "]") : null,
+                    addBookBtn: ((await action.getElementCount(this.addBookBtn + i + "]")) > 0) ? await action.getText(this.addBookBtn + i + "]") : null,
+                    bookMoreOptionsBtn: ((await action.getElementCount(this.bookMoreOptionsBtn + i + "]")) > 0) ? await action.getText(this.bookMoreOptionsBtn + i + "]") : null,
                 }
             }
         }
         return obj;
     },
 
-    getData_bookMoreOptions: function () {
-        logger.logInto(stackTrace.get());
+    getData_bookMoreOptions: async function () {
+        await logger.logInto(stackTrace.get());
         var obj;
         obj = {
-            viewClassOption: (action.getElementCount(this.viewClassOption) > 0) ? action.getText(this.viewClassOption) : null,
-            createNewClassOption: (action.getElementCount(this.createNewClassOption) > 0) ? action.getText(this.createNewClassOption) : null,
-            addToMyBooksOption: (action.getElementCount(this.addToMyBooksOption) > 0) ? action.getText(this.addToMyBooksOption) : null,
-            removeFromMyBooksOption: (action.getElementCount(this.removeFromMyBooksOption) > 0) ? action.getText(this.removeFromMyBooksOption) : null,
-            openFlipbookOption: (action.getElementCount(this.openFlipbookOption) > 0) ? action.getText(this.openFlipbookOption) : null,
+            viewClassOption: ((await action.getElementCount(this.viewClassOption)) > 0) ? await action.getText(this.viewClassOption) : null,
+            createNewClassOption: ((await action.getElementCount(this.createNewClassOption)) > 0) ? await action.getText(this.createNewClassOption) : null,
+            addToMyBooksOption: ((await action.getElementCount(this.addToMyBooksOption)) > 0) ? await action.getText(this.addToMyBooksOption) : null,
+            removeFromMyBooksOption: ((await action.getElementCount(this.removeFromMyBooksOption)) > 0) ? await action.getText(this.removeFromMyBooksOption) : null,
+            openFlipbookOption: ((await action.getElementCount(this.openFlipbookOption)) > 0) ? await action.getText(this.openFlipbookOption) : null,
         }
         return obj;
     },
 
-    getData_addToPlaylist: function () {
-        logger.logInto(stackTrace.get());
+    getData_addToPlaylist: async function () {
+        await logger.logInto(stackTrace.get());
         var obj;
         obj = {
-            listOfPlaylist: this.listOfPlaylist_Data(),
+            listOfPlaylist: await this.listOfPlaylist_Data(),
         }
         return obj;
     },
 
-    listOfPlaylist_Data: function () {
-        logger.logInto(stackTrace.get());
+    listOfPlaylist_Data: async function () {
+        await logger.logInto(stackTrace.get());
         var i, list;
         var listOfPlaylist_Arr = [];
-        action.waitForDisplayed(this.listOfPlaylist);
-        list = action.findElements(this.listOfPlaylist);
+        await action.waitForDisplayed(this.listOfPlaylist);
+        list = await action.findElements(this.listOfPlaylist);
         for (i = 0; i < list.length; i++) {
-            listOfPlaylist_Arr[i] = action.getText(list[i])
+            listOfPlaylist_Arr[i] = await action.getText(list[i])
         }
-        logger.logInto(stackTrace.get(), listOfPlaylist_Arr);
+        await logger.logInto(stackTrace.get(), listOfPlaylist_Arr);
         return listOfPlaylist_Arr;
     },
 
-    getData_searchList: function () {
-        logger.logInto(stackTrace.get());
+    getData_searchList: async function () {
+        await logger.logInto(stackTrace.get());
         var obj;
         obj = {
-            searchList: this.searchList_Data(),
-            showMoreResults: (action.getElementCount(this.showMoreResults) > 0) ? action.getText(this.showMoreResults) : null,
-            noResultListItemTitle: (action.getElementCount(this.noResultListItemTitle) > 0) ? action.getText(this.noResultListItemTitle) : null,
-            noResultListItemSubtitle: (action.getElementCount(this.noResultListItemSubtitle) > 0) ? action.getText(this.noResultListItemSubtitle) : null,
+            searchList: await this.searchList_Data(),
+            showMoreResults: ((await action.getElementCount(this.showMoreResults)) > 0) ? await action.getText(this.showMoreResults) : null,
+            noResultListItemTitle: ((await action.getElementCount(this.noResultListItemTitle)) > 0) ? await action.getText(this.noResultListItemTitle) : null,
+            noResultListItemSubtitle: ((await action.getElementCount(this.noResultListItemSubtitle)) > 0) ? await action.getText(this.noResultListItemSubtitle) : null,
         }
         return obj;
     },
 
-    searchList_Data: function () {
-        logger.logInto(stackTrace.get());
+    searchList_Data: async function () {
+        await logger.logInto(stackTrace.get());
         var i, list;
         var searchList_Arr = [];
-        list = action.findElements(this.searchList);
+        list = await action.findElements(this.searchList);
         for (i = 0; i < list.length; i++) {
-            searchList_Arr[i] = action.getText(list[i])
+            searchList_Arr[i] = await action.getText(list[i])
         }
-        logger.logInto(stackTrace.get(), searchList_Arr);
+        await logger.logInto(stackTrace.get(), searchList_Arr);
         return searchList_Arr;
     },
 
-    getData_searchNoResults: function () {
-        logger.logInto(stackTrace.get());
+    getData_searchNoResults: async function () {
+        await logger.logInto(stackTrace.get());
         var obj;
         obj = {
-            search_NoResult_img: (action.getElementCount(this.search_NoResult_img) > 0) ? action.waitForDisplayed(this.search_NoResult_img) : false,
-            search_NoResult_title: (action.getElementCount(this.search_NoResult_title) > 0) ? action.getText(this.search_NoResult_title) : null,
-            search_NoResult_subTitle: (action.getElementCount(this.search_NoResult_subTitle) > 0) ? action.getText(this.search_NoResult_subTitle) : null,
+            search_NoResult_img: ((await action.getElementCount(this.search_NoResult_img)) > 0) ? await action.waitForDisplayed(this.search_NoResult_img) : false,
+            search_NoResult_title: ((await action.getElementCount(this.search_NoResult_title)) > 0) ? await action.getText(this.search_NoResult_title) : null,
+            search_NoResult_subTitle: ((await action.getElementCount(this.search_NoResult_subTitle)) > 0) ? await action.getText(this.search_NoResult_subTitle) : null,
         }
         return obj;
     },
 
-    getData_filterMenu: function () {
-        logger.logInto(stackTrace.get());
+    getData_filterMenu: async function () {
+        await logger.logInto(stackTrace.get());
         var obj;
         obj = {
-            filterMenuTitle: (action.getElementCount(this.filterMenuTitle) > 0) ? action.getText(this.filterMenuTitle) : null,
-            filterMenuCloseBtn: (action.getElementCount(this.filterMenuCloseBtn) > 0) ? action.getText(this.filterMenuCloseBtn) : null,
-            filterMenuFilterCount: (action.getElementCount(this.filterMenuFilterCount) > 0) ? action.getText(this.filterMenuFilterCount) : null,
-            filterMenuClearAllBtn: (action.getElementCount(this.filterMenuClearAllBtn) > 0) ? action.getText(this.filterMenuClearAllBtn) : null,
-            filterMenuApplyBtn: (action.getElementCount(this.filterMenuApplyBtn) > 0) ? action.getText(this.filterMenuApplyBtn) : null,
+            filterMenuTitle: ((await action.getElementCount(this.filterMenuTitle)) > 0) ? await action.getText(this.filterMenuTitle) : null,
+            filterMenuCloseBtn: ((await action.getElementCount(this.filterMenuCloseBtn)) > 0) ? await action.getText(this.filterMenuCloseBtn) : null,
+            filterMenuFilterCount: ((await action.getElementCount(this.filterMenuFilterCount)) > 0) ? await action.getText(this.filterMenuFilterCount) : null,
+            filterMenuClearAllBtn: ((await action.getElementCount(this.filterMenuClearAllBtn)) > 0) ? await action.getText(this.filterMenuClearAllBtn) : null,
+            filterMenuApplyBtn: ((await action.getElementCount(this.filterMenuApplyBtn)) > 0) ? await action.getText(this.filterMenuApplyBtn) : null,
         }
         return obj;
     },
 
-    click_filtersBtn: function () {
-        logger.logInto(stackTrace.get());
+    click_filtersBtn: async function () {
+        await logger.logInto(stackTrace.get());
         var res;
-        res = action.click(this.filtersBtn);
+        res = await action.click(this.filtersBtn);
         if (true == res) {
-            logger.logInto(stackTrace.get(), " filtersBtn is clicked");
-            res = this.getData_filterMenu();
+            await logger.logInto(stackTrace.get(), " filtersBtn is clicked");
+            res = await this.getData_filterMenu();
         }
         else {
-            logger.logInto(stackTrace.get(), res + "filtersBtn is NOT clicked", 'error');
+            await logger.logInto(stackTrace.get(), res + "filtersBtn is NOT clicked", 'error');
         }
         return res;
     },
 
-    click_previousPageArrow: function () {
-        logger.logInto(stackTrace.get());
+    click_previousPageArrow: async function () {
+        await logger.logInto(stackTrace.get());
         var res;
-        res = action.click(this.previousPageArrow);
+        res = await action.click(this.previousPageArrow);
         if (true == res) {
-            logger.logInto(stackTrace.get(), " previousPageArrow is clicked");
-            res = this.getData_browsePage();
+            await logger.logInto(stackTrace.get(), " previousPageArrow is clicked");
+            res = await this.getData_browsePage();
         }
         else {
-            logger.logInto(stackTrace.get(), res + "previousPageArrow is NOT clicked", 'error');
+            await logger.logInto(stackTrace.get(), res + "previousPageArrow is NOT clicked", 'error');
         }
         return res;
     },
 
-    click_nextPageArrow: function () {
-        logger.logInto(stackTrace.get());
+    click_nextPageArrow: async function () {
+        await logger.logInto(stackTrace.get());
         var res;
-        res = action.click(this.nextPageArrow);
+        res = await action.click(this.nextPageArrow);
         if (true == res) {
-            logger.logInto(stackTrace.get(), " nextPageArrow is clicked");
-            res = this.getData_browsePage();
+            await logger.logInto(stackTrace.get(), " nextPageArrow is clicked");
+            res = await this.getData_browsePage();
         }
         else {
-            logger.logInto(stackTrace.get(), res + "nextPageArrow is NOT clicked", 'error');
+            await logger.logInto(stackTrace.get(), res + "nextPageArrow is NOT clicked", 'error');
         }
         return res;
     },
 
-    click_viewAllBtn: function (resourceCategoryName) {
-        logger.logInto(stackTrace.get());
+    click_viewAllBtn: async function (resourceCategoryName) {
+        await logger.logInto(stackTrace.get());
         var i, res;
-        var resourceCategory = action.findElements(this.resourceCategory);
-        var viewAllBtn = action.findElements(this.viewAllBtn);
+        var resourceCategory = await action.findElements(this.resourceCategory);
+        var viewAllBtn = await action.findElements(this.viewAllBtn);
         for (i = 0; i < resourceCategory.length; i++) {
-            if ((action.getText(resourceCategory[i])) == resourceCategoryName) {
-                res = action.click(viewAllBtn[i]);
+            if (((await action.getText(resourceCategory[i]))) == resourceCategoryName) {
+                res = await action.click(viewAllBtn[i]);
                 break;
             }
         }
         if (res == true) {
-            logger.logInto(stackTrace.get(), " --viewAllBtn clicked");
-            res = this.getData_resourceCategory();
+            await logger.logInto(stackTrace.get(), " --viewAllBtn clicked");
+            res = await this.getData_resourceCategory();
         }
         else
-            logger.logInto(stackTrace.get(), " --viewAllBtn NOT clicked", "error")
+            await logger.logInto(stackTrace.get(), " --viewAllBtn NOT clicked", "error")
         return res;
     },
 
-    click_cardImage: function (cardTitleName) {
-        logger.logInto(stackTrace.get());
+    click_cardImage: async function (cardTitleName) {
+        await logger.logInto(stackTrace.get());
         var i, list, res;
-        list = this.getResourceIndex();
+        list = await this.getResourceIndex();
         for (i = 0; i < list.length; i++) {
-            if ((action.getText(this.cardTitle + list[i])) == cardTitleName) {
-                res = action.click(this.cardImage + list[i]);
+            if (((await action.getText(this.cardTitle + list[i]))) == cardTitleName) {
+                res = await action.click(this.cardImage + list[i]);
                 break;
             }
         }
         if (res == true) {
-            logger.logInto(stackTrace.get(), " --cardImage clicked");
-            res = require('./activityPlayer.page').isInitialized();
+            await logger.logInto(stackTrace.get(), " --cardImage clicked");
+            res = await require('./activityPlayer.page').isInitialized();
         }
         else
-            logger.logInto(stackTrace.get(), " --cardImage NOT clicked", "error")
+            await logger.logInto(stackTrace.get(), " --cardImage NOT clicked", "error")
         return res;
     },
 
-    click_moreOptionsBtn: function (cardTitleName) {
-        logger.logInto(stackTrace.get());
-        action.waitForDisplayed(this.cardSkeleton, undefined, true); //manually edited
+    click_moreOptionsBtn: async function (cardTitleName) {
+        await logger.logInto(stackTrace.get());
+        await action.waitForDisplayed(this.cardSkeleton, undefined, true); //manually edited
         var i, list, res;
-        list = this.getResourceIndex();
+        list = await this.getResourceIndex();
         for (i = 0; i < list.length; i++) {
-            if ((action.getText(this.cardTitle + list[i])) == cardTitleName) {
-                res = action.click(this.moreOptionsBtn + list[i]);
-                action.waitForDisplayed(action.parentElement(this.viewOption));
+            if (((await action.getText(this.cardTitle + list[i]))) == cardTitleName) {
+                res = await action.click(this.moreOptionsBtn + list[i]);
+                await action.waitForDisplayed(action.parentElement(this.viewOption));
                 break;
             }
         }
         if (res == true) {
-            logger.logInto(stackTrace.get(), " --moreOptionsBtn clicked");
-            res = this.getData_moreOptions();
+            await logger.logInto(stackTrace.get(), " --moreOptionsBtn clicked");
+            res = await this.getData_moreOptions();
         }
         else
-            logger.logInto(stackTrace.get(), " --moreOptionsBtn NOT clicked", "error")
+            await logger.logInto(stackTrace.get(), " --moreOptionsBtn NOT clicked", "error")
         return res;
     },
 
-    click_viewOption: function () {
-        logger.logInto(stackTrace.get());
+    click_viewOption: async function () {
+        await logger.logInto(stackTrace.get());
         var res;
-        res = action.click(this.viewOption);
+        res = await action.click(this.viewOption);
         if (true == res) {
-            logger.logInto(stackTrace.get(), " viewOption is clicked");
-            res = require('./activityPlayer.page').isInitialized();
+            await logger.logInto(stackTrace.get(), " viewOption is clicked");
+            res = await require('./activityPlayer.page').isInitialized();
         }
         else {
-            logger.logInto(stackTrace.get(), res + "viewOption is NOT clicked", 'error');
+            await logger.logInto(stackTrace.get(), res + "viewOption is NOT clicked", 'error');
         }
         return res;
     },
 
-    click_addToPlaylistOption: function () {
-        logger.logInto(stackTrace.get());
+    click_addToPlaylistOption: async function () {
+        await logger.logInto(stackTrace.get());
         var res;
-        res = action.click(this.addToPlaylistOption);
+        res = await action.click(this.addToPlaylistOption);
         if (true == res) {
-            logger.logInto(stackTrace.get(), " addToPlaylistOption is clicked");
-            res = this.getData_addToPlaylist();
+            await logger.logInto(stackTrace.get(), " addToPlaylistOption is clicked");
+            res = await this.getData_addToPlaylist();
         }
         else {
-            logger.logInto(stackTrace.get(), res + "addToPlaylistOption is NOT clicked", 'error');
+            await logger.logInto(stackTrace.get(), res + "addToPlaylistOption is NOT clicked", 'error');
         }
         return res;
     },
 
-    click_shareOption: function () {
-        logger.logInto(stackTrace.get());
+    click_shareOption: async function () {
+        await logger.logInto(stackTrace.get());
         var res;
-        res = action.click(this.shareOption);
+        res = await action.click(this.shareOption);
         if (true == res) {
-            logger.logInto(stackTrace.get(), " shareOption is clicked");
+            await logger.logInto(stackTrace.get(), " shareOption is clicked");
         }
         else {
-            logger.logInto(stackTrace.get(), res + "shareOption is NOT clicked", 'error');
+            await logger.logInto(stackTrace.get(), res + "shareOption is NOT clicked", 'error');
         }
         return res;
     },
 
-    click_bookImage: function (bookTitleName) {
-        logger.logInto(stackTrace.get());
+    click_bookImage: async function (bookTitleName) {
+        await logger.logInto(stackTrace.get());
         var i, list, res;
-        list = action.findElements(this.bookImage);
+        list = await action.findElements(this.bookImage);
         for (i = 0; i < list.length; i++) {
-            if ((action.getText(this.bookTitle + i + "]")) == bookTitleName) {
-                res = action.click(list[i]);
+            if (((await action.getText(this.bookTitle + i + "]"))) == bookTitleName) {
+                res = await action.click(list[i]);
                 break;
             }
         }
         if (res == true) {
-            logger.logInto(stackTrace.get(), " --bookImage clicked");
-            res = require('./viewBook.page').isInitialized();
+            await logger.logInto(stackTrace.get(), " --bookImage clicked");
+            res = await require('./viewBook.page').isInitialized();
         }
         else
-            logger.logInto(stackTrace.get(), " --bookImage NOT clicked", "error")
+            await logger.logInto(stackTrace.get(), " --bookImage NOT clicked", "error")
         return res;
     },
 
-    click_viewBtn: function (bookTitleName) {
-        logger.logInto(stackTrace.get());
+    click_viewBtn: async function (bookTitleName) {
+        await logger.logInto(stackTrace.get());
         var i, list, res;
-        list = action.findElements(this.viewBtn);
+        list = await action.findElements(this.viewBtn);
         for (i = 0; i < list.length; i++) {
-            if ((action.getText(this.bookTitle + i + "]")) == bookTitleName) {
-                res = action.click(list[i]);
+            if (((await action.getText(this.bookTitle + i + "]"))) == bookTitleName) {
+                res = await action.click(list[i]);
                 break;
             }
         }
         if (res == true) {
-            logger.logInto(stackTrace.get(), " --viewBtn clicked");
-            res = require('./viewBook.page').isInitialized();
+            await logger.logInto(stackTrace.get(), " --viewBtn clicked");
+            res = await require('./viewBook.page').isInitialized();
         }
         else
-            logger.logInto(stackTrace.get(), " --viewBtn NOT clicked", "error")
+            await logger.logInto(stackTrace.get(), " --viewBtn NOT clicked", "error")
         return res;
     },
 
-    click_addBookBtn: function (bookTitleName) {
-        logger.logInto(stackTrace.get());
+    click_addBookBtn: async function (bookTitleName) {
+        await logger.logInto(stackTrace.get());
         var i, list, res;
-        list = action.findElements(this.addBookBtn);
+        list = await action.findElements(this.addBookBtn);
         for (i = 0; i < list.length; i++) {
-            if ((action.getText(this.bookTitle + i + "]")) == bookTitleName) {
-                res = action.click(list[i]);
+            if (((await action.getText(this.bookTitle + i + "]"))) == bookTitleName) {
+                res = await action.click(list[i]);
                 break;
             }
         }
         if (res == true) {
-            logger.logInto(stackTrace.get(), " --addBookBtn clicked");
-            res = action.waitForDisplayed(this.addedIcon + i + "]");
+            await logger.logInto(stackTrace.get(), " --addBookBtn clicked");
+            res = await action.waitForDisplayed(this.addedIcon + i + "]");
         }
         else
-            logger.logInto(stackTrace.get(), " --addBookBtn NOT clicked", "error")
+            await logger.logInto(stackTrace.get(), " --addBookBtn NOT clicked", "error")
         return res;
     },
 
-    click_bookMoreOptionsBtn: function (bookTitleName) {
-        logger.logInto(stackTrace.get());
+    click_bookMoreOptionsBtn: async function (bookTitleName) {
+        await logger.logInto(stackTrace.get());
         var i, list, res;
-        list = action.findElements(this.bookMoreOptionsBtn);
+        list = await action.findElements(this.bookMoreOptionsBtn);
         for (i = 0; i < list.length; i++) {
-            if ((action.getText(this.bookTitle + i + "]")) == bookTitleName) {
-                res = action.click(list[i]);
+            if (((await action.getText(this.bookTitle + i + "]"))) == bookTitleName) {
+                res = await action.click(list[i]);
                 break;
             }
         }
         if (res == true) {
-            logger.logInto(stackTrace.get(), " --bookMoreOptionsBtn clicked");
-            res = this.getData_bookMoreOptions();
+            await logger.logInto(stackTrace.get(), " --bookMoreOptionsBtn clicked");
+            res = await this.getData_bookMoreOptions();
         }
         else
-            logger.logInto(stackTrace.get(), " --bookMoreOptionsBtn NOT clicked", "error")
+            await logger.logInto(stackTrace.get(), " --bookMoreOptionsBtn NOT clicked", "error")
         return res;
     },
 
-    click_viewClassOption: function () {
-        logger.logInto(stackTrace.get());
+    click_viewClassOption: async function () {
+        await logger.logInto(stackTrace.get());
         var res;
-        res = action.click(this.viewClassOption);
+        res = await action.click(this.viewClassOption);
         if (true == res) {
-            logger.logInto(stackTrace.get(), " viewClassOption is clicked");
-            res = require('./classDrawer.page').isInitialized();
+            await logger.logInto(stackTrace.get(), " viewClassOption is clicked");
+            res = await require('./classDrawer.page').isInitialized();
         }
         else {
-            logger.logInto(stackTrace.get(), res + "viewClassOption is NOT clicked", 'error');
+            await logger.logInto(stackTrace.get(), res + "viewClassOption is NOT clicked", 'error');
         }
         return res;
     },
 
-    click_createNewClassOption: function () {
-        logger.logInto(stackTrace.get());
+    click_createNewClassOption: async function () {
+        await logger.logInto(stackTrace.get());
         var res;
-        res = action.click(this.createNewClassOption);
+        res = await action.click(this.createNewClassOption);
         if (true == res) {
-            logger.logInto(stackTrace.get(), " createNewClassOption is clicked");
-            res = require('./createClass.page').isInitialized();
+            await logger.logInto(stackTrace.get(), " createNewClassOption is clicked");
+            res = await require('./createClass.page').isInitialized();
         }
         else {
-            logger.logInto(stackTrace.get(), res + "createNewClassOption is NOT clicked", 'error');
+            await logger.logInto(stackTrace.get(), res + "createNewClassOption is NOT clicked", 'error');
         }
         return res;
     },
 
-    click_addToMyBooksOption: function () {
-        logger.logInto(stackTrace.get());
+    click_addToMyBooksOption: async function () {
+        await logger.logInto(stackTrace.get());
         var res;
-        res = action.click(this.addToMyBooksOption);
+        res = await action.click(this.addToMyBooksOption);
         if (true == res) {
-            logger.logInto(stackTrace.get(), " addToMyBooksOption is clicked");
-            res = action.waitForDisplayed(this.addToMyBooksOption, undefined, true);
+            await logger.logInto(stackTrace.get(), " addToMyBooksOption is clicked");
+            res = await action.waitForDisplayed(this.addToMyBooksOption, undefined, true);
         }
         else {
-            logger.logInto(stackTrace.get(), res + "addToMyBooksOption is NOT clicked", 'error');
+            await logger.logInto(stackTrace.get(), res + "addToMyBooksOption is NOT clicked", 'error');
         }
         return res;
     },
 
-    click_removeFromMyBooksOption: function () {
-        logger.logInto(stackTrace.get());
+    click_removeFromMyBooksOption: async function () {
+        await logger.logInto(stackTrace.get());
         var res;
-        res = action.click(this.removeFromMyBooksOption);
+        res = await action.click(this.removeFromMyBooksOption);
         if (true == res) {
-            logger.logInto(stackTrace.get(), " removeFromMyBooksOption is clicked");
-            res = require('./dashboard.page').getData_removeBookDialog();
+            await logger.logInto(stackTrace.get(), " removeFromMyBooksOption is clicked");
+            res = await require('./dashboard.page').getData_removeBookDialog();
         }
         else {
-            logger.logInto(stackTrace.get(), res + "removeFromMyBooksOption is NOT clicked", 'error');
+            await logger.logInto(stackTrace.get(), res + "removeFromMyBooksOption is NOT clicked", 'error');
         }
         return res;
     },
 
-    click_openFlipbookOption: function () {
-        logger.logInto(stackTrace.get());
+    click_openFlipbookOption: async function () {
+        await logger.logInto(stackTrace.get());
         var res;
-        res = action.click(this.openFlipbookOption);
+        res = await action.click(this.openFlipbookOption);
         if (true == res) {
-            logger.logInto(stackTrace.get(), " openFlipbookOption is clicked");
-            res = require('./flipbook.page').isInitialized();
+            await logger.logInto(stackTrace.get(), " openFlipbookOption is clicked");
+            res = await require('./flipbook.page').isInitialized();
         }
         else {
-            logger.logInto(stackTrace.get(), res + "openFlipbookOption is NOT clicked", 'error');
+            await logger.logInto(stackTrace.get(), res + "openFlipbookOption is NOT clicked", 'error');
         }
         return res;
     },
 
-    click_listOfPlaylist: function (listOfPlaylistName) {
-        logger.logInto(stackTrace.get());
+    click_listOfPlaylist: async function (listOfPlaylistName) {
+        await logger.logInto(stackTrace.get());
         var i, list, res;
-        list = action.findElements(this.listOfPlaylist);
+        list = await action.findElements(this.listOfPlaylist);
         for (i = 0; i < list.length; i++) {
-            if ((action.getText(list[i])) == listOfPlaylistName) {
-                res = action.click(list[i]);
+            if (((await action.getText(list[i]))) == listOfPlaylistName) {
+                res = await action.click(list[i]);
                 break;
             }
         }
         if (res == true) {
-            logger.logInto(stackTrace.get(), " --listOfPlaylist clicked");
+            await logger.logInto(stackTrace.get(), " --listOfPlaylist clicked");
         }
         else
-            logger.logInto(stackTrace.get(), " --listOfPlaylist NOT clicked", "error")
+            await logger.logInto(stackTrace.get(), " --listOfPlaylist NOT clicked", "error")
         return res;
     },
 
-    click_searchList: function (searchListName) {
-        logger.logInto(stackTrace.get());
+    click_searchList: async function (searchListName) {
+        await logger.logInto(stackTrace.get());
         var i, list, res;
-        list = action.findElements(this.searchList);
+        list = await action.findElements(this.searchList);
         for (i = 0; i < list.length; i++) {
-            if ((action.getText(list[i])) == searchListName) {
-                res = action.click(list[i]);
+            if (((await action.getText(list[i]))) == searchListName) {
+                res = await action.click(list[i]);
                 break;
             }
         }
         if (res == true) {
-            logger.logInto(stackTrace.get(), " --searchList clicked");
-            res = action.waitForDocumentLoad();
+            await logger.logInto(stackTrace.get(), " --searchList clicked");
+            res = await action.waitForDocumentLoad();
         }
         else
-            logger.logInto(stackTrace.get(), " --searchList NOT clicked", "error")
+            await logger.logInto(stackTrace.get(), " --searchList NOT clicked", "error")
         return res;
     },
 
-    click_showMoreResults: function () {
-        logger.logInto(stackTrace.get());
+    click_showMoreResults: async function () {
+        await logger.logInto(stackTrace.get());
         var res;
-        res = action.click(this.showMoreResults);
+        res = await action.click(this.showMoreResults);
         if (true == res) {
-            logger.logInto(stackTrace.get(), " showMoreResults is clicked");
-            res = this.getData_browsePage();
+            await logger.logInto(stackTrace.get(), " showMoreResults is clicked");
+            res = await this.getData_browsePage();
         }
         else {
-            logger.logInto(stackTrace.get(), res + "showMoreResults is NOT clicked", 'error');
+            await logger.logInto(stackTrace.get(), res + "showMoreResults is NOT clicked", 'error');
         }
         return res;
     },
 
-    click_clearSearch: function () {
-        logger.logInto(stackTrace.get());
+    click_clearSearch: async function () {
+        await logger.logInto(stackTrace.get());
         var res;
-        res = action.click(this.clearSearch);
+        res = await action.click(this.clearSearch);
         if (true == res) {
-            logger.logInto(stackTrace.get(), " clearSearch is clicked");
-            res = this.getData_browsePage();
+            await logger.logInto(stackTrace.get(), " clearSearch is clicked");
+            res = await this.getData_browsePage();
         }
         else {
-            logger.logInto(stackTrace.get(), res + "clearSearch is NOT clicked", 'error');
+            await logger.logInto(stackTrace.get(), res + "clearSearch is NOT clicked", 'error');
         }
         return res;
     },
 
-    click_closeSearchPill: function () {
-        logger.logInto(stackTrace.get());
+    click_closeSearchPill: async function () {
+        await logger.logInto(stackTrace.get());
         var res;
-        res = action.click(this.closeSearchPill);
+        res = await action.click(this.closeSearchPill);
         if (true == res) {
-            logger.logInto(stackTrace.get(), " closeSearchPill is clicked");
-            res = this.getData_browsePage();
+            await logger.logInto(stackTrace.get(), " closeSearchPill is clicked");
+            res = await this.getData_browsePage();
         }
         else {
-            logger.logInto(stackTrace.get(), res + "closeSearchPill is NOT clicked", 'error');
+            await logger.logInto(stackTrace.get(), res + "closeSearchPill is NOT clicked", 'error');
         }
         return res;
     },
 
-    click_goToPage: function (num) { //manual edit
-        logger.logInto(stackTrace.get());
+    click_goToPage: async function (num) { //manual edit
+        await logger.logInto(stackTrace.get());
         var res;
-        res = action.click(this.goToPage + num);
+        res = await action.click(this.goToPage + num);
         if (true == res) {
-            logger.logInto(stackTrace.get(), " goToPage is clicked");
-            res = this.getData_browsePage();
+            await logger.logInto(stackTrace.get(), " goToPage is clicked");
+            res = await this.getData_browsePage();
         }
         else {
-            logger.logInto(stackTrace.get(), res + "goToPage is NOT clicked", 'error');
+            await logger.logInto(stackTrace.get(), res + "goToPage is NOT clicked", 'error');
         }
         return res;
     },
 
-    click_filterMenuCloseBtn: function () {
-        logger.logInto(stackTrace.get());
+    click_filterMenuCloseBtn: async function () {
+        await logger.logInto(stackTrace.get());
         var res;
-        res = action.click(this.filterMenuCloseBtn);
+        res = await action.click(this.filterMenuCloseBtn);
         if (true == res) {
-            logger.logInto(stackTrace.get(), " filterMenuCloseBtn is clicked");
-            res = action.waitForDisplayed(this.filterMenuCloseBtn, undefined, true);
+            await logger.logInto(stackTrace.get(), " filterMenuCloseBtn is clicked");
+            res = await action.waitForDisplayed(this.filterMenuCloseBtn, undefined, true);
         }
         else {
-            logger.logInto(stackTrace.get(), res + "filterMenuCloseBtn is NOT clicked", 'error');
+            await logger.logInto(stackTrace.get(), res + "filterMenuCloseBtn is NOT clicked", 'error');
         }
         return res;
     },
 
-    click_filterMenuClearAllBtn: function () {
-        logger.logInto(stackTrace.get());
+    click_filterMenuClearAllBtn: async function () {
+        await logger.logInto(stackTrace.get());
         var res;
-        res = action.click(this.filterMenuClearAllBtn);
+        res = await action.click(this.filterMenuClearAllBtn);
         if (true == res) {
-            logger.logInto(stackTrace.get(), " filterMenuClearAllBtn is clicked");
+            await logger.logInto(stackTrace.get(), " filterMenuClearAllBtn is clicked");
         }
         else {
-            logger.logInto(stackTrace.get(), res + "filterMenuClearAllBtn is NOT clicked", 'error');
+            await logger.logInto(stackTrace.get(), res + "filterMenuClearAllBtn is NOT clicked", 'error');
         }
         return res;
     },
 
-    click_filterMenuApplyBtn: function () {
-        logger.logInto(stackTrace.get());
+    click_filterMenuApplyBtn: async function () {
+        await logger.logInto(stackTrace.get());
         var res;
-        res = action.click(this.filterMenuApplyBtn);
+        res = await action.click(this.filterMenuApplyBtn);
         if (true == res) {
-            logger.logInto(stackTrace.get(), " filterMenuApplyBtn is clicked");
+            await logger.logInto(stackTrace.get(), " filterMenuApplyBtn is clicked");
         }
         else {
-            logger.logInto(stackTrace.get(), res + "filterMenuApplyBtn is NOT clicked", 'error');
+            await logger.logInto(stackTrace.get(), res + "filterMenuApplyBtn is NOT clicked", 'error');
         }
         return res;
     },
 
-    set_searchBox: function (value) {
+    set_searchBox: async function (value) {
         var res;
-        logger.logInto(stackTrace.get());
-        res = action.setValue(this.searchBox, value);
+        await logger.logInto(stackTrace.get());
+        res = await action.setValue(this.searchBox, value);
         if (true == res) {
-            logger.logInto(stackTrace.get(), "Value is entered in searchBox");
+            await logger.logInto(stackTrace.get(), "Value is entered in searchBox");
         } else {
-            logger.logInto(stackTrace.get(), res + "Value is NOT entered in searchBox", 'error');
+            await logger.logInto(stackTrace.get(), res + "Value is NOT entered in searchBox", 'error');
         }
         return res;
     },
 
-    click_removeBook_cancelBtn: function () { //manual edit
-        logger.logInto(stackTrace.get());
+    click_removeBook_cancelBtn: async function () { //manual edit
+        await logger.logInto(stackTrace.get());
         return require('./dashboard.page').click_removeBook_cancelBtn();
       },
     
-      click_removeBook_removeBtn: function () { //manual edit
-        logger.logInto(stackTrace.get());
+      click_removeBook_removeBtn: async function () { //manual edit
+        await logger.logInto(stackTrace.get());
         return require('./dashboard.page').click_removeBook_removeBtn();
       },
 
-    pressEnter: function () { //manual edit
-        logger.logInto(stackTrace.get());
-        var res = action.keyPress('Enter')
+    pressEnter: async function () { //manual edit
+        await logger.logInto(stackTrace.get());
+        var res = await action.keyPress('Enter')
         if (res == true) {
-            logger.logInto(stackTrace.get(), " -- Enter key pressed");
-            res = this.getData_browsePage();
+            await logger.logInto(stackTrace.get(), " -- Enter key pressed");
+            res = await this.getData_browsePage();
         } else
-            logger.logInto(stackTrace.get(), res + " -- Enter key not pressed");
+            await logger.logInto(stackTrace.get(), res + " -- Enter key not pressed");
         return res;
 
     },
 
-    getResourceIndex: function () { //manual edit
-        logger.logInto(stackTrace.get());
-        var cardTitle = action.findElements(this.cardTitle);
+    getResourceIndex: async function () { //manual edit
+        await logger.logInto(stackTrace.get());
+        var cardTitle = await action.findElements(this.cardTitle);
         var rIndex = [], res;
         if (cardTitle.length > 0) {
             for (var i = 0; i < cardTitle.length; i++) {
-                res = action.getAttribute(cardTitle[i], "data-tid");
+                res = await action.getAttribute(cardTitle[i], "data-tid");
                 res = res.split('-');
                 rIndex[i] = res[2];
             }

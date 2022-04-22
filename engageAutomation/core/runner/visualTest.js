@@ -58,37 +58,42 @@ module.exports = {
             passed: visualPassedTc,
             failed: visualFailedTc
         }
-        logDataobj.appVersion = global.appVersion;
+logDataobj.appVersion = global.appVersion;
         let filePath = rootDir + '/' + global.reportOutputDir + '/visual/' + testExecFile.split(".")[0] + '-visualReport-' + startTime + '.log';
         fs.openSync(filePath, 'w');
         fs.writeFileSync(filePath, JSON.stringify(logDataobj));
     },
 
     //generate Screenshots and logs for Visual test for Novus
-    generateScreenshotsAndLogs: function (testObj, suiteIndex, testIndex, Arr, count) {
+    generateScreenshotsAndLogs: async function (testObj, suiteIndex, testIndex, Arr, count) {
+
         global.suiteKey = suiteIndex;
         global.tcNumber = parseInt(testIndex) + 1;
         global.tcId = testObj.id;
         var hideElements = [];
         // find all the elements to be hide while taking screenshots
-        Object.keys(hideSelectors).forEach(function (selector) {
-            hideElements[selector] = action.findElements(hideSelectors[selector]);
-        })
+        let codemod_placeholder_6971 = Object.keys(hideSelectors);
+
+        for (const selector of codemod_placeholder_6971) {
+            hideElements[selector] = await action.findElements(hideSelectors[selector]);
+        };
         var excludeElements = [];
         // find all the elements to be hide while taking screenshots
-        Object.keys(excludeSelectors).forEach(function (selector) {
-            excludeElements[selector] = action.findElements(excludeSelectors[selector]);
-        })
-        //console.log(" Mismatch Percentage for " + execJsonData[suiteIndex].Test[testIndex].id + " = " + result[0].misMatchPercentage);
-        var result = browser.checkDocument({ exclude: excludeElements, hide: hideElements, misMatchTolerance: testObj.visualTolerance, fuzzLevel: testObj.visualTolerance });
+        let codemod_placeholder_2646 = Object.keys(excludeSelectors);
 
-        browser.call(() =>
+        for (const selector of codemod_placeholder_2646) {
+            excludeElements[selector] = await action.findElements(await excludeSelectors[selector]);
+        };
+        //console.log(" Mismatch Percentage for " + execJsonData[suiteIndex].Test[testIndex].id + " = " + result[0].misMatchPercentage);
+        var result = await browser.checkDocument({ exclude: excludeElements, hide: hideElements, misMatchTolerance: testObj.visualTolerance, fuzzLevel: testObj.visualTolerance });
+
+        await browser.call(() =>
             mergeImg.combineImages(
                 [path.join(rootDir, labelsDir, '/baselineLbl.png'),
                 path.join(rootDir, global.baseScreenshotDir, global.testFileName, global.screenshotName)],
                 path.join(rootDir, global.reportOutputDir, '/visual/baseline-' + global.screenshotName), 'row'));
 
-        browser.call(() =>
+        await browser.call(() =>
             mergeImg.combineImages(
                 [path.join(rootDir, labelsDir, '/testLbl.png'),
                 path.join(rootDir, global.testScreenshotDir, global.testFileName, global.screenshotName)],
@@ -104,7 +109,7 @@ module.exports = {
         else {
             Arr[count].tests[testIndex].state = "failed";
             Arr[count].tests[testIndex].screenshots = [rootDir + global.reportOutputDir + '/visual/baseline-' + global.screenshotName, rootDir + global.reportOutputDir + '/visual/test-' + global.screenshotName, rootDir + global.reportOutputDir + '/visual/diff-' + global.screenshotName];
-            browser.call(() =>
+            await browser.call(() =>
                 mergeImg.combineImages(
                     [path.join(rootDir, labelsDir, '/diffLbl.png'),
                     path.join(rootDir, global.diffScreenshotDir, global.testFileName, global.screenshotName)],
@@ -113,7 +118,7 @@ module.exports = {
 
         // merge condition for mobile mode
         if (result[0].isWithinMisMatchTolerance == true && global.view == 'mobile') {
-            browser.call(() =>
+            await browser.call(() =>
                 mergeImg.combineImages(
                     [path.join(rootDir, global.reportOutputDir, '/visual/baseline-' + global.screenshotName),
                     path.join(rootDir, global.reportOutputDir, '/visual/test-' + global.screenshotName)],
@@ -121,7 +126,7 @@ module.exports = {
             Arr[count].tests[testIndex].screenshots = [rootDir + global.reportOutputDir + '/visual/merge-' + global.screenshotName];
         }
         else if (result[0].isWithinMisMatchTolerance == false && global.view == 'mobile') {
-            browser.call(() =>
+            await browser.call(() =>
                 mergeImg.combineImages(
                     [path.join(rootDir, global.reportOutputDir, '/visual/baseline-' + global.screenshotName),
                     path.join(rootDir, global.reportOutputDir, '/visual/test-' + global.screenshotName),
@@ -133,35 +138,34 @@ module.exports = {
     },
 
     //take screenshot for Applitools
-    generateScreenshotsApplitools: function (testObj) {
-
+    generateScreenshotsApplitools: async function (testObj) {
         //Ignore Region Capabilty- Applitools
         if (testObj.visualTolerance) {
-            browser.call(() => eyes.check(testObj.id, Target.window().fully().ignoreRegions(By.css(testObj.visualTolerance))))
+            await browser.call(() => eyes.check(testObj.id, ((Target.window()).fully()).ignoreRegions(By.css(testObj.visualTolerance))))
         } else
             //Default screenshot capture- Applitools
-            browser.call(() => eyes.check(testObj.id, Target.window().fully()))
+            await browser.call(() => eyes.check(testObj.id, (Target.window()).fully()))
     },
 
     //setting params to initiate Applitools
-    initiateApplitools: function () {
+    initiateApplitools: async function () {
         console.log("applitools Initiated..")
-        eyes.setConfiguration(browser.config.eyes);
-        eyes.setMatchLevel(browser.config.eyes.matchLevel)
-        eyes.setStitchMode(browser.config.eyes.stitchMode);
-        eyes.setBatch(browser.config.eyes.batch);
+        await eyes.setConfiguration(browser.config.eyes);
+        await eyes.setMatchLevel(browser.config.eyes.matchLevel)
+        await eyes.setStitchMode(browser.config.eyes.stitchMode);
+        await eyes.setBatch(browser.config.eyes.batch);
         //eyes.setBaselineEnvName('MasterEnv');
-        eyes.setApiKey(browser.config.eyes.apiKey);
+        await eyes.setApiKey(browser.config.eyes.apiKey);
     },
 
     //open Applitools eyes
-    openApplitoolsEyes: function (suiteIndex, suiteName) {
-        browser.call(() =>
+    openApplitoolsEyes: async function (suiteIndex, suiteName) {
+        await browser.call(() =>
             eyes.open(browser, "Engage", suiteIndex + " - " + suiteName, { width: argv.windowWidth, height: argv.windowHeight }))
     },
 
     //closing Applitools Eyes
-    closeApplitoolsEyes: function () {
-        browser.call(() => eyes.close())
+    closeApplitoolsEyes: async function () {
+        await browser.call(() => eyes.close())
     }
 }

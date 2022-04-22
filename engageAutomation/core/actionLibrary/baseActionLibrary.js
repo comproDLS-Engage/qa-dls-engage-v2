@@ -7,121 +7,121 @@ var message;
 //base action
 module.exports = {
 
-    click: function (selector, options) {
+    click: async function (selector, options) {
         message = "element:" + selector;
         try {
-            this.scrollIntoView(selector, { block: "center" });
-            let result = $(selector).click(options);
+            await this.scrollIntoView(selector, { block: "center" });
+            let result = await $(selector).click(options);
             if (result == null) {
-                logger.logInto(stackTrace.get(), message);
+                await logger.logInto(stackTrace.get(), message);
                 return true;
             }
         } catch (err) {
-            logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(stackTrace.get(), err.message, "error");
             return err;
         }
     },
 
-    doubleClick: function (selector) {
+    doubleClick: async function (selector) {
         message = "element:" + selector;
         try {
-            $(selector).isClickable();
-            $(selector).doubleClick();
-            logger.logInto(stackTrace.get(), message);
+            await $(selector).isClickable();
+            await $(selector).doubleClick();
+            await logger.logInto(stackTrace.get(), message);
             return true;
         } catch (err) {
-            logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(stackTrace.get(), err.message, "error");
             return err;
         }
     },
 
-    isEnabled: function (selector) {
+    isEnabled: async function (selector) {
         message = "element:" + selector;
         try {
-            let result = $(selector).isEnabled();
-            logger.logInto(stackTrace.get(), message);
+            let result = await $(selector).isEnabled();
+            await logger.logInto(stackTrace.get(), message);
             return result;
         } catch (err) {
-            logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(stackTrace.get(), err.message, "error");
             return err;
         }
     },
 
-    isClickable: function (selector) {
+    isClickable: async function (selector) {
         try {
-            let result = $(selector).isClickable();
-            logger.logInto(stackTrace.get(), message);
+            let result = await $(selector).isClickable();
+            await logger.logInto(stackTrace.get(), message);
             return result;
         } catch (err) {
-            logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(stackTrace.get(), err.message, "error");
             return err;
         }
     },
 
-    isDisplayed: function (selector) {
+    isDisplayed: async function (selector) {
         try {
-            let result = $(selector).isDisplayed();
-            logger.logInto(stackTrace.get(), message);
+            let result = await $(selector).isDisplayed();
+            await logger.logInto(stackTrace.get(), message);
             return result;
         } catch (err) {
-            logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(stackTrace.get(), err.message, "error");
             return err;
         }
     },
 
-    setValue: function (selector, value) {
+    setValue: async function (selector, value) {
         message = "element:" + selector + " value:" + value;
         try {
-            this.clearValue(selector);
-            $(selector).setValue(value);
-            logger.logInto(stackTrace.get(), message);
+            await this.clearValue(selector);
+            await $(selector).setValue(value);
+            await logger.logInto(stackTrace.get(), message);
             return true;
         } catch (err) {
-            logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(stackTrace.get(), err.message, "error");
             return err;
         }
     },
 
-    addValue: function (selector, value) {
+    addValue: async function (selector, value) {
         message = "element:" + selector + "value:" + value;
         try {
-            let result = $(selector).addValue(value);
+            let result = await $(selector).addValue(value);
             if (result == null) {
-                logger.logInto(stackTrace.get(), message);
+                await logger.logInto(stackTrace.get(), message);
                 return true;
             }
         } catch (err) {
-            logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(stackTrace.get(), err.message, "error");
             return err;
         }
     },
 
-    getValue: function (selector) {
+    getValue: async function (selector) {
         message = "element:" + selector;
         try {
-            let result = $(selector).getValue();
+            let result = await $(selector).getValue();
             return result;
         } catch (err) {
-            logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(stackTrace.get(), err.message, "error");
             return err;
         }
     },
 
-    clearValueDefault: function (selector) {
+    clearValueDefault: async function (selector) {
         message = "element:" + selector + "value:";
         try {
-            let result = $(selector).clearValue();
+            let result = await $(selector).clearValue();
             return result;
         } catch (err) {
-            logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(stackTrace.get(), err.message, "error");
             return err;
         }
     },
     
-    clearValue: function (selector) {
+    clearValue: async function (selector) {
         message = "element:" + selector;
         try {
-            browser.execute((selector) => {
+            await browser.execute((selector) => {
                 var elem = document.querySelector(selector);
                 var event = new Event('input', { bubbles: true });
                 elem.value = null;
@@ -130,25 +130,25 @@ module.exports = {
             }, selector);
             return true;
         } catch (err) {
-            logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(stackTrace.get(), err.message, "error");
             return err;
         }
     },
 
-    moveTo: function (selector, xOffset, yOffset) { //this function needs to be enhanced to support offsets in percentages
+    moveTo: async function (selector, xOffset, yOffset) { //this async function needs to be enhanced to support offsets in percentages
         message = "element:" + selector + " xoffset:" + xOffset + " yoffset:" + yOffset;
         try {
-            $(selector).moveTo({ xOffset, yOffset });
-            logger.logInto(stackTrace.get(), message);
+            await $(selector).moveTo({ xOffset, yOffset });
+            await logger.logInto(stackTrace.get(), message);
             return true;
         } catch (err) {
-            logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(stackTrace.get(), err.message, "error");
             return err;
         }
     },
 
-    dragAndDrop: function (draggable, droppable) {
-        logger.logInto(stackTrace.get());
+    dragAndDrop: async function (draggable, droppable) {
+        await logger.logInto(stackTrace.get());
         message = "draggable:" + draggable + " droppable:" + draggable;
         try {
             var actions = {
@@ -162,18 +162,18 @@ module.exports = {
                     { "type": "pointerUp", "button": 0 }
                 ]
             }
-            browser.performActions([actions]);
-            logger.logInto(stackTrace.get(), message);
+            await browser.performActions([actions]);
+            await logger.logInto(stackTrace.get(), message);
             return true;
         } catch (err) {
-            logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(stackTrace.get(), err.message, "error");
             return err;
         }
     },
 
-    dragAndDrop2: function (draggable, droppable) {
+    dragAndDrop2: async function (draggable, droppable) {
         //drag and drop using perform actions
-        logger.logInto(stackTrace.get());
+        await logger.logInto(stackTrace.get());
         message = "draggable:" + draggable + " droppable:" + droppable;
         try {
             var actions1 = {
@@ -189,165 +189,165 @@ module.exports = {
                 ]
             }
 
-            browser.performActions([actions1]);
-            logger.logInto(stackTrace.get(), message);
+            await browser.performActions([actions1]);
+            await logger.logInto(stackTrace.get(), message);
             return true;
         } catch (err) {
-            logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(stackTrace.get(), err.message, "error");
             return err;
         }
     },
 
-    waitForDisplayed: function (selector, ms, reverse, timeoutMsg, interval) {
+    waitForDisplayed: async function (selector, ms, reverse, timeoutMsg, interval) {
         message = "element:" + selector;
         try {
-            $(selector).waitForDisplayed({ timeout: ms, reverse: reverse, timeoutMsg: timeoutMsg, interval: interval });
-            logger.logInto(stackTrace.get(), message);
+            await $(selector).waitForDisplayed({ timeout: ms, reverse: reverse, timeoutMsg: timeoutMsg, interval: interval });
+            await logger.logInto(stackTrace.get(), message);
             return true;
         } catch (err) {
-            logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(stackTrace.get(), err.message, "error");
             return err;
         }
     },
 
-    waitForExist: function (selector, ms, reverse, timeoutMsg, interval) {
+    waitForExist: async function (selector, ms, reverse, timeoutMsg, interval) {
         message = "element:" + selector;
         try {
-            $(selector).waitForExist({ timeout: ms, reverse: reverse, timeoutMsg: timeoutMsg, interval: interval });
-            logger.logInto(stackTrace.get(), message);
+            await $(selector).waitForExist({ timeout: ms, reverse: reverse, timeoutMsg: timeoutMsg, interval: interval });
+            await logger.logInto(stackTrace.get(), message);
             return true;
         } catch (err) {
-            logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(stackTrace.get(), err.message, "error");
             return err;
         }
     },
 
-    waitForClickable: function (selector, ms, reverse, timeoutMsg, interval) {
+    waitForClickable: async function (selector, ms, reverse, timeoutMsg, interval) {
         message = "element:" + selector;
         try {
-            $(selector).waitForClickable({ timeout: ms, reverse: reverse, timeoutMsg: timeoutMsg, interval: interval });
-            logger.logInto(stackTrace.get(), message);
+            await $(selector).waitForClickable({ timeout: ms, reverse: reverse, timeoutMsg: timeoutMsg, interval: interval });
+            await logger.logInto(stackTrace.get(), message);
             return true;
         } catch (err) {
-            logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(stackTrace.get(), err.message, "error");
             return err;
         }
     },
 
-    getText: function (selector) {
+    getText: async function (selector) {
         message = "element:" + selector;
         try {
-            res = $(selector).getText();
-            logger.logInto(stackTrace.get(), message + ":" + res);
+            res = await $(selector).getText();
+            await logger.logInto(stackTrace.get(), message + ":" + res);
             return res;
         } catch (err) {
-            logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(stackTrace.get(), err.message, "error");
             return err;
         }
     },
 
-    getAttribute: function (selector, attributeValue) {
+    getAttribute: async function (selector, attributeValue) {
         try {
-            res = $(selector).getAttribute(attributeValue);
+            res = await $(selector).getAttribute(attributeValue);
             message = "element:" + selector + " attributeValue:" + attributeValue + " value:" + res;
-            logger.logInto(stackTrace.get(), message);
+            await logger.logInto(stackTrace.get(), message);
             return res;
         } catch (err) {
-            logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(stackTrace.get(), err.message, "error");
             return err;
         }
     },
 
-    getElementCount: function (selector) {
+    getElementCount: async function (selector) {
         message = "element:" + selector;
         try {
-            logger.logInto(stackTrace.get(), message);
-            res = $$(selector).length;
+            await logger.logInto(stackTrace.get(), message);
+            res = (await $$(selector)).length;
             return res;
         } catch (err) {
-            logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(stackTrace.get(), err.message, "error");
             return err;
         }
     },
 
-    getCSSProperty: function (selector, propertyname) {
+    getCSSProperty: async function (selector, propertyname) {
         try {
-            res = $(selector).getCSSProperty(propertyname);
+            res = await $(selector).getCSSProperty(propertyname);
             message = "element:" + selector + " propertyname:" + propertyname + " value:" + res;
-            logger.logInto(stackTrace.get(), message);
+            await logger.logInto(stackTrace.get(), message);
             return res;
         } catch (err) {
-            logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(stackTrace.get(), err.message, "error");
             return err;
         }
     },
 
-    findElements: function (selector) {
+    findElements: async function (selector) {
         message = "element:" + selector;
         try {
-            logger.logInto(stackTrace.get(), message);
-            res = $$(selector);
+            await logger.logInto(stackTrace.get(), message);
+            res = await $$(selector);
             return res;
         } catch (err) {
-            logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(stackTrace.get(), err.message, "error");
             return err;
         }
     },
 
-    scrollIntoView: function (selector, options) {
+    scrollIntoView: async function (selector, options) {
         message = "element:" + selector;
         try {
-            res = $(selector).scrollIntoView(options)
-            logger.logInto(stackTrace.get(), message);
+            res = await $(selector).scrollIntoView(options)
+            await logger.logInto(stackTrace.get(), message);
             return res;
         } catch (err) {
-            logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(stackTrace.get(), err.message, "error");
             return err;
         }
     },
 
-    switchToFrame: function (id) {
+    switchToFrame: async function (id) {
         message = "frameID:" + id;
         try {
-            res = browser.switchToFrame(id);
-            logger.logInto(stackTrace.get(), message);
+            res = await browser.switchToFrame(id);
+            await logger.logInto(stackTrace.get(), message);
             if (res == null)
                 return true;
         } catch (err) {
-            logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(stackTrace.get(), err.message, "error");
             return err;
         }
     },
 
-    switchToParentFrame: function () {
+    switchToParentFrame: async function () {
         try {
-            res = browser.switchToFrame(null)
-            logger.logInto(stackTrace.get(), res);
+            res = await browser.switchToFrame(null)
+            await logger.logInto(stackTrace.get(), res);
             if (res == null)
                 return true;
         } catch (err) {
-            logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(stackTrace.get(), err.message, "error");
             return err;
         }
     },
 
-    hideKeyboard: function () {
-        if (driver.isKeyboardShown() == true) {
+    hideKeyboard: async function () {
+        if ((await driver.isKeyboardShown()) == true) {
             // console.log("Keyboard is visible");
-            driver.hideKeyboard();
+            await driver.hideKeyboard();
         }
     },
 
-    waitForDocumentLoad: function () {
-        logger.logInto(stackTrace.get());
-        res = this.waitForDisplayed("[data-tid=image-loader]", undefined, true);
-        res2 = this.waitForDisplayed("[class*=rogress][class*=indeterminate]", undefined, true);
+    waitForDocumentLoad: async function () {
+        await logger.logInto(stackTrace.get());
+        res = await this.waitForDisplayed("[data-tid=image-loader]", undefined, true);
+        res2 = await this.waitForDisplayed("[class*=rogress][class*=indeterminate]", undefined, true);
         if (!res)
             console.log("Loader (image-loader) still exists after 30s - " + res)
         else if (!res2)
             console.log("Loader (CircularProgress) still exists after 30s - " + res2)
         else {
-            res = browser.waitUntil(function () {
+            res = await browser.waitUntil(async function() {
                 return browser.execute(function () {
                     var imagesLoad;
                     let imgs = document.getElementsByTagName("img");
@@ -372,49 +372,49 @@ module.exports = {
         return res;
     },
 
-    selectByAttribute: function (selector, attribute, value) {
+    selectByAttribute:async function (selector, attribute, value) {
         message = "element:" + selector;
         try {
-            res = $(selector).selectByAttribute(attribute, value);
-            logger.logInto(stackTrace.get(), message);
+            res = await $(selector).selectByAttribute(attribute, value);
+            await logger.logInto(stackTrace.get(), message);
             return res;
         } catch (err) {
-            logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(stackTrace.get(), err.message, "error");
             return err;
         }
     },
 
-    uploadFile: function (localPath) {
+    uploadFile: async function (localPath) {
         try {
-            let remoteFilePath = browser.uploadFile(localPath);
-            logger.logInto(stackTrace.get(), message);
+            let remoteFilePath = await browser.uploadFile(localPath);
+            await logger.logInto(stackTrace.get(), message);
             return remoteFilePath;
         } catch (err) {
-            logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(stackTrace.get(), err.message, "error");
             return err;
         }
     },
 
-    parentElement: function (selector) {
+    parentElement: async function (selector) {
         message = "element:" + selector;
         try {
-            let result = $(selector).parentElement();
-            logger.logInto(stackTrace.get(), message);
+            let result = await $(selector).parentElement();
+            await logger.logInto(stackTrace.get(), message);
             return result;
         } catch (err) {
-            logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(stackTrace.get(), err.message, "error");
             return err;
         }
     },
 
-    keyPress: function (value) {
+    keyPress: async function (value) {
         message = "key:" + value;
         try {
-            res = browser.keys(value);
-            logger.logInto(stackTrace.get(), message);
+            res = await browser.keys(value);
+            await logger.logInto(stackTrace.get(), message);
             return true;
         } catch (err) {
-            logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(stackTrace.get(), err.message, "error");
             return err;
         }
     }
