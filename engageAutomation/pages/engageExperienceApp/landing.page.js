@@ -1,6 +1,6 @@
 "use strict";
 var action = require('../../core/actionLibrary/baseActionLibrary.js');
-var selectorFile =  jsonParserUtil.jsonParser(selectorDir);
+var selectorFile = jsonParserUtil.jsonParser(selectorDir);
 var res;
 
 module.exports = {
@@ -21,10 +21,10 @@ module.exports = {
 	appVersion: selectorFile.css.ComproEngage.landingPage.appVersion,
 
 	isInitialized: async function () {
-		logger.logInto(stackTrace.get());
-		action.waitForDocumentLoad();
-		let pageStatus = action.waitForDisplayed(this.brandLogo_img);
-		res = this.get_LandingPage_Data();
+		await logger.logInto(stackTrace.get());
+		await action.waitForDocumentLoad();
+		let pageStatus = await action.waitForDisplayed(this.brandLogo_img);
+		res = await this.get_LandingPage_Data();
 		res.pageStatus = pageStatus;
 		await console.log(res)
 		return await res;
@@ -50,7 +50,7 @@ module.exports = {
 		return obj;
 	},
 
-	click_Signup_Button:async function () {
+	click_Signup_Button: async function () {
 		await logger.logInto(stackTrace.get());
 		res = await action.click(this.signupBtn);
 		if (true == res) {
@@ -78,7 +78,7 @@ module.exports = {
 		return res;
 	},
 
-	select_Language_from_dropdown:async function (lang) {
+	select_Language_from_dropdown: async function (lang) {
 		await logger.logInto(stackTrace.get());
 		res = await action.click(this.languageSelector_dropdown);
 		if (true == res) {
