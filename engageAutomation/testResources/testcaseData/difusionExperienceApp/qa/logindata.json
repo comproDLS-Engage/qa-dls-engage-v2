@@ -232,7 +232,17 @@
                         {
                             "key": "TFbA-6AP7",
                             "name": "class3"
+                        },
+                        {
+                            "key": "TFbA-6AP7",
+                            "name": "Gradebook",
+                            "studentName1":"dev1 student100"
+                        },
+                        {
+                            "key": "msLz-9NZA",
+                            "name": "Class no student"
                         }
+
                     ],
                     "info": {}
                 },
@@ -271,6 +281,27 @@
                     "role": "instructor",
                     "name": "flipbook automation",
                     "class": [
+                    ],
+                    "info": {}
+                },
+                "assignmentStudent": {
+                    "email": "assignment_student1@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "student",
+                    "name": "Assignment Student 2",
+                    "class": [
+                        {
+                            "key": "TFbA-6AP7",
+                            "name": "Class with no assignment"
+                        },
+                        {
+                            "key": "TFbA-6AP7",
+                            "name": "Class 1"
+                        },
+                        {
+                            "key": "v324-6vg7",
+                            "name": "Class Assignment test"
+                        }
                     ],
                     "info": {}
                 }

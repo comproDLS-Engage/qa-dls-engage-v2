@@ -10,6 +10,10 @@ var retryTimes = 0;
 if (argv.retry)
     retryTimes = 1;
 
+var resizeImage = true;
+if (argv.noCompressImage)
+    resizeImage = false;
+
 var hostname = global.capabilitiesFile[argv.browserCapability].hostname;
 var portNumber = global.capabilitiesFile[argv.browserCapability].portNumber;
 var webServicePath = global.capabilitiesFile[argv.browserCapability].webServicePath;
@@ -202,7 +206,7 @@ exports.config = {
             embedImage: true,
             images: {
                 quality: 40,
-                resize: true,
+                resize: resizeImage,
                 reductionRatio: 1
             },
             screenshotStrategy: 'before:click'

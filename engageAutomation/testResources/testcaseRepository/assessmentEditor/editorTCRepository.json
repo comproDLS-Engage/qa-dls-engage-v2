@@ -246,6 +246,21 @@
                     "tags": "P1"
                 },
                 {
+                    "id": "ASE_COM_TC_1014",
+                    "description": "Click Done Button",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1015",
+                    "description": "Click Add Subquestuib button",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1016",
+                    "description": "Click Shuffling Checkbox button",
+                    "tags": "P1"
+                },
+                {
                     "id": "ASE_FIBDROPDOWN_TC_1013",
                     "description": "Click on unique for each blank",
                     "tags": "P1"
@@ -262,7 +277,32 @@
                 },
                 {
                     "id": "ASE_FIBDROPDOWN_TC_1016",
+                    "description": "Validate the Set of Row Number",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_WRITING_TC_1",
+                    "description": "Validate the Set of Character Limit",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_WRITING_TC_2",
                     "description": "Set the text on the reponse options",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_WRITING_TC_3",
+                    "description": "Validate the Set on text placeHolder",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_WRITING_TC_4",
+                    "description": "Validate the click on Allow Rich Text Media",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_WRITING_TC_5",
+                    "description": "Validate the click on Allow File Attachment",
                     "tags": "P1"
                 }
             ]

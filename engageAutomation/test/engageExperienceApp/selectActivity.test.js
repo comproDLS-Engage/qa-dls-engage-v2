@@ -29,5 +29,9 @@ module.exports = {
    ENG_SLCTACTIVITY_TC_3: function () {
       sts = selectActivityPage.click_continuetoDetails_btn();
       assertion.assertEqual(sts.pageStatus, true, "Create Assignment page status mismatch");
-   }
+   },
+   ENG_SLCTACTIVITY_TC_4: function (testdata) {
+      sts = selectActivityPage.click_subfolderofActivity(testdata);
+      console.log(sts)
+   },
 }

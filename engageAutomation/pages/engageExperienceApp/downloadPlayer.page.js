@@ -17,6 +17,7 @@ module.exports = {
     fileType: selectorFile.css.ComproEngage.downloadPlayer.fileType,
     sizeLabel: selectorFile.css.ComproEngage.downloadPlayer.sizeLabel,
     fileSize: selectorFile.css.ComproEngage.downloadPlayer.fileSize,
+    viewBtn: selectorFile.css.ComproEngage.downloadPlayer.viewBtn,
 
     isInitialized: function () {
         var res;
@@ -45,6 +46,7 @@ module.exports = {
             fileType: (action.getElementCount(this.fileType) > 0) ? action.getText(this.fileType) : null,
             sizeLabel: (action.getElementCount(this.sizeLabel) > 0) ? action.getText(this.sizeLabel) : null,
             fileSize: (action.getElementCount(this.fileSize) > 0) ? action.getText(this.fileSize) : null,
+            viewBtn: (action.getElementCount(this.viewBtn) > 0) ? action.getText(this.viewBtn) : null,
             downloadBtn_isClickable: (action.getElementCount(this.downloadBtn) > 0) ? action.isClickable(this.downloadBtn) : null //manually added
         }
         return obj;
@@ -63,4 +65,17 @@ module.exports = {
         return res;
     },
 
+    click_viewBtn: function () {
+        logger.logInto(stackTrace.get());
+        var res;
+        res = action.click(this.viewBtn);
+        if (true == res) {
+            logger.logInto(stackTrace.get(), " viewBtn is clicked");
+        }
+        else {
+            logger.logInto(stackTrace.get(), res + "viewBtn is NOT clicked", 'error');
+        }
+        return res;
+    },
+    
 }

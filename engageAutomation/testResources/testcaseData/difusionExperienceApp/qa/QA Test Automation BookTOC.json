@@ -118,7 +118,6 @@
                     "EN": "Book Resources",
                     "ES": "Book Resources"
                 },
-                "nameES": "Book Resources",
                 "unit": [
                     {
                         "index": 0,
@@ -132,10 +131,60 @@
                                 "name": "",
                                 "activity": [
                                     "Practice Exam 1",
-                                    "Download word",
+                                    "Download document",
                                     "Download zip",
                                     "Download pdf",
-                                    "Download excel"
+                                    "Download xls"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "index": 4,
+                "name": {
+                    "EN": "LP1",
+                    "ES": "LP1"
+                },
+                "unit": [
+                    {
+                        "index": 0,
+                        "title": "1. Scorable",
+                        "activityCount": "2",
+                        "folderCount": "0",
+                        "flipbookPageNum": "",
+                        "section": [
+                            {
+                                "index": 0,
+                                "name": "",
+                                "activity": [
+                                    "Open Ended Native",
+                                    "Close Ended Native"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "index": 1,
+                        "title": "2. Non Scorable",
+                        "activityCount": "9",
+                        "folderCount": "0",
+                        "flipbookPageNum": "",
+                        "section": [
+                            {
+                                "index": 0,
+                                "name": "",
+                                "activity": [
+                                    "Rich media - video",
+                                    "Rich media - audio",
+                                    "Download document",
+                                    "Download ppt",
+                                    "Download zip",
+                                    "Download pdf",
+                                    "Download xls",
+                                    "Etext",
+                                    "Html webbook"
                                 ]
                             }
                         ]

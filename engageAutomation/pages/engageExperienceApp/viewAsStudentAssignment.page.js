@@ -9,7 +9,7 @@ module.exports = {
     activity_icon: selectorFile.css.ComproEngage.viewAsStudentAssignment.activity_icon,
     activity_lbl: selectorFile.css.ComproEngage.viewAsStudentAssignment.activity_lbl,
     showDetails_btn: selectorFile.css.ComproEngage.viewAsStudentAssignment.showDetails_btn,
-
+    closeAssignment_btn:selectorFile.css.ComproEngage.viewAsStudentAssignment.closeAssignment_btn,
 
     isInitialized: function () {
         var res;
@@ -72,6 +72,19 @@ module.exports = {
         }
         else {
             logger.logInto(stackTrace.get(), res + "showDetails_btn is NOT clicked", 'error');
+        }
+        return res;
+    },
+    click_closeAssignment_btn: function () {
+        logger.logInto(stackTrace.get());
+        var res;
+        res = action.click(this.closeAssignment_btn);
+        if (true == res) {
+            logger.logInto(stackTrace.get(), " closeAssignment_btn is clicked");
+            res = require('./assignmentDetails.page').isInitialized();
+        }
+        else {
+            logger.logInto(stackTrace.get(), res + "closeAssignment_btn is NOT clicked", 'error');
         }
         return res;
     },

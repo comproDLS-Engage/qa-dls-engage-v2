@@ -653,6 +653,16 @@
           "id": "ENG_INS_CLASS_TC_103",
           "description": " Validate the click on Assignment Tab",
           "tags": "P1"
+        },
+        {
+          "id": "ENG_STU_CLASS_TC_104",
+          "description": " Click on overview button",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_104",
+          "description": " Click on the gradebook button of teacher view class page ",
+          "tags": "P1"
         }
       ]
     },
@@ -833,6 +843,12 @@
         {
           "id": "ENG_SHELL_TC_17",
           "description": "Validate that clicking on the Settings button in left Navigation pane launches Settings page",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_SHELL_TC_18",
+          "description": "Validate that clicking on the Assign button on the header launches the create assignment page",
           "tags": "P1",
           "visualTest": true
         }
@@ -1382,6 +1398,42 @@
         {
           "id": "ENG_PLAY_TC_21",
           "description": "Validate the unattempted state of html webbook",
+          "tags": "",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_PLAY_TC_22",
+          "description": "Validate that clicking on Mark as Complete button displays Competed On information in the footer",
+          "tags": "",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_PLAY_TC_23",
+          "description": "Validate clicking on Close Assignment button closes the assignment and previous page is displayed",
+          "tags": "",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_PLAY_TC_24",
+          "description": "Validate the unattempted state of a close ended activity when launched from assignment",
+          "tags": "",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_PLAY_TC_25",
+          "description": "Validate the attempted state of a close ended activity when launched from assignment",
+          "tags": "",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_PLAY_TC_26",
+          "description": "Validate the unattempted state of a non scorable activity when launched from assignment",
+          "tags": "",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_PLAY_TC_27",
+          "description": "Validate the attempted state of a non scorable activity when launched from assignment",
           "tags": "",
           "visualTest": true
         }
@@ -2541,25 +2593,62 @@
       ]
     },
     {
+      "modulename": "Content Player",
+      "moduledetails": "",
+      "testFile": "./test/engageExperienceApp/contentPlayer.test.js",
+      "testcase": [
+        {
+          "id": "ENG_CONT_TC_1",
+          "description": "Validate that video player is launched on clicking the video activity",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_CONT_TC_2",
+          "description": "Validate that audio player is launched on clicking the audio activity",
+          "tags": "P1, Desktop",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_CONT_TC_3",
+          "description": "Validate that etext is launched on clicking the etext activity",
+          "tags": "P1, Desktop",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_CONT_TC_4",
+          "description": "Validate that html webbook is launched on clicking the html webbook activity",
+          "tags": "P1, Desktop",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_CONT_TC_5",
+          "description": "Validate that page is scrolled to top on clicking the scroll to top button",
+          "tags": "P1, Desktop",
+          "visualTest": true
+        }
+      ]
+    },
+    {
       "modulename": "Assignment - Teacher",
       "moduledetails": "",
       "testFile": "./test/engageExperienceApp/assignmentListTeacher.test.js",
       "testcase": [
         {
           "id": "ENG_ASSLIST_TC_1",
-          "description": "Validate the data of assignment list page",
+          "description": "Validate the content of Blank create assignment page",
           "tags": "P2",
           "visualTest": true
         },
         {
           "id": "ENG_ASSLIST_TC_2",
-          "description": "Validate the click on add new button",
+          "description": "Validate the Click on Add new Button",
           "tags": "P2",
           "visualTest": true
         },
         {
           "id": "ENG_ASSLIST_TC_3",
-          "description": "Validate the click on component",
+          "description": "Validate the Click on Component Name",
           "tags": "P2",
           "visualTest": true
         },
@@ -2601,7 +2690,7 @@
         },
         {
           "id": "ENG_ASSLIST_TC_10",
-          "description": "Validate the Assignment List Page Launched",
+          "description": "Validate the Click on in progress Arrow",
           "tags": "P2",
           "visualTest": true
         },
@@ -2633,6 +2722,12 @@
         {
           "id": "ENG_SLCTACTIVITY_TC_3",
           "description": "Validate the click on continue button",
+          "tags": "P2",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_SLCTACTIVITY_TC_4",
+          "description": "Validate the click on checkbox of  activity of a component",
           "tags": "P2",
           "visualTest": true
         }
@@ -2718,7 +2813,7 @@
         },
         {
           "id": "ENG_ASSDETAILS_TC_6",
-          "description": "Validate the update the text of assginment Title",
+          "description": "Validate the Assignment Title Update",
           "tags": "P2",
           "visualTest": true
         },
@@ -2848,6 +2943,158 @@
           "description": "validate the click on view progress assignment button",
           "tags": "P2",
           "visualTest": true
+        }
+      ]
+    },
+    {
+      "modulename": "Assignment - Student",
+      "moduledetails": "",
+      "testFile": "./test/engageExperienceApp/assignmentStudentList.test.js",
+      "testcase": [
+        {
+          "id": "ENG_ASSLIST_STU_TC_1",
+          "description": "Validate the content on blank Due assignment page",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ASSLIST_STU_TC_2",
+          "description": "Validate the content on blank Upcoming assignment page",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ASSLIST_STU_TC_3",
+          "description": "Validate the content on blank Completed assignment page",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ASSLIST_STU_TC_4",
+          "description": "Validate the click on Due assignment tab on assignment page",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ASSLIST_STU_TC_5",
+          "description": "Validate the click on Upcoming assignment tab on assignment page",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ASSLIST_STU_TC_6",
+          "description": "Validate the click on Completed assignment tab on assignment page",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ASSLIST_STU_TC_7",
+          "description": "Validate the content of student assignment list details page",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ASSLIST_STU_TC_8",
+          "description": "Validate the details of assignment list",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ASSLIST_STU_TC_9",
+          "description": "Validate the click on 'Show Activities' button",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ASSLIST_STU_TC_10",
+          "description": "Validate the click on any activity",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ASSLIST_STU_TC_13",
+          "description": "Validate the data after click on 'Show Activities' button",
+          "tags": "P2",
+          "visualTest": "-"
+        }
+      ]
+    },
+    {
+      "modulename": "GradeBook",
+      "moduledetails": "",
+      "testFile": "./test/engageExperienceApp/gradeBook.test.js",
+      "testcase": [
+        {
+          "id": "ENG_GRADEBOOK_TC_1",
+          "description": "Validate the GradeBook Page is launched",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GRADEBOOK_TC_2",
+          "description": "Validate the content on Blank GradeBook Page",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GRADEBOOK_TC_3",
+          "description": "Validate the content on GradeBook Page",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GRADEBOOK_TC_4",
+          "description": "Validate the Product List in GradeBook",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GRADEBOOK_TC_5",
+          "description": "Click on the Student Name",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GRADEBOOK_TC_6",
+          "description": "Validate the Student List in GradeBook",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GRADEBOOK_TC_7",
+          "description": "Validate that clicking on 'Download' button displays a snackbar message",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GRADEBOOK_TC_8",
+          "description": "Validate that clicking on 'Send to email' button displays a snackbar message",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GRADEBOOK_TC_9",
+          "description": "Validate the content on Student View GradeBook Page",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GRADEBOOK_TC_10",
+          "description": "Validate the Unit Details of a book (Scorable)",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GRADEBOOK_TC_11",
+          "description": "Validate the click on 'Show Activities' button",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GRADEBOOK_TC_12",
+          "description": "Validate the click on 'More options' button",
+          "tags": "P2",
+          "visualTest": "-"
         }
       ]
     }

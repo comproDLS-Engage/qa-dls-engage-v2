@@ -74,6 +74,11 @@
 			"leftRightOption": "[data-tid=radio-leftrightlayout] span[class*=MuiButtonBase]",
 			"scoreInputBox": "[data-tid=input-score] input",
 			"addAnswerbtn":"[data-tid=button-addanswers]",
+			"addSubqun_btn":"[data-tid=button-addsubquestion]",
+			"responseEdit":"[data-tid=button-preview-responsearea] svg",
+			"responseTextArea":"[data-tid=input-ck-texteditor] [role=textbox]",
+			"textAreabtn":"button:nth-child(9) > svg",
+			"shufflingCheckBox":"[data-tid=checkbox-shuffleoptions]",
 			"multipleResponse": {
 				"checkboxOption_input": "[data-tid=checkbox-option-"
 			},
@@ -88,7 +93,7 @@
 			},
 			"DND_image": {
 				"addBlank_btn": "[data-tid=button-addblank]",
-				"questionText_input": "[data-tid=input-questiontext] h7"
+				"questionText_input": "[data-tid=input-questiontext] div[data-contents=true]"
 			},
 			"matching": {
 				"inputItem": "[data-tid=input-item-",
@@ -110,6 +115,14 @@
 				"commonOption": "input[value=common-options]",
 				"inputOption":"[data-tid*=input-text-",
 				"responseOption":"[data-tid*=select-correctoption-"
+			},
+			"writing":{
+				"rowNumber":"[data-tid=input-numberofrows-",
+				"characterLimit":"[data-tid=input-characterlimit-",
+				"placeHolderText":"[data-tid=input-placeholder-",
+				"allowrichTextMedia":"[data-tid=checkbox-richediting-",
+				"allowFileAttachment":"[data-tid=checkbox-allowattachfiles-"
+
 			}
 		}
 	}

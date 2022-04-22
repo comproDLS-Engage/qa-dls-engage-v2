@@ -44,6 +44,8 @@ module.exports = {
 	addToPlaylistBtn: selectorFile.css.ComproEngage.appShell.addToPlaylistBtn,
 	newPlaylistOption: selectorFile.css.ComproEngage.appShell.newPlaylistOption,
 	tabList: selectorFile.css.ComproEngage.appShell.component,
+	assignBtn: selectorFile.css.ComproEngage.appShell.assignBtn,
+	shareBtn: selectorFile.css.ComproEngage.appShell.shareBtn,
 
 	isInitialized: function () {
 		logger.logInto(stackTrace.get());
@@ -78,7 +80,9 @@ module.exports = {
 			userProfileBtn_exists: (action.getElementCount(this.userProfileBtn) > 0) ? action.waitForDisplayed(this.userProfileBtn) : false,
 			indexBtn: (action.getElementCount(this.indexBtn) > 0) ? action.getText(this.indexBtn) : null,
 			inviteBtnTxt: (action.getElementCount(this.inviteBtnTxt) > 0) ? action.getText(this.inviteBtnTxt) : null,
-			addToPlaylistBtn: (action.getElementCount(this.addToPlaylistBtn) > 0) ? action.getText(this.addToPlaylistBtn) : null
+			addToPlaylistBtn: (action.getElementCount(this.addToPlaylistBtn) > 0) ? action.getText(this.addToPlaylistBtn) : null,
+			assignBtn: (action.getElementCount(this.assignBtn) > 0) ? action.getText(this.assignBtn) : null,
+			shareBtn: (action.getElementCount(this.shareBtn) > 0) ? action.getText(this.shareBtn) : null
 		};
 		return obj;
 	},
@@ -329,6 +333,17 @@ module.exports = {
 		return res;
 	},
 
+	clickAssignButton: function () {
+		logger.logInto(stackTrace.get());
+		res = action.click(this.assignBtn);
+		if (true == res) {
+			logger.logInto(stackTrace.get(), res + "Assign Button clicked");
+			res = require('./createAssignment.page.js').isInitialized();
+		} else
+			logger.logInto(stackTrace.get(), res + " -- Error in clicking Assign Button", 'error');
+		return res;
+	},
+
 	selectTab: function (str) {
 		logger.logInto(stackTrace.get());
 		let i, list;
@@ -348,6 +363,7 @@ module.exports = {
 	},
 
 	getTabsListData: function () {
+		logger.logInto(stackTrace.get());
 		let i, list;
 		let obj = {
 			list: null,
@@ -367,6 +383,7 @@ module.exports = {
 	},
 
 	clickSettingsButton: function () {
+		logger.logInto(stackTrace.get());
 		res = action.click(this.settingsBtn);
 		if (true == res) {
 			logger.logInto(stackTrace.get(), res + "Settings Button clicked");

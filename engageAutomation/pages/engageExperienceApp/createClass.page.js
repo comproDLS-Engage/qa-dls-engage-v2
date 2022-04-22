@@ -157,8 +157,8 @@ module.exports = {
         res = action.click(this.cancelBtn);
         if (res == true) {
             logger.logInto(stackTrace.get(), "-- cancelBtn is clicked");
-            var teacherViewClassPage = require('./teacherViewClass.page.js');
-            res = teacherViewClassPage.isInitialized();
+            var classDashboardPage = require('./classDashboard.page.js');
+            res = classDashboardPage.isInitialized();
         }
         else {
             res = res + " -- cancelBtn is NOT clicked";
@@ -211,7 +211,7 @@ module.exports = {
                 action.click(this.msgBarClose)
                 action.waitForDisplayed(this.msgBar, undefined, true);
                 var teacherViewClassPage = require('./teacherViewClass.page.js');
-                res = teacherViewClassPage.isInitialized();
+                res = teacherViewClassPage.getViewClassPageData();
                 res.msg = txt;
             }
         }

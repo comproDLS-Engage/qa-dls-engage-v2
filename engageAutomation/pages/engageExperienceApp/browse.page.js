@@ -356,6 +356,7 @@ module.exports = {
 
     click_moreOptionsBtn: function (cardTitleName) {
         logger.logInto(stackTrace.get());
+        action.waitForDisplayed(this.cardSkeleton, undefined, true); //manually edited
         var i, list, res;
         list = this.getResourceIndex();
         for (i = 0; i < list.length; i++) {

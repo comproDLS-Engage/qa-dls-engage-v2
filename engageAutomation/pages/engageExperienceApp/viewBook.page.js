@@ -169,10 +169,15 @@ module.exports = {
     clickUnit: function (str) {
         logger.logInto(stackTrace.get());
         res = false;
-        let i, list;
+        let i, list, list2, current;
         list = action.findElements(this.unitTitle);
+        list2 = action.findElements(this.unitNumber);
         for (i = 0; i < list.length; i++) {
-            if (str.includes(action.getText(list[i]))) {
+            if (list2.length != 0)
+                current = action.getText(list2[i]) + " " + action.getText(list[i]);
+            else
+                current = action.getText(list[i]);
+            if (str == current) {
                 res = action.click(list[i]);
                 if (res == true) {
                     let unitDetailPage = require('./viewUnit.page');
