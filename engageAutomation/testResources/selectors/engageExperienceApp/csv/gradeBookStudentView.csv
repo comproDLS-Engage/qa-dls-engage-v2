@@ -33,5 +33,5 @@ collapsibleTimeSpentLbl,[data-tid*=label-timeSpent-,p,showActivity_labels,,patte
 activityName,[data-tid*=text-activity-name-,p,activityDetails,parent,pattern,,,
 moreOption,[data-tid*=button-moreOptions-,button,activityDetails,,pattern,moreOption,,
 gradePill,[data-tid*=chip-gradingPill-,p,activityDetails,,pattern,,,
-viewAttempt_btn,[data-tid=button-view-activity],button,moreOption,,,,"""View Attempt""",
+viewAttempt_btn,[data-tid=button-view-activity],button,moreOption,,,viewAsStudentAssignment.page,"""View Attempt""",
 gradeAttempt_btn,[data-tid=button-grade-activity],button,moreOption,,,,"""Grade Attempt""",
