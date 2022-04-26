@@ -1097,7 +1097,29 @@
                     "collapsibleActvityLbl": "Activity",
                     "collapsibleScoreLbl": "Score",
                     "collapsibleAttemptsLbl": "Attempts",
-                    "collapsibleTimeSpentLbl": "Time Spent"
+                    "collapsibleTimeSpentLbl": "Time Spent",
+                    "viewAttempt_btn": "View Attempt",
+                    "gradeAttempt_btn": "Grade Attempt"
+                },
+                "student":{
+                        "pageTitle": "My Progress",
+                        "download_btn": "Download",
+                        "sendtoemail_btn": "Send to email",
+                        "totalTimeSpent_lbl": "Total Time Spent: ",
+                        "score_lbl": "Score",
+                        "completion_lbl": "Completion",
+                        "lesson_title": "Units",
+                        "lesson_Subtitle": "Select a unit to view activity scores and progress",
+                        "score_Unit_lbl": "Score",
+                        "completion__Unit_lbl": "Completion",
+                        "totalTime_lbl": "Total Time",
+                        "activityCount": "Activity",
+                        "CompletionCount": "completed",
+                        "showActivities_btn": "Show Activities",
+                        "collapsibleActvityLbl": "Activity",
+                        "collapsibleScoreLbl": "Score",
+                        "collapsibleAttemptsLbl": "Attempts",
+                        "collapsibleTimeSpentLbl": "Time Spent"
                 }
             }
         }

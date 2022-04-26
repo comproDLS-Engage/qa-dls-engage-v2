@@ -36,6 +36,7 @@ module.exports = {
 	joinClassbtn: selectorFile.css.ComproEngage.myClassPage.joinClassbtn,
 	viewClassOption:selectorFile.css.ComproEngage.myClassPage.viewClassOption,
 	progressOption:selectorFile.css.ComproEngage.myClassPage.progressOption,
+	viewProgress_btn:selectorFile.css.ComproEngage.myClassPage.viewProgress_btn,
 
 	isInitialized: function () {
 		logger.logInto(stackTrace.get());
@@ -295,6 +296,18 @@ module.exports = {
 		if (res == true) {
 		var	studentClassdetails = require('./studentClassDetails.page.js');
 			res = studentClassdetails.isInitialized();
+		}
+		else {
+			res = res + " -- addStudentsOption button is NOT clicked";
+			logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
+	click_viewProgress: function () {
+		logger.logInto(stackTrace.get());
+		res = action.click(this.viewProgress_btn);
+		if (res == true) {
+		res = require('./gradeBookStudent.page.js').isInitialized();
 		}
 		else {
 			res = res + " -- addStudentsOption button is NOT clicked";

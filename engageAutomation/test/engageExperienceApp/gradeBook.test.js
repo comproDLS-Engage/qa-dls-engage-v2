@@ -3,6 +3,7 @@ var gradeBookPage = require('../../pages/engageExperienceApp/gradeBook.page.js')
 var studentGradeBookPage = require('../../pages/engageExperienceApp/gradeBookStudent.page.js');
 var appShell = require('../../pages/engageExperienceApp/appShell.page');
 const { confirmPassword_input } = require('../../pages/engageExperienceApp/settings.page.js');
+var viewAsStudentAssignmentPage = require('../../pages/engageExperienceApp/viewAsStudentAssignment.page.js');
 var sts;
 
 module.exports = {
@@ -18,7 +19,7 @@ module.exports = {
       sts = gradeBookPage.getData_gradeBook()
       assertion.assertEqual(sts.pageTitle, testdata.pageTitle, "pageTitle is Not displayed: " + JSON.stringify(sts))
       assertion.assert((sts.pageSubTitle).includes(testdata.pageSubTitle), "pageSubTitle is Not displayed: " + JSON.stringify(sts))
-      assertion.assertEqual(sts.noGradeBookIcon,true, "noGradeBookIcon is Not displayed: " + JSON.stringify(sts))
+      assertion.assertEqual(sts.noGradeBookIcon, true, "noGradeBookIcon is Not displayed: " + JSON.stringify(sts))
       assertion.assertEqual(sts.noGradeBookTitle, testdata.noGradeBookTitle, "noGradeBookTitle is Not displayed: " + JSON.stringify(sts))
       assertion.assertEqual(sts.noGradeBookSubTitle, testdata.noGradeBookSubTitle, "noGradeBookSubTitle is Not displayed: " + JSON.stringify(sts))
       assertion.assertEqual(sts.download_btn, testdata.download_btn, "download_btn is Not displayed: " + JSON.stringify(sts))
@@ -55,7 +56,7 @@ module.exports = {
    ENG_GRADEBOOK_TC_4: function (testdata) {
       sts = gradeBookPage.getData_productList()
       // Will add asserion when required.
-    },
+   },
 
    //Validate clicking on the Student Name
    ENG_GRADEBOOK_TC_5: function (testdata) {
@@ -72,20 +73,20 @@ module.exports = {
    },
 
    //Validate that clicking on 'Download' button displays a snackbar message
-	ENG_GRADEBOOK_TC_7: function (testdata) {
-		sts = gradeBookPage.click_download_btn();
-		assertion.assertEqual(sts, true, "Download button clicked");
+   ENG_GRADEBOOK_TC_7: function (testdata) {
+      sts = gradeBookPage.click_download_btn();
+      assertion.assertEqual(sts, true, "Download button clicked");
       sts = require('../../test/engageExperienceApp/common.test.js').get_Snackbar_Message_Text();
-		assertion.assert(sts,testdata, "Snackbar message mismatch: " + sts);
-	},
+      assertion.assert(sts, testdata, "Snackbar message mismatch: " + sts);
+   },
 
    //Validate that clicking on 'Send to email' button displays a snackbar message
-	ENG_GRADEBOOK_TC_8: function (testdata) {
-		sts = gradeBookPage.click_sendtoemail_btn();
-		assertion.assertEqual(sts, true, "Send to email button clicked");
+   ENG_GRADEBOOK_TC_8: function (testdata) {
+      sts = gradeBookPage.click_sendtoemail_btn();
+      assertion.assertEqual(sts, true, "Send to email button clicked");
       sts = require('../../test/engageExperienceApp/common.test.js').get_Snackbar_Message_Text();
-		assertion.assert(sts,testdata, "Snackbar message mismatch: " + sts);
-	},
+      assertion.assert(sts, testdata, "Snackbar message mismatch: " + sts);
+   },
 
    //---*** STUDENT VIEW GRADEBOOK ***-----
 
@@ -112,16 +113,16 @@ module.exports = {
       sts = studentGradeBookPage.getData_UnitDetails(testdata[0])
       assertion.assertEqual(sts.lessons_Title_lbl, testdata[0].folder_Title, "folder_Title is Not displayed");
       for (let i = 0; i < sts.length; i++) {
-         assertion.assertEqual(sts[i].score_icon,true, "score_icon is Not displayed");
+         assertion.assertEqual(sts[i].score_icon, true, "score_icon is Not displayed");
          assertion.assertEqual(sts[i].completion_icon, true, "completion_icon is Not displayed");
          assertion.assertEqual(sts[i].totalTime_icon, true, "totalTime_icon is Not displayed");
          assertion.assert((sts[i].score_Unit_lbl).includes(testdata[1][i].score_Unit_lbl), "score_Unit_lbl is Not displayed: ");
          assertion.assert((sts[i].completion__Unit_lbl).includes(testdata[1][i].completion__Unit_lbl), "completion__Unit_lbl is Not displayed: ");
          assertion.assert((sts[i].totalTime_lbl).includes(testdata[1][i].totalTime_lbl), "totalTime_lbl is Not displayed: ");
-         assertion.assertEqual(sts[i].activityCount_icon,true, "activityCount_icon is Not displayed");
-         assertion.assertEqual(sts[i].activityCount_lbl,testdata[1][i].activityCount_lbl, "activityCount_lbl is Not displayed");
-         assertion.assertEqual(sts[i].CompletionCount,testdata[1][i].CompletionCount, "score_icon is Not displayed");
-         assertion.assertEqual(sts[i].showHideActivities_btn,testdata[1][i].showHideActivities_btn, "showHideActivities_btn is Not displayed");
+         assertion.assertEqual(sts[i].activityCount_icon, true, "activityCount_icon is Not displayed");
+         assertion.assertEqual(sts[i].activityCount_lbl, testdata[1][i].activityCount_lbl, "activityCount_lbl is Not displayed");
+         assertion.assertEqual(sts[i].CompletionCount, testdata[1][i].CompletionCount, "CompletionCount is Not displayed");
+         assertion.assertEqual(sts[i].showHideActivities_btn, testdata[1][i].showHideActivities_btn, "showHideActivities_btn is Not displayed");
       }
    },
 
@@ -131,7 +132,7 @@ module.exports = {
       for (let i = 0; i < sts.length; i++) {
          assertion.assertEqual(sts[i].activityName, testdata[2][i].activityName, "activityName mismatch");
          assertion.assertEqual(sts[i].moreOption, testdata[2][i].moreOption, "moreOption mismatch");
-         assertion.assertEqual(sts[i].gradePill, testdata[2][i].gradePill, "gradePill Text mismatch");
+         assertion.assertEqual(sts[i].gradePendingPill, testdata[2][i].gradePendingPill, "gradePill Text mismatch");
       }
       sts = studentGradeBookPage.getData_showActivity_labels(testdata[0])
       for (let i = 0; i < sts.length; i++) {
@@ -144,9 +145,23 @@ module.exports = {
 
    //Validate the click on 'More Options' button
    ENG_GRADEBOOK_TC_12: function (testdata) {
-      console.log("testdata - ",testdata)
-      sts = studentGradeBookPage.click_moreOption(testdata[0],testdata[1]);
+      sts = studentGradeBookPage.click_moreOption(testdata[0], testdata[1]);
+      assertion.assertEqual(sts.viewAttempt_btn, testdata[2].viewAttempt_btn, "viewAttempt_btn mismatch");
+      assertion.assertEqual(sts.gradeAttempt_btn, testdata[2].gradeAttempt_btn, "moreOption mismatch");
+      // please add assertion :rupsi
    },
-
-   
+   ENG_GRADEBOOK_TC_13: function (testdata) {
+      sts = studentGradeBookPage.click_productListName(testdata);
+      assertion.assertEqual(sts.pageStatus, true, "Dashboard page status mismatch")
+   },
+   ENG_GRADEBOOK_TC_14: function () {
+      sts = studentGradeBookPage.click_viewAttempt_btn();
+      assertion.assertEqual(sts.pageStatus, true, "View Attempt status mismatch")
+   },
+   ENG_GRADEBOOK_TC_15: function () {
+      sts = viewAsStudentAssignmentPage.click_cancel();
+      assertion.assertEqual(sts, true, "Cancel button is clicked");
+      sts = studentGradeBookPage.isInitialized();
+      assertion.assertEqual(sts.pageStatus, true, "assignment Details page status mismatch");
+   },
 }

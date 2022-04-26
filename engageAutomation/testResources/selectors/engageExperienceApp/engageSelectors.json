@@ -250,7 +250,8 @@
                 "classHelpText": "#class-key-input-helper-text",
                 "joinclassPopUpbtn": "[data-tid=button-continue]",
                 "helpJoiningClass": "[data-tid=anchor-skip]",
-                "closebtn": "[data-tid=button-joincourseclose]"
+                "closebtn": "[data-tid=button-joincourseclose]",
+                "viewProgress_btn":"[data-tid=button-view-progress]"
             },
             "createClassPage": {
                 "pageTitle": "[data-tid='text-pageTitle']",
@@ -1106,8 +1107,8 @@
                 "sendtoemail_btn": "[data-tid=button-sendToEmail]",
                 "graphHeader": "[data-tid=title-graph]",
                 "graphImage": "[data-tid=class-analytics-graph]",
-                "averageScoreLegend": "[data-tid=label-avgScore] p",
-                "averageCompletionLegend": "[data-tid=label-avgCompletion] p",
+                "averageScoreLegend": "[data-tid*=label-avgScore",
+                "averageCompletionLegend": "[data-tid*=label-avgCompletion",
                 "productListCount": "[data-tid*=button-product-",
                 "productListName": "[data-tid*=button-product-",
                 "teacherOnlyIcon": "[data-tid*=button-product-",
@@ -1131,7 +1132,7 @@
                 "download_btn": "[data-tid=button-downloadGradebook]",
                 "graphHeader": "[data-tid=title-graph]",
                 "sendtoemail_btn": "[data-tid=button-sendToEmail]",
-                "productListName": "[data-tid=button-product-",
+                "productListName": "[data-tid*=button-product-",
                 "totalTimeSpent_lbl": "[data-tid='text-time-spent']",
                 "score_lbl": "[data-tid='text-card-heading-card0']",
                 "scoreChart_icon": "#doughnutCanvas-card0",
@@ -1161,7 +1162,9 @@
                 "collapsibleTimeSpentLbl": "[data-tid*=label-timeSpent-",
                 "activityName": "[data-tid*=text-activity-name-",
                 "moreOption": "[data-tid*=button-moreOptions-",
-                "gradePendingPill": "[data-tid=chip-gradingPill]"
+                "gradePendingPill": "[data-tid=chip-gradingPill]",
+                "viewAttempt_btn" : "[data-tid=button-view-activity]",
+                "gradeAttempt_btn" : "[data-tid=button-grade-activity]"
             }
         }
     }

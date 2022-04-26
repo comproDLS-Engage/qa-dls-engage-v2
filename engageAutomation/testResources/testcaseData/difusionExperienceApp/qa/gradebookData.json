@@ -1,6 +1,6 @@
 {
-    "engage" :{
-        "class" : [
+    "engage": {
+        "class": [
             {
                 "className": "Gradebook",
                 "students": [
@@ -8,9 +8,16 @@
                     "dev1 student100",
                     "qa stu200"
                 ],
+                "componentList": [
+                    "Learning Path 1 (LP1)",
+                    "Learning Path 3 (Bank)",
+                    "VM Test 4th March",
+                    "TeacheOnly",
+                    "LO"
+                ],
                 "bookUnitDetails": [
                     {
-                        "folderName":"4. eText",
+                        "folderName": "4. eText",
                         "activityList": [
                             {
                                 "activityName": "eText",
@@ -25,9 +32,9 @@
                                 "activityTimeSpent": "0 sec"
                             }
                         ]
-                    },           
-                    { 
-                        "folderName":"1. Native LO",
+                    },
+                    {
+                        "folderName": "1. Native LO",
                         "unitDetails": [
                             {
                                 "score_icon": true,
@@ -48,14 +55,43 @@
                                 "activityScore": "0%",
                                 "activityAttempts": "1",
                                 "activityTimeSpent": "5 mins",
-                                "moreOption": true
+                                "moreOption": true,
+                                "gradePendingPill": ""
                             },
                             {
                                 "activityName": "More than 5 MB",
                                 "activityScore": "-",
                                 "activityAttempts": "-",
                                 "activityTimeSpent": "0 sec",
-                                "moreOption": false
+                                "moreOption": false,
+                                "gradePendingPill": ""
+                            }
+                        ]
+                    },
+                    {
+                        "folderName": "2. Open Ended LO",
+                        "unitDetails": [
+                            {
+                                "score_icon": true,
+                                "score_Unit_lbl": "Score:",
+                                "completion_icon": true,
+                                "completion__Unit_lbl": "Completion:",
+                                "totalTime_icon": true,
+                                "totalTime_lbl": "Total Time:",
+                                "activityCount_icon": true,
+                                "activityCount_lbl": "1 Activities",
+                                "CompletionCount": "0 of 1 completed",
+                                "showHideActivities_btn": "Show Activities"
+                            }
+                        ],
+                        "activityList": [
+                            {
+                                "activityName": "Open ended question",
+                                "activityScore": "-",
+                                "activityAttempts": "1",
+                                "activityTimeSpent": "17 mins",
+                                "moreOption": true,
+                                "gradePendingPill": "Grade Pending"
                             }
                         ]
                     }
@@ -69,8 +105,8 @@
                     "Student 20 QA"
                 ],
                 "bookUnitDetails": [
-                    { 
-                        "folderName":"Unit 1",
+                    {
+                        "folderName": "Unit 1",
                         "unitDetails": [
                             {
                                 "score_icon": true,
@@ -94,8 +130,8 @@
                             }
                         ]
                     },
-                    { 
-                        "folderName":"Unit 2",
+                    {
+                        "folderName": "Unit 2",
                         "unitDetails": [
                             {
                                 "score_icon": true,

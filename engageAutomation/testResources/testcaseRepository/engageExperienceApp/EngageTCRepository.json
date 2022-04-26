@@ -760,6 +760,12 @@
           "description": "Validate that class cannot be joined if Class Code is not correct format.",
           "tags": "P2",
           "visualTest": true
+        },
+        {
+          "id": "ENG_STU_CLASS_TC_16",
+          "description": "Validate that click on view Progress button",
+          "tags": "P2",
+          "visualTest": true
         }
       ]
     },
@@ -3050,7 +3056,7 @@
         },
         {
           "id": "ENG_GRADEBOOK_TC_5",
-          "description": "Click on the Student Name",
+          "description": "Click on student gradebook is launched after clicking on gradebook button",
           "tags": "P2",
           "visualTest": "-"
         },
@@ -3093,6 +3099,80 @@
         {
           "id": "ENG_GRADEBOOK_TC_12",
           "description": "Validate the click on 'More options' button",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GRADEBOOK_TC_13",
+          "description": "Validate the click on Product button",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GRADEBOOK_TC_14",
+          "description": "Validate the click on View Attempt button",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GRADEBOOK_TC_15",
+          "description": "Validate the click on Cancel button on  View Attempt Page",
+          "tags": "P2",
+          "visualTest": "-"
+        }
+      ]
+    },
+    {
+      "modulename": "GradeBook-student",
+      "moduledetails": "",
+      "testFile": "./test/engageExperienceApp/gradeBookStudent.test.js",
+      "testcase": [
+        {
+          "id": "ENG_STU_GRADEBOOK_TC_1",
+          "description": "Validate the GradeBook Page is launched",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+       
+        {
+          "id": "ENG_STU_GRADEBOOK_TC_2",
+          "description": "Validate the Product List in GradeBook",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_STU_GRADEBOOK_TC_3",
+          "description": "Validate that clicking on 'Download' button displays a snackbar message",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_STU_GRADEBOOK_TC_4",
+          "description": "Validate that clicking on 'Send to email' button displays a snackbar message",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_STU_GRADEBOOK_TC_5",
+          "description": "Validate the content on Student View GradeBook Page",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_STU_GRADEBOOK_TC_6",
+          "description": "Validate the Unit Details of a book (Scorable)",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_STU_GRADEBOOK_TC_7",
+          "description": "Validate the click on 'Show Activities' button",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_STU_GRADEBOOK_TC_8",
+          "description": "Validate the click on Product button",
           "tags": "P2",
           "visualTest": "-"
         }

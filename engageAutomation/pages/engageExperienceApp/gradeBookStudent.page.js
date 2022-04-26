@@ -1,7 +1,8 @@
 "use strict";
 var action = require('../../core/actionLibrary/baseActionLibrary.js')
 var selectorFile = jsonParserUtil.jsonParser(selectorDir)
-var appShellPage = require('./appShell.page.js')
+var appShellPage = require('./appShell.page.js');
+const { confirmPassword_input } = require('./settings.page.js');
 
 module.exports = {
   pageTitle: selectorFile.css.ComproEngage.gradeBookStudent.pageTitle,
@@ -41,6 +42,9 @@ module.exports = {
   activityName: selectorFile.css.ComproEngage.gradeBookStudent.activityName,
   moreOption: selectorFile.css.ComproEngage.gradeBookStudent.moreOption,
   gradePendingPill: selectorFile.css.ComproEngage.gradeBookStudent.gradePendingPill,
+
+  viewAttempt_btn: selectorFile.css.ComproEngage.gradeBookStudent.viewAttempt_btn,
+  gradeAttempt_btn: selectorFile.css.ComproEngage.gradeBookStudent.gradeAttempt_btn,
 
   isInitialized: function () {
     var res;
@@ -97,6 +101,26 @@ module.exports = {
       }
     }
     return obj;
+  },
+
+
+  click_productListName: function (productListNameName) {
+    logger.logInto(stackTrace.get());
+    var i, list, res;
+    list = action.findElements(this.productListName);
+    for (i = 0; i < list.length; i++) {
+      if ((action.getText(this.productListName + i + "] p")) == productListNameName) {
+        res = action.click(list[i]);
+        break;
+      }
+    }
+    if (res == true) {
+      res = require('./gradeBookStudent.page').isInitialized();
+      logger.logInto(stackTrace.get(), " --productListName clicked");
+    }
+    else
+      logger.logInto(stackTrace.get(), " --productListName NOT clicked", "error")
+    return res;
   },
 
   //Function for returning the Unit details
@@ -202,12 +226,13 @@ module.exports = {
     var obj = [];
     action.waitForDisplayed(this.activityName);
     browser.pause(3000);
-    var list = action.findElements(this.activityName+index);
+    var list = action.findElements(this.activityName + index);
     for (var i = 0; i < list.length; i++) {
       obj[i] = {
+
         activityName: (action.getElementCount(this.activityName + index + "-" + i + "]") > 0) ? action.getText(this.activityName + index + "-" + i + "]") : null,
-        moreOption: (action.getElementCount(this.moreOption + index + "-" + i + "]") > 0) ? action.waitForDisplayed(this.moreOption +index + "-" + i + "]") : false,
-        gradePill: (action.getElementCount(this.gradePill + index + "-" + i + "]") > 0) ? action.getText(this.gradePill + index + "-" + i + "]") : null,
+        moreOption: (action.getElementCount(this.moreOption + index + "-" + i + "]") > 0) ? action.waitForDisplayed(this.moreOption + index + "-" + i + "]") : false,
+        gradePendingPill: (action.getElementCount(this.gradePendingPill) > 0) ? action.getText(this.gradePendingPill) : null,
       }
     }
     //console.log("getData_activityDetails obj - ",obj)
@@ -244,29 +269,65 @@ module.exports = {
     }
     return obj;
   },
-
-  click_moreOption: function (activityNameName, unitActivity) {
+  getData_moreOption: function () {
+    logger.logInto(stackTrace.get());
+    var obj;
+    obj = {
+      viewAttempt_btn: (action.getElementCount(this.viewAttempt_btn) > 0) ? action.getText(this.viewAttempt_btn) : null,
+      gradeAttempt_btn: (action.getElementCount(this.gradeAttempt_btn) > 0) ? action.getText(this.gradeAttempt_btn) : null,
+    }
+    return obj;
+  },
+  click_moreOption: function (unitName, unitActivity) {
     logger.logInto(stackTrace.get());
     var i, list, res, index;
     list = action.findElements(this.activityName);
     for (i = 0; i < list.length; i++) {
-      if ((action.getText(this.lessons_Title_lbl + i + "]")) == activityNameName) {
+      if ((action.getText(this.lessons_Title_lbl + i + "]")) == unitName) {
         index = i;
         break;
       }
     }
     for (i = 0; i < list.length; i++) {
-      if ((action.getText(this.activityName + index + "-" +  + i + "]")) == unitActivity) {
-        res = action.click(list[i]);
+      if ((action.getText(this.activityName + index + "-" +  i + "]")) == unitActivity) {
+        res = action.click(this.moreOption + index + "-" +  i + "]");
         break;
       }
     }
     if (res == true) {
       logger.logInto(stackTrace.get(), " --moreOption clicked");
+      res = this.getData_moreOption();
     }
     else
       logger.logInto(stackTrace.get(), " --moreOption NOT clicked", "error")
     return res;
-  }
-}
+  },
 
+  click_viewAttempt_btn: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.viewAttempt_btn);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " viewAttempt_btn is clicked");
+      res = require('./viewAsStudentAssignment.page').isInitialized();
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + "viewAttempt_btn is NOT clicked", 'error');
+    }
+    return res;
+  },
+
+  click_gradeAttempt_btn: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.gradeAttempt_btn);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " gradeAttempt_btn is clicked");
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + "gradeAttempt_btn is NOT clicked", 'error');
+    }
+    return res;
+  },
+
+}
