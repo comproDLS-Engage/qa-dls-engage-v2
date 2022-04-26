@@ -1099,7 +1099,8 @@
                     "collapsibleAttemptsLbl": "Attempts",
                     "collapsibleTimeSpentLbl": "Time Spent",
                     "viewAttempt_btn": "View Attempt",
-                    "gradeAttempt_btn": "Grade Attempt"
+                    "gradeAttempt_btn": "Grade Attempt",
+                    "score_icon": true
                 },
                 "student":{
                         "pageTitle": "My Progress",

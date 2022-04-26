@@ -337,6 +337,10 @@
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/gradebookData.json",
             "jsonPath": "engage.class[0].bookUnitDetails[1].unitDetails"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.gradeBookStudent.teacher"
           }
         ]
       },

@@ -116,9 +116,9 @@ module.exports = {
          assertion.assertEqual(sts[i].score_icon, true, "score_icon is Not displayed");
          assertion.assertEqual(sts[i].completion_icon, true, "completion_icon is Not displayed");
          assertion.assertEqual(sts[i].totalTime_icon, true, "totalTime_icon is Not displayed");
-         assertion.assert((sts[i].score_Unit_lbl).includes(testdata[1][i].score_Unit_lbl), "score_Unit_lbl is Not displayed: ");
-         assertion.assert((sts[i].completion__Unit_lbl).includes(testdata[1][i].completion__Unit_lbl), "completion__Unit_lbl is Not displayed: ");
-         assertion.assert((sts[i].totalTime_lbl).includes(testdata[1][i].totalTime_lbl), "totalTime_lbl is Not displayed: ");
+         assertion.assert((sts[i].score_Unit_lbl).includes(testdata[2].score_Unit_lbl), "score_Unit_lbl is Not displayed: ");
+         assertion.assert((sts[i].completion__Unit_lbl).includes(testdata[2].completion__Unit_lbl), "completion__Unit_lbl is Not displayed: ");
+         assertion.assert((sts[i].totalTime_lbl).includes(testdata[2].totalTime_lbl), "totalTime_lbl is Not displayed: ");
          assertion.assertEqual(sts[i].activityCount_icon, true, "activityCount_icon is Not displayed");
          assertion.assertEqual(sts[i].activityCount_lbl, testdata[1][i].activityCount_lbl, "activityCount_lbl is Not displayed");
          assertion.assertEqual(sts[i].CompletionCount, testdata[1][i].CompletionCount, "CompletionCount is Not displayed");
