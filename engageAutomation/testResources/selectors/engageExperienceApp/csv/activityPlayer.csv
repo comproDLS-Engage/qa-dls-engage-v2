@@ -16,7 +16,7 @@ closeBtn,[data-tid=button-close],button,activityPlayer,,,"waitForDisplayed, clos
 completedTxt,[data-tid='button-completed'],p,activityPlayer,,,,null,"""Completed on"""
 yourScoreLabel,[data-tid=text-activityScoreInfo] p,p,activityPlayer,,,,null,"""Your Score:"""
 yourScoreValue,[data-tid=text-activityScoreInfo] h6,h6,activityPlayer,,,,,
-detailsPanel,main > div > div:nth-child(1),div,activityPlayer,,,,,
+detailsPanel,[data-tid=container-leftPanel],div,activityPlayer,,,,,
 panelHeading,[data-tid=panel-heading],p,detailsPanel,,,,,
 activityTitle,[data-tid='text-title'],h2,detailsPanel,,,,,
 activitySubtitle,[data-tid='text-subTitle'],p,detailsPanel,,,,,
@@ -28,3 +28,4 @@ analyticsInfoContainer,[data-tid=container-analyticsinfo] > div > div:nth-child(
 closeInfoBtn,[data-tid=button-closeinfotoc],button,infoTocPanel,,,"waitForDisplayed, closeBtn, undefined, true","""""",""""""
 infoTocHeading,[data-tid=text-infotocheading],p,infoTocPanel,,,,"""Activities""","""Activities"""
 feedbackText,[data-tid=text-feedbackmessage],h6,activityPlayer,,,,"[""Well done"", ""Correct"", ""Oops! Not quite correct."", ""Not Correct""]","[""Well done"", ""Correct"", ""Oops! Not quite correct."", ""Not Correct""]"
+closeAssignmentBtn,[data-tid=button-closeAssignment],button,activityPlayer,,,"waitForDisplayed, closeAssignmentBtn, undefined, true",,"""Close Assignment"""

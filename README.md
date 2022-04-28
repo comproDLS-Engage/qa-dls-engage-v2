@@ -69,6 +69,12 @@ Parameter for re-running the entire test if any test is failed. This parameter w
 npm test -- --reportdir=%date:/=%-%time::=-% --appType=engageExperienceApp  --testEnv=qa --testExecFile=End2End.json --retry
 ```
 
+#### noCompressImage
+Parameter for disabling the image compression of the timeline report.
+```
+npm test -- --reportdir=%date:/=%-%time::=-% --appType=engageExperienceApp  --testEnv=qa --testExecFile=End2End.json --noCompressImage
+```
+
 #### logglyToken
 Parameter for setting loggly token. If used,the generated logs will be shipped to loggly. 
 ```

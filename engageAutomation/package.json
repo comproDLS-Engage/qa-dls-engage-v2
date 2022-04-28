@@ -7,9 +7,9 @@
     "test": "./node_modules/.bin/wdio wdio.conf.js",
     "landingFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='landingTest.json' --windowWidth=1600 --windowHeight=900",
     "loginFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='loginTest.json' --windowWidth=1600 --windowHeight=900",
-    "basicFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=production --testExecFile='AcceptanceNew.json' --windowWidth=1600 --windowHeight=900",
+    "basicFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='AcceptanceNew.json' --windowWidth=1600 --windowHeight=900",
     "appShellFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='appShellTest.json' --windowWidth=1600 --windowHeight=900",
-    "classIntructorFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=production --testExecFile='classDashboardTest.json' --windowWidth=1600 --windowHeight=900",
+    "classIntructorFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile=studentClassTest.json --windowWidth=1600 --windowHeight=900",
     "dashboardFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='dashboardTest.json' --windowWidth=1600 --windowHeight=900",
     "bookViewFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa  --testExecFile=bookDetailViewTest.json --browserCapability=desktop-chrome-1920",
     "applitoolsTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='landingTest.json' --browserCapability=applitools-chrome-1920 --visual=applitools --skipAssertion=true",
@@ -21,7 +21,11 @@
     "browseFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='browseTest.json' --browserCapability=desktop-chrome-1366",
     "playlistTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='playlistTest.json' --browserCapability=desktop-chrome-1366",
     "downloadPlayerTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='downloadPlayerTest.json' --browserCapability=desktop-chrome-1366",
-    "assignmentIntructorFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='classTeacherAssignment.json' --windowWidth=1600 --windowHeight=900"
+    "assignmentInstructorFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile=classTeacherAssignment.json --windowWidth=1600 --windowHeight=900",
+    "assignmentStudentFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='classStudentAssignment.json' --windowWidth=1600 --windowHeight=900",
+    "gradeBookFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='gradeBookTest.json' --windowWidth=1600 --windowHeight=900",
+    "gradeBookStudentFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='gradeBookStudentTest.json' --windowWidth=1600 --windowHeight=900"
+
   },
   "keywords": [],
   "author": "",
@@ -62,7 +66,7 @@
     "rimraf": "^3.0.2",
     "selenium-webdriver": "^4.0.0",
     "tesults": "^1.1.1",
-    "wdio-chromedriver-service": "7.2.8",
+    "wdio-chromedriver-service": "^7.3.2",
     "wdio-novus-visual-regression-service": "^1.2.5",
     "wdio-timeline-reporter": "^5.1.4",
     "winston": "^3.2.1",

@@ -2,7 +2,7 @@
     "backoffice": {
         "book": [
             {
-                "type": "Book",
+                "type": "BOOK",
                 "name": "QA Test Automation Book [DO NOT MODIFY]",
                 "coverImage": "./testResources/testcaseData/backoffice/qa/book_cover_compro_qa.png",
                 "description": "DO NOT MODIFY",
@@ -13,13 +13,59 @@
         "component": [
             {
                 "type": "Learning Path",
+                "category": "Extra Activities",
+                "title": "Extra Activities",
+                "folderLevel": "3",
+                "autonumbering": "1-based",
+                "targetRole": "All",
+                "visibility": "True",
+                "assignable": "True",
+                "freeAvailability": "Both"
+            },
+            {
+                "type": "Learning Path",
+                "category": "Textbook",
+                "title": "Textbook",
+                "folderLevel": "3",
+                "autonumbering": "1-based",
+                "targetRole": "All",
+                "visibility": "True",
+                "assignable": "True",
+                "freeAvailability": "Both"
+            },
+            {
+                "type": "Learning Path",
                 "category": "--none--",
                 "title": "Custom Component",
                 "folderLevel": "2",
                 "autonumbering": "None",
                 "targetRole": "All",
                 "visibility": "True",
-                "assignable": "True"
+                "assignable": "True",
+                "freeAvailability": "Both"
+            },
+            {
+                "type": "Learning Path",
+                "category": "--none--",
+                "title": "Book Resources",
+                "folderLevel": "3",
+                "autonumbering": "None",
+                "targetRole": "All",
+                "visibility": "True",
+                "assignable": "True",
+                "enableTracking": "None",
+                "freeAvailability": "Both"
+            },
+            {
+                "type": "Learning Path",
+                "category": "--none--",
+                "title": "LP1",
+                "folderLevel": "2",
+                "autonumbering": "1-based",
+                "targetRole": "All",
+                "visibility": "True",
+                "assignable": "True",
+                "freeAvailability": "Both"
             }
         ],
         "folder": [
@@ -30,12 +76,36 @@
             {
                 "name": "QA Automation Test folder L2",
                 "coverImage": ""
+            },
+            {
+                "name": "Scorable",
+                "coverImage": ""
+            },
+            {
+                "name": "Non Scorable",
+                "coverImage": ""
             }
         ],
         "activity": [
             {
                 "type": "Native Engage Learning Object",
                 "name": "Native LO 1"
+            },
+            {
+                "type": "Native Engage Learning Object",
+                "name": "Close Ended Native"
+            },
+            {
+                "type": "Native Engage Learning Object",
+                "name": "Open Ended Native"
+            },
+            {
+                "type": "Reading (etext)",
+                "name": "Etext"
+            },
+            {
+                "type": "HTML WebBook",
+                "name": "Html webbook"
             }
         ]
     }

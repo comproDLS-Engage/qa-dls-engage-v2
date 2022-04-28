@@ -36,6 +36,7 @@ module.exports = {
 	joinClassbtn: selectorFile.css.ComproEngage.myClassPage.joinClassbtn,
 	viewClassOption:selectorFile.css.ComproEngage.myClassPage.viewClassOption,
 	progressOption:selectorFile.css.ComproEngage.myClassPage.progressOption,
+	viewProgress_btn:selectorFile.css.ComproEngage.myClassPage.viewProgress_btn,
 
 	isInitialized: function () {
 		logger.logInto(stackTrace.get());
@@ -229,7 +230,7 @@ module.exports = {
 		if (res == true) {
 
 			//teacherViewClass = require('./teacherViewClass.page.js');
-			res = teacherViewClassPage.isInitialized();
+			res = teacherViewClassPage.getViewClassPageData();
 		}
 		else {
 			res = res + " -- inboxBtn is NOT clicked";
@@ -242,7 +243,7 @@ module.exports = {
 		res = action.click(this.assignmentsOption);
 		if (res == true) {
 			//var	teacherViewClass = require('./teacherViewClass.page.js');
-			res = teacherViewClassPage.isInitialized();
+			res = teacherViewClassPage.getViewClassPageData();
 		}
 		else {
 			res = res + " -- archievedBtn is NOT clicked";
@@ -255,7 +256,7 @@ module.exports = {
 		res = action.click(this.studentsOption);
 		if (res == true) {
 			//teacherViewClass = require('./teacherViewClass.page.js');
-			res = teacherViewClassPage.isInitialized();
+			res = teacherViewClassPage.getViewClassPageData();
 		}
 		else {
 			res = res + " -- restoreBtn is NOT clicked";
@@ -268,7 +269,7 @@ module.exports = {
 		res = action.click(this.gradeBookOption);
 		if (res == true) {
 			//teacherViewClass = require('./teacherViewClass.page.js');
-			res = teacherViewClassPage.isInitialized();
+			//res = teacherViewClassPage.isInitialized();
 		}
 		else {
 			res = res + " -- addStudentsOption button is NOT clicked";
@@ -295,6 +296,18 @@ module.exports = {
 		if (res == true) {
 		var	studentClassdetails = require('./studentClassDetails.page.js');
 			res = studentClassdetails.isInitialized();
+		}
+		else {
+			res = res + " -- addStudentsOption button is NOT clicked";
+			logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
+	click_viewProgress: function () {
+		logger.logInto(stackTrace.get());
+		res = action.click(this.viewProgress_btn);
+		if (res == true) {
+		res = require('./gradeBookStudent.page.js').isInitialized();
 		}
 		else {
 			res = res + " -- addStudentsOption button is NOT clicked";

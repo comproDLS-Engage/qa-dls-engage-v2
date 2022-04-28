@@ -2,7 +2,6 @@
 var action = require('../../core/actionLibrary/baseActionLibrary.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
 const addFolderPage = require('./addFolder.page.js');
-var res;
 
 module.exports = {
 
@@ -13,6 +12,7 @@ module.exports = {
     targetRoleDropdown: selectorFile.addActivityPage.targetRoleDropdown,
     assignableDropdown: selectorFile.addActivityPage.assignableDropdown,
     loUploadBtn: selectorFile.addActivityPage.loUploadBtn,
+    activityThemeOptions: selectorFile.addActivityPage.activityThemeOptions,
 
     isInitialized: function () {
         return addFolderPage.isInitialized();
@@ -20,6 +20,7 @@ module.exports = {
 
     set_Name: function (text) {
         logger.logInto(stackTrace.get());
+        let res;
         res = action.setValue(this.nameTxtbox, text);
         logger.logInto(stackTrace.get(), res);
         return res;
@@ -27,6 +28,7 @@ module.exports = {
 
     click_Add_Button: function () {
         logger.logInto(stackTrace.get());
+        let res;
         res = action.waitForClickable(addFolderPage.addBtn);
         action.waitForDisplayed(this.buttonLoader, undefined, true)
         if (res == true) {
@@ -41,6 +43,7 @@ module.exports = {
 
     click_Completion_Checkbox: function () {
         logger.logInto(stackTrace.get());
+        let res;
         res = action.click(this.completionCheckBox);
         logger.logInto(stackTrace.get(), res);
         return res;
@@ -48,6 +51,7 @@ module.exports = {
 
     click_Score_Checkbox: function () {
         logger.logInto(stackTrace.get());
+        let res;
         res = action.click(this.scoreCheckBox);
         logger.logInto(stackTrace.get(), res);
         return res;
@@ -55,6 +59,7 @@ module.exports = {
 
     select_TargetRole: function (value) {
         logger.logInto(stackTrace.get());
+        let res;
         if (value == "" || value == undefined)
             res = true;
         else {
@@ -78,6 +83,7 @@ module.exports = {
 
     select_Assignable: function (value) {
         logger.logInto(stackTrace.get());
+        let res;
         if (value == "" || value == undefined)
             res = true;
         else {
@@ -105,12 +111,33 @@ module.exports = {
 
     uploadFile: function (path) {
         logger.logInto(stackTrace.get());
+        let res;
         if (path == "" || path == undefined)
             res = true;
         else {
             res = action.uploadFile(path);
             if ((typeof res) === 'string') {
                 res = action.setValue(this.loUploadBtn, res);
+            }
+            logger.logInto(stackTrace.get(), res);
+        }
+        return res;
+    },
+
+    select_ActivityTheme: function (value) {
+        logger.logInto(stackTrace.get());
+        let res;
+        if (value == "" || value == undefined)
+            res = true;
+        else {
+            let i, list;
+            list = action.findElements(this.activityThemeOptions);
+            for (i = 0; i < list.length; i++) {
+                //console.log(action.getText(list[i]))
+                if (action.getText(list[i]).includes(value)) {
+                    res = action.click(list[i]);
+                    break;
+                }
             }
             logger.logInto(stackTrace.get(), res);
         }

@@ -1,7 +1,6 @@
 "use strict";
 var action = require('../../core/actionLibrary/baseActionLibrary.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
-var res;
 
 module.exports = {
 
@@ -15,18 +14,23 @@ module.exports = {
     bannerCloseBtn: selectorFile.common.bannerCloseBtn,
     bookDesignDropdown: selectorFile.addTitlePage.bookDesignDropdown,
     bookDesignList: selectorFile.addTitlePage.bookDesignList,
-    bookVisibilityDropdown: selectorFile.addTitlePage.bookVisibilityDropdown,
-    bookVisibilityList: selectorFile.addTitlePage.bookVisibilityList,
+    visibilityDropdown: selectorFile.addTitlePage.visibilityDropdown,
+    visibilityList: selectorFile.addTitlePage.visibilityList,
+    targetRoleDropdown: selectorFile.addTitlePage.targetRoleDropdown,
+    targetRoleList: selectorFile.addTitlePage.targetRoleList,
+    categoryDropdown: selectorFile.addTitlePage.categoryDropdown,
+    categoryList: selectorFile.addTitlePage.categoryList,
 
     isInitialized: function () {
         logger.logInto(stackTrace.get());
-        //action.waitForDocumentLoad();
+        let res;
         res = action.waitForDisplayed(this.createTitleBtn);
         return res;
     },
 
     set_Name: function (text) {
         logger.logInto(stackTrace.get());
+        let res;
         res = action.setValue(this.nameTxtbox, text);
         logger.logInto(stackTrace.get(), res);
         return res;
@@ -34,13 +38,19 @@ module.exports = {
 
     set_Description: function (text) {
         logger.logInto(stackTrace.get());
-        res = action.setValue(this.descriptionTxtbox, text);
-        logger.logInto(stackTrace.get(), res);
+        let res;
+        if (text == "" || text == undefined)
+            res = true;
+        else {
+            res = action.setValue(this.descriptionTxtbox, text);
+            logger.logInto(stackTrace.get(), res);
+        }
         return res;
     },
 
     upload_CoverImage: function (imgPath) {
         logger.logInto(stackTrace.get());
+        let res;
         if (imgPath == "" || imgPath == undefined)
             res = true;
         else {
@@ -55,6 +65,7 @@ module.exports = {
 
     click_CreateTitle_Button: function () {
         logger.logInto(stackTrace.get());
+        let res;
         res = action.waitForClickable(this.createTitleBtn);
         if (res == true) {
             res = action.click(this.createTitleBtn);
@@ -72,6 +83,7 @@ module.exports = {
 
     select_bookDesign: function (name) {
         logger.logInto(stackTrace.get());
+        let res;
         if (name == "" || name == undefined)
             res = true;
         else {
@@ -85,35 +97,79 @@ module.exports = {
                         res = action.click(list[i]);
                         break;
                     }
-                    res = "book design not found ";
                 }
             }
-            logger.logInto(stackTrace.get(), res);
         }
+        logger.logInto(stackTrace.get(), res);
         return res;
-
     },
 
-    select_bookVisibility: function (name) {
+    select_visibility: function (name) {
         logger.logInto(stackTrace.get());
+        let res;
         if (name == "" || name == undefined)
             res = true;
         else {
-            res = action.click(this.bookVisibilityDropdown);
-            action.waitForDisplayed(this.bookVisibilityList, undefined, undefined, undefined, 500);
+            res = action.click(this.visibilityDropdown);
+            action.waitForDisplayed(this.visibilityList, undefined, undefined, undefined, 500);
             if (res == true) {
                 let i, list;
-                list = action.findElements(this.bookVisibilityList);
+                list = action.findElements(this.visibilityList);
                 for (i = 0; i < list.length; i++) {
                     if (action.getText(list[i]).includes(name)) {
                         res = action.click(list[i]);
                         break;
                     }
-                    res = "book visibility not found ";
                 }
             }
-            logger.logInto(stackTrace.get(), res);
         }
+        logger.logInto(stackTrace.get(), res);
         return res;
-    }
+    },
+
+    select_TargetRole: function (value) {
+        logger.logInto(stackTrace.get());
+        let res;
+        if (value == "" || value == undefined)
+            res = true;
+        else {
+            res = action.click(this.targetRoleDropdown);
+            action.waitForDisplayed(this.targetRoleList, undefined, undefined, undefined, 500);
+            if (res == true) {
+                let i, list;
+                list = action.findElements(this.targetRoleList);
+                for (i = 0; i < list.length; i++) {
+                    if (action.getText(list[i]).includes(value)) {
+                        res = action.click(list[i]);
+                        break;
+                    }
+                }
+            }
+        }
+        logger.logInto(stackTrace.get(), res);
+        return res;
+    },
+
+    select_Category: function (value) {
+        logger.logInto(stackTrace.get());
+        let res;
+        if (value == "" || value == undefined)
+            res = true;
+        else {
+            res = action.click(this.categoryDropdown);
+            action.waitForDisplayed(this.categoryList, undefined, undefined, undefined, 500);
+            if (res == true) {
+                let i, list;
+                list = action.findElements(this.categoryList);
+                for (i = 0; i < list.length; i++) {
+                    if (action.getText(list[i]).includes(value)) {
+                        res = action.click(list[i]);
+                        break;
+                    }
+                }
+            }
+        }
+        logger.logInto(stackTrace.get(), res);
+        return res;
+    },
 }

@@ -48,8 +48,12 @@ module.exports = {
 		assertion.assertEqual(sts, true, "Description status mismatch");
 		sts = addTitlePage.select_bookDesign(testdata.bookDesign);
 		assertion.assertEqual(sts, true, "Book Design status mismatch");
-		sts = addTitlePage.select_bookVisibility(testdata.visibility);
+		sts = addTitlePage.select_visibility(testdata.visibility);
 		assertion.assertEqual(sts, true, "Visibility status mismatch");
+		sts = addTitlePage.select_Category(testdata.category);
+		assertion.assertEqual(sts, true, "Category status mismatch");
+		sts = addTitlePage.select_TargetRole(testdata.targetRole);
+		assertion.assertEqual(sts, true, "targetRole status mismatch");
 		sts = addTitlePage.click_CreateTitle_Button();
 		assertion.assert((typeof sts === "string" && sts.includes("Your new Umbrella Product is being setup.")), "Banner messsage mismatch. " + sts);
 	},
@@ -59,9 +63,16 @@ module.exports = {
 		sts = homePage.click_Book(testdata.name);
 		assertion.assert(sts.includes(testdata.name), "Book title mismatch. " + sts);
 		sts = viewBookPage.getBookParamDetails();
-		assertion.assertEqual(sts.description, testdata.description, "book description mismatch");
-		assertion.assertEqual(sts.bookDesign, testdata.bookDesign, "book design mismatch");
-		assertion.assertEqual(sts.visibility, testdata.visibility, "book visibility mismatch");
+		if (testdata.type == "BOOK") {
+			assertion.assertEqual(sts.description, testdata.description, "book description mismatch");
+			assertion.assertEqual(sts.bookDesign, testdata.bookDesign, "book design mismatch");
+			assertion.assertEqual(sts.visibility, testdata.visibility, "book visibility mismatch");
+		}
+		else {
+			assertion.assertEqual(sts.description, testdata.category, "global resource category mismatch");
+			assertion.assertEqual(sts.bookDesign, testdata.visibility, "global resource visibility mismatch");
+			assertion.assertEqual(sts.visibility, testdata.targetRole, "global resource targetRole mismatch");
+		}
 	},
 
 	// Validate that the delete book dialog box opens on clicking delete button on the components page
@@ -114,6 +125,8 @@ module.exports = {
 		assertion.assertEqual(sts, true, "Target Role status mismatch");
 		sts = addCompPage.select_Visibility(testdata.visibility);
 		assertion.assertEqual(sts, true, "Visibility status mismatch");
+		sts = addCompPage.select_freeAvailability(testdata.freeAvailability);
+		assertion.assertEqual(sts, true, "Freely available to roles status mismatch");
 		sts = addCompPage.click_Add_Button();
 		//assertion.assert((typeof sts === "string" && sts.includes("Component \"" + testdata.title + "\" is created")), "Banner messsage mismatch. " + sts);
 		assertion.assert((typeof sts === "string" && sts.includes("Your new Component is being setup.")), "Banner messsage mismatch. " + sts);
@@ -144,22 +157,16 @@ module.exports = {
 	BK_TC_12: function (testdata) {
 		sts = addFolderPage.set_Name(testdata.name);
 		assertion.assertEqual(sts, true, "Name status mismatch");
-		if (testdata.coverImage != "") {
-			sts = addFolderPage.upload_CoverImage(testdata.coverImage);
-			assertion.assertEqual(sts, true, "Upload cover image status mismatch");
-		}
-		if (testdata.targetRole != "") {
-			sts = addFolderPage.select_TargetRole(testdata.targetRole);
-			assertion.assertEqual(sts, true, "Target Role status mismatch");
-		}
-		if (testdata.assignable != "") {
-			sts = addFolderPage.select_Assignable(testdata.assignable);
-			assertion.assertEqual(sts, true, "Assignable status mismatch");
-		}
-		if (testdata.color != "") {
-			sts = addFolderPage.set_Folder_Color(testdata.color);
-			assertion.assertEqual(sts, true, "Folder color status mismatch");
-		}
+		sts = addFolderPage.upload_CoverImage(testdata.coverImage);
+		assertion.assertEqual(sts, true, "Upload cover image status mismatch");
+		sts = addFolderPage.select_TargetRole(testdata.targetRole);
+		assertion.assertEqual(sts, true, "Target Role status mismatch");
+		sts = addFolderPage.select_Assignable(testdata.assignable);
+		assertion.assertEqual(sts, true, "Assignable status mismatch");
+		sts = addFolderPage.set_Folder_Color(testdata.color);
+		assertion.assertEqual(sts, true, "Folder color status mismatch");
+		sts = addFolderPage.select_Folder_Type(testdata.folderType);
+		assertion.assertEqual(sts, true, "folderType status mismatch");
 		if (testdata.page == "") {
 			testdata.page = Math.floor(Math.random() * 10);
 		}
@@ -357,6 +364,8 @@ module.exports = {
 		assertion.assertEqual(sts, true, "assignable status mismatch");
 		sts = addActivityPage.set_Page_Reference(testdata.page);
 		assertion.assertEqual(sts, true, "page reference status mismatch");
+		sts = addActivityPage.select_ActivityTheme(testdata.activityTheme);
+		assertion.assertEqual(sts, true, "activityTheme status mismatch");
 	},
 
 	//Click Preview and Publish button on Component viewer Page

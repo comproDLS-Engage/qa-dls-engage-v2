@@ -144,8 +144,14 @@ module.exports = {
 	//Validate that clicking on the Settings button in left Navigation pane launches Settings page
 	ENG_SHELL_TC_17: function () {
 		sts = appShell.clickSettingsButton();
-		//console.log(sts);
 		assertion.typeOf(sts, 'object', new Error(sts));
 		assertion.assertEqual(sts.pageStatus, true, "Settings Page Status Mismatch: ")
+	},
+
+	//Validate that clicking on the Assign button on the header launches the create assignment page
+	ENG_SHELL_TC_18: function () {
+		sts = appShell.clickAssignButton();
+		assertion.typeOf(sts, 'object', new Error(sts));
+		assertion.assertEqual(sts.pageStatus, true, "Create Assignment Page Status Mismatch: ")
 	}
 }

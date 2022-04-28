@@ -3,3 +3,4 @@ package-lock.json
 allure-results
 output
 logs
+node_modules_old
