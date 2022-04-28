@@ -69,6 +69,55 @@
                     ],
                     "info": {}
                 },
+                "assignmentStudent": {
+                    "email": "dev2_student17Jan@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "student",
+                    "name": "Assignment Student 2",
+                    "class": [
+                        {
+                            "key": "TFbA-6AP7",
+                            "name": "Class with no assignment"
+                        },
+                        {
+                            "key": "TFbA-6AP7",
+                            "name": "Class 1"
+                        },
+                        {
+                            "key": "v324-6vg7",
+                            "name": "Class Assignment test"
+                        }
+                       
+                    ],
+                    "info": {}
+                },
+                "assignmentStudent1": {
+                "email": "dev2_28aprilStudent@yopmail.com",
+                "password": "Compro@1234",
+                "role": "student",
+                "name": "dev2 28aprilstudent",
+                "class": [
+                    {
+                        "key": "TFbA-6AP7",
+                        "name": "Class with no assignment"
+                    },
+                    {
+                        "key": "TFbA-6AP7",
+                        "name": "Class 1"
+                    },
+                    {
+                        "key": "v324-6vg7",
+                        "name": "Class Assignment test"
+                    },
+                    {
+                        "key": "v324-6vg7",
+                        "name": "Gradebook"
+                    },
+                    {
+                        "key": "TFbA-6AP7",
+                        "name": "Class with no assignment"
+                    }]
+                },
                 "acceptanceteacher": {
                     "email": "qa_acceptanceteacher100@yopmail.com",
                     "password": "Compro@1234",
@@ -120,7 +169,7 @@
                     "email": "dev2_teacher17Jan@yopmail.com",
                     "password": "Compro@1234",
                     "role": "instructor",
-                    "name": "qa teacher001",
+                    "name": "dev2 teacher17Jan",
                     "class": [
                         {
                             "key": "TFbA-6AP7",
@@ -133,6 +182,15 @@
                         {
                             "key": "TFbA-6AP7",
                             "name": "class3"
+                        },
+                        {
+                            "key": "v324-6vg7",
+                            "name": "Gradebook",
+                            "studentName1":"dev2 28aprilstudent"
+                        },
+                        {
+                            "key": "8aQY-M826",
+                            "name": "class3_new"
                         }
                     ],
                     "info": {}
@@ -164,6 +222,20 @@
                     "name": "no Class1",
                     "role": "student",
                     "class": [],
+                    "info": {}
+                },
+                "gradeBookStudent": {
+                    "email": "dev2_28aprilstudent@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "student",
+                    "name": "dev2 28aprilstudent",
+                    "class": [
+                        {
+                            "key": "TFbA-6AP7",
+                            "name": "Gradebook",
+                            "studentName1":"dev1 student100"
+                        }
+                    ],
                     "info": {}
                 },
                 "NoClassInstructor": {

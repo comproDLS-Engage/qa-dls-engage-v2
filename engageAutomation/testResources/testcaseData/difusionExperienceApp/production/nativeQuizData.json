@@ -263,21 +263,80 @@
       {
         "number": 10,
         "instruction": "",
-        "text": "",
-        "type": "fibselect",
+        "text": "Lisez et sélectionnez vos réponses:",
+        "type": "multi-mcq",
         "mediaType": "",
-        "maxOptions": 2,
         "answerKey": [
-          ["A","3","John","correct"],
-          ["B","2","Jane","correct"]
+          ["1-O1","Commerce ","select","correct"],
+          ["1-O2","Construction","",""],
+          ["1-O3","Construction de navires","",""],
+          ["1-O4","Toutes ces","",""],
+          ["2-O1","Commerce ","",""],
+          ["2-O2","Construction","select","correct"],
+          ["2-O3","Construction de navires","",""],
+          ["2-O4","Toutes ces","",""]
         ],
         "scenario1": [
-          ["A","0","-","incorrect"],
-          ["B","4","Joan","incorrect"]
+          ["1-O1","Commerce ","","correct"],
+          ["1-O2","Construction","",""],
+          ["1-O3","Construction de navires","select","incorrect"],
+          ["1-O4","Toutes ces","",""],
+          ["2-O1","Commerce ","",""],
+          ["2-O2","Construction","","correct"],
+          ["2-O3","Construction de navires","select","incorrect"],
+          ["2-O4","Toutes ces","",""]
+        ]
+      },
+      {
+        "number": 11,
+        "instruction": "",
+        "text": "FIB Questions with unique answers",
+        "type": "fibselect",
+        "mediaType": "",
+        "maxOptions": 3,
+        "answerKey": [
+          ["A","O1","New Delhi","correct"],
+          ["B","O3","Akbar","correct"],
+          ["C","O6","Shah Jahan","correct"]
+        ],
+        "scenario1": [
+          ["A","none","-","incorrect"],
+          ["B","O4","Babar","incorrect"],
+          ["C","O6","Shah Jahan","correct"]
         ],
         "scenario2": [
-          ["A","4","Adam","incorrect"],
-          ["B","3","Sarah","incorrect"]
+          ["A","O2","Bombay","incorrect"],
+          ["B","none","-","incorrect"],
+          ["C","O5","Jahangir","incorrect"]
+        ]
+      },
+      {
+        "number": 12,
+        "instruction": "",
+        "text": "FIB Questions with common answers",
+        "type": "fibselect",
+        "mediaType": "",
+        "maxOptions": 4,
+        "answerKey": [
+          ["A","O1","a","correct"],
+          ["B","O1","a","correct"],
+          ["C","O3","the","correct"],
+          ["D","O2","an","correct"],
+          ["E","O3","the","correct"]
+        ],
+        "scenario1": [
+          ["A","none","-","incorrect"],
+          ["B","O2","an","incorrect"],
+          ["C","O3","the","incorrect"],
+          ["D","none","-","incorrect"],
+          ["E","none","-","incorrect"]
+        ],
+        "scenario2": [
+          ["A","O3","the","incorrect"],
+          ["B","O2","an","incorrect"],
+          ["C","O2","an","incorrect"],
+          ["D","O1","a","incorrect"],
+          ["E","O1","a","incorrect"]
         ]
       }
     ]
