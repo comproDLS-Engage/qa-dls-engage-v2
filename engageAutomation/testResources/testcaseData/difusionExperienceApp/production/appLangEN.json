@@ -979,8 +979,8 @@
                     "editAssignmentlbl": "Edit Assignment",
                     "cloneAssignmentlbl": "Clone Assignment",
                     "deleteAssignmentlbl": "Delete Assignment",
-                    "deletemsg":"Success \nAssignment has been successfully deleted.",
-                    "editmsg":"Success \nYour changes have been saved successfully."
+                    "deletemsg": "Success \nAssignment has been successfully deleted.",
+                    "editmsg": "Success \nYour changes have been saved successfully."
                 }
             },
             "selectActivity": {

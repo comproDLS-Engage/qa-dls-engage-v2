@@ -151,7 +151,9 @@ module.exports = {
       // please add assertion :rupsi
    },
    ENG_GRADEBOOK_TC_13: function (testdata) {
+      console.log(testdata)
       sts = studentGradeBookPage.click_productListName(testdata);
+      console.log(sts)
       assertion.assertEqual(sts.pageStatus, true, "Dashboard page status mismatch")
    },
    ENG_GRADEBOOK_TC_14: function () {

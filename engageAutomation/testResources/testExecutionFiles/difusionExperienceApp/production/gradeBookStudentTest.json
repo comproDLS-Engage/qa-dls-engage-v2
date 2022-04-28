@@ -69,6 +69,18 @@
         "testData": [
         ]
       },
+      
+      {
+        "id": "ENG_GRADEBOOK_TC_13",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/gradeBook.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/gradebookData.json",
+            "jsonPath": "engage.class[0].componentList[1]"
+          }
+        ]
+      },
       {
         "id": "ENG_STU_GRADEBOOK_TC_5",
         "description": "Validate the content on Student View GradeBook Page",
@@ -98,6 +110,7 @@
             "jsonPath": "engage.appContent.appShell.featureNotAvailable_alert"}
         ]
       },
+      
       {
         "id": "ENG_STU_GRADEBOOK_TC_2",
         "description": "Validate the Product List in Student GradeBook",

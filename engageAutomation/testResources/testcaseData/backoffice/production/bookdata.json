@@ -8,6 +8,13 @@
                 "description": "QA automation test description",
                 "bookDesign": "Green",
                 "visibility": "True"
+            },
+            {
+                "type": "GLOBAL_RESOURCES",
+                "name": "QA Test Automation Global Resource [DO NOT PUBLISH]",
+                "category": "Interactive Activities",
+                "visibility": "True",
+                "targetRole": "All"
             }
         ],
         "component": [
@@ -58,7 +65,8 @@
                 "targetRole": "All",
                 "assignable": "True",
                 "color": "#d20f0f",
-                "page": "10"
+                "page": "10",
+                "folderType": "Default"
             },
             {
                 "name": "QA Automation Test folder L2",
@@ -66,22 +74,24 @@
                 "targetRole": "All",
                 "assignable": "True",
                 "color": "#158e19",
-                "page": "12"
+                "page": "12",
+                "folderType": "Default"
             }
         ],
         "activity": [
             {
                 "type": "Native Engage Learning Object",
                 "id": "category-0-option-0",
-                "name": "QA Automation Test LO1 - native",
+                "name": "QA Automation - Native",
                 "targetRole": "All",
                 "assignable": "True",
-                "page": "13"
+                "page": "13",
+                "activityTheme": "Simple"
             },
             {
                 "type": "Native Engage Learning Object",
                 "id": "category-0-option-0",
-                "name": "QA Automation Test LO1 - Writing"
+                "name": "QA Automation - Writing"
             },
             {
                 "type": "Close Ended Learning Object",
@@ -100,6 +110,14 @@
                 "id": "category-3-option-2",
                 "name": "QA Automation download pdf",
                 "file": "./testResources/testcaseData/backoffice/production/Lorem Ipsum.pdf"
+            },
+            {
+                "type": "Native Engage Learning Object",
+                "id": "category-0-option-0",
+                "name": "QA Automation - Native Kids",
+                "targetRole": "All",
+                "assignable": "True",
+                "activityTheme": "Illustrative"
             }
         ],
         "accessCodeBatch": [
