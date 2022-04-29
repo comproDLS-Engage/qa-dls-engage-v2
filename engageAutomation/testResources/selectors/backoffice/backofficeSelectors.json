@@ -116,7 +116,7 @@
 		"activityMenuDeleteBtn": "[class*=mdc-menu-surface--open] [data-tid=button-Delete]",
 		"activityMenuActivityAuthorBtn": "[class*=mdc-menu-surface--open] [data-tid*=button-Activity]",
 		"itemCheckboxes": "[data-tid*=button-folder-details] > div > div",
-		"deleteItemBtn": "[id=deletSlectedItem]",
+		"deleteItemBtn": "[data-tid=button-deleteSelectedItem]",
 		"modifyFolderOptionsBtn":"[data-tid=button-modify-folder-options]",
 		"levels": "[data-tid=text-content-details-value-0]",
 		"autonumbering": "[data-tid=text-content-details-value-1]",
