@@ -19,6 +19,7 @@ module.exports = {
 		assertion.assertEqual(sts.singlePageBtn, "", "singlePageBtn status mismatch");
 		assertion.assertEqual(sts.fullScreenBtn, "", "fullScreenBtn status mismatch");
 		assertion.assertEqual(sts.bookmarkBtn, "", "bookmarkBtn status mismatch");
+		assertion.assertEqual(sts.jumpToPageBtn, "", "jumpToPageBtn status mismatch");		
 		assertion.assert((sts.TOCBtn instanceof Error) === false, "TOCBtn status mismatch - " + sts.TOCBtn);
 		assertion.assertEqual(sts.previousBtn, "", "previousBtn status mismatch");
 		assertion.assertEqual(sts.nextBtn, "", "nextBtn status mismatch");
@@ -196,7 +197,7 @@ module.exports = {
 		sts = flipbook.click_TOCBtn();
 		assertion.assertEqual(sts.flipbookTitle, testdata[0].flipbookTitle, " text mismatch");
 		assertion.assertEqual(sts.tableOfContentTitle, testdata[1].tableOfContentTitle, " text mismatch");
-		assertion.assertEqual(sts.jumpToPageBtn, '', "jumpToPageBtn text mismatch");
+		assertion.assertEqual(sts.jumpToPageBtnTOC, '', "jumpToPageBtnTOC text mismatch");
 	},
 
 	//Validate entering the page number in input label after clicking the input field in TOC
@@ -209,7 +210,7 @@ module.exports = {
 
 	//Validate clicking on Jump to page button lauches the entered page in flipbook
 	ENG_FLIP_TC_22: function () {
-		sts = flipbook.click_jumpToPageBtn();
+		sts = flipbook.click_jumpToPageBtnTOC();
 		assertion.assertEqual(sts.notesBtn, "", "notesBtn status mismatch");
 		assertion.assertEqual(sts.zoomInBtn, "", "zoomInBtn status mismatch");
 		assertion.assertEqual(sts.zoomOutBtn, "", "zoomOutBtn status mismatch");
