@@ -19,7 +19,7 @@ module.exports = {
 		assertion.assertEqual(sts.singlePageBtn, "", "singlePageBtn status mismatch");
 		assertion.assertEqual(sts.fullScreenBtn, "", "fullScreenBtn status mismatch");
 		assertion.assertEqual(sts.bookmarkBtn, "", "bookmarkBtn status mismatch");
-		assertion.assertEqual(sts.jumpToPageBtn, "", "jumpToPageBtn status mismatch");		
+		assertion.assertEqual(sts.jumpToPreviousPageBtn, null, "jumpToPreviousPageBtn status mismatch");
 		assertion.assert((sts.TOCBtn instanceof Error) === false, "TOCBtn status mismatch - " + sts.TOCBtn);
 		assertion.assertEqual(sts.previousBtn, "", "previousBtn status mismatch");
 		assertion.assertEqual(sts.nextBtn, "", "nextBtn status mismatch");
@@ -219,6 +219,24 @@ module.exports = {
 		assertion.assertEqual(sts.singlePageBtn, "", "singlePageBtn status mismatch");
 		assertion.assertEqual(sts.fullScreenBtn, "", "fullScreenBtn status mismatch");
 		assertion.assertEqual(sts.bookmarkBtn, "", "bookmarkBtn status mismatch");
+		assertion.assertEqual(sts.jumpToPreviousPageBtn, "", "jumpToPreviousPageBtn status mismatch");		
+		assertion.assert((sts.TOCBtn instanceof Error) === false, "TOCBtn status mismatch - " + sts.TOCBtn);
+		assertion.assertEqual(sts.previousBtn, "", "previousBtn status mismatch");
+		assertion.assertEqual(sts.nextBtn, "", "nextBtn status mismatch");
+	},
+
+	//Validate clicking on Jump to Previous page button on toolbar launches the last page
+	ENG_FLIP_TC_23: function () {
+		sts = flipbook.click_jumpToPreviousPageBtn();
+		assertion.assertEqual(sts.notesBtn, "", "notesBtn status mismatch");
+		assertion.assertEqual(sts.zoomInBtn, "", "zoomInBtn status mismatch");
+		assertion.assertEqual(sts.zoomOutBtn, "", "zoomOutBtn status mismatch");
+		assertion.assertEqual(sts.fitToScreenBtn, "", "fitToScreenBtn status mismatch");
+		assertion.assertEqual(sts.doublePageBtn, "", "doublePageBtn status mismatch");
+		assertion.assertEqual(sts.singlePageBtn, "", "singlePageBtn status mismatch");
+		assertion.assertEqual(sts.fullScreenBtn, "", "fullScreenBtn status mismatch");
+		assertion.assertEqual(sts.bookmarkBtn, "", "bookmarkBtn status mismatch");
+		assertion.assertEqual(sts.jumpToPreviousPageBtn, null, "jumpToPreviousPageBtn status mismatch");		
 		assertion.assert((sts.TOCBtn instanceof Error) === false, "TOCBtn status mismatch - " + sts.TOCBtn);
 		assertion.assertEqual(sts.previousBtn, "", "previousBtn status mismatch");
 		assertion.assertEqual(sts.nextBtn, "", "nextBtn status mismatch");

@@ -19,7 +19,7 @@ module.exports = {
   singlePageBtn: selectorFile.css.ComproEngage.flipbook.singlePageBtn,
   fullScreenBtn: selectorFile.css.ComproEngage.flipbook.fullScreenBtn,
   bookmarkBtn: selectorFile.css.ComproEngage.flipbook.bookmarkBtn,
-  jumpToPageBtn: selectorFile.css.ComproEngage.flipbook.jumpToPageBtn,
+  jumpToPreviousPageBtn: selectorFile.css.ComproEngage.flipbook.jumpToPreviousPageBtn,
   TOCBtn: selectorFile.css.ComproEngage.flipbook.TOCBtn,
   previousBtn: selectorFile.css.ComproEngage.flipbook.previousBtn,
   nextBtn: selectorFile.css.ComproEngage.flipbook.nextBtn,
@@ -96,7 +96,7 @@ module.exports = {
       singlePageBtn: (action.getElementCount(this.singlePageBtn) > 0) ? action.getText(this.singlePageBtn) : null,
       fullScreenBtn: (action.getElementCount(this.fullScreenBtn) > 0) ? action.getText(this.fullScreenBtn) : null,
       bookmarkBtn: (action.getElementCount(this.bookmarkBtn) > 0) ? action.getText(this.bookmarkBtn) : null,
-      jumpToPageBtn: (action.getElementCount(this.jumpToPageBtn) > 0) ? action.getText(this.jumpToPageBtn) : null,
+      jumpToPreviousPageBtn: (action.getElementCount(this.jumpToPreviousPageBtn) > 0) ? action.getText(this.jumpToPreviousPageBtn) : null,
       TOCBtn: (action.getElementCount(this.TOCBtn) > 0) ? action.getText(this.TOCBtn) : null,
       previousBtn: (action.getElementCount(this.previousBtn) > 0) ? action.getText(this.previousBtn) : null,
       nextBtn: (action.getElementCount(this.nextBtn) > 0) ? action.getText(this.nextBtn) : null,
@@ -651,6 +651,21 @@ module.exports = {
     else {
       logger.logInto(stackTrace.get(), res + " jumpToPageBtnTOC button is not clicked", 'error');
     }
+    return res;
+  },
+
+  click_jumpToPreviousPageBtn: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.jumpToPreviousPageBtn);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " jumpToPreviousPageBtn button is clicked");
+      res = this.getData_flipbookPage();
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + " jumpToPreviousPageBtn button is not clicked", 'error');
+    }
+    console.log("res - ",res)
     return res;
   },
 
