@@ -1122,6 +1122,37 @@
                         "collapsibleAttemptsLbl": "Attempts",
                         "collapsibleTimeSpentLbl": "Time Spent"
                 }
+            },
+            "writingPlayer": {
+                "student": {
+                    "studentName_lbl" : "TODO",
+                    "submissiondate_lbl" : "submitted",
+                    "gradePending_pill" : "Grade Pending",
+                    "bookNameSubTitle_lbl" : "QA free book - 2022",
+                    "activityNameTitle_lbl" : "Open ended question",
+                    "gradingAndFeedback_lbl" : "Grading & Feedback",
+                    "attempt1_lbl" : "Attempt 1",
+                    "attempt2_lbl" : "Attempt 2",
+                    "attempt3_lbl" : "Attempt 3",
+                    "submittedDate_lbl" : "submitted",
+                    "gradedDate_lbl" : "graded",
+                    "score_icon" : "Reattempt Requested",
+                    "score_lbl" : "Score",
+                    "feedback_current_lbl" : "Feedback (Optional)",
+                    "requestReattempted_lbl" : "Request Reattempt",
+                    "requestReattempted_yes_btn" : "Yes",
+                    "requestReattempted_no_btn" : "No",
+                    "submitGrade_btn" : "Submit Grade",
+                    "submitDialog_title" : "Submit Grade?",
+                    "submitDialog_subTitle" : "Submitting the grade will notify the student and send any added feedback for review. Grades cannot be changed unless a student reattempts the activity.",
+                    "submitDialog_score_lbl" : "Score",
+                    "submitDialog_feebback_lbl" : "Feedback",
+                    "submitDialog_requestReattempt_lbl" : "Request Reattempt",
+                    "submitDialog_cancel_btn" : "Cancel",
+                    "submitDialog_confirm_btn" : "Confirm & Submit",
+                    "feedback_previous_lbl" : "Feedback",
+                    "grade_lbl" : "Grade"
+                }
             }
         }
     }
