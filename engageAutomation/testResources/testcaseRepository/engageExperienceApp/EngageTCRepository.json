@@ -3230,6 +3230,12 @@
           "description": "Validate clicking on 'Cancel' button disappears dialog box",
           "tags": "P2",
           "visualTest": "-"
+        },
+        {
+          "id": "ENG_WRITEPLYR_TC_7",
+          "description": "Validate clicking on 'Confirm & Submit' button grades the attempt",
+          "tags": "P2",
+          "visualTest": "-"
         }
       ]
     }

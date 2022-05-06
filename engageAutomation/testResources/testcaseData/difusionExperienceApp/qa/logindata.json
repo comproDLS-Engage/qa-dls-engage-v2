@@ -318,6 +318,19 @@
                         }
                     ],
                     "info": {}
+                },
+                "writingPlayerTeacher": {
+                    "email": "writingPlayer_teacher@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "instructor",
+                    "name": "Teacher Writing Player",
+                    "class": [
+                        {
+                            "key": "4rvF-gRHj",
+                            "name": "class 15"
+                        }
+                    ],
+                    "info": {}
                 }
             }
         },

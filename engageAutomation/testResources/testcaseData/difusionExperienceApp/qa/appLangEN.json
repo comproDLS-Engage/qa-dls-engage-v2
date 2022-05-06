@@ -1125,9 +1125,11 @@
             },
             "writingPlayer": {
                 "student": {
-                    "studentName_lbl" : "qa stu200",
+                    "studentName_lbl" : "",
                     "submissiondate_lbl" : "submitted for review",
+                    "finalGradePosted_lbl": "final grade posted on",
                     "gradePending_pill" : "Grade Pending",
+                    "graded_pill" : "Graded",
                     "bookNameSubTitle_lbl" : "QA free book - 2022",
                     "activityNameTitle_lbl" : "Writing",
                     "gradingAndFeedback_lbl" : "Grading & Feedback",
@@ -1154,7 +1156,7 @@
                     "feedback_previous_lbl" : "Feedback",
                     "grade_lbl" : "Grade",
                     "score_entered": "50",
-                    "feedback_entered": "Attempt 1 - fail! Do again"
+                    "feedback_entered": "Attempt 1 - fail! you can not perform now"
                 }
             }
         }

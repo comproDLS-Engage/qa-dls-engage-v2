@@ -1,6 +1,6 @@
 {
   "Suite1": {
-    "Name": "Validation the Writing Player for 1st attempt Grading in Teacher",
+    "Name": "Validation the Writing Player for 1st attempt Grading in Teacher (without reattempt requested)",
     "TestCaseRepo": [
       "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
     ],
@@ -24,7 +24,7 @@
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
-            "jsonPath": "engage.login.user.classInstructorUser3"
+            "jsonPath": "engage.login.user.writingPlayerTeacher"
           }
         ]
       },
@@ -46,7 +46,7 @@
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
-            "jsonPath": "engage.login.user.classInstructorUser3.class[3].name"
+            "jsonPath": "engage.login.user.writingPlayerTeacher.class[0].name"
           }
         ]
       }
@@ -116,6 +116,28 @@
         "description": "Validate clicking on 'Cancel' button disappears dialog box",
         "testFile": "./test/engageExperienceApp/writingPlayer.test.js",
         "testData": []
+      },
+      {
+        "id": "ENG_WRITEPLYR_TC_5",
+        "description": "Validate clicking on 'Submit Grade' button launches dialog box",
+        "testFile": "./test/engageExperienceApp/writingPlayer.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.writingPlayer.student"
+          }
+        ]
+      },
+      {
+        "id": "ENG_WRITEPLYR_TC_7",
+        "description": "Validate clicking on 'Confirm & Submit' button grades the attempt",
+        "testFile": "./test/engageExperienceApp/writingPlayer.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.writingPlayer.student"
+          }
+        ]
       }
     ],
     "AfterEach": [],

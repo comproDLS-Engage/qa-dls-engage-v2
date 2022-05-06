@@ -8,7 +8,7 @@ activityName: selectorFile.css.ComproEngage.writingPlayer.activityName,
 container_LeftPane: selectorFile.css.ComproEngage.writingPlayer.container_LeftPane,
 studentName_lbl: selectorFile.css.ComproEngage.writingPlayer.studentName_lbl,
 submissiondate_lbl: selectorFile.css.ComproEngage.writingPlayer.submissiondate_lbl,
-gradePending_pill: selectorFile.css.ComproEngage.writingPlayer.gradePending_pill,
+gradeStatus_pill: selectorFile.css.ComproEngage.writingPlayer.gradeStatus_pill,
 bookNameSubTitle_lbl: selectorFile.css.ComproEngage.writingPlayer.bookNameSubTitle_lbl,
 activityNameTitle_lbl: selectorFile.css.ComproEngage.writingPlayer.activityNameTitle_lbl,
 container_ToggleExpansion: selectorFile.css.ComproEngage.writingPlayer.container_ToggleExpansion,
@@ -80,7 +80,7 @@ getData_writingPlayerLeftPane: function () {
         container_LeftPane:(action.getElementCount(this.container_LeftPane) > 0) ? action.waitForDisplayed(this.container_LeftPane) : false,
         studentName_lbl:(action.getElementCount(this.studentName_lbl) > 0) ? action.getText(this.studentName_lbl) : null,
         submissiondate_lbl:(action.getElementCount(this.submissiondate_lbl) > 0) ? action.getText(this.submissiondate_lbl) : null,
-        gradePending_pill:(action.getElementCount(this.gradePending_pill) > 0) ? action.getText(this.gradePending_pill) : null,
+        gradeStatus_pill:(action.getElementCount(this.gradeStatus_pill) > 0) ? action.getText(this.gradeStatus_pill) : null,
         bookNameSubTitle_lbl:(action.getElementCount(this.bookNameSubTitle_lbl) > 0) ? action.getText(this.bookNameSubTitle_lbl) : null,
         activityNameTitle_lbl:(action.getElementCount(this.activityNameTitle_lbl) > 0) ? action.getText(this.activityNameTitle_lbl) : null,
         container_ToggleExpansion:(action.getElementCount(this.container_ToggleExpansion) > 0) ? action.waitForDisplayed(this.container_ToggleExpansion) : false,
@@ -108,7 +108,7 @@ getData_writingPlayerLeftPane: function () {
         grade_lbl:(action.getElementCount(this.grade_lbl) > 0) ? action.getText(this.grade_lbl) : null,
         gradeNumber_txt:(action.getElementCount(this.gradeNumber_txt) > 0) ? action.getText(this.gradeNumber_txt) : null,
     }
-    //console.log("--obj",obj)
+    console.log("******--obj",obj)
     return obj; 
 },
 
@@ -188,6 +188,8 @@ click_submitDialog_confirm_btn: function () {
     var res;
     res = action.click(this.submitDialog_confirm_btn);
     if (true == res) {
+        browser.pause(2000)
+        res = this.getData_writingPlayerLeftPane()
         logger.logInto(stackTrace.get(), " submitDialog_confirm_btn is clicked");
     }
     else {
