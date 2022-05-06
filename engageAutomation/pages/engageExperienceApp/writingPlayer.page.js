@@ -4,6 +4,7 @@ var selectorFile = jsonParserUtil.jsonParser(selectorDir)
 var appShellPage = require('./appShell.page.js')
 
 module.exports = {
+activityName: selectorFile.css.ComproEngage.writingPlayer.activityName,
 container_LeftPane: selectorFile.css.ComproEngage.writingPlayer.container_LeftPane,
 studentName_lbl: selectorFile.css.ComproEngage.writingPlayer.studentName_lbl,
 submissiondate_lbl: selectorFile.css.ComproEngage.writingPlayer.submissiondate_lbl,
@@ -46,54 +47,67 @@ grade_lbl: selectorFile.css.ComproEngage.writingPlayer.grade_lbl,
 gradeNumber_txt: selectorFile.css.ComproEngage.writingPlayer.gradeNumber_txt,
 
 
-isInitialized: function ()
-{ 
-var res;
-logger.logInto(stackTrace.get());
-action.waitForDocumentLoad();
-res = {
-pageStatus:  action.waitForDisplayed(this.container_LeftPane),
- appShellPage:appShellPage.isInitialized()};
-return res; 
+click_activity: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.activityName);
+    if (true == res) {
+        logger.logInto(stackTrace.get(), " submitDialog_cancel_btn is clicked");
+        res = this.isInitialized();
+    }
+    else {
+        logger.logInto(stackTrace.get(), res +"submitDialog_cancel_btn is NOT clicked", 'error');
+    }
+    return res;
 },
 
-getData_writingPlayerLeftPane: function ()
-{
-logger.logInto(stackTrace.get());
-var obj;
-obj = {
-container_LeftPane:(action.getElementCount(this.container_LeftPane) > 0) ? action.getText(this.container_LeftPane) : null,
-studentName_lbl:(action.getElementCount(this.studentName_lbl) > 0) ? action.getText(this.studentName_lbl) : null,
-submissiondate_lbl:(action.getElementCount(this.submissiondate_lbl) > 0) ? action.getText(this.submissiondate_lbl) : null,
-gradePending_pill:(action.getElementCount(this.gradePending_pill) > 0) ? action.getText(this.gradePending_pill) : null,
-bookNameSubTitle_lbl:(action.getElementCount(this.bookNameSubTitle_lbl) > 0) ? action.getText(this.bookNameSubTitle_lbl) : null,
-activityNameTitle_lbl:(action.getElementCount(this.activityNameTitle_lbl) > 0) ? action.getText(this.activityNameTitle_lbl) : null,
-container_ToggleExpansion:(action.getElementCount(this.container_ToggleExpansion) > 0) ? action.getText(this.container_ToggleExpansion) : null,
-gradingAndFeedback_lbl:(action.getElementCount(this.gradingAndFeedback_lbl) > 0) ? action.getText(this.gradingAndFeedback_lbl) : null,
-attempt1_lbl:(action.getElementCount(this.attempt1_lbl) > 0) ? action.getText(this.attempt1_lbl) : null,
-attempt2_lbl:(action.getElementCount(this.attempt2_lbl) > 0) ? action.getText(this.attempt2_lbl) : null,
-attempt3_lbl:(action.getElementCount(this.attempt3_lbl) > 0) ? action.getText(this.attempt3_lbl) : null,
-submittedDate_lbl:(action.getElementCount(this.submittedDate_lbl) > 0) ? action.getText(this.submittedDate_lbl) : null,
-gradedDate_lbl:(action.getElementCount(this.gradedDate_lbl) > 0) ? action.getText(this.gradedDate_lbl) : null,
-reattemptRequested_pill:(action.getElementCount(this.reattemptRequested_pill) > 0) ? action.getText(this.reattemptRequested_pill) : null,
-score_icon:(action.getElementCount(this.score_icon) > 0) ? action.getText(this.score_icon) : null,
-score_lbl:(action.getElementCount(this.score_lbl) > 0) ? action.getText(this.score_lbl) : null,
-score_txtbox:(action.getElementCount(this.score_txtbox) > 0) ? action.getText(this.score_txtbox) : null,
-feedback_current_icon:(action.getElementCount(this.feedback_current_icon) > 0) ? action.getText(this.feedback_current_icon) : null,
-feedback_current_lbl:(action.getElementCount(this.feedback_current_lbl) > 0) ? action.getText(this.feedback_current_lbl) : null,
-feedback_txtbox:(action.getElementCount(this.feedback_txtbox) > 0) ? action.getText(this.feedback_txtbox) : null,
-requestReattempted_lbl:(action.getElementCount(this.requestReattempted_lbl) > 0) ? action.getText(this.requestReattempted_lbl) : null,
-requestReattempted_yes_btn:(action.getElementCount(this.requestReattempted_yes_btn) > 0) ? action.getText(this.requestReattempted_yes_btn) : null,
-requestReattempted_no_btn:(action.getElementCount(this.requestReattempted_no_btn) > 0) ? action.getText(this.requestReattempted_no_btn) : null,
-submitGrade_btn:(action.getElementCount(this.submitGrade_btn) > 0) ? action.getText(this.submitGrade_btn) : null,
-feedback_previous_icon:(action.getElementCount(this.feedback_previous_icon) > 0) ? action.getText(this.feedback_previous_icon) : null,
-feedback_previous_lbl:(action.getElementCount(this.feedback_previous_lbl) > 0) ? action.getText(this.feedback_previous_lbl) : null,
-feedback_txt:(action.getElementCount(this.feedback_txt) > 0) ? action.getText(this.feedback_txt) : null,
-grade_icon:(action.getElementCount(this.grade_icon) > 0) ? action.getText(this.grade_icon) : null,
-grade_lbl:(action.getElementCount(this.grade_lbl) > 0) ? action.getText(this.grade_lbl) : null,
-gradeNumber_txt:(action.getElementCount(this.gradeNumber_txt) > 0) ? action.getText(this.gradeNumber_txt) : null,
-}
- return obj; 
+isInitialized: function () { 
+    var res;
+    logger.logInto(stackTrace.get());
+    action.waitForDocumentLoad();
+    res = {
+        pageStatus:  action.waitForDisplayed(this.container_LeftPane),
+        appShellPage:appShellPage.isInitialized()
+    };
+    return res; 
+},
+
+getData_writingPlayerLeftPane: function () {
+    logger.logInto(stackTrace.get());
+    var obj;
+    obj = {
+        container_LeftPane:(action.getElementCount(this.container_LeftPane) > 0) ? action.getText(this.container_LeftPane) : null,
+        studentName_lbl:(action.getElementCount(this.studentName_lbl) > 0) ? action.getText(this.studentName_lbl) : null,
+        submissiondate_lbl:(action.getElementCount(this.submissiondate_lbl) > 0) ? action.getText(this.submissiondate_lbl) : null,
+        gradePending_pill:(action.getElementCount(this.gradePending_pill) > 0) ? action.getText(this.gradePending_pill) : null,
+        bookNameSubTitle_lbl:(action.getElementCount(this.bookNameSubTitle_lbl) > 0) ? action.getText(this.bookNameSubTitle_lbl) : null,
+        activityNameTitle_lbl:(action.getElementCount(this.activityNameTitle_lbl) > 0) ? action.getText(this.activityNameTitle_lbl) : null,
+        container_ToggleExpansion:(action.getElementCount(this.container_ToggleExpansion) > 0) ? action.getText(this.container_ToggleExpansion) : null,
+        gradingAndFeedback_lbl:(action.getElementCount(this.gradingAndFeedback_lbl) > 0) ? action.getText(this.gradingAndFeedback_lbl) : null,
+        attempt1_lbl:(action.getElementCount(this.attempt1_lbl) > 0) ? action.getText(this.attempt1_lbl) : null,
+        attempt2_lbl:(action.getElementCount(this.attempt2_lbl) > 0) ? action.getText(this.attempt2_lbl) : null,
+        attempt3_lbl:(action.getElementCount(this.attempt3_lbl) > 0) ? action.getText(this.attempt3_lbl) : null,
+        submittedDate_lbl:(action.getElementCount(this.submittedDate_lbl) > 0) ? action.getText(this.submittedDate_lbl) : null,
+        gradedDate_lbl:(action.getElementCount(this.gradedDate_lbl) > 0) ? action.getText(this.gradedDate_lbl) : null,
+        reattemptRequested_pill:(action.getElementCount(this.reattemptRequested_pill) > 0) ? action.getText(this.reattemptRequested_pill) : null,
+        score_icon:(action.getElementCount(this.score_icon) > 0) ? action.getText(this.score_icon) : null,
+        score_lbl:(action.getElementCount(this.score_lbl) > 0) ? action.getText(this.score_lbl) : null,
+        score_txtbox:(action.getElementCount(this.score_txtbox) > 0) ? action.getText(this.score_txtbox) : null,
+        feedback_current_icon:(action.getElementCount(this.feedback_current_icon) > 0) ? action.getText(this.feedback_current_icon) : null,
+        feedback_current_lbl:(action.getElementCount(this.feedback_current_lbl) > 0) ? action.getText(this.feedback_current_lbl) : null,
+        feedback_txtbox:(action.getElementCount(this.feedback_txtbox) > 0) ? action.getText(this.feedback_txtbox) : null,
+        requestReattempted_lbl:(action.getElementCount(this.requestReattempted_lbl) > 0) ? action.getText(this.requestReattempted_lbl) : null,
+        requestReattempted_yes_btn:(action.getElementCount(this.requestReattempted_yes_btn) > 0) ? action.getText(this.requestReattempted_yes_btn) : null,
+        requestReattempted_no_btn:(action.getElementCount(this.requestReattempted_no_btn) > 0) ? action.getText(this.requestReattempted_no_btn) : null,
+        submitGrade_btn:(action.getElementCount(this.submitGrade_btn) > 0) ? action.getText(this.submitGrade_btn) : null,
+        feedback_previous_icon:(action.getElementCount(this.feedback_previous_icon) > 0) ? action.getText(this.feedback_previous_icon) : null,
+        feedback_previous_lbl:(action.getElementCount(this.feedback_previous_lbl) > 0) ? action.getText(this.feedback_previous_lbl) : null,
+        feedback_txt:(action.getElementCount(this.feedback_txt) > 0) ? action.getText(this.feedback_txt) : null,
+        grade_icon:(action.getElementCount(this.grade_icon) > 0) ? action.getText(this.grade_icon) : null,
+        grade_lbl:(action.getElementCount(this.grade_lbl) > 0) ? action.getText(this.grade_lbl) : null,
+        gradeNumber_txt:(action.getElementCount(this.gradeNumber_txt) > 0) ? action.getText(this.gradeNumber_txt) : null,
+    }
+    return obj; 
 },
 
 getData_submitDialog: function ()
@@ -117,16 +131,16 @@ submitDialog_confirm_btn:(action.getElementCount(this.submitDialog_confirm_btn) 
 
 
 click_submitDialog_cancel_btn: function () {
-logger.logInto(stackTrace.get());
-var res;
-res = action.click(this.submitDialog_cancel_btn);
-if (true == res) {
- logger.logInto(stackTrace.get(), " submitDialog_cancel_btn is clicked");
-}
-else {
-logger.logInto(stackTrace.get(), res +"submitDialog_cancel_btn is NOT clicked", 'error');
-}
-return res;
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.submitDialog_cancel_btn);
+    if (true == res) {
+        logger.logInto(stackTrace.get(), " submitDialog_cancel_btn is clicked");
+    }
+    else {
+        logger.logInto(stackTrace.get(), res +"submitDialog_cancel_btn is NOT clicked", 'error');
+    }
+    return res;
 },
 
 click_submitDialog_confirm_btn: function () {

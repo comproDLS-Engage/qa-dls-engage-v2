@@ -3183,6 +3183,37 @@
           "visualTest": "-"
         }
       ]
+    },
+    {
+      "modulename": "writing Player - teacher",
+      "moduledetails": "",
+      "testFile": "./test/engageExperienceApp/writingPlayer.test.js",
+      "testcase": [
+        {
+          "id": "ENG_WRITEPLYR_TC_0",
+          "description": "Click on ativity",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_WRITEPLYR_TC_1",
+          "description": "Validate the writing player is launched",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_WRITEPLYR_TC_2",
+          "description": "Validate the writing player is launched",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_WRITEPLYR_TC_3",
+          "description": "Validate the writing player is launched",
+          "tags": "P2",
+          "visualTest": "-"
+        }
+      ]
     }
   ]
 }

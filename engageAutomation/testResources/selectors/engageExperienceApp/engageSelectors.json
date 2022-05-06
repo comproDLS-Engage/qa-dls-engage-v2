@@ -1168,6 +1168,7 @@
                 "gradeAttempt_btn" : "[data-tid=button-grade-activity]"
             },
             "writingPlayer": {
+                "activityName": "[data-tid=text-activityName-0]",
                 "container_LeftPane" : "[data-tid=container-leftPanel]",
                 "studentName_lbl" : "[data-tid=grading-text-title]",
                 "submissiondate_lbl" : "[data-tid=grading-text-subTitle]",
