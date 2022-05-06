@@ -40,22 +40,22 @@ module.exports = {
 
 	// Validate that new book is added on entering required details on the add title page
 	BK_TC_3: function (testdata) {
-		sts = addTitlePage.set_Name(testdata.name);
+		sts = addTitlePage.set_Name(testdata[0].name);
 		assertion.assertEqual(sts, true, "Title status mismatch");
-		sts = addTitlePage.upload_CoverImage(testdata.coverImage);
+		sts = addTitlePage.upload_CoverImage(testdata[0].coverImage);
 		assertion.assertEqual(sts, true, "Upload cover image status mismatch");
-		sts = addTitlePage.set_Description(testdata.description);
+		sts = addTitlePage.set_Description(testdata[0].description);
 		assertion.assertEqual(sts, true, "Description status mismatch");
-		sts = addTitlePage.select_bookDesign(testdata.bookDesign);
+		sts = addTitlePage.select_bookDesign(testdata[0].bookDesign);
 		assertion.assertEqual(sts, true, "Book Design status mismatch");
-		sts = addTitlePage.select_visibility(testdata.visibility);
+		sts = addTitlePage.select_visibility(testdata[0].visibility);
 		assertion.assertEqual(sts, true, "Visibility status mismatch");
-		sts = addTitlePage.select_Category(testdata.category);
+		sts = addTitlePage.select_Category(testdata[0].category);
 		assertion.assertEqual(sts, true, "Category status mismatch");
-		sts = addTitlePage.select_TargetRole(testdata.targetRole);
+		sts = addTitlePage.select_TargetRole(testdata[0].targetRole);
 		assertion.assertEqual(sts, true, "targetRole status mismatch");
 		sts = addTitlePage.click_CreateTitle_Button();
-		assertion.assert((typeof sts === "string" && sts.includes("Your new Umbrella Product is being setup.")), "Banner messsage mismatch. " + sts);
+		assertion.assert((typeof sts === "string" && sts.includes(testdata[1])), "Banner messsage mismatch. " + sts);
 	},
 
 	// Validate that the view book page is launched on clicking the book card on the home page
@@ -134,9 +134,11 @@ module.exports = {
 
 	// Validate that the component details page is launched on clicking the component card
 	BK_TC_10: function (testdata) {
+		console.log(testdata)
 		sts = viewBookPage.click_Component(testdata.title);
 		assertion.assertEqual(sts, true, "Learning Path page status mismatch");
 		sts = viewLearningPathPage.getComponentParamDetails();
+		console.log(sts)
 		if (testdata.type != "Flipbook") {
 			assertion.assertEqual(sts.levels, testdata.folderLevel, "component levels mismatch");
 			assertion.assertEqual(sts.autonumbering, testdata.autonumbering, "component design mismatch");
@@ -406,6 +408,18 @@ module.exports = {
 	BK_TC_42: function () {
 		sts = learningPathPage.click_ModifyFolderOptions_Button();
 		assertion.assertEqual(sts, true, "Edit folder page status mismatch");
+	},
+
+	//Validate that edit book page opens on clicking the modify options button
+	BK_TC_43: function () {
+		sts = viewBookPage.click_ModifyBook_Button();
+		assertion.assertEqual(sts, true, "Edit book page status mismatch");
+	},
+
+	//Validate that edit component page opens on clicking the modify options button
+	BK_TC_44: function () {
+		//sts = viewBookPage.click_ModifyBook_Button();
+		assertion.assertEqual(sts, true, "Edit component page status mismatch");
 	},
 
 	// launch url and republish native LO

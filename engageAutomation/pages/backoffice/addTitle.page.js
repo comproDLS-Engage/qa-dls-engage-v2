@@ -20,6 +20,8 @@ module.exports = {
     targetRoleList: selectorFile.addTitlePage.targetRoleList,
     categoryDropdown: selectorFile.addTitlePage.categoryDropdown,
     categoryList: selectorFile.addTitlePage.categoryList,
+    buttonSpinner: selectorFile.common.buttonSpinner,
+    snackbarLbl: selectorFile.common.snackbarLbl,
 
     isInitialized: function () {
         logger.logInto(stackTrace.get());
@@ -66,14 +68,15 @@ module.exports = {
     click_CreateTitle_Button: function () {
         logger.logInto(stackTrace.get());
         let res;
+        action.waitForDisplayed(this.buttonSpinner, undefined, true)
         res = action.waitForClickable(this.createTitleBtn);
         if (res == true) {
             res = action.click(this.createTitleBtn);
             if (res == true) {
-                action.waitForDisplayed(this.bannerText);
-                res = action.getText(this.bannerText);
+                action.waitForDisplayed(this.bannerText + "," + this.snackbarLbl);
+                res = action.getText(this.bannerText + "," + this.snackbarLbl);
                 //action.click(this.bannerCloseBtn);
-                action.waitForDisplayed(this.bannerText, 60000, true);
+                action.waitForDisplayed(this.bannerText + "," + this.snackbarLbl, 60000, true);
                 //browser.pause(30000)
             }
         }
