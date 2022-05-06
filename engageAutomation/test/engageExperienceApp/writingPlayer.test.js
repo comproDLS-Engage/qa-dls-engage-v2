@@ -42,19 +42,19 @@ module.exports = {
 
    },
 
-   //Validate the content on Writing Player Page for grading 1st attempt
+   //Validate that the score value can be set in the score text area
    ENG_WRITEPLYR_TC_3: function (testdata) {
       sts = writingPlayer.set_scoreTextArea(testdata)
       assertion.assertEqual(sts, true, "status mismatch");
    },
 
-   //Validate the content on Writing Player Page for grading 1st attempt
+   //Validate that the feedback value can be set in the feedback text area
    ENG_WRITEPLYR_TC_4: function (testdata) {
       sts = writingPlayer.set_feedbackTextArea(testdata)
       assertion.assertEqual(sts, true, "status mismatch");
    },
 
-   //Validate clicking on 'Submit Grade' button
+   //Validate clicking on 'Submit Grade' button launches dialog box
    ENG_WRITEPLYR_TC_5: function (testdata) {
       sts = writingPlayer.click_submitGrade_btn(testdata)
       assertion.assertEqual(sts.submitDialog_title, testdata.submitDialog_title, "submitDialog_title text mismatch");
