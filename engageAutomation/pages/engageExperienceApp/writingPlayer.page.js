@@ -167,10 +167,8 @@ getData_submitDialog: function () {
         submitDialog_cancel_btn:(action.getElementCount(this.submitDialog_cancel_btn) > 0) ? action.getText(this.submitDialog_cancel_btn) : null,
         submitDialog_confirm_btn:(action.getElementCount(this.submitDialog_confirm_btn) > 0) ? action.getText(this.submitDialog_confirm_btn) : null,
     }
-    console.log("submit dialoge -",obj)
     return obj; 
 },
-
 
 click_submitDialog_cancel_btn: function () {
     logger.logInto(stackTrace.get());
@@ -186,17 +184,17 @@ click_submitDialog_cancel_btn: function () {
 },
 
 click_submitDialog_confirm_btn: function () {
-logger.logInto(stackTrace.get());
-var res;
-res = action.click(this.submitDialog_confirm_btn);
-if (true == res) {
- logger.logInto(stackTrace.get(), " submitDialog_confirm_btn is clicked");
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.submitDialog_confirm_btn);
+    if (true == res) {
+        logger.logInto(stackTrace.get(), " submitDialog_confirm_btn is clicked");
+    }
+    else {
+        logger.logInto(stackTrace.get(), res +"submitDialog_confirm_btn is NOT clicked", 'error');
+    }
+    return res;
 }
-else {
-logger.logInto(stackTrace.get(), res +"submitDialog_confirm_btn is NOT clicked", 'error');
-}
-return res;
-},
 
 }
 

@@ -3224,6 +3224,12 @@
           "description": "Validate clicking on 'Submit Grade' button launches dialog box",
           "tags": "P2",
           "visualTest": "-"
+        },
+        {
+          "id": "ENG_WRITEPLYR_TC_6",
+          "description": "Validate clicking on 'Cancel' button disappears dialog box",
+          "tags": "P2",
+          "visualTest": "-"
         }
       ]
     }

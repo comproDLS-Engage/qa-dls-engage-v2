@@ -67,5 +67,11 @@ module.exports = {
       assertion.assertEqual(sts.submitDialog_requestReattempt_lbl, testdata.submitDialog_requestReattempt_lbl, "submitDialog_requestReattempt_lbl text mismatch");
       assertion.assertEqual(sts.submitDialog_cancel_btn, testdata.submitDialog_cancel_btn, "submitDialog_cancel_btn text mismatch");
       assertion.assertEqual(sts.submitDialog_confirm_btn, testdata.submitDialog_confirm_btn, "submitDialog_confirm_btn text mismatch");
-   }
+   },
+
+   //Validate clicking on 'Cancel' button disappears dialog box 
+   ENG_WRITEPLYR_TC_6: function () {
+      sts = writingPlayer.click_submitDialog_cancel_btn();
+      assertion.assertEqual(sts, true, "cancel button status mismatch");
+   },
 }
