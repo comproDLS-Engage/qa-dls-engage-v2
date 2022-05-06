@@ -76,13 +76,13 @@ getData_writingPlayerLeftPane: function () {
     logger.logInto(stackTrace.get());
     var obj;
     obj = {
-        container_LeftPane:(action.getElementCount(this.container_LeftPane) > 0) ? action.getText(this.container_LeftPane) : null,
+        container_LeftPane:(action.getElementCount(this.container_LeftPane) > 0) ? action.waitForDisplayed(this.container_LeftPane) : false,
         studentName_lbl:(action.getElementCount(this.studentName_lbl) > 0) ? action.getText(this.studentName_lbl) : null,
         submissiondate_lbl:(action.getElementCount(this.submissiondate_lbl) > 0) ? action.getText(this.submissiondate_lbl) : null,
         gradePending_pill:(action.getElementCount(this.gradePending_pill) > 0) ? action.getText(this.gradePending_pill) : null,
         bookNameSubTitle_lbl:(action.getElementCount(this.bookNameSubTitle_lbl) > 0) ? action.getText(this.bookNameSubTitle_lbl) : null,
         activityNameTitle_lbl:(action.getElementCount(this.activityNameTitle_lbl) > 0) ? action.getText(this.activityNameTitle_lbl) : null,
-        container_ToggleExpansion:(action.getElementCount(this.container_ToggleExpansion) > 0) ? action.getText(this.container_ToggleExpansion) : null,
+        container_ToggleExpansion:(action.getElementCount(this.container_ToggleExpansion) > 0) ? action.waitForDisplayed(this.container_ToggleExpansion) : false,
         gradingAndFeedback_lbl:(action.getElementCount(this.gradingAndFeedback_lbl) > 0) ? action.getText(this.gradingAndFeedback_lbl) : null,
         attempt1_lbl:(action.getElementCount(this.attempt1_lbl) > 0) ? action.getText(this.attempt1_lbl) : null,
         attempt2_lbl:(action.getElementCount(this.attempt2_lbl) > 0) ? action.getText(this.attempt2_lbl) : null,
@@ -107,6 +107,7 @@ getData_writingPlayerLeftPane: function () {
         grade_lbl:(action.getElementCount(this.grade_lbl) > 0) ? action.getText(this.grade_lbl) : null,
         gradeNumber_txt:(action.getElementCount(this.gradeNumber_txt) > 0) ? action.getText(this.gradeNumber_txt) : null,
     }
+    //console.log("--obj",obj)
     return obj; 
 },
 
