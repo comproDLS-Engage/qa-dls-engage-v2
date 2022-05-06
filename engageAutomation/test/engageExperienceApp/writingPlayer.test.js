@@ -34,7 +34,7 @@ module.exports = {
       assertion.assertEqual(sts.score_lbl, testdata.score_lbl, "score_lbl text mismatch");
       assertion.assertEqual(sts.feedback_current_icon, '', "feedback_current_icon is Not displayed");
       assertion.assertEqual(sts.feedback_current_lbl, testdata.feedback_current_lbl, "feedback_current_lbl text mismatch");
-      assertion.assert(sts.feedback_txtbox.includes(testdata.feedback_txtbox), "feedback_txtbox text mismatch");
+      assertion.assert(sts.feedback_textbox_placeholder.includes(testdata.feedback_textbox_placeholder), "feedback_textbox_placeholder text mismatch");
       assertion.assertEqual(sts.requestReattempted_lbl, testdata.requestReattempted_lbl, "requestReattempted_lbl text mismatch");
       assertion.assertEqual(sts.requestReattempted_yes_btn, testdata.requestReattempted_yes_btn, "requestReattempted_yes_btn text mismatch");
       assertion.assertEqual(sts.requestReattempted_no_btn, testdata.requestReattempted_no_btn, "requestReattempted_no_btn text mismatch");
@@ -42,15 +42,36 @@ module.exports = {
 
    },
 
-   //Validate the content on Writing Player Page for grading 1st attempt
+   //Validate that the score value can be set in the score text area
    ENG_WRITEPLYR_TC_3: function (testdata) {
       sts = writingPlayer.set_scoreTextArea(testdata)
       assertion.assertEqual(sts, true, "status mismatch");
    },
 
-   //Validate the content on Writing Player Page for grading 1st attempt
+   //Validate that the feedback value can be set in the feedback text area
    ENG_WRITEPLYR_TC_4: function (testdata) {
       sts = writingPlayer.set_feedbackTextArea(testdata)
       assertion.assertEqual(sts, true, "status mismatch");
-   }
+   },
+
+   //Validate clicking on 'Submit Grade' button launches dialog box
+   ENG_WRITEPLYR_TC_5: function (testdata) {
+      sts = writingPlayer.click_submitGrade_btn(testdata)
+      assertion.assertEqual(sts.submitDialog_title, testdata.submitDialog_title, "submitDialog_title text mismatch");
+      assertion.assertEqual(sts.submitDialog_subTitle, testdata.submitDialog_subTitle, "submitDialog_subTitle text mismatch");
+      assertion.assertEqual(sts.submitDialog_score_icon, '', "submitDialog_score_icon is Not displayed");
+      assertion.assertEqual(sts.submitDialog_score_lbl, testdata.submitDialog_score_lbl, "submitDialog_score_lbl text mismatch");
+      assertion.assertEqual(sts.submitDialog_feedback_icon, '', "submitDialog_feedback_icon is Not displayed");
+      assertion.assertEqual(sts.submitDialog_feebback_lbl, testdata.submitDialog_feebback_lbl, "submitDialog_feebback_lbl text mismatch");
+      assertion.assertEqual(sts.submitDialog_requestReattempt_icon, '', "submitDialog_requestReattempt_icon is Not displayed");
+      assertion.assertEqual(sts.submitDialog_requestReattempt_lbl, testdata.submitDialog_requestReattempt_lbl, "submitDialog_requestReattempt_lbl text mismatch");
+      assertion.assertEqual(sts.submitDialog_cancel_btn, testdata.submitDialog_cancel_btn, "submitDialog_cancel_btn text mismatch");
+      assertion.assertEqual(sts.submitDialog_confirm_btn, testdata.submitDialog_confirm_btn, "submitDialog_confirm_btn text mismatch");
+   },
+
+   //Validate clicking on 'Cancel' button disappears dialog box 
+   ENG_WRITEPLYR_TC_6: function () {
+      sts = writingPlayer.click_submitDialog_cancel_btn();
+      assertion.assertEqual(sts, true, "cancel button status mismatch");
+   },
 }

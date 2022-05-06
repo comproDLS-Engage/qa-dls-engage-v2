@@ -1,6 +1,6 @@
 {
   "Suite1": {
-    "Name": "Validation the Writing Player in Teacher",
+    "Name": "Validation the Writing Player for 1st attempt Grading in Teacher",
     "TestCaseRepo": [
       "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
     ],
@@ -69,18 +69,18 @@
       },
       {
         "id": "ENG_WRITEPLYR_TC_2",
-        "description": "Validate the content on Writing Player Page",
+        "description": "Validate the content on Writing Player Page for grading 1st attempt",
         "testFile": "./test/engageExperienceApp/writingPlayer.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
             "jsonPath": "engage.appContent.writingPlayer.student"
-         }
+          }
         ]
       },
       {
         "id": "ENG_WRITEPLYR_TC_3",
-        "description": "Set the score",
+        "description": "Validate that the score value can be set in the score text area",
         "testFile": "./test/engageExperienceApp/writingPlayer.test.js",
         "testData": [
           {
@@ -91,7 +91,7 @@
       },
       {
         "id": "ENG_WRITEPLYR_TC_4",
-        "description": "Set the feedback",
+        "description": "Validate that the feedback value can be set in the feedback text area",
         "testFile": "./test/engageExperienceApp/writingPlayer.test.js",
         "testData": [
           {
@@ -99,6 +99,23 @@
             "jsonPath": "engage.appContent.writingPlayer.student.feedback_entered"
          }
         ]
+      },
+      {
+        "id": "ENG_WRITEPLYR_TC_5",
+        "description": "Validate clicking on 'Submit Grade' button launches dialog box",
+        "testFile": "./test/engageExperienceApp/writingPlayer.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.writingPlayer.student"
+          }
+        ]
+      },
+      {
+        "id": "ENG_WRITEPLYR_TC_6",
+        "description": "Validate clicking on 'Cancel' button disappears dialog box",
+        "testFile": "./test/engageExperienceApp/writingPlayer.test.js",
+        "testData": []
       }
     ],
     "AfterEach": [],
