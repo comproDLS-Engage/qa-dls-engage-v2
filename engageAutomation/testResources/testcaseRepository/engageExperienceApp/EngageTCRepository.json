@@ -3209,7 +3209,13 @@
         },
         {
           "id": "ENG_WRITEPLYR_TC_3",
-          "description": "Validate the writing player is launched",
+          "description": "set function",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_WRITEPLYR_TC_4",
+          "description": "set function",
           "tags": "P2",
           "visualTest": "-"
         }

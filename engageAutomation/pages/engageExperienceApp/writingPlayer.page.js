@@ -111,6 +111,31 @@ getData_writingPlayerLeftPane: function () {
     return obj; 
 },
 
+//Function to set a value in the text area
+set_scoreTextArea: function (value) {
+    var res;
+    logger.logInto(stackTrace.get());
+    res = action.setValue(this.score_txtbox, value);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), "Value is entered in scoreTextArea");
+    } else {
+      logger.logInto(stackTrace.get(), res, 'error');
+    }
+    return res;
+},
+
+set_feedbackTextArea: function (value) {
+    var res;
+    logger.logInto(stackTrace.get());
+    res = action.setValue(this.feedback_txtbox, value);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), "Value is entered in feedback_txtbox");
+    } else {
+      logger.logInto(stackTrace.get(), res, 'error');
+    }
+    return res;
+},
+
 getData_submitDialog: function ()
 {
 logger.logInto(stackTrace.get());

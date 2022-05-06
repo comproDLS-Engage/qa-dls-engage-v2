@@ -19,7 +19,6 @@ module.exports = {
    //Validate the content on Writing Player Page for grading 1st attempt
    ENG_WRITEPLYR_TC_2: function (testdata) {
       sts = writingPlayer.getData_writingPlayerLeftPane()
-      console.log("testdata - ",testdata)
       assertion.assertEqual(sts.container_LeftPane, true, "container_LeftPane is Not displayed");
       assertion.assertEqual(sts.studentName_lbl, testdata.studentName_lbl, "studentName_lbl text mismatch");
       assertion.assert(sts.submissiondate_lbl.includes(testdata.submissiondate_lbl), "submissiondate_lbl text mismatch");
@@ -42,4 +41,16 @@ module.exports = {
       assertion.assertEqual(sts.submitGrade_btn, testdata.submitGrade_btn, "submitGrade_btn text mismatch");
 
    },
+
+   //Validate the content on Writing Player Page for grading 1st attempt
+   ENG_WRITEPLYR_TC_3: function (testdata) {
+      sts = writingPlayer.set_scoreTextArea(testdata)
+      assertion.assertEqual(sts, true, "status mismatch");
+   },
+
+   //Validate the content on Writing Player Page for grading 1st attempt
+   ENG_WRITEPLYR_TC_4: function (testdata) {
+      sts = writingPlayer.set_feedbackTextArea(testdata)
+      assertion.assertEqual(sts, true, "status mismatch");
+   }
 }

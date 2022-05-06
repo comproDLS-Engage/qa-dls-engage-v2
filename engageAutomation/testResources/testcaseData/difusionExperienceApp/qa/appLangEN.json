@@ -1152,7 +1152,9 @@
                     "submitDialog_cancel_btn" : "Cancel",
                     "submitDialog_confirm_btn" : "Confirm & Submit",
                     "feedback_previous_lbl" : "Feedback",
-                    "grade_lbl" : "Grade"
+                    "grade_lbl" : "Grade",
+                    "score_entered": "10",
+                    "feedback_entered": "HAHHAHAHA"
                 }
             }
         }
