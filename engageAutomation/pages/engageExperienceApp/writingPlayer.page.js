@@ -25,6 +25,7 @@ score_txtbox: selectorFile.css.ComproEngage.writingPlayer.score_txtbox,
 feedback_current_icon: selectorFile.css.ComproEngage.writingPlayer.feedback_current_icon,
 feedback_current_lbl: selectorFile.css.ComproEngage.writingPlayer.feedback_current_lbl,
 feedback_txtbox: selectorFile.css.ComproEngage.writingPlayer.feedback_txtbox,
+feedback_textbox_placeholder: selectorFile.css.ComproEngage.writingPlayer.feedback_textbox_placeholder,
 requestReattempted_lbl: selectorFile.css.ComproEngage.writingPlayer.requestReattempted_lbl,
 requestReattempted_yes_btn: selectorFile.css.ComproEngage.writingPlayer.requestReattempted_yes_btn,
 requestReattempted_no_btn: selectorFile.css.ComproEngage.writingPlayer.requestReattempted_no_btn,
@@ -95,7 +96,7 @@ getData_writingPlayerLeftPane: function () {
         score_txtbox:(action.getElementCount(this.score_txtbox) > 0) ? action.getText(this.score_txtbox) : null,
         feedback_current_icon:(action.getElementCount(this.feedback_current_icon) > 0) ? action.getText(this.feedback_current_icon) : null,
         feedback_current_lbl:(action.getElementCount(this.feedback_current_lbl) > 0) ? action.getText(this.feedback_current_lbl) : null,
-        feedback_txtbox:(action.getElementCount(this.feedback_txtbox) > 0) ? action.getText(this.feedback_txtbox) : null,
+        feedback_textbox_placeholder:(action.getElementCount(this.feedback_textbox_placeholder) > 0) ? action.getText(this.feedback_textbox_placeholder) : null,
         requestReattempted_lbl:(action.getElementCount(this.requestReattempted_lbl) > 0) ? action.getText(this.requestReattempted_lbl) : null,
         requestReattempted_yes_btn:(action.getElementCount(this.requestReattempted_yes_btn) > 0) ? action.getText(this.requestReattempted_yes_btn) : null,
         requestReattempted_no_btn:(action.getElementCount(this.requestReattempted_no_btn) > 0) ? action.getText(this.requestReattempted_no_btn) : null,
@@ -136,23 +137,38 @@ set_feedbackTextArea: function (value) {
     return res;
 },
 
-getData_submitDialog: function ()
-{
-logger.logInto(stackTrace.get());
-var obj;
-obj = {
-submitDialog_title:(action.getElementCount(this.submitDialog_title) > 0) ? action.getText(this.submitDialog_title) : null,
-submitDialog_subTitle:(action.getElementCount(this.submitDialog_subTitle) > 0) ? action.getText(this.submitDialog_subTitle) : null,
-submitDialog_score_icon:(action.getElementCount(this.submitDialog_score_icon) > 0) ? action.getText(this.submitDialog_score_icon) : null,
-submitDialog_score_lbl:(action.getElementCount(this.submitDialog_score_lbl) > 0) ? action.getText(this.submitDialog_score_lbl) : null,
-submitDialog_feedback_icon:(action.getElementCount(this.submitDialog_feedback_icon) > 0) ? action.getText(this.submitDialog_feedback_icon) : null,
-submitDialog_feebback_lbl:(action.getElementCount(this.submitDialog_feebback_lbl) > 0) ? action.getText(this.submitDialog_feebback_lbl) : null,
-submitDialog_requestReattempt_icon:(action.getElementCount(this.submitDialog_requestReattempt_icon) > 0) ? action.getText(this.submitDialog_requestReattempt_icon) : null,
-submitDialog_requestReattempt_lbl:(action.getElementCount(this.submitDialog_requestReattempt_lbl) > 0) ? action.getText(this.submitDialog_requestReattempt_lbl) : null,
-submitDialog_cancel_btn:(action.getElementCount(this.submitDialog_cancel_btn) > 0) ? action.getText(this.submitDialog_cancel_btn) : null,
-submitDialog_confirm_btn:(action.getElementCount(this.submitDialog_confirm_btn) > 0) ? action.getText(this.submitDialog_confirm_btn) : null,
-}
- return obj; 
+//Function to click on 'Submit Grade' button
+click_submitGrade_btn: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.submitGrade_btn);
+    if (true == res) {
+        res = this.getData_submitDialog()
+        logger.logInto(stackTrace.get(), " submitDialog_cancel_btn is clicked");
+    }
+    else {
+        logger.logInto(stackTrace.get(), res +"submitDialog_cancel_btn is NOT clicked", 'error');
+    }
+    return res;
+},
+
+getData_submitDialog: function () {
+    logger.logInto(stackTrace.get());
+    var obj;
+    obj = {
+        submitDialog_title:(action.getElementCount(this.submitDialog_title) > 0) ? action.getText(this.submitDialog_title) : null,
+        submitDialog_subTitle:(action.getElementCount(this.submitDialog_subTitle) > 0) ? action.getText(this.submitDialog_subTitle) : null,
+        submitDialog_score_icon:(action.getElementCount(this.submitDialog_score_icon) > 0) ? action.getText(this.submitDialog_score_icon) : null,
+        submitDialog_score_lbl:(action.getElementCount(this.submitDialog_score_lbl) > 0) ? action.getText(this.submitDialog_score_lbl) : null,
+        submitDialog_feedback_icon:(action.getElementCount(this.submitDialog_feedback_icon) > 0) ? action.getText(this.submitDialog_feedback_icon) : null,
+        submitDialog_feebback_lbl:(action.getElementCount(this.submitDialog_feebback_lbl) > 0) ? action.getText(this.submitDialog_feebback_lbl) : null,
+        submitDialog_requestReattempt_icon:(action.getElementCount(this.submitDialog_requestReattempt_icon) > 0) ? action.getText(this.submitDialog_requestReattempt_icon) : null,
+        submitDialog_requestReattempt_lbl:(action.getElementCount(this.submitDialog_requestReattempt_lbl) > 0) ? action.getText(this.submitDialog_requestReattempt_lbl) : null,
+        submitDialog_cancel_btn:(action.getElementCount(this.submitDialog_cancel_btn) > 0) ? action.getText(this.submitDialog_cancel_btn) : null,
+        submitDialog_confirm_btn:(action.getElementCount(this.submitDialog_confirm_btn) > 0) ? action.getText(this.submitDialog_confirm_btn) : null,
+    }
+    console.log("submit dialoge -",obj)
+    return obj; 
 },
 
 

@@ -3218,6 +3218,12 @@
           "description": "set function",
           "tags": "P2",
           "visualTest": "-"
+        },
+        {
+          "id": "ENG_WRITEPLYR_TC_5",
+          "description": "click Submit Grade button",
+          "tags": "P2",
+          "visualTest": "-"
         }
       ]
     }

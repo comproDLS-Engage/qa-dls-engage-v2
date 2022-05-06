@@ -75,7 +75,7 @@
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
             "jsonPath": "engage.appContent.writingPlayer.student"
-         }
+          }
         ]
       },
       {
@@ -98,6 +98,17 @@
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
             "jsonPath": "engage.appContent.writingPlayer.student.feedback_entered"
          }
+        ]
+      },
+      {
+        "id": "ENG_WRITEPLYR_TC_5",
+        "description": "Click submit grade",
+        "testFile": "./test/engageExperienceApp/writingPlayer.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.writingPlayer.student"
+          }
         ]
       }
     ],

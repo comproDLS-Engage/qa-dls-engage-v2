@@ -1139,7 +1139,7 @@
                     "reattemptRequested_pill" : "Request Reattempt",
                     "score_lbl" : "Score",
                     "feedback_current_lbl" : "Feedback (Optional)",
-                    "feedback_txtbox": "Add feedback to submit with grade for student to review",
+                    "feedback_textbox_placeholder": "Add feedback to submit with grade for student to review",
                     "requestReattempted_lbl" : "Request Reattempt",
                     "requestReattempted_yes_btn" : "Yes",
                     "requestReattempted_no_btn" : "No",
@@ -1153,8 +1153,8 @@
                     "submitDialog_confirm_btn" : "Confirm & Submit",
                     "feedback_previous_lbl" : "Feedback",
                     "grade_lbl" : "Grade",
-                    "score_entered": "10",
-                    "feedback_entered": "HAHHAHAHA"
+                    "score_entered": "50",
+                    "feedback_entered": "Attempt 1 - fail! Do again"
                 }
             }
         }
