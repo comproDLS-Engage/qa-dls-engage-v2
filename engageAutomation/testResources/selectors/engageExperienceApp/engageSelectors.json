@@ -1171,7 +1171,7 @@
                 "activityName": "[data-tid=text-activityName-0]",
                 "container_LeftPane" : "[data-tid=container-leftPanel]",
                 "studentName_lbl" : "[data-tid=grading-text-title]",
-                "submissiondate_lbl" : "[data-tid=grading-text-subTitle]",
+                "submissionDateAndStatus_lbl" : "[data-tid=grading-text-subTitle]",
                 "gradeStatus_pill" : "[data-tid=status-pill]",
                 "bookNameSubTitle_lbl" : "[data-tid=text-subTitle]",
                 "activityNameTitle_lbl" : "[data-tid=text-title]",

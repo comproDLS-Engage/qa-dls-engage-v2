@@ -21,7 +21,7 @@ module.exports = {
       sts = writingPlayer.getData_writingPlayerLeftPane()
       assertion.assertEqual(sts.container_LeftPane, true, "container_LeftPane is Not displayed");
       //assertion.assertEqual(sts.studentName_lbl, testdata.studentName_lbl, "studentName_lbl text mismatch");
-      assertion.assert(sts.submissiondate_lbl.includes(testdata.submissiondate_lbl), "submissiondate_lbl text mismatch");
+      assertion.assert(sts.submissionDateAndStatus_lbl.includes(testdata.submissionDateAndStatus_lbl), "submissionDateAndStatus_lbl text mismatch");
       assertion.assertEqual(sts.gradeStatus_pill, testdata.gradePending_pill, "gradeStatus_pill text mismatch");
       // assertion.assert(sts.bookNameSubTitle_lbl.includes(testdata.bookNameSubTitle_lbl), "bookNameSubTitle_lbl text mismatch");
       // assertion.assertEqual(sts.activityNameTitle_lbl, testdata.activityNameTitle_lbl, "activityNameTitle_lbl text mismatch");
@@ -79,7 +79,7 @@ module.exports = {
    ENG_WRITEPLYR_TC_7: function (testdata) {
       sts = writingPlayer.click_submitDialog_confirm_btn();
       assertion.assertEqual(sts.container_LeftPane, true, "container_LeftPane is Not displayed");
-      assertion.assert(sts.submissiondate_lbl.includes(testdata.finalGradePosted_lbl), "finalGradePosted_lbl text mismatch");
+      assertion.assert(sts.submissionDateAndStatus_lbl.includes(testdata.finalGradePosted_lbl), "finalGradePosted_lbl text mismatch");
       assertion.assertEqual(sts.gradeStatus_pill, testdata.graded_pill, "gradeStatus_pill text mismatch");
       //assertion.assert(sts.bookNameSubTitle_lbl.includes(testdata.bookNameSubTitle_lbl), "bookNameSubTitle_lbl text mismatch");
       //assertion.assertEqual(sts.activityNameTitle_lbl, testdata.activityNameTitle_lbl, "activityNameTitle_lbl text mismatch");
@@ -100,7 +100,7 @@ module.exports = {
    ENG_WRITEPLYR_TC_9: function (testdata) {
       sts = writingPlayer.click_submitDialog_confirm_btn();
       assertion.assertEqual(sts.container_LeftPane, true, "container_LeftPane is Not displayed");
-      assertion.assert(sts.submissiondate_lbl.includes(testdata.gradeReattemptRequestDate_lbl), "gradeReattemptRequestDate_lbl text mismatch");
+      assertion.assert(sts.submissionDateAndStatus_lbl.includes(testdata.gradeReattemptRequestDate_lbl), "gradeReattemptRequestDate_lbl text mismatch");
       assertion.assertEqual(sts.gradeStatus_pill, testdata.reattemptRequested_statuspill, "reattemptRequested_statuspill text mismatch");
       assertion.assertEqual(sts.container_ToggleExpansion, true, "container_ToggleExpansion is Not displayed");
       assertion.assertEqual(sts.gradingAndFeedback_lbl, testdata.gradingAndFeedback_lbl, "gradingAndFeedback_lbl text mismatch");

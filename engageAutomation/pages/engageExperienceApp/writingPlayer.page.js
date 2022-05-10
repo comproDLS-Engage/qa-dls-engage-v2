@@ -7,7 +7,7 @@ module.exports = {
     activityName: selectorFile.css.ComproEngage.writingPlayer.activityName,
     container_LeftPane: selectorFile.css.ComproEngage.writingPlayer.container_LeftPane,
     studentName_lbl: selectorFile.css.ComproEngage.writingPlayer.studentName_lbl,
-    submissiondate_lbl: selectorFile.css.ComproEngage.writingPlayer.submissiondate_lbl,
+    submissionDateAndStatus_lbl: selectorFile.css.ComproEngage.writingPlayer.submissionDateAndStatus_lbl,
     gradeStatus_pill: selectorFile.css.ComproEngage.writingPlayer.gradeStatus_pill,
     bookNameSubTitle_lbl: selectorFile.css.ComproEngage.writingPlayer.bookNameSubTitle_lbl,
     activityNameTitle_lbl: selectorFile.css.ComproEngage.writingPlayer.activityNameTitle_lbl,
@@ -47,21 +47,6 @@ module.exports = {
     grade_lbl: selectorFile.css.ComproEngage.writingPlayer.grade_lbl,
     gradeNumber_txt: selectorFile.css.ComproEngage.writingPlayer.gradeNumber_txt,
 
-
-    click_activity: function () {
-        logger.logInto(stackTrace.get());
-        var res;
-        res = action.click(this.activityName);
-        if (true == res) {
-            logger.logInto(stackTrace.get(), " submitDialog_cancel_btn is clicked");
-            res = this.isInitialized();
-        }
-        else {
-            logger.logInto(stackTrace.get(), res +"submitDialog_cancel_btn is NOT clicked", 'error');
-        }
-        return res;
-    },
-
     isInitialized: function () { 
         var res;
         logger.logInto(stackTrace.get());
@@ -79,7 +64,7 @@ module.exports = {
         obj = {
             container_LeftPane:(action.getElementCount(this.container_LeftPane) > 0) ? action.waitForDisplayed(this.container_LeftPane) : false,
             studentName_lbl:(action.getElementCount(this.studentName_lbl) > 0) ? action.getText(this.studentName_lbl) : null,
-            submissiondate_lbl:(action.getElementCount(this.submissiondate_lbl) > 0) ? action.getText(this.submissiondate_lbl) : null,
+            submissionDateAndStatus_lbl:(action.getElementCount(this.submissionDateAndStatus_lbl) > 0) ? action.getText(this.submissionDateAndStatus_lbl) : null,
             gradeStatus_pill:(action.getElementCount(this.gradeStatus_pill) > 0) ? action.getText(this.gradeStatus_pill) : null,
             bookNameSubTitle_lbl:(action.getElementCount(this.bookNameSubTitle_lbl) > 0) ? action.getText(this.bookNameSubTitle_lbl) : null,
             activityNameTitle_lbl:(action.getElementCount(this.activityNameTitle_lbl) > 0) ? action.getText(this.activityNameTitle_lbl) : null,
@@ -223,6 +208,20 @@ module.exports = {
         }
         else {
             logger.logInto(stackTrace.get(), res +"submitDialog_confirm_btn is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_activity: function () {
+        logger.logInto(stackTrace.get());
+        var res;
+        res = action.click(this.activityName);
+        if (true == res) {
+            logger.logInto(stackTrace.get(), " submitDialog_cancel_btn is clicked");
+            res = this.isInitialized();
+        }
+        else {
+            logger.logInto(stackTrace.get(), res +"submitDialog_cancel_btn is NOT clicked", 'error');
         }
         return res;
     }
