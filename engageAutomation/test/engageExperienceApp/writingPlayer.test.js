@@ -75,11 +75,10 @@ module.exports = {
       assertion.assertEqual(sts, true, "cancel button status mismatch");
    },
 
-   //Validate clicking on 'Confirm & Submit' button grades the attempt 
+   //Validate clicking on 'Confirm & Submit' with NO REATTEMPT button 
    ENG_WRITEPLYR_TC_7: function (testdata) {
       sts = writingPlayer.click_submitDialog_confirm_btn();
       assertion.assertEqual(sts.container_LeftPane, true, "container_LeftPane is Not displayed");
-      //assertion.assertEqual(sts.studentName_lbl, testdata.studentName_lbl, "studentName_lbl text mismatch");
       assertion.assert(sts.submissiondate_lbl.includes(testdata.finalGradePosted_lbl), "finalGradePosted_lbl text mismatch");
       assertion.assertEqual(sts.gradeStatus_pill, testdata.graded_pill, "gradeStatus_pill text mismatch");
       //assertion.assert(sts.bookNameSubTitle_lbl.includes(testdata.bookNameSubTitle_lbl), "bookNameSubTitle_lbl text mismatch");
@@ -89,5 +88,24 @@ module.exports = {
       assertion.assertEqual(sts.attempt1_lbl, testdata.attempt1_lbl, "attempt1_lbl text mismatch");
       assertion.assert(sts.submittedDate_lbl.includes(testdata.submittedDate_lbl), "submittedDate_lbl text mismatch");
       assertion.assert(sts.gradedDate_lbl.includes(testdata.gradedDate_lbl), "gradedDate_lbl text mismatch");
-   }
+   },
+
+   //Validate clicking on 'Yes' button
+   ENG_WRITEPLYR_TC_8: function () {
+      sts = writingPlayer.click_yesRadio_btn();
+      assertion.assertEqual(sts, true, "cancel button status mismatch");
+   },
+
+   //Validate clicking on 'Confirm & Submit' with REATTEMPT REQUESTED YES button 
+   ENG_WRITEPLYR_TC_9: function (testdata) {
+      sts = writingPlayer.click_submitDialog_confirm_btn();
+      assertion.assertEqual(sts.container_LeftPane, true, "container_LeftPane is Not displayed");
+      assertion.assert(sts.submissiondate_lbl.includes(testdata.gradeReattemptRequestDate_lbl), "gradeReattemptRequestDate_lbl text mismatch");
+      assertion.assertEqual(sts.gradeStatus_pill, testdata.reattemptRequested_statuspill, "reattemptRequested_statuspill text mismatch");
+      assertion.assertEqual(sts.container_ToggleExpansion, true, "container_ToggleExpansion is Not displayed");
+      assertion.assertEqual(sts.gradingAndFeedback_lbl, testdata.gradingAndFeedback_lbl, "gradingAndFeedback_lbl text mismatch");
+      assertion.assertEqual(sts.attempt1_lbl, testdata.attempt1_lbl, "attempt1_lbl text mismatch");
+      assertion.assert(sts.submittedDate_lbl.includes(testdata.submittedDate_lbl), "submittedDate_lbl text mismatch");
+      assertion.assert(sts.gradedDate_lbl.includes(testdata.gradedDate_lbl), "gradedDate_lbl text mismatch");
+   },
 }

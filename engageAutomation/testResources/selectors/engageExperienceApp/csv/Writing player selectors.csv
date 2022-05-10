@@ -21,8 +21,8 @@ feedback_current_lbl,[data-tid=feedback-text],p,writingPlayerLeftPane,,,,"""Feed
 feedback_txtbox,[class='DraftEditor-editorContainer'] .public-DraftStyleDefault-block [data-text=true],textarea,writingPlayerLeftPane,,,,
 feedback_textbox_placeholder,[data-tid=feedback],textarea,writingPlayerLeftPane,,,,
 requestReattempted_lbl,[data-tid=request-reattempt-label],p,writingPlayerLeftPane,,,,"""Request Reattempt"""
-requestReattempted_yes_btn,[data-tid=radio-button-0],p,writingPlayerLeftPane,,,,"""Yes"""
-requestReattempted_no_btn,[data-tid=radio-button-1],p,writingPlayerLeftPane,,,,"""No"""
+requestReattempted_yes_btn,[data-tid=radio-button-0],button,writingPlayerLeftPane,,,,"""Yes"""
+requestReattempted_no_btn,[data-tid=radio-button-1],button,writingPlayerLeftPane,,,,"""No"""
 submitGrade_btn,[data-tid=submit-button],p,writingPlayerLeftPane,,,submitDialog,"""Submit Grade"""
 submitDialog_title,[data-tid=text-title-grade-submit-dialog],p,submitDialog,,,,"""Submit Grade?"""
 submitDialog_subTitle,[data-tid=text-subTitle-grade-submit-dialog],p,submitDialog,,,,"""Submitting the grade will notify the student and send any added feedback for review. Grades cannot be changed unless a student reattempts the activity."""

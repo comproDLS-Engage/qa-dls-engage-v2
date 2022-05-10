@@ -3236,6 +3236,18 @@
           "description": "Validate clicking on 'Confirm & Submit' button grades the attempt",
           "tags": "P2",
           "visualTest": "-"
+        },
+        {
+          "id": "ENG_WRITEPLYR_TC_8",
+          "description": "Validate clicking on 'Yes' radio button",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_WRITEPLYR_TC_9",
+          "description": "Validate clicking on 'Confirm & Submit' with REATTEMPT REQUESTED YES button",
+          "tags": "P2",
+          "visualTest": "-"
         }
       ]
     }
