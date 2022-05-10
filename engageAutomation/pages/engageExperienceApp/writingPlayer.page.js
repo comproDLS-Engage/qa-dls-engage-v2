@@ -93,37 +93,36 @@ module.exports = {
             grade_lbl:(action.getElementCount(this.grade_lbl) > 0) ? action.getText(this.grade_lbl) : null,
             gradeNumber_txt:(action.getElementCount(this.gradeNumber_txt) > 0) ? action.getText(this.gradeNumber_txt) : null,
         }
-        console.log("******--obj",obj)
         return obj; 
     },
 
-    //Function to set a value in the text area
+    //Function to set a value in the score text area
     set_scoreTextArea: function (value) {
         var res;
         logger.logInto(stackTrace.get());
         res = action.setValue(this.score_txtbox, value);
         if (true == res) {
-        logger.logInto(stackTrace.get(), "Value is entered in scoreTextArea");
+            logger.logInto(stackTrace.get(), "Value is entered in scoreTextArea");
         } else {
-        logger.logInto(stackTrace.get(), res, 'error');
+            logger.logInto(stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    //Function to set a value in the text area
+    //Function to set a value in the feedback text area
     set_feedbackTextArea: function (value) {
         var res;
         logger.logInto(stackTrace.get());
         res = action.setValue(this.feedback_txtbox, value);
         if (true == res) {
-        logger.logInto(stackTrace.get(), "Value is entered in feedback_txtbox");
+            logger.logInto(stackTrace.get(), "Value is entered in feedback_txtbox");
         } else {
-        logger.logInto(stackTrace.get(), res, 'error');
+            logger.logInto(stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    //Function to click on 'Yes' button
+    //Function to click on 'Yes' Radio button
     click_yesRadio_btn: function () {
         logger.logInto(stackTrace.get());
         var res;
@@ -158,10 +157,10 @@ module.exports = {
         res = action.click(this.submitGrade_btn);
         if (true == res) {
             res = this.getData_submitDialog()
-            logger.logInto(stackTrace.get(), " submitDialog_cancel_btn is clicked");
+            logger.logInto(stackTrace.get(), "submitGrade_btn is clicked");
         }
         else {
-            logger.logInto(stackTrace.get(), res +"submitDialog_cancel_btn is NOT clicked", 'error');
+            logger.logInto(stackTrace.get(), res +"submitGrade_btn is NOT clicked", 'error');
         }
         return res;
     },

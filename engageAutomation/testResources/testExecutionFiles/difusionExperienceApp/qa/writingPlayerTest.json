@@ -84,8 +84,8 @@
         "testFile": "./test/engageExperienceApp/writingPlayer.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-            "jsonPath": "engage.appContent.writingPlayer.student.score_entered"
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/writingPlayerData.json",
+            "jsonPath": "engage.writingPlayer.score_pass"
          }
         ]
       },
@@ -95,8 +95,8 @@
         "testFile": "./test/engageExperienceApp/writingPlayer.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-            "jsonPath": "engage.appContent.writingPlayer.student.feedback_entered"
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/writingPlayerData.json",
+            "jsonPath": "engage.writingPlayer.feedback_NoReattempt"
          }
         ]
       },
@@ -229,8 +229,8 @@
         "testFile": "./test/engageExperienceApp/writingPlayer.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-            "jsonPath": "engage.appContent.writingPlayer.student.score_entered"
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/writingPlayerData.json",
+            "jsonPath": "engage.writingPlayer.score_fail"
          }
         ]
       },
@@ -240,8 +240,8 @@
         "testFile": "./test/engageExperienceApp/writingPlayer.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-            "jsonPath": "engage.appContent.writingPlayer.student.feedback_entered"
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/writingPlayerData.json",
+            "jsonPath": "engage.writingPlayer.feedback_Reattempt"
          }
         ]
       },

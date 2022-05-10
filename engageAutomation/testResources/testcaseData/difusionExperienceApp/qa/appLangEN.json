@@ -1156,9 +1156,7 @@
                     "submitDialog_cancel_btn" : "Cancel",
                     "submitDialog_confirm_btn" : "Confirm & Submit",
                     "feedback_previous_lbl" : "Feedback",
-                    "grade_lbl" : "Grade",
-                    "score_entered": "50",
-                    "feedback_entered": "Attempt 1 - fail! you can not perform now"
+                    "grade_lbl" : "Grade"
                 }
             }
         }

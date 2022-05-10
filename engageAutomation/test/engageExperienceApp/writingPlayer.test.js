@@ -21,7 +21,7 @@ module.exports = {
       sts = writingPlayer.getData_writingPlayerLeftPane()
       assertion.assertEqual(sts.container_LeftPane, true, "container_LeftPane is Not displayed");
       //assertion.assertEqual(sts.studentName_lbl, testdata.studentName_lbl, "studentName_lbl text mismatch");
-      assertion.assert(sts.submissionDateAndStatus_lbl.includes(testdata.submissionDateAndStatus_lbl), "submissionDateAndStatus_lbl text mismatch");
+      assertion.assert(sts.submissionDateAndStatus_lbl.includes(testdata.submissiondate_lbl), "submissionDateAndStatus_lbl text mismatch");
       assertion.assertEqual(sts.gradeStatus_pill, testdata.gradePending_pill, "gradeStatus_pill text mismatch");
       // assertion.assert(sts.bookNameSubTitle_lbl.includes(testdata.bookNameSubTitle_lbl), "bookNameSubTitle_lbl text mismatch");
       // assertion.assertEqual(sts.activityNameTitle_lbl, testdata.activityNameTitle_lbl, "activityNameTitle_lbl text mismatch");
