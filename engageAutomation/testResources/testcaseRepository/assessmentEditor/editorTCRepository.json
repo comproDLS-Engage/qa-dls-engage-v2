@@ -260,6 +260,11 @@
                     "description": "Click Shuffling Checkbox button",
                     "tags": "P1"
                 },
+                 {
+                    "id": "ASE_COM_TC_1017",
+                    "description": "Click Add blank in ck editor",
+                    "tags": "P1"
+                },
                 {
                     "id": "ASE_FIBDROPDOWN_TC_1013",
                     "description": "Click on unique for each blank",

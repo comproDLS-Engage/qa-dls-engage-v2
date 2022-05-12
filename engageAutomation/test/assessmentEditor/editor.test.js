@@ -471,4 +471,8 @@ module.exports = {
 		sts = EditorPlayer.click_AllowFileAttachment(testdata[0])
 		assertion.assertEqual(sts, true, "allowFileAttachment is not checked");
 	},
+	ASE_COM_TC_1017: function () {
+		sts = EditorPlayer.clickAddBlankCKEditor()
+		assertion.assertEqual(sts, true, "Blank is added");
+	},
 }
