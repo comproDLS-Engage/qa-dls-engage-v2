@@ -16,9 +16,10 @@ doublePageBtn,[data-tid='button-toolbar-item-1-4'][aria-disabled='false'],button
 singlePageBtn,[data-tid='button-toolbar-item-1-5'][aria-disabled='false'],button,flipbookPage,,,flipbookPage
 fullScreenBtn,[data-tid='button-toolbar-item-1-6'][aria-disabled='false'],button,flipbookPage,,,"getCSSProperty,fullScreenBtn, 'aria-label'"
 bookmarkBtn,[data-tid='button-toolbar-item-2-0'],button,flipbookPage,,,bookmarkModal
-TOCBtn,[data-tid='button-toolbar-item-2-1'],button,flipbookPage,,,flipbookTOC
-previousBtn,[data-tid='button-toolbar-item-2-2'],button,flipbookPage,,,flipbookPage
-nextBtn,[data-tid='button-toolbar-item-2-3'],button,flipbookPage,,,flipbookPage
+jumpToPreviousPageBtn,[data-tid='button-toolbar-item-2-1'][aria-disabled='false'],button,flipbookPage,,,flipbookPage
+TOCBtn,[data-tid='button-toolbar-item-2-2'],button,flipbookPage,,,flipbookTOC
+previousBtn,[data-tid='button-toolbar-item-2-3'],button,flipbookPage,,,flipbookPage
+nextBtn,[data-tid='button-toolbar-item-2-4'],button,flipbookPage,,,flipbookPage
 myNotesTitle,[data-tid=label-text-notes-header],h6,notesModal,,,
 notesDockBtn,[data-tid=notebox-button-dock],button,notesModal,,,"waitForDisplayed,notesDockContainer"
 notesUndockBtn,[data-tid=notebox-button-undock],button,notesModal,,,"waitForDisplayed,notesDockContainer,undefined,true"

@@ -1,0 +1,42 @@
+Label,cssSelector,tagName,group,relation,extraInfo,returnValue,studentAppLangEN
+container_LeftPane,[data-tid=container-leftPanel],div,writingPlayerLeftPane,,,,
+studentName_lbl,[data-tid=grading-text-title],p,writingPlayerLeftPane,,,,TODO
+submissionDateAndStatus_lbl,[data-tid=grading-text-subTitle],p,writingPlayerLeftPane,,,,"""submitted"""
+gradePending_pill,[data-tid=status-pill],p,writingPlayerLeftPane,,,,"""Grade Pending"""
+bookNameSubTitle_lbl,[data-tid=text-subTitle],p,writingPlayerLeftPane,,,,"""QA free book - 2022"""
+activityNameTitle_lbl,[data-tid=text-title],p,writingPlayerLeftPane,,,,"""Open ended question"""
+container_ToggleExpansion,[data-tid=toggle-expansion-card-viewA],div,writingPlayerLeftPane,,,,
+gradingAndFeedback_lbl,[data-tid=text-card-viewA],p,writingPlayerLeftPane,,,,"""Grading & Feedback"""
+attempt1_lbl,[data-tid=Attempt 1],p,writingPlayerLeftPane,,,,"""Attempt 1"""
+attempt2_lbl,[data-tid=Attempt 2],p,writingPlayerLeftPane,,,,"""Attempt 2"""
+attempt3_lbl,[data-tid=Attempt 3],p,writingPlayerLeftPane,,,,"""Attempt 3"""
+submittedDate_lbl,[data-tid=time-stamp],p,writingPlayerLeftPane,,,,"""submitted"""
+gradedDate_lbl,[data-tid=TODO,p,writingPlayerLeftPane,,,,"""graded"""
+reattemptRequested_pill,[data-tid=status-pill],p,writingPlayerLeftPane,,,,
+score_icon,[data-tid=main-focus-area-icon],image,writingPlayerLeftPane,,,,"""Reattempt Requested"""
+score_lbl,[data-tid=main-focus-area-text],p,writingPlayerLeftPane,,,,"""Score"""
+score_txtbox,[data-tid=input-main-focus-area],textarea,writingPlayerLeftPane,,,,
+feedback_current_icon,[data-tid=feedback-icon],image,writingPlayerLeftPane,,,,
+feedback_current_lbl,[data-tid=feedback-text],p,writingPlayerLeftPane,,,,"""Feedback (Optional)"""
+feedback_txtbox,[class='DraftEditor-editorContainer'] .public-DraftStyleDefault-block [data-text=true],textarea,writingPlayerLeftPane,,,,
+feedback_textbox_placeholder,[data-tid=feedback],textarea,writingPlayerLeftPane,,,,
+requestReattempted_lbl,[data-tid=request-reattempt-label],p,writingPlayerLeftPane,,,,"""Request Reattempt"""
+requestReattempted_yes_btn,[data-tid=radio-button-0],button,writingPlayerLeftPane,,,,"""Yes"""
+requestReattempted_no_btn,[data-tid=radio-button-1],button,writingPlayerLeftPane,,,,"""No"""
+submitGrade_btn,[data-tid=submit-button],p,writingPlayerLeftPane,,,submitDialog,"""Submit Grade"""
+submitDialog_title,[data-tid=text-title-grade-submit-dialog],p,submitDialog,,,,"""Submit Grade?"""
+submitDialog_subTitle,[data-tid=text-subTitle-grade-submit-dialog],p,submitDialog,,,,"""Submitting the grade will notify the student and send any added feedback for review. Grades cannot be changed unless a student reattempts the activity."""
+submitDialog_score_icon,[data-tid=icon-item-0],image,submitDialog,,,,
+submitDialog_score_lbl,[data-tid=text-label-0],p,submitDialog,,,,"""Score"""
+submitDialog_feedback_icon,[data-tid=icon-item-1],image,submitDialog,,,,
+submitDialog_feebback_lbl,[data-tid=text-label-1],p,submitDialog,,,,"""Feedback"""
+submitDialog_requestReattempt_icon,[data-tid=icon-item-2],image,submitDialog,,,,
+submitDialog_requestReattempt_lbl,[data-tid=text-label-2],p,submitDialog,,,,"""Request Reattempt"""
+submitDialog_cancel_btn,[data-tid=button-secondary-grade-submit-dialog],button,submitDialog,,,,"""Cancel"""
+submitDialog_confirm_btn,[data-tid=button-primary-grade-submit-dialog],button,submitDialog,,,,"""Confirm & Submit"""
+feedback_previous_icon,missing,image,writingPlayerLeftPane,,,,
+feedback_previous_lbl,[data-tid=text-feedbackLabel],p,writingPlayerLeftPane,,,,"""Feedback"""
+feedback_txt,missing,p,writingPlayerLeftPane,,,,
+grade_icon,[data-tid=feedback-icon],image,writingPlayerLeftPane,,,,
+grade_lbl,[data-tid=feedback-text],p,writingPlayerLeftPane,,,,"""Grade"""
+gradeNumber_txt,[data-tid=,p,writingPlayerLeftPane,,,,
