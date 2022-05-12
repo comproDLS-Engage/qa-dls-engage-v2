@@ -27,6 +27,8 @@ module.exports = {
     targetRole: selectorFile.viewLearningPathPage.targetRole,
     assignable: selectorFile.viewLearningPathPage.assignable,
     seeMoreLessBtn: selectorFile.common.seeMoreLessBtn,
+    modifyCompOptionsBtn: selectorFile.viewLearningPathPage.modifyCompOptionsBtn,
+    freelyAvailable: selectorFile.viewLearningPathPage.freelyAvailable,
 
     isInitialized: function () {
         logger.logInto(stackTrace.get());
@@ -46,7 +48,8 @@ module.exports = {
             category: (action.getElementCount(this.category) > 0) ? action.getText(this.category) : null,
             visibility: (action.getElementCount(this.visibility) > 0) ? action.getText(this.visibility) : null,
             targetRole: (action.getElementCount(this.targetRole) > 0) ? action.getText(this.targetRole) : null,
-            assignable: (action.getElementCount(this.assignable) > 0) ? action.getText(this.assignable) : null
+            assignable: (action.getElementCount(this.assignable) > 0) ? action.getText(this.assignable) : null,
+            freelyAvailable: (action.getElementCount(this.freelyAvailable) > 0) ? action.getText(this.freelyAvailable) : null
         };
         return obj;
     },
@@ -252,4 +255,16 @@ module.exports = {
         logger.logInto(stackTrace.get(), res);
         return res;
     },
+
+    click_ModifyCompOptions_Button: function () {
+        logger.logInto(stackTrace.get());
+        let res;
+        res = action.click(this.modifyCompOptionsBtn);
+        if (res == true) {
+            res = require('./addComponent.page.js').isInitialized();
+            browser.pause(2000);
+        }
+        logger.logInto(stackTrace.get(), res);
+        return res;
+    }
 }

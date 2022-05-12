@@ -18,6 +18,7 @@ module.exports = {
     signOutBtn: selectorFile.common.signOutBtn,
     closeBtn: selectorFile.common.closeBtn,
     publishBtn : selectorFile.common.publishBtn,
+    bannerCloseBtn: selectorFile.common.bannerCloseBtn,
 
     click_confirmDialog_Button: function () {
         logger.logInto(stackTrace.get());
@@ -39,6 +40,7 @@ module.exports = {
         res = action.click(this.backBtn);
         if (res == true) {
             res = action.waitForDisplayed(this.pageContent);
+            browser.pause(5000);
         }
         logger.logInto(stackTrace.get(), res);
         return res;
@@ -47,7 +49,7 @@ module.exports = {
     click_Close_Button: function () {
         logger.logInto(stackTrace.get());
         res = action.switchToParentFrame();
-        res = action.click(this.closeBtn);
+        res = action.click(this.closeBtn + "," + this.snackbarBtn + "," + this.bannerCloseBtn);
         if (res == true) {
             res = action.waitForDisplayed(this.pageContent);
         }

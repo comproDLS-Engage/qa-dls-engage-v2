@@ -76,6 +76,7 @@
 		"nameTxtbox": "[id*=book-title]",
 		"descriptionTxtbox": "[id*=description]",
 		"imageUploadBtn": "[id*=cover-image]",
+		"removeImageBtn": "[class*=c-image-upload__remove]:not([style='display: none;'])",
 		"createTitleBtn": "[class=c-form__footer] [data-tid*=button-add-],[class=c-form__footer] [data-tid*=button-modify-]",
 		"bookDesignDropdown": "[data-tid=input-book-theme],[data-tid=input-modify-book-theme]",
 		"bookDesignList": "[class*=mdc-menu-surface--open] [data-tid*=text]",
@@ -95,6 +96,7 @@
 		"autonumberingDropdown": "[id=autonumbering]",
 		"autonumberingList": "[class*=mdc-menu-surface--open] [class*=mdc-list-item__text]",
 		"addBtn": "[class*=c-action-button] [data-tid=button-add-component]",
+		"modifyBtn": "[class*=c-action-button] [data-tid=button-modify-component]",
 		"visibilityDropdown": "[id=visibility]",
 		"visibilityList": "[class*=mdc-menu-surface--open] [class*=mdc-list-item__text]",
 		"targetRoleDropdown": "[id=target-role]",
@@ -120,12 +122,14 @@
 		"itemCheckboxes": "[data-tid*=button-folder-details] > div > div",
 		"deleteItemBtn": "[data-tid=button-deleteSelectedItem]",
 		"modifyFolderOptionsBtn":"[data-tid=button-modify-folder-options]",
+		"modifyCompOptionsBtn":"[data-tid=button-modify-component-options]",
 		"levels": "[data-tid=text-content-details-value-0]",
 		"autonumbering": "[data-tid=text-content-details-value-1]",
 		"category": "[data-tid=text-content-details-value-2]",
 		"visibility": "[data-tid=text-content-details-value-3]",
 		"targetRole": "[data-tid=text-content-details-value-4]",
-		"assignable": "[data-tid=text-content-details-value-5]"
+		"assignable": "[data-tid=text-content-details-value-5]",
+		"freelyAvailable": "[data-tid=text-content-details-value-6]"
 	},
 	"addFolderPage": {
 		"nameTxtbox": "[id=folder-title]",

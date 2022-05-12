@@ -9,6 +9,7 @@ module.exports = {
     nameTxtbox: selectorFile.addTitlePage.nameTxtbox,
     descriptionTxtbox: selectorFile.addTitlePage.descriptionTxtbox,
     imageUploadBtn: selectorFile.addTitlePage.imageUploadBtn,
+    removeImageBtn: selectorFile.addTitlePage.removeImageBtn,
     createTitleBtn: selectorFile.addTitlePage.createTitleBtn,
     bannerText: selectorFile.common.bannerText,
     bannerCloseBtn: selectorFile.common.bannerCloseBtn,
@@ -53,8 +54,16 @@ module.exports = {
     upload_CoverImage: function (imgPath) {
         logger.logInto(stackTrace.get());
         let res;
-        if (imgPath == "" || imgPath == undefined)
-            res = true;
+        if (imgPath == "" || imgPath == undefined) {
+            if (action.isClickable(this.removeImageBtn)) {
+                res = action.click(this.removeImageBtn);
+                if (res == true) {
+                    res = action.waitForDisplayed(this.removeImageBtn, undefined, true);
+                }
+            }
+            else
+                res = true;
+        }
         else {
             res = action.uploadFile(imgPath);
             if ((typeof res) === 'string') {

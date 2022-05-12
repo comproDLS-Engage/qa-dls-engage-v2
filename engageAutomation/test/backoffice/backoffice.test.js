@@ -105,48 +105,52 @@ module.exports = {
 
 	// Validate that new component is added on entering required details on the add title page
 	BK_TC_9: function (testdata) {
-		sts = addCompPage.set_Title(testdata.title);
+		sts = addCompPage.set_Title(testdata[0].title);
 		assertion.assertEqual(sts, true, "Title status mismatch");
-		if (testdata.type != "Flipbook") {
-			sts = addCompPage.select_LearningPathLevel(testdata.folderLevel);
+		if (testdata[0].type != "Flipbook") {
+			sts = addCompPage.select_LearningPathLevel(testdata[0].folderLevel);
 			assertion.assertEqual(sts, true, "Learning path level status mismatch");
-			sts = addCompPage.select_Autonumbering(testdata.autonumbering);
+			sts = addCompPage.select_Autonumbering(testdata[0].autonumbering);
 			assertion.assertEqual(sts, true, "Autonumbering status mismatch");
-			sts = addCompPage.select_Assignable(testdata.assignable);
+			sts = addCompPage.select_Assignable(testdata[0].assignable);
 			assertion.assertEqual(sts, true, "Assignable status mismatch");
 		}
-		if (testdata.type == "Bank") {
-			sts = addCompPage.select_enableTracking(testdata.enableTracking);
+		if (testdata[0].type == "Bank") {
+			sts = addCompPage.select_enableTracking(testdata[0].enableTracking);
 			assertion.assertEqual(sts, true, "enableTracking status mismatch");
 		}
-		sts = addCompPage.select_CategoryType(testdata.category);
+		sts = addCompPage.select_CategoryType(testdata[0].category);
 		assertion.assertEqual(sts, true, "Category status mismatch");
-		sts = addCompPage.select_TargetRole(testdata.targetRole);
+		sts = addCompPage.select_TargetRole(testdata[0].targetRole);
 		assertion.assertEqual(sts, true, "Target Role status mismatch");
-		sts = addCompPage.select_Visibility(testdata.visibility);
+		sts = addCompPage.select_Visibility(testdata[0].visibility);
 		assertion.assertEqual(sts, true, "Visibility status mismatch");
-		sts = addCompPage.select_freeAvailability(testdata.freeAvailability);
+		sts = addCompPage.select_freeAvailability(testdata[0].freelyAvailable);
 		assertion.assertEqual(sts, true, "Freely available to roles status mismatch");
 		sts = addCompPage.click_Add_Button();
-		//assertion.assert((typeof sts === "string" && sts.includes("Component \"" + testdata.title + "\" is created")), "Banner messsage mismatch. " + sts);
-		assertion.assert((typeof sts === "string" && sts.includes("Your new Component is being setup.")), "Banner messsage mismatch. " + sts);
+		assertion.assert((typeof sts === "string" && sts.includes(testdata[1])), "Banner messsage mismatch. " + sts);
 	},
 
 	// Validate that the component details page is launched on clicking the component card
 	BK_TC_10: function (testdata) {
-		console.log(testdata)
 		sts = viewBookPage.click_Component(testdata.title);
 		assertion.assertEqual(sts, true, "Learning Path page status mismatch");
 		sts = viewLearningPathPage.getComponentParamDetails();
-		console.log(sts)
-		if (testdata.type != "Flipbook") {
+		if (testdata.type == "Flipbook") {
+			assertion.assertEqual(sts.levels, testdata.category, "component category mismatch");
+			assertion.assertEqual(sts.autonumbering, testdata.visibility, "component visibility mismatch");
+			assertion.assertEqual(sts.category, testdata.targetRole, "component targetRole mismatch");
+			assertion.assertEqual(sts.visibility, testdata.freelyAvailable, "component freelyAvailable mismatch");
+		}
+		else {
 			assertion.assertEqual(sts.levels, testdata.folderLevel, "component levels mismatch");
 			assertion.assertEqual(sts.autonumbering, testdata.autonumbering, "component design mismatch");
 			assertion.assertEqual(sts.assignable, testdata.assignable, "component assignable mismatch");
+			assertion.assertEqual(sts.category, testdata.category, "component category mismatch");
+			assertion.assertEqual(sts.visibility, testdata.visibility, "component visibility mismatch");
+			assertion.assertEqual(sts.targetRole, testdata.targetRole, "component targetRole mismatch");
+			assertion.assertEqual(sts.freelyAvailable, testdata.freelyAvailable, "component freelyAvailable mismatch");
 		}
-		assertion.assertEqual(sts.category, testdata.category, "component category mismatch");
-		assertion.assertEqual(sts.visibility, testdata.visibility, "component visibility mismatch");
-		assertion.assertEqual(sts.targetRole, testdata.targetRole, "component targetRole mismatch");
 	},
 
 	// Validate that add folder page opens on clicking the add folder button
@@ -157,27 +161,25 @@ module.exports = {
 
 	// Validate that new folder is added on entering required details on the add folder page
 	BK_TC_12: function (testdata) {
-		sts = addFolderPage.set_Name(testdata.name);
+		sts = addFolderPage.set_Name(testdata[0].name);
 		assertion.assertEqual(sts, true, "Name status mismatch");
-		sts = addFolderPage.upload_CoverImage(testdata.coverImage);
+		sts = addFolderPage.upload_CoverImage(testdata[0].coverImage);
 		assertion.assertEqual(sts, true, "Upload cover image status mismatch");
-		sts = addFolderPage.select_TargetRole(testdata.targetRole);
+		sts = addFolderPage.select_TargetRole(testdata[0].targetRole);
 		assertion.assertEqual(sts, true, "Target Role status mismatch");
-		sts = addFolderPage.select_Assignable(testdata.assignable);
+		sts = addFolderPage.select_Assignable(testdata[0].assignable);
 		assertion.assertEqual(sts, true, "Assignable status mismatch");
-		sts = addFolderPage.set_Folder_Color(testdata.color);
+		sts = addFolderPage.set_Folder_Color(testdata[0].color);
 		assertion.assertEqual(sts, true, "Folder color status mismatch");
-		sts = addFolderPage.select_Folder_Type(testdata.folderType);
+		sts = addFolderPage.select_Folder_Type(testdata[0].folderType);
 		assertion.assertEqual(sts, true, "folderType status mismatch");
-		if (testdata.page == "") {
-			testdata.page = Math.floor(Math.random() * 10);
+		if (testdata[0].page == "") {
+			testdata[0].page = Math.floor(Math.random() * 10);
 		}
-		sts == addFolderPage.set_Page_Reference(testdata.page);
+		sts == addFolderPage.set_Page_Reference(testdata[0].page);
 		assertion.assertEqual(sts, true, "Page reference status mismatch");
 		sts = addFolderPage.click_Add_Button();
-		//assertion.assert((typeof sts === "string" && sts.includes(testdata.name)), "Snackbar messsage mismatch. " + sts);
-		assertion.assert((typeof sts === "string" && sts.includes("Folder")), "Snackbar messsage mismatch. " + sts);
-		assertion.assert((typeof sts === "string" && sts.includes("successfully")), "Snackbar messsage mismatch. " + sts);
+		assertion.assert((typeof sts === "string" && sts.includes(testdata[1])), "Snackbar messsage mismatch. " + sts);
 	},
 
 	// Validate that the sub-folder page is launched on clicking the folder on the learning path page
@@ -418,7 +420,7 @@ module.exports = {
 
 	//Validate that edit component page opens on clicking the modify options button
 	BK_TC_44: function () {
-		//sts = viewBookPage.click_ModifyBook_Button();
+		sts = viewLearningPathPage.click_ModifyCompOptions_Button();
 		assertion.assertEqual(sts, true, "Edit component page status mismatch");
 	},
 

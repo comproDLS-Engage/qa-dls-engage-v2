@@ -54,14 +54,8 @@ module.exports = {
 
     upload_CoverImage: function (imgPath) {
         logger.logInto(stackTrace.get());
-        let res;
-        if (imgPath == "" || imgPath == undefined)
-            res = true;
-        else {
-            var addTitlePage = require("./addTitle.page.js");
-            res = addTitlePage.upload_CoverImage(imgPath);
-        }
-        return res;
+        var addTitlePage = require("./addTitle.page.js");
+        return addTitlePage.upload_CoverImage(imgPath);;
     },
 
     select_TargetRole: function (value) {

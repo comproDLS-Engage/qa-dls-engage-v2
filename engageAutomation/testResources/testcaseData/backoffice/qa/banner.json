@@ -4,8 +4,18 @@
             "Your new Umbrella Product is being setup.",
             "Umbrella Product options modified successfully."
         ],
-        "component": [],
-        "folder": [],
+        "globalResources":[
+            "Your new Umbrella Product is being setup.",
+            "Options modified successfully."
+        ],
+        "component": [
+            "Your new Component is being setup.",
+            "Component Modified successfully."
+        ],
+        "folder": [
+            "Folder created successfully.",
+            "Folder modified successfully."
+        ],
         "activity": []
     }
 }
