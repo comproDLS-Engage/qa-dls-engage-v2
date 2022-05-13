@@ -102,7 +102,7 @@ module.exports = {
     return obj;
   },
 
-  //-------- NOTES ----------
+  //-------- NOTES -----------
   click_notesBtn: async function () {
     await logger.logInto(stackTrace.get());
     var res;
@@ -117,7 +117,7 @@ module.exports = {
     return res;
   },
 
-  //Function that returns the notes modal elements  
+  //Function that returns the notes modal elements.
   getData_notesModal: async function () {
     await logger.logInto(stackTrace.get());
     await action.waitForDisplayed(this.addNoteBtn); //manually edited
