@@ -102,7 +102,7 @@ module.exports = {
     return obj;
   },
 
-  //-------- NOTES ----------
+  //-------- NOTES -----------
   click_notesBtn: async function () {
     await logger.logInto(stackTrace.get());
     var res;
