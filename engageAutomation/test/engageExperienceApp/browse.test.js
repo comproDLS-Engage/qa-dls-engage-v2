@@ -329,7 +329,7 @@ module.exports = {
 	ENG_GLOB_TC_63: async function () {
 		sts = await browsePage.click_viewClassOption();
 		await assertion.assertEqual(sts.classDashboardData.pageStatus, true, "Class drawer mismatch: ");
-		var classDrawerPage = require('../../pages/engageExperienceApp/classDrawer.page');
+		var classDrawerPage = await require('../../pages/engageExperienceApp/classDrawer.page');
 		sts = await classDrawerPage.Click_classDrawerCloseBtn();
 		await assertion.assertEqual(sts, true, "Close Class List Menu Not Clicked");
 	},
