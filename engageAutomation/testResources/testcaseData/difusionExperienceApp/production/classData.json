@@ -46,14 +46,14 @@
 			},
 			
 			"class4": {
-				"name": "Class - Book 4",
+				"name": "NEW CLASS - BOOK 3",
 				"key": "vQ9n-qhQ8",
-				"classDuration": "May 10, 2021 - May 10, 2023",
+				"classDuration": "Apr 20, 2022 - Apr 19, 2023",
 				"instructor": {
-					"name": "Quality, Teacher 10",
+					"name": "qa Teacher001",
 					"email": "qa_teacher10@yopmail.com"
 				},
-				"bookName": "Quality TestBook 4",
+				"bookName": "Quality Test Book3",
 				"schoolName": "Mount Allison School",
 				"status": "Active",
 				"studentCount": 0,
@@ -176,14 +176,14 @@
 				]
 			},
 			"activeclass": {
-				"name": "Quality Book 1",
+				"name": "Qa automation",
 				"key": "vQ9n-qhQ8",
-				"classDuration": "Jul 19, 2021 - Jul 18, 2022",
+				"classDuration": "Feb 14, 2022 - Feb 13, 2023",
 				"instructor": {
-					"name": "dev2 Teach1",
+					"name": "qa teacher",
 					"email": "vengqains5_new@yopmail.com"
 				},
-				"bookName": "Quality Test Book 1",
+				"bookName": "QA Test Automation Book [DO NOT MODIFY]",
 				"bookIndex":"0",
 				"schoolName": "Mount Allison School",
 				"status": "Active",

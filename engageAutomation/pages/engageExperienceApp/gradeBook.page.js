@@ -115,7 +115,6 @@ module.exports = {
     return obj;
   },
 
-
   click_download_btn: function () {
     logger.logInto(stackTrace.get());
     var res;

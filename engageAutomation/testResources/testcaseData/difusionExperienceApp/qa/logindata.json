@@ -304,6 +304,33 @@
                         }
                     ],
                     "info": {}
+                },
+                "gradeBookStudent": {
+                    "email": "dev1_student100@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "student",
+                    "name": "dev1 student100",
+                    "class": [
+                        {
+                            "key": "TFbA-6AP7",
+                            "name": "Gradebook",
+                            "studentName1":"dev1 student100"
+                        }
+                    ],
+                    "info": {}
+                },
+                "writingPlayerTeacher": {
+                    "email": "writingPlayer_teacher@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "instructor",
+                    "name": "Teacher Writing Player",
+                    "class": [
+                        {
+                            "key": "4rvF-gRHj",
+                            "name": "class 15"
+                        }
+                    ],
+                    "info": {}
                 }
             }
         },

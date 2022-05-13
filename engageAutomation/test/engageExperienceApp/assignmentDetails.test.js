@@ -89,6 +89,8 @@ module.exports = {
    },
    ENG_ASSDETAILS_TC_13: function () {
       sts = viewAsStudentAssignmentPage.click_cancel();
+      assertion.assertEqual(sts, true, "Cancel button is clicked");
+      sts = require('../../pages/engageExperienceApp/assignmentDetails.page').isInitialized();
       assertion.assertEqual(sts.pageStatus, true, "assignment Details page status mismatch");
    },
    ENG_ASSDETAILS_TC_14: function () {

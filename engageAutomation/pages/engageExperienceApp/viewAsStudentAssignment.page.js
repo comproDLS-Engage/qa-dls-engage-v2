@@ -42,7 +42,6 @@ module.exports = {
         res = action.click(this.cancel);
         if (true == res) {
             logger.logInto(stackTrace.get(), " cancel is clicked");
-            res = require('./assignmentDetails.page').isInitialized();
         }
         else {
             logger.logInto(stackTrace.get(), res + "cancel is NOT clicked", 'error');

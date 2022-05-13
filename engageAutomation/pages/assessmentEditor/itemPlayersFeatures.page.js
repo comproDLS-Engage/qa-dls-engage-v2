@@ -957,12 +957,17 @@ module.exports = {
 		action.click(this.responseEdit)
 		action.clearValueDefault(this.responseTextArea)
 		browser.pause(2000)
+		action.keyPress("\uE014")
+		action.click(this.responseTextArea)
 		res = action.setValue(this.responseTextArea, questionTitle);
 		browser.pause(2000)
+		action.keyPress("\uE008a\uE00F")
+		browser.pause(2000)
+		action.keyPress("\uE017")
 		if (res == true) {
 
 			logger.logInto(stackTrace.get(), " -- Question Title is entered");
-			action.click(this.textAreabtn)
+			//action.click(this.textAreabtn)
 
 		}
 		else {
@@ -970,6 +975,20 @@ module.exports = {
 			logger.logInto(stackTrace.get(), res, 'error');
 		}
 		browser.pause(10000)
+		return res;
+	},
+	clickAddBlankCKEditor: function () {
+		
+		logger.logInto(stackTrace.get());
+		browser.pause(2000)
+		action.waitForDisplayed(this.responseEdit)
+		action.click(this.responseEdit)
+		browser.pause(2000)
+		action.click(this.responseTextArea)
+		action.keyPress("\uE008\uE00F")
+		action.click(this.textAreabtn)
+		action.keyPress("\uE014")
+		browser.pause(2000)
 		return res;
 	},
 	//Adding 'IMAGE' as media

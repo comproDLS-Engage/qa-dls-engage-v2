@@ -174,7 +174,7 @@
 				"testData": []
 			},
 			{
-				"id": "ASE_COM_TC_42",
+				"id": "ASE_COM_TC_1000",
 				"description": "Validate if alpha-numeric text is allowed in the Question Text",
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": [
@@ -182,6 +182,13 @@
 						"dataFile": "./testResources/testcaseData/assessmentEditor/quizDataEdit.json",
 						"jsonPath": "editor.questions.FIB[0].questionText"
 					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1014",
+				"description": "Enter the question text",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
 				]
 			},
 			{
