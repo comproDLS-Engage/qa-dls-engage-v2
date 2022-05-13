@@ -87,38 +87,61 @@
                             "key": "v324-6vg7",
                             "name": "Class Assignment test"
                         }
-                       
                     ],
                     "info": {}
                 },
                 "assignmentStudent1": {
-                "email": "dev2_28aprilStudent@yopmail.com",
-                "password": "Compro@1234",
-                "role": "student",
-                "name": "dev2 28aprilstudent",
-                "class": [
-                    {
-                        "key": "TFbA-6AP7",
-                        "name": "Class with no assignment"
-                    },
-                    {
-                        "key": "TFbA-6AP7",
-                        "name": "Class 1"
-                    },
-                    {
-                        "key": "v324-6vg7",
-                        "name": "Class Assignment test"
-                    },
-                    {
-                        "key": "v324-6vg7",
-                        "name": "Gradebook"
-                    },
-                    {
-                        "key": "TFbA-6AP7",
-                        "name": "Class with no assignment"
-                    }]
+                    "email": "dev2_28aprilStudent@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "student",
+                    "name": "dev2 28aprilstudent",
+                    "class": [
+                        {
+                            "key": "TFbA-6AP7",
+                            "name": "Class with no assignment"
+                        },
+                        {
+                            "key": "TFbA-6AP7",
+                            "name": "Class 1"
+                        },
+                        {
+                            "key": "v324-6vg7",
+                            "name": "Class Assignment test"
+                        },
+                        {
+                            "key": "v324-6vg7",
+                            "name": "Gradebook"
+                        },
+                        {
+                            "key": "TFbA-6AP7",
+                            "name": "Class with no assignment"
+                        }
+                    ]
                 },
                 "acceptanceteacher": {
+                    "email": "dev2-autoteacher1@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "teacher",
+                    "name": "Automation Teacher1",
+                    "class": [
+                        {
+                            "key": "72cX-TWGq",
+                            "name": "acceptanceClass"
+                        }
+                    ],
+                    "info": {}
+                },
+                "acceptanceStudent": {
+                    "email": "dev2-autostudent1@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "student",
+                    "name": "Automation Student1",
+                    "class": [
+                        "acceptanceClass"
+                    ],
+                    "info": {}
+                },
+                "acceptanceteacher-old": {
                     "email": "qa_acceptanceteacher100@yopmail.com",
                     "password": "Compro@1234",
                     "role": "student",
@@ -131,7 +154,7 @@
                     ],
                     "info": {}
                 },
-                "acceptanceStudent": {
+                "acceptanceStudent-old": {
                     "email": "qa_acceptanceStudent2@yopmail.com",
                     "password": "Compro@1234",
                     "role": "student",
@@ -186,7 +209,7 @@
                         {
                             "key": "v324-6vg7",
                             "name": "Gradebook",
-                            "studentName1":"dev2 28aprilstudent"
+                            "studentName1": "dev2 28aprilstudent"
                         },
                         {
                             "key": "8aQY-M826",
@@ -233,7 +256,7 @@
                         {
                             "key": "TFbA-6AP7",
                             "name": "Gradebook",
-                            "studentName1":"dev1 student100"
+                            "studentName1": "dev1 student100"
                         }
                     ],
                     "info": {}
