@@ -250,7 +250,7 @@ module.exports = {
         res = action.click(this.modifyFolderOptionsBtn);
         if (res == true) {
             res = require('./addFolder.page.js').isInitialized();
-            browser.pause(2000);
+            browser.pause(5000);
         }
         logger.logInto(stackTrace.get(), res);
         return res;
@@ -262,7 +262,7 @@ module.exports = {
         res = action.click(this.modifyCompOptionsBtn);
         if (res == true) {
             res = require('./addComponent.page.js').isInitialized();
-            browser.pause(2000);
+            browser.pause(5000);
         }
         logger.logInto(stackTrace.get(), res);
         return res;

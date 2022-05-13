@@ -104,6 +104,7 @@ module.exports = {
 
     click_Add_Button: function () {
         logger.logInto(stackTrace.get());
+        browser.pause(5000);
         res = action.waitForClickable(this.addBtn + "," + this.modifyBtn);
         action.waitForDisplayed(this.buttonLoader, undefined, true)
         if (res == true) {

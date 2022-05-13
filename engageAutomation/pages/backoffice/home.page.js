@@ -103,7 +103,7 @@ module.exports = {
                 res = action.click(list[i]);
                 if (res == true) {
                     res = require('./viewBook.page.js').isInitialized();
-                    browser.pause(2000);
+                    browser.pause(5000);
                 }
                 break;
             }

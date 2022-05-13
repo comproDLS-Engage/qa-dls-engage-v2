@@ -36,6 +36,7 @@ module.exports = {
     click_Add_Button: function () {
         logger.logInto(stackTrace.get());
         let res;
+        browser.pause(5000)
         res = action.waitForClickable(this.addBtn);
         action.waitForDisplayed(this.buttonLoader, undefined, true)
         if (res == true) {
@@ -44,7 +45,6 @@ module.exports = {
                 action.waitForDisplayed(this.snackbarLbl);
                 res = action.getText(this.snackbarLbl);
                 action.click(this.snackbarBtn);
-                browser.pause(5000)
                 action.waitForDisplayed(require('./viewLearningPath.page.js').folderList);
             }
         }
