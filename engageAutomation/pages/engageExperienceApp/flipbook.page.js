@@ -654,7 +654,7 @@ module.exports = {
     return res;
   },
 
-  click_jumpToPreviousPageBtn: function () {
+  click_jumpToPreviousPageBtn: async function () {
     logger.logInto(stackTrace.get());
     var res;
     res = action.click(this.jumpToPreviousPageBtn);

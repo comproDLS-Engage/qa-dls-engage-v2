@@ -26,54 +26,54 @@ module.exports = {
     dueDaysChip: selectorFile.css.ComproEngage.studentClassDashboard.dueDaysChip,
 
 
-    isInitialized: function () { 
+    isInitialized: async function () { 
         var res;
-        logger.logInto(stackTrace.get());
-        action.waitForDocumentLoad();
+        await logger.logInto(stackTrace.get());
+        await action.waitForDocumentLoad();
         res = {
-            pageStatus:  action.waitForDisplayed(this.bookCoverIcon),
-            appShellPage:appShellPage.isInitialized()
+            pageStatus:  await action.waitForDisplayed(this.bookCoverIcon),
+            appShellPage:await appShellPage.isInitialized()
         };
         return res; 
     },
 
-    getData_studentClassDashboardPageData: function () {
-        logger.logInto(stackTrace.get());
+    getData_studentClassDashboardPageData: async function () {
+        await logger.logInto(stackTrace.get());
         var obj;
         obj = {
-            bookCoverIcon:(action.getElementCount(this.bookCoverIcon) > 0) ? action.waitForDisplayed(this.bookCoverIcon) : false,
-            className:(action.getElementCount(this.className) > 0) ? action.getText(this.className) : null,
-            BookName:(action.getElementCount(this.BookName) > 0) ? action.getText(this.BookName) : null,
-            classDurationIcon:(action.getElementCount(this.classDurationIcon) > 0) ? action.waitForDisplayed(this.classDurationIcon) : false,
-            classDuration:(action.getElementCount(this.classDuration) > 0) ? action.getText(this.classDuration) : null,
-            classDatesLabel:(action.getElementCount(this.classDatesLabel) > 0) ? action.getText(this.classDatesLabel) : null,
-            instructorIcon:(action.getElementCount(this.instructorIcon) > 0) ? action.waitForDisplayed(this.instructorIcon) : false,
-            instrutorName:(action.getElementCount(this.instrutorName) > 0) ? action.getText(this.instrutorName) : null,
-            instructorLabel:(action.getElementCount(this.instructorLabel) > 0) ? action.getText(this.instructorLabel) : null,
-            openFlipbookBtn:(action.getElementCount(this.openFlipbookBtn) > 0) ? action.getText(this.openFlipbookBtn) : null,
-            otherDetailsBtn:(action.getElementCount(this.otherDetailsBtn) > 0) ? action.getText(this.otherDetailsBtn) : null,
-            assignmentsLbl:(action.getElementCount(this.assignmentsLbl) > 0) ? action.getText(this.assignmentsLbl) : null,
-            overviewBtn:(action.getElementCount(this.overviewBtn) > 0) ? action.getText(this.overviewBtn) : null,
-            dueBtn:(action.getElementCount(this.dueBtn) > 0) ? action.getText(this.dueBtn) : null,
-            dueNumberChip:(action.getElementCount(this.dueNumberChip) > 0) ? action.getText(this.dueNumberChip) : null,
-            upcomingBtn:(action.getElementCount(this.upcomingBtn) > 0) ? action.getText(this.upcomingBtn) : null,
-            completeBtn:(action.getElementCount(this.completeBtn) > 0) ? action.getText(this.completeBtn) : null,
+            bookCoverIcon:((await action.getElementCount(this.bookCoverIcon)) > 0) ? await action.waitForDisplayed(this.bookCoverIcon) : false,
+            className:((await action.getElementCount(this.className)) > 0) ? await action.getText(this.className) : null,
+            BookName:((await action.getElementCount(this.BookName)) > 0) ? await action.getText(this.BookName) : null,
+            classDurationIcon:((await action.getElementCount(this.classDurationIcon)) > 0) ? await action.waitForDisplayed(this.classDurationIcon) : false,
+            classDuration:((await action.getElementCount(this.classDuration)) > 0) ? await action.getText(this.classDuration) : null,
+            classDatesLabel:((await action.getElementCount(this.classDatesLabel)) > 0) ? await action.getText(this.classDatesLabel) : null,
+            instructorIcon:((await action.getElementCount(this.instructorIcon)) > 0) ? await action.waitForDisplayed(this.instructorIcon) : false,
+            instrutorName:((await action.getElementCount(this.instrutorName)) > 0) ? await action.getText(this.instrutorName) : null,
+            instructorLabel:((await action.getElementCount(this.instructorLabel)) > 0) ? await action.getText(this.instructorLabel) : null,
+            openFlipbookBtn:((await action.getElementCount(this.openFlipbookBtn)) > 0) ? await action.getText(this.openFlipbookBtn) : null,
+            otherDetailsBtn:((await action.getElementCount(this.otherDetailsBtn)) > 0) ? await action.getText(this.otherDetailsBtn) : null,
+            assignmentsLbl:((await action.getElementCount(this.assignmentsLbl)) > 0) ? await action.getText(this.assignmentsLbl) : null,
+            overviewBtn:((await action.getElementCount(this.overviewBtn)) > 0) ? await action.getText(this.overviewBtn) : null,
+            dueBtn:((await action.getElementCount(this.dueBtn)) > 0) ? await action.getText(this.dueBtn) : null,
+            dueNumberChip:((await action.getElementCount(this.dueNumberChip)) > 0) ? await action.getText(this.dueNumberChip) : null,
+            upcomingBtn:((await action.getElementCount(this.upcomingBtn)) > 0) ? await action.getText(this.upcomingBtn) : null,
+            completeBtn:((await action.getElementCount(this.completeBtn)) > 0) ? await action.getText(this.completeBtn) : null,
         }
         return obj; 
     },
 
-    getData_assignmentList: function (assignmentTitleName) {
-        logger.logInto(stackTrace.get());
+    getData_assignmentList: async function (assignmentTitleName) {
+        await logger.logInto(stackTrace.get());
         var obj=[];
-        action.waitForDisplayed(this.assignmentTitle);
-        var list = action.findElements(this.assignmentTitle);
+        await action.waitForDisplayed(this.assignmentTitle);
+        var list = await action.findElements(this.assignmentTitle);
         if (assignmentTitleName) {
             for (var i=0;i<list.length;i++) {
-                if (action.getText(this.assignmentTitle + i) == assignmentTitleName) {
+                if ((await action.getText(this.assignmentTitle + i)) == assignmentTitleName) {
                     obj[0] = {
-                        assignmentTitle:(action.getElementCount(this.assignmentTitle+i+"]")  > 0) ? action.getText(this.assignmentTitle+i+"]")  : null,
-                        assignmentActivities:(action.getElementCount(this.assignmentActivities+i+"]")  > 0) ? action.getText(this.assignmentActivities+i+"]")  : null,
-                        dueDaysChip:(action.getElementCount(this.dueDaysChip+i+"]")  > 0) ? action.getText(this.dueDaysChip+i+"]")  : null,
+                        assignmentTitle:((await action.getElementCount(this.assignmentTitle+i+"]"))  > 0) ? await action.getText(this.assignmentTitle+i+"]")  : null,
+                        assignmentActivities:((await action.getElementCount(this.assignmentActivities+i+"]"))  > 0) ? await action.getText(this.assignmentActivities+i+"]")  : null,
+                        dueDaysChip:((await action.getElementCount(this.dueDaysChip+i+"]"))  > 0) ? await action.getText(this.dueDaysChip+i+"]")  : null,
                     }
                 break; 
                 }
@@ -82,9 +82,9 @@ module.exports = {
         else {
             for (var i=0;i<list.length;i++) {
                 obj[i] = {
-                    assignmentTitle:(action.getElementCount(this.assignmentTitle+i+"]")  > 0) ? action.getText(this.assignmentTitle+i+"]")  : null,
-                    assignmentActivities:(action.getElementCount(this.assignmentActivities+i+"]")  > 0) ? action.getText(this.assignmentActivities+i+"]")  : null,
-                    dueDaysChip:(action.getElementCount(this.dueDaysChip+i+"]")  > 0) ? action.getText(this.dueDaysChip+i+"]")  : null,
+                    assignmentTitle:((await action.getElementCount(this.assignmentTitle+i+"]"))  > 0) ? await action.getText(this.assignmentTitle+i+"]")  : null,
+                    assignmentActivities:((await action.getElementCount(this.assignmentActivities+i+"]"))  > 0) ? await action.getText(this.assignmentActivities+i+"]")  : null,
+                    dueDaysChip:((await action.getElementCount(this.dueDaysChip+i+"]"))  > 0) ? await action.getText(this.dueDaysChip+i+"]")  : null,
                 }
             }
         }
@@ -92,16 +92,16 @@ module.exports = {
     },
 
     //Click function for Upcoming Assignment button
-    click_overviewBtn: function () {
-        logger.logInto(stackTrace.get());
+    click_overviewBtn: async function () {
+        await logger.logInto(stackTrace.get());
         var res;
-        res = action.click(this.overviewBtn);
+        res = await action.click(this.overviewBtn);
         if (true == res) {
-            logger.logInto(stackTrace.get(), " overviewBtn is clicked");
-            res = require('./assignmentStudentList.page.js').isInitialized();
+            await logger.logInto(stackTrace.get(), " overviewBtn is clicked");
+            res = await require('./assignmentStudentList.page.js').isInitialized();
         }
         else {
-            logger.logInto(stackTrace.get(), res +"overviewBtn is NOT clicked", 'error');
+            await logger.logInto(stackTrace.get(), res +"overviewBtn is NOT clicked", 'error');
         }
         return res;
     },

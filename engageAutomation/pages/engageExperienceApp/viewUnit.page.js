@@ -24,77 +24,77 @@ module.exports = {
     openFlipbook_moreOptions: selectorFile.css.ComproEngage.viewUnit.openFlipbook_moreOptions,
     viewActivity_moreOptions: selectorFile.css.ComproEngage.viewUnit.viewActivity_moreOptions,
 
-    isInitialized: function () {
-        logger.logInto(stackTrace.get());
-        action.waitForDocumentLoad();
+    isInitialized: async function () {
+        await logger.logInto(stackTrace.get());
+        await action.waitForDocumentLoad();
         res = {
-            pageStatus: action.waitForDisplayed(this.unitName),
-            appShell: appShell.isInitialized()
+            pageStatus: await action.waitForDisplayed(this.unitName),
+            appShell: await appShell.isInitialized()
         };
         return res;
     },
 
-    getViewUnitData: function () {
-        logger.logInto(stackTrace.get());
+    getViewUnitData: async function () {
+        await logger.logInto(stackTrace.get());
         obj = {
-            unitThumbnail: (action.getElementCount(this.unitThumbnail) > 0) ? action.waitForDisplayed(this.unitThumbnail) : null,
-            unitName: (action.getElementCount(this.unitName) > 0) ? action.getText(this.unitName) : null,
-            unitNumber: (action.getElementCount(this.unitNumber) > 0) ? action.getText(this.unitNumber) : null,
-            openInFlipbook_btn: (action.getElementCount(this.openInFlipbook_btn) > 0) ? action.getText(this.openInFlipbook_btn) : null,
-            activity_label: (action.getElementCount(this.activity_label) > 0) ? action.getText(this.activity_label) : null,
-            activity_label_byline: (action.getElementCount(this.activity_label_byline) > 0) ? action.getText(this.activity_label_byline) : null,
-            nextUnit_btn: (action.getElementCount(this.nextUnit_btn) > 0) ? action.getText(this.nextUnit_btn) : null,
-            previousUnit_btn: (action.getElementCount(this.previousUnit_btn) > 0) ? action.getText(this.previousUnit_btn) : null,
-            component: appShell.getTabsListData(),
+            unitThumbnail: ((await action.getElementCount(this.unitThumbnail)) > 0) ? await action.waitForDisplayed(this.unitThumbnail) : null,
+            unitName: ((await action.getElementCount(this.unitName)) > 0) ? await action.getText(this.unitName) : null,
+            unitNumber: ((await action.getElementCount(this.unitNumber)) > 0) ? await action.getText(this.unitNumber) : null,
+            openInFlipbook_btn: ((await action.getElementCount(this.openInFlipbook_btn)) > 0) ? await action.getText(this.openInFlipbook_btn) : null,
+            activity_label: ((await action.getElementCount(this.activity_label)) > 0) ? await action.getText(this.activity_label) : null,
+            activity_label_byline: ((await action.getElementCount(this.activity_label_byline)) > 0) ? await action.getText(this.activity_label_byline) : null,
+            nextUnit_btn: ((await action.getElementCount(this.nextUnit_btn)) > 0) ? await action.getText(this.nextUnit_btn) : null,
+            previousUnit_btn: ((await action.getElementCount(this.previousUnit_btn)) > 0) ? await action.getText(this.previousUnit_btn) : null,
+            component: await appShell.getTabsListData(),
         }
-        logger.logInto(stackTrace.get(), JSON.stringify(obj));
+        await logger.logInto(stackTrace.get(), JSON.stringify(obj));
         return obj;
     },
 
-    clickNextUnit: function () {
-        logger.logInto(stackTrace.get());
-        res = action.click(this.nextUnit_btn);
+    clickNextUnit: async function () {
+        await logger.logInto(stackTrace.get());
+        res = await action.click(this.nextUnit_btn);
         if (res == true) {
-            logger.logInto(stackTrace.get(), " --Next Unit Button clicked");
-            this.isInitialized();
-            res = this.getViewUnitData();
+            await logger.logInto(stackTrace.get(), " --Next Unit Button clicked");
+            await this.isInitialized();
+            res = await this.getViewUnitData();
         } else
-            logger.logInto(stackTrace.get(), " --Next Unit Button NOT clicked", "error");
+            await logger.logInto(stackTrace.get(), " --Next Unit Button NOT clicked", "error");
         return res;
     },
 
-    clickPreviousUnit: function () {
-        logger.logInto(stackTrace.get())
-        res = action.click(this.previousUnit_btn);
+    clickPreviousUnit: async function () {
+        await logger.logInto(stackTrace.get())
+        res = await action.click(this.previousUnit_btn);
         if (res == true) {
-            logger.logInto(stackTrace.get(), " --Previous Unit Button clicked");
-            this.isInitialized();
-            res = this.getViewUnitData();
+            await logger.logInto(stackTrace.get(), " --Previous Unit Button clicked");
+            await this.isInitialized();
+            res = await this.getViewUnitData();
         } else
-            logger.logInto(stackTrace.get(), " --Previous Unit Button NOT clicked", "error");
+            await logger.logInto(stackTrace.get(), " --Previous Unit Button NOT clicked", "error");
         return res;
     },
 
-    clickOpenInFlipBook: function () {
-        logger.logInto(stackTrace.get())
-        res = action.click(this.openInFlipbook_btn);
+    clickOpenInFlipBook: async function () {
+        await logger.logInto(stackTrace.get())
+        res = await action.click(this.openInFlipbook_btn);
         if (res == true) {
-            logger.logInto(stackTrace.get(), " --Open In FlipBook Button clicked");
+            await logger.logInto(stackTrace.get(), " --Open In FlipBook Button clicked");
             //res = require('./flipbook.page.js').isInitialized()
         } else
-            logger.logInto(stackTrace.get(), " --Open In FlipBook Button NOT clicked", "error");
+            await logger.logInto(stackTrace.get(), " --Open In FlipBook Button NOT clicked", "error");
         return res;
     },
 
-    getFolderListData: function (str) { //this function will get folder and subfolder names
-        logger.logInto(stackTrace.get());
+    getFolderListData: async function (str) { //this function will get folder and subfolder names
+        await logger.logInto(stackTrace.get());
         let list, i, arr = [];
-        list = action.findElements(this.folderTitle);
+        list = await action.findElements(this.folderTitle);
         if (str) {
             for (i = 0; i < list.length; i++) {
-                if (action.getText(list[i]) == str) {
+                if ((await action.getText(list[i])) == str) {
                     arr[0] = {
-                        folderTitle: (action.getElementCount(this.folderTitle + i) > 0) ? action.getText(this.folderTitle + i) : null,
+                        folderTitle: ((await action.getElementCount(this.folderTitle + i)) > 0) ? await action.getText(this.folderTitle + i) : null,
                     }
                     break;
                 }
@@ -103,46 +103,46 @@ module.exports = {
         else {
             for (i = 0; i < list.length; i++) {
                 arr[i] = {
-                    folderTitle: (action.getElementCount(this.folderTitle + i) > 0) ? action.getText(this.folderTitle + i) : null
+                    folderTitle: ((await action.getElementCount(this.folderTitle + i)) > 0) ? await action.getText(this.folderTitle + i) : null
                 }
             }
         }
         return arr;
     },
 
-    expandCollapseFolder: function (str) {
-        logger.logInto(stackTrace.get());
+    expandCollapseFolder: async function (str) {
+        await logger.logInto(stackTrace.get());
         res = false;
         let i, list;
-        list = action.findElements(this.folderTitle);
+        list = await action.findElements(this.folderTitle);
         for (i = 0; i < list.length; i++) {
-            if (str.includes(action.getText(list[i]))) {
-                res = action.click(list[i]);
-                browser.pause(1000);
+            if (str.includes(await action.getText(list[i]))) {
+                res = await action.click(list[i]);
+                await browser.pause(1000);
                 break;
             }
         }
-        logger.logInto(stackTrace.get(), res);
+        await logger.logInto(stackTrace.get(), res);
         return res;
     },
 
-    getActivityListData: function (str) {
-        logger.logInto(stackTrace.get());
+    getActivityListData: async function (str) {
+        await logger.logInto(stackTrace.get());
         let i, arr = [];
-        var activityList = action.findElements(this.activityTitle)
-        var pageInfoList = action.findElements(this.activityPageInfo)
-        var activityCompletionCirlceList = action.findElements(this.activityCompletionCircle)
-        var activityType_icon = action.findElements(this.activityType_icon)
-        var activityType_txt = action.findElements(this.activityType_txt)
+        var activityList = await action.findElements(this.activityTitle)
+        var pageInfoList = await action.findElements(this.activityPageInfo)
+        var activityCompletionCirlceList = await action.findElements(this.activityCompletionCircle)
+        var activityType_icon = await action.findElements(this.activityType_icon)
+        var activityType_txt = await action.findElements(this.activityType_txt)
         if (str) {
             for (i = 0; i < activityList.length; i++) {
-                if (action.getText(activityList[i]) == str) {
+                if ((await action.getText(activityList[i])) == str) {
                     arr[0] = {
-                        activityTitle: (action.getElementCount(activityList[i]) > 0) ? action.getText(activityList[i]) : null,
-                        activityPageInfo: (action.getElementCount(pageInfoList[i]) > 0) ? action.getText(pageInfoList[i]) : null,
-                        activityCompletionCircle: (action.getElementCount(activityCompletionCirlceList[i]) > 0) ? action.waitForDisplayed(activityCompletionCirlceList[i]) : null,
-                        activityType_icon: (action.getElementCount(activityType_icon[i]) > 0) ? action.waitForDisplayed(activityType_icon[i]) : null,
-                        activityType_txt: (action.getElementCount(activityType_txt[i]) > 0) ? action.getText(activityType_txt[i]) : nulll
+                        activityTitle: ((await action.getElementCount(activityList[i])) > 0) ? await action.getText(activityList[i]) : null,
+                        activityPageInfo: ((await action.getElementCount(pageInfoList[i])) > 0) ? await action.getText(pageInfoList[i]) : null,
+                        activityCompletionCircle: ((await action.getElementCount(activityCompletionCirlceList[i])) > 0) ? await action.waitForDisplayed(activityCompletionCirlceList[i]) : null,
+                        activityType_icon: ((await action.getElementCount(activityType_icon[i])) > 0) ? await action.waitForDisplayed(activityType_icon[i]) : null,
+                        activityType_txt: ((await action.getElementCount(activityType_txt[i])) > 0) ? await action.getText(activityType_txt[i]) : nulll
                     }
                     break;
                 }
@@ -151,35 +151,35 @@ module.exports = {
         else {
             for (i = 0; i < list.length; i++) {
                 arr[i] = {
-                    activityTitle: (action.getElementCount(activityList[i]) > 0) ? action.getText(activityList[i]) : null,
-                    activityPageInfo: (action.getElementCount(pageInfoList[i]) > 0) ? action.getText(pageInfoList[i]) : null,
-                    activityCompletionCircle: (action.getElementCount(activityCompletionCirlceList[i]) > 0) ? action.waitForDisplayed(activityCompletionCirlceList[i]) : null,
-                    activityType_icon: (action.getElementCount(activityType_icon[i]) > 0) ? action.waitForDisplayed(activityType_icon[i]) : null,
-                    activityType_txt: (action.getElementCount(activityType_txt[i]) > 0) ? action.getText(activityType_txt[i]) : nulll
+                    activityTitle: ((await action.getElementCount(activityList[i])) > 0) ? await action.getText(activityList[i]) : null,
+                    activityPageInfo: ((await action.getElementCount(pageInfoList[i])) > 0) ? await action.getText(pageInfoList[i]) : null,
+                    activityCompletionCircle: ((await action.getElementCount(activityCompletionCirlceList[i])) > 0) ? await action.waitForDisplayed(activityCompletionCirlceList[i]) : null,
+                    activityType_icon: ((await action.getElementCount(activityType_icon[i])) > 0) ? await action.waitForDisplayed(activityType_icon[i]) : null,
+                    activityType_txt: ((await action.getElementCount(activityType_txt[i])) > 0) ? await action.getText(activityType_txt[i]) : nulll
                 }
             }
         }
-        logger.logInto(stackTrace.get(), arr);
+        await logger.logInto(stackTrace.get(), arr);
         return arr;
     },
 
-    clickActivity: function (str) {
-        logger.logInto(stackTrace.get());
+    clickActivity: async function (str) {
+        await logger.logInto(stackTrace.get());
         res = false;
         let i, list;
-        action.waitForDisplayed(this.activityTitle);
-        list = action.findElements(this.activityTitle);
+        await action.waitForDisplayed(this.activityTitle);
+        list = await action.findElements(this.activityTitle);
         for (i = 0; i < list.length; i++) {
-            if (action.getText(list[i]) == str) {
-                res = action.click(list[i]);
+            if ((await action.getText(list[i])) == str) {
+                res = await action.click(list[i]);
                 break;
             }
         }
-        logger.logInto(stackTrace.get(), res);
+        await logger.logInto(stackTrace.get(), res);
         return res;
     },
 
-    // clickActivityMoreOptions: function (activityName) { 
+    // clickActivityMoreOptions: async function (activityName) { 
     //     let i, list;
     //     list = action.findElements(this.activityTitle);
     //     for (i = 0; i < list.length; i++) {
@@ -193,7 +193,7 @@ module.exports = {
     //     return res;
     // },
 
-    // clickOpenFlipbook_MoreOptions: function (activityName) {
+    // clickOpenFlipbook_MoreOptions: async function (activityName) {
     //     res = this.clickActivityMoreOptions(activityName)
     //     if (res == true) {
     //         res = action.click(this.openFlipbook_moreOptions)
@@ -205,7 +205,7 @@ module.exports = {
     //     return res;
     // },
 
-    // clickViewActivity_moreOptions: function (activityName) { //disable this function as it is not required for now - akhil
+    // clickViewActivity_moreOptions: async function (activityName) { //disable this function as it is not required for now - akhil
     //     res = this.clickActivityMoreOptions(activityName)
     //     if (res == true) {
     //         res = action.click(this.viewActivity_moreOptions)

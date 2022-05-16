@@ -7,28 +7,28 @@ module.exports = {
     source: selectorFile.css.ComproEngage.FIB.source,
     target: selectorFile.css.ComproEngage.FIB.target,
 
-    isInitialized: function (fibQuesData) {
-        logger.logInto(stackTrace.get());
-        let data = DNDonImageItemPlayerPage.isInitialized(fibQuesData)
+    isInitialized: async function (fibQuesData) {
+        await logger.logInto(stackTrace.get());
+        let data = await DNDonImageItemPlayerPage.isInitialized(fibQuesData)
         return data;
     },
 
-    getSourceData: function (qIndex, fibQuesData) {
-        logger.logInto(stackTrace.get());
+    getSourceData: async function (qIndex, fibQuesData) {
+        await logger.logInto(stackTrace.get());
         return DNDonImageItemPlayerPage.getSourceData(qIndex, fibQuesData);
     },
 
-    getTargetData: function (qIndex, fibQuesData) {
-        logger.logInto(stackTrace.get());
+    getTargetData: async function (qIndex, fibQuesData) {
+        await logger.logInto(stackTrace.get());
         
         return DNDonImageItemPlayerPage.getTargetData(qIndex, fibQuesData);
     },
 
-    dragAndDrop: function (fibQuesData) {
+    dragAndDrop: async function (fibQuesData) {
         return DNDonImageItemPlayerPage.dragAndDrop(fibQuesData);
     },
 
-    dragAndDropClick: function (fibQuesData) {
+    dragAndDropClick: async function (fibQuesData) {
         return DNDonImageItemPlayerPage.dragAndDropClick(fibQuesData);
     }
 

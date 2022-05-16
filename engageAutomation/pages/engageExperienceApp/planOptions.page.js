@@ -8,19 +8,19 @@ module.exports = {
 
     isInitialized: function() {
         var res;
-        logger.logInto(stackTrace.get());
-        action.waitForDocumentLoad();
+        await logger.logInto(stackTrace.get());
+        await action.waitForDocumentLoad();
         res = {
-            pageStatus: action.waitForDisplayed(this.cardNumber_text),
+            pageStatus: await action.waitForDisplayed(this.cardNumber_text),
         };
         return res;
     },
 
     getData_PlanOptionsPage: function() {
-        logger.logInto(stackTrace.get());
+        await logger.logInto(stackTrace.get());
         var obj;
         obj = {
-            cardNumber_text: (action.getElementCount(this.cardNumber_text) > 0) ? action.getText(this.cardNumber_text) : null,
+            cardNumber_text: ((await action.getElementCount(this.cardNumber_text)) > 0) ? await action.getText(this.cardNumber_text) : null,
            
         }
         return obj;

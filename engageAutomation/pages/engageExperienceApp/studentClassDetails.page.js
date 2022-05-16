@@ -16,26 +16,26 @@ module.exports = {
     instructorLabel: selectorFile.css.ComproEngage.classDetailsStudent.instructorLabel,
 
 
-    isInitialized: function () {
-        logger.logInto(stackTrace.get());
-        action.waitForDocumentLoad();
+    isInitialized: async function () {
+        await logger.logInto(stackTrace.get());
+        await action.waitForDocumentLoad();
         res = {
-            pageStatus: action.waitForDisplayed(this.bookCoverIcon)
+            pageStatus: await action.waitForDisplayed(this.bookCoverIcon)
         };
         return res;
     },
 
-    classstudent_Data: function () {
+    classstudent_Data: async function () {
         obj = {
-            bookCoverIcon: (action.getElementCount(this.bookCoverIcon) > 0) ? action.waitForExist(this.bookCoverIcon) : false,
-            className: (action.getElementCount(this.className) > 0) ? action.getText(this.className) : null,
-            BookName: (action.getElementCount(this.BookName) > 0) ? action.getText(this.BookName) : null,
-            classDurationIcon: (action.getElementCount(this.classDurationIcon) > 0) ? action.waitForExist(this.classDurationIcon) : false,
-            classDuration: (action.getElementCount(this.classDuration) > 0) ? action.getText(this.classDuration) : null,
-            instructorIcon: (action.getElementCount(this.instructorIcon) > 0) ? action.waitForExist(this.instructorIcon) : false,
-            instrutorName: (action.getElementCount(this.instrutorName) > 0) ? action.getText(this.instrutorName) : null,
-            classDatesLabel: (action.getElementCount(this.classDatesLabel) > 0) ? action.getText(this.classDatesLabel) : null,
-            instructorLabel: (action.getElementCount(this.instructorLabel) > 0) ? action.getText(this.instructorLabel) : null,
+            bookCoverIcon: ((await action.getElementCount(this.bookCoverIcon)) > 0) ? await action.waitForExist(this.bookCoverIcon) : false,
+            className: ((await action.getElementCount(this.className)) > 0) ? await action.getText(this.className) : null,
+            BookName: ((await action.getElementCount(this.BookName)) > 0) ? await action.getText(this.BookName) : null,
+            classDurationIcon: ((await action.getElementCount(this.classDurationIcon)) > 0) ? await action.waitForExist(this.classDurationIcon) : false,
+            classDuration: ((await action.getElementCount(this.classDuration)) > 0) ? await action.getText(this.classDuration) : null,
+            instructorIcon: ((await action.getElementCount(this.instructorIcon)) > 0) ? await action.waitForExist(this.instructorIcon) : false,
+            instrutorName: ((await action.getElementCount(this.instrutorName)) > 0) ? await action.getText(this.instrutorName) : null,
+            classDatesLabel: ((await action.getElementCount(this.classDatesLabel)) > 0) ? await action.getText(this.classDatesLabel) : null,
+            instructorLabel: ((await action.getElementCount(this.instructorLabel)) > 0) ? await action.getText(this.instructorLabel) : null,
         }
         return obj
     },

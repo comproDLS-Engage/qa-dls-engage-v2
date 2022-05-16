@@ -9,19 +9,19 @@ module.exports = {
 
     isInitialized: function() {
         var res;
-        logger.logInto(stackTrace.get());
-        action.waitForDocumentLoad();
+        await logger.logInto(stackTrace.get());
+        await action.waitForDocumentLoad();
         res = {
-            pageStatus: action.waitForDisplayed(this.upgradetoPremium_btn),
+            pageStatus: await action.waitForDisplayed(this.upgradetoPremium_btn),
         };
         return res;
     },
 
     getData_billingPage: function() {
-        logger.logInto(stackTrace.get());
+        await logger.logInto(stackTrace.get());
         var obj;
         obj = {
-            upgradetoPremium_btn: (action.getElementCount(this.upgradetoPremium_btn) > 0) ? action.getText(this.upgradetoPremium_btn) : null,
+            upgradetoPremium_btn: ((await action.getElementCount(this.upgradetoPremium_btn)) > 0) ? await action.getText(this.upgradetoPremium_btn) : null,
            
         }
         return obj;
@@ -29,12 +29,12 @@ module.exports = {
 
     click_close_btn: function() {
         let res;
-        logger.logInto(stackTrace.get());
-        res = action.click(this.close_btn);
+        await logger.logInto(stackTrace.get());
+        res = await action.click(this.close_btn);
         if (true == res) {
-            logger.logInto(stackTrace.get(), " close button is clicked");
+            await logger.logInto(stackTrace.get(), " close button is clicked");
         } else {
-            logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(stackTrace.get(), res, 'error');
         }
         return res;
 

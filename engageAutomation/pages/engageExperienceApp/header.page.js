@@ -6,20 +6,20 @@ var res;
 module.exports = {
    
   
-    clickProfileMenuSignout: function () {// for student and instructor
-        logger.logInto(stackTrace.get());
+    clickProfileMenuSignout: async function () {// for student and instructor
+        await logger.logInto(stackTrace.get());
 
         //tbd headerpage not implemented
         if(global.view == 'desktop')
         {
-            action.click("[data-tid=button-user-profile]")
+            await action.click("[data-tid=button-user-profile]")
         }
         else
-        {   action.waitForDisplayed("//span[text()='More']")
-            action.click("//span[text()='More']")
+        {   await action.waitForDisplayed("//span[text()='More']")
+            await action.click("//span[text()='More']")
 
         }
-        res = action.click('//span[contains(text(),"Logout")]')
+        res = await action.click('//span[contains(text(),"Logout")]')
 
         return res;
     }

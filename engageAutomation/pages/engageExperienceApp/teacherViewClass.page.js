@@ -38,38 +38,38 @@ module.exports = {
     viewMessagebtn: selectorFile.css.ComproEngage.teacherViewClassPage.viewMessagebtn,
     assignmentsTab:selectorFile.css.ComproEngage.teacherViewClassPage.assignmentsTab,
 
-    isInitialized: function () {
-        logger.logInto(stackTrace.get());
-        action.waitForDocumentLoad();
-        let pageStatus = action.waitForDisplayed(this.productTabBtns + 0 + "]");
+    isInitialized: async function () {
+        await logger.logInto(stackTrace.get());
+        await action.waitForDocumentLoad();
+        let pageStatus = await action.waitForDisplayed(this.productTabBtns + 0 + "]");
       //  res = this.getViewClassPageData();
        // res.pageStatus = pageStatus;
         return pageStatus;
     },
 
-    getViewClassPageData: function () {
-        action.waitForDocumentLoad();
-        logger.logInto(stackTrace.get());
+    getViewClassPageData: async function () {
+        await action.waitForDocumentLoad();
+        await logger.logInto(stackTrace.get());
         obj = {
-            className: (action.getElementCount(this.pageTitle) > 0) ? action.getText(this.pageTitle) : null,
-            classDuration: (action.getElementCount(this.pageSubTitle) > 0) ? action.getText(this.pageSubTitle) : null,
-            gradebookBtn: (action.getElementCount(this.gradebookBtn) > 0) ? action.getText(this.gradebookBtn) : null,
-            classOptionsBtn_exists: (action.getElementCount(this.classOptionsBtn) > 0) ? action.waitForDisplayed(this.classOptionsBtn) : false,
-            productList: (action.getElementCount(this.productList) > 0) ? action.waitForDisplayed(this.productList) : null,
-            bookCoverImg: (action.getElementCount(this.bookCoverImg) > 0) ? action.waitForDisplayed(this.bookCoverImg) : false,
-            bookTitleTxt: (action.getElementCount(this.bookTitleTxt) > 0) ? action.getText(this.bookTitleTxt) : null,
-            bookSubtitleTxt: (action.getElementCount(this.bookSubtitleTxt) > 0) ? action.getText(this.bookSubtitleTxt) : null,
-            viewBookBtn: (action.getElementCount(this.viewBookBtn) > 0) ? action.getText(this.viewBookBtn) : null,
+            className: ((await action.getElementCount(this.pageTitle)) > 0) ? await action.getText(this.pageTitle) : null,
+            classDuration: ((await action.getElementCount(this.pageSubTitle)) > 0) ? await action.getText(this.pageSubTitle) : null,
+            gradebookBtn: ((await action.getElementCount(this.gradebookBtn)) > 0) ? await action.getText(this.gradebookBtn) : null,
+            classOptionsBtn_exists: ((await action.getElementCount(this.classOptionsBtn)) > 0) ? await action.waitForDisplayed(this.classOptionsBtn) : false,
+            productList: ((await action.getElementCount(this.productList)) > 0) ? await action.waitForDisplayed(this.productList) : null,
+            bookCoverImg: ((await action.getElementCount(this.bookCoverImg)) > 0) ? await action.waitForDisplayed(this.bookCoverImg) : false,
+            bookTitleTxt: ((await action.getElementCount(this.bookTitleTxt)) > 0) ? await action.getText(this.bookTitleTxt) : null,
+            bookSubtitleTxt: ((await action.getElementCount(this.bookSubtitleTxt)) > 0) ? await action.getText(this.bookSubtitleTxt) : null,
+            viewBookBtn: ((await action.getElementCount(this.viewBookBtn)) > 0) ? await action.getText(this.viewBookBtn) : null,
             productList: null, //for the tabs (inbox, Assignments, Students)
             bookComponentList: null, //for book components in the right pane
         }
 
         let productData = [], productSelector, isProductSelected, i;
-        let productCount = action.getElementCount(this.productTabBtns);
+        let productCount = await action.getElementCount(this.productTabBtns);
         for (i = 0; i < productCount; i++) {
             productSelector = this.productTabBtns + i + "]";
-            productData[i] = action.getText(productSelector);
-            isProductSelected = action.getAttribute(productSelector, 'aria-selected');
+            productData[i] = await action.getText(productSelector);
+            isProductSelected = await action.getAttribute(productSelector, 'aria-selected');
             if (isProductSelected == 'true') {
                 obj.selectedProduct = productData[i];
             }
@@ -77,11 +77,11 @@ module.exports = {
         }
         let bookComponentData = [];
 
-        languageCount = action.getElementCount(this.bookComponentNamesBtns);
+        languageCount = await action.getElementCount(this.bookComponentNamesBtns);
         for (i = 0; i < languageCount; i++) {
             componentSelector = this.bookComponentNamesBtns + i + "]";
-            if (action.getElementCount(componentSelector) > 0) {
-                bookComponentData[i] = action.getText(componentSelector);
+            if ((await action.getElementCount(componentSelector)) > 0) {
+                bookComponentData[i] = await action.getText(componentSelector);
             }
             else
                 bookComponentData[i] = "";
@@ -94,38 +94,38 @@ module.exports = {
     },
 
     //Clicking on 'Class Options' button launches Class Options - Edit class, add books
-    clickClassOptionsButton: function () {
-        logger.logInto(stackTrace.get());
-        res = action.click(this.classOptionsBtn);
+    clickClassOptionsButton: async function () {
+        await logger.logInto(stackTrace.get());
+        res = await action.click(this.classOptionsBtn);
         if (res == true) {
-            logger.logInto(stackTrace.get(), "-- Class Options button is clicked");
-            res = this.getClassOptionsList();
+            await logger.logInto(stackTrace.get(), "-- Class Options button is clicked");
+            res = await this.getClassOptionsList();
         }
         else {
             res = res + "-- Error in clicking View Book button";
-            logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(stackTrace.get(), res, 'error');
         }
         return res;
     },
 
     //class options list 
-    getClassOptionsList: function () {
-        logger.logInto(stackTrace.get());
+    getClassOptionsList: async function () {
+        await logger.logInto(stackTrace.get());
         obj = {
-            editClassBtn: (action.getElementCount(this.editClassBtn) > 0) ? action.getText(this.editClassBtn) : null,
-            addBooksBtn: (action.getElementCount(this.addBooksBtn) > 0) ? action.getText(this.addBooksBtn) : null
+            editClassBtn: ((await action.getElementCount(this.editClassBtn)) > 0) ? await action.getText(this.editClassBtn) : null,
+            addBooksBtn: ((await action.getElementCount(this.addBooksBtn)) > 0) ? await action.getText(this.addBooksBtn) : null
         }
         return obj;
     },
 
     //Clicking on any book component launches snackbar 'Feature Coming Soon'
-    clickBookComponent: function (componentNumber) { //disable for now, to be reviewed later
-        logger.logInto(stackTrace.get());
+    clickBookComponent: async function (componentNumber) { //disable for now, to be reviewed later
+        await logger.logInto(stackTrace.get());
         let componentSelector = this.bookComponentNames_btn + (componentNumber) + "]";
-        res = action.click(componentSelector);
+        res = await action.click(componentSelector);
         if (res == true) {
-            logger.logInto(stackTrace.get(), "-- Selected component is clicked");
-            res = require('../../test/engageExperienceApp/common.test.js').get_Snackbar_Message_Text();
+            await logger.logInto(stackTrace.get(), "-- Selected component is clicked");
+            res = await require('../../test/engageExperienceApp/common.test.js').get_Snackbar_Message_Text();
 
             /*res = action.waitForDisplayed(this.snackbarInfo_txt);
             if (res == true) {
@@ -139,78 +139,78 @@ module.exports = {
         }
         else {
             res = res + "-- Error in clicking Selected component button";
-            logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(stackTrace.get(), res, 'error');
         }
         return res;
     },
     //Click edit class button on more options.
-    clickEditbtn: function () {
-        logger.logInto(stackTrace.get());
-        action.waitForDisplayed(this.editClassBtn)
-        res = action.click(this.editClassBtn);
+    clickEditbtn: async function () {
+        await logger.logInto(stackTrace.get());
+        await action.waitForDisplayed(this.editClassBtn)
+        res = await action.click(this.editClassBtn);
         if (res == true) {
-            logger.logInto(stackTrace.get(), "-- Edit btn is clicked");
-            res = createClassPage.isInitialized();
+            await logger.logInto(stackTrace.get(), "-- Edit btn is clicked");
+            res = await createClassPage.isInitialized();
         }
         else {
             res = res + "-- Error in clicking Inbox Tab";
-            logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(stackTrace.get(), res, 'error');
         }
         return res;
     },
     //clicking on Inbox Tab
-    clickInboxTab: function () {
-        logger.logInto(stackTrace.get());
-        res = action.click(this.inboxTab);
+    clickInboxTab: async function () {
+        await logger.logInto(stackTrace.get());
+        res = await action.click(this.inboxTab);
         if (res == true) {
-            logger.logInto(stackTrace.get(), "-- Inbox Tab is clicked");
-            res = this.isInitialized();
+            await logger.logInto(stackTrace.get(), "-- Inbox Tab is clicked");
+            res = await this.isInitialized();
         }
         else {
             res = res + "-- Error in clicking Inbox Tab";
-            logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(stackTrace.get(), res, 'error');
         }
         return res;
     },
 
     //clicking on Assignment Tab
-    clickAssignmentsTab: function () {
-        logger.logInto(stackTrace.get());
-        action.waitForDisplayed(this.assignmentsTab);
-        res = action.click(this.assignmentsTab);
+    clickAssignmentsTab: async function () {
+        await logger.logInto(stackTrace.get());
+        await action.waitForDisplayed(this.assignmentsTab);
+        res = await action.click(this.assignmentsTab);
         if (res == true) {
-            logger.logInto(stackTrace.get(), "-- Assignment Tab is clicked");
-            res =require ('./assignmentListTeacher.page').isInitialized();
+            await logger.logInto(stackTrace.get(), "-- Assignment Tab is clicked");
+            res =await require ('./assignmentListTeacher.page').isInitialized();
         }
         else {
             res = res + "-- Error in clicking Assignment Tab";
-            logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(stackTrace.get(), res, 'error');
         }
         return res;
     },
 
     //clicking on Progress Tab
-    clickStudentsTab: function () {
-        logger.logInto(stackTrace.get());
-        res = action.click(this.productTabBtns + "2]");
+    clickStudentsTab: async function () {
+        await logger.logInto(stackTrace.get());
+        res = await action.click(this.productTabBtns + "2]");
         if (res == true) {
-            logger.logInto(stackTrace.get(), "-- Progress Tab is clicked");
-            res = this.getStudentPageData();
+            await logger.logInto(stackTrace.get(), "-- Progress Tab is clicked");
+            res = await this.getStudentPageData();
         }
         else {
             res = res + "-- Error in clicking Progress Tab";
-            logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(stackTrace.get(), res, 'error');
         }
         return res;
     },
 
     //Click Invite Students button
-    clickInviteStudentsButton: function () {
-        logger.logInto(stackTrace.get());
-        res = action.click(this.inviteStudents_btn);
+    clickInviteStudentsButton: async function () {
+        await logger.logInto(stackTrace.get());
+        res = await action.click(this.inviteStudents_btn);
         if (res == true) {
-            logger.logInto(stackTrace.get(), "-- Invite Students button is clicked");
-            res = require('../../test/engageExperienceApp/common.test.js').get_Snackbar_Message_Text();
+            await logger.logInto(stackTrace.get(), "-- Invite Students button is clicked");
+            res = await require('../../test/engageExperienceApp/common.test.js').get_Snackbar_Message_Text();
 
             /*res = action.waitForDisplayed(this.snackbarInfo_txt);
             if (res == true) {
@@ -224,18 +224,18 @@ module.exports = {
         }
         else {
             res = res + "-- Error in clicking Invite Students button button";
-            logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(stackTrace.get(), res, 'error');
         }
         return res;
     },
 
     //Click Create Assignments button
-    clickCreateAssignmentsButton: function () {
-        logger.logInto(stackTrace.get());
-        res = action.click(this.createAssignments_btn);
+    clickCreateAssignmentsButton: async function () {
+        await logger.logInto(stackTrace.get());
+        res = await action.click(this.createAssignments_btn);
         if (res == true) {
-            logger.logInto(stackTrace.get(), "-- Invite Students button is clicked");
-            res = require('../../test/engageExperienceApp/common.test.js').get_Snackbar_Message_Text();
+            await logger.logInto(stackTrace.get(), "-- Invite Students button is clicked");
+            res = await require('../../test/engageExperienceApp/common.test.js').get_Snackbar_Message_Text();
 
             /*res = action.waitForDisplayed(this.snackbarInfo_txt);
             if (res == true) {
@@ -249,60 +249,60 @@ module.exports = {
         }
         else {
             res = res + "-- Error in clicking Invite Students button button";
-            logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(stackTrace.get(), res, 'error');
         }
         return res;
     },
     //Click on View Book button
-    clickViewBookbtn: function () {
-        logger.logInto(stackTrace.get());
-        res = action.click(this.viewBookBtn);
+    clickViewBookbtn: async function () {
+        await logger.logInto(stackTrace.get());
+        res = await action.click(this.viewBookBtn);
         if (res == true) {
-            logger.logInto(stackTrace.get(), "-- Progress Tab is clicked");
-            res = bookDetailsPage.isInitialized();
+            await logger.logInto(stackTrace.get(), "-- Progress Tab is clicked");
+            res = await bookDetailsPage.isInitialized();
         }
         else {
             res = res + "-- Error in clicking Progress Tab";
-            logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(stackTrace.get(), res, 'error');
         }
         return res;
     },
-    clickGradeBookbtn: function () {
-        logger.logInto(stackTrace.get());
-        res = action.click(this.gradebookBtn);
+    clickGradeBookbtn: async function () {
+        await logger.logInto(stackTrace.get());
+        res = await action.click(this.gradebookBtn);
         if (res == true) {
-            logger.logInto(stackTrace.get(), "-- gradebookBtn is clicked");
-            res = gradeBookPage.isInitialized();
+            await logger.logInto(stackTrace.get(), "-- gradebookBtn is clicked");
+            res = await gradeBookPage.isInitialized();
         }
         else {
             res = res + "-- Error in clicking gradebookBtn";
-            logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(stackTrace.get(), res, 'error');
         }
         return res;
     },
-    getStudentPageData: function () {
-        pageData = this.getViewClassPageData();
+    getStudentPageData: async function () {
+        pageData = await this.getViewClassPageData();
         obj = {
-            noStudentIcon: (action.getElementCount(this.noStudentIcon) > 0) ? action.waitForExist(this.noStudentIcon) : null,
-            noStudentTitle: (action.getElementCount(this.noStudentTitle) > 0) ? action.getText(this.noStudentTitle) : null,
-            noStudentSubTitle: (action.getElementCount(this.noStudentSubTitle) > 0) ? action.getText(this.noStudentSubTitle) : null,
-            namelbl: (action.getElementCount(this.namelbl) > 0) ? action.getText(this.namelbl) : null,
-            statuslbl: (action.getElementCount(this.statuslbl) > 0) ? action.getText(this.statuslbl) : null,
-            studentAvgScorelbl: (action.getElementCount(this.studentAvgScorelbl) > 0) ? action.getText(this.studentAvgScorelbl) : null,
-            studentCompletionScorelbl: (action.getElementCount(this.studentCompletionScorelbl) > 0) ? action.getText(this.studentCompletionScorelbl) : null,
+            noStudentIcon: ((await action.getElementCount(this.noStudentIcon)) > 0) ? await action.waitForExist(this.noStudentIcon) : null,
+            noStudentTitle: ((await action.getElementCount(this.noStudentTitle)) > 0) ? await action.getText(this.noStudentTitle) : null,
+            noStudentSubTitle: ((await action.getElementCount(this.noStudentSubTitle)) > 0) ? await action.getText(this.noStudentSubTitle) : null,
+            namelbl: ((await action.getElementCount(this.namelbl)) > 0) ? await action.getText(this.namelbl) : null,
+            statuslbl: ((await action.getElementCount(this.statuslbl)) > 0) ? await action.getText(this.statuslbl) : null,
+            studentAvgScorelbl: ((await action.getElementCount(this.studentAvgScorelbl)) > 0) ? await action.getText(this.studentAvgScorelbl) : null,
+            studentCompletionScorelbl: ((await action.getElementCount(this.studentCompletionScorelbl)) > 0) ? await action.getText(this.studentCompletionScorelbl) : null,
         }
         let studentData = [], i;
-        let studentcount = action.getElementCount(this.studentList);
+        let studentcount = await action.getElementCount(this.studentList);
         for (i = 0; i < studentcount; i++) {
             studentData[i] =
             {
-                studentName: (action.getElementCount(this.studentName + i + "]") > 0) ? action.getText(this.studentName + i + "]") : null,
-                studentStatus: (action.getElementCount(this.studentStatus + i + "]") > 0) ? action.getText(this.studentStatus + i + "]") : null,
-                studentAvgScore: (action.getElementCount(this.studentAvgScore + i + "-2]") > 0) ? action.getText(this.studentAvgScore + i + "-2]") : null,
-                studentCompletionScore: (action.getElementCount(this.studentCompletionScore + i + "-3]") > 0) ? action.getText(this.studentCompletionScore + i + "-3]") : null,
-                viewProgressbtn: (action.getElementCount(this.viewProgressbtn + i + "]") > 0) ? action.waitForExist(this.viewProgressbtn + i + "]") : null,
-                viewMessagebtn: (action.getElementCount(this.viewMessagebtn + i + "]") > 0) ? action.waitForExist(this.viewMessagebtn + i + "]") : null,
-                studentMoreOption: (action.getElementCount(this.studentMoreOption + i + "]") > 0) ? action.waitForExist(this.studentMoreOption + i + "]") : null,
+                studentName: ((await action.getElementCount(this.studentName + i + "]")) > 0) ? await action.getText(this.studentName + i + "]") : null,
+                studentStatus: ((await action.getElementCount(this.studentStatus + i + "]")) > 0) ? await action.getText(this.studentStatus + i + "]") : null,
+                studentAvgScore: ((await action.getElementCount(this.studentAvgScore + i + "-2]")) > 0) ? await action.getText(this.studentAvgScore + i + "-2]") : null,
+                studentCompletionScore: ((await action.getElementCount(this.studentCompletionScore + i + "-3]")) > 0) ? await action.getText(this.studentCompletionScore + i + "-3]") : null,
+                viewProgressbtn: ((await action.getElementCount(this.viewProgressbtn + i + "]")) > 0) ? await action.waitForExist(this.viewProgressbtn + i + "]") : null,
+                viewMessagebtn: ((await action.getElementCount(this.viewMessagebtn + i + "]")) > 0) ? await action.waitForExist(this.viewMessagebtn + i + "]") : null,
+                studentMoreOption: ((await action.getElementCount(this.studentMoreOption + i + "]")) > 0) ? await action.waitForExist(this.studentMoreOption + i + "]") : null,
             }
 
         }
