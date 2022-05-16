@@ -11,30 +11,30 @@ module.exports = {
     lastPublishedVer: selectorFile.publishComponentPage.lastPublishedVer,
     lastSnapshotVer: selectorFile.publishComponentPage.lastSnapshotVer,
 
-    isInitialized: function () {
-        logger.logInto(stackTrace.get());
+    isInitialized: async function () {
+        await logger.logInto(stackTrace.get());
         //action.waitForDocumentLoad();
-        action.waitForDisplayed(this.loadingContainer);
-        action.waitForDisplayed(this.loadingContainer, 120000, true);
+        await action.waitForDisplayed(this.loadingContainer);
+        await action.waitForDisplayed(this.loadingContainer, 120000, true);
         res = {
-            lastPublishedVer: action.getText(this.lastPublishedVer),
-            lastSnapshotVer: action.getText(this.lastSnapshotVer),
-            snapshotBtn_isEnabled: action.isEnabled(this.snapshotBtn),
-            publishBtn_isEnabled: action.isEnabled(this.publishBtn),
+            lastPublishedVer: await action.getText(this.lastPublishedVer),
+            lastSnapshotVer: await action.getText(this.lastSnapshotVer),
+            snapshotBtn_isEnabled: await action.isEnabled(this.snapshotBtn),
+            publishBtn_isEnabled: await action.isEnabled(this.publishBtn),
         }
         return res;
     },
 
-    click_CreateSnapshot_Button: function () {
-        logger.logInto(stackTrace.get());
-        res = action.isEnabled(this.snapshotBtn);
+    click_CreateSnapshot_Button: async function () {
+        await logger.logInto(stackTrace.get());
+        res = await action.isEnabled(this.snapshotBtn);
         if (res == true) {
-            res = action.click(this.snapshotBtn);
+            res = await action.click(this.snapshotBtn);
             if (res == true) {
-                res = action.waitForClickable(this.publishBtn, 120000);
+                res = await action.waitForClickable(this.publishBtn, 120000);
                 // res = action.isEnabled(this.publishBtn);
             }
-            logger.logInto(stackTrace.get(), res);
+            await logger.logInto(stackTrace.get(), res);
         }
         else {
             res = res + " - Snapshot button is not enabled"
@@ -42,34 +42,34 @@ module.exports = {
         return res;
     },
 
-    click_Preview_Button: function () {
-        logger.logInto(stackTrace.get());
-        res = action.click(this.previewBtn);
+    click_Preview_Button: async function () {
+        await logger.logInto(stackTrace.get());
+        res = await action.click(this.previewBtn);
         if (res == true) {
-            browser.switchWindow('engage-difusion');
-            res = action.waitForDocumentLoad();
-            res = action.waitForDisplayed("[data-tid=text-bookTitle]");
+            await browser.switchWindow('engage-difusion');
+            res = await action.waitForDocumentLoad();
+            res = await action.waitForDisplayed("[data-tid=text-bookTitle]");
         }
-        logger.logInto(stackTrace.get(), res);
+        await logger.logInto(stackTrace.get(), res);
         return res;
     },
 
-    click_Publish_Button: function () {
-        logger.logInto(stackTrace.get());
-        let prevVersion = action.getText(this.lastPublishedVer);
-        res = action.isEnabled(this.publishBtn);
+    click_Publish_Button: async function () {
+        await logger.logInto(stackTrace.get());
+        let prevVersion = await action.getText(this.lastPublishedVer);
+        res = await action.isEnabled(this.publishBtn);
         if (res == true) {
-            res = action.click(this.publishBtn);
+            res = await action.click(this.publishBtn);
             if (res == true) {
-                browser.waitUntil(
-                    () => action.getText(this.lastPublishedVer) > prevVersion,
+                await browser.waitUntil(
+                    async () => (await action.getText(this.lastPublishedVer)) > prevVersion,
                     {
                         timeout: undefined,
                         timeoutMsg: 'ERROR! Published version did not proceed'
                     }
                 );
             }
-            logger.logInto(stackTrace.get(), res);
+            await logger.logInto(stackTrace.get(), res);
         }
         else {
             res = res + " - publish button is not enabled"

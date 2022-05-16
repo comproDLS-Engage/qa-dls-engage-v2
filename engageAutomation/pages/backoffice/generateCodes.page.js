@@ -16,73 +16,73 @@ module.exports = {
     snackbarBtn: selectorFile.common.snackbarBtn,
     buttonLoader: selectorFile.common.buttonLoader,
 
-    isInitialized: function () {
-        logger.logInto(stackTrace.get());
+    isInitialized: async function () {
+        await logger.logInto(stackTrace.get());
         //action.waitForDocumentLoad();
-        res = action.waitForDisplayed(this.generateBtn);
+        res = await action.waitForDisplayed(this.generateBtn);
         return res;
     },
 
-    select_Book: function (name) {
-        logger.logInto(stackTrace.get());
-        res = action.click(this.bookDropdown);
-        action.waitForDisplayed(this.bookList);
+    select_Book: async function (name) {
+        await logger.logInto(stackTrace.get());
+        res = await action.click(this.bookDropdown);
+        await action.waitForDisplayed(this.bookList);
         if (res == true) {
             let i, list;
-            list = action.findElements(this.bookList);
+            list = await action.findElements(this.bookList);
             for (i = 0; i < list.length; i++) {
-                if (action.getText(list[i]) == name) {
-                    res = action.click(action.parentElement(list[i]));
+                if ((await action.getText(list[i])) == name) {
+                    res = await action.click(action.parentElement(list[i]));
                     break;
                 }
             }
         }
-        logger.logInto(stackTrace.get(), res);
+        await logger.logInto(stackTrace.get(), res);
         return res;
     },
 
 
-    set_BatchName: function (name) {
-        logger.logInto(stackTrace.get());
-        res = action.setValue(this.batchNameTxtbox, name);
-        logger.logInto(stackTrace.get(), res);
+    set_BatchName: async function (name) {
+        await logger.logInto(stackTrace.get());
+        res = await action.setValue(this.batchNameTxtbox, name);
+        await logger.logInto(stackTrace.get(), res);
         return res;
     },
 
-    set_StartDate: function (date) {
-        logger.logInto(stackTrace.get());
-        res = action.setValue(this.startDate, date);
-        logger.logInto(stackTrace.get(), res);
+    set_StartDate: async function (date) {
+        await logger.logInto(stackTrace.get());
+        res = await action.setValue(this.startDate, date);
+        await logger.logInto(stackTrace.get(), res);
         return res;
     },
 
-    set_EndDate: function (date) {
-        logger.logInto(stackTrace.get());
-        res = action.setValue(this.endDate, date);
-        logger.logInto(stackTrace.get(), res);
+    set_EndDate: async function (date) {
+        await logger.logInto(stackTrace.get());
+        res = await action.setValue(this.endDate, date);
+        await logger.logInto(stackTrace.get(), res);
         return res;
     },
 
-    set_CodeLimit: function (number) {
-        logger.logInto(stackTrace.get());
-        res = action.setValue(this.codeLimitTxtbox, number);
-        logger.logInto(stackTrace.get(), res);
+    set_CodeLimit: async function (number) {
+        await logger.logInto(stackTrace.get());
+        res = await action.setValue(this.codeLimitTxtbox, number);
+        await logger.logInto(stackTrace.get(), res);
         return res;
     },
     
-    click_Generate_Button: function () {
-        logger.logInto(stackTrace.get());
-        res = action.waitForClickable(this.generateBtn);
-        action.waitForDisplayed(this.buttonLoader, undefined, true);
+    click_Generate_Button: async function () {
+        await logger.logInto(stackTrace.get());
+        res = await action.waitForClickable(this.generateBtn);
+        await action.waitForDisplayed(this.buttonLoader, undefined, true);
         if (res == true) {
-            res = action.click(this.generateBtn);
+            res = await action.click(this.generateBtn);
             if (res == true) {
-                action.waitForDisplayed(this.snackbarLbl);
-                res = action.getText(this.snackbarLbl);
-                action.click(this.snackbarBtn);
+                await action.waitForDisplayed(this.snackbarLbl);
+                res = await action.getText(this.snackbarLbl);
+                await action.click(this.snackbarBtn);
             }
         }
-        logger.logInto(stackTrace.get(), res);
+        await logger.logInto(stackTrace.get(), res);
         return res;
     },
 

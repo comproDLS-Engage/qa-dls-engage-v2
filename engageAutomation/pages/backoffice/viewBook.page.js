@@ -19,99 +19,99 @@ module.exports = {
     visibility: selectorFile.viewBookPage.visibility,
     seeMoreLessBtn: selectorFile.common.seeMoreLessBtn,
 
-    isInitialized: function () {
-        logger.logInto(stackTrace.get());
+    isInitialized: async function () {
+        await logger.logInto(stackTrace.get());
         //action.waitForDocumentLoad();
-        action.waitForDisplayed(this.loadingContainer);
-        action.waitForDisplayed(this.loadingContainer, undefined, true);
-        res = action.getText(selectorFile.common.pageTitle);
+        await action.waitForDisplayed(this.loadingContainer);
+        await action.waitForDisplayed(this.loadingContainer, undefined, true);
+        res = await action.getText(selectorFile.common.pageTitle);
         return res;
     },
 
-    getBookParamDetails: function () {
-        logger.logInto(stackTrace.get());
-        action.click(this.seeMoreLessBtn);
+    getBookParamDetails: async function () {
+        await logger.logInto(stackTrace.get());
+        await action.click(this.seeMoreLessBtn);
         var obj = {
-			description: (action.getElementCount(this.description) > 0) ? action.getText(this.description) : null,
-			bookDesign: (action.getElementCount(this.bookDesign) > 0) ? action.getText(this.bookDesign) : null,
-			visibility: (action.getElementCount(this.visibility) > 0) ? action.getText(this.visibility) : null
+			description: ((await action.getElementCount(this.description)) > 0) ? await action.getText(this.description) : null,
+			bookDesign: ((await action.getElementCount(this.bookDesign)) > 0) ? await action.getText(this.bookDesign) : null,
+			visibility: ((await action.getElementCount(this.visibility)) > 0) ? await action.getText(this.visibility) : null
 		};
 		return obj;
     },
 
-    click_AddComponent_Button: function () {
-        logger.logInto(stackTrace.get());
-        res = action.click(this.addComponentBtn);
+    click_AddComponent_Button: async function () {
+        await logger.logInto(stackTrace.get());
+        res = await action.click(this.addComponentBtn);
         if (res == true) {
-            res = action.waitForDisplayed(this.proceedBtn);
+            res = await action.waitForDisplayed(this.proceedBtn);
         }
-        logger.logInto(stackTrace.get(), res);
+        await logger.logInto(stackTrace.get(), res);
         return res;
     },
 
-    click_Component: function (name) {
-        logger.logInto(stackTrace.get());
+    click_Component: async function (name) {
+        await logger.logInto(stackTrace.get());
         res = null;
         let i, list;
-        list = action.findElements(this.componentList);
+        list = await action.findElements(this.componentList);
         for (i = 0; i < list.length; i++) {
             //console.log(action.getText(list[i]))
-            if (action.getText(list[i]).includes(name)) {
-                res = action.click(list[i]);
+            if ((await action.getText(list[i])).includes(name)) {
+                res = await action.click(list[i]);
                 if (res == true) {
-                    res = require('./viewLearningPath.page.js').isInitialized();
-                    browser.pause(5000);
+                    res = await require('./viewLearningPath.page.js').isInitialized();
+                    await browser.pause(5000);
                 }
                 break;
             }
             res = "component not found";
         }
-        logger.logInto(stackTrace.get(), res);
+        await logger.logInto(stackTrace.get(), res);
         return res;
     },
 
-    select_ComponentType_and_Proceed: function (type) {
-        logger.logInto(stackTrace.get());
+    select_ComponentType_and_Proceed: async function (type) {
+        await logger.logInto(stackTrace.get());
         res = null;
         let i, list;
-        list = action.findElements(this.componentTypeList);
+        list = await action.findElements(this.componentTypeList);
         for (i = 0; i < list.length; i++) {
             //console.log(action.getText(list[i]))
-            if (action.getText(list[i]).includes(type)) {
-                res = action.click(list[i]);
+            if ((await action.getText(list[i])).includes(type)) {
+                res = await action.click(list[i]);
                 if (res == true) {
-                    res = action.click(this.proceedBtn);
+                    res = await action.click(this.proceedBtn);
                     if (res == true) {
-                        res = require('./addComponent.page.js').isInitialized();
-                        browser.pause(5000);
+                        res = await require('./addComponent.page.js').isInitialized();
+                        await browser.pause(5000);
                     }
                 }
                 break;
             }
             res = "component type not found";
         }
-        logger.logInto(stackTrace.get(), res);
+        await logger.logInto(stackTrace.get(), res);
         return res;
     },
 
-    click_DeleteBook_Button: function () {
-        logger.logInto(stackTrace.get());
-        let res = action.click(this.deleteBookBtn);
+    click_DeleteBook_Button: async function () {
+        await logger.logInto(stackTrace.get());
+        let res = await action.click(this.deleteBookBtn);
         if (res == true) {
-            action.waitForDisplayed(this.dialogContent);
-            res = action.getText(this.dialogContent);
+            await action.waitForDisplayed(this.dialogContent);
+            res = await action.getText(this.dialogContent);
         }
-        logger.logInto(stackTrace.get(), res);
+        await logger.logInto(stackTrace.get(), res);
         return res;
     },
 
-    click_ModifyBook_Button: function () {
-        logger.logInto(stackTrace.get());
-        let res = action.click(this.modifyBookBtn);
+    click_ModifyBook_Button: async function () {
+        await logger.logInto(stackTrace.get());
+        let res = await action.click(this.modifyBookBtn);
         if (res == true) {
-            res = require('./addTitle.page.js').isInitialized();
+            res = await require('./addTitle.page.js').isInitialized();
         }
-        logger.logInto(stackTrace.get(), res);
+        await logger.logInto(stackTrace.get(), res);
         return res;
     },
 

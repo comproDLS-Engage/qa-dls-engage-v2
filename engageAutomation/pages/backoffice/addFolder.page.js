@@ -18,137 +18,137 @@ module.exports = {
     folderTypeDropdown: selectorFile.addFolderPage.folderTypeDropdown,
     folderTypeList: selectorFile.addFolderPage.folderTypeList,
 
-    isInitialized: function () {
-        logger.logInto(stackTrace.get());
+    isInitialized: async function () {
+        await logger.logInto(stackTrace.get());
         let res;
-        res = action.waitForDisplayed(this.addBtn);
+        res = await action.waitForDisplayed(this.addBtn);
         return res;
     },
 
-    set_Name: function (text) {
-        logger.logInto(stackTrace.get());
+    set_Name: async function (text) {
+        await logger.logInto(stackTrace.get());
         let res;
-        res = action.setValue(this.nameTxtbox, text);
-        logger.logInto(stackTrace.get(), res);
+        res = await action.setValue(this.nameTxtbox, text);
+        await logger.logInto(stackTrace.get(), res);
         return res;
     },
 
-    click_Add_Button: function () {
-        logger.logInto(stackTrace.get());
+    click_Add_Button: async function () {
+        await logger.logInto(stackTrace.get());
         let res;
-        res = action.waitForClickable(this.addBtn);
-        action.waitForDisplayed(this.buttonLoader, undefined, true)
+        res = await action.waitForClickable(this.addBtn);
+        await action.waitForDisplayed(this.buttonLoader, undefined, true)
         if (res == true) {
-            res = action.click(this.addBtn);
+            res = await action.click(this.addBtn);
             if (res == true) {
-                action.waitForDisplayed(this.snackbarLbl);
-                res = action.getText(this.snackbarLbl);
-                action.click(this.snackbarBtn);
-                browser.pause(5000)
-                action.waitForDisplayed(require('./viewLearningPath.page.js').folderList);
+                await action.waitForDisplayed(this.snackbarLbl);
+                res = await action.getText(this.snackbarLbl);
+                await action.click(this.snackbarBtn);
+                await browser.pause(5000)
+                await action.waitForDisplayed(await require('./viewLearningPath.page.js').folderList);
             }
         }
-        logger.logInto(stackTrace.get(), res);
+        await logger.logInto(stackTrace.get(), res);
         return res;
     },
 
-    upload_CoverImage: function (imgPath) {
-        logger.logInto(stackTrace.get());
+    upload_CoverImage: async function (imgPath) {
+        await logger.logInto(stackTrace.get());
         var addTitlePage = require("./addTitle.page.js");
-        return addTitlePage.upload_CoverImage(imgPath);;
+        return await addTitlePage.upload_CoverImage(imgPath);;
     },
 
-    select_TargetRole: function (value) {
-        logger.logInto(stackTrace.get());
+    select_TargetRole: async function (value) {
+        await logger.logInto(stackTrace.get());
         let res;
         if (value == "" || value == undefined)
             res = true;
         else {
-            res = action.click(this.targetRoleDropdown);
-            action.waitForDisplayed(this.targetRoleList);
+            res = await action.click(this.targetRoleDropdown);
+            await action.waitForDisplayed(this.targetRoleList);
             if (res == true) {
                 let i, list;
-                list = action.findElements(this.targetRoleList);
+                list = await action.findElements(this.targetRoleList);
                 for (i = 0; i < list.length; i++) {
-                    if (action.getText(list[i]).includes(value)) {
-                        res = action.click(action.parentElement(list[i]));
+                    if ((await action.getText(list[i])).includes(value)) {
+                        res = await action.click(action.parentElement(list[i]));
                         break;
                     }
                     res = "Target Role value not found ";
                 }
             }
-            logger.logInto(stackTrace.get(), res);
+            await logger.logInto(stackTrace.get(), res);
         }
         return res;
     },
 
-    select_Assignable: function (value) {
-        logger.logInto(stackTrace.get());
+    select_Assignable: async function (value) {
+        await logger.logInto(stackTrace.get());
         let res;
         if (value == "" || value == undefined)
             res = true;
         else {
-            res = action.click(this.assignableDropdown);
-            action.waitForDisplayed(this.assignableList);
+            res = await action.click(this.assignableDropdown);
+            await action.waitForDisplayed(this.assignableList);
             if (res == true) {
                 let i, list;
-                list = action.findElements(this.assignableList);
+                list = await action.findElements(this.assignableList);
                 for (i = 0; i < list.length; i++) {
-                    if (action.getText(list[i]).includes(value)) {
-                        res = action.click(action.parentElement(list[i]));
+                    if ((await action.getText(list[i])).includes(value)) {
+                        res = await action.click(action.parentElement(list[i]));
                         break;
                     }
                     res = "Assignable value not found ";
                 }
             }
-            logger.logInto(stackTrace.get(), res);
+            await logger.logInto(stackTrace.get(), res);
         }
         return res;
     },
 
-    set_Folder_Color: function (value) {
-        logger.logInto(stackTrace.get());
+    set_Folder_Color: async function (value) {
+        await logger.logInto(stackTrace.get());
         let res;
         if (value == "" || value == undefined)
             res = true;
         else {
-            res = action.setValue(this.folderColor, value);
-            logger.logInto(stackTrace.get(), res);
+            res = await action.setValue(this.folderColor, value);
+            await logger.logInto(stackTrace.get(), res);
         }
         return res;
     },
 
-    set_Page_Reference: function (value) {
-        logger.logInto(stackTrace.get());
+    set_Page_Reference: async function (value) {
+        await logger.logInto(stackTrace.get());
         let res;
         if (value == "" || value == undefined)
             res = true;
         else {
-            res = action.setValue(this.pageReference, value);
-            logger.logInto(stackTrace.get(), res);
+            res = await action.setValue(this.pageReference, value);
+            await logger.logInto(stackTrace.get(), res);
         }
         return res;
     },
 
-    select_Folder_Type: function (value) {
-        logger.logInto(stackTrace.get());
+    select_Folder_Type: async function (value) {
+        await logger.logInto(stackTrace.get());
         let res;
         if (value == "" || value == undefined)
             res = true;
         else {
-            res = action.click(this.folderTypeDropdown);
-            action.waitForDisplayed(this.folderTypeList);
+            res = await action.click(this.folderTypeDropdown);
+            await action.waitForDisplayed(this.folderTypeList);
             if (res == true) {
                 let i, list;
-                list = action.findElements(this.folderTypeList);
+                list = await action.findElements(this.folderTypeList);
                 for (i = 0; i < list.length; i++) {
-                    if (action.getText(list[i]).includes(value)) {
-                        res = action.click(action.parentElement(list[i]));
+                    if ((await action.getText(list[i])).includes(value)) {
+                        res = await action.click(action.parentElement(list[i]));
                         break;
                     }
                 }
             }
-            logger.logInto(stackTrace.get(), res);
+            await logger.logInto(stackTrace.get(), res);
         }
         return res;
     }

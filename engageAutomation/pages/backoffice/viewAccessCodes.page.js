@@ -18,49 +18,49 @@ module.exports = {
     loadingContainer: selectorFile.common.loadingContainer,
     dialogContent: selectorFile.common.dialogContent,
 
-    isInitialized: function () {
-        logger.logInto(stackTrace.get());
+    isInitialized: async function () {
+        await logger.logInto(stackTrace.get());
         //action.waitForDocumentLoad();
-        action.waitForDisplayed(this.loadingContainer);
-        action.waitForDisplayed(this.loadingContainer, undefined, true);
+        await action.waitForDisplayed(this.loadingContainer);
+        await action.waitForDisplayed(this.loadingContainer, undefined, true);
         let res = {
-            batchName: action.getText(this.batchName),
-            startDate: action.getText(this.startDate),
-            endDate: action.getText(this.endDate),
-            totalAccessCodes: action.getText(this.totalAccessCodes),
-            consumedAccessCodes: action.getText(this.consumedAccessCodes),
-            batchStatus: action.getText(this.batchStatus),
+            batchName: await action.getText(this.batchName),
+            startDate: await action.getText(this.startDate),
+            endDate: await action.getText(this.endDate),
+            totalAccessCodes: await action.getText(this.totalAccessCodes),
+            consumedAccessCodes: await action.getText(this.consumedAccessCodes),
+            batchStatus: await action.getText(this.batchStatus),
         }
         return res;
     },
 
-    get_ListofAccessCodes: function () {
-        logger.logInto(stackTrace.get());
+    get_ListofAccessCodes: async function () {
+        await logger.logInto(stackTrace.get());
         res = [{
             accessCode: null,
             accessCodeStatus: null
         }];
         let i, list1, list2;
-        list1 = action.findElements(this.accessCodes);
-        list2 = action.findElements(this.accessCodeStatus);
+        list1 = await action.findElements(this.accessCodes);
+        list2 = await action.findElements(this.accessCodeStatus);
         for (i = 0; i < list1.length; i++) {
-            res[i].accessCode = action.getText(list1[i]);
-            res[i].accessCodeStatus = action.getText(list2[i])
+            res[i].accessCode = await action.getText(list1[i]);
+            res[i].accessCodeStatus = await action.getText(list2[i])
         }
         return res;
     },
 
-    click_Modify_Button: function () {
-        logger.logInto(stackTrace.get());
-        res = action.click(this.modifyBtn);
+    click_Modify_Button: async function () {
+        await logger.logInto(stackTrace.get());
+        res = await action.click(this.modifyBtn);
         if (res == true) {
-            res = require('./generateCodes.page.js').isInitialized();
+            res = await require('./generateCodes.page.js').isInitialized();
         }
-        logger.logInto(stackTrace.get(), res);
+        await logger.logInto(stackTrace.get(), res);
         return res;
     },
 
-    /*click_Book: function (name) {
+    /*click_Book: async function (name) {
         logger.logInto(stackTrace.get());
         res = null;
         let i, list;
@@ -69,7 +69,7 @@ module.exports = {
             if (action.getText(list[i]) == name) {
                 res = action.click(list[i]);
                 if (res == true) {
-                    res = require('./componentList.page.js').isInitialized();
+                    res = await require('./componentList.page.js').isInitialized();
                 }
                 break;
             }
@@ -79,24 +79,24 @@ module.exports = {
         return res;
     },*/
 
-    click_Deactivate_Button: function () {
-        logger.logInto(stackTrace.get());
-        res = action.click(this.deactivateBtn);
+    click_Deactivate_Button: async function () {
+        await logger.logInto(stackTrace.get());
+        res = await action.click(this.deactivateBtn);
         if (res == true) {
-            action.waitForDisplayed(this.dialogContent);
-            res = action.getText(this.dialogContent);
+            await action.waitForDisplayed(this.dialogContent);
+            res = await action.getText(this.dialogContent);
         }
-        logger.logInto(stackTrace.get(), res);
+        await logger.logInto(stackTrace.get(), res);
         return res;
     },
 
-    click_Redeem_Button: function () {
-        logger.logInto(stackTrace.get());
-        res = action.click(this.redeemBtn);
+    click_Redeem_Button: async function () {
+        await logger.logInto(stackTrace.get());
+        res = await action.click(this.redeemBtn);
         if (res == true) {
-            res = require('./redeemAccessCode.page.js').isInitialized();
+            res = await require('./redeemAccessCode.page.js').isInitialized();
         }
-        logger.logInto(stackTrace.get(), res);
+        await logger.logInto(stackTrace.get(), res);
         return res;
     },
 
