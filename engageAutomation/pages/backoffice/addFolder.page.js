@@ -36,6 +36,7 @@ module.exports = {
     click_Add_Button: async function () {
         await logger.logInto(stackTrace.get());
         let res;
+        await browser.pause(5000)
         res = await action.waitForClickable(this.addBtn);
         await action.waitForDisplayed(this.buttonLoader, undefined, true)
         if (res == true) {
@@ -44,7 +45,6 @@ module.exports = {
                 await action.waitForDisplayed(this.snackbarLbl);
                 res = await action.getText(this.snackbarLbl);
                 await action.click(this.snackbarBtn);
-                await browser.pause(5000)
                 await action.waitForDisplayed(await require('./viewLearningPath.page.js').folderList);
             }
         }

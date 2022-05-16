@@ -203,7 +203,7 @@
         ],
         "folder": [
             {
-                "name": "QA Automation Test folder L",
+                "name": "QA Automation Test folder",
                 "coverImage": "./testResources/testcaseData/backoffice/qa/image-3.png",
                 "targetRole": "All",
                 "assignable": "True",
@@ -212,7 +212,7 @@
                 "folderType": "Default"
             },
             {
-                "name": "QA Automation Test folder L",
+                "name": "QA Automation Test sub-folder",
                 "coverImage": "./testResources/testcaseData/backoffice/qa/image-2.png",
                 "targetRole": "All",
                 "assignable": "True",
