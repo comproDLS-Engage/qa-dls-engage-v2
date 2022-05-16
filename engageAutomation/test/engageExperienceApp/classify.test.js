@@ -5,93 +5,93 @@ var testplayer = require('../../pages/engageExperienceApp/basePlayer.page.js');
 const itemPlayerPage = require('../../pages/engageExperienceApp/itemPlayer.page.js');
 var sts, sts1;
 module.exports = {
-    ENG_ITEM_CLA_TC_1: function (testdata) {
+    ENG_ITEM_CLA_TC_1: async function (testdata) {
         //Validate the unattempt state of the player
-        sts = classify.isInitialized(testdata[0], testdata[1]);
+        sts = await classify.isInitialized(testdata[0], testdata[1]);
         if ((typeof (sts)) === "object") {
             for (var i = 0; i < sts.sourceData.length; i++) {
-                assertion.assertEqual(sts.targetData.key1[i][1], "", "Target text mismatch for " + sts.targetData.key1[i][1]);
-                assertion.assertEqual(sts.targetData.key1[i][2], "", "Status mismatch for " + sts.targetData.key1[i][1]);
+                await assertion.assertEqual(sts.targetData.key1[i][1], "", "Target text mismatch for " + sts.targetData.key1[i][1]);
+                await assertion.assertEqual(sts.targetData.key1[i][2], "", "Status mismatch for " + sts.targetData.key1[i][1]);
             }
         }
-        else assertion.assertFail(sts);
+        else await assertion.assertFail(sts);
     },
 
     //Validate that user is able to place option pill inside the Group using drag and drop
-    ENG_ITEM_CLA_TC_2: function (testdata) {
+    ENG_ITEM_CLA_TC_2: async function (testdata) {
         // sts = itemPlayerPage.getItemplayerInfo();
         // assertion.assertEqual(sts.mediaType, testdata[1].mediaType, "Media type mismatch");
         // assertion.assertEqual(sts.quesText, testdata[1].text, "Question text mismatch");
         // assertion.assertEqual(sts.instructionText, testdata[1].instruction, "Instruction text mismatch");
-        sts = classify.dragAndDrop(testdata);
-        assertion.assertEqual(sts, true, sts);
-        sts1 = classify.isInitialized(testdata);
+        sts = await classify.dragAndDrop(testdata);
+        await assertion.assertEqual(sts, true, sts);
+        sts1 = await classify.isInitialized(testdata);
         for (var i = 0; i < sts1.sourceData.length; i++) {
-            assertion.assertEqual(sts1.targetData.key1[i][1], testdata.key1[i][3], "Target text mismatch for " + sts1.targetData.key1[i][1]);
+            await assertion.assertEqual(sts1.targetData.key1[i][1], testdata.key1[i][3], "Target text mismatch for " + sts1.targetData.key1[i][1]);
             if (testdata.key1[i][1] == "")
-                assertion.assertEqual(sts1.sourceData[i][1], testdata.key1[i][3], "Source text mismatch for " + sts1.sourceData[i]);
+                await assertion.assertEqual(sts1.sourceData[i][1], testdata.key1[i][3], "Source text mismatch for " + sts1.sourceData[i]);
             else
-                assertion.assertEqual(sts1.sourceData[i][1], testdata.key1[i][1], "Source text mismatch for " + sts1.sourceData[i]);
+                await assertion.assertEqual(sts1.sourceData[i][1], testdata.key1[i][1], "Source text mismatch for " + sts1.sourceData[i]);
         }
     },
 
     //Validate the Classify Player for correct scenario
-    ENG_ITEM_CLA_TC_4: function (testdata) {
-        sts = classify.isInitialized(testdata[0], testdata[1]);
+    ENG_ITEM_CLA_TC_4: async function (testdata) {
+        sts = await classify.isInitialized(testdata[0], testdata[1]);
         if ((typeof (sts)) === "object") {
             for (var i = 0; i < sts.sourceData.length; i++) {
-                assertion.assertEqual(sts.targetData.key1[i][1], testdata[0].key1[i][3], "Target text mismatch for " + sts.targetData.key1[i][1]);
-                assertion.assertEqual(sts.targetData.key1[i][2], testdata[0].key1[i][4], "Status mismatch for " + sts.targetData.key1[i][1]);
+                await assertion.assertEqual(sts.targetData.key1[i][1], testdata[0].key1[i][3], "Target text mismatch for " + sts.targetData.key1[i][1]);
+                await assertion.assertEqual(sts.targetData.key1[i][2], testdata[0].key1[i][4], "Status mismatch for " + sts.targetData.key1[i][1]);
             }
             for (var i = 0; i < sts.targetData.key2.length; i++) {
-                assertion.assertEqual(sts.targetData.key2[i][1], testdata[0].key2[i][1], "Target text mismatch for " + sts.targetData.key2[i][1]);
-                assertion.assertEqual(sts.targetData.key2[i][2], testdata[0].key2[i][2], "Status mismatch for " + sts.targetData.key2[i][1]);
+                await assertion.assertEqual(sts.targetData.key2[i][1], testdata[0].key2[i][1], "Target text mismatch for " + sts.targetData.key2[i][1]);
+                await assertion.assertEqual(sts.targetData.key2[i][2], testdata[0].key2[i][2], "Status mismatch for " + sts.targetData.key2[i][1]);
             }
         }
-        else assertion.assertFail(sts);
+        else await assertion.assertFail(sts);
     },
 
     //Validate the Classify Player for incorrect scenario
-    ENG_ITEM_CLA_TC_6: function (testdata) {
-        sts = classify.isInitialized(testdata[0], testdata[1]);
+    ENG_ITEM_CLA_TC_6: async function (testdata) {
+        sts = await classify.isInitialized(testdata[0], testdata[1]);
         if ((typeof (sts)) === "object") {
             for (var i = 0; i < sts.sourceData.length; i++) {
-                assertion.assertEqual(sts.targetData.key1[i][1], testdata[0].key1[i][3], "Target text mismatch for " + sts.targetData[i]);
-                assertion.assertEqual(sts.targetData.key1[i][2], testdata[0].key1[i][4], "Status mismatch for " + sts.targetData[i]);
+                await assertion.assertEqual(sts.targetData.key1[i][1], testdata[0].key1[i][3], "Target text mismatch for " + sts.targetData[i]);
+                await assertion.assertEqual(sts.targetData.key1[i][2], testdata[0].key1[i][4], "Status mismatch for " + sts.targetData[i]);
             }
             for (var i = 0; i < sts.targetData.key2.length; i++) {
-                assertion.assertEqual(sts.targetData.key2[i][1], testdata[0].key2[i][1], "Target text mismatch for " + sts.targetData[i]);
-                assertion.assertEqual(sts.targetData.key2[i][2], testdata[0].key2[i][2], "Status mismatch for " + sts.targetData[i]);
+                await assertion.assertEqual(sts.targetData.key2[i][1], testdata[0].key2[i][1], "Target text mismatch for " + sts.targetData[i]);
+                await assertion.assertEqual(sts.targetData.key2[i][2], testdata[0].key2[i][2], "Status mismatch for " + sts.targetData[i]);
             }
         }
-        else assertion.assertFail(sts);
+        else await assertion.assertFail(sts);
     },
 
     //Validate the Classify Player for partial scenario
-    ENG_ITEM_CLA_TC_5: function (testdata) {
-        sts = classify.isInitialized(testdata[0], testdata[1]);
+    ENG_ITEM_CLA_TC_5: async function (testdata) {
+        sts = await classify.isInitialized(testdata[0], testdata[1]);
         if ((typeof (sts)) === "object") {
             for (var i = 0; i < sts.sourceData.length; i++) {
-                assertion.assertEqual(sts.targetData.key1[i][1], testdata[0].key1[i][3], "Target text mismatch for " + sts.targetData[i]);
-                assertion.assertEqual(sts.targetData.key1[i][2], testdata[0].key1[i][4], "Status mismatch for " + sts.targetData[i]);
+                await assertion.assertEqual(sts.targetData.key1[i][1], testdata[0].key1[i][3], "Target text mismatch for " + sts.targetData[i]);
+                await assertion.assertEqual(sts.targetData.key1[i][2], testdata[0].key1[i][4], "Status mismatch for " + sts.targetData[i]);
             }
             for (var i = 0; i < sts.targetData.key2.length; i++) {
-                assertion.assertEqual(sts.targetData.key2[i][1], testdata[0].key2[i][1], "Target text mismatch for " + sts.targetData[i]);
-                assertion.assertEqual(sts.targetData.key2[i][2], testdata[0].key2[i][2], "Status mismatch for " + sts.targetData[i]);
+                await assertion.assertEqual(sts.targetData.key2[i][1], testdata[0].key2[i][1], "Target text mismatch for " + sts.targetData[i]);
+                await assertion.assertEqual(sts.targetData.key2[i][2], testdata[0].key2[i][2], "Status mismatch for " + sts.targetData[i]);
             }
         }
-        else assertion.assertFail(sts);
+        else await assertion.assertFail(sts);
     },
     //Validate the classify player behaviour when try again button is clicked.
-    ENG_ITEM_CLA_TC_20: function (testdata) {
-        sts = classify.isInitialized(testdata);
-        sts1 = testplayer.click_TryAgain();
-        sts1 = classify.isInitialized(testdata);
+    ENG_ITEM_CLA_TC_20: async function (testdata) {
+        sts = await classify.isInitialized(testdata);
+        sts1 = await testplayer.click_TryAgain();
+        sts1 = await classify.isInitialized(testdata);
         if ((typeof (sts1)) === "object") {
             for (var i = 0; i < sts1.sourceData.length; i++) {
-                assertion.assertEqual(sts1.targetData.key1[i][1], sts.targetData.key1[i][1], "Target text mismatch for " + sts1.targetData.key1[i][1]);
+                await assertion.assertEqual(sts1.targetData.key1[i][1], sts.targetData.key1[i][1], "Target text mismatch for " + sts1.targetData.key1[i][1]);
             }
         }
-        else assertion.assertFail(sts);
+        else await assertion.assertFail(sts);
     }
 }

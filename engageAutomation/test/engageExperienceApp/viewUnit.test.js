@@ -5,52 +5,52 @@ var sts;
 module.exports = {
 
     //Validate that clicking on "Open in Flipbook" button on unit Detail View page launches the corresponding unit page in the flipbook
-    ENG_BOOK_TC_20: function () {
-        sts = unitDetailPage.clickOpenInFlipBook();
-        assertion.assertEqual(sts, true, "Open Flipbook button not clicked");
+    ENG_BOOK_TC_20: async function () {
+        sts = await unitDetailPage.clickOpenInFlipBook();
+        await assertion.assertEqual(sts, true, "Open Flipbook button not clicked");
         //assertions to be updated for validating page number of flipbook - Akhil
     },
 
     //Validate that clicking on Activity on unit detail view page launches the activity
-    ENG_BOOK_TC_21: function (testdata) {
-        sts = unitDetailPage.clickActivity(testdata);
-        assertion.assertEqual(sts, true, "Activity Not Clicked");
+    ENG_BOOK_TC_21: async function (testdata) {
+        sts = await unitDetailPage.clickActivity(testdata);
+        await assertion.assertEqual(sts, true, "Activity Not Clicked");
         //sts = activityPlayerPage.isInitialized();
         //assertion.assertEqual(sts.checkmyWork_isExists, true, "Check My Work not displayed");
     },
 
 
     //Validate that clicking on Next Unit button launches the Next unit of the Current Component
-    ENG_BOOK_TC_25: function (testdata) {
-        sts = unitDetailPage.clickNextUnit();
-        assertion.assertEqual(sts.unitThumbnail, true, "Unit thumbnail not displayed");
-        assertion.assert(testdata.includes(sts.unitName), "Unit name mismatch");
+    ENG_BOOK_TC_25: async function (testdata) {
+        sts = await unitDetailPage.clickNextUnit();
+        await assertion.assertEqual(sts.unitThumbnail, true, "Unit thumbnail not displayed");
+        await assertion.assert(testdata.includes(sts.unitName), "Unit name mismatch");
     },
 
     //Validate that clicking on Previous Unit button launches the Previous unit of Current Component
-    ENG_BOOK_TC_26: function (testdata) {
-        sts = unitDetailPage.clickPreviousUnit();
-        assertion.assertEqual(sts.unitThumbnail, true, "Unit Thumbnail not displayed");
-        assertion.assert(testdata.includes(sts.unitName), "Unit name mismatch");
+    ENG_BOOK_TC_26: async function (testdata) {
+        sts = await unitDetailPage.clickPreviousUnit();
+        await assertion.assertEqual(sts.unitThumbnail, true, "Unit Thumbnail not displayed");
+        await assertion.assert(testdata.includes(sts.unitName), "Unit name mismatch");
     },
 
     //Non-Anchor component - Validate that components are not displayed on View Unit page
-    ENG_BOOK_TC_28: function () {
-        sts = unitDetailPage.getViewUnitData();
-        assertion.assertEqual(sts.unitThumbnail, true, "Book cover status mismatch");
-        assertion.assert((sts.component.list.length == 0), "Component list is not empty on View Unit page");
+    ENG_BOOK_TC_28: async function () {
+        sts = await unitDetailPage.getViewUnitData();
+        await assertion.assertEqual(sts.unitThumbnail, true, "Book cover status mismatch");
+        await assertion.assert((sts.component.list.length == 0), "Component list is not empty on View Unit page");
     },
 
     //Anchor component - Validate that component list is displayed on View Unit page
-    ENG_BOOK_TC_34: function () {
-        sts = unitDetailPage.getViewUnitData();
-        assertion.assertEqual(sts.unitThumbnail, true, "Unit thumbnail status mismatch");
-        assertion.assert((sts.component.list.length > 0), "Component list is empty on View Book page");
+    ENG_BOOK_TC_34: async function () {
+        sts = await unitDetailPage.getViewUnitData();
+        await assertion.assertEqual(sts.unitThumbnail, true, "Unit thumbnail status mismatch");
+        await assertion.assert((sts.component.list.length > 0), "Component list is empty on View Book page");
     },
 
     // //to be added in execution json for aula plus 1
     // //Anchor component - Validate that clicking on Next Unit button launches the Next unit of the Anchored component in an indexed book
-    // ENG_BOOK_TC_32: function (testdata) {
+    // ENG_BOOK_TC_32: async function (testdata) {
     //     sts = unitDetailPage.clickNextUnit();
     //     assertion.assertEqual(sts.unitThumbnail, true, "Unit Thumbnail Not displayed");
     //     assertion.assertEqual(sts.unitNumber, testdata.unitNumber, "Number of Activities Mismatch");
@@ -58,14 +58,14 @@ module.exports = {
 
     // //to be added in execution json for aula plus 1
     // //Anchor component - Validate that clicking on Previous Unit button launch the previous unit of component in an indexed book
-    // ENG_BOOK_TC_33: function (testdata) {
+    // ENG_BOOK_TC_33: async function (testdata) {
     //     sts = unitDetailPage.clickPreviousUnit();
     //     assertion.assertEqual(sts.unitThumbnail, true, "Unit Thumbnail Not displayed");
     //     assertion.assertEqual(sts.unitNumber, testdata.unitNumber, "Number of Activities Mismatch");
     // },
 
     // //Validate that clicking on Activity Screen breadcrumb naviagtes to Unit detail TOC page
-    // ENG_BOOK_TC_43: function (testdata) {
+    // ENG_BOOK_TC_43: async function (testdata) {
     //     appShell.ENG_SHELL_TC_11();
 
     //     sts = unitDetailPage.isInitialized();
@@ -75,16 +75,16 @@ module.exports = {
     // },
 
     //Validate that clicking on unit Detail TOC breadcrumb naviagtes to Book detail TOC page
-    ENG_BOOK_TC_44: function () {
+    ENG_BOOK_TC_44: async function () {
         let appShell = require('./appShell.test');
-        appShell.ENG_SHELL_TC_11();
+        await appShell.ENG_SHELL_TC_11();
         let viewBookPage = require('../../pages/engageExperienceApp/viewBook.page')
-        sts = viewBookPage.isInitialized();
-        assertion.assertEqual(sts.pageStatus, true, "View Book page status mismatch");
+        sts = await viewBookPage.isInitialized();
+        await assertion.assertEqual(sts.pageStatus, true, "View Book page status mismatch");
     },
 
     /*//Validate that clicking on Activity Screen breadcrumb naviagtes to Book Detail TOC page 
-    ENG_BOOK_TC_45: function (testdata) { //this TC is not required - Akhil
+    ENG_BOOK_TC_45: async function (testdata) { //this TC is not required - Akhil
         appShell.ENG_SHELL_TC_11();
 
         sts = bookDetailPage.isInitialized();
@@ -96,9 +96,9 @@ module.exports = {
     },*/
 
     //Validate that clicking on the subfolder expand/collapse the subfolder
-    ENG_BOOK_TC_53: function (testdata) {
-        sts = unitDetailPage.expandCollapseFolder(testdata);
-        assertion.assertEqual(sts, true, "folder not found: ");
+    ENG_BOOK_TC_53: async function (testdata) {
+        sts = await unitDetailPage.expandCollapseFolder(testdata);
+        await assertion.assertEqual(sts, true, "folder not found: ");
     }
 
 };
