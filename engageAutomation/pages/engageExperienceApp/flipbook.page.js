@@ -19,6 +19,7 @@ module.exports = {
   singlePageBtn: selectorFile.css.ComproEngage.flipbook.singlePageBtn,
   fullScreenBtn: selectorFile.css.ComproEngage.flipbook.fullScreenBtn,
   bookmarkBtn: selectorFile.css.ComproEngage.flipbook.bookmarkBtn,
+  jumpToPreviousPageBtn: selectorFile.css.ComproEngage.flipbook.jumpToPreviousPageBtn,
   TOCBtn: selectorFile.css.ComproEngage.flipbook.TOCBtn,
   previousBtn: selectorFile.css.ComproEngage.flipbook.previousBtn,
   nextBtn: selectorFile.css.ComproEngage.flipbook.nextBtn,
@@ -65,7 +66,7 @@ module.exports = {
   flipbookTitle: selectorFile.css.ComproEngage.flipbook.flipbookTitle,
   tableOfContentTitle: selectorFile.css.ComproEngage.flipbook.tableOfContentTitle,
   jumpToPageInput: selectorFile.css.ComproEngage.flipbook.jumpToPageInput,
-  jumpToPageBtn: selectorFile.css.ComproEngage.flipbook.jumpToPageBtn,
+  jumpToPageBtnTOC: selectorFile.css.ComproEngage.flipbook.jumpToPageBtnTOC,
   resourceTitle: selectorFile.css.ComproEngage.flipbook.resourceTitle,
 
   isInitialized: function () {
@@ -95,6 +96,7 @@ module.exports = {
       singlePageBtn: (action.getElementCount(this.singlePageBtn) > 0) ? action.getText(this.singlePageBtn) : null,
       fullScreenBtn: (action.getElementCount(this.fullScreenBtn) > 0) ? action.getText(this.fullScreenBtn) : null,
       bookmarkBtn: (action.getElementCount(this.bookmarkBtn) > 0) ? action.getText(this.bookmarkBtn) : null,
+      jumpToPreviousPageBtn: (action.getElementCount(this.jumpToPreviousPageBtn) > 0) ? action.getText(this.jumpToPreviousPageBtn) : null,
       TOCBtn: (action.getElementCount(this.TOCBtn) > 0) ? action.getText(this.TOCBtn) : null,
       previousBtn: (action.getElementCount(this.previousBtn) > 0) ? action.getText(this.previousBtn) : null,
       nextBtn: (action.getElementCount(this.nextBtn) > 0) ? action.getText(this.nextBtn) : null,
@@ -595,7 +597,7 @@ module.exports = {
       flipbookTitle: (action.getElementCount(this.flipbookTitle) > 0) ? action.getText(this.flipbookTitle) : null,
       tableOfContentTitle: (action.getElementCount(this.tableOfContentTitle) > 0) ? action.getText(this.tableOfContentTitle) : null,
       jumpToPageInput: (action.getElementCount(this.jumpToPageInput) > 0) ? action.getText(this.jumpToPageInput) : null,
-      jumpToPageBtn: (action.getElementCount(this.jumpToPageBtn) > 0) ? action.getText(this.jumpToPageBtn) : null,
+      jumpToPageBtnTOC: (action.getElementCount(this.jumpToPageBtnTOC) > 0) ? action.getText(this.jumpToPageBtnTOC) : null,
       resourceTitle: this.resourceTitle_Data(),
     }
     return obj;
@@ -638,17 +640,32 @@ module.exports = {
     return res;
   },
 
-  click_jumpToPageBtn: function () {
+  click_jumpToPageBtnTOC: function () {
     logger.logInto(stackTrace.get());
     var res;
-    res = action.click(this.jumpToPageBtn);
+    res = action.click(this.jumpToPageBtnTOC);
     if (true == res) {
-      logger.logInto(stackTrace.get(), " jumpToPageBtn button is clicked");
+      logger.logInto(stackTrace.get(), " jumpToPageBtnTOC button is clicked");
       res = this.getData_flipbookPage();
     }
     else {
-      logger.logInto(stackTrace.get(), res + " jumpToPageBtn button is not clicked", 'error');
+      logger.logInto(stackTrace.get(), res + " jumpToPageBtnTOC button is not clicked", 'error');
     }
+    return res;
+  },
+
+  click_jumpToPreviousPageBtn: function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = action.click(this.jumpToPreviousPageBtn);
+    if (true == res) {
+      logger.logInto(stackTrace.get(), " jumpToPreviousPageBtn button is clicked");
+      res = this.getData_flipbookPage();
+    }
+    else {
+      logger.logInto(stackTrace.get(), res + " jumpToPreviousPageBtn button is not clicked", 'error');
+    }
+    console.log("res - ",res)
     return res;
   },
 

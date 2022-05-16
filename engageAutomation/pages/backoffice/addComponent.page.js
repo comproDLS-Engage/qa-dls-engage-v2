@@ -13,6 +13,7 @@ module.exports = {
     categoryTypeDropdown: selectorFile.addComponentPage.categoryTypeDropdown,
     categoryTypeList: selectorFile.addComponentPage.categoryTypeList,
     addBtn: selectorFile.addComponentPage.addBtn,
+    modifyBtn: selectorFile.addComponentPage.modifyBtn,
     bannerText: selectorFile.common.bannerText,
     bannerCloseBtn: selectorFile.common.bannerCloseBtn,
     visibilityDropdown: selectorFile.addComponentPage.visibilityDropdown,
@@ -25,11 +26,12 @@ module.exports = {
     freeAvailabilityList: selectorFile.addComponentPage.freeAvailabilityList,
     enableTrackingDropdown: selectorFile.addComponentPage.enableTrackingDropdown,
     enableTrackingList: selectorFile.addComponentPage.enableTrackingList,
+    snackbarLbl: selectorFile.common.snackbarLbl,
 
     isInitialized: function () {
         logger.logInto(stackTrace.get());
         //action.waitForDocumentLoad();
-        res = action.waitForDisplayed(this.addBtn);
+        res = action.waitForDisplayed(this.addBtn + "," + this.modifyBtn);
         return res;
     },
 
@@ -102,15 +104,17 @@ module.exports = {
 
     click_Add_Button: function () {
         logger.logInto(stackTrace.get());
-        res = action.waitForClickable(this.addBtn);
+        browser.pause(5000);
+        res = action.waitForClickable(this.addBtn + "," + this.modifyBtn);
         action.waitForDisplayed(this.buttonLoader, undefined, true)
         if (res == true) {
-            res = action.click(this.addBtn);
+            res = action.click(this.addBtn + "," + this.modifyBtn);
             if (res == true) {
-                action.waitForDisplayed(this.bannerText);
+                action.waitForDisplayed(this.bannerText + "," + this.snackbarLbl);
                 //action.click(this.bannerCloseBtn);
-                res = action.getText(this.bannerText);
-                action.waitForDisplayed(this.bannerText, 60000, true);
+                res = action.getText(this.bannerText + "," + this.snackbarLbl);
+                require("./common.page").click_Close_Button();
+                //action.waitForDisplayed(this.bannerText + "," + this.snackbarLbl, 60000, true);
                 browser.pause(5000)
             }
         }

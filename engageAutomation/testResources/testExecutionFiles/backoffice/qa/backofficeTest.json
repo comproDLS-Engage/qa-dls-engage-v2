@@ -1,6 +1,6 @@
 {
-	"Suite1": {
-		"Name": "Creation of a book and global resources",
+	"Suite1a": {
+		"Name": "Creation of a book and global resource",
 		"TestCaseRepo": [
 			"./testResources/testcaseRepository/backoffice/backofficeTCRepository.json"
 		],
@@ -32,7 +32,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.book[0]"
+						"jsonPath": "create.book[0]"
 					}
 				]
 			},
@@ -43,7 +43,11 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.book[0]"
+						"jsonPath": "create.book[0]"
+					},
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/banner.json",
+						"jsonPath": "banner.book[0]"
 					}
 				]
 			},
@@ -60,7 +64,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.book[1]"
+						"jsonPath": "create.book[1]"
 					}
 				]
 			},
@@ -71,7 +75,11 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.book[1]"
+						"jsonPath": "create.book[1]"
+					},
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/banner.json",
+						"jsonPath": "banner.globalResources[0]"
 					}
 				]
 			},
@@ -91,8 +99,132 @@
 		"AfterEach": [],
 		"After": []
 	},
-	"Suite2": {
-		"Name": "Creation of a components in the book",
+	"Suite1b": {
+		"Name": "Edit preferences of a book and global resource",
+		"TestCaseRepo": [
+			"./testResources/testcaseRepository/backoffice/backofficeTCRepository.json"
+		],
+		"Before": [
+			{
+				"id": "launchUrl",
+				"description": "",
+				"testFile": "./engageAutomation/core/runner/launchUrl.js",
+				"testData": []
+			},
+			{
+				"id": "BK_TC_1",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/logindata.json",
+						"jsonPath": "backoffice.user.validUser1"
+					}
+				]
+			}
+		],
+		"BeforeEach": [],
+		"Test": [
+			{
+				"id": "BK_TC_35",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
+						"jsonPath": "create.book[0]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_4",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
+						"jsonPath": "create.book[0]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_43",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			},
+			{
+				"id": "BK_TC_3",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
+						"jsonPath": "edit.book[0]"
+					},
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/banner.json",
+						"jsonPath": "banner.book[1]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_24",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			},
+			{
+				"id": "BK_TC_33",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			},
+			{
+				"id": "BK_TC_4",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
+						"jsonPath": "create.book[1]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_43",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			},
+			{
+				"id": "BK_TC_3",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
+						"jsonPath": "edit.book[1]"
+					},
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/banner.json",
+						"jsonPath": "banner.globalResources[1]"
+					}
+				]
+			}
+		],
+		"AfterEach": [],
+		"After": [
+			{
+				"id": "BK_TC_7",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			}
+		]
+	},
+	"Suite2a": {
+		"Name": "Creation of components in the book",
 		"TestCaseRepo": [
 			"./testResources/testcaseRepository/backoffice/backofficeTCRepository.json"
 		],
@@ -124,7 +256,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.book[0]"
+						"jsonPath": "edit.book[0]"
 					}
 				]
 			},
@@ -135,7 +267,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.book[0]"
+						"jsonPath": "edit.book[0]"
 					}
 				]
 			},
@@ -146,7 +278,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.component[0]"
+						"jsonPath": "create.component[0]"
 					}
 				]
 			},
@@ -157,7 +289,11 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.component[0]"
+						"jsonPath": "create.component[0]"
+					},
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/banner.json",
+						"jsonPath": "banner.component[0]"
 					}
 				]
 			},
@@ -168,7 +304,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.component[1]"
+						"jsonPath": "create.component[1]"
 					}
 				]
 			},
@@ -179,7 +315,11 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.component[1]"
+						"jsonPath": "create.component[1]"
+					},
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/banner.json",
+						"jsonPath": "banner.component[0]"
 					}
 				]
 			},
@@ -190,7 +330,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.component[2]"
+						"jsonPath": "create.component[2]"
 					}
 				]
 			},
@@ -201,7 +341,11 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.component[2]"
+						"jsonPath": "create.component[2]"
+					},
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/banner.json",
+						"jsonPath": "banner.component[0]"
 					}
 				]
 			},
@@ -212,7 +356,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.component[3]"
+						"jsonPath": "create.component[3]"
 					}
 				]
 			},
@@ -223,7 +367,11 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.component[3]"
+						"jsonPath": "create.component[3]"
+					},
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/banner.json",
+						"jsonPath": "banner.component[0]"
 					}
 				]
 			}
@@ -238,7 +386,212 @@
 			}
 		]
 	},
-	"Suite3": {
+	"Suite2b": {
+		"Name": "Editing of components in the book",
+		"TestCaseRepo": [
+			"./testResources/testcaseRepository/backoffice/backofficeTCRepository.json"
+		],
+		"Before": [
+			{
+				"id": "launchUrl",
+				"description": "",
+				"testFile": "./engageAutomation/core/runner/launchUrl.js",
+				"testData": []
+			},
+			{
+				"id": "BK_TC_1",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/logindata.json",
+						"jsonPath": "backoffice.user.validUser1"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_35",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
+						"jsonPath": "edit.book[0]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_4",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
+						"jsonPath": "edit.book[0]"
+					}
+				]
+			}
+		],
+		"BeforeEach": [],
+		"Test": [
+			{
+				"id": "BK_TC_10",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
+						"jsonPath": "create.component[0]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_44",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			},
+			{
+				"id": "BK_TC_9",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
+						"jsonPath": "edit.component[0]"
+					},
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/banner.json",
+						"jsonPath": "banner.component[1]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_24",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			},
+			{
+				"id": "BK_TC_10",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
+						"jsonPath": "create.component[1]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_44",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			},
+			{
+				"id": "BK_TC_9",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
+						"jsonPath": "edit.component[1]"
+					},
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/banner.json",
+						"jsonPath": "banner.component[1]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_24",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			},
+			{
+				"id": "BK_TC_10",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
+						"jsonPath": "create.component[2]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_44",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			},
+			{
+				"id": "BK_TC_9",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
+						"jsonPath": "edit.component[2]"
+					},
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/banner.json",
+						"jsonPath": "banner.component[1]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_24",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			},
+			{
+				"id": "BK_TC_10",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
+						"jsonPath": "create.component[3]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_44",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			},
+			{
+				"id": "BK_TC_9",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
+						"jsonPath": "edit.component[3]"
+					},
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/banner.json",
+						"jsonPath": "banner.component[1]"
+					}
+				]
+			}
+		],
+		"AfterEach": [],
+		"After": [
+			{
+				"id": "BK_TC_7",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			}
+		]
+	},
+	"Suite3a": {
 		"Name": "Creation of folders",
 		"TestCaseRepo": [
 			"./testResources/testcaseRepository/backoffice/backofficeTCRepository.json"
@@ -268,7 +621,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.book[0]"
+						"jsonPath": "edit.book[0]"
 					}
 				]
 			},
@@ -279,7 +632,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.book[0]"
+						"jsonPath": "edit.book[0]"
 					}
 				]
 			}
@@ -293,7 +646,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.component[0]"
+						"jsonPath": "edit.component[0]"
 					}
 				]
 			},
@@ -310,7 +663,11 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.folder[0]"
+						"jsonPath": "create.folder[0]"
+					},
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/banner.json",
+						"jsonPath": "banner.folder[0]"
 					}
 				]
 			},
@@ -321,7 +678,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.folder[0].name"
+						"jsonPath": "create.folder[0].name"
 					}
 				]
 			},
@@ -338,7 +695,11 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.folder[1]"
+						"jsonPath": "create.folder[1]"
+					},
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/banner.json",
+						"jsonPath": "banner.folder[0]"
 					}
 				]
 			},
@@ -349,18 +710,63 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.folder[1].name"
+						"jsonPath": "create.folder[1].name"
+					}
+				]
+			}
+		],
+		"AfterEach": [],
+		"After": [
+			{
+				"id": "BK_TC_7",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			}
+		]
+	},
+	"Suite3b": {
+		"Name": "Edit preferences of folders",
+		"TestCaseRepo": [
+			"./testResources/testcaseRepository/backoffice/backofficeTCRepository.json"
+		],
+		"Before": [
+			{
+				"id": "launchUrl",
+				"description": "",
+				"testFile": "./engageAutomation/core/runner/launchUrl.js",
+				"testData": []
+			},
+			{
+				"id": "BK_TC_1",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/logindata.json",
+						"jsonPath": "backoffice.user.validUser1"
 					}
 				]
 			},
 			{
-				"id": "BK_TC_16",
+				"id": "BK_TC_35",
 				"description": "",
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.book[0]"
+						"jsonPath": "edit.book[0]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_4",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
+						"jsonPath": "edit.book[0]"
 					}
 				]
 			},
@@ -371,12 +777,26 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.component[1]"
+						"jsonPath": "edit.component[0]"
+					}
+				]
+			}
+		],
+		"BeforeEach": [],
+		"Test": [
+			{
+				"id": "BK_TC_13",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
+						"jsonPath": "create.folder[0].name"
 					}
 				]
 			},
 			{
-				"id": "BK_TC_11",
+				"id": "BK_TC_42",
 				"description": "",
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": []
@@ -388,7 +808,11 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.folder[0]"
+						"jsonPath": "edit.folder[0]"
+					},
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/banner.json",
+						"jsonPath": "banner.folder[1]"
 					}
 				]
 			},
@@ -399,7 +823,28 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.folder[0].name"
+						"jsonPath": "create.folder[1].name"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_42",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			},
+			{
+				"id": "BK_TC_12",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
+						"jsonPath": "edit.folder[1]"
+					},
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/banner.json",
+						"jsonPath": "banner.folder[1]"
 					}
 				]
 			}
@@ -445,7 +890,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.book[0]"
+						"jsonPath": "edit.book[0]"
 					}
 				]
 			},
@@ -456,7 +901,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.book[0]"
+						"jsonPath": "edit.book[0]"
 					}
 				]
 			},
@@ -467,7 +912,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.component[0]"
+						"jsonPath": "edit.component[0]"
 					}
 				]
 			},
@@ -478,7 +923,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.folder[0].name"
+						"jsonPath": "edit.folder[0].name"
 					}
 				]
 			},
@@ -489,7 +934,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.folder[1].name"
+						"jsonPath": "edit.folder[1].name"
 					}
 				]
 			}
@@ -503,7 +948,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.activity[0]"
+						"jsonPath": "edit.activity[0]"
 					}
 				]
 			},
@@ -514,7 +959,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.activity[0]"
+						"jsonPath": "edit.activity[0]"
 					}
 				]
 			},
@@ -525,7 +970,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.activity[0]"
+						"jsonPath": "edit.activity[0]"
 					}
 				]
 			},
@@ -1891,7 +2336,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.book[0]"
+						"jsonPath": "edit.book[0]"
 					}
 				]
 			},
@@ -1902,7 +2347,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.component[0]"
+						"jsonPath": "edit.component[0]"
 					}
 				]
 			},
@@ -1913,7 +2358,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.folder[0].name"
+						"jsonPath": "edit.folder[0].name"
 					}
 				]
 			},
@@ -1924,7 +2369,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.folder[1].name"
+						"jsonPath": "edit.folder[1].name"
 					}
 				]
 			}
@@ -1938,7 +2383,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.activity[0]"
+						"jsonPath": "edit.activity[0]"
 					}
 				]
 			},
@@ -2408,7 +2853,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.book[0]"
+						"jsonPath": "edit.book[0]"
 					}
 				]
 			},
@@ -2419,7 +2864,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.component[0]"
+						"jsonPath": "edit.component[0]"
 					}
 				]
 			},
@@ -2430,7 +2875,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.folder[0].name"
+						"jsonPath": "edit.folder[0].name"
 					}
 				]
 			},
@@ -2441,7 +2886,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.folder[1].name"
+						"jsonPath": "edit.folder[1].name"
 					}
 				]
 			}
@@ -2455,7 +2900,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.activity[2]"
+						"jsonPath": "edit.activity[2]"
 					}
 				]
 			},
@@ -2466,7 +2911,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.activity[2]"
+						"jsonPath": "edit.activity[2]"
 					}
 				]
 			},
@@ -2477,7 +2922,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.activity[2]"
+						"jsonPath": "edit.activity[2]"
 					}
 				]
 			},
@@ -2488,7 +2933,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.activity[2]"
+						"jsonPath": "edit.activity[2]"
 					}
 				]
 			}
@@ -2534,7 +2979,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.book[0]"
+						"jsonPath": "edit.book[0]"
 					}
 				]
 			},
@@ -2545,7 +2990,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.component[0]"
+						"jsonPath": "edit.component[0]"
 					}
 				]
 			},
@@ -2556,7 +3001,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.folder[0].name"
+						"jsonPath": "edit.folder[0].name"
 					}
 				]
 			},
@@ -2567,7 +3012,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.folder[1].name"
+						"jsonPath": "edit.folder[1].name"
 					}
 				]
 			}
@@ -2581,7 +3026,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.activity[1]"
+						"jsonPath": "edit.activity[1]"
 					}
 				]
 			},
@@ -2592,7 +3037,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.activity[1]"
+						"jsonPath": "edit.activity[1]"
 					}
 				]
 			},
@@ -2603,7 +3048,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.activity[1]"
+						"jsonPath": "edit.activity[1]"
 					}
 				]
 			},
@@ -2777,7 +3222,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.book[0]"
+						"jsonPath": "edit.book[0]"
 					}
 				]
 			},
@@ -2788,7 +3233,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.component[0]"
+						"jsonPath": "edit.component[0]"
 					}
 				]
 			},
@@ -2799,7 +3244,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.folder[0].name"
+						"jsonPath": "edit.folder[0].name"
 					}
 				]
 			},
@@ -2810,7 +3255,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.folder[1].name"
+						"jsonPath": "edit.folder[1].name"
 					}
 				]
 			}
@@ -2824,7 +3269,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.activity[0]"
+						"jsonPath": "edit.activity[0]"
 					}
 				]
 			},
@@ -2841,7 +3286,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.activity[1]"
+						"jsonPath": "edit.activity[1]"
 					}
 				]
 			},
@@ -2858,7 +3303,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.activity[2]"
+						"jsonPath": "edit.activity[2]"
 					}
 				]
 			},
@@ -2909,7 +3354,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.book[0]"
+						"jsonPath": "edit.book[0]"
 					}
 				]
 			},
@@ -2920,7 +3365,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.component[0]"
+						"jsonPath": "edit.component[0]"
 					}
 				]
 			},
@@ -2931,7 +3376,18 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.folder[0].name"
+						"jsonPath": "edit.folder[0].name"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_13",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
+						"jsonPath": "edit.folder[1].name"
 					}
 				]
 			}
@@ -2945,7 +3401,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.folder[1]"
+						"jsonPath": "edit.folder[1]"
 					}
 				]
 			},
@@ -2968,41 +3424,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.folder[0]"
-					}
-				]
-			},
-			{
-				"id": "BK_TC_20",
-				"description": "",
-				"testFile": "./test/backoffice/backoffice.test.js",
-				"testData": []
-			},
-			{
-				"id": "BK_TC_24",
-				"description": "",
-				"testFile": "./test/backoffice/backoffice.test.js",
-				"testData": []
-			},
-			{
-				"id": "BK_TC_10",
-				"description": "",
-				"testFile": "./test/backoffice/backoffice.test.js",
-				"testData": [
-					{
-						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.component[1]"
-					}
-				]
-			},
-			{
-				"id": "BK_TC_19",
-				"description": "",
-				"testFile": "./test/backoffice/backoffice.test.js",
-				"testData": [
-					{
-						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.folder[0]"
+						"jsonPath": "edit.folder[0]"
 					}
 				]
 			},
@@ -3053,7 +3475,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.book[0]"
+						"jsonPath": "edit.book[0]"
 					}
 				]
 			},
@@ -3064,7 +3486,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.component[0]"
+						"jsonPath": "edit.component[0]"
 					}
 				]
 			}
@@ -3078,7 +3500,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.component[0]"
+						"jsonPath": "edit.component[0]"
 					}
 				]
 			},
@@ -3095,7 +3517,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.component[1]"
+						"jsonPath": "edit.component[1]"
 					}
 				]
 			},
@@ -3106,7 +3528,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.component[1]"
+						"jsonPath": "edit.component[1]"
 					}
 				]
 			},
@@ -3123,7 +3545,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.component[2]"
+						"jsonPath": "edit.component[2]"
 					}
 				]
 			},
@@ -3134,7 +3556,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.component[2]"
+						"jsonPath": "edit.component[2]"
 					}
 				]
 			},
@@ -3151,7 +3573,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.component[3]"
+						"jsonPath": "edit.component[3]"
 					}
 				]
 			},
@@ -3162,7 +3584,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.component[3]"
+						"jsonPath": "edit.component[3]"
 					}
 				]
 			},
@@ -3213,7 +3635,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.book[0]"
+						"jsonPath": "edit.book[0]"
 					}
 				]
 			}
@@ -3227,7 +3649,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.book[0]"
+						"jsonPath": "edit.book[0]"
 					}
 				]
 			},
@@ -3250,7 +3672,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.book[1]"
+						"jsonPath": "edit.book[1]"
 					}
 				]
 			},
@@ -3261,7 +3683,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "backoffice.book[1]"
+						"jsonPath": "edit.book[1]"
 					}
 				]
 			},
@@ -3270,6 +3692,97 @@
 				"description": "",
 				"testFile": "./test/backoffice/backoffice.test.js",
 				"testData": []
+			}
+		],
+		"AfterEach": [],
+		"After": [
+			{
+				"id": "BK_TC_7",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			}
+		]
+	},
+	"Suite99": {
+		"Name": "Creation of a components in the book",
+		"TestCaseRepo": [
+			"./testResources/testcaseRepository/backoffice/backofficeTCRepository.json"
+		],
+		"Before": [
+			{
+				"id": "launchUrl",
+				"description": "",
+				"testFile": "./engageAutomation/core/runner/launchUrl.js",
+				"testData": []
+			},
+			{
+				"id": "BK_TC_1",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/logindata.json",
+						"jsonPath": "backoffice.user.validUser1"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_35",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
+						"jsonPath": "edit.book[0]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_4",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
+						"jsonPath": "edit.book[0]"
+					}
+				]
+			}
+		],
+		"BeforeEach": [],
+		"Test": [
+			{
+				"id": "BK_TC_10",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
+						"jsonPath": "create.component[2]"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_44",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			},
+			{
+				"id": "BK_TC_9",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
+						"jsonPath": "edit.component[2]"
+					},
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/banner.json",
+						"jsonPath": "banner.component[1]"
+					}
+				]
 			}
 		],
 		"AfterEach": [],

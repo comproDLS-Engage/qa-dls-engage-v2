@@ -24,7 +24,9 @@
     "assignmentInstructorFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile=classTeacherAssignment.json --windowWidth=1600 --windowHeight=900",
     "assignmentStudentFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='classStudentAssignment.json' --windowWidth=1600 --windowHeight=900",
     "gradeBookFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='gradeBookTest.json' --windowWidth=1600 --windowHeight=900",
-    "gradeBookStudentFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='gradeBookStudentTest.json' --windowWidth=1600 --windowHeight=900"
+    "gradeBookStudentFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='gradeBookStudentTest.json' --windowWidth=1600 --windowHeight=900",
+    "writingPlayerFeatureTest": "./node_modules/.bin/wdio --appType=difusionExperienceApp --testEnv=qa --testExecFile='writingPlayerTest.json' --windowWidth=1600 --windowHeight=900"
+
 
   },
   "keywords": [],

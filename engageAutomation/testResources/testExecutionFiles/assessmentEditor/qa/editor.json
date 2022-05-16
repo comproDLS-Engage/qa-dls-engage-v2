@@ -61,49 +61,49 @@
 				]
 			},
 			{
-				"id": "ASE_COM_TC_42",
-				"description": "Validate if alpha-numeric text is allowed in the Question Text",
-				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-					{
-						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
-						"jsonPath": "editor.questions.MCQ[0].question1.questionText"
-					}
-				]
-			},
-			{
-				"id": "ASE_MCQ_TC_14",
-				"description": "Validate that Option is added in  questions",
-				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-					{
-						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
-						"jsonPath": "editor.questions.MCQ[0].question1.options"
-					}
-				]
-			},
-			{
-				"id": "ASE_COM_TC_75",
-				"description": "Click on Media button and Set Image Media",
-				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-					{
-						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
-						"jsonPath": "editor.questions.MCQ[0].question1.imagePath"
-					}
-				]
-			},
-			{
-				"id": "ASE_COM_TC_1012",
-				"description": "Add the score in the activity player",
-				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-					{
-						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
-						"jsonPath": "editor.questions.MCQ[0].question1.score"
-					}
-				]
-			},
+			"id": "ASE_COM_TC_42",
+			"description": "Validate if alpha-numeric text is allowed in the Question Text",
+			"testFile": "./test/assessmentEditor/editor.test.js",
+			"testData": [
+				{
+					"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+					"jsonPath": "editor.questions.MCQ[0].question1.questionText"
+				}
+			]
+		},
+		{
+			"id": "ASE_MCQ_TC_14",
+			"description": "Validate that Option is added in  questions",
+			"testFile": "./test/assessmentEditor/editor.test.js",
+			"testData": [
+				{
+					"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+					"jsonPath": "editor.questions.MCQ[0].question1.options"
+				}
+			]
+		},
+		{
+			"id": "ASE_COM_TC_75",
+			"description": "Click on Media button and Set Image Media",
+			"testFile": "./test/assessmentEditor/editor.test.js",
+			"testData": [
+				{
+					"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+					"jsonPath": "editor.questions.MCQ[0].question1.imagePath"
+				}
+			]
+		},
+		{
+			"id": "ASE_COM_TC_1012",
+			"description": "Add the score in the activity player",
+			"testFile": "./test/assessmentEditor/editor.test.js",
+			"testData": [
+				{
+					"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+					"jsonPath": "editor.questions.MCQ[0].question1.score"
+				}
+			]
+		},
 			{
 				"id": "ASE_COM_TC_1016",
 				"description": "Click Shuffling Checkbox",
@@ -515,8 +515,8 @@
 				"testData": []
 			},
 			{
-				"id": "ASE_QUN_TC_5",
-				"description": "Validate that alphanumeric text is supported in Question Title Text.",
+				"id": "ASE_COM_TC_1001",
+				"description": "Click on Editor tab",
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": [
 					{
@@ -526,8 +526,8 @@
 				]
 			},
 			{
-				"id": "ASE_COM_TC_9",
-				"description": "Validate that student can add instruction for each question under the 'Question' section",
+				"id": "ASE_COM_TC_1002",
+				"description": "Click on Editor tab",
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": [
 					{
@@ -537,14 +537,41 @@
 				]
 			},
 			{
-				"id": "ASE_COM_TC_42",
-				"description": "Validate if alpha-numeric text is allowed in the Question Text",
+				"id": "ASE_COM_TC_1005",
+				"description": "Click on Edit Prompt button",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+				]
+			},
+
+			{
+				"id": "ASE_COM_TC_1006",
+				"description": "Click on Editor tab",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.FIB[0].promptText"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1000",
+				"description": "Enter the question text",
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
 						"jsonPath": "editor.questions.FIB[0].questionText"
 					}
+				]
+			},
+		
+			{
+				"id": "ASE_COM_TC_1014",
+				"description": "Enter the question text",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
 				]
 			},
 			{
@@ -1203,14 +1230,40 @@
 				]
 			},
 			{
-				"id": "ASE_COM_TC_42",
-				"description": "Validate if alpha-numeric text is allowed in the Question Text",
+				"id": "ASE_COM_TC_1005",
+				"description": "Click on Edit Prompt button",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+				]
+			},
+
+			{
+				"id": "ASE_COM_TC_1006",
+				"description": "Click on Editor tab",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.FIBDropdown[0].question1.promptText"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1000",
+				"description": "Enter the question text",
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
 						"jsonPath": "editor.questions.FIBDropdown[0].question1.questionText"
 					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1014",
+				"description": "Enter the question text",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
 				]
 			},
 			{
@@ -1288,14 +1341,40 @@
 				]
 			},
 			{
-				"id": "ASE_COM_TC_42",
-				"description": "Validate if alpha-numeric text is allowed in the Question Text",
+				"id": "ASE_COM_TC_1005",
+				"description": "Click on Edit Prompt button",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+				]
+			},
+
+			{
+				"id": "ASE_COM_TC_1006",
+				"description": "Click on Editor tab",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.FIBDropdown[0].question2.promptText"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1000",
+				"description": "Enter the question text",
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
 						"jsonPath": "editor.questions.FIBDropdown[0].question2.questionText"
 					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1014",
+				"description": "Enter the question text",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
 				]
 			},
 			{
@@ -1450,6 +1529,19 @@
 						"jsonPath": "editor.questions.writing[0].questionText"
 					}
 				]
+			},
+			{
+				"id": "ASE_COM_TC_1014",
+				"description": "Enter the question text",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1017",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
 			},
 			{
 				"id": "ASE_COM_TC_1014",

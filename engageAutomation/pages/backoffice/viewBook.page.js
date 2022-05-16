@@ -12,6 +12,7 @@ module.exports = {
     proceedBtn: selectorFile.common.proceedBtn,
     loadingContainer: selectorFile.common.loadingContainer,
     deleteBookBtn: selectorFile.viewBookPage.deleteBookBtn,
+    modifyBookBtn: selectorFile.viewBookPage.modifyBookBtn,
     dialogContent: selectorFile.common.dialogContent,
     description: selectorFile.viewBookPage.description,
     bookDesign: selectorFile.viewBookPage.bookDesign,
@@ -99,6 +100,16 @@ module.exports = {
         if (res == true) {
             action.waitForDisplayed(this.dialogContent);
             res = action.getText(this.dialogContent);
+        }
+        logger.logInto(stackTrace.get(), res);
+        return res;
+    },
+
+    click_ModifyBook_Button: function () {
+        logger.logInto(stackTrace.get());
+        let res = action.click(this.modifyBookBtn);
+        if (res == true) {
+            res = require('./addTitle.page.js').isInitialized();
         }
         logger.logInto(stackTrace.get(), res);
         return res;

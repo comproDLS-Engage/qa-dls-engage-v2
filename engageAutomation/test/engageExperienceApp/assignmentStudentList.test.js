@@ -81,6 +81,7 @@ module.exports = {
       }
    },
    ENG_ASSLIST_STU_TC_10: function (testdata) {
+      console.log(testdata)
       sts = assignmentListDetailsPage_student.click_activityName(testdata);
       console.log(sts)
    },

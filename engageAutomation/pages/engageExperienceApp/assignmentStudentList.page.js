@@ -209,7 +209,7 @@ module.exports = {
         list = action.findElements(this.activityName);
         for (i = 0; i < list.length; i++) {
             if ((action.getText(this.activityName+i+"]"))== activityNameName) {
-                res = action.click(list[i]);
+                res = action.click(this.activityName+i+"]");
                 break;
             }
         }
