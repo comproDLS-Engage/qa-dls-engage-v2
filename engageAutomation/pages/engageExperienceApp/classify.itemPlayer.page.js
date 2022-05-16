@@ -9,7 +9,7 @@ module.exports = {
     target: selectorFile.css.ComproEngage.dragAndDrop.target,
 
     isInitialized: async function (classifyQuesData, quesType) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var data = {
             sourceData: [],
             targetData: []
@@ -23,12 +23,12 @@ module.exports = {
     },
 
     getSourceData: async function (qIndex, classifyQuesData) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         return DNDonImageItemPlayerPage.getSourceData(qIndex, classifyQuesData.key1);
     },
 
     getTargetData: async function (qIndex, classifyQuesData, quesType) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         let option = "div[index='" + qIndex + "'] " + "[data-tid*='source-option']";
         var targetMap = {
             key1: [],
@@ -62,12 +62,12 @@ module.exports = {
     },
 
     dragAndDrop: async function (classifyQuesData) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         return DNDonImageItemPlayerPage.dragAndDrop(classifyQuesData.key1);
     },
 
     dragAndDropClick: async function (classifyQuesData) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         return DNDonImageItemPlayerPage.dragAndDropClick(classifyQuesData.key1);
     }
 

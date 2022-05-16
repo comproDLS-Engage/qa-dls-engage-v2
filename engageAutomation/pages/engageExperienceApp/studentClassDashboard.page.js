@@ -28,7 +28,7 @@ module.exports = {
 
     isInitialized: async function () { 
         var res;
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         await action.waitForDocumentLoad();
         res = {
             pageStatus:  await action.waitForDisplayed(this.bookCoverIcon),
@@ -38,7 +38,7 @@ module.exports = {
     },
 
     getData_studentClassDashboardPageData: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var obj;
         obj = {
             bookCoverIcon:((await action.getElementCount(this.bookCoverIcon)) > 0) ? await action.waitForDisplayed(this.bookCoverIcon) : false,
@@ -63,7 +63,7 @@ module.exports = {
     },
 
     getData_assignmentList: async function (assignmentTitleName) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var obj=[];
         await action.waitForDisplayed(this.assignmentTitle);
         var list = await action.findElements(this.assignmentTitle);
@@ -93,15 +93,15 @@ module.exports = {
 
     //Click function for Upcoming Assignment button
     click_overviewBtn: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var res;
         res = await action.click(this.overviewBtn);
         if (true == res) {
-            await logger.logInto(stackTrace.get(), " overviewBtn is clicked");
+            await logger.logInto(await stackTrace.get(), " overviewBtn is clicked");
             res = await require('./assignmentStudentList.page.js').isInitialized();
         }
         else {
-            await logger.logInto(stackTrace.get(), res +"overviewBtn is NOT clicked", 'error');
+            await logger.logInto(await stackTrace.get(), res +"overviewBtn is NOT clicked", 'error');
         }
         return res;
     },

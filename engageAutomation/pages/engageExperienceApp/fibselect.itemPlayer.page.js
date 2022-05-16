@@ -10,7 +10,7 @@ module.exports = {
     responseOption: selectorFile.css.ComproEngage.FIBSelect.responseOption,
 
     isInitialized: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
 		//action.switchToFrame("[id*=iframe]");
 		await action.switchToFrame(0);
 		let res = await action.waitForClickable(this.responses);
@@ -19,7 +19,7 @@ module.exports = {
     },
 
     getTargetData: async function (fibQuesData) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         await action.switchToFrame(0);
         var targetArr = [];
         let optionLength = (await action.findElements(this.responses)).length;
@@ -33,7 +33,7 @@ module.exports = {
     },
 
     selectValue: async function (fibQuesData) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         await action.switchToFrame(0);
         let res, i;
         for (i = 0; i < fibQuesData.length; i++) {
@@ -41,11 +41,11 @@ module.exports = {
             res = await action.click(ddSelector);
             if (true == res) {
                 res = await action.click(this.responseOption + fibQuesData[i][1]);
-                await logger.logInto(stackTrace.get(), res);
+                await logger.logInto(await stackTrace.get(), res);
             }
             else {
                 res = res + " -- Target text placeholder " + fibQuesData[i][0] + " is NOT clicked";
-                await logger.logInto(stackTrace.get(), res, 'error');
+                await logger.logInto(await stackTrace.get(), res, 'error');
             }
         }
         await action.switchToParentFrame();

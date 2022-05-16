@@ -15,14 +15,14 @@ module.exports = {
 	hint_btn: selectorFile.css.ComproEngage.testPlayer.hint_btn,
 
 	isInitialized: async function () {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		res = await action.waitForDocumentLoad();
 		if (res == true) {
 			res = await this.getBasePlayerInfo();
 		}
 		else {
 			res = res + " -- TestPlayer page is not loaded yet";
-			await logger.logInto(stackTrace.get(), res, "error");
+			await logger.logInto(await stackTrace.get(), res, "error");
 		}
 		return res;
 	},
@@ -57,16 +57,16 @@ module.exports = {
 	},
 
 	click_CheckMyWork: async function () {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		let insideFrame = await this.enterFrame(this.checkMyWork_btn);
 		res = await action.click(this.checkMyWork_btn);
 		if (res == true) {
-			await logger.logInto(stackTrace.get(), " -- CheckmyWork Button is clicked");
+			await logger.logInto(await stackTrace.get(), " -- CheckmyWork Button is clicked");
 			//res = this.getBasePlayerInfo();
 		}
 		else {
 			res = res + " -- Error in clicking CheckmyWork Button"
-			await logger.logInto(stackTrace.get(), res, "error");
+			await logger.logInto(await stackTrace.get(), res, "error");
 		}
 		if (insideFrame)
 			await action.switchToParentFrame();
@@ -74,16 +74,16 @@ module.exports = {
 	},
 
 	click_Skip: async function () {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		let insideFrame = await this.enterFrame(this.next_btn);
 		res = await action.click(this.next_btn);
 		if (res == true) {
-			await logger.logInto(stackTrace.get(), " -- next is clicked");
+			await logger.logInto(await stackTrace.get(), " -- next is clicked");
 			//res = this.getBasePlayerInfo();
 		}
 		else {
 			res = res + " --Error in clicking next button";
-			await logger.logInto(stackTrace.get(), res, "error");
+			await logger.logInto(await stackTrace.get(), res, "error");
 		}
 		if (insideFrame)
 			await action.switchToParentFrame();
@@ -91,16 +91,16 @@ module.exports = {
 	},
 
 	click_Previous: async function () {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		let insideFrame = await this.enterFrame(this.previous_btn);
 		res = await action.click(this.previous_btn);
 		if (res == true) {
-			await logger.logInto(stackTrace.get(), " -- previous button is clicked");
+			await logger.logInto(await stackTrace.get(), " -- previous button is clicked");
 			//res = this.getBasePlayerInfo();
 		}
 		else {
 			res = res + " --Error in clicking previous button";
-			await logger.logInto(stackTrace.get(), res, "error");
+			await logger.logInto(await stackTrace.get(), res, "error");
 		}
 		if (insideFrame)
 			await action.switchToParentFrame();
@@ -108,16 +108,16 @@ module.exports = {
 	},
 
 	click_TryAgain: async function () {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		let insideFrame = await this.enterFrame(this.tryAgain_btn);
 		res = await action.click(this.tryAgain_btn);
 		if (res == true) {
-			await logger.logInto(stackTrace.get(), " -- TryAgain Button is clicked");
+			await logger.logInto(await stackTrace.get(), " -- TryAgain Button is clicked");
 			//res = this.getBasePlayerInfo();
 		}
 		else {
 			res = res + " -- Error in clicking TryAgain Button"
-			await logger.logInto(stackTrace.get(), res, "error");
+			await logger.logInto(await stackTrace.get(), res, "error");
 		}
 		if (insideFrame)
 			await action.switchToParentFrame();
@@ -125,16 +125,16 @@ module.exports = {
 	},
 
 	click_Reset: async function () {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		let insideFrame = await this.enterFrame(this.reset_btn);
 		res = await action.click(this.reset_btn);
 		if (res == true) {
-			await logger.logInto(stackTrace.get(), " -- Reset Button is clicked");
+			await logger.logInto(await stackTrace.get(), " -- Reset Button is clicked");
 			//res = this.getBasePlayerInfo();
 		}
 		else {
 			res = res + " -- Error in clicking Reset Button"
-			await logger.logInto(stackTrace.get(), res, "error");
+			await logger.logInto(await stackTrace.get(), res, "error");
 		}
 		if (insideFrame)
 			await action.switchToParentFrame();
@@ -142,16 +142,16 @@ module.exports = {
 	},
 
 	click_ShowAnswer: async function () {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		let insideFrame = await this.enterFrame(this.showAnswer_btn);
 		res = await action.click(this.showAnswer_btn);
 		if (res == true) {
-			await logger.logInto(stackTrace.get(), " -- Show Answer Button is clicked");
+			await logger.logInto(await stackTrace.get(), " -- Show Answer Button is clicked");
 			//res = this.getBasePlayerInfo();
 		}
 		else {
 			res = res + " -- Error in clicking Show Answer Button"
-			await logger.logInto(stackTrace.get(), res, "error");
+			await logger.logInto(await stackTrace.get(), res, "error");
 		}
 		if (insideFrame)
 			await action.switchToParentFrame();
@@ -159,16 +159,16 @@ module.exports = {
 	},
 
 	click_YourResponse: async function () {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		let insideFrame = await this.enterFrame(this.yourResponse_btn);
 		res = await action.click(this.yourResponse_btn);
 		if (res == true) {
-			await logger.logInto(stackTrace.get(), " -- Your Response Button is clicked");
+			await logger.logInto(await stackTrace.get(), " -- Your Response Button is clicked");
 			//res = this.getBasePlayerInfo();
 		}
 		else {
 			res = res + " -- Error in clicking Your Response Button"
-			await logger.logInto(stackTrace.get(), res, "error");
+			await logger.logInto(await stackTrace.get(), res, "error");
 		}
 		if (insideFrame)
 			await action.switchToParentFrame();
@@ -176,16 +176,16 @@ module.exports = {
 	},
 
 	click_Hint: async function () {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		let insideFrame = await this.enterFrame(this.hint_btn);
 		res = await action.click(this.hint_btn);
 		if (res == true) {
-			await logger.logInto(stackTrace.get(), " -- Hint Button is clicked");
+			await logger.logInto(await stackTrace.get(), " -- Hint Button is clicked");
 			//res = this.getBasePlayerInfo();
 		}
 		else {
 			res = res + " -- Error in clicking Hint Button"
-			await logger.logInto(stackTrace.get(), res, "error");
+			await logger.logInto(await stackTrace.get(), res, "error");
 		}
 		if (insideFrame)
 			await action.switchToParentFrame();

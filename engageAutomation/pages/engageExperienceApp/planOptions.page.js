@@ -4,11 +4,11 @@ var selectorFile = jsonParserUtil.jsonParser(selectorDir)
 var appShellPage = require('./appShell.page.js')
 
 module.exports = {
-    cardNumber_text : selectorFile.css.ComproEngage.planOptions.cardNumber_text,
+    cardNumber_text: selectorFile.css.ComproEngage.planOptions.cardNumber_text,
 
-    isInitialized: function() {
+    isInitialized: async function () {
         var res;
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         await action.waitForDocumentLoad();
         res = {
             pageStatus: await action.waitForDisplayed(this.cardNumber_text),
@@ -16,12 +16,12 @@ module.exports = {
         return res;
     },
 
-    getData_PlanOptionsPage: function() {
-        await logger.logInto(stackTrace.get());
+    getData_PlanOptionsPage: async function () {
+        await logger.logInto(await stackTrace.get());
         var obj;
         obj = {
             cardNumber_text: ((await action.getElementCount(this.cardNumber_text)) > 0) ? await action.getText(this.cardNumber_text) : null,
-           
+
         }
         return obj;
     },

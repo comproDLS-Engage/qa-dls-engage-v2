@@ -72,7 +72,7 @@ module.exports = {
 
     isInitialized: async function () {
         var res;
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         await action.waitForDocumentLoad();
         res = {
             pageStatus: await action.waitForDisplayed(this.activity_lbl),
@@ -82,7 +82,7 @@ module.exports = {
     },
 
     getData_createAssignment: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var obj;
         obj = {
             assignment_title: ((await action.getElementCount(this.assignment_title)) > 0) ? await action.getText(this.assignment_title) : null,
@@ -111,7 +111,7 @@ module.exports = {
     },
 
     getData_activitList: async function (activity_cardName) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var obj = [];
         await action.waitForDisplayed(this.activity_card);
         var list = await action.findElements(this.activity_card);
@@ -145,7 +145,7 @@ module.exports = {
     },
 
     getData_advanceOption: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var obj;
         obj = {
             advancedOption: ((await action.getElementCount(this.advancedOption)) > 0) ? await action.getText(this.advancedOption) : null,
@@ -169,7 +169,7 @@ module.exports = {
     },
 
     getData_deleteDialogue: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var obj;
         obj = {
             deleteActivity_header: ((await action.getElementCount(this.deleteActivity_header)) > 0) ? await action.getText(this.deleteActivity_header) : null,
@@ -180,7 +180,7 @@ module.exports = {
         return obj;
     },
     getData_submitDialogue: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var obj;
         obj = {
             assignmentSubmitDialogueHeader: ((await action.getElementCount(this.assignmentSubmitDialogueHeader)) > 0) ? await action.getText(this.assignmentSubmitDialogueHeader) : null,
@@ -204,7 +204,7 @@ module.exports = {
     },
 
     getData_classList: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var obj;
         obj = {
             classList: await this.classList_Data(),
@@ -213,46 +213,46 @@ module.exports = {
     },
 
     classList_Data: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var i, list;
         var classList_Arr = [];
         list = await action.findElements(this.classList);
         for (i = 0; i < list.length; i++) {
             classList_Arr[i] = await action.getText(list[i])
         }
-        await logger.logInto(stackTrace.get(), classList_Arr);
+        await logger.logInto(await stackTrace.get(), classList_Arr);
         return classList_Arr;
     },
     click_showHideActivities: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var res;
         res = await action.click(this.showHideActivities);
         if (true == res) {
-            await logger.logInto(stackTrace.get(), " addActivity_lbl is clicked");
+            await logger.logInto(await stackTrace.get(), " addActivity_lbl is clicked");
             res = await this.getData_activitList();
         }
         else {
-            await logger.logInto(stackTrace.get(), res + "addActivity_lbl is NOT clicked", 'error');
+            await logger.logInto(await stackTrace.get(), res + "addActivity_lbl is NOT clicked", 'error');
         }
         return res;
     },
 
     click_addActivity_lbl: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var res;
         res = await action.click(this.addActivity_lbl);
         if (true == res) {
-            await logger.logInto(stackTrace.get(), " addActivity_lbl is clicked");
+            await logger.logInto(await stackTrace.get(), " addActivity_lbl is clicked");
             res = await require('./selectActivity.page').isInitialized();
         }
         else {
-            await logger.logInto(stackTrace.get(), res + "addActivity_lbl is NOT clicked", 'error');
+            await logger.logInto(await stackTrace.get(), res + "addActivity_lbl is NOT clicked", 'error');
         }
         return res;
     },
 
     click_activity_delete_icon: async function (activity_nameName) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var i, list, res;
         list = await action.findElements(this.activity_delete_icon);
         for (i = 0; i < list.length; i++) {
@@ -262,186 +262,186 @@ module.exports = {
             }
         }
         if (res == true) {
-            await logger.logInto(stackTrace.get(), " --activity_delete_icon clicked");
+            await logger.logInto(await stackTrace.get(), " --activity_delete_icon clicked");
             res = await this.getData_deleteDialogue();
         }
         else
-            await logger.logInto(stackTrace.get(), " --activity_delete_icon NOT clicked", "error")
+            await logger.logInto(await stackTrace.get(), " --activity_delete_icon NOT clicked", "error")
         return res;
     },
 
     click_startDate_icon: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var res;
         res = await action.click(this.startDate_icon);
         if (true == res) {
-            await logger.logInto(stackTrace.get(), " startDate_icon is clicked");
+            await logger.logInto(await stackTrace.get(), " startDate_icon is clicked");
         }
         else {
-            await logger.logInto(stackTrace.get(), res + "startDate_icon is NOT clicked", 'error');
+            await logger.logInto(await stackTrace.get(), res + "startDate_icon is NOT clicked", 'error');
         }
         return res;
     },
 
     click_endDate_icon: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var res;
         res = await action.click(this.endDate_icon);
         if (true == res) {
-            await logger.logInto(stackTrace.get(), " endDate_icon is clicked");
+            await logger.logInto(await stackTrace.get(), " endDate_icon is clicked");
         }
         else {
-            await logger.logInto(stackTrace.get(), res + "endDate_icon is NOT clicked", 'error');
+            await logger.logInto(await stackTrace.get(), res + "endDate_icon is NOT clicked", 'error');
         }
         return res;
     },
 
     click_showAdvanceOption: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var res;
         res = await action.click(this.showAdvanceOption);
         if (true == res) {
-            await logger.logInto(stackTrace.get(), " showAdvanceOption is clicked");
+            await logger.logInto(await stackTrace.get(), " showAdvanceOption is clicked");
             res = await this.getData_advanceOption();
         }
         else {
-            await logger.logInto(stackTrace.get(), res + "showAdvanceOption is NOT clicked", 'error');
+            await logger.logInto(await stackTrace.get(), res + "showAdvanceOption is NOT clicked", 'error');
         }
         return res;
     },
 
     click_cancel_btn: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var res;
         res = await action.click(this.cancel_btn);
         if (true == res) {
-            await logger.logInto(stackTrace.get(), " cancel_btn is clicked");
+            await logger.logInto(await stackTrace.get(), " cancel_btn is clicked");
         }
         else {
-            await logger.logInto(stackTrace.get(), res + "cancel_btn is NOT clicked", 'error');
+            await logger.logInto(await stackTrace.get(), res + "cancel_btn is NOT clicked", 'error');
         }
         return res;
     },
 
     click_assign_btn: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var res;
         res = await action.click(this.assign_btn);
         if (true == res) {
-            await logger.logInto(stackTrace.get(), " assign_btn is clicked");
+            await logger.logInto(await stackTrace.get(), " assign_btn is clicked");
             res = await this.getData_submitDialogue();
         }
         else {
-            await logger.logInto(stackTrace.get(), res + "assign_btn is NOT clicked", 'error');
+            await logger.logInto(await stackTrace.get(), res + "assign_btn is NOT clicked", 'error');
         }
         return res;
     },
 
     click_close_btn: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var res;
         res = await action.click(this.close_btn);
         if (true == res) {
-            await logger.logInto(stackTrace.get(), " close_btn is clicked");
+            await logger.logInto(await stackTrace.get(), " close_btn is clicked");
             res = await require('./assignmentListTeacher.page').isInitialized();
         }
         else {
-            await logger.logInto(stackTrace.get(), res + "close_btn is NOT clicked", 'error');
+            await logger.logInto(await stackTrace.get(), res + "close_btn is NOT clicked", 'error');
         }
         return res;
     },
 
     click_deleteActivity_btn: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var res;
         res = await action.click(this.deleteActivity_btn);
         if (true == res) {
-            await logger.logInto(stackTrace.get(), " deleteActivity_btn is clicked");
+            await logger.logInto(await stackTrace.get(), " deleteActivity_btn is clicked");
             res = await action.waitForDisplayed(this.this.isinitialized);
         }
         else {
-            await logger.logInto(stackTrace.get(), res + "deleteActivity_btn is NOT clicked", 'error');
+            await logger.logInto(await stackTrace.get(), res + "deleteActivity_btn is NOT clicked", 'error');
         }
         return res;
     },
 
     click_cancelActivityDialogue_btn: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var res;
         res = await action.click(this.cancelActivityDialogue_btn);
         if (true == res) {
-            await logger.logInto(stackTrace.get(), " cancelActivityDialogue_btn is clicked");
+            await logger.logInto(await stackTrace.get(), " cancelActivityDialogue_btn is clicked");
         }
         else {
-            await logger.logInto(stackTrace.get(), res + "cancelActivityDialogue_btn is NOT clicked", 'error');
+            await logger.logInto(await stackTrace.get(), res + "cancelActivityDialogue_btn is NOT clicked", 'error');
         }
         return res;
     },
 
     click_cancel: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var res;
         res = await action.click(this.cancel);
         if (true == res) {
-            await logger.logInto(stackTrace.get(), " cancel is clicked");
+            await logger.logInto(await stackTrace.get(), " cancel is clicked");
         }
         else {
-            await logger.logInto(stackTrace.get(), res + "cancel is NOT clicked", 'error');
+            await logger.logInto(await stackTrace.get(), res + "cancel is NOT clicked", 'error');
         }
         return res;
     },
 
     click_confirmAssign: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var res;
         res = await action.click(this.confirmAssign);
         if (true == res) {
-            await logger.logInto(stackTrace.get(), " confirm&Assign is clicked");
+            await logger.logInto(await stackTrace.get(), " confirm&Assign is clicked");
             res = await require('./assignmentListTeacher.page').isInitialized();
         }
         else {
-            await logger.logInto(stackTrace.get(), res + "confirm&Assign is NOT clicked", 'error');
+            await logger.logInto(await stackTrace.get(), res + "confirm&Assign is NOT clicked", 'error');
         }
         return res;
     },
 
     set_assignment_txtbox: async function (value) {
         var res;
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         res = await action.setValue(this.assignment_txtbox, value);
         if (true == res) {
-            await logger.logInto(stackTrace.get(), "Value is entered in assignment_txtbox");
+            await logger.logInto(await stackTrace.get(), "Value is entered in assignment_txtbox");
         } else {
-            await logger.logInto(stackTrace.get(), res + "Value is NOT entered in assignment_txtbox", 'error');
+            await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in assignment_txtbox", 'error');
         }
         return res;
     },
 
     set_startDate_txtBox: async function (value) {
         var res;
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         res = await action.setValue(this.startDate_txtBox, value);
         if (true == res) {
-            await logger.logInto(stackTrace.get(), "Value is entered in startDate_txtBox");
+            await logger.logInto(await stackTrace.get(), "Value is entered in startDate_txtBox");
         } else {
-            await logger.logInto(stackTrace.get(), res + "Value is NOT entered in startDate_txtBox", 'error');
+            await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in startDate_txtBox", 'error');
         }
         return res;
     },
 
     set_endDate_txtBox: async function (value) {
         var res;
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         res = await action.setValue(this.endDate_txtBox, value);
         if (true == res) {
-            await logger.logInto(stackTrace.get(), "Value is entered in endDate_txtBox");
+            await logger.logInto(await stackTrace.get(), "Value is entered in endDate_txtBox");
         } else {
-            await logger.logInto(stackTrace.get(), res + "Value is NOT entered in endDate_txtBox", 'error');
+            await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in endDate_txtBox", 'error');
         }
         return res;
     },
     click_classList: async function (classListName) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var i, list, res;
         list = await action.findElements(this.classList);
         for (i = 0; i < list.length; i++) {
@@ -452,10 +452,10 @@ module.exports = {
             }
         }
         if (res == true) {
-            await logger.logInto(stackTrace.get(), " --classList clicked");
+            await logger.logInto(await stackTrace.get(), " --classList clicked");
         }
         else
-            await logger.logInto(stackTrace.get(), " --classList NOT clicked", "error")
+            await logger.logInto(await stackTrace.get(), " --classList NOT clicked", "error")
         return res;
     },
 

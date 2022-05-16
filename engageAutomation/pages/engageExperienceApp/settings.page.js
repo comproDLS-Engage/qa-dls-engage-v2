@@ -88,9 +88,9 @@ module.exports = {
     changeCard_btn: selectorFile.css.ComproEngage.settings.changeCard_btn,
     updateBillingAddress_btn: selectorFile.css.ComproEngage.settings.updateBillingAddress_btn,
 
-    isInitialized: function() {
+    isInitialized: async function() {
         let res;
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         await action.waitForDocumentLoad();
         res = {
             pageStatus: await action.waitForDisplayed(this.pageTitle),
@@ -99,8 +99,8 @@ module.exports = {
         return res;
     },
 
-    getSettingsPageData: function() {
-        await logger.logInto(stackTrace.get());
+    getSettingsPageData: async function() {
+        await logger.logInto(await stackTrace.get());
         let obj = {
             pageStatus: await action.waitForDisplayed(this.pageTitle),
             pageTitle: (await action.getElementCount(this.pageTitle)) > 0 ? await action.getText(this.pageTitle) : null,
@@ -115,8 +115,8 @@ module.exports = {
         return obj;
     },
 
-    getProfileTabData: function() {
-        await logger.logInto(stackTrace.get());
+    getProfileTabData: async function() {
+        await logger.logInto(await stackTrace.get());
         let obj = {
             pageHeading: (await action.getElementCount(this.pageHeading)) > 0 ? await action.getText(this.pageHeading) : null,
             email_label: (await action.getElementCount(this.email_label)) > 0 ? await action.getText(this.email_label) : null,
@@ -134,35 +134,35 @@ module.exports = {
         return obj;
     },
 
-    setFirstName: function(name) {
+    setFirstName: async function(name) {
         let res;
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         res = await action.setValue(this.firstName_input, name);
         if (res == true) {
-            await logger.logInto(stackTrace.get(), " -- First Name Entered");
+            await logger.logInto(await stackTrace.get(), " -- First Name Entered");
         } else {
             res = res + " -- First Name Not Entered";
-            await logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    setLastName: function(lastname) {
+    setLastName: async function(lastname) {
         let res;
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         res = await action.setValue(this.lastName_input, lastname);
         if (res == true) {
-            await logger.logInto(stackTrace.get(), " -- Last Name Entered");
+            await logger.logInto(await stackTrace.get(), " -- Last Name Entered");
         } else {
             res = res + " -- Last Name Not Entered";
-            await logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    setCountry: function(countryName) {
+    setCountry: async function(countryName) {
         let res;
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         res = await action.click(this.country_input)
         if (res == true) {
             res = await action.setValue(this.country_input, countryName);
@@ -171,47 +171,47 @@ module.exports = {
                 if (res == true) {
                     res = await action.click(this.countryListItem)
                     if (res == true) {
-                        await logger.logInto(stackTrace.get(), " -- Country Name Entered");
+                        await logger.logInto(await stackTrace.get(), " -- Country Name Entered");
                     }
                 } else
-                    await logger.logInto(stackTrace.get(), res + " -- Country Name Not Entered", 'error');
+                    await logger.logInto(await stackTrace.get(), res + " -- Country Name Not Entered", 'error');
             }
         }
         return res;
     },
 
-    clickClose: function() {
+    clickClose: async function() {
         let res;
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         res = await action.moveTo(this.country_input, 0, 0)
         if (res == true) {
             res = await action.click(this.clearIcon);
             if (res == true) {
                 res = await action.getAttribute(this.country_input, "value");
-                await logger.logInto(stackTrace.get(), " -- Close Icon Clicked");
+                await logger.logInto(await stackTrace.get(), " -- Close Icon Clicked");
             } else {
                 res = res + " -- Close Icon Not Clicked";
-                await logger.logInto(stackTrace.get(), res, 'error');
+                await logger.logInto(await stackTrace.get(), res, 'error');
             }
         }
         return res;
     },
 
-    clickUpdateSettingsProfile: function() {
+    clickUpdateSettingsProfile: async function() {
         let res;
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         res = await action.click(this.changeProfile_button);
         if (res == true) {
-            await logger.logInto(stackTrace.get(), " -- Update Settings Clicked");
+            await logger.logInto(await stackTrace.get(), " -- Update Settings Clicked");
         } else {
             res = res + " -- Update Settings Not Clicked";
-            await logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    getErrorMessages: function() {
-        await logger.logInto(stackTrace.get());
+    getErrorMessages: async function() {
+        await logger.logInto(await stackTrace.get());
         let obj = {
             //profile
             firstNameError_text: (await action.getElementCount(this.firstNameError_text)) > 0 ? await action.getText(this.firstNameError_text) : null,
@@ -225,8 +225,8 @@ module.exports = {
         return obj;
     },
 
-    getPasswordTabData: function() {
-        await logger.logInto(stackTrace.get());
+    getPasswordTabData: async function() {
+        await logger.logInto(await stackTrace.get());
         let obj = {
             //password
             pageHeading: (await action.getElementCount(this.pageHeading)) > 0 ? await action.getText(this.pageHeading) : null,
@@ -244,47 +244,47 @@ module.exports = {
         return obj;
     },
 
-    setCurrentPassword: function(password) {
+    setCurrentPassword: async function(password) {
         let res;
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         res = await action.setValue(this.currentPassword_input, password);
         if (res == true) {
-            await logger.logInto(stackTrace.get(), " --Current password Entered");
+            await logger.logInto(await stackTrace.get(), " --Current password Entered");
         } else {
             res = res + " -- Current password Not Entered";
-            await logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    setNewPassword: function(password) {
+    setNewPassword: async function(password) {
         let res;
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         res = await action.setValue(this.password_input, password);
         if (res == true) {
-            await logger.logInto(stackTrace.get(), " --New Password Entered");
+            await logger.logInto(await stackTrace.get(), " --New Password Entered");
         } else {
             res = res + " -- New Password Not Entered";
-            await logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    setConfirmPassword: function(password) {
+    setConfirmPassword: async function(password) {
         let res;
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         res = await action.setValue(this.confirmPassword_input, password);
         if (res == true) {
-            await logger.logInto(stackTrace.get(), " --Confirm Password Entered");
+            await logger.logInto(await stackTrace.get(), " --Confirm Password Entered");
         } else {
             res = res + " -- Confirm Password Not Entered";
-            await logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
     ////TBD - password text to be extracted. getText and getValue not working
-    // togglePasswordVisibility: function() {
+    // togglePasswordVisibility: async function() {
     //     let res;
     //     logger.logInto(stackTrace.get());
     //     browser.pause(2000)
@@ -310,21 +310,21 @@ module.exports = {
     //     return res;
     // },
 
-    clickUpdateSettingsPassword: function() {
+    clickUpdateSettingsPassword: async function() {
         let res;
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         res = await action.click(this.changePassword_button);
         if (res == true) {
-            await logger.logInto(stackTrace.get(), " -- Update Settings Clicked");
+            await logger.logInto(await stackTrace.get(), " -- Update Settings Clicked");
         } else {
             res = res + " -- Update Settings Not Clicked";
-            await logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    getAccessibilityTabData: function() {
-        await logger.logInto(stackTrace.get());
+    getAccessibilityTabData: async function() {
+        await logger.logInto(await stackTrace.get());
         let obj = {
             pageHeading: (await action.getElementCount(this.pageHeading)) > 0 ? await action.getText(this.pageHeading) : null,
             fontSizeText: ((await action.getElementCount(this.fontSizeText)) > 0) ? await action.getText(this.fontSizeText) : null,
@@ -354,8 +354,8 @@ module.exports = {
         return obj;
     },
 
-    getCssPropertyData: function() {
-        await logger.logInto(stackTrace.get());
+    getCssPropertyData: async function() {
+        await logger.logInto(await stackTrace.get());
         await action.scrollIntoView(this.pageHeading)
         let obj = {
             pageHeading_font: (await action.getElementCount(this.pageHeading)) > 0 ? (await action.getCSSProperty(this.pageHeading, 'font-family')).value : null,
@@ -410,8 +410,8 @@ module.exports = {
         return obj;
     },
 
-    getResetSettingsModalData: function() {
-        await logger.logInto(stackTrace.get());
+    getResetSettingsModalData: async function() {
+        await logger.logInto(await stackTrace.get());
         let obj = {
             resetSettingsTitle: (await action.getElementCount(this.resetSettingsTitle)) > 0 ? await action.getText(this.resetSettingsTitle) : null,
             resetSettingsSubTitle: ((await action.getElementCount(this.resetSettingsSubTitle)) > 0) ? await action.getText(this.resetSettingsSubTitle) : null,
@@ -422,164 +422,164 @@ module.exports = {
         return obj;
     },
 
-    click_fontSizeDec: function(count) {
-        await logger.logInto(stackTrace.get());
+    click_fontSizeDec: async function(count) {
+        await logger.logInto(await stackTrace.get());
         let res, itr;
         for (itr = 0; itr < count; itr++) {
             res = await action.click(this.fontSizeDec);
         }
 
         if (true == res) {
-            await logger.logInto(stackTrace.get(), " fontSizeDec button is clicked");
+            await logger.logInto(await stackTrace.get(), " fontSizeDec button is clicked");
         } else {
-            await logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    click_fontSizeInc: function(count) {
-        await logger.logInto(stackTrace.get());
+    click_fontSizeInc: async function(count) {
+        await logger.logInto(await stackTrace.get());
         let res, itr;
         for (itr = 0; itr < count; itr++) {
             res = await action.click(this.fontSizeInc);
         }
         if (true == res) {
-            await logger.logInto(stackTrace.get(), " fontSizeInc button is clicked");
+            await logger.logInto(await stackTrace.get(), " fontSizeInc button is clicked");
         } else {
-            await logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    click_lineSpaceDec: function(count) {
-        await logger.logInto(stackTrace.get());
+    click_lineSpaceDec: async function(count) {
+        await logger.logInto(await stackTrace.get());
         let res, itr;
         for (itr = 0; itr < count; itr++) {
             res = await action.click(this.lineSpaceDec);
         }
         if (true == res) {
-            await logger.logInto(stackTrace.get(), " lineSpaceDec button is clicked");
+            await logger.logInto(await stackTrace.get(), " lineSpaceDec button is clicked");
         } else {
-            await logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    click_lineSpaceInc: function(count) {
-        await logger.logInto(stackTrace.get());
+    click_lineSpaceInc: async function(count) {
+        await logger.logInto(await stackTrace.get());
         let res, itr;
         for (itr = 0; itr < count; itr++) {
             res = await action.click(this.lineSpaceInc);
         }
         if (true == res) {
-            await logger.logInto(stackTrace.get(), " lineSpaceInc button is clicked");
+            await logger.logInto(await stackTrace.get(), " lineSpaceInc button is clicked");
         } else {
-            await logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    click_highContrastToggleBtn: function() {
+    click_highContrastToggleBtn: async function() {
         let res;
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         res = await action.click(this.highContrastToggleBtn);
         if (true == res) {
-            await logger.logInto(stackTrace.get(), " highContrastToggleBtn button is clicked");
+            await logger.logInto(await stackTrace.get(), " highContrastToggleBtn button is clicked");
         } else {
-            await logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    click_dylexicFontToggleBtn: function() {
+    click_dylexicFontToggleBtn: async function() {
         let res;
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         res = await action.click(this.dylexicFontToggleBtn);
         if (true == res) {
-            await logger.logInto(stackTrace.get(), " dylexicFontToggleBtn button is clicked");
+            await logger.logInto(await stackTrace.get(), " dylexicFontToggleBtn button is clicked");
         } else {
-            await logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    click_underlineLinksToggleBtn: function() {
+    click_underlineLinksToggleBtn: async function() {
         let res;
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         res = await action.click(this.underlinelinksToggleBtn);
         if (true == res) {
-            await logger.logInto(stackTrace.get(), " underlinelinksToggleBtn button is clicked");
+            await logger.logInto(await stackTrace.get(), " underlinelinksToggleBtn button is clicked");
         } else {
-            await logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    click_moreDetailsBtn: function() {
+    click_moreDetailsBtn: async function() {
         let res;
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         res = await action.click(this.moreDetailsBtn);
         if (true == res) {
-            await logger.logInto(stackTrace.get(), " moreDetailsBtn button is clicked");
+            await logger.logInto(await stackTrace.get(), " moreDetailsBtn button is clicked");
             //need to add return statement after switching to new tab - Akhil
         } else {
-            await logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    click_resetButton: function() {
+    click_resetButton: async function() {
         let res;
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         res = await action.click(this.resetButton);
         if (true == res) {
             res = await this.getResetSettingsModalData()
-            await logger.logInto(stackTrace.get(), " resetButton button is clicked");
+            await logger.logInto(await stackTrace.get(), " resetButton button is clicked");
         } else {
-            await logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    click_applySettingsButton: function() {
+    click_applySettingsButton: async function() {
         let res;
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         res = await action.click(this.applySettingsBtn);
         if (true == res) {
-            await logger.logInto(stackTrace.get(), " applySettings button is clicked");
+            await logger.logInto(await stackTrace.get(), " applySettings button is clicked");
         } else {
-            await logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    click_resetSettingsConfirmBtn: function() {
+    click_resetSettingsConfirmBtn: async function() {
         let res;
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         res = await action.click(this.resetSettingsConfirmBtn);
         if (true == res) {
-            await logger.logInto(stackTrace.get(), " Confirm button is clicked");
+            await logger.logInto(await stackTrace.get(), " Confirm button is clicked");
         } else {
-            await logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    click_resetSettingsCancelBtn: function() {
+    click_resetSettingsCancelBtn: async function() {
         let res;
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         res = await action.click(this.resetSettingsCancelBtn);
         if (true == res) {
-            await logger.logInto(stackTrace.get(), " Cancel button is clicked");
+            await logger.logInto(await stackTrace.get(), " Cancel button is clicked");
         } else {
-            await logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
 
     },
 
-    getBillingTabData: function() {
-        await logger.logInto(stackTrace.get());
+    getBillingTabData: async function() {
+        await logger.logInto(await stackTrace.get());
         let obj = {
             pageHeading: (await action.getElementCount(this.subscription_text)) > 0 ? await action.getText(this.subscription_text) : null,
             subscriptionSubtitle_text: (await action.getElementCount(this.subscriptionSubtitle_text)) > 0 ? await action.getText(this.subscriptionSubtitle_text) : null,
@@ -607,57 +607,57 @@ module.exports = {
         return obj;
     },
 
-    click_upgradePlan_btn: function() {
+    click_upgradePlan_btn: async function() {
         let res;
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         res = await action.click(this.upgradePlan_btn);
         if (true == res) {
-            await logger.logInto(stackTrace.get(), " upgradePlan button is clicked");
+            await logger.logInto(await stackTrace.get(), " upgradePlan button is clicked");
             res = await require('./billing.page.js').isInitialized();
         } else {
-            await logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
 
     },
 
-    click_managePlan_btn: function() {
+    click_managePlan_btn: async function() {
         let res;
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         res = await action.click(this.managePlan_btn);
         if (true == res) {
-            await logger.logInto(stackTrace.get(), " managePlan button is clicked");
+            await logger.logInto(await stackTrace.get(), " managePlan button is clicked");
             res = await require('./planOptions.page.js').isInitialized();
         } else {
-            await logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
 
     },
 
-    click_changeCard_btn: function() {
+    click_changeCard_btn: async function() {
         let res;
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         res = await action.click(this.changeCard_btn);
         if (true == res) {
-            await logger.logInto(stackTrace.get(), " changeCard button is clicked");
+            await logger.logInto(await stackTrace.get(), " changeCard button is clicked");
             res = await require('./planOptions.page.js').isInitialized();
         } else {
-            await logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
 
     },
 
-    click_updateBillingAddress_btn: function() {
+    click_updateBillingAddress_btn: async function() {
         let res;
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         res = await action.click(this.changeCard_btn);
         if (true == res) {
-            await logger.logInto(stackTrace.get(), " updateBillingAddress button is clicked");
+            await logger.logInto(await stackTrace.get(), " updateBillingAddress button is clicked");
             res = await require('./planOptions.page.js').isInitialized();
         } else {
-            await logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
 

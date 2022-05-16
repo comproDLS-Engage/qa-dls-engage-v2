@@ -8,18 +8,18 @@ module.exports = {
     target: selectorFile.css.ComproEngage.FIB.target,
 
     isInitialized: async function (fibQuesData) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         let data = await DNDonImageItemPlayerPage.isInitialized(fibQuesData)
         return data;
     },
 
     getSourceData: async function (qIndex, fibQuesData) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         return DNDonImageItemPlayerPage.getSourceData(qIndex, fibQuesData);
     },
 
     getTargetData: async function (qIndex, fibQuesData) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         
         return DNDonImageItemPlayerPage.getTargetData(qIndex, fibQuesData);
     },

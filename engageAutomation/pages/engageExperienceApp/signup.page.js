@@ -10,9 +10,9 @@ module.exports = {
 
  
   isInitializedSetEmailPage:async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     res = await action.waitForDisplayed(this.signUpEmailPage_btn, 5000);
-    await logger.logInto(stackTrace.get(), res);
+    await logger.logInto(await stackTrace.get(), res);
     if (res == true) {
       //not added return statement as of now
     }

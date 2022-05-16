@@ -21,7 +21,7 @@ module.exports = {
 
     isInitialized: async function () {
         var res;
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         await action.waitForDocumentLoad();
         res = {
             pageStatus: await action.waitForDisplayed(this.downPlayer_img),
@@ -31,7 +31,7 @@ module.exports = {
     },
 
     getData_downloadPlayer: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var obj;
         obj = {
             downPlayer_img: ((await action.getElementCount(this.downPlayer_img)) > 0) ? await action.waitForDisplayed(this.downPlayer_img) : false,
@@ -53,27 +53,27 @@ module.exports = {
     },
 
     click_downloadBtn: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var res;
         res = await action.click(this.downloadBtn);
         if (true == res) {
-            await logger.logInto(stackTrace.get(), " downloadBtn is clicked");
+            await logger.logInto(await stackTrace.get(), " downloadBtn is clicked");
         }
         else {
-            await logger.logInto(stackTrace.get(), res + "downloadBtn is NOT clicked", 'error');
+            await logger.logInto(await stackTrace.get(), res + "downloadBtn is NOT clicked", 'error');
         }
         return res;
     },
 
     click_viewBtn: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var res;
         res = await action.click(this.viewBtn);
         if (true == res) {
-            await logger.logInto(stackTrace.get(), " viewBtn is clicked");
+            await logger.logInto(await stackTrace.get(), " viewBtn is clicked");
         }
         else {
-            await logger.logInto(stackTrace.get(), res + "viewBtn is NOT clicked", 'error');
+            await logger.logInto(await stackTrace.get(), res + "viewBtn is NOT clicked", 'error');
         }
         return res;
     },

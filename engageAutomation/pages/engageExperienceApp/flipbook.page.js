@@ -71,7 +71,7 @@ module.exports = {
 
   isInitialized: async function () {
     var res;
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     await action.waitForDocumentLoad();
     res = {
       pageStatus: await action.waitForDisplayed(this.readerContainerWrapper),
@@ -81,7 +81,7 @@ module.exports = {
   },
 
   getData_flipbookPage: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var obj;
     obj = {
       pageLayoutSingle: ((await action.getElementCount(this.pageLayoutSingle)) > 0) ? await action.waitForDisplayed(this.pageLayoutSingle) : false,
@@ -106,22 +106,22 @@ module.exports = {
 
   //-------- NOTES -----------
   click_notesBtn: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.notesBtn);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " notesBtn button is clicked");
+      await logger.logInto(await stackTrace.get(), " notesBtn button is clicked");
       res = await this.getData_notesModal();
     }
     else {
-      await logger.logInto(stackTrace.get(), res + " notesBtn button is not clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + " notesBtn button is not clicked", 'error');
     }
     return res;
   },
 
   //Function that returns the notes modal elements.
   getData_notesModal: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     await action.waitForDisplayed(this.addNoteBtn); //manually edited
     var obj;
     obj = {
@@ -138,21 +138,21 @@ module.exports = {
 
   //Clicking on 'Add Note' button and get the data of the text area
   click_addNoteBtn: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.addNoteBtn);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " addNoteBtn button is clicked");
+      await logger.logInto(await stackTrace.get(), " addNoteBtn button is clicked");
       res = await this.getData_addNotes();
     }
     else {
-      await logger.logInto(stackTrace.get(), res + " addNoteBtn button is not clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + " addNoteBtn button is not clicked", 'error');
     }
     return res;
   },
 
   getData_addNotes: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var obj;
     obj = {
       addNotesTitle: ((await action.getElementCount(this.addNotesTitle)) > 0) ? await action.getText(this.addNotesTitle) : null,
@@ -170,32 +170,32 @@ module.exports = {
   //Function to set a value in the add note text area
   set_notesTextArea: async function (value) {
     var res;
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     res = await action.setValue(this.notesTextArea, value);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), "Value is entered in notesTextArea");
+      await logger.logInto(await stackTrace.get(), "Value is entered in notesTextArea");
     } else {
-      await logger.logInto(stackTrace.get(), res, 'error');
+      await logger.logInto(await stackTrace.get(), res, 'error');
     }
     return res;
   },
 
   click_notesSaveBtn: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.notesSaveBtn);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " notesSaveBtn button is clicked");
+      await logger.logInto(await stackTrace.get(), " notesSaveBtn button is clicked");
       //res = this.getData_notesList();
     }
     else {
-      await logger.logInto(stackTrace.get(), res + " notesSaveBtn button is not clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + " notesSaveBtn button is not clicked", 'error');
     }
     return res;
   },
 
   getData_notesList: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var obj = {};
     await action.waitForDisplayed(this.noteListItemText);
     var list = await action.findElements(this.noteListItemText);
@@ -212,7 +212,7 @@ module.exports = {
 
   //Edit Note---
   click_noteListEditBtn: async function (noteListItemTextName) {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var i, list, res;
     list = await action.findElements(this.noteListEditBtn);
     for (i = 0; i < list.length; i++) {
@@ -222,46 +222,46 @@ module.exports = {
       }
     }
     if (res == true) {
-      await logger.logInto(stackTrace.get(), " --noteListEditBtn clicked");
+      await logger.logInto(await stackTrace.get(), " --noteListEditBtn clicked");
       res = await this.getData_addNotes();
     }
     else
-      await logger.logInto(stackTrace.get(), res + " --noteListEditBtn NOT clicked", "error")
+      await logger.logInto(await stackTrace.get(), res + " --noteListEditBtn NOT clicked", "error")
     return res;
   },
 
   click_notesCancelBtn: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.notesCancelBtn);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " notesCancelBtn button is clicked");
+      await logger.logInto(await stackTrace.get(), " notesCancelBtn button is clicked");
       res = await this.getData_notesList();
     }
     else {
-      await logger.logInto(stackTrace.get(), res + " notesCancelBtn button is not clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + " notesCancelBtn button is not clicked", 'error');
     }
     return res;
   },
 
   //Function to close Notes Modal
   click_notesCloseBtn: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.notesCloseBtn);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " notesCloseBtn button is clicked");
+      await logger.logInto(await stackTrace.get(), " notesCloseBtn button is clicked");
       res = await action.waitForDisplayed(this.notesCloseBtn, undefined, true);
     }
     else {
-      await logger.logInto(stackTrace.get(), res + " notesCloseBtn button is not clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + " notesCloseBtn button is not clicked", 'error');
     }
     return res;
   },
 
   //Clicking on Delete Note button and get the data of the delete modal
   click_noteListDeleteBtn: async function (noteListItemTextName) {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var i, list, res;
     list = await action.findElements(this.noteListDeleteBtn);
     for (i = 0; i < list.length; i++) {
@@ -271,16 +271,16 @@ module.exports = {
       }
     }
     if (res == true) {
-      await logger.logInto(stackTrace.get(), " --noteListDeleteBtn clicked");
+      await logger.logInto(await stackTrace.get(), " --noteListDeleteBtn clicked");
       res = await this.getData_deleteNotes();
     }
     else
-      await logger.logInto(stackTrace.get(), res + " --noteListDeleteBtn NOT clicked", "error")
+      await logger.logInto(await stackTrace.get(), res + " --noteListDeleteBtn NOT clicked", "error")
     return res;
   },
 
   getData_deleteNotes: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var obj;
     obj = {
       deleteNoteTitle: ((await action.getElementCount(this.deleteNoteTitle)) > 0) ? await action.getText(this.deleteNoteTitle) : null,
@@ -292,107 +292,107 @@ module.exports = {
   },
 
   click_deleteNoteCancelBtn: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.deleteNoteCancelBtn);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " deleteNoteCancelBtn button is clicked");
+      await logger.logInto(await stackTrace.get(), " deleteNoteCancelBtn button is clicked");
       res = await this.getData_notesList();
     }
     else {
-      await logger.logInto(stackTrace.get(), res + " deleteNoteCancelBtn button is not clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + " deleteNoteCancelBtn button is not clicked", 'error');
     }
     return res;
   },
 
   click_deleteNoteDeleteBtn: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.deleteNoteDeleteBtn);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " deleteNoteDeleteBtn button is clicked");
+      await logger.logInto(await stackTrace.get(), " deleteNoteDeleteBtn button is clicked");
       //res = this.getData_notesList();
       res = await this.getData_notesModal();
     }
     else {
-      await logger.logInto(stackTrace.get(), res + " deleteNoteDeleteBtn button is not clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + " deleteNoteDeleteBtn button is not clicked", 'error');
     }
     return res;
   },
 
   //Notes other functions
   click_notesDockBtn: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.notesDockBtn);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " notesDockBtn button is clicked");
+      await logger.logInto(await stackTrace.get(), " notesDockBtn button is clicked");
       res = await action.waitForDisplayed(this.notesDockContainer); //manually added
     }
     else {
-      await logger.logInto(stackTrace.get(), res + " notesDockBtn button is not clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + " notesDockBtn button is not clicked", 'error');
     }
     return res;
   },
 
   click_notesUndockBtn: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.notesUndockBtn);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " notesUndockBtn button is clicked");
+      await logger.logInto(await stackTrace.get(), " notesUndockBtn button is clicked");
       res = await action.waitForDisplayed(this.notesDockContainer, undefined, true);  //manually added
     }
     else {
-      await logger.logInto(stackTrace.get(), res + " notesUndockBtn button is not clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + " notesUndockBtn button is not clicked", 'error');
     }
     return res;
   },
 
   click_notesPageValueLeft: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.notesPageValueLeft);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " notesPageValueLeft button is clicked");
+      await logger.logInto(await stackTrace.get(), " notesPageValueLeft button is clicked");
     }
     else {
-      await logger.logInto(stackTrace.get(), res + " notesPageValueLeft button is not clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + " notesPageValueLeft button is not clicked", 'error');
     }
     return res;
   },
 
   click_notesPageValueRight: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.notesPageValueRight);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " notesPageValueRight button is clicked");
+      await logger.logInto(await stackTrace.get(), " notesPageValueRight button is clicked");
     }
     else {
-      await logger.logInto(stackTrace.get(), res + " notesPageValueRight button is not clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + " notesPageValueRight button is not clicked", 'error');
     }
     return res;
   },
 
   //--------BOOKMARKS-------
   click_bookmarkBtn: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.bookmarkBtn);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " bookmarkBtn button is clicked");
+      await logger.logInto(await stackTrace.get(), " bookmarkBtn button is clicked");
       res = await this.getData_bookmarkModal();
     }
     else {
-      await logger.logInto(stackTrace.get(), res + " bookmarkBtn button is not clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + " bookmarkBtn button is not clicked", 'error');
     }
     return res;
   },
 
   //Function that returns the bookmark modal elements 
   getData_bookmarkModal: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var obj;
     obj = {
       myBookmarksTitle: ((await action.getElementCount(this.myBookmarksTitle)) > 0) ? await action.getText(this.myBookmarksTitle) : null,
@@ -406,21 +406,21 @@ module.exports = {
 
   //Clicking on Add Bookmark button and get the data of the text area
   click_addBookmarkBtn: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.addBookmarkBtn);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " addBookmarkBtn button is clicked");
+      await logger.logInto(await stackTrace.get(), " addBookmarkBtn button is clicked");
       res = await this.getData_addBookmark();
     }
     else {
-      await logger.logInto(stackTrace.get(), res + " addBookmarkBtn button is not clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + " addBookmarkBtn button is not clicked", 'error');
     }
     return res;
   },
 
   getData_addBookmark: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var obj;
     obj = {
       bookmarkNameLabel: ((await action.getElementCount(this.bookmarkNameLabel)) > 0) ? await action.getText(this.bookmarkNameLabel) : null,
@@ -438,32 +438,32 @@ module.exports = {
   //Function to set a value in the add bookmark text area
   set_bookmarkTextArea: async function (value) {
     var res;
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     res = await action.setValue(this.bookmarkTextArea, value);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), "Value is entered in bookmarkTextArea");
+      await logger.logInto(await stackTrace.get(), "Value is entered in bookmarkTextArea");
     } else {
-      await logger.logInto(stackTrace.get(), res, 'error');
+      await logger.logInto(await stackTrace.get(), res, 'error');
     }
     return res;
   },
 
   click_bookmarkSaveBtn: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.bookmarkSaveBtn);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " bookmarkSaveBtn button is clicked");
+      await logger.logInto(await stackTrace.get(), " bookmarkSaveBtn button is clicked");
       //res = this.getData_bookmarkList();
     }
     else {
-      await logger.logInto(stackTrace.get(), res + " bookmarkSaveBtn button is not clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + " bookmarkSaveBtn button is not clicked", 'error');
     }
     return res;
   },
 
   getData_bookmarkList: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var obj = {};
     await action.waitForDisplayed(this.bookmarkListItemName);
     var list = await action.findElements(this.bookmarkListItemName);
@@ -480,7 +480,7 @@ module.exports = {
 
   //Edit Bookmark----
   click_bookmarkListEditBtn: async function (bookmarkListItemNameName) {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var i, list, res;
     list = await action.findElements(this.bookmarkListEditBtn);
     for (i = 0; i < list.length; i++) {
@@ -490,46 +490,46 @@ module.exports = {
       }
     }
     if (res == true) {
-      await logger.logInto(stackTrace.get(), " --bookmarkListEditBtn clicked");
+      await logger.logInto(await stackTrace.get(), " --bookmarkListEditBtn clicked");
       res = await this.getData_addBookmark();
     }
     else
-      await logger.logInto(stackTrace.get(), res + " --bookmarkListEditBtn NOT clicked", "error")
+      await logger.logInto(await stackTrace.get(), res + " --bookmarkListEditBtn NOT clicked", "error")
     return res;
   },
 
   click_bookmarkCancelBtn: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.bookmarkCancelBtn);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " bookmarkCancelBtn button is clicked");
+      await logger.logInto(await stackTrace.get(), " bookmarkCancelBtn button is clicked");
       res = await this.getData_bookmarkList();
     }
     else {
-      await logger.logInto(stackTrace.get(), res + " bookmarkCancelBtn button is not clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + " bookmarkCancelBtn button is not clicked", 'error');
     }
     return res;
   },
 
   //Function to close Bookmarks Modal
   click_bookmarkCloseBtn: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.bookmarkCloseBtn);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " bookmarkCloseBtn button is clicked");
+      await logger.logInto(await stackTrace.get(), " bookmarkCloseBtn button is clicked");
       res = await action.waitForDisplayed(this.bookmarkCloseBtn, undefined, true);
     }
     else {
-      await logger.logInto(stackTrace.get(), res + " bookmarkCloseBtn button is not clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + " bookmarkCloseBtn button is not clicked", 'error');
     }
     return res;
   },
 
   //Function to delete bookmark
   click_bookmarkListDeleteBtn: async function (bookmarkListItemNameName) {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var i, list, res;
     list = await action.findElements(this.bookmarkListDeleteBtn);
     for (i = 0; i < list.length; i++) {
@@ -539,59 +539,59 @@ module.exports = {
       }
     }
     if (res == true) {
-      await logger.logInto(stackTrace.get(), " --bookmarkListDeleteBtn clicked");
+      await logger.logInto(await stackTrace.get(), " --bookmarkListDeleteBtn clicked");
       //res = this.getData_bookmarkList();
       res = await this.getData_bookmarkModal();
     }
     else
-      await logger.logInto(stackTrace.get(), res + " --bookmarkListDeleteBtn NOT clicked", "error")
+      await logger.logInto(await stackTrace.get(), res + " --bookmarkListDeleteBtn NOT clicked", "error")
     return res;
   },
 
   //Bookmarks other functions
   click_bookmarkPageValueLeft: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.bookmarkPageValueLeft);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " bookmarkPageValueLeft button is clicked");
+      await logger.logInto(await stackTrace.get(), " bookmarkPageValueLeft button is clicked");
     }
     else {
-      await logger.logInto(stackTrace.get(), res + " bookmarkPageValueLeft button is not clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + " bookmarkPageValueLeft button is not clicked", 'error');
     }
     return res;
   },
 
   click_bookmarkPageValueRight: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.bookmarkPageValueRight);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " bookmarkPageValueRight button is clicked");
+      await logger.logInto(await stackTrace.get(), " bookmarkPageValueRight button is clicked");
     }
     else {
-      await logger.logInto(stackTrace.get(), res + " bookmarkPageValueRight button is not clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + " bookmarkPageValueRight button is not clicked", 'error');
     }
     return res;
   },
 
   //----TOC----
   click_TOCBtn: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.TOCBtn);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " TOCBtn button is clicked");
+      await logger.logInto(await stackTrace.get(), " TOCBtn button is clicked");
       res = await this.getData_flipbookTOC();
     }
     else {
-      await logger.logInto(stackTrace.get(), res + " TOCBtn button is clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + " TOCBtn button is clicked", 'error');
     }
     return res;
   },
 
   getData_flipbookTOC: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var obj;
     obj = {
       flipbookTitle: ((await action.getElementCount(this.flipbookTitle)) > 0) ? await action.getText(this.flipbookTitle) : null,
@@ -604,66 +604,66 @@ module.exports = {
   },
 
   resourceTitle_Data: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var i, list;
     var resourceTitle_Arr = [];
     list = await action.findElements(this.resourceTitle);
     for (i = 0; i < list.length; i++) {
       resourceTitle_Arr[i] = await action.getText(list[i])
     }
-    await logger.logInto(stackTrace.get(), resourceTitle_Arr);
+    await logger.logInto(await stackTrace.get(), resourceTitle_Arr);
     return resourceTitle_Arr;
   },
 
   click_jumpToPageInput: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.jumpToPageInput);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " TOCBtn button is clicked");
+      await logger.logInto(await stackTrace.get(), " TOCBtn button is clicked");
     }
     else {
-      await logger.logInto(stackTrace.get(), res + " TOCBtn button is clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + " TOCBtn button is clicked", 'error');
     }
     return res;
   },
 
   set_jumpToPageInput: async function (value) {
     var res;
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     res = await action.setValue(this.jumpToPageInput, value);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), "Value is entered in jumpToPageInput");
+      await logger.logInto(await stackTrace.get(), "Value is entered in jumpToPageInput");
     } else {
-      await logger.logInto(stackTrace.get(), res, 'error');
+      await logger.logInto(await stackTrace.get(), res, 'error');
     }
     return res;
   },
 
   click_jumpToPageBtn: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.jumpToPageBtnTOC);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " jumpToPageBtnTOC button is clicked");
+      await logger.logInto(await stackTrace.get(), " jumpToPageBtnTOC button is clicked");
       res = await this.getData_flipbookPage();
     }
     else {
-      await logger.logInto(stackTrace.get(), res + " jumpToPageBtnTOC button is not clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + " jumpToPageBtnTOC button is not clicked", 'error');
     }
     return res;
   },
 
   click_jumpToPreviousPageBtn: async function () {
-    logger.logInto(stackTrace.get());
+    await logger.logInto(stackTrace.get());
     var res;
-    res = action.click(this.jumpToPreviousPageBtn);
+    res = await action.click(this.jumpToPreviousPageBtn);
     if (true == res) {
-      logger.logInto(stackTrace.get(), " jumpToPreviousPageBtn button is clicked");
-      res = this.getData_flipbookPage();
+      await logger.logInto(stackTrace.get(), " jumpToPreviousPageBtn button is clicked");
+      res = await this.getData_flipbookPage();
     }
     else {
-      logger.logInto(stackTrace.get(), res + " jumpToPreviousPageBtn button is not clicked", 'error');
+      await logger.logInto(stackTrace.get(), res + " jumpToPreviousPageBtn button is not clicked", 'error');
     }
     console.log("res - ",res)
     return res;
@@ -671,21 +671,21 @@ module.exports = {
 
   //-----TOOLBAR BUTTONS-----
   click_annotationsBtn: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.annotationsBtn);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " annotationsBtn button is clicked");
+      await logger.logInto(await stackTrace.get(), " annotationsBtn button is clicked");
       //expected behaviour to be added
     }
     else {
-      await logger.logInto(stackTrace.get(), res + " annotationsBtn button is not clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + " annotationsBtn button is not clicked", 'error');
     }
     return res;
   },
 
   get_flipbookPanelSize: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res, size;
     size = {
       width: (await action.getElementCount(this.readerContainerWrapper)) > 0 ? (await action.getCSSProperty(this.readerContainerWrapper,'width')).value : null,
@@ -697,11 +697,11 @@ module.exports = {
   },
 
   click_zoomInBtn: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res, size;
     res = await action.click(this.zoomInBtn);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " zoomInBtn button is clicked");
+      await logger.logInto(await stackTrace.get(), " zoomInBtn button is clicked");
       size = {
         width: (await action.getElementCount(this.readerContainerWrapper)) > 0 ? (await action.getCSSProperty(this.readerContainerWrapper,'width')).value : null,
         height: (await action.getElementCount(this.readerContainerWrapper)) > 0 ? (await action.getCSSProperty(this.readerContainerWrapper,'height')).value : null
@@ -710,17 +710,17 @@ module.exports = {
       size.height = parseInt(size.height.match(/\d+/g)[0]);
     }
     else {
-      await logger.logInto(stackTrace.get(), res + " zoomInBtn button is not clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + " zoomInBtn button is not clicked", 'error');
     }
     return size;
   },
 
   click_zoomOutBtn: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res, size;
     res = await action.click(this.zoomOutBtn);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " zoomOutBtn button is clicked");
+      await logger.logInto(await stackTrace.get(), " zoomOutBtn button is clicked");
       size = {
         width: (await action.getElementCount(this.readerContainerWrapper)) > 0 ? (await action.getCSSProperty(this.readerContainerWrapper,'width')).value : null,
         height: (await action.getElementCount(this.readerContainerWrapper)) > 0 ? (await action.getCSSProperty(this.readerContainerWrapper,'height')).value : null
@@ -729,91 +729,91 @@ module.exports = {
       size.height = parseInt(size.height.match(/\d+/g)[0]);
     }
     else {
-      await logger.logInto(stackTrace.get(), res + " zoomOutBtn button is not clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + " zoomOutBtn button is not clicked", 'error');
     }
     return size;
   },
 
   click_fitToScreenBtn: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.fitToScreenBtn);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " fitToScreenBtn button is clicked");
+      await logger.logInto(await stackTrace.get(), " fitToScreenBtn button is clicked");
       res = await action.getCSSProperty(this.readerContainerWrapper, 'width');
     }
     else {
-      await logger.logInto(stackTrace.get(), res + " fitToScreenBtn button is not clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + " fitToScreenBtn button is not clicked", 'error');
     }
     return res;
   },
 
   click_doublePageBtn: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.doublePageBtn);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " doublePageBtn button is clicked");
+      await logger.logInto(await stackTrace.get(), " doublePageBtn button is clicked");
       res = await this.getData_flipbookPage();
     }
     else {
-      await logger.logInto(stackTrace.get(), res + " doublePageBtn button is not clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + " doublePageBtn button is not clicked", 'error');
     }
     return res;
   },
 
   click_singlePageBtn: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.singlePageBtn);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " singlePageBtn button is clicked");
+      await logger.logInto(await stackTrace.get(), " singlePageBtn button is clicked");
       var singlelayoutWidth = ((await action.getElementCount(this.pageLayoutSingle)) > 0) ? await action.getAttribute(this.pageLayoutSingle,"style") : null;
     }
     else {
-      await logger.logInto(stackTrace.get(), res + " singlePageBtn button is not clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + " singlePageBtn button is not clicked", 'error');
     }
     return singlelayoutWidth;
   },
 
   click_fullScreenBtn: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.fullScreenBtn);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " fullScreenBtn button is clicked");
+      await logger.logInto(await stackTrace.get(), " fullScreenBtn button is clicked");
       res = await action.getCSSProperty(this.fullScreenBtn, 'aria-label');
     }
     else {
-      await logger.logInto(stackTrace.get(), res + " fullScreenBtn button is not clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + " fullScreenBtn button is not clicked", 'error');
     }
     return res;
   },
 
   click_previousBtn: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.previousBtn);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " previousBtn button is clicked");
+      await logger.logInto(await stackTrace.get(), " previousBtn button is clicked");
       res = await this.getData_flipbookPage();
     }
     else {
-      await logger.logInto(stackTrace.get(), res + " previousBtn button is not clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + " previousBtn button is not clicked", 'error');
     }
     return res;
   },
 
   click_nextBtn: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.nextBtn);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " nextBtn button is clicked");
+      await logger.logInto(await stackTrace.get(), " nextBtn button is clicked");
       res = await this.getData_flipbookPage();
     }
     else {
-      await logger.logInto(stackTrace.get(), res + " nextBtn button is not clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + " nextBtn button is not clicked", 'error');
     }
     return res;
   }

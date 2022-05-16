@@ -10,7 +10,7 @@ module.exports = {
     right: selectorFile.css.ComproEngage.Matching.right,
 
     isInitialized: async function (matchingQuesData) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var qIndex = await itemplayer.getQuesIndex();
         await action.switchToFrame(0);
         matchingQuesData.leftData = await this.getLeftData(qIndex, matchingQuesData);
@@ -20,7 +20,7 @@ module.exports = {
     },
 
     getLeftData: async function (qIndex, matchingQuesData) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var leftMap = [];
         let leftSelector, i, leftSelectorIcon;
         let option = "div[index='" + qIndex + "'] " + this.left;
@@ -35,7 +35,7 @@ module.exports = {
     },
 
     getRightData: async function (qIndex, matchingQuesData) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var rightMap = [];
         let rightSelector, i;
         let option = "div[index='" + qIndex + "'] " + this.right;
@@ -48,7 +48,7 @@ module.exports = {
     },
 
     matchingClick: async function (matchingQuesData) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         qIndex = await itemplayer.getQuesIndex();
         await action.switchToFrame(0);
         var leftPath, rightPath, i;
@@ -60,7 +60,7 @@ module.exports = {
                 res = await action.click(rightPath);
             else {
                 res = res + " -- Left Element is NOT clicked";
-                await logger.logInto(stackTrace.get(), res, 'error');
+                await logger.logInto(await stackTrace.get(), res, 'error');
             }
         }
         await action.switchToParentFrame();

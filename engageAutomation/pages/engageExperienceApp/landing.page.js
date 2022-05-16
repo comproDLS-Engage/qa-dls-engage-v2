@@ -21,12 +21,11 @@ module.exports = {
 	appVersion: selectorFile.css.ComproEngage.landingPage.appVersion,
 
 	isInitialized: async function () {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		await action.waitForDocumentLoad();
 		let pageStatus = await action.waitForDisplayed(this.brandLogo_img);
 		res = await this.get_LandingPage_Data();
 		res.pageStatus = pageStatus;
-		await console.log(res)
 		return await res;
 	},
 
@@ -51,7 +50,7 @@ module.exports = {
 	},
 
 	click_Signup_Button: async function () {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		res = await action.click(this.signupBtn);
 		if (true == res) {
 			let signupPage = require('./signup.page.js');
@@ -59,13 +58,13 @@ module.exports = {
 		}
 		else {
 			res = res + " -- Error in clicking signupBtn";
-			await logger.logInto(stackTrace.get(), res, 'error');
+			await logger.logInto(await stackTrace.get(), res, 'error');
 		}
 		return res;
 	},
 
 	click_Signin_Button: async function () {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		res = await action.click(this.loginBtn);
 		if (true == res) {
 			let loginPage = require('./login.page.js');
@@ -73,13 +72,13 @@ module.exports = {
 		}
 		else {
 			res = res + " -- Error in clicking loginBtn";
-			await logger.logInto(stackTrace.get(), res, 'error');
+			await logger.logInto(await stackTrace.get(), res, 'error');
 		}
 		return res;
 	},
 
 	select_Language_from_dropdown: async function (lang) {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		res = await action.click(this.languageSelector_dropdown);
 		if (true == res) {
 			let list, i;
@@ -88,18 +87,18 @@ module.exports = {
 			for (i = 1; i <= list.length; i++) {
 				if (lang == (await action.getText(this.languageSelector_dropdown_list + ":nth-child(" + i + ")"))) {
 					res = await action.click(this.languageSelector_dropdown_list + ":nth-child(" + i + ")");
-					await logger.logInto(stackTrace.get(), "Value " + lang + " selected from the drop down");
+					await logger.logInto(await stackTrace.get(), "Value " + lang + " selected from the drop down");
 					break;
 				}
 			}
 			if (res == null) {
 				res = lang + " -- language not found in the dropdown";
-				await logger.logInto(stackTrace.get(), res, 'error');
+				await logger.logInto(await stackTrace.get(), res, 'error');
 			}
 		}
 		else {
 			res = res + " -- Error in clicking language Selector Arrow";
-			await logger.logInto(stackTrace.get(), res, 'error');
+			await logger.logInto(await stackTrace.get(), res, 'error');
 		}
 		return res;
 	}

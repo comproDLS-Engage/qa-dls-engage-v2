@@ -7,7 +7,7 @@ module.exports = {
 	textbox: selectorFile.css.ComproEngage.writing.textbox,
 
 	isInitialized: async function () {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		await action.waitForDisplayed("iframe[id*=iframe], iframe");
 		await action.switchToFrame(0);
 		let res = await action.waitForDisplayed(this.textbox);
@@ -16,7 +16,7 @@ module.exports = {
 	},
 
 	set_textboxValue: async function (writingData) {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		let res, textboxSelector;
 		await action.switchToFrame(0);
 		for (let i = 0; i < writingData.length; i++) {
@@ -25,11 +25,11 @@ module.exports = {
 			if (res == 1) {
 				res = await action.setValue(textboxSelector, writingData[i][1]);
 				if (true == res) {
-					await logger.logInto(stackTrace.get(), res + " -- value is entered");
+					await logger.logInto(await stackTrace.get(), res + " -- value is entered");
 				}
 				else {
 					res = res + "-- Error in entering value in the textbox";
-					await logger.logInto(stackTrace.get(), res, "error");
+					await logger.logInto(await stackTrace.get(), res, "error");
 					break;
 				}
 			}
@@ -39,7 +39,7 @@ module.exports = {
 	},
 
 	getData_writing: async function (writingData) {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		await action.switchToFrame(0);
 		var arr = [];
 		var res, textboxSelector;

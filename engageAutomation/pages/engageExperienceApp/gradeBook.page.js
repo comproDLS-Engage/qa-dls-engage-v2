@@ -34,7 +34,7 @@ module.exports = {
 
   isInitialized: async function () {
     var res;
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     await action.waitForDocumentLoad();
     res = {
       pageStatus: await action.waitForDisplayed(this.pageTitle),
@@ -44,7 +44,7 @@ module.exports = {
   },
 
   getData_gradeBook: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var obj;
     obj = {
       pageTitle: ((await action.getElementCount(this.pageTitle)) > 0) ? await action.getText(this.pageTitle) : null,
@@ -76,19 +76,19 @@ module.exports = {
   },
 
   studentList_Data: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var i, list;
     var studentList_Arr = [];
     list = await action.findElements(this.studentList);
     for (i = 0; i < list.length; i++) {
       studentList_Arr[i] = await action.getText(list[i])
     }
-    await logger.logInto(stackTrace.get(), studentList_Arr);
+    await logger.logInto(await stackTrace.get(), studentList_Arr);
     return studentList_Arr;
   },
 
   getData_productList: async function (productListNameName) {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var obj = [];
     await action.waitForDisplayed(this.productListName);
     var list = await action.findElements(this.productListName);
@@ -115,33 +115,33 @@ module.exports = {
   },
 
   click_download_btn: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.download_btn);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " download_btn is clicked");
+      await logger.logInto(await stackTrace.get(), " download_btn is clicked");
     }
     else {
-      await logger.logInto(stackTrace.get(), res + "download_btn is NOT clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + "download_btn is NOT clicked", 'error');
     }
     return res;
   },
 
   click_sendtoemail_btn: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.sendtoemail_btn);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " sendtoemail_btn is clicked");
+      await logger.logInto(await stackTrace.get(), " sendtoemail_btn is clicked");
     }
     else {
-      await logger.logInto(stackTrace.get(), res + "sendtoemail_btn is NOT clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + "sendtoemail_btn is NOT clicked", 'error');
     }
     return res;
   },
 
   click_studentList: async function (studentListName) {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var i, list, res;
     list = await action.findElements(this.studentList);
     for (i = 0; i < list.length; i++) {
@@ -152,10 +152,10 @@ module.exports = {
     }
     if (res == true) {
       res = await require('./gradeBookStudent.page').isInitialized();
-      await logger.logInto(stackTrace.get(), " --studentList clicked");
+      await logger.logInto(await stackTrace.get(), " --studentList clicked");
     }
     else
-      await logger.logInto(stackTrace.get(), " --studentList NOT clicked", "error")
+      await logger.logInto(await stackTrace.get(), " --studentList NOT clicked", "error")
     return res;
   },
 

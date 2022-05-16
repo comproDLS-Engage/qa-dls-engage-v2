@@ -49,7 +49,7 @@ module.exports = {
 
     isInitialized: async function () { 
         var res;
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         await action.waitForDocumentLoad();
         res = {
             pageStatus:  await action.waitForDisplayed(this.container_LeftPane),
@@ -59,7 +59,7 @@ module.exports = {
     },
 
     getData_writingPlayerLeftPane: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var obj;
         obj = {
             container_LeftPane:((await action.getElementCount(this.container_LeftPane)) > 0) ? await action.waitForDisplayed(this.container_LeftPane) : false,
@@ -99,12 +99,12 @@ module.exports = {
     //Function to set a value in the score text area
     set_scoreTextArea: async function (value) {
         var res;
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         res = await action.setValue(this.score_txtbox, value);
         if (true == res) {
-            await logger.logInto(stackTrace.get(), "Value is entered in scoreTextArea");
+            await logger.logInto(await stackTrace.get(), "Value is entered in scoreTextArea");
         } else {
-            await logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
@@ -112,61 +112,61 @@ module.exports = {
     //Function to set a value in the feedback text area
     set_feedbackTextArea: async function (value) {
         var res;
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         res = await action.setValue(this.feedback_txtbox, value);
         if (true == res) {
-            await logger.logInto(stackTrace.get(), "Value is entered in feedback_txtbox");
+            await logger.logInto(await stackTrace.get(), "Value is entered in feedback_txtbox");
         } else {
-            await logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
     //Function to click on 'Yes' Radio button
     click_yesRadio_btn: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var res;
         res = await action.click(this.requestReattempted_yes_btn);
         if (true == res) {
-            await logger.logInto(stackTrace.get(), " requestReattempted_yes_btn is clicked");
+            await logger.logInto(await stackTrace.get(), " requestReattempted_yes_btn is clicked");
         }
         else {
-            await logger.logInto(stackTrace.get(), res +"submitDialog_yes_btn is NOT clicked", 'error');
+            await logger.logInto(await stackTrace.get(), res +"submitDialog_yes_btn is NOT clicked", 'error');
         }
         return res;
     },
 
     //Function to click on 'No' button
     click_noRadio_btn: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var res;
         res = await action.click(this.requestReattempted_no_btn);
         if (true == res) {
-            await logger.logInto(stackTrace.get(), " requestReattempted_no_btn is clicked");
+            await logger.logInto(await stackTrace.get(), " requestReattempted_no_btn is clicked");
         }
         else {
-            await logger.logInto(stackTrace.get(), res +"requestReattempted_no_btn is NOT clicked", 'error');
+            await logger.logInto(await stackTrace.get(), res +"requestReattempted_no_btn is NOT clicked", 'error');
         }
         return res;
     },
 
     //Function to click on 'Submit Grade' button
     click_submitGrade_btn: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var res;
         res = await action.click(this.submitGrade_btn);
         if (true == res) {
             res = await this.getData_submitDialog()
-            await logger.logInto(stackTrace.get(), "submitGrade_btn is clicked");
+            await logger.logInto(await stackTrace.get(), "submitGrade_btn is clicked");
         }
         else {
-            await logger.logInto(stackTrace.get(), res +"submitGrade_btn is NOT clicked", 'error');
+            await logger.logInto(await stackTrace.get(), res +"submitGrade_btn is NOT clicked", 'error');
         }
         return res;
     },
 
     getData_submitDialog: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var obj;
         obj = {
             submitDialog_title:((await action.getElementCount(this.submitDialog_title)) > 0) ? await action.getText(this.submitDialog_title) : null,
@@ -184,43 +184,43 @@ module.exports = {
     },
 
     click_submitDialog_cancel_btn: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var res;
         res = await action.click(this.submitDialog_cancel_btn);
         if (true == res) {
-            await logger.logInto(stackTrace.get(), " submitDialog_cancel_btn is clicked");
+            await logger.logInto(await stackTrace.get(), " submitDialog_cancel_btn is clicked");
         }
         else {
-            await logger.logInto(stackTrace.get(), res +"submitDialog_cancel_btn is NOT clicked", 'error');
+            await logger.logInto(await stackTrace.get(), res +"submitDialog_cancel_btn is NOT clicked", 'error');
         }
         return res;
     },
 
     click_submitDialog_confirm_btn: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var res;
         res = await action.click(this.submitDialog_confirm_btn);
         if (true == res) {
             await browser.pause(2000)
             res = await this.getData_writingPlayerLeftPane()
-            await logger.logInto(stackTrace.get(), " submitDialog_confirm_btn is clicked");
+            await logger.logInto(await stackTrace.get(), " submitDialog_confirm_btn is clicked");
         }
         else {
-            await logger.logInto(stackTrace.get(), res +"submitDialog_confirm_btn is NOT clicked", 'error');
+            await logger.logInto(await stackTrace.get(), res +"submitDialog_confirm_btn is NOT clicked", 'error');
         }
         return res;
     },
 
     click_activity: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var res;
         res = await action.click(this.activityName);
         if (true == res) {
-            await logger.logInto(stackTrace.get(), " submitDialog_cancel_btn is clicked");
+            await logger.logInto(await stackTrace.get(), " submitDialog_cancel_btn is clicked");
             res = await this.isInitialized();
         }
         else {
-            await logger.logInto(stackTrace.get(), res +"submitDialog_cancel_btn is NOT clicked", 'error');
+            await logger.logInto(await stackTrace.get(), res +"submitDialog_cancel_btn is NOT clicked", 'error');
         }
         return res;
     }

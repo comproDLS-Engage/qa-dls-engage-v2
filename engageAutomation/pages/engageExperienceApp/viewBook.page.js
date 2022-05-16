@@ -45,7 +45,7 @@ module.exports = {
     flipbookList: selectorFile.css.ComproEngage.viewBook.flipbookList,
 
     isInitialized: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         await action.waitForDocumentLoad();
         res = {
             pageStatus: await action.waitForDisplayed(this.bookCover),
@@ -55,7 +55,7 @@ module.exports = {
     },
 
     getViewBookData: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         obj = {
             bookCover: ((await action.getElementCount(this.bookCover)) > 0) ? await action.waitForDisplayed(this.bookCover) : null,
             bookTitle: ((await action.getElementCount(this.bookTitle)) > 0) ? await action.getText(this.bookTitle) : null,
@@ -72,12 +72,12 @@ module.exports = {
             component: await appShell.getTabsListData(),
             unit_lbl: ((await action.getElementCount(this.unit_lbl)) > 0) ? await action.getText(this.unit_lbl) : null
         }
-        await logger.logInto(stackTrace.get(), JSON.stringify(obj));
+        await logger.logInto(await stackTrace.get(), await JSON.stringify(obj));
         return obj;
     },
 
     getUnitsData: async function (str) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         let list, i, arr = [];
         await action.waitForDisplayed(this.unitSkeleton);
         await action.waitForDisplayed(this.unitSkeleton, undefined, true);
@@ -117,7 +117,7 @@ module.exports = {
     },
 
     clickOpenFlipbook: async function () { //to be reviewed for multiple flipbook scenario - Akhil
-        await logger.logInto(stackTrace.get())
+        await logger.logInto(await stackTrace.get())
         res = await action.click(this.openFlipbook_btn);
         if (res == true) {
             if ((await action.getElementCount(this.flipbookList)) > 0) { //in case of multiple flipbooks
@@ -125,49 +125,49 @@ module.exports = {
             }
             else {
                 //res = require('./flipbook.page.js') //TBD when flipbook page object is added.
-                await logger.logInto(stackTrace.get(), " --Open Flipbook Button clicked");
+                await logger.logInto(await stackTrace.get(), " --Open Flipbook Button clicked");
             }
         }
         else
-            await logger.logInto(stackTrace.get(), " --Open Flipbook Button NOT clicked", "error");
+            await logger.logInto(await stackTrace.get(), " --Open Flipbook Button NOT clicked", "error");
         return res;
     },
 
     getListOfFlipbooks: async function () {
-        await logger.logInto(stackTrace.get())
+        await logger.logInto(await stackTrace.get())
         var arr = [];
         list = await action.findElements(this.flipbookList);
         for (i = 0; i < list.length; i++) {
             arr[i] = await action.getText(this.flipbookList + i);
         }
-        await logger.logInto(stackTrace.get(), arr);
+        await logger.logInto(await stackTrace.get(), arr);
         return arr;
     },
 
     clickViewClasses: async function () {
-        await logger.logInto(stackTrace.get())
+        await logger.logInto(await stackTrace.get())
         res = await action.click(this.viewClass);
         if (res == true) {
-            await logger.logInto(stackTrace.get(), " --View Classes Button clicked");
+            await logger.logInto(await stackTrace.get(), " --View Classes Button clicked");
             res = await require('./classDrawer.page').isInitialized();
         } else
-            await logger.logInto(stackTrace.get(), " --View Classes Button NOT clicked", "error");
+            await logger.logInto(await stackTrace.get(), " --View Classes Button NOT clicked", "error");
         return res;
     },
 
     clickAddBook: async function () {
-        await logger.logInto(stackTrace.get())
+        await logger.logInto(await stackTrace.get())
         res = await action.click(this.addBook_option);
         if (res == true) {
-            await logger.logInto(stackTrace.get(), " --Add Book Button clicked");
+            await logger.logInto(await stackTrace.get(), " --Add Book Button clicked");
             res = await action.waitForDisplayed(this.myBooks_lbl);
         } else
-            await logger.logInto(stackTrace.get(), " --Add Book Button NOT clicked", "error");
+            await logger.logInto(await stackTrace.get(), " --Add Book Button NOT clicked", "error");
         return res;
     },
 
     clickUnit: async function (str) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         res = false;
         let i, list, list2, current;
         list = await action.findElements(this.unitTitle);
@@ -182,38 +182,38 @@ module.exports = {
                 if (res == true) {
                     let unitDetailPage = require('./viewUnit.page');
                     res = await unitDetailPage.isInitialized();
-                    await logger.logInto(stackTrace.get(), " -- Unit clicked");
+                    await logger.logInto(await stackTrace.get(), " -- Unit clicked");
                 }
                 else {
                     res = res + " -- Error in clicking Unit";
-                    await logger.logInto(stackTrace.get(), res, "error");
+                    await logger.logInto(await stackTrace.get(), res, "error");
                 }
                 break;
             }
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto(await stackTrace.get(), res);
         return res;
     },
 
     getMoreOptionsButtonData: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         obj = {
             addBook: ((await action.getElementCount(this.addBook_option)) > 0) ? await action.getText(this.addBook_option) : null,
             removeBook: ((await action.getElementCount(this.removeBook_option)) > 0) ? await action.getText(this.removeBook_option) : null,
             viewBookDetails: ((await action.getElementCount(this.viewBookDetails_option)) > 0) ? await action.getText(this.viewBookDetails_option) : null
         }
-        await logger.logInto(stackTrace.get(), JSON.stringify(obj));
+        await logger.logInto(await stackTrace.get(), await JSON.stringify(obj));
         return obj;
     },
 
     clickMoreOptionsButton: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         res = await action.click(this.moreOptions_btn);
         if (res == true) {
-            await logger.logInto(stackTrace.get(), " --More Options Button clicked");
+            await logger.logInto(await stackTrace.get(), " --More Options Button clicked");
             res = await this.getMoreOptionsButtonData();
         } else
-            await logger.logInto(stackTrace.get(), " --More Options Button NOT clicked", "error");
+            await logger.logInto(await stackTrace.get(), " --More Options Button NOT clicked", "error");
         return res;
     },
 
@@ -229,51 +229,51 @@ module.exports = {
     },*/
 
     getRemoveBookPopUpData: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         obj = {
             removeBook_title: ((await action.getElementCount(this.removeBook_title)) > 0) ? await action.getText(this.removeBook_title) : null,
             removeBook_subtitle: ((await action.getElementCount(this.removeBook_subtitle)) > 0) ? await action.getText(this.removeBook_subtitle) : null,
             removeBookDialogCancel: ((await action.getElementCount(this.removeBookDialogCancel)) > 0) ? await action.getText(this.removeBookDialogCancel) : null,
             removeBookDialogRemove: ((await action.getElementCount(this.removeBookDialogRemove)) > 0) ? await action.getText(this.removeBookDialogRemove) : null
         }
-        await logger.logInto(stackTrace.get(), JSON.stringify(obj));
+        await logger.logInto(await stackTrace.get(), await JSON.stringify(obj));
         return obj;
     },
 
     clickRemoveBook: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         //this.clickMoreOptionsButton();
         res = await action.click(this.removeBook_option);
         if (res == true) {
-            await logger.logInto(stackTrace.get(), " --Remove Book Button clicked");
+            await logger.logInto(await stackTrace.get(), " --Remove Book Button clicked");
             res = await this.getRemoveBookPopUpData();
         } else
-            await logger.logInto(stackTrace.get(), " --Remove Book Button NOT clicked", "error");
+            await logger.logInto(await stackTrace.get(), " --Remove Book Button NOT clicked", "error");
         return res;
     },
 
     clickCancel_RemoveBookDialog: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         res = await action.click(this.removeBookDialogCancel);
         if (res == true) {
             res = await action.waitForDisplayed(this.myBooks_lbl);
-            await logger.logInto(stackTrace.get(), " --Cancel Button clicked");
+            await logger.logInto(await stackTrace.get(), " --Cancel Button clicked");
         } else
-            await logger.logInto(stackTrace.get(), " --Cancel Button NOT clicked", "error");
+            await logger.logInto(await stackTrace.get(), " --Cancel Button NOT clicked", "error");
         return res;
     },
 
     clickRemove_RemoveBookDialog: async function () {
-        await logger.logInto(stackTrace.get())
+        await logger.logInto(await stackTrace.get())
         res = await action.click(this.removeBookDialogRemove);
         if (res == true) {
             res = await action.waitForDisplayed(this.removeBookDialogRemove, undefined, true)
             if (res == true) {
                 res = await action.waitForDisplayed(this.myBooks_lbl, undefined, true);
-                await logger.logInto(stackTrace.get(), " --Remove Book Button clicked");
+                await logger.logInto(await stackTrace.get(), " --Remove Book Button clicked");
             }
         } else
-            await logger.logInto(stackTrace.get(), " --Remove Book Button NOT clicked", "error");
+            await logger.logInto(await stackTrace.get(), " --Remove Book Button NOT clicked", "error");
         return res;
     },
 
@@ -289,23 +289,23 @@ module.exports = {
     // },
 
     clickUnitMoreOptions: async function (unitIndex) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         res = await action.click(this.unitMoreOptions + unitIndex);
         if (res == true) {
-            await logger.logInto(stackTrace.get(), " --Unit More Options Clicked");
+            await logger.logInto(await stackTrace.get(), " --Unit More Options Clicked");
             res = await this.get_UnitMoreOptionsButton_Data();
         } else
-            await logger.logInto(stackTrace.get(), " --Unit More Options NOT clicked", "error");
+            await logger.logInto(await stackTrace.get(), " --Unit More Options NOT clicked", "error");
         return res;
     },
 
     get_UnitMoreOptionsButton_Data: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         obj = {
             openInFlipbook: ((await action.getElementCount(this.unitOpenFlipbook_option)) > 0) ? await action.getText(this.unitOpenFlipbook_option) : null,
             viewActivity: ((await action.getElementCount(this.unitViewActivity_option)) > 0) ? await action.getText(this.unitViewActivity_option) : null
         }
-        await logger.logInto(stackTrace.get(), JSON.stringify(obj));
+        await logger.logInto(await stackTrace.get(), await JSON.stringify(obj));
         return obj;
     },
 
@@ -335,26 +335,26 @@ module.exports = {
     },*/
 
     clickOnContinue: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         res = await action.click(this.lastActivity_Continue);
         if (res == true) {
             //let activityPlayerPage = require('./activityPlayer.page');
             //res = activityPlayerPage.isInitialized();
             // to be activated when activity player is updated - Akhil
-            await logger.logInto(stackTrace.get(), " --Continue Button clicked");
+            await logger.logInto(await stackTrace.get(), " --Continue Button clicked");
         } else
-            await logger.logInto(stackTrace.get(), " --Continue Button NOT clicked", "error");
+            await logger.logInto(await stackTrace.get(), " --Continue Button NOT clicked", "error");
         return res;
     },
 
     clickOnDismiss: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         res = await action.click(this.lastActivity_Dismiss);
         if (res == true) {
-            await logger.logInto(stackTrace.get(), " --Dismiss Button clicked");
+            await logger.logInto(await stackTrace.get(), " --Dismiss Button clicked");
             res = await action.waitForDisplayed(this.lastActivity_icon, undefined, true)
         } else
-            await logger.logInto(stackTrace.get(), " --Dismiss Button NOT clicked", "error");
+            await logger.logInto(await stackTrace.get(), " --Dismiss Button NOT clicked", "error");
         return res;
     }
 }

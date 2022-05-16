@@ -1,6 +1,6 @@
 "use strict";
 var action = require('../../core/actionLibrary/baseActionLibrary.js');
-var selectorFile = await jsonParserUtil.jsonParser(selectorDir);
+var selectorFile = jsonParserUtil.jsonParser(selectorDir);
 
 module.exports = {
     snackbarInfo_txt: selectorFile.css.ComproEngage.widgets.snackbarInfo_txt,

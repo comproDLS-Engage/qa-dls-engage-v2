@@ -43,7 +43,7 @@ module.exports = {
 
   isInitialized: async function () {
     var res;
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     await action.waitForDocumentLoad();
     res = {
       pageStatus: await action.waitForDisplayed(this.pageTitle),
@@ -53,7 +53,7 @@ module.exports = {
   },
 
   getData_gradeBookStudentView: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var obj;
     obj = {
       pageTitle: ((await action.getElementCount(this.pageTitle)) > 0) ? await action.getText(this.pageTitle) : null,
@@ -75,7 +75,7 @@ module.exports = {
   },
 
   getData_productList: async function (productListNameName) {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var obj = [];
     await action.waitForDisplayed(this.productListName);
     var list = await action.findElements(this.productListName);
@@ -99,7 +99,7 @@ module.exports = {
   },
 
   click_productListName: async function (productListNameName) {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var i, list, res;
     list = await action.findElements(this.productListName);
     for (i = 0; i < list.length; i++) {
@@ -110,16 +110,16 @@ module.exports = {
     }
     if (res == true) {
       res = await require('./gradeBookStudent.page').isInitialized();
-      await logger.logInto(stackTrace.get(), " --productListName clicked");
+      await logger.logInto(await stackTrace.get(), " --productListName clicked");
     }
     else
-      await logger.logInto(stackTrace.get(), " --productListName NOT clicked", "error")
+      await logger.logInto(await stackTrace.get(), " --productListName NOT clicked", "error")
     return res;
   },
 
   //Function for returning the Unit details
   getData_UnitDetails: async function (folder_TitleName) {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var obj = [];
     await action.waitForDisplayed(this.folder_Title);
     var list = await action.findElements(this.folder_Title);
@@ -161,7 +161,7 @@ module.exports = {
   },
 
   getData_showActivity: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var obj;
     obj = {
       activity_lbl: ((await action.getElementCount(this.activity_lbl)) > 0) ? await action.getText(this.activity_lbl) : null,
@@ -173,7 +173,7 @@ module.exports = {
   },
 
   getData_activityDetails: async function (activityNameName) {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var obj = [];
     await action.waitForDisplayed(this.activityName);
     var list = await action.findElements(this.activityName);
@@ -202,33 +202,33 @@ module.exports = {
 
 
   click_download_btn: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.download_btn);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " download_btn is clicked");
+      await logger.logInto(await stackTrace.get(), " download_btn is clicked");
     }
     else {
-      await logger.logInto(stackTrace.get(), res + "download_btn is NOT clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + "download_btn is NOT clicked", 'error');
     }
     return res;
   },
 
   click_sendtoemail_btn: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.sendtoemail_btn);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " sendtoemail_btn is clicked");
+      await logger.logInto(await stackTrace.get(), " sendtoemail_btn is clicked");
     }
     else {
-      await logger.logInto(stackTrace.get(), res + "sendtoemail_btn is NOT clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + "sendtoemail_btn is NOT clicked", 'error');
     }
     return res;
   },
 
   click_showActivities_btn: async function (folder_TitleName) {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var i, list, res;
     list = await action.findElements(this.showActivities_btn);
     for (i = 0; i < list.length; i++) {
@@ -238,17 +238,17 @@ module.exports = {
       }
     }
     if (res == true) {
-      await logger.logInto(stackTrace.get(), " --showActivities_btn clicked");
+      await logger.logInto(await stackTrace.get(), " --showActivities_btn clicked");
       res = await this.getData_showActivity();
     }
     else
-      await logger.logInto(stackTrace.get(), " --showActivities_btn NOT clicked", "error")
+      await logger.logInto(await stackTrace.get(), " --showActivities_btn NOT clicked", "error")
     return res;
   },
 
   //Function to get Activity List and Other options/pills after clicking Show Activities in each folder
   getData_activityDetails: async function (index) {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var obj = [];
     await action.waitForDisplayed(this.activityName);
     await browser.pause(3000);
@@ -267,7 +267,7 @@ module.exports = {
 
   //Function to get Collapsible Labels after clicking Show Activities in each folder
   getData_showActivity_labels: async function (folder_TitleName) {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var obj = [];
     await action.waitForDisplayed(this.lessons_Title_lbl);
     var list = await action.findElements(this.lessons_Title_lbl);
@@ -296,7 +296,7 @@ module.exports = {
     return obj;
   },
   getData_moreOption: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var obj;
     obj = {
       viewAttempt_btn: ((await action.getElementCount(this.viewAttempt_btn)) > 0) ? await action.getText(this.viewAttempt_btn) : null,
@@ -305,7 +305,7 @@ module.exports = {
     return obj;
   },
   click_moreOption: async function (unitName, unitActivity) {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var i, list, res, index;
     list = await action.findElements(this.activityName);
     for (i = 0; i < list.length; i++) {
@@ -321,37 +321,37 @@ module.exports = {
       }
     }
     if (res == true) {
-      await logger.logInto(stackTrace.get(), " --moreOption clicked");
+      await logger.logInto(await stackTrace.get(), " --moreOption clicked");
       res = await this.getData_moreOption();
     }
     else
-      await logger.logInto(stackTrace.get(), " --moreOption NOT clicked", "error")
+      await logger.logInto(await stackTrace.get(), " --moreOption NOT clicked", "error")
     return res;
   },
 
   click_viewAttempt_btn: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.viewAttempt_btn);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " viewAttempt_btn is clicked");
+      await logger.logInto(await stackTrace.get(), " viewAttempt_btn is clicked");
       res = await require('./viewAsStudentAssignment.page').isInitialized();
     }
     else {
-      await logger.logInto(stackTrace.get(), res + "viewAttempt_btn is NOT clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + "viewAttempt_btn is NOT clicked", 'error');
     }
     return res;
   },
 
   click_gradeAttempt_btn: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.gradeAttempt_btn);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " gradeAttempt_btn is clicked");
+      await logger.logInto(await stackTrace.get(), " gradeAttempt_btn is clicked");
     }
     else {
-      await logger.logInto(stackTrace.get(), res + "gradeAttempt_btn is NOT clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + "gradeAttempt_btn is NOT clicked", 'error');
     }
     return res;
   },

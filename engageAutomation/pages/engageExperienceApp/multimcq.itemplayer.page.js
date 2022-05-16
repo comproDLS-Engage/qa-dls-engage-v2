@@ -9,7 +9,7 @@ module.exports = {
 	selectedChoice: selectorFile.css.ComproEngage.multiMcq.selectedChoice,
 
 	isInitialized: async function () {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		//action.switchToFrame("[id*=iframe]");
 		await action.switchToFrame(0);
 		let res = await action.waitForExist(this.choices);
@@ -18,7 +18,7 @@ module.exports = {
 	},
 
 	clickOption: async function (mcqQuesData) {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		await action.switchToFrame(0);
 		let res, choiceSelector;
 		for (let i = 0; i < mcqQuesData.length; i++) {
@@ -27,11 +27,11 @@ module.exports = {
 			if (res == 1 && mcqQuesData[i][2] == 'select') {
 				res = await action.click(choiceSelector);
 				if (true == res) {
-					await logger.logInto(stackTrace.get(), " -- choice is clicked");
+					await logger.logInto(await stackTrace.get(), " -- choice is clicked");
 				}
 				else {
 					res = res + "-- Error in clicking option";
-					await logger.logInto(stackTrace.get(), res, "error");
+					await logger.logInto(await stackTrace.get(), res, "error");
 					break;
 				}
 			}
@@ -41,7 +41,7 @@ module.exports = {
 	},
 
 	getData_multiMcq: async function (mcqQuesData) {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		await action.switchToFrame(0);
 		var obj = [];
 		var res, choiceSelector, selChoiceSelector, value;

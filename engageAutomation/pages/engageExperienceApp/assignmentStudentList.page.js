@@ -40,7 +40,7 @@ module.exports = {
 
     isInitialized: async function () { 
         var res;
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         await action.waitForDocumentLoad();
         res = {
             pageStatus:  await action.waitForDisplayed(this.assignmentDetailPageTitle),
@@ -49,7 +49,7 @@ module.exports = {
     },
 
     getData_assignmentListPage: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var obj;
         obj = {
             assignmentDetailPageTitle:((await action.getElementCount(this.assignmentDetailPageTitle)) > 0) ? await action.getText(this.assignmentDetailPageTitle) : null,
@@ -72,7 +72,7 @@ module.exports = {
     },
 
     getData_assignmentList: async function (assignmentNameName) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var obj=[];
         await action.waitForDisplayed(this.assignmentName);
         var list = await action.findElements(this.assignmentName);
@@ -124,49 +124,49 @@ module.exports = {
 
     //Click function for Due Assignment button
     click_dueAssignmentBtn: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var res;
         res = await action.click(this.dueAssignmentBtn);
         if (true == res) {
-            await logger.logInto(stackTrace.get(), " dueAssignmentBtn is clicked");
+            await logger.logInto(await stackTrace.get(), " dueAssignmentBtn is clicked");
         }
         else {
-            await logger.logInto(stackTrace.get(), res +"dueAssignmentBtn is NOT clicked", 'error');
+            await logger.logInto(await stackTrace.get(), res +"dueAssignmentBtn is NOT clicked", 'error');
         }
         return res;
     },
       
     //Click function for Upcoming Assignment button
     click_upcomingAssignmentBtn: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var res;
         res = await action.click(this.upcomingAssignmentBtn);
         if (true == res) {
-            await logger.logInto(stackTrace.get(), " upcomingAssignmentBtn is clicked");
+            await logger.logInto(await stackTrace.get(), " upcomingAssignmentBtn is clicked");
         }
         else {
-            await logger.logInto(stackTrace.get(), res +"upcomingAssignmentBtn is NOT clicked", 'error');
+            await logger.logInto(await stackTrace.get(), res +"upcomingAssignmentBtn is NOT clicked", 'error');
         }
         return res;
     },
         
     //Click function for Completed Assignment button
     click_completedAssignmentBtn: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var res;
         res = await action.click(this.completedAssignmentBtn);
         if (true == res) {
-            await logger.logInto(stackTrace.get(), " completedAssignmentBtn is clicked");
+            await logger.logInto(await stackTrace.get(), " completedAssignmentBtn is clicked");
         }
         else {
-            await logger.logInto(stackTrace.get(), res +"completedAssignmentBtn is NOT clicked", 'error');
+            await logger.logInto(await stackTrace.get(), res +"completedAssignmentBtn is NOT clicked", 'error');
         }
         return res;
     },
         
     //Click function for 'Show Acivities' button
     click_showActivitiesBtn: async function (assignmentNameName) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var i, list, res;
         list = await action.findElements(this.showActivitiesBtn);
         for (i = 0; i < list.length; i++) {
@@ -176,17 +176,17 @@ module.exports = {
             }
         }
         if (res == true) {
-            await logger.logInto(stackTrace.get(), " --showActivitiesBtn clicked");
+            await logger.logInto(await stackTrace.get(), " --showActivitiesBtn clicked");
             res = await this.getData_activityList(i)
         } 
         else
-            await logger.logInto(stackTrace.get(), " --showActivitiesBtn NOT clicked", "error")
+            await logger.logInto(await stackTrace.get(), " --showActivitiesBtn NOT clicked", "error")
         return res;
     },
 
     //Function to get Activity List in an Assignment
     getData_activityList: async function (index) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var obj=[];
         await browser.pause(2000);
         var list = await action.findElements(this.activityName+index);
@@ -204,7 +204,7 @@ module.exports = {
 
     //Click function for Clicking selected activity
     click_activityName: async function (activityNameName) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var i, list, res;
         list = await action.findElements(this.activityName);
         for (i = 0; i < list.length; i++) {
@@ -214,11 +214,11 @@ module.exports = {
             }
         }
         if (res == true) {
-            await logger.logInto(stackTrace.get(), " --activityName clicked");
+            await logger.logInto(await stackTrace.get(), " --activityName clicked");
             res =await require ('./activityPlayer.page').isInitialized();
         } 
         else
-            await logger.logInto(stackTrace.get(), " --activityName NOT clicked", "error")
+            await logger.logInto(await stackTrace.get(), " --activityName NOT clicked", "error")
         return res;
     }
 

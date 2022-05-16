@@ -14,7 +14,7 @@ module.exports = {
 
     isInitialized: async function () {
         var res;
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         await action.waitForDocumentLoad();
         res = {
             pageStatus: await action.waitForDisplayed(this.container),
@@ -24,7 +24,7 @@ module.exports = {
     },
 
     getData_contentPlayer: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var obj;
         obj = {
             videoPlayerExists: ((await action.getElementCount(this.videoPlayerExists)) > 0) ? await action.waitForDisplayed(this.videoPlayerExists) : false,
@@ -37,15 +37,15 @@ module.exports = {
     },
 
     click_scrollToTopBtn: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var res;
         res = await action.click(this.scrollToTopBtn);
         if (true == res) {
-            await logger.logInto(stackTrace.get(), " scrollToTopBtn is clicked");
+            await logger.logInto(await stackTrace.get(), " scrollToTopBtn is clicked");
             res = await action.waitForDisplayed(this.scrollToTopBtn, undefined, true);
         }
         else {
-            await logger.logInto(stackTrace.get(), res + "scrollToTopBtn is NOT clicked", 'error');
+            await logger.logInto(await stackTrace.get(), res + "scrollToTopBtn is NOT clicked", 'error');
         }
         return res;
     },

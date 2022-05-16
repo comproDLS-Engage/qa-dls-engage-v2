@@ -17,7 +17,7 @@ module.exports = {
 
 
     isInitialized: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         await action.waitForDocumentLoad();
         res = {
             pageStatus: await action.waitForDisplayed(this.bookCoverIcon)

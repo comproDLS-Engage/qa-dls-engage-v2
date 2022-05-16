@@ -40,7 +40,7 @@ module.exports = {
     msgBar: selectorFile.css.ComproEngage.myClassPage.msgBar,
     bookSkeleton: selectorFile.css.ComproEngage.createClassPage.bookSkeleton,
     isInitialized: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         // action.waitForDocumentLoad();
         let pageStatus = await action.waitForDisplayed(this.title_lbl)
         //wait for displayed book is also loaded
@@ -51,7 +51,7 @@ module.exports = {
     },
 
     get_PageData: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         obj = {
             pageStatus: "",
             pageTitle: (await action.getElementCount(this.pageTitle)) > 0 ? await action.getText(this.pageTitle) : null,
@@ -77,10 +77,10 @@ module.exports = {
     },
 
     set_ClassName: async function (name) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         res = await action.click(this.title_txtbox);
         if (res == true) {
-            await logger.logInto(stackTrace.get(), "-- title textbox is clicked");
+            await logger.logInto(await stackTrace.get(), "-- title textbox is clicked");
             res = await action.setValue(this.title_txtbox, name);
             if (res == true) {
                 res = await action.getValue(this.title_txtbox);
@@ -88,30 +88,30 @@ module.exports = {
         }
         else {
             res = res + "-- Title textbox is NOT clicked";
-            await logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
     click_StartDate_Button: async function () { // this function should be updated
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         res = await action.click(this.startDate_txtbox);
         if (res == true)
-            await logger.logInto(stackTrace.get(), "--start date is clicked");
+            await logger.logInto(await stackTrace.get(), "--start date is clicked");
         else {
             res = res + "-- Start Date is NOT clicked";
-            await logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
     click_EndDate_Button: async function () { // this function should be updated
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         res = await action.click(this.endDate_txtbox);
         if (res == true) {
-            await logger.logInto(stackTrace.get(), "--start date is clicked");
+            await logger.logInto(await stackTrace.get(), "--start date is clicked");
         } else {
             res = res + "-- Start Date is NOT clicked";
-            await logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
@@ -152,37 +152,37 @@ module.exports = {
      },*/
 
     click_Cancel_Button: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         res = await action.click(this.cancelBtn);
         if (res == true) {
-            await logger.logInto(stackTrace.get(), "-- cancelBtn is clicked");
+            await logger.logInto(await stackTrace.get(), "-- cancelBtn is clicked");
             var classDashboardPage = require('./classDashboard.page.js');
             res = await classDashboardPage.isInitialized();
         }
         else {
             res = res + " -- cancelBtn is NOT clicked";
-            await logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
     click_Create_Button: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         return this.click_Create_Save_Restore_Button("create");
     },
 
     click_Save_Button: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         return this.click_Create_Save_Restore_Button("save");
     },
 
     click_Restore_Button: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         return this.click_Create_Save_Restore_Button("restore");
     },
 
     click_Create_Save_Restore_Button: async function (btn) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         //let flag = false;
         if (btn.toLowerCase() == "create")
             res = await action.click(this.createBtn);
@@ -193,18 +193,18 @@ module.exports = {
         ret = await this.get_ErrorMessages();
         if (ret.endDateErrorMsg != null || ret.titleErrorMsg != null || ret.startDateErrorMsg != null || ret.bookErrorMsg != null) {
             res = ret;
-            await logger.logInto(stackTrace.get(), "Error message found on the page");
+            await logger.logInto(await stackTrace.get(), "Error message found on the page");
             return res;
         }
         else if (res == true) {
 
             if (btn == "create") {
-                await logger.logInto(stackTrace.get(), "success page launched");
+                await logger.logInto(await stackTrace.get(), "success page launched");
                 let successClassPage = require('./successClass.page.js')
                 res = await successClassPage.isInitialized();
             }
             else {
-                await logger.logInto(stackTrace.get(), "Instructor my classes page is launched");
+                await logger.logInto(await stackTrace.get(), "Instructor my classes page is launched");
                 res = await action.waitForDisplayed(this.msgBar);
                 let txt = await action.getText(this.msgBar);
                 await action.click(this.msgBarClose)
@@ -216,13 +216,13 @@ module.exports = {
         }
         else {
             res = res + " -- unkown error !!";
-            await logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
     get_ErrorMessages: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         obj = {
             titleErrorMsg: (await action.getElementCount(this.titleErrorMsg)) > 0 ? await action.getText(this.titleErrorMsg) : null,
             startDateErrorMsg: (await action.getElementCount(this.startDateErrorMsg)) > 0 ? await action.getText(this.startDateErrorMsg) : null,
@@ -246,7 +246,7 @@ module.exports = {
     },
 
     checkbookAvaibility: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         if ((await action.getElementCount(this.bookIcon)) < 1) {
 
             res = null;
@@ -256,16 +256,16 @@ module.exports = {
     },
 
     click_AddANewBook_Button: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
 
         res = await action.click(this.AddANewBook_btn);
         if (res == true) {
-            await logger.logInto(stackTrace.get(), res + "Add A New Book Button Clicked");
+            await logger.logInto(await stackTrace.get(), res + "Add A New Book Button Clicked");
             let addBookPage = require('./addBook.page.js')
             res = await addBookPage.isInitialized();
         }
         else
-            await logger.logInto(stackTrace.get(), res + ":Add A New Book Button is NOT Clicked", "error");
+            await logger.logInto(await stackTrace.get(), res + ":Add A New Book Button is NOT Clicked", "error");
 
         console.log(res)
         return res;
@@ -274,11 +274,11 @@ module.exports = {
     clickdeleteBook: async function () {
         res = await action.click(this.removeBookbtn);
         if (res == true) {
-            await logger.logInto(stackTrace.get(), res + "Book is removed");
+            await logger.logInto(await stackTrace.get(), res + "Book is removed");
             res = await this.isInitialized();
         }
         else
-            await logger.logInto(stackTrace.get(), res + ":Add A New Book Button is NOT Clicked", "error");
+            await logger.logInto(await stackTrace.get(), res + ":Add A New Book Button is NOT Clicked", "error");
 
         return res;
     }

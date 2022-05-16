@@ -39,7 +39,7 @@ module.exports = {
     assignmentsTab:selectorFile.css.ComproEngage.teacherViewClassPage.assignmentsTab,
 
     isInitialized: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         await action.waitForDocumentLoad();
         let pageStatus = await action.waitForDisplayed(this.productTabBtns + 0 + "]");
       //  res = this.getViewClassPageData();
@@ -49,7 +49,7 @@ module.exports = {
 
     getViewClassPageData: async function () {
         await action.waitForDocumentLoad();
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         obj = {
             className: ((await action.getElementCount(this.pageTitle)) > 0) ? await action.getText(this.pageTitle) : null,
             classDuration: ((await action.getElementCount(this.pageSubTitle)) > 0) ? await action.getText(this.pageSubTitle) : null,
@@ -95,22 +95,22 @@ module.exports = {
 
     //Clicking on 'Class Options' button launches Class Options - Edit class, add books
     clickClassOptionsButton: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         res = await action.click(this.classOptionsBtn);
         if (res == true) {
-            await logger.logInto(stackTrace.get(), "-- Class Options button is clicked");
+            await logger.logInto(await stackTrace.get(), "-- Class Options button is clicked");
             res = await this.getClassOptionsList();
         }
         else {
             res = res + "-- Error in clicking View Book button";
-            await logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
     //class options list 
     getClassOptionsList: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         obj = {
             editClassBtn: ((await action.getElementCount(this.editClassBtn)) > 0) ? await action.getText(this.editClassBtn) : null,
             addBooksBtn: ((await action.getElementCount(this.addBooksBtn)) > 0) ? await action.getText(this.addBooksBtn) : null
@@ -120,11 +120,11 @@ module.exports = {
 
     //Clicking on any book component launches snackbar 'Feature Coming Soon'
     clickBookComponent: async function (componentNumber) { //disable for now, to be reviewed later
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         let componentSelector = this.bookComponentNames_btn + (componentNumber) + "]";
         res = await action.click(componentSelector);
         if (res == true) {
-            await logger.logInto(stackTrace.get(), "-- Selected component is clicked");
+            await logger.logInto(await stackTrace.get(), "-- Selected component is clicked");
             res = await require('../../test/engageExperienceApp/common.test.js').get_Snackbar_Message_Text();
 
             /*res = action.waitForDisplayed(this.snackbarInfo_txt);
@@ -139,77 +139,77 @@ module.exports = {
         }
         else {
             res = res + "-- Error in clicking Selected component button";
-            await logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
     //Click edit class button on more options.
     clickEditbtn: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         await action.waitForDisplayed(this.editClassBtn)
         res = await action.click(this.editClassBtn);
         if (res == true) {
-            await logger.logInto(stackTrace.get(), "-- Edit btn is clicked");
+            await logger.logInto(await stackTrace.get(), "-- Edit btn is clicked");
             res = await createClassPage.isInitialized();
         }
         else {
             res = res + "-- Error in clicking Inbox Tab";
-            await logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
     //clicking on Inbox Tab
     clickInboxTab: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         res = await action.click(this.inboxTab);
         if (res == true) {
-            await logger.logInto(stackTrace.get(), "-- Inbox Tab is clicked");
+            await logger.logInto(await stackTrace.get(), "-- Inbox Tab is clicked");
             res = await this.isInitialized();
         }
         else {
             res = res + "-- Error in clicking Inbox Tab";
-            await logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
     //clicking on Assignment Tab
     clickAssignmentsTab: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         await action.waitForDisplayed(this.assignmentsTab);
         res = await action.click(this.assignmentsTab);
         if (res == true) {
-            await logger.logInto(stackTrace.get(), "-- Assignment Tab is clicked");
+            await logger.logInto(await stackTrace.get(), "-- Assignment Tab is clicked");
             res =await require ('./assignmentListTeacher.page').isInitialized();
         }
         else {
             res = res + "-- Error in clicking Assignment Tab";
-            await logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
     //clicking on Progress Tab
     clickStudentsTab: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         res = await action.click(this.productTabBtns + "2]");
         if (res == true) {
-            await logger.logInto(stackTrace.get(), "-- Progress Tab is clicked");
+            await logger.logInto(await stackTrace.get(), "-- Progress Tab is clicked");
             res = await this.getStudentPageData();
         }
         else {
             res = res + "-- Error in clicking Progress Tab";
-            await logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
     //Click Invite Students button
     clickInviteStudentsButton: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         res = await action.click(this.inviteStudents_btn);
         if (res == true) {
-            await logger.logInto(stackTrace.get(), "-- Invite Students button is clicked");
+            await logger.logInto(await stackTrace.get(), "-- Invite Students button is clicked");
             res = await require('../../test/engageExperienceApp/common.test.js').get_Snackbar_Message_Text();
 
             /*res = action.waitForDisplayed(this.snackbarInfo_txt);
@@ -224,17 +224,17 @@ module.exports = {
         }
         else {
             res = res + "-- Error in clicking Invite Students button button";
-            await logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
     //Click Create Assignments button
     clickCreateAssignmentsButton: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         res = await action.click(this.createAssignments_btn);
         if (res == true) {
-            await logger.logInto(stackTrace.get(), "-- Invite Students button is clicked");
+            await logger.logInto(await stackTrace.get(), "-- Invite Students button is clicked");
             res = await require('../../test/engageExperienceApp/common.test.js').get_Snackbar_Message_Text();
 
             /*res = action.waitForDisplayed(this.snackbarInfo_txt);
@@ -249,34 +249,34 @@ module.exports = {
         }
         else {
             res = res + "-- Error in clicking Invite Students button button";
-            await logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
     //Click on View Book button
     clickViewBookbtn: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         res = await action.click(this.viewBookBtn);
         if (res == true) {
-            await logger.logInto(stackTrace.get(), "-- Progress Tab is clicked");
+            await logger.logInto(await stackTrace.get(), "-- Progress Tab is clicked");
             res = await bookDetailsPage.isInitialized();
         }
         else {
             res = res + "-- Error in clicking Progress Tab";
-            await logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
     clickGradeBookbtn: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         res = await action.click(this.gradebookBtn);
         if (res == true) {
-            await logger.logInto(stackTrace.get(), "-- gradebookBtn is clicked");
+            await logger.logInto(await stackTrace.get(), "-- gradebookBtn is clicked");
             res = await gradeBookPage.isInitialized();
         }
         else {
             res = res + "-- Error in clicking gradebookBtn";
-            await logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },

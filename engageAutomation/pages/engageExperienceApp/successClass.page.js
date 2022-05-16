@@ -15,7 +15,7 @@ module.exports = {
     pageTitle: selectorFile.css.ComproEngage.createClassPage.pageTitle,
     pageSubTitle: selectorFile.css.ComproEngage.createClassPage.pageSubTitle,
     isInitialized: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         await action.waitForDocumentLoad();
         await action.waitForDisplayed(this.loaderIcon, undefined, true);
         let pageStatus = await action.waitForDisplayed(this.success_img)
@@ -24,7 +24,7 @@ module.exports = {
         return res;
     },
     get_SuccessPageData: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var obj = {
             pageTitle: (await action.getElementCount(this.pageTitle)) > 0 ? await action.getText(this.pageTitle) : null,
             pageSubTitle: (await action.getElementCount(this.pageSubTitle)) > 0 ? await action.getText(this.pageSubTitle) : null,
@@ -48,7 +48,7 @@ module.exports = {
         }
         else {
             res = res + " -- viewclassBtn is NOT clicked";
-            await logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
@@ -62,7 +62,7 @@ module.exports = {
         }
         else {
             res = res + " -- headerBack_btn is NOT clicked";
-            await logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     }

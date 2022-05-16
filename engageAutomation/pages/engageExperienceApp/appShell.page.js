@@ -1,6 +1,5 @@
 "use strict";
 var action = require('../../core/actionLibrary/baseActionLibrary.js');
-const { confirmPassword_input } = require('./settings.page.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
 var res;
 
@@ -49,7 +48,7 @@ module.exports = {
 	shareBtn: selectorFile.css.ComproEngage.appShell.shareBtn,
 
 	isInitialized: async function () {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		await action.waitForDocumentLoad();
 		res = {
 			leftPane: ((await action.getElementCount(this.custLogo + "," + this.toggleSidebarBtn)) > 0) ? true : false,
@@ -89,7 +88,7 @@ module.exports = {
 	},
 
 	clickDashboardButton: async function () {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		res = await action.click(this.dashboardBtn);
 		if (true == res) {
 			let dashboardPage = await require('./dashboard.page.js');
@@ -97,13 +96,13 @@ module.exports = {
 		}
 		else {
 			res = res + " -- Error in clicking Dashboard Button";
-			await logger.logInto(stackTrace.get(), res, 'error');
+			await logger.logInto(await stackTrace.get(), res, 'error');
 		}
 		return res;
 	},
 
 	clickBrowseButton: async function () {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		res = await action.click(this.browseBtn);
 		if (true == res) {
 			let browse = await require('./browse.page.js');
@@ -111,20 +110,20 @@ module.exports = {
 		}
 		else {
 			res = res + " -- Error in clicking Browse Button";
-			await logger.logInto(stackTrace.get(), res, 'error');
+			await logger.logInto(await stackTrace.get(), res, 'error');
 		}
 		return res;
 	},
 
 	clickClassesButton: async function () {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		res = await action.click(this.classesBtn);
 		if (true == res) {
-			await logger.logInto(stackTrace.get(), res);
+			await logger.logInto(await stackTrace.get(), res);
 		}
 		else {
 			res = res + " -- Error in clicking Class Button";
-			await logger.logInto(stackTrace.get(), res, 'error');
+			await logger.logInto(await stackTrace.get(), res, 'error');
 		}
 		return res;
 	},
@@ -132,15 +131,15 @@ module.exports = {
 	click_PlusIconClassesTab: async function () {
 		res = await action.click(this.classPlusIcon)
 		if (res == true) {
-			await logger.logInto(stackTrace.get(), res + "Class plus button is clicked");
+			await logger.logInto(await stackTrace.get(), res + "Class plus button is clicked");
 		}
 		else
-			await logger.logInto(stackTrace.get(), res + ":Add A New Book Button is NOT Clicked", "error");
+			await logger.logInto(await stackTrace.get(), res + ":Add A New Book Button is NOT Clicked", "error");
 		return res;
 	},
 
 	clickNotificationButton: async function () {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		res = await action.click(this.notificationBtn);
 		if (true == res) {
 			await action.waitForDisplayed(this.noNotificationImg);
@@ -152,20 +151,20 @@ module.exports = {
 		}
 		else {
 			res = res + " -- Error in clicking Notification Button";
-			await logger.logInto(stackTrace.get(), res, 'error');
+			await logger.logInto(await stackTrace.get(), res, 'error');
 		}
 		return res;
 	},
 
 	clickNotificationCloseButton: async function () {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		res = await action.click(this.notificationCloseBtn);
 		if (true == res) {
 			res = await action.waitForDisplayed(this.grayBackdrop, undefined, true);
 		}
 		else {
 			res = res + " -- Error in clicking Notification Close Button";
-			await logger.logInto(stackTrace.get(), res, 'error');
+			await logger.logInto(await stackTrace.get(), res, 'error');
 		}
 		return res;
 	},
@@ -198,7 +197,7 @@ module.exports = {
 	},*/
 
 	selectLanguagefromLanguageSelector: async function (languageToSelect) {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		res = await action.click(this.languageSwitcherBtn);
 		await action.waitForDisplayed(this.languageList);
 		if (res == true) {
@@ -217,13 +216,13 @@ module.exports = {
 		}
 		else {
 			res = res + " -- Error in clicking languageSwitcherBtn";
-			await logger.logInto(stackTrace.get(), res, 'error');
+			await logger.logInto(await stackTrace.get(), res, 'error');
 		}
 		return res;
 	},
 
 	clickProfileButton: async function () {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		res = await action.waitForDisplayed(this.userProfileBtn);
 		res = await action.click(this.userProfileBtn);
 
@@ -233,13 +232,13 @@ module.exports = {
 		}
 		else {
 			res = res + " -- Error in clicking Profile Button";
-			await logger.logInto(stackTrace.get(), res, 'error');
+			await logger.logInto(await stackTrace.get(), res, 'error');
 		}
 		return res;
 	},
 
 	getProfileData: async function () {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		var obj = {
 			userName: ((await action.getElementCount(this.userName)) > 0) ? await action.getText(this.userName) : null,
 			emailID: ((await action.getElementCount(this.emailID)) > 0) ? await action.getText(this.emailID) : null,
@@ -251,8 +250,7 @@ module.exports = {
 	},
 
 	clickLogoutButton: async function () {
-		await logger.logInto(stackTrace.get());
-
+		await logger.logInto(await stackTrace.get());
 		await action.waitForDisplayed(this.userProfileLogoutBtn);
 		res = await action.click(this.userProfileLogoutBtn);
 		if (true == res) {
@@ -260,24 +258,24 @@ module.exports = {
 		}
 		else {
 			res = res + " -- Error in clicking Profile Button";
-			await logger.logInto(stackTrace.get(), res, 'error');
+			await logger.logInto(await stackTrace.get(), res, 'error');
 		}
 		return res;
 	},
 
 	clickBackButton: async function () {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		res = await action.click(this.breadcrumbbackbtn);
 		if (res == true) {
-			await logger.logInto(stackTrace.get(), res + "back button is clicked");
+			await logger.logInto(await stackTrace.get(), res + "back button is clicked");
 		}
 		else
-			await logger.logInto(stackTrace.get(), res + ":back button is NOT Clicked", "error");
+			await logger.logInto(await stackTrace.get(), res + ":back button is NOT Clicked", "error");
 		return res;
 	},
 
 	clickIndexButton: async function () { //to be reviewed - akhil
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		res = await action.click(this.indexBtn);
 		if (true == res) {
 			await action.waitForDisplayed(this.chapterTitle);
@@ -287,26 +285,26 @@ module.exports = {
 		}
 		else {
 			res = res + " -- Error in clicking index Button";
-			await logger.logInto(stackTrace.get(), res, 'error');
+			await logger.logInto(await stackTrace.get(), res, 'error');
 		}
 		return res;
 	},
 
 	clickIndexCloseButton: async function () {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		res = await action.click(this.indexCloseBtn);
 		if (true == res) {
 			res = await action.waitForDisplayed(this.indexTOCPanel, undefined, true);
 		}
 		else {
 			res = res + " -- Error in clicking Index Close Button";
-			await logger.logInto(stackTrace.get(), res, 'error');
+			await logger.logInto(await stackTrace.get(), res, 'error');
 		}
 		return res;
 	},
 
 	clickInviteButton: async function () { //to be reviewed - akhil
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		res = await action.click(this.inviteBtnTxt);
 		if (true == res) {
 			res = {
@@ -315,14 +313,14 @@ module.exports = {
 		}
 		else {
 			res = res + " -- Error in clicking Invite Button Button";
-			await logger.logInto(stackTrace.get(), res, 'error');
+			await logger.logInto(await stackTrace.get(), res, 'error');
 		}
 		return res;
 	},
 
 	clickAddToPlaylistButton: async function () { //to be reviewed - akhil
 		//page not working currently, getting crash
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		res = await action.click(this.addToPlaylistBtn);
 		if (true == res) {
 			await action.waitForDisplayed(this.newPlaylistOption);
@@ -332,33 +330,33 @@ module.exports = {
 		}
 		else {
 			res = res + " -- Error in clicking Add To Playlist Button";
-			await logger.logInto(stackTrace.get(), res, 'error');
+			await logger.logInto(await stackTrace.get(), res, 'error');
 		}
 		return res;
 	},
 
 	clickAssignButton: async function () {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		res = await action.click(this.assignBtn);
 		if (true == res) {
-			await logger.logInto(stackTrace.get(), res + "Assign Button clicked");
+			await logger.logInto(await stackTrace.get(), res + "Assign Button clicked");
 			res = await require('./createAssignment.page.js').isInitialized();
 		} else
-			await logger.logInto(stackTrace.get(), res + " -- Error in clicking Assign Button", 'error');
+			await logger.logInto(await stackTrace.get(), res + " -- Error in clicking Assign Button", 'error');
 		return res;
 	},
 
 	selectTab: async function (str) {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		let i, list;
 		list = await action.findElements(this.tabList);
 		for (i = 0; i < list.length; i++) {
 			if ((await action.getText(list[i])) == str) {
 				res = await action.click(list[i]);
 				if (res == true) {
-					await logger.logInto(stackTrace.get(), " --Component clicked");
+					await logger.logInto(await stackTrace.get(), " --Component clicked");
 				} else
-					await logger.logInto(stackTrace.get(), " --Component NOT clicked", "error");
+					await logger.logInto(await stackTrace.get(), " --Component NOT clicked", "error");
 				break;
 			}
 			res = false;
@@ -367,7 +365,7 @@ module.exports = {
 	},
 
 	getTabsListData: async function () {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		let i, list;
 		let obj = {
 			list: null,
@@ -382,18 +380,18 @@ module.exports = {
 				obj.selected = componentArr[i];
 		}
 		obj.list = componentArr;
-		await logger.logInto(stackTrace.get(), JSON.stringify(obj));
+		await logger.logInto(await stackTrace.get(), await JSON.stringify(obj));
 		return obj;
 	},
 
 	clickSettingsButton: async function () {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		res = await action.click(this.settingsBtn);
 		if (true == res) {
-			await logger.logInto(stackTrace.get(), res + "Settings Button clicked");
+			await logger.logInto(await stackTrace.get(), res + "Settings Button clicked");
 			res = await require('./settings.page.js').isInitialized()
 		} else
-			await logger.logInto(stackTrace.get(), res + " -- Error in clicking Settings Button", 'error');
+			await logger.logInto(await stackTrace.get(), res + " -- Error in clicking Settings Button", 'error');
 		return res;
 	}
 };

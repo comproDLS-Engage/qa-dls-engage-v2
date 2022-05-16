@@ -25,7 +25,7 @@ module.exports = {
     viewActivity_moreOptions: selectorFile.css.ComproEngage.viewUnit.viewActivity_moreOptions,
 
     isInitialized: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         await action.waitForDocumentLoad();
         res = {
             pageStatus: await action.waitForDisplayed(this.unitName),
@@ -35,7 +35,7 @@ module.exports = {
     },
 
     getViewUnitData: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         obj = {
             unitThumbnail: ((await action.getElementCount(this.unitThumbnail)) > 0) ? await action.waitForDisplayed(this.unitThumbnail) : null,
             unitName: ((await action.getElementCount(this.unitName)) > 0) ? await action.getText(this.unitName) : null,
@@ -47,47 +47,47 @@ module.exports = {
             previousUnit_btn: ((await action.getElementCount(this.previousUnit_btn)) > 0) ? await action.getText(this.previousUnit_btn) : null,
             component: await appShell.getTabsListData(),
         }
-        await logger.logInto(stackTrace.get(), JSON.stringify(obj));
+        await logger.logInto(await stackTrace.get(), await JSON.stringify(obj));
         return obj;
     },
 
     clickNextUnit: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         res = await action.click(this.nextUnit_btn);
         if (res == true) {
-            await logger.logInto(stackTrace.get(), " --Next Unit Button clicked");
+            await logger.logInto(await stackTrace.get(), " --Next Unit Button clicked");
             await this.isInitialized();
             res = await this.getViewUnitData();
         } else
-            await logger.logInto(stackTrace.get(), " --Next Unit Button NOT clicked", "error");
+            await logger.logInto(await stackTrace.get(), " --Next Unit Button NOT clicked", "error");
         return res;
     },
 
     clickPreviousUnit: async function () {
-        await logger.logInto(stackTrace.get())
+        await logger.logInto(await stackTrace.get())
         res = await action.click(this.previousUnit_btn);
         if (res == true) {
-            await logger.logInto(stackTrace.get(), " --Previous Unit Button clicked");
+            await logger.logInto(await stackTrace.get(), " --Previous Unit Button clicked");
             await this.isInitialized();
             res = await this.getViewUnitData();
         } else
-            await logger.logInto(stackTrace.get(), " --Previous Unit Button NOT clicked", "error");
+            await logger.logInto(await stackTrace.get(), " --Previous Unit Button NOT clicked", "error");
         return res;
     },
 
     clickOpenInFlipBook: async function () {
-        await logger.logInto(stackTrace.get())
+        await logger.logInto(await stackTrace.get())
         res = await action.click(this.openInFlipbook_btn);
         if (res == true) {
-            await logger.logInto(stackTrace.get(), " --Open In FlipBook Button clicked");
+            await logger.logInto(await stackTrace.get(), " --Open In FlipBook Button clicked");
             //res = require('./flipbook.page.js').isInitialized()
         } else
-            await logger.logInto(stackTrace.get(), " --Open In FlipBook Button NOT clicked", "error");
+            await logger.logInto(await stackTrace.get(), " --Open In FlipBook Button NOT clicked", "error");
         return res;
     },
 
     getFolderListData: async function (str) { //this function will get folder and subfolder names
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         let list, i, arr = [];
         list = await action.findElements(this.folderTitle);
         if (str) {
@@ -111,7 +111,7 @@ module.exports = {
     },
 
     expandCollapseFolder: async function (str) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         res = false;
         let i, list;
         list = await action.findElements(this.folderTitle);
@@ -122,12 +122,12 @@ module.exports = {
                 break;
             }
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto(await stackTrace.get(), res);
         return res;
     },
 
     getActivityListData: async function (str) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         let i, arr = [];
         var activityList = await action.findElements(this.activityTitle)
         var pageInfoList = await action.findElements(this.activityPageInfo)
@@ -159,12 +159,12 @@ module.exports = {
                 }
             }
         }
-        await logger.logInto(stackTrace.get(), arr);
+        await logger.logInto(await stackTrace.get(), arr);
         return arr;
     },
 
     clickActivity: async function (str) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         res = false;
         let i, list;
         await action.waitForDisplayed(this.activityTitle);
@@ -175,7 +175,7 @@ module.exports = {
                 break;
             }
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto(await stackTrace.get(), res);
         return res;
     },
 

@@ -19,7 +19,7 @@ module.exports = {
 
         isInitialized: async function () {
     var res;
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     await action.waitForDocumentLoad();
     res = {
         pageStatus: await action.waitForDisplayed(this.editAssignmentHeader)
@@ -28,7 +28,7 @@ module.exports = {
 },
 
 getData_editAssignmentPage: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var obj;
     obj = {
         editAssignmentHeader: ((await action.getElementCount(this.editAssignmentHeader)) > 0) ? await action.getText(this.editAssignmentHeader) : null,
@@ -49,105 +49,105 @@ return obj;
 
 
 click_close_btn: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.close_btn);
     if (true == res) {
-        await logger.logInto(stackTrace.get(), " close_btn is clicked");
+        await logger.logInto(await stackTrace.get(), " close_btn is clicked");
         res = await require('./assignmentDetails.page').isInitialized();
     }
     else {
-        await logger.logInto(stackTrace.get(), res + "close_btn is NOT clicked", 'error');
+        await logger.logInto(await stackTrace.get(), res + "close_btn is NOT clicked", 'error');
     }
     return res;
 },
 
 click_startDate_icon: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.startDate_icon);
     if (true == res) {
-        await logger.logInto(stackTrace.get(), " startDate_icon is clicked");
+        await logger.logInto(await stackTrace.get(), " startDate_icon is clicked");
     }
     else {
-        await logger.logInto(stackTrace.get(), res + "startDate_icon is NOT clicked", 'error');
+        await logger.logInto(await stackTrace.get(), res + "startDate_icon is NOT clicked", 'error');
     }
     return res;
 },
 
 click_dueDate_icon: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.dueDate_icon);
     if (true == res) {
-        await logger.logInto(stackTrace.get(), " dueDate_icon is clicked");
+        await logger.logInto(await stackTrace.get(), " dueDate_icon is clicked");
     }
     else {
-        await logger.logInto(stackTrace.get(), res + "dueDate_icon is NOT clicked", 'error');
+        await logger.logInto(await stackTrace.get(), res + "dueDate_icon is NOT clicked", 'error');
     }
     return res;
 },
 
 click_Cancel: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.Cancel);
     if (true == res) {
-        await logger.logInto(stackTrace.get(), " Cancel is clicked");
+        await logger.logInto(await stackTrace.get(), " Cancel is clicked");
         res = await require('./assignmentDetails.page').isInitialized();
     }
     else {
-        await logger.logInto(stackTrace.get(), res + "Cancel is NOT clicked", 'error');
+        await logger.logInto(await stackTrace.get(), res + "Cancel is NOT clicked", 'error');
     }
     return res;
 },
 
 click_SaveandClose: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.SaveandClose);
     if (true == res) {
-        await logger.logInto(stackTrace.get(), " Save & Close is clicked");
+        await logger.logInto(await stackTrace.get(), " Save & Close is clicked");
         res = await require('./assignmentDetails.page').isInitialized();
     }
     else {
-        await logger.logInto(stackTrace.get(), res + "Save & Close is NOT clicked", 'error');
+        await logger.logInto(await stackTrace.get(), res + "Save & Close is NOT clicked", 'error');
     }
     return res;
 },
 
 set_assignmentName_txtbox: async function (value) {
     var res;
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     res = await action.setValue(this.assignmentName_txtbox, value);
     if (true == res) {
-        await logger.logInto(stackTrace.get(), "Value is entered in assignmentName_txtbox");
+        await logger.logInto(await stackTrace.get(), "Value is entered in assignmentName_txtbox");
     } else {
-        await logger.logInto(stackTrace.get(), res + "Value is NOT entered in assignmentName_txtbox", 'error');
+        await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in assignmentName_txtbox", 'error');
     }
     return res;
 },
 
 set_startDate_txtbox: async function (value) {
     var res;
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     res = await action.setValue(this.startDate_txtbox, value);
     if (true == res) {
-        await logger.logInto(stackTrace.get(), "Value is entered in startDate_txtbox");
+        await logger.logInto(await stackTrace.get(), "Value is entered in startDate_txtbox");
     } else {
-        await logger.logInto(stackTrace.get(), res + "Value is NOT entered in startDate_txtbox", 'error');
+        await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in startDate_txtbox", 'error');
     }
     return res;
 },
 
 set_dueDate_txtbox: async function (value) {
     var res;
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     res = await action.setValue(this.dueDate_txtbox, value);
     if (true == res) {
-        await logger.logInto(stackTrace.get(), "Value is entered in dueDate_txtbox");
+        await logger.logInto(await stackTrace.get(), "Value is entered in dueDate_txtbox");
     } else {
-        await logger.logInto(stackTrace.get(), res + "Value is NOT entered in dueDate_txtbox", 'error');
+        await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in dueDate_txtbox", 'error');
     }
     return res;
 },

@@ -63,7 +63,7 @@ module.exports = {
 
   isInitialized: async function () {
     var res;
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     await action.waitForDocumentLoad();
     res = {
       pageStatus: await action.waitForDisplayed(this.assignment_name),
@@ -72,7 +72,7 @@ module.exports = {
   },
 
   getData_assignmentDetails: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var obj;
     obj = {
       assignment_name: ((await action.getElementCount(this.assignment_name)) > 0) ? await action.getText(this.assignment_name) : null,
@@ -112,7 +112,7 @@ module.exports = {
   },
 
   getData_studentList: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var obj;
     obj = {
       ActivityListTab: ((await action.getElementCount(this.ActivityListTab)) > 0) ? await action.getText(this.ActivityListTab) : null,
@@ -131,7 +131,7 @@ module.exports = {
   },
 
   getData_studentCard: async function (studentCardName) {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var obj = [];
     await action.waitForDisplayed(this.studentCard);
     var list = await action.findElements(this.studentCard);
@@ -165,7 +165,7 @@ module.exports = {
   },
 
   getData_assignmentDetailsmoreOption: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var obj;
     obj = {
       editAssignmentIcon: ((await action.getElementCount(this.editAssignmentIcon)) > 0) ? await action.waitForDisplayed(this.editAssignmentIcon) : false,
@@ -179,33 +179,33 @@ module.exports = {
   },
 
   click_studentsTab: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.studentsTab);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " studentsTab is clicked");
+      await logger.logInto(await stackTrace.get(), " studentsTab is clicked");
     }
     else {
-      await logger.logInto(stackTrace.get(), res + "studentsTab is NOT clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + "studentsTab is NOT clicked", 'error');
     }
     return res;
   },
 
   click_ActivityListTab: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.ActivityListTab);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " ActivityListTab is clicked");
+      await logger.logInto(await stackTrace.get(), " ActivityListTab is clicked");
     }
     else {
-      await logger.logInto(stackTrace.get(), res + "ActivityListTab is NOT clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + "ActivityListTab is NOT clicked", 'error');
     }
     return res;
   },
 
   click_studentCard: async function (studentNameName) {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var i, list, res;
     list = await action.findElements(this.studentCard);
     for (i = 0; i < list.length; i++) {
@@ -215,90 +215,90 @@ module.exports = {
       }
     }
     if (res == true) {
-      await logger.logInto(stackTrace.get(), " --studentCard clicked");
+      await logger.logInto(await stackTrace.get(), " --studentCard clicked");
     }
     else
-      await logger.logInto(stackTrace.get(), " --studentCard NOT clicked", "error")
+      await logger.logInto(await stackTrace.get(), " --studentCard NOT clicked", "error")
     return res;
   },
 
   click_viewasStudent: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.viewasStudent);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " viewasStudent is clicked");
+      await logger.logInto(await stackTrace.get(), " viewasStudent is clicked");
       res = await require('./viewAsStudentAssignment.page').isInitialized();
     }
     else {
-      await logger.logInto(stackTrace.get(), res + "viewasStudent is NOT clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + "viewasStudent is NOT clicked", 'error');
     }
     return res;
   },
 
   click_viewasStudentmoreoption: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.viewasStudentmoreoption);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " viewasStudentmoreoption is clicked");
+      await logger.logInto(await stackTrace.get(), " viewasStudentmoreoption is clicked");
       res=await this.getData_assignmentDetailsmoreOption();
     }
     else {
-      await logger.logInto(stackTrace.get(), res + "viewasStudentmoreoption is NOT clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + "viewasStudentmoreoption is NOT clicked", 'error');
     }
     return res;
   },
 
   click_editAssignmentlbl: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.editAssignmentlbl);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " editAssignmentlbl is clicked");
+      await logger.logInto(await stackTrace.get(), " editAssignmentlbl is clicked");
       res = await require('./editAssignment.page').isInitialized();
     }
     else {
-      await logger.logInto(stackTrace.get(), res + "editAssignmentlbl is NOT clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + "editAssignmentlbl is NOT clicked", 'error');
     }
     return res;
   },
 
   click_cloneAssignmentlbl: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.cloneAssignmentlbl);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " cloneAssignmentlbl is clicked");
+      await logger.logInto(await stackTrace.get(), " cloneAssignmentlbl is clicked");
       res = await require('./createAssignment.page').isInitialized();
     }
     else {
-      await logger.logInto(stackTrace.get(), res + "cloneAssignmentlbl is NOT clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + "cloneAssignmentlbl is NOT clicked", 'error');
     }
     return res;
   },
 
   click_deleteAssignmentlbl: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.deleteAssignmentlbl);
     if (true == res) {
       res = await require('./assignmentListTeacher.page').getData_deleteDialogue();
-      await logger.logInto(stackTrace.get(), " deleteAssignmentlbl is clicked");
+      await logger.logInto(await stackTrace.get(), " deleteAssignmentlbl is clicked");
     }
     else {
-      await logger.logInto(stackTrace.get(), res + "deleteAssignmentlbl is NOT clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + "deleteAssignmentlbl is NOT clicked", 'error');
     }
     return res;
   },
   set_search_textbox_placeholder: async function (value) {
     var res;
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     res = await action.setValue(this.search_textbox_placeholder, value);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), "Value is entered in search_textbox_placeholder");
+      await logger.logInto(await stackTrace.get(), "Value is entered in search_textbox_placeholder");
     } else {
-      await logger.logInto(stackTrace.get(), res + "Value is NOT entered in search_textbox_placeholder", 'error');
+      await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in search_textbox_placeholder", 'error');
     }
     return res;
   },

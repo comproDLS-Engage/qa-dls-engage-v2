@@ -11,7 +11,7 @@ module.exports = {
     listIndex: selectorFile.css.ComproEngage.orderList.listIndex,
 
     isInitialized: async function (oliData) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var qIndex = await itemplayer.getQuesIndex();
         await action.switchToFrame(0);
         var option = "div[index='" + (qIndex) + "'] " + this.options;
@@ -23,14 +23,14 @@ module.exports = {
         }
         else {
             res = "Invalid format for Order list as drag handle or correct/incorrect icons are missing"
-            await logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         await action.switchToParentFrame();
         return res;
     },
 
     orderListChange: async function (oliData) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var qIndex = await itemplayer.getQuesIndex();
         await action.switchToFrame(0);
         for (let i = 0; i < oliData.length; i++) {
@@ -43,7 +43,7 @@ module.exports = {
     },
 
     getorderlistData: async function (qIndex, oliData) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         let orderlistData = [];
         let i, j, orderlistSelector, value, optionText, indexText;
         var indexLength = await action.getElementCount("div[index='" + (qIndex) + "'] " + this.options);

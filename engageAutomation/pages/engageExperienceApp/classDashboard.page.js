@@ -39,7 +39,7 @@ module.exports = {
 	viewProgress_btn:selectorFile.css.ComproEngage.myClassPage.viewProgress_btn,
 
 	isInitialized: async function () {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		await action.waitForDocumentLoad();
 		let pageStatus = await action.waitForDisplayed(this.classHeading);
 		res = await this.get_MyClasses_Data();
@@ -48,7 +48,7 @@ module.exports = {
 	},
 
 	get_MyClasses_Data: async function () {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		var obj = {
 			classHeading: (await action.getElementCount(this.classHeading)) > 0 ? await action.getText(this.classHeading) : null,
 			classSubHeading: (await action.getElementCount(this.classSubHeading)) > 0 ? await action.getText(this.classSubHeading) : null,
@@ -88,62 +88,62 @@ module.exports = {
 		return obj;
 	},
 	click_CreateClass_Button: async function () {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		await action.waitForDisplayed(this.addClassBtn);
 		res = await action.click(this.addClassBtn);
 		if (res == true) {
-			await logger.logInto(stackTrace.get(), res + " -- addClassBtn is clicked");
+			await logger.logInto(await stackTrace.get(), res + " -- addClassBtn is clicked");
 			var createClassPage = require('./createClass.page.js');
 			res = await createClassPage.isInitialized();
 		}
 		else {
 			res = res + " -- addClassBtn is NOT clicked";
-			await logger.logInto(stackTrace.get(), res, 'error');
+			await logger.logInto(await stackTrace.get(), res, 'error');
 		}
 		return res;
 	},
 	Click_JoinClassBtn: async function () {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		await action.waitForDisplayed(this.joinClassbtn);
 		res = await action.click(this.joinClassbtn);
 		if (res == true) {
-			await logger.logInto(stackTrace.get(), res + " -- joinClassBtn is clicked");
+			await logger.logInto(await stackTrace.get(), res + " -- joinClassBtn is clicked");
 		}
 		else {
 			res = res + " -- joinClassBtn is NOT clicked";
-			await logger.logInto(stackTrace.get(), res, 'error');
+			await logger.logInto(await stackTrace.get(), res, 'error');
 		}
 		return res;
 	},
 	click_MyClasses_Tab: async function () {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		res = await action.click(this.activeTab);
 		if (res == true) {
 			res = await this.isInitialized();
-			await logger.logInto(stackTrace.get(), res + " -- classbtn is clicked");
+			await logger.logInto(await stackTrace.get(), res + " -- classbtn is clicked");
 		}
 		else {
 			res = res + " -- classbtn is NOT clicked";
-			await logger.logInto(stackTrace.get(), res, 'error');
+			await logger.logInto(await stackTrace.get(), res, 'error');
 		}
 		return res;
 	},
 
 	click_Archived_Tab: async function () {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		res = await action.click(this.archivedTab);
 		if (res == true) {
 			res = await this.isInitialized();
-			await logger.logInto(stackTrace.get(), res + " -- Archievebtn is clicked");
+			await logger.logInto(await stackTrace.get(), res + " -- Archievebtn is clicked");
 		}
 		else {
 			res = res + " -- Archievebtn is NOT clicked";
-			await logger.logInto(stackTrace.get(), res, 'error');
+			await logger.logInto(await stackTrace.get(), res, 'error');
 		}
 		return res;
 	},
 	click_ClassCard: async function (className) {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		let class_index = await this.getClassIndex(className);
 		if (typeof class_index != 'string') {
 			res = await action.click(this.classCard + class_index + "]");
@@ -151,20 +151,20 @@ module.exports = {
 		}
 		else {
 			res = class_index; //storing error message recieved from getclassIndex()
-			await logger.logInto(stackTrace.get(), res, 'error');
+			await logger.logInto(await stackTrace.get(), res, 'error');
 		}
 		return res;
 	},
 
 	getClassIndex: async function (className) {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		var index = 0;
 		var arr = [];
 		await action.waitForDisplayed("circle[class*='MuiCircularProgress-circle']", undefined, true)
 		res = await action.findElements(this.className);
 		if (res.length == 0) {
 			res = res + " -- No class available";
-			await logger.logInto(stackTrace.get(), res, 'error');
+			await logger.logInto(await stackTrace.get(), res, 'error');
 		}
 		else {
 			for (var i = 0; i < res.length; i++) {
@@ -185,7 +185,7 @@ module.exports = {
 	},
 
 	click_MoreOptions_Button: async function (className) {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		let class_index = await this.getClassIndex(className);
 		if (typeof class_index != 'string') {
 			res = await action.waitForDisplayed(this.menuOptionBtn + class_index + "]");
@@ -196,22 +196,22 @@ module.exports = {
 				}
 				else {
 					res = res + " -- class menuOptionBtn is NOT clicked";
-					await logger.logInto(stackTrace.get(), res, 'error');
+					await logger.logInto(await stackTrace.get(), res, 'error');
 				}
 			}
 			else {
 				res = res + " --class menuOptionBtn is NOT available";
-				await logger.logInto(stackTrace.get(), res, 'error');
+				await logger.logInto(await stackTrace.get(), res, 'error');
 			}
 		}
 		else {
 			res = class_index; //storing error message recieved from getclassIndex()
-			await logger.logInto(stackTrace.get(), res, 'error');
+			await logger.logInto(await stackTrace.get(), res, 'error');
 		}
 		return res;
 	},
 	get_MoreOptionsMenu_Data: async function () {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		var obj = {
 			inboxOption_txt: (await action.getElementCount(this.inboxOption)) > 0 ? await action.getText(this.inboxOption) : null,
 			assignmentsOption_txt: (await action.getElementCount(this.assignmentsOption)) > 0 ? await action.getText(this.assignmentsOption) : null,
@@ -225,7 +225,7 @@ module.exports = {
 		return obj;
 	},
 	click_inboxOption: async function () {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		res = await action.click(this.inboxOption);
 		if (res == true) {
 
@@ -234,12 +234,12 @@ module.exports = {
 		}
 		else {
 			res = res + " -- inboxBtn is NOT clicked";
-			await logger.logInto(stackTrace.get(), res, 'error');
+			await logger.logInto(await stackTrace.get(), res, 'error');
 		}
 		return res;
 	},
 	click_assignmentsOption: async function () {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		res = await action.click(this.assignmentsOption);
 		if (res == true) {
 			//var	teacherViewClass = require('./teacherViewClass.page.js');
@@ -247,12 +247,12 @@ module.exports = {
 		}
 		else {
 			res = res + " -- archievedBtn is NOT clicked";
-			await logger.logInto(stackTrace.get(), res, 'error');
+			await logger.logInto(await stackTrace.get(), res, 'error');
 		}
 		return res;
 	},
 	click_studentsOption: async function () {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		res = await action.click(this.studentsOption);
 		if (res == true) {
 			//teacherViewClass = require('./teacherViewClass.page.js');
@@ -260,12 +260,12 @@ module.exports = {
 		}
 		else {
 			res = res + " -- restoreBtn is NOT clicked";
-			await logger.logInto(stackTrace.get(), res, 'error');
+			await logger.logInto(await stackTrace.get(), res, 'error');
 		}
 		return res;
 	},
 	click_gradeBookOption: async function () {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		res = await action.click(this.gradeBookOption);
 		if (res == true) {
 			//teacherViewClass = require('./teacherViewClass.page.js');
@@ -273,12 +273,12 @@ module.exports = {
 		}
 		else {
 			res = res + " -- addStudentsOption button is NOT clicked";
-			await logger.logInto(stackTrace.get(), res, 'error');
+			await logger.logInto(await stackTrace.get(), res, 'error');
 		}
 		return res;
 	},
 	click_materialsOption: async function () {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		res = await action.click(this.materialsOption);
 		if (res == true) {
 			//teacherViewClass = require('./teacherViewClass.page.js');
@@ -286,12 +286,12 @@ module.exports = {
 		}
 		else {
 			res = res + " -- addStudentsOption button is NOT clicked";
-			await logger.logInto(stackTrace.get(), res, 'error');
+			await logger.logInto(await stackTrace.get(), res, 'error');
 		}
 		return res;
 	},
 	click_viewClassOption: async function () {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		res = await action.click(this.viewClassOption);
 		if (res == true) {
 		var	studentClassdetails = require('./studentClassDetails.page.js');
@@ -299,19 +299,19 @@ module.exports = {
 		}
 		else {
 			res = res + " -- addStudentsOption button is NOT clicked";
-			await logger.logInto(stackTrace.get(), res, 'error');
+			await logger.logInto(await stackTrace.get(), res, 'error');
 		}
 		return res;
 	},
 	click_viewProgress: async function () {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		res = await action.click(this.viewProgress_btn);
 		if (res == true) {
 		res = await require('./gradeBookStudent.page.js').isInitialized();
 		}
 		else {
 			res = res + " -- addStudentsOption button is NOT clicked";
-			await logger.logInto(stackTrace.get(), res, 'error');
+			await logger.logInto(await stackTrace.get(), res, 'error');
 		}
 		return res;
 	}

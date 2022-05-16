@@ -7,7 +7,7 @@ module.exports = {
    
   
     clickProfileMenuSignout: async function () {// for student and instructor
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
 
         //tbd headerpage not implemented
         if(global.view == 'desktop')

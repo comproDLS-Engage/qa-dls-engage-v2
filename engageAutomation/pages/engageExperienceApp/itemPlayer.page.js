@@ -18,7 +18,7 @@ module.exports = {
 	imageScelaton:selectorFile.css.ComproEngage.itemPlayer.imageScelaton,
 
 	isInitialized: async function () {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		res = await action.waitForDisplayed("iframe[id*=iframe], iframe");
 		if (res == true) {
 			await action.switchToFrame(0);
@@ -30,13 +30,13 @@ module.exports = {
 		}
 		else {
 			res = res + " -- Itemplayer page is not loaded yet";
-			await logger.logInto(stackTrace.get(), res);
+			await logger.logInto(await stackTrace.get(), res);
 		}
 		return res;
 	},
 
 	getQuesIndex: async function () {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		await action.switchToFrame(0);
 		let qIndex = await action.getAttribute(this.activeQues, "index")
 		await action.switchToParentFrame();
@@ -44,7 +44,7 @@ module.exports = {
 	},
 
 	getItemplayerInfo: async function () {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		let question = {
 			quesType: "",
 			quesText: "",
@@ -87,7 +87,7 @@ module.exports = {
 	},
 
 	getFeedbackIconDetails: async function (quesSelector, quesType) {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		let value;
 		if (quesType == 'classify') {
 			res = await action.getElementCount(quesSelector + " >" + this.correctIcon);

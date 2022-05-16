@@ -37,7 +37,7 @@ module.exports = {
 
   isInitialized: async function () {
     var res;
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     await action.waitForDocumentLoad();
     res = {
       pageStatus: await action.waitForDisplayed(this.Assignment_title),
@@ -47,7 +47,7 @@ module.exports = {
   },
 
   getData_assignmentListPage: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var obj;
     await action.waitForDocumentLoad();
     obj = {
@@ -71,7 +71,7 @@ module.exports = {
   },
 
   getData_assignmentCard: async function (assignmentCardName) {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var obj = [];
     await action.waitForDisplayed(this.assignmentCard);
     var list = await action.findElements(this.assignmentCard);
@@ -115,7 +115,7 @@ module.exports = {
   },
 
   getData_componentList: async function (componentListName) {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var obj = [];
     await action.waitForDisplayed(this.componentList);
     var list = await action.findElements(this.componentList);
@@ -143,7 +143,7 @@ module.exports = {
   },
 
   getData_deleteDialogue: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var obj;
     obj = {
       deletedialogueHeader: ((await action.getElementCount(this.deletedialogueHeader)) > 0) ? await action.getText(this.deletedialogueHeader) : null,
@@ -157,56 +157,56 @@ module.exports = {
 
 
   click_addNew_btn: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.addNew_btn);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " addNew_btn is clicked");
+      await logger.logInto(await stackTrace.get(), " addNew_btn is clicked");
       res = await this.getData_componentList();
     }
     else {
-      await logger.logInto(stackTrace.get(), res + "addNew_btn is NOT clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + "addNew_btn is NOT clicked", 'error');
     }
     return res;
   },
   click_inProgress_lbl: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.inProgress_lbl);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " inProgress_lbl is clicked");
+      await logger.logInto(await stackTrace.get(), " inProgress_lbl is clicked");
     }
     else {
-      await logger.logInto(stackTrace.get(), res + "inProgress_lbl is NOT clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + "inProgress_lbl is NOT clicked", 'error');
     }
     return res;
   },
   click_past_lbl: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.past_lbl);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " past_lbl is clicked");
+      await logger.logInto(await stackTrace.get(), " past_lbl is clicked");
     }
     else {
-      await logger.logInto(stackTrace.get(), res + "past_lbl is NOT clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + "past_lbl is NOT clicked", 'error');
     }
     return res;
   },
   click_upcoming_lbl: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.upcoming_lbl);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " upcoming_lbl is clicked");
+      await logger.logInto(await stackTrace.get(), " upcoming_lbl is clicked");
     }
     else {
-      await logger.logInto(stackTrace.get(), res + "upcoming_lbl is NOT clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + "upcoming_lbl is NOT clicked", 'error');
     }
     return res;
   },
   click_assignmentCard: async function (assignmentNameName) {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var i, list, res;
     list = await action.findElements(this.assignmentCard);
     for (i = 0; i < list.length; i++) {
@@ -216,16 +216,16 @@ module.exports = {
       }
     }
     if (res == true) {
-      await logger.logInto(stackTrace.get(), " --assignmentCard clicked");
+      await logger.logInto(await stackTrace.get(), " --assignmentCard clicked");
       res = await require('./assignmentDetails.page').isInitialized();
     }
     else
-      await logger.logInto(stackTrace.get(), " --assignmentCard NOT clicked", "error")
+      await logger.logInto(await stackTrace.get(), " --assignmentCard NOT clicked", "error")
     return res;
   },
 
   click_viewProgress_btn: async function (assignmentNameName) {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var i, list, res;
     list = await action.findElements(this.viewProgress_btn);
     for (i = 0; i < list.length; i++) {
@@ -235,16 +235,16 @@ module.exports = {
       }
     }
     if (res == true) {
-      await logger.logInto(stackTrace.get(), " --viewProgress_btn clicked");
+      await logger.logInto(await stackTrace.get(), " --viewProgress_btn clicked");
       res = await require('./assignmentDetails.page').isInitialized();
     }
     else
-      await logger.logInto(stackTrace.get(), " --viewProgress_btn NOT clicked", "error")
+      await logger.logInto(await stackTrace.get(), " --viewProgress_btn NOT clicked", "error")
     return res;
   },
 
   click_editAssignment_btn: async function (assignmentNameName) {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var i, list, res;
     list = await action.findElements(this.editAssignment_btn);
     for (i = 0; i < list.length; i++) {
@@ -254,16 +254,16 @@ module.exports = {
       }
     }
     if (res == true) {
-      await logger.logInto(stackTrace.get(), " --editAssignment_btn clicked");
+      await logger.logInto(await stackTrace.get(), " --editAssignment_btn clicked");
       res = await require('./editAssignment.page').isInitialized();
     }
     else
-      await logger.logInto(stackTrace.get(), " --editAssignment_btn NOT clicked", "error")
+      await logger.logInto(await stackTrace.get(), " --editAssignment_btn NOT clicked", "error")
     return res;
   },
 
   click_cloneAssignment_btn: async function (assignmentNameName) {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var i, list, res;
     list = await action.findElements(this.cloneAssignment_btn);
     for (i = 0; i < list.length; i++) {
@@ -273,16 +273,16 @@ module.exports = {
       }
     }
     if (res == true) {
-      await logger.logInto(stackTrace.get(), " --cloneAssignment_btn clicked");
+      await logger.logInto(await stackTrace.get(), " --cloneAssignment_btn clicked");
       res = await require('./createAssignment.page').isInitialized();
     }
     else
-      await logger.logInto(stackTrace.get(), " --cloneAssignment_btn NOT clicked", "error")
+      await logger.logInto(await stackTrace.get(), " --cloneAssignment_btn NOT clicked", "error")
     return res;
   },
 
   click_deleteAssignment_btn: async function (assignmentNameName) {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var i, list, res;
     list = await action.findElements(this.deleteAssignment_btn);
     for (i = 0; i < list.length; i++) {
@@ -292,16 +292,16 @@ module.exports = {
       }
     }
     if (res == true) {
-      await logger.logInto(stackTrace.get(), " --deleteAssignment_btn clicked");
+      await logger.logInto(await stackTrace.get(), " --deleteAssignment_btn clicked");
       res = await this.getData_deleteDialogue();
     }
     else
-      await logger.logInto(stackTrace.get(), " --deleteAssignment_btn NOT clicked", "error")
+      await logger.logInto(await stackTrace.get(), " --deleteAssignment_btn NOT clicked", "error")
     return res;
   },
 
   click_componentList: async function (componentListName) {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var i, list, res;
     list = await action.findElements(this.componentList);
     for (i = 0; i < list.length; i++) {
@@ -311,11 +311,11 @@ module.exports = {
       }
     }
     if (res == true) {
-      await logger.logInto(stackTrace.get(), " --componentList clicked");
+      await logger.logInto(await stackTrace.get(), " --componentList clicked");
       res = await require('./selectActivity.page').isInitialized();
     }
     else
-      await logger.logInto(stackTrace.get(), " --componentList NOT clicked", "error")
+      await logger.logInto(await stackTrace.get(), " --componentList NOT clicked", "error")
     return res;
   },
 

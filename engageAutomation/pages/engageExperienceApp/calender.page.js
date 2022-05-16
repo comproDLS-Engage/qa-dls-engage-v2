@@ -32,7 +32,7 @@ module.exports = {
     },
 
     isInitialized: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         res = await action.waitForDisplayed(this.loaderIcon, undefined, true);
         let pageStatus = await action.waitForDisplayed(this.calenderYear)
         res = await this.gettodayDateData();
@@ -147,12 +147,12 @@ module.exports = {
     clickOkBtn: async function () {
         res = await action.click(this.datePicker_okBtn)
         if (res == true) {
-            await logger.logInto(stackTrace.get(), "--Current date is selected and OK button is clicked");
+            await logger.logInto(await stackTrace.get(), "--Current date is selected and OK button is clicked");
             res = await action.getAttribute(this.endDate_txtbox, "value");
         }
         else {
             res = res + "-- OK button is NOT clicked";
-            await logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
     }
 }

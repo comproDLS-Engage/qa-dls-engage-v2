@@ -48,7 +48,7 @@ module.exports = {
 
   isInitialized: async function () {
     var res;
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     await action.waitForDocumentLoad();
     res = {
       pageStatus: await action.waitForDisplayed(this.playlistPageTitle),
@@ -58,7 +58,7 @@ module.exports = {
   },
 
   getData_playlistPage: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var obj;
     obj = {
       playlistPageTitle: ((await action.getElementCount(this.playlistPageTitle)) > 0) ? await action.getText(this.playlistPageTitle) : null,
@@ -83,7 +83,7 @@ module.exports = {
   },
 
   getData_resourceList: async function (itemIndexName) {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var obj = [];
     await action.waitForDisplayed(this.itemIndex);
     var list = await action.findElements(this.itemIndex);
@@ -115,7 +115,7 @@ module.exports = {
   },
 
   getData_playlistOptionList: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var obj;
     obj = {
       playlistReorderOption: ((await action.getElementCount(this.playlistReorderOption)) > 0) ? await action.getText(this.playlistReorderOption) : null,
@@ -126,7 +126,7 @@ module.exports = {
   },
 
   getData_editPlaylistPopup: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var obj;
     obj = {
       playlistNameLabel: ((await action.getElementCount(this.playlistNameLabel)) > 0) ? await action.getText(this.playlistNameLabel) : null,
@@ -138,7 +138,7 @@ module.exports = {
   },
 
   getData_deletePlaylistPopup: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var obj;
     obj = {
       deletePlaylistTitle: ((await action.getElementCount(this.deletePlaylistTitle)) > 0) ? await action.getText(this.deletePlaylistTitle) : null,
@@ -150,7 +150,7 @@ module.exports = {
   },
 
   getData_removeResourcePopup: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var obj;
     obj = {
       removeResourceTitle: ((await action.getElementCount(this.removeResourceTitle)) > 0) ? await action.getText(this.removeResourceTitle) : null,
@@ -162,7 +162,7 @@ module.exports = {
   },
 
   getData_moreOptionsResourcesList: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var obj;
     obj = {
       viewOptionResourceItem: ((await action.getElementCount(this.viewOptionResourceItem)) > 0) ? await action.getText(this.viewOptionResourceItem) : null,
@@ -174,48 +174,48 @@ module.exports = {
 
 
   click_playlistOptionsBtn: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.playlistOptionsBtn);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " playlistOptionsBtn is clicked");
+      await logger.logInto(await stackTrace.get(), " playlistOptionsBtn is clicked");
       res = await this.getData_playlistOptionList();
     }
     else {
-      await logger.logInto(stackTrace.get(), res + "playlistOptionsBtn is NOT clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + "playlistOptionsBtn is NOT clicked", 'error');
     }
     return res;
   },
 
   click_playlistShareBtn: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.playlistShareBtn);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " playlistShareBtn is clicked");
+      await logger.logInto(await stackTrace.get(), " playlistShareBtn is clicked");
     }
     else {
-      await logger.logInto(stackTrace.get(), res + "playlistShareBtn is NOT clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + "playlistShareBtn is NOT clicked", 'error');
     }
     return res;
   },
 
   click_browseAllResourcesBtn: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.browseAllResourcesBtn);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " browseAllResourcesBtn is clicked");
+      await logger.logInto(await stackTrace.get(), " browseAllResourcesBtn is clicked");
       res = await require('./browse.page').isInitialized();
     }
     else {
-      await logger.logInto(stackTrace.get(), res + "browseAllResourcesBtn is NOT clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + "browseAllResourcesBtn is NOT clicked", 'error');
     }
     return res;
   },
 
   click_itemMoreOptions: async function (itemNameName) {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var i, list, res;
     list = await action.findElements(this.itemMoreOptions);
     for (i = 0; i < list.length; i++) {
@@ -225,201 +225,201 @@ module.exports = {
       }
     }
     if (res == true) {
-      await logger.logInto(stackTrace.get(), " --itemMoreOptions clicked");
+      await logger.logInto(await stackTrace.get(), " --itemMoreOptions clicked");
       res = await this.getData_moreOptionsResourcesList();
     }
     else
-      await logger.logInto(stackTrace.get(), " --itemMoreOptions NOT clicked", "error")
+      await logger.logInto(await stackTrace.get(), " --itemMoreOptions NOT clicked", "error")
     return res;
   },
 
   click_playlistBrowseResourcesBtn: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.playlistBrowseResourcesBtn);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " playlistBrowseResourcesBtn is clicked");
+      await logger.logInto(await stackTrace.get(), " playlistBrowseResourcesBtn is clicked");
       res = await require('./browse.page').isInitialized();
     }
     else {
-      await logger.logInto(stackTrace.get(), res + "playlistBrowseResourcesBtn is NOT clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + "playlistBrowseResourcesBtn is NOT clicked", 'error');
     }
     return res;
   },
 
   click_playlistReorderOption: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.playlistReorderOption);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " playlistReorderOption is clicked");
+      await logger.logInto(await stackTrace.get(), " playlistReorderOption is clicked");
     }
     else {
-      await logger.logInto(stackTrace.get(), res + "playlistReorderOption is NOT clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + "playlistReorderOption is NOT clicked", 'error');
     }
     return res;
   },
 
   click_playlistEditOption: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.playlistEditOption);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " playlistEditOption is clicked");
+      await logger.logInto(await stackTrace.get(), " playlistEditOption is clicked");
       res = await this.getData_editPlaylistPopup();
     }
     else {
-      await logger.logInto(stackTrace.get(), res + "playlistEditOption is NOT clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + "playlistEditOption is NOT clicked", 'error');
     }
     return res;
   },
 
   click_playlistDeleteOption: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.playlistDeleteOption);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " playlistDeleteOption is clicked");
+      await logger.logInto(await stackTrace.get(), " playlistDeleteOption is clicked");
       res = await this.getData_deletePlaylistPopup();
     }
     else {
-      await logger.logInto(stackTrace.get(), res + "playlistDeleteOption is NOT clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + "playlistDeleteOption is NOT clicked", 'error');
     }
     return res;
   },
 
   click_editPlaylistCancelBtn: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.editPlaylistCancelBtn);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " editPlaylistCancelBtn is clicked");
+      await logger.logInto(await stackTrace.get(), " editPlaylistCancelBtn is clicked");
       res = await action.getText(this.playlistPageTitle);
     }
     else {
-      await logger.logInto(stackTrace.get(), res + "editPlaylistCancelBtn is NOT clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + "editPlaylistCancelBtn is NOT clicked", 'error');
     }
     return res;
   },
 
   click_editPlaylistSaveBtn: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.editPlaylistSaveBtn);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " editPlaylistSaveBtn is clicked");
+      await logger.logInto(await stackTrace.get(), " editPlaylistSaveBtn is clicked");
       res = await action.getText(this.playlistPageTitle);
     }
     else {
-      await logger.logInto(stackTrace.get(), res + "editPlaylistSaveBtn is NOT clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + "editPlaylistSaveBtn is NOT clicked", 'error');
     }
     return res;
   },
 
   click_deletePlaylistCancelBtn: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.deletePlaylistCancelBtn);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " deletePlaylistCancelBtn is clicked");
+      await logger.logInto(await stackTrace.get(), " deletePlaylistCancelBtn is clicked");
       res = await action.waitForDisplayed(this.deletePlaylistCancelBtn, undefined, true);
     }
     else {
-      await logger.logInto(stackTrace.get(), res + "deletePlaylistCancelBtn is NOT clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + "deletePlaylistCancelBtn is NOT clicked", 'error');
     }
     return res;
   },
 
   click_deletePlaylistDeleteBtn: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.deletePlaylistDeleteBtn);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " deletePlaylistDeleteBtn is clicked");
+      await logger.logInto(await stackTrace.get(), " deletePlaylistDeleteBtn is clicked");
       res = await require('./dashboard.page').isInitialized();
     }
     else {
-      await logger.logInto(stackTrace.get(), res + "deletePlaylistDeleteBtn is NOT clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + "deletePlaylistDeleteBtn is NOT clicked", 'error');
     }
     return res;
   },
 
   click_removeResourceCancelBtn: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.removeResourceCancelBtn);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " removeResourceCancelBtn is clicked");
+      await logger.logInto(await stackTrace.get(), " removeResourceCancelBtn is clicked");
       res = await this.getData_resourceList();
     }
     else {
-      await logger.logInto(stackTrace.get(), res + "removeResourceCancelBtn is NOT clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + "removeResourceCancelBtn is NOT clicked", 'error');
     }
     return res;
   },
 
   click_removeResourceRemoveBtn: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.removeResourceRemoveBtn);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " removeResourceRemoveBtn is clicked");
+      await logger.logInto(await stackTrace.get(), " removeResourceRemoveBtn is clicked");
       res = await this.getData_resourceList();
     }
     else {
-      await logger.logInto(stackTrace.get(), res + "removeResourceRemoveBtn is NOT clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + "removeResourceRemoveBtn is NOT clicked", 'error');
     }
     return res;
   },
 
   click_viewOptionResourceItem: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.viewOptionResourceItem);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " viewOptionResourceItem is clicked");
+      await logger.logInto(await stackTrace.get(), " viewOptionResourceItem is clicked");
     }
     else {
-      await logger.logInto(stackTrace.get(), res + "viewOptionResourceItem is NOT clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + "viewOptionResourceItem is NOT clicked", 'error');
     }
     return res;
   },
 
   click_shareOptionResourceItem: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.shareOptionResourceItem);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " shareOptionResourceItem is clicked");
+      await logger.logInto(await stackTrace.get(), " shareOptionResourceItem is clicked");
     }
     else {
-      await logger.logInto(stackTrace.get(), res + "shareOptionResourceItem is NOT clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + "shareOptionResourceItem is NOT clicked", 'error');
     }
     return res;
   },
 
   click_removeOptionResourceItem: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.removeOptionResourceItem);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " removeOptionResourceItem is clicked");
+      await logger.logInto(await stackTrace.get(), " removeOptionResourceItem is clicked");
       res = await this.getData_removeResourcePopup();
     }
     else {
-      await logger.logInto(stackTrace.get(), res + "removeOptionResourceItem is NOT clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + "removeOptionResourceItem is NOT clicked", 'error');
     }
     return res;
   },
 
   set_playlistNameInput: async function (value) {
     var res;
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     res = await action.setValue(this.playlistNameInput, value);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), "Value is entered in playlistNameInput");
+      await logger.logInto(await stackTrace.get(), "Value is entered in playlistNameInput");
     } else {
-      await logger.logInto(stackTrace.get(), res + "Value is NOT entered in playlistNameInput", 'error');
+      await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in playlistNameInput", 'error');
     }
     return res;
   },

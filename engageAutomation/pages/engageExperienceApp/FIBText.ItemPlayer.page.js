@@ -10,7 +10,7 @@ module.exports = {
     responses: selectorFile.css.ComproEngage.FIBText.responses,
 
     isInitialized: async function (fibQuesData) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var obj = {
             targetData: []
         };
@@ -20,7 +20,7 @@ module.exports = {
     },
 
     getTargetData: async function (qIndex, fibQuesData) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         await action.switchToFrame(0);
         let option = "div[index='" + qIndex + "'] " + this.responses;
         var targetArr = [];
@@ -35,7 +35,7 @@ module.exports = {
     },
 
     inputValues: async function (fibQuesData) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         qIndex = await itemplayer.getQuesIndex();
         await action.switchToFrame(0);
         for (let i = 0; i < fibQuesData.length; i++) {
@@ -45,11 +45,11 @@ module.exports = {
             if (true == res) {
                 res = await action.setValue(textSelector, fibQuesData[i][1]);
                 await browser.pause(250);
-                await logger.logInto(stackTrace.get(), res);
+                await logger.logInto(await stackTrace.get(), res);
             }
             else {
                 res = res + " -- Target text placeholder " + fibQuesData[i][0] + " is NOT clicked";
-                await logger.logInto(stackTrace.get(), res, 'error');
+                await logger.logInto(await stackTrace.get(), res, 'error');
             }
         }
         await action.switchToParentFrame();

@@ -15,7 +15,7 @@ module.exports = {
     zoomDialogClose_btn: selectorFile.css.ComproEngage.dragAndDrop.zoomDialogClose_btn,
 
     isInitialized: async function (dndQuesData) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var dndData = {
             sourceData: [],
             targetData: [],
@@ -31,7 +31,7 @@ module.exports = {
     },
 
     getSourceData: async function (qIndex, dndQuesData) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         var sourceMap = [];
         let option = "div[index='" + qIndex + "'] " + "[data-tid*='source-option']";
         let optionLength = (await action.findElements(option)).length;
@@ -42,7 +42,7 @@ module.exports = {
     },
 
     getTargetData: async function (qIndex, dndQuesData) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         let option = "div[index='" + qIndex + "'] " + "[data-tid*='target-option']";
         var targetMap = [];
         await action.waitForDisplayed(option)
@@ -63,7 +63,7 @@ module.exports = {
     },
 
     dragAndDrop: async function (dndQuesData) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         qIndex = await itemplayer.getQuesIndex();
         await action.switchToFrame(0);
         for (var i = 0; i < dndQuesData.length; i++) {
@@ -82,7 +82,7 @@ module.exports = {
     },
 
     dragAndDropClick: async function (dndQuesData) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         qIndex = await itemplayer.getQuesIndex();
         await action.switchToFrame(0);
         for (var i = 0; i < dndQuesData.length; i++) {
@@ -98,7 +98,7 @@ module.exports = {
                 }
                 else {
                     res = res + " -- Source Element is NOT clicked";
-                    await logger.logInto(stackTrace.get(), res, 'error');
+                    await logger.logInto(await stackTrace.get(), res, 'error');
                 }
             }
         }
@@ -107,7 +107,7 @@ module.exports = {
     },
 
     clickTaptoZoom: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         qIndex = await itemplayer.getQuesIndex();
         await action.switchToFrame(0);
         res = await action.click("div[index='" + qIndex + "'] " + this.tapToZoom)
@@ -116,14 +116,14 @@ module.exports = {
         }
         else {
             res = res + " -- Tap to Zoom is NOT clicked";
-            await logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         await action.switchToParentFrame();
         return res;
     },
 
     closeZoom: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         qIndex = await itemplayer.getQuesIndex();
         res = await action.click("div[index='" + qIndex + "'] " + this.zoomDialogClose_btn)
         if (res == true) {
@@ -131,24 +131,24 @@ module.exports = {
         }
         else {
             res = res + " -- Zoom dialog close is NOT clicked";
-            await logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
     dragAndDropZoomDropDown: async function (dndQuesData) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         qIndex = await itemplayer.getQuesIndex();
         await action.switchToFrame(0);
         for (var i = 0; i < dndQuesData.length; i++) {
             targetPath = "div[index='" + qIndex + "'] " + this.target + dndQuesData[i][2] + "] select";
             res = await action.selectByAttribute(targetPath, 'value', dndQuesData[i][0]);
             if (null == res) {
-                await logger.logInto(stackTrace.get(), "value selected in the drop down");
+                await logger.logInto(await stackTrace.get(), "value selected in the drop down");
             }
             else {
                 res = res + " -- value NOT selected in the drop down";
-                await logger.logInto(stackTrace.get(), res, 'error');
+                await logger.logInto(await stackTrace.get(), res, 'error');
             }
         }
         await action.switchToParentFrame();

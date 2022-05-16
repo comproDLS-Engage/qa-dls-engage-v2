@@ -20,7 +20,7 @@ module.exports = {
 
   isInitialized: async function () {
     var res;
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     await action.waitForDocumentLoad();
     res = {
       pageStatus: await action.waitForDisplayed(this.addBookPageTitle),
@@ -30,7 +30,7 @@ module.exports = {
   },
 
   getData_addBookPage: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var obj;
     obj = {
       addBookPageTitle: ((await action.getElementCount(this.addBookPageTitle)) > 0) ? await action.getText(this.addBookPageTitle) : null,
@@ -46,7 +46,7 @@ module.exports = {
   },
 
   getData_bookList: async function (bookTitleName) {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var obj = [];
     await action.waitForDisplayed(this.bookTitle);
     var list = await action.findElements(this.bookTitle);
@@ -76,7 +76,7 @@ module.exports = {
   },
 
   click_addBookBtn: async function (bookTitleName) {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var i, list, res;
     list = await action.findElements(this.addBookBtn);
     for (i = 0; i < list.length; i++) {
@@ -86,52 +86,52 @@ module.exports = {
       }
     }
     if (res == true) {
-      await logger.logInto(stackTrace.get(), " --addBookBtn clicked");
+      await logger.logInto(await stackTrace.get(), " --addBookBtn clicked");
       res = await this.getData_addBookPage();
     }
     else
-      await logger.logInto(stackTrace.get(), " --addBookBtn NOT clicked", "error")
+      await logger.logInto(await stackTrace.get(), " --addBookBtn NOT clicked", "error")
     return res;
   },
 
   click_addToClassBtn: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.addToClassBtn);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " addToClassBtn is clicked");
+      await logger.logInto(await stackTrace.get(), " addToClassBtn is clicked");
       res = await require('./createClass.page').isInitialized();
     }
     else {
-      await logger.logInto(stackTrace.get(), res + "addToClassBtn is NOT clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + "addToClassBtn is NOT clicked", 'error');
     }
     return res;
   },
 
   click_cancelBtn: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.cancelBtn);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " cancelBtn is clicked");
+      await logger.logInto(await stackTrace.get(), " cancelBtn is clicked");
       res = await require('./createClass.page').isInitialized();
     }
     else {
-      await logger.logInto(stackTrace.get(), res + "cancelBtn is NOT clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + "cancelBtn is NOT clicked", 'error');
     }
     return res;
   },
 
   click_removeBookBtn: async function () {
-    await logger.logInto(stackTrace.get());
+    await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.removeBookBtn);
     if (true == res) {
-      await logger.logInto(stackTrace.get(), " removeBookBtn is clicked");
+      await logger.logInto(await stackTrace.get(), " removeBookBtn is clicked");
       res = await this.getData_addBookPage();
     }
     else {
-      await logger.logInto(stackTrace.get(), res + "removeBookBtn is NOT clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + "removeBookBtn is NOT clicked", 'error');
     }
     return res;
   }

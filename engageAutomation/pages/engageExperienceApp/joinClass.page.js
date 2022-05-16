@@ -18,7 +18,7 @@ module.exports = {
 	progressOption: selectorFile.css.ComproEngage.myClassPage.progressOption,
 	loaderIcon: selectorFile.css.ComproEngage.appShell.loaderIcon,
 	isInitialized: async function () {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		await action.waitForDocumentLoad();
 		let pageStatus = await action.waitForDisplayed(this.joinClassHeader);
 		res = await this.get_joinClassPopUpData();
@@ -28,7 +28,7 @@ module.exports = {
 
 
 	get_joinClassPopUpData: async function () {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		await action.waitForExist("div[style*=\"visibility: hidden;\"]", 20000);
 		var obj = {
 			joinClassHeader: (await action.getElementCount(this.joinClassHeader)) > 0 ? await action.getText(this.joinClassHeader) : null,
@@ -43,10 +43,10 @@ module.exports = {
 		return obj;
 	},
 	set_ClassCode: async function (code) {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		res = await action.click(this.classCodeInput);
 		if (res == true) {
-			await logger.logInto(stackTrace.get(), "-- classCodeInput textbox is clicked");
+			await logger.logInto(await stackTrace.get(), "-- classCodeInput textbox is clicked");
 			res = await action.setValue(this.classCodeInput, code);
 			if (res == true) {
 				res = await action.getValue(this.classCodeInput);
@@ -54,34 +54,34 @@ module.exports = {
 		}
 		else {
 			res = res + "-- classCodeInput textbox is NOT clicked";
-			await logger.logInto(stackTrace.get(), res, 'error');
+			await logger.logInto(await stackTrace.get(), res, 'error');
 		}
 		return res;
 	},
 	click_joinclassPopUpbtn: async function () {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		await action.waitForDisplayed(this.joinclassPopUpbtn);
 		res = await action.click(this.joinclassPopUpbtn);
 		await browser.pause(4000)
 		if (res == true) {
-			await logger.logInto(stackTrace.get(), res + " -- joinclassPopUpbtn is clicked");
+			await logger.logInto(await stackTrace.get(), res + " -- joinclassPopUpbtn is clicked");
 		}
 		else {
 			res = res + " -- joinclassPopUpbtn is NOT clicked";
-			await logger.logInto(stackTrace.get(), res, 'error');
+			await logger.logInto(await stackTrace.get(), res, 'error');
 		}
 		return res;
 	},
 	click_ClosebtnjoinclassPopUp: async function () {
-		await logger.logInto(stackTrace.get());
+		await logger.logInto(await stackTrace.get());
 		await action.waitForDisplayed(this.closebtn);
 		res = await action.click(this.closebtn);
 		if (res == true) {
-			await logger.logInto(stackTrace.get(), res + " -- joinclassPopUpbtn is clicked");
+			await logger.logInto(await stackTrace.get(), res + " -- joinclassPopUpbtn is clicked");
 		}
 		else {
 			res = res + " -- joinclassPopUpbtn is NOT clicked";
-			await logger.logInto(stackTrace.get(), res, 'error');
+			await logger.logInto(await stackTrace.get(), res, 'error');
 		}
 		return res;
 	},

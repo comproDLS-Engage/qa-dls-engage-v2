@@ -27,9 +27,9 @@ module.exports = {
     Click_classDrawerCloseBtn: async function () {
         res = await action.click(this.classDrawerCloseBtn);
         if (res == true) 
-            await logger.logInto(stackTrace.get(), res + "Drawer Pane button is clicked");
+            await logger.logInto(await stackTrace.get(), res + "Drawer Pane button is clicked");
         else
-            await logger.logInto(stackTrace.get(), res + "Drawer Pane is NOT Clicked", "error");
+            await logger.logInto(await stackTrace.get(), res + "Drawer Pane is NOT Clicked", "error");
         return res;
     }
 

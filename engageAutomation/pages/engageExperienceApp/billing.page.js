@@ -7,9 +7,9 @@ module.exports = {
     upgradetoPremium_btn: selectorFile.css.ComproEngage.billing.upgradetoPremium_btn,
     close_btn: selectorFile.css.ComproEngage.billing.close_btn,
 
-    isInitialized: function() {
+    isInitialized: async function () {
         var res;
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         await action.waitForDocumentLoad();
         res = {
             pageStatus: await action.waitForDisplayed(this.upgradetoPremium_btn),
@@ -17,7 +17,7 @@ module.exports = {
         return res;
     },
 
-    getData_billingPage: function() {
+    getData_billingPage: async function () {
         await logger.logInto(stackTrace.get());
         var obj;
         obj = {
@@ -27,7 +27,7 @@ module.exports = {
         return obj;
     },
 
-    click_close_btn: function() {
+    click_close_btn: async function () {
         let res;
         await logger.logInto(stackTrace.get());
         res = await action.click(this.close_btn);
