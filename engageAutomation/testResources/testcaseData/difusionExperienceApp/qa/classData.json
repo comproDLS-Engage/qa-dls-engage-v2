@@ -4,12 +4,12 @@
 			"class1": {
 				"name": "Active Class",
 				"key": "vQ9n-qhQ8",
-				"classDuration": "May 26, 2021 - May 26, 2022",
+				"classDuration": "May 16 - May 26, 2022",
 				"instructor": {
 					"name": "dev1 teacher",
 					"email": "vengqains5_new@yopmail.com"
 				},
-				"bookName": "PROYECTOS",
+				"bookName": "QA Test Automation Book [DO NOT MODIFY]",
 				"bookIndex":"0",
 				"schoolName": "Mount Allison School",
 				"status": "Active",
@@ -133,11 +133,6 @@
 				"status": "Active",
 				"studentCount": "2",
 				"studentdetails": [
-					{
-						"Name": "qa student5",
-						"AvgScore": "–",
-						"CompletionScore": "0%"
-					},
 					{
 						"Name": "qastu1",
 						"AvgScore": "–",

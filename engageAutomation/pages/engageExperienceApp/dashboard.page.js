@@ -48,7 +48,9 @@ module.exports = {
   resourceSubtitle: selectorFile.css.ComproEngage.dashboard.resourceSubtitle,
   recentlyViewedHeading: selectorFile.css.ComproEngage.dashboard.recentlyViewedHeading,
   recentlyViewed_activities: selectorFile.css.ComproEngage.dashboard.recentlyViewed_activities,
-
+  addNew_btn:selectorFile.css.ComproEngage.dashboard.addNew_btn,
+  rightPanelOpen_btn:selectorFile.css.ComproEngage.dashboard.rightPanelOpen_btn,
+  rightPanelClose_btn:selectorFile.css.ComproEngage.dashboard.rightPanelClose_btn,
   isInitialized: async function () {
     var res;
     await logger.logInto(await stackTrace.get());
@@ -175,6 +177,7 @@ module.exports = {
   getData_bookMenu: async function () {
     await logger.logInto(await stackTrace.get());
     var obj;
+    await action.waitForDisplayed(this.bookMenu_viewClassOption)
     obj = {
       bookMenu_viewClassOption: ((await action.getElementCount(this.bookMenu_viewClassOption)) > 0) ? await action.getText(this.bookMenu_viewClassOption) : null,
       bookMenu_createClassOption: ((await action.getElementCount(this.bookMenu_createClassOption)) > 0) ? await action.getText(this.bookMenu_createClassOption) : null,
@@ -605,6 +608,46 @@ module.exports = {
       await logger.logInto(await stackTrace.get(), "Value is entered in createPlaylist_input");
     } else {
       await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in createPlaylist_input", 'error');
+    }
+    return res;
+  },
+  clickAddNew_btn:async function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res = await action.click(this.addNew_btn);
+    if (true == res) {
+      await action.waitForDisplayed(this.createPlaylistBtn)
+      await logger.logInto(stackTrace.get(), " AddNew_btn is clicked");
+      res = await this.getData_dashboardPage();
+    }
+    else {
+    await  logger.logInto(stackTrace.get(), res + "AddNew_btn is NOT clicked", 'error');
+    }
+    return res;
+  },
+  clickRightPanelOpen_btn:async function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    res =await action.click(this.rightPanelOpen_btn);
+    if (true == res) {
+   await   logger.logInto(stackTrace.get(), " expand_Btn is clicked");
+    }
+    else {
+   await   logger.logInto(stackTrace.get(), res + "expand_Btn is NOT clicked", 'error');
+    }
+    return res;
+  },
+  clickRightPanelClose_btn:async function () {
+    logger.logInto(stackTrace.get());
+    var res;
+    await action.waitForDisplayed(this.rightPanelClose_btn)
+    res = await action.click(this.rightPanelClose_btn);
+    if (true == res) {
+    await  logger.logInto(stackTrace.get(), " Close_btn is clicked");
+      res = await this.isInitialized();
+    }
+    else {
+     await logger.logInto(stackTrace.get(), res + "Close_btn is NOT clicked", 'error');
     }
     return res;
   },

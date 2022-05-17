@@ -34,9 +34,9 @@ module.exports = {
 	classSubHeading: selectorFile.css.ComproEngage.myClassPage.classSubHeading,
 	classCard: selectorFile.css.ComproEngage.myClassPage.classCard,
 	joinClassbtn: selectorFile.css.ComproEngage.myClassPage.joinClassbtn,
-	viewClassOption:selectorFile.css.ComproEngage.myClassPage.viewClassOption,
-	progressOption:selectorFile.css.ComproEngage.myClassPage.progressOption,
-	viewProgress_btn:selectorFile.css.ComproEngage.myClassPage.viewProgress_btn,
+	viewClassOption: selectorFile.css.ComproEngage.myClassPage.viewClassOption,
+	progressOption: selectorFile.css.ComproEngage.myClassPage.progressOption,
+	viewProgress_btn: selectorFile.css.ComproEngage.myClassPage.viewProgress_btn,
 
 	isInitialized: async function () {
 		await logger.logInto(await stackTrace.get());
@@ -147,7 +147,7 @@ module.exports = {
 		let class_index = await this.getClassIndex(className);
 		if (typeof class_index != 'string') {
 			res = await action.click(this.classCard + class_index + "]");
-		
+
 		}
 		else {
 			res = class_index; //storing error message recieved from getclassIndex()
@@ -211,7 +211,8 @@ module.exports = {
 		return res;
 	},
 	get_MoreOptionsMenu_Data: async function () {
-		await logger.logInto(await stackTrace.get());
+		logger.logInto(stackTrace.get());
+		await action.waitForDisplayed(this.viewClassOption)
 		var obj = {
 			inboxOption_txt: (await action.getElementCount(this.inboxOption)) > 0 ? await action.getText(this.inboxOption) : null,
 			assignmentsOption_txt: (await action.getElementCount(this.assignmentsOption)) > 0 ? await action.getText(this.assignmentsOption) : null,
@@ -294,7 +295,7 @@ module.exports = {
 		await logger.logInto(await stackTrace.get());
 		res = await action.click(this.viewClassOption);
 		if (res == true) {
-		var	studentClassdetails = require('./studentClassDetails.page.js');
+			var studentClassdetails = require('./studentClassDetails.page.js');
 			res = await studentClassdetails.isInitialized();
 		}
 		else {
@@ -307,7 +308,7 @@ module.exports = {
 		await logger.logInto(await stackTrace.get());
 		res = await action.click(this.viewProgress_btn);
 		if (res == true) {
-		res = await require('./gradeBookStudent.page.js').isInitialized();
+			res = await require('./gradeBookStudent.page.js').isInitialized();
 		}
 		else {
 			res = res + " -- addStudentsOption button is NOT clicked";

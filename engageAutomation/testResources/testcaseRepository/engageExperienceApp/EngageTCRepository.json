@@ -660,8 +660,18 @@
           "tags": "P1"
         },
         {
-          "id": "ENG_INS_CLASS_TC_104",
+          "id": "ENG_INS_CLASS_TC_105",
           "description": " Click on the gradebook button of teacher view class page ",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_106",
+          "description": "Mobile: Validate that score is coming for anchord book class students.",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_107",
+          "description": "Mobile: Validate that score is not coming for non-anchord book class students",
           "tags": "P1"
         }
       ]
@@ -855,6 +865,18 @@
         {
           "id": "ENG_SHELL_TC_18",
           "description": "Validate that clicking on the Assign button on the header launches the create assignment page",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_SHELL_TC_19",
+          "description": "Mobile: Validate that user is able to logout of the application by selecting the logout option from the profile dropdown",
+          "tags": "P1, Desktop",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_SHELL_TC_20",
+          "description": "Mobile: Validate that on launching the application the appshell (left navigation pane and header) appears",
           "tags": "P1",
           "visualTest": true
         }
@@ -1635,6 +1657,36 @@
           "id": "ENG_DASH_TC_28",
           "description": "Validate that playlist is not added on the dashboard on clicking 'Cancel' button",
           "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DASH_TC_29",
+          "description": "Mobile: Click add new button on dashboard page",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DASH_TC_30",
+          "description": "Mobile: Click Right Panel Launch button on dashboard page",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DASH_TC_31",
+          "description": "Mobile: Click Right Panel Close button on dashboard page",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DASH_TC_32",
+          "description": "Validate that clicking on the 3 dots on book details page, launches the option menu for Student",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DASH_TC_33",
+          "description": "Mobile: Validate the content of the blank Dashboard page in English Language",
+          "tags": "P2",
           "visualTest": true
         }
       ]
