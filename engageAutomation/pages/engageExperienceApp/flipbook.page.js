@@ -1,7 +1,8 @@
 "use strict";
 var action = require('../../core/actionLibrary/baseActionLibrary.js')
 var selectorFile =  jsonParserUtil.jsonParser(selectorDir)
-var appShellPage = require('./appShell.page.js')
+var appShellPage = require('./appShell.page.js');
+const { browseAllResourcesBtn } = require('./playlist.page.js');
 
 module.exports = {
 
@@ -19,7 +20,6 @@ module.exports = {
   singlePageBtn: selectorFile.css.ComproEngage.flipbook.singlePageBtn,
   fullScreenBtn: selectorFile.css.ComproEngage.flipbook.fullScreenBtn,
   bookmarkBtn: selectorFile.css.ComproEngage.flipbook.bookmarkBtn,
-  jumpToPreviousPageBtn: selectorFile.css.ComproEngage.flipbook.jumpToPreviousPageBtn,
   TOCBtn: selectorFile.css.ComproEngage.flipbook.TOCBtn,
   previousBtn: selectorFile.css.ComproEngage.flipbook.previousBtn,
   nextBtn: selectorFile.css.ComproEngage.flipbook.nextBtn,
@@ -96,7 +96,6 @@ module.exports = {
       singlePageBtn: ((await action.getElementCount(this.singlePageBtn)) > 0) ? await action.getText(this.singlePageBtn) : null,
       fullScreenBtn: ((await action.getElementCount(this.fullScreenBtn)) > 0) ? await action.getText(this.fullScreenBtn) : null,
       bookmarkBtn: ((await action.getElementCount(this.bookmarkBtn)) > 0) ? await action.getText(this.bookmarkBtn) : null,
-      jumpToPreviousPageBtn: ((await action.getElementCount(this.jumpToPreviousPageBtn)) > 0) ? await action.getText(this.jumpToPreviousPageBtn) : null,
       TOCBtn: ((await action.getElementCount(this.TOCBtn)) > 0) ? await action.getText(this.TOCBtn) : null,
       previousBtn: ((await action.getElementCount(this.previousBtn)) > 0) ? await action.getText(this.previousBtn) : null,
       nextBtn: ((await action.getElementCount(this.nextBtn)) > 0) ? await action.getText(this.nextBtn) : null,
@@ -109,6 +108,7 @@ module.exports = {
     await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.notesBtn);
+		await browser.pause(2000)
     if (true == res) {
       await logger.logInto(await stackTrace.get(), " notesBtn button is clicked");
       res = await this.getData_notesModal();
@@ -640,7 +640,7 @@ module.exports = {
     return res;
   },
 
-  click_jumpToPageBtn: async function () {
+  click_jumpToPageBtnTOC: async function () {
     await logger.logInto(await stackTrace.get());
     var res;
     res = await action.click(this.jumpToPageBtnTOC);
@@ -665,7 +665,6 @@ module.exports = {
     else {
       await logger.logInto(stackTrace.get(), res + " jumpToPreviousPageBtn button is not clicked", 'error');
     }
-    console.log("res - ",res)
     return res;
   },
 

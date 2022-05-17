@@ -2219,12 +2219,6 @@
           "description": "Validate clicking on Jump to page button lauches the entered page in flipbook",
           "tags": "P1",
           "visualTest": true
-        },
-        {
-          "id": "ENG_FLIP_TC_23",
-          "description": "Validate clicking on Jump to Previous page button on toolbar launches the last page",
-          "tags": "P1",
-          "visualTest": true
         }
       ]
     },

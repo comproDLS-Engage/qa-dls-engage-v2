@@ -219,27 +219,8 @@ module.exports = {
 		await assertion.assertEqual(sts.singlePageBtn, "", "singlePageBtn status mismatch");
 		await assertion.assertEqual(sts.fullScreenBtn, "", "fullScreenBtn status mismatch");
 		await assertion.assertEqual(sts.bookmarkBtn, "", "bookmarkBtn status mismatch");
-		await assertion.assertEqual(sts.jumpToPreviousPageBtn, "", "jumpToPreviousPageBtn status mismatch");		
 		await assertion.assert((sts.TOCBtn instanceof Error) === false, "TOCBtn status mismatch - " + sts.TOCBtn);
 		await assertion.assertEqual(sts.previousBtn, "", "previousBtn status mismatch");
 		await assertion.assertEqual(sts.nextBtn, "", "nextBtn status mismatch");
-	},
-
-	//Validate clicking on Jump to Previous page button on toolbar launches the last page
-	ENG_FLIP_TC_23: async function () {
-		sts = await flipbook.click_jumpToPreviousPageBtn();
-		await assertion.assertEqual(sts.notesBtn, "", "notesBtn status mismatch");
-		await assertion.assertEqual(sts.zoomInBtn, "", "zoomInBtn status mismatch");
-		await assertion.assertEqual(sts.zoomOutBtn, "", "zoomOutBtn status mismatch");
-		await assertion.assertEqual(sts.fitToScreenBtn, "", "fitToScreenBtn status mismatch");
-		await assertion.assertEqual(sts.doublePageBtn, "", "doublePageBtn status mismatch");
-		await assertion.assertEqual(sts.singlePageBtn, "", "singlePageBtn status mismatch");
-		await assertion.assertEqual(sts.fullScreenBtn, "", "fullScreenBtn status mismatch");
-		await assertion.assertEqual(sts.bookmarkBtn, "", "bookmarkBtn status mismatch");
-		await assertion.assertEqual(sts.jumpToPreviousPageBtn, null, "jumpToPreviousPageBtn status mismatch");		
-		await assertion.assert((sts.TOCBtn instanceof Error) === false, "TOCBtn status mismatch - " + sts.TOCBtn);
-		await assertion.assertEqual(sts.previousBtn, "", "previousBtn status mismatch");
-		await assertion.assertEqual(sts.nextBtn, "", "nextBtn status mismatch");
-	},
-	
+	}	
 }

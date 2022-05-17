@@ -622,12 +622,6 @@
             "description": "Validate clicking on Jump to page button lauches the entered page in flipbook",
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": []
-         },
-         {
-            "id": "ENG_FLIP_TC_23",
-            "description": "Validate clicking on Jump to Previous page button on toolbar launches the last page",
-            "testFile": "./test/engageExperienceApp/flipbook.test.js",
-            "testData": []
          }
       ],
       "AfterEach": [],
