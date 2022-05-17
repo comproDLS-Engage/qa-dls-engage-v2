@@ -95,7 +95,7 @@
             },
             "dashboard": {
                 "pageTitle": "[data-tid=text-pageTitle]",
-                "createPlaylistBtn": "[data-tid=button-CreatePlaylist]",
+                "createPlaylistBtn": "[data-tid=button-createPlaylist]",
                 "addBookBtn": "[data-tid=button-addBook]",
                 "cardSliderTitle": "[data-tid=text-cardSliderTitle]",
                 "cardSliderSubtitle": "[data-tid=text-cardSliderSubtitle]",
@@ -130,7 +130,7 @@
                 "createPlaylist_label": "[data-tid=text-createPlaylistLabel]",
                 "createPlaylist_input": "[data-tid=input-createPlaylist]",
                 "createPlaylist_cancelBtn": "[data-tid=button-cancelCreatePlaylist]",
-                "createPlaylist_createBtn": "[data-tid=button-createPlaylist]",
+                "createPlaylist_createBtn": "[class*=MuiDialog] [data-tid=button-createPlaylist]",
                 "exploreHeading": "[data-tid=text-explore]",
                 "viewAllBtn": "[data-tid=btn-label-viewall]",
                 "resourceTitle": "[data-tid*=item-globalresource] p:nth-child(1)",
