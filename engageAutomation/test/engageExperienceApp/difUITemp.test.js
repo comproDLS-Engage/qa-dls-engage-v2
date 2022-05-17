@@ -508,7 +508,7 @@ module.exports = {
 	ENG_DIF_TC_43: async function () {
 		res = await action.scrollIntoView("#app");
 		console.log(res)
-		res = await action.click("[data-tid=button-CreatePlaylist]");
+		res = await action.click("[data-tid=button-createPlaylist]");
 		console.log(res)
 		res = await action.waitForDisplayed("[data-tid=text-createPlaylistLabel]");
 		console.log(res)
