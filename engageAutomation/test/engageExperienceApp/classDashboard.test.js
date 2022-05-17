@@ -111,7 +111,7 @@ module.exports = {
 	ENG_INS_CLASS_TC_6: async function () {
 		sts = await classDashboardPage.click_CreateClass_Button();
 		if ((typeof (sts)) === "object") {
-			
+
 			await assertion.assertEqual(sts.pageStatus, true, "Create Class Page not launched: " + (await JSON.stringify(sts)))
 
 		} else {
@@ -137,19 +137,19 @@ module.exports = {
 	//Validate that on clicking a Class card on the My Classes Page, Class Dashboard is launched for that class
 	ENG_INS_CLASS_TC_7: async function (testdata) {
 		sts = await classDashboardPage.click_ClassCard(testdata)
-		await assertion.assertEqual(sts, true, "Class Details page is not launched" ,sts.pageStatus)
+		await assertion.assertEqual(sts, true, "Class Details page is not launched", sts.pageStatus)
 		sts = await teacherViewClassPage.isInitialized();
 		await assertion.assertEqual(sts, true, "Class Deatails page is not launched" + (await JSON.stringify(sts.pageStatus)))
 
 	},
 
-	
+
 	//Validate that clicking on Edit Class option from Class Menu launches Edit Class Workflow
 	ENG_INS_CLASS_TC_9: async function (testdata) {
 		sts = await teacherViewClassPage.clickClassOptionsButton()
 		await assertion.assertEqual(sts.editClassBtn, testdata[1].editOption_txt, "Edit button is Not displayed: " + (await JSON.stringify(sts)))
 		sts = await teacherViewClassPage.clickEditbtn();
-		
+
 		if ((typeof (sts)) === "object") {
 			await assertion.assertEqual(sts.pageStatus, true, "Edit Class Page is not displayed: " + (await JSON.stringify(sts.pageStatus)))
 		} else {
@@ -498,7 +498,7 @@ module.exports = {
 	ENG_INS_CLASS_TC_44: async function () {
 		sts = await teacherViewClassPage.clickViewBookbtn()
 		await assertion.assertEqual(sts.pageStatus, true, "View book page status mismatch");
-        await assertion.assertEqual(sts.appShell.header, true, "View book page header status mismatch");
+		await assertion.assertEqual(sts.appShell.header, true, "View book page header status mismatch");
 	},
 	//rupsi	
 	//Class Restore - Validate the end date of class increase set for next year before restore.
@@ -526,47 +526,47 @@ module.exports = {
 	},
 
 	//Validate that score is coming for anchord book class students  
-		ENG_INS_CLASS_TC_100: async function (testdata) {
-			//console.log(testdata)
-			sts = await teacherViewClassPage.getStudentPageData()
-			if ((typeof (sts)) === "object") {
-				await assertion.assertEqual(sts.studentData[0].studentName, testdata[0].Name, "Student Name is not mismatched " + (await JSON.stringify(sts)))
-				await assertion.assertEqual(sts.studentData[0].studentStatus, testdata[1].enrolledStatus, "Student Status is not mismatched " + (await JSON.stringify(sts)))
-				await assertion.assertEqual(sts.studentData[0].studentAvgScore, testdata[0].AvgScore, "Student AvgScore is not mismatched " + (await JSON.stringify(sts)))
-				await assertion.assertEqual(sts.studentData[0].studentCompletionScore, testdata[0].CompletionScore, "Student CompletionScore is not mismatched " + (await JSON.stringify(sts)))
-				await assertion.assertEqual(sts.studentData[0].studentMoreOption, true, "Student MoreOption is not mismatched " + (await JSON.stringify(sts)))
-	
-			} else {
-				await assertion.assertFail(sts);
-			}
-	
-		},
+	ENG_INS_CLASS_TC_100: async function (testdata) {
+		//console.log(testdata)
+		sts = await teacherViewClassPage.getStudentPageData()
+		if ((typeof (sts)) === "object") {
+			await assertion.assertEqual(sts.studentData[0].studentName, testdata[0].Name, "Student Name is not mismatched " + (await JSON.stringify(sts)))
+			await assertion.assertEqual(sts.studentData[0].studentStatus, testdata[1].enrolledStatus, "Student Status is not mismatched " + (await JSON.stringify(sts)))
+			await assertion.assertEqual(sts.studentData[0].studentAvgScore, testdata[0].AvgScore, "Student AvgScore is not mismatched " + (await JSON.stringify(sts)))
+			await assertion.assertEqual(sts.studentData[0].studentCompletionScore, testdata[0].CompletionScore, "Student CompletionScore is not mismatched " + (await JSON.stringify(sts)))
+			await assertion.assertEqual(sts.studentData[0].studentMoreOption, true, "Student MoreOption is not mismatched " + (await JSON.stringify(sts)))
+
+		} else {
+			await assertion.assertFail(sts);
+		}
+
+	},
 	//Validate that score is not coming for non-anchord book class students  
 	ENG_INS_CLASS_TC_101: async function (testdata) {
 		//console.log(testdata)
 		sts = await teacherViewClassPage.getStudentPageData()
 		if ((typeof (sts)) === "object") {
 			await assertion.assertEqual(sts.studentData[0].studentName, testdata[0].Name, "Student Name is not mismatched " + (await JSON.stringify(sts)))
-				await assertion.assertEqual(sts.studentData[0].studentStatus, testdata[1].enrolledStatus, "Student Status is not mismatched " + (await JSON.stringify(sts)))
-				await assertion.assertEqual(sts.studentData[0].viewProgressbtn, true, "Student viewProgressbtn is not mismatched " + (await JSON.stringify(sts)))
-				await assertion.assertEqual(sts.studentData[0]. viewMessagebtn, true, "Student viewMessagebtn is not mismatched " + (await JSON.stringify(sts)))
-				await assertion.assertEqual(sts.studentData[0].studentMoreOption, true, "Student MoreOption is not mismatched " + (await JSON.stringify(sts)))
+			await assertion.assertEqual(sts.studentData[0].studentStatus, testdata[1].enrolledStatus, "Student Status is not mismatched " + (await JSON.stringify(sts)))
+			await assertion.assertEqual(sts.studentData[0].viewProgressbtn, true, "Student viewProgressbtn is not mismatched " + (await JSON.stringify(sts)))
+			await assertion.assertEqual(sts.studentData[0].viewMessagebtn, true, "Student viewMessagebtn is not mismatched " + (await JSON.stringify(sts)))
+			await assertion.assertEqual(sts.studentData[0].studentMoreOption, true, "Student MoreOption is not mismatched " + (await JSON.stringify(sts)))
 
 		} else {
 			await assertion.assertFail(sts);
 		}
 	},
 	// Validate the page when no student is added 
-		ENG_INS_CLASS_TC_102: async function (testdata) {
-			sts = await teacherViewClassPage.getStudentPageData()
-			if ((typeof (sts)) === "object") {
-				await assertion.assertEqual(sts.noStudentSubTitle, testdata.noStudentSubTitle, "Student Title is not matched" + (await JSON.stringify(sts)))
-					await assertion.assertEqual(sts.noStudentTitle, testdata.noStudentTitle, "Student subTitle is not mismatched " + (await JSON.stringify(sts)))
-					await assertion.assertEqual(sts.noStudentIcon, true, "Student viewProgressbtn is not mismatched " + (await JSON.stringify(sts)))
-				
-			} else {
-				await assertion.assertFail(sts);
-			}
+	ENG_INS_CLASS_TC_102: async function (testdata) {
+		sts = await teacherViewClassPage.getStudentPageData()
+		if ((typeof (sts)) === "object") {
+			await assertion.assertEqual(sts.noStudentSubTitle, testdata.noStudentSubTitle, "Student Title is not matched" + (await JSON.stringify(sts)))
+			await assertion.assertEqual(sts.noStudentTitle, testdata.noStudentTitle, "Student subTitle is not mismatched " + (await JSON.stringify(sts)))
+			await assertion.assertEqual(sts.noStudentIcon, true, "Student viewProgressbtn is not mismatched " + (await JSON.stringify(sts)))
+
+		} else {
+			await assertion.assertFail(sts);
+		}
 	},
 	ENG_INS_CLASS_TC_103: async function (testdata) {
 		sts = await teacherViewClassPage.clickAssignmentsTab()
@@ -596,6 +596,39 @@ module.exports = {
 		sts = await classDashboardPage.click_viewProgress();
 		if ((typeof (sts)) === "object") {
 			await assertion.assertEqual(sts.pageStatus, true, "Assignment Tab is not selected " + (await JSON.stringify(sts)))
+
+		} else {
+			await assertion.assertFail(sts);
+		}
+	},
+	//Mobile: Validate that score is coming for anchord book class students  
+	ENG_INS_CLASS_TC_106: async function (testdata) {
+		//console.log(testdata)
+		sts = await teacherViewClassPage.getStudentPageData()
+		console.log(sts)
+		if ((typeof (sts)) === "object") {
+			await assertion.assertEqual(sts.studentData[0].studentName, testdata[0].Name, "Student Name is not mismatched " + JSON.stringify(sts))
+			await assertion.assertEqual(sts.studentData[0].studentStatus, testdata[1].enrolledStatus, "Student Status is not mismatched " + JSON.stringify(sts))
+			await assertion.assertEqual(sts.studentData[0].studentAvgScore, testdata[0].AvgScore, "Student AvgScore is not mismatched " + JSON.stringify(sts))
+			await assertion.assertEqual(sts.studentData[0].studentCompletionScore, testdata[0].CompletionScore, "Student CompletionScore is not mismatched " + JSON.stringify(sts))
+			await assertion.assertEqual(sts.studentData[0].studentMoreOption, true, "Student MoreOption is not mismatched " + JSON.stringify(sts))
+
+		} else {
+			await assertion.assertFail(sts);
+		}
+
+	},
+	//Mobile: Validate that score is not coming for non-anchord book class students  
+	ENG_INS_CLASS_TC_107: async function (testdata) {
+		//console.log(testdata)
+		sts = await teacherViewClassPage.getStudentPageData()
+		console.log(sts)
+		if ((typeof (sts)) === "object") {
+			await assertion.assertEqual(sts.studentData[0].studentName, testdata[0].Name, "Student Name is not mismatched " + JSON.stringify(sts))
+			await assertion.assertEqual(sts.studentData[0].studentStatus, testdata[1].enrolledStatus, "Student Status is not mismatched " + JSON.stringify(sts))
+			//await	assertion.assertEqual(sts.studentData[0].viewProgressbtn, true, "Student viewProgressbtn is not mismatched " + JSON.stringify(sts))
+			//assertion.assertEqual(sts.studentData[0]. viewMessagebtn, true, "Student viewMessagebtn is not mismatched " + JSON.stringify(sts))
+			await assertion.assertEqual(sts.studentData[0].studentMoreOption, true, "Student MoreOption is not mismatched " + JSON.stringify(sts))
 
 		} else {
 			await assertion.assertFail(sts);

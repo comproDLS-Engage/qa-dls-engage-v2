@@ -1,0 +1,127 @@
+{
+   "Suite1": {
+      "Name": "Engage App Shell Validation | Successful Scenarios",
+      "TestCaseRepo": [
+         "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
+      ],
+      "Before": [
+         {
+            "id": "launchUrl",
+            "description": "",
+            "testFile": "./engageAutomation/core/runner/launchUrl.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_LAND_TC_3",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/landing.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_IDEN_TC_7",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/login.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+                  "jsonPath": "engage.login.user.validInstructorUser1"
+               }
+            ]
+         }
+      ],
+      "BeforeEach": [],
+      "Test": [
+         {
+            "id": "ENG_SHELL_TC_20",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/appShell.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.appShell"
+               }
+            ]
+         },
+         {
+            "id": "ENG_SHELL_TC_2",
+            "description": "Validate that clicking on the Dashboard button launches Dashboard page",
+            "testFile": "./test/engageExperienceApp/appShell.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_SHELL_TC_3",
+            "description": "Validate that clicking on the Browse button launches Browse page",
+            "testFile": "./test/engageExperienceApp/appShell.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_SHELL_TC_4",
+            "description": "Validate that clicking on the Classes button in left Navigation pane launches Classes page for teacher",
+            "testFile": "./test/engageExperienceApp/appShell.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.myClassPage"
+               }
+            ]
+         },
+         {
+            "id": "ENG_SHELL_TC_5",
+            "description": "Validate that clicking on the bell icon launches the notification drawer",
+            "testFile": "./test/engageExperienceApp/appShell.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.appShell"
+               }
+            ]
+         },
+         {
+            "id": "ENG_SHELL_TC_6",
+            "description": "Validate that clicking on cross icon closes the notification section",
+            "testFile": "./test/engageExperienceApp/appShell.test.js",
+            "testData": []
+         },
+         
+      
+         {
+            "id": "ENG_SHELL_TC_19",
+            "description": "Validate that clicking on the profile dropdown launches the dropdown of profile and other options",
+            "testFile": "./test/engageExperienceApp/appShell.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.appShell"
+               },
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+                  "jsonPath": "engage.login.user.validInstructorUser1"
+               }
+            ]
+         },
+         {
+            "id": "ENG_SHELL_TC_7",
+            "description": "Validate that user is able to change the app language using the language switcher on the header",
+            "testFile": "./test/engageExperienceApp/appShell.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.appShell.languageToSelect"
+               },
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.appShell.selectedLanguage"
+               }
+            ]
+         },
+         {
+            "id": "ENG_SHELL_TC_9",
+            "description": "Validate that clicking on logout logs out from application",
+            "testFile": "./test/engageExperienceApp/appShell.test.js",
+            "testData": []
+         }
+      ],
+      "AfterEach": [],
+      "After": []
+   }
+}

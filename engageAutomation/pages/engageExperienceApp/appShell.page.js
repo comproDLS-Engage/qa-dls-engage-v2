@@ -245,6 +245,9 @@ module.exports = {
 			userProfileHelpBtn: ((await action.getElementCount(this.userProfileHelpBtn)) > 0) ? await action.getText(this.userProfileHelpBtn) : null,
 			userProfileSettingsBtn: ((await action.getElementCount(this.userProfileSettingsBtn)) > 0) ? await action.getText(this.userProfileSettingsBtn) : null,
 			userProfileLogoutBtn: ((await action.getElementCount(this.userProfileLogoutBtn)) > 0) ? await action.getText(this.userProfileLogoutBtn) : null,
+			notificationTxt: ((await action.getElementCount(this.notificationTxt)) > 0) ?await action.getText(this.notificationTxt) : null,
+			notificationBtn_exists: ((await action.getElementCount(this.notificationBtn)) > 0) ? await action.waitForDisplayed(this.notificationBtn) : false,
+			selectedLanguage: ((await action.getElementCount(this.selectedLanguage) > 0)) ? await action.getText(this.selectedLanguage) : null,
 		}
 		return obj;
 	},

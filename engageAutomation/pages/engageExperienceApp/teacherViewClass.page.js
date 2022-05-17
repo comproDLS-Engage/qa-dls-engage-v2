@@ -48,7 +48,7 @@ module.exports = {
     },
 
     getViewClassPageData: async function () {
-        await action.waitForDocumentLoad();
+       // await action.waitForDocumentLoad();
         await logger.logInto(await stackTrace.get());
         obj = {
             className: ((await action.getElementCount(this.pageTitle)) > 0) ? await action.getText(this.pageTitle) : null,
@@ -98,8 +98,9 @@ module.exports = {
         await logger.logInto(await stackTrace.get());
         res = await action.click(this.classOptionsBtn);
         if (res == true) {
-            await logger.logInto(await stackTrace.get(), "-- Class Options button is clicked");
-            res = await this.getClassOptionsList();
+            logger.logInto(stackTrace.get(), "-- Class Options button is clicked");
+            await action.waitForDisplayed(this.editClassBtn)
+            res = this.getClassOptionsList();
         }
         else {
             res = res + "-- Error in clicking View Book button";
@@ -292,7 +293,9 @@ module.exports = {
             studentCompletionScorelbl: ((await action.getElementCount(this.studentCompletionScorelbl)) > 0) ? await action.getText(this.studentCompletionScorelbl) : null,
         }
         let studentData = [], i;
+        await action.waitForDisplayed(this.studentName)
         let studentcount = await action.getElementCount(this.studentList);
+        console.log(this.studentStatus + 0 + "]")
         for (i = 0; i < studentcount; i++) {
             studentData[i] =
             {

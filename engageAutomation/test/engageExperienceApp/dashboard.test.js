@@ -191,4 +191,59 @@ module.exports = {
         sts = await dashboardPage.click_createPlaylist_cancelBtn();
         await assertion.assertEqual(sts, true, "createPlaylist_cancelBtn status mismatch");
     },
+    //Mobile: Click add new button on dashboard page
+    ENG_DASH_TC_29: async function (testdata) {
+        sts = await dashboardPage.clickAddNew_btn();
+       await assertion.assertEqual(sts.createPlaylistBtn, testdata.createPlaylistBtn, "Create Playlist text mismatch");
+       await assertion.assertEqual(sts.addBookBtn, testdata.addBookBtn, "Add Book text mismatch");
+    },
+    //Mobile: Click Right Panel Launch button on dashboard page
+    ENG_DASH_TC_30: async function () {
+        sts = await dashboardPage.clickRightPanelOpen_btn();
+      await  assertion.assertEqual(sts, true, "rightPanelOpen_btn status mismatch");
+    },
+
+    //Mobile: Click Right Panel Close button on dashboard page
+    ENG_DASH_TC_31: async function () {
+        sts = await dashboardPage.clickRightPanelClose_btn();
+       await assertion.assertEqual(sts.pageStatus, true, "rightPanelClose_btn status mismatch");
+    },
+      //Validate on clicking Book Ellipses, dropdown menu is launched for Student
+      ENG_DASH_TC_32:async function (testdata) { 
+        sts = await dashboardPage.click_bookMenuBtn(testdata[0]);
+        console.log(sts)
+        await assertion.assertEqual(sts.bookMenu_viewClassOption, testdata[1].bookMenu_viewClassOption, "View Class text mismatch");
+        await assertion.assertEqual(sts.bookMenu_removeOption, testdata[1].bookMenu_removeOption, "Remove text mismatch");
+       // assertion.assertEqual(sts.bookMenu_createClassOption, testdata[1].bookMenu_createClassOption, "Create Class text mismatch");
+       await assertion.assertEqual(sts.bookMenu_openFlipbookOption, testdata[1].bookMenu_openFlipbookOption, "Open Flipbook text mismatch");
+        //this assetion is dependent whethere flipbook is present or not
+    },
+    ENG_DASH_TC_33: async function (testdata) {
+        await dashboardPage.isInitialized();
+        sts = await dashboardPage.getData_dashboardPage();
+        await assertion.assertEqual(sts.pageTitle, testdata.pageTitle, "Dashboard text mismatch");
+       // await assertion.assertEqual(sts.createPlaylistBtn, testdata.createPlaylistBtn, "Create Playlist text mismatch");
+        //await assertion.assertEqual(sts.addBookBtn, testdata.addBookBtn, "Add Book text mismatch");
+        await assertion.assertEqual(sts.cardSliderTitle, testdata.cardSliderTitle, "slider title text mismatch");
+        await assertion.assertEqual(sts.cardSliderSubtitle, testdata.cardSliderSubtitle, "slider subtile text mismatch");
+        await assertion.assertEqual(sts.cardSliderLeftBtn, testdata.cardSliderLeftBtn, "left btn status mismatch");
+        await assertion.assertEqual(sts.cardSliderRightBtn, testdata.cardSliderRightBtn, "right btn status text mismatch");
+        await assertion.assertEqual(sts.myBooksHeading, testdata.myBooksHeading, "My books text mismatch");
+        await assertion.assertEqual(sts.noBooksTitle, testdata.noBooksTitle, "No books added text mismatch");
+        await assertion.assertEqual(sts.noBooksSubtitle, testdata.noBooksSubtitle, "no books subtitle text mismatch");
+        await assertion.assertEqual(sts.noBooks_addBookBtn, testdata.noBooks_addBookBtn, "add books text mismatch");
+        await assertion.assertEqual(sts.myPlaylistsHeading, testdata.myPlaylistsHeading, "my playlist text mismatch");
+        await assertion.assertEqual(sts.noPlaylistsTitle, testdata.noPlaylistsTitle, "no playlist text mismatch");
+        await assertion.assertEqual(sts.noPlaylistsSubTitle, testdata.noPlaylistsSubTitle, "playlist subtitle text mismatch");
+        await assertion.assertEqual(sts.noPlaylists_createBtn, testdata.noPlaylists_createBtn, "create playlist text mismatch");
+       // await assertion.assertEqual(sts.exploreHeading, testdata.exploreHeading, "Explore heading text mismatch");
+       // await assertion.assertEqual(sts.viewAllBtn, testdata.viewAllBtn, "View All button text mismatch");
+        await assertion.assertEqual(sts.recentlyViewedHeading, testdata.recentlyViewedHeading, "Recently Viewed heading text mismatch");
+        sts = await dashboardPage.getData_actionCards();
+        for (let i = 0; i < sts.length; i++) { //sts.length has been used instead of testdata.actionCard.length to support smaller resolutions
+            await assertion.assertEqual(sts[i].actionCardTitles, testdata.actionCardTitles[i], "Action Card title text mismatch");
+            await assertion.assertEqual(sts[i].actionCardSubtitles, testdata.actionCardSubtitles[i], "Action Card subtitle text mismatch");
+            await assertion.assertEqual(sts[i].actionCardBtns, testdata.actionCardBtns[i], "Action Card button text mismatch");
+        }
+    },
 };

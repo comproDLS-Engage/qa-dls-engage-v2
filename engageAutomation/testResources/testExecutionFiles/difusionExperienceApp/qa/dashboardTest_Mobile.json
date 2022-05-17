@@ -1,0 +1,578 @@
+{
+    "Suite1": {
+        "Name": "Validation of Dashboard for a new instructor",
+        "TestCaseRepo": [
+            "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
+        ],
+        "Before": [
+            {
+                "id": "launchUrl",
+                "description": "",
+                "testFile": "./engageAutomation/core/runner/launchUrl.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_LAND_TC_1",
+                "description": "Landing page",
+                "testFile": "./test/engageExperienceApp/landing.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_LAND_TC_3",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/landing.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_IDEN_TC_7",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/login.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+                        "jsonPath": "engage.login.user.validInstructorUser2"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_DASH_TC_33",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/dashboard.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+                        "jsonPath": "engage.appContent.dashboard.teacher"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_DASH_TC_30",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/dashboard.test.js",
+                "testData": []
+            }
+        ],
+        "BeforeEach": [],
+        "Test": [
+            {
+                "id": "ENG_DASH_TC_19",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/dashboard.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                        "jsonPath": "engage.appContent.dashboard.teacher.resourceTitle[0]"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_DASH_TC_20",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/dashboard.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                        "jsonPath": "engage.appContent.dashboard.teacher.resourceTitle[1]"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_DASH_TC_21",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/dashboard.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                        "jsonPath": "engage.appContent.dashboard.teacher.resourceTitle[2]"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_DASH_TC_22",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/dashboard.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                        "jsonPath": "engage.appContent.dashboard.teacher.resourceTitle[3]"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_DASH_TC_23",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/dashboard.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                        "jsonPath": "engage.appContent.dashboard.teacher.resourceTitle[4]"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_DASH_TC_24",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/dashboard.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                        "jsonPath": "engage.appContent.dashboard.teacher.resourceTitle[5]"
+                    }
+                ]
+            }
+        ],
+        "AfterEach": [
+            {
+                "id": "ENG_SHELL_TC_2",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/appShell.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_DASH_TC_30",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/dashboard.test.js",
+                "testData": []
+            }
+        ],
+        "After": [
+            {
+                "id": "ENG_DASH_TC_31",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/dashboard.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_SHELL_TC_19",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/appShell.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                        "jsonPath": "engage.appContent.appShell"
+                    },
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+                        "jsonPath": "engage.login.user.validInstructorUser2"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_SHELL_TC_9",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/appShell.test.js",
+                "testData": []
+            }
+        ]
+    },
+    "Suite2": {
+        "Name": "Validation of Dashboard for a new student",
+        "TestCaseRepo": [
+            "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
+        ],
+        "Before": [
+            {
+                "id": "launchUrl",
+                "description": "",
+                "testFile": "./engageAutomation/core/runner/launchUrl.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_LAND_TC_1",
+                "description": "Landing page",
+                "testFile": "./test/engageExperienceApp/landing.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_LAND_TC_3",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/landing.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_IDEN_TC_7",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/login.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+                        "jsonPath": "engage.login.user.validStudent2"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_DASH_TC_33",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/dashboard.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                        "jsonPath": "engage.appContent.dashboard.student"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_DASH_TC_30",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/dashboard.test.js",
+                "testData": []
+            }
+        ],
+        "BeforeEach": [],
+        "Test": [
+            {
+                "id": "ENG_DASH_TC_19",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/dashboard.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                        "jsonPath": "engage.appContent.dashboard.student.resourceTitle[0]"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_DASH_TC_20",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/dashboard.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                        "jsonPath": "engage.appContent.dashboard.student.resourceTitle[1]"
+                    }
+                ]
+            }
+        ],
+        "AfterEach": [
+            {
+                "id": "ENG_SHELL_TC_2",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/appShell.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_DASH_TC_30",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/dashboard.test.js",
+                "testData": []
+            }
+        ],
+        "After": [
+            {
+                "id": "ENG_DASH_TC_31",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/dashboard.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_SHELL_TC_19",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/appShell.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                        "jsonPath": "engage.appContent.appShell"
+                    },
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+                        "jsonPath": "engage.login.user.validStudent2"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_SHELL_TC_9",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/appShell.test.js",
+                "testData": []
+            }
+        ]
+    },
+    "Suite3": {
+        "Name": "Validation of Dashboard for an existing instructor",
+        "TestCaseRepo": [
+            "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
+        ],
+        "Before": [
+            {
+                "id": "launchUrl",
+                "description": "",
+                "testFile": "./engageAutomation/core/runner/launchUrl.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_LAND_TC_1",
+                "description": "Landing page",
+                "testFile": "./test/engageExperienceApp/landing.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_LAND_TC_3",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/landing.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_IDEN_TC_7",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/login.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+                        "jsonPath": "engage.login.user.validInstructorUser1"
+                    }
+                ]
+            }
+        ],
+        "BeforeEach": [],
+        "Test": [
+            {
+                "id": "ENG_DASH_TC_29",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/dashboard.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                        "jsonPath": "engage.appContent.dashboard.student"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_DASH_TC_26",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/dashboard.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                        "jsonPath": "engage.appContent.dashboard.teacher"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_DASH_TC_28",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/dashboard.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_SHELL_TC_2",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/appShell.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_DASH_TC_12",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/dashboard.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                        "jsonPath": "book.name"
+                    },
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                        "jsonPath": "engage.appContent.dashboard.teacher"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_DASH_TC_13",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/dashboard.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                        "jsonPath": "book.name"
+                    },
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                        "jsonPath": "engage.appContent.dashboard.teacher"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_DASH_TC_14",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/dashboard.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_DASH_TC_12",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/dashboard.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                        "jsonPath": "book.name"
+                    },
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                        "jsonPath": "engage.appContent.dashboard.teacher"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_DASH_TC_18",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/dashboard.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_SHELL_TC_11",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/appShell.test.js",
+                "testData": []
+            }
+        ],
+        "AfterEach": [],
+        "After": [
+            {
+                "id": "ENG_SHELL_TC_19",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/appShell.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                        "jsonPath": "engage.appContent.appShell"
+                    },
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+                        "jsonPath": "engage.login.user.validInstructorUser1"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_SHELL_TC_9",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/appShell.test.js",
+                "testData": []
+            }
+        ]
+    },
+    "Suite4": {
+        "Name": "Validation of Dashboard for an existing student",
+        "TestCaseRepo": [
+            "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
+        ],
+        "Before": [
+            {
+                "id": "launchUrl",
+                "description": "",
+                "testFile": "./engageAutomation/core/runner/launchUrl.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_LAND_TC_1",
+                "description": "Landing page",
+                "testFile": "./test/engageExperienceApp/landing.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_LAND_TC_3",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/landing.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_IDEN_TC_7",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/login.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+                        "jsonPath": "engage.login.user.validStudent1"
+                    }
+                ]
+            }
+        ],
+        "BeforeEach": [],
+        "Test": [
+            {
+                "id": "ENG_DASH_TC_12",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/dashboard.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                        "jsonPath": "book.name"
+                    },
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                        "jsonPath": "engage.appContent.dashboard.student"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_DASH_TC_13",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/dashboard.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                        "jsonPath": "book.name"
+                    },
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                        "jsonPath": "engage.appContent.dashboard.student"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_DASH_TC_14",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/dashboard.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_DASH_TC_32",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/dashboard.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                        "jsonPath": "book.name"
+                    },
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                        "jsonPath": "engage.appContent.dashboard.student"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_DASH_TC_18",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/dashboard.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_SHELL_TC_11",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/appShell.test.js",
+                "testData": []
+            }
+        ],
+        "AfterEach": [],
+        "After": [
+            {
+                "id": "ENG_SHELL_TC_19",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/appShell.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                        "jsonPath": "engage.appContent.appShell"
+                    },
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+                        "jsonPath": "engage.login.user.validStudent1"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_SHELL_TC_9",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/appShell.test.js",
+                "testData": []
+            }
+        ]
+    }
+}

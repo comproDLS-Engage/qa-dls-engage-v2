@@ -72,7 +72,7 @@ module.exports = {
 	},
 
 	//Validate that clicking on the profile dropdown launches the dropdown of profile and other options
-   async ENG_SHELL_TC_8 (testdata) {
+   ENG_SHELL_TC_8:async function (testdata) {
 		sts = await appShell.clickProfileButton();
 		if (testdata[0] != undefined) {
 			await assertion.assertEqual(sts.userName, testdata[1].name, "User Name Text mismatch");
@@ -153,5 +153,31 @@ module.exports = {
 		sts = await appShell.clickAssignButton();
 		await assertion.typeOf(sts, 'object', new Error(sts));
 		await assertion.assertEqual(sts.pageStatus, true, "Create Assignment Page Status Mismatch: ")
-	}
+	},
+	//Mobile: Click on Profile button on the header
+	ENG_SHELL_TC_19: async function (testdata) {
+		sts = await appShell.clickProfileButton();
+		if (testdata[0] != undefined) {
+		await	assertion.assertEqual(sts.userName, testdata[1].name, "User Name Text mismatch");
+		await	assertion.assertEqual(sts.emailID, testdata[1].email, "email ID Text mismatch");
+		await	assertion.assertEqual(sts.userProfileHelpBtn, testdata[0].userProfileHelpBtn, "Help Text mismatch");
+		await	assertion.assertEqual(sts.userProfileSettingsBtn, testdata[0].userProfileSettingsBtn, "Settings Text mismatch");
+		await	assertion.assertEqual(sts.userProfileLogoutBtn, testdata[0].userProfileLogoutBtn, "Logout Text mismatch");
+		await	assertion.assertEqual(sts.notificationTxt, testdata[0].notificationHeader, "Notification Header Text mismatch");
+		await	assertion.assertEqual(sts.notificationBtn_exists, true, "Notification Button does not exist");
+		await	assertion.assertEqual(sts.selectedLanguage, testdata[0].selectedLanguage, "Language Button does not exist");
+		}
+	},
+	//Validate content of the appShell is launched (Desktop)
+	ENG_SHELL_TC_20: async function (testdata) {
+		sts = await appShell.getAppShellLeftPaneData();
+          await assertion.assertEqual(sts.dashboardBtn, testdata.dashboardTxt, "Dashboard text mismatch");
+	await	assertion.assertEqual(sts.browseBtn, testdata.browseTxt, "Browser text mismatch");
+        await	assertion.assertEqual(sts.classesBtn, testdata.classesTxt, "Classes text mismatch");
+	await	assertion.assertEqual(sts.helpBtn, testdata.helpTxt, "Help text mismatch");
+		sts = await appShell.getAppShellHeaderData();
+	await	assertion.assertEqual(sts.notificationBtn_exists, true, "Notification Button does not exist");
+	//	assertion.assertEqual(sts.selectedLanguage, testdata.selectedLanguage, "Language Button does not exist");
+	await	assertion.assertEqual(sts.userProfileBtn_exists, true, "User Profile Button does not exist");
+	},
 }

@@ -3,7 +3,7 @@
         "login": {
             "user": {
                 "validStudent1": {
-                    "email": "hutudibrulli-3717@yopmail.com",
+                    "email": "hutudibrulli-3718@yopmail.com",
                     "password": "Compro@1234",
                     "role": "student",
                     "name": "hutudibrulli-3717 auto",
@@ -27,7 +27,7 @@
                     "email": "jijetoullozo-4043@yopmail.com",
                     "password": "Compro@1234",
                     "role": "student",
-                    "name": "etirrase-9139",
+                    "name": "QA Automation Student2",
                     "class": [],
                     "info": {}
                 },
