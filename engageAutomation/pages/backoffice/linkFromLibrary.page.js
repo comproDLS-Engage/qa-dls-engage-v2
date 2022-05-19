@@ -11,13 +11,13 @@ module.exports = {
     filteredChips: selectorFile.linkFromLibraryPage.filteredChips,
 
     isInitialized: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         let res = await action.waitForDisplayed(this.nextBtn);
         return res;
     },
 
     searchLO_byName: async function (name) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         let res = await action.setValue(this.searchBox, name);
         if (res == true) {
             res = await action.keyPress("Enter");
@@ -29,7 +29,7 @@ module.exports = {
     },
 
     select_Resource_and_Proceed: async function (name) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         let res = null;
         let i, list, cboxes;
         list = await action.findElements(this.resourceNameList);
@@ -48,7 +48,7 @@ module.exports = {
             }
             res = "resource \"" + name + "\" not found";
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 

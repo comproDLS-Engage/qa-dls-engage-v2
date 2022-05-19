@@ -36,7 +36,7 @@ module.exports = {
     appVersion: selectorFile.common.appVersion,
 
     isInitialized: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         // /action.waitForDocumentLoad();
         await action.waitForDisplayed(this.loadingContainer, undefined, true);
         res = await action.waitForDisplayed(this.headingText);
@@ -47,7 +47,7 @@ module.exports = {
     },
 
     get_ListofBooks: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         res = [];
         let i, count;
         count = await action.findElements(this.bookList);
@@ -59,17 +59,17 @@ module.exports = {
     },
 
     click_NewTitle_Button: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         res = await action.click(this.newTitleBtn);
         if (res == true) {
             res = await action.waitForDisplayed(this.proceedBtn);
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     select_TitleType_and_Proceed: async function (type) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         res = null;
         let i, list;
         list = await action.findElements(this.titleTypeList);
@@ -87,12 +87,12 @@ module.exports = {
             }
             res = "component type not found";
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     click_Book: async function (name) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         res = null;
         let i, list;
         await action.waitForDisplayed(this.bookList);
@@ -109,42 +109,42 @@ module.exports = {
             }
             res = "book not found ";
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     /*click_Library_Button: async function () {
-        logger.logInto(stackTrace.get());
+        logger.logInto((await stackTrace.get()));
         res = action.click(this.libraryBtn);
         if (res == true) {
             res = action.waitForDisplayed(this.goBackBtn);
         }
-        logger.logInto(stackTrace.get(), res);
+        logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     click_Metadata_Button: async function () {
-        logger.logInto(stackTrace.get());
+        logger.logInto((await stackTrace.get()));
         res = action.click(this.metadataBtn);
         if (res == true) {
             res = action.waitForDisplayed(this.goBackBtn);
         }
-        logger.logInto(stackTrace.get(), res);
+        logger.logInto((await stackTrace.get()), res);
         return res;
     },*/
 
     click_ViewCodes_Button: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         res = await action.click(this.viewCodesBtn);
         if (res == true) {
             res = await action.waitForDisplayed(this.viewCodeProceedBtn);
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     select_Book_in_ViewCode_Launcher: async function (name) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         res = await action.click(this.viewCodeBookDropdown);
         await action.waitForDisplayed(this.viewCodeBookList);
         if (res == true) {
@@ -152,17 +152,17 @@ module.exports = {
             list = await action.findElements(this.viewCodeBookList);
             for (i = 0; i < list.length; i++) {
                 if ((await action.getText(list[i])) == name) {
-                    res = await action.click(action.parentElement(list[i]));
+                    res = await action.click((await action.parentElement(list[i])));
                     break;
                 }
             }
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     select_Batch_in_ViewCode_Launcher: async function (name) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         res = await action.click(this.viewCodeBatchDropdown);
         await action.waitForDisplayed(this.viewCodeBatchList);
         if (res == true) {
@@ -170,101 +170,101 @@ module.exports = {
             list = await action.findElements(this.viewCodeBatchList);
             for (i = 0; i < list.length; i++) {
                 if ((await action.getText(list[i])) == name) {
-                    res = await action.click(action.parentElement(list[i]));
+                    res = await action.click((await action.parentElement(list[i])));
                     break;
                 }
             }
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     click_Proceed_Button_in_ViewCode_Launcher: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         res = await action.click(this.viewCodeProceedBtn);
         if (res == true) {
             await browser.pause(5000);
             res = await require('./viewAccessCodes.page.js').isInitialized();
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     enter_AccessCode_in_CheckACode_Launcher: async function (code) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         res = await action.setValue(this.accessCodeTxtbox, code);
         if (res == null) {
             res = await action.isEnabled(this.checkCodeProceedBtn);
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     click_Proceed_Button_in_CheckACode_Launcher: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         res = await action.click(this.checkCodeProceedBtn);
         if (res == true) {
             //res = await require('./viewCode.page.js').isInitialized();
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     click_GenerateCodes_Button: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         res = await action.click(this.generateCodesBtn);
         if (res == true) {
             res = await require('./generateCodes.page.js').isInitialized();
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     click_CheckACode_Button: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         res = await action.click(this.checkCodeBtn);
         if (res == true) {
             res = await action.waitForDisplayed(this.checkCodeProceedBtn);
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     set_Search_Text: async function (text) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         res = await action.click(this.searchTxtbox);
         res = await action.setValue(this.searchTxtbox, text);
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     click_Search_Button: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         res = await action.click(this.searchBtn);
         if (res == true) {
             res = await action.findElements(this.bookList);
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     click_Books_Pill: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         res = await action.click(this.booksPill);
         if (res == true) {
             res = await action.waitForDisplayed(this.bookIcon)
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     click_GlobalResources_Pill: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         res = await action.click(this.globalResourcesPill);
         if (res == true) {
             res = await action.waitForDisplayed(this.globalResourceIcon)
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     }
 

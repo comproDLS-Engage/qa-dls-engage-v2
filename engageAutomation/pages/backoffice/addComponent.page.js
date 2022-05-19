@@ -29,21 +29,21 @@ module.exports = {
     snackbarLbl: selectorFile.common.snackbarLbl,
 
     isInitialized: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         //action.waitForDocumentLoad();
         res = await action.waitForDisplayed(this.addBtn + "," + this.modifyBtn);
         return res;
     },
 
     set_Title: async function (text) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         res = await action.setValue(this.titleTxtbox, text);
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     select_CategoryType: async function (value) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         res = await action.click(this.categoryTypeDropdown);
         await action.waitForDisplayed(this.categoryTypeList, undefined, undefined, undefined, 500);
         if (res == true) {
@@ -52,18 +52,18 @@ module.exports = {
             for (i = 0; i < list.length; i++) {
                 //console.log(action.getText(list[i]))
                 if ((await action.getText(list[i])).includes(value)) {
-                    res = await action.click(action.parentElement(list[i]));
+                    res = await action.click((await action.parentElement(list[i])));
                     break;
                 }
                 res = value + " not found ";
             }
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     select_LearningPathLevel: async function (value) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         res = await action.click(this.lpLevelsDropdown);
         await action.waitForDisplayed(this.lpLevelsList, undefined, undefined, undefined, 500);
         if (res == true) {
@@ -72,18 +72,18 @@ module.exports = {
             for (i = 0; i < list.length; i++) {
                 //console.log(action.getText(list[i]))
                 if ((await action.getText(list[i])).includes(value)) {
-                    res = await action.click(action.parentElement(list[i]));
+                    res = await action.click((await action.parentElement(list[i])));
                     break;
                 }
                 res = value + " not found ";
             }
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     select_Autonumbering: async function (value) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         res = await action.click(this.autonumberingDropdown);
         await action.waitForDisplayed(this.autonumberingList, undefined, undefined, undefined, 500);
         if (res == true) {
@@ -92,18 +92,18 @@ module.exports = {
             for (i = 0; i < list.length; i++) {
                 //console.log(action.getText(list[i]))
                 if ((await action.getText(list[i])).includes(value)) {
-                    res = await action.click(action.parentElement(list[i]));
+                    res = await action.click((await action.parentElement(list[i])));
                     break;
                 }
                 res = value + " not found ";
             }
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     click_Add_Button: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         await browser.pause(5000)
         res = await action.waitForClickable(this.addBtn + "," + this.modifyBtn);
         await action.waitForDisplayed(this.buttonLoader, undefined, true)
@@ -118,12 +118,12 @@ module.exports = {
                 await browser.pause(5000)
             }
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     select_Visibility: async function (value) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         if (value == "" || value == undefined)
             res = true;
         else {
@@ -134,19 +134,19 @@ module.exports = {
                 list = await action.findElements(this.visibilityList);
                 for (i = 0; i < list.length; i++) {
                     if ((await action.getText(list[i])).includes(value)) {
-                        res = await action.click(action.parentElement(list[i]));
+                        res = await action.click((await action.parentElement(list[i])));
                         break;
                     }
                     res = value + " not found ";
                 }
             }
-            await logger.logInto(stackTrace.get(), res);
+            await logger.logInto((await stackTrace.get()), res);
         }
         return res;
     },
 
     select_TargetRole: async function (value) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         if (value == "" || value == undefined)
             res = true;
         else {
@@ -157,19 +157,19 @@ module.exports = {
                 list = await action.findElements(this.targetRoleList);
                 for (i = 0; i < list.length; i++) {
                     if ((await action.getText(list[i])).includes(value)) {
-                        res = await action.click(action.parentElement(list[i]));
+                        res = await action.click((await action.parentElement(list[i])));
                         break;
                     }
                     res = value + " not found ";
                 }
             }
-            await logger.logInto(stackTrace.get(), res);
+            await logger.logInto((await stackTrace.get()), res);
         }
         return res;
     },
 
     select_Assignable: async function (value) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         if (value == "" || value == undefined)
             res = true;
         else {
@@ -180,19 +180,19 @@ module.exports = {
                 list = await action.findElements(this.assignableList);
                 for (i = 0; i < list.length; i++) {
                     if ((await action.getText(list[i])).includes(value)) {
-                        res = await action.click(action.parentElement(list[i]));
+                        res = await action.click((await action.parentElement(list[i])));
                         break;
                     }
                     res = value + " not found ";
                 }
             }
-            await logger.logInto(stackTrace.get(), res);
+            await logger.logInto((await stackTrace.get()), res);
         }
         return res;
     },
 
     select_freeAvailability: async function (value) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         if (value == "" || value == undefined)
             res = true;
         else {
@@ -203,19 +203,19 @@ module.exports = {
                 list = await action.findElements(this.freeAvailabilityList);
                 for (i = 0; i < list.length; i++) {
                     if ((await action.getText(list[i])).includes(value)) {
-                        res = await action.click(action.parentElement(list[i]));
+                        res = await action.click((await action.parentElement(list[i])));
                         break;
                     }
                     res = value + " not found ";
                 }
             }
-            await logger.logInto(stackTrace.get(), res);
+            await logger.logInto((await stackTrace.get()), res);
         }
         return res;
     },
 
     select_enableTracking: async function (value) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         if (value == "" || value == undefined)
             res = true;
         else {
@@ -226,13 +226,13 @@ module.exports = {
                 list = await action.findElements(this.enableTrackingList);
                 for (i = 0; i < list.length; i++) {
                     if ((await action.getText(list[i])).includes(value)) {
-                        res = await action.click(action.parentElement(list[i]));
+                        res = await action.click((await action.parentElement(list[i])));
                         break;
                     }
                     res = value + " not found ";
                 }
             }
-            await logger.logInto(stackTrace.get(), res);
+            await logger.logInto((await stackTrace.get()), res);
         }
         return res;
     },

@@ -19,22 +19,22 @@ module.exports = {
     folderTypeList: selectorFile.addFolderPage.folderTypeList,
 
     isInitialized: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         let res;
         res = await action.waitForDisplayed(this.addBtn);
         return res;
     },
 
     set_Name: async function (text) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         let res;
         res = await action.setValue(this.nameTxtbox, text);
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     click_Add_Button: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         let res;
         await browser.pause(5000)
         res = await action.waitForClickable(this.addBtn);
@@ -45,21 +45,22 @@ module.exports = {
                 await action.waitForDisplayed(this.snackbarLbl);
                 res = await action.getText(this.snackbarLbl);
                 await action.click(this.snackbarBtn);
-                await action.waitForDisplayed(await require('./viewLearningPath.page.js').folderList);
+                await action.waitForDisplayed((await require('./viewLearningPath.page.js').folderList));
+                await browser.pause(5000);
             }
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     upload_CoverImage: async function (imgPath) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         var addTitlePage = require("./addTitle.page.js");
         return await addTitlePage.upload_CoverImage(imgPath);;
     },
 
     select_TargetRole: async function (value) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         let res;
         if (value == "" || value == undefined)
             res = true;
@@ -71,19 +72,19 @@ module.exports = {
                 list = await action.findElements(this.targetRoleList);
                 for (i = 0; i < list.length; i++) {
                     if ((await action.getText(list[i])).includes(value)) {
-                        res = await action.click(action.parentElement(list[i]));
+                        res = await action.click((await action.parentElement(list[i])));
                         break;
                     }
                     res = "Target Role value not found ";
                 }
             }
-            await logger.logInto(stackTrace.get(), res);
+            await logger.logInto((await stackTrace.get()), res);
         }
         return res;
     },
 
     select_Assignable: async function (value) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         let res;
         if (value == "" || value == undefined)
             res = true;
@@ -95,43 +96,43 @@ module.exports = {
                 list = await action.findElements(this.assignableList);
                 for (i = 0; i < list.length; i++) {
                     if ((await action.getText(list[i])).includes(value)) {
-                        res = await action.click(action.parentElement(list[i]));
+                        res = await action.click((await action.parentElement(list[i])));
                         break;
                     }
                     res = "Assignable value not found ";
                 }
             }
-            await logger.logInto(stackTrace.get(), res);
+            await logger.logInto((await stackTrace.get()), res);
         }
         return res;
     },
 
     set_Folder_Color: async function (value) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         let res;
         if (value == "" || value == undefined)
             res = true;
         else {
             res = await action.setValue(this.folderColor, value);
-            await logger.logInto(stackTrace.get(), res);
+            await logger.logInto((await stackTrace.get()), res);
         }
         return res;
     },
 
     set_Page_Reference: async function (value) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         let res;
         if (value == "" || value == undefined)
             res = true;
         else {
             res = await action.setValue(this.pageReference, value);
-            await logger.logInto(stackTrace.get(), res);
+            await logger.logInto((await stackTrace.get()), res);
         }
         return res;
     },
 
     select_Folder_Type: async function (value) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         let res;
         if (value == "" || value == undefined)
             res = true;
@@ -143,12 +144,12 @@ module.exports = {
                 list = await action.findElements(this.folderTypeList);
                 for (i = 0; i < list.length; i++) {
                     if ((await action.getText(list[i])).includes(value)) {
-                        res = await action.click(action.parentElement(list[i]));
+                        res = await action.click((await action.parentElement(list[i])));
                         break;
                     }
                 }
             }
-            await logger.logInto(stackTrace.get(), res);
+            await logger.logInto((await stackTrace.get()), res);
         }
         return res;
     }

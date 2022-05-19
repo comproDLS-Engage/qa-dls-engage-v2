@@ -20,7 +20,7 @@ module.exports = {
     seeMoreLessBtn: selectorFile.common.seeMoreLessBtn,
 
     isInitialized: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         //action.waitForDocumentLoad();
         await action.waitForDisplayed(this.loadingContainer);
         await action.waitForDisplayed(this.loadingContainer, undefined, true);
@@ -29,7 +29,7 @@ module.exports = {
     },
 
     getBookParamDetails: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         await action.click(this.seeMoreLessBtn);
         var obj = {
 			description: ((await action.getElementCount(this.description)) > 0) ? await action.getText(this.description) : null,
@@ -40,17 +40,17 @@ module.exports = {
     },
 
     click_AddComponent_Button: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         res = await action.click(this.addComponentBtn);
         if (res == true) {
             res = await action.waitForDisplayed(this.proceedBtn);
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     click_Component: async function (name) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         res = null;
         let i, list;
         list = await action.findElements(this.componentList);
@@ -66,12 +66,12 @@ module.exports = {
             }
             res = "component not found";
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     select_ComponentType_and_Proceed: async function (type) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         res = null;
         let i, list;
         list = await action.findElements(this.componentTypeList);
@@ -90,28 +90,28 @@ module.exports = {
             }
             res = "component type not found";
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     click_DeleteBook_Button: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         let res = await action.click(this.deleteBookBtn);
         if (res == true) {
             await action.waitForDisplayed(this.dialogContent);
             res = await action.getText(this.dialogContent);
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     click_ModifyBook_Button: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         let res = await action.click(this.modifyBookBtn);
         if (res == true) {
             res = await require('./addTitle.page.js').isInitialized();
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
