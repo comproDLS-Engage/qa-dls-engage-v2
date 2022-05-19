@@ -235,7 +235,7 @@
                 "classInstructorIcon": "[data-tid=icon-instructorName-",
                 "bookIcon": "[data-tid*=image-book-",
                 "inboxOption": "div[style*='opacity: 1'] li[data-tid*='button-inbox'],[data-tid=button-inbox]",
-                "assignmentsOption": "div[style*='opacity: 1'] li[data-tid*='button-assignment'],[data-tid=button-assignment] p,[data-tid=button-assignments]",
+                "assignmentsOption": "div[style*='opacity: 1'] li[data-tid*='button-assignment'],[data-tid=button-assignment] p,[data-tid=button-assignments] p",
                 "studentsOption": "div[style*='opacity: 1'] li[data-tid*='button-students'],[data-tid=button-students]",
                 "gradeBookOption": "div[style*='opacity: 1'] li[data-tid*='button-gradebook'],[data-tid=button-gradebook]",
                 "materialsOption": "div[style*='opacity: 1'] li[data-tid*='button-material'],[data-tid=button-material]",
