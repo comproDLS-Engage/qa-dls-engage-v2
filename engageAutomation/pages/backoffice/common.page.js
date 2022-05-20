@@ -21,7 +21,7 @@ module.exports = {
     bannerCloseBtn: selectorFile.common.bannerCloseBtn,
 
     click_confirmDialog_Button: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         res = await action.click(this.confirmDialog);
         if (res == true) {
             res = await action.waitForDisplayed(this.snackbarLbl);
@@ -31,54 +31,54 @@ module.exports = {
             }
             await browser.pause(5000);
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     click_Back_Button: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         res = await action.click(this.backBtn);
         if (res == true) {
             res = await action.waitForDisplayed(this.pageContent);
             await browser.pause(5000);
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     click_Close_Button: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         res = await action.switchToParentFrame();
         res = await action.click(this.closeBtn + "," + this.snackbarBtn + "," + this.bannerCloseBtn);
         if (res == true) {
             res = await action.waitForDisplayed(this.pageContent);
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     click_Level1Breadcrumb: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         res = await action.click(this.breadcrumbLevel1);
         if (res == true) {
             res = await require('./viewBook.page.js').isInitialized();
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     click_Level2Breadcrumb: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         res = await action.click(this.breadcrumbLevel2);
         if (res == true) {
             res = await require('./viewLearningPath.page.js').isInitialized();
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     signout_from_app: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         res = await action.click(this.menuBtn);
         if (res == true) {
             res = await action.click(this.signOutBtn);
@@ -86,17 +86,17 @@ module.exports = {
                 res = await require('./login.page.js').isInitialized();
             }
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     click_PreviewAndPublish_button: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         res = await action.click(this.publishBtn);
         if (res == true) {
             res = await require('./publishComponent.page.js').isInitialized();
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 }

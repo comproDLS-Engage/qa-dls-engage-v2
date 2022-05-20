@@ -15,21 +15,20 @@ module.exports = {
 
     getSourceData: async function (qIndex, fibQuesData) {
         await logger.logInto(await stackTrace.get());
-        return DNDonImageItemPlayerPage.getSourceData(qIndex, fibQuesData);
+        return await DNDonImageItemPlayerPage.getSourceData(qIndex, fibQuesData);
     },
 
     getTargetData: async function (qIndex, fibQuesData) {
         await logger.logInto(await stackTrace.get());
-        
-        return DNDonImageItemPlayerPage.getTargetData(qIndex, fibQuesData);
+        return await DNDonImageItemPlayerPage.getTargetData(qIndex, fibQuesData);
     },
 
     dragAndDrop: async function (fibQuesData) {
-        return DNDonImageItemPlayerPage.dragAndDrop(fibQuesData);
+        return await DNDonImageItemPlayerPage.dragAndDrop(fibQuesData);
     },
 
     dragAndDropClick: async function (fibQuesData) {
-        return DNDonImageItemPlayerPage.dragAndDropClick(fibQuesData);
+        return await DNDonImageItemPlayerPage.dragAndDropClick(fibQuesData);
     }
 
 }

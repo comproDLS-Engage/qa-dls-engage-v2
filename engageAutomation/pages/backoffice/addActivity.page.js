@@ -19,15 +19,15 @@ module.exports = {
     },
 
     set_Name: async function (text) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         let res;
         res = await action.setValue(this.nameTxtbox, text);
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     click_Add_Button: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         let res;
         res = await action.waitForClickable(addFolderPage.addBtn);
         await action.waitForDisplayed(this.buttonLoader, undefined, true)
@@ -37,28 +37,28 @@ module.exports = {
                 await browser.pause(10000);
             }
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     click_Completion_Checkbox: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         let res;
         res = await action.click(this.completionCheckBox);
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     click_Score_Checkbox: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         let res;
         res = await action.click(this.scoreCheckBox);
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     select_TargetRole: async function (value) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         let res;
         if (value == "" || value == undefined)
             res = true;
@@ -70,19 +70,19 @@ module.exports = {
                 list = await action.findElements(addFolderPage.targetRoleList);
                 for (i = 0; i < list.length; i++) {
                     if ((await action.getText(list[i])).includes(value)) {
-                        res = await action.click(action.parentElement(list[i]));
+                        res = await action.click((await action.parentElement(list[i])));
                         break;
                     }
                     res = "Target Role value not found ";
                 }
             }
-            await logger.logInto(stackTrace.get(), res);
+            await logger.logInto((await stackTrace.get()), res);
         }
         return res;
     },
 
     select_Assignable: async function (value) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         let res;
         if (value == "" || value == undefined)
             res = true;
@@ -94,13 +94,13 @@ module.exports = {
                 list = await action.findElements(addFolderPage.assignableList);
                 for (i = 0; i < list.length; i++) {
                     if ((await action.getText(list[i])).includes(value)) {
-                        res = await action.click(action.parentElement(list[i]));
+                        res = await action.click((await action.parentElement(list[i])));
                         break;
                     }
                     res = "Assignable value not found ";
                 }
             }
-            await logger.logInto(stackTrace.get(), res);
+            await logger.logInto((await stackTrace.get()), res);
         }
         return res;
     },
@@ -110,7 +110,7 @@ module.exports = {
     },
 
     uploadFile: async function (path) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         let res;
         if (path == "" || path == undefined)
             res = true;
@@ -119,13 +119,13 @@ module.exports = {
             if ((typeof res) === 'string') {
                 res = await action.setValue(this.loUploadBtn, res);
             }
-            await logger.logInto(stackTrace.get(), res);
+            await logger.logInto((await stackTrace.get()), res);
         }
         return res;
     },
 
     select_ActivityTheme: async function (value) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         let res;
         if (value == "" || value == undefined)
             res = true;
@@ -139,7 +139,7 @@ module.exports = {
                     break;
                 }
             }
-            await logger.logInto(stackTrace.get(), res);
+            await logger.logInto((await stackTrace.get()), res);
         }
         return res;
     },

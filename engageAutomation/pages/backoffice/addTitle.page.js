@@ -25,57 +25,59 @@ module.exports = {
     snackbarLbl: selectorFile.common.snackbarLbl,
 
     isInitialized: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         let res;
         res = await action.waitForDisplayed(this.createTitleBtn);
         return res;
     },
 
     set_Name: async function (text) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         let res;
         res = await action.setValue(this.nameTxtbox, text);
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     set_Description: async function (text) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         let res;
         if (text == "" || text == undefined)
             res = true;
         else {
             res = await action.setValue(this.descriptionTxtbox, text);
-            await logger.logInto(stackTrace.get(), res);
+            await logger.logInto((await stackTrace.get()), res);
         }
         return res;
     },
 
     upload_CoverImage: async function (imgPath) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         let res;
-        if (imgPath == "" || imgPath == undefined) {
-            if (await action.isClickable(this.removeImageBtn)) {
-                res = await action.click(this.removeImageBtn);
-                if (res == true) {
-                    res = await action.waitForDisplayed(this.removeImageBtn, undefined, true);
-                }
+        if (await action.isClickable(this.removeImageBtn)) {
+            res = await action.click(this.removeImageBtn);
+            if (res == true) {
+                res = await action.waitForDisplayed(this.removeImageBtn, undefined, true);
+                await browser.pause(2000);
             }
-            else
-                res = true;
+        }
+
+        if (imgPath == "" || imgPath == undefined) {
+            res = true;
         }
         else {
             res = await action.uploadFile(imgPath);
             if ((typeof res) === 'string') {
                 res = await action.setValue(this.imageUploadBtn, res);
+                await browser.pause(2000);
             }
-            await logger.logInto(stackTrace.get(), res);
+            await logger.logInto((await stackTrace.get()), res);
+            return res;
         }
-        return res;
     },
 
     click_CreateTitle_Button: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         let res;
         await action.waitForDisplayed(this.buttonSpinner, undefined, true)
         res = await action.waitForClickable(this.createTitleBtn);
@@ -89,12 +91,12 @@ module.exports = {
                 //browser.pause(30000)
             }
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     select_bookDesign: async function (name) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         let res;
         if (name == "" || name == undefined)
             res = true;
@@ -112,12 +114,12 @@ module.exports = {
                 }
             }
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     select_visibility: async function (name) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         let res;
         if (name == "" || name == undefined)
             res = true;
@@ -135,12 +137,12 @@ module.exports = {
                 }
             }
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     select_TargetRole: async function (value) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         let res;
         if (value == "" || value == undefined)
             res = true;
@@ -158,12 +160,12 @@ module.exports = {
                 }
             }
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     select_Category: async function (value) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         let res;
         if (value == "" || value == undefined)
             res = true;
@@ -181,7 +183,7 @@ module.exports = {
                 }
             }
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 }

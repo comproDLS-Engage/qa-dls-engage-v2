@@ -19,7 +19,7 @@ module.exports = {
     dialogContent: selectorFile.common.dialogContent,
 
     isInitialized: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         //action.waitForDocumentLoad();
         await action.waitForDisplayed(this.loadingContainer);
         await action.waitForDisplayed(this.loadingContainer, undefined, true);
@@ -35,7 +35,7 @@ module.exports = {
     },
 
     get_ListofAccessCodes: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         res = [{
             accessCode: null,
             accessCodeStatus: null
@@ -51,17 +51,17 @@ module.exports = {
     },
 
     click_Modify_Button: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         res = await action.click(this.modifyBtn);
         if (res == true) {
             res = await require('./generateCodes.page.js').isInitialized();
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     /*click_Book: async function (name) {
-        logger.logInto(stackTrace.get());
+        logger.logInto((await stackTrace.get()));
         res = null;
         let i, list;
         list = action.findElements(this.bookList);
@@ -75,28 +75,28 @@ module.exports = {
             }
             res = "book not found ";
         }
-        logger.logInto(stackTrace.get(), res);
+        logger.logInto((await stackTrace.get()), res);
         return res;
     },*/
 
     click_Deactivate_Button: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         res = await action.click(this.deactivateBtn);
         if (res == true) {
             await action.waitForDisplayed(this.dialogContent);
             res = await action.getText(this.dialogContent);
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     click_Redeem_Button: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         res = await action.click(this.redeemBtn);
         if (res == true) {
             res = await require('./redeemAccessCode.page.js').isInitialized();
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 

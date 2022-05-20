@@ -17,14 +17,14 @@ module.exports = {
     buttonLoader: selectorFile.common.buttonLoader,
 
     isInitialized: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         //action.waitForDocumentLoad();
         res = await action.waitForDisplayed(this.generateBtn);
         return res;
     },
 
     select_Book: async function (name) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         res = await action.click(this.bookDropdown);
         await action.waitForDisplayed(this.bookList);
         if (res == true) {
@@ -32,46 +32,46 @@ module.exports = {
             list = await action.findElements(this.bookList);
             for (i = 0; i < list.length; i++) {
                 if ((await action.getText(list[i])) == name) {
-                    res = await action.click(action.parentElement(list[i]));
+                    res = await action.click((await action.parentElement(list[i])));
                     break;
                 }
             }
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
 
     set_BatchName: async function (name) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         res = await action.setValue(this.batchNameTxtbox, name);
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     set_StartDate: async function (date) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         res = await action.setValue(this.startDate, date);
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     set_EndDate: async function (date) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         res = await action.setValue(this.endDate, date);
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     set_CodeLimit: async function (number) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         res = await action.setValue(this.codeLimitTxtbox, number);
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
     
     click_Generate_Button: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         res = await action.waitForClickable(this.generateBtn);
         await action.waitForDisplayed(this.buttonLoader, undefined, true);
         if (res == true) {
@@ -82,7 +82,7 @@ module.exports = {
                 await action.click(this.snackbarBtn);
             }
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 

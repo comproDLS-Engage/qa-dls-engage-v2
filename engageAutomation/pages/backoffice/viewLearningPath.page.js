@@ -31,7 +31,7 @@ module.exports = {
     freelyAvailable: selectorFile.viewLearningPathPage.freelyAvailable,
 
     isInitialized: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         //action.waitForDocumentLoad();
         await action.waitForDisplayed(this.loadingContainer);
         await action.waitForDisplayed(this.loadingContainer, undefined, true);
@@ -40,7 +40,7 @@ module.exports = {
     },
 
     getComponentParamDetails: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         await action.click(this.seeMoreLessBtn);
         var obj = {
             levels: ((await action.getElementCount(this.levels)) > 0) ? await action.getText(this.levels) : null,
@@ -55,7 +55,7 @@ module.exports = {
     },
 
     click_AddFolder_Button: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         let res;
         if (await action.isClickable(this.emptyStateBtn)) {
             res = await action.click(this.emptyStateBtn);
@@ -67,12 +67,12 @@ module.exports = {
             res = await require('./addFolder.page.js').isInitialized();
             await browser.pause(3000);
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     click_AddActivity_Button: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         let res;
         if (await action.isClickable(this.emptyStateBtn)) {
             res = await action.click(this.emptyStateBtn);
@@ -83,12 +83,12 @@ module.exports = {
         if (res == true) {
             res = await action.waitForDisplayed(this.proceedBtn);
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     click_Folder: async function (name) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         let res = null;
         let i, list;
         list = await action.findElements(this.folderList);
@@ -103,12 +103,12 @@ module.exports = {
             }
             res = "folder \"" + name + "\" not found";
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     click_Activity: async function (name) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         let res = null;
         let i, list;
         list = await action.findElements(this.activityList);
@@ -125,13 +125,13 @@ module.exports = {
             }
             res = "activity \"" + name + "\" not found";
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         // action.switchToFrame(0);
         return res;
     },
 
     select_ActivityType_and_Proceed: async function (id) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         let res = null;
         res = await action.click("[data-tid=input-" + id);
         if (res == true) {
@@ -145,23 +145,23 @@ module.exports = {
             }
         }
         //res = "activity type \"" + type + "\" not found";
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     click_DeleteComponent_Button: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         let res = await action.click(this.deleteComponentBtn);
         if (res == true) {
             await action.waitForDisplayed(this.dialogContent);
             res = await action.getText(this.dialogContent);
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     click_Delete_Button_in_ActivityMenu: async function (name) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         let res = null;
         let i, list, list2;
         list = await action.findElements(this.activityList);
@@ -189,12 +189,12 @@ module.exports = {
         //         res = action.getText(this.dialogContent);
         //     }
         // }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     click_ActivityAuthor_Button_in_ActivityMenu: async function (name) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         await action.waitForDisplayed(this.activityList);
         let res = null;
         let i, list, list2;
@@ -216,12 +216,12 @@ module.exports = {
             }
             res = "activity \"" + name + "\" not found";
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     select_Item_and_Click_Delete: async function (item) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         let res = null;
         let i, list, checkboxes;
         list = await action.findElements(this.folderList);
@@ -240,31 +240,31 @@ module.exports = {
             }
             res = "Item \"" + item + "\" not found";
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     click_ModifyFolderOptions_Button: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         let res;
         res = await action.click(this.modifyFolderOptionsBtn);
         if (res == true) {
             res = await require('./addFolder.page.js').isInitialized();
             await browser.pause(5000);
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     click_ModifyCompOptions_Button: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto((await stackTrace.get()));
         let res;
         res = await action.click(this.modifyCompOptionsBtn);
         if (res == true) {
             res = await require('./addComponent.page.js').isInitialized();
             await browser.pause(5000);
         }
-        await logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     }
 }

@@ -20,38 +20,38 @@ function noop() {
 //add new assertion type in the object: assertionList
 var assertionList = {
 
-    assert: function (actual, message) {
-        logger.logInto(stackTrace.get(), message);
+    assert: async function (actual, message) {
+        await logger.logInto(await stackTrace.get(), message);
         assert(actual, message);
     },
 
-    assertEqual: function (actual, expected, message) {
-        logger.logInto(stackTrace.get(), message);
+    assertEqual: async function (actual, expected, message) {
+        await logger.logInto(await stackTrace.get(), message);
         assert.equal(actual, expected, message);
     },
 
-    assertNotEqual: function (actual, expected, message) {
-        logger.logInto(stackTrace.get(), message);
+    assertNotEqual: async function (actual, expected, message) {
+        await logger.logInto(await stackTrace.get(), message);
         assert.notEqual(actual, expected, message);
     },
 
-    isNotNaN: function (actual, message) {
-        logger.logInto(stackTrace.get(), message);
+    isNotNaN: async function (actual, message) {
+        await logger.logInto(await stackTrace.get(), message);
         assert.isNotNaN(actual, message);
     },
 
-    typeOf: function (value, name, message) {
-        logger.logInto(stackTrace.get(), message);
+    typeOf: async function (value, name, message) {
+        await logger.logInto(await stackTrace.get(), message);
         assert.typeOf(value, name, message)
     },
 
-    assertFail: function (message) {
-        logger.logInto(stackTrace.get(), message);
+    assertFail: async function (message) {
+        await logger.logInto(await stackTrace.get(), message);
         assert.fail(message);
     },
 
-    isAtMost: function (valueToCheck, valueToBeAtMost, message) {
-        logger.logInto(stackTrace.get(), message);
+    isAtMost: async function (valueToCheck, valueToBeAtMost, message) {
+        await logger.logInto(await stackTrace.get(), message);
         assert.isAtMost(valueToCheck, valueToBeAtMost, [message]);
     }
 }
@@ -81,15 +81,15 @@ module.exports = _evaluateAndAssert(argv.skipAssertion);
 //     assert: function(actual, message) {
 
 //         assert(actual, message);
-//         logger.logInto(stackTrace.get(), message);
+//         await logger.logInto(await stackTrace.get(), message);
 //     },
 //     assertEqual: function(actual, expected, message) {
 //         assert.equal(actual, expected, message);
-//         logger.logInto(stackTrace.get(), message);
+//         await logger.logInto(await stackTrace.get(), message);
 //     },
 //     assertNotEqual: function(actual, expected, message) {
 //         assert.notEqual(actual, expected, message);
-//         logger.logInto(stackTrace.get(), message);
+//         await logger.logInto(await stackTrace.get(), message);
 //     },
 //     /*expectEqual:function(actual,expected,message)
 //     {
