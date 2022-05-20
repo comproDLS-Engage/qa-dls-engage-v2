@@ -40,11 +40,11 @@ module.exports = {
 
 	getmcmrData: async function (mcmrQuesData) {
 		await logger.logInto(await stackTrace.get());
-		return mcqBlockItemplayerPage.getmcqbData(mcmrQuesData);
+		return await mcqBlockItemplayerPage.getmcqbData(mcmrQuesData);
 	},
 
 	clickOptions: async function (mcmrQuesData) {
 		await logger.logInto(await stackTrace.get());
-		return mcqBlockItemplayerPage.clickOption(mcmrQuesData);
+		return await mcqBlockItemplayerPage.clickOption(mcmrQuesData);
 	}
 }

@@ -26,7 +26,7 @@ module.exports = {
 		let pageStatus = await action.waitForDisplayed(this.brandLogo_img);
 		res = await this.get_LandingPage_Data();
 		res.pageStatus = pageStatus;
-		return await res;
+		return res;
 	},
 
 	get_LandingPage_Data: async function () {

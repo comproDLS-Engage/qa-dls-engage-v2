@@ -11,13 +11,13 @@ module.exports = {
         message = "element:" + selector;
         try {
             await this.scrollIntoView(selector, { block: "center" });
-            let result = await $(selector).click(options);
+            let result = await (await $(selector)).click(options);
             if (result == null) {
-                await logger.logInto(stackTrace.get(), message);
+                await logger.logInto(await stackTrace.get(), message);
                 return true;
             }
         } catch (err) {
-            await logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(await stackTrace.get(), err.message, "error");
             return err;
         }
     },
@@ -25,12 +25,12 @@ module.exports = {
     doubleClick: async function (selector) {
         message = "element:" + selector;
         try {
-            await $(selector).isClickable();
-            await $(selector).doubleClick();
-            await logger.logInto(stackTrace.get(), message);
+            await (await $(selector)).isClickable();
+            await (await $(selector)).doubleClick();
+            await logger.logInto(await stackTrace.get(), message);
             return true;
         } catch (err) {
-            await logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(await stackTrace.get(), err.message, "error");
             return err;
         }
     },
@@ -38,33 +38,33 @@ module.exports = {
     isEnabled: async function (selector) {
         message = "element:" + selector;
         try {
-            let result = await $(selector).isEnabled();
-            await logger.logInto(stackTrace.get(), message);
+            let result = await (await $(selector)).isEnabled();
+            await logger.logInto(await stackTrace.get(), message);
             return result;
         } catch (err) {
-            await logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(await stackTrace.get(), err.message, "error");
             return err;
         }
     },
 
     isClickable: async function (selector) {
         try {
-            let result = await $(selector).isClickable();
-            await logger.logInto(stackTrace.get(), message);
+            let result = await (await $(selector)).isClickable();
+            await logger.logInto(await stackTrace.get(), message);
             return result;
         } catch (err) {
-            await logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(await stackTrace.get(), err.message, "error");
             return err;
         }
     },
 
     isDisplayed: async function (selector) {
         try {
-            let result = await $(selector).isDisplayed();
-            await logger.logInto(stackTrace.get(), message);
+            let result = await (await $(selector)).isDisplayed();
+            await logger.logInto(await stackTrace.get(), message);
             return result;
         } catch (err) {
-            await logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(await stackTrace.get(), err.message, "error");
             return err;
         }
     },
@@ -73,11 +73,11 @@ module.exports = {
         message = "element:" + selector + " value:" + value;
         try {
             await this.clearValue(selector);
-            await $(selector).setValue(value);
-            await logger.logInto(stackTrace.get(), message);
+            await (await $(selector)).setValue(value);
+            await logger.logInto(await stackTrace.get(), message);
             return true;
         } catch (err) {
-            await logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(await stackTrace.get(), err.message, "error");
             return err;
         }
     },
@@ -85,13 +85,13 @@ module.exports = {
     addValue: async function (selector, value) {
         message = "element:" + selector + "value:" + value;
         try {
-            let result = await $(selector).addValue(value);
+            let result = await (await $(selector)).addValue(value);
             if (result == null) {
-                await logger.logInto(stackTrace.get(), message);
+                await logger.logInto(await stackTrace.get(), message);
                 return true;
             }
         } catch (err) {
-            await logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(await stackTrace.get(), err.message, "error");
             return err;
         }
     },
@@ -99,10 +99,10 @@ module.exports = {
     getValue: async function (selector) {
         message = "element:" + selector;
         try {
-            let result = await $(selector).getValue();
+            let result = await (await $(selector)).getValue();
             return result;
         } catch (err) {
-            await logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(await stackTrace.get(), err.message, "error");
             return err;
         }
     },
@@ -110,10 +110,10 @@ module.exports = {
     clearValueDefault: async function (selector) {
         message = "element:" + selector + "value:";
         try {
-            let result = await $(selector).clearValue();
+            let result = await (await $(selector)).clearValue();
             return result;
         } catch (err) {
-            await logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(await stackTrace.get(), err.message, "error");
             return err;
         }
     },
@@ -130,7 +130,7 @@ module.exports = {
             }, selector);
             return true;
         } catch (err) {
-            await logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(await stackTrace.get(), err.message, "error");
             return err;
         }
     },
@@ -138,17 +138,17 @@ module.exports = {
     moveTo: async function (selector, xOffset, yOffset) { //this async function needs to be enhanced to support offsets in percentages
         message = "element:" + selector + " xoffset:" + xOffset + " yoffset:" + yOffset;
         try {
-            await $(selector).moveTo({ xOffset, yOffset });
-            await logger.logInto(stackTrace.get(), message);
+            await (await $(selector)).moveTo({ xOffset, yOffset });
+            await logger.logInto(await stackTrace.get(), message);
             return true;
         } catch (err) {
-            await logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(await stackTrace.get(), err.message, "error");
             return err;
         }
     },
 
     dragAndDrop: async function (draggable, droppable) {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         message = "draggable:" + draggable + " droppable:" + draggable;
         try {
             var actions = {
@@ -156,24 +156,24 @@ module.exports = {
                 "id": "mouse1",
                 "parameters": { "pointerType": "touch" },
                 "actions": [
-                    { "type": "pointerMove", "duration": 100, "origin": $(draggable), "x": 0, "y": 0 },
+                    { "type": "pointerMove", "duration": 100, "origin": await $(draggable), "x": 0, "y": 0 },
                     { "type": "pointerDown", "button": 0 },
-                    { "type": "pointerMove", "duration": 1000, "origin": $(droppable), "x": 0, "y": 0 },
+                    { "type": "pointerMove", "duration": 1000, "origin": await $(droppable), "x": 0, "y": 0 },
                     { "type": "pointerUp", "button": 0 }
                 ]
             }
             await browser.performActions([actions]);
-            await logger.logInto(stackTrace.get(), message);
+            await logger.logInto(await stackTrace.get(), message);
             return true;
         } catch (err) {
-            await logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(await stackTrace.get(), err.message, "error");
             return err;
         }
     },
 
     dragAndDrop2: async function (draggable, droppable) {
         //drag and drop using perform actions
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         message = "draggable:" + draggable + " droppable:" + droppable;
         try {
             var actions1 = {
@@ -181,19 +181,19 @@ module.exports = {
                 "id": "mouse1",
                 "parameters": { "pointerType": "touch" },
                 "actions": [
-                    { "type": "pointerMove", "duration": 100, "origin": $(draggable), "x": 0, "y": 0 },
+                    { "type": "pointerMove", "duration": 100, "origin": await $(draggable), "x": 0, "y": 0 },
                     { "type": "pointerDown", "button": 0 },
-                    { "type": "pointerMove", "duration": 0, "origin": $(droppable), "x": 0, "y": 0 },
-                    { "type": "pointerMove", "duration": 100, "origin": $(droppable), "x": 1, "y": 0 },
+                    { "type": "pointerMove", "duration": 0, "origin": await $(droppable), "x": 0, "y": 0 },
+                    { "type": "pointerMove", "duration": 200, "origin": await $(droppable), "x": 1, "y": 0 },
                     { "type": "pointerUp", "button": 0 }
                 ]
             }
 
             await browser.performActions([actions1]);
-            await logger.logInto(stackTrace.get(), message);
+            await logger.logInto(await stackTrace.get(), message);
             return true;
         } catch (err) {
-            await logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(await stackTrace.get(), err.message, "error");
             return err;
         }
     },
@@ -201,11 +201,11 @@ module.exports = {
     waitForDisplayed: async function (selector, ms, reverse, timeoutMsg, interval) {
         message = "element:" + selector;
         try {
-            await $(selector).waitForDisplayed({ timeout: ms, reverse: reverse, timeoutMsg: timeoutMsg, interval: interval });
-            await logger.logInto(stackTrace.get(), message);
+            await (await $(selector)).waitForDisplayed({ timeout: ms, reverse: reverse, timeoutMsg: timeoutMsg, interval: interval });
+            await logger.logInto(await stackTrace.get(), message);
             return true;
         } catch (err) {
-            await logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(await stackTrace.get(), err.message, "error");
             return err;
         }
     },
@@ -213,11 +213,11 @@ module.exports = {
     waitForExist: async function (selector, ms, reverse, timeoutMsg, interval) {
         message = "element:" + selector;
         try {
-            await $(selector).waitForExist({ timeout: ms, reverse: reverse, timeoutMsg: timeoutMsg, interval: interval });
-            await logger.logInto(stackTrace.get(), message);
+            await (await $(selector)).waitForExist({ timeout: ms, reverse: reverse, timeoutMsg: timeoutMsg, interval: interval });
+            await logger.logInto(await stackTrace.get(), message);
             return true;
         } catch (err) {
-            await logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(await stackTrace.get(), err.message, "error");
             return err;
         }
     },
@@ -225,11 +225,11 @@ module.exports = {
     waitForClickable: async function (selector, ms, reverse, timeoutMsg, interval) {
         message = "element:" + selector;
         try {
-            await $(selector).waitForClickable({ timeout: ms, reverse: reverse, timeoutMsg: timeoutMsg, interval: interval });
-            await logger.logInto(stackTrace.get(), message);
+            await (await $(selector)).waitForClickable({ timeout: ms, reverse: reverse, timeoutMsg: timeoutMsg, interval: interval });
+            await logger.logInto(await stackTrace.get(), message);
             return true;
         } catch (err) {
-            await logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(await stackTrace.get(), err.message, "error");
             return err;
         }
     },
@@ -237,23 +237,23 @@ module.exports = {
     getText: async function (selector) {
         message = "element:" + selector;
         try {
-            res = await $(selector).getText();
-            await logger.logInto(stackTrace.get(), message + ":" + res);
+            res = await (await $(selector)).getText();
+            await logger.logInto(await stackTrace.get(), message + ":" + res);
             return res;
         } catch (err) {
-            await logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(await stackTrace.get(), err.message, "error");
             return err;
         }
     },
 
     getAttribute: async function (selector, attributeValue) {
         try {
-            res = await $(selector).getAttribute(attributeValue);
+            res = await (await $(selector)).getAttribute(attributeValue);
             message = "element:" + selector + " attributeValue:" + attributeValue + " value:" + res;
-            await logger.logInto(stackTrace.get(), message);
+            await logger.logInto(await stackTrace.get(), message);
             return res;
         } catch (err) {
-            await logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(await stackTrace.get(), err.message, "error");
             return err;
         }
     },
@@ -261,23 +261,23 @@ module.exports = {
     getElementCount: async function (selector) {
         message = "element:" + selector;
         try {
-            await logger.logInto(stackTrace.get(), message);
+            await logger.logInto(await stackTrace.get(), message);
             res = (await $$(selector)).length;
             return res;
         } catch (err) {
-            await logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(await stackTrace.get(), err.message, "error");
             return err;
         }
     },
 
     getCSSProperty: async function (selector, propertyname) {
         try {
-            res = await $(selector).getCSSProperty(propertyname);
+            res = await (await $(selector)).getCSSProperty(propertyname);
             message = "element:" + selector + " propertyname:" + propertyname + " value:" + res;
-            await logger.logInto(stackTrace.get(), message);
+            await logger.logInto(await stackTrace.get(), message);
             return res;
         } catch (err) {
-            await logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(await stackTrace.get(), err.message, "error");
             return err;
         }
     },
@@ -285,11 +285,11 @@ module.exports = {
     findElements: async function (selector) {
         message = "element:" + selector;
         try {
-            await logger.logInto(stackTrace.get(), message);
+            await logger.logInto(await stackTrace.get(), message);
             res = await $$(selector);
             return res;
         } catch (err) {
-            await logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(await stackTrace.get(), err.message, "error");
             return err;
         }
     },
@@ -297,11 +297,11 @@ module.exports = {
     scrollIntoView: async function (selector, options) {
         message = "element:" + selector;
         try {
-            res = await $(selector).scrollIntoView(options)
-            await logger.logInto(stackTrace.get(), message);
+            res = await (await $(selector)).scrollIntoView(options)
+            await logger.logInto(await stackTrace.get(), message);
             return res;
         } catch (err) {
-            await logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(await stackTrace.get(), err.message, "error");
             return err;
         }
     },
@@ -310,11 +310,11 @@ module.exports = {
         message = "frameID:" + id;
         try {
             res = await browser.switchToFrame(id);
-            await logger.logInto(stackTrace.get(), message);
+            await logger.logInto(await stackTrace.get(), message);
             if (res == null)
                 return true;
         } catch (err) {
-            await logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(await stackTrace.get(), err.message, "error");
             return err;
         }
     },
@@ -322,11 +322,11 @@ module.exports = {
     switchToParentFrame: async function () {
         try {
             res = await browser.switchToFrame(null)
-            await logger.logInto(stackTrace.get(), res);
+            await logger.logInto(await stackTrace.get(), res);
             if (res == null)
                 return true;
         } catch (err) {
-            await logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(await stackTrace.get(), err.message, "error");
             return err;
         }
     },
@@ -339,7 +339,7 @@ module.exports = {
     },
 
     waitForDocumentLoad: async function () {
-        await logger.logInto(stackTrace.get());
+        await logger.logInto(await stackTrace.get());
         res = await this.waitForDisplayed("[data-tid=image-loader]", undefined, true);
         res2 = await this.waitForDisplayed("[class*=rogress][class*=indeterminate]", undefined, true);
         if (!res)
@@ -375,11 +375,11 @@ module.exports = {
     selectByAttribute:async function (selector, attribute, value) {
         message = "element:" + selector;
         try {
-            res = await $(selector).selectByAttribute(attribute, value);
-            await logger.logInto(stackTrace.get(), message);
+            res = await (await $(selector)).selectByAttribute(attribute, value);
+            await logger.logInto(await stackTrace.get(), message);
             return res;
         } catch (err) {
-            await logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(await stackTrace.get(), err.message, "error");
             return err;
         }
     },
@@ -387,10 +387,10 @@ module.exports = {
     uploadFile: async function (localPath) {
         try {
             let remoteFilePath = await browser.uploadFile(localPath);
-            await logger.logInto(stackTrace.get(), message);
+            await logger.logInto(await stackTrace.get(), message);
             return remoteFilePath;
         } catch (err) {
-            await logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(await stackTrace.get(), err.message, "error");
             return err;
         }
     },
@@ -398,11 +398,11 @@ module.exports = {
     parentElement: async function (selector) {
         message = "element:" + selector;
         try {
-            let result = await $(selector).parentElement();
-            await logger.logInto(stackTrace.get(), message);
+            let result = await (await $(selector)).parentElement();
+            await logger.logInto(await stackTrace.get(), message);
             return result;
         } catch (err) {
-            await logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(await stackTrace.get(), err.message, "error");
             return err;
         }
     },
@@ -411,10 +411,10 @@ module.exports = {
         message = "key:" + value;
         try {
             res = await browser.keys(value);
-            await logger.logInto(stackTrace.get(), message);
+            await logger.logInto(await stackTrace.get(), message);
             return true;
         } catch (err) {
-            await logger.logInto(stackTrace.get(), err.message, "error");
+            await logger.logInto(await stackTrace.get(), err.message, "error");
             return err;
         }
     }

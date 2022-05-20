@@ -24,7 +24,7 @@ module.exports = {
 
     getSourceData: async function (qIndex, classifyQuesData) {
         await logger.logInto(await stackTrace.get());
-        return DNDonImageItemPlayerPage.getSourceData(qIndex, classifyQuesData.key1);
+        return await DNDonImageItemPlayerPage.getSourceData(qIndex, classifyQuesData.key1);
     },
 
     getTargetData: async function (qIndex, classifyQuesData, quesType) {
@@ -63,12 +63,12 @@ module.exports = {
 
     dragAndDrop: async function (classifyQuesData) {
         await logger.logInto(await stackTrace.get());
-        return DNDonImageItemPlayerPage.dragAndDrop(classifyQuesData.key1);
+        return await DNDonImageItemPlayerPage.dragAndDrop(classifyQuesData.key1);
     },
 
     dragAndDropClick: async function (classifyQuesData) {
         await logger.logInto(await stackTrace.get());
-        return DNDonImageItemPlayerPage.dragAndDropClick(classifyQuesData.key1);
+        return await DNDonImageItemPlayerPage.dragAndDropClick(classifyQuesData.key1);
     }
 
 }
