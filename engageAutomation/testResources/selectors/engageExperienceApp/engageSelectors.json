@@ -1136,7 +1136,7 @@
                 "graphHeader": "[data-tid=title-graph]",
                 "sendtoemail_btn": "[data-tid=button-sendToEmail]",
                 "productListName": "[data-tid*=button-product-",
-                "totalTimeSpent_lbl": "[data-tid='text-time-spent']",
+                "totalTimeSpent_lbl": "[data-tid=text-time-spent]",
                 "score_lbl": "[data-tid='text-card-heading-card0']",
                 "scoreChart_icon": "#doughnutCanvas-card0",
                 "classAnalyticsScore_lbl": "[data-tid=label-class-average-score-1]",
@@ -1145,7 +1145,7 @@
                 "classAnalyticsCompletion_lbl": "[data-tid=label-class-average-completion-1]",
                 "unit_title": "[data-tid='text-title-units']",
                 "lesson_Subtitle": "[data-tid='text-subtitle-lessons']",
-
+                "folder_Title":"[data-tid*=label-unit-title-",
                 "lessons_Title_lbl": "[data-tid*=label-unit-title-",
                 "score_icon": "[data-tid*=analytics-unit-icon-score-",
                 "score_Unit_lbl": "[data-tid*=analytics-unit-value-score-",

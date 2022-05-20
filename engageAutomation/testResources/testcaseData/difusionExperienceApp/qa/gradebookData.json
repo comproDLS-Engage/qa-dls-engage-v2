@@ -62,7 +62,7 @@
                         ]
                     },
                     {
-                        "folderName": "2. Open Ended LO",
+                        "folderName": "9. Open Ended LO",
                         "unitDetails": [
                             {
                               
@@ -73,7 +73,7 @@
                         ],
                         "activityList": [
                             {
-                                "activityName": "Open ended question",
+                                "activityName": "Open ended question1",
                                 "activityScore": "-",
                                 "activityAttempts": "1",
                                 "activityTimeSpent": "17 mins",

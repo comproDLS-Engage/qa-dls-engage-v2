@@ -17,7 +17,7 @@ module.exports = {
   completion_lbl: selectorFile.css.ComproEngage.gradeBookStudent.completion_lbl,
   classAnalyticsCompletion_lbl: selectorFile.css.ComproEngage.gradeBookStudent.classAnalyticsCompletion_lbl,
   classAnalyticsScore_lbl: selectorFile.css.ComproEngage.gradeBookStudent.classAnalyticsScore_lbl,
-  lesson_title: selectorFile.css.ComproEngage.gradeBookStudent.lesson_title,
+  lesson_title: selectorFile.css.ComproEngage.gradeBookStudent.unit_title,
   lesson_Subtitle: selectorFile.css.ComproEngage.gradeBookStudent.lesson_Subtitle,
   folder_Title: selectorFile.css.ComproEngage.gradeBookStudent.folder_Title,
   score_icon: selectorFile.css.ComproEngage.gradeBookStudent.score_icon,
@@ -27,8 +27,10 @@ module.exports = {
   totalTime_icon: selectorFile.css.ComproEngage.gradeBookStudent.totalTime_icon,
   totalTime_lbl: selectorFile.css.ComproEngage.gradeBookStudent.totalTime_lbl,
   activityCount: selectorFile.css.ComproEngage.gradeBookStudent.activityCount,
+  activityCount_icon:selectorFile.css.ComproEngage.gradeBookStudent.activityCount_icon,
+  activityCount_lbl:selectorFile.css.ComproEngage.gradeBookStudent.activityCount_lbl,
   CompletionCount: selectorFile.css.ComproEngage.gradeBookStudent.CompletionCount,
-  showActivities_btn: selectorFile.css.ComproEngage.gradeBookStudent.showActivities_btn,
+  showActivities_btn: selectorFile.css.ComproEngage.gradeBookStudent.showHideActivities_btn,
   activity_lbl: selectorFile.css.ComproEngage.gradeBookStudent.activity_lbl,
   score_activity_lbl: selectorFile.css.ComproEngage.gradeBookStudent.score_activity_lbl,
   attempt_lbl: selectorFile.css.ComproEngage.gradeBookStudent.attempt_lbl,
@@ -36,10 +38,14 @@ module.exports = {
   activityName: selectorFile.css.ComproEngage.gradeBookStudent.activityName,
   moreOption: selectorFile.css.ComproEngage.gradeBookStudent.moreOption,
   gradePill: selectorFile.css.ComproEngage.gradeBookStudent.gradePill,
-
+  lessons_Title_lbl:selectorFile.css.ComproEngage.gradeBookStudent.lessons_Title_lbl,
 
   viewAttempt_btn: selectorFile.css.ComproEngage.gradeBookStudent.viewAttempt_btn,
   gradeAttempt_btn: selectorFile.css.ComproEngage.gradeBookStudent.gradeAttempt_btn,
+  collapsibleActivityLbl: selectorFile.css.ComproEngage.gradeBookStudent.collapsibleActivityLbl,
+  collapsibleScoreLbl: selectorFile.css.ComproEngage.gradeBookStudent.collapsibleScoreLbl,
+  collapsibleAttemptsLbl:selectorFile.css.ComproEngage.gradeBookStudent.collapsibleAttemptsLbl,
+  collapsibleTimeSpentLbl: selectorFile.css.ComproEngage.gradeBookStudent.collapsibleTimeSpentLbl,
 
   isInitialized: async function () {
     var res;
@@ -128,13 +134,15 @@ module.exports = {
         if ((await action.getText(this.folder_Title + i)) == folder_TitleName) {
           obj[0] = {
             folder_Title: ((await action.getElementCount(this.folder_Title + i + "]")) > 0) ? await action.getText(this.folder_Title + i + "]") : null,
-            score_icon: ((await action.getElementCount(this.score_icon + i + "]")) > 0) ? await action.getText(this.score_icon + i + "]") : null,
+            score_icon: ((await action.getElementCount(this.score_icon + i + "]")) > 0) ? await action.waitForExist(this.score_icon + i + "]") : null,
             score_Unit_lbl: ((await action.getElementCount(this.score_Unit_lbl + i + "]")) > 0) ? await action.getText(this.score_Unit_lbl + i + "]") : null,
             completion_icon: ((await action.getElementCount(this.completion_icon + i + "]")) > 0) ? await action.waitForDisplayed(this.completion_icon + i + "]") : false,
             completion__Unit_lbl: ((await action.getElementCount(this.completion__Unit_lbl + i + "]")) > 0) ? await action.getText(this.completion__Unit_lbl + i + "]") : null,
             totalTime_icon: ((await action.getElementCount(this.totalTime_icon + i + "]")) > 0) ? await action.waitForDisplayed(this.totalTime_icon + i + "]") : false,
             totalTime_lbl: ((await action.getElementCount(this.totalTime_lbl + i + "]")) > 0) ? await action.getText(this.totalTime_lbl + i + "]") : null,
             activityCount: ((await action.getElementCount(this.activityCount + i + "]")) > 0) ? await action.getText(this.activityCount + i + "]") : null,
+            activityCount_icon: ((await action.getElementCount(this.activityCount_icon + i + "]")) > 0) ? await action.waitForExist(this.activityCount_icon + i + "]") : null,
+            activityCount_lbl: ((await action.getElementCount(this.activityCount_lbl + i + "]")) > 0) ? await action.getText(this.activityCount_lbl + i + "]") : null,
             CompletionCount: ((await action.getElementCount(this.CompletionCount + i + "]")) > 0) ? await action.getText(this.CompletionCount + i + "]") : null,
             showActivities_btn: ((await action.getElementCount(this.showActivities_btn + i + "]")) > 0) ? await action.getText(this.showActivities_btn + i + "]") : null,
           }
@@ -152,6 +160,9 @@ module.exports = {
           totalTime_icon: ((await action.getElementCount(this.totalTime_icon + i + "]")) > 0) ? await action.waitForDisplayed(this.totalTime_icon + i + "]") : false,
           totalTime_lbl: ((await action.getElementCount(this.totalTime_lbl + i + "]")) > 0) ? await action.getText(this.totalTime_lbl + i + "]") : null,
           activityCount: ((await action.getElementCount(this.activityCount + i + "]")) > 0) ? await action.getText(this.activityCount + i + "]") : null,
+          
+          activityCount_icon: ((await action.getElementCount(this.activityCount_icon + i + "]")) > 0) ? await action.waitForExist(this.activityCount_icon + i + "]") : null,
+          activityCount_lbl: ((await action.getElementCount(this.activityCount_lbl + i + "]")) > 0) ? await action.getText(this.activityCount_lbl + i + "]") : null,
           CompletionCount: ((await action.getElementCount(this.CompletionCount + i + "]")) > 0) ? await action.getText(this.CompletionCount + i + "]") : null,
           showActivities_btn: ((await action.getElementCount(this.showActivities_btn + i + "]")) > 0) ? await action.getText(this.showActivities_btn + i + "]") : null,
         }
@@ -227,12 +238,15 @@ module.exports = {
     return res;
   },
 
-  click_showActivities_btn: async function (folder_TitleName) {
+  click_showHideActivities_btn: async function (folder_TitleName) {
     await logger.logInto(await stackTrace.get());
     var i, list, res;
+    console.log(folder_TitleName)
     list = await action.findElements(this.showActivities_btn);
+    console.log(list.length)
     for (i = 0; i < list.length; i++) {
-      if (((await action.getText(this.folder_Title + i + "]"))) == folder_TitleName) {
+      console.log((await action.getText(this.folder_Title + i)))
+      if (((await action.getText(this.folder_Title + i))) == folder_TitleName) {
         res = await action.click(list[i]);
         break;
       }
@@ -307,7 +321,10 @@ module.exports = {
   click_moreOption: async function (unitName, unitActivity) {
     await logger.logInto(await stackTrace.get());
     var i, list, res, index;
+    console.log(unitName+"fFFF"+ unitActivity)
     list = await action.findElements(this.activityName);
+    console.log(list.length)
+    console.log(this.lessons_Title_lbl)
     for (i = 0; i < list.length; i++) {
       if (((await action.getText(this.lessons_Title_lbl + i + "]"))) == unitName) {
         index = i;

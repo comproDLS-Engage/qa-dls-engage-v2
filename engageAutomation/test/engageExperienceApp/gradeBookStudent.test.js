@@ -44,7 +44,7 @@ module.exports = {
       await assertion.assertEqual(sts.scoreChart_icon, true, "scoreChart_icon is Not displayed");
       await assertion.assertEqual(sts.completion_lbl, testdata.completion_lbl, "completion_lbl is Not displayed");
       await assertion.assertEqual(sts.completionChart_icon, true, "completionChart_icon is Not displayed");
-      await assertion.assertEqual(sts.unit_title, testdata.lesson_title, "lesson_title is Not displayed");
+      await assertion.assertEqual(sts.lesson_title, testdata.lesson_title, "lesson_title is Not displayed");
       await assertion.assertEqual(sts.lesson_Subtitle, testdata.lesson_Subtitle, "lesson_Subtitle is Not displayed");
    },
 
@@ -62,7 +62,7 @@ module.exports = {
          await assertion.assertEqual(sts[i].activityCount_icon, true, "activityCount_icon is Not displayed");
          await assertion.assertEqual(sts[i].activityCount_lbl, testdata[1][i].activityCount_lbl, "activityCount_lbl is Not displayed");
          await assertion.assertEqual(sts[i].CompletionCount, testdata[1][i].CompletionCount, "CompletionCount is Not displayed");
-         await assertion.assertEqual(sts[i].showHideActivities_btn, testdata[1][i].showHideActivities_btn, "showHideActivities_btn is Not displayed");
+         await assertion.assertEqual(sts[i].showActivities_btn, testdata[1][i].showHideActivities_btn, "showHideActivities_btn is Not displayed");
       }
    },
 

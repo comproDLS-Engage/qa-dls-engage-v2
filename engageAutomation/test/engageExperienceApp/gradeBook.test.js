@@ -2,6 +2,8 @@
 var gradeBookPage = require('../../pages/engageExperienceApp/gradeBook.page.js');
 var appShell = require('../../pages/engageExperienceApp/appShell.page');
 var viewAsStudentAssignmentPage = require('../../pages/engageExperienceApp/viewAsStudentAssignment.page.js');
+var studentGradeBookPage=require('../../pages/engageExperienceApp/gradeBookStudent.page.js');
+const { confirmPassword_input } = require('../../pages/engageExperienceApp/settings.page.js');
 var sts;
 
 module.exports = {
@@ -41,7 +43,7 @@ module.exports = {
       await assertion.assertEqual(sts.below70_lbl, testdata.below70_lbl, "below70_lbl is Not displayed: " + (await JSON.stringify(sts)))
       await assertion.assertEqual(sts.averageScore_lbl, testdata.averageScore_lbl, "above70_lbl is Not displayed: " + (await JSON.stringify(sts)))
       await assertion.assertEqual(sts.averageCompletion_lbl, testdata.averageCompletion_lbl, "averageCompletion_lbl is Not displayed: " + (await JSON.stringify(sts)))
-      await assertion.assertEqual(sts.serachBox, true, "serachBox is Not displayed: " + (await JSON.stringify(sts)))
+      await assertion.assertEqual(sts.searchBox, true, "serachBox is Not displayed: " + (await JSON.stringify(sts)))
       await assertion.assertEqual(sts.searchStudentPlaceholder, testdata.searchStudentPlaceholder, "searchStudentPlaceholder is Not displayed: " + (await JSON.stringify(sts)))
       await assertion.assertEqual(sts.name_lbl, testdata.name_lbl, "name_lbl is Not displayed: " + (await JSON.stringify(sts)))
       await assertion.assertEqual(sts.lastActive_lbl, testdata.lastActive_lbl, "lastActive_lbl is Not displayed: " + (await JSON.stringify(sts)))
@@ -61,7 +63,7 @@ module.exports = {
       sts = await gradeBookPage.click_studentList(testdata);
       await assertion.assertEqual(sts.pageStatus, true, "GradeBook Student Page not launched: " + (await JSON.stringify(sts)))
    },
-   ENG_GRADEBOOK_TC_6: async function () {
+   ENG_GRADEBOOK_TC_6: async function (testdata) {
       sts = await gradeBookPage.studentList_Data();  
       for (let i = 0; i < sts.length; i++) {
          await assertion.assertEqual(sts[i], testdata[i], "GradeBook Student Page not launched: ");
@@ -89,24 +91,26 @@ module.exports = {
    //Validate the content on Student GradeBook Page
    ENG_GRADEBOOK_TC_9: async function (testdata) {
       sts = await studentGradeBookPage.getData_gradeBookStudentView()
-      await assertion.assertEqual(sts.pageTitle, testdata[1], "pageTitle is Not displayed");
-      await assertion.assert(sts.pageSubTitle.includes(testdata[0].pageSubTitle), "pageSubTitle is Not displayed");
-      await assertion.assertEqual(sts.download_btn, testdata[0].download_btn, "download_btn is Not displayed");
-      await assertion.assertEqual(sts.sendtoemail_btn, testdata[0].sendtoemail_btn, "sendtoemail_btn is Not displayed");
-      await assertion.assert(sts.totalTimeSpent_lbl.includes(testdata[0].totalTimeSpent_lbl), "totalTimeSpent_lbl is Not displayed");
-      await assertion.assertEqual(sts.score_lbl, testdata[0].score_lbl, "score_lbl is Not displayed");
+      console.log(sts)
+      await assertion.assertEqual(sts.pageTitle, testdata.pageTitle, "pageTitle is Not displayed");
+      await assertion.assert(sts.pageSubTitle.includes(testdata.pageSubTitle), "pageSubTitle is Not displayed");
+      await assertion.assertEqual(sts.download_btn, testdata.download_btn, "download_btn is Not displayed");
+      await assertion.assertEqual(sts.sendtoemail_btn, testdata.sendtoemail_btn, "sendtoemail_btn is Not displayed");
+      await assertion.assert(sts.totalTimeSpent_lbl.includes(testdata.totalTimeSpent_lbl), "totalTimeSpent_lbl is Not displayed");
+      await assertion.assertEqual(sts.score_lbl, testdata.score_lbl, "score_lbl is Not displayed");
       await assertion.assertEqual(sts.scoreChart_icon, true, "scoreChart_icon is Not displayed");
-      await assertion.assertEqual(sts.completion_lbl, testdata[0].completion_lbl, "completion_lbl is Not displayed");
+      await assertion.assertEqual(sts.completion_lbl, testdata.completion_lbl, "completion_lbl is Not displayed");
       await assertion.assertEqual(sts.completionChart_icon, true, "completionChart_icon is Not displayed");
-      await assertion.assert(sts.classAnalyticsCompletion_lbl.includes(testdata[0].classAnalyticsCompletion_lbl), "classAnalyticsCompletion_lbl is Not displayed");
-      await assertion.assert(sts.classAnalyticsScore_lbl.includes(testdata[0].classAnalyticsScore_lbl), "classAnalyticsScore_lbl is Not displayed");
-      await assertion.assertEqual(sts.unit_title, testdata[0].lesson_title, "lesson_title is Not displayed");
-      await assertion.assertEqual(sts.lesson_Subtitle, testdata[0].lesson_Subtitle, "lesson_Subtitle is Not displayed");
+      await assertion.assert(sts.classAnalyticsCompletion_lbl.includes(testdata.classAnalyticsCompletion_lbl), "classAnalyticsCompletion_lbl is Not displayed");
+      await assertion.assert(sts.classAnalyticsScore_lbl.includes(testdata.classAnalyticsScore_lbl), "classAnalyticsScore_lbl is Not displayed");
+      await assertion.assertEqual(sts.lesson_title, testdata.lesson_title, "lesson_title is Not displayed");
+      await assertion.assertEqual(sts.lesson_Subtitle, testdata.lesson_Subtitle, "lesson_Subtitle is Not displayed");
    },
 
    //Validate the Unit Details of a book
    ENG_GRADEBOOK_TC_10: async function (testdata) {
       sts = await studentGradeBookPage.getData_UnitDetails(testdata[0])
+      console.log(sts)
       await assertion.assertEqual(sts.lessons_Title_lbl, testdata[0].folder_Title, "folder_Title is Not displayed");
       for (let i = 0; i < sts.length; i++) {
          await assertion.assertEqual(sts[i].score_icon, true, "score_icon is Not displayed");
@@ -118,7 +122,7 @@ module.exports = {
          await assertion.assertEqual(sts[i].activityCount_icon, true, "activityCount_icon is Not displayed");
          await assertion.assertEqual(sts[i].activityCount_lbl, testdata[1][i].activityCount_lbl, "activityCount_lbl is Not displayed");
          await assertion.assertEqual(sts[i].CompletionCount, testdata[1][i].CompletionCount, "CompletionCount is Not displayed");
-         await assertion.assertEqual(sts[i].showHideActivities_btn, testdata[1][i].showHideActivities_btn, "showHideActivities_btn is Not displayed");
+         await assertion.assertEqual(sts[i].showActivities_btn, testdata[1][i].showHideActivities_btn, "showHideActivities_btn is Not displayed");
       }
    },
 
@@ -131,6 +135,7 @@ module.exports = {
          await assertion.assertEqual(sts[i].gradePendingPill, testdata[2][i].gradePendingPill, "gradePill Text mismatch");
       }
       sts = await studentGradeBookPage.getData_showActivity_labels(testdata[0])
+      console.log(sts)
       for (let i = 0; i < sts.length; i++) {
          await assertion.assertEqual(sts[i].collapsibleActivityLbl, testdata[1].collapsibleActvityLbl, "collapsibleActivityLbl mismatch");
          await assertion.assertEqual(sts[i].collapsibleScoreLbl, testdata[1].collapsibleScoreLbl, "collapsibleScoreLbl mismatch");
