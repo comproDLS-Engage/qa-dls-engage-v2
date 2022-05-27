@@ -298,10 +298,6 @@
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
             "jsonPath": "engage.appContent.gradeBookStudent.teacher"
-          },
-             {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
-            "jsonPath": "engage.login.user.classInstructorUser3.class[3].studentName1"
           }
         ]
       },

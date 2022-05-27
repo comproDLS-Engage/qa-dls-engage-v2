@@ -1,0 +1,144 @@
+{
+    "book": {
+        "name": "QA Test Automation Book [DO NOT MODIFY]",
+        "description": "DO NOT MODIFY",
+        "component": [
+            {
+                "index": 0,
+                "type":"LP",
+                "activityCount":"3",
+                "name": {
+                    "EN": "Textbook",
+                    "ES": "Textbook"
+                },
+                "unit": [
+                    {
+                        "index": 0,
+                        "title": "1. Unit 1",
+                        "activityCount": "1",
+                        "folderCount": "1",
+                        "flipbookPageNum": "3"
+                    },
+                    {
+                        "index": 0,
+                        "title": "2. Unit 2",
+                        "activityCount": "1",
+                        "folderCount": "1",
+                        "flipbookPageNum": "3"
+                    }
+                ]
+            },
+            {
+                "index": 1,
+                "type":"LP",
+                "activityCount":"3",
+                "name": {
+                    "EN": "Extra Activities",
+                    "ES": "Extra Activities"
+                },
+                "unit": [
+                    {
+                        "index": 0,
+                        "title": "1. Unit 1",
+                        "activityCount": "3",
+                        "folderCount": "1",
+                        "flipbookPageNum": "3"
+                    },
+                    {
+                        "index": 0,
+                        "title": "2. Unit 2",
+                        "activityCount": "0",
+                        "folderCount": "1",
+                        "flipbookPageNum": "3"
+                    }
+                ]
+            },
+            {
+                "index": 2,
+                "type":"LP",
+                "activityCount":"4",
+                "name": {
+                    "EN": "Custom Component",
+                    "ES": "Custom Component"
+                },
+                "unit": [
+                    {
+                        "index": 0,
+                        "title": "Unit 1",
+                        "activityCount": "1",
+                        "folderCount": "0",
+                        "flipbookPageNum": ""
+                    },
+                    {
+                        "index": 1,
+                        "title": "Unit 2",
+                        "activityCount": "3",
+                        "folderCount": "0",
+                        "flipbookPageNum": ""
+                    }
+                ]
+            },
+            {
+                "index": 3,
+                "activityCount":"11",
+                "type":"LP",
+                "name": {
+                    "EN": "LP1",
+                    "ES": "LP1"
+                },
+                "unit": [
+                    {
+                        "index": 0,
+                        "title": "1. Scorable",
+                        "activityCount": "2",
+                        "folderCount": "0",
+                        "flipbookPageNum": ""
+                    },
+                    {
+                        "index": 1,
+                        "title": "2. Non Scorable",
+                        "activityCount": "9",
+                        "folderCount": "0",
+                        "flipbookPageNum": "",
+                        "section": [
+                            {
+                                "index": 0,
+                                "name": "",
+                                "activity": [
+                                    "Rich media - video",
+                                    "Rich media - audio",
+                                    "Download document",
+                                    "Download ppt",
+                                    "Download zip",
+                                    "Download pdf",
+                                    "Download xls",
+                                    "Etext",
+                                    "Html webbook"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "index": 4,
+                "type":"Resource",
+                "activityCount": "6",
+                "name": {
+                    "EN": "Book Resources",
+                    "ES": "Book Resources"
+                },
+                "unit": [
+                    {
+                        "index": 0,
+                        "title": "1. Unit 1",
+                        "activityCount": "1",
+                        "folderCount": "0",
+                        "flipbookPageNum": ""
+                    }
+                ]
+            }
+           
+        ]
+    }
+}

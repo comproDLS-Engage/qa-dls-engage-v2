@@ -127,7 +127,7 @@ module.exports = {
   getData_UnitDetails: async function (folder_TitleName) {
     await logger.logInto(await stackTrace.get());
     var obj = [];
-    await action.waitForDisplayed(this.folder_Title);
+    await action.waitForDisplayed(this.folder_Title+0);
     var list = await action.findElements(this.folder_Title);
     if (folder_TitleName) {
       for (var i = 0; i < list.length; i++) {

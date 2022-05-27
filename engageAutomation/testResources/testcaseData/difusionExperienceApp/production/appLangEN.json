@@ -279,7 +279,20 @@
                 "editOption_txt": "Edit Class",
                 "noStudentSubTitle": "Go and add few students in this class.",
                 "noStudentTitle": "No students are enrolled in the class",
-                "enrolledStatus": "enrolled"
+                "viewBookBtn":"View Book",
+                "gradebookBtn":"Gradebook",
+                "enrolledStatus": "enrolled",
+                "usingClasses_lbl": "Using classes",
+                "usingClassesByline_lbl": "Assign books and invite students to your class in order to access material and keep track of your class progress.",
+                "inviteStudents_btn": "Invite Students",
+                "createAssignments_btn": "Create Assignments",
+                "createAssignment_lbl": "Create Assignments",
+                "createAssignmentByline_lbl": "Assign specific chapters and activities for your students to complete. Once submitted, you can view all grades and progress.",
+                "noInboxActivity_lbl": "No inbox activity to show yet",
+                "noInboxActivityByline_lbl": "Anytime your student submits textbook activity, we'll notify you here. You'll only be notified about ungraded activities.",
+                "inviteStudentsdropDown_btn":"Invite",
+                "inviteStudents_lbl": "Invite Your Students",
+                "inviteStudentsByline_lbl": "Adding a book to class gives you the access to your students' progress and allow you to create assignment for your class."
             },
             "bookViewTOC": {
                 "addToMyBooks": "Add to My Books",
@@ -447,7 +460,7 @@
                     ]
                 }
             },
-           "settings": {
+            "settings": {
                 "pageTitle": "Settings",
                 "pageSubTitle": "Update and change details about your account",
                 "tabList": [
@@ -1077,7 +1090,7 @@
             },
             "gradeBookStudent": {
                 "teacher": {
-                    "pageTitle": "dev1 student100",
+                    "pageTitle": "dev2 28aprilstudent",
                     "pageSubTitle": "Last Active: ",
                     "download_btn": "Download",
                     "sendtoemail_btn": "Send to email",
@@ -1102,25 +1115,25 @@
                     "gradeAttempt_btn": "Grade Attempt",
                     "score_icon": true
                 },
-                "student":{
-                        "pageTitle": "My Progress",
-                        "download_btn": "Download",
-                        "sendtoemail_btn": "Send to email",
-                        "totalTimeSpent_lbl": "Total Time Spent: ",
-                        "score_lbl": "Score",
-                        "completion_lbl": "Completion",
-                        "lesson_title": "Units",
-                        "lesson_Subtitle": "Select a unit to view activity scores and progress",
-                        "score_Unit_lbl": "Score",
-                        "completion__Unit_lbl": "Completion",
-                        "totalTime_lbl": "Total Time",
-                        "activityCount": "Activity",
-                        "CompletionCount": "completed",
-                        "showActivities_btn": "Show Activities",
-                        "collapsibleActvityLbl": "Activity",
-                        "collapsibleScoreLbl": "Score",
-                        "collapsibleAttemptsLbl": "Attempts",
-                        "collapsibleTimeSpentLbl": "Time Spent"
+                "student": {
+                    "pageTitle": "My Progress",
+                    "download_btn": "Download",
+                    "sendtoemail_btn": "Send to email",
+                    "totalTimeSpent_lbl": "Total Time Spent: ",
+                    "score_lbl": "Score",
+                    "completion_lbl": "Completion",
+                    "lesson_title": "Units",
+                    "lesson_Subtitle": "Select a unit to view activity scores and progress",
+                    "score_Unit_lbl": "Score",
+                    "completion__Unit_lbl": "Completion",
+                    "totalTime_lbl": "Total Time",
+                    "activityCount": "Activity",
+                    "CompletionCount": "completed",
+                    "showActivities_btn": "Show Activities",
+                    "collapsibleActvityLbl": "Activity",
+                    "collapsibleScoreLbl": "Score",
+                    "collapsibleAttemptsLbl": "Attempts",
+                    "collapsibleTimeSpentLbl": "Time Spent"
                 }
             }
         }

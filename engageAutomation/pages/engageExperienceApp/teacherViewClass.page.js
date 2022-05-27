@@ -4,7 +4,7 @@ const createClassPage = require('./createClass.page.js');
 const bookDetailsPage = require('./viewBook.page.js');
 var gradeBookPage = require('./gradeBook.page.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
-var res, obj,pageData;
+var res, obj, pageData;
 var componentSelector, languageCount, i;
 module.exports = {
     pageTitle: selectorFile.css.ComproEngage.teacherViewClassPage.pageTitle,
@@ -36,20 +36,34 @@ module.exports = {
     studentCompletionScore: selectorFile.css.ComproEngage.teacherViewClassPage.studentCompletionScore,
     viewProgressbtn: selectorFile.css.ComproEngage.teacherViewClassPage.viewProgressbtn,
     viewMessagebtn: selectorFile.css.ComproEngage.teacherViewClassPage.viewMessagebtn,
-    assignmentsTab:selectorFile.css.ComproEngage.teacherViewClassPage.assignmentsTab,
+    assignmentsTab: selectorFile.css.ComproEngage.teacherViewClassPage.assignmentsTab,
+    bookComponentUnits: selectorFile.css.ComproEngage.teacherViewClassPage.bookComponentUnits,
+    bookComponentActivities: selectorFile.css.ComproEngage.teacherViewClassPage.bookComponentActivities,
+    usingClasses_lbl: selectorFile.css.ComproEngage.teacherViewClassPage.usingClasses_lbl,
+    usingClassesByline_lbl: selectorFile.css.ComproEngage.teacherViewClassPage.usingClassesByline_lbl,
+    inviteStudents_btn: selectorFile.css.ComproEngage.teacherViewClassPage.inviteStudents_btn,
+    createAssignments_btn: selectorFile.css.ComproEngage.teacherViewClassPage.createAssignments_btn,
+    createAssignment_lbl: selectorFile.css.ComproEngage.teacherViewClassPage.createAssignment_lbl,
+    createAssignmentByline_lbl: selectorFile.css.ComproEngage.teacherViewClassPage.createAssignmentByline_lbl,
+    noInboxActivity_lbl: selectorFile.css.ComproEngage.teacherViewClassPage.noInboxActivity_lbl,
+    noInboxActivityByline_lbl: selectorFile.css.ComproEngage.teacherViewClassPage.noInboxActivityByline_lbl,
+    inviteStudentsdropDown_btn: selectorFile.css.ComproEngage.teacherViewClassPage.inviteStudentsdropDown_btn,
+    inviteStudents_lbl: selectorFile.css.ComproEngage.teacherViewClassPage.inviteStudents_lbl,
+    inviteStudentsByline_lbl: selectorFile.css.ComproEngage.teacherViewClassPage.inviteStudentsByline_lbl,
 
     isInitialized: async function () {
         await logger.logInto(await stackTrace.get());
         await action.waitForDocumentLoad();
         let pageStatus = await action.waitForDisplayed(this.productTabBtns + 0 + "]");
-      //  res = this.getViewClassPageData();
-       // res.pageStatus = pageStatus;
+        //  res = this.getViewClassPageData();
+        // res.pageStatus = pageStatus;
         return pageStatus;
     },
 
     getViewClassPageData: async function () {
-       // await action.waitForDocumentLoad();
+        // await action.waitForDocumentLoad();
         await logger.logInto(await stackTrace.get());
+        await action.waitForDisplayed(this.productTabBtns + 0 + "]")
         obj = {
             className: ((await action.getElementCount(this.pageTitle)) > 0) ? await action.getText(this.pageTitle) : null,
             classDuration: ((await action.getElementCount(this.pageSubTitle)) > 0) ? await action.getText(this.pageSubTitle) : null,
@@ -60,6 +74,18 @@ module.exports = {
             bookTitleTxt: ((await action.getElementCount(this.bookTitleTxt)) > 0) ? await action.getText(this.bookTitleTxt) : null,
             bookSubtitleTxt: ((await action.getElementCount(this.bookSubtitleTxt)) > 0) ? await action.getText(this.bookSubtitleTxt) : null,
             viewBookBtn: ((await action.getElementCount(this.viewBookBtn)) > 0) ? await action.getText(this.viewBookBtn) : null,
+            productList: ((await action.getElementCount(this.productList)) > 0) ? await action.waitForDisplayed(this.productList) : null,
+            usingClasses_lbl: ((await action.getElementCount(this.usingClasses_lbl)) > 0) ? await action.getText(this.usingClasses_lbl) : false,
+            usingClassesByline_lbl: ((await action.getElementCount(this.usingClassesByline_lbl)) > 0) ? await action.getText(this.usingClassesByline_lbl) : null,
+            inviteStudents_btn: ((await action.getElementCount(this.inviteStudents_btn)) > 0) ? await action.getText(this.inviteStudents_btn) : null,
+            createAssignments_btn: ((await action.getElementCount(this.createAssignments_btn)) > 0) ? await action.getText(this.createAssignments_btn) : null,
+            createAssignment_lbl: ((await action.getElementCount(this.createAssignment_lbl)) > 0) ? await action.getText(this.createAssignment_lbl) : false,
+            createAssignmentByline_lbl: ((await action.getElementCount(this.createAssignmentByline_lbl)) > 0) ? await action.getText(this.createAssignmentByline_lbl) : null,
+            noInboxActivity_lbl: ((await action.getElementCount(this.noInboxActivity_lbl)) > 0) ? await action.getText(this.noInboxActivity_lbl) : null,
+            noInboxActivityByline_lbl: ((await action.getElementCount(this.noInboxActivityByline_lbl)) > 0) ? await action.getText(this.noInboxActivityByline_lbl) : null,
+            inviteStudentsdropDown_btn: ((await action.getElementCount(this.inviteStudentsdropDown_btn)) > 0) ? await action.getText(this.inviteStudentsdropDown_btn) : null,
+            inviteStudents_lbl: ((await action.getElementCount(this.inviteStudents_lbl)) > 0) ? await action.getText(this.inviteStudents_lbl) : null,
+            inviteStudentsByline_lbl: ((await action.getElementCount(this.inviteStudentsByline_lbl)) > 0) ? await action.getText(this.inviteStudentsByline_lbl) : null,
             productList: null, //for the tabs (inbox, Assignments, Students)
             bookComponentList: null, //for book components in the right pane
         }
@@ -81,7 +107,11 @@ module.exports = {
         for (i = 0; i < languageCount; i++) {
             componentSelector = this.bookComponentNamesBtns + i + "]";
             if ((await action.getElementCount(componentSelector)) > 0) {
-                bookComponentData[i] = await action.getText(componentSelector);
+                bookComponentData[i] = {
+                    bookComponentData: ((await action.getElementCount(this.bookComponentNamesBtns+ i + "]")) > 0) ? await action.getText(this.bookComponentNamesBtns + i + "]") : null,
+                    bookComponentUnits: ((await action.getElementCount(this.bookComponentUnits+ i + "]")) > 0) ? await action.getText(this.bookComponentUnits + i + "]") : null,
+                    bookComponentActivities: ((await action.getElementCount(this.bookComponentActivities+ i + "]")) > 0) ? await action.getText(this.bookComponentActivities + i + "]") : null
+                }
             }
             else
                 bookComponentData[i] = "";
@@ -89,7 +119,6 @@ module.exports = {
 
         obj.productList = productData;
         obj.bookComponentList = bookComponentData;
-        console.log(obj)
         return obj;
     },
 
@@ -181,7 +210,7 @@ module.exports = {
         res = await action.click(this.assignmentsTab);
         if (res == true) {
             await logger.logInto(await stackTrace.get(), "-- Assignment Tab is clicked");
-            res =await require ('./assignmentListTeacher.page').isInitialized();
+            res = await require('./assignmentListTeacher.page').isInitialized();
         }
         else {
             res = res + "-- Error in clicking Assignment Tab";
@@ -193,6 +222,7 @@ module.exports = {
     //clicking on Progress Tab
     clickStudentsTab: async function () {
         await logger.logInto(await stackTrace.get());
+        action.waitForDisplayed(this.productTabBtns + "2]")
         res = await action.click(this.productTabBtns + "2]");
         if (res == true) {
             await logger.logInto(await stackTrace.get(), "-- Progress Tab is clicked");
@@ -208,7 +238,7 @@ module.exports = {
     //Click Invite Students button
     clickInviteStudentsButton: async function () {
         await logger.logInto(await stackTrace.get());
-        res = await action.click(this.inviteStudents_btn);
+        res = await action.click(this.inviteStudentsdropDown_btn);
         if (res == true) {
             await logger.logInto(await stackTrace.get(), "-- Invite Students button is clicked");
             res = await require('../../test/engageExperienceApp/common.test.js').get_Snackbar_Message_Text();
@@ -293,14 +323,15 @@ module.exports = {
             studentCompletionScorelbl: ((await action.getElementCount(this.studentCompletionScorelbl)) > 0) ? await action.getText(this.studentCompletionScorelbl) : null,
         }
         let studentData = [], i;
-        await action.waitForDisplayed(this.studentName)
-        let studentcount = await action.getElementCount(this.studentList);
-        console.log(this.studentStatus + 0 + "]")
+        // await action.waitForDisplayed(this.studentName+0)
+        let studentcount = await action.getElementCount(this.studentName);
+        console.log(studentcount)
         for (i = 0; i < studentcount; i++) {
+            console.log(this.studentCompletionScore + i + "-3]")
             studentData[i] =
             {
-                studentName: ((await action.getElementCount(this.studentName + i + "]")) > 0) ? await action.getText(this.studentName + i + "]") : null,
-                studentStatus: ((await action.getElementCount(this.studentStatus + i + "]")) > 0) ? await action.getText(this.studentStatus + i + "]") : null,
+                studentName: ((await action.getElementCount(this.studentName + i + "-0] span")) > 0) ? await action.getText(this.studentName + i + "-0]") : null,
+                studentStatus: ((await action.getElementCount(this.studentStatus + i + "-1] p")) > 0) ? await action.getText(this.studentStatus + i + "-1]") : null,
                 studentAvgScore: ((await action.getElementCount(this.studentAvgScore + i + "-2]")) > 0) ? await action.getText(this.studentAvgScore + i + "-2]") : null,
                 studentCompletionScore: ((await action.getElementCount(this.studentCompletionScore + i + "-3]")) > 0) ? await action.getText(this.studentCompletionScore + i + "-3]") : null,
                 viewProgressbtn: ((await action.getElementCount(this.viewProgressbtn + i + "]")) > 0) ? await action.waitForExist(this.viewProgressbtn + i + "]") : null,

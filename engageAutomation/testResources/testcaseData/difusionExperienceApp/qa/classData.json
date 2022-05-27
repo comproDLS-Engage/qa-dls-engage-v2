@@ -134,12 +134,13 @@
 				"studentCount": "2",
 				"studentdetails": [
 					{
-						"Name": "qastu1",
+						"Name": "qa student5",
 						"AvgScore": "–",
 						"CompletionScore": "0%"
 					},
+				
 					{
-						"Name": "qa student5",
+						"Name": "qastu1",
 						"AvgScore": "–",
 						"CompletionScore": "0%"
 					}
@@ -178,12 +179,13 @@
 			"nonStudentClass": {
 				"name": "class3",
 				"key": "EnRQ-VPHJ",
-				"classDuration": "Aug 09, 2021 - Aug 23, 2022",
+				"classDuration": "Aug 09, 2021 - Jan 20, 2022",
 				"instructor": {
 					"name": "qa teacher9",
 					"email": "qa_teacher1@yopmail.com"
 				},
 				"bookName": "QA Test Automation Book [DO NOT MODIFY]",
+				"bookSubtitleTxt":"DO NOT MODIFY",
 				"status": "Active",
 				"studentCount": null,
 				"studentdetails": [

@@ -678,6 +678,16 @@
           "id": "ENG_INS_CLASS_TC_107",
           "description": "Mobile: Validate that score is not coming for non-anchord book class students",
           "tags": "P1"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_108",
+          "description": "Validate that Content of class details page",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_109",
+          "description": "Validate the Right Pane of Class",
+          "tags": "P1"
         }
       ]
     },

@@ -515,7 +515,6 @@ module.exports = {
 	//Click on student tab and validate student tab is selected
 	ENG_INS_CLASS_TC_99: async function (testdata) {
 		sts = await teacherViewClassPage.clickStudentsTab()
-		//console.log(sts)
 		if ((typeof (sts)) === "object") {
 			await assertion.assertEqual(sts.pageData.selectedProduct, "Students", "Student Tab is not selected " + (await JSON.stringify(sts)))
 
@@ -630,6 +629,59 @@ module.exports = {
 			//assertion.assertEqual(sts.studentData[0]. viewMessagebtn, true, "Student viewMessagebtn is not mismatched " + JSON.stringify(sts))
 			await assertion.assertEqual(sts.studentData[0].studentMoreOption, true, "Student MoreOption is not mismatched " + JSON.stringify(sts))
 
+		} else {
+			await assertion.assertFail(sts);
+		}
+	},
+	ENG_INS_CLASS_TC_108: async function (testdata) {
+		//console.log(testdata)
+		sts = await teacherViewClassPage.getViewClassPageData()
+		if ((typeof (sts)) === "object") {
+			await assertion.assertEqual(sts.className, testdata[0].name, "Class Name is not mismatched " + JSON.stringify(sts))
+			await assertion.assertEqual(sts.classDuration, testdata[0].classDuration, "classDuration is not mismatched " + JSON.stringify(sts))
+			await assertion.assertEqual(sts.gradebookBtn, testdata[1].gradebookBtn, "gradebookBtn is not mismatched " + JSON.stringify(sts))
+			await assertion.assertEqual(sts.bookCoverImg, true, "bookCoverImg is not mismatched " + JSON.stringify(sts))
+			await assertion.assertEqual(sts.classOptionsBtn_exists, true, "classOptionsBtn_exists is not mismatched " + JSON.stringify(sts))
+			await assertion.assertEqual(sts.gradebookBtn, testdata[1].gradebookBtn, "gradebookBtn is not mismatched " + JSON.stringify(sts))
+			await assertion.assertEqual(sts.bookTitleTxt, testdata[0].bookName, "bookTitleTxt is not mismatched " + JSON.stringify(sts))
+			await assertion.assertEqual(sts.bookSubtitleTxt, testdata[0].bookSubtitleTxt, "bookSubtitleTxt is not mismatched " + JSON.stringify(sts))
+			await assertion.assertEqual(sts.viewBookBtn, testdata[1].viewBookBtn, "classDuration is not mismatched " + JSON.stringify(sts))
+			await assertion.assertEqual(sts.usingClasses_lbl, testdata[1].usingClasses_lbl, "usingClasses_lbl is not mismatched " + JSON.stringify(sts))
+			await assertion.assertEqual(sts.usingClassesByline_lbl, testdata[1].usingClassesByline_lbl, "usingClassesByline_lbl is not mismatched " + JSON.stringify(sts))
+			await assertion.assertEqual(sts.inviteStudents_btn, testdata[1].inviteStudents_btn, "inviteStudents_btn is not mismatched " + JSON.stringify(sts))
+			await assertion.assertEqual(sts.createAssignments_btn, testdata[1].createAssignments_btn, "createAssignments_btn is not mismatched " + JSON.stringify(sts))
+			await assertion.assertEqual(sts.createAssignment_lbl, testdata[1].createAssignment_lbl, "createAssignment_lbl is not mismatched " + JSON.stringify(sts))
+			await assertion.assertEqual(sts.createAssignmentByline_lbl, testdata[1].createAssignmentByline_lbl, "createAssignmentByline_lbl is not mismatched " + JSON.stringify(sts))
+			await assertion.assertEqual(sts.noInboxActivity_lbl, testdata[1].noInboxActivity_lbl, "noInboxActivity_lbl is not mismatched " + JSON.stringify(sts))
+			await assertion.assertEqual(sts.noInboxActivityByline_lbl, testdata[1].noInboxActivityByline_lbl, "noInboxActivity_lbl is not mismatched " + JSON.stringify(sts))
+
+			await assertion.assertEqual(sts.inviteStudentsdropDown_btn, testdata[1].inviteStudentsdropDown_btn, "inviteStudentsdropDown_btn is not mismatched " + JSON.stringify(sts))
+			await assertion.assertEqual(sts.inviteStudents_lbl, testdata[1].inviteStudents_lbl, "inviteStudents_lbl is not mismatched " + JSON.stringify(sts))
+			await assertion.assertEqual(sts.inviteStudentsByline_lbl, testdata[1].inviteStudentsByline_lbl, "inviteStudentsByline_lbl is not mismatched " + JSON.stringify(sts))
+
+		} else {
+			await assertion.assertFail(sts);
+		}
+
+	},
+	// Validate book Content
+	ENG_INS_CLASS_TC_109: async function (testdata) {
+		//console.log(testdata)
+		sts = await teacherViewClassPage.getViewClassPageData()
+		console.log(sts)
+		console.log(sts.bookComponentList.length)
+		if ((typeof (sts)) === "object") {
+			for (var i = 0; i < sts.bookComponentList.length-1; i++) {
+				await assertion.assertEqual(sts.bookComponentList[i].bookComponentData, testdata[0].component[i].name.EN, "Name is not mismatched " + JSON.stringify(sts))
+				if ((testdata[0].component[i].type)==='LP'){
+				await assertion.assertEqual(sts.bookComponentList[i].bookComponentUnits, testdata[0].component[i].unit.length + " "+ testdata[1].bookComponentUnits, "bookComponentUnits is not mismatched " + JSON.stringify(sts))
+				await assertion.assertEqual(sts.bookComponentList[i].bookComponentActivities, testdata[0].component[i].activityCount +" "+ testdata[1].bookComponentActivities, "bookComponentActivities is not mismatched " + JSON.stringify(sts))
+				}
+				else
+				{
+					
+				await assertion.assertEqual(sts.bookComponentList[i].bookComponentUnits, testdata[0].component[i].activityCount +" "+ testdata[1].resources, "bookComponentActivities is not mismatched " + JSON.stringify(sts))
+			}}
 		} else {
 			await assertion.assertFail(sts);
 		}
