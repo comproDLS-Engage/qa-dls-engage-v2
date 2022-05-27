@@ -29,6 +29,7 @@ module.exports = {
     seeMoreLessBtn: selectorFile.common.seeMoreLessBtn,
     modifyCompOptionsBtn: selectorFile.viewLearningPathPage.modifyCompOptionsBtn,
     freelyAvailable: selectorFile.viewLearningPathPage.freelyAvailable,
+    selectAllBtn: selectorFile.viewLearningPathPage.selectAllBtn,
 
     isInitialized: async function () {
         await logger.logInto((await stackTrace.get()));
@@ -263,6 +264,21 @@ module.exports = {
         if (res == true) {
             res = await require('./addComponent.page.js').isInitialized();
             await browser.pause(5000);
+        }
+        await logger.logInto((await stackTrace.get()), res);
+        return res;
+    },
+
+    click_SelectAll_And_Click_Delete_Button: async function () {
+        await logger.logInto((await stackTrace.get()));
+        let res;
+        res = await action.click(this.selectAllBtn);
+        if (res == true) {
+            res = await action.click(this.deleteItemBtn);
+            if (res == true) {
+                await action.waitForDisplayed(this.dialogContent);
+                res = await action.getText(this.dialogContent);
+            }
         }
         await logger.logInto((await stackTrace.get()), res);
         return res;

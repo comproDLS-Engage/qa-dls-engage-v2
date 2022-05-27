@@ -129,7 +129,8 @@
 		"visibility": "[data-tid=text-content-details-value-3]",
 		"targetRole": "[data-tid=text-content-details-value-4]",
 		"assignable": "[data-tid=text-content-details-value-5]",
-		"freelyAvailable": "[data-tid=text-content-details-value-6]"
+		"freelyAvailable": "[data-tid=text-content-details-value-6]",
+		"selectAllBtn": "[data-tid=button-selectAll]"
 	},
 	"addFolderPage": {
 		"nameTxtbox": "[id=folder-title]",

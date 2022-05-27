@@ -424,6 +424,12 @@ module.exports = {
 		await assertion.assertEqual(sts, true, "Edit component page status mismatch");
 	},
 
+	// Validate that the delete dialog box opens on selecting all items and deleting on the activity page
+	BK_TC_45: async function () {
+		sts = await learningPathPage.click_SelectAll_And_Click_Delete_Button();
+		await assertion.assert((typeof sts === "string" && sts.includes("Are you sure, you want to delete the selected items?")), "Dialog text mismatch. " + sts);
+	},
+
 	// launch url and republish native LO
 	BK_TC_999: async function (testdata) {
 		var action = require('../../core/actionLibrary/baseActionLibrary.js');

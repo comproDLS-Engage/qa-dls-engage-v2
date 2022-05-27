@@ -72,8 +72,8 @@ module.exports = {
                 await browser.pause(2000);
             }
             await logger.logInto((await stackTrace.get()), res);
-            return res;
         }
+        return res;
     },
 
     click_CreateTitle_Button: async function () {
