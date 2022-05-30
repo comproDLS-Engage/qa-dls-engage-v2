@@ -753,7 +753,11 @@
                 "tableOfContentTitle": "[data-tid=flipbook-toc-label]",
                 "jumpToPageInput": "[data-tid=input-searchtextbox] input",
                 "jumpToPageBtnTOC": "[data-tid=button-closeicon]",
-                "resourceTitle": "[data-tid*=text-resourcetitle-]"
+                "resourceTitle": "[data-tid*=text-resourcetitle-]",
+                "hotlinks": "[class*=ee-overlay]",
+                "hotlinkToBeClicked": "[id=ee-overlays4-2]",
+                "activeHotlink": "[class*=hotlink-active]",
+                "hotlinkPlayer": "[class=plyr__controls]"
             },
             "playlist": {
                 "playlistPageTitle": "[data-tid='text-playlistTitle']",

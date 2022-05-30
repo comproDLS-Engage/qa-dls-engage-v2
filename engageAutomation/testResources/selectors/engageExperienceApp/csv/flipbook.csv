@@ -65,3 +65,7 @@ tableOfContentTitle,[data-tid=flipbook-toc-label],h6,flipbookTOC,,,
 jumpToPageInput,[data-tid=input-searchtextbox] input,textarea,flipbookTOC,,,
 jumpToPageBtn,[data-tid=button-closeicon],button,flipbookTOC,,,flipbookPage
 resourceTitle,[data-tid*=text-resourcetitle-],p,flipbookTOC,,pattern,
+hotlinks,[class*=ee-overlay],button,,,,
+hotlinkToBeClicked,[id=ee-overlays4-2],button,,,,
+activeHotlink,[class*=hotlink-active],button,,,,
+hotlinkPlayer,[class=plyr__controls],button,,,,
