@@ -2333,6 +2333,18 @@
           "description": "Validate clicking on Jump to page button lauches the entered page in flipbook",
           "tags": "P1",
           "visualTest": true
+        },
+        {
+          "id": "ENG_FLIP_TC_23",
+          "description": "Validate if the page contains any hotlink or not",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_FLIP_TC_24",
+          "description": "Validate that clicking on a hotlink activates it",
+          "tags": "P1",
+          "visualTest": true
         }
       ]
     },

@@ -68,6 +68,10 @@ module.exports = {
   jumpToPageInput: selectorFile.css.ComproEngage.flipbook.jumpToPageInput,
   jumpToPageBtnTOC: selectorFile.css.ComproEngage.flipbook.jumpToPageBtnTOC,
   resourceTitle: selectorFile.css.ComproEngage.flipbook.resourceTitle,
+  hotlinks: selectorFile.css.ComproEngage.flipbook.hotlinks,
+  hotlinkToBeClicked: selectorFile.css.ComproEngage.flipbook.hotlinkToBeClicked,
+  hotlinkPlayer: selectorFile.css.ComproEngage.flipbook.hotlinkPlayer,
+  activeHotlink: selectorFile.css.ComproEngage.flipbook.activeHotlink,
 
   isInitialized: async function () {
     var res;
@@ -814,6 +818,37 @@ module.exports = {
     else {
       await logger.logInto(await stackTrace.get(), res + " nextBtn button is not clicked", 'error');
     }
+    return res;
+  },
+
+  //-----HOTLINKS------
+  isHotlinkExists: async function () {
+    var res;
+    await logger.logInto(await stackTrace.get());
+    await action.waitForDocumentLoad();
+    res = {
+      hotlinks_isExists: (await action.getElementCount(this.hotlinks)) >= 1 ? true : false,
+    };
+    //console.log("hotlinks exist - ",res)
+    return res;
+  },
+
+  click_hotlink: async function () {
+    await logger.logInto(await stackTrace.get());
+    var res;
+    res = await action.click(this.hotlinkToBeClicked);
+    if (true == res) {
+      await logger.logInto(await stackTrace.get(), " hotlinkToBeClicked button is clicked");
+      //res = await action.isDisplayed(this.hotlinkPlayer);
+      res = {
+        audioPlayer_isExists: (await action.getElementCount(this.hotlinkPlayer)) == 1 ? true : false,
+			  hotlink_isActive: ((await action.getElementCount(this.activeHotlink)) == 1) ? true : false,
+      }
+    }
+    else {
+      await logger.logInto(await stackTrace.get(), res + "hotlinkToBeClicked button is not clicked", 'error');
+    }
+    console.log(" res -----",res);
     return res;
   }
 }

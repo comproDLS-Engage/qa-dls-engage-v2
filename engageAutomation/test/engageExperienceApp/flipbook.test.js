@@ -222,5 +222,18 @@ module.exports = {
 		await assertion.assert((sts.TOCBtn instanceof Error) === false, "TOCBtn status mismatch - " + sts.TOCBtn);
 		await assertion.assertEqual(sts.previousBtn, "", "previousBtn status mismatch");
 		await assertion.assertEqual(sts.nextBtn, "", "nextBtn status mismatch");
-	}	
+	},
+	
+	//Validate if the page contains any hotlink or not
+	ENG_FLIP_TC_23: async function () {
+		sts = await flipbook.isHotlinkExists();
+		await assertion.assertEqual(sts.hotlinks_isExists, true, "hotlinks status mismatch");
+	},
+
+	//Validate that clicking on a hotlink activates it
+	ENG_FLIP_TC_24: async function () {
+		sts = await flipbook.click_hotlink();
+		await assertion.assertEqual(sts.audioPlayer_isExists, true, "audioPlayer_isExists status mismatch");
+		await assertion.assertEqual(sts.hotlink_isActive, true, "hotlink_isActive status mismatch");
+	}
 }
