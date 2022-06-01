@@ -3,6 +3,9 @@
         "class": [
             {
                 "className": "Gradebook",
+                "classDuration": "Mar 30, 2022 - Mar 29, 2023",
+                "bookName":"QA free book - 2022",
+                "instrutorName":"qa teacher9",
                 "students": [
                     "4 student dev",
                     "dev1 student100",

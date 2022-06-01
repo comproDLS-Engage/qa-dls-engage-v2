@@ -651,22 +651,17 @@
         },
         {
           "id": "ENG_INS_CLASS_TC_103",
-          "description": " Validate the click on Assignment Tab",
+          "description": " Validate the click on Assignment Tab on class details page",
           "tags": "P1"
         },
         {
           "id": "ENG_INS_CLASS_TC_104",
-          "description": " Click on GradeBook button",
-          "tags": "P1"
-        },
-        {
-          "id": "ENG_STU_CLASS_TC_104",
-          "description": " Click on overview button",
+          "description": " Click on GradeBook button on class details page",
           "tags": "P1"
         },
         {
           "id": "ENG_INS_CLASS_TC_105",
-          "description": " Click on the gradebook button of teacher view class page ",
+          "description": " Click on the view progress button on the class dashboard",
           "tags": "P1"
         },
         {
@@ -686,7 +681,17 @@
         },
         {
           "id": "ENG_INS_CLASS_TC_109",
-          "description": "Validate the Right Pane of Class",
+          "description": "Validate the Right Pane of Class on class details page",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_110",
+          "description": "Validate that clicking on gradebook option from Class Menu launches class details page with inbox tab selected",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_111",
+          "description": "Validate that clicking on Material option from Class Menu launches class details page with inbox tab selected",
           "tags": "P1"
         }
       ]
@@ -788,9 +793,51 @@
         },
         {
           "id": "ENG_STU_CLASS_TC_16",
-          "description": "Validate that click on view Progress button",
+          "description": "Validate that click on view Progress button on student class dashboard",
           "tags": "P2",
           "visualTest": true
+        },
+        {
+          "id": "ENG_STU_CLASS_TC_17",
+          "description": "Validate that click on Progress button on the more option of class",
+          "tags": "P2",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_STU_CLASS_TC_18",
+          "description": "Validate that click on Assignment button on the more option of class",
+          "tags": "P2",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_STU_CLASS_TC_19",
+          "description": "Click on overview button on the student class details page",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_STU_CLASS_TC_20",
+          "description": "Validate the content on student details page",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_STU_CLASS_TC_21",
+          "description": "Validate the assignment section when assignment is added",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_STU_CLASS_TC_22",
+          "description": "Validate the Click on upcoming button (No Assignment is added)",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_STU_CLASS_TC_23",
+          "description": "Validate the Click on Completed button (No Assignment is added)",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_STU_CLASS_TC_24",
+          "description": "Validate the Content of Assignment Data",
+          "tags": "P1"
         }
       ]
     },

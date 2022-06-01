@@ -24,6 +24,9 @@ module.exports = {
       await assertion.assertEqual(sts.noGradeBookSubTitle, testdata.noGradeBookSubTitle, "noGradeBookSubTitle is Not displayed: " + (await JSON.stringify(sts)))
       await assertion.assertEqual(sts.download_btn, testdata.download_btn, "download_btn is Not displayed: " + (await JSON.stringify(sts)))
       await assertion.assertEqual(sts.sendtoemail_btn, testdata.sendtoemail_btn, "sendtoemail_btn is Not displayed: " + (await JSON.stringify(sts)))
+      await assertion.assertEqual(sts.inviteStudents_btn, testdata.inviteStudents_btn, "inviteStudents_btn is not mismatched " + JSON.stringify(sts))
+      await assertion.assertEqual(sts.inviteStudents_lbl, testdata.inviteStudents_lbl, "inviteStudents_lbl is not mismatched " + JSON.stringify(sts))
+      await assertion.assertEqual(sts.inviteStudentsByline_lbl, testdata.inviteStudentsByline_lbl, "inviteStudentsByline_lbl is not mismatched " + JSON.stringify(sts))
 
    },
 
@@ -75,7 +78,7 @@ module.exports = {
       sts = await gradeBookPage.click_download_btn();
       await assertion.assertEqual(sts, true, "Download button clicked");
       sts = await require('../../test/engageExperienceApp/common.test.js').get_Snackbar_Message_Text();
-      await assertion.assert(sts, testdata, "Snackbar message mismatch: " + sts);
+      await assertion.assertEqual(sts, testdata, "Snackbar message mismatch: " + sts);
    },
 
    //Validate that clicking on 'Send to email' button displays a snackbar message
@@ -166,5 +169,5 @@ module.exports = {
       await assertion.assertEqual(sts, true, "Cancel button is clicked");
       sts = await studentGradeBookPage.isInitialized();
       await assertion.assertEqual(sts.pageStatus, true, "assignment Details page status mismatch");
-   },
+   }
 }

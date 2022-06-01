@@ -70,7 +70,7 @@ module.exports = {
    },
    ENG_ASSDETAILS_TC_10: async function (testdata) {
       var name = testdata[0].concat(testdata[1].current);
-      sts = await createAssignmentPage.click_classList(name)
+      sts = await createAssignmentPage.click_classList(testdata[0])
       await assertion.assertEqual(sts, true, "button is not clicked");
    },
    ENG_ASSDETAILS_TC_11: async function () {

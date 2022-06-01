@@ -445,7 +445,7 @@ module.exports = {
         var i, list, res;
         list = await action.findElements(this.classList);
         for (i = 0; i < list.length; i++) {
-            if (((await action.getText(list[i]))) == classListName) {
+            if (((await action.getText(list[i])).split("\n")[0]) == classListName) {
                 console.log(classListName)
                 res = await action.click(list[i]);
                 break;

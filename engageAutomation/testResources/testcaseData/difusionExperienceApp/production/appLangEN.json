@@ -1059,7 +1059,6 @@
                     "assignmentsLbl": "Assignments",
                     "overviewBtn": "Overview",
                     "dueBtn": "Due",
-                    "dueNumberChip": 2,
                     "upcomingBtn": "Upcoming",
                     "completeBtn": "Completed"
                 }

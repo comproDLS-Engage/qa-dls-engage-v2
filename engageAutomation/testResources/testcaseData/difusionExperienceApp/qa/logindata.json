@@ -36,7 +36,20 @@
                     "password": "Compro@1234",
                     "role": "student",
                     "name": "student automation",
-                    "class": [],
+                    "class": [
+                        {
+                            "key": "AEYP-p9hk",
+                            "name": "future Class"
+                        },
+                        {
+                            "key": "9q6x-QzFe",
+                            "name": "course1"
+                        },
+                        {
+                            "key": "Cw32-FLZ7",
+                            "name": "Archive Class"
+                        }
+                    ],
                     "info": {}
                 },
                 "validStudent4": {
@@ -335,6 +348,11 @@
                         {
                             "key": "TFbA-6AP7",
                             "name": "Gradebook",
+                            "studentName1":"dev1 student100"
+                        },
+                        {
+                            "key": "TFbA-6AP7",
+                            "name": "Non-Scorable",
                             "studentName1":"dev1 student100"
                         }
                     ],

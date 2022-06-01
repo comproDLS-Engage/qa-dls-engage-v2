@@ -30,7 +30,9 @@ module.exports = {
   score_lbl: selectorFile.css.ComproEngage.gradeBook.score_lbl,
   completion_lbl: selectorFile.css.ComproEngage.gradeBook.completion_lbl,
   studentList: selectorFile.css.ComproEngage.gradeBook.studentList,
-
+  inviteStudents_btn: selectorFile.css.ComproEngage.gradeBook.inviteStudents_btn,
+  inviteStudents_lbl: selectorFile.css.ComproEngage.gradeBook.inviteStudents_lbl,
+  inviteStudentsByline_lbl: selectorFile.css.ComproEngage.gradeBook.inviteStudentsByline_lbl,
 
   isInitialized: async function () {
     var res;
@@ -70,6 +72,10 @@ module.exports = {
       time_lbl: ((await action.getElementCount(this.time_lbl)) > 0) ? await action.getText(this.time_lbl) : null,
       score_lbl: ((await action.getElementCount(this.score_lbl)) > 0) ? await action.getText(this.score_lbl) : null,
       completion_lbl: ((await action.getElementCount(this.completion_lbl)) > 0) ? await action.getText(this.completion_lbl) : null,
+      inviteStudents_btn: ((await action.getElementCount(this.inviteStudents_btn)) > 0) ? await action.getText(this.inviteStudents_btn) : null,
+      inviteStudents_lbl: ((await action.getElementCount(this.inviteStudents_lbl)) > 0) ? await action.getText(this.inviteStudents_lbl) : null,
+      inviteStudentsByline_lbl: ((await action.getElementCount(this.inviteStudentsByline_lbl)) > 0) ? await action.getText(this.inviteStudentsByline_lbl) : null,
+ 
       studentList: await this.studentList_Data(),
     }
     return obj;

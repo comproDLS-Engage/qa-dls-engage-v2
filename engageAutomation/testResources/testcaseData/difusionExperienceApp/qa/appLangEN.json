@@ -967,7 +967,7 @@
                     "activitylbl": "Activity List",
                     "classToAssignlbl": "Class to Assign",
                     "confirmAssign": "Confirm & Assign",
-                    "current": " (Current)"
+                    "current": " Current"
                 }
             },
             "assignmentDetails": {
@@ -1050,30 +1050,34 @@
                     ]
                 }
             },
-            "studentClassDashboard": {
+            "studentClassDetails": {
                 "student": {
-                    "bookCoverIcon": "TRUE",
-                    "className": "Class 1",
-                    "BookName": "QA free book - 2022",
-                    "classDuration": "Feb 21, 2022 - Feb 20, 2023",
                     "classDatesLabel": "Class Dates",
-                    "instrutorName": "assignment automation Teacher",
                     "instructorLabel": "Instructor",
                     "openFlipbookBtn": "Open Flipbook",
                     "assignmentsLbl": "Assignments",
                     "overviewBtn": "Overview",
                     "dueBtn": "Due",
-                    "dueNumberChip": 2,
                     "upcomingBtn": "Upcoming",
-                    "completeBtn": "Completed"
+                    "completeBtn": "Completed",
+                    "blankAssignment_title": "No assignments due",
+                    "blankAssignment_subtitle": "There is no assignment pending in your class.",
+                    "progress_lbl":"Progress",
+                    "viewProgress_btn":"View All",
+                    "noUpcoming_title":"No Upcoming Assignments",
+                    "noUpcoming_subtitle":"Any future assignment set by your teacher will appear here.",
+                    "noCompleted_title":"No Assignments Found",
+                    "noCompleted_subtitle":"You have no assignments completed in this class.",
+                    "dueDaysChip": "past due",
+                    "activities": "activities"
                 }
             },
             "gradeBook": {
                 "teacher": {
                     "pageTitle": "Gradebook",
                     "pageSubTitle": "Class Dates: ",
-                    "noGradeBookTitle": "No analytics to show yet",
-                    "noGradeBookSubTitle": "Invite students to enroll in your class and see their progress & grades.",
+                    "noGradeBookTitle": "No progress to show yet",
+                    "noGradeBookSubTitle": "Invite students to enroll in your class and see their progress and grades here.",
                     "download_btn": "Download",
                     "graphHeader": "Average Score and Average Completion",
                     "sendtoemail_btn": "Send to email",
@@ -1089,7 +1093,11 @@
                     "lastActive_lbl": "Last Active",
                     "time_lbl": "Time",
                     "score_lbl": "Score",
-                    "completion_lbl": "Completion"
+                    "completion_lbl": "Completion",
+                    "inviteStudents_btn": "Invite Students",
+                    "inviteStudents_lbl": "Invite Your Students",
+                    "inviteStudentsByline_lbl": "Invite students to enroll in your class and see their progress and grades."
+               
                 }
             },
             "gradeBookStudent": {

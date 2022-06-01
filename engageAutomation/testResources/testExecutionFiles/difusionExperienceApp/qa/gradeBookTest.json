@@ -54,8 +54,7 @@
         "id": "ENG_INS_CLASS_TC_104",
         "description": "",
         "testFile": "./test/engageExperienceApp/classDashboard.test.js",
-        "testData": [
-        ]
+        "testData": []
       }
     ],
     "BeforeEach": [],
@@ -64,16 +63,17 @@
         "id": "ENG_GRADEBOOK_TC_1",
         "description": "",
         "testFile": "./test/engageExperienceApp/gradeBook.test.js",
-        "testData": [
-        ]
+        "testData": []
       },
       {
         "id": "ENG_GRADEBOOK_TC_2",
         "description": "",
         "testFile": "./test/engageExperienceApp/gradeBook.test.js",
         "testData": [
-          {"dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-            "jsonPath": "engage.appContent.gradeBook.teacher"}
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.gradeBook.teacher"
+          }
         ]
       }
     ],
@@ -119,23 +119,27 @@
             "jsonPath": "engage.appContent.myClassPage"
           }
         ]
-      },
-      {
-        "id": "ENG_INS_CLASS_TC_7",
-        "description": "",
-        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
-        "testData": [
-          {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
-            "jsonPath": "engage.login.user.classInstructorUser3.class[3].name"
-          }
-        ]
       }
     ],
     "BeforeEach": [],
     "Test": [
       {
-        "id": "ENG_INS_CLASS_TC_104",
+        "id": "ENG_INS_CLASS_TC_8",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "jsonPath": "engage.login.user.classInstructorUser3.class[3]"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.myClassPage"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_CLASS_TC_110",
         "description": "",
         "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": [
@@ -145,16 +149,17 @@
         "id": "ENG_GRADEBOOK_TC_1",
         "description": "Validate the GradeBook Page is launched",
         "testFile": "./test/engageExperienceApp/gradeBook.test.js",
-        "testData": [
-        ]
+        "testData": []
       },
       {
         "id": "ENG_GRADEBOOK_TC_3",
         "description": "Validate the content on GradeBook Page",
         "testFile": "./test/engageExperienceApp/gradeBook.test.js",
         "testData": [
-          {"dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-            "jsonPath": "engage.appContent.gradeBook.teacher"}
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.gradeBook.teacher"
+          }
         ]
       },
       {
@@ -162,15 +167,17 @@
         "description": "Validate that clicking on 'Download' button displays a snackbar message",
         "testFile": "./test/engageExperienceApp/gradeBook.test.js",
         "testData": [
-          {"dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-            "jsonPath": "engage.appContent.appShell.featureNotAvailable_alert"}
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.appShell.featureNotAvailable_alert"
+          }
         ]
       },
       {
         "id": "ENG_GRADEBOOK_TC_8",
         "description": "Validate that clicking on 'Send to email' button displays a snackbar message",
         "testFile": "./test/engageExperienceApp/gradeBook.test.js",
-        "testData": [ 
+        "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
             "jsonPath": "engage.appContent.appShell.featureNotAvailable_alert"
@@ -181,8 +188,7 @@
         "id": "ENG_GRADEBOOK_TC_4",
         "description": "Validate the Product List in GradeBook",
         "testFile": "./test/engageExperienceApp/gradeBook.test.js",
-        "testData": [
-        ]
+        "testData": []
       },
       {
         "id": "ENG_GRADEBOOK_TC_6",
@@ -268,15 +274,13 @@
         "id": "ENG_INS_CLASS_TC_104",
         "description": "",
         "testFile": "./test/engageExperienceApp/classDashboard.test.js",
-        "testData": [
-        ]
+        "testData": []
       },
       {
         "id": "ENG_GRADEBOOK_TC_1",
         "description": "Validate the GradeBook Page is launched",
         "testFile": "./test/engageExperienceApp/gradeBook.test.js",
-        "testData": [
-        ]
+        "testData": []
       },
       {
         "id": "ENG_GRADEBOOK_TC_5",
@@ -305,8 +309,10 @@
         "description": "Validate that clicking on 'Download' button displays a snackbar message",
         "testFile": "./test/engageExperienceApp/gradeBook.test.js",
         "testData": [
-          {"dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-            "jsonPath": "engage.appContent.appShell.featureNotAvailable_alert"}
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.appShell.featureNotAvailable_alert"
+          }
         ]
       },
       {
@@ -314,16 +320,17 @@
         "description": "Validate that clicking on 'Send to email' button displays a snackbar message",
         "testFile": "./test/engageExperienceApp/gradeBook.test.js",
         "testData": [
-          {"dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-            "jsonPath": "engage.appContent.appShell.featureNotAvailable_alert"}
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.appShell.featureNotAvailable_alert"
+          }
         ]
       },
       {
         "id": "ENG_GRADEBOOK_TC_4",
         "description": "Validate the Product List in Student GradeBook",
         "testFile": "./test/engageExperienceApp/gradeBook.test.js",
-        "testData": [
-        ]
+        "testData": []
       },
       {
         "id": "ENG_GRADEBOOK_TC_10",
@@ -405,8 +412,7 @@
         "id": "ENG_GRADEBOOK_TC_14",
         "description": "",
         "testFile": "./test/engageExperienceApp/gradeBook.test.js",
-        "testData": [
-        ]
+        "testData": []
       },
       {
         "id": "ENG_GRADEBOOK_TC_15",
@@ -414,7 +420,6 @@
         "testFile": "./test/engageExperienceApp/gradeBook.test.js",
         "testData": []
       }
-      
     ],
     "AfterEach": [],
     "After": []
