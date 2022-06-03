@@ -1094,9 +1094,11 @@
                     "time_lbl": "Time",
                     "score_lbl": "Score",
                     "completion_lbl": "Completion",
-                    "inviteStudents_btn": "Invite Students",
+                    "classCode_btn": "Copy Class Code",
+                    "copiedlassCode_btn": "Class Code Copied!",
+                    "inviteEmail_btn":"Invite with Email",
                     "inviteStudents_lbl": "Invite Your Students",
-                    "inviteStudentsByline_lbl": "Invite students to enroll in your class and see their progress and grades."
+                    "inviteStudentsByline_lbl": "Send your class code (msLz-9NZA) or invite through email."
                
                 }
             },

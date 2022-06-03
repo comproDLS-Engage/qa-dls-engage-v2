@@ -1093,14 +1093,16 @@
                     "time_lbl": "Time",
                     "score_lbl": "Score",
                     "completion_lbl": "Completion",
-                    "inviteStudents_btn": "Invite Students",
+                    "classCode_btn": "Copy Class Code",
+                    "copiedlassCode_btn": "Class Code Copied",
+                    "inviteEmail_btn":"Invite with Email",
                     "inviteStudents_lbl": "Invite Your Students",
-                    "inviteStudentsByline_lbl": "Invite students to enroll in your class and see their progress and grades."
+                    "inviteStudentsByline_lbl": "Send your class code (8aQY-M826) or invite through email."
                 }
             },
             "gradeBookStudent": {
                 "teacher": {
-                    "pageTitle": "dev1 student100",
+                    "pageTitle": "dev2 28aprilstudent",
                     "pageSubTitle": "Last Active: ",
                     "download_btn": "Download",
                     "sendtoemail_btn": "Send to email",

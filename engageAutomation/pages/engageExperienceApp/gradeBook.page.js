@@ -30,10 +30,11 @@ module.exports = {
   score_lbl: selectorFile.css.ComproEngage.gradeBook.score_lbl,
   completion_lbl: selectorFile.css.ComproEngage.gradeBook.completion_lbl,
   studentList: selectorFile.css.ComproEngage.gradeBook.studentList,
-  inviteStudents_btn: selectorFile.css.ComproEngage.gradeBook.inviteStudents_btn,
+  classCode_btn: selectorFile.css.ComproEngage.gradeBook.classCode_btn,
+  inviteEmail_btn: selectorFile.css.ComproEngage.gradeBook.inviteEmail,
   inviteStudents_lbl: selectorFile.css.ComproEngage.gradeBook.inviteStudents_lbl,
   inviteStudentsByline_lbl: selectorFile.css.ComproEngage.gradeBook.inviteStudentsByline_lbl,
-
+  copyClassCode_btn:selectorFile.css.ComproEngage.gradeBook.copyClassCode_btn,
   isInitialized: async function () {
     var res;
     await logger.logInto(await stackTrace.get());
@@ -72,7 +73,9 @@ module.exports = {
       time_lbl: ((await action.getElementCount(this.time_lbl)) > 0) ? await action.getText(this.time_lbl) : null,
       score_lbl: ((await action.getElementCount(this.score_lbl)) > 0) ? await action.getText(this.score_lbl) : null,
       completion_lbl: ((await action.getElementCount(this.completion_lbl)) > 0) ? await action.getText(this.completion_lbl) : null,
-      inviteStudents_btn: ((await action.getElementCount(this.inviteStudents_btn)) > 0) ? await action.getText(this.inviteStudents_btn) : null,
+      classCode_btn: ((await action.getElementCount(this.classCode_btn)) > 0) ? await action.getText(this.classCode_btn) : null,
+      copyClassCode_btn: ((await action.getElementCount(this.copyClassCode_btn)) > 0) ? await action.getText(this.copyClassCode_btn) : null,
+      inviteEmail_btn: ((await action.getElementCount(this.inviteEmail_btn)) > 0) ? await action.getText(this.inviteEmail_btn) : null,
       inviteStudents_lbl: ((await action.getElementCount(this.inviteStudents_lbl)) > 0) ? await action.getText(this.inviteStudents_lbl) : null,
       inviteStudentsByline_lbl: ((await action.getElementCount(this.inviteStudentsByline_lbl)) > 0) ? await action.getText(this.inviteStudentsByline_lbl) : null,
  
@@ -129,6 +132,30 @@ module.exports = {
     }
     else {
       await logger.logInto(await stackTrace.get(), res + "download_btn is NOT clicked", 'error');
+    }
+    return res;
+  },
+  click_inviteEmail_btn: async function () {
+    await logger.logInto(await stackTrace.get());
+    var res;
+    res = await action.click(this.inviteEmail_btn);
+    if (true == res) {
+      await logger.logInto(await stackTrace.get(), " inviteEmail_btn is clicked");
+    }
+    else {
+      await logger.logInto(await stackTrace.get(), res + "inviteEmail_btn is NOT clicked", 'error');
+    }
+    return res;
+  },
+  click_classCode_btn: async function () {
+    await logger.logInto(await stackTrace.get());
+    var res;
+    res = await action.click(this.classCode_btn);
+    if (true == res) {
+      await logger.logInto(await stackTrace.get(), " classCode_btn is clicked");
+    }
+    else {
+      await logger.logInto(await stackTrace.get(), res + "classCode_btn is NOT clicked", 'error');
     }
     return res;
   },

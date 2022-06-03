@@ -245,10 +245,111 @@ module.exports = {
 	ENG_STU_CLASS_TC_16: async function () {
 		sts = await classDashboardPage.click_viewProgress();
 		if ((typeof (sts)) === "object") {
+			await assertion.assertEqual(sts.pageStatus, true, "Gradebook Page is not selected " + (await JSON.stringify(sts)))
+
+		} else {
+			await assertion.assertFail(sts);
+		}
+	},
+	ENG_STU_CLASS_TC_17: async function () {
+		sts = await classDashboardPage.click_progressOption();
+		if ((typeof (sts)) === "object") {
 			await assertion.assertEqual(sts.pageStatus, true, "Assignment Tab is not selected " + (await JSON.stringify(sts)))
 
 		} else {
 			await assertion.assertFail(sts);
 		}
 	},
+	ENG_STU_CLASS_TC_18: async function () {
+		sts = await classDashboardPage.click_assignmentsOption();
+		if ((typeof (sts)) === "object") {
+			await assertion.assertEqual(sts.pageStatus, true, "Assignment Tab is not selected " + (await JSON.stringify(sts)))
+
+		} else {
+			await assertion.assertFail(sts);
+		}
+	},
+	ENG_STU_CLASS_TC_19: async function () {
+		sts = await studentClassDetailsPage.click_overviewBtn();
+		if ((typeof (sts)) === "object") {
+			await assertion.assertEqual(sts.pageStatus, true, "Assignment Tab is not selected " + (await JSON.stringify(sts)))
+
+		} else {
+			await assertion.assertFail(sts);
+		}
+	},
+
+	//Validate the content on student details page
+	ENG_STU_CLASS_TC_20: async function (testdata) {
+		sts = await studentClassDetailsPage.getData_studentClassDashboardPageData();
+		if ((typeof (sts)) === "object") {
+			await assertion.assertEqual(sts.bookCoverIcon, true, "bookCoverIcon is not displayed: " + (await JSON.stringify(sts)))
+			await assertion.assertEqual(sts.className, testdata[0].className, "Class Name is mismatched: " + (await JSON.stringify(sts)))
+			await assertion.assertEqual(sts.bookName, testdata[0].bookName, "Book Name is mismatched: " + (await JSON.stringify(sts)))
+			await assertion.assertEqual(sts.classDuration, testdata[0].classDuration, "Class Duration is mismatched: " + (await JSON.stringify(sts)))
+			await assertion.assertEqual(sts.classDurationIcon, true, "classDurationIcon is not displayed: " + (await JSON.stringify(sts)))
+			await assertion.assertEqual(sts.classDatesLabel, testdata[1].classDatesLabel, "Class Duration Label is mismatched: " + (await JSON.stringify(sts)))
+			await assertion.assertEqual(sts.instructorIcon, true, "instructorIcon is not displayed: " + (await JSON.stringify(sts)))
+			await assertion.assertEqual(sts.instrutorName, testdata[0].instrutorName, "Class Instructor Name is mismatched: " + (await JSON.stringify(sts)))
+			await assertion.assertEqual(sts.instructorLabel, testdata[1].instructorLabel, "instructorLabel is mismatched: " + (await JSON.stringify(sts)))
+			await assertion.assertEqual(sts.openFlipbookBtn, testdata[1].openFlipbookBtn, "openFlipbookBtn is mismatched: " + (await JSON.stringify(sts)))
+			await assertion.assertEqual(sts.otherDetailsBtn, true, "otherDetailsBtn is mismatched: " + (await JSON.stringify(sts)))
+			await assertion.assertEqual(sts.assignmentsLbl, testdata[1].assignmentsLbl, "assignmentsLbl is mismatched: " + (await JSON.stringify(sts)))
+			await assertion.assertEqual(sts.overviewBtn, testdata[1].overviewBtn, "overviewBtn is mismatched: " + (await JSON.stringify(sts)))
+			await assertion.assertEqual(sts.blankAssignment_img, true, "blankAssignment_img is mismatched: " + (await JSON.stringify(sts)))
+			await assertion.assertEqual(sts.blankAssignment_title, testdata[1].blankAssignment_title, "blankAssignment_title is mismatched: " + (await JSON.stringify(sts)))
+			await assertion.assertEqual(sts.blankAssignment_subtitle, testdata[1].blankAssignment_subtitle, "completeBtn is mismatched: " + (await JSON.stringify(sts)))
+			await assertion.assertEqual(sts.progress_lbl, testdata[1].progress_lbl, "completeBtn is mismatched: " + (await JSON.stringify(sts)))
+			await assertion.assertEqual(sts.viewProgress_btn, testdata[1].viewProgress_btn, "completeBtn is mismatched: " + (await JSON.stringify(sts)))
+
+		} else {
+			await assertion.assertFail(sts);
+		}
+	},
+
+	//Validate the assignment section when assignment is added
+	ENG_STU_CLASS_TC_21: async function (testdata) {
+		sts = await studentClassDetailsPage.getData_studentClassDashboardPageData();
+		if ((typeof (sts)) === "object") {
+			await assertion.assertEqual(sts.dueBtn, testdata.dueBtn, "Class Name is mismatched: " + (await JSON.stringify(sts)))
+			await assertion.assertEqual(sts.upcomingBtn, testdata.upcomingBtn, "Book Name is mismatched: " + (await JSON.stringify(sts)))
+			await assertion.assertEqual(sts.completeBtn, testdata.completeBtn, "Class Name is mismatched: " + (await JSON.stringify(sts)))
+		}
+	},
+	//Validate the Click on upcoming button (No Assignment is added)
+	ENG_STU_CLASS_TC_22: async function (testdata) {
+		sts = await studentClassDetailsPage.click_upcomingBtn();
+		if ((typeof (sts)) === "object") {
+			await assertion.assertEqual(sts.noUpcoming_title, testdata.noUpcoming_title, "noUpcoming_title is mismatched: " + (await JSON.stringify(sts)))
+			await assertion.assertEqual(sts.noUpcoming_subtitle, testdata.noUpcoming_subtitle, "noUpcoming_subtitle is mismatched: " + (await JSON.stringify(sts)))
+		}
+	},
+	//Validate the Click on upcoming button (No Assignment is added)
+	ENG_STU_CLASS_TC_23: async function (testdata) {
+		sts = await studentClassDetailsPage.click_completeBtn();
+		if ((typeof (sts)) === "object") {
+			await assertion.assertEqual(sts.noCompleted_title, testdata.noCompleted_title, "noCompleted_title is mismatched: " + (await JSON.stringify(sts)))
+			await assertion.assertEqual(sts.noCompleted_subtitle, testdata.noCompleted_subtitle, "noCompleted_subtitleis mismatched: " + (await JSON.stringify(sts)))
+		}
+	},
+
+	//Validate the Assignment data on the class dashboard
+	ENG_STU_CLASS_TC_24: async function (testdata) {
+		sts = await studentClassDetailsPage.getData_assignmentList();
+		if ((typeof (sts)) === "object") {
+			await assertion.assertEqual(sts[0].dueDaysChip, testdata[1].dueDaysChip, "dueDaysChip is mismatched: " + (await JSON.stringify(sts)))
+			await assertion.assertEqual(sts[0].assignmentTitle, testdata[0].assignmentName, "assignmentTitle mismatched: " + (await JSON.stringify(sts)))
+			await assertion.assertEqual(sts[0].assignmentActivities, testdata[0].assignmentActivities+" "+testdata[1].activities, "assignmentTitle mismatched: " + (await JSON.stringify(sts)))
+			await assertion.assertEqual(sts[0].dueNumberChip, testdata[0].dueNumberChip, "assignmentTitle mismatched: " + (await JSON.stringify(sts)))
+		}
+	},
+	//Validate the Book data on the class dashboard
+	ENG_STU_CLASS_TC_25: async function (testdata) {
+		sts = await studentClassDetailsPage.getData_bookList();
+		if ((typeof (sts)) === "object") {
+			await assertion.assertEqual(sts[0].bookMaterial_lbl, testdata.bookMaterial_lbl, "bookMaterial_lbl is mismatched: " + (await JSON.stringify(sts)))
+			await assertion.assertEqual(sts[0].completionValue, testdata.completionValue, "completionValue mismatched: " + (await JSON.stringify(sts)))
+			await assertion.assertEqual(sts[0].progressbar, testdata.progressbar+ "progressbar mismatched: " + (await JSON.stringify(sts)))
+		}
+	}
 };

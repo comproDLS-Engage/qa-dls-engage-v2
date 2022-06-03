@@ -693,6 +693,29 @@
           "id": "ENG_INS_CLASS_TC_111",
           "description": "Validate that clicking on Material option from Class Menu launches class details page with inbox tab selected",
           "tags": "P1"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_112",
+          "description": "Validate that searching can be done on basis of Class name",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_113",
+          "description": "Validate that No Result Found is displayed in the drop down suggestion and in the screen when no Class matching the search criteria is fulfilled",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_114",
+          "description": "Validate that clicking on a class from the search suggestion drop down list launches the class.",
+          "tags": "P1"
+        },  {
+          "id": "ENG_INS_CLASS_TC_115",
+          "description": "Validate that clicking on \"More search results for ..xyz\" lists the resources based on search text.",
+          "tags": "P1"
+        },  {
+          "id": "ENG_INS_CLASS_TC_116",
+          "description": "Validate that clicking on close search button removes the search criteria",
+          "tags": "P1"
         }
       ]
     },
@@ -3243,6 +3266,18 @@
         {
           "id": "ENG_GRADEBOOK_TC_15",
           "description": "Validate the click on Cancel button on  View Attempt Page",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GRADEBOOK_TC_16",
+          "description": "Validate the click on 'Class Copy Code' button",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GRADEBOOK_TC_17",
+          "description": "Validate the click on 'Invie Email' button",
           "tags": "P2",
           "visualTest": "-"
         }
