@@ -30,7 +30,7 @@
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
-                  "jsonPath": "engage.login.user.flipbookUser"
+                  "jsonPath": "engage.login.user.validInstructorUser1"
                }
             ]
          },
@@ -141,7 +141,7 @@
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
-                  "jsonPath": "engage.login.user.flipbookUser"
+                  "jsonPath": "engage.login.user.validInstructorUser1"
                }
             ]
          },
@@ -313,7 +313,7 @@
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
-                  "jsonPath": "engage.login.user.flipbookUser"
+                  "jsonPath": "engage.login.user.validInstructorUser1"
                }
             ]
          },
@@ -532,7 +532,7 @@
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
-                  "jsonPath": "engage.login.user.flipbookUser"
+                  "jsonPath": "engage.login.user.validInstructorUser1"
                }
             ]
          },

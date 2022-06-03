@@ -98,12 +98,11 @@ module.exports = {
         await action.waitForDisplayed(this.bookList);
         list = await action.findElements(this.bookList);
         for (i = 0; i < list.length; i++) {
-            //console.log(action.getText(list[i]))
             if ((await action.getText(list[i])).includes(name)) {
                 res = await action.click(list[i]);
                 if (res == true) {
-                    res = await require('./viewBook.page.js').isInitialized();
                     await browser.pause(5000);
+                    res = await require('./viewBook.page.js').isInitialized();
                 }
                 break;
             }
