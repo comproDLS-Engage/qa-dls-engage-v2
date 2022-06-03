@@ -75,6 +75,28 @@
             "jsonPath": "engage.appContent.gradeBook.teacher"
           }
         ]
+      },
+      {
+        "id": "ENG_GRADEBOOK_TC_16",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/gradeBook.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.gradeBook.teacher"
+          }
+        ]
+      },
+      {
+        "id": "ENG_GRADEBOOK_TC_17",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/gradeBook.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.appShell.featureNotAvailable_alert"
+          }
+        ]
       }
     ],
     "AfterEach": [],
