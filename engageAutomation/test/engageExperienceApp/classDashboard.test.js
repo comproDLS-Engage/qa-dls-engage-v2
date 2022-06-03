@@ -1,6 +1,5 @@
 "use strict";
 var classDashboardPage = require('../../pages/engageExperienceApp/classDashboard.page.js');
-var studentClassDashboard = require('../../pages/engageExperienceApp/studentClassDashboard.page.js');
 var createClassPage = require('../../pages/engageExperienceApp/createClass.page.js');
 var successClassPage = require('../../pages/engageExperienceApp/successClass.page.js');
 const dashboardPage = require('../../pages/engageExperienceApp/dashboard.page.js');
@@ -25,6 +24,8 @@ module.exports = {
 			await assertion.assertEqual(sts.activeTab, testdata.activeTab, "MyClass Tab is mismatched: " + (await JSON.stringify(sts)))
 			await assertion.assertEqual(sts.isActiveTabSelected, 'true', "Myclass Tab is not selected: " + (await JSON.stringify(sts)))
 			await assertion.assertEqual(sts.isArchievedTabSelected, 'false', "Archived Tab is selected: " + (await JSON.stringify(sts)))
+			//await assertion.assertEqual(sts.searchBox, "", "searchBox Text Mismatch");
+			//await assertion.assertEqual(sts.searchIcon, true, "searchIcon status mismatch");
 		} else {
 			await assertion.assertFail(sts);
 		}
@@ -161,7 +162,6 @@ module.exports = {
 	//Validate that clicking on inbox option from Class Menu launches class details page with inbox tab selected
 	ENG_INS_CLASS_TC_10: async function (testdata) {
 		sts = await classDashboardPage.click_inboxOption();
-		console.log(sts)
 		if ((typeof (sts)) === "object") {
 			await assertion.assertEqual(sts.selectedProduct, testdata.inboxOption_txt, "Add Student Page is not displayed: " + (await JSON.stringify(sts.pageStatus)))
 		} else {
@@ -183,7 +183,7 @@ module.exports = {
 		sts = await classDashboardPage.click_assignmentsOption();
 		//console.log(sts)
 		if ((typeof (sts)) === "object") {
-			await assertion.assertEqual(sts.selectedProduct, testdata.assignmentsOption_txt, "Add Student Page is not displayed: " + (await JSON.stringify(sts.pageStatus)))
+			await assertion.assertEqual(sts.selectedProduct, testdata.assignmentsOption_txt, "Assignment Page is not displayed: " + (await JSON.stringify(sts.pageStatus)))
 		} else {
 			await assertion.assertFail(sts);
 		}
@@ -567,6 +567,7 @@ module.exports = {
 			await assertion.assertFail(sts);
 		}
 	},
+	//Validate the click on Assignment Tab on class details page
 	ENG_INS_CLASS_TC_103: async function (testdata) {
 		sts = await teacherViewClassPage.clickAssignmentsTab()
 		console.log(sts)
@@ -578,23 +579,22 @@ module.exports = {
 		}
 
 	},
-	ENG_STU_CLASS_TC_104: async function () {
-		sts = await studentClassDashboard.click_overviewBtn();
-	},
-	//Click GradeBok btn
+	//Click GradeBok btn on the class details page
 	ENG_INS_CLASS_TC_104: async function () {
 		sts = await teacherViewClassPage.clickGradeBookbtn();
 		if ((typeof (sts)) === "object") {
-			await assertion.assertEqual(sts.pageStatus, true, "Assignment Tab is not selected " + (await JSON.stringify(sts)))
+			await assertion.assertEqual(sts.pageStatus, true, "gradebook page is not displayed" + (await JSON.stringify(sts)))
 
 		} else {
 			await assertion.assertFail(sts);
 		}
 	},
+
+	//Click on the view progress button
 	ENG_INS_CLASS_TC_105: async function () {
 		sts = await classDashboardPage.click_viewProgress();
 		if ((typeof (sts)) === "object") {
-			await assertion.assertEqual(sts.pageStatus, true, "Assignment Tab is not selected " + (await JSON.stringify(sts)))
+			await assertion.assertEqual(sts.pageStatus, true, "Progress page is not displayed " + (await JSON.stringify(sts)))
 
 		} else {
 			await assertion.assertFail(sts);
@@ -633,6 +633,8 @@ module.exports = {
 			await assertion.assertFail(sts);
 		}
 	},
+
+	//Validate that Content of class details page
 	ENG_INS_CLASS_TC_108: async function (testdata) {
 		//console.log(testdata)
 		sts = await teacherViewClassPage.getViewClassPageData()
@@ -664,26 +666,119 @@ module.exports = {
 		}
 
 	},
-	// Validate book Content
+	// Validate book Content on the class details page
 	ENG_INS_CLASS_TC_109: async function (testdata) {
 		//console.log(testdata)
 		sts = await teacherViewClassPage.getViewClassPageData()
 		console.log(sts)
 		console.log(sts.bookComponentList.length)
 		if ((typeof (sts)) === "object") {
-			for (var i = 0; i < sts.bookComponentList.length-1; i++) {
+			for (var i = 0; i < sts.bookComponentList.length - 1; i++) {
 				await assertion.assertEqual(sts.bookComponentList[i].bookComponentData, testdata[0].component[i].name.EN, "Name is not mismatched " + JSON.stringify(sts))
-				if ((testdata[0].component[i].type)==='LP'){
-				await assertion.assertEqual(sts.bookComponentList[i].bookComponentUnits, testdata[0].component[i].unit.length + " "+ testdata[1].bookComponentUnits, "bookComponentUnits is not mismatched " + JSON.stringify(sts))
-				await assertion.assertEqual(sts.bookComponentList[i].bookComponentActivities, testdata[0].component[i].activityCount +" "+ testdata[1].bookComponentActivities, "bookComponentActivities is not mismatched " + JSON.stringify(sts))
+				if ((testdata[0].component[i].type) === 'LP') {
+					await assertion.assertEqual(sts.bookComponentList[i].bookComponentUnits, testdata[0].component[i].unit.length + " " + testdata[1].bookComponentUnits, "bookComponentUnits is not mismatched " + JSON.stringify(sts))
+					await assertion.assertEqual(sts.bookComponentList[i].bookComponentActivities, testdata[0].component[i].activityCount + " " + testdata[1].bookComponentActivities, "bookComponentActivities is not mismatched " + JSON.stringify(sts))
 				}
-				else
-				{
-					
-				await assertion.assertEqual(sts.bookComponentList[i].bookComponentUnits, testdata[0].component[i].activityCount +" "+ testdata[1].resources, "bookComponentActivities is not mismatched " + JSON.stringify(sts))
-			}}
+				else {
+
+					await assertion.assertEqual(sts.bookComponentList[i].bookComponentUnits, testdata[0].component[i].activityCount + " " + testdata[1].resources, "bookComponentActivities is not mismatched " + JSON.stringify(sts))
+				}
+			}
 		} else {
 			await assertion.assertFail(sts);
 		}
 	},
+	//Validate that clicking on gradebook option from Class Menu launches class details page with inbox tab selected
+	ENG_INS_CLASS_TC_110: async function () {
+		sts = await classDashboardPage.click_gradeBookOption();
+		console.log(sts)
+		if ((typeof (sts)) === "object") {
+			await assertion.assertEqual(sts.pageStatus, true, "GradeBook Page is not displayed: " + (await JSON.stringify(sts.pageStatus)))
+		} else {
+			await assertion.assertFail(sts);
+		}
+	},
+	//Validate that clicking on Material option from Class Menu launches class details page with inbox tab selected
+	ENG_INS_CLASS_TC_111: async function (testdata) {
+		sts = await classDashboardPage.click_materialsOption();
+		await assertion.assertEqual(sts, true, "materialsOption is clicked");
+		sts = await require('../../test/engageExperienceApp/common.test.js').get_Snackbar_Message_Text();
+		await assertion.assert(sts, testdata, "Snackbar message mismatch: " + sts);
+	},
+	//Validate that searching can be done on basis of Class name
+	ENG_INS_CLASS_TC_112: async function (testdata) {
+		sts = await classDashboardPage.set_searchBox(testdata[0].search_txt);
+		await assertion.assertEqual(sts, true, "set_searchBox status Mismatch");
+
+		sts = await classDashboardPage.getData_searchList();
+		await assertion.assertEqual(sts.searchList[0], testdata[0].expected_txt, "Class Name Text Mismatch in Dropdown")
+
+		sts = await classDashboardPage.pressEnter();
+		await assertion.assertEqual(sts.searchPill, testdata[0].search_txt, "Search Pill Mismatch");
+		await assertion.assert(sts.searchCount.includes(testdata[0].searchResultCount + testdata[1].searchCount), "Search Pill Mismatch");
+
+
+		sts = await classDashboardPage.get_MyClasses_Data();// copy from tc 4
+		await assertion.assertEqual(sts.classList[0].className, testdata[0].expected_txt, "Class Name is mismatched: " + (await JSON.stringify(sts)))
+		await assertion.assertEqual(sts.classList[0].bookIconExists, true, "bookImage status Mismatch");
+
+	},
+
+	//Validate that No Result Found is displayed in the drop down suggestion and in the screen when no Class matching the search criteria is fulfilled
+	ENG_INS_CLASS_TC_113: async function (testdata) {
+		sts = await classDashboardPage.set_searchBox(testdata[0].search_txt);
+		await assertion.assertEqual(sts, true, "set_searchBox status Mismatch");
+
+		sts = await classDashboardPage.getData_searchList();
+		await assertion.assertEqual(sts.noResultListItemTitle, testdata[1].noResultListItemTitle, "noResultListItemTitle text Mismatch")
+		await assertion.assertEqual(sts.noResultListItemSubtitle, testdata[1].noResultListItemSubtitle, "noResultListItemSubtitle text Mismatch")
+
+		sts = await classDashboardPage.pressEnter();
+		await assertion.assertEqual(sts.searchPill, testdata[0].search_txt, "Search Pill Mismatch");
+		await assertion.assert(sts.searchCount.includes(testdata[0].searchResultCount + testdata[1].searchCount), "Search Pill Mismatch: expected " + sts.searchCount + " to equal " + testdata[0].searchCount + testdata[1].searchCount);
+
+		sts = await classDashboardPage.getData_searchNoResults();
+		await assertion.assertEqual(sts.search_NoResult_img, testdata[1].search_NoResult_img, "search_NoResult_img status Mismatch");
+		await assertion.assertEqual(sts.search_NoResult_title, testdata[1].search_NoResult_title, "search_NoResult_title text Mismatch");
+		await assertion.assertEqual(sts.search_NoResult_subTitle, testdata[1].search_NoResult_subTitle, "search_NoResult_subTitle text Mismatch");
+
+	},
+
+	//Validate that clicking on a class from the search suggestion drop down list launches the class.
+	ENG_INS_CLASS_TC_114: async function (testdata) {
+		sts = await classDashboardPage.set_searchBox(testdata.search_txt);
+		await assertion.assertEqual(sts, true, "set_searchBox status Mismatch");
+		sts = await classDashboardPage.getData_searchList();
+		await assertion.assertEqual(sts.searchList[0], testdata.expected_txt, "Class Name Text Mismatch in Dropdown")
+		sts = await classDashboardPage.click_searchList(testdata.expected_txt);
+		await assertion.assertEqual(sts, true, "Class status mismatch");
+	},
+
+	//Validate that clicking on "More search results for ..xyz" lists the resources based on search text.
+	ENG_INS_CLASS_TC_115: async function (testdata) {
+		sts = await classDashboardPage.set_searchBox(testdata[0].search_txt);
+		await assertion.assertEqual(sts, true, "set_searchBox status Mismatch");
+
+		sts = await classDashboardPage.getData_searchList()
+		await assertion.assertEqual(sts.searchList[0], testdata[0].expected_txt, "Resource Name Text Mismatch in Dropdown")
+
+		sts = await classDashboardPage.click_showMoreResults()
+		await assertion.assertEqual(sts.searchPill, testdata[0].search_txt, "Search Pill Mismatch");
+		await assertion.assert(sts.searchCount.includes(testdata[0].searchResultCount + testdata[1].searchCount), "Search Pill Mismatch");
+		if (sts.tabInfo.selected == sts.tabInfo.list[0]) {
+			sts = await classDashboardPage.get_MyClasses_Data();// copy from tc 4
+			await assertion.assertEqual(sts.classList[0].className, testdata[1].name, "Class Name is mismatched: " + (await JSON.stringify(sts)))
+			await assertion.assertEqual(sts.classList[0].bookName, testdata[1].bookName, "Book Name is mismatched: " + (await JSON.stringify(sts)))
+			await assertion.assertEqual(sts.classList[0].classDuration, testdata[1].classDuration, "Class Duration is mismatched: " + (await JSON.stringify(sts)))
+
+		}
+
+	},
+
+	//Validate that clicking on close search button removes the search criteria
+	ENG_INS_CLASS_TC_116: async function () {
+		sts = await classDashboardPage.click_clearSearch();
+		await assertion.assertEqual(sts.searchPill, null, "searchPill status Mismatch");
+	},
+
 };
