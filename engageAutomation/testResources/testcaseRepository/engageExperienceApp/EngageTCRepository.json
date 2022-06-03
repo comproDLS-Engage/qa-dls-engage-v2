@@ -2758,6 +2758,18 @@
           "description": "Validate that page is scrolled to top on clicking the scroll to top button",
           "tags": "P1, Desktop",
           "visualTest": true
+        },
+        {
+          "id": "ENG_CONT_TC_6",
+          "description": "Validate that video player with transcript is launched on clicking the video with subtitles activity",
+          "tags": "P1, Desktop",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_CONT_TC_7",
+          "description": "Validate that audio player with transcript is launched on clicking the audio with subtitles activity",
+          "tags": "P1, Desktop",
+          "visualTest": true
         }
       ]
     },
