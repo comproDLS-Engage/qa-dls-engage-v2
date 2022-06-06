@@ -2634,7 +2634,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/bookdata.json",
-						"jsonPath": "edit.activity[0]"
+						"jsonPath": "edit.activity[2]"
 					}
 				]
 			},

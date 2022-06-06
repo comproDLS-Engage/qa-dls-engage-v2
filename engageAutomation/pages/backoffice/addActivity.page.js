@@ -34,7 +34,7 @@ module.exports = {
         if (res == true) {
             res = await action.click(addFolderPage.addBtn);
             if (res == true) {
-                await browser.pause(10000);
+                await browser.pause(5000);
             }
         }
         await logger.logInto((await stackTrace.get()), res);
