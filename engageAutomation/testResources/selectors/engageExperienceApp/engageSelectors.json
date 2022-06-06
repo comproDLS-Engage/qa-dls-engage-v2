@@ -1073,7 +1073,8 @@
                 "audioPlayerExists": "[class*=audio]",
                 "etextExists": "[data-tid=container-eText-Player]",
                 "webbookExists": "[data-tid=container-productviewer] iframe,[data-tid=container-assignmentviewer] iframe",
-                "scrollToTopBtn": "[data-tid=button-scrollToTop]:not([style*=hidden])"
+                "scrollToTopBtn": "[data-tid=button-scrollToTop]:not([style*=hidden])",
+                "transcriptExists" : "button[data-plyr=transcript]"
             },
             "AssignmentListDetailsPage_student": {
                 "assignmentDetailPageTitle": "[data-tid=text-pageTitle]",

@@ -11,6 +11,7 @@ module.exports = {
     etextExists: selectorFile.css.ComproEngage.contentPlayer.etextExists,
     webbookExists: selectorFile.css.ComproEngage.contentPlayer.webbookExists,
     scrollToTopBtn: selectorFile.css.ComproEngage.contentPlayer.scrollToTopBtn,
+    transcriptExists: selectorFile.css.ComproEngage.contentPlayer.transcriptExists,
 
     isInitialized: async function () {
         var res;
@@ -32,7 +33,9 @@ module.exports = {
             etextExists: ((await action.getElementCount(this.etextExists)) > 0) ? await action.waitForDisplayed(this.etextExists) : false,
             webbookExists: ((await action.getElementCount(this.webbookExists)) > 0) ? await action.waitForDisplayed(this.webbookExists) : false,
             scrollToTopBtn: ((await action.getElementCount(this.scrollToTopBtn)) > 0) ? await action.getText(this.scrollToTopBtn) : null,
+            transcriptExists: ((await action.getElementCount(this.transcriptExists)) > 0) ? await action.waitForDisplayed(this.transcriptExists) : false,
         }
+        console.log(obj)
         return obj;
     },
 

@@ -36,6 +36,22 @@ module.exports = {
 	ENG_CONT_TC_5: async function () {
 		sts = await contentPlayer.click_scrollToTopBtn();
 		await assertion.assertEqual(sts, true, "scrollToTopBtn status mismatch");
-	}
+	},
+
+	//Validate that video player with transcript is launched on clicking the video with subtitles activity
+	ENG_CONT_TC_6: async function () {
+		await contentPlayer.isInitialized();
+		sts = await contentPlayer.getData_contentPlayer();
+		await assertion.assertEqual(sts.videoPlayerExists, true, "videoPlayerExists status mismatch");
+		await assertion.assertEqual(sts.transcriptExists, true, "transcriptExists status mismatch");
+	},
+
+	//Validate that audio player with transcript is launched on clicking the audio with subtitles activity
+	ENG_CONT_TC_7: async function () {
+		await contentPlayer.isInitialized();
+		sts = await contentPlayer.getData_contentPlayer();
+		await assertion.assertEqual(sts.audioPlayerExists, true, "audioPlayerExists status mismatch");
+		await assertion.assertEqual(sts.transcriptExists, true, "transcriptExists status mismatch");
+	},
 
 }

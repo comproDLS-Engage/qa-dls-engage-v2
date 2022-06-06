@@ -46,23 +46,38 @@
                     {
                         "index": 0,
                         "title": "1. Unit 1",
-                        "activityCount": "3",
-                        "folderCount": "1",
+                        "activityCount": "2",
+                        "folderCount": "2",
                         "flipbookPageNum": "3",
                         "section": [
                             {
                                 "index": 0,
                                 "name": "Part 1",
                                 "activity": [
-                                    "Close Ended Activity 1",
-                                    "Close Ended Activity 2"
+                                    "Quiz 1"
                                 ]
                             },
                             {
                                 "index": 1,
                                 "name": "Part2",
                                 "activity": [
-                                    "Presentation Slides Activity"
+                                    "Quiz 2"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "index": 0,
+                        "title": "2. Unit 2",
+                        "activityCount": "1",
+                        "folderCount": "0",
+                        "flipbookPageNum": "",
+                        "section": [
+                            {
+                                "index": 0,
+                                "name": "",
+                                "activity": [
+                                    "Glossary"
                                 ]
                             }
                         ]
@@ -184,7 +199,9 @@
                                     "Download pdf",
                                     "Download xls",
                                     "Etext",
-                                    "Html webbook"
+                                    "Html webbook",
+                                    "Video with subtitles",
+                                    "Audio with subtitles"
                                 ]
                             }
                         ]

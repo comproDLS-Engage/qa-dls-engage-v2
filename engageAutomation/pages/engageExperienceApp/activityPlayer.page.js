@@ -177,6 +177,7 @@ module.exports = {
         res = await action.click(this.nextActivityBtn);
         if (true == res) {
             await logger.logInto(await stackTrace.get(), " nextActivityBtn is clicked");
+            await browser.pause(5000);
             res = await this.getData_activityPlayer();
         }
         else {
