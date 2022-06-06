@@ -24,7 +24,8 @@ module.exports = {
       await assertion.assertEqual(sts.noGradeBookSubTitle, testdata.noGradeBookSubTitle, "noGradeBookSubTitle is Not displayed: " + (await JSON.stringify(sts)))
       await assertion.assertEqual(sts.download_btn, testdata.download_btn, "download_btn is Not displayed: " + (await JSON.stringify(sts)))
       await assertion.assertEqual(sts.sendtoemail_btn, testdata.sendtoemail_btn, "sendtoemail_btn is Not displayed: " + (await JSON.stringify(sts)))
-      await assertion.assertEqual(sts.inviteStudents_btn, testdata.inviteStudents_btn, "inviteStudents_btn is not mismatched " + JSON.stringify(sts))
+      await assertion.assertEqual(sts.classCode_btn, testdata.classCode_btn, "classCode_btn is not mismatched " + JSON.stringify(sts))
+      await assertion.assertEqual(sts.inviteEmail_btn, testdata.inviteEmail_btn, "inviteEmail_btn is not mismatched " + JSON.stringify(sts))
       await assertion.assertEqual(sts.inviteStudents_lbl, testdata.inviteStudents_lbl, "inviteStudents_lbl is not mismatched " + JSON.stringify(sts))
       await assertion.assertEqual(sts.inviteStudentsByline_lbl, testdata.inviteStudentsByline_lbl, "inviteStudentsByline_lbl is not mismatched " + JSON.stringify(sts))
 
@@ -33,7 +34,6 @@ module.exports = {
    //Validate the content on GradeBook Page
    ENG_GRADEBOOK_TC_3: async function (testdata) {
       sts = await gradeBookPage.getData_gradeBook()
-      console.log(sts) 
       await assertion.assertEqual(sts.pageTitle, testdata.pageTitle, "pageTitle is Not displayed: " + (await JSON.stringify(sts)))
       await assertion.assert(sts.pageSubTitle.includes(testdata.pageSubTitle), "pageSubTitle is Not displayed: " + (await JSON.stringify(sts)))
       await assertion.assertEqual(sts.graphHeader, testdata.graphHeader, "graphHeader is Not displayed: " + (await JSON.stringify(sts)))
@@ -94,7 +94,6 @@ module.exports = {
    //Validate the content on Student GradeBook Page
    ENG_GRADEBOOK_TC_9: async function (testdata) {
       sts = await studentGradeBookPage.getData_gradeBookStudentView()
-      console.log(sts)
       await assertion.assertEqual(sts.pageTitle, testdata.pageTitle, "pageTitle is Not displayed");
       await assertion.assert(sts.pageSubTitle.includes(testdata.pageSubTitle), "pageSubTitle is Not displayed");
       await assertion.assertEqual(sts.download_btn, testdata.download_btn, "download_btn is Not displayed");
@@ -113,7 +112,6 @@ module.exports = {
    //Validate the Unit Details of a book
    ENG_GRADEBOOK_TC_10: async function (testdata) {
       sts = await studentGradeBookPage.getData_UnitDetails(testdata[0])
-      console.log(sts)
       await assertion.assertEqual(sts.lessons_Title_lbl, testdata[0].folder_Title, "folder_Title is Not displayed");
       for (let i = 0; i < sts.length; i++) {
          await assertion.assertEqual(sts[i].score_icon, true, "score_icon is Not displayed");
@@ -138,7 +136,6 @@ module.exports = {
          await assertion.assertEqual(sts[i].gradePendingPill, testdata[2][i].gradePendingPill, "gradePill Text mismatch");
       }
       sts = await studentGradeBookPage.getData_showActivity_labels(testdata[0])
-      console.log(sts)
       for (let i = 0; i < sts.length; i++) {
          await assertion.assertEqual(sts[i].collapsibleActivityLbl, testdata[1].collapsibleActvityLbl, "collapsibleActivityLbl mismatch");
          await assertion.assertEqual(sts[i].collapsibleScoreLbl, testdata[1].collapsibleScoreLbl, "collapsibleScoreLbl mismatch");
@@ -155,9 +152,7 @@ module.exports = {
       // please add assertion :rupsi
    },
    ENG_GRADEBOOK_TC_13: async function (testdata) {
-      console.log(testdata)
       sts = await studentGradeBookPage.click_productListName(testdata);
-      console.log(sts)
       await assertion.assertEqual(sts.pageStatus, true, "Dashboard page status mismatch")
    },
    ENG_GRADEBOOK_TC_14: async function () {
@@ -169,5 +164,21 @@ module.exports = {
       await assertion.assertEqual(sts, true, "Cancel button is clicked");
       sts = await studentGradeBookPage.isInitialized();
       await assertion.assertEqual(sts.pageStatus, true, "assignment Details page status mismatch");
+   },
+
+    //Validate the click on 'Class Copy Code' button
+   ENG_GRADEBOOK_TC_16: async function (testdata) {
+      sts = await gradeBookPage.click_classCode_btn()
+      await assertion.assertEqual(sts, true, "Class Code button is clicked");
+      sts = await gradeBookPage.getData_gradeBook();
+      await assertion.assertEqual(sts.copyClassCode_btn, testdata.copiedlassCode_btn, "getData_gradeBook is mismatch");
+   },
+
+    //Validate the click on 'Invie Email' button
+   ENG_GRADEBOOK_TC_17: async function (testdata) {
+      sts = await gradeBookPage.click_inviteEmail_btn();
+      await assertion.assertEqual(sts, true, "sendtoemail button is clicked");
+      sts = await require('../../test/engageExperienceApp/common.test.js').get_Snackbar_Message_Text();
+      await assertion.assertEqual(sts, testdata, "Snackbar message mismatch: " + sts);
    }
 }

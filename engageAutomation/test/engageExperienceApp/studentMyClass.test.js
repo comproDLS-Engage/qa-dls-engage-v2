@@ -343,6 +343,8 @@ module.exports = {
 			await assertion.assertEqual(sts[0].dueNumberChip, testdata[0].dueNumberChip, "assignmentTitle mismatched: " + (await JSON.stringify(sts)))
 		}
 	},
+
+	// we discussed, automate this tc later
 	//Validate the Book data on the class dashboard
 	ENG_STU_CLASS_TC_25: async function (testdata) {
 		sts = await studentClassDetailsPage.getData_bookList();
