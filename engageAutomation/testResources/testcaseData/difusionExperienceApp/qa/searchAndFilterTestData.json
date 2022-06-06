@@ -37,6 +37,16 @@
                 "playlist": [
                     "Playlist01"
                 ]
+            },
+            "searchScenario7": {
+                "search_txt": "\"Future Class\"",
+                "expected_txt": "Future Class",
+                "searchResultCount": "1"
+            },
+            "searchScenario8": {
+                "search_txt": "test",
+                "expected_txt": "test",
+                "searchResultCount": "3"
             }
         },
         "pagination": {

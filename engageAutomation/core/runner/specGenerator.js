@@ -28,11 +28,12 @@ var glob = require("glob");
 var path = require('path');
 var rimraf = require("rimraf");
 const { argv } = require("yargs");
+const { convertPackageHashToObject } = require("@wdio/cli/build/utils");
 
 module.exports = {
 
     //generating temp files based on spec file names
-    fileArrayGenerator: function () {
+    fileArrayGenerator: async function() {
         var specData = [],
             specPath = [],
             specs = [],
@@ -40,14 +41,13 @@ module.exports = {
             store = [],
             fs = [];
         var testRunner = process.cwd() + '/core/runner/testrunner.js';
-        var tempRunnerDirectory = process.cwd() + '/test/tempRunner/';
-
+        var tempRunnerDirectory = process.cwd() + '/test/tempRunner/'
         if (!fss.existsSync(tempRunnerDirectory)) {
             //console.log("Creating Temp Runner directory...")
-            fss.mkdirSync(tempRunnerDirectory);
+            await fss.mkdirSync(tempRunnerDirectory);
         }
 
-        specs = this.getLisOfTestFiles(argv.testExecFile);
+        specs = await this.getLisOfTestFiles(argv.testExecFile);
         //if argv.excludeTestFile exists, then update specFilesArray by removing the specs to exclude
         if (argv.excludeTestFile) {
             var excludeArray = this.getLisOfTestFiles(argv.excludeTestFile)
@@ -76,7 +76,7 @@ module.exports = {
     },
 
     //This function returns an array with the list of test files based on the input (specFile names array generator)
-    getLisOfTestFiles: function (value) {
+    getLisOfTestFiles: async function (value) {
         var specFilesArray = [],
             specFiles = [];
         var pathProps;

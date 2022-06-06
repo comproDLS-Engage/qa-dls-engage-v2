@@ -3,7 +3,8 @@ var testObj, execJsonData, prevtestFile, getName, hookFuncData, tcProp;
 var testDataArr = [];
 var Arr = [];
 var rootDir = process.cwd();
-
+const { convertPackageHashToObject } = require('@wdio/cli/build/utils');
+var async = require('async');
 class specRunner {
     //instantiate class
     constructor(testExecFile) {
@@ -16,65 +17,68 @@ class specRunner {
     }
 
     //mocha hooks for iterating over suites and tests
-    runMochaSuite() {
+    async runMochaSuite() {
         try {
             //setting context for this
             var that = this;
             var visualTotalTc = 0;
-            execJsonData = jsonParserUtil.jsonParser(path.resolve(rootDir, testExecDir, argv.testEnv, this.testExecFile));
-
-            Object.keys(execJsonData).forEach(function (suiteIndex, count) {
+            execJsonData = await jsonParserUtil.jsonParser(path.resolve(rootDir, testExecDir, argv.testEnv, this.testExecFile));
+            Object.keys(execJsonData).forEach(async (suiteIndex, count) => {
                 Arr[count] = { "title": suiteIndex + " " + execJsonData[suiteIndex].Name, "duration": "-", "start": "-", "end": "-", "tests": [], "hooks": [] }
-
+                // console.log(Arr[count])
                 // initiating Applitools     
                 if (argv.visual == 'applitools')
-                    that.visualTest.initiateApplitools();
+                    await that.visualTest.initiateApplitools();
 
                 //Mocha test Suite
-                describe(suiteIndex + " - " + execJsonData[suiteIndex].Name, function () {
+                describe(suiteIndex + " - " + execJsonData[suiteIndex].Name, () => {
                     //this.retries(1);
-
                     //This is before hook of Mocha runner
-                    before(function () {
+                    before(async () => {
                         if (count != 0) {
-                            browser.reloadSession();
+                            await browser.reloadSession();
                         }
+
                         if (global.maximizeWindow == true && global.view == 'desktop') { //this will cause browser to maximize on the client screen resolution
-                            browser.maximizeWindow();
-                            global.resolution = browser.getWindowSize();
-                            //console.log(global.resolution)
+                            await browser.maximizeWindow();
+                            global.resolution = await browser.getWindowSize();
                         }
                         else if (global.resolution.width != undefined && global.resolution.height != undefined) {
-                            browser.setWindowSize(parseInt(global.resolution.width), parseInt(global.resolution.height));
+                            await browser.setWindowSize(parseInt(global.resolution.width), parseInt(global.resolution.height));
                         }
 
                         console.log("====== Starting Test " + suiteIndex + ": " + execJsonData[suiteIndex].Name + " ======");
 
                         if (argv.visual == 'applitools')
-                            that.visualTest.openApplitoolsEyes(suiteIndex, execJsonData[suiteIndex].Name);
+                            await that.visualTest.openApplitoolsEyes(suiteIndex, execJsonData[suiteIndex].Name);
 
-                        global.logger = require(path.join(rootDir, '/core/utils/loggerFunction.js'));
+                        global.logger = await require(path.join(rootDir, '/core/utils/loggerFunction.js'));
                         logger.logInto(stackTrace.get(), "Starting Test Suite:" + suiteIndex + " - " + execJsonData[suiteIndex].Name);
-                        Object.keys(execJsonData[suiteIndex].Before).forEach(function (key) {
-                            console.log(" Before      : Start " + execJsonData[suiteIndex].Before[key].id);
-                            logger.logInto(stackTrace.get(), "BEFORE HOOK:" + JSON.stringify(execJsonData[suiteIndex].Before[key]));
-                            global.selectorDir = that.getTCPropertiesFromTCRepo(execJsonData[suiteIndex].TestCaseRepo, execJsonData[suiteIndex].Before[key].testFile, execJsonData[suiteIndex].Before[key].id).selectorDir;
-                            that.jsonHookObjParser(execJsonData[suiteIndex].Before[key]);
-                            console.log(" Before      :   End " + execJsonData[suiteIndex].Before[key].id);
-                        })
-                    });
+                        let beforeGroup = Object.keys(execJsonData[suiteIndex].Before);
 
+                        for (const key of beforeGroup) {
+                            await console.log(" Before      : Start " + execJsonData[suiteIndex].Before[key].id);
+                            await logger.logInto(stackTrace.get(), "BEFORE HOOK:" + JSON.stringify(execJsonData[suiteIndex].Before[key]));
+                            global.selectorDir = await that.getTCPropertiesFromTCRepo(execJsonData[suiteIndex].TestCaseRepo, execJsonData[suiteIndex].Before[key].testFile, execJsonData[suiteIndex].Before[key].id).selectorDir;
+                            await that.jsonHookObjParser(execJsonData[suiteIndex].Before[key]);
+                            await console.log(" Before      :   End " + execJsonData[suiteIndex].Before[key].id);
+
+                        }
+                    });
                     //This is beforeEach hook of Mocha runner
-                    beforeEach(function () {
-                        Object.keys(execJsonData[suiteIndex].BeforeEach).forEach(function (key) {
-                            console.log(" Before each : Start " + execJsonData[suiteIndex].BeforeEach[key].id);
-                            logger.logInto(stackTrace.get(), "BEFORE EACH HOOK: " + JSON.stringify(execJsonData[suiteIndex].BeforeEach[key]));
-                            global.selectorDir = that.getTCPropertiesFromTCRepo(execJsonData[suiteIndex].TestCaseRepo, execJsonData[suiteIndex].BeforeEach[key].testFile, execJsonData[suiteIndex].BeforeEach[key].id).selectorDir;
-                            that.jsonHookObjParser(execJsonData[suiteIndex].BeforeEach[key]);
-                            console.log(" Before each :   End " + execJsonData[suiteIndex].BeforeEach[key].id);
-                        })
-                    });
+                    beforeEach(async () => {
 
+                        let beforeEachGroup = Object.keys(execJsonData[suiteIndex].BeforeEach);
+
+                        for (const key of beforeEachGroup) {
+                            await console.log(" Before each : Start " + execJsonData[suiteIndex].BeforeEach[key].id);
+                            await logger.logInto(stackTrace.get(), "BEFORE EACH HOOK: " + JSON.stringify(execJsonData[suiteIndex].BeforeEach[key]));
+                            global.selectorDir = await that.getTCPropertiesFromTCRepo(execJsonData[suiteIndex].TestCaseRepo, execJsonData[suiteIndex].BeforeEach[key].testFile, execJsonData[suiteIndex].BeforeEach[key].id).selectorDir;
+                            await that.jsonHookObjParser(execJsonData[suiteIndex].BeforeEach[key]);
+                            await console.log(" Before each :   End " + execJsonData[suiteIndex].BeforeEach[key].id);
+
+                        }
+                    })
                     //processing Test node in the execution json (pre-steps for mocha it)
                     testDataArr[suiteIndex] = [];
                     Object.keys(execJsonData[suiteIndex].Test).forEach(function (testIndex) {
@@ -93,7 +97,7 @@ class specRunner {
                         }
                         //processing data node for every Test node in the execution json
                         var arrIndex = 0;
-                        Object.keys(execJsonData[suiteIndex].Test[testIndex].testData).forEach(function (tdIndex) {
+                        Object.keys(execJsonData[suiteIndex].Test[testIndex].testData).forEach(async (tdIndex) => {
                             //condition for checking if test data is a string or an array
                             if (typeof execJsonData[suiteIndex].Test[testIndex].testData[tdIndex].jsonPath == 'string') {
                                 //condition for accepting login data file via command
@@ -105,7 +109,7 @@ class specRunner {
                                     testDataArr[suiteIndex][testIndex][arrIndex] = jsonParserUtil.getJsonNode(jsonParserUtil.jsonParser(path.resolve(rootDir, execJsonData[suiteIndex].Test[testIndex].testData[tdIndex].dataFile)), execJsonData[suiteIndex].Test[testIndex].testData[tdIndex].jsonPath);
                                 arrIndex++;
                             } else {
-                                Object.keys(execJsonData[suiteIndex].Test[testIndex].testData[tdIndex].jsonPath).forEach(function (key) {
+                                Object.keys(execJsonData[suiteIndex].Test[testIndex].testData[tdIndex].jsonPath).forEach(async function (key) {
                                     if (execJsonData[suiteIndex].Test[testIndex].testFile.includes('login.test.js') && argv.loginDataFile)
                                         //testDataArr[suiteIndex][testIndex][arrIndex] = jsonParserUtil.getJsonNode(jsonParserUtil.jsonParser(tcDataDir + argv.loginDataFile), execJsonData[suiteIndex].Test[testIndex].testData[tdIndex].jsonPath[key]);
                                         testDataArr[suiteIndex][testIndex][arrIndex] = jsonParserUtil.getJsonNode(jsonParserUtil.jsonParser(path.resolve(rootDir, argv.loginDataFile)), execJsonData[suiteIndex].Test[testIndex].testData[tdIndex].jsonPath[key]);
@@ -125,42 +129,51 @@ class specRunner {
                         Arr[count].tests[testIndex].title = getName;
 
                         //This is test hook of Mocha runner
-                        it(getName, function () {
-                            console.log(" Testcase    : Start " + execJsonData[suiteIndex].Test[testIndex].id);
+                        it(getName, async () => {
+                            await console.log(" Testcase    : Start " + execJsonData[suiteIndex].Test[testIndex].id);
                             logger.logInto(stackTrace.get(), "Executing testCase:" + execJsonData[suiteIndex].Test[testIndex].id);
-                            global.selectorDir = that.getTCPropertiesFromTCRepo(execJsonData[suiteIndex].TestCaseRepo, execJsonData[suiteIndex].Test[testIndex].testFile, execJsonData[suiteIndex].Test[testIndex].id).selectorDir;
-                            that.identifyTest(execJsonData[suiteIndex].Test[testIndex].testFile, execJsonData[suiteIndex].Test[testIndex].id, testDataArr[suiteIndex][testIndex]);
-                            if (argv.visual == 'novus' && Arr[count].tests[testIndex].visual == "yes")
-                                Arr[count] = that.visualTest.generateScreenshotsAndLogs(execJsonData[suiteIndex].Test[testIndex], suiteIndex, testIndex, Arr, count);
-                            else if (argv.visual == 'applitools')
-                                that.visualTest.generateScreenshotsApplitools(execJsonData[suiteIndex].Test[testIndex]);
+                            global.selectorDir = await that.getTCPropertiesFromTCRepo(execJsonData[suiteIndex].TestCaseRepo, execJsonData[suiteIndex].Test[testIndex].testFile, execJsonData[suiteIndex].Test[testIndex].id).selectorDir;
+                            await that.identifyTest(execJsonData[suiteIndex].Test[testIndex].testFile, execJsonData[suiteIndex].Test[testIndex].id, testDataArr[suiteIndex][testIndex]);
+                            if (argv.visual == 'novus' && Arr[count].tests[testIndex].visual == "yes") {
+                                Arr[count] = await that.visualTest.generateScreenshotsAndLogs(execJsonData[suiteIndex].Test[testIndex], suiteIndex, testIndex, Arr, count);
+
+
+
+                            } else if (argv.visual == 'applitools')
+                                await that.visualTest.generateScreenshotsApplitools(execJsonData[suiteIndex].Test[testIndex]);
 
                             console.log(" Testcase    :   End " + execJsonData[suiteIndex].Test[testIndex].id);
                         })
                     })
 
                     //This is afterEach hook of Mocha runner
-                    afterEach(function () {
-                        Object.keys(execJsonData[suiteIndex].AfterEach).forEach(function (key) {
-                            console.log(" After each  : Start " + execJsonData[suiteIndex].AfterEach[key].id);
+                    afterEach(async function () {
+                        let afterEachGroup = Object.keys(execJsonData[suiteIndex].AfterEach);
+
+                        for (const key of afterEachGroup) {
+                            await console.log(" After each  : Start " + execJsonData[suiteIndex].AfterEach[key].id);
                             logger.logInto(stackTrace.get(), "AFTER EACH HOOK: " + JSON.stringify((execJsonData[suiteIndex].AfterEach[key])));
-                            global.selectorDir = that.getTCPropertiesFromTCRepo(execJsonData[suiteIndex].TestCaseRepo, execJsonData[suiteIndex].AfterEach[key].testFile, execJsonData[suiteIndex].AfterEach[key].id).selectorDir;
-                            that.jsonHookObjParser(execJsonData[suiteIndex].AfterEach[key]);
-                            console.log(" After each  :   End " + execJsonData[suiteIndex].AfterEach[key].id);
-                        })
+                            global.selectorDir = await that.getTCPropertiesFromTCRepo(execJsonData[suiteIndex].TestCaseRepo, execJsonData[suiteIndex].AfterEach[key].testFile, execJsonData[suiteIndex].AfterEach[key].id).selectorDir;
+                            await that.jsonHookObjParser(execJsonData[suiteIndex].AfterEach[key]);
+                            //   await that.identifyTest(execJsonData[suiteIndex].Test[testIndex].testFile, execJsonData[suiteIndex].Test[testIndex].id, testDataArr[suiteIndex][testIndex]);
+                            await console.log(" After each  :   End " + execJsonData[suiteIndex].AfterEach[key].id);
+                        };
                     });
 
                     //This is after hook of Mocha runner
-                    after(function () {
-                        Object.keys(execJsonData[suiteIndex].After).forEach(function (key) {
+                    after(async function () {
+                        let afterGroup = Object.keys(execJsonData[suiteIndex].After);
+
+                        for (const key of afterGroup) {
                             console.log(" After       : Start " + execJsonData[suiteIndex].After[key].id);
-                            logger.logInto(stackTrace.get(), "AFTER HOOK: " + JSON.stringify((execJsonData[suiteIndex].After[key])));
-                            global.selectorDir = that.getTCPropertiesFromTCRepo(execJsonData[suiteIndex].TestCaseRepo, execJsonData[suiteIndex].After[key].testFile, execJsonData[suiteIndex].After[key].id).selectorDir;
-                            that.jsonHookObjParser(execJsonData[suiteIndex].After[key]);
+                            logger.logInto(stackTrace.get(), "AFTER HOOK: " + (JSON.stringify((execJsonData[suiteIndex].After[key]))));
+                            global.selectorDir = (await that.getTCPropertiesFromTCRepo(execJsonData[suiteIndex].TestCaseRepo, execJsonData[suiteIndex].After[key].testFile, execJsonData[suiteIndex].After[key].id)).selectorDir;
+                            await that.jsonHookObjParser(execJsonData[suiteIndex].After[key]);
+                            //await that.identifyTest(execJsonData[suiteIndex].After[key].testFile, execJsonData[suiteIndex].After[key].id, testDataArr[suiteIndex][key]);
                             console.log(" After       :   End " + execJsonData[suiteIndex].After[key].id);
-                        })
+                        };
                         if (argv.visual == 'applitools')
-                            that.visualTest.closeApplitoolsEyes();
+                            await that.visualTest.closeApplitoolsEyes();
 
                         console.log("====== Test " + suiteIndex + " Ended ======");
                         console.log(" ");
@@ -179,21 +192,20 @@ class specRunner {
     }
 
     //identifying and calling a test case function from the test js file 
-    identifyTest(testFile, testFunction, testdata) {
+    async identifyTest(testFile, testFunction, testdata) {
         var testFilepath;
         if (prevtestFile != testFile) {
             testObj = null;
             prevtestFile = testFile
             try {
                 if (testFile.includes("launchUrl.js"))
-                    testFilepath = path.resolve(rootDir, '../', testFile);
+                    testFilepath = await path.resolve(rootDir, '../', testFile);
                 else
-                    testFilepath = path.resolve(rootDir, testFile);
-
-                testObj = require(testFilepath);
+                    testFilepath = await path.resolve(rootDir, testFile);
+                testObj = await require(testFilepath);
             } catch (e) {
                 //logger.logInto(stackTrace.get(), "ERROR!! " + rootDir + '/test/' + testJsDir + testFile + " NOT found.");
-                logger.logInto(stackTrace.get(), "ERROR!! " + testFilepath + " NOT found.");
+                logger.logInto(stackTrace.get(), "ERROR!! " + testFilepath + " NOT found." + e);
                 //console.log(" ERROR!! " + rootDir + '/test/' + testJsDir + testFile + " NOT found.");
                 console.log(" ERROR!! " + testFilepath + " NOT found.");
                 throw e;
@@ -201,7 +213,7 @@ class specRunner {
         }
         try {
             // calling a test case function from the test js file
-            testObj[testFunction](testdata);
+            await testObj[testFunction](testdata);
             //logger.logInto(stackTrace.get(),testObj[testFunction](testdata));
         } catch (e) {
             //logger.logInto(stackTrace.get(), " ERROR while executing " + testFunction + "() in " + testJsDir + testFile)
@@ -213,37 +225,44 @@ class specRunner {
     }
 
     //function to read json file and parse the testfiles and testfunctions
-    jsonHookObjParser(obj) {
+    async jsonHookObjParser(obj) {
         hookFuncData = [];
         var arrIndex = 0;
-        Object.keys(obj.testData).forEach(function (dataIndex) {
+        let jsonHookObjParserGroup = Object.keys(Object.keys(obj.testData));
+        for (const dataIndex of jsonHookObjParserGroup) {
+            // Object.keys(obj.testData).forEach(async () => {
             if (typeof obj.testData[dataIndex].jsonPath == 'string') {
+
                 if (obj.testFile.includes('login.test.js') && argv.loginDataFile) {
                     //hookFuncData[arrIndex] = jsonParserUtil.getJsonNode(jsonParserUtil.jsonParser(tcDataDir + argv.loginDataFile), obj.testData[dataIndex].jsonPath);
                     //assuming argv.loginDataFile will be a path to logindata file
-                    hookFuncData[arrIndex] = jsonParserUtil.getJsonNode(jsonParserUtil.jsonParser(argv.loginDataFile), obj.testData[dataIndex].jsonPath);
+                    hookFuncData[arrIndex] = await jsonParserUtil.getJsonNode(jsonParserUtil.jsonParser(argv.loginDataFile), obj.testData[dataIndex].jsonPath);
                 } else {
                     //hookFuncData[arrIndex] = jsonParserUtil.getJsonNode(jsonParserUtil.jsonParser(tcDataDir + obj.testData[dataIndex].dataFile), obj.testData[dataIndex].jsonPath);
-                    hookFuncData[arrIndex] = jsonParserUtil.getJsonNode(jsonParserUtil.jsonParser(obj.testData[dataIndex].dataFile), obj.testData[dataIndex].jsonPath);
+                    hookFuncData[arrIndex] = await jsonParserUtil.getJsonNode(jsonParserUtil.jsonParser(obj.testData[dataIndex].dataFile), obj.testData[dataIndex].jsonPath);
                 }
                 arrIndex++;
             } else {
-                Object.keys(obj.testData[dataIndex].jsonPath).forEach(function (key) {
+                let jsonGroup = Object.keys(Object.keys(obj.testData[dataIndex].jsonPath));
+                for (const key of jsonGroup) {
+                    // Object.keys(obj.testData[dataIndex].jsonPath).forEach(async (key) => {
                     if (obj.testFile.includes('login.test.js') && argv.loginDataFile) {
                         //hookFuncData[arrIndex] = jsonParserUtil.getJsonNode(jsonParserUtil.jsonParser(tcDataDir + argv.loginDataFile), obj.testData[dataIndex].jsonPath[key]);
                         //assuming argv.loginDataFile will be a path to logindata file
-                        hookFuncData[arrIndex] = jsonParserUtil.getJsonNode(jsonParserUtil.jsonParser(argv.loginDataFile), obj.testData[dataIndex].jsonPath);
+                        hookFuncData[arrIndex] = await jsonParserUtil.getJsonNode(jsonParserUtil.jsonParser(argv.loginDataFile), obj.testData[dataIndex].jsonPath);
                     } else {
                         //hookFuncData[arrIndex] = jsonParserUtil.getJsonNode(jsonParserUtil.jsonParser(tcDataDir + obj.testData[dataIndex].dataFile), obj.testData[dataIndex].jsonPath[key]);
-                        hookFuncData[arrIndex] = jsonParserUtil.getJsonNode(jsonParserUtil.jsonParser(obj.testData[dataIndex].dataFile), obj.testData[dataIndex].jsonPath);
+                        hookFuncData[arrIndex] = await jsonParserUtil.getJsonNode(jsonParserUtil.jsonParser(obj.testData[dataIndex].dataFile), obj.testData[dataIndex].jsonPath);
                     }
                     arrIndex++;
-                })
+                }
             }
-        })
+        }
+
+
+
         if (hookFuncData.length == 1) { hookFuncData = hookFuncData[0] }
-        //console.log(hookFuncData);
-        this.identifyTest(obj.testFile, obj.id, hookFuncData)
+        await this.identifyTest(obj.testFile, obj.id, hookFuncData)
     }
 
     //function to identify if a testcase in testRepo has a visual tag
@@ -251,10 +270,9 @@ class specRunner {
         let repoKey, moduleKey, tcKey, testObj, obj = {};
         let repository = [];
 
-        tcRepo.forEach(function (repoFile, index) {
+        tcRepo.forEach(async (repoFile, index) => {
             repository[index] = jsonParserUtil.jsonParser(path.resolve(rootDir, repoFile))
         })
-
         for (repoKey = 0; repoKey < repository.length; repoKey++) {
             for (moduleKey = 0; moduleKey < repository[repoKey].modules.length; moduleKey++) {
                 //selectorFileInRepo = repository[repoKey].selectorFile;
@@ -275,8 +293,8 @@ class specRunner {
         }
         if (undefined == obj.tcName && tcId != "launchUrl")
             throw new Error(" Cannot find " + tcId + " or " + moduleTestFile + " in the test case repository.");
-        // console.log("----------------- obj:")
-        // console.log(obj)
+        //console.log("----------------- obj:")
+        //console.log(obj)
         return obj;
     }
 };

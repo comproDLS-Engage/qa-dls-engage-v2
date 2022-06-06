@@ -112,10 +112,46 @@
                 "file": "./testResources/testcaseData/backoffice/qa/rich-video.mp4"
             },
             {
+                "type": "Audio",
+                "id": "category-2-option-1",
+                "name": "QA Automation rich audio",
+                "file": "./testResources/testcaseData/backoffice/qa/rich-audio.mp3"
+            },
+            {
+                "type": "Video with subtitles",
+                "id": "category-2-option-2",
+                "name": "QA Automation Video with subtitles",
+                "file": "./testResources/testcaseData/backoffice/qa/IGT_video.zip"
+            },
+            {
+                "type": "Audio with subtitles",
+                "id": "category-2-option-3",
+                "name": "QA Automation Audio with subtitles",
+                "file": "./testResources/testcaseData/backoffice/qa/audio_with_subtitle.zip"
+            },
+            {
+                "type": "Document",
+                "id": "category-3-option-0",
+                "name": "QA Automation document",
+                "file": "./testResources/testcaseData/backoffice/qa/Lorem Ipsum.docx"
+            },
+            {
+                "type": "ZIP Archive",
+                "id": "category-3-option-1",
+                "name": "QA Automation ZIP Archive",
+                "file": "./testResources/testcaseData/backoffice/qa/Lorem Ipsum.zip"
+            },
+            {
                 "type": "PDF",
                 "id": "category-3-option-2",
-                "name": "QA Automation download pdf",
+                "name": "QA Automation pdf",
                 "file": "./testResources/testcaseData/backoffice/qa/Lorem Ipsum.pdf"
+            },
+            {
+                "type": "Spreadsheet",
+                "id": "category-3-option-3",
+                "name": "QA Automation spreadsheet",
+                "file": "./testResources/testcaseData/backoffice/qa/Lorem Ipsum.xlsx"
             },
             {
                 "type": "Native Engage Learning Object",

@@ -6,50 +6,50 @@ module.exports = {
 
 	textbox: selectorFile.css.ComproEngage.writing.textbox,
 
-	isInitialized: function () {
-		logger.logInto(stackTrace.get());
-		action.waitForDisplayed("iframe[id*=iframe], iframe");
-		action.switchToFrame(0);
-		let res = action.waitForDisplayed(this.textbox);
-		action.switchToParentFrame();
+	isInitialized: async function () {
+		await logger.logInto(await stackTrace.get());
+		await action.waitForDisplayed("iframe[id*=iframe], iframe");
+		await action.switchToFrame(0);
+		let res = await action.waitForDisplayed(this.textbox);
+		await action.switchToParentFrame();
 		return res;
 	},
 
-	set_textboxValue: function (writingData) {
-		logger.logInto(stackTrace.get());
+	set_textboxValue: async function (writingData) {
+		await logger.logInto(await stackTrace.get());
 		let res, textboxSelector;
-		action.switchToFrame(0);
+		await action.switchToFrame(0);
 		for (let i = 0; i < writingData.length; i++) {
 			textboxSelector = this.textbox + writingData[i][0] + "]";
-			res = action.getElementCount(textboxSelector);
+			res = await action.getElementCount(textboxSelector);
 			if (res == 1) {
-				res = action.setValue(textboxSelector, writingData[i][1]);
+				res = await action.setValue(textboxSelector, writingData[i][1]);
 				if (true == res) {
-					logger.logInto(stackTrace.get(), res + " -- value is entered");
+					await logger.logInto(await stackTrace.get(), res + " -- value is entered");
 				}
 				else {
 					res = res + "-- Error in entering value in the textbox";
-					logger.logInto(stackTrace.get(), res, "error");
+					await logger.logInto(await stackTrace.get(), res, "error");
 					break;
 				}
 			}
 		}
-		action.switchToParentFrame();
+		await action.switchToParentFrame();
 		return res;
 	},
 
-	getData_writing: function (writingData) {
-		logger.logInto(stackTrace.get());
-		action.switchToFrame(0);
+	getData_writing: async function (writingData) {
+		await logger.logInto(await stackTrace.get());
+		await action.switchToFrame(0);
 		var arr = [];
 		var res, textboxSelector;
 		for (let i = 0; i < writingData.length; i++) {
 			textboxSelector = this.textbox + writingData[i][0] + "] ";
-			res = action.getElementCount(textboxSelector);
+			res = await action.getElementCount(textboxSelector);
 			if (res == 1)
-				arr[i] = [writingData[i][0], action.getValue(textboxSelector), action.getAttribute(textboxSelector, "readonly")]
+				arr[i] = [writingData[i][0], await action.getValue(textboxSelector), await action.getAttribute(textboxSelector, "readonly")]
 		}
-		action.switchToParentFrame();
+		await action.switchToParentFrame();
 		return arr;
 	}
 }

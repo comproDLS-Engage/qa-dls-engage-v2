@@ -6,104 +6,104 @@ var sts;
 module.exports = {
 
     //Validate the content of add book page launched from Class workflow
-    ENG_ADDB_TC_2: function (testdata) {
-        sts = addBookPage.getData_addBookPage();
-        assertion.assertEqual(sts.addBookPageTitle, testdata.addBookPageTitle, "addBookPageTitle mismatch");
-        assertion.assertEqual(sts.addBookPageSubtitle, testdata.addBookPageSubtitle, "addBookPageSubtitle mismatch");
-        assertion.assertEqual(sts.addToClassBtn, testdata.addToClassBtn, "addToClassBtn mismatch");
-        assertion.assertEqual(sts.cancelBtn, testdata.cancelBtn, "cancelBtn mismatch");
+    ENG_ADDB_TC_2: async function (testdata) {
+        sts = await addBookPage.getData_addBookPage();
+        await assertion.assertEqual(sts.addBookPageTitle, testdata.addBookPageTitle, "addBookPageTitle mismatch");
+        await assertion.assertEqual(sts.addBookPageSubtitle, testdata.addBookPageSubtitle, "addBookPageSubtitle mismatch");
+        await assertion.assertEqual(sts.addToClassBtn, testdata.addToClassBtn, "addToClassBtn mismatch");
+        await assertion.assertEqual(sts.cancelBtn, testdata.cancelBtn, "cancelBtn mismatch");
         if (sts.bookLabel == null) {
-            assertion.assertEqual(sts.noBookLabel, testdata.noBookLabel[0], "noBookLabel mismatch");
+            await assertion.assertEqual(sts.noBookLabel, testdata.noBookLabel[0], "noBookLabel mismatch");
         }
         else {
-            assertion.assertEqual(sts.bookLabel, testdata.bookLabel, "bookLabel mismatch");
-            assertion.assertEqual(sts.removeBookBtn, testdata.removeBookBtn, "removeBookBtn mismatch");
+            await assertion.assertEqual(sts.bookLabel, testdata.bookLabel, "bookLabel mismatch");
+            await assertion.assertEqual(sts.removeBookBtn, testdata.removeBookBtn, "removeBookBtn mismatch");
         }
-        sts = appShell.getTabsListData();
-        assertion.assertEqual(sts.selected, testdata.tabList[0], "Selected tab mismatch");
+        sts = await appShell.getTabsListData();
+        await assertion.assertEqual(sts.selected, testdata.tabList[0], "Selected tab mismatch");
     },
 
     //Validate the "My Books" tab selected when click on my book tab
-    ENG_ADDB_TC_3: function (testdata) {
-        sts = appShell.selectTab(testdata.tabList[0]);
-        assertion.assertEqual(sts, true, "Select tab error");
-        sts = appShell.getTabsListData();
-        assertion.assertEqual(sts.selected, testdata.tabList[0], "Selected tab mismatch");
+    ENG_ADDB_TC_3: async function (testdata) {
+        sts = await appShell.selectTab(testdata.tabList[0]);
+        await assertion.assertEqual(sts, true, "Select tab error");
+        sts = await appShell.getTabsListData();
+        await assertion.assertEqual(sts.selected, testdata.tabList[0], "Selected tab mismatch");
     },
 
     //Validate the "All Books" tab selected when click on my book tab
-    ENG_ADDB_TC_4: function (testdata) {
-        sts = appShell.selectTab(testdata.tabList[1]);
-        assertion.assertEqual(sts, true, "Select tab error");
-        sts = appShell.getTabsListData();
-        assertion.assertEqual(sts.selected, testdata.tabList[1], "Selected tab mismatch");
+    ENG_ADDB_TC_4: async function (testdata) {
+        sts = await appShell.selectTab(testdata.tabList[1]);
+        await assertion.assertEqual(sts, true, "Select tab error");
+        sts = await appShell.getTabsListData();
+        await assertion.assertEqual(sts.selected, testdata.tabList[1], "Selected tab mismatch");
     },
 
     //Validate that create class page is launched after click on add to class button
-    ENG_ADDB_TC_5: function (testdata) {
-        sts = addBookPage.click_addToClassBtn();
+    ENG_ADDB_TC_5: async function (testdata) {
+        sts = await addBookPage.click_addToClassBtn();
         if ((typeof (sts)) === "object") {
-            assertion.assertEqual(sts.pageStatus, true, "Create Class Page not launched: ");
-            assertion.assertEqual(sts.bookTitle, testdata, "Book Title is mismatched: ");
-            assertion.assertEqual(sts.bookIcon, true, "Book Icon is mismatched: ");
+            await assertion.assertEqual(sts.pageStatus, true, "Create Class Page not launched: ");
+            await assertion.assertEqual(sts.bookTitle, testdata, "Book Title is mismatched: ");
+            await assertion.assertEqual(sts.bookIcon, true, "Book Icon is mismatched: ");
         } else {
-            assertion.assertFail(sts);
+            await assertion.assertFail(sts);
         }
     },
 
     //Validate the create class page is launched and book is not changed after click on Cancel and go Back button
-    ENG_ADDB_TC_6: function (testdata) {
-        sts = addBookPage.click_cancelBtn();
+    ENG_ADDB_TC_6: async function (testdata) {
+        sts = await addBookPage.click_cancelBtn();
         if ((typeof (sts)) === "object") {
-            assertion.assertEqual(sts.pageStatus, true, "Create Class Page not launched: ");
-            assertion.assertEqual(sts.bookTitle, testdata, "Book Title is mismatched: ");
-            assertion.assertEqual(sts.bookIcon, true, "Book Icon is mismatched: ");
+            await assertion.assertEqual(sts.pageStatus, true, "Create Class Page not launched: ");
+            await assertion.assertEqual(sts.bookTitle, testdata, "Book Title is mismatched: ");
+            await assertion.assertEqual(sts.bookIcon, true, "Book Icon is mismatched: ");
         } else {
-            assertion.assertFail(sts);
+            await assertion.assertFail(sts);
         }
     },
 
     //Validate the create class page is launched and no book is added after click on Cancel and go Back button
-    ENG_ADDB_TC_7: function (testdata) {
-        sts = addBookPage.click_cancelBtn();
+    ENG_ADDB_TC_7: async function (testdata) {
+        sts = await addBookPage.click_cancelBtn();
         if ((typeof (sts)) === "object") {
-            assertion.assertEqual(sts.pageStatus, true, "Create Class Page not launched: ");
-            assertion.assertEqual(sts.bookTitle, null, "Book Title is mismatched: ");
-            assertion.assertEqual(sts.bookIcon, false, "Book Icon is mismatched: ");
-            assertion.assertEqual(sts.selectBook_lbl, testdata.selectBook_lbl, "SelectBook Label Text Mismatch: ");
-            assertion.assertEqual(sts.selectBook_txt, testdata.selectBook_txt, "SelectBook Label Text Mismatch: ");
+            await assertion.assertEqual(sts.pageStatus, true, "Create Class Page not launched: ");
+            await assertion.assertEqual(sts.bookTitle, null, "Book Title is mismatched: ");
+            await assertion.assertEqual(sts.bookIcon, false, "Book Icon is mismatched: ");
+            await assertion.assertEqual(sts.selectBook_lbl, testdata.selectBook_lbl, "SelectBook Label Text Mismatch: ");
+            await assertion.assertEqual(sts.selectBook_txt, testdata.selectBook_txt, "SelectBook Label Text Mismatch: ");
 
         } else {
-            assertion.assertFail(sts);
+            await assertion.assertFail(sts);
         }
     },
 
     //Validate the book is added on clicking of add book button of a specific book
-    ENG_ADDB_TC_8: function (testdata) {
-        sts = addBookPage.click_addBookBtn(testdata[0]);
-        assertion.assertEqual(sts.bookValue, testdata[0], "bookValue mismatch");
-        assertion.assertEqual(sts.bookLabel, testdata[1].bookLabel, "bookLabel mismatch");
-        assertion.assertEqual(sts.removeBookBtn, testdata[1].removeBookBtn, "removeBookBtn mismatch");
+    ENG_ADDB_TC_8: async function (testdata) {
+        sts = await addBookPage.click_addBookBtn(testdata[0]);
+        await assertion.assertEqual(sts.bookValue, testdata[0], "bookValue mismatch");
+        await assertion.assertEqual(sts.bookLabel, testdata[1].bookLabel, "bookLabel mismatch");
+        await assertion.assertEqual(sts.removeBookBtn, testdata[1].removeBookBtn, "removeBookBtn mismatch");
     },
 
     //Validate the book is remove from class when click on cross icon on bottom label
-    ENG_ADDB_TC_9: function () {
-        sts = addBookPage.click_removeBookBtn();
-        assertion.assertEqual(sts.bookValue, null, "bookValue mismatch");
+    ENG_ADDB_TC_9: async function () {
+        sts = await addBookPage.click_removeBookBtn();
+        await assertion.assertEqual(sts.bookValue, null, "bookValue mismatch");
     },
 
     //Validate the error message when click on add to class button without adding any book
-    ENG_ADDB_TC_10: function (testdata) {
-        sts = addBookPage.click_addToClassBtn();
-        assertion.assert((sts.pageStatus instanceof Error) === true, "Create Class Page is launched: " + sts.pageStatus);
-        sts = addBookPage.getData_addBookPage();
-        assertion.assertEqual(sts.noBookLabel, testdata.noBookLabel[1], "noBookLabel mismatch");
+    ENG_ADDB_TC_10: async function (testdata) {
+        sts = await addBookPage.click_addToClassBtn();
+        await assertion.assert((sts.pageStatus instanceof Error) === true, "Create Class Page is launched: " + sts.pageStatus);
+        sts = await addBookPage.getData_addBookPage();
+        await assertion.assertEqual(sts.noBookLabel, testdata.noBookLabel[1], "noBookLabel mismatch");
     },
 
     /****************************Search Testcases*************************************************/
 
     /*//Validate that the serach for partial text book.
-    ENG_ADDBOOK_TC_35: function (testdata) {
+    ENG_ADDBOOK_TC_35: async function (testdata) {
         sts = addBookPage.enterTextInSearchBox(testdata[0].search_txt);
         assertion.assertEqual(sts, true, "Search Text Not Entered")
 
@@ -125,7 +125,7 @@ module.exports = {
     },
 
     //Validate that the serach for complete text of resource's name
-    ENG_ADDBOOK_TC_36: function (testdata) {
+    ENG_ADDBOOK_TC_36: async function (testdata) {
         sts = addBookPage.enterTextInSearchBox(testdata[0].search_txt);
         assertion.assertEqual(sts, true, "Search Text Not Entered")
 
@@ -147,7 +147,7 @@ module.exports = {
     },
 
     //Validate the search for alpha numeric text
-    ENG_ADDBOOK_TC_37: function (testdata) {
+    ENG_ADDBOOK_TC_37: async function (testdata) {
         sts = addBookPage.enterTextInSearchBox(testdata[0].search_txt);
         assertion.assertEqual(sts, true, "Search Text Not Entered")
 
@@ -167,7 +167,7 @@ module.exports = {
     },
 
     //Validate that No Result Found screen is displayed when no resource matching the search crietria is fulfilled
-    ENG_ADDBOOK_TC_39: function (testdata) {
+    ENG_ADDBOOK_TC_39: async function (testdata) {
         sts = addBookPage.enterTextInSearchBox(testdata[0].search_txt);
         assertion.assertEqual(sts, true, "Search Text Not Entered")
 
@@ -185,7 +185,7 @@ module.exports = {
     },
 
     //Validate that clicking on close search pill icon, the search results are cleared
-    ENG_ADDBOOK_TC_40: function (testdata) {
+    ENG_ADDBOOK_TC_40: async function (testdata) {
 
         sts = addBookPage.getSearchData()
         assertion.typeOf(sts, 'object', new Error(sts));
@@ -218,7 +218,7 @@ module.exports = {
     },
 
     //Validate that clicking on a resource from the search suggestion drop down list launches the resource.
-    ENG_ADDBOOK_TC_41: function (testdata) {
+    ENG_ADDBOOK_TC_41: async function (testdata) {
         sts = addBookPage.enterTextInSearchBox(testdata[0].search_txt);
         assertion.assertEqual(sts, true, "Search Text Not Entered")
 
@@ -232,7 +232,7 @@ module.exports = {
 
     },*/
     /*// Validate the Search of  book Name on  the add Book List page.-- add by rupsi for acceptance test
-    ENG_ADDBOOK_TC_99: function (testdata) {
+    ENG_ADDBOOK_TC_99: async function (testdata) {
         var testdata1 = "\"" + testdata + "\""
         sts = addBookPage.enterTextInSearchBox(testdata1);
         assertion.assertEqual(sts, true, "Search Text Not Entered")

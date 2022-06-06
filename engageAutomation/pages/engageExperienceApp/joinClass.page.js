@@ -17,71 +17,71 @@ module.exports = {
 	viewClassOption: selectorFile.css.ComproEngage.myClassPage.viewClassOption,
 	progressOption: selectorFile.css.ComproEngage.myClassPage.progressOption,
 	loaderIcon: selectorFile.css.ComproEngage.appShell.loaderIcon,
-	isInitialized: function () {
-		logger.logInto(stackTrace.get());
-		action.waitForDocumentLoad();
-		let pageStatus = action.waitForDisplayed(this.joinClassHeader);
-		res = this.get_joinClassPopUpData();
+	isInitialized: async function () {
+		await logger.logInto(await stackTrace.get());
+		await action.waitForDocumentLoad();
+		let pageStatus = await action.waitForDisplayed(this.joinClassHeader);
+		res = await this.get_joinClassPopUpData();
 		res.pageStatus = pageStatus;
 		return res;
 	},
 
 
-	get_joinClassPopUpData: function () {
-		logger.logInto(stackTrace.get());
-		action.waitForExist("div[style*=\"visibility: hidden;\"]", 20000);
+	get_joinClassPopUpData: async function () {
+		await logger.logInto(await stackTrace.get());
+		await action.waitForExist("div[style*=\"visibility: hidden;\"]", 20000);
 		var obj = {
-			joinClassHeader: action.getElementCount(this.joinClassHeader) > 0 ? action.getText(this.joinClassHeader) : null,
-			joinClassSubHeader: action.getElementCount(this.joinClassSubHeader) > 0 ? action.getText(this.joinClassSubHeader) : null,
-			enterClassCodeLabel: action.getElementCount(this.enterClassCodeLabel) > 0 ? action.getText(this.enterClassCodeLabel) : null,
-			classCodeInput: (action.getElementCount(this.classCodeInput) > 0) ? action.getAttribute(this.classCodeInput, "placeholder") : null,
-			classHelpText: action.getElementCount(this.classHelpText) > 0 ? action.getText(this.classHelpText) : null,
-			joinclassPopUpbtn: action.getElementCount(this.joinclassPopUpbtn) > 0 ? action.getText(this.joinclassPopUpbtn) : null,
-			helpJoiningClass: action.getElementCount(this.helpJoiningClass) > 0 ? action.getText(this.helpJoiningClass) : null,
-			closebtn: action.getElementCount(this.closebtn) > 0 ? action.waitForExist(this.closebtn) : null,
+			joinClassHeader: (await action.getElementCount(this.joinClassHeader)) > 0 ? await action.getText(this.joinClassHeader) : null,
+			joinClassSubHeader: (await action.getElementCount(this.joinClassSubHeader)) > 0 ? await action.getText(this.joinClassSubHeader) : null,
+			enterClassCodeLabel: (await action.getElementCount(this.enterClassCodeLabel)) > 0 ? await action.getText(this.enterClassCodeLabel) : null,
+			classCodeInput: ((await action.getElementCount(this.classCodeInput)) > 0) ? await action.getAttribute(this.classCodeInput, "placeholder") : null,
+			classHelpText: (await action.getElementCount(this.classHelpText)) > 0 ? await action.getText(this.classHelpText) : null,
+			joinclassPopUpbtn: (await action.getElementCount(this.joinclassPopUpbtn)) > 0 ? await action.getText(this.joinclassPopUpbtn) : null,
+			helpJoiningClass: (await action.getElementCount(this.helpJoiningClass)) > 0 ? await action.getText(this.helpJoiningClass) : null,
+			closebtn: (await action.getElementCount(this.closebtn)) > 0 ? await action.waitForExist(this.closebtn) : null,
 		}
 		return obj;
 	},
-	set_ClassCode: function (code) {
-		logger.logInto(stackTrace.get());
-		res = action.click(this.classCodeInput);
+	set_ClassCode: async function (code) {
+		await logger.logInto(await stackTrace.get());
+		res = await action.click(this.classCodeInput);
 		if (res == true) {
-			logger.logInto(stackTrace.get(), "-- classCodeInput textbox is clicked");
-			res = action.setValue(this.classCodeInput, code);
+			await logger.logInto(await stackTrace.get(), "-- classCodeInput textbox is clicked");
+			res = await action.setValue(this.classCodeInput, code);
 			if (res == true) {
-				res = action.getValue(this.classCodeInput);
+				res = await action.getValue(this.classCodeInput);
 			}
 		}
 		else {
 			res = res + "-- classCodeInput textbox is NOT clicked";
-			logger.logInto(stackTrace.get(), res, 'error');
+			await logger.logInto(await stackTrace.get(), res, 'error');
 		}
 		return res;
 	},
-	click_joinclassPopUpbtn: function () {
-		logger.logInto(stackTrace.get());
-		action.waitForDisplayed(this.joinclassPopUpbtn);
-		res = action.click(this.joinclassPopUpbtn);
-		browser.pause(4000)
+	click_joinclassPopUpbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		await action.waitForDisplayed(this.joinclassPopUpbtn);
+		res = await action.click(this.joinclassPopUpbtn);
+		await browser.pause(4000)
 		if (res == true) {
-			logger.logInto(stackTrace.get(), res + " -- joinclassPopUpbtn is clicked");
+			await logger.logInto(await stackTrace.get(), res + " -- joinclassPopUpbtn is clicked");
 		}
 		else {
 			res = res + " -- joinclassPopUpbtn is NOT clicked";
-			logger.logInto(stackTrace.get(), res, 'error');
+			await logger.logInto(await stackTrace.get(), res, 'error');
 		}
 		return res;
 	},
-	click_ClosebtnjoinclassPopUp: function () {
-		logger.logInto(stackTrace.get());
-		action.waitForDisplayed(this.closebtn);
-		res = action.click(this.closebtn);
+	click_ClosebtnjoinclassPopUp: async function () {
+		await logger.logInto(await stackTrace.get());
+		await action.waitForDisplayed(this.closebtn);
+		res = await action.click(this.closebtn);
 		if (res == true) {
-			logger.logInto(stackTrace.get(), res + " -- joinclassPopUpbtn is clicked");
+			await logger.logInto(await stackTrace.get(), res + " -- joinclassPopUpbtn is clicked");
 		}
 		else {
 			res = res + " -- joinclassPopUpbtn is NOT clicked";
-			logger.logInto(stackTrace.get(), res, 'error');
+			await logger.logInto(await stackTrace.get(), res, 'error');
 		}
 		return res;
 	},

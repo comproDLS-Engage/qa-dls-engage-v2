@@ -11,41 +11,44 @@ module.exports = {
     etextExists: selectorFile.css.ComproEngage.contentPlayer.etextExists,
     webbookExists: selectorFile.css.ComproEngage.contentPlayer.webbookExists,
     scrollToTopBtn: selectorFile.css.ComproEngage.contentPlayer.scrollToTopBtn,
+    transcriptExists: selectorFile.css.ComproEngage.contentPlayer.transcriptExists,
 
-    isInitialized: function () {
+    isInitialized: async function () {
         var res;
-        logger.logInto(stackTrace.get());
-        action.waitForDocumentLoad();
+        await logger.logInto(await stackTrace.get());
+        await action.waitForDocumentLoad();
         res = {
-            pageStatus: action.waitForDisplayed(this.container),
-            appShellPage: appShellPage.isInitialized()
+            pageStatus: await action.waitForDisplayed(this.container),
+            appShellPage: await appShellPage.isInitialized()
         };
         return res;
     },
 
-    getData_contentPlayer: function () {
-        logger.logInto(stackTrace.get());
+    getData_contentPlayer: async function () {
+        await logger.logInto(await stackTrace.get());
         var obj;
         obj = {
-            videoPlayerExists: (action.getElementCount(this.videoPlayerExists) > 0) ? action.waitForDisplayed(this.videoPlayerExists) : false,
-            audioPlayerExists: (action.getElementCount(this.audioPlayerExists) > 0) ? action.waitForDisplayed(this.audioPlayerExists) : false,
-            etextExists: (action.getElementCount(this.etextExists) > 0) ? action.waitForDisplayed(this.etextExists) : false,
-            webbookExists: (action.getElementCount(this.webbookExists) > 0) ? action.waitForDisplayed(this.webbookExists) : false,
-            scrollToTopBtn: (action.getElementCount(this.scrollToTopBtn) > 0) ? action.getText(this.scrollToTopBtn) : null,
+            videoPlayerExists: ((await action.getElementCount(this.videoPlayerExists)) > 0) ? await action.waitForDisplayed(this.videoPlayerExists) : false,
+            audioPlayerExists: ((await action.getElementCount(this.audioPlayerExists)) > 0) ? await action.waitForDisplayed(this.audioPlayerExists) : false,
+            etextExists: ((await action.getElementCount(this.etextExists)) > 0) ? await action.waitForDisplayed(this.etextExists) : false,
+            webbookExists: ((await action.getElementCount(this.webbookExists)) > 0) ? await action.waitForDisplayed(this.webbookExists) : false,
+            scrollToTopBtn: ((await action.getElementCount(this.scrollToTopBtn)) > 0) ? await action.getText(this.scrollToTopBtn) : null,
+            transcriptExists: ((await action.getElementCount(this.transcriptExists)) > 0) ? await action.waitForDisplayed(this.transcriptExists) : false,
         }
+        console.log(obj)
         return obj;
     },
 
-    click_scrollToTopBtn: function () {
-        logger.logInto(stackTrace.get());
+    click_scrollToTopBtn: async function () {
+        await logger.logInto(await stackTrace.get());
         var res;
-        res = action.click(this.scrollToTopBtn);
+        res = await action.click(this.scrollToTopBtn);
         if (true == res) {
-            logger.logInto(stackTrace.get(), " scrollToTopBtn is clicked");
-            res = action.waitForDisplayed(this.scrollToTopBtn, undefined, true);
+            await logger.logInto(await stackTrace.get(), " scrollToTopBtn is clicked");
+            res = await action.waitForDisplayed(this.scrollToTopBtn, undefined, true);
         }
         else {
-            logger.logInto(stackTrace.get(), res + "scrollToTopBtn is NOT clicked", 'error');
+            await logger.logInto(await stackTrace.get(), res + "scrollToTopBtn is NOT clicked", 'error');
         }
         return res;
     },

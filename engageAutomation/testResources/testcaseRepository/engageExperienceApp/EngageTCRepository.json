@@ -651,17 +651,70 @@
         },
         {
           "id": "ENG_INS_CLASS_TC_103",
-          "description": " Validate the click on Assignment Tab",
-          "tags": "P1"
-        },
-        {
-          "id": "ENG_STU_CLASS_TC_104",
-          "description": " Click on overview button",
+          "description": " Validate the click on Assignment Tab on class details page",
           "tags": "P1"
         },
         {
           "id": "ENG_INS_CLASS_TC_104",
-          "description": " Click on the gradebook button of teacher view class page ",
+          "description": " Click on GradeBook button on class details page",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_105",
+          "description": " Click on the view progress button on the class dashboard",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_106",
+          "description": "Mobile: Validate that score is coming for anchord book class students.",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_107",
+          "description": "Mobile: Validate that score is not coming for non-anchord book class students",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_108",
+          "description": "Validate that Content of class details page",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_109",
+          "description": "Validate the Right Pane of Class on class details page",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_110",
+          "description": "Validate that clicking on gradebook option from Class Menu launches class details page with inbox tab selected",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_111",
+          "description": "Validate that clicking on Material option from Class Menu launches class details page with inbox tab selected",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_112",
+          "description": "Validate that searching can be done on basis of Class name",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_113",
+          "description": "Validate that No Result Found is displayed in the drop down suggestion and in the screen when no Class matching the search criteria is fulfilled",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_114",
+          "description": "Validate that clicking on a class from the search suggestion drop down list launches the class.",
+          "tags": "P1"
+        },  {
+          "id": "ENG_INS_CLASS_TC_115",
+          "description": "Validate that clicking on \"More search results for ..xyz\" lists the resources based on search text.",
+          "tags": "P1"
+        },  {
+          "id": "ENG_INS_CLASS_TC_116",
+          "description": "Validate that clicking on close search button removes the search criteria",
           "tags": "P1"
         }
       ]
@@ -763,9 +816,51 @@
         },
         {
           "id": "ENG_STU_CLASS_TC_16",
-          "description": "Validate that click on view Progress button",
+          "description": "Validate that click on view Progress button on student class dashboard",
           "tags": "P2",
           "visualTest": true
+        },
+        {
+          "id": "ENG_STU_CLASS_TC_17",
+          "description": "Validate that click on Progress button on the more option of class",
+          "tags": "P2",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_STU_CLASS_TC_18",
+          "description": "Validate that click on Assignment button on the more option of class",
+          "tags": "P2",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_STU_CLASS_TC_19",
+          "description": "Click on overview button on the student class details page",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_STU_CLASS_TC_20",
+          "description": "Validate the content on student details page",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_STU_CLASS_TC_21",
+          "description": "Validate the assignment section when assignment is added",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_STU_CLASS_TC_22",
+          "description": "Validate the Click on upcoming button (No Assignment is added)",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_STU_CLASS_TC_23",
+          "description": "Validate the Click on Completed button (No Assignment is added)",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_STU_CLASS_TC_24",
+          "description": "Validate the Content of Assignment Data",
+          "tags": "P1"
         }
       ]
     },
@@ -855,6 +950,18 @@
         {
           "id": "ENG_SHELL_TC_18",
           "description": "Validate that clicking on the Assign button on the header launches the create assignment page",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_SHELL_TC_19",
+          "description": "Mobile: Validate that user is able to logout of the application by selecting the logout option from the profile dropdown",
+          "tags": "P1, Desktop",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_SHELL_TC_20",
+          "description": "Mobile: Validate that on launching the application the appshell (left navigation pane and header) appears",
           "tags": "P1",
           "visualTest": true
         }
@@ -1636,6 +1743,36 @@
           "description": "Validate that playlist is not added on the dashboard on clicking 'Cancel' button",
           "tags": "P1",
           "visualTest": true
+        },
+        {
+          "id": "ENG_DASH_TC_29",
+          "description": "Mobile: Click add new button on dashboard page",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DASH_TC_30",
+          "description": "Mobile: Click Right Panel Launch button on dashboard page",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DASH_TC_31",
+          "description": "Mobile: Click Right Panel Close button on dashboard page",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DASH_TC_32",
+          "description": "Validate that clicking on the 3 dots on book details page, launches the option menu for Student",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DASH_TC_33",
+          "description": "Mobile: Validate the content of the blank Dashboard page in English Language",
+          "tags": "P2",
+          "visualTest": true
         }
       ]
     },
@@ -2222,7 +2359,13 @@
         },
         {
           "id": "ENG_FLIP_TC_23",
-          "description": "Validate clicking on Jump to Previous page button on toolbar launches the last page",
+          "description": "Validate if the page contains any hotlink or not",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_FLIP_TC_24",
+          "description": "Validate that clicking on a hotlink activates it",
           "tags": "P1",
           "visualTest": true
         }
@@ -2636,6 +2779,18 @@
         {
           "id": "ENG_CONT_TC_5",
           "description": "Validate that page is scrolled to top on clicking the scroll to top button",
+          "tags": "P1, Desktop",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_CONT_TC_6",
+          "description": "Validate that video player with transcript is launched on clicking the video with subtitles activity",
+          "tags": "P1, Desktop",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_CONT_TC_7",
+          "description": "Validate that audio player with transcript is launched on clicking the audio with subtitles activity",
           "tags": "P1, Desktop",
           "visualTest": true
         }
@@ -3123,6 +3278,18 @@
         {
           "id": "ENG_GRADEBOOK_TC_15",
           "description": "Validate the click on Cancel button on  View Attempt Page",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GRADEBOOK_TC_16",
+          "description": "Validate the click on 'Class Copy Code' button",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_GRADEBOOK_TC_17",
+          "description": "Validate the click on 'Invie Email' button",
           "tags": "P2",
           "visualTest": "-"
         }

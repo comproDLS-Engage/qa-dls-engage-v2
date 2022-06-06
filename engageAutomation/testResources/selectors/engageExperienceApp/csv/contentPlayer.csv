@@ -5,3 +5,4 @@ audioPlayerExists,[class*=audio],img,contentPlayer,,,,,
 etextExists,[data-tid=container-eText-Player],img,contentPlayer,,,,,
 webbookExists,[data-tid=container-productviewer] iframe,img,contentPlayer,,,,,
 scrollToTopBtn,[data-tid=button-scrollToTop]:not([style*=hidden]),button,contentPlayer,,,"waitForDisplayed, scrollToTopBtn, undefined, true","""""",""""""
+transcriptExists,button[data-plyr=transcript],img,contentPlayer,,,,,

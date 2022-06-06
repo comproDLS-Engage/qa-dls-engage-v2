@@ -430,8 +430,8 @@
 				"testData": []
 			},
 			{
-				"id": "ASE_QUN_TC_5",
-				"description": "Validate that alphanumeric text is supported in Question Title Text.",
+				"id": "ASE_COM_TC_1001",
+				"description": "Click on Editor tab",
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": [
 					{
@@ -441,8 +441,8 @@
 				]
 			},
 			{
-				"id": "ASE_COM_TC_9",
-				"description": "Validate that student can add instruction for each question under the 'Question' section",
+				"id": "ASE_COM_TC_1002",
+				"description": "Click on Editor tab",
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": [
 					{
@@ -452,8 +452,8 @@
 				]
 			},
 			{
-				"id": "ASE_COM_TC_42",
-				"description": "Validate if alpha-numeric text is allowed in the Question Text",
+				"id": "ASE_COM_TC_1000",
+				"description": "Enter the question text",
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": [
 					{
@@ -462,6 +462,15 @@
 					}
 				]
 			},
+		
+			{
+				"id": "ASE_COM_TC_1014",
+				"description": "Enter the question text",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+				]
+			},
+			
 			{
 				"id": "ASE_MCQ_TC_14",
 				"description": "Validate that Option is added in  questions",

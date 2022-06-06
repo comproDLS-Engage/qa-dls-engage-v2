@@ -18,46 +18,46 @@ module.exports = {
   bookValue: selectorFile.css.ComproEngage.addBook.bookValue,
   removeBookBtn: selectorFile.css.ComproEngage.addBook.removeBookBtn,
 
-  isInitialized: function () {
+  isInitialized: async function () {
     var res;
-    logger.logInto(stackTrace.get());
-    action.waitForDocumentLoad();
+    await logger.logInto(await stackTrace.get());
+    await action.waitForDocumentLoad();
     res = {
-      pageStatus: action.waitForDisplayed(this.addBookPageTitle),
-      appShellPage: appShellPage.isInitialized()
+      pageStatus: await action.waitForDisplayed(this.addBookPageTitle),
+      appShellPage: await appShellPage.isInitialized()
     };
     return res;
   },
 
-  getData_addBookPage: function () {
-    logger.logInto(stackTrace.get());
+  getData_addBookPage: async function () {
+    await logger.logInto(await stackTrace.get());
     var obj;
     obj = {
-      addBookPageTitle: (action.getElementCount(this.addBookPageTitle) > 0) ? action.getText(this.addBookPageTitle) : null,
-      addBookPageSubtitle: (action.getElementCount(this.addBookPageSubtitle) > 0) ? action.getText(this.addBookPageSubtitle) : null,
-      addToClassBtn: (action.getElementCount(this.addToClassBtn) > 0) ? action.getText(this.addToClassBtn) : null,
-      cancelBtn: (action.getElementCount(this.cancelBtn) > 0) ? action.getText(this.cancelBtn) : null,
-      noBookLabel: (action.getElementCount(this.noBookLabel) > 0) ? action.getText(this.noBookLabel) : null,
-      bookLabel: (action.getElementCount(this.bookLabel) > 0) ? action.getText(this.bookLabel) : null,
-      bookValue: (action.getElementCount(this.bookValue) > 0) ? action.getText(this.bookValue) : null,
-      removeBookBtn: (action.getElementCount(this.removeBookBtn) > 0) ? action.getText(this.removeBookBtn) : null
+      addBookPageTitle: ((await action.getElementCount(this.addBookPageTitle)) > 0) ? await action.getText(this.addBookPageTitle) : null,
+      addBookPageSubtitle: ((await action.getElementCount(this.addBookPageSubtitle)) > 0) ? await action.getText(this.addBookPageSubtitle) : null,
+      addToClassBtn: ((await action.getElementCount(this.addToClassBtn)) > 0) ? await action.getText(this.addToClassBtn) : null,
+      cancelBtn: ((await action.getElementCount(this.cancelBtn)) > 0) ? await action.getText(this.cancelBtn) : null,
+      noBookLabel: ((await action.getElementCount(this.noBookLabel)) > 0) ? await action.getText(this.noBookLabel) : null,
+      bookLabel: ((await action.getElementCount(this.bookLabel)) > 0) ? await action.getText(this.bookLabel) : null,
+      bookValue: ((await action.getElementCount(this.bookValue)) > 0) ? await action.getText(this.bookValue) : null,
+      removeBookBtn: ((await action.getElementCount(this.removeBookBtn)) > 0) ? await action.getText(this.removeBookBtn) : null
     }
     return obj;
   },
 
-  getData_bookList: function (bookTitleName) {
-    logger.logInto(stackTrace.get());
+  getData_bookList: async function (bookTitleName) {
+    await logger.logInto(await stackTrace.get());
     var obj = [];
-    action.waitForDisplayed(this.bookTitle);
-    var list = action.findElements(this.bookTitle);
+    await action.waitForDisplayed(this.bookTitle);
+    var list = await action.findElements(this.bookTitle);
     if (bookTitleName) {
       for (var i = 0; i < list.length; i++) {
-        if (action.getText(this.bookTitle + i) == bookTitleName) {
+        if ((await action.getText(this.bookTitle + i)) == bookTitleName) {
           obj[0] = {
-            bookCoverImg: (action.getElementCount(this.bookCoverImg + i + "]") > 0) ? action.waitForDisplayed(this.bookCoverImg + i + "]") : false,
-            bookTitle: (action.getElementCount(this.bookTitle + i + "]") > 0) ? action.getText(this.bookTitle + i + "]") : null,
-            bookSubtitle: (action.getElementCount(this.bookSubtitle + i + "]") > 0) ? action.getText(this.bookSubtitle + i + "]") : null,
-            addBookBtn: (action.getElementCount(this.addBookBtn + i + "]") > 0) ? action.getText(this.addBookBtn + i + "]") : null,
+            bookCoverImg: ((await action.getElementCount(this.bookCoverImg + i + "]")) > 0) ? await action.waitForDisplayed(this.bookCoverImg + i + "]") : false,
+            bookTitle: ((await action.getElementCount(this.bookTitle + i + "]")) > 0) ? await action.getText(this.bookTitle + i + "]") : null,
+            bookSubtitle: ((await action.getElementCount(this.bookSubtitle + i + "]")) > 0) ? await action.getText(this.bookSubtitle + i + "]") : null,
+            addBookBtn: ((await action.getElementCount(this.addBookBtn + i + "]")) > 0) ? await action.getText(this.addBookBtn + i + "]") : null,
           }
           break;
         }
@@ -65,73 +65,73 @@ module.exports = {
     } else {
       for (var i = 0; i < list.length; i++) {
         obj[i] = {
-          bookCoverImg: (action.getElementCount(this.bookCoverImg + i + "]") > 0) ? action.waitForDisplayed(this.bookCoverImg + i + "]") : false,
-          bookTitle: (action.getElementCount(this.bookTitle + i + "]") > 0) ? action.getText(this.bookTitle + i + "]") : null,
-          bookSubtitle: (action.getElementCount(this.bookSubtitle + i + "]") > 0) ? action.getText(this.bookSubtitle + i + "]") : null,
-          addBookBtn: (action.getElementCount(this.addBookBtn + i + "]") > 0) ? action.getText(this.addBookBtn + i + "]") : null,
+          bookCoverImg: ((await action.getElementCount(this.bookCoverImg + i + "]")) > 0) ? await action.waitForDisplayed(this.bookCoverImg + i + "]") : false,
+          bookTitle: ((await action.getElementCount(this.bookTitle + i + "]")) > 0) ? await action.getText(this.bookTitle + i + "]") : null,
+          bookSubtitle: ((await action.getElementCount(this.bookSubtitle + i + "]")) > 0) ? await action.getText(this.bookSubtitle + i + "]") : null,
+          addBookBtn: ((await action.getElementCount(this.addBookBtn + i + "]")) > 0) ? await action.getText(this.addBookBtn + i + "]") : null,
         }
       }
     }
     return obj;
   },
 
-  click_addBookBtn: function (bookTitleName) {
-    logger.logInto(stackTrace.get());
+  click_addBookBtn: async function (bookTitleName) {
+    await logger.logInto(await stackTrace.get());
     var i, list, res;
-    list = action.findElements(this.addBookBtn);
+    list = await action.findElements(this.addBookBtn);
     for (i = 0; i < list.length; i++) {
-      if ((action.getText(this.bookTitle + i + "]")) == bookTitleName) {
-        res = action.click(list[i]);
+      if (((await action.getText(this.bookTitle + i + "]"))) == bookTitleName) {
+        res = await action.click(list[i]);
         break;
       }
     }
     if (res == true) {
-      logger.logInto(stackTrace.get(), " --addBookBtn clicked");
-      res = this.getData_addBookPage();
+      await logger.logInto(await stackTrace.get(), " --addBookBtn clicked");
+      res = await this.getData_addBookPage();
     }
     else
-      logger.logInto(stackTrace.get(), " --addBookBtn NOT clicked", "error")
+      await logger.logInto(await stackTrace.get(), " --addBookBtn NOT clicked", "error")
     return res;
   },
 
-  click_addToClassBtn: function () {
-    logger.logInto(stackTrace.get());
+  click_addToClassBtn: async function () {
+    await logger.logInto(await stackTrace.get());
     var res;
-    res = action.click(this.addToClassBtn);
+    res = await action.click(this.addToClassBtn);
     if (true == res) {
-      logger.logInto(stackTrace.get(), " addToClassBtn is clicked");
-      res = require('./createClass.page').isInitialized();
+      await logger.logInto(await stackTrace.get(), " addToClassBtn is clicked");
+      res = await require('./createClass.page').isInitialized();
     }
     else {
-      logger.logInto(stackTrace.get(), res + "addToClassBtn is NOT clicked", 'error');
-    }
-    return res;
-  },
-
-  click_cancelBtn: function () {
-    logger.logInto(stackTrace.get());
-    var res;
-    res = action.click(this.cancelBtn);
-    if (true == res) {
-      logger.logInto(stackTrace.get(), " cancelBtn is clicked");
-      res = require('./createClass.page').isInitialized();
-    }
-    else {
-      logger.logInto(stackTrace.get(), res + "cancelBtn is NOT clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + "addToClassBtn is NOT clicked", 'error');
     }
     return res;
   },
 
-  click_removeBookBtn: function () {
-    logger.logInto(stackTrace.get());
+  click_cancelBtn: async function () {
+    await logger.logInto(await stackTrace.get());
     var res;
-    res = action.click(this.removeBookBtn);
+    res = await action.click(this.cancelBtn);
     if (true == res) {
-      logger.logInto(stackTrace.get(), " removeBookBtn is clicked");
-      res = this.getData_addBookPage();
+      await logger.logInto(await stackTrace.get(), " cancelBtn is clicked");
+      res = await require('./createClass.page').isInitialized();
     }
     else {
-      logger.logInto(stackTrace.get(), res + "removeBookBtn is NOT clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + "cancelBtn is NOT clicked", 'error');
+    }
+    return res;
+  },
+
+  click_removeBookBtn: async function () {
+    await logger.logInto(await stackTrace.get());
+    var res;
+    res = await action.click(this.removeBookBtn);
+    if (true == res) {
+      await logger.logInto(await stackTrace.get(), " removeBookBtn is clicked");
+      res = await this.getData_addBookPage();
+    }
+    else {
+      await logger.logInto(await stackTrace.get(), res + "removeBookBtn is NOT clicked", 'error');
     }
     return res;
   }

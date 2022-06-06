@@ -8,54 +8,54 @@ module.exports = {
 	choices: selectorFile.css.ComproEngage.multiMcq.choices,
 	selectedChoice: selectorFile.css.ComproEngage.multiMcq.selectedChoice,
 
-	isInitialized: function () {
-		logger.logInto(stackTrace.get());
+	isInitialized: async function () {
+		await logger.logInto(await stackTrace.get());
 		//action.switchToFrame("[id*=iframe]");
-		action.switchToFrame(0);
-		let res = action.waitForExist(this.choices);
-		action.switchToParentFrame();
+		await action.switchToFrame(0);
+		let res = await action.waitForExist(this.choices);
+		await action.switchToParentFrame();
 		return res;
 	},
 
-	clickOption: function (mcqQuesData) {
-		logger.logInto(stackTrace.get());
-		action.switchToFrame(0);
+	clickOption: async function (mcqQuesData) {
+		await logger.logInto(await stackTrace.get());
+		await action.switchToFrame(0);
 		let res, choiceSelector;
 		for (let i = 0; i < mcqQuesData.length; i++) {
 			choiceSelector = this.choices + mcqQuesData[i][0] + "]";
-			res = action.getElementCount(choiceSelector);
+			res = await action.getElementCount(choiceSelector);
 			if (res == 1 && mcqQuesData[i][2] == 'select') {
-				res = action.click(choiceSelector);
+				res = await action.click(choiceSelector);
 				if (true == res) {
-					logger.logInto(stackTrace.get(), " -- choice is clicked");
+					await logger.logInto(await stackTrace.get(), " -- choice is clicked");
 				}
 				else {
 					res = res + "-- Error in clicking option";
-					logger.logInto(stackTrace.get(), res, "error");
+					await logger.logInto(await stackTrace.get(), res, "error");
 					break;
 				}
 			}
 		}
-		action.switchToParentFrame();
+		await action.switchToParentFrame();
 		return res;
 	},
 
-	getData_multiMcq: function (mcqQuesData) {
-		logger.logInto(stackTrace.get());
-		action.switchToFrame(0);
+	getData_multiMcq: async function (mcqQuesData) {
+		await logger.logInto(await stackTrace.get());
+		await action.switchToFrame(0);
 		var obj = [];
 		var res, choiceSelector, selChoiceSelector, value;
 		for (let i = 0; i < mcqQuesData.length; i++) {
 			choiceSelector = this.choices + mcqQuesData[i][0] + "] ";
 			selChoiceSelector = choiceSelector + this.selectedChoice;
-			value = itemplayer.getFeedbackIconDetails(choiceSelector)
-			res = action.getElementCount(selChoiceSelector);
+			value = await itemplayer.getFeedbackIconDetails(choiceSelector)
+			res = await action.getElementCount(selChoiceSelector);
 			if (res == 1)
-				obj[i] = [mcqQuesData[i][0], action.getText(choiceSelector), "select", value]
+				obj[i] = [mcqQuesData[i][0], await action.getText(choiceSelector), "select", value]
 			else
-				obj[i] = [mcqQuesData[i][0], action.getText(choiceSelector), "", value]
+				obj[i] = [mcqQuesData[i][0], await action.getText(choiceSelector), "", value]
 		}
-		action.switchToParentFrame();
+		await action.switchToParentFrame();
 		return obj;
 	}
 }

@@ -14,132 +14,132 @@ module.exports = {
     loUploadBtn: selectorFile.addActivityPage.loUploadBtn,
     activityThemeOptions: selectorFile.addActivityPage.activityThemeOptions,
 
-    isInitialized: function () {
+    isInitialized: async function () {
         return addFolderPage.isInitialized();
     },
 
-    set_Name: function (text) {
-        logger.logInto(stackTrace.get());
+    set_Name: async function (text) {
+        await logger.logInto((await stackTrace.get()));
         let res;
-        res = action.setValue(this.nameTxtbox, text);
-        logger.logInto(stackTrace.get(), res);
+        res = await action.setValue(this.nameTxtbox, text);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
-    click_Add_Button: function () {
-        logger.logInto(stackTrace.get());
+    click_Add_Button: async function () {
+        await logger.logInto((await stackTrace.get()));
         let res;
-        res = action.waitForClickable(addFolderPage.addBtn);
-        action.waitForDisplayed(this.buttonLoader, undefined, true)
+        res = await action.waitForClickable(addFolderPage.addBtn);
+        await action.waitForDisplayed(this.buttonLoader, undefined, true)
         if (res == true) {
-            res = action.click(addFolderPage.addBtn);
+            res = await action.click(addFolderPage.addBtn);
             if (res == true) {
-                browser.pause(10000);
+                await browser.pause(5000);
             }
         }
-        logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
-    click_Completion_Checkbox: function () {
-        logger.logInto(stackTrace.get());
+    click_Completion_Checkbox: async function () {
+        await logger.logInto((await stackTrace.get()));
         let res;
-        res = action.click(this.completionCheckBox);
-        logger.logInto(stackTrace.get(), res);
+        res = await action.click(this.completionCheckBox);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
-    click_Score_Checkbox: function () {
-        logger.logInto(stackTrace.get());
+    click_Score_Checkbox: async function () {
+        await logger.logInto((await stackTrace.get()));
         let res;
-        res = action.click(this.scoreCheckBox);
-        logger.logInto(stackTrace.get(), res);
+        res = await action.click(this.scoreCheckBox);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
-    select_TargetRole: function (value) {
-        logger.logInto(stackTrace.get());
+    select_TargetRole: async function (value) {
+        await logger.logInto((await stackTrace.get()));
         let res;
         if (value == "" || value == undefined)
             res = true;
         else {
-            res = action.click(this.targetRoleDropdown);
-            action.waitForDisplayed(addFolderPage.targetRoleList);
+            res = await action.click(this.targetRoleDropdown);
+            await action.waitForDisplayed(addFolderPage.targetRoleList);
             if (res == true) {
                 let i, list;
-                list = action.findElements(addFolderPage.targetRoleList);
+                list = await action.findElements(addFolderPage.targetRoleList);
                 for (i = 0; i < list.length; i++) {
-                    if (action.getText(list[i]).includes(value)) {
-                        res = action.click(action.parentElement(list[i]));
+                    if ((await action.getText(list[i])).includes(value)) {
+                        res = await action.click((await action.parentElement(list[i])));
                         break;
                     }
                     res = "Target Role value not found ";
                 }
             }
-            logger.logInto(stackTrace.get(), res);
+            await logger.logInto((await stackTrace.get()), res);
         }
         return res;
     },
 
-    select_Assignable: function (value) {
-        logger.logInto(stackTrace.get());
+    select_Assignable: async function (value) {
+        await logger.logInto((await stackTrace.get()));
         let res;
         if (value == "" || value == undefined)
             res = true;
         else {
-            res = action.click(this.assignableDropdown);
-            action.waitForDisplayed(addFolderPage.assignableList);
+            res = await action.click(this.assignableDropdown);
+            await action.waitForDisplayed(addFolderPage.assignableList);
             if (res == true) {
                 let i, list;
-                list = action.findElements(addFolderPage.assignableList);
+                list = await action.findElements(addFolderPage.assignableList);
                 for (i = 0; i < list.length; i++) {
-                    if (action.getText(list[i]).includes(value)) {
-                        res = action.click(action.parentElement(list[i]));
+                    if ((await action.getText(list[i])).includes(value)) {
+                        res = await action.click((await action.parentElement(list[i])));
                         break;
                     }
                     res = "Assignable value not found ";
                 }
             }
-            logger.logInto(stackTrace.get(), res);
+            await logger.logInto((await stackTrace.get()), res);
         }
         return res;
     },
 
-    set_Page_Reference: function (value) {
+    set_Page_Reference: async function (value) {
         return addFolderPage.set_Page_Reference(value);
     },
 
-    uploadFile: function (path) {
-        logger.logInto(stackTrace.get());
+    uploadFile: async function (path) {
+        await logger.logInto((await stackTrace.get()));
         let res;
         if (path == "" || path == undefined)
             res = true;
         else {
-            res = action.uploadFile(path);
+            res = await action.uploadFile(path);
             if ((typeof res) === 'string') {
-                res = action.setValue(this.loUploadBtn, res);
+                res = await action.setValue(this.loUploadBtn, res);
             }
-            logger.logInto(stackTrace.get(), res);
+            await logger.logInto((await stackTrace.get()), res);
         }
         return res;
     },
 
-    select_ActivityTheme: function (value) {
-        logger.logInto(stackTrace.get());
+    select_ActivityTheme: async function (value) {
+        await logger.logInto((await stackTrace.get()));
         let res;
         if (value == "" || value == undefined)
             res = true;
         else {
             let i, list;
-            list = action.findElements(this.activityThemeOptions);
+            list = await action.findElements(this.activityThemeOptions);
             for (i = 0; i < list.length; i++) {
                 //console.log(action.getText(list[i]))
-                if (action.getText(list[i]).includes(value)) {
-                    res = action.click(list[i]);
+                if ((await action.getText(list[i])).includes(value)) {
+                    res = await action.click(list[i]);
                     break;
                 }
             }
-            logger.logInto(stackTrace.get(), res);
+            await logger.logInto((await stackTrace.get()), res);
         }
         return res;
     },

@@ -12,6 +12,12 @@
             "testData": []
          },
          {
+             "id": "ENG_LAND_TC_1",
+             "description": "",
+             "testFile": "./test/engageExperienceApp/landing.test.js",
+             "testData": []
+         },
+         {
             "id": "ENG_LAND_TC_3",
             "description": "",
             "testFile": "./test/engageExperienceApp/landing.test.js",
@@ -115,6 +121,12 @@
             "description": "",
             "testFile": "./engageAutomation/core/runner/launchUrl.js",
             "testData": []
+         },
+         {
+             "id": "ENG_LAND_TC_1",
+             "description": "",
+             "testFile": "./test/engageExperienceApp/landing.test.js",
+             "testData": []
          },
          {
             "id": "ENG_LAND_TC_3",
@@ -281,6 +293,12 @@
             "description": "",
             "testFile": "./engageAutomation/core/runner/launchUrl.js",
             "testData": []
+         },
+         {
+             "id": "ENG_LAND_TC_1",
+             "description": "",
+             "testFile": "./test/engageExperienceApp/landing.test.js",
+             "testData": []
          },
          {
             "id": "ENG_LAND_TC_3",
@@ -484,7 +502,7 @@
       "After": []
    },
    "Suite4": {
-      "Name": "Use Case to click on TOC button and jump to new page in flipbook",
+      "Name": "Use Case to click on TOC button and jump to page in flipbook",
       "TestCaseRepo": [
          "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
       ],
@@ -494,6 +512,12 @@
             "description": "",
             "testFile": "./engageAutomation/core/runner/launchUrl.js",
             "testData": []
+         },
+         {
+             "id": "ENG_LAND_TC_1",
+             "description": "",
+             "testFile": "./test/engageExperienceApp/landing.test.js",
+             "testData": []
          },
          {
             "id": "ENG_LAND_TC_3",
@@ -596,6 +620,18 @@
          {
             "id": "ENG_FLIP_TC_22",
             "description": "Validate clicking on Jump to page button lauches the entered page in flipbook",
+            "testFile": "./test/engageExperienceApp/flipbook.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_FLIP_TC_23",
+            "description": "Validate if the page contains any hotlink or not",
+            "testFile": "./test/engageExperienceApp/flipbook.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_FLIP_TC_24",
+            "description": "Validate that clicking on a hotlink activates it",
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": []
          }

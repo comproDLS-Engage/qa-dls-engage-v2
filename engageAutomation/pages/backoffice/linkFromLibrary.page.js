@@ -10,56 +10,56 @@ module.exports = {
     resourceNameList: selectorFile.linkFromLibraryPage.resourceNameList,
     filteredChips: selectorFile.linkFromLibraryPage.filteredChips,
 
-    isInitialized: function () {
-        logger.logInto(stackTrace.get());
-        let res = action.waitForDisplayed(this.nextBtn);
+    isInitialized: async function () {
+        await logger.logInto((await stackTrace.get()));
+        let res = await action.waitForDisplayed(this.nextBtn);
         return res;
     },
 
-    searchLO_byName: function (name) {
-        logger.logInto(stackTrace.get());
-        let res = action.setValue(this.searchBox, name);
+    searchLO_byName: async function (name) {
+        await logger.logInto((await stackTrace.get()));
+        let res = await action.setValue(this.searchBox, name);
         if (res == true) {
-            res = action.keyPress("Enter");
-            res = action.waitForDisplayed(this.filteredChips);
+            res = await action.keyPress("Enter");
+            res = await action.waitForDisplayed(this.filteredChips);
             if (res == true)
-                res = action.waitForDisplayed(this.resourceNameList);
+                res = await action.waitForDisplayed(this.resourceNameList);
         }
         return res;
     },
 
-    select_Resource_and_Proceed: function (name) {
-        logger.logInto(stackTrace.get());
+    select_Resource_and_Proceed: async function (name) {
+        await logger.logInto((await stackTrace.get()));
         let res = null;
         let i, list, cboxes;
-        list = action.findElements(this.resourceNameList);
-        cboxes = action.findElements(this.loCheckbox);
+        list = await action.findElements(this.resourceNameList);
+        cboxes = await action.findElements(this.loCheckbox);
         for (i = 0; i < list.length; i++) {
-            if (action.getText(list[i]).includes(name)) {
-                res = action.click(cboxes[i]);
+            if ((await action.getText(list[i])).includes(name)) {
+                res = await action.click(cboxes[i]);
                 if (res == true) {
-                    res = action.click(this.nextBtn);
+                    res = await action.click(this.nextBtn);
                     if (res == true) {
-                        res = require('./addActivity.page.js').isInitialized();
-                        browser.pause(5000);
+                        res = await require('./addActivity.page.js').isInitialized();
+                        await browser.pause(5000);
                     }
                 }
                 break;
             }
             res = "resource \"" + name + "\" not found";
         }
-        logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
-    set_Name: function (text) {
+    set_Name: async function (text) {
         const addActivityPage = require('./addActivity.page.js');
-        return addActivityPage.set_Name(text);
+        return await addActivityPage.set_Name(text);
     },
 
-    click_Add_Button: function () {
+    click_Add_Button: async function () {
         const addActivityPage = require('./addActivity.page.js');
-        return addActivityPage.click_Add_Button();
+        return await addActivityPage.click_Add_Button();
     },
 
 }

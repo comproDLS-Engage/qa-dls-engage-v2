@@ -1,6 +1,6 @@
 Label,cssSelector,tagName,group,relation,extraInfo,returnValue,teacherAppLangEN,studentAppLangEN
 pageTitle,[data-tid=text-pageTitle],h1,dashboardPage,,,,"""Dashboard""","""Dashboard"""
-createPlaylistBtn,[data-tid=button-CreatePlaylist],button,dashboardPage,,,createPlaylistDialog,"""Create Playlist""","""Create Playlist"""
+createPlaylistBtn,[data-tid=button-createPlaylist],button,dashboardPage,,,createPlaylistDialog,"""Create Playlist""","""Create Playlist"""
 addBookBtn,[data-tid=button-addBook],button,dashboardPage,,,addBook.page,"""Add Book""","""Add Book"""
 cardSliderTitle,[data-tid=text-cardSliderTitle],p,dashboardPage,,,,"""Getting started""","""Getting started"""
 cardSliderSubtitle,[data-tid=text-cardSliderSubtitle],p,dashboardPage,,,,"""Use your dashboard to pin your textbooks and create playlists to share with your class.""","""Use your dashboard to pin your textbooks and create playlists."""
@@ -35,7 +35,7 @@ removeBook_removeBtn,[data-tid=button-primary-removeBook],button,removeBookDialo
 createPlaylist_label,[data-tid=text-createPlaylistLabel],label,createPlaylistDialog,,,,"""Playlist Name""","""Playlist Name"""
 createPlaylist_input,[id=input-createPlaylist],input,createPlaylistDialog,,,,"",""
 createPlaylist_cancelBtn,[data-tid=button-cancelCreatePlaylist],button,createPlaylistDialog,,,"waitForDisplayed, createPlaylist_cancelBtn, undefined, true","""Cancel""","""Cancel"""
-createPlaylist_createBtn,[data-tid=button-createPlaylist],button,createPlaylistDialog,,,playlist,"""Create""","""Create"""
+createPlaylist_createBtn,[class*=MuiDialog] [data-tid=button-createPlaylist],button,createPlaylistDialog,,,playlist,"""Create""","""Create"""
 exploreHeading,[data-tid=text-explore],p,dashboardPage,,,,"""Explore""","""Explore"""
 viewAllBtn,[data-tid=btn-label-viewall],button,dashboardPage,,,browse.page,"""View All""","""View All"""
 resourceTitle,[data-tid*=item-globalresource] p:nth-child(1),button,resources,condition,pattern,browse.page,"[""Interactive Activities"",""Videos"",""Online Class"",""Teacher Training"",""Today in Class"",""Projectables""]","[""Interactive Activities"",""Videos""]"

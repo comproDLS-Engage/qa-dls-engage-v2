@@ -88,203 +88,203 @@ module.exports = {
     changeCard_btn: selectorFile.css.ComproEngage.settings.changeCard_btn,
     updateBillingAddress_btn: selectorFile.css.ComproEngage.settings.updateBillingAddress_btn,
 
-    isInitialized: function() {
+    isInitialized: async function() {
         let res;
-        logger.logInto(stackTrace.get());
-        action.waitForDocumentLoad();
+        await logger.logInto(await stackTrace.get());
+        await action.waitForDocumentLoad();
         res = {
-            pageStatus: action.waitForDisplayed(this.pageTitle),
-            appShell: appShell.isInitialized()
+            pageStatus: await action.waitForDisplayed(this.pageTitle),
+            appShell: await appShell.isInitialized()
         };
         return res;
     },
 
-    getSettingsPageData: function() {
-        logger.logInto(stackTrace.get());
+    getSettingsPageData: async function() {
+        await logger.logInto(await stackTrace.get());
         let obj = {
-            pageStatus: action.waitForDisplayed(this.pageTitle),
-            pageTitle: action.getElementCount(this.pageTitle) > 0 ? action.getText(this.pageTitle) : null,
-            pageSubTitle: action.getElementCount(this.pageSubTitle) > 0 ? action.getText(this.pageSubTitle) : null,
+            pageStatus: await action.waitForDisplayed(this.pageTitle),
+            pageTitle: (await action.getElementCount(this.pageTitle)) > 0 ? await action.getText(this.pageTitle) : null,
+            pageSubTitle: (await action.getElementCount(this.pageSubTitle)) > 0 ? await action.getText(this.pageSubTitle) : null,
             tabsList: null,
             selectedTab: null
         }
 
-        var tabInfo = appShell.getTabsListData();
+        var tabInfo = await appShell.getTabsListData();
         obj.tabsList = tabInfo.list;
         obj.selectedTab = tabInfo.selected;
         return obj;
     },
 
-    getProfileTabData: function() {
-        logger.logInto(stackTrace.get());
+    getProfileTabData: async function() {
+        await logger.logInto(await stackTrace.get());
         let obj = {
-            pageHeading: action.getElementCount(this.pageHeading) > 0 ? action.getText(this.pageHeading) : null,
-            email_label: action.getElementCount(this.email_label) > 0 ? action.getText(this.email_label) : null,
-            email_input: action.getElementCount(this.email_input) > 0 ? action.getAttribute(this.email_input, "value") : null,
-            email_input_readOnly: action.getElementCount(this.email_input) > 0 ? action.getAttribute(this.email_input, "disabled") : null,
-            firstName_label: action.getElementCount(this.firstName_label) > 0 ? action.getText(this.firstName_label) : null,
-            firstName_input: action.getElementCount(this.firstName_input) > 0 ? action.getAttribute(this.firstName_input, "value") : null,
-            lastName_label: action.getElementCount(this.lastName_label) > 0 ? action.getText(this.lastName_label) : null,
-            lastName_input: action.getElementCount(this.lastName_input) > 0 ? action.getAttribute(this.lastName_input, "value") : null,
-            country_label: action.getElementCount(this.country_label) > 0 ? action.getText(this.country_label) : null,
-            country_input_placeholder: action.getElementCount(this.country_input) > 0 ? action.getAttribute(this.country_input, "placeholder") : null,
-            country_input_value: action.getElementCount(this.country_input) > 0 ? action.getAttribute(this.country_input, "value") : null,
-            changeProfile_button: action.getElementCount(this.changeProfile_button) > 0 ? action.getText(this.changeProfile_button) : null
+            pageHeading: (await action.getElementCount(this.pageHeading)) > 0 ? await action.getText(this.pageHeading) : null,
+            email_label: (await action.getElementCount(this.email_label)) > 0 ? await action.getText(this.email_label) : null,
+            email_input: (await action.getElementCount(this.email_input)) > 0 ? await action.getAttribute(this.email_input, "value") : null,
+            email_input_readOnly: (await action.getElementCount(this.email_input)) > 0 ? await action.getAttribute(this.email_input, "disabled") : null,
+            firstName_label: (await action.getElementCount(this.firstName_label)) > 0 ? await action.getText(this.firstName_label) : null,
+            firstName_input: (await action.getElementCount(this.firstName_input)) > 0 ? await action.getAttribute(this.firstName_input, "value") : null,
+            lastName_label: (await action.getElementCount(this.lastName_label)) > 0 ? await action.getText(this.lastName_label) : null,
+            lastName_input: (await action.getElementCount(this.lastName_input)) > 0 ? await action.getAttribute(this.lastName_input, "value") : null,
+            country_label: (await action.getElementCount(this.country_label)) > 0 ? await action.getText(this.country_label) : null,
+            country_input_placeholder: (await action.getElementCount(this.country_input)) > 0 ? await action.getAttribute(this.country_input, "placeholder") : null,
+            country_input_value: (await action.getElementCount(this.country_input)) > 0 ? await action.getAttribute(this.country_input, "value") : null,
+            changeProfile_button: (await action.getElementCount(this.changeProfile_button)) > 0 ? await action.getText(this.changeProfile_button) : null
         }
         return obj;
     },
 
-    setFirstName: function(name) {
+    setFirstName: async function(name) {
         let res;
-        logger.logInto(stackTrace.get());
-        res = action.setValue(this.firstName_input, name);
+        await logger.logInto(await stackTrace.get());
+        res = await action.setValue(this.firstName_input, name);
         if (res == true) {
-            logger.logInto(stackTrace.get(), " -- First Name Entered");
+            await logger.logInto(await stackTrace.get(), " -- First Name Entered");
         } else {
             res = res + " -- First Name Not Entered";
-            logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    setLastName: function(lastname) {
+    setLastName: async function(lastname) {
         let res;
-        logger.logInto(stackTrace.get());
-        res = action.setValue(this.lastName_input, lastname);
+        await logger.logInto(await stackTrace.get());
+        res = await action.setValue(this.lastName_input, lastname);
         if (res == true) {
-            logger.logInto(stackTrace.get(), " -- Last Name Entered");
+            await logger.logInto(await stackTrace.get(), " -- Last Name Entered");
         } else {
             res = res + " -- Last Name Not Entered";
-            logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    setCountry: function(countryName) {
+    setCountry: async function(countryName) {
         let res;
-        logger.logInto(stackTrace.get());
-        res = action.click(this.country_input)
+        await logger.logInto(await stackTrace.get());
+        res = await action.click(this.country_input)
         if (res == true) {
-            res = action.setValue(this.country_input, countryName);
+            res = await action.setValue(this.country_input, countryName);
             if (res == true) {
-                res = action.waitForDisplayed(this.countryListItem)
+                res = await action.waitForDisplayed(this.countryListItem)
                 if (res == true) {
-                    res = action.click(this.countryListItem)
+                    res = await action.click(this.countryListItem)
                     if (res == true) {
-                        logger.logInto(stackTrace.get(), " -- Country Name Entered");
+                        await logger.logInto(await stackTrace.get(), " -- Country Name Entered");
                     }
                 } else
-                    logger.logInto(stackTrace.get(), res + " -- Country Name Not Entered", 'error');
+                    await logger.logInto(await stackTrace.get(), res + " -- Country Name Not Entered", 'error');
             }
         }
         return res;
     },
 
-    clickClose: function() {
+    clickClose: async function() {
         let res;
-        logger.logInto(stackTrace.get());
-        res = action.moveTo(this.country_input, 0, 0)
+        await logger.logInto(await stackTrace.get());
+        res = await action.moveTo(this.country_input, 0, 0)
         if (res == true) {
-            res = action.click(this.clearIcon);
+            res = await action.click(this.clearIcon);
             if (res == true) {
-                res = action.getAttribute(this.country_input, "value");
-                logger.logInto(stackTrace.get(), " -- Close Icon Clicked");
+                res = await action.getAttribute(this.country_input, "value");
+                await logger.logInto(await stackTrace.get(), " -- Close Icon Clicked");
             } else {
                 res = res + " -- Close Icon Not Clicked";
-                logger.logInto(stackTrace.get(), res, 'error');
+                await logger.logInto(await stackTrace.get(), res, 'error');
             }
         }
         return res;
     },
 
-    clickUpdateSettingsProfile: function() {
+    clickUpdateSettingsProfile: async function() {
         let res;
-        logger.logInto(stackTrace.get());
-        res = action.click(this.changeProfile_button);
+        await logger.logInto(await stackTrace.get());
+        res = await action.click(this.changeProfile_button);
         if (res == true) {
-            logger.logInto(stackTrace.get(), " -- Update Settings Clicked");
+            await logger.logInto(await stackTrace.get(), " -- Update Settings Clicked");
         } else {
             res = res + " -- Update Settings Not Clicked";
-            logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    getErrorMessages: function() {
-        logger.logInto(stackTrace.get());
+    getErrorMessages: async function() {
+        await logger.logInto(await stackTrace.get());
         let obj = {
             //profile
-            firstNameError_text: action.getElementCount(this.firstNameError_text) > 0 ? action.getText(this.firstNameError_text) : null,
-            lastNameError_text: action.getElementCount(this.lastNameError_text) > 0 ? action.getText(this.lastNameError_text) : null,
+            firstNameError_text: (await action.getElementCount(this.firstNameError_text)) > 0 ? await action.getText(this.firstNameError_text) : null,
+            lastNameError_text: (await action.getElementCount(this.lastNameError_text)) > 0 ? await action.getText(this.lastNameError_text) : null,
             //password
-            currentPasswordError_text: action.getElementCount(this.currentPasswordError_text) > 0 ? action.getText(this.currentPasswordError_text) : null,
-            newPasswordError_text: action.getElementCount(this.newPasswordError_text) > 0 ? action.getText(this.newPasswordError_text) : null,
-            confirmPasswordError_text: action.getElementCount(this.confirmPasswordError_text) > 0 ? action.getText(this.confirmPasswordError_text) : null
+            currentPasswordError_text: (await action.getElementCount(this.currentPasswordError_text)) > 0 ? await action.getText(this.currentPasswordError_text) : null,
+            newPasswordError_text: (await action.getElementCount(this.newPasswordError_text)) > 0 ? await action.getText(this.newPasswordError_text) : null,
+            confirmPasswordError_text: (await action.getElementCount(this.confirmPasswordError_text)) > 0 ? await action.getText(this.confirmPasswordError_text) : null
         }
         //console.log(obj)
         return obj;
     },
 
-    getPasswordTabData: function() {
-        logger.logInto(stackTrace.get());
+    getPasswordTabData: async function() {
+        await logger.logInto(await stackTrace.get());
         let obj = {
             //password
-            pageHeading: action.getElementCount(this.pageHeading) > 0 ? action.getText(this.pageHeading) : null,
-            currentPassword_label: action.getElementCount(this.currentPassword_label) > 0 ? action.getText(this.currentPassword_label) : null,
-            currentPassword_input: action.getElementCount(this.currentPassword_input) > 0 ? action.getText(this.currentPassword_input) : null,
-            togglePassword_currentPassword: action.getElementCount(this.togglePassword_currentPassword) > 0 ? action.waitForExist(this.togglePassword_currentPassword) : null,
-            password_label: action.getElementCount(this.password_label) > 0 ? action.getText(this.password_label) : null,
-            password_input: action.getElementCount(this.password_input) > 0 ? action.getText(this.password_input) : null,
-            confirmPassword_label: action.getElementCount(this.confirmPassword_label) > 0 ? action.getText(this.confirmPassword_label) : null,
-            confirmPassword_input: action.getElementCount(this.confirmPassword_input) > 0 ? action.getText(this.confirmPassword_input) : null,
-            newPasswordRules_text: action.getElementCount(this.newPasswordRules_text) > 0 ? action.getText(this.newPasswordRules_text) : null,
-            changePassword_button: action.getElementCount(this.changePassword_button) > 0 ? action.getText(this.changePassword_button) : null
+            pageHeading: (await action.getElementCount(this.pageHeading)) > 0 ? await action.getText(this.pageHeading) : null,
+            currentPassword_label: (await action.getElementCount(this.currentPassword_label)) > 0 ? await action.getText(this.currentPassword_label) : null,
+            currentPassword_input: (await action.getElementCount(this.currentPassword_input)) > 0 ? await action.getText(this.currentPassword_input) : null,
+            togglePassword_currentPassword: (await action.getElementCount(this.togglePassword_currentPassword)) > 0 ? await action.waitForExist(this.togglePassword_currentPassword) : null,
+            password_label: (await action.getElementCount(this.password_label)) > 0 ? await action.getText(this.password_label) : null,
+            password_input: (await action.getElementCount(this.password_input)) > 0 ? await action.getText(this.password_input) : null,
+            confirmPassword_label: (await action.getElementCount(this.confirmPassword_label)) > 0 ? await action.getText(this.confirmPassword_label) : null,
+            confirmPassword_input: (await action.getElementCount(this.confirmPassword_input)) > 0 ? await action.getText(this.confirmPassword_input) : null,
+            newPasswordRules_text: (await action.getElementCount(this.newPasswordRules_text)) > 0 ? await action.getText(this.newPasswordRules_text) : null,
+            changePassword_button: (await action.getElementCount(this.changePassword_button)) > 0 ? await action.getText(this.changePassword_button) : null
         }
         //console.log(obj)
         return obj;
     },
 
-    setCurrentPassword: function(password) {
+    setCurrentPassword: async function(password) {
         let res;
-        logger.logInto(stackTrace.get());
-        res = action.setValue(this.currentPassword_input, password);
+        await logger.logInto(await stackTrace.get());
+        res = await action.setValue(this.currentPassword_input, password);
         if (res == true) {
-            logger.logInto(stackTrace.get(), " --Current password Entered");
+            await logger.logInto(await stackTrace.get(), " --Current password Entered");
         } else {
             res = res + " -- Current password Not Entered";
-            logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    setNewPassword: function(password) {
+    setNewPassword: async function(password) {
         let res;
-        logger.logInto(stackTrace.get());
-        res = action.setValue(this.password_input, password);
+        await logger.logInto(await stackTrace.get());
+        res = await action.setValue(this.password_input, password);
         if (res == true) {
-            logger.logInto(stackTrace.get(), " --New Password Entered");
+            await logger.logInto(await stackTrace.get(), " --New Password Entered");
         } else {
             res = res + " -- New Password Not Entered";
-            logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    setConfirmPassword: function(password) {
+    setConfirmPassword: async function(password) {
         let res;
-        logger.logInto(stackTrace.get());
-        res = action.setValue(this.confirmPassword_input, password);
+        await logger.logInto(await stackTrace.get());
+        res = await action.setValue(this.confirmPassword_input, password);
         if (res == true) {
-            logger.logInto(stackTrace.get(), " --Confirm Password Entered");
+            await logger.logInto(await stackTrace.get(), " --Confirm Password Entered");
         } else {
             res = res + " -- Confirm Password Not Entered";
-            logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
     ////TBD - password text to be extracted. getText and getValue not working
-    // togglePasswordVisibility: function() {
+    // togglePasswordVisibility: async function() {
     //     let res;
     //     logger.logInto(stackTrace.get());
     //     browser.pause(2000)
@@ -310,354 +310,354 @@ module.exports = {
     //     return res;
     // },
 
-    clickUpdateSettingsPassword: function() {
+    clickUpdateSettingsPassword: async function() {
         let res;
-        logger.logInto(stackTrace.get());
-        res = action.click(this.changePassword_button);
+        await logger.logInto(await stackTrace.get());
+        res = await action.click(this.changePassword_button);
         if (res == true) {
-            logger.logInto(stackTrace.get(), " -- Update Settings Clicked");
+            await logger.logInto(await stackTrace.get(), " -- Update Settings Clicked");
         } else {
             res = res + " -- Update Settings Not Clicked";
-            logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    getAccessibilityTabData: function() {
-        logger.logInto(stackTrace.get());
+    getAccessibilityTabData: async function() {
+        await logger.logInto(await stackTrace.get());
         let obj = {
-            pageHeading: action.getElementCount(this.pageHeading) > 0 ? action.getText(this.pageHeading) : null,
-            fontSizeText: (action.getElementCount(this.fontSizeText) > 0) ? action.getText(this.fontSizeText) : null,
-            fontSizeValue: (action.getElementCount(this.fontSizeValue) > 0) ? action.getText(this.fontSizeValue) : null,
-            fontSizeDec: (action.getElementCount(this.fontSizeDec) > 0) ? action.getText(this.fontSizeDec) : null,
-            fontSizeInc: (action.getElementCount(this.fontSizeInc) > 0) ? action.getText(this.fontSizeInc) : null,
-            lineSpaceText: (action.getElementCount(this.lineSpaceText) > 0) ? action.getText(this.lineSpaceText) : null,
-            lineSpaceValue: (action.getElementCount(this.lineSpaceValue) > 0) ? action.getText(this.lineSpaceValue) : null,
-            lineSpaceDec: (action.getElementCount(this.lineSpaceDec) > 0) ? action.getText(this.lineSpaceDec) : null,
-            lineSpaceInc: (action.getElementCount(this.lineSpaceInc) > 0) ? action.getText(this.lineSpaceInc) : null,
-            highContrastText: (action.getElementCount(this.highContrastText) > 0) ? action.getText(this.highContrastText) : null,
-            highContrastToggleBtn: (action.getElementCount(this.highContrastToggleBtn) > 0) ? action.getText(this.highContrastToggleBtn) : null,
-            dylexicFontText: (action.getElementCount(this.dylexicFontText) > 0) ? action.getText(this.dylexicFontText) : null,
-            dylexicFontToggleBtn: (action.getElementCount(this.dylexicFontToggleBtn) > 0) ? action.getText(this.dylexicFontToggleBtn) : null,
-            underlinelinksText: (action.getElementCount(this.underlinelinksText) > 0) ? action.getText(this.underlinelinksText) : null,
-            underlinelinksToggleBtn: (action.getElementCount(this.underlinelinksToggleBtn) > 0) ? action.getText(this.underlinelinksToggleBtn) : null,
-            previewTextHeading: (action.getElementCount(this.previewTextHeading) > 0) ? action.getText(this.previewTextHeading) : null,
-            previewTextPara: (action.getElementCount(this.previewTextPara) > 0) ? action.getText(this.previewTextPara) : null,
-            previewLinkText: (action.getElementCount(this.previewLinkText) > 0) ? action.getText(this.previewLinkText) : null,
-            button1: (action.getElementCount(this.button1) > 0) ? action.getText(this.button1) : null,
-            button2: (action.getElementCount(this.button2) > 0) ? action.getText(this.button2) : null,
-            moreDetailsBtn: (action.getElementCount(this.moreDetailsBtn) > 0) ? action.getText(this.moreDetailsBtn) : null,
-            resetButton: (action.getElementCount(this.resetButton) > 0) ? action.getText(this.resetButton) : null,
-            applySettingsBtn: (action.getElementCount(this.applySettingsBtn) > 0) ? action.getText(this.applySettingsBtn) : null
+            pageHeading: (await action.getElementCount(this.pageHeading)) > 0 ? await action.getText(this.pageHeading) : null,
+            fontSizeText: ((await action.getElementCount(this.fontSizeText)) > 0) ? await action.getText(this.fontSizeText) : null,
+            fontSizeValue: ((await action.getElementCount(this.fontSizeValue)) > 0) ? await action.getText(this.fontSizeValue) : null,
+            fontSizeDec: ((await action.getElementCount(this.fontSizeDec)) > 0) ? await action.getText(this.fontSizeDec) : null,
+            fontSizeInc: ((await action.getElementCount(this.fontSizeInc)) > 0) ? await action.getText(this.fontSizeInc) : null,
+            lineSpaceText: ((await action.getElementCount(this.lineSpaceText)) > 0) ? await action.getText(this.lineSpaceText) : null,
+            lineSpaceValue: ((await action.getElementCount(this.lineSpaceValue)) > 0) ? await action.getText(this.lineSpaceValue) : null,
+            lineSpaceDec: ((await action.getElementCount(this.lineSpaceDec)) > 0) ? await action.getText(this.lineSpaceDec) : null,
+            lineSpaceInc: ((await action.getElementCount(this.lineSpaceInc)) > 0) ? await action.getText(this.lineSpaceInc) : null,
+            highContrastText: ((await action.getElementCount(this.highContrastText)) > 0) ? await action.getText(this.highContrastText) : null,
+            highContrastToggleBtn: ((await action.getElementCount(this.highContrastToggleBtn)) > 0) ? await action.getText(this.highContrastToggleBtn) : null,
+            dylexicFontText: ((await action.getElementCount(this.dylexicFontText)) > 0) ? await action.getText(this.dylexicFontText) : null,
+            dylexicFontToggleBtn: ((await action.getElementCount(this.dylexicFontToggleBtn)) > 0) ? await action.getText(this.dylexicFontToggleBtn) : null,
+            underlinelinksText: ((await action.getElementCount(this.underlinelinksText)) > 0) ? await action.getText(this.underlinelinksText) : null,
+            underlinelinksToggleBtn: ((await action.getElementCount(this.underlinelinksToggleBtn)) > 0) ? await action.getText(this.underlinelinksToggleBtn) : null,
+            previewTextHeading: ((await action.getElementCount(this.previewTextHeading)) > 0) ? await action.getText(this.previewTextHeading) : null,
+            previewTextPara: ((await action.getElementCount(this.previewTextPara)) > 0) ? await action.getText(this.previewTextPara) : null,
+            previewLinkText: ((await action.getElementCount(this.previewLinkText)) > 0) ? await action.getText(this.previewLinkText) : null,
+            button1: ((await action.getElementCount(this.button1)) > 0) ? await action.getText(this.button1) : null,
+            button2: ((await action.getElementCount(this.button2)) > 0) ? await action.getText(this.button2) : null,
+            moreDetailsBtn: ((await action.getElementCount(this.moreDetailsBtn)) > 0) ? await action.getText(this.moreDetailsBtn) : null,
+            resetButton: ((await action.getElementCount(this.resetButton)) > 0) ? await action.getText(this.resetButton) : null,
+            applySettingsBtn: ((await action.getElementCount(this.applySettingsBtn)) > 0) ? await action.getText(this.applySettingsBtn) : null
         }
         //console.log(obj)
         return obj;
     },
 
-    getCssPropertyData: function() {
-        logger.logInto(stackTrace.get());
-        action.scrollIntoView(this.pageHeading)
+    getCssPropertyData: async function() {
+        await logger.logInto(await stackTrace.get());
+        await action.scrollIntoView(this.pageHeading)
         let obj = {
-            pageHeading_font: action.getElementCount(this.pageHeading) > 0 ? action.getCSSProperty(this.pageHeading, 'font-family').value : null,
-            pageHeading_lineHeight: action.getElementCount(this.pageHeading) > 0 ? action.getCSSProperty(this.pageHeading, 'line-height').value : null,
-            pageHeading_fontSize: action.getElementCount(this.pageHeading) > 0 ? action.getCSSProperty(this.pageHeading, 'font-size').value : null,
+            pageHeading_font: (await action.getElementCount(this.pageHeading)) > 0 ? (await action.getCSSProperty(this.pageHeading, 'font-family')).value : null,
+            pageHeading_lineHeight: (await action.getElementCount(this.pageHeading)) > 0 ? (await action.getCSSProperty(this.pageHeading, 'line-height')).value : null,
+            pageHeading_fontSize: (await action.getElementCount(this.pageHeading)) > 0 ? (await action.getCSSProperty(this.pageHeading, 'font-size')).value : null,
 
-            previewTextHeading_font: (action.getElementCount(this.previewTextHeading) > 0) ? action.getCSSProperty(this.previewTextHeading, 'font-family').value : null,
-            previewTextHeading_lineHeight: (action.getElementCount(this.previewTextHeading) > 0) ? action.getCSSProperty(this.previewTextHeading, 'line-height').value : null,
-            previewTextHeading_fontSize: (action.getElementCount(this.previewTextHeading) > 0) ? action.getCSSProperty(this.previewTextHeading, 'font-size').value : null,
+            previewTextHeading_font: ((await action.getElementCount(this.previewTextHeading)) > 0) ? (await action.getCSSProperty(this.previewTextHeading, 'font-family')).value : null,
+            previewTextHeading_lineHeight: ((await action.getElementCount(this.previewTextHeading)) > 0) ? (await action.getCSSProperty(this.previewTextHeading, 'line-height')).value : null,
+            previewTextHeading_fontSize: ((await action.getElementCount(this.previewTextHeading)) > 0) ? (await action.getCSSProperty(this.previewTextHeading, 'font-size')).value : null,
 
-            previewTextPara_font: (action.getElementCount(this.previewTextPara) > 0) ? action.getCSSProperty(this.previewTextPara, 'font-family').value : null,
-            previewTextPara_lineHeight: (action.getElementCount(this.previewTextPara) > 0) ? action.getCSSProperty(this.previewTextPara, 'line-height').value : null,
-            previewTextPara_fontSize: (action.getElementCount(this.previewTextPara) > 0) ? action.getCSSProperty(this.previewTextPara, 'font-size').value : null,
+            previewTextPara_font: ((await action.getElementCount(this.previewTextPara)) > 0) ? (await action.getCSSProperty(this.previewTextPara, 'font-family')).value : null,
+            previewTextPara_lineHeight: ((await action.getElementCount(this.previewTextPara)) > 0) ? (await action.getCSSProperty(this.previewTextPara, 'line-height')).value : null,
+            previewTextPara_fontSize: ((await action.getElementCount(this.previewTextPara)) > 0) ? (await action.getCSSProperty(this.previewTextPara, 'font-size')).value : null,
 
-            previewLinkText_font: (action.getElementCount(this.previewLinkText) > 0) ? action.getCSSProperty(this.previewLinkText, 'font-family').value : null,
-            previewLinkText_lineHeight: (action.getElementCount(this.previewLinkText) > 0) ? action.getCSSProperty(this.previewLinkText, 'line-height').value : null,
-            previewLinkText_fontSize: (action.getElementCount(this.previewLinkText) > 0) ? action.getCSSProperty(this.previewLinkText, 'font-size').value : null,
-            previewLinkText_textDecoration: (action.getElementCount(this.previewLinkText) > 0) ? action.getCSSProperty(this.previewLinkText, 'text-decoration').value : null,
-            previewLinkText_color: (action.getElementCount(this.previewLinkText) > 0) ? action.getCSSProperty(this.previewLinkText, 'color').value : null,
+            previewLinkText_font: ((await action.getElementCount(this.previewLinkText)) > 0) ? (await action.getCSSProperty(this.previewLinkText, 'font-family')).value : null,
+            previewLinkText_lineHeight: ((await action.getElementCount(this.previewLinkText)) > 0) ? (await action.getCSSProperty(this.previewLinkText, 'line-height')).value : null,
+            previewLinkText_fontSize: ((await action.getElementCount(this.previewLinkText)) > 0) ? (await action.getCSSProperty(this.previewLinkText, 'font-size')).value : null,
+            previewLinkText_textDecoration: ((await action.getElementCount(this.previewLinkText)) > 0) ? (await action.getCSSProperty(this.previewLinkText, 'text-decoration')).value : null,
+            previewLinkText_color: ((await action.getElementCount(this.previewLinkText)) > 0) ? (await action.getCSSProperty(this.previewLinkText, 'color')).value : null,
 
-            button1_font: (action.getElementCount(this.button1) > 0) ? action.getCSSProperty(this.button1, 'font-family').value : null,
-            button1_lineHeight: (action.getElementCount(this.button1) > 0) ? action.getCSSProperty(this.button1, 'line-height').value : null,
-            button1_fontSize: (action.getElementCount(this.button1) > 0) ? action.getCSSProperty(this.button1, 'font-size').value : null,
-            button1_textDecoration: (action.getElementCount(this.button1) > 0) ? action.getCSSProperty(this.button1, 'text-decoration').value : null,
-            button1_color: (action.getElementCount(this.button1) > 0) ? action.getCSSProperty(this.button1, 'color').value : null,
+            button1_font: ((await action.getElementCount(this.button1)) > 0) ? (await action.getCSSProperty(this.button1, 'font-family')).value : null,
+            button1_lineHeight: ((await action.getElementCount(this.button1)) > 0) ? (await action.getCSSProperty(this.button1, 'line-height')).value : null,
+            button1_fontSize: ((await action.getElementCount(this.button1)) > 0) ? (await action.getCSSProperty(this.button1, 'font-size')).value : null,
+            button1_textDecoration: ((await action.getElementCount(this.button1)) > 0) ? (await action.getCSSProperty(this.button1, 'text-decoration')).value : null,
+            button1_color: ((await action.getElementCount(this.button1)) > 0) ? (await action.getCSSProperty(this.button1, 'color')).value : null,
 
-            button2_font: (action.getElementCount(this.button2) > 0) ? action.getCSSProperty(this.button2, 'font-family').value : null,
-            button2_lineHeight: (action.getElementCount(this.button2) > 0) ? action.getCSSProperty(this.button2, 'line-height').value : null,
-            button2_fontSize: (action.getElementCount(this.button2) > 0) ? action.getCSSProperty(this.button2, 'font-size').value : null,
-            button2_textDecoration: (action.getElementCount(this.button2) > 0) ? action.getCSSProperty(this.button2, 'text-decoration').value : null,
-            button2_bgcolor: (action.getElementCount(this.button2) > 0) ? action.getCSSProperty(this.button2, 'background-color').value : null,
+            button2_font: ((await action.getElementCount(this.button2)) > 0) ? (await action.getCSSProperty(this.button2, 'font-family')).value : null,
+            button2_lineHeight: ((await action.getElementCount(this.button2)) > 0) ? (await action.getCSSProperty(this.button2, 'line-height')).value : null,
+            button2_fontSize: ((await action.getElementCount(this.button2)) > 0) ? (await action.getCSSProperty(this.button2, 'font-size')).value : null,
+            button2_textDecoration: ((await action.getElementCount(this.button2)) > 0) ? (await action.getCSSProperty(this.button2, 'text-decoration')).value : null,
+            button2_bgcolor: ((await action.getElementCount(this.button2)) > 0) ? (await action.getCSSProperty(this.button2, 'background-color')).value : null,
 
-            moreDetailsBtn_font: (action.getElementCount(this.moreDetailsBtn) > 0) ? action.getCSSProperty(this.moreDetailsBtn, 'font-family').value : null,
-            moreDetailsBtn_lineHeight: (action.getElementCount(this.moreDetailsBtn) > 0) ? action.getCSSProperty(this.moreDetailsBtn, 'line-height').value : null,
-            moreDetailsBtn_fontSize: (action.getElementCount(this.moreDetailsBtn) > 0) ? action.getCSSProperty(this.moreDetailsBtn, 'font-size').value : null,
-            moreDetailsBtn_textDecoration: (action.getElementCount(this.moreDetailsBtn) > 0) ? action.getCSSProperty(this.moreDetailsBtn, 'text-decoration').value : null,
-            moreDetailsBtn_color: (action.getElementCount(this.moreDetailsBtn) > 0) ? action.getCSSProperty(this.moreDetailsBtn, 'color').value : null,
+            moreDetailsBtn_font: ((await action.getElementCount(this.moreDetailsBtn)) > 0) ? (await action.getCSSProperty(this.moreDetailsBtn, 'font-family')).value : null,
+            moreDetailsBtn_lineHeight: ((await action.getElementCount(this.moreDetailsBtn)) > 0) ? (await action.getCSSProperty(this.moreDetailsBtn, 'line-height')).value : null,
+            moreDetailsBtn_fontSize: ((await action.getElementCount(this.moreDetailsBtn)) > 0) ? (await action.getCSSProperty(this.moreDetailsBtn, 'font-size')).value : null,
+            moreDetailsBtn_textDecoration: ((await action.getElementCount(this.moreDetailsBtn)) > 0) ? (await action.getCSSProperty(this.moreDetailsBtn, 'text-decoration')).value : null,
+            moreDetailsBtn_color: ((await action.getElementCount(this.moreDetailsBtn)) > 0) ? (await action.getCSSProperty(this.moreDetailsBtn, 'color')).value : null,
 
-            resetButton_font: (action.getElementCount(this.resetButton) > 0) ? action.getCSSProperty(this.resetButton, 'font-family').value : null,
-            resetButton_lineHeight: (action.getElementCount(this.resetButton) > 0) ? action.getCSSProperty(this.resetButton, 'line-height').value : null,
-            resetButton_fontSize: (action.getElementCount(this.resetButton) > 0) ? action.getCSSProperty(this.resetButton, 'font-size').value : null,
-            resetButton_textDecoration: (action.getElementCount(this.resetButton) > 0) ? action.getCSSProperty(this.resetButton, 'text-decoration').value : null,
-            resetButton_color: (action.getElementCount(this.resetButton) > 0) ? action.getCSSProperty(this.resetButton, 'color').value : null,
+            resetButton_font: ((await action.getElementCount(this.resetButton)) > 0) ? (await action.getCSSProperty(this.resetButton, 'font-family')).value : null,
+            resetButton_lineHeight: ((await action.getElementCount(this.resetButton)) > 0) ? (await action.getCSSProperty(this.resetButton, 'line-height')).value : null,
+            resetButton_fontSize: ((await action.getElementCount(this.resetButton)) > 0) ? (await action.getCSSProperty(this.resetButton, 'font-size')).value : null,
+            resetButton_textDecoration: ((await action.getElementCount(this.resetButton)) > 0) ? (await action.getCSSProperty(this.resetButton, 'text-decoration')).value : null,
+            resetButton_color: ((await action.getElementCount(this.resetButton)) > 0) ? (await action.getCSSProperty(this.resetButton, 'color')).value : null,
 
-            applySettingsBtn_font: (action.getElementCount(this.applySettingsBtn) > 0) ? action.getCSSProperty(this.applySettingsBtn, 'font-family').value : null,
-            applySettingsBtn_lineHeight: (action.getElementCount(this.applySettingsBtn) > 0) ? action.getCSSProperty(this.applySettingsBtn, 'line-height').value : null,
-            applySettingsBtn_fontSize: (action.getElementCount(this.applySettingsBtn) > 0) ? action.getCSSProperty(this.applySettingsBtn, 'font-size').value : null,
-            applySettingsBtn_textDecoration: (action.getElementCount(this.applySettingsBtn) > 0) ? action.getCSSProperty(this.applySettingsBtn, 'text-decoration').value : null,
-            applySettingsBtn_bgcolor: (action.getElementCount(this.applySettingsBtn) > 0) ? action.getCSSProperty(this.applySettingsBtn, 'background-color').value : null
+            applySettingsBtn_font: ((await action.getElementCount(this.applySettingsBtn)) > 0) ? (await action.getCSSProperty(this.applySettingsBtn, 'font-family')).value : null,
+            applySettingsBtn_lineHeight: ((await action.getElementCount(this.applySettingsBtn)) > 0) ? (await action.getCSSProperty(this.applySettingsBtn, 'line-height')).value : null,
+            applySettingsBtn_fontSize: ((await action.getElementCount(this.applySettingsBtn)) > 0) ? (await action.getCSSProperty(this.applySettingsBtn, 'font-size')).value : null,
+            applySettingsBtn_textDecoration: ((await action.getElementCount(this.applySettingsBtn)) > 0) ? (await action.getCSSProperty(this.applySettingsBtn, 'text-decoration')).value : null,
+            applySettingsBtn_bgcolor: ((await action.getElementCount(this.applySettingsBtn)) > 0) ? (await action.getCSSProperty(this.applySettingsBtn, 'background-color')).value : null
         }
         //console.log(obj)
         return obj;
     },
 
-    getResetSettingsModalData: function() {
-        logger.logInto(stackTrace.get());
+    getResetSettingsModalData: async function() {
+        await logger.logInto(await stackTrace.get());
         let obj = {
-            resetSettingsTitle: action.getElementCount(this.resetSettingsTitle) > 0 ? action.getText(this.resetSettingsTitle) : null,
-            resetSettingsSubTitle: (action.getElementCount(this.resetSettingsSubTitle) > 0) ? action.getText(this.resetSettingsSubTitle) : null,
-            resetSettingsCancelBtn: (action.getElementCount(this.resetSettingsCancelBtn) > 0) ? action.getText(this.resetSettingsCancelBtn) : null,
-            resetSettingsConfirmBtn: (action.getElementCount(this.resetSettingsConfirmBtn) > 0) ? action.getText(this.resetSettingsConfirmBtn) : null
+            resetSettingsTitle: (await action.getElementCount(this.resetSettingsTitle)) > 0 ? await action.getText(this.resetSettingsTitle) : null,
+            resetSettingsSubTitle: ((await action.getElementCount(this.resetSettingsSubTitle)) > 0) ? await action.getText(this.resetSettingsSubTitle) : null,
+            resetSettingsCancelBtn: ((await action.getElementCount(this.resetSettingsCancelBtn)) > 0) ? await action.getText(this.resetSettingsCancelBtn) : null,
+            resetSettingsConfirmBtn: ((await action.getElementCount(this.resetSettingsConfirmBtn)) > 0) ? await action.getText(this.resetSettingsConfirmBtn) : null
         }
         //console.log(obj)
         return obj;
     },
 
-    click_fontSizeDec: function(count) {
-        logger.logInto(stackTrace.get());
+    click_fontSizeDec: async function(count) {
+        await logger.logInto(await stackTrace.get());
         let res, itr;
         for (itr = 0; itr < count; itr++) {
-            res = action.click(this.fontSizeDec);
+            res = await action.click(this.fontSizeDec);
         }
 
         if (true == res) {
-            logger.logInto(stackTrace.get(), " fontSizeDec button is clicked");
+            await logger.logInto(await stackTrace.get(), " fontSizeDec button is clicked");
         } else {
-            logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    click_fontSizeInc: function(count) {
-        logger.logInto(stackTrace.get());
+    click_fontSizeInc: async function(count) {
+        await logger.logInto(await stackTrace.get());
         let res, itr;
         for (itr = 0; itr < count; itr++) {
-            res = action.click(this.fontSizeInc);
+            res = await action.click(this.fontSizeInc);
         }
         if (true == res) {
-            logger.logInto(stackTrace.get(), " fontSizeInc button is clicked");
+            await logger.logInto(await stackTrace.get(), " fontSizeInc button is clicked");
         } else {
-            logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    click_lineSpaceDec: function(count) {
-        logger.logInto(stackTrace.get());
+    click_lineSpaceDec: async function(count) {
+        await logger.logInto(await stackTrace.get());
         let res, itr;
         for (itr = 0; itr < count; itr++) {
-            res = action.click(this.lineSpaceDec);
+            res = await action.click(this.lineSpaceDec);
         }
         if (true == res) {
-            logger.logInto(stackTrace.get(), " lineSpaceDec button is clicked");
+            await logger.logInto(await stackTrace.get(), " lineSpaceDec button is clicked");
         } else {
-            logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    click_lineSpaceInc: function(count) {
-        logger.logInto(stackTrace.get());
+    click_lineSpaceInc: async function(count) {
+        await logger.logInto(await stackTrace.get());
         let res, itr;
         for (itr = 0; itr < count; itr++) {
-            res = action.click(this.lineSpaceInc);
+            res = await action.click(this.lineSpaceInc);
         }
         if (true == res) {
-            logger.logInto(stackTrace.get(), " lineSpaceInc button is clicked");
+            await logger.logInto(await stackTrace.get(), " lineSpaceInc button is clicked");
         } else {
-            logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    click_highContrastToggleBtn: function() {
+    click_highContrastToggleBtn: async function() {
         let res;
-        logger.logInto(stackTrace.get());
-        res = action.click(this.highContrastToggleBtn);
+        await logger.logInto(await stackTrace.get());
+        res = await action.click(this.highContrastToggleBtn);
         if (true == res) {
-            logger.logInto(stackTrace.get(), " highContrastToggleBtn button is clicked");
+            await logger.logInto(await stackTrace.get(), " highContrastToggleBtn button is clicked");
         } else {
-            logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    click_dylexicFontToggleBtn: function() {
+    click_dylexicFontToggleBtn: async function() {
         let res;
-        logger.logInto(stackTrace.get());
-        res = action.click(this.dylexicFontToggleBtn);
+        await logger.logInto(await stackTrace.get());
+        res = await action.click(this.dylexicFontToggleBtn);
         if (true == res) {
-            logger.logInto(stackTrace.get(), " dylexicFontToggleBtn button is clicked");
+            await logger.logInto(await stackTrace.get(), " dylexicFontToggleBtn button is clicked");
         } else {
-            logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    click_underlineLinksToggleBtn: function() {
+    click_underlineLinksToggleBtn: async function() {
         let res;
-        logger.logInto(stackTrace.get());
-        res = action.click(this.underlinelinksToggleBtn);
+        await logger.logInto(await stackTrace.get());
+        res = await action.click(this.underlinelinksToggleBtn);
         if (true == res) {
-            logger.logInto(stackTrace.get(), " underlinelinksToggleBtn button is clicked");
+            await logger.logInto(await stackTrace.get(), " underlinelinksToggleBtn button is clicked");
         } else {
-            logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    click_moreDetailsBtn: function() {
+    click_moreDetailsBtn: async function() {
         let res;
-        logger.logInto(stackTrace.get());
-        res = action.click(this.moreDetailsBtn);
+        await logger.logInto(await stackTrace.get());
+        res = await action.click(this.moreDetailsBtn);
         if (true == res) {
-            logger.logInto(stackTrace.get(), " moreDetailsBtn button is clicked");
+            await logger.logInto(await stackTrace.get(), " moreDetailsBtn button is clicked");
             //need to add return statement after switching to new tab - Akhil
         } else {
-            logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    click_resetButton: function() {
+    click_resetButton: async function() {
         let res;
-        logger.logInto(stackTrace.get());
-        res = action.click(this.resetButton);
+        await logger.logInto(await stackTrace.get());
+        res = await action.click(this.resetButton);
         if (true == res) {
-            res = this.getResetSettingsModalData()
-            logger.logInto(stackTrace.get(), " resetButton button is clicked");
+            res = await this.getResetSettingsModalData()
+            await logger.logInto(await stackTrace.get(), " resetButton button is clicked");
         } else {
-            logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    click_applySettingsButton: function() {
+    click_applySettingsButton: async function() {
         let res;
-        logger.logInto(stackTrace.get());
-        res = action.click(this.applySettingsBtn);
+        await logger.logInto(await stackTrace.get());
+        res = await action.click(this.applySettingsBtn);
         if (true == res) {
-            logger.logInto(stackTrace.get(), " applySettings button is clicked");
+            await logger.logInto(await stackTrace.get(), " applySettings button is clicked");
         } else {
-            logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    click_resetSettingsConfirmBtn: function() {
+    click_resetSettingsConfirmBtn: async function() {
         let res;
-        logger.logInto(stackTrace.get());
-        res = action.click(this.resetSettingsConfirmBtn);
+        await logger.logInto(await stackTrace.get());
+        res = await action.click(this.resetSettingsConfirmBtn);
         if (true == res) {
-            logger.logInto(stackTrace.get(), " Confirm button is clicked");
+            await logger.logInto(await stackTrace.get(), " Confirm button is clicked");
         } else {
-            logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    click_resetSettingsCancelBtn: function() {
+    click_resetSettingsCancelBtn: async function() {
         let res;
-        logger.logInto(stackTrace.get());
-        res = action.click(this.resetSettingsCancelBtn);
+        await logger.logInto(await stackTrace.get());
+        res = await action.click(this.resetSettingsCancelBtn);
         if (true == res) {
-            logger.logInto(stackTrace.get(), " Cancel button is clicked");
+            await logger.logInto(await stackTrace.get(), " Cancel button is clicked");
         } else {
-            logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
 
     },
 
-    getBillingTabData: function() {
-        logger.logInto(stackTrace.get());
+    getBillingTabData: async function() {
+        await logger.logInto(await stackTrace.get());
         let obj = {
-            pageHeading: action.getElementCount(this.subscription_text) > 0 ? action.getText(this.subscription_text) : null,
-            subscriptionSubtitle_text: action.getElementCount(this.subscriptionSubtitle_text) > 0 ? action.getText(this.subscriptionSubtitle_text) : null,
-            free_text: action.getElementCount(this.free_text) > 0 ? action.getText(this.free_text) : null,
-            getPremiumAccess_text: action.getElementCount(this.getPremiumAccess_text) > 0 ? action.getText(this.getPremiumAccess_text) : null,
-            getPremiumAccessSubtitle_text: action.getElementCount(this.getPremiumAccessSubtitle_text) > 0 ? action.getText(this.getPremiumAccessSubtitle_text) : null,
-            price_text: action.getElementCount(this.price_text) > 0 ? action.getText(this.price_text) : null,
-            upgradePlan_btn: action.getElementCount(this.upgradePlan_btn) > 0 ? action.getText(this.upgradePlan_btn) : null,
-            paymentMethod_text: action.getElementCount(this.paymentMethod_text) > 0 ? action.getText(this.paymentMethod_text) : null,
-            noPaymentMethod_text: action.getElementCount(this.noPaymentMethod_text) > 0 ? action.getText(this.noPaymentMethod_text) : null,
-            noPaymentMethodSubtitle_text: action.getElementCount(this.noPaymentMethodSubtitle_text) > 0 ? action.getText(this.noPaymentMethodSubtitle_text) : null,
-            billingMethod_text: action.getElementCount(this.billingMethod) > 0 ? action.getText(this.billingMethod) : null,
-            noBillingInfo_text: action.getElementCount(this.noBillingInfo_text) > 0 ? action.getText(this.noBillingInfo_text) : null,
-            premiumPlan_text: action.getElementCount(this.premiumPlan_text) > 0 ? action.getText(this.premiumPlan_text) : null,
-            active_text: action.getElementCount(this.active_text) > 0 ? action.getText(this.active_text) : null,
-            premiumPrice_text: action.getElementCount(this.premiumPrice_text) > 0 ? action.getText(this.premiumPrice_text) : null,
-            autoRenewal_text: action.getElementCount(this.autoRenewal_text) > 0 ? action.getText(this.autoRenewal_text) : null,
-            licensePeriod_text: action.getElementCount(this.licensePeriod_text) > 0 ? action.getText(this.licensePeriod_text) : null,
-            licensePeriod_date: action.getElementCount(this.licensePeriod_date) > 0 ? action.getText(this.licensePeriod_date) : null,
-            managePlan_btn: action.getElementCount(this.managePlan_btn) > 0 ? action.getText(this.managePlan_btn) : null,
-            changeCard_btn: action.getElementCount(this.changeCard_btn) > 0 ? action.getText(this.changeCard_btn) : null,
-            updateBillingAddress_btn: action.getElementCount(this.updateBillingAddress_btn) > 0 ? action.getText(this.updateBillingAddress_btn) : null
+            pageHeading: (await action.getElementCount(this.subscription_text)) > 0 ? await action.getText(this.subscription_text) : null,
+            subscriptionSubtitle_text: (await action.getElementCount(this.subscriptionSubtitle_text)) > 0 ? await action.getText(this.subscriptionSubtitle_text) : null,
+            free_text: (await action.getElementCount(this.free_text)) > 0 ? await action.getText(this.free_text) : null,
+            getPremiumAccess_text: (await action.getElementCount(this.getPremiumAccess_text)) > 0 ? await action.getText(this.getPremiumAccess_text) : null,
+            getPremiumAccessSubtitle_text: (await action.getElementCount(this.getPremiumAccessSubtitle_text)) > 0 ? await action.getText(this.getPremiumAccessSubtitle_text) : null,
+            price_text: (await action.getElementCount(this.price_text)) > 0 ? await action.getText(this.price_text) : null,
+            upgradePlan_btn: (await action.getElementCount(this.upgradePlan_btn)) > 0 ? await action.getText(this.upgradePlan_btn) : null,
+            paymentMethod_text: (await action.getElementCount(this.paymentMethod_text)) > 0 ? await action.getText(this.paymentMethod_text) : null,
+            noPaymentMethod_text: (await action.getElementCount(this.noPaymentMethod_text)) > 0 ? await action.getText(this.noPaymentMethod_text) : null,
+            noPaymentMethodSubtitle_text: (await action.getElementCount(this.noPaymentMethodSubtitle_text)) > 0 ? await action.getText(this.noPaymentMethodSubtitle_text) : null,
+            billingMethod_text: (await action.getElementCount(this.billingMethod)) > 0 ? await action.getText(this.billingMethod) : null,
+            noBillingInfo_text: (await action.getElementCount(this.noBillingInfo_text)) > 0 ? await action.getText(this.noBillingInfo_text) : null,
+            premiumPlan_text: (await action.getElementCount(this.premiumPlan_text)) > 0 ? await action.getText(this.premiumPlan_text) : null,
+            active_text: (await action.getElementCount(this.active_text)) > 0 ? await action.getText(this.active_text) : null,
+            premiumPrice_text: (await action.getElementCount(this.premiumPrice_text)) > 0 ? await action.getText(this.premiumPrice_text) : null,
+            autoRenewal_text: (await action.getElementCount(this.autoRenewal_text)) > 0 ? await action.getText(this.autoRenewal_text) : null,
+            licensePeriod_text: (await action.getElementCount(this.licensePeriod_text)) > 0 ? await action.getText(this.licensePeriod_text) : null,
+            licensePeriod_date: (await action.getElementCount(this.licensePeriod_date)) > 0 ? await action.getText(this.licensePeriod_date) : null,
+            managePlan_btn: (await action.getElementCount(this.managePlan_btn)) > 0 ? await action.getText(this.managePlan_btn) : null,
+            changeCard_btn: (await action.getElementCount(this.changeCard_btn)) > 0 ? await action.getText(this.changeCard_btn) : null,
+            updateBillingAddress_btn: (await action.getElementCount(this.updateBillingAddress_btn)) > 0 ? await action.getText(this.updateBillingAddress_btn) : null
             
         }
         return obj;
     },
 
-    click_upgradePlan_btn: function() {
+    click_upgradePlan_btn: async function() {
         let res;
-        logger.logInto(stackTrace.get());
-        res = action.click(this.upgradePlan_btn);
+        await logger.logInto(await stackTrace.get());
+        res = await action.click(this.upgradePlan_btn);
         if (true == res) {
-            logger.logInto(stackTrace.get(), " upgradePlan button is clicked");
-            res = require('./billing.page.js').isInitialized();
+            await logger.logInto(await stackTrace.get(), " upgradePlan button is clicked");
+            res = await require('./billing.page.js').isInitialized();
         } else {
-            logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
 
     },
 
-    click_managePlan_btn: function() {
+    click_managePlan_btn: async function() {
         let res;
-        logger.logInto(stackTrace.get());
-        res = action.click(this.managePlan_btn);
+        await logger.logInto(await stackTrace.get());
+        res = await action.click(this.managePlan_btn);
         if (true == res) {
-            logger.logInto(stackTrace.get(), " managePlan button is clicked");
-            res = require('./planOptions.page.js').isInitialized();
+            await logger.logInto(await stackTrace.get(), " managePlan button is clicked");
+            res = await require('./planOptions.page.js').isInitialized();
         } else {
-            logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
 
     },
 
-    click_changeCard_btn: function() {
+    click_changeCard_btn: async function() {
         let res;
-        logger.logInto(stackTrace.get());
-        res = action.click(this.changeCard_btn);
+        await logger.logInto(await stackTrace.get());
+        res = await action.click(this.changeCard_btn);
         if (true == res) {
-            logger.logInto(stackTrace.get(), " changeCard button is clicked");
-            res = require('./planOptions.page.js').isInitialized();
+            await logger.logInto(await stackTrace.get(), " changeCard button is clicked");
+            res = await require('./planOptions.page.js').isInitialized();
         } else {
-            logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
 
     },
 
-    click_updateBillingAddress_btn: function() {
+    click_updateBillingAddress_btn: async function() {
         let res;
-        logger.logInto(stackTrace.get());
-        res = action.click(this.changeCard_btn);
+        await logger.logInto(await stackTrace.get());
+        res = await action.click(this.changeCard_btn);
         if (true == res) {
-            logger.logInto(stackTrace.get(), " updateBillingAddress button is clicked");
-            res = require('./planOptions.page.js').isInitialized();
+            await logger.logInto(await stackTrace.get(), " updateBillingAddress button is clicked");
+            res = await require('./planOptions.page.js').isInitialized();
         } else {
-            logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
 

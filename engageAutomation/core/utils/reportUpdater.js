@@ -8,7 +8,7 @@ module.exports = {
 
     updateFunctionalObj: function() {
         var logData, specName, logDataObjToConsole;
-        //console.log(functionalChangeLogFile)
+
         try {
 
             if (fs.existsSync(functionalChangeLogFile)) {

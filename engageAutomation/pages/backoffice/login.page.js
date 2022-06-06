@@ -11,52 +11,52 @@ module.exports = {
     appLoader: selectorFile.common.appLoader,
     buttonLoader: selectorFile.common.buttonLoader,
 
-    isInitialized: function () {
-        logger.logInto(stackTrace.get());
+    isInitialized: async function () {
+        await logger.logInto((await stackTrace.get()));
         //action.waitForDocumentLoad();
-        action.waitForDisplayed(this.appLoader, undefined, true);
-        res = action.waitForDisplayed(this.login_btn);
+        await action.waitForDisplayed(this.appLoader, undefined, true);
+        res = await action.waitForDisplayed(this.login_btn);
         return res;
     },
 
-    set_UserName: function (userName) {
-        logger.logInto(stackTrace.get());
-        res = action.setValue(this.email_tbox, userName);
+    set_UserName: async function (userName) {
+        await logger.logInto((await stackTrace.get()));
+        res = await action.setValue(this.email_tbox, userName);
         if (res == true) {
-            logger.logInto(stackTrace.get(), " -- UserName is entered");
+            await logger.logInto((await stackTrace.get()), " -- UserName is entered");
         }
         else {
             res = res + " -- UserName is NOT entered";
-            logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto((await stackTrace.get()), res, 'error');
         }
         return res;
     },
 
-    set_Password: function (password) {
-        logger.logInto(stackTrace.get());
-        res = action.setValue(this.password_tbox, password);
+    set_Password: async function (password) {
+        await logger.logInto((await stackTrace.get()));
+        res = await action.setValue(this.password_tbox, password);
         if (res == true) {
-            logger.logInto(stackTrace.get(), " -- Password is entered");
+            await logger.logInto((await stackTrace.get()), " -- Password is entered");
         }
         else {
             res = res + " -- Password is NOT entered";
-            logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto((await stackTrace.get()), res, 'error');
         }
         return res;
     },
 
-    click_Login_Button: function () {
-        logger.logInto(stackTrace.get());
-        res = action.click(this.login_btn);
+    click_Login_Button: async function () {
+        await logger.logInto((await stackTrace.get()));
+        res = await action.click(this.login_btn);
         if (res == true) {
-            logger.logInto(stackTrace.get(), " -- Login button is clicked");
-            action.waitForDisplayed(this.buttonLoader, undefined, true)
-            res = require('./home.page.js').isInitialized();
-            browser.pause(5000)
+            await logger.logInto((await stackTrace.get()), " -- Login button is clicked");
+            await action.waitForDisplayed(this.buttonLoader, undefined, true)
+            res = await require('./home.page.js').isInitialized();
+            await browser.pause(5000)
         }
         else {
             res = res + " -- Login button is NOT clicked ";
-            logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto((await stackTrace.get()), res, 'error');
         }
         return res;
     }

@@ -14,55 +14,55 @@ module.exports = {
     loaderIcon: selectorFile.css.ComproEngage.widgets.loaderIcon,
     pageTitle: selectorFile.css.ComproEngage.createClassPage.pageTitle,
     pageSubTitle: selectorFile.css.ComproEngage.createClassPage.pageSubTitle,
-    isInitialized: function () {
-        logger.logInto(stackTrace.get());
-        action.waitForDocumentLoad();
-        action.waitForDisplayed(this.loaderIcon, undefined, true);
-        let pageStatus = action.waitForDisplayed(this.success_img)
-        res = this.get_SuccessPageData();
+    isInitialized: async function () {
+        await logger.logInto(await stackTrace.get());
+        await action.waitForDocumentLoad();
+        await action.waitForDisplayed(this.loaderIcon, undefined, true);
+        let pageStatus = await action.waitForDisplayed(this.success_img)
+        res = await this.get_SuccessPageData();
         res.pageStatus = pageStatus;
         return res;
     },
-    get_SuccessPageData: function () {
-        logger.logInto(stackTrace.get());
+    get_SuccessPageData: async function () {
+        await logger.logInto(await stackTrace.get());
         var obj = {
-            pageTitle: action.getElementCount(this.pageTitle) > 0 ? action.getText(this.pageTitle) : null,
-            pageSubTitle: action.getElementCount(this.pageSubTitle) > 0 ? action.getText(this.pageSubTitle) : null,
-            viewClassbtn: action.getElementCount(this.viewClassbtn) > 0 ? action.getText(this.viewClassbtn) : null,
-            backToHomeBtn_txt: action.getElementCount(this.backToHomeBtn) > 0 ? action.getText(this.backToHomeBtn) : null,
-            className_txt: action.getElementCount(this.className_txt) > 0 ? action.getText(this.className_txt) : null,
-            successCaption_txt: action.getElementCount(this.successCaption_txt) > 0 ? action.getText(this.successCaption_txt) : null,
-            copy_txt: action.getElementCount(this.copy_btn) > 0 ? action.getText(this.copy_btn) : null,
-            classKey_value: action.getElementCount(this.classKey_value) > 0 ? action.getText(this.classKey_value) : null,
-            copy_btn: action.getElementCount(this.copy_btn) > 0 ? action.waitForExist(this.copy_btn) : null,
+            pageTitle: (await action.getElementCount(this.pageTitle)) > 0 ? await action.getText(this.pageTitle) : null,
+            pageSubTitle: (await action.getElementCount(this.pageSubTitle)) > 0 ? await action.getText(this.pageSubTitle) : null,
+            viewClassbtn: (await action.getElementCount(this.viewClassbtn)) > 0 ? await action.getText(this.viewClassbtn) : null,
+            backToHomeBtn_txt: (await action.getElementCount(this.backToHomeBtn)) > 0 ? await action.getText(this.backToHomeBtn) : null,
+            className_txt: (await action.getElementCount(this.className_txt)) > 0 ? await action.getText(this.className_txt) : null,
+            successCaption_txt: (await action.getElementCount(this.successCaption_txt)) > 0 ? await action.getText(this.successCaption_txt) : null,
+            copy_txt: (await action.getElementCount(this.copy_btn)) > 0 ? await action.getText(this.copy_btn) : null,
+            classKey_value: (await action.getElementCount(this.classKey_value)) > 0 ? await action.getText(this.classKey_value) : null,
+            copy_btn: (await action.getElementCount(this.copy_btn)) > 0 ? await action.waitForExist(this.copy_btn) : null,
         }
         return obj;
     },
-    click_ViewClass_Button: function () {
+    click_ViewClass_Button: async function () {
         if (argv.deviceName) {
-            action.hideKeyboard()
+            await action.hideKeyboard()
         }
-        res = action.click(this.viewClassbtn);
+        res = await action.click(this.viewClassbtn);
         if (res == true) {
-            res = teacherViewClass.isInitialized()
+            res = await teacherViewClass.isInitialized()
         }
         else {
             res = res + " -- viewclassBtn is NOT clicked";
-            logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
-    click_Close_Button: function () {
-        action.waitForClickable(this.backToHomeBtn)
-        res = action.click(this.backToHomeBtn);
+    click_Close_Button: async function () {
+        await action.waitForClickable(this.backToHomeBtn)
+        res = await action.click(this.backToHomeBtn);
         console.log(res)
         if (res == true) {
             var classDashboardPage = require('./classDashboard.page.js');
-            res = classDashboardPage.isInitialized();
+            res = await classDashboardPage.isInitialized();
         }
         else {
             res = res + " -- headerBack_btn is NOT clicked";
-            logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     }

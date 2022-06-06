@@ -7,30 +7,30 @@ module.exports = {
 
 	//launch_btn: selectorFile.css.testbench.launchbtn,
 
-	isInitialized: function () {
-		logger.logInto(stackTrace.get());
-		action.waitForDocumentLoad();
-		let pageStatus = action.waitForDisplayed(this.launch_btn);
-		res = this.getData();
+	isInitialized: async function () {
+		await logger.logInto(stackTrace.get());
+		await action.waitForDocumentLoad();
+		let pageStatus = await action.waitForDisplayed(this.launch_btn);
+		res = await this.getData();
 		res.pageStatus = pageStatus;
 		return res;
 	},
 
-	getData: function () {
+	getData: async function () {
 		var obj = {
-			launch: action.getText(this.launch_btn),
+			launch: await action.getText(this.launch_btn),
 		};
 		return obj;
 	},
 
-	clickLaunch: function () {
-		logger.logInto(stackTrace.get());
+	clickLaunch: async function () {
+		await logger.logInto(stackTrace.get());
 		//res = action.click(this.launch_btn);
 		if (true == res) {
 		}
 		else {
 			res = res + " -- Error in clicking signup_btn";
-			logger.logInto(stackTrace.get(), res, 'error');
+			await logger.logInto(stackTrace.get(), res, 'error');
 		}
 		return res;
 	}

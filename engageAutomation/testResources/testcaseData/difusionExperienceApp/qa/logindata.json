@@ -27,7 +27,7 @@
                     "email": "jijetoullozo-4043@yopmail.com",
                     "password": "Compro@1234",
                     "role": "student",
-                    "name": "etirrase-9139",
+                    "name": "QA Automation Student2",
                     "class": [],
                     "info": {}
                 },
@@ -36,7 +36,20 @@
                     "password": "Compro@1234",
                     "role": "student",
                     "name": "student automation",
-                    "class": [],
+                    "class": [
+                        {
+                            "key": "AEYP-p9hk",
+                            "name": "future Class"
+                        },
+                        {
+                            "key": "9q6x-QzFe",
+                            "name": "course1"
+                        },
+                        {
+                            "key": "Cw32-FLZ7",
+                            "name": "Archive Class"
+                        }
+                    ],
                     "info": {}
                 },
                 "validStudent4": {
@@ -62,7 +75,7 @@
                     "info": {}
                 },
                 "acceptanceStudent": {
-                    "email": "acceptanceStudent1@yopmail.com",
+                    "email": "acceptanceStudent2@yopmail.com",
                     "password": "Compro@1234",
                     "role": "student",
                     "name": "acceptance student",
@@ -267,12 +280,46 @@
                     ],
                     "info": {}
                 },
+                "classInstructorUser6": {
+                    "email": "qa_teachertest1@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "instructor",
+                    "name": "qa teachertest1",
+                    "class": [
+                        {
+                            "key": "TFbA-6AP7",
+                            "name": "class2"
+                        },
+                        {
+                            "key": "TFbA-6AP7",
+                            "name": "class1"
+                        },
+                        {
+                            "key": "TFbA-6AP7",
+                            "name": "class3"
+                        }
+                    ],
+                    "info": {}
+                },
                 "classInstructorUser4": {
                     "email": "4-teacher@yopmail.com",
                     "password": "Compro@1234",
                     "role": "instructor",
                     "name": "4 Teacher dev1",
                     "class": [],
+                    "info": {}
+                },
+                "classInstructorUser7": {
+                    "email": "qa_teacher100@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "instructor",
+                    "name": "qa teacher100",
+                    "class": [
+                        {
+                            "key": "TFbA-6AP7",
+                            "name": "Automation"
+                        }
+                    ],
                     "info": {}
                 },
                 "flipbookUser": {
@@ -314,6 +361,11 @@
                         {
                             "key": "TFbA-6AP7",
                             "name": "Gradebook",
+                            "studentName1":"dev1 student100"
+                        },
+                        {
+                            "key": "TFbA-6AP7",
+                            "name": "Non-Scorable",
                             "studentName1":"dev1 student100"
                         }
                     ],

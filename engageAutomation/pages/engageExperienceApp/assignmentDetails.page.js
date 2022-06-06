@@ -61,90 +61,90 @@ module.exports = {
   deleteAssignmentlbl: selectorFile.css.ComproEngage.assignmentDetails.deleteAssignmentlbl,
 
 
-  isInitialized: function () {
+  isInitialized: async function () {
     var res;
-    logger.logInto(stackTrace.get());
-    action.waitForDocumentLoad();
+    await logger.logInto(await stackTrace.get());
+    await action.waitForDocumentLoad();
     res = {
-      pageStatus: action.waitForDisplayed(this.assignment_name),
+      pageStatus: await action.waitForDisplayed(this.assignment_name),
     };
     return res;
   },
 
-  getData_assignmentDetails: function () {
-    logger.logInto(stackTrace.get());
+  getData_assignmentDetails: async function () {
+    await logger.logInto(await stackTrace.get());
     var obj;
     obj = {
-      assignment_name: (action.getElementCount(this.assignment_name) > 0) ? action.getText(this.assignment_name) : null,
-      activity_icon: (action.getElementCount(this.activity_icon) > 0) ? action.waitForDisplayed(this.activity_icon) : false,
-      activity_lbl: (action.getElementCount(this.activity_lbl) > 0) ? action.getText(this.activity_lbl) : null,
-      avgScore_icon: (action.getElementCount(this.avgScore_icon) > 0) ? action.waitForDisplayed(this.avgScore_icon) : false,
-      avgScore_lbl: (action.getElementCount(this.avgScore_lbl) > 0) ? action.getText(this.avgScore_lbl) : null,
-      dueDate_icon: (action.getElementCount(this.dueDate_icon) > 0) ? action.waitForDisplayed(this.dueDate_icon) : false,
-      dueDate_lbl: (action.getElementCount(this.dueDate_lbl) > 0) ? action.getText(this.dueDate_lbl) : null,
-      turnedInValue: (action.getElementCount(this.turnedInValue) > 0) ? action.getText(this.turnedInValue) : null,
-      dueDate_pill: (action.getElementCount(this.dueDate_pill) > 0) ? action.getText(this.dueDate_pill) : null,
-      turnedIn_bar: (action.getElementCount(this.turnedIn_bar) > 0) ? action.getText(this.turnedIn_bar) : null,
-      studentsTab: (action.getElementCount(this.studentsTab) > 0) ? action.getText(this.studentsTab) : null,
-      viewasStudent: (action.getElementCount(this.viewasStudent) > 0) ? action.getText(this.viewasStudent) : null,
-      viewasStudent_icon: (action.getElementCount(this.viewasStudent_icon) > 0) ? action.getText(this.viewasStudent_icon) : null,
-      viewasStudentmoreoption: (action.getElementCount(this.viewasStudentmoreoption) > 0) ? action.waitForDisplayed(this.viewasStudentmoreoption) : false,
-      startDate_lbl: (action.getElementCount(this.startDate_lbl) > 0) ? action.getText(this.startDate_lbl) : null,
-      startDate_icon: (action.getElementCount(this.startDate_icon) > 0) ? action.waitForDisplayed(this.startDate_icon) : false,
-      startDate_value: (action.getElementCount(this.startDate_value) > 0) ? action.getText(this.startDate_value) : null,
-      dueDate_lbl: (action.getElementCount(this.dueDate_lbl) > 0) ? action.getText(this.dueDate_lbl) : null,
-      dueDate_icon: (action.getElementCount(this.dueDate_icon) > 0) ? action.waitForDisplayed(this.dueDate_icon) : false,
-      dueDate_value: (action.getElementCount(this.dueDate_value) > 0) ? action.getText(this.dueDate_value) : null,
-      allowLateSubmission_lbl: (action.getElementCount(this.allowLateSubmission_lbl) > 0) ? action.getText(this.allowLateSubmission_lbl) : null,
-      allowLateSubmission_btn: (action.getElementCount(this.allowLateSubmission_btn) > 0) ? action.waitForExist(this.allowLateSubmission_btn) : null,
-      allowLateSubmission_info: (action.getElementCount(this.allowLateSubmission_info) > 0) ? action.waitForDisplayed(this.allowLateSubmission_info) : false,
-      preventfromSkipping_lbl: (action.getElementCount(this.preventfromSkipping_lbl) > 0) ? action.getText(this.preventfromSkipping_lbl) : null,
-      preventfromSkipping_btn: (action.getElementCount(this.preventfromSkipping_btn) > 0) ? action.waitForExist(this.preventfromSkipping_btn) : null,
-      preventfromSkipping_info: (action.getElementCount(this.preventfromSkipping_info) > 0) ? action.waitForDisplayed(this.preventfromSkipping_info) : false,
-      disableShowAnswers_lbl: (action.getElementCount(this.disableShowAnswers_lbl) > 0) ? action.getText(this.disableShowAnswers_lbl) : null,
-      disableShowAnswers_btn: (action.getElementCount(this.disableShowAnswers_btn) > 0) ? action.waitForExist(this.disableShowAnswers_btn) : null,
-      disableShowAnswers_info: (action.getElementCount(this.disableShowAnswers_info) > 0) ? action.waitForDisplayed(this.disableShowAnswers_info) : false,
-      includeProgressBar_lbl: (action.getElementCount(this.includeProgressBar_lbl) > 0) ? action.getText(this.includeProgressBar_lbl) : null,
-      includeProgressBar_btn: (action.getElementCount(this.includeProgressBar_btn) > 0) ? action.waitForExist(this.includeProgressBar_btn) : null,
-      includeProgressBar_info: (action.getElementCount(this.includeProgressBar_info) > 0) ? action.waitForDisplayed(this.includeProgressBar_info) : false,
+      assignment_name: ((await action.getElementCount(this.assignment_name)) > 0) ? await action.getText(this.assignment_name) : null,
+      activity_icon: ((await action.getElementCount(this.activity_icon)) > 0) ? await action.waitForDisplayed(this.activity_icon) : false,
+      activity_lbl: ((await action.getElementCount(this.activity_lbl)) > 0) ? await action.getText(this.activity_lbl) : null,
+      avgScore_icon: ((await action.getElementCount(this.avgScore_icon)) > 0) ? await action.waitForDisplayed(this.avgScore_icon) : false,
+      avgScore_lbl: ((await action.getElementCount(this.avgScore_lbl)) > 0) ? await action.getText(this.avgScore_lbl) : null,
+      dueDate_icon: ((await action.getElementCount(this.dueDate_icon)) > 0) ? await action.waitForDisplayed(this.dueDate_icon) : false,
+      dueDate_lbl: ((await action.getElementCount(this.dueDate_lbl)) > 0) ? await action.getText(this.dueDate_lbl) : null,
+      turnedInValue: ((await action.getElementCount(this.turnedInValue)) > 0) ? await action.getText(this.turnedInValue) : null,
+      dueDate_pill: ((await action.getElementCount(this.dueDate_pill)) > 0) ? await action.getText(this.dueDate_pill) : null,
+      turnedIn_bar: ((await action.getElementCount(this.turnedIn_bar)) > 0) ? await action.getText(this.turnedIn_bar) : null,
+      studentsTab: ((await action.getElementCount(this.studentsTab)) > 0) ? await action.getText(this.studentsTab) : null,
+      viewasStudent: ((await action.getElementCount(this.viewasStudent)) > 0) ? await action.getText(this.viewasStudent) : null,
+      viewasStudent_icon: ((await action.getElementCount(this.viewasStudent_icon)) > 0) ? await action.getText(this.viewasStudent_icon) : null,
+      viewasStudentmoreoption: ((await action.getElementCount(this.viewasStudentmoreoption)) > 0) ? await action.waitForDisplayed(this.viewasStudentmoreoption) : false,
+      startDate_lbl: ((await action.getElementCount(this.startDate_lbl)) > 0) ? await action.getText(this.startDate_lbl) : null,
+      startDate_icon: ((await action.getElementCount(this.startDate_icon)) > 0) ? await action.waitForDisplayed(this.startDate_icon) : false,
+      startDate_value: ((await action.getElementCount(this.startDate_value)) > 0) ? await action.getText(this.startDate_value) : null,
+      dueDate_lbl: ((await action.getElementCount(this.dueDate_lbl)) > 0) ? await action.getText(this.dueDate_lbl) : null,
+      dueDate_icon: ((await action.getElementCount(this.dueDate_icon)) > 0) ? await action.waitForDisplayed(this.dueDate_icon) : false,
+      dueDate_value: ((await action.getElementCount(this.dueDate_value)) > 0) ? await action.getText(this.dueDate_value) : null,
+      allowLateSubmission_lbl: ((await action.getElementCount(this.allowLateSubmission_lbl)) > 0) ? await action.getText(this.allowLateSubmission_lbl) : null,
+      allowLateSubmission_btn: ((await action.getElementCount(this.allowLateSubmission_btn)) > 0) ? await action.waitForExist(this.allowLateSubmission_btn) : null,
+      allowLateSubmission_info: ((await action.getElementCount(this.allowLateSubmission_info)) > 0) ? await action.waitForDisplayed(this.allowLateSubmission_info) : false,
+      preventfromSkipping_lbl: ((await action.getElementCount(this.preventfromSkipping_lbl)) > 0) ? await action.getText(this.preventfromSkipping_lbl) : null,
+      preventfromSkipping_btn: ((await action.getElementCount(this.preventfromSkipping_btn)) > 0) ? await action.waitForExist(this.preventfromSkipping_btn) : null,
+      preventfromSkipping_info: ((await action.getElementCount(this.preventfromSkipping_info)) > 0) ? await action.waitForDisplayed(this.preventfromSkipping_info) : false,
+      disableShowAnswers_lbl: ((await action.getElementCount(this.disableShowAnswers_lbl)) > 0) ? await action.getText(this.disableShowAnswers_lbl) : null,
+      disableShowAnswers_btn: ((await action.getElementCount(this.disableShowAnswers_btn)) > 0) ? await action.waitForExist(this.disableShowAnswers_btn) : null,
+      disableShowAnswers_info: ((await action.getElementCount(this.disableShowAnswers_info)) > 0) ? await action.waitForDisplayed(this.disableShowAnswers_info) : false,
+      includeProgressBar_lbl: ((await action.getElementCount(this.includeProgressBar_lbl)) > 0) ? await action.getText(this.includeProgressBar_lbl) : null,
+      includeProgressBar_btn: ((await action.getElementCount(this.includeProgressBar_btn)) > 0) ? await action.waitForExist(this.includeProgressBar_btn) : null,
+      includeProgressBar_info: ((await action.getElementCount(this.includeProgressBar_info)) > 0) ? await action.waitForDisplayed(this.includeProgressBar_info) : false,
     }
     return obj;
   },
 
-  getData_studentList: function () {
-    logger.logInto(stackTrace.get());
+  getData_studentList: async function () {
+    await logger.logInto(await stackTrace.get());
     var obj;
     obj = {
-      ActivityListTab: (action.getElementCount(this.ActivityListTab) > 0) ? action.getText(this.ActivityListTab) : null,
-      search_textbox_placeholder: (action.getElementCount(this.search_textbox_placeholder) > 0) ? action.getText(this.search_textbox_placeholder) : null,
-      search_icon: (action.getElementCount(this.search_icon) > 0) ? action.waitForDisplayed(this.search_icon) : false,
-      student_count: (action.getElementCount(this.student_count) > 0) ? action.getText(this.student_count) : null,
-      noStudent_header: (action.getElementCount(this.noStudent_header) > 0) ? action.getText(this.noStudent_header) : null,
-      noStudent_Subheader: (action.getElementCount(this.noStudent_Subheader) > 0) ? action.getText(this.noStudent_Subheader) : null,
-      noStudent_icon: (action.getElementCount(this.noStudent_icon) > 0) ? action.waitForDisplayed(this.noStudent_icon) : false,
-      name_lbl: (action.getElementCount(this.name_lbl) > 0) ? action.getText(this.name_lbl) : null,
-      progress_lbl: (action.getElementCount(this.progress_lbl) > 0) ? action.getText(this.progress_lbl) : null,
-      turnedIn_lbl: (action.getElementCount(this.turnedIn_lbl) > 0) ? action.getText(this.turnedIn_lbl) : null,
-      score_lbl: (action.getElementCount(this.score_lbl) > 0) ? action.getText(this.score_lbl) : null,
+      ActivityListTab: ((await action.getElementCount(this.ActivityListTab)) > 0) ? await action.getText(this.ActivityListTab) : null,
+      search_textbox_placeholder: ((await action.getElementCount(this.search_textbox_placeholder)) > 0) ? await action.getText(this.search_textbox_placeholder) : null,
+      search_icon: ((await action.getElementCount(this.search_icon)) > 0) ? await action.waitForDisplayed(this.search_icon) : false,
+      student_count: ((await action.getElementCount(this.student_count)) > 0) ? await action.getText(this.student_count) : null,
+      noStudent_header: ((await action.getElementCount(this.noStudent_header)) > 0) ? await action.getText(this.noStudent_header) : null,
+      noStudent_Subheader: ((await action.getElementCount(this.noStudent_Subheader)) > 0) ? await action.getText(this.noStudent_Subheader) : null,
+      noStudent_icon: ((await action.getElementCount(this.noStudent_icon)) > 0) ? await action.waitForDisplayed(this.noStudent_icon) : false,
+      name_lbl: ((await action.getElementCount(this.name_lbl)) > 0) ? await action.getText(this.name_lbl) : null,
+      progress_lbl: ((await action.getElementCount(this.progress_lbl)) > 0) ? await action.getText(this.progress_lbl) : null,
+      turnedIn_lbl: ((await action.getElementCount(this.turnedIn_lbl)) > 0) ? await action.getText(this.turnedIn_lbl) : null,
+      score_lbl: ((await action.getElementCount(this.score_lbl)) > 0) ? await action.getText(this.score_lbl) : null,
     }
     return obj;
   },
 
-  getData_studentCard: function (studentCardName) {
-    logger.logInto(stackTrace.get());
+  getData_studentCard: async function (studentCardName) {
+    await logger.logInto(await stackTrace.get());
     var obj = [];
-    action.waitForDisplayed(this.studentCard);
-    var list = action.findElements(this.studentCard);
+    await action.waitForDisplayed(this.studentCard);
+    var list = await action.findElements(this.studentCard);
     if (studentCardName) {
       for (var i = 0; i < list.length; i++) {
-        if (action.getText(this.studentCard + i) == studentCardName) {
+        if ((await action.getText(this.studentCard + i)) == studentCardName) {
           obj[0] = {
-            studentCard: (action.getElementCount(this.studentCard + i + "]") > 0) ? action.getText(this.studentCard + i + "]") : null,
-            studentName: (action.getElementCount(this.studentName + i + "]") > 0) ? action.getText(this.studentName + i + "]") : null,
-            progress_icon: (action.getElementCount(this.progress_icon + i + "]") > 0) ? action.waitForDisplayed(this.progress_icon + i + "]") : false,
-            progress_value: (action.getElementCount(this.progress_value + i + "]") > 0) ? action.getText(this.progress_value + i + "]") : null,
-            turnedIn_value: (action.getElementCount(this.turnedIn_value + i + "]") > 0) ? action.getText(this.turnedIn_value + i + "]") : null,
-            score: (action.getElementCount(this.score + i + "]") > 0) ? action.getText(this.score + i + "]") : null,
+            studentCard: ((await action.getElementCount(this.studentCard + i + "]")) > 0) ? await action.getText(this.studentCard + i + "]") : null,
+            studentName: ((await action.getElementCount(this.studentName + i + "]")) > 0) ? await action.getText(this.studentName + i + "]") : null,
+            progress_icon: ((await action.getElementCount(this.progress_icon + i + "]")) > 0) ? await action.waitForDisplayed(this.progress_icon + i + "]") : false,
+            progress_value: ((await action.getElementCount(this.progress_value + i + "]")) > 0) ? await action.getText(this.progress_value + i + "]") : null,
+            turnedIn_value: ((await action.getElementCount(this.turnedIn_value + i + "]")) > 0) ? await action.getText(this.turnedIn_value + i + "]") : null,
+            score: ((await action.getElementCount(this.score + i + "]")) > 0) ? await action.getText(this.score + i + "]") : null,
           }
           break;
         }
@@ -152,153 +152,153 @@ module.exports = {
     } else {
       for (var i = 0; i < list.length; i++) {
         obj[i] = {
-          studentCard: (action.getElementCount(this.studentCard + i + "]") > 0) ? action.getText(this.studentCard + i + "]") : null,
-          studentName: (action.getElementCount(this.studentName + i + "]") > 0) ? action.getText(this.studentName + i + "]") : null,
-          progress_icon: (action.getElementCount(this.progress_icon + i + "]") > 0) ? action.waitForDisplayed(this.progress_icon + i + "]") : false,
-          progress_value: (action.getElementCount(this.progress_value + i + "]") > 0) ? action.getText(this.progress_value + i + "]") : null,
-          turnedIn_value: (action.getElementCount(this.turnedIn_value + i + "]") > 0) ? action.getText(this.turnedIn_value + i + "]") : null,
-          score: (action.getElementCount(this.score + i + "]") > 0) ? action.getText(this.score + i + "]") : null,
+          studentCard: ((await action.getElementCount(this.studentCard + i + "]")) > 0) ? await action.getText(this.studentCard + i + "]") : null,
+          studentName: ((await action.getElementCount(this.studentName + i + "]")) > 0) ? await action.getText(this.studentName + i + "]") : null,
+          progress_icon: ((await action.getElementCount(this.progress_icon + i + "]")) > 0) ? await action.waitForDisplayed(this.progress_icon + i + "]") : false,
+          progress_value: ((await action.getElementCount(this.progress_value + i + "]")) > 0) ? await action.getText(this.progress_value + i + "]") : null,
+          turnedIn_value: ((await action.getElementCount(this.turnedIn_value + i + "]")) > 0) ? await action.getText(this.turnedIn_value + i + "]") : null,
+          score: ((await action.getElementCount(this.score + i + "]")) > 0) ? await action.getText(this.score + i + "]") : null,
         }
       }
     }
     return obj;
   },
 
-  getData_assignmentDetailsmoreOption: function () {
-    logger.logInto(stackTrace.get());
+  getData_assignmentDetailsmoreOption: async function () {
+    await logger.logInto(await stackTrace.get());
     var obj;
     obj = {
-      editAssignmentIcon: (action.getElementCount(this.editAssignmentIcon) > 0) ? action.waitForDisplayed(this.editAssignmentIcon) : false,
-      editAssignmentlbl: (action.getElementCount(this.editAssignmentlbl) > 0) ? action.getText(this.editAssignmentlbl) : null,
-      cloneAssignmentIcon: (action.getElementCount(this.cloneAssignmentIcon) > 0) ? action.waitForDisplayed(this.cloneAssignmentIcon) : false,
-      cloneAssignmentlbl: (action.getElementCount(this.cloneAssignmentlbl) > 0) ? action.getText(this.cloneAssignmentlbl) : null,
-      deleteAssignmentIcon: (action.getElementCount(this.deleteAssignmentIcon) > 0) ? action.waitForDisplayed(this.deleteAssignmentIcon) : false,
-      deleteAssignmentlbl: (action.getElementCount(this.deleteAssignmentlbl) > 0) ? action.getText(this.deleteAssignmentlbl) : null,
+      editAssignmentIcon: ((await action.getElementCount(this.editAssignmentIcon)) > 0) ? await action.waitForDisplayed(this.editAssignmentIcon) : false,
+      editAssignmentlbl: ((await action.getElementCount(this.editAssignmentlbl)) > 0) ? await action.getText(this.editAssignmentlbl) : null,
+      cloneAssignmentIcon: ((await action.getElementCount(this.cloneAssignmentIcon)) > 0) ? await action.waitForDisplayed(this.cloneAssignmentIcon) : false,
+      cloneAssignmentlbl: ((await action.getElementCount(this.cloneAssignmentlbl)) > 0) ? await action.getText(this.cloneAssignmentlbl) : null,
+      deleteAssignmentIcon: ((await action.getElementCount(this.deleteAssignmentIcon)) > 0) ? await action.waitForDisplayed(this.deleteAssignmentIcon) : false,
+      deleteAssignmentlbl: ((await action.getElementCount(this.deleteAssignmentlbl)) > 0) ? await action.getText(this.deleteAssignmentlbl) : null,
     }
     return obj;
   },
 
-  click_studentsTab: function () {
-    logger.logInto(stackTrace.get());
+  click_studentsTab: async function () {
+    await logger.logInto(await stackTrace.get());
     var res;
-    res = action.click(this.studentsTab);
+    res = await action.click(this.studentsTab);
     if (true == res) {
-      logger.logInto(stackTrace.get(), " studentsTab is clicked");
+      await logger.logInto(await stackTrace.get(), " studentsTab is clicked");
     }
     else {
-      logger.logInto(stackTrace.get(), res + "studentsTab is NOT clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + "studentsTab is NOT clicked", 'error');
     }
     return res;
   },
 
-  click_ActivityListTab: function () {
-    logger.logInto(stackTrace.get());
+  click_ActivityListTab: async function () {
+    await logger.logInto(await stackTrace.get());
     var res;
-    res = action.click(this.ActivityListTab);
+    res = await action.click(this.ActivityListTab);
     if (true == res) {
-      logger.logInto(stackTrace.get(), " ActivityListTab is clicked");
+      await logger.logInto(await stackTrace.get(), " ActivityListTab is clicked");
     }
     else {
-      logger.logInto(stackTrace.get(), res + "ActivityListTab is NOT clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + "ActivityListTab is NOT clicked", 'error');
     }
     return res;
   },
 
-  click_studentCard: function (studentNameName) {
-    logger.logInto(stackTrace.get());
+  click_studentCard: async function (studentNameName) {
+    await logger.logInto(await stackTrace.get());
     var i, list, res;
-    list = action.findElements(this.studentCard);
+    list = await action.findElements(this.studentCard);
     for (i = 0; i < list.length; i++) {
-      if ((action.getText(this.studentName + i + "]")) == studentNameName) {
-        res = action.click(list[i]);
+      if (((await action.getText(this.studentName + i + "]"))) == studentNameName) {
+        res = await action.click(list[i]);
         break;
       }
     }
     if (res == true) {
-      logger.logInto(stackTrace.get(), " --studentCard clicked");
+      await logger.logInto(await stackTrace.get(), " --studentCard clicked");
     }
     else
-      logger.logInto(stackTrace.get(), " --studentCard NOT clicked", "error")
+      await logger.logInto(await stackTrace.get(), " --studentCard NOT clicked", "error")
     return res;
   },
 
-  click_viewasStudent: function () {
-    logger.logInto(stackTrace.get());
+  click_viewasStudent: async function () {
+    await logger.logInto(await stackTrace.get());
     var res;
-    res = action.click(this.viewasStudent);
+    res = await action.click(this.viewasStudent);
     if (true == res) {
-      logger.logInto(stackTrace.get(), " viewasStudent is clicked");
-      res = require('./viewAsStudentAssignment.page').isInitialized();
+      await logger.logInto(await stackTrace.get(), " viewasStudent is clicked");
+      res = await require('./viewAsStudentAssignment.page').isInitialized();
     }
     else {
-      logger.logInto(stackTrace.get(), res + "viewasStudent is NOT clicked", 'error');
-    }
-    return res;
-  },
-
-  click_viewasStudentmoreoption: function () {
-    logger.logInto(stackTrace.get());
-    var res;
-    res = action.click(this.viewasStudentmoreoption);
-    if (true == res) {
-      logger.logInto(stackTrace.get(), " viewasStudentmoreoption is clicked");
-      res=this.getData_assignmentDetailsmoreOption();
-    }
-    else {
-      logger.logInto(stackTrace.get(), res + "viewasStudentmoreoption is NOT clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + "viewasStudent is NOT clicked", 'error');
     }
     return res;
   },
 
-  click_editAssignmentlbl: function () {
-    logger.logInto(stackTrace.get());
+  click_viewasStudentmoreoption: async function () {
+    await logger.logInto(await stackTrace.get());
     var res;
-    res = action.click(this.editAssignmentlbl);
+    res = await action.click(this.viewasStudentmoreoption);
     if (true == res) {
-      logger.logInto(stackTrace.get(), " editAssignmentlbl is clicked");
-      res = require('./editAssignment.page').isInitialized();
+      await logger.logInto(await stackTrace.get(), " viewasStudentmoreoption is clicked");
+      res=await this.getData_assignmentDetailsmoreOption();
     }
     else {
-      logger.logInto(stackTrace.get(), res + "editAssignmentlbl is NOT clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + "viewasStudentmoreoption is NOT clicked", 'error');
     }
     return res;
   },
 
-  click_cloneAssignmentlbl: function () {
-    logger.logInto(stackTrace.get());
+  click_editAssignmentlbl: async function () {
+    await logger.logInto(await stackTrace.get());
     var res;
-    res = action.click(this.cloneAssignmentlbl);
+    res = await action.click(this.editAssignmentlbl);
     if (true == res) {
-      logger.logInto(stackTrace.get(), " cloneAssignmentlbl is clicked");
-      res = require('./createAssignment.page').isInitialized();
+      await logger.logInto(await stackTrace.get(), " editAssignmentlbl is clicked");
+      res = await require('./editAssignment.page').isInitialized();
     }
     else {
-      logger.logInto(stackTrace.get(), res + "cloneAssignmentlbl is NOT clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + "editAssignmentlbl is NOT clicked", 'error');
     }
     return res;
   },
 
-  click_deleteAssignmentlbl: function () {
-    logger.logInto(stackTrace.get());
+  click_cloneAssignmentlbl: async function () {
+    await logger.logInto(await stackTrace.get());
     var res;
-    res = action.click(this.deleteAssignmentlbl);
+    res = await action.click(this.cloneAssignmentlbl);
     if (true == res) {
-      res = require('./assignmentListTeacher.page').getData_deleteDialogue();
-      logger.logInto(stackTrace.get(), " deleteAssignmentlbl is clicked");
+      await logger.logInto(await stackTrace.get(), " cloneAssignmentlbl is clicked");
+      res = await require('./createAssignment.page').isInitialized();
     }
     else {
-      logger.logInto(stackTrace.get(), res + "deleteAssignmentlbl is NOT clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + "cloneAssignmentlbl is NOT clicked", 'error');
     }
     return res;
   },
-  set_search_textbox_placeholder: function (value) {
+
+  click_deleteAssignmentlbl: async function () {
+    await logger.logInto(await stackTrace.get());
     var res;
-    logger.logInto(stackTrace.get());
-    res = action.setValue(this.search_textbox_placeholder, value);
+    res = await action.click(this.deleteAssignmentlbl);
     if (true == res) {
-      logger.logInto(stackTrace.get(), "Value is entered in search_textbox_placeholder");
+      res = await require('./assignmentListTeacher.page').getData_deleteDialogue();
+      await logger.logInto(await stackTrace.get(), " deleteAssignmentlbl is clicked");
+    }
+    else {
+      await logger.logInto(await stackTrace.get(), res + "deleteAssignmentlbl is NOT clicked", 'error');
+    }
+    return res;
+  },
+  set_search_textbox_placeholder: async function (value) {
+    var res;
+    await logger.logInto(await stackTrace.get());
+    res = await action.setValue(this.search_textbox_placeholder, value);
+    if (true == res) {
+      await logger.logInto(await stackTrace.get(), "Value is entered in search_textbox_placeholder");
     } else {
-      logger.logInto(stackTrace.get(), res + "Value is NOT entered in search_textbox_placeholder", 'error');
+      await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in search_textbox_placeholder", 'error');
     }
     return res;
   },

@@ -47,129 +47,129 @@ module.exports = {
 	assignBtn: selectorFile.css.ComproEngage.appShell.assignBtn,
 	shareBtn: selectorFile.css.ComproEngage.appShell.shareBtn,
 
-	isInitialized: function () {
-		logger.logInto(stackTrace.get());
-		action.waitForDocumentLoad();
+	isInitialized: async function () {
+		await logger.logInto(await stackTrace.get());
+		await action.waitForDocumentLoad();
 		res = {
-			leftPane: (action.getElementCount(this.custLogo + "," + this.toggleSidebarBtn) > 0) ? true : false,
-			header: (action.getElementCount(this.headerbandDiv) > 0) ? true : false
+			leftPane: ((await action.getElementCount(this.custLogo + "," + this.toggleSidebarBtn)) > 0) ? true : false,
+			header: ((await action.getElementCount(this.headerbandDiv)) > 0) ? true : false
 		}
 		return res;
 	},
 
-	getAppShellLeftPaneData: function () {
+	getAppShellLeftPaneData: async function () {
 		var obj = {
-			custLogo_exists: (action.getElementCount(this.custLogo) > 0) ? action.waitForDisplayed(this.custLogo) : false,
-			dashboardBtn: (action.getElementCount(this.dashboardBtn) > 0) ? action.getText(this.dashboardBtn) : null,
-			browseBtn: (action.getElementCount(this.browseBtn) > 0) ? action.getText(this.browseBtn) : null,
-			classesBtn: (action.getElementCount(this.classesBtn) > 0) ? action.getText(this.classesBtn) : null,
-			helpBtn: (action.getElementCount(this.helpBtn) > 0) ? action.getText(this.helpBtn) : null,
-			settingsBtn: (action.getElementCount(this.settingsBtn) > 0) ? action.getText(this.settingsBtn) : null,
-			sidebarImg_exists: (action.getElementCount(this.sidebarImg) > 0) ? action.waitForDisplayed(this.sidebarImg) : false,
-			poweredbyTxt: (action.getElementCount(this.poweredbyTxt) > 0) ? action.getText(this.poweredbyTxt) : null,
-			comproLogo_exists: (action.getElementCount(this.comproLogo) > 0) ? action.waitForDisplayed(this.comproLogo) : false,
-			versionTxt: (action.getElementCount(this.versionTxt) > 0) ? action.getText(this.versionTxt) : null
+			custLogo_exists: ((await action.getElementCount(this.custLogo)) > 0) ? await action.waitForDisplayed(this.custLogo) : false,
+			dashboardBtn: ((await action.getElementCount(this.dashboardBtn)) > 0) ? await action.getText(this.dashboardBtn) : null,
+			browseBtn: ((await action.getElementCount(this.browseBtn)) > 0) ? await action.getText(this.browseBtn) : null,
+			classesBtn: ((await action.getElementCount(this.classesBtn)) > 0) ? await action.getText(this.classesBtn) : null,
+			helpBtn: ((await action.getElementCount(this.helpBtn)) > 0) ? await action.getText(this.helpBtn) : null,
+			settingsBtn: ((await action.getElementCount(this.settingsBtn)) > 0) ? await action.getText(this.settingsBtn) : null,
+			sidebarImg_exists: ((await action.getElementCount(this.sidebarImg)) > 0) ? await action.waitForDisplayed(this.sidebarImg) : false,
+			poweredbyTxt: ((await action.getElementCount(this.poweredbyTxt)) > 0) ? await action.getText(this.poweredbyTxt) : null,
+			comproLogo_exists: ((await action.getElementCount(this.comproLogo)) > 0) ? await action.waitForDisplayed(this.comproLogo) : false,
+			versionTxt: ((await action.getElementCount(this.versionTxt)) > 0) ? await action.getText(this.versionTxt) : null
 		};
 		return obj;
 	},
 
-	getAppShellHeaderData: function () {
+	getAppShellHeaderData: async function () {
 		var obj = {
-			notificationBtn_exists: (action.getElementCount(this.notificationBtn) > 0) ? action.waitForDisplayed(this.notificationBtn) : false,
-			selectedLanguage: (action.getElementCount(this.selectedLanguage) > 0) ? action.getText(this.selectedLanguage) : null,
-			userProfileBtn_exists: (action.getElementCount(this.userProfileBtn) > 0) ? action.waitForDisplayed(this.userProfileBtn) : false,
-			indexBtn: (action.getElementCount(this.indexBtn) > 0) ? action.getText(this.indexBtn) : null,
-			inviteBtnTxt: (action.getElementCount(this.inviteBtnTxt) > 0) ? action.getText(this.inviteBtnTxt) : null,
-			addToPlaylistBtn: (action.getElementCount(this.addToPlaylistBtn) > 0) ? action.getText(this.addToPlaylistBtn) : null,
-			assignBtn: (action.getElementCount(this.assignBtn) > 0) ? action.getText(this.assignBtn) : null,
-			shareBtn: (action.getElementCount(this.shareBtn) > 0) ? action.getText(this.shareBtn) : null
+			notificationBtn_exists: ((await action.getElementCount(this.notificationBtn)) > 0) ? await action.waitForDisplayed(this.notificationBtn) : false,
+			selectedLanguage: ((await action.getElementCount(this.selectedLanguage)) > 0) ? await action.getText(this.selectedLanguage) : null,
+			userProfileBtn_exists: ((await action.getElementCount(this.userProfileBtn)) > 0) ? await action.waitForDisplayed(this.userProfileBtn) : false,
+			indexBtn: ((await action.getElementCount(this.indexBtn)) > 0) ? await action.getText(this.indexBtn) : null,
+			inviteBtnTxt: ((await action.getElementCount(this.inviteBtnTxt)) > 0) ? await action.getText(this.inviteBtnTxt) : null,
+			addToPlaylistBtn: ((await action.getElementCount(this.addToPlaylistBtn)) > 0) ? await action.getText(this.addToPlaylistBtn) : null,
+			assignBtn: ((await action.getElementCount(this.assignBtn)) > 0) ? await action.getText(this.assignBtn) : null,
+			shareBtn: ((await action.getElementCount(this.shareBtn)) > 0) ? await action.getText(this.shareBtn) : null
 		};
 		return obj;
 	},
 
-	clickDashboardButton: function () {
-		logger.logInto(stackTrace.get());
-		res = action.click(this.dashboardBtn);
+	clickDashboardButton: async function () {
+		await logger.logInto(await stackTrace.get());
+		res = await action.click(this.dashboardBtn);
 		if (true == res) {
-			let dashboardPage = require('./dashboard.page.js');
-			res = dashboardPage.isInitialized();
+			let dashboardPage = await require('./dashboard.page.js');
+			res = await dashboardPage.isInitialized();
 		}
 		else {
 			res = res + " -- Error in clicking Dashboard Button";
-			logger.logInto(stackTrace.get(), res, 'error');
+			await logger.logInto(await stackTrace.get(), res, 'error');
 		}
 		return res;
 	},
 
-	clickBrowseButton: function () {
-		logger.logInto(stackTrace.get());
-		res = action.click(this.browseBtn);
+	clickBrowseButton: async function () {
+		await logger.logInto(await stackTrace.get());
+		res = await action.click(this.browseBtn);
 		if (true == res) {
-			let browse = require('./browse.page.js');
-			res = browse.isInitialized();
+			let browse = await require('./browse.page.js');
+			res = await browse.isInitialized();
 		}
 		else {
 			res = res + " -- Error in clicking Browse Button";
-			logger.logInto(stackTrace.get(), res, 'error');
+			await logger.logInto(await stackTrace.get(), res, 'error');
 		}
 		return res;
 	},
 
-	clickClassesButton: function () {
-		logger.logInto(stackTrace.get());
-		res = action.click(this.classesBtn);
+	clickClassesButton: async function () {
+		await logger.logInto(await stackTrace.get());
+		res = await action.click(this.classesBtn);
 		if (true == res) {
-			logger.logInto(stackTrace.get(), res);
+			await logger.logInto(await stackTrace.get(), res);
 		}
 		else {
 			res = res + " -- Error in clicking Class Button";
-			logger.logInto(stackTrace.get(), res, 'error');
+			await logger.logInto(await stackTrace.get(), res, 'error');
 		}
 		return res;
 	},
 
-	click_PlusIconClassesTab: function () {
-		res = action.click(this.classPlusIcon)
+	click_PlusIconClassesTab: async function () {
+		res = await action.click(this.classPlusIcon)
 		if (res == true) {
-			logger.logInto(stackTrace.get(), res + "Class plus button is clicked");
+			await logger.logInto(await stackTrace.get(), res + "Class plus button is clicked");
 		}
 		else
-			logger.logInto(stackTrace.get(), res + ":Add A New Book Button is NOT Clicked", "error");
+			await logger.logInto(await stackTrace.get(), res + ":Add A New Book Button is NOT Clicked", "error");
 		return res;
 	},
 
-	clickNotificationButton: function () {
-		logger.logInto(stackTrace.get());
-		res = action.click(this.notificationBtn);
+	clickNotificationButton: async function () {
+		await logger.logInto(await stackTrace.get());
+		res = await action.click(this.notificationBtn);
 		if (true == res) {
-			action.waitForDisplayed(this.noNotificationImg);
+			await action.waitForDisplayed(this.noNotificationImg);
 			res = {
-				notificationTxt: (action.getElementCount(this.notificationTxt) > 0) ? action.getText(this.notificationTxt) : null,
-				notificationCloseBtn_exists: (action.getElementCount(this.notificationCloseBtn) > 0) ? action.waitForDisplayed(this.notificationCloseBtn) : false,
-				noNotificationImg_exists: (action.getElementCount(this.noNotificationImg) > 0) ? action.waitForDisplayed(this.noNotificationImg) : null,
+				notificationTxt: ((await action.getElementCount(this.notificationTxt)) > 0) ? await action.getText(this.notificationTxt) : null,
+				notificationCloseBtn_exists: ((await action.getElementCount(this.notificationCloseBtn)) > 0) ? await action.waitForDisplayed(this.notificationCloseBtn) : false,
+				noNotificationImg_exists: ((await action.getElementCount(this.noNotificationImg)) > 0) ? await action.waitForDisplayed(this.noNotificationImg) : null,
 			};
 		}
 		else {
 			res = res + " -- Error in clicking Notification Button";
-			logger.logInto(stackTrace.get(), res, 'error');
+			await logger.logInto(await stackTrace.get(), res, 'error');
 		}
 		return res;
 	},
 
-	clickNotificationCloseButton: function () {
-		logger.logInto(stackTrace.get());
-		res = action.click(this.notificationCloseBtn);
+	clickNotificationCloseButton: async function () {
+		await logger.logInto(await stackTrace.get());
+		res = await action.click(this.notificationCloseBtn);
 		if (true == res) {
-			res = action.waitForDisplayed(this.grayBackdrop, undefined, true);
+			res = await action.waitForDisplayed(this.grayBackdrop, undefined, true);
 		}
 		else {
 			res = res + " -- Error in clicking Notification Close Button";
-			logger.logInto(stackTrace.get(), res, 'error');
+			await logger.logInto(await stackTrace.get(), res, 'error');
 		}
 		return res;
 	},
 
-	/*getLanguageListFromDropdown: function () {
+	/*getLanguageListFromDropdown: async function () {
 		logger.logInto(stackTrace.get());
 		res = action.click(this.languageSwitcherBtn);
 		if (res == true) {
@@ -188,7 +188,7 @@ module.exports = {
 		return languageData;
 	},
 
-	selectLanguage: function (lang) {
+	selectLanguage: async function (lang) {
 		logger.logInto(stackTrace.get());
 		let languageSelector;
 		languageSelector = this.languageList + "0]";
@@ -196,19 +196,19 @@ module.exports = {
 		return res;
 	},*/
 
-	selectLanguagefromLanguageSelector: function (languageToSelect) {
-		logger.logInto(stackTrace.get());
-		res = action.click(this.languageSwitcherBtn);
-		action.waitForDisplayed(this.languageList);
+	selectLanguagefromLanguageSelector: async function (languageToSelect) {
+		await logger.logInto(await stackTrace.get());
+		res = await action.click(this.languageSwitcherBtn);
+		await action.waitForDisplayed(this.languageList);
 		if (res == true) {
 			let list, i, languageListText;
-			list = action.findElements(this.languageList);
+			list = await action.findElements(this.languageList);
 			for (i = 0; i < list.length; i++) {
-				languageListText = action.getText(list[i]);
+				languageListText = await action.getText(list[i]);
 				if (languageListText.includes(languageToSelect)) {
-					res = action.click(list[i]);
+					res = await action.click(list[i]);
 					if (res == true) {
-						res = action.getText(this.selectedLanguage);
+						res = await action.getText(this.selectedLanguage);
 						break;
 					}
 				}
@@ -216,145 +216,150 @@ module.exports = {
 		}
 		else {
 			res = res + " -- Error in clicking languageSwitcherBtn";
-			logger.logInto(stackTrace.get(), res, 'error');
+			await logger.logInto(await stackTrace.get(), res, 'error');
 		}
 		return res;
 	},
 
-	clickProfileButton: function () {
-		logger.logInto(stackTrace.get());
-		res = action.click(this.userProfileBtn);
+	clickProfileButton: async function () {
+		await logger.logInto(await stackTrace.get());
+		res = await action.waitForDisplayed(this.userProfileBtn);
+		res = await action.click(this.userProfileBtn);
+
 		if (true == res) {
-			action.waitForDisplayed(this.userName);
-			res = this.getProfileData();
+			await action.waitForDisplayed(this.userName);
+			res = await this.getProfileData();
 		}
 		else {
 			res = res + " -- Error in clicking Profile Button";
-			logger.logInto(stackTrace.get(), res, 'error');
+			await logger.logInto(await stackTrace.get(), res, 'error');
 		}
 		return res;
 	},
 
-	getProfileData: function () {
-		logger.logInto(stackTrace.get());
+	getProfileData: async function () {
+		await logger.logInto(await stackTrace.get());
 		var obj = {
-			userName: (action.getElementCount(this.userName) > 0) ? action.getText(this.userName) : null,
-			emailID: (action.getElementCount(this.emailID) > 0) ? action.getText(this.emailID) : null,
-			userProfileHelpBtn: (action.getElementCount(this.userProfileHelpBtn) > 0) ? action.getText(this.userProfileHelpBtn) : null,
-			userProfileSettingsBtn: (action.getElementCount(this.userProfileSettingsBtn) > 0) ? action.getText(this.userProfileSettingsBtn) : null,
-			userProfileLogoutBtn: (action.getElementCount(this.userProfileLogoutBtn) > 0) ? action.getText(this.userProfileLogoutBtn) : null,
+			userName: ((await action.getElementCount(this.userName)) > 0) ? await action.getText(this.userName) : null,
+			emailID: ((await action.getElementCount(this.emailID)) > 0) ? await action.getText(this.emailID) : null,
+			userProfileHelpBtn: ((await action.getElementCount(this.userProfileHelpBtn)) > 0) ? await action.getText(this.userProfileHelpBtn) : null,
+			userProfileSettingsBtn: ((await action.getElementCount(this.userProfileSettingsBtn)) > 0) ? await action.getText(this.userProfileSettingsBtn) : null,
+			userProfileLogoutBtn: ((await action.getElementCount(this.userProfileLogoutBtn)) > 0) ? await action.getText(this.userProfileLogoutBtn) : null,
+			notificationTxt: ((await action.getElementCount(this.notificationTxt)) > 0) ?await action.getText(this.notificationTxt) : null,
+			notificationBtn_exists: ((await action.getElementCount(this.notificationBtn)) > 0) ? await action.waitForDisplayed(this.notificationBtn) : false,
+			selectedLanguage: ((await action.getElementCount(this.selectedLanguage) > 0)) ? await action.getText(this.selectedLanguage) : null,
 		}
 		return obj;
 	},
 
-	clickLogoutButton: function () {
-		logger.logInto(stackTrace.get());
-		res = action.click(this.userProfileLogoutBtn);
+	clickLogoutButton: async function () {
+		await logger.logInto(await stackTrace.get());
+		await action.waitForDisplayed(this.userProfileLogoutBtn);
+		res = await action.click(this.userProfileLogoutBtn);
 		if (true == res) {
-			let landing = require('./landing.page.js');
-			res = landing.isInitialized();
+			res = await require('./landing.page.js').isInitialized();
 		}
 		else {
 			res = res + " -- Error in clicking Profile Button";
-			logger.logInto(stackTrace.get(), res, 'error');
+			await logger.logInto(await stackTrace.get(), res, 'error');
 		}
 		return res;
 	},
 
-	clickBackButton: function () {
-		logger.logInto(stackTrace.get());
-		res = action.click(this.breadcrumbbackbtn);
+	clickBackButton: async function () {
+		await logger.logInto(await stackTrace.get());
+		res = await action.click(this.breadcrumbbackbtn);
 		if (res == true) {
-			logger.logInto(stackTrace.get(), res + "back button is clicked");
+			await logger.logInto(await stackTrace.get(), res + "back button is clicked");
 		}
 		else
-			logger.logInto(stackTrace.get(), res + ":back button is NOT Clicked", "error");
+			await logger.logInto(await stackTrace.get(), res + ":back button is NOT Clicked", "error");
 		return res;
 	},
 
-	clickIndexButton: function () { //to be reviewed - akhil
-		logger.logInto(stackTrace.get());
-		res = action.click(this.indexBtn);
+	clickIndexButton: async function () { //to be reviewed - akhil
+		await logger.logInto(await stackTrace.get());
+		res = await action.click(this.indexBtn);
 		if (true == res) {
-			action.waitForDisplayed(this.chapterTitle);
+			await action.waitForDisplayed(this.chapterTitle);
 			res = {
-				chapterTitleTxt: (action.getElementCount(this.chapterTitle) > 0) ? action.getText(this.chapterTitle) : null,
+				chapterTitleTxt: ((await action.getElementCount(this.chapterTitle)) > 0) ? await action.getText(this.chapterTitle) : null,
 			};
 		}
 		else {
 			res = res + " -- Error in clicking index Button";
-			logger.logInto(stackTrace.get(), res, 'error');
+			await logger.logInto(await stackTrace.get(), res, 'error');
 		}
 		return res;
 	},
 
-	clickIndexCloseButton: function () {
-		logger.logInto(stackTrace.get());
-		res = action.click(this.indexCloseBtn);
+	clickIndexCloseButton: async function () {
+		await logger.logInto(await stackTrace.get());
+		res = await action.click(this.indexCloseBtn);
 		if (true == res) {
-			res = action.waitForDisplayed(this.indexTOCPanel, undefined, true);
+			res = await action.waitForDisplayed(this.indexTOCPanel, undefined, true);
 		}
 		else {
 			res = res + " -- Error in clicking Index Close Button";
-			logger.logInto(stackTrace.get(), res, 'error');
+			await logger.logInto(await stackTrace.get(), res, 'error');
 		}
 		return res;
 	},
 
-	clickInviteButton: function () { //to be reviewed - akhil
-		logger.logInto(stackTrace.get());
-		res = action.click(this.inviteBtnTxt);
+	clickInviteButton: async function () { //to be reviewed - akhil
+		await logger.logInto(await stackTrace.get());
+		res = await action.click(this.inviteBtnTxt);
 		if (true == res) {
 			res = {
-				inviteBtnTxt: (action.getElementCount(this.inviteBtnTxt) > 0) ? action.getText(this.inviteBtnTxt) : null,
+				inviteBtnTxt: ((await action.getElementCount(this.inviteBtnTxt)) > 0) ? await action.getText(this.inviteBtnTxt) : null,
 			};
 		}
 		else {
 			res = res + " -- Error in clicking Invite Button Button";
-			logger.logInto(stackTrace.get(), res, 'error');
+			await logger.logInto(await stackTrace.get(), res, 'error');
 		}
 		return res;
 	},
 
-	clickAddToPlaylistButton: function () { //to be reviewed - akhil
+	clickAddToPlaylistButton: async function () { //to be reviewed - akhil
 		//page not working currently, getting crash
-		logger.logInto(stackTrace.get());
-		res = action.click(this.addToPlaylistBtn);
+		await logger.logInto(await stackTrace.get());
+		res = await action.click(this.addToPlaylistBtn);
 		if (true == res) {
-			action.waitForDisplayed(this.newPlaylistOption);
+			await action.waitForDisplayed(this.newPlaylistOption);
 			res = {
-				newPlaylistOption: (action.getElementCount(this.newPlaylistOption) > 0) ? action.getText(this.newPlaylistOption) : null
+				newPlaylistOption: ((await action.getElementCount(this.newPlaylistOption)) > 0) ? await action.getText(this.newPlaylistOption) : null
 			};
 		}
 		else {
 			res = res + " -- Error in clicking Add To Playlist Button";
-			logger.logInto(stackTrace.get(), res, 'error');
+			await logger.logInto(await stackTrace.get(), res, 'error');
 		}
 		return res;
 	},
 
-	clickAssignButton: function () {
-		logger.logInto(stackTrace.get());
-		res = action.click(this.assignBtn);
+	clickAssignButton: async function () {
+		await logger.logInto(await stackTrace.get());
+		res = await action.click(this.assignBtn);
 		if (true == res) {
-			logger.logInto(stackTrace.get(), res + "Assign Button clicked");
-			res = require('./createAssignment.page.js').isInitialized();
+			await logger.logInto(await stackTrace.get(), res + "Assign Button clicked");
+			res = await require('./createAssignment.page.js').isInitialized();
 		} else
-			logger.logInto(stackTrace.get(), res + " -- Error in clicking Assign Button", 'error');
+			await logger.logInto(await stackTrace.get(), res + " -- Error in clicking Assign Button", 'error');
 		return res;
 	},
 
-	selectTab: function (str) {
-		logger.logInto(stackTrace.get());
+	selectTab: async function (str) {
+		await logger.logInto(await stackTrace.get());
 		let i, list;
-		list = action.findElements(this.tabList);
+		list = await action.findElements(this.tabList);
 		for (i = 0; i < list.length; i++) {
-			if (action.getText(list[i]) == str) {
-				res = action.click(list[i]);
+			if ((await action.getText(list[i])) == str) {
+				res = await action.click(list[i]);
 				if (res == true) {
-					logger.logInto(stackTrace.get(), " --Component clicked");
+					await logger.logInto(await stackTrace.get(), " --Component clicked");
 				} else
-					logger.logInto(stackTrace.get(), " --Component NOT clicked", "error");
+					await logger.logInto(await stackTrace.get(), " --Component NOT clicked", "error");
 				break;
 			}
 			res = false;
@@ -362,8 +367,8 @@ module.exports = {
 		return res;
 	},
 
-	getTabsListData: function () {
-		logger.logInto(stackTrace.get());
+	getTabsListData: async function () {
+		await logger.logInto(await stackTrace.get());
 		let i, list;
 		let obj = {
 			list: null,
@@ -371,25 +376,25 @@ module.exports = {
 		};
 		let componentArr = [];
 
-		list = action.findElements(this.tabList);
+		list = await action.findElements(this.tabList);
 		for (i = 0; i < list.length; i++) {
-			componentArr[i] = action.getText(list[i])
-			if (action.getAttribute(list[i], "aria-selected") == "true")
+			componentArr[i] = await action.getText(list[i])
+			if ((await action.getAttribute(list[i], "aria-selected")) == "true")
 				obj.selected = componentArr[i];
 		}
 		obj.list = componentArr;
-		logger.logInto(stackTrace.get(), JSON.stringify(obj));
+		await logger.logInto(await stackTrace.get(), await JSON.stringify(obj));
 		return obj;
 	},
 
-	clickSettingsButton: function () {
-		logger.logInto(stackTrace.get());
-		res = action.click(this.settingsBtn);
+	clickSettingsButton: async function () {
+		await logger.logInto(await stackTrace.get());
+		res = await action.click(this.settingsBtn);
 		if (true == res) {
-			logger.logInto(stackTrace.get(), res + "Settings Button clicked");
-			res = require('./settings.page.js').isInitialized()
+			await logger.logInto(await stackTrace.get(), res + "Settings Button clicked");
+			res = await require('./settings.page.js').isInitialized()
 		} else
-			logger.logInto(stackTrace.get(), res + " -- Error in clicking Settings Button", 'error');
+			await logger.logInto(await stackTrace.get(), res + " -- Error in clicking Settings Button", 'error');
 		return res;
 	}
 };

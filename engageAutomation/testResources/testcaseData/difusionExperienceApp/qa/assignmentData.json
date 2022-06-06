@@ -1,43 +1,40 @@
 {
     "completedAssignmentList": [
         {
-                      "assignment1":"Completed Quiz 2",
-                      "activityList": [
-                          {
-                              "activityName": "one question quiz",
-                              "activityStatus": "Submitted: Mar 17, 2022",
-                              "activityScore": "100%",
-                              "activityAttempts": "1"
-                          },
-                          {
-                              "activityName": "More than 5 MB",
-                              "activityStatus": "Submitted: Mar 15, 2022",
-                              "activityScore": "100%",
-                              "activityAttempts": "1"
-                          }
-              ]
+            "assignment1": "Completed Quiz 2",
+            "activityList": [
+                {
+                    "activityName": "one question quiz",
+                    "activityStatus": "Submitted: Mar 17, 2022",
+                    "activityScore": "100%",
+                    "activityAttempts": "1"
+                },
+                {
+                    "activityName": "More than 5 MB",
+                    "activityStatus": "Submitted: Mar 15, 2022",
+                    "activityScore": "100%",
+                    "activityAttempts": "1"
+                }
+            ]
         },
-                      
-        { 
-                 "assignment2":"Completed Quiz",
-                "activityList": [
-                          {
-                              "activityName": "one question quiz",
-                              "activityStatus": "Submitted: Mar 17, 2022",
-                              "activityScore": "100%",
-                              "activityAttempts": "1"
-                          },
-                          {
-                              "activityName": "More than 5 MB",
-                              "activityStatus": "Submitted: Mar 15, 2022",
-                              "activityScore": "100%",
-                              "activityAttempts": "1"
-                          }
-                        ]
-                      }
-              
-        ],
-        
+        {
+            "assignment2": "Completed Quiz",
+            "activityList": [
+                {
+                    "activityName": "one question quiz",
+                    "activityStatus": "Submitted: Mar 17, 2022",
+                    "activityScore": "100%",
+                    "activityAttempts": "1"
+                },
+                {
+                    "activityName": "More than 5 MB",
+                    "activityStatus": "Submitted: Mar 15, 2022",
+                    "activityScore": "100%",
+                    "activityAttempts": "1"
+                }
+            ]
+        }
+    ],
     "engage": {
         "className": "Class Assignment test",
         "assignmentName": {
@@ -99,29 +96,12 @@
                 ],
                 "upcomingAssignmentNames": [
                     {
-                        "assignmentName":"Diwali Assignment"
+                        "assignmentName": "Diwali Assignment"
                     }
                 ],
                 "completedAssignment": [
                     {
-                        "assignmentName":"Completed Quiz 2",
-                        "activityList": [
-                            {
-                                "activityName": "one question quiz",
-                                "activityStatus": "Submitted: Mar 17, 2022",
-                                "activityScore": "100%",
-                                "activityAttempts": "1"
-                            },
-                            {
-                                "activityName": "More than 5 MB",
-                                "activityStatus": "Submitted: Mar 15, 2022",
-                                "activityScore": "100%",
-                                "activityAttempts": "1"
-                            }
-                        ]
-                    },           
-                    { 
-                        "assignmentName":"Completed Quiz",
+                        "assignmentName": "Completed Quiz 2",
                         "activityList": [
                             {
                                 "activityName": "More than 5 MB",
@@ -132,17 +112,28 @@
                         ]
                     },
                     {
-                        "assignmentName":"Complete Download Assignment",
+                        "assignmentName": "Completed Quiz",
+                        "activityList": [
+                            {
+                                "activityName": "More than 5 MB",
+                                "activityStatus": "Submitted: Mar 15, 2022",
+                                "activityScore": "100%",
+                                "activityAttempts": "1"
+                            }
+                        ]
+                    },
+                    {
+                        "assignmentName": "Complete Download Assignment",
                         "activityList": [
                             {
                                 "activityName": "Close Ended Native"
                             }
                         ]
                     }
-            ],
-            "completedAssignmentPerform": [
+                ],
+                "completedAssignmentPerform": [
                     {
-                        "assignmentName":"Closed Ended Assignment",
+                        "assignmentName": "Closed Ended Assignment",
                         "activityList": [
                             {
                                 "activityName": "Close Ended Native"
@@ -150,7 +141,21 @@
                         ]
                     }
                 ]
+                
             }
-        }
+        },
+
+        "classAssignment": [
+            {
+                "assignmentName": "Assignemnt",
+                "assignmentActivities": "3",
+                "dueNumberChip":1,
+                "activityList": [
+                    {
+                   
+                    }
+                ]
+            }
+        ]
     }
 }

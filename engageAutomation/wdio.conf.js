@@ -3,7 +3,7 @@ require('./env.conf.js');
 //let QaTouchReporter = require('wdio-qatouch-reporter/lib/index');
 const novusVisualCompare = require('wdio-novus-visual-regression-service/compare');
 const { TimelineService } = require('wdio-timeline-reporter/timeline-service');
-const specGenerator = require(process.cwd() + '/core/runner/specGenerator.js')
+const specGenerator = require(( process.cwd()) + '/core/runner/specGenerator.js')
 const visualTimelineReportService = require('./core/utils/visual-report-utility/report-service').TimelineService;
 var visualReportService = new visualTimelineReportService();
 var retryTimes = 0;
@@ -30,28 +30,26 @@ var NovusService = [
     'novus-visual-regression',
     {
         compare: new novusVisualCompare.LocalCompare({
-            referenceName: getScreenshotName(path.join(process.cwd(), global.baseScreenshotDir)),
-            screenshotName: getScreenshotName(path.join(process.cwd(), global.testScreenshotDir)),
-            diffName: getScreenshotName(path.join(process.cwd(), global.diffScreenshotDir)),
+            referenceName:  getScreenshotName(path.join( process.cwd(), global.baseScreenshotDir)),
+            screenshotName:  getScreenshotName(path.join( process.cwd(), global.testScreenshotDir)),
+            diffName:  getScreenshotName(path.join( process.cwd(), global.diffScreenshotDir)),
             misMatchTolerance: 0,
             ignoreComparison: 'nothing'
         })
     }
 ];
 
-function getScreenshotName(basePath) {
+ function getScreenshotName(basePath) {
     return function (context) {
         if (context.test.file.indexOf("/") >= 0)
-            global.testFileName = context.test.file.split('tempRunner/')[1].replace('.js', "");
+            global.testFileName =  context.test.file.split('tempRunner/')[1].replace('.js', "");
         else
-            global.testFileName = context.test.file.split('tempRunner\\')[1].replace('.js', "");
+            global.testFileName =  context.test.file.split('tempRunner\\')[1].replace('.js', "");
 
         global.screenshotName = global.suiteKey + "-" + ((global.tcNumber.toString().length == 1) ? "0" + global.tcNumber : global.tcNumber) + "-" + global.tcId + '.png';
-        return (path.join(basePath, global.testFileName, global.screenshotName));
+        return  (path.join(basePath, global.testFileName, global.screenshotName));
     }
 };
-
-
 exports.config = {
     //
     // ====================
@@ -91,9 +89,16 @@ exports.config = {
     // Specify Test Files
     // ==================
     // Define which test specs should run. The pattern is relative to the directory
-    // from which `wdio` was called. Notice that, if you are calling `wdio` from an
-    // NPM script (see https://docs.npmjs.com/cli/run-script) then the current working
-    // directory is where your package.json resides, so `wdio` will be called from there.
+    // from which `wdio` was called.
+    //
+    // The specs are defined as an array of spec files (optionally using wildcards
+    // that will be expanded). The test for each spec file will be run in a separate
+    // worker process. In order to have a group of spec files run in the same worker
+    // process simply enclose them in an array within the specs array.
+    //
+    // If you are calling `wdio` from an NPM script (see https://docs.npmjs.com/cli/run-script),
+    // then the current working directory is where your `package.json` resides, so `wdio`
+    // will be called from there.
     //
     specs: [
         './test/tempRunner/**.js'
@@ -128,7 +133,7 @@ exports.config = {
     //
     // If you have trouble getting all important capabilities together, check out the
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
-    // https://docs.saucelabs.com/reference/platforms-configurator
+    // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: global.capabilities,
     //
@@ -143,15 +148,15 @@ exports.config = {
     // Set specific log levels per logger
     // loggers:
     // - webdriver, webdriverio
-    // - @wdio/applitools-service, @wdio/browserstack-service, @wdio/devtools-service, @wdio/sauce-service
+    // - @wdio/browserstack-service, @wdio/devtools-service, @wdio/sauce-service
     // - @wdio/mocha-framework, @wdio/jasmine-framework
-    // - @wdio/local-runner, @wdio/lambda-runner
+    // - @wdio/local-runner
     // - @wdio/sumologic-reporter
-    // - @wdio/cli, @wdio/config, @wdio/sync, @wdio/utils
+    // - @wdio/cli, @wdio/config, @wdio/utils
     // Level of logging verbosity: trace | debug | info | warn | error | silent
     // logLevels: {
     //     webdriver: 'info',
-    //     '@wdio/applitools-service': 'info'
+    //     '@wdio/appium-service': 'info'
     // },
     //
     // If you only want to run your tests until a specific amount of tests have failed use
@@ -187,7 +192,7 @@ exports.config = {
     ],
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
-    // see also: https://webdriver.io/docs/frameworks.html
+    // see also: https://webdriver.io/docs/frameworks
     //
     // Make sure you have the wdio adapter package for the specific framework installed
     // before running any tests.
@@ -196,9 +201,15 @@ exports.config = {
     // The number of times to retry the entire specfile when it fails as a whole
     // specFileRetries: 1,
     //
+    // Delay in seconds between the spec file retry attempts
+    // specFileRetriesDelay: 0,
+    //
+    // Whether or not retried specfiles should be retried immediately or deferred to the end of the queue
+    // specFileRetriesDeferred: false,
+    //
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
-    // see also: https://webdriver.io/docs/dot-reporter.html
+    // see also: https://webdriver.io/docs/dot-reporter
     reporters: ['spec',
         ['timeline', {
             outputDir: global.reportOutputDir,
@@ -251,10 +262,10 @@ exports.config = {
      * @param {Object} config wdio configuration object
      * @param {Array.<Object>} capabilities list of capabilities details
      */
-    onPrepare: function (config, capabilities) {
-        specGenerator.fileArrayGenerator(); //generating specs
+    onPrepare: async function (config, capabilities) {
+        await specGenerator.fileArrayGenerator(); //generating specs
         if (argv.visual) {
-            visualReportService.onPrepare();    //initiating visualReportService
+            await visualReportService.onPrepare();    //initiating visualReportService
         }
     },
     /**
@@ -340,7 +351,7 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {Array.<String>} specs List of spec file paths that ran
      */
-    afterSession: function (config, capabilities, specs) {
+    afterSession:async  function (config, capabilities, specs) {
         require('./core/utils/reportUpdater.js').updateFunctionalObj();
     },
     /**
@@ -352,7 +363,7 @@ exports.config = {
      * @param {<Object>} results object containing test results
      */
     onComplete: async function (exitCode, config, capabilities, results) {
-        if (argv.tesultsToken) {
+       /* if (argv.tesultsToken) {
             const tesults = require('tesults');
             const util = require('util');
             const tesultsResults = util.promisify(tesults.results);
@@ -404,11 +415,11 @@ exports.config = {
                 console.log(response)
             }
         }
-
+*/
         //require('./core/utils/reportUpdater.js').indexFileUpdate();
-        specGenerator.removingTempSpecs();
+        await specGenerator.removingTempSpecs();
         if (argv.visual) {
-            visualReportService.onComplete();
+            await visualReportService.onComplete();
         }
     },
     /**
@@ -418,9 +429,9 @@ exports.config = {
      */
     // onReload: function(oldSessionId, newSessionId) {
     // },
-    afterStep: function (test, context, { error, result, duration, passed, retries }) {
+    afterStep: async function (test, context, { error, result, duration, passed, retries }) {
         if (error) { //condition for allure report
-            browser.takeScreenshot();
+            await browser.takeScreenshot();
         }
     }
 }

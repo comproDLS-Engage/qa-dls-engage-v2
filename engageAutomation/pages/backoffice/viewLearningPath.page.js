@@ -29,151 +29,152 @@ module.exports = {
     seeMoreLessBtn: selectorFile.common.seeMoreLessBtn,
     modifyCompOptionsBtn: selectorFile.viewLearningPathPage.modifyCompOptionsBtn,
     freelyAvailable: selectorFile.viewLearningPathPage.freelyAvailable,
+    selectAllBtn: selectorFile.viewLearningPathPage.selectAllBtn,
 
-    isInitialized: function () {
-        logger.logInto(stackTrace.get());
+    isInitialized: async function () {
+        await logger.logInto((await stackTrace.get()));
         //action.waitForDocumentLoad();
-        action.waitForDisplayed(this.loadingContainer);
-        action.waitForDisplayed(this.loadingContainer, undefined, true);
-        let res = action.waitForDisplayed(this.deleteComponentBtn);
+        await action.waitForDisplayed(this.loadingContainer);
+        await action.waitForDisplayed(this.loadingContainer, undefined, true);
+        let res = await action.waitForDisplayed(this.deleteComponentBtn);
         return res;
     },
 
-    getComponentParamDetails: function () {
-        logger.logInto(stackTrace.get());
-        action.click(this.seeMoreLessBtn);
+    getComponentParamDetails: async function () {
+        await logger.logInto((await stackTrace.get()));
+        await action.click(this.seeMoreLessBtn);
         var obj = {
-            levels: (action.getElementCount(this.levels) > 0) ? action.getText(this.levels) : null,
-            autonumbering: (action.getElementCount(this.autonumbering) > 0) ? action.getText(this.autonumbering) : null,
-            category: (action.getElementCount(this.category) > 0) ? action.getText(this.category) : null,
-            visibility: (action.getElementCount(this.visibility) > 0) ? action.getText(this.visibility) : null,
-            targetRole: (action.getElementCount(this.targetRole) > 0) ? action.getText(this.targetRole) : null,
-            assignable: (action.getElementCount(this.assignable) > 0) ? action.getText(this.assignable) : null,
-            freelyAvailable: (action.getElementCount(this.freelyAvailable) > 0) ? action.getText(this.freelyAvailable) : null
+            levels: ((await action.getElementCount(this.levels)) > 0) ? await action.getText(this.levels) : null,
+            autonumbering: ((await action.getElementCount(this.autonumbering)) > 0) ? await action.getText(this.autonumbering) : null,
+            category: ((await action.getElementCount(this.category)) > 0) ? await action.getText(this.category) : null,
+            visibility: ((await action.getElementCount(this.visibility)) > 0) ? await action.getText(this.visibility) : null,
+            targetRole: ((await action.getElementCount(this.targetRole)) > 0) ? await action.getText(this.targetRole) : null,
+            assignable: ((await action.getElementCount(this.assignable)) > 0) ? await action.getText(this.assignable) : null,
+            freelyAvailable: ((await action.getElementCount(this.freelyAvailable)) > 0) ? await action.getText(this.freelyAvailable) : null
         };
         return obj;
     },
 
-    click_AddFolder_Button: function () {
-        logger.logInto(stackTrace.get());
+    click_AddFolder_Button: async function () {
+        await logger.logInto((await stackTrace.get()));
         let res;
-        if (action.isClickable(this.emptyStateBtn)) {
-            res = action.click(this.emptyStateBtn);
+        if (await action.isClickable(this.emptyStateBtn)) {
+            res = await action.click(this.emptyStateBtn);
         }
         else {
-            res = action.click(this.addFolderBtn);
+            res = await action.click(this.addFolderBtn);
         }
         if (res == true) {
-            res = require('./addFolder.page.js').isInitialized();
-            browser.pause(3000);
+            res = await require('./addFolder.page.js').isInitialized();
+            await browser.pause(3000);
         }
-        logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
-    click_AddActivity_Button: function () {
-        logger.logInto(stackTrace.get());
+    click_AddActivity_Button: async function () {
+        await logger.logInto((await stackTrace.get()));
         let res;
-        if (action.isClickable(this.emptyStateBtn)) {
-            res = action.click(this.emptyStateBtn);
+        if (await action.isClickable(this.emptyStateBtn)) {
+            res = await action.click(this.emptyStateBtn);
         }
         else {
-            res = action.click(this.addActivityBtn);
+            res = await action.click(this.addActivityBtn);
         }
         if (res == true) {
-            res = action.waitForDisplayed(this.proceedBtn);
+            res = await action.waitForDisplayed(this.proceedBtn);
         }
-        logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
-    click_Folder: function (name) {
-        logger.logInto(stackTrace.get());
+    click_Folder: async function (name) {
+        await logger.logInto((await stackTrace.get()));
         let res = null;
         let i, list;
-        list = action.findElements(this.folderList);
+        list = await action.findElements(this.folderList);
         for (i = 0; i < list.length; i++) {
-            if (action.getText(list[i]) == name) {
-                res = action.click(list[i]);
+            if ((await action.getText(list[i])) == name) {
+                res = await action.click(list[i]);
                 if (res == true) {
-                    res = action.waitForDisplayed(this.loadingContainer, undefined, true);
-                    browser.pause(3000);
+                    res = await action.waitForDisplayed(this.loadingContainer, undefined, true);
+                    await browser.pause(3000);
                 }
                 break;
             }
             res = "folder \"" + name + "\" not found";
         }
-        logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
-    click_Activity: function (name) {
-        logger.logInto(stackTrace.get());
+    click_Activity: async function (name) {
+        await logger.logInto((await stackTrace.get()));
         let res = null;
         let i, list;
-        list = action.findElements(this.activityList);
+        list = await action.findElements(this.activityList);
         for (i = 0; i < list.length; i++) {
             //console.log(action.getText(list[i]))
-            if (action.getText(list[i]).includes(name)) {
-                res = action.click(list[i]);
+            if ((await action.getText(list[i])).includes(name)) {
+                res = await action.click(list[i]);
                 if (res == true) {
-                    action.waitForDisplayed(this.loadingContainer, undefined, true);
-                    res = action.waitForDisplayed("iframe[id*=iframe], iframe");
-                    browser.pause(2000)
+                    await action.waitForDisplayed(this.loadingContainer, undefined, true);
+                    res = await action.waitForDisplayed("iframe[id*=iframe], iframe");
+                    await browser.pause(2000)
                 }
                 break;
             }
             res = "activity \"" + name + "\" not found";
         }
-        logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         // action.switchToFrame(0);
         return res;
     },
 
-    select_ActivityType_and_Proceed: function (id) {
-        logger.logInto(stackTrace.get());
+    select_ActivityType_and_Proceed: async function (id) {
+        await logger.logInto((await stackTrace.get()));
         let res = null;
-        res = action.click("[data-tid=input-" + id);
+        res = await action.click("[data-tid=input-" + id);
         if (res == true) {
-            res = action.click(this.proceedBtn);
+            res = await action.click(this.proceedBtn);
             if (res == true) {
                 if (id == "category-4-option-0")
-                    res = require('./linkFromLibrary.page.js').isInitialized();
+                    res = await require('./linkFromLibrary.page.js').isInitialized();
                 else
-                    res = require('./addActivity.page.js').isInitialized();
-                browser.pause(3000);
+                    res = await require('./addActivity.page.js').isInitialized();
+                await browser.pause(3000);
             }
         }
         //res = "activity type \"" + type + "\" not found";
-        logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
-    click_DeleteComponent_Button: function () {
-        logger.logInto(stackTrace.get());
-        let res = action.click(this.deleteComponentBtn);
+    click_DeleteComponent_Button: async function () {
+        await logger.logInto((await stackTrace.get()));
+        let res = await action.click(this.deleteComponentBtn);
         if (res == true) {
-            action.waitForDisplayed(this.dialogContent);
-            res = action.getText(this.dialogContent);
+            await action.waitForDisplayed(this.dialogContent);
+            res = await action.getText(this.dialogContent);
         }
-        logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
-    click_Delete_Button_in_ActivityMenu: function (name) {
-        logger.logInto(stackTrace.get());
+    click_Delete_Button_in_ActivityMenu: async function (name) {
+        await logger.logInto((await stackTrace.get()));
         let res = null;
         let i, list, list2;
-        list = action.findElements(this.activityList);
-        list2 = action.findElements(this.activityMenuBtn);
+        list = await action.findElements(this.activityList);
+        list2 = await action.findElements(this.activityMenuBtn);
         for (i = 0; i < list.length; i++) {
-            if (action.getText(list[i]).includes(name)) {
-                res = action.click(list2[i]);
+            if ((await action.getText(list[i])).includes(name)) {
+                res = await action.click(list2[i]);
                 if (res == true) {
-                    res = action.click(this.activityMenuDeleteBtn);
+                    res = await action.click(this.activityMenuDeleteBtn);
                     if (res == true) {
-                        action.waitForDisplayed(this.dialogContent);
-                        res = action.getText(this.dialogContent);
+                        await action.waitForDisplayed(this.dialogContent);
+                        res = await action.getText(this.dialogContent);
                     }
                 }
                 break;
@@ -189,25 +190,25 @@ module.exports = {
         //         res = action.getText(this.dialogContent);
         //     }
         // }
-        logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
-    click_ActivityAuthor_Button_in_ActivityMenu: function (name) {
-        logger.logInto(stackTrace.get());
-        action.waitForDisplayed(this.activityList);
+    click_ActivityAuthor_Button_in_ActivityMenu: async function (name) {
+        await logger.logInto((await stackTrace.get()));
+        await action.waitForDisplayed(this.activityList);
         let res = null;
         let i, list, list2;
-        list = action.findElements(this.activityList);
-        list2 = action.findElements(this.activityMenuBtn);
+        list = await action.findElements(this.activityList);
+        list2 = await action.findElements(this.activityMenuBtn);
         for (i = 0; i < list.length; i++) {
-            if (action.getText(list[i]).includes(name)) {
-                res = action.click(list2[i]);
+            if ((await action.getText(list[i])).includes(name)) {
+                res = await action.click(list2[i]);
                 if (res == true) {
-                    res = action.click(this.activityMenuActivityAuthorBtn);
+                    res = await action.click(this.activityMenuActivityAuthorBtn);
                     if (res == true) {
-                        browser.pause(5000);
-                        browser.switchWindow("paint.backoffice.comprodls.com");
+                        await browser.pause(5000);
+                        await browser.switchWindow("paint.backoffice.comprodls.com");
                         // action.waitForDisplayed(this.dialogContent);
                         // res = action.getText(this.dialogContent);
                     }
@@ -216,55 +217,70 @@ module.exports = {
             }
             res = "activity \"" + name + "\" not found";
         }
-        logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
-    select_Item_and_Click_Delete: function (item) {
-        logger.logInto(stackTrace.get());
+    select_Item_and_Click_Delete: async function (item) {
+        await logger.logInto((await stackTrace.get()));
         let res = null;
         let i, list, checkboxes;
-        list = action.findElements(this.folderList);
-        checkboxes = action.findElements(this.itemCheckboxes);
+        list = await action.findElements(this.folderList);
+        checkboxes = await action.findElements(this.itemCheckboxes);
         for (i = 0; i < list.length; i++) {
-            if (action.getText(list[i]) == item) {
-                res = action.click(checkboxes[i]);
+            if ((await action.getText(list[i])) == item) {
+                res = await action.click(checkboxes[i]);
                 if (res == true) {
-                    res = action.click(this.deleteItemBtn);
+                    res = await action.click(this.deleteItemBtn);
                     if (res == true) {
-                        action.waitForDisplayed(this.dialogContent);
-                        res = action.getText(this.dialogContent);
+                        await action.waitForDisplayed(this.dialogContent);
+                        res = await action.getText(this.dialogContent);
                     }
                 }
                 break;
             }
             res = "Item \"" + item + "\" not found";
         }
-        logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
-    click_ModifyFolderOptions_Button: function () {
-        logger.logInto(stackTrace.get());
+    click_ModifyFolderOptions_Button: async function () {
+        await logger.logInto((await stackTrace.get()));
         let res;
-        res = action.click(this.modifyFolderOptionsBtn);
+        res = await action.click(this.modifyFolderOptionsBtn);
         if (res == true) {
-            res = require('./addFolder.page.js').isInitialized();
-            browser.pause(5000);
+            res = await require('./addFolder.page.js').isInitialized();
+            await browser.pause(5000);
         }
-        logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
-    click_ModifyCompOptions_Button: function () {
-        logger.logInto(stackTrace.get());
+    click_ModifyCompOptions_Button: async function () {
+        await logger.logInto((await stackTrace.get()));
         let res;
-        res = action.click(this.modifyCompOptionsBtn);
+        res = await action.click(this.modifyCompOptionsBtn);
         if (res == true) {
-            res = require('./addComponent.page.js').isInitialized();
-            browser.pause(5000);
+            res = await require('./addComponent.page.js').isInitialized();
+            await browser.pause(5000);
         }
-        logger.logInto(stackTrace.get(), res);
+        await logger.logInto((await stackTrace.get()), res);
+        return res;
+    },
+
+    click_SelectAll_And_Click_Delete_Button: async function () {
+        await logger.logInto((await stackTrace.get()));
+        let res;
+        res = await action.click(this.selectAllBtn);
+        if (res == true) {
+            res = await action.click(this.deleteItemBtn);
+            if (res == true) {
+                await action.waitForDisplayed(this.dialogContent);
+                res = await action.getText(this.dialogContent);
+            }
+        }
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     }
 }

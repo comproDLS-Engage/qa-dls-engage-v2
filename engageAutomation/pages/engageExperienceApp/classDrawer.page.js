@@ -9,27 +9,27 @@ module.exports = {
     classDrawerHeader: selectorFile.css.ComproEngage.classDrawer.classDrawerHeader,
     classDrawerSubTitle: selectorFile.css.ComproEngage.classDrawer.classDrawerSubTitle,
     classDrawerCloseBtn: selectorFile.css.ComproEngage.classDrawer.classDrawerCloseBtn,
-    isInitialized: function () {
+    isInitialized: async function () {
         var classDashboard = require('./classDashboard.page.js');
-        var classDashboardData = classDashboard.isInitialized();
-        classDashboardData.pageStatus=action.waitForDisplayed(this.classDrawerHeader)
-        action.scrollIntoView(this.classDrawerTitle)
+        var classDashboardData = await classDashboard.isInitialized();
+        classDashboardData.pageStatus=await action.waitForDisplayed(this.classDrawerHeader)
+        await action.scrollIntoView(this.classDrawerTitle)
         let obj = {
-            classDrawerTitle: action.getElementCount(this.classDrawerTitle) > 0 ? action.getText(this.classDrawerTitle) : null,
-            classDrawerHeader: action.getElementCount(this.classDrawerHeader) > 0 ? action.getText(this.classDrawerHeader) : null,
-            classDrawerSubTitle: action.getElementCount(this.classDrawerSubTitle) > 0 ? action.getText(this.classDrawerSubTitle) : null,
-            classDrawerCloseBtn: action.getElementCount(this.classDrawerCloseBtn) > 0 ? action.waitForExist(this.classDrawerCloseBtn) : false,
+            classDrawerTitle: (await action.getElementCount(this.classDrawerTitle)) > 0 ? await action.getText(this.classDrawerTitle) : null,
+            classDrawerHeader: (await action.getElementCount(this.classDrawerHeader)) > 0 ? await action.getText(this.classDrawerHeader) : null,
+            classDrawerSubTitle: (await action.getElementCount(this.classDrawerSubTitle)) > 0 ? await action.getText(this.classDrawerSubTitle) : null,
+            classDrawerCloseBtn: (await action.getElementCount(this.classDrawerCloseBtn)) > 0 ? await action.waitForExist(this.classDrawerCloseBtn) : false,
         }
         obj.classDashboardData = classDashboardData;
         return obj;
     },
 
-    Click_classDrawerCloseBtn: function () {
-        res = action.click(this.classDrawerCloseBtn);
+    Click_classDrawerCloseBtn: async function () {
+        res = await action.click(this.classDrawerCloseBtn);
         if (res == true) 
-            logger.logInto(stackTrace.get(), res + "Drawer Pane button is clicked");
+            await logger.logInto(await stackTrace.get(), res + "Drawer Pane button is clicked");
         else
-            logger.logInto(stackTrace.get(), res + "Drawer Pane is NOT Clicked", "error");
+            await logger.logInto(await stackTrace.get(), res + "Drawer Pane is NOT Clicked", "error");
         return res;
     }
 

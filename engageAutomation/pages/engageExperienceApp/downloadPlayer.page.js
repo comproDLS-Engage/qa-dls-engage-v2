@@ -19,61 +19,61 @@ module.exports = {
     fileSize: selectorFile.css.ComproEngage.downloadPlayer.fileSize,
     viewBtn: selectorFile.css.ComproEngage.downloadPlayer.viewBtn,
 
-    isInitialized: function () {
+    isInitialized: async function () {
         var res;
-        logger.logInto(stackTrace.get());
-        action.waitForDocumentLoad();
+        await logger.logInto(await stackTrace.get());
+        await action.waitForDocumentLoad();
         res = {
-            pageStatus: action.waitForDisplayed(this.downPlayer_img),
-            appShellPage: appShellPage.isInitialized()
+            pageStatus: await action.waitForDisplayed(this.downPlayer_img),
+            appShellPage: await appShellPage.isInitialized()
         };
         return res;
     },
 
-    getData_downloadPlayer: function () {
-        logger.logInto(stackTrace.get());
+    getData_downloadPlayer: async function () {
+        await logger.logInto(await stackTrace.get());
         var obj;
         obj = {
-            downPlayer_img: (action.getElementCount(this.downPlayer_img) > 0) ? action.waitForDisplayed(this.downPlayer_img) : false,
-            downPlayer_title: (action.getElementCount(this.downPlayer_title) > 0) ? action.getText(this.downPlayer_title) : null,
-            resourceLabel: (action.getElementCount(this.resourceLabel) > 0) ? action.getText(this.resourceLabel) : null,
-            downPlayer_subtitle: (action.getElementCount(this.downPlayer_subtitle) > 0) ? action.getText(this.downPlayer_subtitle) : null,
-            downloadBtn: (action.getElementCount(this.downloadBtn) > 0) ? action.getText(this.downloadBtn) : null,
-            downInfoLabel: (action.getElementCount(this.downInfoLabel) > 0) ? action.getText(this.downInfoLabel) : null,
-            fileLabel: (action.getElementCount(this.fileLabel) > 0) ? action.getText(this.fileLabel) : null,
-            fileName: (action.getElementCount(this.fileName) > 0) ? action.getText(this.fileName) : null,
-            typeLabel: (action.getElementCount(this.typeLabel) > 0) ? action.getText(this.typeLabel) : null,
-            fileType: (action.getElementCount(this.fileType) > 0) ? action.getText(this.fileType) : null,
-            sizeLabel: (action.getElementCount(this.sizeLabel) > 0) ? action.getText(this.sizeLabel) : null,
-            fileSize: (action.getElementCount(this.fileSize) > 0) ? action.getText(this.fileSize) : null,
-            viewBtn: (action.getElementCount(this.viewBtn) > 0) ? action.getText(this.viewBtn) : null,
-            downloadBtn_isClickable: (action.getElementCount(this.downloadBtn) > 0) ? action.isClickable(this.downloadBtn) : null //manually added
+            downPlayer_img: ((await action.getElementCount(this.downPlayer_img)) > 0) ? await action.waitForDisplayed(this.downPlayer_img) : false,
+            downPlayer_title: ((await action.getElementCount(this.downPlayer_title)) > 0) ? await action.getText(this.downPlayer_title) : null,
+            resourceLabel: ((await action.getElementCount(this.resourceLabel)) > 0) ? await action.getText(this.resourceLabel) : null,
+            downPlayer_subtitle: ((await action.getElementCount(this.downPlayer_subtitle)) > 0) ? await action.getText(this.downPlayer_subtitle) : null,
+            downloadBtn: ((await action.getElementCount(this.downloadBtn)) > 0) ? await action.getText(this.downloadBtn) : null,
+            downInfoLabel: ((await action.getElementCount(this.downInfoLabel)) > 0) ? await action.getText(this.downInfoLabel) : null,
+            fileLabel: ((await action.getElementCount(this.fileLabel)) > 0) ? await action.getText(this.fileLabel) : null,
+            fileName: ((await action.getElementCount(this.fileName)) > 0) ? await action.getText(this.fileName) : null,
+            typeLabel: ((await action.getElementCount(this.typeLabel)) > 0) ? await action.getText(this.typeLabel) : null,
+            fileType: ((await action.getElementCount(this.fileType)) > 0) ? await action.getText(this.fileType) : null,
+            sizeLabel: ((await action.getElementCount(this.sizeLabel)) > 0) ? await action.getText(this.sizeLabel) : null,
+            fileSize: ((await action.getElementCount(this.fileSize)) > 0) ? await action.getText(this.fileSize) : null,
+            viewBtn: ((await action.getElementCount(this.viewBtn)) > 0) ? await action.getText(this.viewBtn) : null,
+            downloadBtn_isClickable: ((await action.getElementCount(this.downloadBtn)) > 0) ? await action.isClickable(this.downloadBtn) : null //manually added
         }
         return obj;
     },
 
-    click_downloadBtn: function () {
-        logger.logInto(stackTrace.get());
+    click_downloadBtn: async function () {
+        await logger.logInto(await stackTrace.get());
         var res;
-        res = action.click(this.downloadBtn);
+        res = await action.click(this.downloadBtn);
         if (true == res) {
-            logger.logInto(stackTrace.get(), " downloadBtn is clicked");
+            await logger.logInto(await stackTrace.get(), " downloadBtn is clicked");
         }
         else {
-            logger.logInto(stackTrace.get(), res + "downloadBtn is NOT clicked", 'error');
+            await logger.logInto(await stackTrace.get(), res + "downloadBtn is NOT clicked", 'error');
         }
         return res;
     },
 
-    click_viewBtn: function () {
-        logger.logInto(stackTrace.get());
+    click_viewBtn: async function () {
+        await logger.logInto(await stackTrace.get());
         var res;
-        res = action.click(this.viewBtn);
+        res = await action.click(this.viewBtn);
         if (true == res) {
-            logger.logInto(stackTrace.get(), " viewBtn is clicked");
+            await logger.logInto(await stackTrace.get(), " viewBtn is clicked");
         }
         else {
-            logger.logInto(stackTrace.get(), res + "viewBtn is NOT clicked", 'error');
+            await logger.logInto(await stackTrace.get(), res + "viewBtn is NOT clicked", 'error');
         }
         return res;
     },

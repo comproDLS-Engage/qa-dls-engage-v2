@@ -38,61 +38,61 @@ module.exports = {
     activityAttempt: selectorFile.css.ComproEngage.AssignmentListDetailsPage_student.activityAttempt,
 
 
-    isInitialized: function () { 
+    isInitialized: async function () { 
         var res;
-        logger.logInto(stackTrace.get());
-        action.waitForDocumentLoad();
+        await logger.logInto(await stackTrace.get());
+        await action.waitForDocumentLoad();
         res = {
-            pageStatus:  action.waitForDisplayed(this.assignmentDetailPageTitle),
-            appShellPage:appShellPage.isInitialized()};
+            pageStatus:  await action.waitForDisplayed(this.assignmentDetailPageTitle),
+            appShellPage:await appShellPage.isInitialized()};
         return res; 
     },
 
-    getData_assignmentListPage: function () {
-        logger.logInto(stackTrace.get());
+    getData_assignmentListPage: async function () {
+        await logger.logInto(await stackTrace.get());
         var obj;
         obj = {
-            assignmentDetailPageTitle:(action.getElementCount(this.assignmentDetailPageTitle) > 0) ? action.getText(this.assignmentDetailPageTitle) : null,
-            assignmentDetailPageSubtitle:(action.getElementCount(this.assignmentDetailPageSubtitle) > 0) ? action.getText(this.assignmentDetailPageSubtitle) : null,
-            dueAssignmentBtn:(action.getElementCount(this.dueAssignmentBtn) > 0) ? action.getText(this.dueAssignmentBtn) : null,
-            dueAssignmentCount:(action.getElementCount(this.dueAssignmentCount) > 0) ? action.getText(this.dueAssignmentCount) : null,
-            due_noAssignmentTitle:(action.getElementCount(this.due_noAssignmentTitle) > 0) ? action.getText(this.due_noAssignmentTitle) : null,
-            due_noAssignmentSubTitle:(action.getElementCount(this.due_noAssignmentSubTitle) > 0) ? action.getText(this.due_noAssignmentSubTitle) : null,
-            upcomingAssignmentBtn:(action.getElementCount(this.upcomingAssignmentBtn) > 0) ? action.getText(this.upcomingAssignmentBtn) : null,
-            upcoming_noAssignmentTitle:(action.getElementCount(this.upcoming_noAssignmentTitle) > 0) ? action.getText(this.upcoming_noAssignmentTitle) : null,
-            upcoming_noAssignmentSubTitle:(action.getElementCount(this.upcoming_noAssignmentSubTitle) > 0) ? action.getText(this.upcoming_noAssignmentSubTitle) : null,
-            completedAssignmentBtn:(action.getElementCount(this.completedAssignmentBtn) > 0) ? action.getText(this.completedAssignmentBtn) : null,
-            completed_noAssignmentTitle:(action.getElementCount(this.completed_noAssignmentTitle) > 0) ? action.getText(this.completed_noAssignmentTitle) : null,
-            completed_noAssignmentSubTitle:(action.getElementCount(this.completed_noAssignmentSubTitle) > 0) ? action.getText(this.completed_noAssignmentSubTitle) : null,
-            completeSearchIcon:(action.getElementCount(this.completeSearchIcon) > 0) ? action.waitForDisplayed(this.completeSearchIcon) : false,
-            completeSearchTextBox:(action.getElementCount(this.completeSearchTextBox) > 0) ? action.getText(this.completeSearchTextBox) : null,
-            completeResultLbl:(action.getElementCount(this.completeResultLbl) > 0) ? action.getText(this.completeResultLbl) : null,
+            assignmentDetailPageTitle:((await action.getElementCount(this.assignmentDetailPageTitle)) > 0) ? await action.getText(this.assignmentDetailPageTitle) : null,
+            assignmentDetailPageSubtitle:((await action.getElementCount(this.assignmentDetailPageSubtitle)) > 0) ? await action.getText(this.assignmentDetailPageSubtitle) : null,
+            dueAssignmentBtn:((await action.getElementCount(this.dueAssignmentBtn)) > 0) ? await action.getText(this.dueAssignmentBtn) : null,
+            dueAssignmentCount:((await action.getElementCount(this.dueAssignmentCount)) > 0) ? await action.getText(this.dueAssignmentCount) : null,
+            due_noAssignmentTitle:((await action.getElementCount(this.due_noAssignmentTitle)) > 0) ? await action.getText(this.due_noAssignmentTitle) : null,
+            due_noAssignmentSubTitle:((await action.getElementCount(this.due_noAssignmentSubTitle)) > 0) ? await action.getText(this.due_noAssignmentSubTitle) : null,
+            upcomingAssignmentBtn:((await action.getElementCount(this.upcomingAssignmentBtn)) > 0) ? await action.getText(this.upcomingAssignmentBtn) : null,
+            upcoming_noAssignmentTitle:((await action.getElementCount(this.upcoming_noAssignmentTitle)) > 0) ? await action.getText(this.upcoming_noAssignmentTitle) : null,
+            upcoming_noAssignmentSubTitle:((await action.getElementCount(this.upcoming_noAssignmentSubTitle)) > 0) ? await action.getText(this.upcoming_noAssignmentSubTitle) : null,
+            completedAssignmentBtn:((await action.getElementCount(this.completedAssignmentBtn)) > 0) ? await action.getText(this.completedAssignmentBtn) : null,
+            completed_noAssignmentTitle:((await action.getElementCount(this.completed_noAssignmentTitle)) > 0) ? await action.getText(this.completed_noAssignmentTitle) : null,
+            completed_noAssignmentSubTitle:((await action.getElementCount(this.completed_noAssignmentSubTitle)) > 0) ? await action.getText(this.completed_noAssignmentSubTitle) : null,
+            completeSearchIcon:((await action.getElementCount(this.completeSearchIcon)) > 0) ? await action.waitForDisplayed(this.completeSearchIcon) : false,
+            completeSearchTextBox:((await action.getElementCount(this.completeSearchTextBox)) > 0) ? await action.getText(this.completeSearchTextBox) : null,
+            completeResultLbl:((await action.getElementCount(this.completeResultLbl)) > 0) ? await action.getText(this.completeResultLbl) : null,
         }
         return obj; 
     },
 
-    getData_assignmentList: function (assignmentNameName) {
-        logger.logInto(stackTrace.get());
+    getData_assignmentList: async function (assignmentNameName) {
+        await logger.logInto(await stackTrace.get());
         var obj=[];
-        action.waitForDisplayed(this.assignmentName);
-        var list = action.findElements(this.assignmentName);
+        await action.waitForDisplayed(this.assignmentName);
+        var list = await action.findElements(this.assignmentName);
         if (assignmentNameName) {
             for (var i=0;i<list.length;i++) {
-                if (action.getText(this.assignmentName + i) == assignmentNameName) {
+                if ((await action.getText(this.assignmentName + i)) == assignmentNameName) {
                     obj[0] = {
-                        assignmentName:(action.getElementCount(this.assignmentName+i+"]")  > 0) ? action.getText(this.assignmentName+i+"]")  : null,
-                        activityIcon:(action.getElementCount(this.activityIcon+i+"]") > 0) ? action.waitForDisplayed(this.activityIcon+i+"]")  : false,
-                        assignmentActivityCount:(action.getElementCount(this.assignmentActivityCount+i+"]")  > 0) ? action.getText(this.assignmentActivityCount+i+"]")  : null,
-                        scoreIcon:(action.getElementCount(this.scoreIcon+i+"]") > 0) ? action.waitForDisplayed(this.scoreIcon+i+"]")  : false,
-                        scoreLabel:(action.getElementCount(this.scoreLabel+i+"]")  > 0) ? action.getText(this.scoreLabel+i+"]")  : null,
-                        dateIcon:(action.getElementCount(this.dateIcon+i+"]") > 0) ? action.waitForDisplayed(this.dateIcon+i+"]")  : false,
-                        dateLabel:(action.getElementCount(this.dateLabel+i+"]")  > 0) ? action.getText(this.dateLabel+i+"]")  : null,
-                        dueDaysPill:(action.getElementCount(this.dueDaysPill+i+"]")  > 0) ? action.getText(this.dueDaysPill+i+"]")  : null,
-                        activityProgressText:(action.getElementCount(this.activityProgressText+i+"]")  > 0) ? action.getText(this.activityProgressText+i+"]")  : null,
-                        showActivitiesBtn:(action.getElementCount(this.showActivitiesBtn+i+"]")  > 0) ? action.getText(this.showActivitiesBtn+i+"]")  : null,
-                        collapsibleActvitiesLbl:(action.getElementCount(this.collapsibleActvitiesLbl+i+"]")  > 0) ? action.getText(this.collapsibleActvitiesLbl+i+"]")  : null,
-                        collapsibleScoreLbl:(action.getElementCount(this.collapsibleScoreLbl+i+"]")  > 0) ? action.getText(this.collapsibleScoreLbl+i+"]")  : null,
-                        collapsibleAttemptsLbl:(action.getElementCount(this.collapsibleAttemptsLbl+i+"]")  > 0) ? action.getText(this.collapsibleAttemptsLbl+i+"]")  : null,
+                        assignmentName:((await action.getElementCount(this.assignmentName+i+"]"))  > 0) ? await action.getText(this.assignmentName+i+"]")  : null,
+                        activityIcon:((await action.getElementCount(this.activityIcon+i+"]")) > 0) ? await action.waitForDisplayed(this.activityIcon+i+"]")  : false,
+                        assignmentActivityCount:((await action.getElementCount(this.assignmentActivityCount+i+"]"))  > 0) ? await action.getText(this.assignmentActivityCount+i+"]")  : null,
+                        scoreIcon:((await action.getElementCount(this.scoreIcon+i+"]")) > 0) ? await action.waitForDisplayed(this.scoreIcon+i+"]")  : false,
+                        scoreLabel:((await action.getElementCount(this.scoreLabel+i+"]"))  > 0) ? await action.getText(this.scoreLabel+i+"]")  : null,
+                        dateIcon:((await action.getElementCount(this.dateIcon+i+"]")) > 0) ? await action.waitForDisplayed(this.dateIcon+i+"]")  : false,
+                        dateLabel:((await action.getElementCount(this.dateLabel+i+"]"))  > 0) ? await action.getText(this.dateLabel+i+"]")  : null,
+                        dueDaysPill:((await action.getElementCount(this.dueDaysPill+i+"]"))  > 0) ? await action.getText(this.dueDaysPill+i+"]")  : null,
+                        activityProgressText:((await action.getElementCount(this.activityProgressText+i+"]"))  > 0) ? await action.getText(this.activityProgressText+i+"]")  : null,
+                        showActivitiesBtn:((await action.getElementCount(this.showActivitiesBtn+i+"]"))  > 0) ? await action.getText(this.showActivitiesBtn+i+"]")  : null,
+                        collapsibleActvitiesLbl:((await action.getElementCount(this.collapsibleActvitiesLbl+i+"]"))  > 0) ? await action.getText(this.collapsibleActvitiesLbl+i+"]")  : null,
+                        collapsibleScoreLbl:((await action.getElementCount(this.collapsibleScoreLbl+i+"]"))  > 0) ? await action.getText(this.collapsibleScoreLbl+i+"]")  : null,
+                        collapsibleAttemptsLbl:((await action.getElementCount(this.collapsibleAttemptsLbl+i+"]"))  > 0) ? await action.getText(this.collapsibleAttemptsLbl+i+"]")  : null,
 
                     }
                 break; 
@@ -102,19 +102,19 @@ module.exports = {
         else {
             for (var i=0;i<list.length;i++) {
                 obj[i] = {
-                    assignmentName:(action.getElementCount(this.assignmentName+i+"]")  > 0) ? action.getText(this.assignmentName+i+"]")  : null,
-                    activityIcon:(action.getElementCount(this.activityIcon+i+"]") > 0) ? action.waitForDisplayed(this.activityIcon+i+"]")  : false,
-                    assignmentActivityCount:(action.getElementCount(this.assignmentActivityCount+i+"]")  > 0) ? action.getText(this.assignmentActivityCount+i+"]")  : null,
-                    scoreIcon:(action.getElementCount(this.scoreIcon+i+"]") > 0) ? action.waitForDisplayed(this.scoreIcon+i+"]")  : false,
-                    scoreLabel:(action.getElementCount(this.scoreLabel+i+"]")  > 0) ? action.getText(this.scoreLabel+i+"]")  : null,
-                    dateIcon:(action.getElementCount(this.dateIcon+i+"]") > 0) ? action.waitForDisplayed(this.dateIcon+i+"]")  : false,
-                    dateLabel:(action.getElementCount(this.dateLabel+i+"]")  > 0) ? action.getText(this.dateLabel+i+"]")  : null,
-                    dueDaysPill:(action.getElementCount(this.dueDaysPill+i+"]")  > 0) ? action.getText(this.dueDaysPill+i+"]")  : null,
-                    activityProgressText:(action.getElementCount(this.activityProgressText+i+"]")  > 0) ? action.getText(this.activityProgressText+i+"]")  : null,
-                    showActivitiesBtn:(action.getElementCount(this.showActivitiesBtn+i+"]")  > 0) ? action.getText(this.showActivitiesBtn+i+"]")  : null,
-                    collapsibleActvitiesLbl:(action.getElementCount(this.collapsibleActvitiesLbl+i+"]")  > 0) ? action.getText(this.collapsibleActvitiesLbl+i+"]")  : null,
-                    collapsibleScoreLbl:(action.getElementCount(this.collapsibleScoreLbl+i+"]")  > 0) ? action.getText(this.collapsibleScoreLbl+i+"]")  : null,
-                    collapsibleAttemptsLbl:(action.getElementCount(this.collapsibleAttemptsLbl+i+"]")  > 0) ? action.getText(this.collapsibleAttemptsLbl+i+"]")  : null,
+                    assignmentName:((await action.getElementCount(this.assignmentName+i+"]"))  > 0) ? await action.getText(this.assignmentName+i+"]")  : null,
+                    activityIcon:((await action.getElementCount(this.activityIcon+i+"]")) > 0) ? await action.waitForDisplayed(this.activityIcon+i+"]")  : false,
+                    assignmentActivityCount:((await action.getElementCount(this.assignmentActivityCount+i+"]"))  > 0) ? await action.getText(this.assignmentActivityCount+i+"]")  : null,
+                    scoreIcon:((await action.getElementCount(this.scoreIcon+i+"]")) > 0) ? await action.waitForDisplayed(this.scoreIcon+i+"]")  : false,
+                    scoreLabel:((await action.getElementCount(this.scoreLabel+i+"]"))  > 0) ? await action.getText(this.scoreLabel+i+"]")  : null,
+                    dateIcon:((await action.getElementCount(this.dateIcon+i+"]")) > 0) ? await action.waitForDisplayed(this.dateIcon+i+"]")  : false,
+                    dateLabel:((await action.getElementCount(this.dateLabel+i+"]"))  > 0) ? await action.getText(this.dateLabel+i+"]")  : null,
+                    dueDaysPill:((await action.getElementCount(this.dueDaysPill+i+"]"))  > 0) ? await action.getText(this.dueDaysPill+i+"]")  : null,
+                    activityProgressText:((await action.getElementCount(this.activityProgressText+i+"]"))  > 0) ? await action.getText(this.activityProgressText+i+"]")  : null,
+                    showActivitiesBtn:((await action.getElementCount(this.showActivitiesBtn+i+"]"))  > 0) ? await action.getText(this.showActivitiesBtn+i+"]")  : null,
+                    collapsibleActvitiesLbl:((await action.getElementCount(this.collapsibleActvitiesLbl+i+"]"))  > 0) ? await action.getText(this.collapsibleActvitiesLbl+i+"]")  : null,
+                    collapsibleScoreLbl:((await action.getElementCount(this.collapsibleScoreLbl+i+"]"))  > 0) ? await action.getText(this.collapsibleScoreLbl+i+"]")  : null,
+                    collapsibleAttemptsLbl:((await action.getElementCount(this.collapsibleAttemptsLbl+i+"]"))  > 0) ? await action.getText(this.collapsibleAttemptsLbl+i+"]")  : null,
 
                 }
             }
@@ -123,79 +123,79 @@ module.exports = {
     },
 
     //Click function for Due Assignment button
-    click_dueAssignmentBtn: function () {
-        logger.logInto(stackTrace.get());
+    click_dueAssignmentBtn: async function () {
+        await logger.logInto(await stackTrace.get());
         var res;
-        res = action.click(this.dueAssignmentBtn);
+        res = await action.click(this.dueAssignmentBtn);
         if (true == res) {
-            logger.logInto(stackTrace.get(), " dueAssignmentBtn is clicked");
+            await logger.logInto(await stackTrace.get(), " dueAssignmentBtn is clicked");
         }
         else {
-            logger.logInto(stackTrace.get(), res +"dueAssignmentBtn is NOT clicked", 'error');
+            await logger.logInto(await stackTrace.get(), res +"dueAssignmentBtn is NOT clicked", 'error');
         }
         return res;
     },
       
     //Click function for Upcoming Assignment button
-    click_upcomingAssignmentBtn: function () {
-        logger.logInto(stackTrace.get());
+    click_upcomingAssignmentBtn: async function () {
+        await logger.logInto(await stackTrace.get());
         var res;
-        res = action.click(this.upcomingAssignmentBtn);
+        res = await action.click(this.upcomingAssignmentBtn);
         if (true == res) {
-            logger.logInto(stackTrace.get(), " upcomingAssignmentBtn is clicked");
+            await logger.logInto(await stackTrace.get(), " upcomingAssignmentBtn is clicked");
         }
         else {
-            logger.logInto(stackTrace.get(), res +"upcomingAssignmentBtn is NOT clicked", 'error');
+            await logger.logInto(await stackTrace.get(), res +"upcomingAssignmentBtn is NOT clicked", 'error');
         }
         return res;
     },
         
     //Click function for Completed Assignment button
-    click_completedAssignmentBtn: function () {
-        logger.logInto(stackTrace.get());
+    click_completedAssignmentBtn: async function () {
+        await logger.logInto(await stackTrace.get());
         var res;
-        res = action.click(this.completedAssignmentBtn);
+        res = await action.click(this.completedAssignmentBtn);
         if (true == res) {
-            logger.logInto(stackTrace.get(), " completedAssignmentBtn is clicked");
+            await logger.logInto(await stackTrace.get(), " completedAssignmentBtn is clicked");
         }
         else {
-            logger.logInto(stackTrace.get(), res +"completedAssignmentBtn is NOT clicked", 'error');
+            await logger.logInto(await stackTrace.get(), res +"completedAssignmentBtn is NOT clicked", 'error');
         }
         return res;
     },
         
     //Click function for 'Show Acivities' button
-    click_showActivitiesBtn: function (assignmentNameName) {
-        logger.logInto(stackTrace.get());
+    click_showActivitiesBtn: async function (assignmentNameName) {
+        await logger.logInto(await stackTrace.get());
         var i, list, res;
-        list = action.findElements(this.showActivitiesBtn);
+        list = await action.findElements(this.showActivitiesBtn);
         for (i = 0; i < list.length; i++) {
-            if ((action.getText(this.assignmentName+i+"]"))== assignmentNameName) {
-                res = action.click(list[i]);
+            if (((await action.getText(this.assignmentName+i+"]")))== assignmentNameName) {
+                res = await action.click(list[i]);
                 break;
             }
         }
         if (res == true) {
-            logger.logInto(stackTrace.get(), " --showActivitiesBtn clicked");
-            res = this.getData_activityList(i)
+            await logger.logInto(await stackTrace.get(), " --showActivitiesBtn clicked");
+            res = await this.getData_activityList(i)
         } 
         else
-            logger.logInto(stackTrace.get(), " --showActivitiesBtn NOT clicked", "error")
+            await logger.logInto(await stackTrace.get(), " --showActivitiesBtn NOT clicked", "error")
         return res;
     },
 
     //Function to get Activity List in an Assignment
-    getData_activityList: function (index) {
-        logger.logInto(stackTrace.get());
+    getData_activityList: async function (index) {
+        await logger.logInto(await stackTrace.get());
         var obj=[];
-        browser.pause(2000);
-        var list = action.findElements(this.activityName+index);
+        await browser.pause(2000);
+        var list = await action.findElements(this.activityName+index);
         for (var i=0; i<list.length; i++) {
             obj[i] = {
-                activityName: (action.getElementCount(this.activityName+index+"-"+i+"]")  > 0) ? action.getText(this.activityName+index+"-"+i+"]")  : null,
-                activityStatus: (action.getElementCount(this.activityStatus+index+"-"+i+"]")  > 0) ? action.getText(this.activityStatus+index+"-"+i+"]")  : null,
-                activityScore: (action.getElementCount(this.activityScore+index+"-"+i+"]")  > 0) ? action.getText(this.activityScore+index+"-"+i+"]")  : null,
-                activityAttempts: (action.getElementCount(this.activityAttempt+index+"-"+i+"]")  > 0) ? action.getText(this.activityAttempt+index+"-"+i+"]")  : null,
+                activityName: ((await action.getElementCount(this.activityName+index+"-"+i+"]"))  > 0) ? await action.getText(this.activityName+index+"-"+i+"]")  : null,
+                activityStatus: ((await action.getElementCount(this.activityStatus+index+"-"+i+"]"))  > 0) ? await action.getText(this.activityStatus+index+"-"+i+"]")  : null,
+                activityScore: ((await action.getElementCount(this.activityScore+index+"-"+i+"]"))  > 0) ? await action.getText(this.activityScore+index+"-"+i+"]")  : null,
+                activityAttempts: ((await action.getElementCount(this.activityAttempt+index+"-"+i+"]"))  > 0) ? await action.getText(this.activityAttempt+index+"-"+i+"]")  : null,
 
             }
         }
@@ -203,22 +203,22 @@ module.exports = {
     },
 
     //Click function for Clicking selected activity
-    click_activityName: function (activityNameName) {
-        logger.logInto(stackTrace.get());
+    click_activityName: async function (activityNameName) {
+        await logger.logInto(await stackTrace.get());
         var i, list, res;
-        list = action.findElements(this.activityName);
+        list = await action.findElements(this.activityName);
         for (i = 0; i < list.length; i++) {
-            if ((action.getText(this.activityName+i+"]"))== activityNameName) {
-                res = action.click(this.activityName+i+"]");
+            if (((await action.getText(this.activityName+i+"]")))== activityNameName) {
+                res = await action.click(this.activityName+i+"]");
                 break;
             }
         }
         if (res == true) {
-            logger.logInto(stackTrace.get(), " --activityName clicked");
-            res =require ('./activityPlayer.page').isInitialized();
+            await logger.logInto(await stackTrace.get(), " --activityName clicked");
+            res =await require ('./activityPlayer.page').isInitialized();
         } 
         else
-            logger.logInto(stackTrace.get(), " --activityName NOT clicked", "error")
+            await logger.logInto(await stackTrace.get(), " --activityName NOT clicked", "error")
         return res;
     }
 

@@ -9,46 +9,46 @@ module.exports = {
     responses: selectorFile.css.ComproEngage.FIBSelect.responses,
     responseOption: selectorFile.css.ComproEngage.FIBSelect.responseOption,
 
-    isInitialized: function () {
-        logger.logInto(stackTrace.get());
+    isInitialized: async function () {
+        await logger.logInto(await stackTrace.get());
 		//action.switchToFrame("[id*=iframe]");
-		action.switchToFrame(0);
-		let res = action.waitForClickable(this.responses);
-		action.switchToParentFrame();
+		await action.switchToFrame(0);
+		let res = await action.waitForClickable(this.responses);
+		await action.switchToParentFrame();
 		return res;
     },
 
-    getTargetData: function (fibQuesData) {
-        logger.logInto(stackTrace.get());
-        action.switchToFrame(0);
+    getTargetData: async function (fibQuesData) {
+        await logger.logInto(await stackTrace.get());
+        await action.switchToFrame(0);
         var targetArr = [];
-        let optionLength = action.findElements(this.responses).length;
+        let optionLength = (await action.findElements(this.responses)).length;
         for (let i = 0; i < optionLength; i++) {
             var ddSelector = this.response + fibQuesData[i][0] + "]";
-            var value = itemplayer.getFeedbackIconDetails(ddSelector);
-            targetArr[i] = [fibQuesData[i][0], action.getText(ddSelector + " [class*=' mdc-select__selected-text']"), value];
+            var value = await itemplayer.getFeedbackIconDetails(ddSelector);
+            targetArr[i] = [fibQuesData[i][0], await action.getText(ddSelector + " [class*=' mdc-select__selected-text']"), value];
         }
-        action.switchToParentFrame();
+        await action.switchToParentFrame();
         return targetArr;
     },
 
-    selectValue: function (fibQuesData) {
-        logger.logInto(stackTrace.get());
-        action.switchToFrame(0);
+    selectValue: async function (fibQuesData) {
+        await logger.logInto(await stackTrace.get());
+        await action.switchToFrame(0);
         let res, i;
         for (i = 0; i < fibQuesData.length; i++) {
             var ddSelector = this.response + fibQuesData[i][0] + "] div";
-            res = action.click(ddSelector);
+            res = await action.click(ddSelector);
             if (true == res) {
-                res = action.click(this.responseOption + fibQuesData[i][1]);
-                logger.logInto(stackTrace.get(), res);
+                res = await action.click(this.responseOption + fibQuesData[i][1]);
+                await logger.logInto(await stackTrace.get(), res);
             }
             else {
                 res = res + " -- Target text placeholder " + fibQuesData[i][0] + " is NOT clicked";
-                logger.logInto(stackTrace.get(), res, 'error');
+                await logger.logInto(await stackTrace.get(), res, 'error');
             }
         }
-        action.switchToParentFrame();
+        await action.switchToParentFrame();
         return res;
     }
 }

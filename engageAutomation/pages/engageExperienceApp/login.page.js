@@ -1,6 +1,6 @@
 "use strict";
 var action = require('../../core/actionLibrary/baseActionLibrary.js');
-var selectorFile = jsonParserUtil.jsonParser(selectorDir);
+var selectorFile =  jsonParserUtil.jsonParser(selectorDir);
 var res, obj;
 
 module.exports = {
@@ -28,330 +28,330 @@ module.exports = {
     invalidEmail_txt: selectorFile.css.ComproEngage.loginPage.invalidEmail_txt,
     loginbtnState:selectorFile.css.ComproEngage.loginPage.loginbtnState,
 
-    isInitialized: function () {
-        logger.logInto(stackTrace.get());
-        action.waitForDocumentLoad();
-        action.waitForDisplayed(this.brandLogo);
-        let pageStatus = action.waitForDisplayed(this.userName_tbox);
-        res = this.login_PageData();
+    isInitialized: async function () {
+        await logger.logInto(await stackTrace.get());
+        await action.waitForDocumentLoad();
+        await action.waitForDisplayed(this.brandLogo);
+        let pageStatus = await action.waitForDisplayed(this.userName_tbox);
+        res = await this.login_PageData();
         res.pageStatus = pageStatus;
         return res;
     },
 
-    login_PageData: function () {
-        logger.logInto(stackTrace.get());
+    login_PageData:async function () {
+        await logger.logInto(await stackTrace.get());
         obj = {
-            loginPage_title: (action.getElementCount(this.loginPage_title) > 0) ? action.getText(this.loginPage_title) : null,
-            email_tbox_lbl: (action.getElementCount(this.email_tbox_lbl) > 0) ? action.getText(this.email_tbox_lbl) : null,
-            userName_tbox_placeholder: (action.getElementCount(this.userName_tbox) > 0) ? action.getAttribute(this.userName_tbox, "placeholder") : null,
-            pswrd_tbox_lbl: (action.getElementCount(this.pswrd_tbox_lbl) > 0) ? action.getText(this.pswrd_tbox_lbl) : null,
-            password_tbox_placeholder: (action.getElementCount(this.password_tbox) > 0) ? action.getAttribute(this.password_tbox, "placeholder") : null,
-            togglePasswordVisibility_btn: (action.getElementCount(this.togglePasswordVisibility_btn) > 0) ? action.waitForDisplayed(this.togglePasswordVisibility_btn) : false,
-            google_btn: (action.getElementCount(this.google_btn) > 0) ? action.getText(this.google_btn) : null,
-            googlebtn_icon: (action.getElementCount(this.googlebtn_icon) > 0) ? action.waitForDisplayed(this.googlebtn_icon) : false,
-            facebook_btn: (action.getElementCount(this.facebook_btn) > 0) ? action.getText(this.facebook_btn) : null,
-            facebookbtn_icon: (action.getElementCount(this.facebookbtn_icon) > 0) ? action.waitForDisplayed(this.facebookbtn_icon) : false,
-            login_btn: (action.getElementCount(this.login_btn) > 0) ? action.getText(this.login_btn) : null,
-            login_btn_Disabled: (action.getElementCount(this.login_btn)) ? !(action.isClickable(this.login_btn)) : false,
-            forgotPassword: (action.getElementCount(this.forgotPassword) > 0) ? action.getText(this.forgotPassword) : null,
-            signup: (action.getElementCount(this.signup) > 0) ? action.getText(this.signup) : null,
-            dontHaveAccount_txt: (action.getElementCount(this.dontHaveAccount_txt) > 0) ? action.getText(this.dontHaveAccount_txt) : null,
-            loginoption_txt: (action.getElementCount(this.loginoption_txt) > 0) ? action.getText(this.loginoption_txt) : null,
-            languageSelector_image_exists: (action.getElementCount(this.languageSelector_image) > 0) ? action.waitForDisplayed(this.languageSelector_image) : false,
-            languageSelector_dropdown: (action.getElementCount(this.languageSelector_dropdown) > 0) ? action.getText(this.languageSelector_dropdown) : null,
-            brandLogo_img_exists: (action.getElementCount(this.brandLogo_img) > 0) ? action.waitForDisplayed(this.brandLogo_img) : false
+            loginPage_title: ((await action.getElementCount(this.loginPage_title)) > 0) ? await action.getText(this.loginPage_title) : null,
+            email_tbox_lbl: ((await action.getElementCount(this.email_tbox_lbl)) > 0) ? await action.getText(this.email_tbox_lbl) : null,
+            userName_tbox_placeholder: ((await action.getElementCount(this.userName_tbox)) > 0) ? await action.getAttribute(this.userName_tbox, "placeholder") : null,
+            pswrd_tbox_lbl: ((await action.getElementCount(this.pswrd_tbox_lbl)) > 0) ? await action.getText(this.pswrd_tbox_lbl) : null,
+            password_tbox_placeholder: ((await action.getElementCount(this.password_tbox)) > 0) ? await action.getAttribute(this.password_tbox, "placeholder") : null,
+            togglePasswordVisibility_btn: ((await action.getElementCount(this.togglePasswordVisibility_btn)) > 0) ? await action.waitForDisplayed(this.togglePasswordVisibility_btn) : false,
+            google_btn: ((await action.getElementCount(this.google_btn)) > 0) ? await action.getText(this.google_btn) : null,
+            googlebtn_icon: ((await action.getElementCount(this.googlebtn_icon)) > 0) ? await action.waitForDisplayed(this.googlebtn_icon) : false,
+            facebook_btn: ((await action.getElementCount(this.facebook_btn)) > 0) ? await action.getText(this.facebook_btn) : null,
+            facebookbtn_icon: ((await action.getElementCount(this.facebookbtn_icon)) > 0) ? await action.waitForDisplayed(this.facebookbtn_icon) : false,
+            login_btn: ((await action.getElementCount(this.login_btn)) > 0) ? await action.getText(this.login_btn) : null,
+            login_btn_Disabled: ((await action.getElementCount(this.login_btn))) ? !((await action.isClickable(this.login_btn))) : false,
+            forgotPassword: ((await action.getElementCount(this.forgotPassword)) > 0) ? await action.getText(this.forgotPassword) : null,
+            signup: ((await action.getElementCount(this.signup)) > 0) ? await action.getText(this.signup) : null,
+            dontHaveAccount_txt: ((await action.getElementCount(this.dontHaveAccount_txt)) > 0) ? await action.getText(this.dontHaveAccount_txt) : null,
+            loginoption_txt: ((await action.getElementCount(this.loginoption_txt)) > 0) ? await action.getText(this.loginoption_txt) : null,
+            languageSelector_image_exists: ((await action.getElementCount(this.languageSelector_image)) > 0) ? await action.waitForDisplayed(this.languageSelector_image) : false,
+            languageSelector_dropdown: ((await action.getElementCount(this.languageSelector_dropdown)) > 0) ? await action.getText(this.languageSelector_dropdown) : null,
+            brandLogo_img_exists: ((await action.getElementCount(this.brandLogo_img)) > 0) ? await action.waitForDisplayed(this.brandLogo_img) : false
         }
         return obj;
     },
 
-    set_UserName: function (userName) {
-        logger.logInto(stackTrace.get());
-        res = action.setValue(this.userName_tbox, userName);
+    set_UserName:async function (userName) {
+        await logger.logInto(await stackTrace.get());
+        res = await action.setValue(this.userName_tbox, userName);
         if (res == true) {
-            logger.logInto(stackTrace.get(), " -- UserName is entered");
+            await logger.logInto(await stackTrace.get(), " -- UserName is entered");
         } else {
             res = res + " -- UserName is NOT entered";
-            logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    set_Password: function (password) {
-        logger.logInto(stackTrace.get());
-        res = action.setValue(this.password_tbox, password);
+    set_Password: async function (password) {
+        await logger.logInto(await stackTrace.get());
+        res = await action.setValue(this.password_tbox, password);
         if (res == true) {
-            logger.logInto(stackTrace.get(), " -- Password is entered");
+            await logger.logInto(await stackTrace.get(), " -- Password is entered");
         } else {
             res = res + " -- Password is NOT entered";
-            logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    click_Login_Button: function () {
-        logger.logInto(stackTrace.get());
+    click_Login_Button: async function () {
+        await logger.logInto(await stackTrace.get());
       /*  if (argv.deviceName) {
             action.hideKeyboard();
         }*/
-        res = action.click(this.login_btn);
+        res = await action.click(this.login_btn);
         if (res == true) {
-            logger.logInto(stackTrace.get(), " -- Login button is clicked");
+            await logger.logInto(await stackTrace.get(), " -- Login button is clicked");
             
             //action.waitForDisplayed(this.loaderIcon);
         } else {
             res = res + " -- Login button is NOT clicked ";
-            logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    click_ForgotPassword_Button: function () {
-        logger.logInto(stackTrace.get());
-        res = action.click(this.forgotPassword);
-        action.waitForDocumentLoad();
+    click_ForgotPassword_Button:async function () {
+        await logger.logInto(await stackTrace.get());
+        res = await action.click(this.forgotPassword);
+        await action.waitForDocumentLoad();
         if (res == true) {
-            logger.logInto(stackTrace.get(), " -- Forgot Password Button is clicked");
-            res = this.forgotPassword_PageData();
+            await logger.logInto(await stackTrace.get(), " -- Forgot Password Button is clicked");
+            res = await this.forgotPassword_PageData();
         } else {
             res = res + "-- Forgot Password Button is NOT clicked";
-            logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    forgotPassword_PageData: function () {
-        logger.logInto(stackTrace.get());
+    forgotPassword_PageData:async function () {
+        await logger.logInto(await stackTrace.get());
         obj = {
-            pageStatus: (action.getElementCount(this.userName_tbox) > 0) ? action.waitForDisplayed(this.userName_tbox) : false,
-            brandLogo_img_exists: (action.getElementCount(this.brandLogo_img) > 0) ? action.waitForDisplayed(this.brandLogo_img) : false,
-            sendOTPToResetbtn_txt: (action.getElementCount(this.sendOTPToReset_btn) > 0) ? action.getText(this.sendOTPToReset_btn) : null,
-            sendOTPToResetbtn_Disabled: (action.getElementCount(this.sendOTPToReset_btn) > 0) ? !(action.isEnabled(this.sendOTPToReset_btn)) : null,
-            forgotPassword_Email_lbl: (action.getElementCount(this.email_tbox_lbl) > 0) ? action.getText(this.email_tbox_lbl) : null,
-            resetPassword_title: (action.getElementCount(this.resetPassword_title) > 0) ? action.getText(this.resetPassword_title) : null,
-            resetPassword_subHeading: (action.getElementCount(this.resetPassword_subHeading) > 0) ? action.getText(this.resetPassword_subHeading) : null,
-            cancelandGoBackbtn_txt: (action.getElementCount(this.cancelandGoBack_btn) > 0) ? action.getText(this.cancelandGoBack_btn) : null,
+            pageStatus: ((await action.getElementCount(this.userName_tbox)) > 0) ? await action.waitForDisplayed(this.userName_tbox) : false,
+            brandLogo_img_exists: ((await action.getElementCount(this.brandLogo_img)) > 0) ? await action.waitForDisplayed(this.brandLogo_img) : false,
+            sendOTPToResetbtn_txt: ((await action.getElementCount(this.sendOTPToReset_btn)) > 0) ? await action.getText(this.sendOTPToReset_btn) : null,
+            sendOTPToResetbtn_Disabled: ((await action.getElementCount(this.sendOTPToReset_btn)) > 0) ? !((await action.isEnabled(this.sendOTPToReset_btn))) : null,
+            forgotPassword_Email_lbl: ((await action.getElementCount(this.email_tbox_lbl)) > 0) ? await action.getText(this.email_tbox_lbl) : null,
+            resetPassword_title: ((await action.getElementCount(this.resetPassword_title)) > 0) ? await action.getText(this.resetPassword_title) : null,
+            resetPassword_subHeading: ((await action.getElementCount(this.resetPassword_subHeading)) > 0) ? await action.getText(this.resetPassword_subHeading) : null,
+            cancelandGoBackbtn_txt: ((await action.getElementCount(this.cancelandGoBack_btn)) > 0) ? await action.getText(this.cancelandGoBack_btn) : null,
             //languageSelector_image_exists: (action.getElementCount(this.languageSelector_image) > 0) ? action.waitForDisplayed(this.languageSelector_image) : false,
             //languageSelector_dropdown: (action.getElementCount(this.languageSelector_dropdown) > 0) ? action.getText(this.languageSelector_dropdown) : null,
         }
         return obj;
     },
 
-    set_Email_ForgotPassword: function (emailID) {
-        logger.logInto(stackTrace.get());
-        action.setValue(this.userName_tbox, emailID);
-        res = this.sendOTP_Button_Status();
+    set_Email_ForgotPassword:async function (emailID) {
+        await logger.logInto(await stackTrace.get());
+        await action.setValue(this.userName_tbox, emailID);
+        res = await this.sendOTP_Button_Status();
         if (res == "enabled") {
-            logger.logInto(stackTrace.get(), " -- Email ID is entered");
+            await logger.logInto(await stackTrace.get(), " -- Email ID is entered");
         } else {
             res = res + " -- Email ID is NOT entered";
-            logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    click_SendOTPToReset_Button: function () {
-        logger.logInto(stackTrace.get());
-        res = action.click(this.sendOTPToReset_btn);
+    click_SendOTPToReset_Button:async function () {
+        await logger.logInto(await stackTrace.get());
+        res = await action.click(this.sendOTPToReset_btn);
         if (res == true)
-            logger.logInto(stackTrace.get(), " -- Send OTP button is clicked ");
+            await logger.logInto(await stackTrace.get(), " -- Send OTP button is clicked ");
         else
-            logger.logInto(stackTrace.get(), res + " -- Send OTP button Not clicked", "error");
+            await logger.logInto(await stackTrace.get(), res + " -- Send OTP button Not clicked", "error");
         return res;
     },
 
-    click_CancelAndGoBackToLogin_Button: function () {
-        logger.logInto(stackTrace.get());
-        res = action.click(this.cancelandGoBack_btn);
+    click_CancelAndGoBackToLogin_Button:async function () {
+        await logger.logInto(await stackTrace.get());
+        res = await action.click(this.cancelandGoBack_btn);
         if (res == true) {
-            res = this.login_PageData();
-            logger.logInto(stackTrace.get(), " -- Cancel Button is clicked");
+            res = await this.login_PageData();
+            await logger.logInto(await stackTrace.get(), " -- Cancel Button is clicked");
         } else {
             res = res + " -- Cancel Button is NOT clicked";
-            logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    changePassword_isInitialized: function () {
-        logger.logInto(stackTrace.get());
-        action.waitForDocumentLoad();
-        let pageStatus = action.waitForDisplayed(this.changePassword);
-        res = this.changePassword_PageData()
+    changePassword_isInitialized: async function () {
+        await logger.logInto(await stackTrace.get());
+        await action.waitForDocumentLoad();
+        let pageStatus = await action.waitForDisplayed(this.changePassword);
+        res = await this.changePassword_PageData()
         res.pageStatus = pageStatus;
         return res;
     },
 
-    changePassword_PageData: function () {
-        logger.logInto(stackTrace.get());
+    changePassword_PageData: async function () {
+        await logger.logInto(await stackTrace.get());
         obj = {
             //checkEmailForCode_txt: (action.getElementCount(this.snackbarInfo_txt) > 0) ? action.getText(this.snackbarInfo_txt) : null,
-            resetPassword_title: (action.getElementCount(this.resetPassword_title) > 0) ? action.getText(this.resetPassword_title) : null,
-            resetPassword_subHeading2: (action.getElementCount(this.resetPassword_subHeading2) > 0) ? action.getText(this.resetPassword_subHeading2) : null,
-            email_tbox_lbl: (action.getElementCount(this.email_tbox_lbl) > 0) ? action.getText(this.email_tbox_lbl) : null,
-            userName_tbox_value: (action.getElementCount(this.userName_tbox) > 0) ? action.getValue(this.userName_tbox) : null,
-            userName_tbox_Disabled: (action.getElementCount(this.userName_tbox) > 0) ? !(action.isEnabled(this.userName_tbox)) : null,
-            verificationCode_lbl: (action.getElementCount(this.verificationCode_lbl) > 0) ? action.getText(this.verificationCode_lbl) : null,
-            verificationCode_txtBox: (action.getElementCount(this.verificationCode_txtBox) > 0) ? action.getValue(this.verificationCode_txtBox) : null,
-            newPassword_lbl: (action.getElementCount(this.newPassword_lbl) > 0) ? action.getText(this.newPassword_lbl) : null,
-            newPassword_txtBox: (action.getElementCount(this.newPassword_txtBox) > 0) ? action.getValue(this.newPassword_txtBox) : null,
-            togglePasswordVisibility_btn: (action.getElementCount(this.togglePasswordVisibility_btn) > 0) ? action.waitForDisplayed(this.togglePasswordVisibility_btn) : false,
-            confirmPassword_lbl: (action.getElementCount(this.confirmPassword_lbl) > 0) ? action.getText(this.confirmPassword_lbl) : null,
-            confirmPassword_txtBox: (action.getElementCount(this.confirmPassword_txtBox) > 0) ? action.getValue(this.confirmPassword_txtBox) : null,
-            toggle_ConfirmPasswordVisibility_btn: (action.getElementCount(this.toggle_ConfirmPasswordVisibility_btn) > 0) ? action.waitForDisplayed(this.toggle_ConfirmPasswordVisibility_btn) : false,
-            resendOTP: (action.getElementCount(this.resendOTP) > 0) ? action.getText(this.resendOTP) : null,
-            resendTimer: (action.getElementCount(this.resendTimer) > 0) ? action.getText(this.resendTimer) : null,
-            changePassword: (action.getElementCount(this.changePassword) > 0) ? action.getText(this.changePassword) : null,
-            cancelandGoBackbtn_txt: (action.getElementCount(this.cancelandGoBack_btn) > 0) ? action.getText(this.cancelandGoBack_btn) : null,
-            brandLogo_img_exists: (action.getElementCount(this.brandLogo_img) > 0) ? action.waitForDisplayed(this.brandLogo_img) : false
+            resetPassword_title: ((await action.getElementCount(this.resetPassword_title)) > 0) ? await action.getText(this.resetPassword_title) : null,
+            resetPassword_subHeading2: ((await action.getElementCount(this.resetPassword_subHeading2)) > 0) ? await action.getText(this.resetPassword_subHeading2) : null,
+            email_tbox_lbl: ((await action.getElementCount(this.email_tbox_lbl)) > 0) ? await action.getText(this.email_tbox_lbl) : null,
+            userName_tbox_value: ((await action.getElementCount(this.userName_tbox)) > 0) ? await action.getValue(this.userName_tbox) : null,
+            userName_tbox_Disabled: ((await action.getElementCount(this.userName_tbox)) > 0) ? !((await action.isEnabled(this.userName_tbox))) : null,
+            verificationCode_lbl: ((await action.getElementCount(this.verificationCode_lbl)) > 0) ? await action.getText(this.verificationCode_lbl) : null,
+            verificationCode_txtBox: ((await action.getElementCount(this.verificationCode_txtBox)) > 0) ? await action.getValue(this.verificationCode_txtBox) : null,
+            newPassword_lbl: ((await action.getElementCount(this.newPassword_lbl)) > 0) ? await action.getText(this.newPassword_lbl) : null,
+            newPassword_txtBox: ((await action.getElementCount(this.newPassword_txtBox)) > 0) ? await action.getValue(this.newPassword_txtBox) : null,
+            togglePasswordVisibility_btn: ((await action.getElementCount(this.togglePasswordVisibility_btn)) > 0) ? await action.waitForDisplayed(this.togglePasswordVisibility_btn) : false,
+            confirmPassword_lbl: ((await action.getElementCount(this.confirmPassword_lbl)) > 0) ? await action.getText(this.confirmPassword_lbl) : null,
+            confirmPassword_txtBox: ((await action.getElementCount(this.confirmPassword_txtBox)) > 0) ? await action.getValue(this.confirmPassword_txtBox) : null,
+            toggle_ConfirmPasswordVisibility_btn: ((await action.getElementCount(this.toggle_ConfirmPasswordVisibility_btn)) > 0) ? await action.waitForDisplayed(this.toggle_ConfirmPasswordVisibility_btn) : false,
+            resendOTP: ((await action.getElementCount(this.resendOTP)) > 0) ? await action.getText(this.resendOTP) : null,
+            resendTimer: ((await action.getElementCount(this.resendTimer)) > 0) ? await action.getText(this.resendTimer) : null,
+            changePassword: ((await action.getElementCount(this.changePassword)) > 0) ? await action.getText(this.changePassword) : null,
+            cancelandGoBackbtn_txt: ((await action.getElementCount(this.cancelandGoBack_btn)) > 0) ? await action.getText(this.cancelandGoBack_btn) : null,
+            brandLogo_img_exists: ((await action.getElementCount(this.brandLogo_img)) > 0) ? await action.waitForDisplayed(this.brandLogo_img) : false
         }
         return obj;
     },
 
-    toggle_Password_Eye: function () {
-        logger.logInto(stackTrace.get());
-        res = action.click(this.togglePasswordVisibility_btn);
+    toggle_Password_Eye: async function () {
+        await logger.logInto(await stackTrace.get());
+        res = await action.click(this.togglePasswordVisibility_btn);
         if (res == true) {
-            logger.logInto(stackTrace.get(), res + "-- toggle_Password_Eye Button Clicked ");
-            res = action.getAttribute(this.password_tbox, "type");
+            await logger.logInto(await stackTrace.get(), res + "-- toggle_Password_Eye Button Clicked ");
+            res = await action.getAttribute(this.password_tbox, "type");
         } else
-            logger.logInto(stackTrace.get(), res + "-- toggle_Password_Eye Button Not Clicked ", "error");
+            await logger.logInto(await stackTrace.get(), res + "-- toggle_Password_Eye Button Not Clicked ", "error");
         return res;
     },
 
-    change_Language: function (lang) {
+    change_Language:async function (lang) {
         res = require('./landing.page.js').select_Language_from_dropdown(lang);
         return res;
     },
 
-    get_invalidEmail_ErrorText: function () {
-        res = action.waitForDisplayed(this.invalidEmail_txt)
+    get_invalidEmail_ErrorText:async function () {
+        res = await action.waitForDisplayed(this.invalidEmail_txt)
         if (res == true) {
-            res = action.getText(this.invalidEmail_txt)
-            logger.logInto(stackTrace.get(), res);
+            res = await action.getText(this.invalidEmail_txt)
+            await logger.logInto(await stackTrace.get(), res);
         } else
-            logger.logInto(stackTrace.get(), res, "error");
+            await logger.logInto(await stackTrace.get(), res, "error");
         return res;
     },
 
-    set_VerificationCode: function (Code) {
-        logger.logInto(stackTrace.get());
-        action.clearValue(this.verificationCode_txtBox)
-        res = action.setValue(this.verificationCode_txtBox, Code);
+    set_VerificationCode:async function (Code) {
+        await logger.logInto(await stackTrace.get());
+        await action.clearValue(this.verificationCode_txtBox)
+        res = await action.setValue(this.verificationCode_txtBox, Code);
         if (res == true) {
-            logger.logInto(stackTrace.get(), " -- Verification Code Entered");
+            await logger.logInto(await stackTrace.get(), " -- Verification Code Entered");
         } else {
             res = res + " -- Verification Code NOT Entered";
-            logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    set_NewPassword: function (password) {
-        logger.logInto(stackTrace.get());
-        action.setValue(this.newPassword_txtBox, password);
+    set_NewPassword: async function (password) {
+        await logger.logInto(await stackTrace.get());
+        await action.setValue(this.newPassword_txtBox, password);
         if (res == true) {
-            logger.logInto(stackTrace.get(), " -- NewPassword Entered");
+            await logger.logInto(await stackTrace.get(), " -- NewPassword Entered");
         } else {
             res = res + " -- NewPassword Code NOT Entered";
-            logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    set_ConfirmPassword: function (password) {
-        logger.logInto(stackTrace.get());
-        action.setValue(this.confirmPassword_txtBox, password);
+    set_ConfirmPassword:async function (password) {
+        await logger.logInto(await stackTrace.get());
+        await action.setValue(this.confirmPassword_txtBox, password);
         if (res == true) {
-            logger.logInto(stackTrace.get(), " -- ConfirmPassword Entered");
+            await logger.logInto(await stackTrace.get(), " -- ConfirmPassword Entered");
         } else {
             res = res + " -- ConfirmPassword Code NOT Entered";
-            logger.logInto(stackTrace.get(), res, 'error');
+            await logger.logInto(await stackTrace.get(), res, 'error');
         }
         return res;
     },
 
-    click_ChangePassword_Button: function () {
-        logger.logInto(stackTrace.get());
-        res = action.click(this.changePassword);
+    click_ChangePassword_Button:async function () {
+        await logger.logInto(await stackTrace.get());
+        res = await action.click(this.changePassword);
         if (res == true)
-            logger.logInto(stackTrace.get(), " -- Change Password Button Clicked");
+            await logger.logInto(await stackTrace.get(), " -- Change Password Button Clicked");
         else
-            logger.logInto(stackTrace.get(), res + " -- Change Password Button NOT Clicked", 'error');
+            await logger.logInto(await stackTrace.get(), res + " -- Change Password Button NOT Clicked", 'error');
         return res;
     },
 
-    get_invalid_VerificationCode_Text: function () {
-        res = action.waitForDisplayed(this.invalidVerificationCode_txt)
+    get_invalid_VerificationCode_Text:async function () {
+        res = await action.waitForDisplayed(this.invalidVerificationCode_txt)
         if (res == true) {
-            res = action.getText(this.invalidVerificationCode_txt)
-            logger.logInto(stackTrace.get(), res);
+            res = await action.getText(this.invalidVerificationCode_txt)
+            await logger.logInto(await stackTrace.get(), res);
         }
         else
-            logger.logInto(stackTrace.get(), res, "error");
+            await logger.logInto(await stackTrace.get(), res, "error");
         return res;
     },
 
     //get password rules and mismatch to be conbined after data-tid updates
-    get_PasswordRules_text: function () {
-        res = action.waitForDisplayed(this.passwordRules_txt)
+    get_PasswordRules_text:async function () {
+        res = await action.waitForDisplayed(this.passwordRules_txt)
         if (res == true) {
-            res = action.getText(this.passwordRules_txt)
-            logger.logInto(stackTrace.get(), res);
+            res = await action.getText(this.passwordRules_txt)
+            await logger.logInto(await stackTrace.get(), res);
         }
         else
-            logger.logInto(stackTrace.get(), res, "error");
+            await logger.logInto(await stackTrace.get(), res, "error");
         return res;
     },
 
-    get_PasswordMismatch_text: function () {
-        res = action.waitForDisplayed(this.passwordMismatch)
+    get_PasswordMismatch_text:async function () {
+        res = await action.waitForDisplayed(this.passwordMismatch)
         if (res == true) {
-            res = action.getText(this.passwordMismatch)
-            logger.logInto(stackTrace.get(), res);
+            res = await action.getText(this.passwordMismatch)
+            await logger.logInto(await stackTrace.get(), res);
         }
         else
-            logger.logInto(stackTrace.get(), res, "error");
+            await logger.logInto(await stackTrace.get(), res, "error");
         return res;
     },
 
-    click_ResentOTP_Button: function () {
-        logger.logInto(stackTrace.get());
-        action.waitForDisplayed(this.resendTimer, 60000, true);
-        action.waitForDisplayed(this.resendOTP);
-        res = action.click(this.resendOTP);
+    click_ResentOTP_Button:async function () {
+        await logger.logInto(await stackTrace.get());
+        await action.waitForDisplayed(this.resendTimer, 60000, true);
+        await action.waitForDisplayed(this.resendOTP);
+        res = await action.click(this.resendOTP);
         if (res == true) {
             var obj = {}
             obj.snackbar = require('../../test/engageExperienceApp/common.test.js').get_Snackbar_Message_Text();
-            obj.resendTimer_Enabled = action.waitForDisplayed(this.resendTimer);
-            logger.logInto(stackTrace.get(), " -- Change Password Button Clicked");
+            obj.resendTimer_Enabled = await action.waitForDisplayed(this.resendTimer);
+            await logger.logInto(await stackTrace.get(), " -- Change Password Button Clicked");
         }
         else
-            logger.logInto(stackTrace.get(), res + " -- Change Password Button NOT Clicked", 'error');
+            await logger.logInto(await stackTrace.get(), res + " -- Change Password Button NOT Clicked", 'error');
         return obj;
     },
 
-    press_Enter: function () {
-        logger.logInto(stackTrace.get());
-        res = action.keyPress("Enter")
+    press_Enter: async function () {
+        await logger.logInto(await stackTrace.get());
+        res = await action.keyPress("Enter")
         if (res == null) {
             res = true
-            logger.logInto(stackTrace.get(), " -- Enter Key Pressed");
+            await logger.logInto(await stackTrace.get(), " -- Enter Key Pressed");
         }
         else
-            logger.logInto(stackTrace.get(), res + " --  Enter Key Not Pressed", 'error');
+            await logger.logInto(await stackTrace.get(), res + " --  Enter Key Not Pressed", 'error');
         return res;
     },
 
-    click_SignUP_Button: function () {
-        logger.logInto(stackTrace.get());
-        res = action.click(this.signup);
+    click_SignUP_Button: async function () {
+        await logger.logInto(await stackTrace.get());
+        res = await action.click(this.signup);
         if (res == true) {
             //TBD Sign Up Page to be implemented - ENG_IDEN_TC_17
             //res = require('./signup.page.js').isInitialized()
-            logger.logInto(stackTrace.get(), " -- Sign Up Clicked");
+            await logger.logInto(await stackTrace.get(), " -- Sign Up Clicked");
         }
         else
-            logger.logInto(stackTrace.get(), res + " -- Sign Up NOT Clicked", 'error');
+            await logger.logInto(await stackTrace.get(), res + " -- Sign Up NOT Clicked", 'error');
         return res;
     }
 

@@ -2,7 +2,6 @@
 var action = require('../../core/actionLibrary/baseActionLibrary.js')
 var selectorFile = jsonParserUtil.jsonParser(selectorDir)
 var appShellPage = require('./appShell.page.js');
-const { confirmPassword_input } = require('./settings.page.js');
 
 module.exports = {
   pageTitle: selectorFile.css.ComproEngage.gradeBook.pageTitle,
@@ -31,75 +30,84 @@ module.exports = {
   score_lbl: selectorFile.css.ComproEngage.gradeBook.score_lbl,
   completion_lbl: selectorFile.css.ComproEngage.gradeBook.completion_lbl,
   studentList: selectorFile.css.ComproEngage.gradeBook.studentList,
-
-
-  isInitialized: function () {
+  classCode_btn: selectorFile.css.ComproEngage.gradeBook.classCode_btn,
+  inviteEmail_btn: selectorFile.css.ComproEngage.gradeBook.inviteEmail,
+  inviteStudents_lbl: selectorFile.css.ComproEngage.gradeBook.inviteStudents_lbl,
+  inviteStudentsByline_lbl: selectorFile.css.ComproEngage.gradeBook.inviteStudentsByline_lbl,
+  copyClassCode_btn:selectorFile.css.ComproEngage.gradeBook.copyClassCode_btn,
+  isInitialized: async function () {
     var res;
-    logger.logInto(stackTrace.get());
-    action.waitForDocumentLoad();
+    await logger.logInto(await stackTrace.get());
+    await action.waitForDocumentLoad();
     res = {
-      pageStatus: action.waitForDisplayed(this.pageTitle),
-      appShellPage: appShellPage.isInitialized()
+      pageStatus: await action.waitForDisplayed(this.pageTitle),
+      appShellPage: await appShellPage.isInitialized()
     };
     return res;
   },
 
-  getData_gradeBook: function () {
-    logger.logInto(stackTrace.get());
+  getData_gradeBook: async function () {
+    await logger.logInto(await stackTrace.get());
     var obj;
     obj = {
-      pageTitle: (action.getElementCount(this.pageTitle) > 0) ? action.getText(this.pageTitle) : null,
-      pageSubTitle: (action.getElementCount(this.pageSubTitle) > 0) ? action.getText(this.pageSubTitle) : null,
-      noGradeBookIcon: (action.getElementCount(this.noGradeBookIcon) > 0) ? action.waitForDisplayed(this.noGradeBookIcon) : false,
-      noGradeBookTitle: (action.getElementCount(this.noGradeBookTitle) > 0) ? action.getText(this.noGradeBookTitle) : null,
-      noGradeBookSubTitle: (action.getElementCount(this.noGradeBookSubTitle) > 0) ? action.getText(this.noGradeBookSubTitle) : null,
-      download_btn: (action.getElementCount(this.download_btn) > 0) ? action.getText(this.download_btn) : null,
-      sendtoemail_btn: (action.getElementCount(this.sendtoemail_btn) > 0) ? action.getText(this.sendtoemail_btn) : null,
-      graphHeader: (action.getElementCount(this.graphHeader) > 0) ? action.getText(this.graphHeader) : null,
-      graphImage: (action.getElementCount(this.graphImage) > 0) ? action.waitForDisplayed(this.graphImage) : false,
-      averageScoreLegend: (action.getElementCount(this.averageScoreLegend) > 0) ? action.getText(this.averageScoreLegend) : null,
-      averageCompletionLegend: (action.getElementCount(this.averageCompletionLegend) > 0) ? action.getText(this.averageCompletionLegend) : null,
-      above70_lbl: (action.getElementCount(this.above70_lbl) > 0) ? action.getText(this.above70_lbl) : null,
-      below70_lbl: (action.getElementCount(this.below70_lbl) > 0) ? action.getText(this.below70_lbl) : null,
-      averageScore_lbl: (action.getElementCount(this.averageScore_lbl) > 0) ? action.getText(this.averageScore_lbl) : null,
-      averageCompletion_lbl: (action.getElementCount(this.averageCompletion_lbl) > 0) ? action.getText(this.averageCompletion_lbl) : null,
-      students_lbl: (action.getElementCount(this.students_lbl) > 0) ? action.getText(this.students_lbl) : null,
-      searchBox: (action.getElementCount(this.searchBox) > 0) ? action.waitForDisplayed(this.searchBox) : false,
-      searchStudentPlaceholder: (action.getElementCount(this.searchStudentPlaceholder) > 0) ? action.getAttribute(this.searchStudentPlaceholder, "placeholder") : null,
-      name_lbl: (action.getElementCount(this.name_lbl) > 0) ? action.getText(this.name_lbl) : null,
-      lastActive_lbl: (action.getElementCount(this.lastActive_lbl) > 0) ? action.getText(this.lastActive_lbl) : null,
-      time_lbl: (action.getElementCount(this.time_lbl) > 0) ? action.getText(this.time_lbl) : null,
-      score_lbl: (action.getElementCount(this.score_lbl) > 0) ? action.getText(this.score_lbl) : null,
-      completion_lbl: (action.getElementCount(this.completion_lbl) > 0) ? action.getText(this.completion_lbl) : null,
-      studentList: this.studentList_Data(),
+      pageTitle: ((await action.getElementCount(this.pageTitle)) > 0) ? await action.getText(this.pageTitle) : null,
+      pageSubTitle: ((await action.getElementCount(this.pageSubTitle)) > 0) ? await action.getText(this.pageSubTitle) : null,
+      noGradeBookIcon: ((await action.getElementCount(this.noGradeBookIcon)) > 0) ? await action.waitForDisplayed(this.noGradeBookIcon) : false,
+      noGradeBookTitle: ((await action.getElementCount(this.noGradeBookTitle)) > 0) ? await action.getText(this.noGradeBookTitle) : null,
+      noGradeBookSubTitle: ((await action.getElementCount(this.noGradeBookSubTitle)) > 0) ? await action.getText(this.noGradeBookSubTitle) : null,
+      download_btn: ((await action.getElementCount(this.download_btn)) > 0) ? await action.getText(this.download_btn) : null,
+      graphHeader: ((await action.getElementCount(this.graphHeader)) > 0) ? await action.getText(this.graphHeader) : null,
+      sendtoemail_btn: ((await action.getElementCount(this.sendtoemail_btn)) > 0) ? await action.getText(this.sendtoemail_btn) : null,
+      graphImage: ((await action.getElementCount(this.graphImage)) > 0) ? await action.waitForDisplayed(this.graphImage) : false,
+      averageScoreLegend: ((await action.getElementCount(this.averageScoreLegend)) > 0) ? await action.getText(this.averageScoreLegend) : null,
+      averageCompletionLegend: ((await action.getElementCount(this.averageCompletionLegend)) > 0) ? await action.getText(this.averageCompletionLegend) : null,
+      above70_lbl: ((await action.getElementCount(this.above70_lbl)) > 0) ? await action.getText(this.above70_lbl) : null,
+      below70_lbl: ((await action.getElementCount(this.below70_lbl)) > 0) ? await action.getText(this.below70_lbl) : null,
+      averageScore_lbl: ((await action.getElementCount(this.averageScore_lbl)) > 0) ? await action.getText(this.averageScore_lbl) : null,
+      averageCompletion_lbl: ((await action.getElementCount(this.averageCompletion_lbl)) > 0) ? await action.getText(this.averageCompletion_lbl) : null,
+      students_lbl: ((await action.getElementCount(this.students_lbl)) > 0) ? await action.getText(this.students_lbl) : null,
+      searchBox: ((await action.getElementCount(this.searchBox)) > 0) ? await action.waitForDisplayed(this.searchBox) : false,
+      searchStudentPlaceholder: ((await action.getElementCount(this.searchStudentPlaceholder)) > 0) ? await action.getAttribute(this.searchStudentPlaceholder, "placeholder") : null,
+      name_lbl: ((await action.getElementCount(this.name_lbl)) > 0) ? await action.getText(this.name_lbl) : null,
+      lastActive_lbl: ((await action.getElementCount(this.lastActive_lbl)) > 0) ? await action.getText(this.lastActive_lbl) : null,
+      time_lbl: ((await action.getElementCount(this.time_lbl)) > 0) ? await action.getText(this.time_lbl) : null,
+      score_lbl: ((await action.getElementCount(this.score_lbl)) > 0) ? await action.getText(this.score_lbl) : null,
+      completion_lbl: ((await action.getElementCount(this.completion_lbl)) > 0) ? await action.getText(this.completion_lbl) : null,
+      classCode_btn: ((await action.getElementCount(this.classCode_btn)) > 0) ? await action.getText(this.classCode_btn) : null,
+      copyClassCode_btn: ((await action.getElementCount(this.copyClassCode_btn)) > 0) ? await action.getText(this.copyClassCode_btn) : null,
+      inviteEmail_btn: ((await action.getElementCount(this.inviteEmail_btn)) > 0) ? await action.getText(this.inviteEmail_btn) : null,
+      inviteStudents_lbl: ((await action.getElementCount(this.inviteStudents_lbl)) > 0) ? await action.getText(this.inviteStudents_lbl) : null,
+      inviteStudentsByline_lbl: ((await action.getElementCount(this.inviteStudentsByline_lbl)) > 0) ? await action.getText(this.inviteStudentsByline_lbl) : null,
+ 
+      studentList: await this.studentList_Data(),
     }
     return obj;
   },
 
-  studentList_Data: function () {
-    logger.logInto(stackTrace.get());
+  studentList_Data: async function () {
+    await logger.logInto(await stackTrace.get());
     var i, list;
     var studentList_Arr = [];
-    list = action.findElements(this.studentList);
+    list = await action.findElements(this.studentList);
     for (i = 0; i < list.length; i++) {
-      studentList_Arr[i] = action.getText(this.studentList + i + "-0]")
+      studentList_Arr[i] = await action.getText(list[i])
     }
-    logger.logInto(stackTrace.get(), studentList_Arr);
+    await logger.logInto(await stackTrace.get(), studentList_Arr);
     return studentList_Arr;
   },
 
-  getData_productList: function (productListNameName) {
-    logger.logInto(stackTrace.get());
+  getData_productList: async function (productListNameName) {
+    await logger.logInto(await stackTrace.get());
     var obj = [];
-    action.waitForDisplayed(this.productListName);
-    var list = action.findElements(this.productListName);
+    await action.waitForDisplayed(this.productListName);
+    var list = await action.findElements(this.productListName);
     if (productListNameName) {
       for (var i = 0; i < list.length; i++) {
-        if (action.getText(this.productListName + i) == productListNameName) {
+        if ((await action.getText(this.productListName + i)) == productListNameName) {
           console.log(this.teacherOnlyIcon + i + "] span>span>span")
           obj[0] = {
-            productListName: (action.getElementCount(this.productListName + i + "] p") > 0) ? action.getText(this.productListName + i + "] p") : null,
-            teacherOnlyIcon: (action.getElementCount(this.teacherOnlyIcon + i + "] span>span>span") > 0) ? action.getText(this.teacherOnlyIcon + i + "] span>span>span") : null,
+            productListName: ((await action.getElementCount(this.productListName + i + "] p")) > 0) ? await action.getText(this.productListName + i + "] p") : null,
+            teacherOnlyIcon: ((await action.getElementCount(this.teacherOnlyIcon + i + "] span>span>span")) > 0) ? await action.getText(this.teacherOnlyIcon + i + "] span>span>span") : null,
           }
           break;
         }
@@ -107,61 +115,82 @@ module.exports = {
     } else {
       for (var i = 0; i < list.length; i++) {
         obj[i] = {
-          productListName: (action.getElementCount(this.productListName + i + "] p") > 0) ? action.getText(this.productListName + i + "] p") : null,
-          teacherOnlyIcon: (action.getElementCount(this.teacherOnlyIcon + i + "] span>span>span") > 0) ? action.getText(this.teacherOnlyIcon + i + "] span>span>span") : null,
+          productListName: ((await action.getElementCount(this.productListName + i + "] p")) > 0) ? await action.getText(this.productListName + i + "] p") : null,
+          teacherOnlyIcon: ((await action.getElementCount(this.teacherOnlyIcon + i + "] span>span>span")) > 0) ? await action.getText(this.teacherOnlyIcon + i + "] span>span>span") : null,
         }
       }
     }
-    //console.log("obj tc4 -",obj)
     return obj;
   },
 
-  
-
-  click_download_btn: function () {
-    logger.logInto(stackTrace.get());
+  click_download_btn: async function () {
+    await logger.logInto(await stackTrace.get());
     var res;
-    res = action.click(this.download_btn);
+    res = await action.click(this.download_btn);
     if (true == res) {
-      logger.logInto(stackTrace.get(), " download_btn is clicked");
+      await logger.logInto(await stackTrace.get(), " download_btn is clicked");
     }
     else {
-      logger.logInto(stackTrace.get(), res + "download_btn is NOT clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + "download_btn is NOT clicked", 'error');
+    }
+    return res;
+  },
+  click_inviteEmail_btn: async function () {
+    await logger.logInto(await stackTrace.get());
+    var res;
+    res = await action.click(this.inviteEmail_btn);
+    if (true == res) {
+      await logger.logInto(await stackTrace.get(), " inviteEmail_btn is clicked");
+    }
+    else {
+      await logger.logInto(await stackTrace.get(), res + "inviteEmail_btn is NOT clicked", 'error');
+    }
+    return res;
+  },
+  click_classCode_btn: async function () {
+    await logger.logInto(await stackTrace.get());
+    var res;
+    res = await action.click(this.classCode_btn);
+    if (true == res) {
+      await logger.logInto(await stackTrace.get(), " classCode_btn is clicked");
+    }
+    else {
+      await logger.logInto(await stackTrace.get(), res + "classCode_btn is NOT clicked", 'error');
     }
     return res;
   },
 
-  click_sendtoemail_btn: function () {
-    logger.logInto(stackTrace.get());
+  click_sendtoemail_btn: async function () {
+    await logger.logInto(await stackTrace.get());
     var res;
-    res = action.click(this.sendtoemail_btn);
+    res = await action.click(this.sendtoemail_btn);
     if (true == res) {
-      logger.logInto(stackTrace.get(), " sendtoemail_btn is clicked");
+      await logger.logInto(await stackTrace.get(), " sendtoemail_btn is clicked");
     }
     else {
-      logger.logInto(stackTrace.get(), res + "sendtoemail_btn is NOT clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + "sendtoemail_btn is NOT clicked", 'error');
     }
     return res;
   },
 
-  click_studentList: function (studentListName) {
-    logger.logInto(stackTrace.get());
+  click_studentList: async function (studentListName) {
+    await logger.logInto(await stackTrace.get());
     var i, list, res;
-    list = action.findElements(this.studentList);
+    list = await action.findElements(this.studentList);
     for (i = 0; i < list.length; i++) {
-      if ((action.getText(this.studentList + i + "]")) == studentListName) {
-        res = action.click(list[i]);
+      if (((await action.getText(this.studentList + i + "]"))) == studentListName) {
+        res = await action.click(list[i]);
         break;
       }
     }
     if (res == true) {
-      res = require('./gradeBookStudent.page').isInitialized();
-      logger.logInto(stackTrace.get(), " --studentList clicked");
+      res = await require('./gradeBookStudent.page').isInitialized();
+      await logger.logInto(await stackTrace.get(), " --studentList clicked");
     }
     else
-      logger.logInto(stackTrace.get(), " --studentList NOT clicked", "error")
+      await logger.logInto(await stackTrace.get(), " --studentList NOT clicked", "error")
     return res;
-  }
+  },
 
 }
 

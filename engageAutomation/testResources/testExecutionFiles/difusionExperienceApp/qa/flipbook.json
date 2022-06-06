@@ -625,7 +625,13 @@
          },
          {
             "id": "ENG_FLIP_TC_23",
-            "description": "Validate clicking on Jump to Previous page button on toolbar launches the last page",
+            "description": "Validate if the page contains any hotlink or not",
+            "testFile": "./test/engageExperienceApp/flipbook.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_FLIP_TC_24",
+            "description": "Validate that clicking on a hotlink activates it",
             "testFile": "./test/engageExperienceApp/flipbook.test.js",
             "testData": []
          }

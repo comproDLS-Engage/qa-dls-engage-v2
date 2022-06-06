@@ -17,34 +17,34 @@ module.exports = {
 	activeQues: selectorFile.css.ComproEngage.itemPlayer.activeQues,
 	imageScelaton:selectorFile.css.ComproEngage.itemPlayer.imageScelaton,
 
-	isInitialized: function () {
-		logger.logInto(stackTrace.get());
-		res = action.waitForDisplayed("iframe[id*=iframe], iframe");
+	isInitialized: async function () {
+		await logger.logInto(await stackTrace.get());
+		res = await action.waitForDisplayed("iframe[id*=iframe], iframe");
 		if (res == true) {
-			action.switchToFrame(0);
-			res = action.waitForDocumentLoad();
-			action.switchToParentFrame();
+			await action.switchToFrame(0);
+			res = await action.waitForDocumentLoad();
+			await action.switchToParentFrame();
 		}
 		if (res == true) {
-			res = this.getItemplayerInfo();
+			res = await this.getItemplayerInfo();
 		}
 		else {
 			res = res + " -- Itemplayer page is not loaded yet";
-			logger.logInto(stackTrace.get(), res);
+			await logger.logInto(await stackTrace.get(), res);
 		}
 		return res;
 	},
 
-	getQuesIndex: function () {
-		logger.logInto(stackTrace.get());
-		action.switchToFrame(0);
-		let qIndex = action.getAttribute(this.activeQues, "index")
-		action.switchToParentFrame();
+	getQuesIndex: async function () {
+		await logger.logInto(await stackTrace.get());
+		await action.switchToFrame(0);
+		let qIndex = await action.getAttribute(this.activeQues, "index")
+		await action.switchToParentFrame();
 		return qIndex;
 	},
 
-	getItemplayerInfo: function () {
-		logger.logInto(stackTrace.get());
+	getItemplayerInfo: async function () {
+		await logger.logInto(await stackTrace.get());
 		let question = {
 			quesType: "",
 			quesText: "",
@@ -56,46 +56,46 @@ module.exports = {
 			feedback: {},
 		};
 
-		let qIndex = this.getQuesIndex();
+		let qIndex = await this.getQuesIndex();
 		let activeItemplayer = "div[index='" + qIndex + "'] " + this.itemPlayerContainer;
 		let correctOpt = "div[index='" + qIndex + "'] " + this.correctIcon;
 		let incorrectOpt = "div[index='" + qIndex + "'] " + this.incorrectIcon;
 		let quesTextSelector = "div[index='" + qIndex + "'] " + this.questionText;
 		let instructionTextSelector = "div[index='" + qIndex + "'] " + this.instructionText;
 
-		action.switchToFrame(0);
-		question.quesType = action.getAttribute(activeItemplayer, 'class');
-		question.quesText = (action.getElementCount(quesTextSelector) == 1) ? action.getText(quesTextSelector) : "";
-		question.instructionText = (action.getElementCount(instructionTextSelector) == 1) ? action.getText(instructionTextSelector) : "";
-		question.correctCount = action.getElementCount(correctOpt);
-		question.incorrectCount = action.getElementCount(incorrectOpt);
+		await action.switchToFrame(0);
+		question.quesType = await action.getAttribute(activeItemplayer, 'class');
+		question.quesText = ((await action.getElementCount(quesTextSelector)) == 1) ? await action.getText(quesTextSelector) : "";
+		question.instructionText = ((await action.getElementCount(instructionTextSelector)) == 1) ? await action.getText(instructionTextSelector) : "";
+		question.correctCount = await action.getElementCount(correctOpt);
+		question.incorrectCount = await action.getElementCount(incorrectOpt);
 		if (0 < question.correctCount || 0 < question.incorrectCount)
 			question.isSubmitted = true;
 		else
 			question.isSubmitted = false;
 
-		action.waitForDisplayed(this.imageScelaton, true, 20000)
-		if (action.getElementCount("div[index='" + qIndex + "'] " + this.videoMedia) == 1)
+		await action.waitForDisplayed(this.imageScelaton, true, 20000)
+		if ((await action.getElementCount("div[index='" + qIndex + "'] " + this.videoMedia)) == 1)
 			question.mediaType = "video";
-		else if (action.getElementCount("div[index='" + qIndex + "'] " + this.imageMedia) == 1)
+		else if ((await action.getElementCount("div[index='" + qIndex + "'] " + this.imageMedia)) == 1)
 			question.mediaType = "image";
-		else if (action.getElementCount("div[index='" + qIndex + "'] " + this.audioMedia) == 1)
+		else if ((await action.getElementCount("div[index='" + qIndex + "'] " + this.audioMedia)) == 1)
 			question.mediaType = "audio";
 
-		action.switchToParentFrame();
+		await action.switchToParentFrame();
 		return question;
 	},
 
-	getFeedbackIconDetails: function (quesSelector, quesType) {
-		logger.logInto(stackTrace.get());
+	getFeedbackIconDetails: async function (quesSelector, quesType) {
+		await logger.logInto(await stackTrace.get());
 		let value;
 		if (quesType == 'classify') {
-			res = action.getElementCount(quesSelector + " >" + this.correctIcon);
-			ret = action.getElementCount(quesSelector + " >" + this.incorrectIcon);
+			res = await action.getElementCount(quesSelector + " >" + this.correctIcon);
+			ret = await action.getElementCount(quesSelector + " >" + this.incorrectIcon);
 		}
 		else {
-			res = action.getElementCount(quesSelector + " " + this.correctIcon);
-			ret = action.getElementCount(quesSelector + " " + this.incorrectIcon);
+			res = await action.getElementCount(quesSelector + " " + this.correctIcon);
+			ret = await action.getElementCount(quesSelector + " " + this.incorrectIcon);
 		}
 		if (res > 0)
 			value = "correct"

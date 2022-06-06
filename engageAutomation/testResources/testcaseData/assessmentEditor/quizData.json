@@ -99,12 +99,11 @@
           "imagePath": "./testResources/testcaseData/assessmentEditor/media/Plant.jpg",
           "imageCredit": "Plant Diagram",
           "questionText": "Identify the parts of the plants in the given options:",
-          "options": [
-            "Roots",
-            "Soil",
-            "Stem",
-            "Leaves"
-          ],
+          "options": 
+          [["0" ,"O1","Roots "],
+          ["0" ,"O2","Soil"],
+          ["1" ,"O3","Stem"],
+          ["2" ,"O4","Leaves"]],
           "correctOptions": [
             1,
             3,

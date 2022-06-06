@@ -51,9 +51,9 @@
         ]
       },
       {
-        "id": "ENG_STU_CLASS_TC_104",
+        "id": "ENG_STU_CLASS_TC_19",
         "description": "",
-        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
+        "testFile": "./test/engageExperienceApp/studentMyClass.test.js",
         "testData": [
         ]
       }
@@ -194,9 +194,9 @@
         ]
       },
       {
-        "id": "ENG_STU_CLASS_TC_104",
+        "id": "ENG_STU_CLASS_TC_19",
         "description": "",
-        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
+        "testFile": "./test/engageExperienceApp/studentMyClass.test.js",
         "testData": [
         ]
       }
