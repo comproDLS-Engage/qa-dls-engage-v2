@@ -200,6 +200,18 @@ module.exports = {
 	BK_TC_15: async function (testdata) {
 		sts = await addActivityPage.set_Name(testdata.name);
 		await assertion.assertEqual(sts, true, "Name status mismatch");
+		sts = await addActivityPage.click_Completion_Checkbox(testdata.completion);
+		await assertion.assertEqual(sts, true, "completion checkbox status mismatch");
+		sts = await addActivityPage.click_Score_Checkbox(testdata.scoring);
+		await assertion.assertEqual(sts, true, "score checkbox status mismatch");
+		sts = await addActivityPage.select_TargetRole(testdata.targetRole);
+		await assertion.assertEqual(sts, true, "target role status mismatch");
+		sts = await addActivityPage.select_Assignable(testdata.assignable);
+		await assertion.assertEqual(sts, true, "assignable status mismatch");
+		sts = await addActivityPage.set_Page_Reference(testdata.page);
+		await assertion.assertEqual(sts, true, "page reference status mismatch");
+		sts = await addActivityPage.select_ActivityTheme(testdata.activityTheme);
+		await assertion.assertEqual(sts, true, "activityTheme status mismatch");
 		if (testdata.id.includes("category-2") || testdata.id.includes("category-3")) {
 			sts = await addActivityPage.uploadFile(testdata.file);
 			await assertion.assertEqual(sts, true, "file upload status mismatch");
@@ -356,11 +368,13 @@ module.exports = {
 		await assertion.assertEqual(sts.length, "1", "Book count Mismatch");
 	},
 
-	//Set Optional fields on Add Learning Object page
+	//Validate editing of the activity metadata
 	BK_TC_36: async function (testdata) {
-		sts = await addActivityPage.click_Completion_Checkbox();
+		sts = await addActivityPage.set_Name(testdata.name);
+		await assertion.assertEqual(sts, true, "Name status mismatch");
+		sts = await addActivityPage.click_Completion_Checkbox(testdata.completion);
 		await assertion.assertEqual(sts, true, "completion checkbox status mismatch");
-		sts = await addActivityPage.click_Score_Checkbox();
+		sts = await addActivityPage.click_Score_Checkbox(testdata.scoring);
 		await assertion.assertEqual(sts, true, "score checkbox status mismatch");
 		sts = await addActivityPage.select_TargetRole(testdata.targetRole);
 		await assertion.assertEqual(sts, true, "target role status mismatch");
@@ -370,6 +384,12 @@ module.exports = {
 		await assertion.assertEqual(sts, true, "page reference status mismatch");
 		sts = await addActivityPage.select_ActivityTheme(testdata.activityTheme);
 		await assertion.assertEqual(sts, true, "activityTheme status mismatch");
+		if (testdata.id.includes("category-2") || testdata.id.includes("category-3")) {
+			sts = await addActivityPage.uploadFile(testdata.file);
+			await assertion.assertEqual(sts, true, "file upload status mismatch");
+		}
+		sts = await addActivityPage.click_Add_Button();
+		await assertion.assertEqual(sts, true, "Add button status mismatch");			
 	},
 
 	//Click Preview and Publish button on Component viewer Page
@@ -428,6 +448,12 @@ module.exports = {
 	BK_TC_45: async function () {
 		sts = await learningPathPage.click_SelectAll_And_Click_Delete_Button();
 		await assertion.assert((typeof sts === "string" && sts.includes("Are you sure, you want to delete the selected items?")), "Dialog text mismatch. " + sts);
+	},
+
+	//Validate that edit activity page opens on selecting the modify options in the menu
+	BK_TC_46: async function (testdata) {
+		sts = await viewLearningPathPage.click_Modify_Button_in_ActivityMenu(testdata.name);
+		await assertion.assertEqual(sts, true, "Edit activity page status mismatch");
 	},
 
 	// launch url and republish native LO

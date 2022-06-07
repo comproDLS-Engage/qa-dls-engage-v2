@@ -69,6 +69,18 @@ module.exports = {
         }
     },
 
+    isSelected: async function (selector) {
+        message = "element:" + selector;
+        try {
+            let result = await (await $(selector)).isSelected();
+            await logger.logInto(await stackTrace.get(), message);
+            return result;
+        } catch (err) {
+            await logger.logInto(await stackTrace.get(), err.message, "error");
+            return err;
+        }
+    },
+
     setValue: async function (selector, value) {
         message = "element:" + selector + " value:" + value;
         try {

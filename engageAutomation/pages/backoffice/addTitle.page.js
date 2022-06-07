@@ -58,7 +58,7 @@ module.exports = {
             res = await action.click(this.removeImageBtn);
             if (res == true) {
                 res = await action.waitForDisplayed(this.removeImageBtn, undefined, true);
-                await browser.pause(2000);
+                await browser.pause(1000);
             }
         }
 
@@ -69,7 +69,7 @@ module.exports = {
             res = await action.uploadFile(imgPath);
             if ((typeof res) === 'string') {
                 res = await action.setValue(this.imageUploadBtn, res);
-                await browser.pause(2000);
+                await browser.pause(1000);
             }
             await logger.logInto((await stackTrace.get()), res);
         }

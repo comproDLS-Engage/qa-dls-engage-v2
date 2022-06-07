@@ -12,6 +12,7 @@ module.exports = {
     targetRoleDropdown: selectorFile.addActivityPage.targetRoleDropdown,
     assignableDropdown: selectorFile.addActivityPage.assignableDropdown,
     loUploadBtn: selectorFile.addActivityPage.loUploadBtn,
+    removeFileBtn: selectorFile.addActivityPage.removeFileBtn,
     activityThemeOptions: selectorFile.addActivityPage.activityThemeOptions,
 
     isInitialized: async function () {
@@ -41,19 +42,35 @@ module.exports = {
         return res;
     },
 
-    click_Completion_Checkbox: async function () {
+    click_Completion_Checkbox: async function (value) {
         await logger.logInto((await stackTrace.get()));
         let res;
-        res = await action.click(this.completionCheckBox);
-        await logger.logInto((await stackTrace.get()), res);
+        if (value == "" || value == undefined)
+            res = true;
+        else {
+            res = await action.isSelected(this.completionCheckBox);
+            if (res != value)
+                res = await action.click(this.completionCheckBox);
+            else
+                res = true;
+            await logger.logInto((await stackTrace.get()), res);
+        }
         return res;
     },
 
-    click_Score_Checkbox: async function () {
+    click_Score_Checkbox: async function (value) {
         await logger.logInto((await stackTrace.get()));
         let res;
-        res = await action.click(this.scoreCheckBox);
-        await logger.logInto((await stackTrace.get()), res);
+        if (value == "" || value == undefined)
+            res = true;
+        else {
+            res = await action.isSelected(this.scoreCheckBox);
+            if (res != value)
+                res = await action.click(this.scoreCheckBox);
+            else
+                res = true;
+            await logger.logInto((await stackTrace.get()), res);
+        }
         return res;
     },
 
@@ -112,12 +129,20 @@ module.exports = {
     uploadFile: async function (path) {
         await logger.logInto((await stackTrace.get()));
         let res;
+        if (await action.isClickable(this.removeFileBtn)) {
+            res = await action.click(this.removeFileBtn);
+            if (res == true) {
+                res = await action.waitForDisplayed(this.removeFileBtn, undefined, true);
+                await browser.pause(1000);
+            }
+        }
         if (path == "" || path == undefined)
             res = true;
         else {
             res = await action.uploadFile(path);
             if ((typeof res) === 'string') {
                 res = await action.setValue(this.loUploadBtn, res);
+                await browser.pause(1000);
             }
             await logger.logInto((await stackTrace.get()), res);
         }
