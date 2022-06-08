@@ -14,6 +14,7 @@ module.exports = {
     loUploadBtn: selectorFile.addActivityPage.loUploadBtn,
     removeFileBtn: selectorFile.addActivityPage.removeFileBtn,
     activityThemeOptions: selectorFile.addActivityPage.activityThemeOptions,
+    progressBarClosed: selectorFile.addActivityPage.progressBarClosed,
 
     isInitialized: async function () {
         return addFolderPage.isInitialized();
@@ -142,7 +143,10 @@ module.exports = {
             res = await action.uploadFile(path);
             if ((typeof res) === 'string') {
                 res = await action.setValue(this.loUploadBtn, res);
+                console.log(res)
                 await browser.pause(1000);
+                res = await action.waitForExist(this.progressBarClosed, 60000);
+                console.log(res)
             }
             await logger.logInto((await stackTrace.get()), res);
         }

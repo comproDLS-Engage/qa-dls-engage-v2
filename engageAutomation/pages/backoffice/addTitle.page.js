@@ -28,6 +28,7 @@ module.exports = {
         await logger.logInto((await stackTrace.get()));
         let res;
         res = await action.waitForDisplayed(this.createTitleBtn);
+        await browser.pause(5000);
         return res;
     },
 
@@ -58,7 +59,7 @@ module.exports = {
             res = await action.click(this.removeImageBtn);
             if (res == true) {
                 res = await action.waitForDisplayed(this.removeImageBtn, undefined, true);
-                await browser.pause(1000);
+                await browser.pause(2000);
             }
         }
 
@@ -69,7 +70,7 @@ module.exports = {
             res = await action.uploadFile(imgPath);
             if ((typeof res) === 'string') {
                 res = await action.setValue(this.imageUploadBtn, res);
-                await browser.pause(1000);
+                await browser.pause(2000);
             }
             await logger.logInto((await stackTrace.get()), res);
         }
