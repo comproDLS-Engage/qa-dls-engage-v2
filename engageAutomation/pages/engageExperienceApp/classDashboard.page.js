@@ -272,6 +272,19 @@ module.exports = {
 		}
 		return res;
 	},
+	click_assignmentsOption_student: async function () {
+		await logger.logInto(await stackTrace.get());
+		res = await action.click(this.assignmentsOption);
+		if (res == true) {
+			var	assignmentStudentList = require('./assignmentStudentList.page.js');
+			res = await assignmentStudentList.isInitialized();
+		}
+		else {
+			res = res + " -- assignmentsOption is NOT clicked";
+			await logger.logInto(await stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
 	click_progressOption: async function () {
 		await logger.logInto(await stackTrace.get());
 		res = await action.click(this.progressOption);

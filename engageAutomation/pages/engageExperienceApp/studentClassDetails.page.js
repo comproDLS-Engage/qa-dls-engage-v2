@@ -116,6 +116,8 @@ module.exports = {
     },
     getData_studentClassDashboardPageData: async function () {
         await logger.logInto(await stackTrace.get());
+        await action.waitForDocumentLoad();
+        await action.waitForDisplayed(this.className)
         var obj;
         obj = {
             bookCoverIcon: ((await action.getElementCount(this.bookCoverIcon)) > 0) ? await action.waitForDisplayed(this.bookCoverIcon) : false,

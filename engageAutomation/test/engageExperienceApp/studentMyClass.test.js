@@ -261,9 +261,9 @@ module.exports = {
 		}
 	},
 	ENG_STU_CLASS_TC_18: async function () {
-		sts = await classDashboardPage.click_assignmentsOption();
+		sts = await classDashboardPage.click_assignmentsOption_student();
 		if ((typeof (sts)) === "object") {
-			await assertion.assertEqual(sts.pageStatus, true, "Assignment Tab is not selected " + (await JSON.stringify(sts)))
+			await assertion.assertEqual(sts.pageStatus, true, "Assignment Page is not displayed " + (await JSON.stringify(sts)))
 
 		} else {
 			await assertion.assertFail(sts);
