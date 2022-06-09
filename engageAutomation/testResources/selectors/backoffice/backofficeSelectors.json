@@ -29,12 +29,11 @@
 		"bannerText": "[class*=mdc-banner__text]",
 		"bannerCloseBtn": "[class=c-banner__close]",
 		"proceedBtn": "[data-tid=button-item-type-launch]",
-		"buttonLoader": "[class=c-button__spinner]",
+		"buttonLoader": "[class*=button__spinner]",
 		"emptyStateBtn": "[class*=c-empty-state-button]",
 		"publishBtn": "[data-tid=button-publish-book-component]",
 		"seeMoreLessBtn": "[data-tid=button-see-more-less]",
-		"appVersion": "[class*=version]",
-		"buttonSpinner": "[class*=c-button__spinner]"
+		"appVersion": "[class*=version]"
 	},
 	"homePage": {
 		"headingText": "[class*=c-nav__heading-text]",

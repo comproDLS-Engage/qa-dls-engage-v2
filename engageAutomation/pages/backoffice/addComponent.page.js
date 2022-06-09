@@ -30,7 +30,7 @@ module.exports = {
 
     isInitialized: async function () {
         await logger.logInto((await stackTrace.get()));
-        //action.waitForDocumentLoad();
+        await action.waitForDisplayed(this.buttonLoader, undefined, true);
         res = await action.waitForDisplayed(this.addBtn + "," + this.modifyBtn);
         return res;
     },

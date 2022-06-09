@@ -21,14 +21,15 @@ module.exports = {
     targetRoleList: selectorFile.addTitlePage.targetRoleList,
     categoryDropdown: selectorFile.addTitlePage.categoryDropdown,
     categoryList: selectorFile.addTitlePage.categoryList,
-    buttonSpinner: selectorFile.common.buttonSpinner,
+    buttonLoader: selectorFile.common.buttonLoader,
     snackbarLbl: selectorFile.common.snackbarLbl,
 
     isInitialized: async function () {
         await logger.logInto((await stackTrace.get()));
         let res;
+        await action.waitForDisplayed(this.buttonLoader, undefined, true);
         res = await action.waitForDisplayed(this.createTitleBtn);
-        await browser.pause(5000);
+        //await browser.pause(2000);
         return res;
     },
 
@@ -80,7 +81,7 @@ module.exports = {
     click_CreateTitle_Button: async function () {
         await logger.logInto((await stackTrace.get()));
         let res;
-        await action.waitForDisplayed(this.buttonSpinner, undefined, true)
+        await action.waitForDisplayed(this.buttonLoader, undefined, true)
         res = await action.waitForClickable(this.createTitleBtn);
         if (res == true) {
             res = await action.click(this.createTitleBtn);
