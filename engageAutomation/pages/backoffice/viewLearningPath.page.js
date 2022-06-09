@@ -30,6 +30,7 @@ module.exports = {
     modifyCompOptionsBtn: selectorFile.viewLearningPathPage.modifyCompOptionsBtn,
     freelyAvailable: selectorFile.viewLearningPathPage.freelyAvailable,
     selectAllBtn: selectorFile.viewLearningPathPage.selectAllBtn,
+    activityMenuModifyBtn: selectorFile.viewLearningPathPage.activityMenuModifyBtn,
 
     isInitialized: async function () {
         await logger.logInto((await stackTrace.get()));
@@ -211,6 +212,31 @@ module.exports = {
                         await browser.switchWindow("paint.backoffice.comprodls.com");
                         // action.waitForDisplayed(this.dialogContent);
                         // res = action.getText(this.dialogContent);
+                    }
+                }
+                break;
+            }
+            res = "activity \"" + name + "\" not found";
+        }
+        await logger.logInto((await stackTrace.get()), res);
+        return res;
+    },
+
+    click_Modify_Button_in_ActivityMenu: async function (name) {
+        await logger.logInto((await stackTrace.get()));
+        await action.waitForDisplayed(this.activityList);
+        let res = null;
+        let i, list, list2;
+        list = await action.findElements(this.activityList);
+        list2 = await action.findElements(this.activityMenuBtn);
+        for (i = 0; i < list.length; i++) {
+            if ((await action.getText(list[i])).includes(name)) {
+                res = await action.click(list2[i]);
+                if (res == true) {
+                    res = await action.click(this.activityMenuModifyBtn);
+                    if (res == true) {
+                        res = await require('./addActivity.page.js').isInitialized();
+                        await browser.pause(5000);
                     }
                 }
                 break;

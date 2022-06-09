@@ -36,7 +36,6 @@ module.exports = {
     click_Add_Button: async function () {
         await logger.logInto((await stackTrace.get()));
         let res;
-        await browser.pause(5000)
         res = await action.waitForClickable(this.addBtn);
         await action.waitForDisplayed(this.buttonLoader, undefined, true)
         if (res == true) {

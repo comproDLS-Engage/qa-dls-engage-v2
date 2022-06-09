@@ -119,6 +119,7 @@
 		"activityMenuBtn": "[data-tid=button-display-activity-menu]",
 		"activityMenuDeleteBtn": "[class*=mdc-menu-surface--open] [data-tid=button-Delete]",
 		"activityMenuActivityAuthorBtn": "[class*=mdc-menu-surface--open] [data-tid*=button-Activity]",
+		"activityMenuModifyBtn": "[class*=mdc-menu-surface--open] [data-tid*=button-Modify]",
 		"itemCheckboxes": "[data-tid*=button-folder-details] > div > div",
 		"deleteItemBtn": "[data-tid=button-deleteSelectedItem]",
 		"modifyFolderOptionsBtn":"[data-tid=button-modify-folder-options]",
@@ -146,12 +147,14 @@
 	},
 	"addActivityPage": {
 		"nameTxtbox": "[id=activity-title]",
-		"completionCheckBox" : "[class=c-form-section__completion-container] [class*=c-form-section__completion-checkbox]",
-		"scoreCheckBox" :"[class=c-form-section__score-container] [class*=c-form-section__completion-checkbox]",
+		"completionCheckBox" : "[id=activity-completion]",
+		"scoreCheckBox" :"[id=activity-score]",
 		"targetRoleDropdown" : "[id=target-role]",
 		"assignableDropdown" :"[id=assignability]",
 		"loUploadBtn": "[data-tid=input-lo-upload]",
-		"activityThemeOptions": "[data-tid*=input-select-visual-]"
+		"removeFileBtn": "[class*=c-file-upload__remove]:not([style='display: none;'])",
+		"activityThemeOptions": "[data-tid*=input-select-visual-]",
+		"progressBarClosed": "[class*=progress--closed-animation-off]"
 	},
 	"publishComponentPage": {
 		"snapshotBtn": "[data-tid*='button-Create New Snapshot']",

@@ -28,6 +28,7 @@ module.exports = {
         await logger.logInto((await stackTrace.get()));
         let res;
         res = await action.waitForDisplayed(this.createTitleBtn);
+        await browser.pause(5000);
         return res;
     },
 
