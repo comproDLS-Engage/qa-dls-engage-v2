@@ -10,7 +10,7 @@ module.exports = {
         await dashboardPage.isInitialized();
         sts = await dashboardPage.getData_dashboardPage();
         await assertion.assertEqual(sts.pageTitle, testdata.pageTitle, "Dashboard text mismatch");
-        await assertion.assertEqual(sts.createPlaylistBtn, testdata.createPlaylistBtn, "Create Playlist text mismatch");
+        //await assertion.assertEqual(sts.createPlaylistBtn, testdata.createPlaylistBtn, "Create Playlist text mismatch");
         await assertion.assertEqual(sts.addBookBtn, testdata.addBookBtn, "Add Book text mismatch");
         await assertion.assertEqual(sts.cardSliderTitle, testdata.cardSliderTitle, "slider title text mismatch");
         await assertion.assertEqual(sts.cardSliderSubtitle, testdata.cardSliderSubtitle, "slider subtile text mismatch");
@@ -20,10 +20,10 @@ module.exports = {
         await assertion.assertEqual(sts.noBooksTitle, testdata.noBooksTitle, "No books added text mismatch");
         await assertion.assertEqual(sts.noBooksSubtitle, testdata.noBooksSubtitle, "no books subtitle text mismatch");
         await assertion.assertEqual(sts.noBooks_addBookBtn, testdata.noBooks_addBookBtn, "add books text mismatch");
-        await assertion.assertEqual(sts.myPlaylistsHeading, testdata.myPlaylistsHeading, "my playlist text mismatch");
-        await assertion.assertEqual(sts.noPlaylistsTitle, testdata.noPlaylistsTitle, "no playlist text mismatch");
-        await assertion.assertEqual(sts.noPlaylistsSubTitle, testdata.noPlaylistsSubTitle, "playlist subtitle text mismatch");
-        await assertion.assertEqual(sts.noPlaylists_createBtn, testdata.noPlaylists_createBtn, "create playlist text mismatch");
+        //await assertion.assertEqual(sts.myPlaylistsHeading, testdata.myPlaylistsHeading, "my playlist text mismatch");
+        //await assertion.assertEqual(sts.noPlaylistsTitle, testdata.noPlaylistsTitle, "no playlist text mismatch");
+        //await assertion.assertEqual(sts.noPlaylistsSubTitle, testdata.noPlaylistsSubTitle, "playlist subtitle text mismatch");
+        //await assertion.assertEqual(sts.noPlaylists_createBtn, testdata.noPlaylists_createBtn, "create playlist text mismatch");
         await assertion.assertEqual(sts.exploreHeading, testdata.exploreHeading, "Explore heading text mismatch");
         await assertion.assertEqual(sts.viewAllBtn, testdata.viewAllBtn, "View All button text mismatch");
         await assertion.assertEqual(sts.recentlyViewedHeading, testdata.recentlyViewedHeading, "Recently Viewed heading text mismatch");
@@ -232,10 +232,10 @@ module.exports = {
         await assertion.assertEqual(sts.noBooksTitle, testdata.noBooksTitle, "No books added text mismatch");
         await assertion.assertEqual(sts.noBooksSubtitle, testdata.noBooksSubtitle, "no books subtitle text mismatch");
         await assertion.assertEqual(sts.noBooks_addBookBtn, testdata.noBooks_addBookBtn, "add books text mismatch");
-        await assertion.assertEqual(sts.myPlaylistsHeading, testdata.myPlaylistsHeading, "my playlist text mismatch");
-        await assertion.assertEqual(sts.noPlaylistsTitle, testdata.noPlaylistsTitle, "no playlist text mismatch");
-        await assertion.assertEqual(sts.noPlaylistsSubTitle, testdata.noPlaylistsSubTitle, "playlist subtitle text mismatch");
-        await assertion.assertEqual(sts.noPlaylists_createBtn, testdata.noPlaylists_createBtn, "create playlist text mismatch");
+        //await assertion.assertEqual(sts.myPlaylistsHeading, testdata.myPlaylistsHeading, "my playlist text mismatch");
+        //await assertion.assertEqual(sts.noPlaylistsTitle, testdata.noPlaylistsTitle, "no playlist text mismatch");
+        //await assertion.assertEqual(sts.noPlaylistsSubTitle, testdata.noPlaylistsSubTitle, "playlist subtitle text mismatch");
+        //await assertion.assertEqual(sts.noPlaylists_createBtn, testdata.noPlaylists_createBtn, "create playlist text mismatch");
        // await assertion.assertEqual(sts.exploreHeading, testdata.exploreHeading, "Explore heading text mismatch");
        // await assertion.assertEqual(sts.viewAllBtn, testdata.viewAllBtn, "View All button text mismatch");
         await assertion.assertEqual(sts.recentlyViewedHeading, testdata.recentlyViewedHeading, "Recently Viewed heading text mismatch");

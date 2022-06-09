@@ -474,7 +474,7 @@
                 "closeBtn": "[data-tid=button-close]",
                 "completedTxt": "[data-tid='button-completed']",
                 "yourScoreLabel": "[data-tid=text-activityScoreInfo] p",
-                "yourScoreValue": "[data-tid=text-activityScoreInfo] h6",
+                "yourScoreValue": "[data-tid=text-activityScoreInfo] h4",
                 "detailsPanel": "[data-tid=container-leftPanel]",
                 "panelHeading": "[data-tid=panel-heading]",
                 "activityTitle": "[data-tid='text-title']",

@@ -57,7 +57,7 @@
                     "createPlaylistBtn": "Create Playlist",
                     "addBookBtn": "Add Book",
                     "cardSliderTitle": "Getting started",
-                    "cardSliderSubtitle": "Use your dashboard to pin your textbooks and create playlists to share with your class.",
+                    "cardSliderSubtitle": "Use your dashboard to pin your textbooks and create classes for your students to join.",
                     "cardSliderLeftBtn": "",
                     "cardSliderRightBtn": "",
                     "actionCardTitles": [
@@ -122,7 +122,7 @@
                     "createPlaylistBtn": "Create Playlist",
                     "addBookBtn": "Add Book",
                     "cardSliderTitle": "Getting started",
-                    "cardSliderSubtitle": "Use your dashboard to pin your textbooks and create playlists.",
+                    "cardSliderSubtitle": "Use your dashboard to pin your textbooks and join classes to see progress and assignments.",
                     "cardSliderLeftBtn": "",
                     "cardSliderRightBtn": "",
                     "actionCardTitles": [
@@ -381,7 +381,7 @@
                     "retakeActivityBtn": "Retake Activity",
                     "closeBtn": "Close",
                     "completedTxt": "Completed on",
-                    "yourScoreLabel": "Your Score:",
+                    "yourScoreLabel": "Score:",
                     "closeInfoBtn": "",
                     "infoTocHeading": "Activities",
                     "feedbackText": [
