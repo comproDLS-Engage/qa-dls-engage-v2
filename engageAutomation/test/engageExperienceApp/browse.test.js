@@ -124,7 +124,7 @@ module.exports = {
 	ENG_GLOB_TC_22: async function (testdata) {
 		sts = await browsePage.click_moreOptionsBtn(testdata[0]);
 		await assertion.assertEqual(sts.viewOption, testdata[1].viewOption, "viewOption Text Mismatch");
-		await assertion.assertEqual(sts.addToPlaylistOption, testdata[1].addToPlaylistOption, "addToPlaylistOption Text Mismatch");
+		//await assertion.assertEqual(sts.addToPlaylistOption, testdata[1].addToPlaylistOption, "addToPlaylistOption Text Mismatch");
 		await assertion.assertEqual(sts.shareOption, testdata[1].shareOption, "shareOption Text Mismatch");
 	},
 
@@ -136,16 +136,16 @@ module.exports = {
 	},
 
 	//Validate that clicking on Add to playlist on 3 dot options lists the existing playlists and option to create a new playlist.
-	ENG_GLOB_TC_24: async function (testdata) {
+	/*ENG_GLOB_TC_24: async function (testdata) {
 		sts = await browsePage.click_addToPlaylistOption();
 		await assertion.assertEqual(sts.listOfPlaylist[0], testdata, "Create playlist text mismatch");
-	},
+	},*/
 
-	//Validate that clicking on the playlist name adds the resource to the playlist
+	/*//Validate that clicking on the playlist name adds the resource to the playlist
 	ENG_GLOB_TC_25: async function (testdata) {
 		sts = await browsePage.click_listOfPlaylist(testdata);
 		await assertion.assertEqual(sts, true, sts);
-	},
+	},*/
 
 	//Validate that clicking on the resource image launches the resource
 	ENG_GLOB_TC_26: async function (testdata) {

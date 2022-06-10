@@ -81,17 +81,6 @@
             ]
          },
          {
-            "id": "ENG_GLOB_TC_24",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/browse.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath": "engage.appContent.browse.teacher.listOfPlaylist"
-               }
-            ]
-         },
-         {
             "id": "ENG_GLOB_TC_23",
             "description": "",
             "testFile": "./test/engageExperienceApp/browse.test.js",
