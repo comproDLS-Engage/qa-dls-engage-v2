@@ -233,7 +233,17 @@ module.exports = {
             return err;
         }
     },
-
+    waitForEnabled: async function (selector, ms, reverse, timeoutMsg, interval) {
+        message = "element:" + selector;
+        try {
+            await (await $(selector)).waitForEnabled({ timeout: ms, reverse: reverse, timeoutMsg: timeoutMsg, interval: interval });
+            await logger.logInto(await stackTrace.get(), message);
+            return true;
+        } catch (err) {
+            await logger.logInto(await stackTrace.get(), err.message, "error");
+            return err;
+        }
+    },
     waitForClickable: async function (selector, ms, reverse, timeoutMsg, interval) {
         message = "element:" + selector;
         try {

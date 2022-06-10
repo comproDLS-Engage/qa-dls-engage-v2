@@ -724,8 +724,8 @@ module.exports = {
 
 	clickEditorTab: async function () {
 		await logger.logInto(stackTrace.get());
-		//res = action.waitForClickable(this.addQuestion_btn);
-		res = true;
+		res = await action.waitForEnabled(this.editor_tab);
+	//	res = true;
 		if (res == true) {
 			await logger.logInto(stackTrace.get(), res + " -- Editor Tab is clicked");
 			res = await action.click(this.editor_tab);
