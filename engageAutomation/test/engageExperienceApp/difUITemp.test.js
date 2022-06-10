@@ -316,7 +316,7 @@ module.exports = {
 		console.log(res)
 		res = await action.waitForDisplayed("[data-tid=image-bookCover]");
 		console.log(res)
-		res = await action.waitForDisplayed("[data-tid=image-image-noAssignments]");
+		res = await action.waitForDisplayed("[data-tid=image-noAssignments]");
 		console.log(res)
 		res = await action.waitForDisplayed("[class*=MuiSkeleton]", undefined, true);
 		console.log(res)
@@ -403,7 +403,7 @@ module.exports = {
 		console.log(res)
 		res = await action.click("[data-tid=button-notification]");
 		console.log(res)
-		res = await action.waitForDisplayed("[data-tid=image-noNotifications]");
+		res = await action.waitForDisplayed("[data-tid=image-noNotifications],[data-tid*=text-notification]");
 		console.log(res)
 	},
 
@@ -504,7 +504,7 @@ module.exports = {
 		console.log(res)
 	},
 
-	// Create playlist dialog
+	/*// Create playlist dialog
 	ENG_DIF_TC_43: async function () {
 		res = await action.scrollIntoView("#app");
 		console.log(res)
@@ -580,7 +580,7 @@ module.exports = {
 		console.log(res)
 		res = await action.waitForDisplayed("[data-tid=text-error], [data-tid=text-info], [data-tid=text-success]");
 		console.log(res)
-	},
+	},*/
 
 	// Search in global resources
 	ENG_DIF_TC_50: async function () {
@@ -690,7 +690,7 @@ module.exports = {
 	ENG_DIF_TC_60: async function () {
 		res = await action.click("[data-tid=list-0]");
 		console.log(res)
-		res = await action.waitForDisplayed("[id*=doughnutCanvas-card]");
+		res = await action.waitForDisplayed("[data-tid=image-noProgress]");
 		console.log(res)
 	},
 
