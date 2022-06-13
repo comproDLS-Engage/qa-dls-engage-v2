@@ -101,14 +101,14 @@
           "questionText": "Identify the parts of the plants in the given options:",
           "subQuestionText":
           [["1", "Identify the parts of the plants in the given options:"],
-          [ "2","dentify the parts of the flower in the given options:t"]],
+          [ "2","Identify the parts of the flower in the given options:"]],
           "options": 
           [["0" ,"O1","Roots"],
           ["0" ,"O2","Soil"],
           ["0" ,"O3","Stem"],
           ["1" ,"O1","Leaves"],
-          ["1" ,"O2","stem"],
-          ["1" ,"O3","bud"]],
+          ["1" ,"O2","Stem"],
+          ["1" ,"O3","Bud"]],
           "correctOptions": [
             1,
             3,

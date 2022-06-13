@@ -198,8 +198,8 @@
                 "viewClassbtn": "View Class",
                 "backToHomeBtn_txt": "Close",
                 "className_txt": "Added: ",
-                "successCaption_txt": "Your class has been added! Share the class key below to let your students join",
-                "copy_txt": "Copy Key"
+                "successCaption_txt": "Your class has been added! Share the class code below to let your students join",
+                "copy_txt": "Copy Class Code"
             },
             "myClassPage": {
                 "classHeading": "Classes",

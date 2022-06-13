@@ -1,7 +1,7 @@
 {
 
   "Suite1": {
-    "Name": " Validation the Class workflow for Join Class scenario",
+    "Name": "Join Class Workflow for Student",
     "TestCaseRepo": [
       "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
     ],
@@ -192,7 +192,7 @@
     ]
   },
   "Suite2": {
-    "Name": "Validation of Class features for an Instructor when no class has been created (English)",
+    "Name": "Class Dashboard when student is not enrolled in any class.",
     "TestCaseRepo": [
       "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
     ],
@@ -272,7 +272,7 @@
     ]
   },
   "Suite3": {
-    "Name": "Validation the content of My Class tab and archived tab and validate the class data on myclass tab",
+    "Name": "Content validation of my class and archived tab.",
     "TestCaseRepo": [
       "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
     ],
@@ -384,7 +384,7 @@
     ]
   },
   "Suite4": {
-    "Name": "Validation the feature of student class workflow",
+    "Name": "Class Card more options and student class details.",
     "TestCaseRepo": [
       "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
     ],
