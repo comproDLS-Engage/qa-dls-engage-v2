@@ -186,6 +186,7 @@ module.exports = {
 
 	setinputOptionText: async function (testdata) {
 		await logger.logInto(stackTrace.get());
+		console.log(testdata.length)
 		for (var i = 0; i < testdata.length; i++) {
 			var inputSelector = this.inputOption + testdata[i][0] + "] input "
 			res = await action.setValue(inputSelector, testdata[i][1])
@@ -297,7 +298,12 @@ module.exports = {
 		console.log(testdata[2])
 		await logger.logInto(stackTrace.get());
 		console.log(this.subOptionIndex + "\"" + testdata[0] + "\"] " + this.subOptionValue + testdata[1] + "] " + this.subOptiontext)
-		res = await action.setValue((this.subOptionIndex + "\"" + testdata[0] + "\"] " + this.subOptionValue + testdata[1] + "] " + this.subOptiontext), testdata[2])
+		await action.click(this.subOptionIndex + "\"" + testdata[0] + "\"]>" + this.subOptionValue + testdata[1] + "] " + this.subOptiontext)
+		res = await action.clearValue((this.subOptionIndex + "\"" + testdata[0] + "\"]>" + this.subOptionValue + testdata[1] + "] " + this.subOptiontext))
+		await browser.pause(2000)
+		res = await action.addValue((this.subOptionIndex + "\"" + testdata[0] + "\"]>" + this.subOptionValue + testdata[1] + "] " + this.subOptiontext), testdata[2])
+		
+		//res = await action.setValue((this.subOptionIndex + "\"" + testdata[0] + "\"] " + this.subOptionValue + testdata[1] + "] " + this.subOptiontext), testdata[2])
 		await browser.pause(2000)
 		if (res == true) {
 			await logger.logInto(stackTrace.get(), " -- Add Pair Button is clicked");
@@ -432,11 +438,16 @@ module.exports = {
 	clickAddLabelBtn: async function (labelOptions) { //why do we need the list of options, need to discuss - akhil
 		await logger.logInto(stackTrace.get());
 		var countLabel = labelOptions.length;
+		console.log(countLabel)
 		var optionlength = await action.findElements("[data-tid*=container-label")
+		console.log(optionlength.length)
 		if (labelOptions.length > optionlength.length) {
 			countLabel = (labelOptions.length - optionlength.length)
 		}
+		console.log(countLabel)
 		for (var i = 0; i < countLabel; i++) {
+			await action.waitForEnabled(this.addLabel_btn);
+			await action.waitForClickable(this.addLabel_btn);
 			res = await action.click(this.addLabel_btn);
 		}
 
@@ -961,7 +972,8 @@ module.exports = {
 		await action.click(this.responseTextArea)
 		res = await action.setValue(this.responseTextArea, questionTitle);
 		await browser.pause(2000)
-		await action.keyPress("\uE008a\uE00F")
+		//await action.keyPress("\uE008a\uE00F")
+		await action.keyPress(['\uE008', '\uE00F'])
 		await browser.pause(2000)
 		await action.keyPress("\uE017")
 		if (res == true) {
@@ -1084,7 +1096,7 @@ module.exports = {
 		let remoteFilePath = await browser.uploadFile(imagePath);
 		// set file path value in the input field
 		res = await action.addValue(this.media_input, remoteFilePath);
-		await action.waitForDisplayed(this.uploadedImage, 5000);
+		await action.waitForDisplayed(this.uploadedImage);
 		return res;
 	},
 
@@ -1139,7 +1151,8 @@ module.exports = {
 
 	setAudioCredit: async function (audioCredit) {
 		await logger.logInto(stackTrace.get());
-		res = await action.setValue(this.audioCredit_input, audioCredit); // use setValue instead of addValue - akhil
+		await action.clearValue(this.audioCredit_input)
+		res = await action.addValue(this.audioCredit_input, audioCredit); // use setValue instead of addValue - akhil
 		if (res == true) {
 			await logger.logInto(stackTrace.get(), " -- Audio Credit is entered");
 		}

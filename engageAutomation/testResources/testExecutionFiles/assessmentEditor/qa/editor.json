@@ -61,6 +61,8 @@
 					}
 				]
 			},
+			
+		
 			{
 			"id": "ASE_COM_TC_42",
 			"description": "Validate if alpha-numeric text is allowed in the Question Text",
@@ -1366,7 +1368,17 @@
 				"testData": [
 				]
 			},
-
+			{
+				"id": "ASE_COM_TC_75",
+				"description": "Click on Media button and Set Image Media",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.FIBDropdown[0].question1.promptImagePath"
+					}
+				]
+			},
 			{
 				"id": "ASE_COM_TC_1006",
 				"description": "Click on Editor tab",
@@ -1509,6 +1521,20 @@
 			},
 			{
 				"id": "ASE_FIBDROPDOWN_TC_1014",
+				"description": "Click the Common option",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1013",
+				"description": "Click the Common option",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1013",
 				"description": "Click the Common option",
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": [
