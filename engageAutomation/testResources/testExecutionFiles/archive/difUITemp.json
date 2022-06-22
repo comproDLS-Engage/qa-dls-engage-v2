@@ -65,6 +65,20 @@
                 "testData": []
             },
             {
+                "id": "ENG_DIF_TC_55",
+                "description": "Premium plan popup",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.05,
+                "testData": []
+            },
+            {
+                "id": "ENG_DIF_TC_54",
+                "description": "Close activate book popup",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.08,
+                "testData": []
+            },
+            {
                 "id": "ENG_DIF_TC_33",
                 "description": "Notifications pane",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
@@ -293,6 +307,13 @@
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
                 "visualTolerance": 0.08,
                 "testData": []
+            },
+            {
+                "id": "ENG_DIF_TC_58",
+                "description": "View billing tab on Settings page",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.08,
+                "testData": []
             }
         ],
         "AfterEach": [],
@@ -448,6 +469,13 @@
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
                 "visualTolerance": 0.08,
                 "testData": []
+            },
+            {
+                "id": "ENG_DIF_TC_58",
+                "description": "View billing tab on Settings page",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.08,
+                "testData": []
             }
         ],
         "AfterEach": [],
@@ -512,6 +540,20 @@
                 "description": "Activate book popup",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
                 "visualTolerance": 0.06,
+                "testData": []
+            },
+            {
+                "id": "ENG_DIF_TC_54",
+                "description": "Close activate book popup",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.08,
+                "testData": []
+            },
+            {
+                "id": "ENG_DIF_TC_55",
+                "description": "Premium plan popup",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.05,
                 "testData": []
             },
             {
@@ -636,6 +678,13 @@
             {
                 "id": "ENG_DIF_TC_41",
                 "description": "View accessibility tab on Settings page",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.08,
+                "testData": []
+            },
+            {
+                "id": "ENG_DIF_TC_58",
+                "description": "View billing tab on Settings page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
                 "visualTolerance": 0.08,
                 "testData": []
@@ -798,6 +847,13 @@
             {
                 "id": "ENG_DIF_TC_39",
                 "description": "View profile tab on Settings page",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.08,
+                "testData": []
+            },
+            {
+                "id": "ENG_DIF_TC_58",
+                "description": "View billing tab on Settings page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
                 "visualTolerance": 0.08,
                 "testData": []
