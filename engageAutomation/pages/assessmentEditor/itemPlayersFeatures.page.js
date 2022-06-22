@@ -1151,8 +1151,11 @@ module.exports = {
 
 	setAudioCredit: async function (audioCredit) {
 		await logger.logInto(stackTrace.get());
-		await action.clearValue(this.audioCredit_input)
-		res = await action.addValue(this.audioCredit_input, audioCredit); // use setValue instead of addValue - akhil
+		await action.waitForDisplayed(this.audioCredit_input)
+		await action.waitForEnabled(this.audioCredit_input)
+		
+		res = await action.setValue(this.audioCredit_input, audioCredit); // use setValue instead of addValue - akhil
+		console.log(res)
 		if (res == true) {
 			await logger.logInto(stackTrace.get(), " -- Audio Credit is entered");
 		}
