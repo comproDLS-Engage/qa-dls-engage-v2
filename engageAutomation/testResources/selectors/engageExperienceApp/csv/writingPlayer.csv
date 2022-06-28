@@ -1,0 +1,20 @@
+Label,cssSelector,tagName,group,relation,extraInfo,returnValue,teacherAppLangEN,studentAppLangEN
+writingTextbox,div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-input-id*=ta-,textarea,writingPlayer,,,,,
+attachedFile,div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [aria-describedby*=tooltip-filename-ta-,div,writingPlayer,,,,,
+writingAttachBtn,div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [aria-describedby*=tooltip-attachfile-ta-,button,,,,"getText,browseCompOption",,"""Attach"""
+browseCompOption,[class*=mdc-menu-surface--open] li:nth-child(1),button,,,,attachDialog,,"""Browse this computer"""
+progressBar,[aria-label='Progress Bar'],div,,,,,,
+removeFileBtn,[aria-describedby*=tooltip-removefile-ta-,button,,,,removeDialog,,""""""
+attachDialogTitle,[class*=mdc-dialog--open] [data-tid=text-heading][color],div,attachDialog,,,,,"""Attach File"""
+attachDialogSubtitle,[class*=mdc-dialog--open] [data-tid=text-fileUploadTitle],div,attachDialog,,,,,"""Drag and Drop File here"""
+uploadFile,[class*=mdc-dialog--open] [data-tid=container-uploadFile] input,input,,,,maxLimitDialog,,
+attachDialogBrowseBtn,[class*=mdc-dialog--open] [data-tid=button-browse],button,attachDialog,,,,,"""Browse"""
+attachDialogCloseBtn,[class*=mdc-dialog--open] [data-tid=button-close],button,attachDialog,,,"waitForDisplayed,attachDialogBrowseBtn,undefined,true",,""""""
+attachDialogMaxSize,[class*=mdc-dialog--open] [data-tid=text-maxFileSize],div,attachDialog,,,,,"""Maximum file size: 100MB"""
+maxLimitDialogTitle,[class*=mdc-dialog--open] [data-tid=text-heading][font-weight],div,maxLimitDialog,,,,,"""Maximum file size exceeded"""
+maxLimitDialogSubtitle,[class*=mdc-dialog--open] [data-tid=text-content],div,maxLimitDialog,,,,,"""You are trying to attach a file which is larger than the allowed size of 100MB."""
+maxLimitDialogOkBtn,[class*=mdc-dialog--open] [data-tid=button-agree],button,maxLimitDialog,,,"waitForDisplayed,maxLimitDialogOkBtn,undefined,true",,"""OK"""
+removeDialogTitle,[class*=mdc-dialog--open] [data-tid=text-heading][font-weight],div,removeDialog,,,,,"""Remove attachment?"""
+removeDialogSubtitle,[class*=mdc-dialog--open] [data-tid=text-content],div,removeDialog,,,,,"""Are you sure you want to remove the attachment?"""
+removeDialogNoBtn,[class*=mdc-dialog--open] [data-tid=button-close],button,removeDialog,,,"waitForExist,attachedFile",,"""No"""
+removeDialogYesBtn,[class*=mdc-dialog--open] [data-tid=button-agree],button,removeDialog,,,"waitForExist,attachedFile,undefined,true",,"""Yes"""

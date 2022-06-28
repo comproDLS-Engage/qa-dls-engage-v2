@@ -1,0 +1,57 @@
+Label,cssSelector,tagName,group,relation,extraInfo,returnValue,teacherAppLangEN,studentAppLangEN
+showDetailsBtn,[data-tid=button-activityinfopanelswitcher],button,openActivityPlayer,,,"getAttribute, leftPanelContainer, ""aria-hidden""","[""Show Details"",""Hide Details""]","[""Show Details"",""Hide Details""]"
+infoBtn,[data-tid='button-openinfotoc'],button,openActivityPlayer,,,infoTocPanel,"""""",""""""
+leftPanelHidden,[data-tid=container-leftPanel][aria-hidden=true],img,openActivityPlayer,,,,,
+yourScoreLabel,[data-tid=text-activityScoreInfo] p,p,openActivityPlayer,,,,null,"""Your Score:"""
+yourScoreValue,[data-tid=text-activityScoreInfo] h4,h4,openActivityPlayer,,,,,
+feedbackBtn,[data-tid=button-openendedfeedbacknotification],button,openActivityPlayer,,,"getAttribute, leftPanelContainer, ""aria-hidden""","""""",""""""
+submittedOn,[data-tid=button-submittedOn],p,openActivityPlayer,,,,null,"""Submitted on"""
+gradedOn,[data-tid=button-gradedOn],p,openActivityPlayer,,,,null,"""Graded on"""
+closeBtn,[data-tid=button-close],button,openActivityPlayer,,,"waitForDisplayed, closeBtn, undefined, true","""Close""","""Close"""
+submitActivityBtn,[data-tid=button-submitActivity],button,openActivityPlayer,,,submitGradeDialog,null,"""Submit Answers"""
+submitGradeBtn,[data-tid=button-submitGrade],button,openActivityPlayer,,,submitGradeDialog,"""Submit Grade""",null
+retakeOpenActivityBtn,[data-tid='button-retakeActivity'],button,openActivityPlayer,,,retakeOpenDialog,null,"""Retake Activity"""
+snackbarMsg,"[data-tid=text-error], [data-tid=text-info], [data-tid=text-success]",span,,,,,"""Grade has been submitted! The student will be notified and can reattempt as requested.""",""""""
+gradingTitle,[data-tid=grading-text-title],p,openActivityLeftPanel,,,,,
+gradingSubtitle,[data-tid=grading-text-subTitle],p,openActivityLeftPanel,,,,"[""submitted for review on""]","""submitted"""
+statusPill,[data-tid=status-pill],p,openActivityLeftPanel,,,,"[""Grade Pending"",""Reattempt Requested"",""Graded""]","[""Grade Pending"",""Reattempt Requested"",""Graded""]"
+bookName,[data-tid=text-subTitle],p,openActivityLeftPanel,,,,,
+activityName,[data-tid=text-title],p,openActivityLeftPanel,,,,,
+cardTitle,"[data-tid=text-card-viewA],[data-tid=text-score-progress-Infocard]",p,openActivityLeftPanel,,,,"""Grading & Feedback""","""Scores & Progress"""
+cardSubtitle,[data-tid=scores-progress-subtitle],p,openActivityLeftPanel,,,,null,"""Not yet submitted"""
+cardText,[data-tid=scores-progress-text],p,openActivityLeftPanel,,,,null,"""This activity hasn’t been submitted yet. Once submitted, your grade and any feedback from your teacher will be shown here."""
+attempt1Label,"[data-tid='Attempt 1'],[data-tid=text-attempt-0]",p,openActivityLeftPanel,,,,"""Attempt 1""","""Attempt 1"""
+attempt2Label,"[data-tid='Attempt 2'],[data-tid=text-attempt-1]",p,openActivityLeftPanel,,,,"""Attempt 2""","""Attempt 2"""
+attempt3Label,"[data-tid='Attempt 3'],[data-tid=text-attempt-2]",p,openActivityLeftPanel,,,,"""Attempt 3""","""Attempt 3"""
+attempt1SubmittedTime,[data-tid=attempt-0-0-timestamp],p,openActivityLeftPanel,,,,"""submitted""","""submitted"""
+attempt1GradedTime,[data-tid=attempt-0-1-timestamp],p,openActivityLeftPanel,,,,"""graded""","""graded"""
+attempt1StatusPill,[data-tid=attempt-0-status-pill],span,openActivityLeftPanel,,,,"[""Grade Pending"",""Reattempt Requested"",""Graded""]","[""Grade Pending"",""Reattempt Requested"",""Graded""]"
+attempt2SubmittedTime,[data-tid=attempt-1-0-timestamp],p,openActivityLeftPanel,,,,"""submitted""","""submitted"""
+attempt2GradedTime,[data-tid=attempt-1-1-timestamp],p,openActivityLeftPanel,,,,"""graded""","""graded"""
+attempt2StatusPill,[data-tid=attempt-1-status-pill],span,openActivityLeftPanel,,,,"[""Grade Pending"",""Reattempt Requested"",""Graded""]","[""Grade Pending"",""Reattempt Requested"",""Graded""]"
+scoreLabel,[data-tid=main-focus-area-text],p,openActivityLeftPanel,,,,"""Score""",null
+scoreInput,[data-tid=input-main-focus-area],input,openActivityLeftPanel,,,,,
+feedbackLabel,[data-tid=feedback-text],p,openActivityLeftPanel,,,,"""Feedback (Optional)""",null
+feedbackInput,[data-tid=feedback] [role=textbox],input,openActivityLeftPanel,,,,,
+reattemptLabel,[data-tid=request-reattempt-label],p,openActivityLeftPanel,,,,"""Request Reattempt""",null
+reattemptYesBtn,[data-tid=radio-button-0],button,openActivityLeftPanel,,,,"""Yes""",null
+reattemptNoBtn,[data-tid=radio-button-1],button,openActivityLeftPanel,,,,"""No""",null
+scoreError,[data-tid=text-main-focus-areaError],p,openActivityLeftPanel,,,,"""Score is required""",null
+submitGradeDialogTitle,[data-tid=text-title-grade-submit-dialog],p,submitGradeDialog,,,,"""Submit Grade?""",
+submitGradeDialogSubtitle,[data-tid=text-subTitle-grade-submit-dialog],p,submitGradeDialog,,,,"""Submitting the grade will notify the student and send any added feedback for review. Grades cannot be changed unless a student reattempts the activity.""",
+submitGradeDialogScoreLabel,[data-tid=text-label-0],p,submitGradeDialog,,,,"""Score""",
+submitGradeDialogScoreValue,[data-tid=text-value-0],p,submitGradeDialog,,,,,
+submitGradeDialogFeedbackLabel,[data-tid=text-label-1],p,submitGradeDialog,,,,"""Feedback""",
+submitGradeDialogFeedbackValue,[data-tid=text-value-1],p,submitGradeDialog,,,,,
+submitGradeDialogReattemptLabel,[data-tid=text-label-2],p,submitGradeDialog,,,,"""Request Reattempt""",
+submitGradeDialogReattemptValue,[data-tid=text-value-2],p,submitGradeDialog,,,,,
+submitGradeDialogCancelBtn,[data-tid=button-secondary-grade-submit-dialog],button,submitGradeDialog,,,"waitForDisplayed,submitGradeDialogCancelBtn,undefined,true","""Cancel""",
+submitGradeDialogConfirmBtn,[data-tid=button-primary-grade-submit-dialog],button,submitGradeDialog,,,"getText,snackbarMsg","""Confirm & Submit""",
+retakeOpenDialogTitle,[data-tid=text-title-retake-activity],h6,retakeOpenDialog,,,,,"""Retake with previous response?"""
+retakeOpenDialogSubtitle,[data-tid=text-subTitle-retake-activity],p,retakeOpenDialog,,,,,"""Would you like to use your previous responses for this retake?"""
+retakeOpenDialogNoBtn,[data-tid=button-secondary-retake-activity],button,retakeOpenDialog,,,"waitForDisplayed,retakeOpenDialogNoBtn,undefined,true",,"""No"""
+retakeOpenDialogYesBtn,[data-tid=button-primary-retake-activity],button,retakeOpenDialog,,,"waitForDisplayed,retakeOpenDialogYesBtn,undefined,true",,"""Yes"""
+submitActivityDialogTitle,[data-tid=text-title-submit-activity],p,submitActivityDialog,,,,,"""Submit Activity?"""
+submitActivityDialogSubtitle,[data-tid=text-subTitle-submit-activity],p,submitActivityDialog,,,,,"""Your answers will be sent to your teacher to review and grade. Once you submit you won't be able to change your answers."""
+submitActivityDialogCancelBtn,[data-tid=button-secondary-submit-activity],button,submitActivityDialog,,,"waitForDisplayed,submitActivityDialogCancelBtn,undefined,true",,"""Cancel"""
+submitActivityDialogConfirmBtn,[data-tid=button-button-primary-submit-activity],button,submitActivityDialog,,,"getText,snackbarMsg",,"""Confirm & Submit"""

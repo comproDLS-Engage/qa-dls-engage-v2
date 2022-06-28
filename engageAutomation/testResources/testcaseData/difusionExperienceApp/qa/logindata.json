@@ -103,7 +103,7 @@
                     "class": [],
                     "info": {}
                 },
-               "validStudent5": {
+                "validStudent5": {
                     "email": "difusionqa.stud44@yopmail.com",
                     "password": "Compro@1234",
                     "role": "student",
@@ -249,13 +249,12 @@
                         {
                             "key": "TFbA-6AP7",
                             "name": "Gradebook",
-                            "studentName1":"dev1 student100"
+                            "studentName1": "dev1 student100"
                         },
                         {
                             "key": "msLz-9NZA",
                             "name": "Class no student"
                         }
-
                     ],
                     "info": {}
                 },
@@ -327,8 +326,7 @@
                     "password": "Compro@1234",
                     "role": "instructor",
                     "name": "flipbook automation",
-                    "class": [
-                    ],
+                    "class": [],
                     "info": {}
                 },
                 "assignmentStudent": {
@@ -361,12 +359,12 @@
                         {
                             "key": "TFbA-6AP7",
                             "name": "Gradebook",
-                            "studentName1":"dev1 student100"
+                            "studentName1": "dev1 student100"
                         },
                         {
                             "key": "TFbA-6AP7",
                             "name": "Non-Scorable",
-                            "studentName1":"dev1 student100"
+                            "studentName1": "dev1 student100"
                         }
                     ],
                     "info": {}
