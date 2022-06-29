@@ -11,6 +11,9 @@
         "mediaType": "",
         "scenario1": [
           ["A","test text1","./testResources/testcaseData/difusionExperienceApp/qa/sample-image.jpg"]
+        ],
+        "scenario2": [
+          ["A","","./testResources/testcaseData/difusionExperienceApp/qa/100MB.bin"]
         ]
       }
     ]

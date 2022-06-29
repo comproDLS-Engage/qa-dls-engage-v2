@@ -1260,7 +1260,7 @@
                 "submitActivityDialogTitle": "[data-tid=text-title-submit-activity]",
                 "submitActivityDialogSubtitle": "[data-tid=text-subTitle-submit-activity]",
                 "submitActivityDialogCancelBtn": "[data-tid=button-secondary-submit-activity]",
-                "submitActivityDialogConfirmBtn": "[data-tid=button-button-primary-submit-activity]"
+                "submitActivityDialogConfirmBtn": "[data-tid=button-primary-submit-activity]"
             }
         }
     }

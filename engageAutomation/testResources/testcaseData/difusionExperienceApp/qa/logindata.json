@@ -381,6 +381,32 @@
                         }
                     ],
                     "info": {}
+                },
+                "writingStudent1": {
+                    "email": "difqastud3@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "student",
+                    "name": "Difusionqa student3",
+                    "class": [
+                        {
+                            "key": "wCre-GV4X",
+                            "name": "new automation class1"
+                        }
+                    ],
+                    "info": {}
+                },
+                "writingTeacher1": {
+                    "email": "difqains3@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "instructor",
+                    "name": "Difusionqa instructor3",
+                    "class": [
+                        {
+                            "key": "wCre-GV4X",
+                            "name": "new automation class1"
+                        }
+                    ],
+                    "info": {}
                 }
             }
         },

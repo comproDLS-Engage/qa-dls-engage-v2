@@ -3385,6 +3385,30 @@
           "description": "Validate the writing question in unattempted state for student",
           "tags": "P1",
           "visualTest": true
+        },
+        {
+          "id": "ENG_OPEN_TC_2",
+          "description": "Validate the writing question in attempted state (not graded) for student",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_OPEN_TC_3",
+          "description": "Validate the writing question in graded state for student",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_OPEN_TC_4",
+          "description": "Validate that clicking on Submit Answers displays Submit dialog",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_OPEN_TC_6",
+          "description": "Validate that clicking on Cancel button does not submit the student response",
+          "tags": "P1",
+          "visualTest": true
         }
       ]
     }

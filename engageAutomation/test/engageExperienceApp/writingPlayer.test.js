@@ -51,14 +51,16 @@ module.exports = {
 
    //Validate that max. file size dialog is displayed if user tries to attach file greater than 100 mb
    ENG_ITEM_WRITING_TC_7: async function (testdata) {
-      sts = await writingPlayer.set_uploadFile(testdata);
+      sts = await writingPlayer.set_uploadFile(testdata[0]);
       await assertion.assertEqual(sts, true, "set_uploadFile status mismatch");
       sts = await writingPlayer.getData_maxLimitDialog();
-      await assertion.assertEqual(sts.maxLimitDialogTitle, testdata.maxLimitDialogTitle, "maxLimitDialogTitle status mismatch");
-      await assertion.assertEqual(sts.maxLimitDialogSubtitle, testdata.maxLimitDialogSubtitle, "maxLimitDialogSubtitle status mismatch");
-      await assertion.assertEqual(sts.maxLimitDialogOkBtn, testdata.maxLimitDialogOkBtn, "maxLimitDialogOkBtn status mismatch");
+      await assertion.assertEqual(sts.maxLimitDialogTitle, testdata[1].maxLimitDialogTitle, "maxLimitDialogTitle status mismatch");
+      await assertion.assertEqual(sts.maxLimitDialogSubtitle, testdata[1].maxLimitDialogSubtitle, "maxLimitDialogSubtitle status mismatch");
+      await assertion.assertEqual(sts.maxLimitDialogOkBtn, testdata[1].maxLimitDialogOkBtn, "maxLimitDialogOkBtn status mismatch");
       sts = await writingPlayer.click_maxLimitDialogOkBtn();
       await assertion.assertEqual(sts, true, "maxLimitDialogOkBtn status mismatch");
+      sts = await writingPlayer.click_attachDialogCloseBtn();
+      await assertion.assertEqual(sts, true, "attachDialogCloseBtn status mismatch");
    },
 
    

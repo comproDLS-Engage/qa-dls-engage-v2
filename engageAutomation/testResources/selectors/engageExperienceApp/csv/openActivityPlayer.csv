@@ -19,7 +19,7 @@ bookName,[data-tid=text-subTitle],p,openActivityLeftPanel,,,,,
 activityName,[data-tid=text-title],p,openActivityLeftPanel,,,,,
 cardTitle,"[data-tid=text-card-viewA],[data-tid=text-score-progress-Infocard]",p,openActivityLeftPanel,,,,"""Grading & Feedback""","""Scores & Progress"""
 cardSubtitle,[data-tid=scores-progress-subtitle],p,openActivityLeftPanel,,,,null,"""Not yet submitted"""
-cardText,[data-tid=scores-progress-text],p,openActivityLeftPanel,,,,null,"""This activity hasn’t been submitted yet. Once submitted, your grade and any feedback from your teacher will be shown here."""
+cardText,[data-tid=scores-progress-text],p,openActivityLeftPanel,,,,null,"""This activity hasnï¿½t been submitted yet. Once submitted, your grade and any feedback from your teacher will be shown here."""
 attempt1Label,"[data-tid='Attempt 1'],[data-tid=text-attempt-0]",p,openActivityLeftPanel,,,,"""Attempt 1""","""Attempt 1"""
 attempt2Label,"[data-tid='Attempt 2'],[data-tid=text-attempt-1]",p,openActivityLeftPanel,,,,"""Attempt 2""","""Attempt 2"""
 attempt3Label,"[data-tid='Attempt 3'],[data-tid=text-attempt-2]",p,openActivityLeftPanel,,,,"""Attempt 3""","""Attempt 3"""
@@ -54,4 +54,4 @@ retakeOpenDialogYesBtn,[data-tid=button-primary-retake-activity],button,retakeOp
 submitActivityDialogTitle,[data-tid=text-title-submit-activity],p,submitActivityDialog,,,,,"""Submit Activity?"""
 submitActivityDialogSubtitle,[data-tid=text-subTitle-submit-activity],p,submitActivityDialog,,,,,"""Your answers will be sent to your teacher to review and grade. Once you submit you won't be able to change your answers."""
 submitActivityDialogCancelBtn,[data-tid=button-secondary-submit-activity],button,submitActivityDialog,,,"waitForDisplayed,submitActivityDialogCancelBtn,undefined,true",,"""Cancel"""
-submitActivityDialogConfirmBtn,[data-tid=button-button-primary-submit-activity],button,submitActivityDialog,,,"getText,snackbarMsg",,"""Confirm & Submit"""
+submitActivityDialogConfirmBtn,[data-tid=button-primary-submit-activity],button,submitActivityDialog,,,"getText,snackbarMsg",,"""Confirm & Submit"""
