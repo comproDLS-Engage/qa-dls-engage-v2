@@ -1,0 +1,15 @@
+{
+    "openActivityPlayer": {
+        "case1":{
+            "score": "80",
+            "feedback": "Well done!",
+            "reattempt": "No"
+        },
+        "case2":{
+            "score": "20",
+            "feedback": "Hint - read page 49 in the textbook ",
+            "reattempt": "Yes"
+        }
+        
+    }
+}

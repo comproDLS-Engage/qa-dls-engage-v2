@@ -271,4 +271,81 @@ module.exports = {
 		await assertion.assertEqual(sts.reattemptNoBtn, testdata[1].reattemptNoBtn, "reattemptNoBtn status mismatch");
 		await assertion.assertEqual(sts.scoreError, testdata[1].scoreError, "scoreError status mismatch");
 	},
+	
+	//Validate that confirmation dialog appears on clicking submit button after entering score, feedback and reattempt request as no
+	ENG_OPEN_TC_13: async function (testdata) {
+		sts = await openActivityPlayerPage.set_scoreInput(testdata[0].score);
+		await assertion.assertEqual(sts, true, "set_scoreInput status mismatch");
+		sts = await openActivityPlayerPage.set_feedbackInput(testdata[0].feedback);
+		await assertion.assertEqual(sts, true, "set_feedbackInput status mismatch");
+		sts = await openActivityPlayerPage.click_reattemptNoBtn();
+		await assertion.assertEqual(sts, true, "click_reattemptNoBtn status mismatch");
+
+		sts = await openActivityPlayerPage.click_submitGradeBtn();
+		await assertion.assertEqual(sts.submitGradeDialogTitle, testdata[1].submitGradeDialogTitle, "submitGradeDialogTitle status mismatch");
+		await assertion.assertEqual(sts.submitGradeDialogSubtitle, testdata[1].submitGradeDialogSubtitle, "submitGradeDialogSubtitle status mismatch");
+		await assertion.assertEqual(sts.submitGradeDialogScoreLabel, testdata[1].submitGradeDialogScoreLabel, "submitGradeDialogScoreLabel status mismatch");
+		await assertion.assertEqual(sts.submitGradeDialogScoreValue, testdata[0].score, "submitGradeDialogScoreValue status mismatch");
+		await assertion.assertEqual(sts.submitGradeDialogFeedbackLabel, testdata[1].submitGradeDialogFeedbackLabel, "submitGradeDialogFeedbackLabel status mismatch");
+		await assertion.assertEqual(sts.submitGradeDialogFeedbackValue, testdata[0].feedback, "submitGradeDialogFeedbackValue status mismatch");
+		await assertion.assertEqual(sts.submitGradeDialogReattemptLabel, testdata[1].submitGradeDialogReattemptLabel, "submitGradeDialogReattemptLabel status mismatch");
+		await assertion.assertEqual(sts.submitGradeDialogReattemptValue, testdata[0].reattempt, "submitGradeDialogReattemptValue status mismatch");
+		await assertion.assertEqual(sts.submitGradeDialogCancelBtn, testdata[1].submitGradeDialogCancelBtn, "submitGradeDialogCancelBtn status mismatch");
+		await assertion.assertEqual(sts.submitGradeDialogConfirmBtn, testdata[1].submitGradeDialogConfirmBtn, "submitGradeDialogConfirmBtn status mismatch");
+	},
+
+	//Validate that confirmation dialog appears on clicking submit button after entering score, feedback and reattempt request as yes
+	ENG_OPEN_TC_14: async function (testdata) {
+		sts = await openActivityPlayerPage.set_scoreInput(testdata[0].score);
+		await assertion.assertEqual(sts, true, "set_scoreInput status mismatch");
+		sts = await openActivityPlayerPage.set_feedbackInput(testdata[0].feedback);
+		await assertion.assertEqual(sts, true, "set_feedbackInput status mismatch");
+		sts = await openActivityPlayerPage.click_reattemptYesBtn();
+		await assertion.assertEqual(sts, true, "click_reattemptYesBtn status mismatch");
+
+		sts = await openActivityPlayerPage.click_submitGradeBtn();
+		await assertion.assertEqual(sts.submitGradeDialogTitle, testdata[1].submitGradeDialogTitle, "submitGradeDialogTitle status mismatch");
+		await assertion.assertEqual(sts.submitGradeDialogSubtitle, testdata[1].submitGradeDialogSubtitle, "submitGradeDialogSubtitle status mismatch");
+		await assertion.assertEqual(sts.submitGradeDialogScoreLabel, testdata[1].submitGradeDialogScoreLabel, "submitGradeDialogScoreLabel status mismatch");
+		await assertion.assertEqual(sts.submitGradeDialogScoreValue, testdata[0].score, "submitGradeDialogScoreValue status mismatch");
+		await assertion.assertEqual(sts.submitGradeDialogFeedbackLabel, testdata[1].submitGradeDialogFeedbackLabel, "submitGradeDialogFeedbackLabel status mismatch");
+		await assertion.assertEqual(sts.submitGradeDialogFeedbackValue, testdata[0].feedback, "submitGradeDialogFeedbackValue status mismatch");
+		await assertion.assertEqual(sts.submitGradeDialogReattemptLabel, testdata[1].submitGradeDialogReattemptLabel, "submitGradeDialogReattemptLabel status mismatch");
+		await assertion.assertEqual(sts.submitGradeDialogReattemptValue, testdata[0].reattempt, "submitGradeDialogReattemptValue status mismatch");
+		await assertion.assertEqual(sts.submitGradeDialogCancelBtn, testdata[1].submitGradeDialogCancelBtn, "submitGradeDialogCancelBtn status mismatch");
+		await assertion.assertEqual(sts.submitGradeDialogConfirmBtn, testdata[1].submitGradeDialogConfirmBtn, "submitGradeDialogConfirmBtn status mismatch");
+	},
+
+	//Validate that clicking on cancel button does not complete the grading of the activity
+	ENG_OPEN_TC_16: async function (testdata) {
+		sts = await openActivityPlayerPage.click_submitActivityDialogCancelBtn();
+		await assertion.assertEqual(sts, true, "click_submitActivityDialogCancelBtn status mismatch");
+
+		sts = await openActivityPlayerPage.getData_openActivityLeftPanel();
+		await assertion.assertEqual(sts.gradingTitle, testdata[3], "gradingTitle status mismatch");
+		await assertion.assertEqual(sts.gradingSubtitle, testdata[1].gradingSubtitle, "gradingSubtitle status mismatch");
+		await assertion.assertEqual(sts.statusPill, testdata[1].statusPill[0], "statusPill status mismatch");
+		await assertion.assert(await sts.bookName.includes(testdata[2]), "bookName status mismatch");
+		await assertion.assertEqual(sts.activityName, testdata[3], "activityName status mismatch");
+		await assertion.assertEqual(sts.cardTitle, testdata[1].cardTitle, "cardTitle status mismatch");
+		await assertion.assertEqual(sts.cardSubtitle, testdata[1].cardSubtitle, "cardSubtitle status mismatch");
+		await assertion.assertEqual(sts.cardText, testdata[1].cardText, "cardText status mismatch");
+		await assertion.assertEqual(sts.attempt1Label, testdata[1].attempt1Label, "attempt1Label status mismatch");
+		await assertion.assertEqual(sts.attempt2Label, null, "attempt2Label status mismatch");
+		await assertion.assertEqual(sts.attempt3Label, null, "attempt3Label status mismatch");
+		await assertion.assertEqual(sts.attempt1SubmittedTime, testdata[1].attempt1SubmittedTime, "attempt1SubmittedTime status mismatch");
+		await assertion.assertEqual(sts.attempt1GradedTime, null, "attempt1GradedTime status mismatch");
+		await assertion.assertEqual(sts.attempt1StatusPill, null, "attempt1StatusPill status mismatch");
+		await assertion.assertEqual(sts.attempt2SubmittedTime, null, "attempt2SubmittedTime status mismatch");
+		await assertion.assertEqual(sts.attempt2GradedTime, null, "attempt2GradedTime status mismatch");
+		await assertion.assertEqual(sts.attempt2StatusPill, null, "attempt2StatusPill status mismatch");
+		await assertion.assertEqual(sts.scoreLabel, testdata[1].scoreLabel, "scoreLabel status mismatch");
+		await assertion.assertEqual(sts.scoreInput, testdata[0].score, "scoreInput status mismatch");
+		await assertion.assertEqual(sts.feedbackLabel, testdata[1].feedbackLabel, "feedbackLabel status mismatch");
+		await assertion.assertEqual(sts.feedbackInput, testdata[0].feedback, "feedbackInput status mismatch");
+		await assertion.assertEqual(sts.reattemptLabel, testdata[1].reattemptLabel, "reattemptLabel status mismatch");
+		await assertion.assertEqual(sts.reattemptYesBtn, testdata[1].reattemptYesBtn, "reattemptYesBtn status mismatch");
+		await assertion.assertEqual(sts.reattemptNoBtn, testdata[1].reattemptNoBtn, "reattemptNoBtn status mismatch");
+		await assertion.assertEqual(sts.scoreError, null, "scoreError status mismatch");
+	},
 }

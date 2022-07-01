@@ -383,10 +383,10 @@
                     "info": {}
                 },
                 "writingStudent1": {
-                    "email": "difqastud3@yopmail.com",
+                    "email": "autodev1stud1@yopmail.com",
                     "password": "Compro@1234",
                     "role": "student",
-                    "name": "Difusionqa student3",
+                    "name": "Automation Student1",
                     "class": [
                         {
                             "key": "wCre-GV4X",
@@ -396,14 +396,14 @@
                     "info": {}
                 },
                 "writingTeacher1": {
-                    "email": "difqains3@yopmail.com",
+                    "email": "autodev1ins1@yopmail.com",
                     "password": "Compro@1234",
                     "role": "instructor",
-                    "name": "Difusionqa instructor3",
+                    "name": "Automation Instructor1",
                     "class": [
                         {
-                            "key": "wCre-GV4X",
-                            "name": "new automation class1"
+                            "key": "",
+                            "name": "class1"
                         }
                     ],
                     "info": {}
