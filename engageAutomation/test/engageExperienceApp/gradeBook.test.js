@@ -3,7 +3,7 @@ var gradeBookPage = require('../../pages/engageExperienceApp/gradeBook.page.js')
 var appShell = require('../../pages/engageExperienceApp/appShell.page');
 var viewAsStudentAssignmentPage = require('../../pages/engageExperienceApp/viewAsStudentAssignment.page.js');
 var studentGradeBookPage=require('../../pages/engageExperienceApp/gradeBookStudent.page.js');
-const { confirmPassword_input } = require('../../pages/engageExperienceApp/settings.page.js');
+const { confirmPassword_input, confirmPassword_label } = require('../../pages/engageExperienceApp/settings.page.js');
 var sts;
 
 module.exports = {
@@ -17,6 +17,8 @@ module.exports = {
    //Validate the content on Blank GradeBook Page
    ENG_GRADEBOOK_TC_2: async function (testdata) {
       sts = await gradeBookPage.getData_gradeBook()
+     // console.log(sts)
+     // console.log(testdata)
       await assertion.assertEqual(sts.pageTitle, testdata.pageTitle, "pageTitle is Not displayed: " + (await JSON.stringify(sts)))
       await assertion.assert((sts.pageSubTitle).includes(testdata.pageSubTitle), "pageSubTitle is Not displayed: " + (await JSON.stringify(sts)))
       await assertion.assertEqual(sts.noGradeBookIcon, true, "noGradeBookIcon is Not displayed: " + (await JSON.stringify(sts)))
@@ -24,7 +26,7 @@ module.exports = {
       await assertion.assertEqual(sts.noGradeBookSubTitle, testdata.noGradeBookSubTitle, "noGradeBookSubTitle is Not displayed: " + (await JSON.stringify(sts)))
       await assertion.assertEqual(sts.download_btn, testdata.download_btn, "download_btn is Not displayed: " + (await JSON.stringify(sts)))
       await assertion.assertEqual(sts.sendtoemail_btn, testdata.sendtoemail_btn, "sendtoemail_btn is Not displayed: " + (await JSON.stringify(sts)))
-      await assertion.assertEqual(sts.classCode_btn, testdata.classCode_btn, "classCode_btn is not mismatched " + JSON.stringify(sts))
+      await assertion.assertEqual(sts.copyClassCode_btn, testdata.classCode_btn, "classCode_btn is not mismatched " + JSON.stringify(sts))
       await assertion.assertEqual(sts.inviteEmail_btn, testdata.inviteEmail_btn, "inviteEmail_btn is not mismatched " + JSON.stringify(sts))
       await assertion.assertEqual(sts.inviteStudents_lbl, testdata.inviteStudents_lbl, "inviteStudents_lbl is not mismatched " + JSON.stringify(sts))
       await assertion.assertEqual(sts.inviteStudentsByline_lbl, testdata.inviteStudentsByline_lbl, "inviteStudentsByline_lbl is not mismatched " + JSON.stringify(sts))
@@ -171,7 +173,7 @@ module.exports = {
       sts = await gradeBookPage.click_classCode_btn()
       await assertion.assertEqual(sts, true, "Class Code button is clicked");
       sts = await gradeBookPage.getData_gradeBook();
-      await assertion.assertEqual(sts.copyClassCode_btn, testdata.copiedlassCode_btn, "getData_gradeBook is mismatch");
+      await assertion.assertEqual(sts.classCode_btn, testdata.copiedlassCode_btn, "getData_gradeBook is mismatch");
    },
 
     //Validate the click on 'Invie Email' button

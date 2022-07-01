@@ -1138,8 +1138,8 @@
                 "score_lbl": "[data-tid='value-score']",
                 "completion_lbl": "[data-tid='value-completion']",
                 "studentList": "[data-tid*=text-name-",
-                "classCode_btn": "[data-tid*=button-classCodeCopied]",
-                "copyClassCode_btn":"[data-tid*=button-copyClassCode]",
+                "classCode_btn": "[data-tid=button-classCodeCopied]",
+                "copyClassCode_btn":"[data-tid=button-copyClassCode]",
                 "inviteEmail": "[data-tid*=button-inviteEmail]",
                 "inviteStudents_lbl": "[data-tid*=text-actionCardTitle-",
                 "inviteStudentsByline_lbl": "[data-tid*=text-actionCardSubtitle-"
