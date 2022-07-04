@@ -295,8 +295,7 @@
                 "inviteStudentsByline_lbl": "Invite students to enroll in your class and see their progress and grades.",
                 "bookComponentUnits": "Units",
                 "bookComponentActivities": "Activities",
-                "resources":"Resources"
-
+                "resources": "Resources"
             },
             "bookViewTOC": {
                 "addToMyBooks": "Add to My Books",
@@ -1062,12 +1061,12 @@
                     "completeBtn": "Completed",
                     "blankAssignment_title": "No assignments due",
                     "blankAssignment_subtitle": "There is no assignment pending in your class.",
-                    "progress_lbl":"Progress",
-                    "viewProgress_btn":"View All",
-                    "noUpcoming_title":"No Upcoming Assignments",
-                    "noUpcoming_subtitle":"Any future assignment set by your teacher will appear here.",
-                    "noCompleted_title":"No Assignments Found",
-                    "noCompleted_subtitle":"You have no assignments completed in this class.",
+                    "progress_lbl": "Progress",
+                    "viewProgress_btn": "View All",
+                    "noUpcoming_title": "No Upcoming Assignments",
+                    "noUpcoming_subtitle": "Any future assignment set by your teacher will appear here.",
+                    "noCompleted_title": "No Assignments Found",
+                    "noCompleted_subtitle": "You have no assignments completed in this class.",
                     "dueDaysChip": "past due",
                     "activities": "activities"
                 }
@@ -1096,10 +1095,9 @@
                     "completion_lbl": "Completion",
                     "classCode_btn": "Copy Class Code",
                     "copiedlassCode_btn": "Class Code Copied!",
-                    "inviteEmail_btn":"Invite with Email",
+                    "inviteEmail_btn": "Invite with Email",
                     "inviteStudents_lbl": "Invite Your Students",
                     "inviteStudentsByline_lbl": "Send your class code (msLz-9NZA) or invite through email."
-               
                 }
             },
             "gradeBookStudent": {

@@ -57,7 +57,7 @@
                     "createPlaylistBtn": "Create Playlist",
                     "addBookBtn": "Add Book",
                     "cardSliderTitle": "Getting started",
-                    "cardSliderSubtitle": "Use your dashboard to pin your textbooks and create playlists to share with your class.",
+                    "cardSliderSubtitle": "Use your dashboard to pin your textbooks and create classes for your students to join.",
                     "cardSliderLeftBtn": "",
                     "cardSliderRightBtn": "",
                     "actionCardTitles": [
@@ -122,7 +122,7 @@
                     "createPlaylistBtn": "Create Playlist",
                     "addBookBtn": "Add Book",
                     "cardSliderTitle": "Getting started",
-                    "cardSliderSubtitle": "Use your dashboard to pin your textbooks and create playlists.",
+                    "cardSliderSubtitle": "Use your dashboard to pin your textbooks and join classes to see your progress and assignments.",
                     "cardSliderLeftBtn": "",
                     "cardSliderRightBtn": "",
                     "actionCardTitles": [
@@ -198,8 +198,8 @@
                 "viewClassbtn": "View Class",
                 "backToHomeBtn_txt": "Close",
                 "className_txt": "Added: ",
-                "successCaption_txt": "Your class has been added! Share the class key below to let your students join",
-                "copy_txt": "Copy Key"
+                "successCaption_txt": "Your class has been added! Share the class code below to let your students join",
+                "copy_txt": "Copy Class Code"
             },
             "myClassPage": {
                 "classHeading": "Classes",
@@ -243,7 +243,7 @@
                 "classHelpText": "Your class code should look like: iqig-Gq32. Be sure to check your email to see if your teacher sent you an invite.",
                 "joinclassPopUpbtn": "Join Class",
                 "helpJoiningClass": "Help Joining Classes",
-                "titleErrorMsg": "You are already enrolled in this class. Please enter a different class code.",
+                "titleErrorMsg": "You are already enrolled in this class.",
                 "alreadyExistErrorMessage": "You are already enrolled in this class. Please enter a different class code."
             },
             "classDrawerPane": {
@@ -380,7 +380,7 @@
                     "retakeActivityBtn": "Retake Activity",
                     "closeBtn": "Close",
                     "completedTxt": "Completed on",
-                    "yourScoreLabel": "Your Score:",
+                    "yourScoreLabel": "Score:",
                     "closeInfoBtn": "",
                     "infoTocHeading": "Activities",
                     "feedbackText": [
@@ -412,12 +412,12 @@
                     "pageHeading": "Enter your class code",
                     "subHeading": "Use the class code provided by your teacher or skip for now.",
                     "textboxMessage": "Enter Class Code",
-                    "helper_txt": "Your class code should look like: iqig-Gq32. Be sure to check your email to see if your teacher sent you an invite.",
+                    "helper_txt": "This class code is invalid. Please check the code and try again or contact your teacher.",
                     "submitBtn": "Continue",
                     "skipForNow": "Skip for now",
-                    "invalidKeyMessage": "Invalid course key",
-                    "alreadyEnrolledMsg": "You are already enrolled in this course",
-                    "clickToExitMsg": "Please enter a different course key or click here to exit.",
+                    "invalidKeyMessage": "Invalid class key",
+                    "alreadyEnrolledMsg": "You are already enrolled in this class.",
+                    "clickToExitMsg": "Please enter a different class key or click here to exit.",
                     "back_btn": "Back (select a different role)"
                 },
                 "schoolKeyPage": {
@@ -1094,15 +1094,15 @@
                     "score_lbl": "Score",
                     "completion_lbl": "Completion",
                     "classCode_btn": "Copy Class Code",
-                    "copiedlassCode_btn": "Class Code Copied",
-                    "inviteEmail_btn":"Invite with Email",
+                    "copiedlassCode_btn": "Class Code Copied!",
+                    "inviteEmail_btn": "Invite with Email",
                     "inviteStudents_lbl": "Invite Your Students",
-                    "inviteStudentsByline_lbl": "Send your class code (8aQY-M826) or invite through email."
+                    "inviteStudentsByline_lbl": "Send your class code (msLz-9NZA) or invite through email."
                 }
             },
             "gradeBookStudent": {
                 "teacher": {
-                    "pageTitle": "dev2 28aprilstudent",
+                    "pageTitle": "dev1 student100",
                     "pageSubTitle": "Last Active: ",
                     "download_btn": "Download",
                     "sendtoemail_btn": "Send to email",
