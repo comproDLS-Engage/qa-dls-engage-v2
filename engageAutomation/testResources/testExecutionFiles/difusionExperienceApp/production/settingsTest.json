@@ -36,7 +36,7 @@
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
-                  "jsonPath": "engage.login.user.validInstructorUser3"
+                  "jsonPath": "engage.login.user.validInstructorUser4"
                }
             ]
          }
@@ -71,7 +71,7 @@
                },
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
-                  "jsonPath": "engage.login.user.validInstructorUser3"
+                  "jsonPath": "engage.login.user.validInstructorUser4"
                }
             ]
          },
@@ -115,7 +115,7 @@
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
-                  "jsonPath": "engage.login.user.validInstructorUser3"
+                  "jsonPath": "engage.login.user.validInstructorUser4"
                },
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
@@ -141,7 +141,7 @@
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
-                  "jsonPath": "engage.login.user.validInstructorUser3"
+                  "jsonPath": "engage.login.user.validInstructorUser4"
                },
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
@@ -156,7 +156,7 @@
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
-                  "jsonPath": "engage.login.user.validInstructorUser3"
+                  "jsonPath": "engage.login.user.validInstructorUser4"
                },
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
@@ -215,7 +215,7 @@
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
-                  "jsonPath": "engage.login.user.validInstructorUser3"
+                  "jsonPath": "engage.login.user.validInstructorUser4"
                },
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
@@ -230,7 +230,7 @@
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
-                  "jsonPath": "engage.login.user.validInstructorUser3"
+                  "jsonPath": "engage.login.user.validInstructorUser4"
                },
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
@@ -274,7 +274,7 @@
                },
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
-                  "jsonPath": "engage.login.user.validInstructorUser3"
+                  "jsonPath": "engage.login.user.validInstructorUser4"
                }
             ]
          },
@@ -323,7 +323,7 @@
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
-                  "jsonPath": "engage.login.user.validInstructorUser3"
+                  "jsonPath": "engage.login.user.validInstructorUser4"
                }
             ]
          },
@@ -493,7 +493,7 @@
                },
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
-                  "jsonPath": "engage.login.user.validInstructorUser3"
+                  "jsonPath": "engage.login.user.validInstructorUser4"
                }
             ]
          },
