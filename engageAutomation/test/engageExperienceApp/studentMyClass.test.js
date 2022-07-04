@@ -159,7 +159,7 @@ module.exports = {
 			await assertion.assertEqual(sts.joinClassSubHeader, testdata.joinClassSubHeader, "joinClassSubHeader Text Mismatch: " + (await JSON.stringify(sts.joinClassSubHeader)))
 			await assertion.assertEqual(sts.enterClassCodeLabel, testdata.enterClassCodeLabel, "enterClassCodeLabel Text Mismatch: " + (await JSON.stringify(sts.enterClassCodeLabel)))
 			await assertion.assertEqual(sts.classCodeInput, testdata.classCodeInput, "classCodeInput placeHolderText Mismatch: " + (await JSON.stringify(sts.classCodeInput)))
-			await assertion.assertEqual(sts.classHelpText, testdata.classHelpText, "classHelpText Text Mismatch: " + (await JSON.stringify(sts.classHelpText)))
+			await assertion.assertEqual(sts.classSubLable, testdata.classSubLable, "classSubLable Text Mismatch: " + (await JSON.stringify(sts.classHelpText)))
 			await assertion.assertEqual(sts.joinclassPopUpbtn, testdata.joinclassPopUpbtn, "joinclassPopUpbtn Text Mismatch: " + (await JSON.stringify(sts.joinclassPopUpbtn)))
 			await assertion.assertEqual(sts.helpJoiningClass, testdata.helpJoiningClass, "helpJoiningClass Text Mismatch: " + (await JSON.stringify(sts.helpJoiningClass)))
 		} else {
@@ -175,6 +175,7 @@ module.exports = {
 		sts = await joinClassPage.click_joinclassPopUpbtn();
 		await assertion.assertEqual(sts, true, JSON.stringify(sts))
 		sts = await joinClassPage.get_joinClassPopUpData()
+		console.log(sts)
 		if ((typeof (sts)) === "object") {
 			await assertion.assertEqual(sts.joinClassHeader, testdata.joinClassHeader, "joinClassHeader Text Mismatch: " + (await JSON.stringify(sts.joinClassHeader)))
 			await assertion.assertEqual(sts.joinClassSubHeader, testdata.joinClassSubHeader, "joinClassSubHeader Text Mismatch: " + (await JSON.stringify(sts.joinClassSubHeader)))
