@@ -1205,14 +1205,14 @@
                     "attempt1StatusPill": [
                         "Grade Pending",
                         "Reattempt Requested",
-                        "Graded"
+                        "Final Grade"
                     ],
                     "attempt2SubmittedTime": "submitted",
                     "attempt2GradedTime": "graded",
                     "attempt2StatusPill": [
                         "Grade Pending",
                         "Reattempt Requested",
-                        "Graded"
+                        "Final Grade"
                     ],
                     "scoreLabel": "Score",
                     "feedbackLabel": "Feedback (Optional)",

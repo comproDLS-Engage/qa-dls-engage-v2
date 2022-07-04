@@ -320,11 +320,11 @@
                 "testData": [
                     {
                         "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
-                        "jsonPath": "book.component[4].name.EN"
+                        "jsonPath": "book.component[2].name.EN"
                     },
                     {
                         "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
-                        "jsonPath": "book.component[4].unit"
+                        "jsonPath": "book.component[2].unit"
                     }
                 ]
             },
@@ -335,7 +335,7 @@
                 "testData": [
                     {
                         "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
-                        "jsonPath": "book.component[4].unit[0].title"
+                        "jsonPath": "book.component[2].unit[1].title"
                     }
                 ]
             },
@@ -346,7 +346,7 @@
                 "testData": [
                     {
                         "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
-                        "jsonPath": "book.component[4].unit[0].section[0].activity[0]"
+                        "jsonPath": "book.component[2].unit[1].section[0].activity[1]"
                     }
                 ]
             }
@@ -372,7 +372,7 @@
                     },
                     {
                         "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
-                        "jsonPath": "book.component[4].unit[0].section[0].activity[0]"
+                        "jsonPath": "book.component[2].unit[1].section[0].activity[1]"
                     }
                 ]
             }
@@ -478,7 +478,7 @@
                 "testData": [
                     {
                         "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
-                        "jsonPath": "book.component[2].unit[1].section[0].activity[1]"
+                        "jsonPath": "book.component[2].unit[1].section[0].activity[3]"
                     }
                 ]
             }
@@ -486,7 +486,7 @@
         "BeforeEach": [],
         "Test": [
             {
-                "id": "ENG_OPEN_TC_2",
+                "id": "ENG_OPEN_TC_3",
                 "description": "",
                 "testFile": "./test/engageExperienceApp/openActivityPlayer.test.js",
                 "testData": [
@@ -504,7 +504,15 @@
                     },
                     {
                         "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
-                        "jsonPath": "book.component[4].unit[0].section[0].activity[0]"
+                        "jsonPath": "book.component[2].unit[1].section[0].activity[3]"
+                    },
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/openActivityGrading.json",
+                        "jsonPath": "openActivityPlayer.case1"
+                    },
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/openActivityGrading.json",
+                        "jsonPath": "openActivityPlayer.case2"
                     }
                 ]
             }

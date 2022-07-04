@@ -389,8 +389,8 @@
                     "name": "Automation Student1",
                     "class": [
                         {
-                            "key": "wCre-GV4X",
-                            "name": "new automation class1"
+                            "key": "dNcW-6h9X",
+                            "name": "class1"
                         }
                     ],
                     "info": {}
@@ -402,7 +402,7 @@
                     "name": "Automation Instructor1",
                     "class": [
                         {
-                            "key": "",
+                            "key": "dNcW-6h9X",
                             "name": "class1"
                         }
                     ],
