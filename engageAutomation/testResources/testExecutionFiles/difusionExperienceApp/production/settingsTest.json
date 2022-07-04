@@ -1,290 +1,279 @@
 {
-   "Suite1":{
-      "Name":"Validation of Settings Page",
-      "TestCaseRepo":[
+   "Suite1": {
+      "Name": "Validation of Settings Page",
+      "TestCaseRepo": [
          "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
       ],
-      "Before":[
+      "Before": [
          {
-            "id":"launchUrl",
-            "description":"",
-            "testFile":"./engageAutomation/core/runner/launchUrl.js",
-            "testData":[
-               
-            ]
+            "id": "launchUrl",
+            "description": "",
+            "testFile": "./engageAutomation/core/runner/launchUrl.js",
+            "testData": []
          },
          {
-            "id":"ENG_LAND_TC_1",
-            "description":"Landing page",
-            "testFile":"./test/engageExperienceApp/landing.test.js",
-            "visualTest":true,
-            "visualTolerance":0.07,
-            "testData":[
-               
-            ]
+            "id": "ENG_LAND_TC_1",
+            "description": "Landing page",
+            "testFile": "./test/engageExperienceApp/landing.test.js",
+            "visualTest": true,
+            "visualTolerance": 0.07,
+            "testData": []
          },
          {
-            "id":"ENG_LAND_TC_3",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/landing.test.js",
-            "visualTest":true,
-            "visualTolerance":0.07,
-            "testData":[
-               
-            ]
+            "id": "ENG_LAND_TC_3",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/landing.test.js",
+            "visualTest": true,
+            "visualTolerance": 0.07,
+            "testData": []
          },
          {
-            "id":"ENG_IDEN_TC_7",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/login.test.js",
-            "visualTest":true,
-            "visualTolerance":0.07,
-            "testData":[
+            "id": "ENG_IDEN_TC_7",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/login.test.js",
+            "visualTest": true,
+            "visualTolerance": 0.07,
+            "testData": [
                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
-                  "jsonPath":"engage.login.user.validInstructorUser3"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
+                  "jsonPath": "engage.login.user.validInstructorUser3"
                }
             ]
          }
       ],
-      "BeforeEach":[
-         
-      ],
-      "Test":[
+      "BeforeEach": [],
+      "Test": [
          {
-            "id":"ENG_SHELL_TC_17",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/appShell.test.js",
-            "testData":[
-            ]
+            "id": "ENG_SHELL_TC_17",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/appShell.test.js",
+            "testData": []
          },
          {
-            "id":"ENG_SETT_TC_1",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/settings.test.js",
-            "testData":[
+            "id": "ENG_SETT_TC_1",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/settings.test.js",
+            "testData": [
                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath":"engage.appContent.settings"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+                  "jsonPath": "engage.appContent.settings"
                }
             ]
          },
          {
-            "id":"ENG_SETT_TC_2",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/settings.test.js",
-            "testData":[
+            "id": "ENG_SETT_TC_2",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/settings.test.js",
+            "testData": [
                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath":"engage.appContent.settings"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+                  "jsonPath": "engage.appContent.settings"
                },
                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
-                  "jsonPath":"engage.login.user.validInstructorUser3"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
+                  "jsonPath": "engage.login.user.validInstructorUser3"
                }
             ]
          },
          {
-            "id":"ENG_SETT_TC_5",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/settings.test.js",
-            "testData":[
+            "id": "ENG_SETT_TC_5",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/settings.test.js",
+            "testData": [
                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath":"engage.appContent.settings.Profile"
-               }
-            ]
-         }, 
-         {
-            "id":"ENG_SETT_TC_8",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/settings.test.js",
-            "testData":[
-               {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath":"engage.appContent.settings.Profile"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+                  "jsonPath": "engage.appContent.settings.Profile"
                }
             ]
          },
          {
-            "id":"ENG_SETT_TC_13",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/settings.test.js",
-            "testData":[
+            "id": "ENG_SETT_TC_8",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/settings.test.js",
+            "testData": [
                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath":"engage.appContent.settings.ErrorMessages"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+                  "jsonPath": "engage.appContent.settings.Profile"
                }
             ]
-         },  
+         },
          {
-            "id":"ENG_SETT_TC_9",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/settings.test.js",
-            "testData":[
+            "id": "ENG_SETT_TC_13",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/settings.test.js",
+            "testData": [
                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
-                  "jsonPath":"engage.login.user.validInstructorUser3"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+                  "jsonPath": "engage.appContent.settings.ErrorMessages"
+               }
+            ]
+         },
+         {
+            "id": "ENG_SETT_TC_9",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/settings.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
+                  "jsonPath": "engage.login.user.validInstructorUser3"
                },
                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath":"engage.appContent.settings.snackBarMessages"
-               }
-            ]
-         }, 
-         {
-            "id":"ENG_SETT_TC_14",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/settings.test.js",
-            "testData":[
-               {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath":"engage.appContent.settings.ErrorMessages"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+                  "jsonPath": "engage.appContent.settings.snackBarMessages"
                }
             ]
          },
          {
-            "id":"ENG_SETT_TC_10",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/settings.test.js",
-            "testData":[
+            "id": "ENG_SETT_TC_14",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/settings.test.js",
+            "testData": [
                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
-                  "jsonPath":"engage.login.user.validInstructorUser3"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+                  "jsonPath": "engage.appContent.settings.ErrorMessages"
+               }
+            ]
+         },
+         {
+            "id": "ENG_SETT_TC_10",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/settings.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
+                  "jsonPath": "engage.login.user.validInstructorUser3"
                },
                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath":"engage.appContent.settings.snackBarMessages"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+                  "jsonPath": "engage.appContent.settings.snackBarMessages"
                }
             ]
          },
          {
-            "id":"ENG_SETT_TC_11",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/settings.test.js",
-            "testData":[
+            "id": "ENG_SETT_TC_11",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/settings.test.js",
+            "testData": [
                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
-                  "jsonPath":"engage.login.user.validInstructorUser3"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
+                  "jsonPath": "engage.login.user.validInstructorUser3"
                },
                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath":"engage.appContent.settings.snackBarMessages"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+                  "jsonPath": "engage.appContent.settings.snackBarMessages"
                }
             ]
          },
          {
-            "id":"ENG_SETT_TC_12",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/settings.test.js",
-            "testData":[
+            "id": "ENG_SETT_TC_12",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/settings.test.js",
+            "testData": [
                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath":"engage.appContent.settings.snackBarMessages"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+                  "jsonPath": "engage.appContent.settings.snackBarMessages"
                }
             ]
          },
          {
-            "id":"ENG_SETT_TC_3",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/settings.test.js",
-            "testData":[
+            "id": "ENG_SETT_TC_3",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/settings.test.js",
+            "testData": [
                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath":"engage.appContent.settings"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+                  "jsonPath": "engage.appContent.settings"
                }
             ]
          },
          {
-            "id":"ENG_SETT_TC_6",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/settings.test.js",
-            "testData":[
+            "id": "ENG_SETT_TC_6",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/settings.test.js",
+            "testData": [
                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath":"engage.appContent.settings.Password"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+                  "jsonPath": "engage.appContent.settings.Password"
                }
             ]
          },
          {
-            "id":"ENG_SETT_TC_16",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/settings.test.js",
-            "testData":[
+            "id": "ENG_SETT_TC_16",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/settings.test.js",
+            "testData": [
                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath":"engage.appContent.settings.ErrorMessages"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+                  "jsonPath": "engage.appContent.settings.ErrorMessages"
                }
             ]
-         }, 
+         },
          {
-            "id":"ENG_SETT_TC_17",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/settings.test.js",
-            "testData":[
+            "id": "ENG_SETT_TC_17",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/settings.test.js",
+            "testData": [
                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
-                  "jsonPath":"engage.login.user.validInstructorUser3"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
+                  "jsonPath": "engage.login.user.validInstructorUser3"
                },
                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath":"engage.appContent.settings.snackBarMessages"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+                  "jsonPath": "engage.appContent.settings.snackBarMessages"
                }
             ]
          },
          {
-            "id":"ENG_SETT_TC_18",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/settings.test.js",
-            "testData":[
+            "id": "ENG_SETT_TC_18",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/settings.test.js",
+            "testData": [
                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
-                  "jsonPath":"engage.login.user.validInstructorUser3"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
+                  "jsonPath": "engage.login.user.validInstructorUser3"
                },
                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath":"engage.appContent.settings.ErrorMessages"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+                  "jsonPath": "engage.appContent.settings.ErrorMessages"
                }
             ]
          },
          {
-            "id":"ENG_SETT_TC_4",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/settings.test.js",
-            "testData":[
+            "id": "ENG_SETT_TC_4",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/settings.test.js",
+            "testData": [
                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath":"engage.appContent.settings"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+                  "jsonPath": "engage.appContent.settings"
                }
             ]
          },
          {
-            "id":"ENG_SETT_TC_7",
-            "description":"",
-            "testFile":"./test/engageExperienceApp/settings.test.js",
-            "testData":[
+            "id": "ENG_SETT_TC_7",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/settings.test.js",
+            "testData": [
                {
-                  "dataFile":"./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath":"engage.appContent.settings.Accessibility"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+                  "jsonPath": "engage.appContent.settings.Accessibility"
                }
             ]
          }
       ],
-      "AfterEach":[
-         
-      ],
-      "After":[
+      "AfterEach": [],
+      "After": [
          {
             "id": "ENG_SHELL_TC_8",
             "description": "",
             "testFile": "./test/engageExperienceApp/appShell.test.js",
             "testData": [
-                 {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
                   "jsonPath": "engage.appContent.appShell"
                },
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
                   "jsonPath": "engage.login.user.validInstructorUser3"
                }
             ]
@@ -297,234 +286,223 @@
          }
       ]
    },
-   "Suite2":
-    {
-        "Name": "Validation of Accessibility Settings",
-        "TestCaseRepo": [
-            "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
-        ],
-        "Before": [
-        {
+   "Suite2": {
+      "Name": "Validation of Accessibility Settings",
+      "TestCaseRepo": [
+         "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
+      ],
+      "Before": [
+         {
             "id": "launchUrl",
             "description": "",
             "testFile": "./engageAutomation/core/runner/launchUrl.js",
-            "testData": [
-
-            ]
-        },
-        {
+            "testData": []
+         },
+         {
             "id": "ENG_LAND_TC_1",
             "description": "Landing page",
             "testFile": "./test/engageExperienceApp/landing.test.js",
             "visualTest": true,
             "visualTolerance": 0.07,
-            "testData": [
-
-            ]
-        },
-        {
+            "testData": []
+         },
+         {
             "id": "ENG_LAND_TC_3",
             "description": "",
             "testFile": "./test/engageExperienceApp/landing.test.js",
             "visualTest": true,
             "visualTolerance": 0.07,
-            "testData": [
-
-            ]
-        },
-        {
+            "testData": []
+         },
+         {
             "id": "ENG_IDEN_TC_7",
             "description": "",
             "testFile": "./test/engageExperienceApp/login.test.js",
             "visualTest": true,
             "visualTolerance": 0.07,
             "testData": [
-            {
-                "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
-                "jsonPath": "engage.login.user.validInstructorUser3"
-            }]
-        },
-        {
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
+                  "jsonPath": "engage.login.user.validInstructorUser3"
+               }
+            ]
+         },
+         {
             "id": "ENG_SHELL_TC_17",
             "description": "",
             "testFile": "./test/engageExperienceApp/appShell.test.js",
             "testData": []
-        },
-        {
+         },
+         {
             "id": "ENG_SETT_TC_4",
             "description": "",
             "testFile": "./test/engageExperienceApp/settings.test.js",
             "testData": [
-            {
-                "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                "jsonPath": "engage.appContent.settings"
-            }]
-        }],
-        "BeforeEach": [
-
-        ],
-        "Test": [
-        {
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+                  "jsonPath": "engage.appContent.settings"
+               }
+            ]
+         }
+      ],
+      "BeforeEach": [],
+      "Test": [
+         {
             "id": "ENG_SETT_TC_23",
             "description": "",
             "testFile": "./test/engageExperienceApp/settings.test.js",
             "testData": [
-                {
-                    "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                    "jsonPath": "engage.appContent.settings.appliedSettingsProps"
-                },
-                {
-                    "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                    "jsonPath": "engage.appContent.settings.snackBarMessages"
-                }
-
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+                  "jsonPath": "engage.appContent.settings.appliedSettingsProps"
+               },
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+                  "jsonPath": "engage.appContent.settings.snackBarMessages"
+               }
             ]
-        },
-        {
+         },
+         {
             "id": "ENG_SETT_TC_24",
             "description": "",
             "testFile": "./test/engageExperienceApp/settings.test.js",
             "testData": [
-            {
-                "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                "jsonPath": "engage.appContent.settings.appliedSettingsProps"
-            },
-            {
-                "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                "jsonPath": "engage.appContent.settings.snackBarMessages"
-            }]
-        },
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+                  "jsonPath": "engage.appContent.settings.appliedSettingsProps"
+               },
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+                  "jsonPath": "engage.appContent.settings.snackBarMessages"
+               }
+            ]
+         },
          {
             "id": "ENG_SETT_TC_25",
             "description": "",
             "testFile": "./test/engageExperienceApp/settings.test.js",
             "testData": [
-                {
-                    "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                    "jsonPath": "engage.appContent.settings.appliedSettingsProps"
-                },
-                {
-                    "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                    "jsonPath": "engage.appContent.settings.snackBarMessages"
-                }
-
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+                  "jsonPath": "engage.appContent.settings.appliedSettingsProps"
+               },
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+                  "jsonPath": "engage.appContent.settings.snackBarMessages"
+               }
             ]
-        },
-        {
+         },
+         {
             "id": "ENG_SETT_TC_26",
             "description": "",
             "testFile": "./test/engageExperienceApp/settings.test.js",
             "testData": [
-                {
-                    "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                    "jsonPath": "engage.appContent.settings.appliedSettingsProps"
-                },
-                {
-                    "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                    "jsonPath": "engage.appContent.settings.snackBarMessages"
-                }
-
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+                  "jsonPath": "engage.appContent.settings.appliedSettingsProps"
+               },
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+                  "jsonPath": "engage.appContent.settings.snackBarMessages"
+               }
             ]
-        },
-        {
+         },
+         {
             "id": "ENG_SETT_TC_27",
             "description": "",
             "testFile": "./test/engageExperienceApp/settings.test.js",
             "testData": [
-                {
-                    "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                    "jsonPath": "engage.appContent.settings.appliedSettingsProps"
-                },
-                {
-                    "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                    "jsonPath": "engage.appContent.settings.snackBarMessages"
-                }
-
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+                  "jsonPath": "engage.appContent.settings.appliedSettingsProps"
+               },
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+                  "jsonPath": "engage.appContent.settings.snackBarMessages"
+               }
             ]
-        },
-        {
+         },
+         {
             "id": "ENG_SETT_TC_28",
             "description": "",
             "testFile": "./test/engageExperienceApp/settings.test.js",
             "testData": [
-                {
-                    "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                    "jsonPath": "engage.appContent.settings.appliedSettingsProps"
-                },
-                {
-                    "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                    "jsonPath": "engage.appContent.settings.snackBarMessages"
-                }
-
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+                  "jsonPath": "engage.appContent.settings.appliedSettingsProps"
+               },
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+                  "jsonPath": "engage.appContent.settings.snackBarMessages"
+               }
             ]
-        },
-        {
+         },
+         {
             "id": "ENG_SETT_TC_29",
             "description": "",
             "testFile": "./test/engageExperienceApp/settings.test.js",
             "testData": [
-                {
-                    "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                    "jsonPath": "engage.appContent.settings.appliedSettingsProps"
-                },
-                {
-                    "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                    "jsonPath": "engage.appContent.settings.snackBarMessages"
-                }
-
-            ]
-        }],
-        "AfterEach": [
-            {
-                "id": "ENG_SETT_TC_54",
-                "description": "",
-                "testFile": "./test/engageExperienceApp/settings.test.js",
-                "testData": [
-                {
-                    "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                    "jsonPath": "engage.appContent.settings.resetSettings"
-                }]
-            },
-            {
-                "id": "ENG_SETT_TC_40",
-                "description": "",
-                "testFile": "./test/engageExperienceApp/settings.test.js",
-                "testData": [
-                {
-                    "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                    "jsonPath": "engage.appContent.settings.defaultProps"
-                },
                {
-                    "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                    "jsonPath": "engage.appContent.settings.snackBarMessages"
-                }]
-            }
-
-        ],
-        "After": [
-
-            {
-                "id": "ENG_SHELL_TC_8",
-                "description": "",
-                "testFile": "./test/engageExperienceApp/appShell.test.js",
-                "testData": [
-                {
-                    "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                    "jsonPath": "engage.appContent.appShell"
-                },
-                {
-                    "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
-                    "jsonPath": "engage.login.user.validInstructorUser3"
-                }]
-            },
-            {
-                "id": "ENG_SHELL_TC_9",
-                "description": "",
-                "testFile": "./test/engageExperienceApp/appShell.test.js",
-                "testData": [
-
-                ]
-            }
-        ]
-    }
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+                  "jsonPath": "engage.appContent.settings.appliedSettingsProps"
+               },
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+                  "jsonPath": "engage.appContent.settings.snackBarMessages"
+               }
+            ]
+         }
+      ],
+      "AfterEach": [
+         {
+            "id": "ENG_SETT_TC_54",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/settings.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+                  "jsonPath": "engage.appContent.settings.resetSettings"
+               }
+            ]
+         },
+         {
+            "id": "ENG_SETT_TC_40",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/settings.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+                  "jsonPath": "engage.appContent.settings.defaultProps"
+               },
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+                  "jsonPath": "engage.appContent.settings.snackBarMessages"
+               }
+            ]
+         }
+      ],
+      "After": [
+         {
+            "id": "ENG_SHELL_TC_8",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/appShell.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+                  "jsonPath": "engage.appContent.appShell"
+               },
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
+                  "jsonPath": "engage.login.user.validInstructorUser3"
+               }
+            ]
+         },
+         {
+            "id": "ENG_SHELL_TC_9",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/appShell.test.js",
+            "testData": []
+         }
+      ]
+   }
 }
