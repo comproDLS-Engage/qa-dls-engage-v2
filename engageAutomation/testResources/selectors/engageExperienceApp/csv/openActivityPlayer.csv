@@ -26,9 +26,17 @@ attempt3Label,"[data-tid='Attempt 3'],[data-tid=text-attempt-2]",p,openActivityL
 attempt1SubmittedTime,[data-tid=attempt-0-0-timestamp],p,openActivityLeftPanel,,,,"""submitted""","""submitted"""
 attempt1GradedTime,[data-tid=attempt-0-1-timestamp],p,openActivityLeftPanel,,,,"""graded""","""graded"""
 attempt1StatusPill,[data-tid=attempt-0-status-pill],span,openActivityLeftPanel,,,,"[""Grade Pending"",""Reattempt Requested"",""Graded""]","[""Grade Pending"",""Reattempt Requested"",""Graded""]"
+attempt1GradeLabel,[data-tid=attempt-0-grade-label],p,openActivityLeftPanel,,,,,"""Grade"""
+attempt1GradeValue,[data-tid=attempt-0-score],p,openActivityLeftPanel,,,,,
+attempt1FeedbackLabel,,p,openActivityLeftPanel,,,,,"""Feedback"""
+attempt1FeedbackValue,,p,openActivityLeftPanel,,,,,
 attempt2SubmittedTime,[data-tid=attempt-1-0-timestamp],p,openActivityLeftPanel,,,,"""submitted""","""submitted"""
 attempt2GradedTime,[data-tid=attempt-1-1-timestamp],p,openActivityLeftPanel,,,,"""graded""","""graded"""
 attempt2StatusPill,[data-tid=attempt-1-status-pill],span,openActivityLeftPanel,,,,"[""Grade Pending"",""Reattempt Requested"",""Graded""]","[""Grade Pending"",""Reattempt Requested"",""Graded""]"
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
 scoreLabel,[data-tid=main-focus-area-text],p,openActivityLeftPanel,,,,"""Score""",null
 scoreInput,[data-tid=input-main-focus-area],input,openActivityLeftPanel,,,,,
 feedbackLabel,[data-tid=feedback-text],p,openActivityLeftPanel,,,,"""Feedback (Optional)""",null
