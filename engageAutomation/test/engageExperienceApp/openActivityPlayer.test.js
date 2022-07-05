@@ -255,31 +255,31 @@ module.exports = {
 		await assertion.assertEqual(sts.submitGradeDialogConfirmBtn, null, "submitGradeDialogConfirmBtn status mismatch");
 
 		sts = await openActivityPlayerPage.getData_openActivityLeftPanel();
-		await assertion.assertEqual(sts.gradingTitle, testdata[3], "gradingTitle status mismatch");
-		await assertion.assertEqual(sts.gradingSubtitle, testdata[1].gradingSubtitle, "gradingSubtitle status mismatch");
-		await assertion.assertEqual(sts.statusPill, testdata[1].statusPill[0], "statusPill status mismatch");
-		await assertion.assert(await sts.bookName.includes(testdata[2]), "bookName status mismatch");
-		await assertion.assertEqual(sts.activityName, testdata[3], "activityName status mismatch");
-		await assertion.assertEqual(sts.cardTitle, testdata[1].cardTitle, "cardTitle status mismatch");
-		await assertion.assertEqual(sts.cardSubtitle, testdata[1].cardSubtitle, "cardSubtitle status mismatch");
-		await assertion.assertEqual(sts.cardText, testdata[1].cardText, "cardText status mismatch");
-		await assertion.assertEqual(sts.attempt1Label, testdata[1].attempt1Label, "attempt1Label status mismatch");
+		await assertion.assertEqual(sts.gradingTitle, testdata[2], "gradingTitle status mismatch");
+		await assertion.assertEqual(sts.gradingSubtitle, testdata[0].gradingSubtitle, "gradingSubtitle status mismatch");
+		await assertion.assertEqual(sts.statusPill, testdata[0].statusPill[0], "statusPill status mismatch");
+		await assertion.assert(await sts.bookName.includes(testdata[1]), "bookName status mismatch");
+		await assertion.assertEqual(sts.activityName, testdata[2], "activityName status mismatch");
+		await assertion.assertEqual(sts.cardTitle, testdata[0].cardTitle, "cardTitle status mismatch");
+		await assertion.assertEqual(sts.cardSubtitle, testdata[0].cardSubtitle, "cardSubtitle status mismatch");
+		await assertion.assertEqual(sts.cardText, testdata[0].cardText, "cardText status mismatch");
+		await assertion.assertEqual(sts.attempt1Label, testdata[0].attempt1Label, "attempt1Label status mismatch");
 		await assertion.assertEqual(sts.attempt2Label, null, "attempt2Label status mismatch");
 		await assertion.assertEqual(sts.attempt3Label, null, "attempt3Label status mismatch");
-		await assertion.assertEqual(sts.attempt1SubmittedTime, testdata[1].attempt1SubmittedTime, "attempt1SubmittedTime status mismatch");
+		await assertion.assertEqual(sts.attempt1SubmittedTime, testdata[0].attempt1SubmittedTime, "attempt1SubmittedTime status mismatch");
 		await assertion.assertEqual(sts.attempt1GradedTime, null, "attempt1GradedTime status mismatch");
 		await assertion.assertEqual(sts.attempt1StatusPill, null, "attempt1StatusPill status mismatch");
 		await assertion.assertEqual(sts.attempt2SubmittedTime, null, "attempt2SubmittedTime status mismatch");
 		await assertion.assertEqual(sts.attempt2GradedTime, null, "attempt2GradedTime status mismatch");
 		await assertion.assertEqual(sts.attempt2StatusPill, null, "attempt2StatusPill status mismatch");
-		await assertion.assertEqual(sts.scoreLabel, testdata[1].scoreLabel, "scoreLabel status mismatch");
+		await assertion.assertEqual(sts.scoreLabel, testdata[0].scoreLabel, "scoreLabel status mismatch");
 		await assertion.assertEqual(sts.scoreInput, null, "scoreInput status mismatch");
-		await assertion.assertEqual(sts.feedbackLabel, testdata[1].feedbackLabel, "feedbackLabel status mismatch");
+		await assertion.assertEqual(sts.feedbackLabel, testdata[0].feedbackLabel, "feedbackLabel status mismatch");
 		await assertion.assertEqual(sts.feedbackInput, null, "feedbackInput status mismatch");
-		await assertion.assertEqual(sts.reattemptLabel, testdata[1].reattemptLabel, "reattemptLabel status mismatch");
-		await assertion.assertEqual(sts.reattemptYesBtn, testdata[1].reattemptYesBtn, "reattemptYesBtn status mismatch");
-		await assertion.assertEqual(sts.reattemptNoBtn, testdata[1].reattemptNoBtn, "reattemptNoBtn status mismatch");
-		await assertion.assertEqual(sts.scoreError, testdata[1].scoreError, "scoreError status mismatch");
+		await assertion.assertEqual(sts.reattemptLabel, testdata[0].reattemptLabel, "reattemptLabel status mismatch");
+		await assertion.assertEqual(sts.reattemptYesBtn, testdata[0].reattemptYesBtn, "reattemptYesBtn status mismatch");
+		await assertion.assertEqual(sts.reattemptNoBtn, testdata[0].reattemptNoBtn, "reattemptNoBtn status mismatch");
+		await assertion.assertEqual(sts.scoreError, testdata[0].scoreError, "scoreError status mismatch");
 	},
 	
 	//Validate that confirmation dialog appears on clicking submit button after entering score, feedback and reattempt request as no
