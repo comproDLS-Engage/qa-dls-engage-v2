@@ -74,7 +74,6 @@ module.exports = {
          await action.waitForDocumentLoad();
         await logger.logInto(await stackTrace.get());
         await action.waitForDisplayed(this.productTabBtns + 0 + "]")
-        await action.waitForDisplayed(this.reviewBox_Title)
         obj = {
             className: ((await action.getElementCount(this.pageTitle)) > 0) ? await action.getText(this.pageTitle) : null,
             classDuration: ((await action.getElementCount(this.pageSubTitle)) > 0) ? await action.getText(this.pageSubTitle) : null,
