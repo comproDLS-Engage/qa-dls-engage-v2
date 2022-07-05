@@ -74,7 +74,7 @@ module.exports = {
       score_lbl: ((await action.getElementCount(this.score_lbl)) > 0) ? await action.getText(this.score_lbl) : null,
       completion_lbl: ((await action.getElementCount(this.completion_lbl)) > 0) ? await action.getText(this.completion_lbl) : null,
       classCode_btn: ((await action.getElementCount(this.classCode_btn)) > 0) ? await action.getText(this.classCode_btn) : null,
-      copyClassCode_btn: ((await action.getElementCount(this.copyClassCode_btn)) > 0) ? await action.getText(this.copyClassCode_btn) : null,
+      copyClassCode_btn: ((await action.getElementCount(this.copyClassCode_btn +" p")) > 0) ? await action.getText(this.copyClassCode_btn +" p") : null,
       inviteEmail_btn: ((await action.getElementCount(this.inviteEmail_btn)) > 0) ? await action.getText(this.inviteEmail_btn) : null,
       inviteStudents_lbl: ((await action.getElementCount(this.inviteStudents_lbl)) > 0) ? await action.getText(this.inviteStudents_lbl) : null,
       inviteStudentsByline_lbl: ((await action.getElementCount(this.inviteStudentsByline_lbl)) > 0) ? await action.getText(this.inviteStudentsByline_lbl) : null,
@@ -150,7 +150,7 @@ module.exports = {
   click_classCode_btn: async function () {
     await logger.logInto(await stackTrace.get());
     var res;
-    res = await action.click(this.classCode_btn);
+    res = await action.click(this.copyClassCode_btn);
     if (true == res) {
       await logger.logInto(await stackTrace.get(), " classCode_btn is clicked");
     }

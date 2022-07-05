@@ -1,6 +1,6 @@
 {
   "Suite1": {
-    "Name": " Validation the Class workflow for create and edit scenario",
+    "Name": "Create and Edit Workflow of Class",
     "TestCaseRepo": [
       "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
     ],
@@ -253,7 +253,7 @@
     ]
   },
   "Suite2": {
-    "Name": "Validation of Class features for an Instructor when no class has been created (English)",
+    "Name": "Class features of an Instructor when no class has been created (English)",
     "TestCaseRepo": [
       "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
     ],
@@ -333,7 +333,7 @@
     ]
   },
   "Suite3": {
-    "Name": "Validation the content of My Class tab and archived tab and validate the class data on myclass tab",
+    "Name": "Content Validation of Active tab and Archived tab",
     "TestCaseRepo": [
       "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
     ],
@@ -445,7 +445,7 @@
     ]
   },
   "Suite4": {
-    "Name": "Validation the content of more option of class and click on inbox",
+    "Name": "Class Card more options and Inbox page.",
     "TestCaseRepo": [
       "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
     ],
@@ -559,7 +559,7 @@
     "After": []
   },
   "Suite5": {
-    "Name": "Validation the content of create class",
+    "Name": "Content Validation of create class",
     "TestCaseRepo": [
       "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
     ],
@@ -630,7 +630,7 @@
     "After": []
   },
   "Suite6": {
-    "Name": "Validation the content of Edit Page",
+    "Name": "Content Validation of Edit Class Page.",
     "TestCaseRepo": [
       "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
     ],
@@ -731,7 +731,7 @@
     "After": []
   },
   "Suite7": {
-    "Name": "Validation of a class creation workflow from left panel",
+    "Name": "Create Class Workflow from Left Pane ( + Button)",
     "TestCaseRepo": [
       "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
     ],
@@ -853,7 +853,7 @@
     "After": []
   },
   "Suite8": {
-    "Name": "Validation of a class creation workflow from Dashboard (MY Books)",
+    "Name": "Class creation workflow from Dashboard (MY Books)",
     "TestCaseRepo": [
       "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
     ],
@@ -1119,7 +1119,7 @@
     "After": []
   },
   "Suite10": {
-    "Name": "Validation the content of more option of class and click on Student",
+    "Name": "Class Card more options and Student Tab on class details Page.",
     "TestCaseRepo": [
       "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
     ],
@@ -1207,7 +1207,7 @@
     "After": []
   },
   "Suite11": {
-    "Name": "Validation the content of more option of class and click on Assignment",
+    "Name": "Class Card more options and Assignment Tab on class details Page.",
     "TestCaseRepo": [
       "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
     ],
@@ -1295,7 +1295,7 @@
     "After": []
   },
   "Suite12": {
-    "Name": "Validate the class pane when no class is available",
+    "Name": "Class Pane (Dashboard Page) Content Validation (when no class added)",
     "TestCaseRepo": [
       "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
     ],
@@ -1378,7 +1378,7 @@
     "After": []
   },
   "Suite13": {
-    "Name": "Validate the class pane when class is available",
+    "Name": "Class Pane (Dashboard Page) Content Validation (when class added)",
     "TestCaseRepo": [
       "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
     ],
@@ -1461,7 +1461,7 @@
     "After": []
   },
   "Suite14": {
-    "Name": "Validation the Serach on Class Dashboard Page",
+    "Name": "Search of a class on class dashboard Page",
     "TestCaseRepo": [
       "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
     ],

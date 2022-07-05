@@ -136,8 +136,8 @@
 				"studentdetails": [
 					{
 						"Name": "dev2 Jovanović student Jovanović",
-						"AvgScore": null,
-						"CompletionScore": null
+						"AvgScore": "–",
+						"CompletionScore": "–"
 					}
 				]
 			},

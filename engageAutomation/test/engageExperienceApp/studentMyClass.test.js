@@ -159,7 +159,7 @@ module.exports = {
 			await assertion.assertEqual(sts.joinClassSubHeader, testdata.joinClassSubHeader, "joinClassSubHeader Text Mismatch: " + (await JSON.stringify(sts.joinClassSubHeader)))
 			await assertion.assertEqual(sts.enterClassCodeLabel, testdata.enterClassCodeLabel, "enterClassCodeLabel Text Mismatch: " + (await JSON.stringify(sts.enterClassCodeLabel)))
 			await assertion.assertEqual(sts.classCodeInput, testdata.classCodeInput, "classCodeInput placeHolderText Mismatch: " + (await JSON.stringify(sts.classCodeInput)))
-			await assertion.assertEqual(sts.classHelpText, testdata.classHelpText, "classHelpText Text Mismatch: " + (await JSON.stringify(sts.classHelpText)))
+			await assertion.assertEqual(sts.classSubLable, testdata.classSubLable, "classSubLable Text Mismatch: " + (await JSON.stringify(sts.classHelpText)))
 			await assertion.assertEqual(sts.joinclassPopUpbtn, testdata.joinclassPopUpbtn, "joinclassPopUpbtn Text Mismatch: " + (await JSON.stringify(sts.joinclassPopUpbtn)))
 			await assertion.assertEqual(sts.helpJoiningClass, testdata.helpJoiningClass, "helpJoiningClass Text Mismatch: " + (await JSON.stringify(sts.helpJoiningClass)))
 		} else {
@@ -180,7 +180,7 @@ module.exports = {
 			await assertion.assertEqual(sts.joinClassSubHeader, testdata.joinClassSubHeader, "joinClassSubHeader Text Mismatch: " + (await JSON.stringify(sts.joinClassSubHeader)))
 			await assertion.assertEqual(sts.enterClassCodeLabel, testdata.enterClassCodeLabel, "enterClassCodeLabel Text Mismatch: " + (await JSON.stringify(sts.enterClassCodeLabel)))
 			await assertion.assertEqual(sts.classCodeInput, testdata.classCodeInput, "classCodeInput placeHolderText Mismatch: " + (await JSON.stringify(sts.classCodeInput)))
-			await assertion.assertEqual(sts.classHelpText, testdata.classHelpText, "classHelpText Text Mismatch: " + (await JSON.stringify(sts.classHelpText)))
+			await assertion.assertEqual(sts.classHelpText, testdata.blankErrorMsg, "classHelpText Text Mismatch: " + (await JSON.stringify(sts.classHelpText)))
 			await assertion.assertEqual(sts.joinclassPopUpbtn, testdata.joinclassPopUpbtn, "joinclassPopUpbtn Text Mismatch: " + (await JSON.stringify(sts.joinclassPopUpbtn)))
 			await assertion.assertEqual(sts.helpJoiningClass, testdata.helpJoiningClass, "helpJoiningClass Text Mismatch: " + (await JSON.stringify(sts.helpJoiningClass)))
 		} else {

@@ -166,7 +166,7 @@ module.exports = {
     getData_componentList: async function (componentListName) {
         await logger.logInto(await stackTrace.get());
         var obj = [];
-        await action.waitForDisplayed(this.componentList);
+        await action.waitForDisplayed(this.componentHeader);
         var list = await action.findElements(this.componentList);
         if (componentListName) {
             for (var i = 0; i < list.length; i++) {

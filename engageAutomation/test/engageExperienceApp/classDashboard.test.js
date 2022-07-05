@@ -7,6 +7,7 @@ var calender = require('../../pages/engageExperienceApp/calender.page.js');
 var classDrawerpage = require('../../pages/engageExperienceApp/classDrawer.page.js');
 var gradeBookPage = require('../../pages/engageExperienceApp/gradeBook.page.js');
 const teacherViewClassPage = require('../../pages/engageExperienceApp/teacherViewClass.page.js');
+const { confirmPassword_input } = require('../../pages/engageExperienceApp/settings.page.js');
 var sts;
 module.exports = {
 
@@ -162,8 +163,9 @@ module.exports = {
 	//Validate that clicking on inbox option from Class Menu launches class details page with inbox tab selected
 	ENG_INS_CLASS_TC_10: async function (testdata) {
 		sts = await classDashboardPage.click_inboxOption();
+		console.log(sts)
 		if ((typeof (sts)) === "object") {
-			await assertion.assertEqual(sts.selectedProduct, testdata.inboxOption_txt, "Add Student Page is not displayed: " + (await JSON.stringify(sts.pageStatus)))
+			await assertion.assertEqual(sts.selectedProduct, testdata.inboxOption_txt+"\n1", "Inbox Page is not displayed: " + (await JSON.stringify(sts.pageStatus)))
 		} else {
 			await assertion.assertFail(sts);
 		}
@@ -781,4 +783,56 @@ module.exports = {
 		await assertion.assertEqual(sts.searchPill, null, "searchPill status Mismatch");
 	},
 
+	//Validate the Review Pane content validation on inbox tab of dashboard
+	ENG_INS_CLASS_TC_117: async function (testdata) {
+		sts = await teacherViewClassPage.getViewClassPageData()
+		console.log(sts)
+		if ((typeof (sts)) === "object") {
+			await assertion.assertEqual(sts.reviewBox_Title, testdata.reviewBox_Title, "reviewBox_Title is not mismatched " + JSON.stringify(sts))
+			await assertion.assertEqual(sts.reviewBox_SubTitle, testdata.reviewBox_SubTitle, "reviewBox_SubTitle Status is not mismatched " + JSON.stringify(sts))
+			await assertion.assertEqual(sts.reviewBox_Cancelbtn, true, "reviewBox_Cancelbtn is not mismatched " + JSON.stringify(sts))
+			await assertion.assertEqual(sts.reviewBox_icon, true, "reviewBox_icon Status is not mismatched " + JSON.stringify(sts))
+		} else {
+			await assertion.assertFail(sts);
+		}
+	},
+		//Validate the student card on inbox tab of dashboard
+		ENG_INS_CLASS_TC_118: async function (testdata) {
+			sts = await teacherViewClassPage.getData_activityGradeCard(testdata[0].activityName)
+			console.log(sts)
+			console.log(testdata[0])
+			console.log(testdata[0].studentName)
+			if ((typeof (sts)) === "object") {
+				await assertion.assertEqual(sts[0].assignmentCardStudentName, testdata[0].studentName, "assignmentCardStudentName is not mismatched " + JSON.stringify(sts))
+				await assertion.assertEqual(sts[0].assignmentCardActivityText, testdata[1].assignmentCardActivityText, "assignmentCardActivityText Status is not mismatched " + JSON.stringify(sts))
+				await assertion.assertEqual(sts[0].assignmentCardActivityDate, testdata[0].time, "assignmentCardActivityDate is not mismatched " + JSON.stringify(sts))
+				await assertion.assertEqual(sts[0].assignmentCardActivityName, testdata[0].activityName, "assignmentCardActivityName Status is not mismatched " + JSON.stringify(sts))
+				await assertion.assertEqual(sts[0].assignmentCardUnitName, testdata[0].unitName, "assignmentCardUnitName Status is not mismatched " + JSON.stringify(sts))
+
+			} else {
+				await assertion.assertFail(sts);
+			}
+		},
+
+	//Validate the Review Pane cancel button  on inbox tab of dashboard
+	ENG_INS_CLASS_TC_119: async function (testdata) {
+		sts = await teacherViewClassPage.click_reviewBox_Cancelbtn()
+		console.log(sts)
+		if ((typeof (sts)) === "object") {
+			await assertion.assertEqual(sts.reviewBox_Title, null, "reviewBox_Title is not mismatched " + JSON.stringify(sts))
+			await assertion.assertEqual(sts.reviewBox_SubTitle, null, "reviewBox_SubTitle Status is not mismatched " + JSON.stringify(sts))
+		} else {
+			await assertion.assertFail(sts);
+		}
+	},
+	//Validate the Click on Activity Card  on inbox tab of dashboard
+	ENG_INS_CLASS_TC_120: async function (testdata) {
+		sts = await teacherViewClassPage.click_assignmentCardActivityName(testdata)
+		console.log(sts)
+		if ((typeof (sts)) === "object") {
+			await assertion.assertEqual(sts.pageStatus, true, "Writing Player Grade Page is not Launched " + JSON.stringify(sts))
+		} else {
+			await assertion.assertFail(sts);
+		}
+	},
 };

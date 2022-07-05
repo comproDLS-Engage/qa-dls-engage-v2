@@ -241,7 +241,7 @@ module.exports = {
 		console.log(res)
 		res = await action.click("[data-tid=button-Save]");
 		console.log(res)
-		res = await action.waitForDisplayed("img[src*=Compro]");
+		res = await action.waitForDisplayed("img[src*=Compro]", 60000);
 		console.log(res)
 	},
 

@@ -1,6 +1,6 @@
 {
    "Suite1": {
-      "Name": "Validate the student tab of a non-anchor book class",
+      "Name": "Student tab Content Validation of a non-anchor book class",
       "TestCaseRepo": [
          "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
       ],
@@ -104,7 +104,7 @@
       ]
    },
    "Suite2": {
-      "Name": "Validate the student tab of a anchor book class",
+      "Name": "Student tab Content Validation of a anchor book class",
       "TestCaseRepo": [
          "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
       ],
@@ -208,7 +208,7 @@
       ]
    },
    "Suite3": {
-      "Name": "Validate the student tab of a class when no student is added",
+      "Name": "Class Details Page Student tab Content when no student is added",
       "TestCaseRepo": [
          "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
       ],
