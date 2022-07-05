@@ -30,7 +30,7 @@ module.exports = {
 
     isInitialized: async function () {
         await logger.logInto((await stackTrace.get()));
-        //action.waitForDocumentLoad();
+        await action.waitForDisplayed(this.buttonLoader, undefined, true);
         res = await action.waitForDisplayed(this.addBtn + "," + this.modifyBtn);
         return res;
     },
@@ -115,7 +115,7 @@ module.exports = {
                 res = await action.getText(this.bannerText + "," + this.snackbarLbl);
                 await require("./common.page").click_Close_Button();
                 //action.waitForDisplayed(this.bannerText + "," + this.snackbarLbl, 60000, true);
-                await browser.pause(5000)
+                await browser.pause(10000)
             }
         }
         await logger.logInto((await stackTrace.get()), res);

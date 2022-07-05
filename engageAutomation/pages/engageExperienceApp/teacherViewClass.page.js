@@ -50,6 +50,15 @@ module.exports = {
     inviteStudentsdropDown_btn: selectorFile.css.ComproEngage.teacherViewClassPage.inviteStudentsdropDown_btn,
     inviteStudents_lbl: selectorFile.css.ComproEngage.teacherViewClassPage.inviteStudents_lbl,
     inviteStudentsByline_lbl: selectorFile.css.ComproEngage.teacherViewClassPage.inviteStudentsByline_lbl,
+    reviewBox_Title: selectorFile.css.ComproEngage.teacherViewClassPage.reviewBox_Title,
+    reviewBox_SubTitle: selectorFile.css.ComproEngage.teacherViewClassPage.reviewBox_SubTitle,
+    reviewBox_Cancelbtn: selectorFile.css.ComproEngage.teacherViewClassPage.reviewBox_Cancelbtn,
+    reviewBox_icon: selectorFile.css.ComproEngage.teacherViewClassPage.reviewBox_icon,
+    assignmentCardStudentName: selectorFile.css.ComproEngage.teacherViewClassPage.assignmentCardStudentName,
+    assignmentCardActivityText: selectorFile.css.ComproEngage.teacherViewClassPage.assignmentCardActivityText,
+    assignmentCardActivityDate: selectorFile.css.ComproEngage.teacherViewClassPage.assignmentCardActivityDate,
+    assignmentCardActivityName: selectorFile.css.ComproEngage.teacherViewClassPage.assignmentCardActivityName,
+    assignmentCardUnitName: selectorFile.css.ComproEngage.teacherViewClassPage.assignmentCardUnitName,
 
     isInitialized: async function () {
         await logger.logInto(await stackTrace.get());
@@ -86,6 +95,10 @@ module.exports = {
             inviteStudentsdropDown_btn: ((await action.getElementCount(this.inviteStudentsdropDown_btn)) > 0) ? await action.getText(this.inviteStudentsdropDown_btn) : null,
             inviteStudents_lbl: ((await action.getElementCount(this.inviteStudents_lbl)) > 0) ? await action.getText(this.inviteStudents_lbl) : null,
             inviteStudentsByline_lbl: ((await action.getElementCount(this.inviteStudentsByline_lbl)) > 0) ? await action.getText(this.inviteStudentsByline_lbl) : null,
+            reviewBox_Title: ((await action.getElementCount(this.reviewBox_Title)) > 0) ? await action.getText(this.reviewBox_Title) : null,
+            reviewBox_SubTitle: ((await action.getElementCount(this.reviewBox_SubTitle)) > 0) ? await action.getText(this.reviewBox_SubTitle) : null,
+            reviewBox_Cancelbtn: ((await action.getElementCount(this.reviewBox_Cancelbtn)) > 0) ? await action.waitForDisplayed(this.reviewBox_Cancelbtn) : null,
+            reviewBox_icon: ((await action.getElementCount(this.reviewBox_icon)) > 0) ? await action.waitForDisplayed(this.reviewBox_icon) : false,
             productList: null, //for the tabs (inbox, Assignments, Students)
             bookComponentList: null, //for book components in the right pane
         }
@@ -108,9 +121,9 @@ module.exports = {
             componentSelector = this.bookComponentNamesBtns + i + "]";
             if ((await action.getElementCount(componentSelector)) > 0) {
                 bookComponentData[i] = {
-                    bookComponentData: ((await action.getElementCount(this.bookComponentNamesBtns+ i + "]")) > 0) ? await action.getText(this.bookComponentNamesBtns + i + "]") : null,
-                    bookComponentUnits: ((await action.getElementCount(this.bookComponentUnits+ i + "]")) > 0) ? await action.getText(this.bookComponentUnits + i + "]") : null,
-                    bookComponentActivities: ((await action.getElementCount(this.bookComponentActivities+ i + "]")) > 0) ? await action.getText(this.bookComponentActivities + i + "]") : null
+                    bookComponentData: ((await action.getElementCount(this.bookComponentNamesBtns + i + "]")) > 0) ? await action.getText(this.bookComponentNamesBtns + i + "]") : null,
+                    bookComponentUnits: ((await action.getElementCount(this.bookComponentUnits + i + "]")) > 0) ? await action.getText(this.bookComponentUnits + i + "]") : null,
+                    bookComponentActivities: ((await action.getElementCount(this.bookComponentActivities + i + "]")) > 0) ? await action.getText(this.bookComponentActivities + i + "]") : null
                 }
             }
             else
@@ -135,6 +148,72 @@ module.exports = {
             res = res + "-- Error in clicking View Book button";
             await logger.logInto(await stackTrace.get(), res, 'error');
         }
+        return res;
+    },
+
+    getData_activityGradeCard: async function (assignmentCardActivityNameName) {
+        await logger.logInto(await stackTrace.get());
+        var obj = [];
+        await action.waitForDisplayed(this.assignmentCardActivityName);
+        var list = await action.findElements(this.assignmentCardActivityName);
+        if (assignmentCardActivityNameName) {
+            for (var i = 0; i < list.length; i++) {
+                if ((await action.getText(this.assignmentCardActivityName + i)) == assignmentCardActivityNameName) {
+                    obj[0] = {
+                        assignmentCardStudentName: ((await action.getElementCount(this.assignmentCardStudentName + i + "]")) > 0) ? await action.getText(this.assignmentCardStudentName + i + "]") : null,
+                        assignmentCardActivityText: ((await action.getElementCount(this.assignmentCardActivityText + i + "]")) > 0) ? await action.getText(this.assignmentCardActivityText + i + "]") : null,
+                        assignmentCardActivityDate: ((await action.getElementCount(this.assignmentCardActivityDate + i + "]")) > 0) ? await action.getText(this.assignmentCardActivityDate + i + "]") : null,
+                        assignmentCardActivityName: ((await action.getElementCount(this.assignmentCardActivityName + i + "]")) > 0) ? await action.getText(this.assignmentCardActivityName + i + "]") : null,
+                        assignmentCardUnitName: ((await action.getElementCount(this.assignmentCardUnitName + i + "]")) > 0) ? await action.getText(this.assignmentCardUnitName + i + "]") : null,
+                    }
+                    break;
+                }
+            }
+        } else {
+            for (var i = 0; i < list.length; i++) {
+                obj[i] = {
+                    assignmentCardStudentName: ((await action.getElementCount(this.assignmentCardStudentName + i + "]")) > 0) ? await action.getText(this.assignmentCardStudentName + i + "]") : null,
+                    assignmentCardActivityText: ((await action.getElementCount(this.assignmentCardActivityText + i + "]")) > 0) ? await action.getText(this.assignmentCardActivityText + i + "]") : null,
+                    assignmentCardActivityDate: ((await action.getElementCount(this.assignmentCardActivityDate + i + "]")) > 0) ? await action.getText(this.assignmentCardActivityDate + i + "]") : null,
+                    assignmentCardActivityName: ((await action.getElementCount(this.assignmentCardActivityName + i + "]")) > 0) ? await action.getText(this.assignmentCardActivityName + i + "]") : null,
+                    assignmentCardUnitName: ((await action.getElementCount(this.assignmentCardUnitName + i + "]")) > 0) ? await action.getText(this.assignmentCardUnitName + i + "]") : null,
+                }
+            }
+        }
+        return obj;
+    },
+
+
+    click_reviewBox_Cancelbtn: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.reviewBox_Cancelbtn);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " reviewBox_Cancelbtn is clicked");
+            res = await this.getViewClassPageData()
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "reviewBox_Cancelbtn is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_assignmentCardActivityName: async function (assignmentCardActivityNameName) {
+        await logger.logInto(await stackTrace.get());
+        var i, list, res;
+        list = await action.findElements(this.assignmentCardActivityName);
+        for (i = 0; i < list.length; i++) {
+            if (((await action.getText(this.assignmentCardActivityName + i + "]"))) == assignmentCardActivityNameName) {
+                res = await action.click(list[i]);
+                res =await require ('./writingPlayer.page').isInitialized();
+                break;
+            }
+        }
+        if (res == true) {
+            await logger.logInto(await stackTrace.get(), " --assignmentCardActivityName clicked");
+        }
+        else
+            await logger.logInto(await stackTrace.get(), " --assignmentCardActivityName NOT clicked", "error")
         return res;
     },
 

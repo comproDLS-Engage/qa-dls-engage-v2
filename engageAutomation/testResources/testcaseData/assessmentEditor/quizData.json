@@ -7,7 +7,7 @@
           "question1": {
             "questionIndex": 1,
             "buttonName": "mutiplechoice",
-            "questionTitle": "Question 1",
+            "questionTitle": "Multiple Choice Question",
             "score":"1",
             "questionInstruction": "See the image carefully and answer the question",
             "videoURL": "https://www.youtube.com/watch?v=mxbodI60OT4",
@@ -20,7 +20,7 @@
           "question2": {
             "questionIndex": 2,
             "buttonName": "mutiplechoice",
-            "questionTitle": "Question 2",
+            "questionTitle": "Multiple Choice Question",
             "questionInstruction": "See the diagram carefully and choose the correct option of the given below question",
             "imagePath": "./testResources/testcaseData/assessmentEditor/media/Cell.png",
             "imageCredit": "Cell Diagram",
@@ -34,7 +34,7 @@
         {
             "questionIndex": 1,
             "buttonName": "multiplechoicequestionset",
-            "questionTitle": "Question 1",
+            "questionTitle": "Multiple Choice Question",
             "score":"1",
             "questionInstruction": "Dans cette activité \n  Lisez des informations sur la prospérité de la ville de Nantes et voyez l'image d'un riche résident, armateur et marchand. Sur la base de ces informations, répondez aux questions suivantes.",
             "questionInstructionEdit": "Dans cette activité \n  Lisez des informations sur la prospérité de la ville de Nantes et voyez l'image d'un riche résident.",
@@ -49,14 +49,14 @@
             "subQuestionText":
                               [["1", "Quelle activité semble être à l’origine de la richesse de Nantes ?"],
                               [ "2","Quels métiers profi tent de cet enrichissement ?"]],
-              "options": [["0" ,"O1","Commerce "],
-                          ["0" ,"O2","Construction"],
-                          ["0" ,"O3","Construction de navires"],
-                          ["0" ,"O4","Toutes ces"],
-                          ["1" ,"O1","Commerce "],
-                          ["1" ,"O2","Construction"],
-                          ["1" ,"O3","Construction de navires"],
-                          ["1" ,"O4","Toutes ces"]],
+              "options": [["2" ,"O1","Commerce "],
+                          ["2" ,"O2","Construction"],
+                          ["2" ,"O3","Construction de navires"],
+                          ["2" ,"O4","Toutes ces"],
+                          ["3" ,"O1","Commerce "],
+                          ["3" ,"O2","Construction"],
+                          ["3" ,"O3","Construction de navires"],
+                          ["3" ,"O4","Toutes ces"]],
            
             "optionStyle": "2"
         
@@ -82,7 +82,7 @@
           "questionIndex": 3,
           "buttonName": "trueorfalse",
           "score":"1",
-          "questionTitle": "Question 3",
+          "questionTitle": "True Or False Question",
           "questionInstruction": "Listen to the audio carefully and choose the correct option of the given below question",
           "audioPath": "./testResources/testcaseData/assessmentEditor/media/Ringtone.mp3",
           "audioCredit": "Audio",
@@ -94,16 +94,21 @@
           "questionIndex": 4,
           "buttonName": "multipleresponse",
           "score":"3",
-          "questionTitle": "Question 4",
+          "questionTitle": "Multiple Response Question",
           "questionInstruction": "See the image carefully and choose the correct option(s)",
           "imagePath": "./testResources/testcaseData/assessmentEditor/media/Plant.jpg",
           "imageCredit": "Plant Diagram",
           "questionText": "Identify the parts of the plants in the given options:",
+          "subQuestionText":
+          [["1", "Identify the parts of the plants in the given options:"],
+          [ "2","Identify the parts of the flower in the given options:"]],
           "options": 
-          [["0" ,"O1","Roots "],
+          [["0" ,"O1","Stem"],
           ["0" ,"O2","Soil"],
-          ["1" ,"O3","Stem"],
-          ["2" ,"O4","Leaves"]],
+          ["0" ,"O3","Roots"],
+          ["1" ,"O1","Bud"],
+          ["1" ,"O2","Stem"],
+          ["1" ,"O3","Leaves"]],
           "correctOptions": [
             1,
             3,
@@ -115,7 +120,7 @@
         {
           "questionIndex": 5,
           "buttonName": "draganddropontoimage",
-          "questionTitle": "Question 5",
+          "questionTitle": "Drag And Drop Onto Image",
           "score":"5",
           "questionText": "Drag the continents at their correct places on the world map",
           "questionInstruction": "Drop the continents in correct places",
@@ -133,13 +138,13 @@
         {
           "questionIndex": 6,
           "buttonName": "draganddropintotext",
-          "questionTitle": "Question 6",
+          "questionTitle": "Drag And Drop Into Text",
           "score":"3",
           "questionInstruction": "Drag the pills at their correct places in the sentence.",
           "videoURL": "https://www.youtube.com/watch?v=uwzViw-T0-A",
           "videoCredit": "Thirsty Crow",
           "questionText": 
-            "Once there was a,{{Blank:A}}. He was very,{{Blank:B}}.He flew here and there in search of,{{Blank:C}}.He saw a pot"
+            "  Once there was a,{{Blank:A}}. He was very,{{Blank:B}}.He flew here and there in search of,{{Blank:C}}.He saw a pot"
           ,
           "options": [
             "crow", 
@@ -152,7 +157,7 @@
         {
           "questionIndex": 7,
           "buttonName": "fillintheblanks",
-          "questionTitle": "GRAMMAR",
+          "questionTitle": "Fill in the Blanks",
           "score":"5",
           "questionInstruction": "Match the statements below with the correct answer.",
           "questionText": " I can’t swim.{{Blank:A}}\nWe’re not from London. {{Blank:B}}\nI’ve got a cat. {{Blank:C}}\n We go to church every Sunday. {{Blank:D}} \n My best friend calls me every day. {{Blank:E}}\n don’t know the answer. {{Blank:F}}",
@@ -175,11 +180,11 @@
           "buttonName": "fibdropdown",
           "questionTitle": "FIB Questions with unique answers",
           "score":"5",
-          "imagePath": "./testResources/testcaseData/assessmentEditor/media/WorldMap.jpg",
+          "promptImagePath": "./testResources/testcaseData/assessmentEditor/media/Mughal.jpg",
           "questionInstruction": "Fill the blanks with the correct options.",
-          "promptText": "Fill the details of Mughal",
+          "promptText": "The Mughal Empire was important for bringing almost the entire Indian subcontinent under one domain, drawing the subcontinent's regions together through enhanced overland and coastal trading networks. It was also known for its cultural influence and its architectural achievements (most famously, the Taj Mahal).",
           "questionInstructionEdit": "Fill the blanks with the unique correct options.",
-          "questionText": "1. The capital of India is {{Blank:A}}\n 2. {{Blank:B}} was the father of Humayu.\n 3. Taj Mahal was built by {{Blank:C}}",
+          "questionText": "  1. The capital of India is {{Blank:A}}\n 2. {{Blank:B}} was the father of Humayu.\n 3. Taj Mahal was built by {{Blank:C}}",
          "options":[
          [ "A-O1" , "New Delhi"], 
          [ "A-O2" , "Bombay"], 
@@ -195,21 +200,23 @@
           "questionTitle": "FIB Questions with common answers",
           "score":"5",
           "videoURL": "https://www.youtube.com/watch?v=Vk461NU7wbg",
-          "promptText": "Fill the details as per your experenice",
+          "promptText": "Colin being the son of Archibald Craven, and that he suffers from an unspecified spinal problem which precludes him from walking and causes him to spend all of his time in bed.",
           "questionInstruction": "Fill the blanks with the correct options.",
           "questionInstructionEdit": "Fill the blanks with the Comman correct options.",
-          "questionText": "1. There was {{Blank:A}} crow in the garden.  \n 2. My brother is {{Blank:B}} lawyer. \n  3. He lives in {{Blank:C}} USA. \n 4. {{Blank:D}} apple a day, keeps {{Blank:E}} doctor away.",
+          "questionText": "  1. Colin thought he had a {{Blank:A}} back.  \n 2. When Mary lived in India, she was a {{Blank:B}} little girl. \n 3. Colin’s room was very {{Blank:C}}. \n 4. Misselthwaite Manor was on the English {{Blank:D}} \n 5. ‘Colin isn’t feeling well because he had another {{Blank:E}} ,’ said Martha.",
           "options":[
-          ["O1" , "a"], 
-          ["O2" , "an"],
-          ["O3" , "the"]
+          ["O1" , "gloomy"], 
+          ["O2" , "tantrum"],
+          ["O3" , "crooked"],
+          ["O4" , "spoilt"],
+          ["O5" , "moor"]
           ],
           "response":
           [ ["A" , "O3"], 
-           [ "B" , "O1"],
-           [ "C" , "O3"],
-            ["D" , "O2"], 
-            ["E" , "O3"]]
+           [ "B" , "O4"],
+           [ "C" , "O1"],
+            ["D" , "O5"], 
+            ["E" , "O2"]]
       }
     }
       ],
@@ -218,8 +225,8 @@
           "questionIndex": 8,
           "buttonName": "ordering",
           "score":"4",
-          "questionTitle": "Question 8",
-          "imagePath": "./testResources/testcaseData/assessmentEditor/media/WorldMap.jpg",
+          "questionTitle": "Ordering Question",
+          "imagePath": "./testResources/testcaseData/assessmentEditor/media/Mughal.jpg",
           "questionInstruction": "See the image and reorder the options in correct sequence.",
           "questionText": "Arrange the incidents in sequence",
           "options": [
@@ -235,7 +242,7 @@
           "questionIndex": 9,
           "buttonName": "matching",
           "score":"3",
-          "questionTitle": "Question 9",
+          "questionTitle": "Matching Question",
           "questionInstruction": "See the image and match the suitable word",
           "questionText": "Match the following countries with their corresponding capitals",
           "items": [
@@ -254,7 +261,7 @@
         {
           "questionIndex": 10,
           "buttonName": "classify",
-          "questionTitle": "Question 10",
+          "questionTitle": "Classify Question",
           "score":"6",
           "questionInstruction": "View the video and place the items in the correct categories.",
           "videoURL": "https://www.youtube.com/watch?v=Vk461NU7wbg",

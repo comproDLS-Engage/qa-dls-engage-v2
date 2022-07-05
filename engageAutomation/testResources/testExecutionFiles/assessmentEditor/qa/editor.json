@@ -49,6 +49,7 @@
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": []
 			},
+		
 			{
 				"id": "ASE_QUN_TC_5",
 				"description": "Validate that alphanumeric text is supported in Question Title Text.",
@@ -60,6 +61,8 @@
 					}
 				]
 			},
+			
+		
 			{
 			"id": "ASE_COM_TC_42",
 			"description": "Validate if alpha-numeric text is allowed in the Question Text",
@@ -135,14 +138,8 @@
 				"testData": []
 			},
 			{
-				"id": "ASE_QUN_TC_17",
+				"id": "ASE_COM_TC_1001",
 				"description": "Click on Editor tab",
-				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": []
-			},
-			{
-				"id": "ASE_QUN_TC_5",
-				"description": "Validate that alphanumeric text is supported in Question Title Text.",
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": [
 					{
@@ -152,8 +149,8 @@
 				]
 			},
 			{
-				"id": "ASE_COM_TC_9",
-				"description": "Validate that student can add instruction for each question under the 'Question' section",
+				"id": "ASE_COM_TC_1002",
+				"description": "Click on Editor tab",
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": [
 					{
@@ -163,25 +160,10 @@
 				]
 			},
 			{
-				"id": "ASE_COM_TC_42",
-				"description": "Validate if alpha-numeric text is allowed in the Question Text",
+				"id": "ASE_COM_TC_1005",
+				"description": "Click on Edit Prompt button",
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": [
-					{
-						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
-						"jsonPath": "editor.questions.MultipleResponse[0].questionText"
-					}
-				]
-			},
-			{
-				"id": "ASE_MCQ_TC_14",
-				"description": "Validate that Option is added in  questions",
-				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-					{
-						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
-						"jsonPath": "editor.questions.MultipleResponse[0].options"
-					}
 				]
 			},
 			{
@@ -196,6 +178,146 @@
 				]
 			},
 			{
+				"id": "ASE_COM_TC_1014",
+				"description": "Enter the question text",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+				]
+			},
+			
+			{
+				"id": "ASE_COM_TC_1007",
+				"description": "Click on Editor tab",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MultipleResponse[0].subQuestionText[0]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1009",
+				"description": "Click on Editor tab",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MultipleResponse[0].subQuestionText[0]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1008",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MultipleResponse[0].options[0]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1008",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MultipleResponse[0].options[1]"
+					}
+				]
+			},
+			{
+				"id": "EDIT_TC_13",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MultipleResponse[0].subQuestionText[0]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1008",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MultipleResponse[0].options[2]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1007",
+				"description": "Click on Editor tab",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MultipleResponse[0].subQuestionText[1]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1009",
+				"description": "Click on Editor tab",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MultipleResponse[0].subQuestionText[1]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1008",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MultipleResponse[0].options[3]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1008",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MultipleResponse[0].options[4]"
+					}
+				]
+			},
+			{
+				"id": "EDIT_TC_13",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MultipleResponse[0].subQuestionText[1]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1008",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MultipleResponse[0].options[5]"
+					}
+				]
+			},
+			{
 				"id": "ASE_COM_TC_1012",
 				"description": "Add the score in the activity player",
 				"testFile": "./test/assessmentEditor/editor.test.js",
@@ -206,6 +328,7 @@
 					}
 				]
 			},
+
 			
 			{
 				"id": "ASE_COM_TC_1016",
@@ -1245,7 +1368,17 @@
 				"testData": [
 				]
 			},
-
+			{
+				"id": "ASE_COM_TC_75",
+				"description": "Click on Media button and Set Image Media",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.FIBDropdown[0].question1.promptImagePath"
+					}
+				]
+			},
 			{
 				"id": "ASE_COM_TC_1006",
 				"description": "Click on Editor tab",
@@ -1388,6 +1521,20 @@
 			},
 			{
 				"id": "ASE_FIBDROPDOWN_TC_1014",
+				"description": "Click the Common option",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1013",
+				"description": "Click the Common option",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1013",
 				"description": "Click the Common option",
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": [

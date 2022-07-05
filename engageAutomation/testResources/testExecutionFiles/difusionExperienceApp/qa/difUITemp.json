@@ -65,20 +65,6 @@
                 "testData": []
             },
             {
-                "id": "ENG_DIF_TC_55",
-                "description": "Premium plan popup",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.05,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_54",
-                "description": "Close activate book popup",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.08,
-                "testData": []
-            },
-            {
                 "id": "ENG_DIF_TC_33",
                 "description": "Notifications pane",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
@@ -307,13 +293,6 @@
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
                 "visualTolerance": 0.08,
                 "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_58",
-                "description": "View billing tab on Settings page",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.08,
-                "testData": []
             }
         ],
         "AfterEach": [],
@@ -422,55 +401,6 @@
                 "testData": []
             },
             {
-                "id": "ENG_DIF_TC_43",
-                "description": "Create playlist dialog",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.08,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_44",
-                "description": "Enter playlist name and create playlist",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.08,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_45",
-                "description": "View blank playlist page",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.08,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_46",
-                "description": "Browse resources and add to playlist",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.08,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_47",
-                "description": "View playlist page",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.1,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_48",
-                "description": "Delete playlist dialog",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.08,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_49",
-                "description": "Confirm playlist deletion",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.08,
-                "testData": []
-            },
-            {
                 "id": "ENG_DIF_TC_4",
                 "description": "Browse page with books tab",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
@@ -515,13 +445,6 @@
             {
                 "id": "ENG_DIF_TC_39",
                 "description": "View profile tab on Settings page",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.08,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_58",
-                "description": "View billing tab on Settings page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
                 "visualTolerance": 0.08,
                 "testData": []
@@ -589,20 +512,6 @@
                 "description": "Activate book popup",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
                 "visualTolerance": 0.06,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_54",
-                "description": "Close activate book popup",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.08,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_55",
-                "description": "Premium plan popup",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.05,
                 "testData": []
             },
             {
@@ -730,13 +639,6 @@
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
                 "visualTolerance": 0.08,
                 "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_58",
-                "description": "View billing tab on Settings page",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.08,
-                "testData": []
             }
         ],
         "AfterEach": [],
@@ -845,55 +747,6 @@
                 "testData": []
             },
             {
-                "id": "ENG_DIF_TC_43",
-                "description": "Create playlist dialog",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.08,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_44",
-                "description": "Enter playlist name and create playlist",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.08,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_45",
-                "description": "View blank playlist page",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.08,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_46",
-                "description": "Browse resources and add to playlist",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.08,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_47",
-                "description": "View playlist page",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.1,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_48",
-                "description": "Delete playlist dialog",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.08,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_49",
-                "description": "Confirm playlist deletion",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.08,
-                "testData": []
-            },
-            {
                 "id": "ENG_DIF_TC_4",
                 "description": "Browse page with books tab",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
@@ -945,13 +798,6 @@
             {
                 "id": "ENG_DIF_TC_39",
                 "description": "View profile tab on Settings page",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.08,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_58",
-                "description": "View billing tab on Settings page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
                 "visualTolerance": 0.08,
                 "testData": []

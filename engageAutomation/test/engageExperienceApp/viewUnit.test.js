@@ -99,6 +99,13 @@ module.exports = {
     ENG_BOOK_TC_53: async function (testdata) {
         sts = await unitDetailPage.expandCollapseFolder(testdata);
         await assertion.assertEqual(sts, true, "folder not found: ");
-    }
+    },
+
+    //Anchor component (non indexed) - Validate that components are not displayed on View Unit page
+    ENG_BOOK_TC_55: async function () {
+        sts = await unitDetailPage.getViewUnitData();
+        await assertion.assertEqual(sts.unitThumbnail, true, "Book cover status mismatch");
+        await assertion.assert((sts.component.list.length == 0), "Component list is not empty on View Unit page");
+    },
 
 };

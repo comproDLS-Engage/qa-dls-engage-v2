@@ -781,4 +781,54 @@ module.exports = {
 		await assertion.assertEqual(sts.searchPill, null, "searchPill status Mismatch");
 	},
 
+	//Validate the Review Pane content validation on inbox tab of dashboard
+	ENG_INS_CLASS_TC_117: async function (testdata) {
+		sts = await teacherViewClassPage.getViewClassPageData()
+		console.log(sts)
+		if ((typeof (sts)) === "object") {
+			await assertion.assertEqual(sts.reviewBox_Title, testdata.reviewBox_Title, "reviewBox_Title is not mismatched " + JSON.stringify(sts))
+			await assertion.assertEqual(sts.reviewBox_SubTitle, testdata.reviewBox_SubTitle, "reviewBox_SubTitle Status is not mismatched " + JSON.stringify(sts))
+			await assertion.assertEqual(sts.reviewBox_Cancelbtn, true, "reviewBox_Cancelbtn is not mismatched " + JSON.stringify(sts))
+			await assertion.assertEqual(sts.reviewBox_icon, true, "reviewBox_icon Status is not mismatched " + JSON.stringify(sts))
+		} else {
+			await assertion.assertFail(sts);
+		}
+	},
+		//Validate the student card on inbox tab of dashboard
+		ENG_INS_CLASS_TC_118: async function (testdata) {
+			sts = await teacherViewClassPage.getData_activityGradeCard(testdata.assignmentCardStudentName)
+			console.log(sts)
+			if ((typeof (sts)) === "object") {
+				await assertion.assertEqual(sts.assignmentCardStudentName, testdata.assignmentCardStudentName, "assignmentCardStudentName is not mismatched " + JSON.stringify(sts))
+				await assertion.assertEqual(sts.assignmentCardActivityText, testdata.assignmentCardActivityText, "assignmentCardActivityText Status is not mismatched " + JSON.stringify(sts))
+				await assertion.assertEqual(sts.assignmentCardActivityDate, testdata.assignmentCardActivityDate, "assignmentCardActivityDate is not mismatched " + JSON.stringify(sts))
+				await assertion.assertEqual(sts.assignmentCardActivityName, testdata.assignmentCardActivityName, "assignmentCardActivityName Status is not mismatched " + JSON.stringify(sts))
+				await assertion.assertEqual(sts.assignmentCardUnitName, testdata.assignmentCardUnitName, "assignmentCardUnitName Status is not mismatched " + JSON.stringify(sts))
+
+			} else {
+				await assertion.assertFail(sts);
+			}
+		},
+
+	//Validate the Review Pane cancel button  on inbox tab of dashboard
+	ENG_INS_CLASS_TC_119: async function (testdata) {
+		sts = await teacherViewClassPage.click_reviewBox_Cancelbtn()
+		console.log(sts)
+		if ((typeof (sts)) === "object") {
+			await assertion.assertEqual(sts.reviewBox_Title, null, "reviewBox_Title is not mismatched " + JSON.stringify(sts))
+			await assertion.assertEqual(sts.reviewBox_SubTitle, null, "reviewBox_SubTitle Status is not mismatched " + JSON.stringify(sts))
+		} else {
+			await assertion.assertFail(sts);
+		}
+	},
+	//Validate the Click on Activity Card  on inbox tab of dashboard
+	ENG_INS_CLASS_TC_120: async function (testdata) {
+		sts = await teacherViewClassPage.click_assignmentCardActivityName(testdata)
+		console.log(sts)
+		if ((typeof (sts)) === "object") {
+			await assertion.assertEqual(sts.pageStatus, true, "Writing Player Grade Page is not Launched " + JSON.stringify(sts))
+		} else {
+			await assertion.assertFail(sts);
+		}
+	},
 };

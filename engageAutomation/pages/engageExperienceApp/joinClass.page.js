@@ -17,6 +17,7 @@ module.exports = {
 	viewClassOption: selectorFile.css.ComproEngage.myClassPage.viewClassOption,
 	progressOption: selectorFile.css.ComproEngage.myClassPage.progressOption,
 	loaderIcon: selectorFile.css.ComproEngage.appShell.loaderIcon,
+	classSubLable:selectorFile.css.ComproEngage.myClassPage.classSubLable,
 	isInitialized: async function () {
 		await logger.logInto(await stackTrace.get());
 		await action.waitForDocumentLoad();
@@ -31,6 +32,7 @@ module.exports = {
 		await logger.logInto(await stackTrace.get());
 		await action.waitForExist("div[style*=\"visibility: hidden;\"]", 20000);
 		var obj = {
+			classSubLable: (await action.getElementCount(this.classSubLable)) > 0 ? await action.getText(this.classSubLable) : null,
 			joinClassHeader: (await action.getElementCount(this.joinClassHeader)) > 0 ? await action.getText(this.joinClassHeader) : null,
 			joinClassSubHeader: (await action.getElementCount(this.joinClassSubHeader)) > 0 ? await action.getText(this.joinClassSubHeader) : null,
 			enterClassCodeLabel: (await action.getElementCount(this.enterClassCodeLabel)) > 0 ? await action.getText(this.enterClassCodeLabel) : null,

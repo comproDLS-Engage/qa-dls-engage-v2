@@ -201,7 +201,7 @@
                     "email": "qa_teacher006@yopmail.com",
                     "password": "Compro@1234",
                     "role": "instructor",
-                    "name": "qa_teacher006",
+                    "name": "qa_teacher006 dev2",
                     "courses": [],
                     "country": "",
                     "info": "Automation User.Do Not Touch."
@@ -275,6 +275,11 @@
                             "key": "TFbA-6AP7",
                             "name": "Gradebook",
                             "studentName1": "dev1 student100"
+                        },
+                        {
+                            "key": "TFbA-6AP7",
+                            "name": "Non-Scorable",
+                            "studentName1":"dev1 student100"
                         }
                     ],
                     "info": {}
@@ -285,6 +290,19 @@
                     "name": "qa instructor",
                     "role": "teacher",
                     "class": [],
+                    "info": {}
+                },
+                "classInstructorUser7": {
+                    "email": "dev2_teacher100@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "instructor",
+                    "name": "qa teacher",
+                    "class": [
+                        {
+                            "key": "TFbA-6AP7",
+                            "name": "class automation"
+                        }
+                    ],
                     "info": {}
                 },
                 "classInstructorUser1": {

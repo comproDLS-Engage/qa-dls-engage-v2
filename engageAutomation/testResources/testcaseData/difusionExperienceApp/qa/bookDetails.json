@@ -56,7 +56,7 @@
             {
                 "index": 2,
                 "type":"LP",
-                "activityCount":"4",
+                "activityCount":"5",
                 "name": {
                     "EN": "Custom Component",
                     "ES": "Custom Component"
@@ -80,7 +80,7 @@
             },
             {
                 "index": 3,
-                "activityCount":"11",
+                "activityCount":"13",
                 "type":"LP",
                 "name": {
                     "EN": "LP1",
