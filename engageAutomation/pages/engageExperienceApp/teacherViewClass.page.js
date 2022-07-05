@@ -3,6 +3,7 @@ var action = require('../../core/actionLibrary/baseActionLibrary.js');
 const createClassPage = require('./createClass.page.js');
 const bookDetailsPage = require('./viewBook.page.js');
 var gradeBookPage = require('./gradeBook.page.js');
+const { confirmPassword_input } = require('./settings.page.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
 var res, obj, pageData;
 var componentSelector, languageCount, i;
@@ -70,9 +71,10 @@ module.exports = {
     },
 
     getViewClassPageData: async function () {
-        // await action.waitForDocumentLoad();
+         await action.waitForDocumentLoad();
         await logger.logInto(await stackTrace.get());
         await action.waitForDisplayed(this.productTabBtns + 0 + "]")
+        await action.waitForDisplayed(this.reviewBox_Title)
         obj = {
             className: ((await action.getElementCount(this.pageTitle)) > 0) ? await action.getText(this.pageTitle) : null,
             classDuration: ((await action.getElementCount(this.pageSubTitle)) > 0) ? await action.getText(this.pageSubTitle) : null,
@@ -156,8 +158,11 @@ module.exports = {
         var obj = [];
         await action.waitForDisplayed(this.assignmentCardActivityName);
         var list = await action.findElements(this.assignmentCardActivityName);
+        console.log(list.length)
         if (assignmentCardActivityNameName) {
             for (var i = 0; i < list.length; i++) {
+                console.log(assignmentCardActivityNameName)
+                console.log(await action.getText(this.assignmentCardActivityName + i))
                 if ((await action.getText(this.assignmentCardActivityName + i)) == assignmentCardActivityNameName) {
                     obj[0] = {
                         assignmentCardStudentName: ((await action.getElementCount(this.assignmentCardStudentName + i + "]")) > 0) ? await action.getText(this.assignmentCardStudentName + i + "]") : null,

@@ -240,11 +240,13 @@
                 "joinClassSubHeader": "If your teacher has enrolled you in a class, enter the class code.",
                 "enterClassCodeLabel": "Enter Class Code",
                 "classCodeInput": "Enter Class Code",
-                "classHelpText": "Your class code should look like: iqig-Gq32. Be sure to check your email to see if your teacher sent you an invite.",
+                "blankErrorMsg": "Class code is required.",
+                "classSubLable": "Your class code should look like: iqig-Gq32. Be sure to check your email to see if your teacher sent you an invite.",
+                "classHelpText": "This class code is invalid. Please check the code and try again or contact your teacher.",
                 "joinclassPopUpbtn": "Join Class",
                 "helpJoiningClass": "Help Joining Classes",
                 "titleErrorMsg": "You are already enrolled in this class.",
-                "alreadyExistErrorMessage": "You are already enrolled in this class. Please enter a different class code."
+                "alreadyExistErrorMessage": "You are already enrolled in this class."
             },
             "classDrawerPane": {
                 "classHeading": "Dashboard",
@@ -295,7 +297,10 @@
                 "inviteStudentsByline_lbl": "Invite students to enroll in your class and see their progress and grades.",
                 "bookComponentUnits": "Units",
                 "bookComponentActivities": "Activities",
-                "resources": "Resources"
+                "resources": "Resources",
+                "reviewBox_Title": "Review and grade student submissions",
+                "reviewBox_SubTitle": "When students in your class submit activities from assigments or class textbooks, you'll see them here to review grade.",
+                "assignmentCardActivityText": "submitted an activity"
             },
             "bookViewTOC": {
                 "addToMyBooks": "Add to My Books",

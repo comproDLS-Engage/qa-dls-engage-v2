@@ -251,7 +251,7 @@
                 "enterClassCodeLabel": "[data-tid=text-enterclasskey]",
                 "classCodeInput": "input[id=main-focus-area]",
                 "classHelpText": "[id=main-focus-area-helper-text]>p",
-                "classSubLable":"[data-tid=text-courseKeySublabel]",
+                "classSubLable": "[data-tid=text-courseKeySublabel]",
                 "joinclassPopUpbtn": "[data-tid=button-continue]",
                 "helpJoiningClass": "[data-tid=anchor-skip]",
                 "closebtn": "[data-tid=button-joincourseclose]",
@@ -341,9 +341,9 @@
                 "noUpcoming_subtitle": "[data-tid=text-noAssignments-description]",
                 "noCompleted_title": "[data-tid=text-noAssignments]",
                 "noCompleted_subtitle": "[data-tid=text-noAssignments-description]",
-                "bookMaterial_lbl":"[data-tid=text-bookMaterial-label-",
-                "completionValue":"[data-tid=text-progress-completion-",
-                "progressbar":"[data-tid=progressbar-"
+                "bookMaterial_lbl": "[data-tid=text-bookMaterial-label-",
+                "completionValue": "[data-tid=text-progress-completion-",
+                "progressbar": "[data-tid=progressbar-"
             },
             "teacherViewClassPage": {
                 "pageTitle": "[data-tid=text-pageTitle]",
@@ -387,7 +387,16 @@
                 "viewProgressbtn": "[data-tid*=button-viewProgress-",
                 "viewMessagebtn": "[data-tid*=button-message-",
                 "studentList": "[data-tid*=text-name-",
-                "assignmentsTab": "[data-tid=button-product-1]"
+                "assignmentsTab": "[data-tid=button-product-1]",
+                "reviewBox_Title": "[data-tid=text-title-reviewBox]",
+                "reviewBox_SubTitle": "[data-tid=text-subtitle-reviewBox]",
+                "reviewBox_Cancelbtn": "[data-tid=icon-cancelBtn-reviewBox]",
+                "reviewBox_icon": "[data-tid=icon-reviewBox]",
+                "assignmentCardStudentName": "[data-tid*=text-userName-",
+                "assignmentCardActivityText": "[data-tid*=text-submitActivity-",
+                "assignmentCardActivityDate": "[data-tid*=text-submitDate-",
+                "assignmentCardActivityName": "[data-tid*=text-activityName-",
+                "assignmentCardUnitName": "[data-tid*=text-unitPath-"
             },
             "itemPlayer": {
                 "correctIcon": "[data-tid=icon-correct]",
@@ -1075,7 +1084,7 @@
                 "etextExists": "[data-tid=container-eText-Player]",
                 "webbookExists": "[data-tid=container-productviewer] iframe,[data-tid=container-assignmentviewer] iframe",
                 "scrollToTopBtn": "[data-tid=button-scrollToTop]:not([style*=hidden])",
-                "transcriptExists" : "button[data-plyr=transcript]"
+                "transcriptExists": "button[data-plyr=transcript]"
             },
             "AssignmentListDetailsPage_student": {
                 "assignmentDetailPageTitle": "[data-tid=text-pageTitle]",
@@ -1140,7 +1149,7 @@
                 "completion_lbl": "[data-tid='value-completion']",
                 "studentList": "[data-tid*=text-name-",
                 "classCode_btn": "[data-tid=button-classCodeCopied]",
-                "copyClassCode_btn":"[data-tid=button-copyClassCode]",
+                "copyClassCode_btn": "[data-tid=button-copyClassCode]",
                 "inviteEmail": "[data-tid*=button-inviteEmail]",
                 "inviteStudents_lbl": "[data-tid*=text-actionCardTitle-",
                 "inviteStudentsByline_lbl": "[data-tid*=text-actionCardSubtitle-"

@@ -322,6 +322,19 @@
                     ],
                     "info": {}
                 },
+                "classInstructorUser8": {
+                    "email": "difqains3@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "instructor",
+                    "name": "qa teacher",
+                    "class": [
+                        {
+                            "key": "TFbA-6AP7",
+                            "name": "new automation class1"
+                        }
+                    ],
+                    "info": {}
+                },
                 "flipbookUser": {
                     "email": "flipbook_automation@yopmail.com",
                     "password": "Compro@1234",

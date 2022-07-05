@@ -708,13 +708,35 @@
           "id": "ENG_INS_CLASS_TC_114",
           "description": "Validate that clicking on a class from the search suggestion drop down list launches the class.",
           "tags": "P1"
-        },  {
+        },
+        {
           "id": "ENG_INS_CLASS_TC_115",
           "description": "Validate that clicking on \"More search results for ..xyz\" lists the resources based on search text.",
           "tags": "P1"
-        },  {
+        },
+        {
           "id": "ENG_INS_CLASS_TC_116",
           "description": "Validate that clicking on close search button removes the search criteria",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_117",
+          "description": "Validate the Review Pane content validation on inbox tab of dashboard",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_118",
+          "description": "Validate the student card on inbox tab of dashboard",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_119",
+          "description": "Validate the Review Pane cancel button  on inbox tab of dashboard",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_120",
+          "description": "Validate the Click on Activity Card  on inbox tab of dashboard",
           "tags": "P1"
         }
       ]
@@ -3306,7 +3328,6 @@
           "tags": "P2",
           "visualTest": "-"
         },
-       
         {
           "id": "ENG_STU_GRADEBOOK_TC_2",
           "description": "Validate the Product List in GradeBook",

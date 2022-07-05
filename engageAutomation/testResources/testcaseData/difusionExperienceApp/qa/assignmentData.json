@@ -157,5 +157,16 @@
                 ]
             }
         ]
+    },
+    "inbox": {
+        "className": "new automation class1",
+        "activity": [
+            {
+                "activityName": "Open Ended Native",
+                "unitName": "LP1 • 1. Scorable",
+                "studentName":"Difusionqa student3 ",
+                "time":"Jun 28, 2022 at 12:27 PM"
+            }
+        ]
     }
 }
