@@ -1239,7 +1239,7 @@
                         "Hide Details"
                     ],
                     "infoBtn": "",
-                    "yourScoreLabel": "Your Score:",
+                    "yourScoreLabel": "Score:",
                     "feedbackBtn": "",
                     "submittedOn": "Submitted on",
                     "gradedOn": "Graded on",
@@ -1268,6 +1268,8 @@
                         "Graded",
                         "Final Grade"
                     ],
+                    "attempt1GradeLabel": "Grade",
+                    "attempt1FeedbackLabel": "Feedback",
                     "attempt2SubmittedTime": "submitted",
                     "attempt2GradedTime": "graded",
                     "attempt2StatusPill": [
@@ -1276,6 +1278,8 @@
                         "Graded",
                         "Final Grade"
                     ],
+                    "attempt2GradeLabel": "Grade",
+                    "attempt2FeedbackLabel": "Feedback",
                     "scoreLabel": null,
                     "feedbackLabel": null,
                     "reattemptLabel": null,

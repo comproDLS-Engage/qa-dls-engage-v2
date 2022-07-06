@@ -71,7 +71,7 @@ module.exports = {
     },
 
     getViewClassPageData: async function () {
-         await action.waitForDocumentLoad();
+        await action.waitForDocumentLoad();
         await logger.logInto(await stackTrace.get());
         await action.waitForDisplayed(this.productTabBtns + 0 + "]")
         obj = {
@@ -205,11 +205,13 @@ module.exports = {
     click_assignmentCardActivityName: async function (assignmentCardActivityNameName) {
         await logger.logInto(await stackTrace.get());
         var i, list, res;
+        await action.waitForDisplayed(this.assignmentCardActivityName);
         list = await action.findElements(this.assignmentCardActivityName);
         for (i = 0; i < list.length; i++) {
             if (((await action.getText(this.assignmentCardActivityName + i + "]"))) == assignmentCardActivityNameName) {
                 res = await action.click(list[i]);
-                res =await require ('./writingPlayer.page').isInitialized();
+                if (res == true)
+                    res = await require('./openActivityPlayer.page').isInitialized();
                 break;
             }
         }

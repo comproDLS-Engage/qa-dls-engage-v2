@@ -108,21 +108,21 @@ module.exports = {
 	},
 
 	//Validate the writing question in graded state for student
-	ENG_OPEN_TC_3: async function () {
+	ENG_OPEN_TC_3: async function (testdata) {
 		sts = await writingPlayerPage.isInitialized();
 		await assertion.assertEqual(sts, true, "writing player status mismatch");
 		sts = await writingPlayerPage.getData_writingPlayer(testdata[0]);
-		await assertion.assertEqual(sts[0][2], true, "Activity submission status mismatch");
-		// pending update
+		await assertion.assertEqual(sts[0][2], "true", "Activity submission status mismatch");
+
 		sts = await openActivityPlayerPage.getData_openActivityPlayer();
 		await assertion.assertEqual(sts.showDetailsBtn, testdata[1].showDetailsBtn[0], "showDetailsBtn status mismatch");
 		await assertion.assertEqual(sts.infoBtn, testdata[1].infoBtn, "infoBtn status mismatch");
 		await assertion.assertEqual(sts.leftPanelHidden, true, "leftPanelHidden status mismatch");
 		await assertion.assertEqual(sts.yourScoreLabel, testdata[1].yourScoreLabel, "yourScoreLabel status mismatch");
-		await assertion.assertEqual(sts.yourScoreValue, testdata[4].score, "score status mismatch");
+		await assertion.assertEqual(sts.yourScoreValue, testdata[5].score, "score status mismatch");
 		await assertion.assertEqual(sts.feedbackBtn, testdata[1].feedbackBtn, "feedbackBtn status mismatch");
 		await assertion.assertEqual(sts.submittedOn, null, "submittedOn status mismatch");
-		await assertion.assertEqual(sts.gradedOn, testdata[1].gradedOn, "gradedOn status mismatch");
+		await assertion.assert(sts.gradedOn.includes(testdata[1].gradedOn), "gradedOn status mismatch");
 		await assertion.assertEqual(sts.submitActivityBtn, null, "submitActivityBtn status mismatch");
 		await assertion.assertEqual(sts.submitGradeBtn, null, "submitGradeBtn status mismatch");
 		await assertion.assertEqual(sts.retakeOpenActivityBtn, null, "retakeOpenActivityBtn status mismatch");
@@ -130,31 +130,44 @@ module.exports = {
 		if (sts.leftPanelHidden == true)
 			await activityPlayerTest.ENG_PLAY_TC_11();
 		sts = await openActivityPlayerPage.getData_openActivityLeftPanel();
+		if (sts.attempt1ExpansionBtn == "") {
+			sts = await openActivityPlayerPage.click_attempt1ExpansionBtn();
+			await assertion.assertEqual(sts, true, "attempt1ExpansionBtn status mismatch");
+			sts = await openActivityPlayerPage.getData_openActivityLeftPanel();
+		}
+		if (sts.attempt2ExpansionBtn == "") {
+			sts = await openActivityPlayerPage.click_attempt2ExpansionBtn();
+			await assertion.assertEqual(sts, true, "attempt2ExpansionBtn status mismatch");
+			sts = await openActivityPlayerPage.getData_openActivityLeftPanel();
+		}
+		console.log(sts)
 		await assertion.assertEqual(sts.gradingTitle, null, "gradingTitle status mismatch");
 		await assertion.assertEqual(sts.gradingSubtitle, null, "gradingSubtitle status mismatch");
 		await assertion.assertEqual(sts.statusPill, testdata[1].statusPill[2], "statusPill status mismatch");
 		await assertion.assert(await sts.bookName.includes(testdata[2]), "bookName status mismatch");
 		await assertion.assertEqual(sts.activityName, testdata[3], "activityName status mismatch");
 		await assertion.assertEqual(sts.cardTitle, testdata[1].cardTitle, "cardTitle status mismatch");
-		await assertion.assertEqual(sts.cardSubtitle, testdata[1].cardSubtitle, "cardSubtitle status mismatch");
-		await assertion.assertEqual(sts.cardText, testdata[1].cardText, "cardText status mismatch");
+		await assertion.assertEqual(sts.cardSubtitle, null, "cardSubtitle status mismatch");
+		await assertion.assertEqual(sts.cardText, null, "cardText status mismatch");
 		await assertion.assertEqual(sts.attempt1Label, testdata[1].attempt1Label, "attempt1Label status mismatch");
 		await assertion.assertEqual(sts.attempt2Label, testdata[1].attempt2Label, "attempt2Label status mismatch");
 		await assertion.assertEqual(sts.attempt3Label, null, "attempt3Label status mismatch");
-		await assertion.assertEqual(sts.attempt1SubmittedTime, testdata[1].attempt1SubmittedTime, "attempt1SubmittedTime status mismatch");
+		await assertion.assertEqual(sts.attempt1ExpansionBtn, testdata[1].attempt1ExpansionBtn, "attempt1ExpansionBtn status mismatch");
+		await assertion.assert(sts.attempt1SubmittedTime.includes(testdata[1].attempt1SubmittedTime), "attempt1SubmittedTime status mismatch");
 		await assertion.assertEqual(sts.attempt1GradedTime, testdata[1].attempt1GradedTime, "attempt1GradedTime status mismatch");
 		await assertion.assertEqual(sts.attempt1StatusPill, testdata[1].attempt1StatusPill[1], "attempt1StatusPill status mismatch");
 		await assertion.assertEqual(sts.attempt1GradeLabel, testdata[1].attempt1GradeLabel, "attempt1GradeLabel status mismatch");
-		await assertion.assertEqual(sts.attempt1GradeValue, testdata[5].score, "attempt1GradeValue status mismatch");
+		await assertion.assertEqual(sts.attempt1GradeValue, testdata[4].score, "attempt1GradeValue status mismatch");
 		await assertion.assertEqual(sts.attempt1FeedbackLabel, testdata[1].attempt1FeedbackLabel, "attempt1FeedbackLabel status mismatch");
-		//await assertion.assertEqual(sts.attempt1FeedbackValue, testdata[5].feedback, "attempt1FeedbackValue status mismatch");
-		await assertion.assertEqual(sts.attempt2SubmittedTime, testdata[1].attempt2SubmittedTime, "attempt2SubmittedTime status mismatch");
+		//await assertion.assertEqual(sts.attempt1FeedbackValue, testdata[4].feedback, "attempt1FeedbackValue status mismatch");
+		await assertion.assertEqual(sts.attempt2ExpansionBtn, testdata[1].attempt2ExpansionBtn, "attempt2ExpansionBtn status mismatch");
+		await assertion.assert(sts.attempt2SubmittedTime.includes(testdata[1].attempt2SubmittedTime), "attempt2SubmittedTime status mismatch");
 		await assertion.assertEqual(sts.attempt2GradedTime, testdata[1].attempt2GradedTime, "attempt2GradedTime status mismatch");
 		await assertion.assertEqual(sts.attempt2StatusPill, testdata[1].attempt2StatusPill[2], "attempt2StatusPill status mismatch");
 		await assertion.assertEqual(sts.attempt2GradeLabel, testdata[1].attempt2GradeLabel, "attempt2GradeLabel status mismatch");
-		await assertion.assertEqual(sts.attempt2GradeValue, testdata[4].score, "attempt2GradeValue status mismatch");
+		await assertion.assertEqual(sts.attempt2GradeValue, testdata[5].score, "attempt2GradeValue status mismatch");
 		await assertion.assertEqual(sts.attempt2FeedbackLabel, testdata[1].attempt2FeedbackLabel, "attempt2FeedbackLabel status mismatch");
-		//await assertion.assertEqual(sts.attempt2FeedbackValue, testdata[4].feedback, "attempt2FeedbackValue status mismatch");
+		//await assertion.assertEqual(sts.attempt2FeedbackValue, testdata[5].feedback, "attempt2FeedbackValue status mismatch");
 		await assertion.assertEqual(sts.scoreLabel, null, "scoreLabel status mismatch");
 		await assertion.assertEqual(sts.scoreInput, null, "scoreInput status mismatch");
 		await assertion.assertEqual(sts.feedbackLabel, null, "feedbackLabel status mismatch");
@@ -197,7 +210,7 @@ module.exports = {
 		await assertion.assertEqual(sts[0][2], 'true', "Activity submission status mismatch");
 
 		sts = await openActivityPlayerPage.getData_openActivityPlayer();
-		await assertion.assertEqual(sts.showDetailsBtn, testdata[1].showDetailsBtn[1], "showDetailsBtn status mismatch");
+		//await assertion.assertEqual(sts.showDetailsBtn, testdata[1].showDetailsBtn[1], "showDetailsBtn status mismatch");
 		await assertion.assertEqual(sts.infoBtn, null, "infoBtn status mismatch");
 		await assertion.assertEqual(sts.leftPanelHidden, false, "leftPanelHidden status mismatch");
 		await assertion.assertEqual(sts.yourScoreLabel, testdata[1].yourScoreLabel, "yourScoreLabel status mismatch");
@@ -281,7 +294,7 @@ module.exports = {
 		await assertion.assertEqual(sts.reattemptNoBtn, testdata[0].reattemptNoBtn, "reattemptNoBtn status mismatch");
 		await assertion.assertEqual(sts.scoreError, testdata[0].scoreError, "scoreError status mismatch");
 	},
-	
+
 	//Validate that confirmation dialog appears on clicking submit button after entering score, feedback and reattempt request as no
 	ENG_OPEN_TC_13: async function (testdata) {
 		sts = await openActivityPlayerPage.set_scoreInput(testdata[0].score);

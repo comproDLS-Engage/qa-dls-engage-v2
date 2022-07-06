@@ -508,11 +508,11 @@
                     },
                     {
                         "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/openActivityGrading.json",
-                        "jsonPath": "openActivityPlayer.case1"
+                        "jsonPath": "openActivityPlayer.case2"
                     },
                     {
                         "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/openActivityGrading.json",
-                        "jsonPath": "openActivityPlayer.case2"
+                        "jsonPath": "openActivityPlayer.case1"
                     }
                 ]
             }
@@ -570,9 +570,20 @@
                 "testData": [
                     {
                         "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
-                        "jsonPath": "engage.login.user.writingTeacher4"
+                        "jsonPath": "engage.login.user.writingTeacher1"
                     }
                 ]
+            },
+            {
+               "id": "ENG_SHELL_TC_4",
+               "description": "Validate that clicking on the Classes button in left Navigation pane launches Classes page for teacher",
+               "testFile": "./test/engageExperienceApp/appShell.test.js",
+               "testData": [
+                  {
+                     "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                     "jsonPath": "engage.appContent.myClassPage"
+                  }
+               ]
             },
             {
                 "id": "ENG_INS_CLASS_TC_7",
@@ -581,7 +592,18 @@
                 "testData": [
                     {
                         "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
-                        "jsonPath": "engage.login.user.writingTeacher4.class[0].name"
+                        "jsonPath": "engage.login.user.writingTeacher1.class[0].name"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_INS_CLASS_TC_120",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/classDashboard.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                        "jsonPath": "book.component[2].unit[1].section[0].activity[1]"
                     }
                 ]
             }
@@ -606,8 +628,8 @@
                         "jsonPath": "book.name"
                     },
                     {
-                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
-                        "jsonPath": "book.component[4].unit[0].section[0].activity[0]"
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+                        "jsonPath": "engage.login.user.writingStudent1.name"
                     }
                 ]
             },
@@ -626,7 +648,7 @@
                     },
                     {
                         "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
-                        "jsonPath": "book.component[4].unit[0].section[0].activity[0]"
+                        "jsonPath": "book.component[2].unit[1].section[0].activity[1]"
                     }
                 ]
             },
@@ -664,7 +686,7 @@
                     },
                     {
                         "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
-                        "jsonPath": "book.component[4].unit[0].section[0].activity[0]"
+                        "jsonPath": "book.component[2].unit[1].section[0].activity[1]"
                     }                 
                 ]
             },
@@ -702,7 +724,7 @@
                     },
                     {
                         "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
-                        "jsonPath": "book.component[4].unit[0].section[0].activity[0]"
+                        "jsonPath": "book.component[2].unit[1].section[0].activity[1]"
                     }                 
                 ]
             }

@@ -29,9 +29,11 @@ module.exports = {
     attempt1Label: selectorFile.css.ComproEngage.openActivityPlayer.attempt1Label,
     attempt2Label: selectorFile.css.ComproEngage.openActivityPlayer.attempt2Label,
     attempt3Label: selectorFile.css.ComproEngage.openActivityPlayer.attempt3Label,
+    attempt1ExpansionBtn: selectorFile.css.ComproEngage.openActivityPlayer.attempt1ExpansionBtn,
     attempt1SubmittedTime: selectorFile.css.ComproEngage.openActivityPlayer.attempt1SubmittedTime,
     attempt1GradedTime: selectorFile.css.ComproEngage.openActivityPlayer.attempt1GradedTime,
     attempt1StatusPill: selectorFile.css.ComproEngage.openActivityPlayer.attempt1StatusPill,
+    attempt2ExpansionBtn: selectorFile.css.ComproEngage.openActivityPlayer.attempt2ExpansionBtn,
     attempt2SubmittedTime: selectorFile.css.ComproEngage.openActivityPlayer.attempt2SubmittedTime,
     attempt2GradedTime: selectorFile.css.ComproEngage.openActivityPlayer.attempt2GradedTime,
     attempt2StatusPill: selectorFile.css.ComproEngage.openActivityPlayer.attempt2StatusPill,
@@ -108,9 +110,11 @@ module.exports = {
             attempt1Label: ((await action.getElementCount(this.attempt1Label)) > 0) ? await action.getText(this.attempt1Label) : null,
             attempt2Label: ((await action.getElementCount(this.attempt2Label)) > 0) ? await action.getText(this.attempt2Label) : null,
             attempt3Label: ((await action.getElementCount(this.attempt3Label)) > 0) ? await action.getText(this.attempt3Label) : null,
+            attempt1ExpansionBtn: ((await action.getElementCount(this.attempt1ExpansionBtn)) > 0) ? await action.getText(this.attempt1ExpansionBtn) : null,
             attempt1SubmittedTime: ((await action.getElementCount(this.attempt1SubmittedTime)) > 0) ? await action.getText(this.attempt1SubmittedTime) : null,
             attempt1GradedTime: ((await action.getElementCount(this.attempt1GradedTime)) > 0) ? await action.getText(this.attempt1GradedTime) : null,
             attempt1StatusPill: ((await action.getElementCount(this.attempt1StatusPill)) > 0) ? await action.getText(this.attempt1StatusPill) : null,
+            attempt2ExpansionBtn: ((await action.getElementCount(this.attempt2ExpansionBtn)) > 0) ? await action.getText(this.attempt2ExpansionBtn) : null,
             attempt2SubmittedTime: ((await action.getElementCount(this.attempt2SubmittedTime)) > 0) ? await action.getText(this.attempt2SubmittedTime) : null,
             attempt2GradedTime: ((await action.getElementCount(this.attempt2GradedTime)) > 0) ? await action.getText(this.attempt2GradedTime) : null,
             attempt2StatusPill: ((await action.getElementCount(this.attempt2StatusPill)) > 0) ? await action.getText(this.attempt2StatusPill) : null,
@@ -262,6 +266,32 @@ module.exports = {
         }
         else {
             await logger.logInto(await stackTrace.get(), res + "retakeOpenActivityBtn is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_attempt1ExpansionBtn: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.attempt1ExpansionBtn);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " attempt1ExpansionBtn is clicked");
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "attempt1ExpansionBtn is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_attempt2ExpansionBtn: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.attempt2ExpansionBtn);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " attempt2ExpansionBtn is clicked");
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "attempt2ExpansionBtn is NOT clicked", 'error');
         }
         return res;
     },

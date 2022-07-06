@@ -2,7 +2,7 @@ Label,cssSelector,tagName,group,relation,extraInfo,returnValue,teacherAppLangEN,
 showDetailsBtn,[data-tid=button-activityinfopanelswitcher],button,openActivityPlayer,,,"getAttribute, leftPanelContainer, ""aria-hidden""","[""Show Details"",""Hide Details""]","[""Show Details"",""Hide Details""]"
 infoBtn,[data-tid='button-openinfotoc'],button,openActivityPlayer,,,infoTocPanel,"""""",""""""
 leftPanelHidden,[data-tid=container-leftPanel][aria-hidden=true],img,openActivityPlayer,,,,,
-yourScoreLabel,[data-tid=text-activityScoreInfo] p,p,openActivityPlayer,,,,null,"""Your Score:"""
+yourScoreLabel,[data-tid=text-activityScoreInfo] p,p,openActivityPlayer,,,,null,"""Score:"""
 yourScoreValue,[data-tid=text-activityScoreInfo] h4,h4,openActivityPlayer,,,,,
 feedbackBtn,[data-tid=button-openendedfeedbacknotification],button,openActivityPlayer,,,"getAttribute, leftPanelContainer, ""aria-hidden""","""""",""""""
 submittedOn,[data-tid=button-submittedOn],p,openActivityPlayer,,,,null,"""Submitted on"""
@@ -23,20 +23,22 @@ cardText,[data-tid=scores-progress-text],p,openActivityLeftPanel,,,,null,"""This
 attempt1Label,"[data-tid='Attempt 1'],[data-tid=text-attempt-0]",p,openActivityLeftPanel,,,,"""Attempt 1""","""Attempt 1"""
 attempt2Label,"[data-tid='Attempt 2'],[data-tid=text-attempt-1]",p,openActivityLeftPanel,,,,"""Attempt 2""","""Attempt 2"""
 attempt3Label,"[data-tid='Attempt 3'],[data-tid=text-attempt-2]",p,openActivityLeftPanel,,,,"""Attempt 3""","""Attempt 3"""
+attempt1ExpansionBtn,[data-tid=toggle-expansion-attempt-0] button svg[id],button,openActivityLeftPanel,,,,,""""""
 attempt1SubmittedTime,[data-tid=attempt-0-0-timestamp],p,openActivityLeftPanel,,,,"""submitted""","""submitted"""
 attempt1GradedTime,[data-tid=attempt-0-1-timestamp],p,openActivityLeftPanel,,,,"""graded""","""graded"""
 attempt1StatusPill,[data-tid=attempt-0-status-pill],span,openActivityLeftPanel,,,,"[""Grade Pending"",""Reattempt Requested"",""Graded""]","[""Grade Pending"",""Reattempt Requested"",""Graded""]"
-attempt1GradeLabel,[data-tid=attempt-0-grade-label],p,openActivityLeftPanel,,,,,"""Grade"""
+attempt1GradeLabel,[data-tid=attempt-0-Grade-label],p,openActivityLeftPanel,,,,,"""Grade"""
 attempt1GradeValue,[data-tid=attempt-0-score],p,openActivityLeftPanel,,,,,
-attempt1FeedbackLabel,,p,openActivityLeftPanel,,,,,"""Feedback"""
-attempt1FeedbackValue,,p,openActivityLeftPanel,,,,,
+attempt1FeedbackLabel,[data-tid=attempt-0-Feedback-label],p,openActivityLeftPanel,,,,,"""Feedback"""
+attempt1FeedbackValue,[data-tid=feedback-text-0],p,openActivityLeftPanel,,,,,
+attempt2ExpansionBtn,[data-tid=toggle-expansion-attempt-1] button svg[id],button,openActivityLeftPanel,,,,,""""""
 attempt2SubmittedTime,[data-tid=attempt-1-0-timestamp],p,openActivityLeftPanel,,,,"""submitted""","""submitted"""
 attempt2GradedTime,[data-tid=attempt-1-1-timestamp],p,openActivityLeftPanel,,,,"""graded""","""graded"""
 attempt2StatusPill,[data-tid=attempt-1-status-pill],span,openActivityLeftPanel,,,,"[""Grade Pending"",""Reattempt Requested"",""Graded""]","[""Grade Pending"",""Reattempt Requested"",""Graded""]"
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
+attempt2GradeLabel,[data-tid=attempt-1-Grade-label],p,openActivityLeftPanel,,,,,"""Grade"""
+attempt2GradeValue,[data-tid=attempt-1-score],p,openActivityLeftPanel,,,,,
+attempt2FeedbackLabel,[data-tid=attempt-1-Feedback-label],p,openActivityLeftPanel,,,,,"""Feedback"""
+attempt2FeedbackValue,[data-tid=feedback-text-1],p,openActivityLeftPanel,,,,,
 scoreLabel,[data-tid=main-focus-area-text],p,openActivityLeftPanel,,,,"""Score""",null
 scoreInput,[data-tid=input-main-focus-area],input,openActivityLeftPanel,,,,,
 feedbackLabel,[data-tid=feedback-text],p,openActivityLeftPanel,,,,"""Feedback (Optional)""",null
