@@ -67,8 +67,8 @@
 			"deleteMedia_btn": "[data-tid=button-deletemedia]",
 			"editPrompt_btn": "[data-tid=button-preview-prompt]",
 			"editSubQuestion_btn": "[data-tid=button-preview-subquestion-",
-			"subOptionIndex": "div[data-rbd-droppable-context-id=",
-			"subOptionValue": "[data-rbd-draggable-id=",
+			"subOptionIndex": "[data-tid=preview-subquestion-",
+			"subOptionValue": "-option-",
 			"subOptiontext": "input[type=text]",
 			"topsbottomOption": "[data-tid=radio-optionstyle-1] span[class*=MuiButtonBase]",
 			"leftRightOption": "[data-tid=radio-optionstyle-2] span[class*=MuiButtonBase]",
@@ -113,7 +113,7 @@
 			"fibdropdown": {
 				"uniqueOption": "input[value=individual-options]",
 				"commonOption": "input[value=common-options]",
-				"inputOption":"[data-tid*=input-text-",
+				"inputOption":"[data-tid*=preview-option-",
 				"responseOption":"[data-tid*=select-correctoption-"
 			},
 			"writing":{

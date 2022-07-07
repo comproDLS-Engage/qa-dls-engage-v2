@@ -1,0 +1,10 @@
+Label,cssSelector,tagName,group,relation,extraInfo,returnValue,teacherAppLangEN
+reviewBox_Title,[data-tid=text-title-reviewBox],div,teacherview,,,,"""Review and grade student submissions"""
+reviewBox_SubTitle,[data-tid=text-subtitle-reviewBox],div,teacherview,,,,"""When students in your class submit activities from assigments or class textbooks, you'll see them here to review grade."""
+reviewBox_Cancelbtn,[data-tid=icon-cancelBtn-reviewBox],button,teacherview,,,"this,getViewClassPageData",
+reviewBox_icon,[data-tid=icon-reviewBox],svg,teacherview,,,,
+assignmentCardStudentName,[data-tid*=text-userName-,div,activityGradeCard,,pattern,,
+assignmentCardActivityText,[data-tid*=text-submitActivity-,div,activityGradeCard,,pattern,,"""submitted an activity"""
+assignmentCardActivityDate,[data-tid*=text-submitDate-,div,activityGradeCard,,pattern,,
+assignmentCardActivityName,[data-tid*=text-activityName-,button,activityGradeCard,parent,pattern,writingPlayer.page,
+assignmentCardUnitName,[data-tid*=text-unitPath-,div,activityGradeCard,,pattern,,

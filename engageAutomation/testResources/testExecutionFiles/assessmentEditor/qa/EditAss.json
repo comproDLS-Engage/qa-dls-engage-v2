@@ -103,6 +103,13 @@
 				"testData": []
 			},
 			{
+				"id": "ASE_COM_TC_1005",
+				"description": "Click on Edit Prompt button",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+				]
+			},
+			{
 				"id": "ASE_COM_TC_1004",
 				"description": "Delete Media button",
 				"testFile": "./test/assessmentEditor/editor.test.js",
@@ -128,6 +135,13 @@
 						"dataFile": "./testResources/testcaseData/assessmentEditor/quizDataEdit.json",
 						"jsonPath": "editor.questions.TrueFalse[0].audioCredit"
 					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1014",
+				"description": "Enter the question text",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
 				]
 			},
 			{
