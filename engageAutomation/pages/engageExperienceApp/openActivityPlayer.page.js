@@ -33,10 +33,18 @@ module.exports = {
     attempt1SubmittedTime: selectorFile.css.ComproEngage.openActivityPlayer.attempt1SubmittedTime,
     attempt1GradedTime: selectorFile.css.ComproEngage.openActivityPlayer.attempt1GradedTime,
     attempt1StatusPill: selectorFile.css.ComproEngage.openActivityPlayer.attempt1StatusPill,
+    attempt1GradeLabel: selectorFile.css.ComproEngage.openActivityPlayer.attempt1GradeLabel,
+    attempt1GradeValue: selectorFile.css.ComproEngage.openActivityPlayer.attempt1GradeValue,
+    attempt1FeedbackLabel: selectorFile.css.ComproEngage.openActivityPlayer.attempt1FeedbackLabel,
+    attempt1FeedbackValue: selectorFile.css.ComproEngage.openActivityPlayer.attempt1FeedbackValue,
     attempt2ExpansionBtn: selectorFile.css.ComproEngage.openActivityPlayer.attempt2ExpansionBtn,
     attempt2SubmittedTime: selectorFile.css.ComproEngage.openActivityPlayer.attempt2SubmittedTime,
     attempt2GradedTime: selectorFile.css.ComproEngage.openActivityPlayer.attempt2GradedTime,
     attempt2StatusPill: selectorFile.css.ComproEngage.openActivityPlayer.attempt2StatusPill,
+    attempt2GradeLabel: selectorFile.css.ComproEngage.openActivityPlayer.attempt2GradeLabel,
+    attempt2GradeValue: selectorFile.css.ComproEngage.openActivityPlayer.attempt2GradeValue,
+    attempt2FeedbackLabel: selectorFile.css.ComproEngage.openActivityPlayer.attempt2FeedbackLabel,
+    attempt2FeedbackValue: selectorFile.css.ComproEngage.openActivityPlayer.attempt2FeedbackValue,
     scoreLabel: selectorFile.css.ComproEngage.openActivityPlayer.scoreLabel,
     scoreInput: selectorFile.css.ComproEngage.openActivityPlayer.scoreInput,
     feedbackLabel: selectorFile.css.ComproEngage.openActivityPlayer.feedbackLabel,
@@ -44,6 +52,7 @@ module.exports = {
     reattemptLabel: selectorFile.css.ComproEngage.openActivityPlayer.reattemptLabel,
     reattemptYesBtn: selectorFile.css.ComproEngage.openActivityPlayer.reattemptYesBtn,
     reattemptNoBtn: selectorFile.css.ComproEngage.openActivityPlayer.reattemptNoBtn,
+    submitBtn: selectorFile.css.ComproEngage.openActivityPlayer.submitBtn,
     scoreError: selectorFile.css.ComproEngage.openActivityPlayer.scoreError,
     submitGradeDialogTitle: selectorFile.css.ComproEngage.openActivityPlayer.submitGradeDialogTitle,
     submitGradeDialogSubtitle: selectorFile.css.ComproEngage.openActivityPlayer.submitGradeDialogSubtitle,
@@ -114,10 +123,18 @@ module.exports = {
             attempt1SubmittedTime: ((await action.getElementCount(this.attempt1SubmittedTime)) > 0) ? await action.getText(this.attempt1SubmittedTime) : null,
             attempt1GradedTime: ((await action.getElementCount(this.attempt1GradedTime)) > 0) ? await action.getText(this.attempt1GradedTime) : null,
             attempt1StatusPill: ((await action.getElementCount(this.attempt1StatusPill)) > 0) ? await action.getText(this.attempt1StatusPill) : null,
+            attempt1GradeLabel: ((await action.getElementCount(this.attempt1GradeLabel)) > 0) ? await action.getText(this.attempt1GradeLabel) : null,
+            attempt1GradeValue: ((await action.getElementCount(this.attempt1GradeValue)) > 0) ? await action.getText(this.attempt1GradeValue) : null,
+            attempt1FeedbackLabel: ((await action.getElementCount(this.attempt1FeedbackLabel)) > 0) ? await action.getText(this.attempt1FeedbackLabel) : null,
+            attempt1FeedbackValue: ((await action.getElementCount(this.attempt1FeedbackValue)) > 0) ? await action.getText(this.attempt1FeedbackValue) : null,
             attempt2ExpansionBtn: ((await action.getElementCount(this.attempt2ExpansionBtn)) > 0) ? await action.getText(this.attempt2ExpansionBtn) : null,
             attempt2SubmittedTime: ((await action.getElementCount(this.attempt2SubmittedTime)) > 0) ? await action.getText(this.attempt2SubmittedTime) : null,
             attempt2GradedTime: ((await action.getElementCount(this.attempt2GradedTime)) > 0) ? await action.getText(this.attempt2GradedTime) : null,
             attempt2StatusPill: ((await action.getElementCount(this.attempt2StatusPill)) > 0) ? await action.getText(this.attempt2StatusPill) : null,
+            attempt2GradeLabel: ((await action.getElementCount(this.attempt2GradeLabel)) > 0) ? await action.getText(this.attempt2GradeLabel) : null,
+            attempt2GradeValue: ((await action.getElementCount(this.attempt2GradeValue)) > 0) ? await action.getText(this.attempt2GradeValue) : null,
+            attempt2FeedbackLabel: ((await action.getElementCount(this.attempt2FeedbackLabel)) > 0) ? await action.getText(this.attempt2FeedbackLabel) : null,
+            attempt2FeedbackValue: ((await action.getElementCount(this.attempt2FeedbackValue)) > 0) ? await action.getText(this.attempt2FeedbackValue) : null,
             scoreLabel: ((await action.getElementCount(this.scoreLabel)) > 0) ? await action.getText(this.scoreLabel) : null,
             scoreInput: ((await action.getElementCount(this.scoreInput)) > 0) ? await action.getText(this.scoreInput) : null,
             feedbackLabel: ((await action.getElementCount(this.feedbackLabel)) > 0) ? await action.getText(this.feedbackLabel) : null,
@@ -125,6 +142,7 @@ module.exports = {
             reattemptLabel: ((await action.getElementCount(this.reattemptLabel)) > 0) ? await action.getText(this.reattemptLabel) : null,
             reattemptYesBtn: ((await action.getElementCount(this.reattemptYesBtn)) > 0) ? await action.getText(this.reattemptYesBtn) : null,
             reattemptNoBtn: ((await action.getElementCount(this.reattemptNoBtn)) > 0) ? await action.getText(this.reattemptNoBtn) : null,
+            submitBtn: ((await action.getElementCount(this.submitBtn)) > 0) ? await action.getText(this.submitBtn) : null,
             scoreError: ((await action.getElementCount(this.scoreError)) > 0) ? await action.getText(this.scoreError) : null,
         }
         return obj;
@@ -245,6 +263,7 @@ module.exports = {
     click_submitGradeBtn: async function () {
         await logger.logInto(await stackTrace.get());
         var res;
+        await browser.pause(500);
         res = await action.click(this.submitGradeBtn);
         if (true == res) {
             await logger.logInto(await stackTrace.get(), " submitGradeBtn is clicked");
@@ -318,6 +337,20 @@ module.exports = {
         }
         else {
             await logger.logInto(await stackTrace.get(), res + "reattemptNoBtn is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_submitBtn: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.submitBtn);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " submitBtn is clicked");
+            res = await this.getData_submitGradeDialog();
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "submitBtn is NOT clicked", 'error');
         }
         return res;
     },
@@ -421,7 +454,10 @@ module.exports = {
     set_feedbackInput: async function (value) {
         var res;
         await logger.logInto(await stackTrace.get());
-        res = await action.setValue(this.feedbackInput, value);
+        await action.click(this.feedbackInput);
+        await action.keyPress(['\uE009', 'a']) //press ctrl+a
+        await action.keyPress("\uE017")        //press delete
+        res = await action.keyPress(value);
         if (true == res) {
             await logger.logInto(await stackTrace.get(), "Value is entered in feedbackInput");
         } else {

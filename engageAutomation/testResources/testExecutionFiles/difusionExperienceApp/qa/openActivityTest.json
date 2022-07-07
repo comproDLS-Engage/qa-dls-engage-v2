@@ -624,12 +624,16 @@
                         "jsonPath": "engage.appContent.openActivityPlayer.teacher"
                     },
                     {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+                        "jsonPath": "engage.login.user.writingStudent1.name"
+                    },
+                    {
                         "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
                         "jsonPath": "book.name"
                     },
                     {
-                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
-                        "jsonPath": "engage.login.user.writingStudent1.name"
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                        "jsonPath": "book.component[2].unit[1].section[0].activity[1]"
                     }
                 ]
             },
@@ -639,8 +643,16 @@
                 "testFile": "./test/engageExperienceApp/openActivityPlayer.test.js",
                 "testData": [
                     {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/openActivityGrading.json",
+                        "jsonPath": "openActivityPlayer.clean"
+                    },
+                    {
                         "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
                         "jsonPath": "engage.appContent.openActivityPlayer.teacher"
+                    },
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+                        "jsonPath": "engage.login.user.writingStudent1.name"
                     },
                     {
                         "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
@@ -673,21 +685,9 @@
                 "testFile": "./test/engageExperienceApp/openActivityPlayer.test.js",
                 "testData": [
                     {
-                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/openActivityGrading.json",
-                        "jsonPath": "openActivityPlayer.case1"
-                    },
-                    {
                         "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
                         "jsonPath": "engage.appContent.openActivityPlayer.teacher"
-                    },
-                    {
-                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
-                        "jsonPath": "book.name"
-                    },
-                    {
-                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
-                        "jsonPath": "book.component[2].unit[1].section[0].activity[1]"
-                    }                 
+                    }                
                 ]
             },
             {
@@ -711,12 +711,30 @@
                 "testFile": "./test/engageExperienceApp/openActivityPlayer.test.js",
                 "testData": [
                     {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                        "jsonPath": "engage.appContent.openActivityPlayer.teacher"
+                    }                
+                ]
+            }
+        ],
+        "AfterEach": [],
+        "After": [
+            {
+                "id": "ENG_OPEN_TC_12",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/openActivityPlayer.test.js",
+                "testData": [
+                    {
                         "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/openActivityGrading.json",
-                        "jsonPath": "openActivityPlayer.case2"
+                        "jsonPath": "openActivityPlayer.clean"
                     },
                     {
                         "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
                         "jsonPath": "engage.appContent.openActivityPlayer.teacher"
+                    },
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+                        "jsonPath": "engage.login.user.writingStudent1.name"
                     },
                     {
                         "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
@@ -725,12 +743,9 @@
                     {
                         "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
                         "jsonPath": "book.component[2].unit[1].section[0].activity[1]"
-                    }                 
+                    }
                 ]
-            }
-        ],
-        "AfterEach": [],
-        "After": [
+            },
             {
                 "id": "ENG_SHELL_TC_11",
                 "description": "",

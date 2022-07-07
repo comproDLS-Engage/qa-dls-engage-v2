@@ -1180,7 +1180,7 @@
                     ],
                     "infoBtn": "",
                     "yourScoreLabel": null,
-                    "feedbackBtn": "",
+                    "feedbackBtn": null,
                     "submittedOn": null,
                     "gradedOn": null,
                     "closeBtn": "Close",
@@ -1191,9 +1191,7 @@
                         "Grade has been submitted! The student will be notified and can reattempt as requested.",
                         "Grade has been submitted! The student will be notified."
                     ],
-                    "gradingSubtitle": [
-                        "submitted for review on"
-                    ],
+                    "gradingSubtitle": "submitted for review on",
                     "statusPill": [
                         "Grade Pending",
                         "Reattempt Requested",
@@ -1205,6 +1203,7 @@
                     "attempt1Label": "Attempt 1",
                     "attempt2Label": "Attempt 2",
                     "attempt3Label": "Attempt 3",
+                    "attempt1ExpansionBtn": "",
                     "attempt1SubmittedTime": "submitted",
                     "attempt1GradedTime": "graded",
                     "attempt1StatusPill": [
@@ -1212,6 +1211,9 @@
                         "Reattempt Requested",
                         "Final Grade"
                     ],
+                    "attempt1GradeLabel": "Grade",
+                    "attempt1FeedbackLabel": "Feedback",
+                    "attempt2ExpansionBtn": "",
                     "attempt2SubmittedTime": "submitted",
                     "attempt2GradedTime": "graded",
                     "attempt2StatusPill": [
@@ -1219,11 +1221,14 @@
                         "Reattempt Requested",
                         "Final Grade"
                     ],
+                    "attempt2GradeLabel": "Grade",
+                    "attempt2FeedbackLabel": "Feedback",
                     "scoreLabel": "Score",
                     "feedbackLabel": "Feedback (Optional)",
                     "reattemptLabel": "Request Reattempt",
                     "reattemptYesBtn": "Yes",
                     "reattemptNoBtn": "No",
+                    "submitBtn": "Submit Grade",
                     "scoreError": "Score is required",
                     "submitGradeDialogTitle": "Submit Grade?",
                     "submitGradeDialogSubtitle": "Submitting the grade will notify the student and send any added feedback for review. Grades cannot be changed unless a student reattempts the activity.",
@@ -1260,6 +1265,7 @@
                     "attempt1Label": "Attempt 1",
                     "attempt2Label": "Attempt 2",
                     "attempt3Label": "Attempt 3",
+                    "attempt1ExpansionBtn": "",
                     "attempt1SubmittedTime": "submitted",
                     "attempt1GradedTime": "graded",
                     "attempt1StatusPill": [
@@ -1270,6 +1276,7 @@
                     ],
                     "attempt1GradeLabel": "Grade",
                     "attempt1FeedbackLabel": "Feedback",
+                    "attempt2ExpansionBtn": "",
                     "attempt2SubmittedTime": "submitted",
                     "attempt2GradedTime": "graded",
                     "attempt2StatusPill": [
@@ -1285,6 +1292,7 @@
                     "reattemptLabel": null,
                     "reattemptYesBtn": null,
                     "reattemptNoBtn": null,
+                    "submitBtn": null,
                     "scoreError": null,
                     "retakeOpenDialogTitle": "Retake with previous response?",
                     "retakeOpenDialogSubtitle": "Would you like to use your previous responses for this retake?",
