@@ -297,13 +297,13 @@ module.exports = {
 	setOptiontxt: async function (testdata) {
 		console.log(testdata[2])
 		await logger.logInto(stackTrace.get());
-		console.log(this.subOptionIndex + "\"" + testdata[0] + "\"] " + this.subOptionValue + testdata[1] + "] " + this.subOptiontext)
-		await action.click(this.subOptionIndex + "\"" + testdata[0] + "\"]>" + this.subOptionValue + testdata[1] + "] " + this.subOptiontext)
-		res = await action.clearValue((this.subOptionIndex + "\"" + testdata[0] + "\"]>" + this.subOptionValue + testdata[1] + "] " + this.subOptiontext))
+		console.log(this.subOptionIndex + testdata[0] +   this.subOptionValue + testdata[1] + "] " + this.subOptiontext)
+		await action.click(this.subOptionIndex +  testdata[0] + this.subOptionValue + testdata[1] + "] " + this.subOptiontext)
+		res = await action.clearValue((this.subOptionIndex +  testdata[0] + this.subOptionValue + testdata[1] + "] " + this.subOptiontext))
 		await browser.pause(2000)
-		res = await action.addValue((this.subOptionIndex + "\"" + testdata[0] + "\"]>" + this.subOptionValue + testdata[1] + "] " + this.subOptiontext), testdata[2])
+		res = await action.addValue((this.subOptionIndex + testdata[0]  + this.subOptionValue + testdata[1] + "] " + this.subOptiontext), testdata[2])
 		
-		//res = await action.setValue((this.subOptionIndex + "\"" + testdata[0] + "\"] " + this.subOptionValue + testdata[1] + "] " + this.subOptiontext), testdata[2])
+		//res = await action.setValue((this.subOptionIndex + testdata[0] + "\"] " + this.subOptionValue + testdata[1] + "] " + this.subOptiontext), testdata[2])
 		await browser.pause(2000)
 		if (res == true) {
 			await logger.logInto(stackTrace.get(), " -- Add Pair Button is clicked");
