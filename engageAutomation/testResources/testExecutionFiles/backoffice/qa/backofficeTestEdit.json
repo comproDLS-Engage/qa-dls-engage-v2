@@ -3375,6 +3375,18 @@
 			},
 			{
 				"id": "ASE_COM_TC_1014",
+				"description": "Enter the question text",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_COM_TC_1017",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_COM_TC_1014",
 				"description": "",
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": []
