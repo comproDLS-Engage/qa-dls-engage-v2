@@ -49,7 +49,6 @@
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": []
 			},
-		
 			{
 				"id": "ASE_QUN_TC_5",
 				"description": "Validate that alphanumeric text is supported in Question Title Text.",
@@ -61,58 +60,55 @@
 					}
 				]
 			},
-			
-		
 			{
-			"id": "ASE_COM_TC_42",
-			"description": "Validate if alpha-numeric text is allowed in the Question Text",
-			"testFile": "./test/assessmentEditor/editor.test.js",
-			"testData": [
-				{
-					"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
-					"jsonPath": "editor.questions.MCQ[0].question1.questionText"
-				}
-			]
-		},
-		{
-			"id": "ASE_MCQ_TC_14",
-			"description": "Validate that Option is added in  questions",
-			"testFile": "./test/assessmentEditor/editor.test.js",
-			"testData": [
-				{
-					"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
-					"jsonPath": "editor.questions.MCQ[0].question1.options"
-				}
-			]
-		},
-		{
-			"id": "ASE_COM_TC_75",
-			"description": "Click on Media button and Set Image Media",
-			"testFile": "./test/assessmentEditor/editor.test.js",
-			"testData": [
-				{
-					"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
-					"jsonPath": "editor.questions.MCQ[0].question1.imagePath"
-				}
-			]
-		},
-		{
-			"id": "ASE_COM_TC_1012",
-			"description": "Add the score in the activity player",
-			"testFile": "./test/assessmentEditor/editor.test.js",
-			"testData": [
-				{
-					"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
-					"jsonPath": "editor.questions.MCQ[0].question1.score"
-				}
-			]
-		},
+				"id": "ASE_COM_TC_42",
+				"description": "Validate if alpha-numeric text is allowed in the Question Text",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQ[0].question1.questionText"
+					}
+				]
+			},
+			{
+				"id": "ASE_MCQ_TC_14",
+				"description": "Validate that Option is added in  questions",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQ[0].question1.options"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_75",
+				"description": "Click on Media button and Set Image Media",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQ[0].question1.imagePath"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1012",
+				"description": "Add the score in the activity player",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.MCQ[0].question1.score"
+					}
+				]
+			},
 			{
 				"id": "ASE_COM_TC_1016",
 				"description": "Click Shuffling Checkbox",
 				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-				]
+				"testData": []
 			},
 			{
 				"id": "ASE_COM_TC_4",
@@ -163,8 +159,7 @@
 				"id": "ASE_COM_TC_1005",
 				"description": "Click on Edit Prompt button",
 				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-				]
+				"testData": []
 			},
 			{
 				"id": "ASE_COM_TC_75",
@@ -181,10 +176,8 @@
 				"id": "ASE_COM_TC_1014",
 				"description": "Enter the question text",
 				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-				]
+				"testData": []
 			},
-			
 			{
 				"id": "ASE_COM_TC_1007",
 				"description": "Click on Editor tab",
@@ -328,14 +321,11 @@
 					}
 				]
 			},
-
-			
 			{
 				"id": "ASE_COM_TC_1016",
 				"description": "Click Shuffling Checkbox",
 				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-				]
+				"testData": []
 			},
 			{
 				"id": "ASE_COM_TC_4",
@@ -359,7 +349,8 @@
 				"description": "Validate the editor is selected in question pane and displayed.",
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": []
-			},	{
+			},
+			{
 				"id": "ASE_COM_TC_1001",
 				"description": "Click on Editor tab",
 				"testFile": "./test/assessmentEditor/editor.test.js",
@@ -385,10 +376,8 @@
 				"id": "ASE_COM_TC_1005",
 				"description": "Click on Edit Prompt button",
 				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-				]
+				"testData": []
 			},
-
 			{
 				"id": "ASE_COM_TC_1006",
 				"description": "Click on Editor tab",
@@ -404,8 +393,7 @@
 				"id": "ASE_COM_TC_1005",
 				"description": "Click on Edit Prompt button",
 				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-				]
+				"testData": []
 			},
 			{
 				"id": "ASE_COM_TC_86",
@@ -433,8 +421,7 @@
 				"id": "ASE_COM_TC_1014",
 				"description": "Enter the question text",
 				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-				]
+				"testData": []
 			},
 			{
 				"id": "ASE_COM_TC_1007",
@@ -495,8 +482,7 @@
 				"id": "ASE_COM_TC_1016",
 				"description": "Click Shuffling Checkbox",
 				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-				]
+				"testData": []
 			},
 			{
 				"id": "ASE_COM_TC_4",
@@ -591,8 +577,7 @@
 				"id": "ASE_COM_TC_1016",
 				"description": "Click Shuffling Checkbox",
 				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-				]
+				"testData": []
 			},
 			{
 				"id": "ASE_COM_TC_4",
@@ -650,15 +635,12 @@
 					}
 				]
 			},
-		
 			{
 				"id": "ASE_COM_TC_1014",
 				"description": "Enter the question text",
 				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-				]
+				"testData": []
 			},
-			
 			{
 				"id": "ASE_MCQ_TC_14",
 				"description": "Validate that Option is added in  questions",
@@ -685,8 +667,7 @@
 				"id": "ASE_COM_TC_1016",
 				"description": "Click Shuffling Checkbox",
 				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-				]
+				"testData": []
 			},
 			{
 				"id": "ASE_COM_TC_4",
@@ -737,10 +718,8 @@
 				"id": "ASE_COM_TC_1005",
 				"description": "Click on Edit Prompt button",
 				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-				]
+				"testData": []
 			},
-
 			{
 				"id": "ASE_COM_TC_1006",
 				"description": "Click on Editor tab",
@@ -763,13 +742,11 @@
 					}
 				]
 			},
-		
 			{
 				"id": "ASE_COM_TC_1014",
 				"description": "Enter the question text",
 				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-				]
+				"testData": []
 			},
 			{
 				"id": "ASE_FIB_TC_1",
@@ -1015,7 +992,6 @@
 					}
 				]
 			},
-		
 			{
 				"id": "ASE_COM_TC_15",
 				"description": "Click on Media button and Set Image Media",
@@ -1100,8 +1076,7 @@
 				"id": "ASE_COM_TC_1016",
 				"description": "Click Shuffling Checkbox",
 				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-				]
+				"testData": []
 			},
 			{
 				"id": "ASE_COM_TC_4",
@@ -1148,13 +1123,11 @@
 					}
 				]
 			},
-
 			{
 				"id": "ASE_COM_TC_1005",
 				"description": "Click on Edit Prompt button",
 				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-				]
+				"testData": []
 			},
 			{
 				"id": "ASE_COM_TC_75",
@@ -1167,7 +1140,6 @@
 					}
 				]
 			},
-
 			{
 				"id": "ASE_COM_TC_1006",
 				"description": "Click on Editor tab",
@@ -1370,16 +1342,13 @@
 				"id": "ASE_COM_TC_1016",
 				"description": "Click Shuffling Checkbox",
 				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-				]
+				"testData": []
 			},
 			{
 				"id": "ASE_COM_TC_1011",
 				"description": "",
 				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-				
-				]
+				"testData": []
 			},
 			{
 				"id": "ASE_COM_TC_4",
@@ -1430,8 +1399,7 @@
 				"id": "ASE_COM_TC_1005",
 				"description": "Click on Edit Prompt button",
 				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-				]
+				"testData": []
 			},
 			{
 				"id": "ASE_COM_TC_75",
@@ -1470,8 +1438,7 @@
 				"id": "ASE_COM_TC_1014",
 				"description": "Enter the question text",
 				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-				]
+				"testData": []
 			},
 			{
 				"id": "ASE_FIBDROPDOWN_TC_1015",
@@ -1499,8 +1466,7 @@
 				"id": "ASE_COM_TC_1016",
 				"description": "Click Shuffling Checkbox",
 				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-				]
+				"testData": []
 			},
 			{
 				"id": "ASE_COM_TC_4",
@@ -1551,10 +1517,8 @@
 				"id": "ASE_COM_TC_1005",
 				"description": "Click on Edit Prompt button",
 				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-				]
+				"testData": []
 			},
-
 			{
 				"id": "ASE_COM_TC_1006",
 				"description": "Click on Editor tab",
@@ -1581,36 +1545,31 @@
 				"id": "ASE_COM_TC_1014",
 				"description": "Enter the question text",
 				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-				]
+				"testData": []
 			},
 			{
 				"id": "ASE_FIBDROPDOWN_TC_1014",
 				"description": "Click the Common option",
 				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-				]
+				"testData": []
 			},
 			{
 				"id": "ASE_COM_TC_1013",
 				"description": "Click the Common option",
 				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-				]
+				"testData": []
 			},
 			{
 				"id": "ASE_COM_TC_1013",
 				"description": "Click the Common option",
 				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-				]
+				"testData": []
 			},
 			{
 				"id": "ASE_COM_TC_1013",
 				"description": "Click the Common option",
 				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-				]
+				"testData": []
 			},
 			{
 				"id": "ASE_FIBDROPDOWN_TC_1015",
@@ -1634,7 +1593,6 @@
 					}
 				]
 			},
-			
 			{
 				"id": "ASE_COM_TC_1012",
 				"description": "Add the score in the activity player",
@@ -1650,8 +1608,7 @@
 				"id": "ASE_COM_TC_1016",
 				"description": "Click Shuffling Checkbox",
 				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-				]
+				"testData": []
 			}
 		],
 		"AfterEach": [],
@@ -1755,8 +1712,7 @@
 				"id": "ASE_COM_TC_1014",
 				"description": "Enter the question text",
 				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-				]
+				"testData": []
 			},
 			{
 				"id": "ASE_COM_TC_1017",
