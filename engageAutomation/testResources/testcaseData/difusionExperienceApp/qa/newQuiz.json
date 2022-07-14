@@ -1,0 +1,37 @@
+{
+  "quiz1": {
+    "type": "Native Engage Learning Object",
+    "name": "",
+    "question": [
+      {
+        "number": 1,
+        "quesTitle": "Gestalt psychology",
+        "instructionHeading": "In this activity",
+        "instructionText": "",
+        "promptText": "Gestalt Psychology states that the whole is different from the sum of its parts. How does the term gestalt relate to the psychological study of perception? Gestalt psychology was popular in the 20th century, but it has been replaced by psycholinguistics.",
+        "selectOneText": "Select all correct answers",
+        "type": "multi-mcq",
+        "mediaType": "image",
+        "subQues": [
+          ["1","Which gestalt principle is shown in image?","image"],
+          ["2","Which among the following laws do not belong to Gestalt Phycology?",null],
+          ["3","Select the images which related to Gestalt Psychology",null]
+        ],
+        "answerKey": [
+          ["1-O1","Closure ","","correct"],
+          ["1-O2","Continuity","",null],
+          ["1-O3","Similarity","",null],
+          ["1-O4","Proximity","select",null],
+          ["2-O1","Kurt Lewin Law","select",null],
+          ["2-O2","Pragnanz Law","","correct"],
+          ["2-O3","Proximity Law","",null],
+          ["2-O4","Wolfgang Kholer Law","select",null],
+          ["3-O1","","select",null],
+          ["3-O2","","select","correct"],
+          ["3-O3","","select",null]
+        ],
+        "scenario1": []
+      }
+    ]
+  }
+}

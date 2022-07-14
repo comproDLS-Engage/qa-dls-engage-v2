@@ -5,9 +5,24 @@ var sts;
 module.exports = {
 
 	//Validate the Multi MCSR question launch in default unattempted state
-	ENG_ITEM_MMCQ_TC_1: async function () {
+	ENG_ITEM_MMCQ_TC_1: async function (testdata) {
 		sts = await multimcq.isInitialized();
 		await assertion.assertEqual(sts, true, "Multi MCSR question not loaded");
+		sts = await multimcq.getData_subques(testdata[0]);
+		if ((typeof (sts)) === "object") {
+			for (var i = 0; i < sts.length; i++) {
+				await assertion.assertEqual(sts[i][1], testdata[0][i][1], "Subques for index " + i);
+				await assertion.assert(await sts[i][2].includes(testdata[0][i][2]), "Expected - " + sts[i][2] + " to include " + testdata[0][i][2]);
+			}
+		}
+		else await assertion.assertFail(sts);
+		sts = await multimcq.getData_options(testdata[1]);
+		if ((typeof (sts)) === "object") {
+			for (var i = 0; i < sts.length; i++) {
+				await assertion.assertEqual(sts[i][3], null, "Option mismatch for index " + i);
+			}
+		}
+		else await assertion.assertFail(sts);
 	},
 
 	//Validate that the user can select an option in multiple sub-questions while performing the question
@@ -18,10 +33,10 @@ module.exports = {
 
 	//Validate MCMR question functionality for Correct scenario
 	ENG_ITEM_MMCQ_TC_3: async function (testdata) {
-		sts = await multimcq.getData_multiMcq(testdata);
+		sts = await multimcq.getData_options(testdata);
 		if ((typeof (sts)) === "object") {
 			for (var i = 0; i < sts.length; i++) {
-				await assertion.assertEqual(sts[i][3], testdata[i][3], "Multi MCSR 'value' for index " + i + " is - " + sts[i]);
+				await assertion.assertEqual(sts[i][3], testdata[i][3], "Option mismatch for index " + i);
 			}
 		}
 		else await assertion.assertFail(sts);

@@ -7,6 +7,9 @@ module.exports = {
 
 	choices: selectorFile.css.ComproEngage.multiMcq.choices,
 	selectedChoice: selectorFile.css.ComproEngage.multiMcq.selectedChoice,
+	subquesText: selectorFile.css.ComproEngage.multiMcq.subquesText,
+	subquesMediaCont1: selectorFile.css.ComproEngage.multiMcq.subquesMediaCont1,
+	subquesMediaCont2: selectorFile.css.ComproEngage.multiMcq.subquesMediaCont2,
 
 	isInitialized: async function () {
 		await logger.logInto(await stackTrace.get());
@@ -40,20 +43,37 @@ module.exports = {
 		return res;
 	},
 
-	getData_multiMcq: async function (mcqQuesData) {
+	getData_options: async function (optionsArr) {
 		await logger.logInto(await stackTrace.get());
 		await action.switchToFrame(0);
 		var obj = [];
-		var res, choiceSelector, selChoiceSelector, value;
-		for (let i = 0; i < mcqQuesData.length; i++) {
-			choiceSelector = this.choices + mcqQuesData[i][0] + "] ";
-			selChoiceSelector = choiceSelector + this.selectedChoice;
-			value = await itemplayer.getFeedbackIconDetails(choiceSelector)
-			res = await action.getElementCount(selChoiceSelector);
-			if (res == 1)
-				obj[i] = [mcqQuesData[i][0], await action.getText(choiceSelector), "select", value]
-			else
-				obj[i] = [mcqQuesData[i][0], await action.getText(choiceSelector), "", value]
+		var choiceSelector, selChoiceSelector;
+		for (let i = 0; i < optionsArr.length; i++) {
+			choiceSelector = this.choices + optionsArr[i][0] + "]";
+			selChoiceSelector =  choiceSelector + this.selectedChoice;
+			obj[i] = [
+				optionsArr[i][0],
+				await action.getText(choiceSelector),
+				(await action.getElementCount(selChoiceSelector) > 0) ? "select" : "",
+				await itemplayer.getFeedbackIconDetails(choiceSelector)
+			];
+		}
+		await action.switchToParentFrame();
+		return obj;
+	},
+
+	getData_subques: async function (subquesArr) {
+		await logger.logInto(await stackTrace.get());
+		await action.switchToFrame(0);
+		var obj = [];
+		var sel;
+		for (let i = 0; i < subquesArr.length; i++) {
+			sel = this.subquesMediaCont1 + subquesArr[i][0] + this.subquesMediaCont2;
+			obj[i] = [
+				subquesArr[i][0],
+				await action.getText(this.subquesText + subquesArr[i][0]),
+				(await action.getElementCount(sel) > 0) ? await action.getAttribute(sel,'data-tid') : ""
+			];
 		}
 		await action.switchToParentFrame();
 		return obj;

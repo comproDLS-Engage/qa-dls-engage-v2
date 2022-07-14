@@ -399,16 +399,21 @@
                 "assignmentCardUnitName": "[data-tid*=text-unitPath-"
             },
             "itemPlayer": {
-                "correctIcon": "[data-tid=icon-correct]",
-                "incorrectIcon": "[data-tid=icon-incorrect]",
-                "questionText": "[data-tid=text-question]",
-                "instructionText": "[data-tid=text-instruction]",
-                "itemPlayerContainer": "[id='itemContainer']",
-                "videoMedia": "[data-tid=container-video]",
-                "imageMedia": "[data-tid=container-image]",
-                "audioMedia": "[data-tid=container-audio]",
-                "activeQues": "div[class*=item-player-container] > div[style='height: 100%; display: block;'], div[class*=item-player-container] > div[style='height: 100%;']",
-                "imageScelaton": "img[src*=\"data:image\"]"
+                "correctIcon": " [data-tid=icon-correct]",
+                "incorrectIcon": " [data-tid=icon-incorrect]",
+                "questionTitle": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-tid=text-headerTitle]",
+                "instructionHeading": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-tid=text-instructionHeading]",
+                "instructionText": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-tid=text-instruction]",
+                "promptText": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-tid=text-prompt]",
+                "selectOneText": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-tid=text-selectOneOrMore],div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-tid=text-selectOne]",
+                "itemPlayerContainer": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [id='itemContainer']",
+                "videoMedia": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [aria-label=Prompt] [data-tid=container-video]",
+                "imageMedia": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [aria-label=Prompt] [data-tid=container-image]",
+                "audioMedia": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [aria-label=Prompt] [data-tid=container-audio]",
+                "activeQues": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']), div[class*=item-player-container] > div[style='height: 100%;']",
+                "imageSkeleton": "img[src*=\"data:image\"]",
+                "mediaLoading": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [aria-label=Prompt] [class*=plyr--loading],div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [aria-label=Prompt] img[src*=\"data:image\"]",
+                "mediaPlayBtn": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [aria-label=Prompt] [class=plyr__controls] button[data-plyr=play]"
             },
             "testPlayer": {
                 "checkMyWork_btn": "[class=buttons-container] [class=defaultBtn-check-mywork-icon] , [data-tid=button-checkAnswers],[data-tid=button-checkanswers], [data-tid=button-check]",
@@ -428,7 +433,12 @@
             },
             "multiMcq": {
                 "choices": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-tid*=input-click-option-sub-question-",
-                "selectedChoice": "[aria-checked=true]"
+                "selectedChoice": "[aria-checked=true]",
+                "choiceMediaPlayBtn": "] [data-tid*=container-] button[data-plyr=play]",
+                "mediaLoading": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [class*=plyr--loading]",
+                "subquesText": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-tid*=text-sub-question-",
+                "subquesMediaCont1": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-tid*=mediaContainer-sub-question-",
+                "subquesMediaCont2": "] > div > [data-tid*=container-]"
             },
             "FIB": {
                 "source": "[data-tid=dragsource-option-",
@@ -444,11 +454,11 @@
                 "responseOption": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [class*=mdc-menu-surface--open] [data-tid*=select-responseoption][data-value="
             },
             "dragAndDrop": {
-                "source": "[data-tid=dragsource-option-",
-                "target": "[data-tid=droptarget-option-",
-                "tapToZoom": "[data-tid='button-taptozoom']",
-                "zoomOverlay": "[class*='zoom-overlay']",
-                "zoomDialogClose_btn": "[data-tid='button-zoomdialogclose']"
+                "source": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-tid*=dragsource-option-",
+                "target": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-tid*=droptarget-option-",
+                "tapToZoom": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-tid='button-taptozoom']",
+                "zoomOverlay": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [class*='zoom-overlay']",
+                "zoomDialogClose_btn": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-tid='button-zoomdialogclose']"
             },
             "MCMR": {
                 "choice": "div[data-tid=input-click-option-",
