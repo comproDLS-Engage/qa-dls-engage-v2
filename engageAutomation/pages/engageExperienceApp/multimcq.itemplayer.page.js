@@ -9,7 +9,11 @@ module.exports = {
 	selectedChoice: selectorFile.css.ComproEngage.multiMcq.selectedChoice,
 	subquesText: selectorFile.css.ComproEngage.multiMcq.subquesText,
 	subquesMediaCont1: selectorFile.css.ComproEngage.multiMcq.subquesMediaCont1,
-	subquesMediaCont2: selectorFile.css.ComproEngage.multiMcq.subquesMediaCont2,
+	qMediaContainer: selectorFile.css.ComproEngage.multiMcq.qMediaContainer,
+	qImageLoaded: selectorFile.css.ComproEngage.multiMcq.qImageLoaded,
+	qPlyrLoading: selectorFile.css.ComproEngage.multiMcq.qPlyrLoading,
+	qPlyrPlaying: selectorFile.css.ComproEngage.multiMcq.qPlyrPlaying,
+	qPlyrPlayBtn: selectorFile.css.ComproEngage.multiMcq.qPlyrPlayBtn,
 
 	isInitialized: async function () {
 		await logger.logInto(await stackTrace.get());
@@ -47,16 +51,30 @@ module.exports = {
 		await logger.logInto(await stackTrace.get());
 		await action.switchToFrame(0);
 		var obj = [];
-		var choiceSelector, selChoiceSelector;
+		var choiceSelector, res;
 		for (let i = 0; i < optionsArr.length; i++) {
-			choiceSelector = this.choices + optionsArr[i][0] + "]";
-			selChoiceSelector =  choiceSelector + this.selectedChoice;
+			choiceSelector = this.choices + optionsArr[i][0];
 			obj[i] = [
 				optionsArr[i][0],
 				await action.getText(choiceSelector),
-				(await action.getElementCount(selChoiceSelector) > 0) ? "select" : "",
-				await itemplayer.getFeedbackIconDetails(choiceSelector)
+				(await action.getElementCount(choiceSelector + this.selectedChoice) > 0) ? "select" : null,
+				await itemplayer.getFeedbackIconDetails(choiceSelector + "]"),
+				(await action.getElementCount(choiceSelector + this.qMediaContainer) > 0) ? await action.getAttribute(choiceSelector + this.qMediaContainer, 'data-tid') : null
 			];
+			console.log(choiceSelector + this.qMediaContainer)
+			console.log(obj[i][4])
+			if (obj[i][4] != null) {
+				const arr = await obj[i][4].split("-");
+				if (arr[1] == "image")
+					res = await action.waitForDisplayed(this.qImageLoaded);
+				else if (arr[1] == "audio" || arr[1] == "video")
+					res = await this.getPlyrStatus(choiceSelector);
+
+				if (res)
+					obj[i][4] = arr[1];
+				else
+					obj[i][4] = arr[1] + " did not load";
+			}
 		}
 		await action.switchToParentFrame();
 		return obj;
@@ -66,16 +84,57 @@ module.exports = {
 		await logger.logInto(await stackTrace.get());
 		await action.switchToFrame(0);
 		var obj = [];
-		var sel;
+		var sel, res;
 		for (let i = 0; i < subquesArr.length; i++) {
-			sel = this.subquesMediaCont1 + subquesArr[i][0] + this.subquesMediaCont2;
+			sel = this.subquesMediaCont1 + subquesArr[i][0];
 			obj[i] = [
 				subquesArr[i][0],
 				await action.getText(this.subquesText + subquesArr[i][0]),
-				(await action.getElementCount(sel) > 0) ? await action.getAttribute(sel,'data-tid') : ""
+				(await action.getElementCount(sel + this.qMediaContainer) > 0) ? await action.getAttribute(sel + this.qMediaContainer, 'data-tid') : null
 			];
+
+			if (obj[i][2] != null) {
+				const arr = await obj[i][2].split("-");
+				if (arr[1] == "image")
+					res = await action.waitForDisplayed(this.subquesImageLoaded);
+				else if (arr[1] == "audio" || arr[1] == "video")
+					res = await this.getPlyrStatus(sel);
+
+				if (res)
+					obj[i][2] = arr[1];
+				else
+					obj[i][2] = arr[1] + " did not load";
+			}
 		}
 		await action.switchToParentFrame();
 		return obj;
+	},
+
+	getPlyrStatus: async function (qSel) {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(qSel + this.qPlyrPlayBtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), "qPlyrPlayBtn is clicked");
+			res = await action.waitForDisplayed(qSel + this.qPlyrLoading, undefined, true);
+			if (true == res) {
+				await logger.logInto(await stackTrace.get(), "media is loaded");
+				res = await action.waitForDisplayed(qSel + this.qPlyrPlaying);
+				if (true == res) {
+					await logger.logInto(await stackTrace.get(), "media is playing");
+					res = await action.click(qSel + this.qPlyrPlayBtn);
+				}
+				else
+					await logger.logInto(await stackTrace.get(), res + "media is not playing", 'error');
+			}
+			else
+				await logger.logInto(await stackTrace.get(), res + "media is not loaded", 'error');
+		}
+		else
+			await logger.logInto(await stackTrace.get(), res + "qPlyrPlayBtn is NOT clicked", 'error');
+
+		console.log(res)
+		return res;
 	}
+
 }

@@ -18,9 +18,11 @@ module.exports = {
 	imageMedia: selectorFile.css.ComproEngage.itemPlayer.imageMedia,
 	audioMedia: selectorFile.css.ComproEngage.itemPlayer.audioMedia,
 	activeQues: selectorFile.css.ComproEngage.itemPlayer.activeQues,
-	imageSkeleton: selectorFile.css.ComproEngage.itemPlayer.imageSkeleton,
-	mediaLoading: selectorFile.css.ComproEngage.itemPlayer.mediaLoading,
-	mediaPlayBtn: selectorFile.css.ComproEngage.itemPlayer.mediaPlayBtn,
+	//imageSkeleton: selectorFile.css.ComproEngage.itemPlayer.imageSkeleton,
+	promptImageLoaded: selectorFile.css.ComproEngage.itemPlayer.promptImageLoaded,
+	plyrLoading: selectorFile.css.ComproEngage.itemPlayer.plyrLoading,
+	plyrPlaying: selectorFile.css.ComproEngage.itemPlayer.plyrPlaying,
+	plyrPlayBtn: selectorFile.css.ComproEngage.itemPlayer.plyrPlayBtn,
 
 	isInitialized: async function () {
 		await logger.logInto(await stackTrace.get());
@@ -46,7 +48,6 @@ module.exports = {
 	getItemplayerInfo: async function () {
 		await logger.logInto(await stackTrace.get());
 		await action.switchToFrame(0);
-		await action.waitForDisplayed(this.imageSkeleton, undefined, true);
 		let question = {
 			quesType: null,
 			quesTitle: ((await action.getElementCount(this.questionTitle)) == 1) ? await action.getText(this.questionTitle) : null,
@@ -55,19 +56,12 @@ module.exports = {
 			promptText: ((await action.getElementCount(this.promptText)) == 1) ? await action.getText(this.promptText) : null,
 			selectOneText: ((await action.getElementCount(this.selectOneText)) == 1) ? await action.getText(this.selectOneText) : null,
 			mediaType: null,
-			mediaLoaded: await this.getMediaStatus(),
+			mediaLoaded: null,
 			isSubmitted: null,
 			correctCount: await action.getElementCount(this.correctIcon),
 			incorrectCount: await action.getElementCount(this.incorrectIcon),
 			feedback: {}
 		};
-
-		/*let qIndex = await this.getQuesIndex();
-		let activeItemplayer = "div[index='" + qIndex + "'] " + this.itemPlayerContainer;
-		let correctOpt = "div[index='" + qIndex + "'] " + this.correctIcon;
-		let incorrectOpt = "div[index='" + qIndex + "'] " + this.incorrectIcon;
-		let quesTitleSelector = "div[index='" + qIndex + "'] " + this.questionTitle;
-		let instructionTextSelector = "div[index='" + qIndex + "'] " + this.instructionText;*/
 
 		let text = await action.getAttribute(this.itemPlayerContainer, 'class')
 		const arr = await text.split(" ");
@@ -78,13 +72,18 @@ module.exports = {
 		else
 			question.isSubmitted = false;
 
-		if ((await action.getElementCount(this.videoMedia)) == 1)
-			question.mediaType = "video";
-		else if ((await action.getElementCount(this.imageMedia)) == 1)
+		if ((await action.getElementCount(this.imageMedia)) == 1) {
 			question.mediaType = "image";
-		else if ((await action.getElementCount(this.audioMedia)) == 1)
+			question.mediaLoaded = await action.waitForDisplayed(this.promptImageLoaded);
+		}
+		else if ((await action.getElementCount(this.videoMedia)) == 1) {
+			question.mediaType = "video";
+			question.mediaLoaded = await this.getPlyrStatus();
+		}
+		else if ((await action.getElementCount(this.audioMedia)) == 1) {
 			question.mediaType = "audio";
-
+			question.mediaLoaded = await this.getPlyrStatus();
+		}
 		await action.switchToParentFrame();
 		return question;
 	},
@@ -109,26 +108,29 @@ module.exports = {
 		return value;
 	},
 
-	getMediaStatus: async function () {
+	getPlyrStatus: async function () {
 		await logger.logInto(await stackTrace.get());
-        var res;
-		await action.waitForDisplayed(this.mediaLoading);
-        res = await action.click(this.mediaPlayBtn);
-        if (true == res) {
-            await logger.logInto(await stackTrace.get(), "mediaPlayBtn is clicked");
-            res = await action.waitForDisplayed(this.mediaLoading, undefined, true);
+		var res;
+		res = await action.click(this.plyrPlayBtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), "plyrPlayBtn is clicked");
+			res = await action.waitForDisplayed(this.plyrLoading, undefined, true);
 			if (true == res) {
 				await logger.logInto(await stackTrace.get(), "media is loaded");
-				res = await action.click(this.mediaPlayBtn);
+				res = await action.waitForDisplayed(this.plyrPlaying);
+				if (true == res) {
+					await logger.logInto(await stackTrace.get(), "media is playing");
+					res = await action.click(this.plyrPlayBtn);
+				}
+				else
+					await logger.logInto(await stackTrace.get(), res + "media is not playing", 'error');
 			}
-			else {
+			else
 				await logger.logInto(await stackTrace.get(), res + "media is not loaded", 'error');
-			}
-        }
-        else {
-            await logger.logInto(await stackTrace.get(), res + "mediaPlayBtn is NOT clicked", 'error');
-        }
-        return res;
+		}
+		else
+			await logger.logInto(await stackTrace.get(), res + "plyrPlayBtn is NOT clicked", 'error');
+		return res;
 	}
 
 	/*generateScreenshot: async function () {

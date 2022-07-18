@@ -13,18 +13,18 @@
         "type": "multi-mcq",
         "mediaType": "image",
         "subQues": [
-          ["1","Quelle activité semble être à l’origine de la richesse de Nantes ?",""],
-          ["2","Quels métiers profi tent de cet enrichissement ?",""]
+          ["1","Quelle activité semble être à l’origine de la richesse de Nantes ?",null],
+          ["2","Quels métiers profi tent de cet enrichissement ?",null]
         ],
         "answerKey": [
-          ["1-O1","Commerce ","select","correct"],
-          ["1-O2","Construction","",null],
-          ["1-O3","Construction de navires","",null],
-          ["1-O4","Toutes ces","",null],
-          ["2-O1","Commerce ","",null],
-          ["2-O2","Construction","select","correct"],
-          ["2-O3","Construction de navires","",null],
-          ["2-O4","Toutes ces","",null]
+          ["1-O1","Commerce ","select","correct",null],
+          ["1-O2","Construction",null,null,null],
+          ["1-O3","Construction de navires",null,null,null],
+          ["1-O4","Toutes ces",null,null,null],
+          ["2-O1","Commerce ",null,null,null],
+          ["2-O2","Construction","select","correct",null],
+          ["2-O3","Construction de navires",null,null,null],
+          ["2-O4","Toutes ces",null,null,null]
         ],
         "scenario1": [
           ["1-O1","Commerce ","","correct"],

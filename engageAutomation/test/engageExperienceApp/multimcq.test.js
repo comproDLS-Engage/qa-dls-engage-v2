@@ -11,15 +11,19 @@ module.exports = {
 		sts = await multimcq.getData_subques(testdata[0]);
 		if ((typeof (sts)) === "object") {
 			for (var i = 0; i < sts.length; i++) {
-				await assertion.assertEqual(sts[i][1], testdata[0][i][1], "Subques for index " + i);
-				await assertion.assert(await sts[i][2].includes(testdata[0][i][2]), "Expected - " + sts[i][2] + " to include " + testdata[0][i][2]);
+				await assertion.assertEqual(sts[i][1], testdata[0][i][1], "Subques text for index " + i);
+				//await assertion.assert(await sts[i][2].includes(testdata[0][i][2]), "Expected - " + sts[i][2] + " to include " + testdata[0][i][2]);
+				await assertion.assertEqual(sts[i][2], testdata[0][i][2], "Subques media for index " + i);
 			}
 		}
 		else await assertion.assertFail(sts);
 		sts = await multimcq.getData_options(testdata[1]);
+		console.log(sts)
 		if ((typeof (sts)) === "object") {
 			for (var i = 0; i < sts.length; i++) {
-				await assertion.assertEqual(sts[i][3], null, "Option mismatch for index " + i);
+				await assertion.assertEqual(sts[i][2], null, "Option selection mismatch for index " + i);
+				await assertion.assertEqual(sts[i][3], null, "Option status mismatch for index " + i);
+				await assertion.assertEqual(sts[i][4], testdata[1][i][4], "Option media mismatch for index " + i);
 			}
 		}
 		else await assertion.assertFail(sts);

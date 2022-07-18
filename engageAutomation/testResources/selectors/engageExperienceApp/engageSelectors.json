@@ -412,8 +412,10 @@
                 "audioMedia": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [aria-label=Prompt] [data-tid=container-audio]",
                 "activeQues": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']), div[class*=item-player-container] > div[style='height: 100%;']",
                 "imageSkeleton": "img[src*=\"data:image\"]",
-                "mediaLoading": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [aria-label=Prompt] [class*=plyr--loading],div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [aria-label=Prompt] img[src*=\"data:image\"]",
-                "mediaPlayBtn": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [aria-label=Prompt] [class=plyr__controls] button[data-plyr=play]"
+                "promptImageLoaded": "img:not([src*=\"data:image\"])",
+                "plyrLoading": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [aria-label=Prompt] [class*=plyr--loading]",
+                "plyrPlaying": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [aria-label=Prompt] [class*=plyr--playing]",
+                "plyrPlayBtn": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [aria-label=Prompt] [class=plyr__controls] button[data-plyr=play]"
             },
             "testPlayer": {
                 "checkMyWork_btn": "[class=buttons-container] [class=defaultBtn-check-mywork-icon] , [data-tid=button-checkAnswers],[data-tid=button-checkanswers], [data-tid=button-check]",
@@ -433,12 +435,14 @@
             },
             "multiMcq": {
                 "choices": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-tid*=input-click-option-sub-question-",
-                "selectedChoice": "[aria-checked=true]",
-                "choiceMediaPlayBtn": "] [data-tid*=container-] button[data-plyr=play]",
-                "mediaLoading": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [class*=plyr--loading]",
+                "selectedChoice": "] [aria-checked=true]",
                 "subquesText": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-tid*=text-sub-question-",
                 "subquesMediaCont1": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-tid*=mediaContainer-sub-question-",
-                "subquesMediaCont2": "] > div > [data-tid*=container-]"
+                "qMediaContainer": "] > div > [data-tid*=container-]",
+                "qImageLoaded": "img[data-tid=image-loaded]",
+                "qPlyrLoading": "] [class*=plyr--loading]",
+                "qPlyrPlaying": "] [class*=plyr--playing]",
+                "qPlyrPlayBtn": "] [class=plyr__controls] button[data-plyr=play]"
             },
             "FIB": {
                 "source": "[data-tid=dragsource-option-",
