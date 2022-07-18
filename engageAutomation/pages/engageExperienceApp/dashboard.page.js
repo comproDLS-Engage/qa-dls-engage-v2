@@ -565,9 +565,7 @@ module.exports = {
     await logger.logInto(await stackTrace.get());
     var i, res;
     var resourceTitle = await action.findElements(this.resourceTitle);
-    console.log(resourceTitleName)
     for (i = 0; i < resourceTitle.length; i++) {
-      console.log(await action.getText(resourceTitle[i]))
       if (((await action.getText(resourceTitle[i]))) == resourceTitleName) {
         res = await action.click(resourceTitle[i]);
         break;
