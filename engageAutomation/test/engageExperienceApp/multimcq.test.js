@@ -18,7 +18,6 @@ module.exports = {
 		}
 		else await assertion.assertFail(sts);
 		sts = await multimcq.getData_options(testdata[1]);
-		console.log(sts)
 		if ((typeof (sts)) === "object") {
 			for (var i = 0; i < sts.length; i++) {
 				await assertion.assertEqual(sts[i][2], null, "Option selection mismatch for index " + i);

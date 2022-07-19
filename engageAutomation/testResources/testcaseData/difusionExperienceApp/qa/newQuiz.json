@@ -56,7 +56,7 @@
           ["2-O3","8 dots in four lines","",null,null],
           ["2-O4","all of these","select","correct",null],
           ["3-O1","continuity",null,null,"audio"],
-          ["3-O2","proximity",null,null,"image"],
+          ["3-O2","proximity",null,null,"imageWrapper"],
           ["3-O3","connectedness",null,null,null],
           ["3-O4","closure","select","correct",null]
         ],

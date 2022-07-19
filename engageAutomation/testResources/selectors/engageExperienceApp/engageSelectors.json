@@ -411,8 +411,7 @@
                 "imageMedia": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [aria-label=Prompt] [data-tid=container-image]",
                 "audioMedia": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [aria-label=Prompt] [data-tid=container-audio]",
                 "activeQues": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']), div[class*=item-player-container] > div[style='height: 100%;']",
-                "imageSkeleton": "img[src*=\"data:image\"]",
-                "promptImageLoaded": "img:not([src*=\"data:image\"])",
+                "promptImageLoaded": "img[data-tid=image-loaded]",
                 "plyrLoading": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [aria-label=Prompt] [class*=plyr--loading]",
                 "plyrPlaying": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [aria-label=Prompt] [class*=plyr--playing]",
                 "plyrPlayBtn": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [aria-label=Prompt] [class=plyr__controls] button[data-plyr=play]"
@@ -438,7 +437,7 @@
                 "selectedChoice": "] [aria-checked=true]",
                 "subquesText": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-tid*=text-sub-question-",
                 "subquesMediaCont1": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-tid*=mediaContainer-sub-question-",
-                "qMediaContainer": "] > div > [data-tid*=container-]",
+                "qMediaContainer": "[data-tid*=container-]",
                 "qImageLoaded": "img[data-tid=image-loaded]",
                 "qPlyrLoading": "] [class*=plyr--loading]",
                 "qPlyrPlaying": "] [class*=plyr--playing]",

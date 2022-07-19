@@ -59,21 +59,22 @@ module.exports = {
 				await action.getText(choiceSelector),
 				(await action.getElementCount(choiceSelector + this.selectedChoice) > 0) ? "select" : null,
 				await itemplayer.getFeedbackIconDetails(choiceSelector + "]"),
-				(await action.getElementCount(choiceSelector + this.qMediaContainer) > 0) ? await action.getAttribute(choiceSelector + this.qMediaContainer, 'data-tid') : null
+				(await action.getElementCount(choiceSelector + "] " + this.qMediaContainer) > 0) ? await action.getAttribute(choiceSelector + "] " + this.qMediaContainer, 'data-tid') : null
 			];
-			console.log(choiceSelector + this.qMediaContainer)
-			console.log(obj[i][4])
-			if (obj[i][4] != null) {
+			let pEvent = await action.getAttribute(await action.parentElement(choiceSelector + "]"), "pointer-events");
+			if (obj[i][4] != null && pEvent == "auto") {
 				const arr = await obj[i][4].split("-");
+				obj[i][4] = arr[1];
 				if (arr[1] == "image")
 					res = await action.waitForDisplayed(this.qImageLoaded);
 				else if (arr[1] == "audio" || arr[1] == "video")
 					res = await this.getPlyrStatus(choiceSelector);
-
-				if (res)
-					obj[i][4] = arr[1];
-				else
-					obj[i][4] = arr[1] + " did not load";
+				else if (arr[1] == "eText") {
+					obj[i][4] = null;
+					res = true;
+				}
+				if (!res)
+					obj[i][4] = obj[i][4] + " did not load";
 			}
 		}
 		await action.switchToParentFrame();
@@ -90,7 +91,7 @@ module.exports = {
 			obj[i] = [
 				subquesArr[i][0],
 				await action.getText(this.subquesText + subquesArr[i][0]),
-				(await action.getElementCount(sel + this.qMediaContainer) > 0) ? await action.getAttribute(sel + this.qMediaContainer, 'data-tid') : null
+				(await action.getElementCount(sel + "] > div > " + this.qMediaContainer) > 0) ? await action.getAttribute(sel + "] > div > " + this.qMediaContainer, 'data-tid') : null
 			];
 
 			if (obj[i][2] != null) {
@@ -133,7 +134,6 @@ module.exports = {
 		else
 			await logger.logInto(await stackTrace.get(), res + "qPlyrPlayBtn is NOT clicked", 'error');
 
-		console.log(res)
 		return res;
 	}
 
