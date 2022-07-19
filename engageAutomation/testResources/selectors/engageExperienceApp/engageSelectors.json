@@ -438,7 +438,7 @@
                 "subquesText": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-tid*=text-sub-question-",
                 "subquesMediaCont1": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-tid*=mediaContainer-sub-question-",
                 "qMediaContainer": "[data-tid*=container-]",
-                "qImageLoaded": "img[data-tid=image-loaded]",
+                "qImageLoaded": "] img[data-tid=image-loaded]",
                 "qPlyrLoading": "] [class*=plyr--loading]",
                 "qPlyrPlaying": "] [class*=plyr--playing]",
                 "qPlyrPlayBtn": "] [class=plyr__controls] button[data-plyr=play]"

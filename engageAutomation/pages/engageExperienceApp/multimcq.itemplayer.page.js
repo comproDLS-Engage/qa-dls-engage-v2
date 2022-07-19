@@ -61,15 +61,15 @@ module.exports = {
 				await itemplayer.getFeedbackIconDetails(choiceSelector + "]"),
 				(await action.getElementCount(choiceSelector + "] " + this.qMediaContainer) > 0) ? await action.getAttribute(choiceSelector + "] " + this.qMediaContainer, 'data-tid') : null
 			];
-			let pEvent = await action.getAttribute(await action.parentElement(choiceSelector + "]"), "pointer-events");
+			let pEvent = await action.getAttribute(await action.parentElement(choiceSelector), "pointer-events");
 			if (obj[i][4] != null && pEvent == "auto") {
 				const arr = await obj[i][4].split("-");
 				obj[i][4] = arr[1];
-				if (arr[1] == "image")
-					res = await action.waitForDisplayed(this.qImageLoaded);
-				else if (arr[1] == "audio" || arr[1] == "video")
+				if (await obj[i][4].includes("image"))
+					res = await action.waitForDisplayed(choiceSelector + this.qImageLoaded);
+				else if (obj[i][4] == "audio" || obj[i][4] == "video")
 					res = await this.getPlyrStatus(choiceSelector);
-				else if (arr[1] == "eText") {
+				else if (obj[i][4] == "eText") {
 					obj[i][4] = null;
 					res = true;
 				}
@@ -90,21 +90,19 @@ module.exports = {
 			sel = this.subquesMediaCont1 + subquesArr[i][0];
 			obj[i] = [
 				subquesArr[i][0],
-				await action.getText(this.subquesText + subquesArr[i][0]),
+				(await action.getElementCount(this.subquesText + subquesArr[i][0]) > 0) ? await action.getText(this.subquesText + subquesArr[i][0]) : null,
 				(await action.getElementCount(sel + "] > div > " + this.qMediaContainer) > 0) ? await action.getAttribute(sel + "] > div > " + this.qMediaContainer, 'data-tid') : null
 			];
-
 			if (obj[i][2] != null) {
 				const arr = await obj[i][2].split("-");
-				if (arr[1] == "image")
-					res = await action.waitForDisplayed(this.subquesImageLoaded);
-				else if (arr[1] == "audio" || arr[1] == "video")
+				obj[i][2] = arr[1];
+				if (await obj[i][2].includes("image"))
+					res = await action.waitForDisplayed(sel + this.qImageLoaded);
+				else if (obj[i][2] == "audio" || obj[i][2] == "video")
 					res = await this.getPlyrStatus(sel);
 
-				if (res)
-					obj[i][2] = arr[1];
-				else
-					obj[i][2] = arr[1] + " did not load";
+				if (!res)
+					obj[i][2] = obj[i][2] + " did not load";
 			}
 		}
 		await action.switchToParentFrame();
