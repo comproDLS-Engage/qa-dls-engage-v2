@@ -1131,6 +1131,54 @@
                   "jsonPath": "engage.login.user.validInstructorUser1"
                }
             ]
+         },
+         {
+            "id": "ENG_DASH_TC_11",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/dashboard.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                  "jsonPath": "book.name"
+               }
+            ]
+         },
+         {
+            "id": "ENG_BOOK_TC_10",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/viewBook.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                  "jsonPath": "book.component[4].name.EN"
+               },
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                  "jsonPath": "book.component[4].unit"
+               }
+            ]
+         },
+         {
+            "id": "ENG_BOOK_TC_19",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/viewBook.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                  "jsonPath": "book.component[4].unit[0].title"
+               }
+            ]
+         },
+         {
+            "id": "ENG_BOOK_TC_21",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/viewUnit.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                  "jsonPath": "book.component[4].unit[0].section[0].activity[2]"
+               }
+            ]
          }
       ],
       "BeforeEach": [],
@@ -1140,6 +1188,10 @@
             "description": "",
             "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
             "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/acceptanceQuiz.json",
+                  "jsonPath": "itemPlayerQues.question[0]"
+               },
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
                   "jsonPath": "engage.appContent.activityPlayer.teacher"
@@ -1152,12 +1204,12 @@
             "testFile": "./test/engageExperienceApp/multimcq.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/newQuiz.json",
-                  "jsonPath": "acceptanceQuiz2.question[0].subQues"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/acceptanceQuiz.json",
+                  "jsonPath": "itemPlayerQues.question[0].subQues"
                },
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/newQuiz.json",
-                  "jsonPath": "acceptanceQuiz2.question[0].answerKey"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/acceptanceQuiz.json",
+                  "jsonPath": "itemPlayerQues.question[0].answerKey"
                }
             ]
          },
@@ -1167,8 +1219,8 @@
             "testFile": "./test/engageExperienceApp/multimcq.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/newQuiz.json",
-                  "jsonPath": "acceptanceQuiz2.question[0].answerKey"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/acceptanceQuiz.json",
+                  "jsonPath": "itemPlayerQues.question[0].answerKey"
                }
             ]
          },
@@ -1184,8 +1236,8 @@
             "testFile": "./test/engageExperienceApp/multimcq.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/newQuiz.json",
-                  "jsonPath": "acceptanceQuiz2.question[0].answerKey"
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/acceptanceQuiz.json",
+                  "jsonPath": "itemPlayerQues.question[0].answerKey"
                }
             ]
          },

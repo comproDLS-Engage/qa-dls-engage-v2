@@ -408,10 +408,10 @@
                 "selectOneText": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-tid=text-selectOneOrMore],div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-tid=text-selectOne]",
                 "itemPlayerContainer": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [id='itemContainer']",
                 "videoMedia": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [aria-label=Prompt] [data-tid=container-video]",
-                "imageMedia": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [aria-label=Prompt] [data-tid=container-image]",
+                "imageMedia": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [aria-label=Prompt] [data-tid=container-imageWrapper]",
                 "audioMedia": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [aria-label=Prompt] [data-tid=container-audio]",
                 "activeQues": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']), div[class*=item-player-container] > div[style='height: 100%;']",
-                "promptImageLoaded": "img[data-tid=image-loaded]",
+                "promptImageLoaded": "[aria-label=Prompt] [data-tid=container-imageWrapper] img[data-tid=image-loaded]",
                 "plyrLoading": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [aria-label=Prompt] [class*=plyr--loading]",
                 "plyrPlaying": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [aria-label=Prompt] [class*=plyr--playing]",
                 "plyrPlayBtn": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [aria-label=Prompt] [class=plyr__controls] button[data-plyr=play]"

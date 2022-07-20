@@ -167,7 +167,7 @@
                     {
                         "index": 0,
                         "title": "1. Scorable",
-                        "activityCount": "2",
+                        "activityCount": "4",
                         "folderCount": "0",
                         "flipbookPageNum": "",
                         "section": [
@@ -176,7 +176,9 @@
                                 "name": "",
                                 "activity": [
                                     "Open Ended Native",
-                                    "Close Ended Native"
+                                    "Close Ended Native (OLD)",
+                                    "Item Player Test Question",
+                                    "Acceptance Quz"
                                 ]
                             }
                         ]

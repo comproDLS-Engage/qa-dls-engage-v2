@@ -8,11 +8,20 @@ module.exports = {
 	//Validate the unattempted state of a close ended activity for a student
 	ENG_PLAY_TC_1: async function (testdata) {
 		sts = await itemPlayerPage.isInitialized();
-		await assertion.assertEqual(sts.isSubmitted, false, "Activity submission status mismatch");
+		await assertion.assertEqual(sts.quesType, testdata[0].quesType, "quesType mismatch");
+		await assertion.assertEqual(sts.quesTitle, testdata[0].quesTitle, "quesTitle mismatch");
+		await assertion.assertEqual(sts.instructionHeading, testdata[0].instructionHeading, "instructionHeading mismatch");
+		await assertion.assertEqual(sts.instructionText, testdata[0].instructionText, "instructionText mismatch");
+		await assertion.assertEqual(sts.promptText, testdata[0].promptText, "promptText mismatch");
+		await assertion.assertEqual(sts.selectOneText, testdata[0].selectOneText, "selectOneText mismatch");
+		await assertion.assertEqual(sts.mediaType, testdata[0].mediaType, "mediaType mismatch");
+		if (sts.mediaType != null)
+			await assertion.assertEqual(sts.mediaLoaded, true, "mediaLoaded mismatch");
+		await assertion.assertEqual(sts.isSubmitted, false, "isSubmitted mismatch");
 		sts = await activityPlayerPage.getData_activityPlayer();
-		await assertion.assertEqual(sts.infoBtn, testdata.infoBtn, "infoBtn status mismatch");
-		await assertion.assertEqual(sts.showDetailsBtn, testdata.showDetailsBtn[0], "showDetailsBtn status mismatch");
-		await assertion.assertEqual(sts.checkAnswerBtn, testdata.checkAnswerBtn, "checkAnswerBtn status mismatch");
+		await assertion.assertEqual(sts.infoBtn, testdata[1].infoBtn, "infoBtn status mismatch");
+		await assertion.assertEqual(sts.showDetailsBtn, testdata[1].showDetailsBtn[0], "showDetailsBtn status mismatch");
+		await assertion.assertEqual(sts.checkAnswerBtn, testdata[1].checkAnswerBtn, "checkAnswerBtn status mismatch");
 		await assertion.assertEqual(sts.showAnswerBtn, null, "showAnswerBtn status mismatch");
 		await assertion.assertEqual(sts.showResponseBtn, null, "showResponseBtn status mismatch");
 		await assertion.assertEqual(sts.retakeActivityBtn, null, "retakeActivityBtn status mismatch");
@@ -24,30 +33,30 @@ module.exports = {
 		if (sts.quesNumber == null) {
 			await assertion.assertEqual(sts.nextPageBtn, null, "nextPageBtn status mismatch");
 			await assertion.assertEqual(sts.prevPageBtn, null, "prevPageBtn status mismatch");
-			await assertion.assertEqual(sts.prevActivityBtn, testdata.prevActivityBtn[0], "prevActivityBtn status mismatch");
+			await assertion.assertEqual(sts.prevActivityBtn, testdata[1].prevActivityBtn[0], "prevActivityBtn status mismatch");
 			if (sts.closeBtn == null)
-				await assertion.assertEqual(sts.nextActivityBtn, testdata.nextActivityBtn[0], "nextActivityBtn status mismatch");
+				await assertion.assertEqual(sts.nextActivityBtn, testdata[1].nextActivityBtn[0], "nextActivityBtn status mismatch");
 			else
-				await assertion.assertEqual(sts.closeBtn, testdata.closeBtn, "closeBtn status mismatch");
+				await assertion.assertEqual(sts.closeBtn, testdata[1].closeBtn, "closeBtn status mismatch");
 		}
 		else {
 			let q = sts.quesNumber.split(" ");
 			if (q[0] == '1') {
 				await assertion.assertEqual(sts.nextPageBtn, "", "nextPageBtn status mismatch");
 				await assertion.assertEqual(sts.prevPageBtn, null, "prevPageBtn status mismatch");
-				await assertion.assertEqual(sts.prevActivityBtn, testdata.prevActivityBtn[0], "prevActivityBtn status mismatch");
+				await assertion.assertEqual(sts.prevActivityBtn, testdata[1].prevActivityBtn[0], "prevActivityBtn status mismatch");
 				await assertion.assertEqual(sts.nextActivityBtn, null, "nextActivityBtn status mismatch");
 				if (sts.closeBtn != null)
-					await assertion.assertEqual(sts.closeBtn, testdata.closeBtn, "closeBtn status mismatch");
+					await assertion.assertEqual(sts.closeBtn, testdata[1].closeBtn, "closeBtn status mismatch");
 			}
 			else if (q[0] == q[2]) {
 				await assertion.assertEqual(sts.nextPageBtn, null, "nextPageBtn status mismatch");
 				await assertion.assertEqual(sts.prevPageBtn, "", "prevPageBtn status mismatch");
 				await assertion.assertEqual(sts.prevActivityBtn, null, "prevActivityBtn status mismatch");
 				if (sts.closeBtn == null)
-					await assertion.assertEqual(sts.nextActivityBtn, testdata.nextActivityBtn[0], "nextActivityBtn status mismatch");
+					await assertion.assertEqual(sts.nextActivityBtn, testdata[1].nextActivityBtn[0], "nextActivityBtn status mismatch");
 				else
-					await assertion.assertEqual(sts.closeBtn, testdata.closeBtn, "closeBtn status mismatch");
+					await assertion.assertEqual(sts.closeBtn, testdata[1].closeBtn, "closeBtn status mismatch");
 			}
 			else {
 				await assertion.assertEqual(sts.nextPageBtn, "", "nextPageBtn status mismatch");
@@ -55,11 +64,10 @@ module.exports = {
 				await assertion.assertEqual(sts.prevActivityBtn, null, "prevActivityBtn status mismatch");
 				await assertion.assertEqual(sts.nextActivityBtn, null, "nextActivityBtn status mismatch");
 				if (sts.closeBtn != null)
-					await assertion.assertEqual(sts.closeBtn, testdata.closeBtn, "closeBtn status mismatch");
+					await assertion.assertEqual(sts.closeBtn, testdata[1].closeBtn, "closeBtn status mismatch");
 			}
 		}
 	},
-
 
 	//Validate that clicking on next arrow button navigates to next question in the activity
 	ENG_PLAY_TC_2: async function () {
@@ -106,10 +114,19 @@ module.exports = {
 	},
 
 	//Validate that activity is restored to unattempted state on clicking the Retake button
-	ENG_PLAY_TC_7: async function () {
+	ENG_PLAY_TC_7: async function (testdata) {
 		sts = await activityPlayerPage.click_retakeActivityBtn();
 		await assertion.assertEqual(sts, true, "retakeActivityBtn status mismatch");
 		sts = await itemPlayerPage.isInitialized();
+		await assertion.assertEqual(sts.quesType, testdata.quesType, "quesType mismatch");
+		await assertion.assertEqual(sts.quesTitle, testdata.quesTitle, "quesTitle mismatch");
+		await assertion.assertEqual(sts.instructionHeading, testdata.instructionHeading, "instructionHeading mismatch");
+		await assertion.assertEqual(sts.instructionText, testdata.instructionText, "instructionText mismatch");
+		await assertion.assertEqual(sts.promptText, testdata.promptText, "promptText mismatch");
+		await assertion.assertEqual(sts.selectOneText, testdata.selectOneText, "selectOneText mismatch");
+		await assertion.assertEqual(sts.mediaType, testdata.mediaType, "mediaType mismatch");
+		if (sts.mediaType != null)
+			await assertion.assertEqual(sts.mediaLoaded, true, "mediaLoaded mismatch");
 		await assertion.assertEqual(sts.isSubmitted, false, "Activity submission status mismatch");
 		sts = await activityPlayerPage.getData_activityPlayer();
 		await assertion.assertEqual(sts.retakeActivityBtn, null, "retakeActivityBtn status mismatch");
@@ -121,47 +138,56 @@ module.exports = {
 	//Validate the attempted/submitted state of a close ended activity
 	ENG_PLAY_TC_8: async function (testdata) {
 		let sts2 = await itemPlayerPage.isInitialized();
+		await assertion.assertEqual(sts.quesType, testdata[0].quesType, "quesType mismatch");
+		await assertion.assertEqual(sts.quesTitle, testdata[0].quesTitle, "quesTitle mismatch");
+		await assertion.assertEqual(sts.instructionHeading, testdata[0].instructionHeading, "instructionHeading mismatch");
+		await assertion.assertEqual(sts.instructionText, testdata[0].instructionText, "instructionText mismatch");
+		await assertion.assertEqual(sts.promptText, testdata[0].promptText, "promptText mismatch");
+		await assertion.assertEqual(sts.selectOneText, testdata[0].selectOneText, "selectOneText mismatch");
+		await assertion.assertEqual(sts.mediaType, testdata[0].mediaType, "mediaType mismatch");
+		if (sts.mediaType != null)
+			await assertion.assertEqual(sts.mediaLoaded, true, "mediaLoaded mismatch");
 		await assertion.assertEqual(sts2.isSubmitted, true, "submit status mismatch");
 		sts = await activityPlayerPage.getData_activityPlayer();
-		await assertion.assertEqual(sts.infoBtn, testdata.infoBtn, "infoBtn status mismatch");
-		await assertion.assertEqual(sts.checkAnswerBtn, testdata.checkAnswerBtn, "checkAnswerBtn status mismatch");
+		await assertion.assertEqual(sts.infoBtn, testdata[1].infoBtn, "infoBtn status mismatch");
+		await assertion.assertEqual(sts.checkAnswerBtn, testdata[1].checkAnswerBtn, "checkAnswerBtn status mismatch");
 		if (sts2.quesType.includes("mcsr"))
 			await assertion.assertEqual(sts.showAnswerBtn, null, "showAnswerBtn status mismatch");
 		else
-			await assertion.assertEqual(sts.showAnswerBtn, testdata.showAnswerBtn, "showAnswerBtn status mismatch");
+			await assertion.assertEqual(sts.showAnswerBtn, testdata[1].showAnswerBtn, "showAnswerBtn status mismatch");
 		await assertion.assertEqual(sts.showResponseBtn, null, "showResponseBtn status mismatch");
-		await assertion.assertEqual(sts.retakeActivityBtn, testdata.retakeActivityBtn, "retakeActivityBtn status mismatch");
-		await assertion.assertEqual(sts.yourScoreLabel, testdata.yourScoreLabel, "yourScoreLabel status mismatch");
+		await assertion.assertEqual(sts.retakeActivityBtn, testdata[1].retakeActivityBtn, "retakeActivityBtn status mismatch");
+		await assertion.assertEqual(sts.yourScoreLabel, testdata[1].yourScoreLabel, "yourScoreLabel status mismatch");
 		//assertion.assertEqual(sts.yourScoreValue, null, "yourScoreValue status mismatch");
 		await assertion.assertEqual(sts.detailsPanelHidden, "true", "detailsPanel status mismatch");
 		await assertion.assertNotEqual(sts.feedbackText, null, "feedbackText status mismatch");
 		if (sts.quesNumber == null) {
 			await assertion.assertEqual(sts.nextPageBtn, null, "nextPageBtn status mismatch");
 			await assertion.assertEqual(sts.prevPageBtn, null, "prevPageBtn status mismatch");
-			await assertion.assertEqual(sts.prevActivityBtn, testdata.prevActivityBtn[0], "prevActivityBtn status mismatch");
+			await assertion.assertEqual(sts.prevActivityBtn, testdata[1].prevActivityBtn[0], "prevActivityBtn status mismatch");
 			if (sts.closeBtn == null)
-				await assertion.assertEqual(sts.nextActivityBtn, testdata.nextActivityBtn[0], "nextActivityBtn status mismatch");
+				await assertion.assertEqual(sts.nextActivityBtn, testdata[1].nextActivityBtn[0], "nextActivityBtn status mismatch");
 			else
-				await assertion.assertEqual(sts.closeBtn, testdata.closeBtn, "closeBtn status mismatch");
+				await assertion.assertEqual(sts.closeBtn, testdata[1].closeBtn, "closeBtn status mismatch");
 		}
 		else {
 			let q = sts.quesNumber.split(" ");
 			if (q[0] == '1') {
 				await assertion.assertEqual(sts.nextPageBtn, "", "nextPageBtn status mismatch");
 				await assertion.assertEqual(sts.prevPageBtn, null, "prevPageBtn status mismatch");
-				await assertion.assertEqual(sts.prevActivityBtn, testdata.prevActivityBtn[0], "prevActivityBtn status mismatch");
+				await assertion.assertEqual(sts.prevActivityBtn, testdata[1].prevActivityBtn[0], "prevActivityBtn status mismatch");
 				await assertion.assertEqual(sts.nextActivityBtn, null, "nextActivityBtn status mismatch");
 				if (sts.closeBtn != null)
-					await assertion.assertEqual(sts.closeBtn, testdata.closeBtn, "closeBtn status mismatch");
+					await assertion.assertEqual(sts.closeBtn, testdata[1].closeBtn, "closeBtn status mismatch");
 			}
 			else if (q[0] == q[2]) {
 				await assertion.assertEqual(sts.nextPageBtn, null, "nextPageBtn status mismatch");
 				await assertion.assertEqual(sts.prevPageBtn, "", "prevPageBtn status mismatch");
 				await assertion.assertEqual(sts.prevActivityBtn, null, "prevActivityBtn status mismatch");
 				if (sts.closeBtn == null)
-					await assertion.assertEqual(sts.nextActivityBtn, testdata.nextActivityBtn[0], "nextActivityBtn status mismatch");
+					await assertion.assertEqual(sts.nextActivityBtn, testdata[1].nextActivityBtn[0], "nextActivityBtn status mismatch");
 				else
-					await assertion.assertEqual(sts.closeBtn, testdata.closeBtn, "closeBtn status mismatch");
+					await assertion.assertEqual(sts.closeBtn, testdata[1].closeBtn, "closeBtn status mismatch");
 			}
 			else {
 				await assertion.assertEqual(sts.nextPageBtn, "", "nextPageBtn status mismatch");
@@ -169,16 +195,25 @@ module.exports = {
 				await assertion.assertEqual(sts.prevActivityBtn, null, "prevActivityBtn status mismatch");
 				await assertion.assertEqual(sts.nextActivityBtn, null, "nextActivityBtn status mismatch");
 				if (sts.closeBtn != null)
-					await assertion.assertEqual(sts.closeBtn, testdata.closeBtn, "closeBtn status mismatch");
+					await assertion.assertEqual(sts.closeBtn, testdata[1].closeBtn, "closeBtn status mismatch");
 			}
 		}
 	},
 
 	//Validate that user responses are submitted for the Activity on clicking the Submit/Finish button
-	ENG_PLAY_TC_9: async function () {
+	ENG_PLAY_TC_9: async function (testdata) {
 		sts = await activityPlayerPage.click_submitActivityBtn();
 		await assertion.assertEqual(sts, true, "submitActivityBtn status mismatch");
 		sts = await itemPlayerPage.isInitialized();
+		await assertion.assertEqual(sts.quesType, testdata.quesType, "quesType mismatch");
+		await assertion.assertEqual(sts.quesTitle, testdata.quesTitle, "quesTitle mismatch");
+		await assertion.assertEqual(sts.instructionHeading, testdata.instructionHeading, "instructionHeading mismatch");
+		await assertion.assertEqual(sts.instructionText, testdata.instructionText, "instructionText mismatch");
+		await assertion.assertEqual(sts.promptText, testdata.promptText, "promptText mismatch");
+		await assertion.assertEqual(sts.selectOneText, testdata.selectOneText, "selectOneText mismatch");
+		await assertion.assertEqual(sts.mediaType, testdata.mediaType, "mediaType mismatch");
+		if (sts.mediaType != null)
+			await assertion.assertEqual(sts.mediaLoaded, true, "mediaLoaded mismatch");
 		await assertion.assertEqual(sts.isSubmitted, true, "submit status mismatch");
 		sts = await activityPlayerPage.getData_activityPlayer();
 		await assertion.assertNotEqual(sts.retakeActivityBtn, null, "retakeActivityBtn status mismatch");
@@ -341,10 +376,19 @@ module.exports = {
 	//Validate the unattempted state of a close ended activity when launched from assignment
 	ENG_PLAY_TC_24: async function (testdata) {
 		sts = await itemPlayerPage.isInitialized();
+		await assertion.assertEqual(sts.quesType, testdata[0].quesType, "quesType mismatch");
+		await assertion.assertEqual(sts.quesTitle, testdata[0].quesTitle, "quesTitle mismatch");
+		await assertion.assertEqual(sts.instructionHeading, testdata[0].instructionHeading, "instructionHeading mismatch");
+		await assertion.assertEqual(sts.instructionText, testdata[0].instructionText, "instructionText mismatch");
+		await assertion.assertEqual(sts.promptText, testdata[0].promptText, "promptText mismatch");
+		await assertion.assertEqual(sts.selectOneText, testdata[0].selectOneText, "selectOneText mismatch");
+		await assertion.assertEqual(sts.mediaType, testdata[0].mediaType, "mediaType mismatch");
+		if (sts.mediaType != null)
+			await assertion.assertEqual(sts.mediaLoaded, true, "mediaLoaded mismatch");
 		await assertion.assertEqual(sts.isSubmitted, false, "Activity submission status mismatch");
 		sts = await activityPlayerPage.getData_activityPlayer();
 		await assertion.assertEqual(sts.infoBtn, null, "infoBtn status mismatch");
-		await assertion.assertEqual(sts.showDetailsBtn, testdata.showDetailsBtn[0], "showDetailsBtn status mismatch");
+		await assertion.assertEqual(sts.showDetailsBtn, testdata[1].showDetailsBtn[0], "showDetailsBtn status mismatch");
 		await assertion.assertEqual(sts.checkAnswerBtn, null, "checkAnswerBtn status mismatch");
 		await assertion.assertEqual(sts.showAnswerBtn, null, "showAnswerBtn status mismatch");
 		await assertion.assertEqual(sts.showResponseBtn, null, "showResponseBtn status mismatch");
@@ -359,9 +403,9 @@ module.exports = {
 			await assertion.assertEqual(sts.prevPageBtn, null, "prevPageBtn status mismatch");
 			await assertion.assertEqual(sts.prevActivityBtn, null, "prevActivityBtn status mismatch");
 			if (sts.closeAssignmentBtn == null)
-				await assertion.assertEqual(sts.nextActivityBtn, testdata.nextActivityBtn[0], "nextActivityBtn status mismatch");
+				await assertion.assertEqual(sts.nextActivityBtn, testdata[1].nextActivityBtn[0], "nextActivityBtn status mismatch");
 			else
-				await assertion.assertEqual(sts.closeAssignmentBtn, testdata.closeAssignmentBtn, "closeAssignmentBtn status mismatch");
+				await assertion.assertEqual(sts.closeAssignmentBtn, testdata[1].closeAssignmentBtn, "closeAssignmentBtn status mismatch");
 		}
 		else {
 			let q = sts.quesNumber.split(" ");
@@ -371,16 +415,16 @@ module.exports = {
 				await assertion.assertEqual(sts.prevActivityBtn, null, "prevActivityBtn status mismatch");
 				await assertion.assertEqual(sts.nextActivityBtn, null, "nextActivityBtn status mismatch");
 				if (sts.closeAssignmentBtn != null)
-					await assertion.assertEqual(sts.closeAssignmentBtn, testdata.closeAssignmentBtn, "closeAssignmentBtn status mismatch");
+					await assertion.assertEqual(sts.closeAssignmentBtn, testdata[1].closeAssignmentBtn, "closeAssignmentBtn status mismatch");
 			}
 			else if (q[0] == q[2]) {
 				await assertion.assertEqual(sts.nextPageBtn, null, "nextPageBtn status mismatch");
 				await assertion.assertEqual(sts.prevPageBtn, "", "prevPageBtn status mismatch");
 				await assertion.assertEqual(sts.prevActivityBtn, null, "prevActivityBtn status mismatch");
 				if (sts.closeAssignmentBtn == null)
-					await assertion.assertEqual(sts.nextActivityBtn, testdata.nextActivityBtn[0], "nextActivityBtn status mismatch");
+					await assertion.assertEqual(sts.nextActivityBtn, testdata[1].nextActivityBtn[0], "nextActivityBtn status mismatch");
 				else
-					await assertion.assertEqual(sts.closeAssignmentBtn, testdata.closeAssignmentBtn, "closeAssignmentBtn status mismatch");
+					await assertion.assertEqual(sts.closeAssignmentBtn, testdata[1].closeAssignmentBtn, "closeAssignmentBtn status mismatch");
 			}
 			else {
 				await assertion.assertEqual(sts.nextPageBtn, "", "nextPageBtn status mismatch");
@@ -388,7 +432,7 @@ module.exports = {
 				await assertion.assertEqual(sts.prevActivityBtn, null, "prevActivityBtn status mismatch");
 				await assertion.assertEqual(sts.nextActivityBtn, null, "nextActivityBtn status mismatch");
 				if (sts.closeAssignmentBtn != null)
-					await assertion.assertEqual(sts.closeAssignmentBtn, testdata.closeAssignmentBtn, "closeAssignmentBtn status mismatch");
+					await assertion.assertEqual(sts.closeAssignmentBtn, testdata[1].closeAssignmentBtn, "closeAssignmentBtn status mismatch");
 			}
 		}
 	},
@@ -396,25 +440,34 @@ module.exports = {
 	//Validate the attempted state of a close ended activity when launched from assignment
 	ENG_PLAY_TC_25: async function (testdata) {
 		let sts2 = await itemPlayerPage.isInitialized();
+		await assertion.assertEqual(sts.quesType, testdata[0].quesType, "quesType mismatch");
+		await assertion.assertEqual(sts.quesTitle, testdata[0].quesTitle, "quesTitle mismatch");
+		await assertion.assertEqual(sts.instructionHeading, testdata[0].instructionHeading, "instructionHeading mismatch");
+		await assertion.assertEqual(sts.instructionText, testdata[0].instructionText, "instructionText mismatch");
+		await assertion.assertEqual(sts.promptText, testdata[0].promptText, "promptText mismatch");
+		await assertion.assertEqual(sts.selectOneText, testdata[0].selectOneText, "selectOneText mismatch");
+		await assertion.assertEqual(sts.mediaType, testdata[0].mediaType, "mediaType mismatch");
+		if (sts.mediaType != null)
+			await assertion.assertEqual(sts.mediaLoaded, true, "mediaLoaded mismatch");
 		await assertion.assertEqual(sts2.isSubmitted, true, "submit status mismatch");
 		sts = await activityPlayerPage.getData_activityPlayer();
 		await assertion.assertEqual(sts.infoBtn, null, "infoBtn status mismatch");
 		await assertion.assertEqual(sts.checkAnswerBtn, null, "checkAnswerBtn status mismatch");
 		await assertion.assertEqual(sts.showAnswerBtn, null, "showAnswerBtn status mismatch");
 		await assertion.assertEqual(sts.showResponseBtn, null, "showResponseBtn status mismatch");
-		await assertion.assertEqual(sts.retakeActivityBtn, testdata.retakeActivityBtn, "retakeActivityBtn status mismatch");
-		await assertion.assertEqual(sts.yourScoreLabel, testdata.yourScoreLabel, "yourScoreLabel status mismatch");
+		await assertion.assertEqual(sts.retakeActivityBtn, testdata[1].retakeActivityBtn, "retakeActivityBtn status mismatch");
+		await assertion.assertEqual(sts.yourScoreLabel, testdata[1].yourScoreLabel, "yourScoreLabel status mismatch");
 		//assertion.assertEqual(sts.yourScoreValue, null, "yourScoreValue status mismatch");
 		await assertion.assertEqual(sts.detailsPanelHidden, "true", "detailsPanel status mismatch");
 		await assertion.assertNotEqual(sts.feedbackText, null, "feedbackText status mismatch");
 		if (sts.quesNumber == null) {
 			await assertion.assertEqual(sts.nextPageBtn, null, "nextPageBtn status mismatch");
 			await assertion.assertEqual(sts.prevPageBtn, null, "prevPageBtn status mismatch");
-			await assertion.assertEqual(sts.prevActivityBtn, testdata.prevActivityBtn[0], "prevActivityBtn status mismatch");
+			await assertion.assertEqual(sts.prevActivityBtn, testdata[1].prevActivityBtn[0], "prevActivityBtn status mismatch");
 			if (sts.closeAssignmentBtn == null)
-				await assertion.assertEqual(sts.nextActivityBtn, testdata.nextActivityBtn[0], "nextActivityBtn status mismatch");
+				await assertion.assertEqual(sts.nextActivityBtn, testdata[1].nextActivityBtn[0], "nextActivityBtn status mismatch");
 			else
-				await assertion.assertEqual(sts.closeAssignmentBtn, testdata.closeAssignmentBtn, "closeAssignmentBtn status mismatch");
+				await assertion.assertEqual(sts.closeAssignmentBtn, testdata[1].closeAssignmentBtn, "closeAssignmentBtn status mismatch");
 		}
 		else {
 			let q = sts.quesNumber.split(" ");
@@ -424,16 +477,16 @@ module.exports = {
 				await assertion.assertEqual(sts.prevActivityBtn, null, "prevActivityBtn status mismatch");
 				await assertion.assertEqual(sts.nextActivityBtn, null, "nextActivityBtn status mismatch");
 				if (sts.closeAssignmentBtn != null)
-					await assertion.assertEqual(sts.closeAssignmentBtn, testdata.closeAssignmentBtn, "closeAssignmentBtn status mismatch");
+					await assertion.assertEqual(sts.closeAssignmentBtn, testdata[1].closeAssignmentBtn, "closeAssignmentBtn status mismatch");
 			}
 			else if (q[0] == q[2]) {
 				await assertion.assertEqual(sts.nextPageBtn, null, "nextPageBtn status mismatch");
 				await assertion.assertEqual(sts.prevPageBtn, "", "prevPageBtn status mismatch");
 				await assertion.assertEqual(sts.prevActivityBtn, null, "prevActivityBtn status mismatch");
 				if (sts.closeAssignmentBtn == null)
-					await assertion.assertEqual(sts.nextActivityBtn, testdata.nextActivityBtn[0], "nextActivityBtn status mismatch");
+					await assertion.assertEqual(sts.nextActivityBtn, testdata[1].nextActivityBtn[0], "nextActivityBtn status mismatch");
 				else
-					await assertion.assertEqual(sts.closeAssignmentBtn, testdata.closeAssignmentBtn, "closeAssignmentBtn status mismatch");
+					await assertion.assertEqual(sts.closeAssignmentBtn, testdata[1].closeAssignmentBtn, "closeAssignmentBtn status mismatch");
 			}
 			else {
 				await assertion.assertEqual(sts.nextPageBtn, "", "nextPageBtn status mismatch");
@@ -441,7 +494,7 @@ module.exports = {
 				await assertion.assertEqual(sts.prevActivityBtn, null, "prevActivityBtn status mismatch");
 				await assertion.assertEqual(sts.nextActivityBtn, null, "nextActivityBtn status mismatch");
 				if (sts.closeAssignmentBtn != null)
-					await assertion.assertEqual(sts.closeAssignmentBtn, testdata.closeAssignmentBtn, "closeAssignmentBtn status mismatch");
+					await assertion.assertEqual(sts.closeAssignmentBtn, testdata[1].closeAssignmentBtn, "closeAssignmentBtn status mismatch");
 			}
 		}
 	},

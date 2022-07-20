@@ -1,0 +1,74 @@
+{
+  "itemPlayerQues": {
+    "type": "Native Engage Learning Object",
+    "name": "Item Player Test Question",
+    "question": [
+      {
+        "number": 1,
+        "quesType": "multi-mcqsr-item-player",
+        "quesTitle": "Multiple Choice Question with Different formats",
+        "instructionHeading": "In this activity",
+        "instructionText": "Choose the correct answer A, B or C for the following questions\nПревуците и испустите бројеве у исправан празан оквир.",
+        "promptText": "Set in England, it is one of Burnett's most popular novels and seen as a classic of English children's literature.\nSet in England, it is one of Burnett's most popular novels and seen as a classic of English children's literature.\nHola, me llamo Anderson. ¿Y tú? ¿Cómo te llamas?\nwell done\nMary  becomes Secret\ngarden interested book\nher ill manners\nbegin to soften\nMary becomes interested in finding the secret garden herself, and her ill manners begin to soften as a result.\nThis is the default text formatting",
+        "selectOneText": "Select one",
+        "mediaType": "image",
+        "subQues": [
+          ["1","When the wind blew the ivy to one side,\ntest test test test test\ntest test test test test","imageWrapper"],
+          ["2",null,"audio"],
+          ["3",null,"videoNative"]
+        ],
+        "answerKey": [
+          ["1-O1","Option A","select","correct",null],
+          ["1-O2","Option B",null,null,null],
+          ["1-O3","Option C",null,null,null],
+          ["1-O4","Option D",null,null,null],
+          ["2-O1","Option A","select","correct","audio"],
+          ["2-O2","",null,null,"audio"],
+          ["2-O3","Option C",null,null,"audio"],
+          ["2-O4","",null,null,"audio"],
+          ["3-O1","Option A","select","correct","imageWrapper"],
+          ["3-O2","",null,null,"imageWrapper"],
+          ["3-O3","Option C",null,null,"imageWrapper"],
+          ["3-O4","",null,null,"imageWrapper"]
+        ],
+        "scenario1": []
+      }
+    ]
+  },
+  "acceptanceQuiz": {
+    "type": "Native Engage Learning Object",
+    "name": "Acceptance Quiz",
+    "question": [
+      {
+        "number": 1,
+        "quesTitle": "Multiple Choice Question with Different formats",
+        "instructionHeading": "In this activity",
+        "instructionText": "Choose the correct answer A, B or C for the following questions\nChoose the correct answer A, B or C for the following questions",
+        "promptText": "",
+        "selectOneText": "Select one",
+        "type": "multi-mcq",
+        "mediaType": "image",
+        "subQues": [
+          ["1","When the wind blew the ivy to one side,\ntest test test test test\ntest test test test test","imageWrapper"],
+          ["2",null,"audio"],
+          ["3",null,"videoNative"]
+        ],
+        "answerKey": [
+          ["1-O1","Option A","select","correct",null],
+          ["1-O2","Option B",null,null,null],
+          ["1-O3","Option C",null,null,null],
+          ["1-O4","Option D",null,null,null],
+          ["2-O1","Option A","select","correct","audio"],
+          ["2-O2","",null,null,"audio"],
+          ["2-O3","Option C",null,null,"audio"],
+          ["2-O4","",null,null,"audio"],
+          ["3-O1","Option A","select","correct","imageWrapper"],
+          ["3-O2","",null,null,"imageWrapper"],
+          ["3-O3","Option C",null,null,"imageWrapper"],
+          ["3-O4","",null,null,"imageWrapper"]
+        ],
+        "scenario1": []
+      }
+    ]
+  }
+}
