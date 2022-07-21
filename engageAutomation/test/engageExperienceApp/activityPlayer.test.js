@@ -138,20 +138,20 @@ module.exports = {
 	//Validate the attempted/submitted state of a close ended activity
 	ENG_PLAY_TC_8: async function (testdata) {
 		let sts2 = await itemPlayerPage.isInitialized();
-		await assertion.assertEqual(sts.quesType, testdata[0].quesType, "quesType mismatch");
-		await assertion.assertEqual(sts.quesTitle, testdata[0].quesTitle, "quesTitle mismatch");
-		await assertion.assertEqual(sts.instructionHeading, testdata[0].instructionHeading, "instructionHeading mismatch");
-		await assertion.assertEqual(sts.instructionText, testdata[0].instructionText, "instructionText mismatch");
-		await assertion.assertEqual(sts.promptText, testdata[0].promptText, "promptText mismatch");
-		await assertion.assertEqual(sts.selectOneText, testdata[0].selectOneText, "selectOneText mismatch");
-		await assertion.assertEqual(sts.mediaType, testdata[0].mediaType, "mediaType mismatch");
-		if (sts.mediaType != null)
-			await assertion.assertEqual(sts.mediaLoaded, true, "mediaLoaded mismatch");
+		await assertion.assertEqual(sts2.quesType, testdata[0].quesType, "quesType mismatch");
+		await assertion.assertEqual(sts2.quesTitle, testdata[0].quesTitle, "quesTitle mismatch");
+		await assertion.assertEqual(sts2.instructionHeading, testdata[0].instructionHeading, "instructionHeading mismatch");
+		await assertion.assertEqual(sts2.instructionText, testdata[0].instructionText, "instructionText mismatch");
+		await assertion.assertEqual(sts2.promptText, testdata[0].promptText, "promptText mismatch");
+		await assertion.assertEqual(sts2.selectOneText, testdata[0].selectOneText, "selectOneText mismatch");
+		await assertion.assertEqual(sts2.mediaType, testdata[0].mediaType, "mediaType mismatch");
+		if (sts2.mediaType != null)
+			await assertion.assertEqual(sts2.mediaLoaded, true, "mediaLoaded mismatch");
 		await assertion.assertEqual(sts2.isSubmitted, true, "submit status mismatch");
 		sts = await activityPlayerPage.getData_activityPlayer();
 		await assertion.assertEqual(sts.infoBtn, testdata[1].infoBtn, "infoBtn status mismatch");
 		await assertion.assertEqual(sts.checkAnswerBtn, testdata[1].checkAnswerBtn, "checkAnswerBtn status mismatch");
-		if (sts2.quesType.includes("mcsr"))
+		if (sts2.quesType.includes("mcqsr"))
 			await assertion.assertEqual(sts.showAnswerBtn, null, "showAnswerBtn status mismatch");
 		else
 			await assertion.assertEqual(sts.showAnswerBtn, testdata[1].showAnswerBtn, "showAnswerBtn status mismatch");
@@ -440,15 +440,15 @@ module.exports = {
 	//Validate the attempted state of a close ended activity when launched from assignment
 	ENG_PLAY_TC_25: async function (testdata) {
 		let sts2 = await itemPlayerPage.isInitialized();
-		await assertion.assertEqual(sts.quesType, testdata[0].quesType, "quesType mismatch");
-		await assertion.assertEqual(sts.quesTitle, testdata[0].quesTitle, "quesTitle mismatch");
-		await assertion.assertEqual(sts.instructionHeading, testdata[0].instructionHeading, "instructionHeading mismatch");
-		await assertion.assertEqual(sts.instructionText, testdata[0].instructionText, "instructionText mismatch");
-		await assertion.assertEqual(sts.promptText, testdata[0].promptText, "promptText mismatch");
-		await assertion.assertEqual(sts.selectOneText, testdata[0].selectOneText, "selectOneText mismatch");
-		await assertion.assertEqual(sts.mediaType, testdata[0].mediaType, "mediaType mismatch");
-		if (sts.mediaType != null)
-			await assertion.assertEqual(sts.mediaLoaded, true, "mediaLoaded mismatch");
+		await assertion.assertEqual(sts2.quesType, testdata[0].quesType, "quesType mismatch");
+		await assertion.assertEqual(sts2.quesTitle, testdata[0].quesTitle, "quesTitle mismatch");
+		await assertion.assertEqual(sts2.instructionHeading, testdata[0].instructionHeading, "instructionHeading mismatch");
+		await assertion.assertEqual(sts2.instructionText, testdata[0].instructionText, "instructionText mismatch");
+		await assertion.assertEqual(sts2.promptText, testdata[0].promptText, "promptText mismatch");
+		await assertion.assertEqual(sts2.selectOneText, testdata[0].selectOneText, "selectOneText mismatch");
+		await assertion.assertEqual(sts2.mediaType, testdata[0].mediaType, "mediaType mismatch");
+		if (sts2.mediaType != null)
+			await assertion.assertEqual(sts2.mediaLoaded, true, "mediaLoaded mismatch");
 		await assertion.assertEqual(sts2.isSubmitted, true, "submit status mismatch");
 		sts = await activityPlayerPage.getData_activityPlayer();
 		await assertion.assertEqual(sts.infoBtn, null, "infoBtn status mismatch");

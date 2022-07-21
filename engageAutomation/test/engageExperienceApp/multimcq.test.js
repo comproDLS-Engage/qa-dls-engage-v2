@@ -34,12 +34,14 @@ module.exports = {
 		await assertion.assertEqual(sts, true, sts);
 	},
 
-	//Validate MCMR question functionality for Correct scenario
+	//Validate Multi MCSR question after submission
 	ENG_ITEM_MMCQ_TC_3: async function (testdata) {
 		sts = await multimcq.getData_options(testdata);
 		if ((typeof (sts)) === "object") {
 			for (var i = 0; i < sts.length; i++) {
+				await assertion.assertEqual(sts[i][2], testdata[i][2], "Option selection mismatch for index " + i);
 				await assertion.assertEqual(sts[i][3], testdata[i][3], "Option mismatch for index " + i);
+				//await assertion.assertEqual(sts[i][4], testdata[1][i][4], "Option media mismatch for index " + i);
 			}
 		}
 		else await assertion.assertFail(sts);

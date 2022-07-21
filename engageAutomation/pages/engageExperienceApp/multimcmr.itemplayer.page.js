@@ -16,8 +16,13 @@ module.exports = {
 		return await multimcqPlayer.clickOption(quesData);
 	},
 
-	getData_multimcmr: async function (quesData) {
+	getData_options: async function (optionsArr) {
 		await logger.logInto(await stackTrace.get());
-		return await multimcqPlayer.getData_multiMcq(quesData);
+		return await multimcqPlayer.getData_options(optionsArr);
+	},
+
+	getData_subques: async function (subquesArr) {
+		await logger.logInto(await stackTrace.get());
+		return await multimcqPlayer.getData_subques(subquesArr);
 	}
 }

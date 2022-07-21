@@ -29,7 +29,7 @@ module.exports = {
 		await action.switchToFrame(0);
 		let res, choiceSelector;
 		for (let i = 0; i < mcqQuesData.length; i++) {
-			choiceSelector = this.choices + mcqQuesData[i][0] + "]";
+			choiceSelector = this.choices + mcqQuesData[i][0] + "] [class*=radio]," + this.choices + mcqQuesData[i][0] + "] [class*=checkbox]";
 			res = await action.getElementCount(choiceSelector);
 			if (res == 1 && mcqQuesData[i][2] == 'select') {
 				res = await action.click(choiceSelector);
@@ -61,20 +61,22 @@ module.exports = {
 				await itemplayer.getFeedbackIconDetails(choiceSelector + "]"),
 				(await action.getElementCount(choiceSelector + "] " + this.qMediaContainer) > 0) ? await action.getAttribute(choiceSelector + "] " + this.qMediaContainer, 'data-tid') : null
 			];
-			let pEvent = await action.getAttribute(await action.parentElement(choiceSelector), "pointer-events");
-			if (obj[i][4] != null && pEvent == "auto") {
+			if (obj[i][4] != null) {
 				const arr = await obj[i][4].split("-");
 				obj[i][4] = arr[1];
-				if (await obj[i][4].includes("image"))
-					res = await action.waitForDisplayed(choiceSelector + this.qImageLoaded);
-				else if (obj[i][4] == "audio" || obj[i][4] == "video")
-					res = await this.getPlyrStatus(choiceSelector);
-				else if (obj[i][4] == "eText") {
-					obj[i][4] = null;
-					res = true;
+				let pEvent = await action.getAttribute(await action.parentElement(choiceSelector), "pointer-events");
+				if (pEvent == "auto") {
+					if (await obj[i][4].includes("image"))
+						res = await action.waitForDisplayed(choiceSelector + this.qImageLoaded);
+					else if (obj[i][4] == "audio" || obj[i][4] == "video")
+						res = await this.getPlyrStatus(choiceSelector);
+					else if (obj[i][4] == "eText") {
+						obj[i][4] = null;
+						res = true;
+					}
+					if (!res)
+						obj[i][4] = obj[i][4] + " did not load";
 				}
-				if (!res)
-					obj[i][4] = obj[i][4] + " did not load";
 			}
 		}
 		await action.switchToParentFrame();

@@ -31,7 +31,20 @@
           ["3-O3","Option C",null,null,"imageWrapper"],
           ["3-O4","",null,null,"imageWrapper"]
         ],
-        "scenario1": []
+        "scenario1": [
+          ["1-O1","Option A",null,"correct",null],
+          ["1-O2","Option B","select","incorrect",null],
+          ["1-O3","Option C",null,null,null],
+          ["1-O4","Option D",null,null,null],
+          ["2-O1","Option A",null,"correct","audio"],
+          ["2-O2","","select","incorrect","audio"],
+          ["2-O3","Option C",null,null,"audio"],
+          ["2-O4","",null,null,"audio"],
+          ["3-O1","Option A",null,"correct","imageWrapper"],
+          ["3-O2","",null,null,"imageWrapper"],
+          ["3-O3","Option C",null,null,"imageWrapper"],
+          ["3-O4","","select","incorrect","imageWrapper"]
+        ]
       }
     ]
   },
@@ -41,31 +54,83 @@
     "question": [
       {
         "number": 1,
-        "quesTitle": "Multiple Choice Question with Different formats",
+        "quesType": "multi-mcqsr-item-player",
+        "quesTitle": "MCSR Question with Multiple Sub-Questions",
         "instructionHeading": "In this activity",
-        "instructionText": "Choose the correct answer A, B or C for the following questions\nChoose the correct answer A, B or C for the following questions",
-        "promptText": "",
+        "instructionText": "Choose the correct answer for the following questions",
+        "promptText": "There are twelve of us and my father doesn’t earn much money. It’s hard for my mother to feed them all. The fresh air on the moor makes them strong and healthy. Dickon is twelve and he’s always out on the moor. He loves animals.",
         "selectOneText": "Select one",
-        "type": "multi-mcq",
-        "mediaType": "image",
+        "mediaType": null,
         "subQues": [
-          ["1","When the wind blew the ivy to one side,\ntest test test test test\ntest test test test test","imageWrapper"],
-          ["2",null,"audio"],
-          ["3",null,"videoNative"]
+          ["1","When the wind blew the ivy to one side,",null],
+          ["2","As soon as Mary met Dickon,",null],
+          ["3","Mr Craven returned home to Misselthwaite Manor",null],
+          ["4","Colin felt that the secret garden",null]
         ],
         "answerKey": [
-          ["1-O1","Option A","select","correct",null],
-          ["1-O2","Option B",null,null,null],
-          ["1-O3","Option C",null,null,null],
-          ["1-O4","Option D",null,null,null],
-          ["2-O1","Option A","select","correct","audio"],
-          ["2-O2","",null,null,"audio"],
-          ["2-O3","Option C",null,null,"audio"],
-          ["2-O4","",null,null,"audio"],
-          ["3-O1","Option A","select","correct","imageWrapper"],
-          ["3-O2","",null,null,"imageWrapper"],
-          ["3-O3","Option C",null,null,"imageWrapper"],
-          ["3-O4","",null,null,"imageWrapper"]
+          ["1-O1","Mary saw the little robin.",null,null,null],
+          ["1-O2","Mary found the door to the secret garden.","select","correct",null],
+          ["1-O3","Mary found the key to the secret garden.",null,null,null],
+          ["1-O4","Mary saw Ben Weatherstaff looking at her.",null,null,null],
+          ["2-O1"," she didn’t want to talk to him.",null,null,null],
+          ["2-O2","she was afraid of him and ran away.",null,null,null],
+          ["2-O3","they started to play ball together.",null,null,null],
+          ["2-O4","she liked him and trusted him.","select","correct",null],
+          ["3-O1","because he had to talk to Ben Weatherstaff.",null,null,null],
+          ["3-O2","because Mrs Medlock wrote him a letter.",null,null,null],
+          ["3-O3","because he dreamt about his wife’s garden.","select","correct",null],
+          ["3-O4","but he was unhappy there.",null,null,null],
+          ["4-O1","was a sad place.",null,null,null],
+          ["4-O2","was a boring place.",null,null,null],
+          ["4-O3","should be locked forever.",null,null,null],
+          ["4-O4","could help him grow strong and healthy.","select","correct",null]
+        ],
+        "scenario1": []
+      },
+      {
+        "number": 2,
+        "quesType": "mcqmr-item-player",
+        "quesTitle": "MCMR Question with Single Sub-Question",
+        "instructionHeading": "In this activity",
+        "instructionText": "Select more that one options for the following question",
+        "promptText": null,
+        "selectOneText": "Select all correct answers",
+        "mediaType": null,
+        "subQues": [
+          ["1","Which of the following laws do not belong to Gestalt Phycology",null]
+        ],
+        "answerKey": [
+          ["1-O1","Kurt Lewin Law","select","correct",null],
+          ["1-O2","Pragnanz Law",null,"correct",null],
+          ["1-O3","Proximity Law",null,"correct",null],
+          ["1-O4","Wolfgang Kholer Law","select","correct",null]
+      ],
+        "scenario1": []
+      },
+      {
+        "number": 3,
+        "quesType": "multi-mcqsr-item-player",
+        "quesTitle": "True and False Question with Multiple Sub-Questions",
+        "instructionHeading": "In this activity",
+        "instructionText": "Are the following sentences true (T) or false (F)?",
+        "promptText": null,
+        "selectOneText": "Select one",
+        "mediaType": "image",
+        "subQues": [
+          ["1","Mary Lennox’s Indian nanny met her in London and they took the train to Yorkshire.",null],
+          ["2","Mrs Medlock didn’t like Mary because she was bad-­‐tempered.",null],
+          ["3","Mr Craven locked up his wife’s garden and kept the key in his pocket.",null],
+          ["4","Martha worked as a housemaid at Misselthwaite Manor, but she lived on the moor with her family.",null]
+        ],
+        "answerKey": [
+          ["1-O1","True",null,null,null],
+          ["1-O2","False","select","correct",null],
+          ["2-O1","True","select","correct",null],
+          ["2-O2","False",null,null,null],
+          ["3-O1","True",null,null,null],
+          ["3-O2","False","select","correct",null],
+          ["4-O1","True","select","correct",null],
+          ["4-O2","False",null,null,null]
         ],
         "scenario1": []
       }

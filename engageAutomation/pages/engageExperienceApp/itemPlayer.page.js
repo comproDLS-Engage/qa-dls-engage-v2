@@ -50,20 +50,20 @@ module.exports = {
 		await action.switchToFrame(0);
 		let question = {
 			quesType: null,
-			quesTitle: ((await action.getElementCount(this.questionTitle)) == 1) ? await action.getText(this.questionTitle) : null,
-			instructionHeading: ((await action.getElementCount(this.instructionHeading)) == 1) ? await action.getText(this.instructionHeading) : null,
-			instructionText: ((await action.getElementCount(this.instructionText)) == 1) ? await action.getText(this.instructionText) : null,
-			promptText: ((await action.getElementCount(this.promptText)) == 1) ? await action.getText(this.promptText) : null,
-			selectOneText: ((await action.getElementCount(this.selectOneText)) == 1) ? await action.getText(this.selectOneText) : null,
+			quesTitle: ((await action.getElementCount(this.activeQues + this.questionTitle)) == 1) ? await action.getText(this.activeQues + this.questionTitle) : null,
+			instructionHeading: ((await action.getElementCount(this.activeQues + this.instructionHeading)) == 1) ? await action.getText(this.activeQues + this.instructionHeading) : null,
+			instructionText: ((await action.getElementCount(this.activeQues + this.instructionText)) == 1) ? await action.getText(this.activeQues + this.instructionText) : null,
+			promptText: ((await action.getElementCount(this.activeQues + this.promptText)) == 1) ? await action.getText(this.activeQues + this.promptText) : null,
+			selectOneText: ((await action.getElementCount(this.activeQues + this.selectOneText)) == 1) ? await action.getText(this.activeQues + this.selectOneText) : null,
 			mediaType: null,
 			mediaLoaded: null,
 			isSubmitted: null,
-			correctCount: await action.getElementCount(this.correctIcon),
-			incorrectCount: await action.getElementCount(this.incorrectIcon),
-			feedback: {}
+			correctCount: await action.getElementCount(this.activeQues + this.correctIcon),
+			incorrectCount: await action.getElementCount(this.activeQues + this.incorrectIcon),
+			//feedback: {}
 		};
 
-		let text = await action.getAttribute(this.itemPlayerContainer, 'class')
+		let text = await action.getAttribute(this.activeQues + this.itemPlayerContainer, 'class')
 		const arr = await text.split(" ");
 		question.quesType = arr[2];
 
@@ -72,15 +72,15 @@ module.exports = {
 		else
 			question.isSubmitted = false;
 
-		if ((await action.getElementCount(this.imageMedia)) == 1) {
+		if ((await action.getElementCount(this.activeQues + this.imageMedia)) == 1) {
 			question.mediaType = "image";
-			question.mediaLoaded = await action.waitForDisplayed(this.promptImageLoaded);
+			question.mediaLoaded = await action.waitForDisplayed(this.activeQues + this.promptImageLoaded);
 		}
-		else if ((await action.getElementCount(this.videoMedia)) == 1) {
+		else if ((await action.getElementCount(this.activeQues + this.videoMedia)) == 1) {
 			question.mediaType = "video";
 			question.mediaLoaded = await this.getPlyrStatus();
 		}
-		else if ((await action.getElementCount(this.audioMedia)) == 1) {
+		else if ((await action.getElementCount(this.activeQues + this.audioMedia)) == 1) {
 			question.mediaType = "audio";
 			question.mediaLoaded = await this.getPlyrStatus();
 		}
@@ -111,16 +111,16 @@ module.exports = {
 	getPlyrStatus: async function () {
 		await logger.logInto(await stackTrace.get());
 		var res;
-		res = await action.click(this.plyrPlayBtn);
+		res = await action.click(this.activeQues + this.plyrPlayBtn);
 		if (true == res) {
 			await logger.logInto(await stackTrace.get(), "plyrPlayBtn is clicked");
-			res = await action.waitForDisplayed(this.plyrLoading, undefined, true);
+			res = await action.waitForDisplayed(this.activeQues + this.plyrLoading, undefined, true);
 			if (true == res) {
 				await logger.logInto(await stackTrace.get(), "media is loaded");
-				res = await action.waitForDisplayed(this.plyrPlaying);
+				res = await action.waitForDisplayed(this.activeQues + this.plyrPlaying);
 				if (true == res) {
 					await logger.logInto(await stackTrace.get(), "media is playing");
-					res = await action.click(this.plyrPlayBtn);
+					res = await action.click(this.activeQues + this.plyrPlayBtn);
 				}
 				else
 					await logger.logInto(await stackTrace.get(), res + "media is not playing", 'error');
