@@ -133,6 +133,27 @@
           ["4-O2","False",null,null,null]
         ],
         "scenario1": []
+      },
+      {},
+      {},
+      {
+        "number": 6,
+        "quesTitle": "FIB Text Question",
+        "instructionHeading": "In this activity",
+        "instructionText": "Read the description and write the correct word.",
+        "promptText": null,
+        "selectOneText": null,
+        "quesType": "fib-item-player",
+        "mediaType": null,
+        "subQues": [],
+        "answerKey": [
+          ["A"," Gloomy","correct"],
+          ["B","Moor","correct"],
+          ["C","Crooked","correct"],
+          ["D","Spoilt","correct"],
+          ["E","Tantrum","correct"]
+        ],
+        "scenario1": []
       }
     ]
   }

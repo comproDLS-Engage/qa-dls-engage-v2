@@ -1824,25 +1824,25 @@
       ]
     },
     {
-      "modulename": "Item Player - DND Into Text",
+      "modulename": "Item Player - FIB Text",
       "moduledetails": "",
-      "testFile": "./test/engageExperienceApp/FIBText.test.js",
+      "testFile": "./test/engageExperienceApp/fibtext.test.js",
       "testcase": [
         {
-          "id": "ENG_ITEM_FIBTEXT_TC_2",
+          "id": "ENG_ITEM_FIBTEXT_TC_1",
           "description": "Validate DND Into Text question is launched",
           "tags": "P1",
           "visualTest": true
         },
         {
-          "id": "ENG_ITEM_FIBTEXT_TC_3",
-          "description": "Validate that user is able to click in the text placeholders and type the desired text in the DND Into Text question",
+          "id": "ENG_ITEM_FIBTEXT_TC_2",
+          "description": "Validate that user is able to click in the text placeholders and type the desired text in the FIB text question",
           "tags": "P1",
           "visualTest": true
         },
         {
-          "id": "ENG_ITEM_FIBTEXT_TC_5",
-          "description": "Validate DND Into Text Question for correct scenario",
+          "id": "ENG_ITEM_FIBTEXT_TC_3",
+          "description": "Validate FIB Text Question after submission",
           "tags": "P1",
           "visualTest": true
         }

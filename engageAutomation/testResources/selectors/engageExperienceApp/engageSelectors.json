@@ -447,9 +447,9 @@
                 "source": "[data-tid=dragsource-option-",
                 "target": "[data-tid=droptarget-option-"
             },
-            "FIBText": {
-                "response": "[data-tid=input-response-",
-                "responses": "[data-tid*='input-response']"
+            "fibtext": {
+                "responses": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-tid*=input-response-",
+                "textPlaceholder": "] [data-tid=text-placeholder]"
             },
             "FIBSelect": {
                 "response": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-tid=input-response-",
