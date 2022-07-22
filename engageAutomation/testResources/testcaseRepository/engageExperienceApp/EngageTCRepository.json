@@ -1301,7 +1301,7 @@
         },
         {
           "id": "ENG_ITEM_MMCQ_TC_3",
-          "description": "Validate MCMR question functionality for Correct scenario",
+          "description": "Validate Multi MCSR question after submission",
           "tags": "P1",
           "visualTest": true
         }
@@ -1886,13 +1886,13 @@
         },
         {
           "id": "ENG_ITEM_MCMR_TC_3",
-          "description": "Validate that the user can select multiple options while performing Multiple Response question",
+          "description": "Validate that the user can select multiple options in multiple sub-questions while performing the question",
           "tags": "P1",
           "visualTest": true
         },
         {
           "id": "ENG_ITEM_MCMR_TC_5",
-          "description": "Validate Multiple Response question functionality for Correct scenario",
+          "description": "Validate Multi MCSR question after submission",
           "tags": "P1",
           "visualTest": true
         }

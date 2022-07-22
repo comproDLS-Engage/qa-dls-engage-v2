@@ -12,7 +12,6 @@ module.exports = {
 		if ((typeof (sts)) === "object") {
 			for (var i = 0; i < sts.length; i++) {
 				await assertion.assertEqual(sts[i][1], testdata[0][i][1], "Subques text for index " + i);
-				//await assertion.assert(await sts[i][2].includes(testdata[0][i][2]), "Expected - " + sts[i][2] + " to include " + testdata[0][i][2]);
 				await assertion.assertEqual(sts[i][2], testdata[0][i][2], "Subques media for index " + i);
 			}
 		}
