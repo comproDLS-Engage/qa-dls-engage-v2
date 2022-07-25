@@ -2,15 +2,15 @@
 const action = require('../../core/actionLibrary/baseActionLibrary.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
 const itemplayer = require('./itemPlayer.page.js');
-var srcPath, targetPath, res, qIndex;
+var srcPath, targetPath, res;
 
 module.exports = {
 
-    source: selectorFile.css.ComproEngage.dragAndDrop.source,
-    target: selectorFile.css.ComproEngage.dragAndDrop.target,
-    tapToZoom: selectorFile.css.ComproEngage.dragAndDrop.tapToZoom,
-    zoomOverlay: selectorFile.css.ComproEngage.dragAndDrop.zoomOverlay,
-    zoomDialogClose_btn: selectorFile.css.ComproEngage.dragAndDrop.zoomDialogClose_btn,
+    source: selectorFile.css.ComproEngage.dnd.source,
+    target: selectorFile.css.ComproEngage.dnd.target,
+    tapToZoom: selectorFile.css.ComproEngage.dnd.tapToZoom,
+    zoomOverlay: selectorFile.css.ComproEngage.dnd.zoomOverlay,
+    zoomDialogClose_btn: selectorFile.css.ComproEngage.dnd.zoomDialogClose_btn,
 
     isInitialized: async function (dndQuesData) {
         await logger.logInto(await stackTrace.get());
@@ -31,8 +31,13 @@ module.exports = {
         await logger.logInto(await stackTrace.get());
         var sourceList = [];
         let optionLength = (await action.findElements(this.source)).length;
+        let sourceSel;
         for (let i = 0; i < optionLength; i++) {
-            sourceList[i] = [dndQuesData[i][0], await action.getText(this.source + dndQuesData[i][0] + "] div")];
+            sourceSel = this.source + dndQuesData[i][0] + "] [data-tid=text-placeholder]";
+            sourceList[i] = [
+                dndQuesData[i][0],
+                await (await action.getAttribute(sourceSel, "color")).includes("secondary") ? await action.getText(sourceSel) : null
+            ];
         }
         return sourceList;
     },
@@ -44,15 +49,13 @@ module.exports = {
         let optionLength = (await action.findElements(this.target)).length;
         for (let i = 0; i < optionLength; i++) {
             var dndSelector = this.target + dndQuesData[i][2];
-            var dndSelectorText = dndSelector + "] [data-tid=text-placeholder]";
-            //value = await itemplayer.getFeedbackIconDetails(dndSelector);
-            //var sts = await action.getElementCount(dndSelectorText)
-            // if (sts !== 0) {
-                 targetList[i] = [dndQuesData[i][2], await action.getText(dndSelectorText), await itemplayer.getFeedbackIconDetails(dndSelector)];
-            // }
-            // else {
-            //     targetList[i] = [dndQuesData[i][2], "", value];
-            // }
+            targetList[i] = [
+                dndQuesData[i][2],
+                await action.getText(dndSelector + "] [data-tid=text-placeholder]"),
+                await itemplayer.getFeedbackIconDetails(dndSelector + "]")
+            ];
+            if (targetList[i][1] == "")
+                targetList[i][1] = null;
         }
         return targetList;
     },
@@ -78,9 +81,6 @@ module.exports = {
             srcPath = this.source + dndQuesData[i][0];
             targetPath = this.target + dndQuesData[i][2];
             if (dndQuesData[i][3] !== "") {
-                // action.switchToParentFrame();
-                // testplayer.collapseTestPlayer();
-                // action.switchToFrame(0)
                 res = await action.click(srcPath);
                 if (true == res) {
                     res = await action.click(targetPath);

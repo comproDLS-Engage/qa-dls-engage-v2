@@ -1183,9 +1183,9 @@
       ]
     },
     {
-      "modulename": "Item Player - FIB",
+      "modulename": "Item Player - DND into Text",
       "moduledetails": "",
-      "testFile": "./test/engageExperienceApp/FIB.test.js",
+      "testFile": "./test/engageExperienceApp/dndInText.test.js",
       "testcase": [
         {
           "id": "ENG_ITEM_FIB_TC_3",
@@ -1851,7 +1851,7 @@
     {
       "modulename": "Item Player - DND Onto Image",
       "moduledetails": "",
-      "testFile": "./test/engageExperienceApp/dragDrop.test.js",
+      "testFile": "./test/engageExperienceApp/dndOnImage.test.js",
       "testcase": [
         {
           "id": "ENG_ITEM_DND_TC_7",

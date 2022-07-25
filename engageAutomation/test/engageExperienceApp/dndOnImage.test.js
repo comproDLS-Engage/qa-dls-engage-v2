@@ -1,7 +1,6 @@
 'use strict';
 
-var dragAndDrop = require('../../pages/engageExperienceApp/DNDonImage.itemPlayer.page.js');
-const itemPlayerPage = require('../../pages/engageExperienceApp/itemPlayer.page.js');
+var dragAndDrop = require('../../pages/engageExperienceApp/dndOnImage.itemPlayer.page.js');
 var sts, sts1;
 module.exports = {
 
@@ -81,16 +80,11 @@ module.exports = {
 
     //Validate Drag and Drop question is launched
     ENG_ITEM_DND_TC_20: async function (testdata) {
-        sts = await dragAndDrop.isInitialized(testdata.answerKey);
-        await assertion.assertEqual(sts.sourceData.length, testdata.maxOptions, "Draggable option count mismatch");
+        sts = await dragAndDrop.isInitialized(testdata);
         for (var i = 0; i < sts.sourceData.length; i++) {
-            await assertion.assertEqual(sts.targetData[i][1], "", "Target text mismatch for " + sts.targetData[i]);
-            await assertion.assertEqual(sts.targetData[i][2], "", "Status mismatch for " + sts.targetData[i]);
+            await assertion.assertEqual(sts.targetData[i][1], null, "Target text mismatch for " + sts.targetData[i]);
+            await assertion.assertEqual(sts.targetData[i][2], null, "Status mismatch for " + sts.targetData[i]);
         }
-        // sts = itemPlayerPage.getItemplayerInfo();
-        // assertion.assertEqual(sts.mediaType, testdata.mediaType, "Media type mismatch");
-        // assertion.assertEqual(sts.quesText, testdata.text, "Question text mismatch");
-        // assertion.assertEqual(sts.instructionText, testdata.instruction, "Instruction text mismatch");
     },
 
     //Validate That "Tap To Zoom" Option Is Available In The Mobile Mode In The DND Question - (Portrait, Landscape)

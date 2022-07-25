@@ -403,10 +403,14 @@
                 "correctIcon": " [data-tid=icon-correct]",
                 "incorrectIcon": " [data-tid=icon-incorrect]",
                 "questionTitle": "[data-tid=text-headerTitle]",
-                "instructionHeading": "[data-tid=text-instructionHeading]",
                 "instructionText": "[data-tid=text-instruction]",
                 "promptText": "[data-tid=text-prompt]",
-                "selectOneText": "[data-tid*=text-selectOne]",
+                "instructionHeading": "[data-tid=text-instructionHeading]",
+                "selectOneLabel": "[data-tid=text-selectOne]",
+                "selectOneOrMoreLabel": "[data-tid=text-selectOneOrMore]",
+                "selectFromDropdownLabel": "[data-tid=text-selectFromDropdown]",
+                "matchingLeftLabel": "",
+                "matchingRightLabel": "",                
                 "itemPlayerContainer": "[id='itemContainer']",
                 "videoMedia": "[aria-label=Prompt] [data-tid=container-video]",
                 "imageMedia": "[aria-label=Prompt] [data-tid=container-imageWrapper]",
@@ -456,7 +460,7 @@
                 "responses": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-tid*='input-response']",
                 "responseOption": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [class*=mdc-menu-surface--open] [data-tid*=select-responseoption][data-value="
             },
-            "dragAndDrop": {
+            "dnd": {
                 "source": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-tid*=dragsource-option-",
                 "target": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-tid*=droptarget-option-",
                 "tapToZoom": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-tid='button-taptozoom']",
