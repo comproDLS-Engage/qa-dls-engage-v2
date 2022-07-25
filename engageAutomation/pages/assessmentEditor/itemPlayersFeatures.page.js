@@ -78,21 +78,89 @@ module.exports = {
 	topsbottomOption: selectorFile.css.editorTab.topsbottomOption,
 	leftRightOption: selectorFile.css.editorTab.leftRightOption,
 	scoreInputBox: selectorFile.css.editorTab.scoreInputBox,
-	addSubqun_btn:selectorFile.css.editorTab.addSubqun_btn,
+	addSubqun_btn: selectorFile.css.editorTab.addSubqun_btn,
 	uniqueOption: selectorFile.css.editorTab.fibdropdown.uniqueOption,
 	commonOption: selectorFile.css.editorTab.fibdropdown.commonOption,
 	inputOption: selectorFile.css.editorTab.fibdropdown.inputOption,
 	responseOption: selectorFile.css.editorTab.fibdropdown.responseOption,
 	addAnswerbtn: selectorFile.css.editorTab.addAnswerbtn,
-	rowNumber:selectorFile.css.editorTab.writing.rowNumber,
-	characterLimit:selectorFile.css.editorTab.writing.characterLimit,
-	placeHolderText:selectorFile.css.editorTab.writing.placeHolderText,
-	allowrichTextMedia:selectorFile.css.editorTab.writing.allowrichTextMedia,
-	allowFileAttachment:selectorFile.css.editorTab.writing.allowFileAttachment,
-	responseEdit:selectorFile.css.editorTab.responseEdit,
-	responseTextArea:selectorFile.css.editorTab.responseTextArea,
-	textAreabtn:selectorFile.css.editorTab.textAreabtn,
-	shufflingCheckBox:selectorFile.css.editorTab.shufflingCheckBox,
+	rowNumber: selectorFile.css.editorTab.writing.rowNumber,
+	characterLimit: selectorFile.css.editorTab.writing.characterLimit,
+	placeHolderText: selectorFile.css.editorTab.writing.placeHolderText,
+	allowrichTextMedia: selectorFile.css.editorTab.writing.allowrichTextMedia,
+	allowFileAttachment: selectorFile.css.editorTab.writing.allowFileAttachment,
+	responseEdit: selectorFile.css.editorTab.responseEdit,
+	responseTextArea: selectorFile.css.editorTab.responseTextArea,
+	textAreabtn: selectorFile.css.editorTab.textAreabtn,
+	shufflingCheckBox: selectorFile.css.editorTab.shufflingCheckBox,
+	instruction_boldbtn: selectorFile.css.editorTab.instruction_formatting.instruction_boldbtn,
+	instruction_italicbtn: selectorFile.css.editorTab.instruction_formatting.instruction_italicbtn,
+	instruction_underlinebtn: selectorFile.css.editorTab.instruction_formatting.instruction_underlinebtn,
+	instruction_numberListmenudropdownbtn: selectorFile.css.editorTab.instruction_formatting.instruction_numberListmenudropdownbtn,
+	instruction_numbermenuList: selectorFile.css.editorTab.instruction_formatting.instruction_numbermenuList,
+	instruction_numbermenuItem: selectorFile.css.editorTab.instruction_formatting.instruction_numbermenuItem,
+	instruction_bulletListmenudropdownbtn: selectorFile.css.editorTab.instruction_formatting.instruction_bulletListmenudropdownbtn,
+	instruction_bulletmenuList: selectorFile.css.editorTab.instruction_formatting.instruction_bulletmenuList,
+	instruction_bulletmenuItem: selectorFile.css.editorTab.instruction_formatting.instruction_bulletmenuItem,
+	instruction_languageClick: selectorFile.css.editorTab.instruction_formatting.instruction_languagebtn,
+	instruction_languagedropdoenvalue: selectorFile.css.editorTab.instruction_formatting.instruction_languagedropdoenvalue,
+	instruction_langbtn: selectorFile.css.editorTab.instruction_formatting.instruction_langbtn,
+	instruction_undobtn: selectorFile.css.editorTab.instruction_formatting.instruction_undobtn,
+	instruction_redobtn: selectorFile.css.editorTab.instruction_formatting.instruction_redobtn,
+	header_headingdropdownbtn: selectorFile.css.editorTab.headerFormatting.header_headingdropdownbtn,
+	header_headingtoolbarvaluebtn: selectorFile.css.editorTab.headerFormatting.header_headingtoolbarvaluebtn,
+	header_boldbtn: selectorFile.css.editorTab.headerFormatting.header_boldbtn,
+	header_italicbtn: selectorFile.css.editorTab.headerFormatting.header_italicbtn,
+	header_underlinebtn: selectorFile.css.editorTab.headerFormatting.header_underlinebtn,
+	header_languagebtn: selectorFile.css.editorTab.headerFormatting.header_languagebtn,
+	header_languagedropdoenvaluebtn: selectorFile.css.editorTab.headerFormatting.header_languagedropdoenvaluebtn,
+	header_langbtn: selectorFile.css.editorTab.headerFormatting.header_langbtn,
+	header_undobtn: selectorFile.css.editorTab.headerFormatting.header_undobtn,
+	header_redobtn: selectorFile.css.editorTab.headerFormatting.header_redobtn,
+	prompt_headerdropdownbtn: selectorFile.css.editorTab.promptFormatting.prompt_headerdropdownbtn,
+	prompt_headingtoolbarvaluebtn: selectorFile.css.editorTab.promptFormatting.prompt_headingtoolbarvaluebtn,
+	prompt_boldbtn: selectorFile.css.editorTab.promptFormatting.prompt_boldbtn,
+	prompt_italicbtn: selectorFile.css.editorTab.promptFormatting.prompt_italicbtn,
+	prompt_underlinebtn: selectorFile.css.editorTab.promptFormatting.prompt_underlinebtn,
+	prompt_numberListmenudropdownbtn: selectorFile.css.editorTab.promptFormatting.prompt_numberListmenudropdownbtn,
+	prompt_numbermenuListbtn: selectorFile.css.editorTab.promptFormatting.prompt_numbermenuListbtn,
+	prompt_numbermenuItembtn: selectorFile.css.editorTab.promptFormatting.prompt_numbermenuItembtn,
+	prompt_bulletListmenudropdownbtn: selectorFile.css.editorTab.promptFormatting.prompt_bulletListmenudropdownbtn,
+	prompt_bulletmenuListbtn: selectorFile.css.editorTab.promptFormatting.prompt_bulletmenuListbtn,
+	prompt_bulletmenuItembtn: selectorFile.css.editorTab.promptFormatting.prompt_bulletmenuItembtn,
+	prompt_languagebtn: selectorFile.css.editorTab.promptFormatting.prompt_languagebtn,
+	prompt_languagedropdownvaluebtn: selectorFile.css.editorTab.promptFormatting.prompt_languagedropdownvaluebtn,
+	prompt_langbtn: selectorFile.css.editorTab.promptFormatting.prompt_langbtn,
+	prompt_imagebtn: selectorFile.css.editorTab.promptFormatting.prompt_imagebtn,
+	prompt_tabledropdownbtn: selectorFile.css.editorTab.promptFormatting.prompt_tabledropdownbtn,
+	prompt_linebtn: selectorFile.css.editorTab.promptFormatting.prompt_linebtn,
+	prompt_blockQuotebtn: selectorFile.css.editorTab.promptFormatting.prompt_blockQuotebtn,
+	prompt_undobtn: selectorFile.css.editorTab.promptFormatting.prompt_undobtn,
+	prompt_redobtn: selectorFile.css.editorTab.promptFormatting.prompt_redobtn,
+	subQuestion_boldbtn: selectorFile.css.editorTab.subQuestionFormatting.subQuestion_boldbtn,
+	subQuestion_italicbtn: selectorFile.css.editorTab.subQuestionFormatting.subQuestion_italicbtn,
+	subQuestion_underlinebtn: selectorFile.css.editorTab.subQuestionFormatting.subQuestion_underlinebtn,
+	subQuestion_languagebtn: selectorFile.css.editorTab.subQuestionFormatting.subQuestion_languagebtn,
+	subQuestion_languagedropdownvaluebtn: selectorFile.css.editorTab.subQuestionFormatting.subQuestion_languagedropdownvaluebtn,
+	subQuestion_langbtn: selectorFile.css.editorTab.subQuestionFormatting.subQuestion_langbtn,
+	subQuestion_tabledropdownbtn: selectorFile.css.editorTab.subQuestionFormatting.subQuestion_tabledropdownbtn,
+	subQuestion_linebtn: selectorFile.css.editorTab.subQuestionFormatting.subQuestion_linebtn,
+	subQuestion_blockQuotebtn: selectorFile.css.editorTab.subQuestionFormatting.subQuestion_blockQuotebtn,
+	subQuestion_undobtn: selectorFile.css.editorTab.subQuestionFormatting.subQuestion_undobtn,
+	subQuestion_redobtn: selectorFile.css.editorTab.subQuestionFormatting.subQuestion_redobtn,
+	subQuestionOption_boldbtn: selectorFile.css.editorTab.subQuestionOptionFormatting.subQuestionOption_boldbtn,
+	subQuestionOption_italicbtn: selectorFile.css.editorTab.subQuestionOptionFormatting.subQuestionOption_italicbtn,
+	subQuestionOption_underlinebtn: selectorFile.css.editorTab.subQuestionOptionFormatting.subQuestionOption_underlinebtn,
+	subQuestionOption_languagebtn: selectorFile.css.editorTab.subQuestionOptionFormatting.subQuestionOption_languagebtn,
+	subQuestionOption_languagedropdownvaluebtn: selectorFile.css.editorTab.subQuestionOptionFormatting.subQuestionOption_languagedropdownvaluebtn,
+	subQuestionOption_langbtn: selectorFile.css.editorTab.subQuestionOptionFormatting.subQuestionOption_langbtn,
+	subQuestionOption_undobtn: selectorFile.css.editorTab.subQuestionOptionFormatting.subQuestionOption_undobtn,
+	subQuestionOption_redobtn: selectorFile.css.editorTab.subQuestionOptionFormatting.subQuestionOption_redobtn,
+	imagePlacement_btn: selectorFile.css.editorTab.DND_image.imagePlacement_btn,
+	leftRight_btn: selectorFile.css.editorTab.DND_image.leftRight_btn,
+	topBottom_btn: selectorFile.css.editorTab.DND_image.topBottom_btn,
+
+
 	//--MULTIPLE RESPONSE
 	isInitialized1: async function (testdata) {
 		for (var i = 0; i < testdata.length; i++) {
@@ -229,19 +297,39 @@ module.exports = {
 		}
 		return res;
 	},
+
+	clickEditHeaderbtn: async function () {
+		await browser.pause(5000)
+		await action.waitForClickable(this.headerEdit_btn)
+		res = await action.click(this.headerEdit_btn);
+		if (res == true) {
+			await action.waitForDisplayed(this.done_btn)
+			await logger.logInto(stackTrace.get(), " -- Edit Header Button is clicked");
+		}
+		else {
+			await logger.logInto(stackTrace.get(), " -- Edit Header Button is clicked");
+		}
+		return res
+
+	},
 	setHeaderTextinPlaceHolder: async function (testdata) {
 		await logger.logInto(stackTrace.get());
-		await browser.pause(5000)
-		await action.waitForDisplayed(this.headerEdit_btn)
-		res = await action.click(this.headerEdit_btn);
-		await action.clearValueDefault(this.placeHolderHeader_txt);
 		if (res == true) {
 			await browser.pause(5000)
-			res = await action.addValue(this.placeHolderHeader_txt, testdata)
+			res = await action.setValue(this.placeHolderHeader_txt, testdata)
 			await browser.pause(2000)
-			if (res == true) {
-				await this.clickDonebtn();
-			}
+			await logger.logInto(stackTrace.get(), " -- Value is added");
+		}
+		else {
+			res = res + " -- Error in Adding text";
+			await logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
+	clickinstructionEditbtn: async function (testdata) {
+		await logger.logInto(stackTrace.get());
+		res = await action.click(this.instructionEdit_btn);
+		if (res == true) {
 			await logger.logInto(stackTrace.get(), " -- Add Pair Button is clicked");
 		}
 		else {
@@ -250,23 +338,18 @@ module.exports = {
 		}
 		return res;
 	},
+
 	setInsTextinPlaceHolder: async function (testdata) {
 		await logger.logInto(stackTrace.get());
-		res = await action.click(this.instructionEdit_btn);
+		await browser.pause(5000)
+		//res = await action.clearValueDefault(this.placeHolderIns_txt)
+		res = await action.click(this.placeHolderIns_txt);
+		res = await action.addValue(this.placeHolderIns_txt, testdata)
+		await browser.pause(2000)
 		if (res == true) {
-			await browser.pause(5000)
-			res = await action.clearValueDefault(this.placeHolderIns_txt)
-			res = await action.addValue(this.placeHolderIns_txt, testdata)
-			await browser.pause(2000)
-			if (res == true) {
-				await this.clickDonebtn();
-			}
-			await logger.logInto(stackTrace.get(), " -- Add Pair Button is clicked");
+			await logger.logInto(stackTrace.get(), " -- text added");
 		}
-		else {
-			res = res + " -- Error in clicking Add Pir button";
-			await logger.logInto(stackTrace.get(), res, 'error');
-		}
+
 		return res;
 	},
 	setPromptTextPlaceHolder: async function (testdata) {
@@ -275,34 +358,49 @@ module.exports = {
 		res = await action.addValue(this.placeHolderIns_txt, testdata)
 		await browser.pause(2000)
 		if (res == true) {
-			await this.clickDonebtn();
+			await logger.logInto(stackTrace.get(), " -- Add Pair Button is clicked");
 		}
-		await logger.logInto(stackTrace.get(), " -- Add Pair Button is clicked");
+		else
+			await logger.logInto(stackTrace.get(), " -- Add Pair Button is not clicked");
 
 		return res;
 	},
 
 	setSubQuestiontxt: async function (testdata) {
 		await logger.logInto(stackTrace.get());
-
+		await action.clearValueDefault(this.placeHolderIns_txt)
 		res = await action.addValue(this.placeHolderIns_txt, testdata)
 		await browser.pause(2000)
 		if (res == true) {
-			await this.clickDonebtn();
+			await logger.logInto(stackTrace.get(), " -- sub question text added");
 		}
-		await logger.logInto(stackTrace.get(), " -- Add Pair Button is clicked");
+		else
+			await logger.logInto(stackTrace.get(), " -- sub question text added");
 
+		return res;
+	},
+	clickOptionEditbutton: async function (testdata) {
+		await logger.logInto(stackTrace.get());
+		console.log(this.editSubQuestion_btn + testdata[0] + this.subOptionValue + testdata[1] + "] ")
+		await browser.pause(2000)
+		res = await action.click((this.editSubQuestion_btn + testdata[0] + this.subOptionValue + testdata[1] + "] "))
+
+		//res = await action.setValue((this.subOptionIndex + testdata[0] + "\"] " + this.subOptionValue + testdata[1] + "] " + this.subOptiontext), testdata[2])
+		await browser.pause(2000)
+		if (res == true) {
+			await logger.logInto(stackTrace.get(), " -- Add Pair Button is clicked");
+		}
 		return res;
 	},
 	setOptiontxt: async function (testdata) {
 		console.log(testdata[2])
 		await logger.logInto(stackTrace.get());
-		console.log(this.subOptionIndex + testdata[0] +   this.subOptionValue + testdata[1] + "] " + this.subOptiontext)
-		await action.click(this.subOptionIndex +  testdata[0] + this.subOptionValue + testdata[1] + "] " + this.subOptiontext)
-		res = await action.clearValue((this.subOptionIndex +  testdata[0] + this.subOptionValue + testdata[1] + "] " + this.subOptiontext))
+		console.log(this.subOptionIndex + testdata[0] + this.subOptionValue + testdata[1] + "] " + this.subOptiontext)
+		await action.click(this.subOptionIndex + testdata[0] + this.subOptionValue + testdata[1] + "] " + this.subOptiontext)
+		res = await action.clearValue((this.subOptionIndex + testdata[0] + this.subOptionValue + testdata[1] + "] " + this.subOptiontext))
 		await browser.pause(2000)
-		res = await action.addValue((this.subOptionIndex + testdata[0]  + this.subOptionValue + testdata[1] + "] " + this.subOptiontext), testdata[2])
-		
+		res = await action.addValue((this.subOptionIndex + testdata[0] + this.subOptionValue + testdata[1] + "] " + this.subOptiontext), testdata[2])
+
 		//res = await action.setValue((this.subOptionIndex + testdata[0] + "\"] " + this.subOptionValue + testdata[1] + "] " + this.subOptiontext), testdata[2])
 		await browser.pause(2000)
 		if (res == true) {
@@ -736,7 +834,7 @@ module.exports = {
 	clickEditorTab: async function () {
 		await logger.logInto(stackTrace.get());
 		res = await action.waitForEnabled(this.editor_tab);
-	//	res = true;
+		//	res = true;
 		if (res == true) {
 			await logger.logInto(stackTrace.get(), res + " -- Editor Tab is clicked");
 			res = await action.click(this.editor_tab);
@@ -824,6 +922,7 @@ module.exports = {
 		//swati - to be edited, browser.pause is temp
 		//BhxBrowser.pause(10000); // remove this and add wait for loader to not display - akhil
 		if (res == true) {
+			browser.pause(2000)
 			//action.waitForDisplayed(".//span[contains(@class, 'MuiSkeleton-wave')]", undefined, true)
 			await logger.logInto(stackTrace.get(), " -- OK Button is clicked");
 		}
@@ -990,7 +1089,7 @@ module.exports = {
 		return res;
 	},
 	clickAddBlankCKEditor: async function () {
-		
+
 		await logger.logInto(stackTrace.get());
 		await browser.pause(2000)
 		await action.waitForDisplayed(this.responseEdit)
@@ -1038,8 +1137,8 @@ module.exports = {
 	setCharacterLimit: async function (i, characterLimit) {
 
 		await logger.logInto(stackTrace.get());
-		res = await action.clearValue(this.characterLimit + i+"] input");
-		res = await action.addValue(this.characterLimit + i+"] input", characterLimit);
+		res = await action.clearValue(this.characterLimit + i + "] input");
+		res = await action.addValue(this.characterLimit + i + "] input", characterLimit);
 		if (res == true) {
 			await logger.logInto(stackTrace.get(), " -- characterLimit is entered");
 		}
@@ -1052,8 +1151,8 @@ module.exports = {
 	setPlaceHolderText: async function (i, placeHolderText) {
 
 		await logger.logInto(stackTrace.get());
-		res = await action.clearValue(this.placeHolderText + i +"] input");
-		res = await action.addValue(this.placeHolderText + i +"] input", placeHolderText);
+		res = await action.clearValue(this.placeHolderText + i + "] input");
+		res = await action.addValue(this.placeHolderText + i + "] input", placeHolderText);
 		if (res == true) {
 			await logger.logInto(stackTrace.get(), " -- placeHolderText is entered");
 		}
@@ -1065,7 +1164,7 @@ module.exports = {
 	},
 	click_AllowRichTextMedia: async function (i) {
 		await logger.logInto(stackTrace.get());
-		res = await action.click(this.allowrichTextMedia + i +"] input");
+		res = await action.click(this.allowrichTextMedia + i + "] input");
 		await browser.pause(2000)
 		if (res == true) {
 			await logger.logInto(stackTrace.get(), " -- allowrichTextMedia is clicked");
@@ -1079,7 +1178,7 @@ module.exports = {
 
 	click_AllowFileAttachment: async function (i) {
 		await logger.logInto(stackTrace.get());
-		res = await action.click(this.allowFileAttachment + i +"] input");
+		res = await action.click(this.allowFileAttachment + i + "] input");
 		await browser.pause(4000)
 		if (res == true) {
 			await logger.logInto(stackTrace.get(), " -- allowFileAttachment is clicked");
@@ -1153,7 +1252,7 @@ module.exports = {
 		await logger.logInto(stackTrace.get());
 		await action.waitForDisplayed(this.audioCredit_input)
 		await action.waitForEnabled(this.audioCredit_input)
-		
+
 		res = await action.setValue(this.audioCredit_input, audioCredit); // use setValue instead of addValue - akhil
 		console.log(res)
 		if (res == true) {
@@ -1318,5 +1417,873 @@ module.exports = {
 		}
 		return res;
 	},
+	click_instruction_boldbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.instruction_boldbtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " instruction_boldbtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "instruction_boldbtn is NOT clicked", 'error');
+		}
+		return res;
+	},
 
+	click_instruction_italicbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.instruction_italicbtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " instruction_italicbtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "instruction_italicbtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_instruction_underlinebtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.instruction_underlinebtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " instruction_underlinebtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "instruction_underlinebtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_instruction_numberListmenudropdownbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.instruction_numberListmenudropdownbtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " instruction_numberListmenudropdownbtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "instruction_numberListmenudropdownbtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_instruction_numbermenuList: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.instruction_numbermenuList);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " instruction_numbermenuList is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "instruction_numbermenuList is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_instruction_numbermenuItem: async function (testdata) {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		console.log(this.instruction_numbermenuItem + testdata)
+		res = await action.click(this.instruction_numbermenuItem + testdata);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " instruction_numbermenuItem is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "instruction_numbermenuItem is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_instruction_bulletListmenudropdownbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.instruction_bulletListmenudropdownbtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " instruction_bulletListmenudropdownbtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "instruction_bulletListmenudropdownbtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_instruction_bulletmenuList: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.instruction_bulletmenuList);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " instruction_bulletmenuList is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "instruction_bulletmenuList is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_instruction_bulletmenuItem: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.instruction_bulletmenuItem);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " instruction_bulletmenuItem is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "instruction_bulletmenuItem is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_instruction_languagebtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.instruction_languagebtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " instruction_language Click is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "instruction_language Click is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_instruction_languagedropdownvalue: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.instruction_languagedropdoenvalue);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " instruction_languagedropdoenvalue is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "instruction_languagedropdoenvalue is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_instruction_langbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.instruction_langbtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " instruction_langbtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "instruction_langbtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_instruction_undobtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.instruction_undobtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " instruction_undobtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "instruction_undobtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_instruction_redobtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.instruction_redobtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " instruction_redobtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "instruction_redobtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+	click_header_headingdropdownbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.header_headingdropdownbtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " header_headingdropdownbtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "header_headingdropdownbtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_header_headingtoolbarvaluebtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.header_headingtoolbarvaluebtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " header_headingtoolbarvaluebtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "header_headingtoolbarvaluebtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_header_boldbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.header_boldbtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " header_boldbtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "header_boldbtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_header_italicbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.header_italicbtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " header_italicbtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "header_italicbtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_header_underlinebtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.header_underlinebtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " header_underlinebtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "header_underlinebtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_header_languagebtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.header_languagebtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " header_languagebtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "header_languagebtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_header_languagedropdownvaluebtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.header_languagedropdoenvaluebtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " header_languagedropdoenvaluebtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "header_languagedropdoenvaluebtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_header_langbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.header_langbtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " header_langbtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "header_langbtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_header_undobtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.header_undobtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " header_undobtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "header_undobtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_header_redobtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.header_redobtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " header_redobtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "header_redobtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_prompt_headerdropdownbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.prompt_headerdropdownbtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " prompt_headerdropdownbtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "prompt_headerdropdownbtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_prompt_headingtoolbarvaluebtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.prompt_headingtoolbarvaluebtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " prompt_headingtoolbarvaluebtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "prompt_headingtoolbarvaluebtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_prompt_boldbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.prompt_boldbtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " prompt_boldbtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "prompt_boldbtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_prompt_italicbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.prompt_italicbtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " prompt_italicbtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "prompt_italicbtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_prompt_underlinebtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.prompt_underlinebtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " prompt_underlinebtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "prompt_underlinebtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_prompt_numberListmenudropdownbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.prompt_numberListmenudropdownbtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " prompt_numberListmenudropdownbtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "prompt_numberListmenudropdownbtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_prompt_numbermenuListbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.prompt_numbermenuListbtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " prompt_numbermenuListbtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "prompt_numbermenuListbtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_prompt_numbermenuItembtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.prompt_numbermenuItembtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " prompt_numbermenuItembtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "prompt_numbermenuItembtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_prompt_bulletListmenudropdownbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.prompt_bulletListmenudropdownbtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " prompt_bulletListmenudropdownbtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "prompt_bulletListmenudropdownbtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_prompt_bulletmenuListbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.prompt_bulletmenuListbtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " prompt_bulletmenuListbtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "prompt_bulletmenuListbtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_prompt_bulletmenuItembtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.prompt_bulletmenuItembtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " prompt_bulletmenuItembtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "prompt_bulletmenuItembtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_prompt_languagebtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.prompt_languagebtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " prompt_languagebtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "prompt_languagebtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_prompt_languagedropdownvaluebtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.prompt_languagedropdownvaluebtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " prompt_languagedropdownvaluebtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "prompt_languagedropdownvaluebtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_prompt_langbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.prompt_langbtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " prompt_langbtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "prompt_langbtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_prompt_imagebtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.prompt_imagebtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " prompt_imagebtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "prompt_imagebtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+	// need to check this funtion workflow
+	click_prompt_tabledropdownbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.prompt_tabledropdownbtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " prompt_tabledropdownbtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "prompt_tabledropdownbtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_prompt_linebtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.prompt_linebtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " prompt_linebtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "prompt_linebtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_prompt_blockQuotebtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.prompt_blockQuotebtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " prompt_blockQuotebtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "prompt_blockQuotebtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_prompt_undobtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.prompt_undobtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " prompt_undobtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "prompt_undobtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_prompt_redobtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.prompt_redobtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " prompt_redobtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "prompt_redobtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+	clickCtrlA: async function () {
+		await browser.pause(2000)
+		//await action.keyPress("\uE008a\uE00F")
+		await action.keyPress(['Control', 'a'])
+		await browser.pause(2000)
+		if (res == true) {
+			await logger.logInto(stackTrace.get(), " -- Question Title is entered");
+		}
+		else {
+			res = res + " -- Question Title is NOT entered";
+			await logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
+	click_subQuestion_boldbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.subQuestion_boldbtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " subQuestion_boldbtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "subQuestion_boldbtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_subQuestion_italicbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.subQuestion_italicbtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " subQuestion_italicbtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "subQuestion_italicbtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_subQuestion_underlinebtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.subQuestion_underlinebtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " subQuestion_underlinebtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "subQuestion_underlinebtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_subQuestion_languagebtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.subQuestion_languagebtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " subQuestion_languagebtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "subQuestion_languagebtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_subQuestion_languagedropdownvaluebtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.subQuestion_languagedropdownvaluebtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " subQuestion_languagedropdownvaluebtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "subQuestion_languagedropdownvaluebtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_subQuestion_langbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.subQuestion_langbtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " subQuestion_langbtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "subQuestion_langbtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_subQuestion_tabledropdownbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.subQuestion_tabledropdownbtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " subQuestion_tabledropdownbtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "subQuestion_tabledropdownbtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_subQuestion_linebtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.subQuestion_linebtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " subQuestion_linebtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "subQuestion_linebtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_subQuestion_blockQuotebtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.subQuestion_blockQuotebtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " subQuestion_blockQuotebtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "subQuestion_blockQuotebtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_subQuestion_undobtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.subQuestion_undobtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " subQuestion_undobtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "subQuestion_undobtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_subQuestion_redobtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.subQuestion_redobtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " subQuestion_redobtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "subQuestion_redobtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_subQuestionOption_boldbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.subQuestionOption_boldbtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " subQuestionOption_boldbtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "subQuestionOption_boldbtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_subQuestionOption_italicbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.subQuestionOption_italicbtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " subQuestionOption_italicbtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "subQuestionOption_italicbtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_subQuestionOption_underlinebtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.subQuestionOption_underlinebtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " subQuestionOption_underlinebtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "subQuestionOption_underlinebtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_subQuestionOption_languagebtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.subQuestionOption_languagebtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " subQuestionOption_languagebtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "subQuestionOption_languagebtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_subQuestionOption_languagedropdownvaluebtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.subQuestionOption_languagedropdownvaluebtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " subQuestionOption_languagedropdownvaluebtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "subQuestionOption_languagedropdownvaluebtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_subQuestionOption_langbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.subQuestionOption_langbtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " subQuestionOption_langbtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "subQuestionOption_langbtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_subQuestionOption_undobtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.subQuestionOption_undobtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " subQuestionOption_undobtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "subQuestionOption_undobtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_subQuestionOption_redobtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.subQuestionOption_redobtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " subQuestionOption_redobtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "subQuestionOption_redobtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+	click_dndimagetopBottom_btn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.topBottom_btn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " topBottom_btn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "topBottom_btn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_dndimagePlacement_btn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.imagePlacement_btn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " imagePlacement_btn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "imagePlacement_btn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_dndimageleftRight_btn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.leftRight_btn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " leftRight_btn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "leftRight_btn is NOT clicked", 'error');
+		}
+		return res;
+	},
 }

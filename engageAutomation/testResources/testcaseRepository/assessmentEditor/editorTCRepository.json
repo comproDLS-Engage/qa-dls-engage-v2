@@ -156,6 +156,21 @@
                     "tags": "P1"
                 },
                 {
+                    "id": "ASE_DND_TC_30",
+                    "description": "DND Editor -Validate that Image Left Right dropdown is clicked from settings.",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_DND_TC_31",
+                    "description": "DND Editor - Validate that Left Right option is clicked from image setting dropdown.",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_DND_TC_32",
+                    "description": "DND Editor - Validate that Top Bottom option is clicked from image setting dropdown.",
+                    "tags": "P1"
+                },
+                {
                     "id": "ASE_FIB_TC_1",
                     "description": "Enter the Answer in FIB Value",
                     "tags": "P1"
@@ -308,6 +323,346 @@
                 {
                     "id": "ASE_WRITING_TC_5",
                     "description": "Validate the click on Allow File Attachment",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1018",
+                    "description": "Click Instruction Bold button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1019",
+                    "description": "Click Instruction Italic button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1020",
+                    "description": "Click Instruction underline button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1021",
+                    "description": "Click Instruction bullet List menu in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1022",
+                    "description": "Click Instruction number List menu dropdownbtn in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1023",
+                    "description": "Click Instruction number menu list in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1024",
+                    "description": "Click Instruction number menu item in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1025",
+                    "description": "Click Instruction bullet List menu dropdownbtn in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1026",
+                    "description": "Click Instruction bullet menu Item in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1027",
+                    "description": "Click Instruction language button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1028",
+                    "description": "Click Instruction language list dropdown item in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1029",
+                    "description": "Click Instruction lang button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1030",
+                    "description": "Click Instruction undo button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1017",
+                    "description": "Click Add blank in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1031",
+                    "description": "Click Instruction redo button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1032",
+                    "description": "Click Edit button on Instructor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1033",
+                    "description": "Click Edit button of Header",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1036",
+                    "description": "Click Header Bold button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1037",
+                    "description": "Click Header Italic button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1038",
+                    "description": "Click Header underline button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1039",
+                    "description": "Click Header language button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1040",
+                    "description": "Click Header language list dropdown item in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1041",
+                    "description": "Click Header lang button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1042",
+                    "description": "Click Header undo button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1043",
+                    "description": "Click Header redo button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1034",
+                    "description": "Click Header Heading dropdown button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1035",
+                    "description": "Click Header Heading Dropdown Value button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1064",
+                    "description": "Click ctrl+A in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1044",
+                    "description": "Click Prompt Heading dropdown button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1045",
+                    "description": "Click Prompt Heading Dropdown Value button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1046",
+                    "description": "Click Prompt Bold button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1047",
+                    "description": "Click Prompt Italic button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1048",
+                    "description": "Click Prompt underline button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1049",
+                    "description": "Click Prompt language button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1050",
+                    "description": "Click Prompt language list dropdown item in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1051",
+                    "description": "Click Prompt lang button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1052",
+                    "description": "Click Prompt undo button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1053",
+                    "description": "Click Prompt redo button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1054",
+                    "description": "Click Prompt block button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1055",
+                    "description": "Click Prompt line button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1056",
+                    "description": "Click Prompt tabledropdown button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1057",
+                    "description": "Click Prompt image button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1058",
+                    "description": "Click Prompt bulletmenuItem button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1059",
+                    "description": "Click Prompt numbermenu Item button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1060",
+                    "description": "Click Prompt bullet List menu dropdown button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1061",
+                    "description": "Click Prompt number menu List button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1062",
+                    "description": "Click Prompt number List menu dropdown  button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1063",
+                    "description": "Click Prompt bullet List menu button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1065",
+                    "description": "Click Option Edit button",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1066",
+                    "description": "Click SubQuestioin Bold button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1067",
+                    "description": "Click subQuestion Italic button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1068",
+                    "description": "Click subQuestion underline button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1069",
+                    "description": "Click subQuestion language button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1070",
+                    "description": "Click subQuestion language list dropdown item in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1071",
+                    "description": "Click subQuestion lang button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1072",
+                    "description": "Click subQuestion undo button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1073",
+                    "description": "Click subQuestion redo button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1074",
+                    "description": "Click subQuestion block button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1075",
+                    "description": "Click subQuestion line button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1076",
+                    "description": "Click subQuestion tabledropdown button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1077",
+                    "description": "Click SubQuestion Option Bold button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1078",
+                    "description": "Click subQuestion Option Italic button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1079",
+                    "description": "Click subQuestion Option underline button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1080",
+                    "description": "Click subQuestion Option language button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1081",
+                    "description": "Click subQuestion Option language list dropdown item in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1082",
+                    "description": "Click subQuestion Option lang button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1083",
+                    "description": "Click subQuestion Option undo button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1084",
+                    "description": "Click subQuestion Option redo button in ck editor",
                     "tags": "P1"
                 }
             ]

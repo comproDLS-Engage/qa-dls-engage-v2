@@ -2,172 +2,161 @@
   "editor": {
     "title": "Automation Quiz",
     "questions": {
-      "MCQ": [
-        {
-          "question1": {
-            "questionIndex": 1,
-            "buttonName": "mutiplechoice",
-            "questionTitle": "Multiple Choice Question",
-            "score":"1",
-            "questionInstruction": "See the image carefully and answer the question",
-            "videoURL": "https://www.youtube.com/watch?v=mxbodI60OT4",
-            "videoCredit": "mcq video #1",
-            "imagePath": "./testResources/testcaseData/assessmentEditor/media/Cell.png",
-            "questionText": "Which organelle is called powerhouse of the cell?",
-            "options": ["Mitochondria","Nucleus","Golgi Bodies","Ribosomes"],
-            "optionStyle": "2"
-          },
-          "question2": {
-            "questionIndex": 2,
-            "buttonName": "mutiplechoice",
-            "questionTitle": "Multiple Choice Question",
-            "questionInstruction": "See the diagram carefully and choose the correct option of the given below question",
-            "imagePath": "./testResources/testcaseData/assessmentEditor/media/Cell.png",
-            "imageCredit": "Cell Diagram",
-            "questionText": "Name the marked organelle which is also responsible for the formation of peptide bonds",
-            "options": ["Ribosomes","RNA","DNA","Golgi Bodies"],
-            "optionStyle": "2"
-          }
-        }
-      ],
-      "MCQSR": [
-        {
-            "questionIndex": 1,
-            "buttonName": "multiplechoicequestionset",
-            "questionTitle": "Multiple Choice Question",
-            "score":"1",
-            "questionInstruction": "Dans cette activité \n  Lisez des informations sur la prospérité de la ville de Nantes et voyez l'image d'un riche résident, armateur et marchand. Sur la base de ces informations, répondez aux questions suivantes.",
-            "questionInstructionEdit": "Dans cette activité \n  Lisez des informations sur la prospérité de la ville de Nantes et voyez l'image d'un riche résident.",
-            "videoURL": "https://www.youtube.com/watch?v=mxbodI60OT4",
-            "videoCredit": "mcq video #1",
-            "audioPath": "./testResources/testcaseData/assessmentEditor/media/Ringtone.mp3",
-            "audioCredit": "Audio",
-            "imagePath": "./testResources/testcaseData/assessmentEditor/media/WorldMap.jpg",
-            "promptImagePath": "./testResources/testcaseData/assessmentEditor/media/MCQSR.png",
-            "promptText":"Nantes 2 s’embellit et s’agrandit \n Le quartier de La Fosse est sans contredit l’endroit le plus agréable, le plus riche et le plus actif de Nantes. Il commence à la place de la Bourse et s’étend sur une longueur de cinq cents toises. Ce qui ajoute à l’agrément de ce quartier, c’est l’admirable vue sur la Loire, ouverte de navires et de bateaux. Les maisons que l’on voit le long de ces quais répondent à l’opulence de ceux qui les habitent. Elles sont toutes bâties en pierre avec ferrades et balcons. Nous devons rendre justice au zèle de M. le Maire : car c’est par ses soins que la ville a pris une nouvelle face et s’est accrue d’un quart. Les maisons nouvelles qu’on bâtit tous les jours sont à moitié faites que le rez-de-chaussée est déjà occupé. Encore vingt ans de paix et d’un commerce actif, Nantes égalera, si elle ne les surpasse par la magnificence et l’étendue, les plus belles villes de l’Europe.",
-            "questionText": "Lisez et sélectionnez vos réponses:",
-            "subQuestionText":
-                              [["1", "Quelle activité semble être à l’origine de la richesse de Nantes ?"],
-                              [ "2","Quels métiers profi tent de cet enrichissement ?"]],
-              "options": [["1" ,"1","Commerce "],
-                          ["1" ,"2","Construction"],
-                          ["1" ,"3","Construction de navires"],
-                          ["1" ,"4","Toutes ces"],
-                          ["2" ,"1","Commerce "],
-                          ["2" ,"2","Construction"],
-                          ["2" ,"3","Construction de navires"],
-                          ["2" ,"4","Toutes ces"]],
-           
-            "optionStyle": "2"
-        
-        }
-      ],
-      "writing": [
-        {
-          "questionIndex": 3,
-          "score":"1",
-          "buttonName": "writing",
-          "questionTitle": "Short Essay About Uttar Pradesh with 500 words. See description in Instruction",
-          "questionInstruction": "Write Essay about Uttar Pradesh. provide details about districts, Religion, Famous Places, Area, Politics. Should be not ore than 500 words. Key points: Modern human hunter-gatherers have been in Uttar Pradesh[15][16][17] since between around[18] 85,000 and 72,000 years ago.",
-          "videoURL": "https://www.youtube.com/watch?v=fe6x2n274Fg",
-          "questionText":  " Please Write the Essay.",
-          "textAreaConf":[
-           ["1", "4", "1024","Write Here"],
-           ["2","5","100","placeHolder Text2"]
-          ]
-        }
-      ],
       "TrueFalse": [
         {
-          "questionIndex": 3,
-          "buttonName": "truefalsequestionset",
+          "number": 3,
+          "type": "truefalsequestionset",
           "score":"1",
-          "questionTitle": "True Or False Question",
-          "questionInstruction": "Listen to the audio carefully and choose the correct option of the given below question",
-          "audioPath": "./testResources/testcaseData/assessmentEditor/media/Ringtone.mp3",
-          "audioCredit": "Audio",
-          "questionText": "Is this an iphone original ringtone?",
-          "subQuestionText":
-          [["1", "Is this mi rigtone"],
-          [ "2","is this iphone ringtone"]]
+          "quesTitle": "True and False Question with Multiple Sub-Questions",
+          "instructionText": "Are the following sentences true (T) or false (F)?",
+          "promptImg": "./testResources/testcaseData/assessmentEditor/media/secretgarden.png",
+          "subQues":
+          [["1", "Mary Lennox’s Indian nanny met her in London and they took the train to Yorkshire."],
+          [ "2","Mrs Medlock didn’t like Mary because she was bad-­‐tempered."],
+          ["3","Mr Craven locked up his wife’s garden and kept the key in his pocket."],
+          ["4","Martha worked as a housemaid at Misselthwaite Manor, but she lived on the moor with her family."]]
         }
       ],
       "MultipleResponse": [
         {
-          "questionIndex": 4,
-          "buttonName": "multipleresponse",
+          "number": 4,
+          "type": "multipleresponse",
           "score":"3",
-          "questionTitle": "Multiple Response Question",
-          "questionInstruction": "See the image carefully and choose the correct option(s)",
-          "imagePath": "./testResources/testcaseData/assessmentEditor/media/Plant.jpg",
+          "quesTitle": "Multiple Choice Multiple Response Question",
+          "instructionText": "Select more that one options for the following question",
+          "bulletType":"1",
+          "imagePath": "./testResources/testcaseData/assessmentEditor/media/secretgarden.jpg",
+          "promptText":"Gestalt Psychology states that the whole is different from the sum of its parts. How does the term gestalt relate to the psychological study of perception? Gestalt psychology was popular in the 20th century, but it has been replaced by psycholinguistics.",
           "imageCredit": "Plant Diagram",
           "questionText": "Identify the parts of the plants in the given options:",
-          "subQuestionText":
-          [["1", "Identify the parts of the plants in the given options:"],
-          [ "2","Identify the parts of the flower in the given options:"]],
-          "options": 
-          [["1" ,"1","Stem"],
-          ["1" ,"2","Soil"],
-          ["1" ,"3","Roots"],
-          ["2" ,"1","Bud"],
-          ["2" ,"2","Stem"],
-          ["2" ,"3","Leaves"]],
-          "correctOptions": [
+          "subQues":
+          [["1", "Which of the following laws do not belong to Gestalt Phycology"]],
+          "answerKey": 
+          [["1" ,"1","Kurt Lewin Law", "correct"],
+          ["1" ,"2","Pragnanz Law",""],
+          ["1" ,"3","Proximity Law",""],
+          ["1" ,"4","Wolfgang Kholer Law","correct"]],
+          "correctanswerKey": [
             1,
-            3,
             4
           ]
         }
       ],
       "DragDropOnImage": [
         {
-          "questionIndex": 5,
-          "buttonName": "draganddropontoimage",
-          "questionTitle": "Drag And Drop Onto Image",
+          "number": 5,
+          "type": "draganddropontoimage",
+          "quesTitle": "DND Onto Image Question",
           "score":"5",
-          "questionText": "Drag the continents at their correct places on the world map",
-          "questionInstruction": "Drop the continents in correct places",
-          "imagePath": "./testResources/testcaseData/assessmentEditor/media/WorldMap.jpg",
+          "instructionText": "Drag and drop the textual descriptions to their correct locations within the model",
+          "imagePath": "./testResources/testcaseData/assessmentEditor/media/face-recog-transparent.png",
           "labelOptions": [
-            "Asia", 
-            "Africa", 
-            "Europe", 
-            "North America",
-            "South America"
+            "Expression analysis", 
+            "Facial speech analysis", 
+            "Direct visual processing", 
+            "Viewed-centered descriptions",
+            "Expression-independent descriptions",
+            "Face recognition units", 
+            "Person identity nodes",
+            "Name generation",
+            "Cognitive system"
           ]
         }
       ],
       "DragDropIntoText": [
         {
-          "questionIndex": 6,
-          "buttonName": "draganddropintotext",
-          "questionTitle": "Drag And Drop Into Text",
+          "number": 6,
+          "type": "draganddropintotext",
+          "quesTitle": "DND Into Text Question",
           "score":"3",
-          "questionInstruction": "Drag the pills at their correct places in the sentence.",
-          "videoURL": "https://www.youtube.com/watch?v=uwzViw-T0-A",
-          "videoCredit": "Thirsty Crow",
-          "questionText": 
-            "  Once there was a,{{Blank:A}}. He was very,{{Blank:B}}.He flew here and there in search of,{{Blank:C}}.He saw a pot"
-          ,
+          "instructionText": "Drag and drop the text to the correct location",
+          "promptText":"Mary is a spoilt, unpleasant girl with a bad temper. When Mary meets Ben Weatherstaff, another unpleasant person, she tells him, ‘I’ve never had any friends.’ And Ben answers, ‘Neither have I.’",
+           "questionText": 
+            " 1. Colin thought he had a {{Blank:A}} back. \n When Mary lived in India, she was a {{Blank:B}} little girl. \n‘Colin isn’t feeling well because he had another {{Blank:C}} ,’ said Martha.\n Misselthwaite Manor was on the English {{Blank:D}}",
           "options": [
-            "crow", 
-            "thirsty",
-            "water"
+            "crooked", 
+            "spoilt",
+            "tantrum",
+            "moor"
           ]
         }
       ],
       "FIB": [
         {
-          "questionIndex": 7,
-          "buttonName": "fillintheblanks",
-          "questionTitle": "Fill in the Blanks",
+          "number": 7,
+          "type": "fillintheblanks",
+          "quesTitle": "FIB Text Question",
           "score":"5",
-          "questionInstruction": "Match the statements below with the correct answer.",
-          "questionText": " I can’t swim.{{Blank:A}}\nWe’re not from London. {{Blank:B}}\nI’ve got a cat. {{Blank:C}}\n We go to church every Sunday. {{Blank:D}} \n My best friend calls me every day. {{Blank:E}}\n don’t know the answer. {{Blank:F}}",
-          "promptText": " So/neither/nor + auxiliary + pronoun\n‘I’ve never had any friends,’ said Mary sadly. ‘Neither have I,’ said Ben.\n • If you want to agree with a positive statement, use so + auxiliary + pronoun.\n‘I like swimming in the sea.’   →   ‘So do I.’\n ‘My brother can speak French.’   →   ‘So can I.’\n If you want to agree with a negative statement, use neither/nor + auxiliary + pronoun.\n ‘I don’t like working in the garden.’    →   ‘Neither do I.’\n‘She won’t go to London.’    →   ‘Nor will I.'\n’Be careful! Remember to use the same auxiliary verb as in the sentence you are responding to. \n ‘He will win a prize.’ ‘So will I.’",
-          "options": ["A1","B1","C1","D1","E1","F1"],
+          "instructionText": "Read the description and write the correct word.",
+          "questionText": " Six letter word for 'Dark and sad' :{{Blank:A}} \nFour letter word for 'Large open land' :{{Blank:B}}\nSeven letter word for 'Not straight' :{{Blank:C}}\nSix letter word for 'This person always gets everything he/she wants' :{{Blank:D}}\nSeven letter word for 'Sudden explosion of anger' :{{Blank:E}}",
+          "promptText": "",
+          "options": ["A1","B1","C1","D1","E1"],
           "optionValue":[
-            "Neither can I.", 
+            "Gloomy", 
+            "Moor",
+            "Crooked",
+            "Spoilt",
+            "Tantrum"
+          ]
+        }
+      ],
+      "FIBDropdown": [
+        {
+          "question1": {
+          "number": 7,
+          "type": "fibdropdown",
+          "quesTitle": "FIB Select Question with Unique Options",
+          "score":"5",
+          "instructionText": "Read the first part of each sentence and match it with a conclusion.",
+           "questionText": "  1. Mary entered the room slowly and put her {{Blank:A}} down on a table. \n 2. he hates the garden because she fell off the {{Blank:B}} of the tree and died.",
+         "options":[
+         [ "A-O1" , "cushion"], 
+         [ "A-O2" , "candle"], 
+         ["B-O3" , "branch"], 
+         ["B-O4" , "bed"]
+          ]
+        },
+      "question2": {
+        "number": 7,
+          "type": "fibdropdown",
+          "quesTitle": "FIB Select Question with Common Options",
+          "score":"5",
+          "instructionText": "Read the part of each sentence and match it with a conclusion.",
+          "questionText": " 1. Mary Lennox’s parents {{Blank:A}} \n2. Mary was a spoilt girl with a bad temper, {{Blank:B}}\n3. One morning Mary discovered {{Blank:C}}\n4. Mary had to leave India {{Blank:D}} \n5. Mrs Medlock, her uncle’s housekeeper,  {{Blank:E}}",
+          "options":[
+          ["O1" , "met Mary in London and took her to Misselthwaite Manor."], 
+          ["O2" , "didn't have any time for their daughter."],
+          ["O3" , "because her Indian nanny let her do anything she wanted."],
+          ["O4" , "that her parents were dead."],
+          ["O5" , "and go to live with her uncle in England."]
+          ],
+          "response":
+          [ ["A" , "O2"], 
+           [ "B" , "O3"],
+           [ "C" , "O4"],
+            ["D" , "O5"], 
+            ["E" , "O1"]]
+      }
+    }
+      ],
+
+      "Matching": [
+        {
+          "number": 9,
+          "type": "matching",
+          "score":"3",
+          "quesTitle": "Matching Question",
+          "instructionText": "Match the statements below with the correct answer.",
+          "items": [
+            "I can’t swim.",
+            "We’re not from London.",
+            "I’ve got a cat.",
+            "We go to church every Sunday.",
+            "My best friend calls me every day.",
+            "I don’t know the answer."
+          ],
+          "matchedItems": [
+            "Neither can I.",
             "Neither are we.",
             "So have I.",
             "So do we.",
@@ -176,106 +165,106 @@
           ]
         }
       ],
-      "FIBDropdown": [
-        {
-          "question1": {
-          "questionIndex": 7,
-          "buttonName": "fibdropdown",
-          "questionTitle": "FIB Questions with unique answers",
-          "score":"5",
-          "promptImagePath": "./testResources/testcaseData/assessmentEditor/media/Mughal.jpg",
-          "questionInstruction": "Fill the blanks with the correct options.",
-          "promptText": "The Mughal Empire was important for bringing almost the entire Indian subcontinent under one domain, drawing the subcontinent's regions together through enhanced overland and coastal trading networks. It was also known for its cultural influence and its architectural achievements (most famously, the Taj Mahal).",
-          "questionInstructionEdit": "Fill the blanks with the unique correct options.",
-          "questionText": "  1. The capital of India is {{Blank:A}}\n 2. {{Blank:B}} was the father of Humayu.\n 3. Taj Mahal was built by {{Blank:C}}",
-         "options":[
-         [ "A-O1" , "New Delhi"], 
-         [ "A-O2" , "Bombay"], 
-         ["B-O3" , "Akbar"], 
-         ["B-O4" , "Babar"],
-         ["C-O5" , "Jahangir"], 
-         ["C-O6" , "Shah Jahan"]
-          ]
-        },
-      "question2": {
-        "questionIndex": 7,
-          "buttonName": "fibdropdown",
-          "questionTitle": "FIB Questions with common answers",
-          "score":"5",
-          "videoURL": "https://www.youtube.com/watch?v=Vk461NU7wbg",
-          "promptText": "Colin being the son of Archibald Craven, and that he suffers from an unspecified spinal problem which precludes him from walking and causes him to spend all of his time in bed.",
-          "questionInstruction": "Fill the blanks with the correct options.",
-          "questionInstructionEdit": "Fill the blanks with the Comman correct options.",
-          "questionText": "  1. Colin thought he had a {{Blank:A}} back.  \n 2. When Mary lived in India, she was a {{Blank:B}} little girl. \n 3. Colin’s room was very {{Blank:C}}. \n 4. Misselthwaite Manor was on the English {{Blank:D}} \n 5. ‘Colin isn’t feeling well because he had another {{Blank:E}} ,’ said Martha.",
-          "options":[
-          ["O1" , "gloomy"], 
-          ["O2" , "tantrum"],
-          ["O3" , "crooked"],
-          ["O4" , "spoilt"],
-          ["O5" , "moor"]
-          ],
-          "response":
-          [ ["A" , "O3"], 
-           [ "B" , "O4"],
-           [ "C" , "O1"],
-            ["D" , "O5"], 
-            ["E" , "O2"]]
-      }
-    }
-      ],
       "Ordering": [
         {
-          "questionIndex": 8,
-          "buttonName": "ordering",
+          "number": 8,
+          "type": "ordering",
           "score":"4",
-          "questionTitle": "Ordering Question",
-          "imagePath": "./testResources/testcaseData/assessmentEditor/media/Mughal.jpg",
-          "questionInstruction": "See the image and reorder the options in correct sequence.",
-          "questionText": "Arrange the incidents in sequence",
+          "quesTitle": "Orderlist",
+          "instructionText": "Arrange the options in the correct order",
+          "questionText": "Make a Bond title by putting these four words in the correct order",
           "options": [
-            "Babur’s attack on India",
-            "Akbar’s birth",
-            "Construction of the Taj Mahal",
-            "Aurangzeb’s death"
+            "From",
+            "Russia",
+            "With",
+            "Love"
           ]
         }
       ],
-      "Matching": [
-        {
-          "questionIndex": 9,
-          "buttonName": "matching",
-          "score":"3",
-          "questionTitle": "Matching Question",
-          "questionInstruction": "See the image and match the suitable word",
-          "questionText": "Match the following countries with their corresponding capitals",
-          "items": [
-            "China",
-            "Japan",
-            "New Zealand"
-          ],
-          "matchedItems": [
-            "Beijing",
-            "Tokyo",
-            "Wellington"
-          ]
-        }
-      ],
+      
       "Classify": [
         {
-          "questionIndex": 10,
-          "buttonName": "classify",
-          "questionTitle": "Classify Question",
+          "number": 10,
+          "type": "classify",
+          "quesTitle": "Classify Question",
           "score":"6",
-          "questionInstruction": "View the video and place the items in the correct categories.",
+          "instructionText": "Clasifica estas expresiones según si sirven para saludar o para despedirse",
           "videoURL": "https://www.youtube.com/watch?v=Vk461NU7wbg",
           "questionText": "Classify in to categories",
-          "groups": ["herbivores","carnivores","omnivores"],
-          "options": ["cow","human","tiger","sheep","cat","bear"],
+          "groups": ["SALUDAR","DESPSEDERSE"],
+          "options": ["¿Qué tal?","¡Hasta el lunes!","¿Cómo andas?","Buenas tardes","Buenas noches","¡Hasta mañana!"],
           "groupsIcon": ["O1","O2","O3","O4","O5","O6"],
-          "setGroups": ["A","C","B","A","C","A"]
+          "setGroups": ["A","B","A","A","B","B"]
         }
+      ],
+      "MCQ": [
+      {
+        "question1": {
+          "questionIndex": 1,
+          "buttonName": "mutiplechoice",
+          "quesTitle": "Multiple Choice Question",
+          "score":"1",
+          "instructionText": "See the image carefully and answer the question",
+          "videoURL": "https://www.youtube.com/watch?v=mxbodI60OT4",
+          "videoCredit": "mcq video #1",
+          "imagePath": "./testResources/testcaseData/assessmentEditor/media/Cell.png",
+          "questionText": "Which organelle is called powerhouse of the cell?",
+          "options": ["Mitochondria","Nucleus","Golgi Bodies","Ribosomes"],
+          "optionStyle": "2"
+        }
+      }
+      ],
+      "MCQSR": [
+      {
+          "number": 1,
+          "type": "multiplechoicequestionset",
+          "quesTitle": "MCSR Question with Multiple Sub-Questions",
+          "score":"1",
+          "instructionText": "Choose the correct answer for the following questions",
+          "promptText":"There are twelve of us and my father doesn’t earn much money. It’s hard for my mother to feed them all. The fresh air on the moor makes them strong and healthy. Dickon is twelve and he’s always out on the moor. He loves animals.",
+          "subQues":
+                            [["1", "When the wind blew the ivy to one side"],
+                            [ "2","As soon as Mary met Dickon"],
+                            ["3","Mr Craven returned home to Misselthwaite Manor"],
+                            ["4","Colin felt that the secret garden"]],
+            "answerKey": [["1" ,"1","Mary found the door to the secret garden."],
+                        ["1" ,"2","Mary saw Ben Weatherstaff looking at her."],
+                        ["1" ,"3","Mary saw the little robin."],
+                        ["1" ,"4","Mary found the key to the secret garden."],
+                        ["2" ,"1","she didn’t want to talk to him. "],
+                        ["2" ,"2","they started to play ball together."],
+                        ["2" ,"3","she liked him and trusted him."],
+                        ["2" ,"4","she was afraid of him and ran away."],
+                        ["3" ,"1","because Mrs Medlock wrote him a letter."],
+                        ["3" ,"2","but he was unhappy there."],
+                        ["3" ,"3","because he dreamt about his wife’s garden."],
+                        ["3" ,"4","because he had to talk to Ben Weatherstaff."],
+                        ["4" ,"1","was a sad place."],
+                        ["4" ,"2","should be locked forever."],
+                        ["4" ,"3","was a boring place."],
+                        ["4" ,"4","could help him grow strong and healthy."]],
+         
+          "optionStyle": "2"
+      
+      }
+      ],
+      "writing": [
+      {
+        "questionIndex": 3,
+        "score":"1",
+        "buttonName": "writing",
+        "questionTitle": "Short Essay About Uttar Pradesh with 500 words. See description in Instruction",
+        "questionInstruction": "Write Essay about Uttar Pradesh. provide details about districts, Religion, Famous Places, Area, Politics. Should be not ore than 500 words. Key points: Modern human hunter-gatherers have been in Uttar Pradesh[15][16][17] since between around[18] 85,000 and 72,000 years ago.",
+        "videoURL": "https://www.youtube.com/watch?v=fe6x2n274Fg",
+        "questionText":  " Please Write the Essay.",
+        "textAreaConf":[
+         ["1", "4", "1024","Write Here"],
+         ["2","5","100","placeHolder Text2"]
+        ]
+      }
       ]
-    },
+    
+  },  
     "kidsQuestion":{
       "MCQSR": [
         {

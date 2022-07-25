@@ -105,6 +105,21 @@ module.exports = {
 		sts = await EditorPlayer.imageUpload(testdata);
 		await assertion.assertEqual(sts, true, "Image Upload is not updated");
 	},
+	ASE_DND_TC_30: async function (testdata) {
+			//Validate that Image Left Right dropdown is clicked from settings.
+		sts = await EditorPlayer.click_dndimagePlacement_btn();
+		await assertion.assertEqual(sts, true, "dndimagePlacement_btn is not clicked");
+	},
+	ASE_DND_TC_31: async function (testdata) {
+			//Validate that Left Right option is clicked from image setting dropdown.
+		sts = await EditorPlayer.click_dndimageleftRight_btn();
+		await assertion.assertEqual(sts, true, "dndimageleftRight_btn is not clicked");
+	},
+	ASE_DND_TC_32: async function (testdata) {
+		//Validate that Top Bottom option is clicked from image setting dropdown.
+		sts = await EditorPlayer.click_dndimagetopBottom_btn(testdata);
+		await assertion.assertEqual(sts, true, "dndimagetopBottom_btn is not clicked");
+	},
 	ASE_COM_TC_42: async function (testdata) {
 		sts = await EditorPlayer.setQuestionText(testdata);
 		await assertion.assertEqual(sts, true, "question text is not set");
@@ -398,7 +413,7 @@ module.exports = {
 		await assertion.assertEqual(sts, true, "Edit Prompt button");
 	},
 	ASE_COM_TC_1009: async function (testdata) {
-		sts = await EditorPlayer.setSubQuestiontxt(testdata[1])
+		sts = await EditorPlayer.setSubQuestiontxt(testdata)
 		await assertion.assertEqual(sts, true, "Edit Prompt button");
 	},
 	ASE_COM_TC_1008: async function (testdata) {
@@ -473,5 +488,292 @@ module.exports = {
 	ASE_COM_TC_1017: async function () {
 		sts = await EditorPlayer.clickAddBlankCKEditor()
 		await assertion.assertEqual(sts, true, "Blank is added");
+	},
+	ASE_COM_TC_1018: async function () {
+		sts = await EditorPlayer.click_instruction_boldbtn()
+		await assertion.assertEqual(sts, true, "click_instruction_boldbtn clicked");
+	},
+	ASE_COM_TC_1019: async function () {
+		sts = await EditorPlayer.click_instruction_italicbtn()
+		await assertion.assertEqual(sts, true, "click_instruction_italicbtn clicked");
+	},
+
+	ASE_COM_TC_1020: async function () {
+		sts = await EditorPlayer.click_instruction_underlinebtn()
+		await assertion.assertEqual(sts, true, "click_instruction_underlinebtn clicked");
+	},
+
+	ASE_COM_TC_1021: async function () {
+		sts = await EditorPlayer.click_instruction_bulletmenuList()
+		await assertion.assertEqual(sts, true, "click_instruction_bulletmenuList clicked");
+	},
+	ASE_COM_TC_1022: async function () {
+		sts = await EditorPlayer.click_instruction_numberListmenudropdownbtn()
+		await assertion.assertEqual(sts, true, "instruction_numberListmenudropdownbtn clicked");
+	},
+	ASE_COM_TC_1023: async function () {
+		sts = await EditorPlayer.click_instruction_numbermenuList()
+		await assertion.assertEqual(sts, true, "instruction_numbermenuList clicked");
+	},
+	ASE_COM_TC_1024: async function (testdata) {
+		sts = await EditorPlayer.click_instruction_numbermenuItem(testdata)
+		await assertion.assertEqual(sts, true, "instruction_numbermenuItem clicked");
+	},
+	ASE_COM_TC_1025: async function () {
+		sts = await EditorPlayer.click_instruction_bulletListmenudropdownbtn()
+		await assertion.assertEqual(sts, true, "instruction_bulletListmenudropdownbtn clicked");
+	},
+	ASE_COM_TC_1026: async function () {
+		sts = await EditorPlayer.click_instruction_bulletmenuItem()
+		await assertion.assertEqual(sts, true, "instruction_bulletmenuItem clicked");
+	},
+	ASE_COM_TC_1027: async function () {
+		sts = await EditorPlayer.click_instruction_languagebtn()
+		await assertion.assertEqual(sts, true, "instruction_languagebtn clicked");
+	},
+	ASE_COM_TC_1028: async function () {
+		sts = await EditorPlayer.click_instruction_languagedropdownvalue()
+		await assertion.assertEqual(sts, true, "click_instruction_languagedropdownvalue clicked");
+	},
+	ASE_COM_TC_1029: async function () {
+		sts = await EditorPlayer.click_instruction_langbtn()
+		await assertion.assertEqual(sts, true, "instruction_langbtn clicked");
+	},
+	ASE_COM_TC_1030: async function () {
+		sts = await EditorPlayer.click_instruction_undobtn()
+		await assertion.assertEqual(sts, true, "Instruction_undobtn clicked");
+	},
+	ASE_COM_TC_1031: async function () {
+		sts = await EditorPlayer.click_instruction_redobtn()
+		await assertion.assertEqual(sts, true, "instruction_bulletListmenudropdownbtnclicked");
+	},
+	ASE_COM_TC_1032: async function () {
+		sts = await EditorPlayer.clickinstructionEditbtn()
+		await assertion.assertEqual(sts, true, "instruction Edit button is notlicked");
+	},
+	ASE_COM_TC_1033: async function () {
+		sts = await EditorPlayer.clickEditHeaderbtn()
+		await assertion.assertEqual(sts, true, "Header Edit button is not clicked");
+	},
+	ASE_COM_TC_1034: async function () {
+		sts = await EditorPlayer.click_header_headingdropdownbtn()
+		await assertion.assertEqual(sts, true, "header_headingdropdownbtn clicked");
+	},
+	ASE_COM_TC_1035: async function () {
+		sts = await EditorPlayer.click_header_headingtoolbarvaluebtn()
+		await assertion.assertEqual(sts, true, "headingtoolbarvaluebtn clicked");
+	},
+
+	ASE_COM_TC_1036: async function () {
+		sts = await EditorPlayer.click_header_boldbtn()
+		await assertion.assertEqual(sts, true, "Header Bold is not  clicked");
+	},
+	ASE_COM_TC_1037: async function () {
+		sts = await EditorPlayer.click_header_italicbtn()
+		await assertion.assertEqual(sts, true, "Header Italic is not  clicked");
+	},
+	ASE_COM_TC_1038: async function () {
+		sts = await EditorPlayer.click_header_underlinebtn()
+		await assertion.assertEqual(sts, true, "Header underline is not  clicked");
+	},
+
+	ASE_COM_TC_1039: async function () {
+		sts = await EditorPlayer.click_header_languagebtn()
+		await assertion.assertEqual(sts, true, "Haeder Language button not clicked");
+	},
+	ASE_COM_TC_1040: async function () {
+		sts = await EditorPlayer.click_header_languagedropdownvaluebtn()
+		await assertion.assertEqual(sts, true, "Header Language dropdown is not  clicked");
+	},
+	ASE_COM_TC_1041: async function () {
+		sts = await EditorPlayer.click_header_langbtn()
+		await assertion.assertEqual(sts, true, "Header Lang is not  clicked");
+	},
+	ASE_COM_TC_1042: async function () {
+		sts = await EditorPlayer.click_header_undobtn()
+		await assertion.assertEqual(sts, true, "Header undo is not  clicked");
+	},
+
+	ASE_COM_TC_1043: async function () {
+		sts = await EditorPlayer.click_header_redobtn()
+		await assertion.assertEqual(sts, true, "Haeder redo button not clicked");
+	},
+	ASE_COM_TC_1044: async function () {
+		sts = await EditorPlayer.click_prompt_headerdropdownbtn()
+		await assertion.assertEqual(sts, true, "prompt_headerdropdownbtn is not clicked");
+	},
+	ASE_COM_TC_1045: async function () {
+		sts = await EditorPlayer.click_prompt_headingtoolbarvaluebtn()
+		await assertion.assertEqual(sts, true, "Prompt headingtoolbarvaluebtn is not clicked");
+	},
+
+	ASE_COM_TC_1046: async function () {
+		sts = await EditorPlayer.click_prompt_boldbtn()
+		await assertion.assertEqual(sts, true, "Prompt Bold is not  clicked");
+	},
+	ASE_COM_TC_1047: async function () {
+		sts = await EditorPlayer.click_prompt_italicbtn()
+		await assertion.assertEqual(sts, true, "Prompt Italic is not  clicked");
+	},
+	ASE_COM_TC_1048: async function () {
+		sts = await EditorPlayer.click_prompt_underlinebtn()
+		await assertion.assertEqual(sts, true, "Prompt underline is not  clicked");
+	},
+
+	ASE_COM_TC_1049: async function () {
+		sts = await EditorPlayer.click_prompt_languagebtn()
+		await assertion.assertEqual(sts, true, "Prompt Language button not clicked");
+	},
+	ASE_COM_TC_1050: async function () {
+		sts = await EditorPlayer.click_prompt_languagedropdownvaluebtn()
+		await assertion.assertEqual(sts, true, "Prompt Language dropdown is not  clicked");
+	},
+	ASE_COM_TC_1051: async function () {
+		sts = await EditorPlayer.click_prompt_langbtn()
+		await assertion.assertEqual(sts, true, "Prompt Lang is not  clicked");
+	},
+	ASE_COM_TC_1052: async function () {
+		sts = await EditorPlayer.click_prompt_undobtn()
+		await assertion.assertEqual(sts, true, "Prompt undo is not  clicked");
+	},
+
+	ASE_COM_TC_1053: async function () {
+		sts = await EditorPlayer.click_prompt_redobtn()
+		await assertion.assertEqual(sts, true, "Prompt redo button not clicked");
+	},
+	ASE_COM_TC_1054: async function () {
+		sts = await EditorPlayer.click_prompt_blockQuotebtn()
+		await assertion.assertEqual(sts, true, "Prompt Block quotes is not  clicked");
+	},
+
+	ASE_COM_TC_1055: async function () {
+		sts = await EditorPlayer.click_prompt_linebtn()
+		await assertion.assertEqual(sts, true, "Prompt Line button not clicked");
+	},
+
+	// need to check this funtion workflow
+	ASE_COM_TC_1056: async function () {
+		sts = await EditorPlayer.click_prompt_tabledropdownbtn()
+		await assertion.assertEqual(sts, true, "Prompt tabledropdownbtn is not  clicked");
+	},
+	ASE_COM_TC_1057: async function () {
+		sts = await EditorPlayer.click_prompt_imagebtn()
+		await assertion.assertEqual(sts, true, "Prompt img is not  clicked");
+	},
+	ASE_COM_TC_1058: async function () {
+		sts = await EditorPlayer.click_prompt_bulletmenuItembtn()
+		await assertion.assertEqual(sts, true, "Prompt bulletmenuItembtn is not  clicked");
+	},
+
+	ASE_COM_TC_1059: async function () {
+		sts = await EditorPlayer.click_prompt_numbermenuItembtn()
+		await assertion.assertEqual(sts, true, "Prompt number menu Item button not clicked");
+	},
+	ASE_COM_TC_1060: async function () {
+		sts = await EditorPlayer.click_prompt_bulletListmenudropdownbtn()
+		await assertion.assertEqual(sts, true, "Prompt bullet List menu dropdown btn is not  clicked");
+	},
+	ASE_COM_TC_1061: async function () {
+		sts = await EditorPlayer.click_prompt_numbermenuListbtn()
+		await assertion.assertEqual(sts, true, "Prompt number menu List btn is not  clicked");
+	},
+	ASE_COM_TC_1062: async function () {
+		sts = await EditorPlayer.click_prompt_numberListmenudropdownbtn()
+		await assertion.assertEqual(sts, true, "Prompt number List menu dropdown btn is not  clicked");
+	},
+	ASE_COM_TC_1063: async function () {
+		sts = await EditorPlayer.click_prompt_bulletmenuListbtn()
+		await assertion.assertEqual(sts, true, "Prompt bullet List menu is not  clicked");
+	},
+	ASE_COM_TC_1064: async function () {
+		sts = await EditorPlayer.clickCtrlA()
+		await assertion.assertEqual(sts, true, "ctrl+A is not  clicked");
+	},
+	ASE_COM_TC_1065: async function (testdata) {
+		sts = await EditorPlayer.clickOptionEditbutton(testdata)
+		await assertion.assertEqual(sts, true, "Edit Subquestion Option  button");
+	},
+	ASE_COM_TC_1066: async function () {
+		sts = await EditorPlayer.click_subQuestion_boldbtn()
+		await assertion.assertEqual(sts, true, "subQuestion Bold is not  clicked");
+	},
+	ASE_COM_TC_1067: async function () {
+		sts = await EditorPlayer.click_subQuestion_italicbtn()
+		await assertion.assertEqual(sts, true, "subQuestion Italic is not  clicked");
+	},
+	ASE_COM_TC_1068: async function () {
+		sts = await EditorPlayer.click_subQuestion_underlinebtn()
+		await assertion.assertEqual(sts, true, "subQuestion underline is not  clicked");
+	},
+
+	ASE_COM_TC_1069: async function () {
+		sts = await EditorPlayer.click_subQuestion_languagebtn()
+		await assertion.assertEqual(sts, true, "subQuestion Language button not clicked");
+	},
+	ASE_COM_TC_1070: async function () {
+		sts = await EditorPlayer.click_subQuestion_languagedropdownvaluebtn()
+		await assertion.assertEqual(sts, true, "subQuestion Language dropdown is not  clicked");
+	},
+	ASE_COM_TC_1071: async function () {
+		sts = await EditorPlayer.click_subQuestion_langbtn()
+		await assertion.assertEqual(sts, true, "subQuestion Lang is not  clicked");
+	},
+	ASE_COM_TC_1072: async function () {
+		sts = await EditorPlayer.click_subQuestion_undobtn()
+		await assertion.assertEqual(sts, true, "subQuestion undo is not  clicked");
+	},
+
+	ASE_COM_TC_1073: async function () {
+		sts = await EditorPlayer.click_subQuestion_redobtn()
+		await assertion.assertEqual(sts, true, "subQuestion redo button not clicked");
+	},
+	ASE_COM_TC_1074: async function () {
+		sts = await EditorPlayer.click_subQuestion_blockQuotebtn()
+		await assertion.assertEqual(sts, true, "subQuestion Block quotes is not  clicked");
+	},
+
+	ASE_COM_TC_1075: async function () {
+		sts = await EditorPlayer.click_subQuestion_linebtn()
+		await assertion.assertEqual(sts, true, "subQuestion Line button not clicked");
+	},
+
+	// need to check this funtion workflow
+	ASE_COM_TC_1076: async function () {
+		sts = await EditorPlayer.click_subQuestion_tabledropdownbtn()
+		await assertion.assertEqual(sts, true, "subQuestion tabledropdownbtn is not  clicked");
+	},
+	ASE_COM_TC_1077: async function () {
+		sts = await EditorPlayer.click_subQuestionOption_boldbtn()
+		await assertion.assertEqual(sts, true, "subQuestion Bold is not  clicked");
+	},
+	ASE_COM_TC_1078: async function () {
+		sts = await EditorPlayer.click_subQuestionOption_italicbtn()
+		await assertion.assertEqual(sts, true, "subQuestion Italic is not  clicked");
+	},
+	ASE_COM_TC_1079: async function () {
+		sts = await EditorPlayer.click_subQuestionOption_languagebtn()
+		await assertion.assertEqual(sts, true, "subQuestion underline is not  clicked");
+	},
+
+	ASE_COM_TC_1080: async function () {
+		sts = await EditorPlayer.click_subQuestionOption_languagebtn()
+		await assertion.assertEqual(sts, true, "subQuestion Language button not clicked");
+	},
+	ASE_COM_TC_1081: async function () {
+		sts = await EditorPlayer.click_subQuestionOption_languagedropdownvaluebtn()
+		await assertion.assertEqual(sts, true, "subQuestion Language dropdown is not  clicked");
+	},
+	ASE_COM_TC_1082: async function () {
+		sts = await EditorPlayer.click_subQuestionOption_langbtn()
+		await assertion.assertEqual(sts, true, "subQuestion Lang is not  clicked");
+	},
+	ASE_COM_TC_1083: async function () {
+		sts = await EditorPlayer.click_subQuestionOption_undobtn()
+		await assertion.assertEqual(sts, true, "subQuestion undo is not  clicked");
+	},
+
+	ASE_COM_TC_1084: async function () {
+		sts = await EditorPlayer.click_subQuestionOption_redobtn()
+		await assertion.assertEqual(sts, true, "subQuestion redo button not clicked");
 	},
 }
