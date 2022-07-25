@@ -2710,23 +2710,47 @@
     {
       "modulename": "Writing Player",
       "moduledetails": "",
-      "testFile": "./test/engageExperienceApp/writing.test.js",
+      "testFile": "./test/engageExperienceApp/writingPlayer.test.js",
       "testcase": [
         {
-          "id": "ENG_ITEM_WRIT_TC_1",
-          "description": "Validate the writing question launch in default unattempted state",
+          "id": "ENG_ITEM_WRITING_TC_1",
+          "description": "Validate that user is able to add text in the editable text area",
           "tags": "P1",
           "visualTest": true
         },
         {
-          "id": "ENG_ITEM_WRIT_TC_2",
-          "description": "Validate the writing question launch in submitted state",
+          "id": "ENG_ITEM_WRITING_TC_2",
+          "description": "Validate that attach file dialog opens on selecting Browse from Computer option in attach dropdown",
           "tags": "P1",
           "visualTest": true
         },
         {
-          "id": "ENG_ITEM_WRIT_TC_3",
-          "description": "Validate that the user can add the text in the textboxes of the writing question",
+          "id": "ENG_ITEM_WRITING_TC_3",
+          "description": "Validate that user is able to attach the file less than 100 mb",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ITEM_WRITING_TC_4",
+          "description": "Validate that remove dialog appears when user tries to remove the attachment",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ITEM_WRITING_TC_5",
+          "description": "Validate that file is removed on clicking yes in the remove dialog",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ITEM_WRITING_TC_6",
+          "description": "Validate that file is not removed on clicking no in the remove dialog",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ITEM_WRITING_TC_7",
+          "description": "Validate that max. file size dialog is displayed if user tries to attach file greater than 100 mb",
           "tags": "P1",
           "visualTest": true
         }
@@ -3373,69 +3397,69 @@
       ]
     },
     {
-      "modulename": "writing Player - teacher",
+      "modulename": "Open Activity Player",
       "moduledetails": "",
-      "testFile": "./test/engageExperienceApp/writingPlayer.test.js",
+      "testFile": "./test/engageExperienceApp/openActivityPlayer.test.js",
       "testcase": [
         {
-          "id": "ENG_WRITEPLYR_TC_0",
-          "description": "Click on ativity",
-          "tags": "P2",
-          "visualTest": "-"
+          "id": "ENG_OPEN_TC_1",
+          "description": "Validate the writing question in unattempted state for student",
+          "tags": "P1",
+          "visualTest": true
         },
         {
-          "id": "ENG_WRITEPLYR_TC_1",
-          "description": "Validate the writing player is launched",
-          "tags": "P2",
-          "visualTest": "-"
+          "id": "ENG_OPEN_TC_2",
+          "description": "Validate the writing question in attempted state (not graded) for student",
+          "tags": "P1",
+          "visualTest": true
         },
         {
-          "id": "ENG_WRITEPLYR_TC_2",
-          "description": "Validate the content on Writing Player Page for grading 1st attempt",
-          "tags": "P2",
-          "visualTest": "-"
+          "id": "ENG_OPEN_TC_3",
+          "description": "Validate the writing question in graded state for student",
+          "tags": "P1",
+          "visualTest": true
         },
         {
-          "id": "ENG_WRITEPLYR_TC_3",
-          "description": "Validate that the score value can be set in the score text area",
-          "tags": "P2",
-          "visualTest": "-"
+          "id": "ENG_OPEN_TC_4",
+          "description": "Validate that clicking on Submit Answers displays Submit dialog",
+          "tags": "P1",
+          "visualTest": true
         },
         {
-          "id": "ENG_WRITEPLYR_TC_4",
-          "description": "Validate that the feedback value can be set in the feedback text area",
-          "tags": "P2",
-          "visualTest": "-"
+          "id": "ENG_OPEN_TC_6",
+          "description": "Validate that clicking on Cancel button does not submit the student response",
+          "tags": "P1",
+          "visualTest": true
         },
         {
-          "id": "ENG_WRITEPLYR_TC_5",
-          "description": "Validate clicking on 'Submit Grade' button launches dialog box",
-          "tags": "P2",
-          "visualTest": "-"
+          "id": "ENG_OPEN_TC_11",
+          "description": "Validate the writing question in grading state for teacher",
+          "tags": "P1",
+          "visualTest": true
         },
         {
-          "id": "ENG_WRITEPLYR_TC_6",
-          "description": "Validate clicking on 'Cancel' button disappears dialog box",
-          "tags": "P2",
-          "visualTest": "-"
+          "id": "ENG_OPEN_TC_12",
+          "description": "Validate that clicking on submit grade button without entering the score shows error message",
+          "tags": "P1",
+          "visualTest": true
         },
         {
-          "id": "ENG_WRITEPLYR_TC_7",
-          "description": "Validate clicking on 'Confirm & Submit' button grades the attempt",
-          "tags": "P2",
-          "visualTest": "-"
+          "id": "ENG_OPEN_TC_13",
+          "description": "Validate that confirmation dialog appears on clicking submit button after entering score, feedback and reattempt request as no",
+          "tags": "P1",
+          "visualTest": true
         },
         {
-          "id": "ENG_WRITEPLYR_TC_8",
-          "description": "Validate clicking on 'Yes' radio button",
-          "tags": "P2",
-          "visualTest": "-"
+          "id": "ENG_OPEN_TC_14",
+          "description": "Validate that confirmation dialog appears on clicking submit button after entering score, feedback and reattempt request as yes",
+          "tags": "P1",
+          "visualTest": true
         },
         {
-          "id": "ENG_WRITEPLYR_TC_9",
-          "description": "Validate clicking on 'Confirm & Submit' with REATTEMPT REQUESTED YES button",
-          "tags": "P2",
-          "visualTest": "-"
+          "id": "ENG_OPEN_TC_16",
+          "description": "Validate that clicking on cancel button does not complete the grading of the activity",
+          "tags": "P1",
+          "visualTest": true
         }
       ]
     }

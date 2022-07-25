@@ -192,12 +192,12 @@
                 "maxInstances": 5,
                 "browserName": "chrome",
                 "goog:chromeOptions": {
-                    "args": ["--headless", "--disable-gpu", "--log-level=3"]
+                    "args": ["--disable-gpu", "--log-level=3"]
                 }
             }
         ],
-        "resolution": "1920x1080",
-        "maximizeWindow": false,
+        "resolution": "1280x600",
+        "maximizeWindow": true,
         "hostname": "localhost",
         "portNumber": 4444,
         "webServicePath": "/",
@@ -206,8 +206,10 @@
         "eyes": {
             "batch": "Acceptance",
             "matchLevel": "Layout",
-            "apiKey": "YgTpmv103jxt3HTzb0jJWyQLk3m3NQVFc8kUHuf1BOd2g110",
-            "stitchMode": "Scroll"
+            "apiKey": "WCylilnK2R9V9X2vyMC1SVNXTgv9kgelAUtdD9pKqh0110",
+            "setForceFullPageScreenshot":true,
+            "stitchMode" : "CSS"
+
         }
     }
 }

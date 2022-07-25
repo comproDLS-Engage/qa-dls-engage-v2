@@ -92,6 +92,11 @@
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": []
 			},
+
+
+
+
+
 			{
 				"id": "ASE_COM_TC_1032",
 				"description": "Click on Edit Instruction tab",
@@ -112,6 +117,34 @@
 			{
 				"id": "ASE_COM_TC_1014",
 				"description": "",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": []
 			},
@@ -196,7 +229,6 @@
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": []
 			},
-
 			{
 				"id": "ASE_COM_TC_1065",
 				"description": "",
@@ -408,6 +440,12 @@
 				"id": "ASE_COM_TC_1065",
 				"description": "",
 				"testFile": "./test/assessmentEditor/editor.test.js",
+
+
+
+
+
+
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
@@ -443,7 +481,6 @@
 					}
 				]
 			},
-
 			{
 				"id": "ASE_COM_TC_1065",
 				"description": "",
@@ -787,7 +824,6 @@
 					}
 				]
 			},
-
 			{
 				"id": "ASE_COM_TC_1065",
 				"description": "",
@@ -833,8 +869,7 @@
 				"id": "ASE_COM_TC_1016",
 				"description": "Click Shuffling Checkbox",
 				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-				]
+				"testData": []
 			},
 			{
 				"id": "ASE_COM_TC_4",
@@ -1851,8 +1886,7 @@
 				"id": "ASE_COM_TC_1014",
 				"description": "Enter the question text",
 				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-				]
+				"testData": []
 			},
 			{
 				"id": "ASE_FIBDROPDOWN_TC_1015",
@@ -1880,8 +1914,7 @@
 				"id": "ASE_COM_TC_1016",
 				"description": "Click Shuffling Checkbox",
 				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-				]
+				"testData": []
 			},
 			{
 				"id": "ASE_COM_TC_4",
@@ -1968,36 +2001,31 @@
 				"id": "ASE_COM_TC_1014",
 				"description": "Enter the question text",
 				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-				]
+				"testData": []
 			},
 			{
 				"id": "ASE_FIBDROPDOWN_TC_1014",
 				"description": "Click the Common option",
 				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-				]
+				"testData": []
 			},
 			{
 				"id": "ASE_COM_TC_1013",
 				"description": "Click the Common option",
 				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-				]
+				"testData": []
 			},
 			{
 				"id": "ASE_COM_TC_1013",
 				"description": "Click the Common option",
 				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-				]
+				"testData": []
 			},
 			{
 				"id": "ASE_COM_TC_1013",
 				"description": "Click the Common option",
 				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-				]
+				"testData": []
 			},
 			{
 				"id": "ASE_FIBDROPDOWN_TC_1015",
@@ -2021,7 +2049,6 @@
 					}
 				]
 			},
-			
 			{
 				"id": "ASE_COM_TC_1012",
 				"description": "Add the score in the activity player",
@@ -2037,8 +2064,7 @@
 				"id": "ASE_COM_TC_1016",
 				"description": "Click Shuffling Checkbox",
 				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-				]
+				"testData": []
 			},
 			{
 				"id": "ASE_COM_TC_4",

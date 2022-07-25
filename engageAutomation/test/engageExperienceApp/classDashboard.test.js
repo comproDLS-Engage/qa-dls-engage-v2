@@ -828,9 +828,8 @@ module.exports = {
 	//Validate the Click on Activity Card  on inbox tab of dashboard
 	ENG_INS_CLASS_TC_120: async function (testdata) {
 		sts = await teacherViewClassPage.click_assignmentCardActivityName(testdata)
-		console.log(sts)
 		if ((typeof (sts)) === "object") {
-			await assertion.assertEqual(sts.pageStatus, true, "Writing Player Grade Page is not Launched " + JSON.stringify(sts))
+			await assertion.assertEqual(sts.pageStatus, true, "Open activity player grading page is not Launched ")
 		} else {
 			await assertion.assertFail(sts);
 		}

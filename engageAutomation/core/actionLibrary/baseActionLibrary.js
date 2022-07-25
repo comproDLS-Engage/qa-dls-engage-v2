@@ -120,7 +120,7 @@ module.exports = {
     },
 
     clearValueDefault: async function (selector) {
-        message = "element:" + selector + "value:";
+        message = "element:" + selector;
         try {
             let result = await (await $(selector)).clearValue();
             return result;
