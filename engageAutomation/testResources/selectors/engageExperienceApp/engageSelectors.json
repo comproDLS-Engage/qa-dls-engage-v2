@@ -410,7 +410,7 @@
                 "selectOneOrMoreLabel": "[data-tid=text-selectOneOrMore]",
                 "selectFromDropdownLabel": "[data-tid=text-selectFromDropdown]",
                 "matchingLeftLabel": "",
-                "matchingRightLabel": "",                
+                "matchingRightLabel": "",
                 "itemPlayerContainer": "[id='itemContainer']",
                 "videoMedia": "[aria-label=Prompt] [data-tid=container-video]",
                 "imageMedia": "[aria-label=Prompt] [data-tid=container-imageWrapper]",
@@ -455,9 +455,8 @@
                 "responses": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-tid*=input-response-",
                 "textPlaceholder": "] [data-tid=text-placeholder]"
             },
-            "FIBSelect": {
-                "response": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-tid=input-response-",
-                "responses": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-tid*='input-response']",
+            "fibselect": {
+                "response": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-tid*=input-response-",
                 "responseOption": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [class*=mdc-menu-surface--open] [data-tid*=select-responseoption][data-value="
             },
             "dnd": {
@@ -472,9 +471,9 @@
                 "choices": "div[data-tid*=input-click-option-]",
                 "selectedChoice": "svg[data-tid=icon-selected]"
             },
-            "Matching": {
-                "left": "[data-tid*=input-left-item-",
-                "right": "[data-tid*=input-right-item-"
+            "matching": {
+                "left": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-tid*=input-left-item-",
+                "right": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-tid*=input-right-item-"
             },
             "orderList": {
                 "option": "li[data-tid=input-drag-option-",

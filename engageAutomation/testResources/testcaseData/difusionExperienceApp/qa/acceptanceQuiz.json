@@ -255,6 +255,95 @@
           ["E","Tantrum","correct"]
         ],
         "scenario1": []
+      },
+      {
+        "number": 7,
+        "quesTitle": "FIB Select Question with Unique Options",
+        "quesType": "fibdropdown-item-player",
+        "instructionText": "Read the first part of each sentence and match it with a conclusion.",
+        "promptText": null,
+        "viewLabels": {
+          "instructionHeading": "In this activity",
+          "selectOneLabel": null,
+          "selectOneOrMoreLabel": null,
+          "selectFromDropdownLabel": "Select from dropdown",
+          "matchingLeftLabel": null,
+          "matchingRightLabel": null,
+          "zoomLabel": null,
+          "selectLabel": null,
+          "noneLabel": null,
+          "clearLabel": null
+        },
+        "mediaType": null,
+        "subQues": [],
+        "answerKey": [
+          ["A","O1","cushion","correct"],
+          ["B","O3","branch","correct"]
+        ],
+        "scenario1": [],
+        "scenario2": [],
+        "id": "difusionqa-dev-10256"
+      },
+      {
+        "number": 8,
+        "quesTitle": "FIB Select Question with Common Options",
+        "quesType": "fibdropdown-item-player",
+        "instructionText": "Read the part of each sentence and match it with a conclusion.",
+        "promptText": null,
+        "viewLabels": {
+          "instructionHeading": "In this activity",
+          "selectOneLabel": null,
+          "selectOneOrMoreLabel": null,
+          "selectFromDropdownLabel": "Select from dropdown",
+          "matchingLeftLabel": null,
+          "matchingRightLabel": null,
+          "zoomLabel": null,
+          "selectLabel": null,
+          "noneLabel": null,
+          "clearLabel": null
+        },
+        "mediaType": null,
+        "subQues": [],
+        "answerKey": [
+          ["A","O2","didn't have any time for their daughter.","correct"],
+          ["B","O3","because her Indian nanny let her do anything she wanted.","correct"],
+          ["C","O4","that her parents were dead.","correct"],
+          ["D","O5","and go to live with her uncle in England.","correct"],
+          ["E","O1","met Mary in London and took her to Misselthwaite Manor.","correct"]
+        ],
+        "scenario1": [],
+        "id": "difusionqa-dev-10269"
+      },
+      {
+        "number": 9,
+        "quesTitle": "Matching Question",
+        "quesType": "matching-item-player",
+        "instructionText": "Match the statements below with the correct answer.",
+        "promptText": null,
+        "viewLabels": {
+          "instructionHeading": "In this activity",
+          "selectOneLabel": null,
+          "selectOneOrMoreLabel": null,
+          "selectFromDropdownLabel": null,
+          "matchingLeftLabel": "Select from this column",
+          "matchingRightLabel": "Match with this column",
+          "zoomLabel": null,
+          "selectLabel": "Select the option you want to match",
+          "noneLabel": null,
+          "clearLabel": null
+        },
+        "mediaType": null,
+        "subQues": [],
+        "answerKey": [
+          ["RC1","I can’t swim.","O1","Neither can I.","correct"],
+          ["RC2","We’re not from London.","O2","Neither are we.","correct"],
+          ["RC3","I’ve got a cat.","O3","So have I.","correct"],
+          ["RC4","We go to church every Sunday.","O4","So do we.","correct"],
+          ["RC5","My best friend calls me every day.","O5","So does mine.","correct"],
+          ["RC6","I don’t know the answer.","O6","Neither do I.","correct"]
+        ],
+        "scenario1": [],
+        "id": "difusionqa-dev-10257"
       }
     ]
   }

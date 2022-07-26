@@ -43,8 +43,11 @@ module.exports = {
                 res = await action.setValue(textSelector, fibQuesData[i][1]);
                 await browser.pause(250);
                 await logger.logInto(await stackTrace.get(), res);
-                if (res != true)
+                if (true != res) {
+                    res = res + " -- Target value " + fibQuesData[i][1] + " is NOT entered";
+                    await logger.logInto(await stackTrace.get(), res, 'error');
                     break;
+                }
             }
             else {
                 res = res + " -- Target text placeholder " + fibQuesData[i][0] + " is NOT clicked";

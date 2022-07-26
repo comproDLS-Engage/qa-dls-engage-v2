@@ -84,6 +84,11 @@ module.exports = {
                 res = await action.click(srcPath);
                 if (true == res) {
                     res = await action.click(targetPath);
+                    if (true != res) {
+                        res = res + " -- Source Element is NOT clicked";
+                        await logger.logInto(await stackTrace.get(), res, 'error');
+                        break;
+                    }
                 }
                 else {
                     res = res + " -- Source Element is NOT clicked";

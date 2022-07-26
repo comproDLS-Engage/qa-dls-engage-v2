@@ -33,10 +33,7 @@ module.exports = {
 			res = await action.getElementCount(choiceSelector);
 			if (res == 1 && mcqQuesData[i][2] == 'select') {
 				res = await action.click(choiceSelector);
-				if (true == res) {
-					await logger.logInto(await stackTrace.get(), " -- choice is clicked");
-				}
-				else {
+				if (true != res) {
 					res = res + "-- Error in clicking option";
 					await logger.logInto(await stackTrace.get(), res, "error");
 					break;
