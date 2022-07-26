@@ -241,6 +241,16 @@
                     "tags": "P1"
                 },
                 {
+                    "id": "ASE_COM_TC_1098",
+                    "description": "Click on MultiRespose Checkbox",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1099",
+                    "description": "Click on MultiRespose Checkbox",
+                    "tags": "P1"
+                },
+                {
                     "id": "ASE_COM_TC_1010",
                     "description": "Click on Top bottom option",
                     "tags": "P1"

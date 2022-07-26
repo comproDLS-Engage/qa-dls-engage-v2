@@ -73,6 +73,8 @@ module.exports = {
 	editPrompt_btn: selectorFile.css.editorTab.editPrompt_btn,
 	editSubQuestion_btn: selectorFile.css.editorTab.editSubQuestion_btn,
 	subOptionIndex: selectorFile.css.editorTab.subOptionIndex,
+	subOptionCheckBoxIndex: selectorFile.css.editorTab.subOptionCheckBoxIndex,
+	subOptionRadioIndex:selectorFile.css.editorTab.subOptionRadioIndex,
 	subOptionValue: selectorFile.css.editorTab.subOptionValue,
 	subOptiontext: selectorFile.css.editorTab.subOptiontext,
 	topsbottomOption: selectorFile.css.editorTab.topsbottomOption,
@@ -344,6 +346,7 @@ module.exports = {
 		await browser.pause(5000)
 		//res = await action.clearValueDefault(this.placeHolderIns_txt)
 		res = await action.click(this.placeHolderIns_txt);
+		res = await action.clearValueDefault(this.placeHolderIns_txt)
 		res = await action.addValue(this.placeHolderIns_txt, testdata)
 		await browser.pause(2000)
 		if (res == true) {
@@ -354,7 +357,7 @@ module.exports = {
 	},
 	setPromptTextPlaceHolder: async function (testdata) {
 		await logger.logInto(stackTrace.get());
-
+		res = await action.clearValueDefault(this.placeHolderIns_txt)
 		res = await action.addValue(this.placeHolderIns_txt, testdata)
 		await browser.pause(2000)
 		if (res == true) {
@@ -408,6 +411,27 @@ module.exports = {
 		}
 		return res;
 	},
+	setOptionCheckbox: async function (testdata) {
+		await logger.logInto(stackTrace.get());
+		res= await action.click((this.subOptionCheckBoxIndex + testdata[0] + this.subOptionValue + testdata[1]) +"] input " )
+		console.log(res)
+			await browser.pause(2000)
+		if (res == true) {
+			await logger.logInto(stackTrace.get(), " -- Add Pair Button is clicked");
+		}
+		return res;
+	},
+	setOptionRadio: async function (testdata) {
+		await logger.logInto(stackTrace.get());
+		res= await action.click((this.subOptionRadioIndex + testdata[0] + this.subOptionValue + testdata[1]) +"] input " )
+		console.log(res)
+			await browser.pause(2000)
+		if (res == true) {
+			await logger.logInto(stackTrace.get(), " -- Add Pair Button is clicked");
+		}
+		return res;
+	},
+	
 	clickeditSubQuestionbtn: async function (testdata) {
 		await logger.logInto(stackTrace.get());
 		res = await action.waitForClickable(this.editSubQuestion_btn + testdata + "]>span:nth-child(1)");

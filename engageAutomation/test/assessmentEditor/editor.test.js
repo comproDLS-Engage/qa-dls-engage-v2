@@ -414,7 +414,15 @@ module.exports = {
 	},
 	ASE_COM_TC_1009: async function (testdata) {
 		sts = await EditorPlayer.setSubQuestiontxt(testdata)
-		await assertion.assertEqual(sts, true, "Edit Prompt button");
+		await assertion.assertEqual(sts, true, "setSubQuestiontxt");
+	},
+	ASE_COM_TC_1099: async function (testdata) {
+		sts = await EditorPlayer.setOptionCheckbox(testdata)
+		await assertion.assertEqual(sts, true, "setOptionCheckbox button");
+	},
+	ASE_COM_TC_1098: async function (testdata) {
+		sts = await EditorPlayer.setOptionRadio(testdata)
+		await assertion.assertEqual(sts, true, "setOptionCheckbox button");
 	},
 	ASE_COM_TC_1008: async function (testdata) {
 		sts = await EditorPlayer.setOptiontxt(testdata)
