@@ -7,10 +7,20 @@
         "number": 1,
         "quesType": "multi-mcqsr-item-player",
         "quesTitle": "Multiple Choice Question with Different formats",
-        "instructionHeading": "In this activity",
         "instructionText": "Choose the correct answer A, B or C for the following questions\nПревуците и испустите бројеве у исправан празан оквир.",
         "promptText": "Set in England, it is one of Burnett's most popular novels and seen as a classic of English children's literature.\nSet in England, it is one of Burnett's most popular novels and seen as a classic of English children's literature.\nHola, me llamo Anderson. ¿Y tú? ¿Cómo te llamas?\nwell done\nMary  becomes Secret\ngarden interested book\nher ill manners\nbegin to soften\nMary becomes interested in finding the secret garden herself, and her ill manners begin to soften as a result.\nThis is the default text formatting",
-        "selectOneText": "Select one",
+        "viewLabels": {
+          "instructionHeading": "In this activity",
+          "selectOneLabel": "Select one",
+          "selectOneOrMoreLabel": null,
+          "selectFromDropdownLabel": null,
+          "matchingLeftLabel": null,
+          "matchingRightLabel": null,
+          "zoomLabel": null,
+          "selectLabel": null,
+          "noneLabel": null,
+          "clearLabel": null
+        },
         "mediaType": "image",
         "subQues": [
           ["1","When the wind blew the ivy to one side,\ntest test test test test\ntest test test test test","imageWrapper"],
