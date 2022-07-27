@@ -1,5 +1,4 @@
 var orderlist = require("../../pages/engageExperienceApp/orderlist.page");
-const itemPlayerPage = require('../../pages/engageExperienceApp/itemPlayer.page.js');
 
 module.exports = {
 
@@ -9,14 +8,10 @@ module.exports = {
         if ((typeof (sts)) === "object") {
             await assertion.assertEqual(sts.length, testdata.length, "Options count mismatch");
             for (var i = 0; i < sts.length; i++) {
-                await assertion.assertEqual(sts[i][3], "", "OrderList data for index " + i + " is - " + sts[i]);
+                await assertion.assertEqual(sts[i][3], null, "OrderList data for index " + i + " is - " + sts[i]);
             }
         }
         else await assertion.assertFail(sts);
-        // sts = itemPlayerPage.getItemplayerInfo();
-		// assertion.assertEqual(sts.mediaType, testdata[1].mediaType, "Media type mismatch");
-		// assertion.assertEqual(sts.quesText, testdata[1].text, "Question text mismatch");
-		// assertion.assertEqual(sts.instructionText, testdata[1].instruction, "Instruction text mismatch");
     },
 
     ENG_ITEM_OLI_TC_5: async function (testdata) {
@@ -30,7 +25,7 @@ module.exports = {
         }
         else await assertion.assertFail(sts);
     },
-    ENG_ITEM_OLI_TC_6: async function (testdata) {
+    /*ENG_ITEM_OLI_TC_6: async function (testdata) {
         //Validate Ordered List Question For Partial Scenario
         sts = await orderlist.isInitialized(testdata);
         if ((typeof (sts)) === "object") {
@@ -41,8 +36,8 @@ module.exports = {
         }
         else await assertion.assertFail(sts);
 
-    },
-    ENG_ITEM_OLI_TC_7: async function (testdata) {
+    },*/
+    /*ENG_ITEM_OLI_TC_7: async function (testdata) {
         //Validate Order List Question For Complete Incorrect Scenario
         sts = await orderlist.isInitialized(testdata);
         if ((typeof (sts)) === "object") {
@@ -52,7 +47,7 @@ module.exports = {
             }
         }
         else await assertion.assertFail(sts);
-    },
+    },*/
 
     ENG_ITEM_OLI_TC_9: async function (testdata) {
         //Validate if user is able to drag the items from arrow in the Order List Question
@@ -61,14 +56,14 @@ module.exports = {
         sts = await orderlist.isInitialized(testdata);
         if ((typeof (sts)) === "object") {
             for (var i = 0; i < sts.length; i++) {
-                await assertion.assertEqual(sts[i][1], testdata[i][1], "OrderList data for index " + (i+1) + " is - " + sts[i]);
-                await assertion.assertEqual(sts[i][2], testdata[i][2], "OrderList data for index " + (i+1) + " is - " + sts[i]);
+                await assertion.assertEqual(sts[i][1], testdata[i][1], "OrderList data for index " + (i + 1) + " is - " + sts[i]);
+                await assertion.assertEqual(sts[i][2], testdata[i][2], "OrderList data for index " + (i + 1) + " is - " + sts[i]);
             }
         }
         else await assertion.assertFail(sts);
     },
 
-    ENG_ITEM_OLI_TC_11: async function (testdata) {
+    /*ENG_ITEM_OLI_TC_11: async function (testdata) {
         //Validate that the user responses are retained in Orderlist after clicking try again
         sts = await orderlist.isInitialized(testdata);
         if ((typeof (sts)) === "object") {
@@ -79,5 +74,5 @@ module.exports = {
             }
         }
         else await assertion.assertFail(sts);
-    }
+    }*/
 }

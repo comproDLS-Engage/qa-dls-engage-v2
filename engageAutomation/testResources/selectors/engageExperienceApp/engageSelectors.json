@@ -431,11 +431,6 @@
                 "showingCorrectAnswer_txt": "p[data-tid=text-showingcorrectanswer]",
                 "hint_btn": "[data-tid=button-hint]"
             },
-            "MCQB": {
-                "choice": "div[data-tid=input-click-option-",
-                "choices": "div[data-tid*=input-click-option-]",
-                "selectedChoice": "svg[data-tid=icon-selected]"
-            },
             "multiMcq": {
                 "choices": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-tid*=input-click-option-sub-question-",
                 "selectedChoice": "] [aria-checked=true]",
@@ -446,10 +441,6 @@
                 "qPlyrLoading": "] [class*=plyr--loading]",
                 "qPlyrPlaying": "] [class*=plyr--playing]",
                 "qPlyrPlayBtn": "] [class=plyr__controls] button[data-plyr=play]"
-            },
-            "FIB": {
-                "source": "[data-tid=dragsource-option-",
-                "target": "[data-tid=droptarget-option-"
             },
             "fibtext": {
                 "responses": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-tid*=input-response-",
@@ -466,18 +457,16 @@
                 "zoomOverlay": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [class*='zoom-overlay']",
                 "zoomDialogClose_btn": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-tid='button-zoomdialogclose']"
             },
-            "MCMR": {
-                "choice": "div[data-tid=input-click-option-",
-                "choices": "div[data-tid*=input-click-option-]",
-                "selectedChoice": "svg[data-tid=icon-selected]"
-            },
             "matching": {
                 "left": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-tid*=input-left-item-",
                 "right": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-tid*=input-right-item-"
             },
+            "classify":{
+                "droppedOption": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-tid*=dropped-option-",
+                "textPlaceholder": "] [data-tid=text-placeholder]"
+            },
             "orderList": {
-                "option": "li[data-tid=input-drag-option-",
-                "options": "li[data-tid*=input-drag-option-]",
+                "option": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) li[data-tid*=input-drag-option-",
                 "listIndex": "li[data-tid]:nth-child("
             },
             "writing": {

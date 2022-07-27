@@ -344,6 +344,72 @@
         ],
         "scenario1": [],
         "id": "difusionqa-dev-10257"
+      },
+      {
+        "number": 10,
+        "quesTitle": "Classify Question",
+        "quesType": "classify-item-player",
+        "instructionText": "Clasifica estas expresiones según si sirven para saludar o para despedirse",
+        "promptText": null,
+        "viewLabels": {
+          "instructionHeading": "In this activity",
+          "selectOne": null,
+          "selectOneOrMore": null,
+          "zoomLabel": null,
+          "selectLabel": "Select the group for option",
+          "noneLabel": null,
+          "matchingLeftLabel": null,
+          "matchingRightLabel": null,
+          "clearLabel": "Clear Selection",
+          "selectFromDropdown": null
+        },
+        "mediaType": null,
+        "subQues": [],
+        "answerKey": {
+          "key1": [
+            ["O1",null,"A","¿Qué tal?","correct"],
+            ["O2",null,"B","¡Hasta el lunes!","correct"],
+            ["O3",null,"A","¿Cómo andas?","correct"],
+            ["O4",null,"A","Buenas tardes","correct"],
+            ["O5",null,"B","Buenas noches","correct"],
+            ["O6",null,"B","¡Hasta mañana!","correct"]
+          ],
+          "key2": [
+            ["A","SALUDAR","correct"],
+            ["B","DESPSEDERSE","correct"]
+          ]
+        },
+        "scenario1": {},
+        "id": "difusionqa-dev-10258"
+      },
+      {
+        "number": 11,
+        "quesTitle": null,
+        "quesType": "order-list-item-player",
+        "instructionText": "Arrange the options in the correct order",
+        "promptText": null,
+        "viewLabels": {
+          "instructionHeading": null,
+          "selectOne": null,
+          "selectOneOrMore": null,
+          "zoomLabel": null,
+          "selectLabel": null,
+          "noneLabel": null,
+          "matchingLeftLabel": null,
+          "matchingRightLabel": null,
+          "clearLabel": null,
+          "selectFromDropdown": null
+        },
+        "mediaType": null,
+        "subQues": [],
+        "answerKey": [
+          ["O1","From","1","correct"],
+          ["O2","Russia","2","correct"],
+          ["O3","With","3","correct"],
+          ["O4","Love","4","correct"]
+        ],
+        "scenario1": [],
+        "id": "difusionqa-dev-10452"
       }
     ]
   }
