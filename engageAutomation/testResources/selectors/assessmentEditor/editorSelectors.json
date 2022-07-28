@@ -67,18 +67,20 @@
 			"deleteMedia_btn": "[data-tid=button-deletemedia]",
 			"editPrompt_btn": "[data-tid=button-preview-prompt]",
 			"editSubQuestion_btn": "[data-tid=button-preview-subquestion-",
+			"subOptionCheckBoxIndex":"[data-tid=checkbox-subquestion-",
+			"subOptionRadioIndex":"[data-tid=radio-subquestion-",
 			"subOptionIndex": "[data-tid=preview-subquestion-",
 			"subOptionValue": "-option-",
 			"subOptiontext": "input[type=text]",
 			"topsbottomOption": "[data-tid=radio-optionstyle-1] span[class*=MuiButtonBase]",
 			"leftRightOption": "[data-tid=radio-optionstyle-2] span[class*=MuiButtonBase]",
 			"scoreInputBox": "[data-tid=input-score] input",
-			"addAnswerbtn":"[data-tid=button-addanswers]",
-			"addSubqun_btn":"[data-tid=button-addsubquestion]",
-			"responseEdit":"[data-tid=button-preview-responsearea] svg",
-			"responseTextArea":"[data-tid=input-ck-texteditor] [role=textbox]",
-			"textAreabtn":"button:nth-child(9) > svg , button:nth-child(10)",
-			"shufflingCheckBox":"[data-tid=checkbox-shuffleoptions]",
+			"addAnswerbtn": "[data-tid=button-addanswers]",
+			"addSubqun_btn": "[data-tid=button-addsubquestion]",
+			"responseEdit": "[data-tid=button-preview-responsearea] svg",
+			"responseTextArea": "[data-tid=input-ck-texteditor] [role=textbox]",
+			"textAreabtn": "button:nth-child(9) > svg , button:nth-child(10)",
+			"shufflingCheckBox": "[data-tid=checkbox-shuffleoptions]",
 			"multipleResponse": {
 				"checkboxOption_input": "[data-tid=checkbox-option-"
 			},
@@ -93,7 +95,10 @@
 			},
 			"DND_image": {
 				"addBlank_btn": "[data-tid=button-addblank]",
-				"questionText_input": "[data-tid=input-questiontext] div[data-contents=true]"
+				"questionText_input": "[data-tid=input-questiontext] div[data-contents=true]",
+				"imagePlacement_btn":"[data-tid=select-imagePlacement]",
+				"leftRight_btn":"[data-value=left-right]",
+				"topBottom_btn":"[data-value=top-bottom]"
 			},
 			"matching": {
 				"inputItem": "[data-tid=input-item-",
@@ -113,16 +118,88 @@
 			"fibdropdown": {
 				"uniqueOption": "input[value=individual-options]",
 				"commonOption": "input[value=common-options]",
-				"inputOption":"[data-tid*=preview-option-",
-				"responseOption":"[data-tid*=select-correctoption-"
+				"inputOption": "[data-tid*=preview-option-",
+				"responseOption": "[data-tid*=select-correctoption-"
 			},
-			"writing":{
-				"rowNumber":"[data-tid=input-numberofrows-",
-				"characterLimit":"[data-tid=input-characterlimit-",
-				"placeHolderText":"[data-tid=input-placeholder-",
-				"allowrichTextMedia":"[data-tid=checkbox-richediting-",
-				"allowFileAttachment":"[data-tid=checkbox-allowattachfiles-"
-
+			"writing": {
+				"rowNumber": "[data-tid=input-numberofrows-",
+				"characterLimit": "[data-tid=input-characterlimit-",
+				"placeHolderText": "[data-tid=input-placeholder-",
+				"allowrichTextMedia": "[data-tid=checkbox-richediting-",
+				"allowFileAttachment": "[data-tid=checkbox-allowattachfiles-"
+			},
+			"instruction_formatting": {
+				"instruction_boldbtn": "div[class=\"ck ck-toolbar__items\"]>button[class*=\"ck-button\"]:nth-child(1)",
+				"instruction_italicbtn": "div[class=\"ck ck-toolbar__items\"]>button[class*=\"ck-button\"]:nth-child(2)",
+				"instruction_underlinebtn": "div[class=\"ck ck-toolbar__items\"]>button[class*=\"ck-button\"]:nth-child(3)",
+				"instruction_numberListmenudropdownbtn": ".//div[contains(@class,'ck-list-styles-dropdown')][1]",
+				"instruction_numbermenuList": "div[class*='ck-list-styles-dropdown'] div[aria-label=\"Numbered list styles toolbar\"]",
+				"instruction_numbermenuItem": "div[class*='ck-list-styles-dropdown'] div[aria-label=\"Numbered list styles toolbar\"] button:nth-child(",
+				"instruction_bulletListmenudropdownbtn": ".//div[contains(@class,'ck-list-styles-dropdown')][2]",
+				"instruction_bulletmenuList": "div[class*='ck-list-styles-dropdown'] div[aria-label=\"Bulleted list styles toolbar\"]",
+				"instruction_bulletmenuItem": "div[class*='ck-list-styles-dropdown'] div[aria-label=\"Bulleted list styles toolbar\"] button:nth-child(",
+				"instruction_language Click": "div[class*=ck-text-fragment-language-dropdown]",
+				"instruction_languagedropdoenvalue": "div[class*=ck-text-fragment-language-dropdown] ul[class*=ck-list] span[class*=ck-button__label]",
+				"instruction_langbtn": " //button[contains(@class,'ck-button_with-text') and @aria-pressed=\"false\"]",
+				"instruction_undobtn": "div[class=\"ck ck-toolbar__items\"]>button[class=\"ck-button\"]:nth-child(7)",
+				"instruction_redobtn": "div[class=\"ck ck-toolbar__items\"]>button[class=\"ck-button\"]:nth-child(8)"
+			},
+			"headerFormatting": {
+				"header_headingdropdownbtn": "div[class*=ck-heading-dropdown]",
+				"header_headingtoolbarvaluebtn": "div[class*=ck-heading-dropdown] ul[class*=ck-list] span[class*=ck-button__label]",
+				"header_boldbtn": "div[class=\"ck ck-toolbar__items\"]>button[class*=ck-button]:nth-child(3)",
+				"header_italicbtn": "div[class=\"ck ck-toolbar__items\"]>button[class*=ck-button]:nth-child(4)",
+				"header_underlinebtn": "div[class=\"ck ck-toolbar__items\"]>button[class*=ck-button]:nth-child(5)",
+				"header_languagebtn": "div[class*=ck-text-fragment-language-dropdown]",
+				"header_languagedropdoenvaluebtn": " div[class*=ck-text-fragment-language-dropdown] ul[class*=ck-list] span[class*=ck-button__label]",
+				"header_langbtn": "//button[contains(@class,'ck-button_with-text') and @aria-pressed=\"false\"]",
+				"header_undobtn": "div[class=\"ck ck-toolbar__items\"]>button[class*=ck-button]:nth-child(7)",
+				"header_redobtn": "div[class=\"ck ck-toolbar__items\"]>button[class*=ck-button]:nth-child(8)"
+			},
+			"promptFormatting": {
+				"prompt_headerdropdownbtn": "div[class*=ck-heading-dropdown]",
+				"prompt_headingtoolbarvaluebtn": "div[class*=ck-heading-dropdown] ul[class*=ck-list] span[class*=ck-button__label]",
+				"prompt_boldbtn": "div[class=\"ck ck-toolbar__items\"]>button[class*=ck-button]:nth-child(3)",
+				"prompt_italicbtn": "div[class=\"ck ck-toolbar__items\"]>button[class*=ck-button]:nth-child(4)",
+				"prompt_underlinebtn": "div[class=\"ck ck-toolbar__items\"]>button[class*=ck-button]:nth-child(5)",
+				"prompt_numberListmenudropdownbtn": ".//div[contains(@class,'ck-list-styles-dropdown')][1]",
+				"prompt_numbermenuListbtn": "div[class*='ck-list-styles-dropdown'] div[aria-label=\"Numbered list styles toolbar\"]",
+				"prompt_numbermenuItembtn": "div[class*='ck-list-styles-dropdown'] div[aria-label=\"Numbered list styles toolbar\"] button:nth-child(",
+				"prompt_bulletListmenudropdownbtn": ".//div[contains(@class,'ck-list-styles-dropdown')][2]",
+				"prompt_bulletmenuListbtn": "div[class*='ck-list-styles-dropdown'] div[aria-label=\"Bulleted list styles toolbar\"]",
+				"prompt_bulletmenuItembtn": "div[class*='ck-list-styles-dropdown'] div[aria-label=\"Bulleted list styles toolbar\"] button:nth-child(",
+				"prompt_languagebtn": "div[class*=ck-text-fragment-language-dropdown]",
+				"prompt_languagedropdownvaluebtn": " div[class*=ck-text-fragment-language-dropdown] ul[class*=ck-list] span[class*=ck-button__label]",
+				"prompt_langbtn": "//button[contains(@class,'ck-button_with-text') and @aria-pressed=\"false\"]",
+				"prompt_imagebtn": "div[class=\"ck ck-toolbar__items\"]>button[class=ck-button]:nth-child(9)",
+				"prompt_tabledropdownbtn": "div[class*=\"ck ck-dropdown\"]:nth-child(10)",
+				"prompt_linebtn": "div[class=\"ck ck-toolbar__items\"]>button[class*=ck-button]:nth-child(11)",
+				"prompt_blockQuotebtn": "div[class=\"ck ck-toolbar__items\"]>button[class*=ck-button]:nth-child(12)",
+				"prompt_undobtn": "div[class=\"ck ck-toolbar__items\"]>button[class*=ck-button]:nth-child(13)",
+				"prompt_redobtn": "div[class=\"ck ck-toolbar__items\"]>button[class*=ck-button]:nth-child(14)"
+			},
+			"subQuestionFormatting": {
+				"subQuestion_boldbtn": "div[class=\"ck ck-toolbar__items\"]>button[class*=ck-button]:nth-child(1)",
+				"subQuestion_italicbtn": "div[class=\"ck ck-toolbar__items\"]>button[class*=ck-button]:nth-child(2)",
+				"subQuestion_underlinebtn": "div[class=\"ck ck-toolbar__items\"]>button[class*=ck-button]:nth-child(3)",
+				"subQuestion_languagebtn": "div[class*=ck-text-fragment-language-dropdown]",
+				"subQuestion_languagedropdownvaluebtn": " div[class*=ck-text-fragment-language-dropdown] ul[class*=ck-list] span[class*=ck-button__label]",
+				"subQuestion_langbtn": "//button[contains(@class,'ck-button_with-text') and @aria-pressed=\"false\"]",
+				"subQuestion_tabledropdownbtn": "div[class*=\"ck ck-dropdown\"]:nth-child(5)",
+				"subQuestion_linebtn": "div[class=\"ck ck-toolbar__items\"]>button[class*=ck-button]:nth-child(6)",
+				"subQuestion_blockQuotebtn": "div[class=\"ck ck-toolbar__items\"]>button[class*=ck-button]:nth-child(7)",
+				"subQuestion_undobtn": "div[class=\"ck ck-toolbar__items\"]>button[class*=ck-button]:nth-child(8)",
+				"subQuestion_redobtn": "div[class=\"ck ck-toolbar__items\"]>button[class*=ck-button]:nth-child(9)"
+			},
+			"subQuestionOptionFormatting": {
+				"subQuestionOption_boldbtn": "div[class=\"ck ck-toolbar__items\"]>button[class*=ck-button]:nth-child(1)",
+				"subQuestionOption_italicbtn": "div[class=\"ck ck-toolbar__items\"]>button[class*=ck-button]:nth-child(2)",
+				"subQuestionOption_underlinebtn": "div[class=\"ck ck-toolbar__items\"]>button[class*=ck-button]:nth-child(3)",
+				"subQuestionOption_languagebtn": "div[class*=ck-text-fragment-language-dropdown]",
+				"subQuestionOption_languagedropdownvaluebtn": " div[class*=ck-text-fragment-language-dropdown] ul[class*=ck-list] span[class*=ck-button__label]",
+				"subQuestionOption_langbtn": "//button[contains(@class,'ck-button_with-text') and @aria-pressed=\"false\"]",
+				"subQuestionOption_undobtn": "div[class=\"ck ck-toolbar__items\"]>button[class*=ck-button]:nth-child(5)",
+				"subQuestionOption_redobtn": "div[class=\"ck ck-toolbar__items\"]>button[class*=ck-button]:nth-child(6)"
 			}
 		}
 	}

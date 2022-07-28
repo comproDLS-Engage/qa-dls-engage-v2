@@ -61,6 +61,32 @@
                     "country": "",
                     "info": "Automation User.Do Not Touch."
                 },
+                "uiStudent": {
+                    "email": "dev1uistudent1@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "student",
+                    "name": "dev1ui student1",
+                    "class": [
+                        {
+                            "key": "HB4A-3Rad",
+                            "name": "class1"
+                        }
+                    ],
+                    "info": {}
+                },
+                "uiTeacher": {
+                    "email": "dev1uiteacher1@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "teacher",
+                    "name": "dev1ui teacher1",
+                    "class": [
+                        {
+                            "key": "HB4A-3Rad",
+                            "name": "class1"
+                        }
+                    ],
+                    "info": {}
+                },
                 "acceptanceteacher": {
                     "email": "acceptanceTeacher@yopmail.com",
                     "password": "Compro@1234",

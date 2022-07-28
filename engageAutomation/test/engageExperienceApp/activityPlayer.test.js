@@ -7,6 +7,8 @@ module.exports = {
 
 	//Validate the unattempted state of a close ended activity for a student
 	ENG_PLAY_TC_1: async function (testdata) {
+		await browser.pause(30000);
+		
 		sts = await itemPlayerPage.isInitialized();
 		await assertion.assertEqual(sts.quesType, testdata[0].quesType, "quesType mismatch");
 		await assertion.assertEqual(sts.quesTitle, testdata[0].quesTitle, "quesTitle mismatch");
