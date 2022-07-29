@@ -1,7 +1,7 @@
 //****************************************************//
 // utility for reading activity json of lo package and giving quizData.json
 // run this utility using following command:
-// node quizDataGenerator.js --input 'path to activityjs' --output 'path for output json'
+// node quizDataGenerator.js --input 'path to activity json' --output 'path for output json'
 //****************************************************//
 
 var fs = require('fs');
@@ -24,10 +24,11 @@ fs.readFile(argv.input, 'utf8', function (err, data) {
     }
     Object.keys(loJson.itemBody.questions).forEach(function (qindex) {
         quizObj.quizName.question[qindex] = {
-            "number": "",
+            "number": null,
+            "quesType": "",
             "quesTitle": "",
-            "instructionText": "",
-            "promptText": "",
+            "instructionText": null,
+            "promptText": null,
             "viewLabels": {
                 "instructionHeading": null,
                 "selectOneLabel": null,
@@ -40,8 +41,7 @@ fs.readFile(argv.input, 'utf8', function (err, data) {
                 "noneLabel": null,
                 "clearLabel": null
             },
-            "quesType": "",
-            "mediaType": "",
+            "mediaType": null,
             "subQues": [],
             "answerKey": [],
             "scenario1": [],
@@ -50,46 +50,41 @@ fs.readFile(argv.input, 'utf8', function (err, data) {
             //"maxOptions": "",
             // "id": "",
         }
-        quizObj.quizName.question[qindex].id = loJson.itemBody.questions[qindex].id;
+        //quizObj.quizName.question[qindex].id = loJson.itemBody.questions[qindex].id;
 
         console.log(loJson.itemBody.questions[qindex].id);
 
         quizObj.quizName.question[qindex].number = parseInt(qindex) + 1;
         quizObj.quizName.name = loJson.itemMeta.title;
-        var quesJson = loJson.itemFragments[quizObj.quizName.question[qindex].id];
+        var quesJson = loJson.itemFragments[loJson.itemBody.questions[qindex].id];
         quizObj.quizName.question[qindex].quesType = quesJson.data.player;
         quizObj.quizName.question[qindex].quesTitle = quesJson.data.itemBody.stimulus.content.data.replace(/(<([^>]+)>)/ig, '');
         quizObj.quizName.question[qindex].instructionText = quesJson.data.itemBody.instruction.content.data.replace(/(<([^>]+)>)/ig, '') == "" ? null : quesJson.data.itemBody.instruction.content.data.replace(/(<([^>]+)>)/ig, '');
-        if (quesJson.data.itemBody.prompt == null)
-            quizObj.quizName.question[qindex].promptText = null
-        else
+        if (quesJson.data.itemBody.prompt != null)
             quizObj.quizName.question[qindex].promptText = (quesJson.data.itemBody.prompt.content.data.replace(/(<([^>]+)>)/ig, '')) == "" ? null : quesJson.data.itemBody.prompt.content.data.replace(/(<([^>]+)>)/ig, '');
+
         quizObj.quizName.question[qindex].mediaType = (quesJson.data.itemBody.media.content.data.type) == "" ? null : (quesJson.data.itemBody.media.content.data.type);
         quizObj.quizName.question[qindex] = getQuesdetail(quesJson, quizObj.quizName.question[qindex]);
-        quizObj.quizName.question[qindex].scenario1 = quizObj.quizName.question[qindex].answerKey;
-        quizObj.quizName.question[qindex].scenario2 = quizObj.quizName.question[qindex].answerKey;
+        //quizObj.quizName.question[qindex].scenario1 = quizObj.quizName.question[qindex].answerKey;
+        //quizObj.quizName.question[qindex].scenario2 = quizObj.quizName.question[qindex].answerKey;
         quizObj.quizName.question[qindex].subQues = quizObj.quizName.question[qindex].subQues;
-        if (quesJson.data.itemBody.viewLabels == null)
-            quizObj.quizName.question[qindex].viewLabels = null
-        else {
+
+        if (quesJson.data.itemBody.viewLabels != null) {
             quizObj.quizName.question[qindex].viewLabels = {
-                "instructionHeading": quesJson.data.itemBody.viewLabels.instructionHeading || null,
-                "selectOne": quesJson.data.itemBody.viewLabels.selectOne || null,
-                "selectOneOrMore": quesJson.data.itemBody.viewLabels.selectOneOrMore || null,
-                "selectFromDropdown": quesJson.data.itemBody.viewLabels.selectFromDropdown || null,
-                "matchingLeftLabel": quesJson.data.itemBody.viewLabels.matchingLeftLabel || null,
-                "matchingRightLabel": quesJson.data.itemBody.viewLabels.matchingRightLabel || null,
-                "zoomLabel": quesJson.data.itemBody.viewLabels.zoomLabel || null,
-                "selectLabel": quesJson.data.itemBody.viewLabels.selectLabel || null,
-                "noneLabel": quesJson.data.itemBody.viewLabels.noneLabel || null,
-                "clearLabel": quesJson.data.itemBody.viewLabels.clearLabel || null,
-                
+                instructionHeading: quesJson.data.itemBody.viewLabels.instructionHeading || null,
+                selectOneLabel: quesJson.data.itemBody.viewLabels.selectOne || null,
+                selectOneOrMoreLabel: quesJson.data.itemBody.viewLabels.selectOneOrMore || null,
+                selectFromDropdownLabel: quesJson.data.itemBody.viewLabels.selectFromDropdown || null,
+                matchingLeftLabel: quesJson.data.itemBody.viewLabels.matchingLeftLabel || null,
+                matchingRightLabel: quesJson.data.itemBody.viewLabels.matchingRightLabel || null,
+                zoomLabel: quesJson.data.itemBody.viewLabels.zoomLabel || null,
+                selectLabel: quesJson.data.itemBody.viewLabels.selectLabel || null,
+                noneLabel: quesJson.data.itemBody.viewLabels.noneLabel || null,
+                clearLabel: quesJson.data.itemBody.viewLabels.clearLabel || null,
             }
         }
         // quizObj.quizName.totalScore = quizObj.quizName.totalScore + quizObj.quizName.question[qindex].maxScore;
         // quizObj.quizName.question[qindex].maxScore = loJson.itemBody.questions[qindex].meta.score;
-        //quizObj.quizName.question[qindex].id = undefined;
-
     })
     // quizObj.quizName.passScore = Math.round(quizObj.quizName.totalScore * 0.7 * 10) / 10;
 
@@ -146,7 +141,6 @@ function getQuesdetail(qJson, obj) {
                         if (qJson.data.itemBody.questions[i].id == quesValidations[key].responseContainer.slice(0, -3) && quesValidations[key].correctResponse == "true" && answerKey[j][0] == quesValidations[key].responseContainer.substring(15)) {
                             answerKey[j][2] = "select";
                             answerKey[j][3] = "correct";
-
                         }
                     }
                     else if (obj.quesType == 'multi-mcqsr-itemplayer') {
@@ -154,7 +148,6 @@ function getQuesdetail(qJson, obj) {
                             answerKey[j][2] = "select";
                             answerKey[j][3] = "correct";
                         }
-
                     }
                 })
                 answerKey[j][0] = (parseInt(i) + 1) + "-" + quesOptions[i][j].id;
