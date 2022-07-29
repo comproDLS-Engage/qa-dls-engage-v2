@@ -8,7 +8,7 @@
 	"common": {
 		"appLoader": "[class='c-app-loader js-app-loader']",
 		"menuBtn": "[id=menu-button]",
-		"signOutBtn": "[data-tid=button-signout",
+		"signOutBtn": "[data-tid='button-Sign Out']",
 		"pageTitle": "[class*=c-page-header__title]",
 		"pageSubtitle": "[class*=c-page-header__sub-title]",
 		"pageHeaderImg": "[class*=c-page-header__icon] img",
