@@ -157,7 +157,7 @@
 	},
 	"publishComponentPage": {
 		"snapshotBtn": "[data-tid*='button-Create New Snapshot']",
-		"previewBtn": "button[data-tid*='button-Preview']",
+		"previewBtn": ".//*[contains(@data-tid,'button-Create New Snapshot')]//..//..//*[@class='c-secondary-action']/button",
 		"publishBtn": "button[data-tid*='button-Publish']",
 		"lastPublishedVer": "div:nth-child(1)[class=c-publish-component-page__component__attribute] [class=c-publish-component-page__component__attribute_value__version]",
 		"lastSnapshotVer": "div:nth-child(2)[class=c-publish-component-page__component__attribute] [class=c-publish-component-page__component__attribute_value__version]"

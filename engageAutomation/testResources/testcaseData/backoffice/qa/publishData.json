@@ -19,7 +19,8 @@
                 "autonumbering": "1-based",
                 "targetRole": "All",
                 "visibility": "True",
-                "assignable": "True"
+                "assignable": "True",
+                "freelyAvailable": "Both (Teacher and Student)"
             }
         ],
         "folder": [
