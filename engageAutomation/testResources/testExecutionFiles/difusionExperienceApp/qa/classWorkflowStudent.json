@@ -332,7 +332,7 @@
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/classData.json",
-            "jsonPath": "engage.courses.activeclass"
+            "jsonPath": "engage.courses.class2"
           },
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/classData.json",

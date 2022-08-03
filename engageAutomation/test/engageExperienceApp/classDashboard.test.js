@@ -165,7 +165,7 @@ module.exports = {
 		sts = await classDashboardPage.click_inboxOption();
 		console.log(sts)
 		if ((typeof (sts)) === "object") {
-			await assertion.assertEqual(sts.selectedProduct, testdata.inboxOption_txt+"\n1", "Inbox Page is not displayed: " + (await JSON.stringify(sts.pageStatus)))
+			await assertion.assert(sts.selectedProduct.includes(testdata.inboxOption_txt), "Inbox Page is not displayed: " + (await JSON.stringify(sts.pageStatus)))
 		} else {
 			await assertion.assertFail(sts);
 		}

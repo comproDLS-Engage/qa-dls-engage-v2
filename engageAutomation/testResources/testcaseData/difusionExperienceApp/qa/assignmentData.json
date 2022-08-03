@@ -63,7 +63,9 @@
                             "name": "1. Scorable",
                             "activityList": {
                                 "activity1": "Close Ended Native",
-                                "activity2": "Open Ended Native"
+                                "activity2": "Open Ended Native",
+                                "activity3": "Item Player Test Question",
+                                "activity4": "Acceptance Quiz"
                             }
                         },
                         {
@@ -126,7 +128,7 @@
                         "assignmentName": "Complete Download Assignment",
                         "activityList": [
                             {
-                                "activityName": "Close Ended Native"
+                                "activityName": "Acceptance Quiz"
                             }
                         ]
                     }
@@ -136,7 +138,7 @@
                         "assignmentName": "Closed Ended Assignment",
                         "activityList": [
                             {
-                                "activityName": "Close Ended Native"
+                                "activityName": "Acceptance Quiz"
                             }
                         ]
                     }

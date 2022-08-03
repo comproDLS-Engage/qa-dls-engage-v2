@@ -220,7 +220,7 @@
                 "NoClassInstructor": {
                     "email": "noclassinstructornew@yopmail.com",
                     "password": "Compro@1234",
-                    "name": "noclassinstructornew",
+                    "name": "noclassinstructor new",
                     "role": "instructor",
                     "class": [],
                     "info": {}
@@ -237,7 +237,7 @@
                     "email": "classinstructor1@yopmail.com",
                     "password": "Compro@1234",
                     "role": "instructor",
-                    "name": "classinstructor1",
+                    "name": "classinstructor 1",
                     "class": [
                         {
                             "key": "AEYP-p9hk",
