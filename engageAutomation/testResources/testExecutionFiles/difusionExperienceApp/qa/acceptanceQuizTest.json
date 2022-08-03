@@ -192,7 +192,7 @@
             ]
          },
          {
-            "id": "ENG_ITEM_MCMR_TC_3",
+            "id": "ENG_ITEM_MCMR_TC_2",
             "description": "",
             "testFile": "./test/engageExperienceApp/mcmr.test.js",
             "testData": [
@@ -209,7 +209,7 @@
             "testData": []
          },
          {
-            "id": "ENG_ITEM_MCMR_TC_5",
+            "id": "ENG_ITEM_MCMR_TC_3",
             "description": "",
             "testFile": "./test/engageExperienceApp/mcmr.test.js",
             "testData": [

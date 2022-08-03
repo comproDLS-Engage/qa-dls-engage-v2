@@ -40,13 +40,13 @@ module.exports = {
 	},*/
 
 	//Validate that the user can select multiple options in multiple sub-questions while performing the question
-	ENG_ITEM_MCMR_TC_3: async function (testdata) {
+	ENG_ITEM_MCMR_TC_2: async function (testdata) {
 		sts = await mcmrPage.clickOption(testdata)
 		await assertion.assertEqual(sts, true, sts);
 	},
 
 	//Validate Multi MCSR question after submission
-	ENG_ITEM_MCMR_TC_5: async function (testdata) {
+	ENG_ITEM_MCMR_TC_3: async function (testdata) {
 		sts = await mcmrPage.getData_options(testdata);
 		if ((typeof (sts)) === "object") {
 			for (var i = 0; i < sts.length; i++) {
