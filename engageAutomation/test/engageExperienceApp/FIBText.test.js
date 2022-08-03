@@ -4,7 +4,7 @@ var sts;
 
 module.exports = {
 
-    //Validate the fib text question launch in default unattempted state
+    //Validate the fib text question in unattempted state
     ENG_ITEM_FIBTEXT_TC_1: async function (testdata) {
         sts = await fibtext.isInitialized();
 		await assertion.assertEqual(sts, true, "FIB text question not loaded");
@@ -18,7 +18,7 @@ module.exports = {
 		else await assertion.assertFail(sts);
     },
 
-    //Validate that user is able to click in the text placeholders and type the desired text in the FIB text question
+    //Validate that user can enter text value in each blank
     ENG_ITEM_FIBTEXT_TC_2: async function (testdata) {
         sts = await fibtext.inputValues(testdata);
         await assertion.assertEqual(sts, true);
@@ -32,7 +32,7 @@ module.exports = {
         else await assertion.assertFail(sts);
     },
 
-    //Validate FIB Text Question after submission
+    //Validate the fib text question in attempted state after submission
     ENG_ITEM_FIBTEXT_TC_3: async function (testdata) {
         sts = await fibtext.getData_responses(testdata);
 		if ((typeof (sts)) === "object") {

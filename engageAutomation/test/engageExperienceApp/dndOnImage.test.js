@@ -3,8 +3,8 @@ var dragAndDrop = require('../../pages/engageExperienceApp/dndOnImage.itemPlayer
 var sts, sts1;
 module.exports = {
     
-    //Validate Drag and Drop question is launched
-    ENG_ITEM_DND_TC_20: async function (testdata) {
+    //Validate the drag and drop onto image question in unattempted state
+    ENG_ITEM_DNDI_TC_1: async function (testdata) {
         sts = await dragAndDrop.isInitialized(testdata);
         for (var i = 0; i < sts.sourceData.length; i++) {
             await assertion.assertEqual(sts.targetData[i][1], null, "Target text mismatch for " + sts.targetData[i]);
@@ -12,8 +12,8 @@ module.exports = {
         }
     },
 
-    //Validate Drag & Drop Question Functionality using drag drop option
-    ENG_ITEM_DND_TC_17: async function (testdata) {
+    //Validate that user can drag and drop the pills from source to target location using drag drop functionality
+    ENG_ITEM_DNDI_TC_2: async function (testdata) {
         sts = await dragAndDrop.dragAndDrop(testdata);
         await assertion.assertEqual(sts, true, sts);
         sts1 = await dragAndDrop.isInitialized(testdata);
@@ -26,8 +26,8 @@ module.exports = {
         }
     },
 
-    //Validate Drag & Drop Functionality using Click option
-    ENG_ITEM_DND_TC_7: async function (testdata) {
+    //Validate that user can move the pills from source to target location using click functionality
+    ENG_ITEM_DNDI_TC_3: async function (testdata) {
         sts = await dragAndDrop.dragAndDropClick(testdata);
         await assertion.assertEqual(sts, true);
         sts1 = await dragAndDrop.isInitialized(testdata);
@@ -40,8 +40,8 @@ module.exports = {
         }
     },
 
-    //Validate Drag & Drop Question for Correct scenario
-    ENG_ITEM_DND_TC_1: async function (testdata) {
+    //Validate the drag and drop onto image question in attempted state after submission
+    ENG_ITEM_DNDI_TC_4: async function (testdata) {
         sts = await dragAndDrop.isInitialized(testdata);
         if ((typeof (sts)) === "object") {
             for (var i = 0; i < sts.sourceData.length; i++) {

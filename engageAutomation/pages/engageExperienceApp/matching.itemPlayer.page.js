@@ -53,10 +53,8 @@ module.exports = {
             res = await action.click(this.left + matchingQuesData[i][0]);
             if (true == res) {
                 res = await action.click(this.right + matchingQuesData[i][2]);
-                if (true == res)
-                    res = await action.click(this.right + matchingQuesData[i][2]);
-                else {
-                    res = res + " -- Left Element is NOT clicked";
+                if (true != res) {
+                    res = res + " -- Right Element is NOT clicked";
                     await logger.logInto(await stackTrace.get(), res, 'error');
                     break;
                 }

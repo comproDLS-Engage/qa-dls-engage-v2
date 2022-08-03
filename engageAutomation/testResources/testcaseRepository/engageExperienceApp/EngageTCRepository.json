@@ -1188,20 +1188,26 @@
       "testFile": "./test/engageExperienceApp/dndInText.test.js",
       "testcase": [
         {
-          "id": "ENG_ITEM_FIB_TC_3",
-          "description": "Validate FIB Question Functionality Using Drag & Drop Option",
+          "id": "ENG_ITEM_DNDT_TC_1",
+          "description": "Validate the drag and drop into text question in unattempted state",
           "tags": "P1",
           "visualTest": true
         },
         {
-          "id": "ENG_ITEM_FIB_TC_7",
-          "description": "Validate FIB Question for correct scenario",
+          "id": "ENG_ITEM_DNDT_TC_2",
+          "description": "Validate that user can drag and drop the pills from source to target location using drag drop functionality",
           "tags": "P1",
           "visualTest": true
         },
         {
-          "id": "ENG_ITEM_FIB_TC_20",
-          "description": "Validate Drag and Drop question is launched",
+          "id": "ENG_ITEM_DNDT_TC_3",
+          "description": "Validate that user can move the pills from source to target location using click functionality",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ITEM_DNDT_TC_4",
+          "description": "Validate the drag and drop into text question in attempted state after submission",
           "tags": "P1",
           "visualTest": true
         }
@@ -1264,19 +1270,19 @@
       "testcase": [
         {
           "id": "ENG_ITEM_MATCH_TC_1",
-          "description": "Validate the UI of the Matching player in the default mode",
-          "tags": "P3",
+          "description": "Validate the matching question in unattempted state",
+          "tags": "P1",
           "visualTest": true
         },
         {
           "id": "ENG_ITEM_MATCH_TC_2",
-          "description": "Validate the behaviour of matching player when user match the left item with right item (Mobile)",
+          "description": "Validate that user is able to match left column item with a right column item if the matching is unidirectional",
           "tags": "P1",
           "visualTest": true
         },
         {
           "id": "ENG_ITEM_MATCH_TC_5",
-          "description": "Validate Matching Question for correct scenario",
+          "description": "Validate the matching question in attempted state after submission",
           "tags": "P1",
           "visualTest": true
         }
@@ -1290,7 +1296,7 @@
         {
           "id": "ENG_ITEM_MMCQ_TC_1",
           "description": "Validate the multiple choice single response question in unattempted state",
-          "tags": "P3",
+          "tags": "P1",
           "visualTest": true
         },
         {
@@ -1818,19 +1824,19 @@
       "testcase": [
         {
           "id": "ENG_ITEM_FIBTEXT_TC_1",
-          "description": "Validate DND Into Text question is launched",
+          "description": "Validate the fib text question in unattempted state",
           "tags": "P1",
           "visualTest": true
         },
         {
           "id": "ENG_ITEM_FIBTEXT_TC_2",
-          "description": "Validate that user is able to click in the text placeholders and type the desired text in the FIB text question",
+          "description": "Validate that user can enter text value in each blank",
           "tags": "P1",
           "visualTest": true
         },
         {
           "id": "ENG_ITEM_FIBTEXT_TC_3",
-          "description": "Validate FIB Text Question after submission",
+          "description": "Validate the fib text question in attempted state after submission",
           "tags": "P1",
           "visualTest": true
         }
@@ -1842,21 +1848,27 @@
       "testFile": "./test/engageExperienceApp/dndOnImage.test.js",
       "testcase": [
         {
-          "id": "ENG_ITEM_DND_TC_7",
-          "description": "Validate DND Onto Image Functionality using Click option",
-          "tags": "P1",
-          "visualTest": true
-        },
-        {
-          "id": "ENG_ITEM_DND_TC_1",
-          "description": "Validate DND Onto Image Question Functionality For Correct Scenario",
-          "tags": "P1",
-          "visualTest": true
-        },
-        {
-          "id": "ENG_ITEM_DND_TC_20",
-          "description": "Validate DND Onto Image question is launched",
+          "id": "ENG_ITEM_DNDI_TC_1",
+          "description": "Validate the drag and drop onto image question in unattempted state",
           "tags": "P2",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ITEM_DNDI_TC_2",
+          "description": "Validate that user can drag and drop the pills from source to target location using drag drop functionality",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ITEM_DNDI_TC_3",
+          "description": "Validate that user can move the pills from source to target location using click functionality",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ITEM_DNDI_TC_4",
+          "description": "Validate the drag and drop onto image question in attempted state after submission",
+          "tags": "P1",
           "visualTest": true
         }
       ]
