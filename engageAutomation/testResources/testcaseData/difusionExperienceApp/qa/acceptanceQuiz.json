@@ -422,5 +422,42 @@
         "id": "difusionqa-dev-10452"
       }
     ]
+  },
+  "interactiveActivities": {
+    "type": "Native Engage Learning Object",
+    "name": "A la hora de dormir",
+    "question": [
+      {
+        "number": 1,
+        "quesType": "multi-mcqsr-item-player",
+        "quesTitle": "A la hora de dormir",
+        "instructionText": "Mira este vídeo y selecciona la información que no es correcta.",
+        "promptText": null,
+        "viewLabels": {
+          "instructionHeading": "En esta actividad",
+          "selectOneLabel": null,
+          "selectOneOrMoreLabel": null,
+          "selectFromDropdownLabel": null,
+          "matchingLeftLabel": null,
+          "matchingRightLabel": null,
+          "zoomLabel": null,
+          "selectLabel": null,
+          "noneLabel": null,
+          "clearLabel": null
+        },
+        "mediaType": "video",
+        "subQues": [
+          ["1",null,null]
+        ],
+        "answerKey": [
+          ["2-O1","Al marido le molesta que su mujer ponga en duda si ha cenado o no.",null,null,null],
+          ["2-O2","La mujer duda que sea cierto que su marido haya estado en una cena de trabajo.",null,null,null],
+          ["2-O3","Ella se muestra muy interesada en saber si él la ha engañado.","select","correct",null],
+          ["2-O4","Él quiere dormir pero ella prefiere estar despierta hasta que vuelva su hija.",null,null,null],
+          ["2-O5","Él insinúa que su mujer tiene otros motivos para no dormir por la noche.",null,null,null]
+        ],
+        "scenario1": []
+      }
+    ]
   }
 }

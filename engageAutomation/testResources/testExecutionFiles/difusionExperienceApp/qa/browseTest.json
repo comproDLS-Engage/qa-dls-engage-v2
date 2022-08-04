@@ -90,7 +90,16 @@
             "id": "ENG_ITEM_MMCQ_TC_1",
             "description": "",
             "testFile": "./test/engageExperienceApp/multimcq.test.js",
-            "testData": []
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/acceptanceQuiz.json",
+                  "jsonPath": "interactiveActivities.question[0].subQues"
+               },
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/acceptanceQuiz.json",
+                  "jsonPath": "interactiveActivities.question[0].answerKey"
+               }
+            ]
          },
          {
             "id": "ENG_SHELL_TC_11",
