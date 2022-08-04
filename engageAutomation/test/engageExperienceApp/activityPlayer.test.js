@@ -576,7 +576,7 @@ module.exports = {
 		if (sts.nextActivityBtn == null)
 			await assertion.assertEqual(sts.closeAssignmentBtn, testdata.closeAssignmentBtn, "closeAssignmentBtn status mismatch");
 		else {
-			await assertion.assertEqual(sts.nextActivityBtn, testdata.nextActivityBtn[0], "nextActivityBtn status mismatch");
+			await assertion.assertEqual(sts.nextActivityBtn, testdata.nextActivityBtn[1], "nextActivityBtn status mismatch");
 			await assertion.assertEqual(sts.closeAssignmentBtn, null, "closeAssignmentBtn status mismatch");
 		}
 	},

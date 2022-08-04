@@ -814,7 +814,7 @@
       {
         "id": "ENG_ITEM_DND_TC_20",
         "description": "",
-        "testFile": "./test/engageExperienceApp/dragDrop.test.js",
+        "testFile": "./test/engageExperienceApp/dndOnImage.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/nativeQuizData.json",
@@ -825,7 +825,7 @@
       {
         "id": "ENG_ITEM_DND_TC_7",
         "description": "",
-        "testFile": "./test/engageExperienceApp/dragDrop.test.js",
+        "testFile": "./test/engageExperienceApp/dndOnImage.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/nativeQuizData.json",
@@ -847,7 +847,7 @@
       {
         "id": "ENG_ITEM_FIB_TC_20",
         "description": "",
-        "testFile": "./test/engageExperienceApp/FIB.test.js",
+        "testFile": "./test/engageExperienceApp/dndInText.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/nativeQuizData.json",
@@ -858,7 +858,7 @@
       {
         "id": "ENG_ITEM_FIB_TC_3",
         "description": "",
-        "testFile": "./test/engageExperienceApp/FIB.test.js",
+        "testFile": "./test/engageExperienceApp/dndInText.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/nativeQuizData.json",
@@ -880,7 +880,7 @@
       {
         "id": "ENG_ITEM_FIBTEXT_TC_2",
         "description": "",
-        "testFile": "./test/engageExperienceApp/FIBText.test.js",
+        "testFile": "./test/engageExperienceApp/fibtext.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/nativeQuizData.json",
@@ -891,7 +891,7 @@
       {
         "id": "ENG_ITEM_FIBTEXT_TC_3",
         "description": "",
-        "testFile": "./test/engageExperienceApp/FIBText.test.js",
+        "testFile": "./test/engageExperienceApp/fibtext.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/nativeQuizData.json",
@@ -1099,17 +1099,11 @@
         "id": "ENG_PLAY_TC_9",
         "description": "",
         "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
-        "testData": []
-      },
-      {
-        "id": "ENG_PLAY_TC_25",
-        "description": "",
-        "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
-            "jsonPath": "engage.appContent.activityPlayer.student"
-          }
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/acceptanceQuiz.json",
+            "jsonPath": "itemPlayerQues.question[0]"
+         }
         ]
       },
       {
@@ -1762,7 +1756,7 @@
       {
         "id": "ENG_ITEM_DND_TC_20",
         "description": "",
-        "testFile": "./test/engageExperienceApp/dragDrop.test.js",
+        "testFile": "./test/engageExperienceApp/dndOnImage.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/nativeQuizData.json",
@@ -1773,7 +1767,7 @@
       {
         "id": "ENG_ITEM_DND_TC_7",
         "description": "",
-        "testFile": "./test/engageExperienceApp/dragDrop.test.js",
+        "testFile": "./test/engageExperienceApp/dndOnImage.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/nativeQuizData.json",
@@ -1795,7 +1789,7 @@
       {
         "id": "ENG_ITEM_FIB_TC_20",
         "description": "",
-        "testFile": "./test/engageExperienceApp/FIB.test.js",
+        "testFile": "./test/engageExperienceApp/dndInText.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/nativeQuizData.json",
@@ -1806,7 +1800,7 @@
       {
         "id": "ENG_ITEM_FIB_TC_3",
         "description": "",
-        "testFile": "./test/engageExperienceApp/FIB.test.js",
+        "testFile": "./test/engageExperienceApp/dndInText.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/nativeQuizData.json",
@@ -1828,7 +1822,7 @@
       {
         "id": "ENG_ITEM_FIBTEXT_TC_2",
         "description": "",
-        "testFile": "./test/engageExperienceApp/FIBText.test.js",
+        "testFile": "./test/engageExperienceApp/fibtext.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/nativeQuizData.json",
@@ -1839,7 +1833,7 @@
       {
         "id": "ENG_ITEM_FIBTEXT_TC_3",
         "description": "",
-        "testFile": "./test/engageExperienceApp/FIBText.test.js",
+        "testFile": "./test/engageExperienceApp/fibtext.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/nativeQuizData.json",
