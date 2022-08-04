@@ -155,8 +155,6 @@ module.exports = {
 	//Validate the content (in english) of the Join Class PopUP
 	ENG_STU_CLASS_TC_10: async function (testdata) {
 		sts = await joinClassPage.get_joinClassPopUpData()
-		console.log(sts)
-		console.log(testdata)
 		if ((typeof (sts)) === "object") {
 			await assertion.assertEqual(sts.joinClassHeader, testdata.joinClassHeader, "joinClassHeader Text Mismatch: " + (await JSON.stringify(sts.joinClassHeader)))
 			await assertion.assertEqual(sts.joinClassSubHeader, testdata.joinClassSubHeader, "joinClassSubHeader Text Mismatch: " + (await JSON.stringify(sts.joinClassSubHeader)))
