@@ -89,15 +89,22 @@
                 "type": "Native Engage Learning Object",
                 "id": "category-0-option-0",
                 "name": "QA Automation - Native",
-                "targetRole": "All",
-                "assignable": "True",
+                "completion": true,
+                "scoring": true,
+                "targetRole": "Inherit",
+                "assignable": "Inherit",
                 "page": "13",
                 "activityTheme": "Simple"
             },
             {
                 "type": "Native Engage Learning Object",
                 "id": "category-0-option-0",
-                "name": "QA Automation - Writing"
+                "name": "QA Automation - Writing",
+                "completion": true,
+                "scoring": true,
+                "targetRole": "Inherit",
+                "assignable": "Inherit",
+                "page": "14"
             },
             {
                 "type": "Close Ended Learning Object",
@@ -109,7 +116,11 @@
                 "type": "Video",
                 "id": "category-2-option-0",
                 "name": "QA Automation rich video",
-                "file": "./testResources/testcaseData/backoffice/production/rich-video.mp4"
+                "file": "./testResources/testcaseData/backoffice/production/SampleVideo_1280x720_2mb.mp4",
+                "completion": false,
+                "targetRole": "Inherit",
+                "assignable": "Inherit",
+                "page": ""
             },
             {
                 "type": "Audio",
@@ -151,7 +162,11 @@
                 "type": "Spreadsheet",
                 "id": "category-3-option-3",
                 "name": "QA Automation spreadsheet",
-                "file": "./testResources/testcaseData/backoffice/production/Lorem Ipsum.xlsx"
+                "file": "./testResources/testcaseData/backoffice/production/Lorem Ipsum.xlsx",
+                "completion": false,
+                "targetRole": "Inherit",
+                "assignable": "Inherit",
+                "page": ""
             },
             {
                 "type": "Native Engage Learning Object",
@@ -255,6 +270,99 @@
                 "color": "#158e19",
                 "page": "12",
                 "folderType": "Part"
+            }
+        ],
+        "activity": [
+            {
+                "type": "Native Engage Learning Object",
+                "id": "category-0-option-0",
+                "name": "QA Automation Close Ended",
+                "completion": false,
+                "scoring": false,
+                "targetRole": "All",
+                "assignable": "True",
+                "page": "13",
+                "activityTheme": "Simple"
+            },
+            {
+                "type": "Native Engage Learning Object",
+                "id": "category-0-option-0",
+                "name": "QA Automation Open Ended",
+                "completion": false,
+                "scoring": false,
+                "targetRole": "All",
+                "assignable": "True",
+                "page": "14"
+            },
+            {
+                "type": "Close Ended Learning Object",
+                "id": "category-4-option-0",
+                "name": "QA Automation Test LO3 - close ended linked from Library",
+                "file": "au_plus_1_iexe_exam_9"
+            },
+            {
+                "type": "Video",
+                "id": "category-2-option-0",
+                "name": "QA Automation rich video",
+                "file": "./testResources/testcaseData/backoffice/production/rich-video.mp4",
+                "completion": false,
+                "targetRole": "All",
+                "assignable": "True",
+                "page": "14"
+            },
+            {
+                "type": "Audio",
+                "id": "category-2-option-1",
+                "name": "QA Automation rich audio",
+                "file": "./testResources/testcaseData/backoffice/production/rich-audio.mp3"
+            },
+            {
+                "type": "Video with subtitles",
+                "id": "category-2-option-2",
+                "name": "QA Automation Video with subtitles",
+                "file": "./testResources/testcaseData/backoffice/production/IGT_video.zip"
+            },
+            {
+                "type": "Audio with subtitles",
+                "id": "category-2-option-3",
+                "name": "QA Automation Audio with subtitles",
+                "file": "./testResources/testcaseData/backoffice/production/audio_with_subtitle.zip"
+            },
+            {
+                "type": "Document",
+                "id": "category-3-option-0",
+                "name": "QA Automation document",
+                "file": "./testResources/testcaseData/backoffice/production/Lorem Ipsum.docx"
+            },
+            {
+                "type": "ZIP Archive",
+                "id": "category-3-option-1",
+                "name": "QA Automation ZIP Archive",
+                "file": "./testResources/testcaseData/backoffice/production/Lorem Ipsum.zip"
+            },
+            {
+                "type": "PDF",
+                "id": "category-3-option-2",
+                "name": "QA Automation pdf",
+                "file": "./testResources/testcaseData/backoffice/production/Lorem Ipsum.pdf"
+            },
+            {
+                "type": "Spreadsheet",
+                "id": "category-3-option-3",
+                "name": "QA Automation xls",
+                "file": "./testResources/testcaseData/backoffice/production/SampleXLSFile_19kb.xls",
+                "completion": true,
+                "targetRole": "Teachers Only",
+                "assignable": "False",
+                "page": ""
+            },
+            {
+                "type": "Native Engage Learning Object",
+                "id": "category-0-option-0",
+                "name": "QA Automation - Native Kids",
+                "targetRole": "All",
+                "assignable": "True",
+                "activityTheme": "Illustrative"
             }
         ]
     }

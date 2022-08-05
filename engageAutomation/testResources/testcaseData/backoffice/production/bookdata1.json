@@ -20,7 +20,7 @@
                 "targetRole": "All",
                 "visibility": "True",
                 "assignable": "True",
-                "freeAvailability": "Both"
+                "freelyAvailable": "Both (Teacher and Student)"
             },
             {
                 "type": "Learning Path",
@@ -31,22 +31,22 @@
                 "targetRole": "All",
                 "visibility": "True",
                 "assignable": "True",
-                "freeAvailability": "Both"
+                "freelyAvailable": "Both (Teacher and Student)"
             },
             {
                 "type": "Learning Path",
-                "category": "--none--",
+                "category": "None",
                 "title": "Custom Component",
                 "folderLevel": "2",
                 "autonumbering": "None",
                 "targetRole": "All",
                 "visibility": "True",
                 "assignable": "True",
-                "freeAvailability": "Both"
+                "freelyAvailable": "Both (Teacher and Student)"
             },
             {
                 "type": "Learning Path",
-                "category": "--none--",
+                "category": "None",
                 "title": "Book Resources",
                 "folderLevel": "3",
                 "autonumbering": "None",
@@ -54,18 +54,18 @@
                 "visibility": "True",
                 "assignable": "True",
                 "enableTracking": "None",
-                "freeAvailability": "Both"
+                "freelyAvailable": "Both (Teacher and Student)"
             },
             {
                 "type": "Learning Path",
-                "category": "--none--",
+                "category": "None",
                 "title": "LP1",
                 "folderLevel": "2",
                 "autonumbering": "1-based",
                 "targetRole": "All",
                 "visibility": "True",
                 "assignable": "True",
-                "freeAvailability": "Both"
+                "freelyAvailable": "Both (Teacher and Student)"
             }
         ],
         "folder": [
@@ -93,11 +93,15 @@
             },
             {
                 "type": "Native Engage Learning Object",
-                "name": "Close Ended Native"
+                "name": "Close Ended Native (OLD)"
             },
             {
                 "type": "Native Engage Learning Object",
                 "name": "Open Ended Native"
+            },
+            {
+                "type": "Native Engage Learning Object",
+                "name": "Acceptance Quiz"
             },
             {
                 "type": "Reading (etext)",
