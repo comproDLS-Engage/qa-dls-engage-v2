@@ -1,0 +1,463 @@
+{
+  "itemPlayerQues": {
+    "type": "Native Engage Learning Object",
+    "name": "Item Player Test Question",
+    "question": [
+      {
+        "number": 1,
+        "quesType": "multi-mcqsr-item-player",
+        "quesTitle": "Multiple Choice Question with Different formats",
+        "instructionText": "Choose the correct answer A, B or C for the following questions\nПревуците и испустите бројеве у исправан празан оквир.",
+        "promptText": "Set in England, it is one of Burnett's most popular novels and seen as a classic of English children's literature.\nSet in England, it is one of Burnett's most popular novels and seen as a classic of English children's literature.\nHola, me llamo Anderson. ¿Y tú? ¿Cómo te llamas?\nwell done\nMary  becomes Secret\ngarden interested book\nher ill manners\nbegin to soften\nMary becomes interested in finding the secret garden herself, and her ill manners begin to soften as a result.\nThis is the default text formatting",
+        "viewLabels": {
+          "instructionHeading": "In this activity",
+          "selectOneLabel": "Select one",
+          "selectOneOrMoreLabel": null,
+          "selectFromDropdownLabel": null,
+          "matchingLeftLabel": null,
+          "matchingRightLabel": null,
+          "zoomLabel": null,
+          "selectLabel": null,
+          "noneLabel": null,
+          "clearLabel": null
+        },
+        "mediaType": "image",
+        "subQues": [
+          ["1","When the wind blew the ivy to one side,\ntest test test test test\ntest test test test test","imageWrapper"],
+          ["2",null,"audio"],
+          ["3",null,"videoNative"]
+        ],
+        "answerKey": [
+          ["1-O1","Option A","select","correct",null],
+          ["1-O2","Option B",null,null,null],
+          ["1-O3","Option C",null,null,null],
+          ["1-O4","Option D",null,null,null],
+          ["2-O1","Option A","select","correct","audio"],
+          ["2-O2","",null,null,"audio"],
+          ["2-O3","Option C",null,null,"audio"],
+          ["2-O4","",null,null,"audio"],
+          ["3-O1","Option A","select","correct","imageWrapper"],
+          ["3-O2","",null,null,"imageWrapper"],
+          ["3-O3","Option C",null,null,"imageWrapper"],
+          ["3-O4","",null,null,"imageWrapper"]
+        ],
+        "scenario1": [
+          ["1-O1","Option A",null,"correct",null],
+          ["1-O2","Option B","select","incorrect",null],
+          ["1-O3","Option C",null,null,null],
+          ["1-O4","Option D",null,null,null],
+          ["2-O1","Option A",null,"correct","audio"],
+          ["2-O2","","select","incorrect","audio"],
+          ["2-O3","Option C",null,null,"audio"],
+          ["2-O4","",null,null,"audio"],
+          ["3-O1","Option A",null,"correct","imageWrapper"],
+          ["3-O2","",null,null,"imageWrapper"],
+          ["3-O3","Option C",null,null,"imageWrapper"],
+          ["3-O4","","select","incorrect","imageWrapper"]
+        ]
+      }
+    ]
+  },
+  "acceptanceQuiz": {
+    "type": "Native Engage Learning Object",
+    "name": "Acceptance Quiz",
+    "question": [
+      {
+        "number": 1,
+        "quesType": "multi-mcqsr-item-player",
+        "quesTitle": "MCSR Question with Multiple Sub-Questions",
+        "instructionText": "Choose the correct answer for the following questions",
+        "promptText": "There are twelve of us and my father doesn’t earn much money. It’s hard for my mother to feed them all. The fresh air on the moor makes them strong and healthy. Dickon is twelve and he’s always out on the moor. He loves animals.",
+        "viewLabels": {
+          "instructionHeading": "In this activity",
+          "selectOneLabel": "Select one",
+          "selectOneOrMoreLabel": null,
+          "selectFromDropdownLabel": null,
+          "matchingLeftLabel": null,
+          "matchingRightLabel": null,
+          "zoomLabel": null,
+          "selectLabel": null,
+          "noneLabel": null,
+          "clearLabel": null
+        },
+        "mediaType": null,
+        "subQues": [
+          ["1","When the wind blew the ivy to one side,",null],
+          ["2","As soon as Mary met Dickon,",null],
+          ["3","Mr Craven returned home to Misselthwaite Manor",null],
+          ["4","Colin felt that the secret garden",null]
+        ],
+        "answerKey": [
+          ["1-O1","Mary saw the little robin.",null,null,null],
+          ["1-O2","Mary found the door to the secret garden.","select","correct",null],
+          ["1-O3","Mary found the key to the secret garden.",null,null,null],
+          ["1-O4","Mary saw Ben Weatherstaff looking at her.",null,null,null],
+          ["2-O1"," she didn’t want to talk to him.",null,null,null],
+          ["2-O2","she was afraid of him and ran away.",null,null,null],
+          ["2-O3","they started to play ball together.",null,null,null],
+          ["2-O4","she liked him and trusted him.","select","correct",null],
+          ["3-O1","because he had to talk to Ben Weatherstaff.",null,null,null],
+          ["3-O2","because Mrs Medlock wrote him a letter.",null,null,null],
+          ["3-O3","because he dreamt about his wife’s garden.","select","correct",null],
+          ["3-O4","but he was unhappy there.",null,null,null],
+          ["4-O1","was a sad place.",null,null,null],
+          ["4-O2","was a boring place.",null,null,null],
+          ["4-O3","should be locked forever.",null,null,null],
+          ["4-O4","could help him grow strong and healthy.","select","correct",null]
+        ],
+        "scenario1": []
+      },
+      {
+        "number": 2,
+        "quesType": "mcqmr-item-player",
+        "quesTitle": "MCMR Question with Single Sub-Question",
+        "instructionText": "Select more that one options for the following question",
+        "promptText": null,
+        "viewLabels": {
+          "instructionHeading": "In this activity",
+          "selectOneLabel": null,
+          "selectOneOrMoreLabel": "Select all correct answers",
+          "selectFromDropdownLabel": null,
+          "matchingLeftLabel": null,
+          "matchingRightLabel": null,
+          "zoomLabel": null,
+          "selectLabel": null,
+          "noneLabel": null,
+          "clearLabel": null
+        },
+        "mediaType": null,
+        "subQues": [
+          ["1","Which of the following laws do not belong to Gestalt Phycology",null]
+        ],
+        "answerKey": [
+          ["1-O1","Kurt Lewin Law","select","correct",null],
+          ["1-O2","Pragnanz Law",null,"correct",null],
+          ["1-O3","Proximity Law",null,"correct",null],
+          ["1-O4","Wolfgang Kholer Law","select","correct",null]
+      ],
+        "scenario1": []
+      },
+      {
+        "number": 3,
+        "quesType": "multi-mcqsr-item-player",
+        "quesTitle": "True and False Question with Multiple Sub-Questions",
+        "instructionText": "Are the following sentences true (T) or false (F)?",
+        "promptText": null,
+        "viewLabels": {
+          "instructionHeading": "In this activity",
+          "selectOneLabel": "Select one",
+          "selectOneOrMoreLabel": null,
+          "selectFromDropdownLabel": null,
+          "matchingLeftLabel": null,
+          "matchingRightLabel": null,
+          "zoomLabel": null,
+          "selectLabel": null,
+          "noneLabel": null,
+          "clearLabel": null
+        },
+        "mediaType": "image",
+        "subQues": [
+          ["1","Mary Lennox’s Indian nanny met her in London and they took the train to Yorkshire.",null],
+          ["2","Mrs Medlock didn’t like Mary because she was bad-­‐tempered.",null],
+          ["3","Mr Craven locked up his wife’s garden and kept the key in his pocket.",null],
+          ["4","Martha worked as a housemaid at Misselthwaite Manor, but she lived on the moor with her family.",null]
+        ],
+        "answerKey": [
+          ["1-O1","True",null,null,null],
+          ["1-O2","False","select","correct",null],
+          ["2-O1","True","select","correct",null],
+          ["2-O2","False",null,null,null],
+          ["3-O1","True",null,null,null],
+          ["3-O2","False","select","correct",null],
+          ["4-O1","True","select","correct",null],
+          ["4-O2","False",null,null,null]
+        ],
+        "scenario1": []
+      },
+      {
+        "number": 4,
+        "quesType": "imagelabel-dnd-item-player",
+        "quesTitle": "DND Onto Image Question",
+        "instructionText": "Drag and drop the textual descriptions to their correct locations within the model",
+        "promptText": null,
+        "viewLabels": {
+          "instructionHeading": "In this activity",
+          "selectOneLabel": null,
+          "selectOneOrMoreLabel": null,
+          "selectFromDropdownLabel": null,
+          "matchingLeftLabel": null,
+          "matchingRightLabel": null,
+          "zoomLabel": "Tap here to zoom",
+          "selectLabel": "Tap to select",
+          "noneLabel": "None",
+          "clearLabel": null
+        },
+        "mediaType": null,
+        "subQues": [],
+        "answerKey": [
+          ["O1",null,"A","Expression analysis","correct"],
+          ["O2",null,"B","Facial speech analysis","correct"],
+          ["O3",null,"C","Direct visual processing","correct"],
+          ["O4",null,"D","Viewed-centered descriptions","correct"],
+          ["O5",null,"E","Expression-independent descriptions","correct"],
+          ["O6",null,"F","Face recognition units","correct"],
+          ["O7",null,"G","Person identity nodes","correct"],
+          ["O8",null,"H","Name generation","correct"],
+          ["O9",null,"I","Cognitive system","correct"]
+        ],
+        "scenario1": []
+      },
+      {
+        "number": 5,
+        "quesTitle": "DND Into Text Question",
+        "quesType": "fib-dnd-item-player",
+        "instructionText": "Drag and drop the text to the correct location",
+        "promptText": "Mary is a spoilt, unpleasant girl with a bad temper. When Mary meets Ben Weatherstaff, another unpleasant person, she tells him, ‘I’ve never had any friends.’ And Ben answers, ‘Neither have I.’",
+        "viewLabels": {
+          "instructionHeading": "In this activity",
+          "selectOneLabel": null,
+          "selectOneOrMoreLabel": null,
+          "selectFromDropdownLabel": null,
+          "matchingLeftLabel": null,
+          "matchingRightLabel": null,
+          "zoomLabel": null,
+          "selectLabel": null,
+          "noneLabel": null,
+          "clearLabel": null
+        },
+        "mediaType": null,
+        "subQues": [],
+        "answerKey": [
+          ["O1",null,"A","crooked","correct"],
+          ["O2",null,"B","spoilt","correct"],
+          ["O3",null,"C","tantrum","correct"],
+          ["O4",null,"D","moor","correct"]
+        ],
+        "scenario1": [],
+        "scenario2": [],
+        "id": "difusionqa-dev-10254"
+      },
+      {
+        "number": 6,
+        "quesTitle": "FIB Text Question",
+        "instructionText": "Read the description and write the correct word.",
+        "promptText": null,
+        "viewLabels": {
+          "instructionHeading": "In this activity",
+          "selectOneLabel": null,
+          "selectOneOrMoreLabel": null,
+          "selectFromDropdownLabel": null,
+          "matchingLeftLabel": null,
+          "matchingRightLabel": null,
+          "zoomLabel": null,
+          "selectLabel": null,
+          "noneLabel": null,
+          "clearLabel": null
+        },
+        "quesType": "fib-item-player",
+        "mediaType": null,
+        "subQues": [],
+        "answerKey": [
+          ["A"," Gloomy","correct"],
+          ["B","Moor","correct"],
+          ["C","Crooked","correct"],
+          ["D","Spoilt","correct"],
+          ["E","Tantrum","correct"]
+        ],
+        "scenario1": []
+      },
+      {
+        "number": 7,
+        "quesTitle": "FIB Select Question with Unique Options",
+        "quesType": "fibdropdown-item-player",
+        "instructionText": "Read the first part of each sentence and match it with a conclusion.",
+        "promptText": null,
+        "viewLabels": {
+          "instructionHeading": "In this activity",
+          "selectOneLabel": null,
+          "selectOneOrMoreLabel": null,
+          "selectFromDropdownLabel": "Select from dropdown",
+          "matchingLeftLabel": null,
+          "matchingRightLabel": null,
+          "zoomLabel": null,
+          "selectLabel": null,
+          "noneLabel": null,
+          "clearLabel": null
+        },
+        "mediaType": null,
+        "subQues": [],
+        "answerKey": [
+          ["A","O1","cushion","correct"],
+          ["B","O3","branch","correct"]
+        ],
+        "scenario1": [],
+        "scenario2": [],
+        "id": "difusionqa-dev-10256"
+      },
+      {
+        "number": 8,
+        "quesTitle": "FIB Select Question with Common Options",
+        "quesType": "fibdropdown-item-player",
+        "instructionText": "Read the part of each sentence and match it with a conclusion.",
+        "promptText": null,
+        "viewLabels": {
+          "instructionHeading": "In this activity",
+          "selectOneLabel": null,
+          "selectOneOrMoreLabel": null,
+          "selectFromDropdownLabel": "Select from dropdown",
+          "matchingLeftLabel": null,
+          "matchingRightLabel": null,
+          "zoomLabel": null,
+          "selectLabel": null,
+          "noneLabel": null,
+          "clearLabel": null
+        },
+        "mediaType": null,
+        "subQues": [],
+        "answerKey": [
+          ["A","O2","didn't have any time for their daughter.","correct"],
+          ["B","O3","because her Indian nanny let her do anything she wanted.","correct"],
+          ["C","O4","that her parents were dead.","correct"],
+          ["D","O5","and go to live with her uncle in England.","correct"],
+          ["E","O1","met Mary in London and took her to Misselthwaite Manor.","correct"]
+        ],
+        "scenario1": [],
+        "id": "difusionqa-dev-10269"
+      },
+      {
+        "number": 9,
+        "quesTitle": "Matching Question",
+        "quesType": "matching-item-player",
+        "instructionText": "Match the statements below with the correct answer.",
+        "promptText": null,
+        "viewLabels": {
+          "instructionHeading": "In this activity",
+          "selectOneLabel": null,
+          "selectOneOrMoreLabel": null,
+          "selectFromDropdownLabel": null,
+          "matchingLeftLabel": "Select from this column",
+          "matchingRightLabel": "Match with this column",
+          "zoomLabel": null,
+          "selectLabel": "Select the option you want to match",
+          "noneLabel": null,
+          "clearLabel": null
+        },
+        "mediaType": null,
+        "subQues": [],
+        "answerKey": [
+          ["RC1","I can’t swim.","O1","Neither can I.","correct"],
+          ["RC2","We’re not from London.","O2","Neither are we.","correct"],
+          ["RC3","I’ve got a cat.","O3","So have I.","correct"],
+          ["RC4","We go to church every Sunday.","O4","So do we.","correct"],
+          ["RC5","My best friend calls me every day.","O5","So does mine.","correct"],
+          ["RC6","I don’t know the answer.","O6","Neither do I.","correct"]
+        ],
+        "scenario1": [],
+        "id": "difusionqa-dev-10257"
+      },
+      {
+        "number": 10,
+        "quesTitle": "Classify Question",
+        "quesType": "classify-item-player",
+        "instructionText": "Clasifica estas expresiones según si sirven para saludar o para despedirse",
+        "promptText": null,
+        "viewLabels": {
+          "instructionHeading": "In this activity",
+          "selectOne": null,
+          "selectOneOrMore": null,
+          "zoomLabel": null,
+          "selectLabel": "Select the group for option",
+          "noneLabel": null,
+          "matchingLeftLabel": null,
+          "matchingRightLabel": null,
+          "clearLabel": "Clear Selection",
+          "selectFromDropdown": null
+        },
+        "mediaType": null,
+        "subQues": [],
+        "answerKey": {
+          "key1": [
+            ["O1",null,"A","¿Qué tal?","correct"],
+            ["O2",null,"B","¡Hasta el lunes!","correct"],
+            ["O3",null,"A","¿Cómo andas?","correct"],
+            ["O4",null,"A","Buenas tardes","correct"],
+            ["O5",null,"B","Buenas noches","correct"],
+            ["O6",null,"B","¡Hasta mañana!","correct"]
+          ],
+          "key2": [
+            ["A","SALUDAR","correct"],
+            ["B","DESPSEDERSE","correct"]
+          ]
+        },
+        "scenario1": {},
+        "id": "difusionqa-dev-10258"
+      },
+      {
+        "number": 11,
+        "quesTitle": null,
+        "quesType": "order-list-item-player",
+        "instructionText": "Arrange the options in the correct order",
+        "promptText": null,
+        "viewLabels": {
+          "instructionHeading": null,
+          "selectOne": null,
+          "selectOneOrMore": null,
+          "zoomLabel": null,
+          "selectLabel": null,
+          "noneLabel": null,
+          "matchingLeftLabel": null,
+          "matchingRightLabel": null,
+          "clearLabel": null,
+          "selectFromDropdown": null
+        },
+        "mediaType": null,
+        "subQues": [],
+        "answerKey": [
+          ["O1","From","1","correct"],
+          ["O2","Russia","2","correct"],
+          ["O3","With","3","correct"],
+          ["O4","Love","4","correct"]
+        ],
+        "scenario1": [],
+        "id": "difusionqa-dev-10452"
+      }
+    ]
+  },
+  "interactiveActivities": {
+    "type": "Native Engage Learning Object",
+    "name": "A la hora de dormir",
+    "question": [
+      {
+        "number": 1,
+        "quesType": "multi-mcqsr-item-player",
+        "quesTitle": "A la hora de dormir",
+        "instructionText": "Mira este vídeo y selecciona la información que no es correcta.",
+        "promptText": null,
+        "viewLabels": {
+          "instructionHeading": "En esta actividad",
+          "selectOneLabel": null,
+          "selectOneOrMoreLabel": null,
+          "selectFromDropdownLabel": null,
+          "matchingLeftLabel": null,
+          "matchingRightLabel": null,
+          "zoomLabel": null,
+          "selectLabel": null,
+          "noneLabel": null,
+          "clearLabel": null
+        },
+        "mediaType": "video",
+        "subQues": [
+          ["1",null,null]
+        ],
+        "answerKey": [
+          ["2-O1","Al marido le molesta que su mujer ponga en duda si ha cenado o no.",null,null,null],
+          ["2-O2","La mujer duda que sea cierto que su marido haya estado en una cena de trabajo.",null,null,null],
+          ["2-O3","Ella se muestra muy interesada en saber si él la ha engañado.","select","correct",null],
+          ["2-O4","Él quiere dormir pero ella prefiere estar despierta hasta que vuelva su hija.",null,null,null],
+          ["2-O5","Él insinúa que su mujer tiene otros motivos para no dormir por la noche.",null,null,null]
+        ],
+        "scenario1": []
+      }
+    ]
+  }
+}
