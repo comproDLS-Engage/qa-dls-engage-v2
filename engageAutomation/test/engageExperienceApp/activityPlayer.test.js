@@ -7,8 +7,6 @@ module.exports = {
 
 	//Validate the unattempted state of a close ended activity for a student
 	ENG_PLAY_TC_1: async function (testdata) {
-		await browser.pause(30000);
-		
 		sts = await itemPlayerPage.isInitialized();
 		await assertion.assertEqual(sts.quesType, testdata[0].quesType, "quesType mismatch");
 		await assertion.assertEqual(sts.quesTitle, testdata[0].quesTitle, "quesTitle mismatch");
@@ -18,8 +16,8 @@ module.exports = {
 		await assertion.assertEqual(sts.viewLabels.selectOneLabel, testdata[0].viewLabels.selectOneLabel, "selectOneLabel mismatch");
 		await assertion.assertEqual(sts.viewLabels.selectOneOrMoreLabel, testdata[0].viewLabels.selectOneOrMoreLabel, "selectOneOrMoreLabel mismatch");
 		await assertion.assertEqual(sts.viewLabels.selectFromDropdownLabel, testdata[0].viewLabels.selectFromDropdownLabel, "selectFromDropdownLabel mismatch");
-		//await assertion.assertEqual(sts.viewLabels.matchingLeftLabel, testdata[0].viewLabels.matchingLeftLabel, "matchingLeftLabel mismatch");
-		//await assertion.assertEqual(sts.viewLabels.matchingRightLabel, testdata[0].viewLabels.matchingRightLabel, "matchingRightLabel mismatch");
+		await assertion.assertEqual(sts.viewLabels.matchingLeftLabel, testdata[0].viewLabels.matchingLeftLabel, "matchingLeftLabel mismatch");
+		await assertion.assertEqual(sts.viewLabels.matchingRightLabel, testdata[0].viewLabels.matchingRightLabel, "matchingRightLabel mismatch");
 		await assertion.assertEqual(sts.mediaType, testdata[0].mediaType, "mediaType mismatch");
 		if (sts.mediaType != null)
 			await assertion.assertEqual(sts.mediaLoaded, true, "mediaLoaded mismatch");
@@ -132,8 +130,8 @@ module.exports = {
 		await assertion.assertEqual(sts.viewLabels.selectOneLabel, testdata.viewLabels.selectOneLabel, "selectOneLabel mismatch");
 		await assertion.assertEqual(sts.viewLabels.selectOneOrMoreLabel, testdata.viewLabels.selectOneOrMoreLabel, "selectOneOrMoreLabel mismatch");
 		await assertion.assertEqual(sts.viewLabels.selectFromDropdownLabel, testdata.viewLabels.selectFromDropdownLabel, "selectFromDropdownLabel mismatch");
-		//await assertion.assertEqual(sts.viewLabels.matchingLeftLabel, testdata[0].viewLabels.matchingLeftLabel, "matchingLeftLabel mismatch");
-		//await assertion.assertEqual(sts.viewLabels.matchingRightLabel, testdata[0].viewLabels.matchingRightLabel, "matchingRightLabel mismatch");
+		await assertion.assertEqual(sts.viewLabels.matchingLeftLabel, testdata.viewLabels.matchingLeftLabel, "matchingLeftLabel mismatch");
+		await assertion.assertEqual(sts.viewLabels.matchingRightLabel, testdata.viewLabels.matchingRightLabel, "matchingRightLabel mismatch");
 		await assertion.assertEqual(sts.mediaType, testdata.mediaType, "mediaType mismatch");
 		if (sts.mediaType != null)
 			await assertion.assertEqual(sts.mediaLoaded, true, "mediaLoaded mismatch");
@@ -156,8 +154,8 @@ module.exports = {
 		await assertion.assertEqual(sts2.viewLabels.selectOneLabel, testdata[0].viewLabels.selectOneLabel, "selectOneLabel mismatch");
 		await assertion.assertEqual(sts2.viewLabels.selectOneOrMoreLabel, testdata[0].viewLabels.selectOneOrMoreLabel, "selectOneOrMoreLabel mismatch");
 		await assertion.assertEqual(sts2.viewLabels.selectFromDropdownLabel, testdata[0].viewLabels.selectFromDropdownLabel, "selectFromDropdownLabel mismatch");
-		//await assertion.assertEqual(sts2.viewLabels.matchingLeftLabel, testdata[0].viewLabels.matchingLeftLabel, "matchingLeftLabel mismatch");
-		//await assertion.assertEqual(sts2.viewLabels.matchingRightLabel, testdata[0].viewLabels.matchingRightLabel, "matchingRightLabel mismatch");
+		await assertion.assertEqual(sts2.viewLabels.matchingLeftLabel, testdata[0].viewLabels.matchingLeftLabel, "matchingLeftLabel mismatch");
+		await assertion.assertEqual(sts2.viewLabels.matchingRightLabel, testdata[0].viewLabels.matchingRightLabel, "matchingRightLabel mismatch");
 		await assertion.assertEqual(sts2.mediaType, testdata[0].mediaType, "mediaType mismatch");
 		if (sts2.mediaType != null)
 			await assertion.assertEqual(sts2.mediaLoaded, true, "mediaLoaded mismatch");
@@ -227,8 +225,8 @@ module.exports = {
 		await assertion.assertEqual(sts.viewLabels.selectOneLabel, testdata.viewLabels.selectOneLabel, "selectOneLabel mismatch");
 		await assertion.assertEqual(sts.viewLabels.selectOneOrMoreLabel, testdata.viewLabels.selectOneOrMoreLabel, "selectOneOrMoreLabel mismatch");
 		await assertion.assertEqual(sts.viewLabels.selectFromDropdownLabel, testdata.viewLabels.selectFromDropdownLabel, "selectFromDropdownLabel mismatch");
-		//await assertion.assertEqual(sts.viewLabels.matchingLeftLabel, testdata.viewLabels.matchingLeftLabel, "matchingLeftLabel mismatch");
-		//await assertion.assertEqual(sts.viewLabels.matchingRightLabel, testdata.viewLabels.matchingRightLabel, "matchingRightLabel mismatch");
+		await assertion.assertEqual(sts.viewLabels.matchingLeftLabel, testdata.viewLabels.matchingLeftLabel, "matchingLeftLabel mismatch");
+		await assertion.assertEqual(sts.viewLabels.matchingRightLabel, testdata.viewLabels.matchingRightLabel, "matchingRightLabel mismatch");
 		await assertion.assertEqual(sts.mediaType, testdata.mediaType, "mediaType mismatch");
 		if (sts.mediaType != null)
 			await assertion.assertEqual(sts.mediaLoaded, true, "mediaLoaded mismatch");
@@ -402,8 +400,8 @@ module.exports = {
 		await assertion.assertEqual(sts.viewLabels.selectOneLabel, testdata[0].viewLabels.selectOneLabel, "selectOneLabel mismatch");
 		await assertion.assertEqual(sts.viewLabels.selectOneOrMoreLabel, testdata[0].viewLabels.selectOneOrMoreLabel, "selectOneOrMoreLabel mismatch");
 		await assertion.assertEqual(sts.viewLabels.selectFromDropdownLabel, testdata[0].viewLabels.selectFromDropdownLabel, "selectFromDropdownLabel mismatch");
-		//await assertion.assertEqual(sts.viewLabels.matchingLeftLabel, testdata[0].viewLabels.matchingLeftLabel, "matchingLeftLabel mismatch");
-		//await assertion.assertEqual(sts.viewLabels.matchingRightLabel, testdata[0].viewLabels.matchingRightLabel, "matchingRightLabel mismatch");
+		await assertion.assertEqual(sts.viewLabels.matchingLeftLabel, testdata[0].viewLabels.matchingLeftLabel, "matchingLeftLabel mismatch");
+		await assertion.assertEqual(sts.viewLabels.matchingRightLabel, testdata[0].viewLabels.matchingRightLabel, "matchingRightLabel mismatch");
 		await assertion.assertEqual(sts.mediaType, testdata[0].mediaType, "mediaType mismatch");
 		if (sts.mediaType != null)
 			await assertion.assertEqual(sts.mediaLoaded, true, "mediaLoaded mismatch");
@@ -470,8 +468,8 @@ module.exports = {
 		await assertion.assertEqual(sts.viewLabels.selectOneLabel, testdata[0].viewLabels.selectOneLabel, "selectOneLabel mismatch");
 		await assertion.assertEqual(sts.viewLabels.selectOneOrMoreLabel, testdata[0].viewLabels.selectOneOrMoreLabel, "selectOneOrMoreLabel mismatch");
 		await assertion.assertEqual(sts.viewLabels.selectFromDropdownLabel, testdata[0].viewLabels.selectFromDropdownLabel, "selectFromDropdownLabel mismatch");
-		//await assertion.assertEqual(sts.viewLabels.matchingLeftLabel, testdata[0].viewLabels.matchingLeftLabel, "matchingLeftLabel mismatch");
-		//await assertion.assertEqual(sts.viewLabels.matchingRightLabel, testdata[0].viewLabels.matchingRightLabel, "matchingRightLabel mismatch");
+		await assertion.assertEqual(sts.viewLabels.matchingLeftLabel, testdata[0].viewLabels.matchingLeftLabel, "matchingLeftLabel mismatch");
+		await assertion.assertEqual(sts.viewLabels.matchingRightLabel, testdata[0].viewLabels.matchingRightLabel, "matchingRightLabel mismatch");
 		await assertion.assertEqual(sts2.mediaType, testdata[0].mediaType, "mediaType mismatch");
 		if (sts2.mediaType != null)
 			await assertion.assertEqual(sts2.mediaLoaded, true, "mediaLoaded mismatch");

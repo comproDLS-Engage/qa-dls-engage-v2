@@ -100,7 +100,6 @@ module.exports = {
         return obj;
     },
 
-
     click_infoBtn: async function () {
         await logger.logInto(await stackTrace.get());
         var res;
@@ -135,7 +134,13 @@ module.exports = {
         res = await action.click(this.prevPageBtn);
         if (true == res) {
             await logger.logInto(await stackTrace.get(), " prevPageBtn is clicked");
-            res = await action.getText(this.quesNumber);
+            res = await this.isInitialized();
+            if (true == res.pageStatus) {
+                res = await action.getText(this.quesNumber);
+            }
+            else {
+                await logger.logInto(await stackTrace.get(), res + "prevPage not loaded", 'error'); 
+            }
         }
         else {
             await logger.logInto(await stackTrace.get(), res + "prevPageBtn is NOT clicked", 'error');
@@ -149,7 +154,13 @@ module.exports = {
         res = await action.click(this.nextPageBtn);
         if (true == res) {
             await logger.logInto(await stackTrace.get(), " nextPageBtn is clicked");
-            res = await action.getText(this.quesNumber);
+            res = await this.isInitialized();
+            if (true == res.pageStatus) {
+                res = await action.getText(this.quesNumber);
+            }
+            else {
+                await logger.logInto(await stackTrace.get(), res + "nextPage not loaded", 'error'); 
+            }
         }
         else {
             await logger.logInto(await stackTrace.get(), res + "nextPageBtn is NOT clicked", 'error');
@@ -163,6 +174,7 @@ module.exports = {
         res = await action.click(this.prevActivityBtn);
         if (true == res) {
             await logger.logInto(await stackTrace.get(), " prevActivityBtn is clicked");
+            await browser.pause(5000);
             res = await this.getData_activityPlayer();
         }
         else {
