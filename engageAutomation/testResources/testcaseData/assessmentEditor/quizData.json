@@ -148,20 +148,20 @@
           "quesTitle": "Matching Question",
           "instructionText": "Match the statements below with the correct answer.",
           "items": [
-            "I can’t swim.",
-            "We’re not from London.",
-            "I’ve got a cat.",
-            "We go to church every Sunday.",
-            "My best friend calls me every day.",
-            "I don’t know the answer."
+           ["A", "I can’t swim."],
+           ["B","We’re not from London."],
+           ["C", "I’ve got a cat."],
+           ["D", "We go to church every Sunday."],
+           ["E","My best friend calls me every day."],
+           ["F","I don’t know the answer."]
           ],
           "matchedItems": [
-            "Neither can I.",
-            "Neither are we.",
-            "So have I.",
-            "So do we.",
-            "So does mine.",
-            "Neither do I."
+           ["A","Neither can I."],
+           ["B", "Neither are we."],
+           ["C", "So have I."],
+           ["D", "So do we."],
+           ["E","So does mine."],
+           ["F", "Neither do I"]
           ]
         }
       ],

@@ -161,6 +161,7 @@ module.exports = {
 	imagePlacement_btn: selectorFile.css.editorTab.DND_image.imagePlacement_btn,
 	leftRight_btn: selectorFile.css.editorTab.DND_image.leftRight_btn,
 	topBottom_btn: selectorFile.css.editorTab.DND_image.topBottom_btn,
+	editMatchingItem:selectorFile.css.editorTab.matching.editMatchingItem,
 
 
 	//--MULTIPLE RESPONSE
@@ -667,7 +668,7 @@ module.exports = {
 	},
 
 	//--MATCHING
-	setItems: async function (items) {
+/*old	setItems: async function (items) {
 		await logger.logInto(stackTrace.get());
 		var countLabel = items.length;
 		console.log(countLabel)
@@ -689,20 +690,48 @@ module.exports = {
 			getValueArray[i - 1] = await action.getValue(optionSelector)
 		}
 		return getValueArray
-	},
-
-	//--MATCHING
-	setMatchedItems: async function (matchedItems) {
+	},*/
+	addOption: async function (items) {
 		await logger.logInto(stackTrace.get());
-		var matchedItemsArr = [];
-		let getValueArray = []
-		for (var i = 1; i <= matchedItems.length; i++) {
-			var optionSelector = this.inputMatchedItem + i + "] textarea";
-			var optionValue = matchedItems[i - 1];
-			matchedItemsArr[i - 1] = await action.setValue(optionSelector, optionValue);
-			getValueArray[i - 1] = await action.getValue(optionSelector)
+		var countLabel = items.length;
+		var optionlength = await action.findElements(this.editMatchingItem)
+		countLabel = (items.length - optionlength.length)
+		//}
+		for (var i = 0; i < (countLabel); i++) {
+			res = await action.click("div[class*=libs-matching-item-editor-MuiBox-root ]>div[class*=libs-matching-item-editor-MuiBox-root]:nth-child(3)>button[data-tid=button-add]");
 		}
-		return getValueArray
+		return res;
+	},
+	clickItems: async function (testdata) {
+		await logger.logInto(stackTrace.get());
+		console.log(this.editMatchingItem + testdata[0])
+		res = await action.click(this.editMatchingItem + testdata[0]);
+		console.log("selector:",this.editMatchingItem + testdata[0])
+		if (res == true) {
+			action.waitForDisplayed(this.placeHolderIns_txt)
+			await logger.logInto(stackTrace.get(), " -- Edit Button is clicked");
+		}
+		else {
+			res = res + " -- Error in clicking Edit Item button";
+			await logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
+	//--MATCHING
+	clickMatchedItems: async function (testdata) {
+		await logger.logInto(stackTrace.get());
+		console.log(this.inputMatchedItem + testdata[0])
+		res = await action.click(this.inputMatchedItem + testdata[0]);
+		console.log("selector:",this.inputMatchedItem + testdata[0])
+		if (res == true) {
+			action.waitForDisplayed(this.placeHolderIns_txt)
+			await logger.logInto(stackTrace.get(), " -- Edit Button is clicked");
+		}
+		else {
+			res = res + " -- Error in clicking Edit Item button";
+			await logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
 	},
 
 	// function missing for re-ordering answer options - akhil

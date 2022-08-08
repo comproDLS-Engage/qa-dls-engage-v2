@@ -1,6 +1,7 @@
 "use strict";
 var testbench = require('../../pages/assessmentEditor/TestBench.page.js');
 var EditorPlayer = require('../../pages/assessmentEditor/itemPlayersFeatures.page.js');
+const { click_prompt_numberListmenudropdownbtn } = require('../../pages/assessmentEditor/itemPlayersFeatures.page.js');
 
 var sts, i;
 
@@ -137,25 +138,25 @@ module.exports = {
 		sts = await EditorPlayer.setVideoCredit(testdata);
 		await assertion.assertEqual(sts, true, "Vedio Credit is not set");
 	},
-
 	//"Add item pair options in a question Click on Add Pair"
-	ASE_MAT_TC_13: async function () {
-		sts = await EditorPlayer.clickAddPairBtn();
-		await assertion.assertEqual(sts, true, "Add Pair button is not clicked");
-	},
-	//Add text in left itmes
 	ASE_MAT_TC_14: async function (testdata) {
-		sts = await EditorPlayer.setItems(testdata);
-		for (i = 1; i <= testdata.length; i++) {
+		sts = await EditorPlayer.addOption(testdata);
+		await assertion.assertEqual(sts, true, "Add Option button is not clicked");
+		/*for (i = 1; i <= testdata.length; i++) {
 			await assertion.assertEqual(sts[i], testdata[i], "Items" + i + " is not set correctly");
-		}
+			
+		}*/
 	},
 	//Add text in matched itmes
 	ASE_MAT_TC_15: async function (testdata) {
-		sts = await EditorPlayer.setMatchedItems(testdata);
-		for (i = 1; i <= testdata.length; i++) {
+		sts = await EditorPlayer.clickMatchedItems(testdata);
+	/*	for (i = 1; i <= testdata.length; i++) {
 			await assertion.assertEqual(sts[i], testdata[i], "Items" + i + " is not matched correctly");
-		}
+		}*/
+	},
+	ASE_MAT_TC_16: async function (testdata) {
+		sts = await EditorPlayer.clickItems(testdata);
+		await assertion.assertEqual(sts, true, "Edit Item button is not clicked");
 	},
 	//Validate that the user can add a label in the Response Template
 	ASE_DND_TC_9: async function (testdata) {

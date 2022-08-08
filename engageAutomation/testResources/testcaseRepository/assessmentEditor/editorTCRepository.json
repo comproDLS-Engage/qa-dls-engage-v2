@@ -85,19 +85,19 @@
                     "tags": "P1"
                 },
                 {
-                    "id": "ASE_MAT_TC_13",
-                    "description": "Validate tthe pair is added in player",
-                    "tags": "P1"
-                },
-                {
                     "id": "ASE_MAT_TC_14",
-                    "description": "Validate the text is added in left itmes",
+                    "description": "Validate tthe pair is added in player",
                     "tags": "P1"
                 },
 
                 {
                     "id": "ASE_MAT_TC_15",
                     "description": "Validate the text is added in matched itmes",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_MAT_TC_16",
+                    "description": "Validate the text is added in itmes",
                     "tags": "P1"
                 },
                 {

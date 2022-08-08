@@ -102,8 +102,9 @@
 			},
 			"matching": {
 				"inputItem": "[data-tid=input-item-",
-				"inputMatchedItem": "[data-tid=input-matcheditem-",
-				"addPair": "[data-tid=button-add]"
+				"inputMatchedItem": "[data-tid=button-preview-matched-item-",
+				"addPair": "[data-tid=button-add]",
+				"editMatchingItem":"[data-tid*=button-preview-item-"
 			},
 			"classify": {
 				"group_input": "[data-tid*=input-group-",
