@@ -35,7 +35,6 @@ module.exports = {
             scrollToTopBtn: ((await action.getElementCount(this.scrollToTopBtn)) > 0) ? await action.getText(this.scrollToTopBtn) : null,
             transcriptExists: ((await action.getElementCount(this.transcriptExists)) > 0) ? await action.waitForDisplayed(this.transcriptExists) : false,
         }
-        console.log(obj)
         return obj;
     },
 

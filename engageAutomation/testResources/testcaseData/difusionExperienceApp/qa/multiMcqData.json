@@ -5,19 +5,26 @@
     "question": [
       {
         "number": 1,
-        "instruction": "",
-        "text": "",
+        "quesTitle": "Lisez et sélectionnez vos réponses:",
+        "instructionHeading": "In this activity",
+        "instructionText": "Dans cette activitéLisez des informations sur la prospérité de la ville de Nantes et voyez l'image d'un riche résident, armateur et marchand. Sur la base de ces informations, répondez aux questions suivantes.",
+        "promptText": "Nantes 2 s’embellit et s’agranditLe quartier de La Fosse est sans contredit l’endroit le plus agréable, le plus riche et le plus actif de Nantes. Il commence à la place de la Bourse et s’étend sur une longueur de cinq cents toises. Ce qui ajoute à l’agrément de ce quartier, c’est l’admirable vue sur la Loire, ouverte de navires et de bateaux. Les maisons que l’on voit le long de ces quais répondent à l’opulence de ceux qui les habitent. Elles sont toutes bâties en pierre avec ferrades et balcons. Nous devons rendre justice au zèle de M. le Maire : car c’est par ses soins que la ville a pris une nouvelle face et s’est accrue d’un quart. Les maisons nouvelles qu’on bâtit tous les jours sont à moitié faites que le rez-de-chaussée est déjà occupé. Encore vingt ans de paix et d’un commerce actif, Nantes égalera, si elle ne les surpasse par la magnificence et l’étendue, les plus belles villes de l’Europe.",
+        "selectOneText": "",
         "type": "multi-mcq",
-        "mediaType": "",
+        "mediaType": "image",
+        "subQues": [
+          ["1","Quelle activité semble être à l’origine de la richesse de Nantes ?",null],
+          ["2","Quels métiers profi tent de cet enrichissement ?",null]
+        ],
         "answerKey": [
-          ["1-O1","Commerce ","select","correct"],
-          ["1-O2","Construction","",""],
-          ["1-O3","Construction de navires","",""],
-          ["1-O4","Toutes ces","",""],
-          ["2-O1","Commerce ","",""],
-          ["2-O2","Construction","select","correct"],
-          ["2-O3","Construction de navires","",""],
-          ["2-O4","Toutes ces","",""]
+          ["1-O1","Commerce ","select","correct",null],
+          ["1-O2","Construction",null,null,null],
+          ["1-O3","Construction de navires",null,null,null],
+          ["1-O4","Toutes ces",null,null,null],
+          ["2-O1","Commerce ",null,null,null],
+          ["2-O2","Construction","select","correct",null],
+          ["2-O3","Construction de navires",null,null,null],
+          ["2-O4","Toutes ces",null,null,null]
         ],
         "scenario1": [
           ["1-O1","Commerce ","","correct"],

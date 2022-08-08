@@ -61,6 +61,32 @@
                     "country": "",
                     "info": "Automation User.Do Not Touch."
                 },
+                "uiStudent": {
+                    "email": "dev1uistudent1@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "student",
+                    "name": "dev1ui student1",
+                    "class": [
+                        {
+                            "key": "HB4A-3Rad",
+                            "name": "class1"
+                        }
+                    ],
+                    "info": {}
+                },
+                "uiTeacher": {
+                    "email": "dev1uiteacher1@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "teacher",
+                    "name": "dev1ui teacher1",
+                    "class": [
+                        {
+                            "key": "HB4A-3Rad",
+                            "name": "class1"
+                        }
+                    ],
+                    "info": {}
+                },
                 "acceptanceteacher": {
                     "email": "acceptanceTeacher@yopmail.com",
                     "password": "Compro@1234",
@@ -103,7 +129,7 @@
                     "class": [],
                     "info": {}
                 },
-               "validStudent5": {
+                "validStudent5": {
                     "email": "difusionqa.stud44@yopmail.com",
                     "password": "Compro@1234",
                     "role": "student",
@@ -194,7 +220,7 @@
                 "NoClassInstructor": {
                     "email": "noclassinstructornew@yopmail.com",
                     "password": "Compro@1234",
-                    "name": "noclassinstructornew",
+                    "name": "noclassinstructor new",
                     "role": "instructor",
                     "class": [],
                     "info": {}
@@ -211,7 +237,7 @@
                     "email": "classinstructor1@yopmail.com",
                     "password": "Compro@1234",
                     "role": "instructor",
-                    "name": "classinstructor1",
+                    "name": "classinstructor 1",
                     "class": [
                         {
                             "key": "AEYP-p9hk",
@@ -249,13 +275,12 @@
                         {
                             "key": "TFbA-6AP7",
                             "name": "Gradebook",
-                            "studentName1":"dev1 student100"
+                            "studentName1": "dev1 student100"
                         },
                         {
                             "key": "msLz-9NZA",
                             "name": "Class no student"
                         }
-
                     ],
                     "info": {}
                 },
@@ -322,13 +347,25 @@
                     ],
                     "info": {}
                 },
+                "classInstructorUser8": {
+                    "email": "difqains3@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "instructor",
+                    "name": "qa teacher",
+                    "class": [
+                        {
+                            "key": "TFbA-6AP7",
+                            "name": "new automation class1"
+                        }
+                    ],
+                    "info": {}
+                },
                 "flipbookUser": {
                     "email": "flipbook_automation@yopmail.com",
                     "password": "Compro@1234",
                     "role": "instructor",
                     "name": "flipbook automation",
-                    "class": [
-                    ],
+                    "class": [],
                     "info": {}
                 },
                 "assignmentStudent": {
@@ -361,12 +398,12 @@
                         {
                             "key": "TFbA-6AP7",
                             "name": "Gradebook",
-                            "studentName1":"dev1 student100"
+                            "studentName1": "dev1 student100"
                         },
                         {
                             "key": "TFbA-6AP7",
                             "name": "Non-Scorable",
-                            "studentName1":"dev1 student100"
+                            "studentName1": "dev1 student100"
                         }
                     ],
                     "info": {}
@@ -380,6 +417,32 @@
                         {
                             "key": "4rvF-gRHj",
                             "name": "class 15"
+                        }
+                    ],
+                    "info": {}
+                },
+                "writingStudent1": {
+                    "email": "autodev1stud1@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "student",
+                    "name": "Automation Student1",
+                    "class": [
+                        {
+                            "key": "dNcW-6h9X",
+                            "name": "class1"
+                        }
+                    ],
+                    "info": {}
+                },
+                "writingTeacher1": {
+                    "email": "autodev1ins1@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "instructor",
+                    "name": "Automation Instructor1",
+                    "class": [
+                        {
+                            "key": "dNcW-6h9X",
+                            "name": "class1"
                         }
                     ],
                     "info": {}

@@ -23,14 +23,14 @@ module.exports = {
     //Validate that clicking on Next Unit button launches the Next unit of the Current Component
     ENG_BOOK_TC_25: async function (testdata) {
         sts = await unitDetailPage.clickNextUnit();
-        await assertion.assertEqual(sts.unitThumbnail, true, "Unit thumbnail not displayed");
+        //await assertion.assertEqual(sts.unitThumbnail, true, "Unit thumbnail not displayed");
         await assertion.assert(testdata.includes(sts.unitName), "Unit name mismatch");
     },
 
     //Validate that clicking on Previous Unit button launches the Previous unit of Current Component
     ENG_BOOK_TC_26: async function (testdata) {
         sts = await unitDetailPage.clickPreviousUnit();
-        await assertion.assertEqual(sts.unitThumbnail, true, "Unit Thumbnail not displayed");
+        //await assertion.assertEqual(sts.unitThumbnail, true, "Unit Thumbnail not displayed");
         await assertion.assert(testdata.includes(sts.unitName), "Unit name mismatch");
     },
 

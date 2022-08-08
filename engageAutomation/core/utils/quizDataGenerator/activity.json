@@ -1,0 +1,3877 @@
+{
+  "_id": "62d78aa5c9e5250f26d55b9b",
+  "displayType": "master",
+  "workspace": {
+    "default": {}
+  },
+  "status": "in-process",
+  "systemMeta": {
+    "publish": {
+      "requestReceived": false,
+      "publishId": "difusionqa-pub-10399",
+      "publishedOn": "2022-07-26T10:48:26.697Z"
+    },
+    "learningObject": {
+      "status": "success",
+      "lastPosted": "2022-07-26T10:48:33.289Z"
+    },
+    "isDeleted": false,
+    "schemaVersion": "2.0",
+    "revision": 3,
+    "state": "draft",
+    "clientId": "4dw2a4",
+    "created": {
+      "userId": "52b7a199-0a3f-4b44-86b3-34e3b6143b12",
+      "timestamp": "2022-07-20T04:55:01.864Z"
+    },
+    "lastModified": {
+      "userId": "52b7a199-0a3f-4b44-86b3-34e3b6143b12",
+      "timestamp": "2022-07-26T10:48:09.035Z"
+    },
+    "itemIndex": 10361,
+    "assetsBasePath": "https://backoffice-activityauthor-qa-authorstore-difusion.s3.us-east-1.amazonaws.com"
+  },
+  "type": "activity",
+  "model": "bank",
+  "editor": "bank-activityeditor",
+  "player": "bank-activityplayer",
+  "toolName": "paint",
+  "toolVersion": "1.0",
+  "itemMeta": {
+    "title": "Acceptance Quiz",
+    "description": "",
+    "tags": {},
+    "gradingType": "auto",
+    "displayMode": "quiz",
+    "visualTheme": "simple",
+    "tcMeta": {
+      "productId": "lp11645619105378/1658292906297"
+    }
+  },
+  "itemBody": {
+    "questions": [
+      {
+        "id": "difusionqa-dev-10362",
+        "placement": "external-meta",
+        "meta": {
+          "stimulus": {
+            "content": {
+              "type": "item-xhtml-ck",
+              "data": "<h2>MCSR Question with Multiple Sub-Questions</h2>"
+            }
+          },
+          "title": "Untitled Question",
+          "model": "mcqsr",
+          "editor": "mcqsr-itemeditor",
+          "type": "item",
+          "status": "in-process",
+          "score": 4,
+          "gradingType": "",
+          "editorSubType": "multiple"
+        }
+      },
+      {
+        "id": "difusionqa-dev-10363",
+        "placement": "external-meta",
+        "meta": {
+          "stimulus": {
+            "content": {
+              "type": "item-xhtml-ck",
+              "data": "<h2>MCMR Question with Single Sub-Question</h2>"
+            }
+          },
+          "title": "Untitled Question",
+          "model": "mcqmr",
+          "editor": "mcqmr-itemeditor",
+          "type": "item",
+          "status": "in-process",
+          "score": 3,
+          "gradingType": ""
+        }
+      },
+      {
+        "id": "difusionqa-dev-10364",
+        "placement": "external-meta",
+        "meta": {
+          "stimulus": {
+            "content": {
+              "type": "item-xhtml-ck",
+              "data": "<h2>True and False Question with Multiple Sub-Questions</h2>"
+            }
+          },
+          "title": "Untitled Question",
+          "model": "mcqsr",
+          "editor": "truefalse-itemeditor",
+          "type": "item",
+          "status": "in-process",
+          "score": 3,
+          "gradingType": ""
+        }
+      },
+      {
+        "id": "difusionqa-dev-10365",
+        "placement": "external-meta",
+        "meta": {
+          "stimulus": {
+            "content": {
+              "type": "item-xhtml-ck",
+              "data": "<h2>DND Onto Image Question</h2>"
+            }
+          },
+          "title": "Untitled Question",
+          "model": "imagelabel",
+          "editor": "dnd-imagelabel-itemeditor",
+          "type": "item",
+          "status": "in-process",
+          "score": 1,
+          "gradingType": ""
+        }
+      },
+      {
+        "id": "difusionqa-dev-10366",
+        "placement": "external-meta",
+        "meta": {
+          "stimulus": {
+            "content": {
+              "type": "item-xhtml-ck",
+              "data": "<h2>DND Into Text Question</h2>"
+            }
+          },
+          "title": "Untitled Question",
+          "model": "fib",
+          "editor": "dnd-fib-itemeditor",
+          "type": "item",
+          "status": "in-process",
+          "score": 1,
+          "gradingType": ""
+        }
+      },
+      {
+        "id": "difusionqa-dev-10367",
+        "placement": "external-meta",
+        "meta": {
+          "stimulus": {
+            "content": {
+              "type": "item-xhtml-ck",
+              "data": "<h2>FIB Text Question</h2>"
+            }
+          },
+          "title": "Untitled Question",
+          "model": "fibtext",
+          "editor": "fibtext-itemeditor",
+          "type": "item",
+          "status": "in-process",
+          "score": 1,
+          "gradingType": ""
+        }
+      },
+      {
+        "id": "difusionqa-dev-10368",
+        "placement": "external-meta",
+        "meta": {
+          "stimulus": {
+            "content": {
+              "type": "item-xhtml-ck",
+              "data": "<h2>FIB Select Question with Unique Options</h2>"
+            }
+          },
+          "title": "Untitled Question",
+          "model": "fibdropdown",
+          "editor": "fibdropdown-itemeditor",
+          "type": "item",
+          "status": "in-process",
+          "score": 1,
+          "gradingType": ""
+        }
+      },
+      {
+        "id": "difusionqa-dev-10372",
+        "placement": "external-meta",
+        "meta": {
+          "stimulus": {
+            "content": {
+              "type": "item-xhtml-ck",
+              "data": "<h2>FIB Select Question with Common Options</h2>"
+            }
+          },
+          "title": "Untitled Question",
+          "model": "fibdropdown",
+          "editor": "fibdropdown-itemeditor",
+          "type": "item",
+          "status": "in-process",
+          "score": 1,
+          "gradingType": ""
+        }
+      },
+      {
+        "id": "difusionqa-dev-10369",
+        "placement": "external-meta",
+        "meta": {
+          "stimulus": {
+            "content": {
+              "type": "item-text",
+              "data": "Matching Question"
+            }
+          },
+          "title": "Untitled Question",
+          "model": "matching",
+          "editor": "matching-itemeditor",
+          "type": "item",
+          "status": "in-process",
+          "score": 1,
+          "gradingType": ""
+        }
+      },
+      {
+        "id": "difusionqa-dev-10370",
+        "placement": "external-meta",
+        "meta": {
+          "stimulus": {
+            "content": {
+              "type": "item-text",
+              "data": "Classify Question"
+            }
+          },
+          "title": "Untitled Question",
+          "model": "classify",
+          "editor": "classify-itemeditor",
+          "type": "item",
+          "status": "in-process",
+          "score": 2,
+          "gradingType": ""
+        }
+      },
+      {
+        "id": "difusionqa-dev-10371",
+        "placement": "external-meta",
+        "meta": {
+          "stimulus": {
+            "content": {
+              "type": "item-xhtml",
+              "data": "<div class='item-body-standard'>Make a Bond title by putting these four words in the correct order</div>"
+            }
+          },
+          "title": "Orderlist Question",
+          "model": "orderlist",
+          "editor": "orderlist-itemeditor",
+          "type": "item",
+          "status": "in-process",
+          "score": 1,
+          "gradingType": ""
+        }
+      }
+    ]
+  },
+  "itemId": "difusionqa-dev-10361",
+  "itemResources": {},
+  "itemFragments": {
+    "difusionqa-dev-10362": {
+      "itemId": "difusionqa-dev-10362",
+      "data": {
+        "_id": "62d78ab7c9e5250f26d55b9d",
+        "displayType": "master",
+        "workspace": {
+          "default": {}
+        },
+        "status": "in-process",
+        "systemMeta": {
+          "publish": {
+            "requestReceived": false,
+            "publishId": "difusionqa-pub-10334",
+            "publishedOn": "2022-07-21T04:30:06.139Z"
+          },
+          "learningObject": {
+            "status": "Not exported"
+          },
+          "isDeleted": false,
+          "schemaVersion": "2.0",
+          "revision": 2,
+          "state": "published",
+          "clientId": "4dw2a4",
+          "created": {
+            "userId": "52b7a199-0a3f-4b44-86b3-34e3b6143b12",
+            "timestamp": "2022-07-20T04:55:19.752Z"
+          },
+          "lastModified": {
+            "userId": "52b7a199-0a3f-4b44-86b3-34e3b6143b12",
+            "timestamp": "2022-07-21T04:27:27.726Z"
+          },
+          "itemIndex": 10362,
+          "assetsBasePath": "https://backoffice-activityauthor-qa-authorstore-difusion.s3.us-east-1.amazonaws.com"
+        },
+        "type": "item",
+        "model": "mcqsr",
+        "editor": "mcqsr-itemeditor",
+        "player": "multi-mcqsr-itemplayer",
+        "toolName": "paint",
+        "toolVersion": "1",
+        "itemMeta": {
+          "title": "Untitled Question",
+          "description": "Description",
+          "tags": {
+            "domain": "",
+            "difficulty": "",
+            "custom": [
+              ""
+            ]
+          },
+          "skill": "",
+          "learningObjective": "",
+          "targetAudience": ""
+        },
+        "itemBody": {
+          "instruction": {
+            "content": {
+              "type": "item-xhtml-ck",
+              "data": "<p>Choose the correct answer for the following questions</p>"
+            }
+          },
+          "stimulus": {
+            "content": {
+              "type": "item-xhtml-ck",
+              "data": "<h2>MCSR Question with Multiple Sub-Questions</h2>"
+            }
+          },
+          "media": {
+            "content": {
+              "type": "item-media",
+              "data": {
+                "type": "",
+                "alt": "",
+                "title": "",
+                "url": "",
+                "xhtml": ""
+              }
+            }
+          },
+          "prompt": {
+            "content": {
+              "type": "item-xhtml-ck",
+              "data": "<p>There are twelve of us and my father doesn’t earn much money. It’s hard for my mother to feed them all. The fresh air on the moor makes them strong and healthy. Dickon is twelve and he’s always out on the moor. He loves animals.</p>"
+            }
+          },
+          "questions": [
+            {
+              "placement": "embedded",
+              "id": "sub-question-1",
+              "data": {
+                "stimulus": {
+                  "content": {
+                    "type": "item-xhtml-ck",
+                    "data": "<p>When the wind blew the ivy to one side,</p>"
+                  }
+                },
+                "media": {
+                  "content": {
+                    "type": "item-media",
+                    "data": {
+                      "type": "",
+                      "alt": "",
+                      "title": "",
+                      "url": "",
+                      "xhtml": ""
+                    }
+                  }
+                },
+                "options": [
+                  {
+                    "id": "O1",
+                    "content": {
+                      "type": "item-text",
+                      "data": "Mary saw the little robin."
+                    },
+                    "media": {
+                      "content": {
+                        "type": "item-media",
+                        "data": {
+                          "type": "",
+                          "alt": "",
+                          "title": "",
+                          "url": "",
+                          "xhtml": ""
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "id": "O2",
+                    "content": {
+                      "type": "item-text",
+                      "data": "Mary found the door to the secret garden."
+                    },
+                    "media": {
+                      "content": {
+                        "type": "item-media",
+                        "data": {
+                          "type": "",
+                          "alt": "",
+                          "title": "",
+                          "url": "",
+                          "xhtml": ""
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "id": "O3",
+                    "content": {
+                      "type": "item-text",
+                      "data": "Mary found the key to the secret garden."
+                    },
+                    "media": {
+                      "content": {
+                        "type": "item-media",
+                        "data": {
+                          "type": "",
+                          "alt": "",
+                          "title": "",
+                          "url": "",
+                          "xhtml": ""
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "id": "O4",
+                    "content": {
+                      "type": "item-text",
+                      "data": "Mary saw Ben Weatherstaff looking at her."
+                    },
+                    "media": {
+                      "content": {
+                        "type": "item-media",
+                        "data": {
+                          "type": "",
+                          "alt": "",
+                          "title": "",
+                          "url": "",
+                          "xhtml": ""
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "placement": "embedded",
+              "id": "sub-question-2",
+              "data": {
+                "stimulus": {
+                  "content": {
+                    "type": "item-text",
+                    "data": "As soon as Mary met Dickon,"
+                  }
+                },
+                "media": {
+                  "content": {
+                    "type": "item-media",
+                    "data": {
+                      "type": "",
+                      "alt": "",
+                      "title": "",
+                      "url": "",
+                      "xhtml": ""
+                    }
+                  }
+                },
+                "options": [
+                  {
+                    "id": "O1",
+                    "content": {
+                      "type": "item-text",
+                      "data": " she didn’t want to talk to him."
+                    },
+                    "media": {
+                      "content": {
+                        "type": "item-media",
+                        "data": {
+                          "type": "",
+                          "alt": "",
+                          "title": "",
+                          "url": "",
+                          "xhtml": ""
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "id": "O2",
+                    "content": {
+                      "type": "item-text",
+                      "data": "she was afraid of him and ran away."
+                    },
+                    "media": {
+                      "content": {
+                        "type": "item-media",
+                        "data": {
+                          "type": "",
+                          "alt": "",
+                          "title": "",
+                          "url": "",
+                          "xhtml": ""
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "id": "O3",
+                    "content": {
+                      "type": "item-text",
+                      "data": "they started to play ball together."
+                    },
+                    "media": {
+                      "content": {
+                        "type": "item-media",
+                        "data": {
+                          "type": "",
+                          "alt": "",
+                          "title": "",
+                          "url": "",
+                          "xhtml": ""
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "id": "O4",
+                    "content": {
+                      "type": "item-text",
+                      "data": "she liked him and trusted him."
+                    },
+                    "media": {
+                      "content": {
+                        "type": "item-media",
+                        "data": {
+                          "type": "",
+                          "alt": "",
+                          "title": "",
+                          "url": "",
+                          "xhtml": ""
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "placement": "embedded",
+              "id": "sub-question-3",
+              "data": {
+                "stimulus": {
+                  "content": {
+                    "type": "item-xhtml-ck",
+                    "data": "<p>Mr Craven returned home to Misselthwaite Manor</p>"
+                  }
+                },
+                "media": {
+                  "content": {
+                    "type": "item-media",
+                    "data": {
+                      "type": "",
+                      "alt": "",
+                      "title": "",
+                      "url": "",
+                      "xhtml": ""
+                    }
+                  }
+                },
+                "options": [
+                  {
+                    "id": "O1",
+                    "content": {
+                      "type": "item-text",
+                      "data": "because he had to talk to Ben Weatherstaff."
+                    },
+                    "media": {
+                      "content": {
+                        "type": "item-media",
+                        "data": {
+                          "type": "",
+                          "alt": "",
+                          "title": "",
+                          "url": "",
+                          "xhtml": ""
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "id": "O2",
+                    "content": {
+                      "type": "item-text",
+                      "data": "because Mrs Medlock wrote him a letter."
+                    },
+                    "media": {
+                      "content": {
+                        "type": "item-media",
+                        "data": {
+                          "type": "",
+                          "alt": "",
+                          "title": "",
+                          "url": "",
+                          "xhtml": ""
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "id": "O3",
+                    "content": {
+                      "type": "item-text",
+                      "data": "because he dreamt about his wife’s garden."
+                    },
+                    "media": {
+                      "content": {
+                        "type": "item-media",
+                        "data": {
+                          "type": "",
+                          "alt": "",
+                          "title": "",
+                          "url": "",
+                          "xhtml": ""
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "id": "O4",
+                    "content": {
+                      "type": "item-text",
+                      "data": "but he was unhappy there."
+                    },
+                    "media": {
+                      "content": {
+                        "type": "item-media",
+                        "data": {
+                          "type": "",
+                          "alt": "",
+                          "title": "",
+                          "url": "",
+                          "xhtml": ""
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "placement": "embedded",
+              "id": "sub-question-4",
+              "data": {
+                "stimulus": {
+                  "content": {
+                    "type": "item-xhtml-ck",
+                    "data": "<p>Colin felt that the secret garden</p>"
+                  }
+                },
+                "media": {
+                  "content": {
+                    "type": "item-media",
+                    "data": {
+                      "type": "",
+                      "alt": "",
+                      "title": "",
+                      "url": "",
+                      "xhtml": ""
+                    }
+                  }
+                },
+                "options": [
+                  {
+                    "id": "O1",
+                    "content": {
+                      "type": "item-text",
+                      "data": "was a sad place."
+                    },
+                    "media": {
+                      "content": {
+                        "type": "item-media",
+                        "data": {
+                          "type": "",
+                          "alt": "",
+                          "title": "",
+                          "url": "",
+                          "xhtml": ""
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "id": "O2",
+                    "content": {
+                      "type": "item-text",
+                      "data": "was a boring place."
+                    },
+                    "media": {
+                      "content": {
+                        "type": "item-media",
+                        "data": {
+                          "type": "",
+                          "alt": "",
+                          "title": "",
+                          "url": "",
+                          "xhtml": ""
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "id": "O3",
+                    "content": {
+                      "type": "item-text",
+                      "data": "should be locked forever."
+                    },
+                    "media": {
+                      "content": {
+                        "type": "item-media",
+                        "data": {
+                          "type": "",
+                          "alt": "",
+                          "title": "",
+                          "url": "",
+                          "xhtml": ""
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "id": "O4",
+                    "content": {
+                      "type": "item-text",
+                      "data": "could help him grow strong and healthy."
+                    },
+                    "media": {
+                      "content": {
+                        "type": "item-media",
+                        "data": {
+                          "type": "",
+                          "alt": "",
+                          "title": "",
+                          "url": "",
+                          "xhtml": ""
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "viewLabels": {
+            "instructionHeading": "In this activity",
+            "selectOne": "Select one"
+          },
+          "validations": [
+            {
+              "validationId": "v1",
+              "responseContainer": "sub-question-1",
+              "correctResponse": "O2",
+              "operator": "id_equals"
+            },
+            {
+              "validationId": "v2",
+              "responseContainer": "sub-question-2",
+              "correctResponse": "O4",
+              "operator": "id_equals"
+            },
+            {
+              "validationId": "v3",
+              "responseContainer": "sub-question-3",
+              "correctResponse": "O3",
+              "operator": "id_equals"
+            },
+            {
+              "validationId": "v4",
+              "responseContainer": "sub-question-4",
+              "correctResponse": "O4",
+              "operator": "id_equals"
+            }
+          ],
+          "scoring": {
+            "rules": [
+              {
+                "type": "sum",
+                "score": 4,
+                "rules": [
+                  {
+                    "type": "compute",
+                    "validationId": "v1",
+                    "score": 1
+                  },
+                  {
+                    "type": "compute",
+                    "validationId": "v1",
+                    "score": 1
+                  },
+                  {
+                    "type": "compute",
+                    "validationId": "v3",
+                    "score": 1
+                  },
+                  {
+                    "type": "compute",
+                    "validationId": "v4",
+                    "score": 1
+                  }
+                ]
+              }
+            ]
+          },
+          "preferences": {
+            "shuffle": false,
+            "layout": {
+              "orientation": "top-bottom",
+              "positionAnswerOptions": "vertically",
+              "positionRadio": "inside-image",
+              "mediaPlacement": "top-bottom"
+            },
+            "ariaLabels": {
+              "questionLabel": "Multiple Choice Question",
+              "directionLabel": "Title",
+              "HelpTextLabel": "Instructions",
+              "PromptLabel": "Prompt",
+              "ResponseLabel": "Answer Options",
+              "QuestionItemLabel": "Question Item"
+            },
+            "numberingFormat": "A",
+            "visualTheme": "simple",
+            "mode": "block",
+            "optionImageAspectRatio": "1on1",
+            "questionOnPage": "multiple"
+          },
+          "feedback": {
+            "general": {
+              "content": {
+                "type": "item-text",
+                "data": ""
+              }
+            },
+            "correct": {
+              "content": {
+                "type": "item-text",
+                "data": ""
+              }
+            },
+            "incorrect": {
+              "content": {
+                "type": "item-text",
+                "data": ""
+              }
+            }
+          },
+          "hints": []
+        },
+        "itemResources": {},
+        "itemFragments": null,
+        "__v": 0,
+        "itemId": "difusionqa-dev-10362"
+      }
+    },
+    "difusionqa-dev-10363": {
+      "itemId": "difusionqa-dev-10363",
+      "data": {
+        "_id": "62d78ab9c9e5250f26d55b9f",
+        "displayType": "embedded",
+        "workspace": {
+          "default": {}
+        },
+        "status": "in-process",
+        "systemMeta": {
+          "publish": {
+            "requestReceived": false,
+            "publishId": "difusionqa-pub-10336",
+            "publishedOn": "2022-07-21T04:30:05.764Z"
+          },
+          "learningObject": {
+            "status": "Not exported"
+          },
+          "isDeleted": false,
+          "schemaVersion": "2.0",
+          "revision": 2,
+          "state": "published",
+          "clientId": "4dw2a4",
+          "created": {
+            "userId": "52b7a199-0a3f-4b44-86b3-34e3b6143b12",
+            "timestamp": "2022-07-20T04:55:21.697Z"
+          },
+          "lastModified": {
+            "userId": "52b7a199-0a3f-4b44-86b3-34e3b6143b12",
+            "timestamp": "2022-07-21T04:27:33.253Z"
+          },
+          "itemIndex": 10363,
+          "assetsBasePath": "https://backoffice-activityauthor-qa-authorstore-difusion.s3.us-east-1.amazonaws.com"
+        },
+        "type": "item",
+        "model": "mcqmr",
+        "editor": "mcqmr-itemeditor",
+        "player": "mcqmr-itemplayer",
+        "toolName": "paint",
+        "toolVersion": "1",
+        "itemMeta": {
+          "title": "Untitled Question",
+          "description": "Description",
+          "tags": {
+            "domain": "",
+            "difficulty": "",
+            "custom": [
+              ""
+            ]
+          },
+          "skill": "",
+          "learningObjective": "",
+          "targetAudience": ""
+        },
+        "itemBody": {
+          "instruction": {
+            "content": {
+              "type": "item-text",
+              "data": "Select more that one options for the following question"
+            }
+          },
+          "stimulus": {
+            "content": {
+              "type": "item-xhtml-ck",
+              "data": "<h2>MCMR Question with Single Sub-Question</h2>"
+            }
+          },
+          "media": {
+            "content": {
+              "type": "item-media",
+              "data": {
+                "type": "",
+                "alt": "",
+                "title": "",
+                "url": "",
+                "xhtml": ""
+              }
+            }
+          },
+          "prompt": {
+            "content": {
+              "type": "item-text",
+              "data": ""
+            }
+          },
+          "questions": [
+            {
+              "placement": "embedded",
+              "id": "sub-question-1",
+              "data": {
+                "stimulus": {
+                  "content": {
+                    "type": "item-text",
+                    "data": "Which of the following laws do not belong to Gestalt Phycology"
+                  }
+                },
+                "media": {
+                  "content": {
+                    "type": "item-media",
+                    "data": {
+                      "type": "",
+                      "alt": "",
+                      "title": "",
+                      "url": "",
+                      "xhtml": ""
+                    }
+                  }
+                },
+                "options": [
+                  {
+                    "id": "O1",
+                    "content": {
+                      "type": "item-text",
+                      "data": "Kurt Lewin Law"
+                    },
+                    "media": {
+                      "content": {
+                        "type": "item-media",
+                        "data": {
+                          "type": "",
+                          "alt": "",
+                          "title": "",
+                          "url": "",
+                          "xhtml": ""
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "id": "O2",
+                    "content": {
+                      "type": "item-text",
+                      "data": "Pragnanz Law"
+                    },
+                    "media": {
+                      "content": {
+                        "type": "item-media",
+                        "data": {
+                          "type": "",
+                          "alt": "",
+                          "title": "",
+                          "url": "",
+                          "xhtml": ""
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "id": "O3",
+                    "content": {
+                      "type": "item-text",
+                      "data": "Proximity Law"
+                    },
+                    "media": {
+                      "content": {
+                        "type": "item-media",
+                        "data": {
+                          "type": "",
+                          "alt": "",
+                          "title": "",
+                          "url": "",
+                          "xhtml": ""
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "id": "O4",
+                    "content": {
+                      "type": "item-text",
+                      "data": "Wolfgang Kholer Law"
+                    },
+                    "media": {
+                      "content": {
+                        "type": "item-media",
+                        "data": {
+                          "type": "",
+                          "alt": "",
+                          "title": "",
+                          "url": "",
+                          "xhtml": ""
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "viewLabels": {
+            "instructionHeading": "In this activity",
+            "selectOneOrMore": "Select all correct answers"
+          },
+          "validations": [
+            {
+              "validationId": "v1",
+              "responseContainer": "sub-question-1-O1",
+              "correctResponse": "true",
+              "operator": "text_equals"
+            },
+            {
+              "validationId": "v2",
+              "responseContainer": "sub-question-1-O2",
+              "correctResponse": "false",
+              "operator": "text_equals"
+            },
+            {
+              "validationId": "v3",
+              "responseContainer": "sub-question-1-O3",
+              "correctResponse": "false",
+              "operator": "text_equals"
+            },
+            {
+              "validationId": "v4",
+              "responseContainer": "sub-question-1-O4",
+              "correctResponse": "true",
+              "operator": "text_equals"
+            }
+          ],
+          "scoring": {
+            "rules": [
+              {
+                "type": "sum",
+                "score": 3,
+                "rules": [
+                  {
+                    "type": "all",
+                    "score": 3,
+                    "rules": [
+                      {
+                        "type": "compute",
+                        "validationId": "v1"
+                      },
+                      {
+                        "type": "compute",
+                        "validationId": "v2"
+                      },
+                      {
+                        "type": "compute",
+                        "validationId": "v3"
+                      },
+                      {
+                        "type": "compute",
+                        "validationId": "v4"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "preferences": {
+            "shuffle": false,
+            "layout": {
+              "orientation": "top-bottom",
+              "positionAnswerOptions": "vertically",
+              "positionRadio": "inside-image",
+              "mediaPlacement": "top-bottom"
+            },
+            "ariaLabels": {
+              "questionLabel": "Multiple Response Question",
+              "directionLabel": "Title",
+              "HelpTextLabel": "Instructions",
+              "PromptLabel": "Prompt",
+              "ResponseLabel": "Answer Options",
+              "QuestionItemLabel": "Question Item"
+            },
+            "numberingFormat": "A",
+            "visualTheme": "simple",
+            "mode": "block",
+            "radioImageOverlapping": true,
+            "optionImageAspectRatio": "1on1"
+          },
+          "feedback": {
+            "general": {
+              "content": {
+                "type": "item-text",
+                "data": ""
+              }
+            },
+            "correct": {
+              "content": {
+                "type": "item-text",
+                "data": ""
+              }
+            },
+            "incorrect": {
+              "content": {
+                "type": "item-text",
+                "data": ""
+              }
+            }
+          },
+          "hints": []
+        },
+        "itemResources": {},
+        "itemFragments": null,
+        "__v": 0,
+        "itemId": "difusionqa-dev-10363"
+      }
+    },
+    "difusionqa-dev-10364": {
+      "itemId": "difusionqa-dev-10364",
+      "data": {
+        "_id": "62d78abbc9e5250f26d55ba1",
+        "displayType": "embedded",
+        "workspace": {
+          "default": {}
+        },
+        "status": "in-process",
+        "systemMeta": {
+          "publish": {
+            "requestReceived": false,
+            "publishId": "difusionqa-pub-10340",
+            "publishedOn": "2022-07-21T04:30:06.023Z"
+          },
+          "learningObject": {
+            "status": "Not exported"
+          },
+          "isDeleted": false,
+          "schemaVersion": "2.0",
+          "revision": 2,
+          "state": "published",
+          "clientId": "4dw2a4",
+          "created": {
+            "userId": "52b7a199-0a3f-4b44-86b3-34e3b6143b12",
+            "timestamp": "2022-07-20T04:55:23.616Z"
+          },
+          "lastModified": {
+            "userId": "52b7a199-0a3f-4b44-86b3-34e3b6143b12",
+            "timestamp": "2022-07-21T04:27:38.664Z"
+          },
+          "itemIndex": 10364,
+          "assetsBasePath": "https://backoffice-activityauthor-qa-authorstore-difusion.s3.us-east-1.amazonaws.com"
+        },
+        "type": "item",
+        "model": "mcqsr",
+        "editor": "truefalse-itemeditor",
+        "player": "multi-mcqsr-itemplayer",
+        "toolName": "paint",
+        "toolVersion": "1",
+        "itemMeta": {
+          "title": "Untitled Question",
+          "description": "Description",
+          "tags": {
+            "domain": "",
+            "difficulty": "",
+            "custom": [
+              ""
+            ]
+          },
+          "skill": "",
+          "learningObjective": "",
+          "targetAudience": ""
+        },
+        "itemBody": {
+          "instruction": {
+            "content": {
+              "type": "item-text",
+              "data": "Are the following sentences true (T) or false (F)?"
+            }
+          },
+          "stimulus": {
+            "content": {
+              "type": "item-xhtml-ck",
+              "data": "<h2>True and False Question with Multiple Sub-Questions</h2>"
+            }
+          },
+          "media": {
+            "content": {
+              "type": "item-media",
+              "data": {
+                "type": "image",
+                "alt": "secret graden",
+                "title": "",
+                "url": "",
+                "xhtml": "<img name='t1.png' size='410974' src='difusionqa-dev-10364/resources/kyKr5raqt/kyKr5raqt.png'  size= />",
+                "alignment": "center",
+                "aspectRatio": true,
+                "size": {
+                  "srcHeight": 344,
+                  "srcWidth": 600,
+                  "height": 344,
+                  "width": 600
+                }
+              }
+            }
+          },
+          "prompt": {
+            "content": {
+              "type": "item-xhtml-ck",
+              "data": "<p></p>"
+            }
+          },
+          "questions": [
+            {
+              "placement": "embedded",
+              "id": "sub-question-1",
+              "data": {
+                "stimulus": {
+                  "content": {
+                    "type": "item-text",
+                    "data": "Mary Lennox’s Indian nanny met her in London and they took the train to Yorkshire."
+                  }
+                },
+                "media": {
+                  "content": {
+                    "type": "item-media",
+                    "data": {
+                      "type": "",
+                      "alt": "",
+                      "title": "",
+                      "url": "",
+                      "xhtml": ""
+                    }
+                  }
+                },
+                "options": [
+                  {
+                    "id": "O1",
+                    "content": {
+                      "type": "item-text",
+                      "data": "True"
+                    },
+                    "media": {
+                      "content": {
+                        "type": "item-media",
+                        "data": {
+                          "type": "",
+                          "alt": "",
+                          "title": "",
+                          "url": "",
+                          "xhtml": ""
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "id": "O2",
+                    "content": {
+                      "type": "item-text",
+                      "data": "False"
+                    },
+                    "media": {
+                      "content": {
+                        "type": "item-media",
+                        "data": {
+                          "type": "",
+                          "alt": "",
+                          "title": "",
+                          "url": "",
+                          "xhtml": ""
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "placement": "embedded",
+              "id": "sub-question-2",
+              "data": {
+                "stimulus": {
+                  "content": {
+                    "type": "item-text",
+                    "data": "Mrs Medlock didn’t like Mary because she was bad-­‐tempered."
+                  }
+                },
+                "media": {
+                  "content": {
+                    "type": "item-media",
+                    "data": {
+                      "type": "",
+                      "alt": "",
+                      "title": "",
+                      "url": "",
+                      "xhtml": ""
+                    }
+                  }
+                },
+                "options": [
+                  {
+                    "id": "O1",
+                    "content": {
+                      "type": "item-text",
+                      "data": "True"
+                    },
+                    "media": {
+                      "content": {
+                        "type": "item-media",
+                        "data": {
+                          "type": "",
+                          "alt": "",
+                          "title": "",
+                          "url": "",
+                          "xhtml": ""
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "id": "O2",
+                    "content": {
+                      "type": "item-text",
+                      "data": "False"
+                    },
+                    "media": {
+                      "content": {
+                        "type": "item-media",
+                        "data": {
+                          "type": "",
+                          "alt": "",
+                          "title": "",
+                          "url": "",
+                          "xhtml": ""
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "placement": "embedded",
+              "id": "sub-question-3",
+              "data": {
+                "stimulus": {
+                  "content": {
+                    "type": "item-xhtml-ck",
+                    "data": "<p>Mr Craven locked up his wife’s garden and kept the key in his pocket.</p>"
+                  }
+                },
+                "media": {
+                  "content": {
+                    "type": "item-media",
+                    "data": {
+                      "type": "",
+                      "alt": "",
+                      "title": "",
+                      "url": "",
+                      "xhtml": ""
+                    }
+                  }
+                },
+                "options": [
+                  {
+                    "id": "O1",
+                    "content": {
+                      "type": "item-text",
+                      "data": "True"
+                    },
+                    "media": {
+                      "content": {
+                        "type": "item-media",
+                        "data": {
+                          "type": "",
+                          "alt": "",
+                          "title": "",
+                          "url": "",
+                          "xhtml": ""
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "id": "O2",
+                    "content": {
+                      "type": "item-text",
+                      "data": "False"
+                    },
+                    "media": {
+                      "content": {
+                        "type": "item-media",
+                        "data": {
+                          "type": "",
+                          "alt": "",
+                          "title": "",
+                          "url": "",
+                          "xhtml": ""
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "placement": "embedded",
+              "id": "sub-question-4",
+              "data": {
+                "stimulus": {
+                  "content": {
+                    "type": "item-xhtml-ck",
+                    "data": "<p>Martha worked as a housemaid at Misselthwaite Manor, but she lived on the moor with her family.</p>"
+                  }
+                },
+                "media": {
+                  "content": {
+                    "type": "item-media",
+                    "data": {
+                      "type": "",
+                      "alt": "",
+                      "title": "",
+                      "url": "",
+                      "xhtml": ""
+                    }
+                  }
+                },
+                "options": [
+                  {
+                    "id": "O1",
+                    "content": {
+                      "type": "item-text",
+                      "data": "True"
+                    },
+                    "media": {
+                      "content": {
+                        "type": "item-media",
+                        "data": {
+                          "type": "",
+                          "alt": "",
+                          "title": "",
+                          "url": "",
+                          "xhtml": ""
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "id": "O2",
+                    "content": {
+                      "type": "item-text",
+                      "data": "False"
+                    },
+                    "media": {
+                      "content": {
+                        "type": "item-media",
+                        "data": {
+                          "type": "",
+                          "alt": "",
+                          "title": "",
+                          "url": "",
+                          "xhtml": ""
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "viewLabels": {
+            "instructionHeading": "In this activity",
+            "selectOne": "Select one"
+          },
+          "validations": [
+            {
+              "validationId": "v1",
+              "responseContainer": "sub-question-1",
+              "correctResponse": "O2",
+              "operator": "id_equals"
+            },
+            {
+              "validationId": "v2",
+              "responseContainer": "sub-question-2",
+              "correctResponse": "O1",
+              "operator": "id_equals"
+            },
+            {
+              "validationId": "v3",
+              "responseContainer": "sub-question-3",
+              "correctResponse": "O2",
+              "operator": "id_equals"
+            },
+            {
+              "validationId": "v4",
+              "responseContainer": "sub-question-4",
+              "correctResponse": "O1",
+              "operator": "id_equals"
+            }
+          ],
+          "scoring": {
+            "rules": [
+              {
+                "type": "sum",
+                "score": 3,
+                "rules": [
+                  {
+                    "type": "compute",
+                    "validationId": "v1",
+                    "score": 0
+                  },
+                  {
+                    "type": "compute",
+                    "validationId": "v2",
+                    "score": 1
+                  },
+                  {
+                    "type": "compute",
+                    "validationId": "v3",
+                    "score": 1
+                  },
+                  {
+                    "type": "compute",
+                    "validationId": "v4",
+                    "score": 1
+                  }
+                ]
+              }
+            ]
+          },
+          "preferences": {
+            "shuffle": false,
+            "layout": {
+              "orientation": "top-bottom",
+              "positionAnswerOptions": "vertically",
+              "mediaPlacement": "top-bottom"
+            },
+            "ariaLabels": {
+              "questionLabel": "Multiple Choice Question",
+              "directionLabel": "Title",
+              "HelpTextLabel": "Instructions",
+              "PromptLabel": "Prompt",
+              "ResponseLabel": "Answer Options",
+              "QuestionItemLabel": "Question Item"
+            },
+            "numberingFormat": "A",
+            "visualTheme": "simple",
+            "mode": "block",
+            "radioImageOverlapping": true,
+            "optionImageAspectRatio": "automatic"
+          },
+          "feedback": {
+            "general": {
+              "content": {
+                "type": "item-text",
+                "data": ""
+              }
+            },
+            "correct": {
+              "content": {
+                "type": "item-text",
+                "data": ""
+              }
+            },
+            "incorrect": {
+              "content": {
+                "type": "item-text",
+                "data": ""
+              }
+            }
+          },
+          "hints": []
+        },
+        "itemResources": {
+          "kyKr5raqt": {
+            "resourceId": "kyKr5raqt",
+            "type": "image",
+            "systemAttribs": {
+              "fileName": "pt6LxS5cN-t1.png",
+              "uploadedOn": "2022-07-20T04:55:25.407Z",
+              "fileSize": 410974,
+              "uri": "difusionqa-dev-10364/resources/kyKr5raqt/kyKr5raqt.png"
+            }
+          }
+        },
+        "itemFragments": null,
+        "__v": 0,
+        "itemId": "difusionqa-dev-10364"
+      }
+    },
+    "difusionqa-dev-10365": {
+      "itemId": "difusionqa-dev-10365",
+      "data": {
+        "_id": "62d78abec9e5250f26d55ba4",
+        "displayType": "embedded",
+        "workspace": {
+          "default": {}
+        },
+        "status": "in-process",
+        "systemMeta": {
+          "publish": {
+            "requestReceived": false,
+            "publishId": "difusionqa-pub-10333",
+            "publishedOn": "2022-07-21T04:30:05.819Z"
+          },
+          "learningObject": {
+            "status": "Not exported"
+          },
+          "isDeleted": false,
+          "schemaVersion": "2.0",
+          "revision": 2,
+          "state": "published",
+          "clientId": "4dw2a4",
+          "created": {
+            "userId": "52b7a199-0a3f-4b44-86b3-34e3b6143b12",
+            "timestamp": "2022-07-20T04:55:26.792Z"
+          },
+          "lastModified": {
+            "userId": "52b7a199-0a3f-4b44-86b3-34e3b6143b12",
+            "timestamp": "2022-07-21T04:27:52.483Z"
+          },
+          "itemIndex": 10365,
+          "assetsBasePath": "https://backoffice-activityauthor-qa-authorstore-difusion.s3.us-east-1.amazonaws.com"
+        },
+        "type": "item",
+        "model": "imagelabel",
+        "editor": "dnd-imagelabel-itemeditor",
+        "player": "dnd-imagelabel-itemplayer",
+        "toolName": "paint",
+        "toolVersion": "1",
+        "itemMeta": {
+          "title": "Untitled Question",
+          "description": "",
+          "tags": {
+            "domain": "",
+            "difficulty": "",
+            "custom": [
+              ""
+            ]
+          },
+          "skill": "",
+          "learningObjective": ""
+        },
+        "itemBody": {
+          "instruction": {
+            "content": {
+              "type": "item-xhtml-ck",
+              "data": "<p>Drag and drop the textual descriptions to their correct locations within the model</p>"
+            }
+          },
+          "stimulus": {
+            "content": {
+              "type": "item-xhtml-ck",
+              "data": "<h2>DND Onto Image Question</h2>"
+            }
+          },
+          "media": {
+            "content": {
+              "type": "item-media",
+              "data": {
+                "type": "",
+                "title": "",
+                "url": "",
+                "xhtml": ""
+              }
+            }
+          },
+          "responseTemplate": {
+            "content": {
+              "type": "item-image",
+              "data": "<img data-height='907' data-width='1048' src='difusionqa-dev-10365/resources/jErsLuFbe/jErsLuFbe.png'/>"
+            }
+          },
+          "options": [
+            {
+              "id": "O1",
+              "content": {
+                "type": "item-text",
+                "data": "Expression analysis"
+              }
+            },
+            {
+              "id": "O2",
+              "content": {
+                "type": "item-text",
+                "data": "Facial speech analysis"
+              }
+            },
+            {
+              "id": "O3",
+              "content": {
+                "type": "item-text",
+                "data": "Direct visual processing"
+              }
+            },
+            {
+              "id": "O4",
+              "content": {
+                "type": "item-text",
+                "data": "Viewed-centered descriptions"
+              }
+            },
+            {
+              "id": "O5",
+              "content": {
+                "type": "item-text",
+                "data": "Expression-independent descriptions"
+              }
+            },
+            {
+              "id": "O6",
+              "content": {
+                "type": "item-text",
+                "data": "Face recognition units"
+              }
+            },
+            {
+              "id": "O7",
+              "content": {
+                "type": "item-text",
+                "data": "Person identity nodes"
+              }
+            },
+            {
+              "id": "O8",
+              "content": {
+                "type": "item-text",
+                "data": "Name generation"
+              }
+            },
+            {
+              "id": "O9",
+              "content": {
+                "type": "item-text",
+                "data": "Cognitive system"
+              }
+            }
+          ],
+          "responseContainer": [
+            {
+              "id": "A",
+              "pos": {
+                "x": "16.17954070981211%",
+                "y": "18.8155823313868%"
+              }
+            },
+            {
+              "id": "B",
+              "pos": {
+                "x": "21.085594989561585%",
+                "y": "36.183812175743846%"
+              }
+            },
+            {
+              "id": "C",
+              "pos": {
+                "x": "28.496868475991647%",
+                "y": "54.034492849110805%"
+              }
+            },
+            {
+              "id": "D",
+              "pos": {
+                "x": "65.86638830897705%",
+                "y": "19.901096696659113%"
+              }
+            },
+            {
+              "id": "E",
+              "pos": {
+                "x": "65.97077244258872%",
+                "y": "36.90748841925872%"
+              }
+            },
+            {
+              "id": "F",
+              "pos": {
+                "x": "65.86638830897704%",
+                "y": "54.03449284911081%"
+              }
+            },
+            {
+              "id": "G",
+              "pos": {
+                "x": "65.86638830897702%",
+                "y": "71.52333540072033%"
+              }
+            },
+            {
+              "id": "H",
+              "pos": {
+                "x": "65.76200417536536%",
+                "y": "89.13279065958233%"
+              }
+            },
+            {
+              "id": "I",
+              "pos": {
+                "x": "15.031315240083504%",
+                "y": "81.53419010267613%"
+              }
+            }
+          ],
+          "validations": [
+            {
+              "validationId": "v1",
+              "responseContainer": "A",
+              "correctResponse": "O1",
+              "operator": "id_equals"
+            },
+            {
+              "validationId": "v2",
+              "responseContainer": "B",
+              "correctResponse": "O2",
+              "operator": "id_equals"
+            },
+            {
+              "validationId": "v3",
+              "responseContainer": "C",
+              "correctResponse": "O3",
+              "operator": "id_equals"
+            },
+            {
+              "validationId": "v4",
+              "responseContainer": "D",
+              "correctResponse": "O4",
+              "operator": "id_equals"
+            },
+            {
+              "validationId": "v5",
+              "responseContainer": "E",
+              "correctResponse": "O5",
+              "operator": "id_equals"
+            },
+            {
+              "validationId": "v6",
+              "responseContainer": "F",
+              "correctResponse": "O6",
+              "operator": "id_equals"
+            },
+            {
+              "validationId": "v7",
+              "responseContainer": "G",
+              "correctResponse": "O7",
+              "operator": "id_equals"
+            },
+            {
+              "validationId": "v8",
+              "responseContainer": "H",
+              "correctResponse": "O8",
+              "operator": "id_equals"
+            },
+            {
+              "validationId": "v9",
+              "responseContainer": "I",
+              "correctResponse": "O9",
+              "operator": "id_equals"
+            }
+          ],
+          "scoring": {
+            "rules": [
+              {
+                "type": "sum",
+                "score": 1,
+                "rules": [
+                  {
+                    "type": "compute",
+                    "validationId": "v1",
+                    "score": 0
+                  },
+                  {
+                    "type": "compute",
+                    "validationId": "v2",
+                    "score": 0
+                  },
+                  {
+                    "type": "compute",
+                    "validationId": "v3",
+                    "score": 0
+                  },
+                  {
+                    "type": "compute",
+                    "validationId": "v4",
+                    "score": 0
+                  },
+                  {
+                    "type": "compute",
+                    "validationId": "v5",
+                    "score": 0
+                  },
+                  {
+                    "type": "compute",
+                    "validationId": "v6",
+                    "score": 0
+                  },
+                  {
+                    "type": "compute",
+                    "validationId": "v7",
+                    "score": 0
+                  },
+                  {
+                    "type": "compute",
+                    "validationId": "v8",
+                    "score": 0
+                  },
+                  {
+                    "type": "compute",
+                    "validationId": "v9",
+                    "score": 1
+                  }
+                ]
+              }
+            ]
+          },
+          "preferences": {
+            "shuffle": false,
+            "layout": {
+              "orientation": "left-right"
+            },
+            "imageAltText": "face"
+          },
+          "viewLabels": {
+            "zoomLabel": "Tap here to zoom",
+            "selectLabel": "Tap to select",
+            "noneLabel": "None",
+            "instructionHeading": "In this activity"
+          },
+          "feedback": {
+            "general": {
+              "content": {
+                "type": "item-text",
+                "data": ""
+              }
+            },
+            "correct": {
+              "content": {
+                "type": "item-text",
+                "data": ""
+              }
+            },
+            "incorrect": {
+              "content": {
+                "type": "item-text",
+                "data": ""
+              }
+            }
+          },
+          "hints": []
+        },
+        "itemResources": {
+          "jErsLuFbe": {
+            "resourceId": "jErsLuFbe",
+            "type": "image",
+            "systemAttribs": {
+              "fileName": "-IYNAmmsp-face-recog-transparent.png",
+              "uploadedOn": "2022-07-20T04:55:27.332Z",
+              "fileSize": 148632,
+              "uri": "difusionqa-dev-10365/resources/jErsLuFbe/jErsLuFbe.png"
+            }
+          }
+        },
+        "itemFragments": null,
+        "__v": 0,
+        "itemId": "difusionqa-dev-10365"
+      }
+    },
+    "difusionqa-dev-10366": {
+      "itemId": "difusionqa-dev-10366",
+      "data": {
+        "_id": "62d78ac1c9e5250f26d55ba7",
+        "displayType": "embedded",
+        "workspace": {
+          "default": {}
+        },
+        "status": "in-process",
+        "systemMeta": {
+          "publish": {
+            "requestReceived": false,
+            "publishId": "difusionqa-pub-10335",
+            "publishedOn": "2022-07-21T04:30:05.572Z"
+          },
+          "learningObject": {
+            "status": "Not exported"
+          },
+          "isDeleted": false,
+          "schemaVersion": "2.0",
+          "revision": 2,
+          "state": "published",
+          "clientId": "4dw2a4",
+          "created": {
+            "userId": "52b7a199-0a3f-4b44-86b3-34e3b6143b12",
+            "timestamp": "2022-07-20T04:55:29.558Z"
+          },
+          "lastModified": {
+            "userId": "52b7a199-0a3f-4b44-86b3-34e3b6143b12",
+            "timestamp": "2022-07-21T04:28:14.289Z"
+          },
+          "itemIndex": 10366,
+          "assetsBasePath": "https://backoffice-activityauthor-qa-authorstore-difusion.s3.us-east-1.amazonaws.com"
+        },
+        "type": "item",
+        "model": "fib",
+        "editor": "dnd-fib-itemeditor",
+        "player": "dnd-fib-itemplayer",
+        "toolName": "paint",
+        "toolVersion": "1",
+        "itemMeta": {
+          "title": "Untitled Question",
+          "description": "",
+          "tags": {
+            "domain": "",
+            "difficulty": "",
+            "custom": [
+              ""
+            ]
+          },
+          "skill": "",
+          "learningObjective": ""
+        },
+        "itemBody": {
+          "instruction": {
+            "content": {
+              "type": "item-text",
+              "data": "Drag and drop the text to the correct location"
+            }
+          },
+          "stimulus": {
+            "content": {
+              "type": "item-xhtml-ck",
+              "data": "<h2>DND Into Text Question</h2>"
+            }
+          },
+          "media": {
+            "content": {
+              "type": "item-media",
+              "data": {
+                "type": "",
+                "title": "",
+                "url": "",
+                "xhtml": ""
+              }
+            }
+          },
+          "prompt": {
+            "content": {
+              "type": "item-text",
+              "data": "Mary is a spoilt, unpleasant girl with a bad temper. When Mary meets Ben Weatherstaff, another unpleasant person, she tells him, ‘I’ve never had any friends.’ And Ben answers, ‘Neither have I.’"
+            }
+          },
+          "responseTemplate": {
+            "content": {
+              "type": "item-xhtml-editor-player",
+              "data": {
+                "editor": {
+                  "content": {
+                    "type": "item-xhtml-ck",
+                    "data": "<ol><li>Colin thought he had a<span class=\"placeholder\">{{Blank:A}}</span>back.</li><li>When Mary lived in India, she was a<span class=\"placeholder\">{{Blank:B}}</span>little girl.</li><li>‘Colin isn’t feeling well because he had another<span class=\"placeholder\">{{Blank:C}}</span>,’ said Martha.</li><li>Misselthwaite Manor was on the English<span class=\"placeholder\">{{Blank:D}}</span></li></ol>"
+                  }
+                },
+                "player": {
+                  "content": {
+                    "type": "item-xhtml-ck",
+                    "data": "<ol><li>Colin thought he had a<span class=\"placeholder\"><blank type=\"dragdrop\" id=\"A\"></blank></span>back.</li><li>When Mary lived in India, she was a<span class=\"placeholder\"><blank type=\"dragdrop\" id=\"B\"></blank></span>little girl.</li><li>‘Colin isn’t feeling well because he had another<span class=\"placeholder\"><blank type=\"dragdrop\" id=\"C\"></blank></span>,’ said Martha.</li><li>Misselthwaite Manor was on the English<span class=\"placeholder\"><blank type=\"dragdrop\" id=\"D\"></blank></span></li></ol>"
+                  }
+                }
+              }
+            }
+          },
+          "options": [
+            {
+              "id": "O1",
+              "content": {
+                "type": "item-text",
+                "data": "crooked"
+              }
+            },
+            {
+              "id": "O2",
+              "content": {
+                "type": "item-text",
+                "data": "spoilt"
+              }
+            },
+            {
+              "id": "O3",
+              "content": {
+                "type": "item-text",
+                "data": "tantrum"
+              }
+            },
+            {
+              "id": "O4",
+              "content": {
+                "type": "item-text",
+                "data": "moor"
+              }
+            }
+          ],
+          "responseContainer": [
+            {
+              "id": "A"
+            },
+            {
+              "id": "B"
+            },
+            {
+              "id": "C"
+            },
+            {
+              "id": "D"
+            }
+          ],
+          "validations": [
+            {
+              "validationId": "v1",
+              "responseContainer": "A",
+              "correctResponse": "O1",
+              "operator": "id_equals"
+            },
+            {
+              "validationId": "v2",
+              "responseContainer": "B",
+              "correctResponse": "O2",
+              "operator": "id_equals"
+            },
+            {
+              "validationId": "v3",
+              "responseContainer": "C",
+              "correctResponse": "O3",
+              "operator": "id_equals"
+            },
+            {
+              "validationId": "v4",
+              "responseContainer": "D",
+              "correctResponse": "O4",
+              "operator": "id_equals"
+            }
+          ],
+          "scoring": {
+            "rules": [
+              {
+                "type": "sum",
+                "score": 1,
+                "rules": [
+                  {
+                    "type": "compute",
+                    "validationId": "v1",
+                    "score": 0
+                  },
+                  {
+                    "type": "compute",
+                    "validationId": "v2",
+                    "score": 0
+                  },
+                  {
+                    "type": "compute",
+                    "validationId": "v3",
+                    "score": 0
+                  },
+                  {
+                    "type": "compute",
+                    "validationId": "v4",
+                    "score": 1
+                  }
+                ]
+              }
+            ]
+          },
+          "preferences": {
+            "shuffle": false,
+            "layout": {
+              "orientation": "top-bottom",
+              "responseAreaAlignment": "center",
+              "optionPlacement": "bottom"
+            }
+          },
+          "viewLabels": {
+            "instructionHeading": "In this activity"
+          },
+          "feedback": {
+            "general": {
+              "content": {
+                "type": "item-text",
+                "data": ""
+              }
+            },
+            "correct": {
+              "content": {
+                "type": "item-text",
+                "data": ""
+              }
+            },
+            "incorrect": {
+              "content": {
+                "type": "item-text",
+                "data": ""
+              }
+            }
+          },
+          "hints": []
+        },
+        "itemResources": {},
+        "itemFragments": null,
+        "__v": 0,
+        "itemId": "difusionqa-dev-10366"
+      }
+    },
+    "difusionqa-dev-10367": {
+      "itemId": "difusionqa-dev-10367",
+      "data": {
+        "_id": "62d78ac3c9e5250f26d55ba9",
+        "displayType": "embedded",
+        "workspace": {
+          "default": {}
+        },
+        "status": "in-process",
+        "systemMeta": {
+          "publish": {
+            "requestReceived": false,
+            "publishId": "difusionqa-pub-10303",
+            "publishedOn": "2022-07-20T04:59:50.102Z"
+          },
+          "learningObject": {
+            "status": "Not exported"
+          },
+          "isDeleted": false,
+          "schemaVersion": "2.0",
+          "revision": 1,
+          "state": "published",
+          "clientId": "4dw2a4",
+          "created": {
+            "userId": "52b7a199-0a3f-4b44-86b3-34e3b6143b12",
+            "timestamp": "2022-07-20T04:55:31.502Z"
+          },
+          "lastModified": {
+            "userId": "52b7a199-0a3f-4b44-86b3-34e3b6143b12",
+            "timestamp": "2022-07-20T04:55:32.749Z"
+          },
+          "itemIndex": 10367,
+          "assetsBasePath": "https://backoffice-activityauthor-qa-authorstore-difusion.s3.us-east-1.amazonaws.com"
+        },
+        "type": "item",
+        "model": "fibtext",
+        "editor": "fibtext-itemeditor",
+        "player": "fibtext-itemplayer",
+        "toolName": "paint",
+        "toolVersion": "1",
+        "itemMeta": {
+          "title": "Untitled Question",
+          "description": "Description",
+          "tags": {
+            "domain": "",
+            "difficulty": "",
+            "custom": [
+              ""
+            ]
+          },
+          "skill": "",
+          "learningObjective": "",
+          "targetAudience": ""
+        },
+        "itemBody": {
+          "instruction": {
+            "content": {
+              "type": "item-text",
+              "data": "Read the description and write the correct word."
+            }
+          },
+          "stimulus": {
+            "content": {
+              "type": "item-xhtml-ck",
+              "data": "<h2>FIB Text Question</h2>"
+            }
+          },
+          "media": {
+            "content": {
+              "type": "item-media",
+              "data": {
+                "type": "",
+                "title": "",
+                "url": "",
+                "xhtml": ""
+              }
+            }
+          },
+          "prompt": {
+            "content": {
+              "type": "item-text",
+              "data": ""
+            }
+          },
+          "responseTemplate": {
+            "content": {
+              "type": "item-xhtml-editor-player",
+              "data": {
+                "editor": {
+                  "content": {
+                    "type": "item-xhtml-ck",
+                    "data": "<p>Six letter word for 'Dark and sad' :<span class=\"placeholder\">{{Blank:A}}</span></p><p>Four letter word for 'Large open land' :<span class=\"placeholder\">{{Blank:B}}</span></p><p>Seven letter word for 'Not straight' :<span class=\"placeholder\">{{Blank:C}}</span></p><p>Six letter word for 'This person always gets everything he/she wants' :<span class=\"placeholder\">{{Blank:D}}</span></p><p>Seven letter word for 'Sudden explosion of anger' :<span class=\"placeholder\">{{Blank:E}}</span></p>"
+                  }
+                },
+                "player": {
+                  "content": {
+                    "type": "item-xhtml-ck",
+                    "data": "<p>Six letter word for 'Dark and sad' :<span class=\"placeholder\"><blank id=\"A\"></blank></span></p><p>Four letter word for 'Large open land' :<span class=\"placeholder\"><blank id=\"B\"></blank></span></p><p>Seven letter word for 'Not straight' :<span class=\"placeholder\"><blank id=\"C\"></blank></span></p><p>Six letter word for 'This person always gets everything he/she wants' :<span class=\"placeholder\"><blank id=\"D\"></blank></span></p><p>Seven letter word for 'Sudden explosion of anger' :<span class=\"placeholder\"><blank id=\"E\"></blank></span></p>"
+                  }
+                }
+              }
+            }
+          },
+          "responseContainer": [
+            {
+              "id": "A",
+              "type": "text"
+            },
+            {
+              "id": "B",
+              "type": "text"
+            },
+            {
+              "id": "C",
+              "type": "text"
+            },
+            {
+              "id": "D",
+              "type": "text"
+            },
+            {
+              "id": "E",
+              "type": "text"
+            }
+          ],
+          "validations": [
+            {
+              "validationId": "v1",
+              "responseContainer": "A",
+              "correctResponse": [
+                " Gloomy"
+              ],
+              "correctDisplay": " Gloomy",
+              "operator": "text_equals_in_array",
+              "operatorToleranceInfo": {}
+            },
+            {
+              "validationId": "v2",
+              "responseContainer": "B",
+              "correctResponse": [
+                "Moor"
+              ],
+              "correctDisplay": "Moor",
+              "operator": "text_equals_in_array",
+              "operatorToleranceInfo": {}
+            },
+            {
+              "validationId": "v3",
+              "responseContainer": "C",
+              "correctResponse": [
+                "Crooked"
+              ],
+              "correctDisplay": "Crooked",
+              "operator": "text_equals_in_array",
+              "operatorToleranceInfo": {}
+            },
+            {
+              "validationId": "v4",
+              "responseContainer": "D",
+              "correctResponse": [
+                "Spoilt"
+              ],
+              "correctDisplay": "Spoilt",
+              "operator": "text_equals_in_array",
+              "operatorToleranceInfo": {}
+            },
+            {
+              "validationId": "v5",
+              "responseContainer": "E",
+              "correctResponse": [
+                "Tantrum"
+              ],
+              "correctDisplay": "Tantrum",
+              "operator": "text_equals_in_array",
+              "operatorToleranceInfo": {}
+            }
+          ],
+          "scoring": {
+            "rules": [
+              {
+                "type": "sum",
+                "score": 1,
+                "rules": [
+                  {
+                    "type": "compute",
+                    "validationId": "v1",
+                    "score": 0
+                  },
+                  {
+                    "type": "compute",
+                    "validationId": "v2",
+                    "score": 0
+                  },
+                  {
+                    "type": "compute",
+                    "validationId": "v3",
+                    "score": 0
+                  },
+                  {
+                    "type": "compute",
+                    "validationId": "v4",
+                    "score": 0
+                  },
+                  {
+                    "type": "compute",
+                    "validationId": "v5",
+                    "score": 1
+                  }
+                ]
+              }
+            ]
+          },
+          "preferences": {
+            "layout": {
+              "orientation": "top-bottom",
+              "responseAreaAlignment": "center"
+            }
+          },
+          "hints": [],
+          "feedback": {
+            "general": {
+              "content": {
+                "type": "item-text",
+                "data": ""
+              }
+            },
+            "correct": {
+              "content": {
+                "type": "item-text",
+                "data": ""
+              }
+            },
+            "incorrect": {
+              "content": {
+                "type": "item-text",
+                "data": ""
+              }
+            }
+          },
+          "viewLabels": {
+            "instructionHeading": "In this activity"
+          }
+        },
+        "itemResources": {},
+        "itemFragments": null,
+        "__v": 0,
+        "itemId": "difusionqa-dev-10367"
+      }
+    },
+    "difusionqa-dev-10368": {
+      "itemId": "difusionqa-dev-10368",
+      "data": {
+        "_id": "62d78ac5c9e5250f26d55bab",
+        "displayType": "embedded",
+        "workspace": {
+          "default": {}
+        },
+        "status": "in-process",
+        "systemMeta": {
+          "publish": {
+            "requestReceived": false,
+            "publishId": "difusionqa-pub-10401",
+            "publishedOn": "2022-07-26T10:48:24.478Z"
+          },
+          "learningObject": {
+            "status": "Not exported"
+          },
+          "isDeleted": false,
+          "schemaVersion": "2.0",
+          "revision": 3,
+          "state": "published",
+          "clientId": "4dw2a4",
+          "created": {
+            "userId": "52b7a199-0a3f-4b44-86b3-34e3b6143b12",
+            "timestamp": "2022-07-20T04:55:33.546Z"
+          },
+          "lastModified": {
+            "userId": "52b7a199-0a3f-4b44-86b3-34e3b6143b12",
+            "timestamp": "2022-07-26T10:47:49.773Z"
+          },
+          "itemIndex": 10368,
+          "assetsBasePath": "https://backoffice-activityauthor-qa-authorstore-difusion.s3.us-east-1.amazonaws.com"
+        },
+        "type": "item",
+        "model": "fibdropdown",
+        "editor": "fibdropdown-itemeditor",
+        "player": "fibdropdown-itemplayer",
+        "toolName": "paint",
+        "toolVersion": "1",
+        "itemMeta": {
+          "title": "Untitled Question",
+          "description": "",
+          "tags": {
+            "domain": "",
+            "difficulty": "",
+            "custom": [
+              ""
+            ]
+          },
+          "skill": "",
+          "learningObjective": ""
+        },
+        "itemBody": {
+          "instruction": {
+            "content": {
+              "type": "item-text",
+              "data": "Read the first part of each sentence and match it with a conclusion."
+            }
+          },
+          "stimulus": {
+            "content": {
+              "type": "item-xhtml-ck",
+              "data": "<h2>FIB Select Question with Unique Options</h2>"
+            }
+          },
+          "media": {
+            "content": {
+              "type": "item-media",
+              "data": {
+                "type": "",
+                "title": "",
+                "url": "",
+                "xhtml": ""
+              }
+            }
+          },
+          "prompt": {
+            "content": {
+              "type": "item-text",
+              "data": ""
+            }
+          },
+          "responseTemplate": {
+            "content": {
+              "type": "item-xhtml-editor-player",
+              "data": {
+                "editor": {
+                  "content": {
+                    "type": "item-xhtml-ck",
+                    "data": "<p>Mary entered the room slowly and put her&nbsp;<span class=\"placeholder\">{{Blank:A}}</span>down on a table.</p><p>He hates the garden because she fell off the&nbsp;<span class=\"placeholder\">{{Blank:B}}</span>of the tree and died.</p>"
+                  }
+                },
+                "player": {
+                  "content": {
+                    "type": "item-xhtml-ck",
+                    "data": "<p>Mary entered the room slowly and put her&nbsp;<span class=\"placeholder\"><blank type=\"dropdown\" id=\"A\"></blank></span>down on a table.</p><p>He hates the garden because she fell off the&nbsp;<span class=\"placeholder\"><blank type=\"dropdown\" id=\"B\"></blank></span>of the tree and died.</p>"
+                  }
+                }
+              }
+            }
+          },
+          "options": [
+            {
+              "id": "O1",
+              "content": {
+                "type": "item-text",
+                "data": "cushion"
+              },
+              "responseContainer": "A"
+            },
+            {
+              "id": "O2",
+              "content": {
+                "type": "item-text",
+                "data": "candle"
+              },
+              "responseContainer": "A"
+            },
+            {
+              "id": "O3",
+              "content": {
+                "type": "item-text",
+                "data": "branch"
+              },
+              "responseContainer": "B"
+            },
+            {
+              "id": "O4",
+              "content": {
+                "type": "item-text",
+                "data": "bed"
+              },
+              "responseContainer": "B"
+            }
+          ],
+          "responseContainer": [
+            {
+              "id": "A"
+            },
+            {
+              "id": "B"
+            }
+          ],
+          "validations": [
+            {
+              "validationId": "v1",
+              "responseContainer": "A",
+              "correctResponse": "O1",
+              "operator": "id_equals"
+            },
+            {
+              "validationId": "v2",
+              "responseContainer": "B",
+              "correctResponse": "O3",
+              "operator": "id_equals"
+            }
+          ],
+          "scoring": {
+            "rules": [
+              {
+                "type": "sum",
+                "score": 1,
+                "rules": [
+                  {
+                    "type": "compute",
+                    "validationId": "v1",
+                    "score": 0
+                  },
+                  {
+                    "type": "compute",
+                    "validationId": "v2",
+                    "score": 1
+                  }
+                ]
+              }
+            ]
+          },
+          "viewLabels": {
+            "instructionHeading": "In this activity",
+            "selectFromDropdown": "Select from dropdown"
+          },
+          "preferences": {
+            "shuffle": false,
+            "responseType": "individual-options",
+            "layout": {
+              "orientation": "top-bottom",
+              "responseAreaAlignment": "center"
+            },
+            "mode": "block",
+            "visualTheme": "simple",
+            "dropdownWidth": "fit-to-response"
+          },
+          "feedback": {
+            "general": {
+              "content": {
+                "type": "item-text",
+                "data": ""
+              }
+            },
+            "correct": {
+              "content": {
+                "type": "item-text",
+                "data": ""
+              }
+            },
+            "incorrect": {
+              "content": {
+                "type": "item-text",
+                "data": ""
+              }
+            }
+          },
+          "hints": []
+        },
+        "itemResources": {},
+        "itemFragments": null,
+        "__v": 0,
+        "itemId": "difusionqa-dev-10368"
+      }
+    },
+    "difusionqa-dev-10369": {
+      "itemId": "difusionqa-dev-10369",
+      "data": {
+        "_id": "62d78ac7c9e5250f26d55bad",
+        "displayType": "embedded",
+        "workspace": {
+          "default": {}
+        },
+        "status": "in-process",
+        "systemMeta": {
+          "publish": {
+            "requestReceived": false,
+            "publishId": "difusionqa-pub-10305",
+            "publishedOn": "2022-07-20T04:59:49.910Z"
+          },
+          "learningObject": {
+            "status": "Not exported"
+          },
+          "isDeleted": false,
+          "schemaVersion": "2.0",
+          "revision": 1,
+          "state": "published",
+          "clientId": "4dw2a4",
+          "created": {
+            "userId": "52b7a199-0a3f-4b44-86b3-34e3b6143b12",
+            "timestamp": "2022-07-20T04:55:35.443Z"
+          },
+          "lastModified": {
+            "userId": "52b7a199-0a3f-4b44-86b3-34e3b6143b12",
+            "timestamp": "2022-07-20T04:55:36.665Z"
+          },
+          "itemIndex": 10369,
+          "assetsBasePath": "https://backoffice-activityauthor-qa-authorstore-difusion.s3.us-east-1.amazonaws.com"
+        },
+        "type": "item",
+        "model": "matching",
+        "editor": "matching-itemeditor",
+        "player": "matching-itemplayer",
+        "toolName": "paint",
+        "toolVersion": "1",
+        "itemMeta": {
+          "title": "Untitled Question",
+          "description": "Description",
+          "tags": {
+            "domain": "",
+            "difficulty": "",
+            "custom": [
+              ""
+            ]
+          },
+          "skill": "",
+          "learningObjective": "",
+          "targetAudience": ""
+        },
+        "itemBody": {
+          "instruction": {
+            "content": {
+              "type": "item-text",
+              "data": "Match the statements below with the correct answer."
+            }
+          },
+          "stimulus": {
+            "content": {
+              "type": "item-text",
+              "data": "Matching Question"
+            }
+          },
+          "media": {
+            "content": {
+              "type": "item-media",
+              "data": {
+                "type": "",
+                "title": "",
+                "url": "",
+                "xhtml": ""
+              }
+            }
+          },
+          "responseContainer": [
+            {
+              "id": "RC1",
+              "content": {
+                "data": "I can’t swim.",
+                "type": "item-text"
+              },
+              "media": {
+                "content": {
+                  "type": "item-media",
+                  "data": {
+                    "type": "",
+                    "title": "",
+                    "alt": "",
+                    "url": "",
+                    "xhtml": ""
+                  }
+                }
+              }
+            },
+            {
+              "id": "RC2",
+              "content": {
+                "data": "We’re not from London.",
+                "type": "item-text"
+              },
+              "media": {
+                "content": {
+                  "type": "item-media",
+                  "data": {
+                    "type": "",
+                    "title": "",
+                    "alt": "",
+                    "url": "",
+                    "xhtml": ""
+                  }
+                }
+              }
+            },
+            {
+              "id": "RC3",
+              "content": {
+                "data": "I’ve got a cat.",
+                "type": "item-text"
+              },
+              "media": {
+                "content": {
+                  "type": "item-media",
+                  "data": {
+                    "type": "",
+                    "title": "",
+                    "alt": "",
+                    "url": "",
+                    "xhtml": ""
+                  }
+                }
+              }
+            },
+            {
+              "id": "RC4",
+              "content": {
+                "data": "We go to church every Sunday. \n",
+                "type": "item-text"
+              },
+              "media": {
+                "content": {
+                  "type": "item-media",
+                  "data": {
+                    "type": "",
+                    "title": "",
+                    "alt": "",
+                    "url": "",
+                    "xhtml": ""
+                  }
+                }
+              }
+            },
+            {
+              "id": "RC5",
+              "content": {
+                "data": "My best friend calls me every day.",
+                "type": "item-text"
+              },
+              "media": {
+                "content": {
+                  "type": "item-media",
+                  "data": {
+                    "type": "",
+                    "title": "",
+                    "alt": "",
+                    "url": "",
+                    "xhtml": ""
+                  }
+                }
+              }
+            },
+            {
+              "id": "RC6",
+              "content": {
+                "data": "I don’t know the answer.\n",
+                "type": "item-text"
+              },
+              "media": {
+                "content": {
+                  "type": "item-media",
+                  "data": {
+                    "type": "",
+                    "title": "",
+                    "alt": "",
+                    "url": "",
+                    "xhtml": ""
+                  }
+                }
+              }
+            }
+          ],
+          "options": [
+            {
+              "id": "O1",
+              "content": {
+                "type": "item-text",
+                "data": "Neither can I.\n"
+              },
+              "media": {
+                "content": {
+                  "type": "item-media",
+                  "data": {
+                    "type": "",
+                    "title": "",
+                    "alt": "",
+                    "url": "",
+                    "xhtml": ""
+                  }
+                }
+              }
+            },
+            {
+              "id": "O2",
+              "content": {
+                "type": "item-text",
+                "data": "Neither are we."
+              },
+              "media": {
+                "content": {
+                  "type": "item-media",
+                  "data": {
+                    "type": "",
+                    "title": "",
+                    "alt": "",
+                    "url": "",
+                    "xhtml": ""
+                  }
+                }
+              }
+            },
+            {
+              "id": "O3",
+              "content": {
+                "type": "item-text",
+                "data": "So have I."
+              },
+              "media": {
+                "content": {
+                  "type": "item-media",
+                  "data": {
+                    "type": "",
+                    "title": "",
+                    "alt": "",
+                    "url": "",
+                    "xhtml": ""
+                  }
+                }
+              }
+            },
+            {
+              "id": "O4",
+              "content": {
+                "type": "item-text",
+                "data": "So do we."
+              },
+              "media": {
+                "content": {
+                  "type": "item-media",
+                  "data": {
+                    "type": "",
+                    "title": "",
+                    "alt": "",
+                    "url": "",
+                    "xhtml": ""
+                  }
+                }
+              }
+            },
+            {
+              "id": "O5",
+              "content": {
+                "type": "item-text",
+                "data": "So does mine."
+              },
+              "media": {
+                "content": {
+                  "type": "item-media",
+                  "data": {
+                    "type": "",
+                    "title": "",
+                    "alt": "",
+                    "url": "",
+                    "xhtml": ""
+                  }
+                }
+              }
+            },
+            {
+              "id": "O6",
+              "content": {
+                "type": "item-text",
+                "data": "Neither do I."
+              },
+              "media": {
+                "content": {
+                  "type": "item-media",
+                  "data": {
+                    "type": "",
+                    "title": "",
+                    "alt": "",
+                    "url": "",
+                    "xhtml": ""
+                  }
+                }
+              }
+            }
+          ],
+          "validations": [
+            {
+              "validationId": "v1",
+              "responseContainer": "RC1",
+              "correctResponse": "O1",
+              "operator": "id_equals"
+            },
+            {
+              "validationId": "v2",
+              "responseContainer": "RC2",
+              "correctResponse": "O2",
+              "operator": "id_equals"
+            },
+            {
+              "validationId": "v3",
+              "responseContainer": "RC3",
+              "correctResponse": "O3",
+              "operator": "id_equals"
+            },
+            {
+              "validationId": "v4",
+              "responseContainer": "RC4",
+              "correctResponse": "O4",
+              "operator": "id_equals"
+            },
+            {
+              "validationId": "v5",
+              "responseContainer": "RC5",
+              "correctResponse": "O5",
+              "operator": "id_equals"
+            },
+            {
+              "validationId": "v6",
+              "responseContainer": "RC6",
+              "correctResponse": "O6",
+              "operator": "id_equals"
+            }
+          ],
+          "scoring": {
+            "rules": [
+              {
+                "type": "sum",
+                "score": 1,
+                "rules": [
+                  {
+                    "type": "compute",
+                    "validationId": "v1",
+                    "score": 0
+                  },
+                  {
+                    "type": "compute",
+                    "validationId": "v2",
+                    "score": 0
+                  },
+                  {
+                    "type": "compute",
+                    "validationId": "v3",
+                    "score": 0
+                  },
+                  {
+                    "type": "compute",
+                    "validationId": "v4",
+                    "score": 0
+                  },
+                  {
+                    "type": "compute",
+                    "validationId": "v5",
+                    "score": 0
+                  },
+                  {
+                    "type": "compute",
+                    "validationId": "v6",
+                    "score": 1
+                  }
+                ]
+              }
+            ]
+          },
+          "preferences": {
+            "shuffle": true,
+            "connectionType": "uniDirectional",
+            "optionImageAspectRatio": "automatic"
+          },
+          "viewLabels": {
+            "instructionHeading": "In this activity",
+            "selectLabel": "Select the option you want to match",
+            "matchingLeftLabel": "Select from this column",
+            "matchingRightLabel": "Match with this column"
+          },
+          "hints": [],
+          "feedback": {
+            "general": {
+              "content": {
+                "type": "item-text",
+                "data": ""
+              }
+            },
+            "correct": {
+              "content": {
+                "type": "item-text",
+                "data": ""
+              }
+            },
+            "incorrect": {
+              "content": {
+                "type": "item-text",
+                "data": ""
+              }
+            }
+          }
+        },
+        "itemResources": {},
+        "itemFragments": null,
+        "__v": 0,
+        "itemId": "difusionqa-dev-10369"
+      }
+    },
+    "difusionqa-dev-10370": {
+      "itemId": "difusionqa-dev-10370",
+      "data": {
+        "_id": "62d78ac9c9e5250f26d55baf",
+        "displayType": "embedded",
+        "workspace": {
+          "default": {}
+        },
+        "status": "in-process",
+        "systemMeta": {
+          "publish": {
+            "requestReceived": false,
+            "publishId": "difusionqa-pub-10339",
+            "publishedOn": "2022-07-21T04:30:06.004Z"
+          },
+          "learningObject": {
+            "status": "Not exported"
+          },
+          "isDeleted": false,
+          "schemaVersion": "2.0",
+          "revision": 2,
+          "state": "published",
+          "clientId": "4dw2a4",
+          "created": {
+            "userId": "52b7a199-0a3f-4b44-86b3-34e3b6143b12",
+            "timestamp": "2022-07-20T04:55:37.383Z"
+          },
+          "lastModified": {
+            "userId": "52b7a199-0a3f-4b44-86b3-34e3b6143b12",
+            "timestamp": "2022-07-21T04:29:02.773Z"
+          },
+          "itemIndex": 10370,
+          "assetsBasePath": "https://backoffice-activityauthor-qa-authorstore-difusion.s3.us-east-1.amazonaws.com"
+        },
+        "type": "item",
+        "model": "classify",
+        "editor": "classify-itemeditor",
+        "player": "classify-itemplayer",
+        "toolName": "paint",
+        "toolVersion": "1",
+        "itemMeta": {
+          "title": "Untitled Question",
+          "description": "Description",
+          "tags": {
+            "domain": "",
+            "difficulty": "",
+            "custom": [
+              ""
+            ]
+          },
+          "skill": "",
+          "learningObjective": "",
+          "targetAudience": ""
+        },
+        "itemBody": {
+          "instruction": {
+            "content": {
+              "type": "item-xhtml-ck",
+              "data": "<p>Clasifica estas expresiones según si sirven para saludar o para despedirse</p>"
+            }
+          },
+          "stimulus": {
+            "content": {
+              "type": "item-text",
+              "data": "Classify Question"
+            }
+          },
+          "media": {
+            "content": {
+              "type": "item-media",
+              "data": {
+                "type": "",
+                "title": "",
+                "url": "",
+                "xhtml": ""
+              }
+            }
+          },
+          "options": [
+            {
+              "id": "O1",
+              "content": {
+                "type": "item-text",
+                "data": "¿Qué tal?"
+              }
+            },
+            {
+              "id": "O2",
+              "content": {
+                "type": "item-text",
+                "data": "¡Hasta el lunes!"
+              }
+            },
+            {
+              "id": "O3",
+              "content": {
+                "type": "item-text",
+                "data": "¿Cómo andas?"
+              }
+            },
+            {
+              "id": "O4",
+              "content": {
+                "type": "item-text",
+                "data": "Buenas tardes"
+              }
+            },
+            {
+              "id": "O5",
+              "content": {
+                "type": "item-text",
+                "data": "Buenas noches"
+              }
+            },
+            {
+              "id": "O6",
+              "content": {
+                "type": "item-text",
+                "data": "¡Hasta mañana!"
+              }
+            }
+          ],
+          "responseContainer": [
+            {
+              "id": "A",
+              "content": {
+                "type": "item-text",
+                "data": "SALUDAR"
+              }
+            },
+            {
+              "id": "B",
+              "content": {
+                "type": "item-text",
+                "data": "DESPSEDERSE"
+              }
+            }
+          ],
+          "validations": [
+            {
+              "validationId": "v1",
+              "responseContainer": "A",
+              "correctResponse": "O1",
+              "operator": "id_equals"
+            },
+            {
+              "validationId": "v2",
+              "responseContainer": "B",
+              "correctResponse": "O2",
+              "operator": "id_equals"
+            },
+            {
+              "validationId": "v3",
+              "responseContainer": "A",
+              "correctResponse": "O3",
+              "operator": "id_equals"
+            },
+            {
+              "validationId": "v4",
+              "responseContainer": "A",
+              "correctResponse": "O4",
+              "operator": "id_equals"
+            },
+            {
+              "validationId": "v5",
+              "responseContainer": "B",
+              "correctResponse": "O5",
+              "operator": "id_equals"
+            },
+            {
+              "validationId": "v6",
+              "responseContainer": "B",
+              "correctResponse": "O6",
+              "operator": "id_equals"
+            }
+          ],
+          "scoring": {
+            "rules": [
+              {
+                "type": "sum",
+                "score": 2,
+                "rules": [
+                  {
+                    "type": "compute",
+                    "validationId": "v1",
+                    "score": 0
+                  },
+                  {
+                    "type": "compute",
+                    "validationId": "v2",
+                    "score": 0
+                  },
+                  {
+                    "type": "compute",
+                    "validationId": "v3",
+                    "score": 0
+                  },
+                  {
+                    "type": "compute",
+                    "validationId": "v4",
+                    "score": 0
+                  },
+                  {
+                    "type": "compute",
+                    "validationId": "v5",
+                    "score": 1
+                  },
+                  {
+                    "type": "compute",
+                    "validationId": "v6",
+                    "score": 1
+                  }
+                ]
+              }
+            ]
+          },
+          "preferences": {
+            "shuffle": false,
+            "layout": {
+              "orientation": "vertical"
+            }
+          },
+          "viewLabels": {
+            "selectLabel": "Select the group for option",
+            "clearLabel": "Clear Selection",
+            "instructionHeading": "In this activity"
+          },
+          "feedback": {
+            "general": {
+              "content": {
+                "type": "item-text",
+                "data": ""
+              }
+            },
+            "correct": {
+              "content": {
+                "type": "item-text",
+                "data": ""
+              }
+            },
+            "incorrect": {
+              "content": {
+                "type": "item-text",
+                "data": ""
+              }
+            }
+          },
+          "hints": []
+        },
+        "itemResources": {},
+        "itemFragments": null,
+        "__v": 0,
+        "itemId": "difusionqa-dev-10370"
+      }
+    },
+    "difusionqa-dev-10371": {
+      "itemId": "difusionqa-dev-10371",
+      "data": {
+        "_id": "62d78acbc9e5250f26d55bb1",
+        "displayType": "embedded",
+        "workspace": {
+          "default": {}
+        },
+        "status": "in-process",
+        "systemMeta": {
+          "publish": {
+            "requestReceived": false,
+            "publishId": "difusionqa-pub-10307",
+            "publishedOn": "2022-07-20T04:59:45.062Z"
+          },
+          "learningObject": {
+            "status": "Not exported"
+          },
+          "isDeleted": false,
+          "schemaVersion": "2.0",
+          "revision": 1,
+          "state": "published",
+          "clientId": "4dw2a4",
+          "created": {
+            "userId": "52b7a199-0a3f-4b44-86b3-34e3b6143b12",
+            "timestamp": "2022-07-20T04:55:39.390Z"
+          },
+          "lastModified": {
+            "userId": "52b7a199-0a3f-4b44-86b3-34e3b6143b12",
+            "timestamp": "2022-07-20T04:55:41.010Z"
+          },
+          "itemIndex": 10371,
+          "assetsBasePath": "https://backoffice-activityauthor-qa-authorstore-difusion.s3.us-east-1.amazonaws.com"
+        },
+        "type": "item",
+        "model": "orderlist",
+        "editor": "orderlist-itemeditor",
+        "player": "orderlist-itemplayer",
+        "toolName": "paint",
+        "toolVersion": "1",
+        "itemMeta": {
+          "title": "Orderlist Question",
+          "description": "Description",
+          "tags": {
+            "domain": "",
+            "difficulty": "",
+            "custom": [
+              ""
+            ]
+          },
+          "skill": "",
+          "learningObjective": "",
+          "targetAudience": ""
+        },
+        "itemBody": {
+          "instruction": {
+            "content": {
+              "type": "item-text",
+              "data": "Arrange the options in the correct order"
+            }
+          },
+          "stimulus": {
+            "content": {
+              "type": "item-xhtml",
+              "data": "<div class='item-body-standard'>Make a Bond title by putting these four words in the correct order</div>"
+            }
+          },
+          "media": {
+            "content": {
+              "type": "item-media",
+              "data": {
+                "type": "",
+                "title": "",
+                "url": "",
+                "xhtml": ""
+              }
+            }
+          },
+          "options": [
+            {
+              "id": "O1",
+              "content": {
+                "type": "item-text",
+                "data": "From"
+              }
+            },
+            {
+              "id": "O2",
+              "content": {
+                "type": "item-text",
+                "data": "Russia"
+              }
+            },
+            {
+              "id": "O3",
+              "content": {
+                "type": "item-text",
+                "data": "With"
+              }
+            },
+            {
+              "id": "O4",
+              "content": {
+                "type": "item-text",
+                "data": "Love"
+              }
+            }
+          ],
+          "validations": [
+            {
+              "validationId": "v1",
+              "responseContainer": "1",
+              "correctResponse": "O1",
+              "operator": "id_equals"
+            },
+            {
+              "validationId": "v2",
+              "responseContainer": "2",
+              "correctResponse": "O2",
+              "operator": "id_equals"
+            },
+            {
+              "validationId": "v3",
+              "responseContainer": "3",
+              "correctResponse": "O3",
+              "operator": "id_equals"
+            },
+            {
+              "validationId": "v4",
+              "responseContainer": "4",
+              "correctResponse": "O4",
+              "operator": "id_equals"
+            }
+          ],
+          "scoring": {
+            "rules": [
+              {
+                "type": "sum",
+                "score": 1,
+                "rules": [
+                  {
+                    "type": "compute",
+                    "validationId": "v1",
+                    "score": 0
+                  },
+                  {
+                    "type": "compute",
+                    "validationId": "v2",
+                    "score": 0
+                  },
+                  {
+                    "type": "compute",
+                    "validationId": "v3",
+                    "score": 0
+                  },
+                  {
+                    "type": "compute",
+                    "validationId": "v4",
+                    "score": 1
+                  }
+                ]
+              }
+            ]
+          },
+          "preferences": {
+            "shuffle": true
+          },
+          "feedback": {
+            "general": {
+              "content": {
+                "type": "item-text",
+                "data": ""
+              }
+            },
+            "correct": {
+              "content": {
+                "type": "item-text",
+                "data": ""
+              }
+            },
+            "incorrect": {
+              "content": {
+                "type": "item-text",
+                "data": ""
+              }
+            }
+          },
+          "hints": []
+        },
+        "itemResources": {},
+        "itemFragments": null,
+        "__v": 0,
+        "itemId": "difusionqa-dev-10371"
+      }
+    },
+    "difusionqa-dev-10372": {
+      "itemId": "difusionqa-dev-10372",
+      "data": {
+        "_id": "62d78acdc9e5250f26d55bb3",
+        "displayType": "embedded",
+        "workspace": {
+          "default": {}
+        },
+        "status": "in-process",
+        "systemMeta": {
+          "publish": {
+            "requestReceived": false,
+            "publishId": "difusionqa-pub-10400",
+            "publishedOn": "2022-07-26T10:48:24.458Z"
+          },
+          "learningObject": {
+            "status": "Not exported"
+          },
+          "isDeleted": false,
+          "schemaVersion": "2.0",
+          "revision": 3,
+          "state": "published",
+          "clientId": "4dw2a4",
+          "created": {
+            "userId": "52b7a199-0a3f-4b44-86b3-34e3b6143b12",
+            "timestamp": "2022-07-20T04:55:41.661Z"
+          },
+          "lastModified": {
+            "userId": "52b7a199-0a3f-4b44-86b3-34e3b6143b12",
+            "timestamp": "2022-07-26T10:48:09.008Z"
+          },
+          "itemIndex": 10372,
+          "assetsBasePath": "https://backoffice-activityauthor-qa-authorstore-difusion.s3.us-east-1.amazonaws.com"
+        },
+        "type": "item",
+        "model": "fibdropdown",
+        "editor": "fibdropdown-itemeditor",
+        "player": "fibdropdown-itemplayer",
+        "toolName": "paint",
+        "toolVersion": "1",
+        "itemMeta": {
+          "title": "Untitled Question",
+          "description": "",
+          "tags": {
+            "domain": "",
+            "difficulty": "",
+            "custom": [
+              ""
+            ]
+          },
+          "skill": "",
+          "learningObjective": ""
+        },
+        "itemBody": {
+          "instruction": {
+            "content": {
+              "type": "item-text",
+              "data": "Read the  part of each sentence and match it with a conclusion."
+            }
+          },
+          "stimulus": {
+            "content": {
+              "type": "item-xhtml-ck",
+              "data": "<h2>FIB Select Question with Common Options</h2>"
+            }
+          },
+          "media": {
+            "content": {
+              "type": "item-media",
+              "data": {
+                "type": "",
+                "title": "",
+                "url": "",
+                "xhtml": ""
+              }
+            }
+          },
+          "prompt": {
+            "content": {
+              "type": "item-text",
+              "data": ""
+            }
+          },
+          "responseTemplate": {
+            "content": {
+              "type": "item-xhtml-editor-player",
+              "data": {
+                "editor": {
+                  "content": {
+                    "type": "item-xhtml-ck",
+                    "data": "<p>Mary Lennox’s parents&nbsp;<span class=\"placeholder\">{{Blank:A}}</span></p><p>Mary was a spoilt girl with a bad temper,<span class=\"placeholder\">{{Blank:B}}</span></p><p>One morning Mary discovered<span class=\"placeholder\">{{Blank:C}}</span></p><p>Mary had to leave India<span class=\"placeholder\">{{Blank:D}}</span></p><p>Mrs Medlock, her uncle’s housekeeper,&nbsp;<span class=\"placeholder\">{{Blank:E}}</span></p>"
+                  }
+                },
+                "player": {
+                  "content": {
+                    "type": "item-xhtml-ck",
+                    "data": "<p>Mary Lennox’s parents&nbsp;<span class=\"placeholder\"><blank type=\"dropdown\" id=\"A\"></blank></span></p><p>Mary was a spoilt girl with a bad temper,<span class=\"placeholder\"><blank type=\"dropdown\" id=\"B\"></blank></span></p><p>One morning Mary discovered<span class=\"placeholder\"><blank type=\"dropdown\" id=\"C\"></blank></span></p><p>Mary had to leave India<span class=\"placeholder\"><blank type=\"dropdown\" id=\"D\"></blank></span></p><p>Mrs Medlock, her uncle’s housekeeper,&nbsp;<span class=\"placeholder\"><blank type=\"dropdown\" id=\"E\"></blank></span></p>"
+                  }
+                }
+              }
+            }
+          },
+          "options": [
+            {
+              "id": "O1",
+              "content": {
+                "type": "item-text",
+                "data": "met Mary in London and took her to Misselthwaite Manor."
+              }
+            },
+            {
+              "id": "O2",
+              "content": {
+                "type": "item-text",
+                "data": "didn't have any time for their daughter."
+              }
+            },
+            {
+              "id": "O3",
+              "content": {
+                "type": "item-text",
+                "data": "because her Indian nanny let her do anything she wanted."
+              }
+            },
+            {
+              "id": "O4",
+              "content": {
+                "type": "item-text",
+                "data": "that her parents were dead."
+              }
+            },
+            {
+              "id": "O5",
+              "content": {
+                "type": "item-text",
+                "data": "and go to live with her uncle in England."
+              }
+            }
+          ],
+          "responseContainer": [
+            {
+              "id": "A"
+            },
+            {
+              "id": "B"
+            },
+            {
+              "id": "C"
+            },
+            {
+              "id": "D"
+            },
+            {
+              "id": "E"
+            }
+          ],
+          "validations": [
+            {
+              "validationId": "v1",
+              "responseContainer": "A",
+              "correctResponse": "O2",
+              "operator": "id_equals"
+            },
+            {
+              "validationId": "v2",
+              "responseContainer": "B",
+              "correctResponse": "O3",
+              "operator": "id_equals"
+            },
+            {
+              "validationId": "v3",
+              "responseContainer": "C",
+              "correctResponse": "O4",
+              "operator": "id_equals"
+            },
+            {
+              "validationId": "v4",
+              "responseContainer": "D",
+              "correctResponse": "O5",
+              "operator": "id_equals"
+            },
+            {
+              "validationId": "v5",
+              "responseContainer": "E",
+              "correctResponse": "O1",
+              "operator": "id_equals"
+            }
+          ],
+          "scoring": {
+            "rules": [
+              {
+                "type": "sum",
+                "score": 1,
+                "rules": [
+                  {
+                    "type": "compute",
+                    "validationId": "v1",
+                    "score": 0
+                  },
+                  {
+                    "type": "compute",
+                    "validationId": "v2",
+                    "score": 0
+                  },
+                  {
+                    "type": "compute",
+                    "validationId": "v3",
+                    "score": 0
+                  },
+                  {
+                    "type": "compute",
+                    "validationId": "v4",
+                    "score": 0
+                  },
+                  {
+                    "type": "compute",
+                    "validationId": "v5",
+                    "score": 1
+                  }
+                ]
+              }
+            ]
+          },
+          "viewLabels": {
+            "instructionHeading": "In this activity",
+            "selectFromDropdown": "Select from dropdown"
+          },
+          "preferences": {
+            "shuffle": false,
+            "responseType": "common-options",
+            "layout": {
+              "orientation": "top-bottom",
+              "responseAreaAlignment": "center"
+            },
+            "mode": "block",
+            "visualTheme": "simple",
+            "dropdownWidth": "fit-to-response"
+          },
+          "feedback": {
+            "general": {
+              "content": {
+                "type": "item-text",
+                "data": ""
+              }
+            },
+            "correct": {
+              "content": {
+                "type": "item-text",
+                "data": ""
+              }
+            },
+            "incorrect": {
+              "content": {
+                "type": "item-text",
+                "data": ""
+              }
+            }
+          },
+          "hints": []
+        },
+        "itemResources": {},
+        "itemFragments": null,
+        "__v": 0,
+        "itemId": "difusionqa-dev-10372"
+      }
+    }
+  },
+  "__v": 0
+}

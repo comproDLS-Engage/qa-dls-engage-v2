@@ -65,8 +65,10 @@
                         {
                             "name": "1. Scorable",
                             "activityList": {
-                                "activity1": "Close Ended Native",
-                                "activity2": "Open Ended Native"
+                                "activity1": "Close Ended Native (OLD)",
+                                "activity2": "Open Ended Native",
+                                "activity3": "Item Player Test Question",
+                                "activity4": "Acceptance Quiz"
                             }
                         },
                         {
@@ -107,7 +109,7 @@
                         "assignmentName":"Completed Quiz 2",
                         "activityList": [
                             {
-                                "activityName": "Close Ended Native",
+                                "activityName": "Close Ended Native (OLD)",
                                 "activityStatus": "Submitted: Mar 17, 2022",
                                 "activityScore": "100%",
                                 "activityAttempts": "1"
@@ -118,7 +120,7 @@
                         "assignmentName":"Complete Download Assignment",
                         "activityList": [
                             {
-                                "activityName": "Close Ended Native"
+                                "activityName": "Close Ended Native (OLD)"
                             }
                         ]
                     },         
@@ -126,25 +128,58 @@
                         "assignmentName":"Completed Quiz",
                         "activityList": [
                             {
-                                "activityName": "More than 5 MB",
+                                "activityName": "Acceptance Quiz",
                                 "activityStatus": "Submitted: Mar 15, 2022",
                                 "activityScore": "100%",
                                 "activityAttempts": "1"
                             }
                         ]
-                    }
-            ],
-            "completedAssignmentPerform": [
+                    },
                     {
-                        "assignmentName":"Closed Ended Assignment",
+                        "assignmentName": "Complete Download Assignment",
                         "activityList": [
                             {
-                                "activityName": "Close Ended Native"
+                                "activityName": "Acceptance Quiz"
+                            }
+                        ]
+                    }
+                ],
+                "completedAssignmentPerform": [
+                    {
+                        "assignmentName": "Closed Ended Assignment",
+                        "activityList": [
+                            {
+                                "activityName": "Acceptance Quiz"
                             }
                         ]
                     }
                 ]
+                
             }
-        }
+        },
+
+        "classAssignment": [
+            {
+                "assignmentName": "Non scorable",
+                "assignmentActivities": "9",
+                "dueNumberChip":1,
+                "activityList": [
+                    {
+                   
+                    }
+                ]
+            }
+        ]
+    },
+    "inbox": {
+        "className": "new automation class1",
+        "activity": [
+            {
+                "activityName": "Open Ended Native",
+                "unitName": "LP1 � 1. Scorable",
+                "studentName":"Difusionqa student3 ",
+                "time":"Jun 28, 2022 at 12:27 PM"
+            }
+        ]
     }
 }

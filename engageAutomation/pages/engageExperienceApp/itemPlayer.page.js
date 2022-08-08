@@ -1,5 +1,5 @@
 "use strict";
-var action = require('../../core/actionLibrary/baseActionLibrary.js');
+const action = require('../../core/actionLibrary/baseActionLibrary.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
 var res, ret;
 
@@ -7,24 +7,29 @@ module.exports = {
 
 	correctIcon: selectorFile.css.ComproEngage.itemPlayer.correctIcon,
 	incorrectIcon: selectorFile.css.ComproEngage.itemPlayer.incorrectIcon,
-	questionText: selectorFile.css.ComproEngage.itemPlayer.questionText,
+	questionTitle: selectorFile.css.ComproEngage.itemPlayer.questionTitle,
+	instructionHeading: selectorFile.css.ComproEngage.itemPlayer.instructionHeading,
+	instructionText: selectorFile.css.ComproEngage.itemPlayer.instructionText,
+	promptText: selectorFile.css.ComproEngage.itemPlayer.promptText,
+	selectOneLabel: selectorFile.css.ComproEngage.itemPlayer.selectOneLabel,
+	selectOneOrMoreLabel: selectorFile.css.ComproEngage.itemPlayer.selectOneOrMoreLabel,
+	selectFromDropdownLabel: selectorFile.css.ComproEngage.itemPlayer.selectFromDropdownLabel,
+	matchingLeftLabel: selectorFile.css.ComproEngage.itemPlayer.matchingLeftLabel,
+	matchingRightLabel: selectorFile.css.ComproEngage.itemPlayer.matchingRightLabel,
 	loaderIcon: selectorFile.css.ComproEngage.widgets.loaderIcon,
 	itemPlayerContainer: selectorFile.css.ComproEngage.itemPlayer.itemPlayerContainer,
-	instructionText: selectorFile.css.ComproEngage.itemPlayer.instructionText,
 	videoMedia: selectorFile.css.ComproEngage.itemPlayer.videoMedia,
 	imageMedia: selectorFile.css.ComproEngage.itemPlayer.imageMedia,
 	audioMedia: selectorFile.css.ComproEngage.itemPlayer.audioMedia,
 	activeQues: selectorFile.css.ComproEngage.itemPlayer.activeQues,
-	imageScelaton:selectorFile.css.ComproEngage.itemPlayer.imageScelaton,
+	promptImageLoaded: selectorFile.css.ComproEngage.itemPlayer.promptImageLoaded,
+	plyrLoading: selectorFile.css.ComproEngage.itemPlayer.plyrLoading,
+	plyrPlaying: selectorFile.css.ComproEngage.itemPlayer.plyrPlaying,
+	plyrPlayBtn: selectorFile.css.ComproEngage.itemPlayer.plyrPlayBtn,
 
 	isInitialized: async function () {
 		await logger.logInto(await stackTrace.get());
 		res = await action.waitForDisplayed("iframe[id*=iframe], iframe");
-		if (res == true) {
-			await action.switchToFrame(0);
-			res = await action.waitForDocumentLoad();
-			await action.switchToParentFrame();
-		}
 		if (res == true) {
 			res = await this.getItemplayerInfo();
 		}
@@ -45,43 +50,49 @@ module.exports = {
 
 	getItemplayerInfo: async function () {
 		await logger.logInto(await stackTrace.get());
+		await action.switchToFrame(0);
 		let question = {
-			quesType: "",
-			quesText: "",
-			instructionText: "",
-			mediaType: "",
-			isSubmitted: "",
-			correctCount: undefined,
-			incorrectCount: undefined,
-			feedback: {},
+			quesType: null,
+			quesTitle: ((await action.getElementCount(this.activeQues + this.questionTitle)) == 1) ? await action.getText(this.activeQues + this.questionTitle) : null,
+			instructionText: ((await action.getElementCount(this.activeQues + this.instructionText)) == 1) ? await action.getText(this.activeQues + this.instructionText) : null,
+			promptText: ((await action.getElementCount(this.activeQues + this.promptText)) == 1) ? await action.getText(this.activeQues + this.promptText) : null,
+			viewLabels: {
+				instructionHeading: ((await action.getElementCount(this.activeQues + this.instructionHeading)) == 1) ? await action.getText(this.activeQues + this.instructionHeading) : null,
+				selectOneLabel: ((await action.getElementCount(this.activeQues + this.selectOneLabel)) == 1) ? await action.getText(this.activeQues + this.selectOneLabel) : null,
+				selectOneOrMoreLabel: ((await action.getElementCount(this.activeQues + this.selectOneOrMoreLabel)) == 1) ? await action.getText(this.activeQues + this.selectOneOrMoreLabel) : null,
+				selectFromDropdownLabel: ((await action.getElementCount(this.activeQues + this.selectFromDropdownLabel)) == 1) ? await action.getText(this.activeQues + this.selectFromDropdownLabel) : null,
+				matchingLeftLabel: ((await action.getElementCount(this.activeQues + this.matchingLeftLabel)) == 1) ? await action.getText(this.activeQues + this.matchingLeftLabel) : null,
+				matchingRightLabel: ((await action.getElementCount(this.activeQues + this.matchingRightLabel)) == 1) ? await action.getText(this.activeQues + this.matchingRightLabel) : null,
+			},
+			mediaType: null,
+			mediaLoaded: null,
+			isSubmitted: null,
+			correctCount: await action.getElementCount(this.activeQues + this.correctIcon),
+			incorrectCount: await action.getElementCount(this.activeQues + this.incorrectIcon),
+			//feedback: {}
 		};
 
-		let qIndex = await this.getQuesIndex();
-		let activeItemplayer = "div[index='" + qIndex + "'] " + this.itemPlayerContainer;
-		let correctOpt = "div[index='" + qIndex + "'] " + this.correctIcon;
-		let incorrectOpt = "div[index='" + qIndex + "'] " + this.incorrectIcon;
-		let quesTextSelector = "div[index='" + qIndex + "'] " + this.questionText;
-		let instructionTextSelector = "div[index='" + qIndex + "'] " + this.instructionText;
+		let text = await action.getAttribute(this.activeQues + this.itemPlayerContainer, 'class')
+		const arr = await text.split(" ");
+		question.quesType = arr[2];
 
-		await action.switchToFrame(0);
-		question.quesType = await action.getAttribute(activeItemplayer, 'class');
-		question.quesText = ((await action.getElementCount(quesTextSelector)) == 1) ? await action.getText(quesTextSelector) : "";
-		question.instructionText = ((await action.getElementCount(instructionTextSelector)) == 1) ? await action.getText(instructionTextSelector) : "";
-		question.correctCount = await action.getElementCount(correctOpt);
-		question.incorrectCount = await action.getElementCount(incorrectOpt);
 		if (0 < question.correctCount || 0 < question.incorrectCount)
 			question.isSubmitted = true;
 		else
 			question.isSubmitted = false;
 
-		await action.waitForDisplayed(this.imageScelaton, true, 20000)
-		if ((await action.getElementCount("div[index='" + qIndex + "'] " + this.videoMedia)) == 1)
-			question.mediaType = "video";
-		else if ((await action.getElementCount("div[index='" + qIndex + "'] " + this.imageMedia)) == 1)
+		if ((await action.getElementCount(this.activeQues + this.imageMedia)) == 1) {
 			question.mediaType = "image";
-		else if ((await action.getElementCount("div[index='" + qIndex + "'] " + this.audioMedia)) == 1)
+			question.mediaLoaded = await action.waitForDisplayed(this.activeQues + this.promptImageLoaded);
+		}
+		else if ((await action.getElementCount(this.activeQues + this.videoMedia)) == 1) {
+			question.mediaType = "video";
+			question.mediaLoaded = await this.getPlyrStatus();
+		}
+		else if ((await action.getElementCount(this.activeQues + this.audioMedia)) == 1) {
 			question.mediaType = "audio";
-
+			question.mediaLoaded = await this.getPlyrStatus();
+		}
 		await action.switchToParentFrame();
 		return question;
 	},
@@ -94,15 +105,55 @@ module.exports = {
 			ret = await action.getElementCount(quesSelector + " >" + this.incorrectIcon);
 		}
 		else {
-			res = await action.getElementCount(quesSelector + " " + this.correctIcon);
-			ret = await action.getElementCount(quesSelector + " " + this.incorrectIcon);
+			res = await action.getElementCount(quesSelector + this.correctIcon);
+			ret = await action.getElementCount(quesSelector + this.incorrectIcon);
 		}
 		if (res > 0)
-			value = "correct"
+			value = "correct";
 		else if (ret > 0)
-			value = "incorrect"
+			value = "incorrect";
 		else
-			value = ""
+			value = null;
 		return value;
+	},
+
+	getPlyrStatus: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.activeQues + this.plyrPlayBtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), "plyrPlayBtn is clicked");
+			res = await action.waitForDisplayed(this.activeQues + this.plyrLoading, undefined, true);
+			if (true == res) {
+				await logger.logInto(await stackTrace.get(), "media is loaded");
+				res = await action.waitForDisplayed(this.activeQues + this.plyrPlaying);
+				if (true == res) {
+					await logger.logInto(await stackTrace.get(), "media is playing");
+					res = await action.click(this.activeQues + this.plyrPlayBtn);
+				}
+				else
+					await logger.logInto(await stackTrace.get(), res + "media is not playing", 'error');
+			}
+			else
+				await logger.logInto(await stackTrace.get(), res + "media is not loaded", 'error');
+		}
+		else
+			await logger.logInto(await stackTrace.get(), res + "plyrPlayBtn is NOT clicked", 'error');
+		return res;
 	}
+
+	/*generateScreenshot: async function () {
+		await logger.logInto(await stackTrace.get());
+		global.suiteKey = "Suite1";
+		global.tcId = "test";
+		
+		await action.switchToFrame(0);
+		
+		var result = await browser.checkDocument();
+		await action.switchToParentFrame();
+		global.tcNumber = global.tcNumber + 1;
+		console.log(global.screenshotName);
+		console.log(result);
+
+	}*/
 };

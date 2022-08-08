@@ -5,7 +5,7 @@
         "component": [
             {
                 "index": 0,
-                "type":"LP",
+                "type":"Textbook",
                 "activityCount":"3",
                 "name": {
                     "EN": "Textbook",
@@ -21,7 +21,7 @@
                     },
                     {
                         "index": 0,
-                        "title": "2. Unit 2",
+                        "title": "1. Unit 2",
                         "activityCount": "1",
                         "folderCount": "1",
                         "flipbookPageNum": "3"
@@ -56,7 +56,7 @@
             {
                 "index": 2,
                 "type":"LP",
-                "activityCount":"4",
+                "activityCount":"5",
                 "name": {
                     "EN": "Custom Component",
                     "ES": "Custom Component"
@@ -80,8 +80,8 @@
             },
             {
                 "index": 3,
-                "activityCount":"11",
-                "type":"LP",
+                "activityCount":"13",
+                "type":"LP1",
                 "name": {
                     "EN": "LP1",
                     "ES": "LP1"

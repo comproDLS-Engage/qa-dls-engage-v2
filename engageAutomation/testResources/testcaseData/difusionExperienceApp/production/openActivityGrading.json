@@ -1,0 +1,25 @@
+{
+    "openActivityPlayer": {
+        "case1":{
+            "score": "85%",
+            "feedback": "Well done!",
+            "reattempt": "No"
+        },
+        "case2":{
+            "score": "30%",
+            "feedback": "Too short, add more explanation. Read articles on metaverse and virtual reality and try to reattempt again.",
+            "reattempt": "Yes"
+        },
+        "case3":{
+            "score": "20%",
+            "feedback": "Hint - read page 49 in the textbook",
+            "reattempt": "Yes"
+        },
+        "clean":{
+            "score": "",
+            "feedback": "",
+            "reattempt": "Yes"
+        }
+        
+    }
+}

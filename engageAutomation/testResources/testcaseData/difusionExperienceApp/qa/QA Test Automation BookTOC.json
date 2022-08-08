@@ -119,8 +119,9 @@
                                 "name": "",
                                 "activity": [
                                     "Native LO 2",
-                                    "Native LO writing",
-                                    "Native LO 3"
+                                    "Writing question 1",
+                                    "Native LO 3",
+                                    "Writing question 2"
                                 ]
                             }
                         ]
@@ -166,7 +167,7 @@
                     {
                         "index": 0,
                         "title": "1. Scorable",
-                        "activityCount": "2",
+                        "activityCount": "4",
                         "folderCount": "0",
                         "flipbookPageNum": "",
                         "section": [
@@ -175,7 +176,9 @@
                                 "name": "",
                                 "activity": [
                                     "Open Ended Native",
-                                    "Close Ended Native"
+                                    "Close Ended Native (OLD)",
+                                    "Item Player Test Question",
+                                    "Acceptance Quiz"
                                 ]
                             }
                         ]

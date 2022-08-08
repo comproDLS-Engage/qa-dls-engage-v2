@@ -3,12 +3,10 @@ var rootDir = process.cwd();
 var mergeImg = require(path.join(rootDir, '/core/utils/mergeImage.js'));
 var hideSelectors = [
     'h4[data-tid="title-analyticsbox-0-1"]',
-    '[data-tid*="button"] div div div:nth-of-type(4)',
-    '[data-tid*="button"] div div div:nth-of-type(5)'];
+    '[data-tid=text-versionInfo]'];
 var excludeSelectors = [
     '[id=input-startDate]',
-    '[id=input-endDate]',
-    '[data-tid=text-versionInfo]'];
+    '[id=input-endDate]'];
 const { Eyes, Target, ClassicRunner, By, Configuration, BatchInfo } = require('@applitools/eyes-webdriverio');
 var eyes = new Eyes();
 var action = require(rootDir + '/core/actionLibrary/baseActionLibrary');
@@ -58,7 +56,7 @@ module.exports = {
             passed: visualPassedTc,
             failed: visualFailedTc
         }
-logDataobj.appVersion = global.appVersion;
+        logDataobj.appVersion = global.appVersion;
         let filePath = rootDir + '/' + global.reportOutputDir + '/visual/' + testExecFile.split(".")[0] + '-visualReport-' + startTime + '.log';
         fs.openSync(filePath, 'w');
         fs.writeFileSync(filePath, JSON.stringify(logDataobj));
@@ -66,6 +64,8 @@ logDataobj.appVersion = global.appVersion;
 
     //generate Screenshots and logs for Visual test for Novus
     generateScreenshotsAndLogs: async function (testObj, suiteIndex, testIndex, Arr, count) {
+
+        await this.enableFullPageScrolling();
 
         global.suiteKey = suiteIndex;
         global.tcNumber = parseInt(testIndex) + 1;
@@ -167,5 +167,14 @@ logDataobj.appVersion = global.appVersion;
     //closing Applitools Eyes
     closeApplitoolsEyes: async function () {
         await browser.call(() => eyes.close())
+    },
+
+    //change scroolbarDiv property
+    enableFullPageScrolling: async function () {
+        await browser.execute(() => {
+            var elem = document.getElementById("scroolbarDiv");
+            elem.setAttribute("style", "overflow-y: visible !important");
+            //console.log(elem.getAttribute("style"));
+        });
     }
 }

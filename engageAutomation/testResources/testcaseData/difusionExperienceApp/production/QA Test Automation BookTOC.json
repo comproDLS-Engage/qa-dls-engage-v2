@@ -104,8 +104,9 @@
                                 "name": "",
                                 "activity": [
                                     "Native LO 2",
-                                    "Native LO writing",
-                                    "Native LO 3"
+                                    "Writing question 1",
+                                    "Native LO 3",
+                                    "Writing question 2"
                                 ]
                             }
                         ]
@@ -160,7 +161,9 @@
                                 "name": "",
                                 "activity": [
                                     "Open Ended Native",
-                                    "Close Ended Native"
+                                    "Close Ended Native (OLD)",
+                                    "Item Player Test Question",
+                                    "Acceptance Quiz"
                                 ]
                             }
                         ]

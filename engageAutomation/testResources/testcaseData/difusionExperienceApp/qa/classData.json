@@ -4,7 +4,7 @@
 			"class1": {
 				"name": "Active Class",
 				"key": "vQ9n-qhQ8",
-				"classDuration": "May 16 - May 26, 2022",
+				"classDuration": "May 16, 2022 - Aug 03, 2024",
 				"instructor": {
 					"name": "dev1 teacher",
 					"email": "vengqains5_new@yopmail.com"
@@ -21,7 +21,7 @@
 				"key": "kzU6-26jW",
 				"classDuration": "May 26, 2022 - May 26, 2024",
 				"instructor": {
-					"name": "engqains5_new",
+					"name": "dev1 teacher",
 					"email": "dev1_teacher1@yopmail.com"
 				},
 				"bookName": "PROYECTOS",
@@ -35,7 +35,7 @@
 				"key": "kzU6-26jW",
 				"classDuration": "May 18 - May 18, 2021",
 				"instructor": {
-					"name": "engqains5_new",
+					"name": "dev1 teacher",
 					"email": "dev1_teacher1@yopmail.com"
 				},
 				"bookName": "PROYECTOS",
@@ -179,7 +179,7 @@
 			"nonStudentClass": {
 				"name": "class3",
 				"key": "EnRQ-VPHJ",
-				"classDuration": "Aug 09, 2021 - Jan 20, 2022",
+				"classDuration": "Aug 09, 2021 - Aug 30, 2023",
 				"instructor": {
 					"name": "qa teacher9",
 					"email": "qa_teacher1@yopmail.com"

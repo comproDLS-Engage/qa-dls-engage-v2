@@ -708,13 +708,35 @@
           "id": "ENG_INS_CLASS_TC_114",
           "description": "Validate that clicking on a class from the search suggestion drop down list launches the class.",
           "tags": "P1"
-        },  {
+        },
+        {
           "id": "ENG_INS_CLASS_TC_115",
           "description": "Validate that clicking on \"More search results for ..xyz\" lists the resources based on search text.",
           "tags": "P1"
-        },  {
+        },
+        {
           "id": "ENG_INS_CLASS_TC_116",
           "description": "Validate that clicking on close search button removes the search criteria",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_117",
+          "description": "Validate the Review Pane content validation on inbox tab of dashboard",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_118",
+          "description": "Validate the student card on inbox tab of dashboard",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_119",
+          "description": "Validate the Review Pane cancel button  on inbox tab of dashboard",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_120",
+          "description": "Validate the Click on Activity Card  on inbox tab of dashboard",
           "tags": "P1"
         }
       ]
@@ -1161,25 +1183,31 @@
       ]
     },
     {
-      "modulename": "Item Player - FIB",
+      "modulename": "Item Player - DND into Text",
       "moduledetails": "",
-      "testFile": "./test/engageExperienceApp/FIB.test.js",
+      "testFile": "./test/engageExperienceApp/dndInText.test.js",
       "testcase": [
         {
-          "id": "ENG_ITEM_FIB_TC_3",
-          "description": "Validate FIB Question Functionality Using Drag & Drop Option",
+          "id": "ENG_ITEM_DNDT_TC_1",
+          "description": "Validate the drag and drop into text question in unattempted state",
           "tags": "P1",
           "visualTest": true
         },
         {
-          "id": "ENG_ITEM_FIB_TC_7",
-          "description": "Validate FIB Question for correct scenario",
+          "id": "ENG_ITEM_DNDT_TC_2",
+          "description": "Validate that user can drag and drop the pills from source to target location using drag drop functionality",
           "tags": "P1",
           "visualTest": true
         },
         {
-          "id": "ENG_ITEM_FIB_TC_20",
-          "description": "Validate Drag and Drop question is launched",
+          "id": "ENG_ITEM_DNDT_TC_3",
+          "description": "Validate that user can move the pills from source to target location using click functionality",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ITEM_DNDT_TC_4",
+          "description": "Validate the drag and drop into text question in attempted state after submission",
           "tags": "P1",
           "visualTest": true
         }
@@ -1242,33 +1270,33 @@
       "testcase": [
         {
           "id": "ENG_ITEM_MATCH_TC_1",
-          "description": "Validate the UI of the Matching player in the default mode",
-          "tags": "P3",
+          "description": "Validate the matching question in unattempted state",
+          "tags": "P1",
           "visualTest": true
         },
         {
           "id": "ENG_ITEM_MATCH_TC_2",
-          "description": "Validate the behaviour of matching player when user match the left item with right item (Mobile)",
+          "description": "Validate that user is able to match left column item with a right column item if the matching is unidirectional",
           "tags": "P1",
           "visualTest": true
         },
         {
           "id": "ENG_ITEM_MATCH_TC_5",
-          "description": "Validate Matching Question for correct scenario",
+          "description": "Validate the matching question in attempted state after submission",
           "tags": "P1",
           "visualTest": true
         }
       ]
     },
     {
-      "modulename": "Item Player - Multi MCQ",
+      "modulename": "Item Player - MCSR",
       "moduledetails": "",
       "testFile": "./test/engageExperienceApp/multimcq.test.js",
       "testcase": [
         {
           "id": "ENG_ITEM_MMCQ_TC_1",
-          "description": "Validate the Multi MCSR question launch in default unattempted state",
-          "tags": "P3",
+          "description": "Validate the multiple choice single response question in unattempted state",
+          "tags": "P1",
           "visualTest": true
         },
         {
@@ -1279,7 +1307,7 @@
         },
         {
           "id": "ENG_ITEM_MMCQ_TC_3",
-          "description": "Validate MCMR question functionality for Correct scenario",
+          "description": "Validate the multiple choice single response question in attempted state after submission",
           "tags": "P1",
           "visualTest": true
         }
@@ -1304,19 +1332,7 @@
         },
         {
           "id": "ENG_ITEM_FIBSEL_TC_3",
-          "description": "Validate FIB Select Question for correct scenario",
-          "tags": "P1",
-          "visualTest": true
-        },
-        {
-          "id": "ENG_ITEM_FIBSEL_TC_4",
-          "description": "Validate FIB Select Question for partial scenario",
-          "tags": "P1",
-          "visualTest": true
-        },
-        {
-          "id": "ENG_ITEM_FIBSEL_TC_5",
-          "description": "Validate FIB Select Question for incorrect scenario",
+          "description": "Validate FIB Select Question after submission",
           "tags": "P1",
           "visualTest": true
         }
@@ -1802,25 +1818,25 @@
       ]
     },
     {
-      "modulename": "Item Player - DND Into Text",
+      "modulename": "Item Player - FIB Text",
       "moduledetails": "",
-      "testFile": "./test/engageExperienceApp/FIBText.test.js",
+      "testFile": "./test/engageExperienceApp/fibtext.test.js",
       "testcase": [
         {
+          "id": "ENG_ITEM_FIBTEXT_TC_1",
+          "description": "Validate the fib text question in unattempted state",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
           "id": "ENG_ITEM_FIBTEXT_TC_2",
-          "description": "Validate DND Into Text question is launched",
+          "description": "Validate that user can enter text value in each blank",
           "tags": "P1",
           "visualTest": true
         },
         {
           "id": "ENG_ITEM_FIBTEXT_TC_3",
-          "description": "Validate that user is able to click in the text placeholders and type the desired text in the DND Into Text question",
-          "tags": "P1",
-          "visualTest": true
-        },
-        {
-          "id": "ENG_ITEM_FIBTEXT_TC_5",
-          "description": "Validate DND Into Text Question for correct scenario",
+          "description": "Validate the fib text question in attempted state after submission",
           "tags": "P1",
           "visualTest": true
         }
@@ -1829,48 +1845,54 @@
     {
       "modulename": "Item Player - DND Onto Image",
       "moduledetails": "",
-      "testFile": "./test/engageExperienceApp/dragDrop.test.js",
+      "testFile": "./test/engageExperienceApp/dndOnImage.test.js",
       "testcase": [
         {
-          "id": "ENG_ITEM_DND_TC_7",
-          "description": "Validate DND Onto Image Functionality using Click option",
-          "tags": "P1",
-          "visualTest": true
-        },
-        {
-          "id": "ENG_ITEM_DND_TC_1",
-          "description": "Validate DND Onto Image Question Functionality For Correct Scenario",
-          "tags": "P1",
-          "visualTest": true
-        },
-        {
-          "id": "ENG_ITEM_DND_TC_20",
-          "description": "Validate DND Onto Image question is launched",
+          "id": "ENG_ITEM_DNDI_TC_1",
+          "description": "Validate the drag and drop onto image question in unattempted state",
           "tags": "P2",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ITEM_DNDI_TC_2",
+          "description": "Validate that user can drag and drop the pills from source to target location using drag drop functionality",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ITEM_DNDI_TC_3",
+          "description": "Validate that user can move the pills from source to target location using click functionality",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ITEM_DNDI_TC_4",
+          "description": "Validate the drag and drop onto image question in attempted state after submission",
+          "tags": "P1",
           "visualTest": true
         }
       ]
     },
     {
-      "modulename": "Item Player - Multiple Response",
+      "modulename": "Item Player - MCMR",
       "moduledetails": "",
       "testFile": "./test/engageExperienceApp/mcmr.test.js",
       "testcase": [
         {
           "id": "ENG_ITEM_MCMR_TC_1",
-          "description": "Validate the Multiple Response question launch in default unattempted state",
+          "description": "Validate the multiple choice multiple response question in unattempted state",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ITEM_MCMR_TC_2",
+          "description": "Validate that the user can select multiple options in each sub-question while performing the question",
           "tags": "P1",
           "visualTest": true
         },
         {
           "id": "ENG_ITEM_MCMR_TC_3",
-          "description": "Validate that the user can select multiple options while performing Multiple Response question",
-          "tags": "P1",
-          "visualTest": true
-        },
-        {
-          "id": "ENG_ITEM_MCMR_TC_5",
-          "description": "Validate Multiple Response question functionality for Correct scenario",
+          "description": "Validate the multiple choice multiple response question in attempted state after submission",
           "tags": "P1",
           "visualTest": true
         }
@@ -2688,23 +2710,47 @@
     {
       "modulename": "Writing Player",
       "moduledetails": "",
-      "testFile": "./test/engageExperienceApp/writing.test.js",
+      "testFile": "./test/engageExperienceApp/writingPlayer.test.js",
       "testcase": [
         {
-          "id": "ENG_ITEM_WRIT_TC_1",
-          "description": "Validate the writing question launch in default unattempted state",
+          "id": "ENG_ITEM_WRITING_TC_1",
+          "description": "Validate that user is able to add text in the editable text area",
           "tags": "P1",
           "visualTest": true
         },
         {
-          "id": "ENG_ITEM_WRIT_TC_2",
-          "description": "Validate the writing question launch in submitted state",
+          "id": "ENG_ITEM_WRITING_TC_2",
+          "description": "Validate that attach file dialog opens on selecting Browse from Computer option in attach dropdown",
           "tags": "P1",
           "visualTest": true
         },
         {
-          "id": "ENG_ITEM_WRIT_TC_3",
-          "description": "Validate that the user can add the text in the textboxes of the writing question",
+          "id": "ENG_ITEM_WRITING_TC_3",
+          "description": "Validate that user is able to attach the file less than 100 mb",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ITEM_WRITING_TC_4",
+          "description": "Validate that remove dialog appears when user tries to remove the attachment",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ITEM_WRITING_TC_5",
+          "description": "Validate that file is removed on clicking yes in the remove dialog",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ITEM_WRITING_TC_6",
+          "description": "Validate that file is not removed on clicking no in the remove dialog",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ITEM_WRITING_TC_7",
+          "description": "Validate that max. file size dialog is displayed if user tries to attach file greater than 100 mb",
           "tags": "P1",
           "visualTest": true
         }
@@ -3306,7 +3352,6 @@
           "tags": "P2",
           "visualTest": "-"
         },
-       
         {
           "id": "ENG_STU_GRADEBOOK_TC_2",
           "description": "Validate the Product List in GradeBook",
@@ -3352,69 +3397,69 @@
       ]
     },
     {
-      "modulename": "writing Player - teacher",
+      "modulename": "Open Activity Player",
       "moduledetails": "",
-      "testFile": "./test/engageExperienceApp/writingPlayer.test.js",
+      "testFile": "./test/engageExperienceApp/openActivityPlayer.test.js",
       "testcase": [
         {
-          "id": "ENG_WRITEPLYR_TC_0",
-          "description": "Click on ativity",
-          "tags": "P2",
-          "visualTest": "-"
+          "id": "ENG_OPEN_TC_1",
+          "description": "Validate the writing question in unattempted state for student",
+          "tags": "P1",
+          "visualTest": true
         },
         {
-          "id": "ENG_WRITEPLYR_TC_1",
-          "description": "Validate the writing player is launched",
-          "tags": "P2",
-          "visualTest": "-"
+          "id": "ENG_OPEN_TC_2",
+          "description": "Validate the writing question in attempted state (not graded) for student",
+          "tags": "P1",
+          "visualTest": true
         },
         {
-          "id": "ENG_WRITEPLYR_TC_2",
-          "description": "Validate the content on Writing Player Page for grading 1st attempt",
-          "tags": "P2",
-          "visualTest": "-"
+          "id": "ENG_OPEN_TC_3",
+          "description": "Validate the writing question in graded state for student",
+          "tags": "P1",
+          "visualTest": true
         },
         {
-          "id": "ENG_WRITEPLYR_TC_3",
-          "description": "Validate that the score value can be set in the score text area",
-          "tags": "P2",
-          "visualTest": "-"
+          "id": "ENG_OPEN_TC_4",
+          "description": "Validate that clicking on Submit Answers displays Submit dialog",
+          "tags": "P1",
+          "visualTest": true
         },
         {
-          "id": "ENG_WRITEPLYR_TC_4",
-          "description": "Validate that the feedback value can be set in the feedback text area",
-          "tags": "P2",
-          "visualTest": "-"
+          "id": "ENG_OPEN_TC_6",
+          "description": "Validate that clicking on Cancel button does not submit the student response",
+          "tags": "P1",
+          "visualTest": true
         },
         {
-          "id": "ENG_WRITEPLYR_TC_5",
-          "description": "Validate clicking on 'Submit Grade' button launches dialog box",
-          "tags": "P2",
-          "visualTest": "-"
+          "id": "ENG_OPEN_TC_11",
+          "description": "Validate the writing question in grading state for teacher",
+          "tags": "P1",
+          "visualTest": true
         },
         {
-          "id": "ENG_WRITEPLYR_TC_6",
-          "description": "Validate clicking on 'Cancel' button disappears dialog box",
-          "tags": "P2",
-          "visualTest": "-"
+          "id": "ENG_OPEN_TC_12",
+          "description": "Validate that clicking on submit grade button without entering the score shows error message",
+          "tags": "P1",
+          "visualTest": true
         },
         {
-          "id": "ENG_WRITEPLYR_TC_7",
-          "description": "Validate clicking on 'Confirm & Submit' button grades the attempt",
-          "tags": "P2",
-          "visualTest": "-"
+          "id": "ENG_OPEN_TC_13",
+          "description": "Validate that confirmation dialog appears on clicking submit button after entering score, feedback and reattempt request as no",
+          "tags": "P1",
+          "visualTest": true
         },
         {
-          "id": "ENG_WRITEPLYR_TC_8",
-          "description": "Validate clicking on 'Yes' radio button",
-          "tags": "P2",
-          "visualTest": "-"
+          "id": "ENG_OPEN_TC_14",
+          "description": "Validate that confirmation dialog appears on clicking submit button after entering score, feedback and reattempt request as yes",
+          "tags": "P1",
+          "visualTest": true
         },
         {
-          "id": "ENG_WRITEPLYR_TC_9",
-          "description": "Validate clicking on 'Confirm & Submit' with REATTEMPT REQUESTED YES button",
-          "tags": "P2",
-          "visualTest": "-"
+          "id": "ENG_OPEN_TC_16",
+          "description": "Validate that clicking on cancel button does not complete the grading of the activity",
+          "tags": "P1",
+          "visualTest": true
         }
       ]
     }

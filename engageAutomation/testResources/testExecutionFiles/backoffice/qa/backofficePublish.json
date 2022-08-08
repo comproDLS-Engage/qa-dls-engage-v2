@@ -84,6 +84,10 @@
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/publishData.json",
 						"jsonPath": "backoffice.folder[0]"
+					},
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/banner.json",
+						"jsonPath": "banner.folder[1]"
 					}
 				]
 			},
