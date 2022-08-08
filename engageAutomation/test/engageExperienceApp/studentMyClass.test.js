@@ -75,7 +75,6 @@ module.exports = {
 	//Validate that My Classes tab option shows all classes 
 	ENG_STU_CLASS_TC_4: async function (testdata) {
 		sts = await classDashboardPage.isInitialized()
-		//console.log(sts)
 		if ((typeof (sts)) === "object") {
 			await assertion.assertEqual(sts.isActiveTabSelected, 'true', "Myclass Tab is not selected: " + (await JSON.stringify(sts)))
 			await assertion.assertEqual(sts.isArchievedTabSelected, 'false', "Archived Tab is selected: " + (await JSON.stringify(sts)))

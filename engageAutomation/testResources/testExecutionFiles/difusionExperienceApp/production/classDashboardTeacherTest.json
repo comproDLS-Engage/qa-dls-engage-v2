@@ -1610,7 +1610,7 @@
     ]
   },
   "Suite15": {
-    "Name": "Validate the class pane menu option",
+    "Name": "More option validation of a class on the class drawer (Dashboard Page) ",
     "TestCaseRepo": [
       "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
     ],
@@ -1764,5 +1764,127 @@
         "testData": []
       }
     ]
+  },
+  "Suite16": {
+    "Name": "Validate the Inbox tab on class details Page",
+    "TestCaseRepo": [
+      "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
+    ],
+    "Before": [
+      {
+        "id": "launchUrl",
+        "description": "",
+        "testFile": "./engageAutomation/core/runner/launchUrl.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_LAND_TC_3",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/landing.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_IDEN_TC_7",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/login.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
+            "jsonPath": "engage.login.user.classInstructorUser8"
+          }
+        ]
+      },
+      {
+        "id": "ENG_SHELL_TC_4",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/appShell.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+            "jsonPath": "engage.appContent.myClassPage"
+          }
+        ]
+       
+      },
+      {
+        "id": "ENG_INS_CLASS_TC_8",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
+            "jsonPath": "engage.login.user.classInstructorUser8.class[0]"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+            "jsonPath": "engage.appContent.myClassPage"
+          }
+        ]
+      }
+    ],
+    "BeforeEach": [],
+    "Test": [
+      {
+        "id": "ENG_INS_CLASS_TC_10",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+            "jsonPath": "engage.appContent.myClassPage"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_CLASS_TC_117",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+            "jsonPath": "engage.appContent.teacherViewClass"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_CLASS_TC_118",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/assignmentData.json",
+            "jsonPath": "inbox.activity[0]"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+            "jsonPath": "engage.appContent.teacherViewClass"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_CLASS_TC_119",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+            "jsonPath": "engage.appContent.teacherViewClass"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_CLASS_TC_120",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/assignmentData.json",
+            "jsonPath": "inbox.activity[0].activityName"
+          }
+        ]
+      }
+    ],
+    "AfterEach": [],
+    "After": []
   }
 }
