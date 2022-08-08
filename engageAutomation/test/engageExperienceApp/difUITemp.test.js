@@ -335,7 +335,7 @@ module.exports = {
 		// console.log(res)
 		res = await action.waitForDisplayed("[id=page],[id=container-non-lo");
 		console.log(res)
-		await browser.pause(3000);
+		await browser.pause(5000);
 		//res = action.switchToParentFrame();
 	},
 
