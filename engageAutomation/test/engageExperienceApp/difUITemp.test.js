@@ -241,7 +241,9 @@ module.exports = {
 		console.log(res)
 		res = await action.click("[data-tid=button-Save]");
 		console.log(res)
-		res = await action.waitForDisplayed("img[src*=Compro]", 60000);
+		res = await action.waitForDisplayed("[class*=rogress][class*=indeterminate]", 60000, true);
+		console.log(res)
+		res = await action.waitForDisplayed("img[src*=Compro]", 30000);
 		console.log(res)
 	},
 
@@ -333,7 +335,7 @@ module.exports = {
 		// console.log(res)
 		res = await action.waitForDisplayed("[id=page],[id=container-non-lo");
 		console.log(res)
-		await browser.pause(3000);
+		await browser.pause(5000);
 		//res = action.switchToParentFrame();
 	},
 
@@ -341,7 +343,7 @@ module.exports = {
 	ENG_DIF_TC_26: async function () {
 		res = await action.click("[data-tid=button-joincourse]");
 		console.log(res)
-		res = await action.waitForDisplayed("[data-tid=button-continue]");
+		res = await action.waitForDisplayed("[data-tid=button-joinClass]");
 		console.log(res)
 		//action.waitForDisplayed("div:nth-child(1) > div > div > button")
 	},
@@ -352,6 +354,7 @@ module.exports = {
 		console.log(res)
 		res = await action.waitForDisplayed("button > span > div > img");
 		console.log(res)
+		await browser.pause(3000);
 	},
 
 	// Change language to Spanish

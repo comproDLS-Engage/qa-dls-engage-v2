@@ -39,6 +39,15 @@
                     "class": [],
                     "info": {}
                 },
+                "validStudent4": {
+                    "email": "gacrihinofri-3384@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "student",
+                    "name": "Automation Student4",
+                    "class": [],
+                    "country": "",
+                    "info": "Automation User.Do Not Touch."
+                },
                 "invalidUser1": {
                     "email": "etirrase@yopmail",
                     "password": "hfcghgufyhW#2",
@@ -270,7 +279,7 @@
                         {
                             "key": "TFbA-6AP7",
                             "name": "Non-Scorable",
-                            "studentName1":"dev1 student100"
+                            "studentName1": "dev1 student100"
                         }
                     ],
                     "info": {}
@@ -296,7 +305,6 @@
                     ],
                     "info": {}
                 },
-              
                 "classInstructorUser1": {
                     "email": "classinstructor1@yopmail.com",
                     "password": "Compro@1234",
@@ -314,6 +322,32 @@
                         {
                             "key": "Cw32-FLZ7",
                             "name": "Archive Class"
+                        }
+                    ],
+                    "info": {}
+                },
+                "writingStudent1": {
+                    "email": "autodev2stud1@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "student",
+                    "name": "Automation Student1",
+                    "class": [
+                        {
+                            "key": "dNcW-6h9X",
+                            "name": "class1"
+                        }
+                    ],
+                    "info": {}
+                },
+                "writingTeacher1": {
+                    "email": "autodev2ins1@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "instructor",
+                    "name": "Automation Instructor1",
+                    "class": [
+                        {
+                            "key": "dNcW-6h9X",
+                            "name": "class1"
                         }
                     ],
                     "info": {}
