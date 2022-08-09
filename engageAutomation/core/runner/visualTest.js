@@ -4,8 +4,8 @@ var mergeImg = require(path.join(rootDir, '/core/utils/mergeImage.js'));
 var hideSelectors = [
     '[data-tid=text-versionInfo]',
     '[data-tid*=text-time-recent]',
-    '[id=input-startDate]',
-    '[id=input-endDate]'
+    'input[id=startDate]',
+    'input[id=endDate]'
 ];
 var excludeSelectors = [];
 const { Eyes, Target, ClassicRunner, By, Configuration, BatchInfo } = require('@applitools/eyes-webdriverio');
@@ -76,8 +76,10 @@ module.exports = {
         let codemod_placeholder_6971 = Object.keys(hideSelectors);
 
         for (const selector of codemod_placeholder_6971) {
-            hideElements[selector] = await action.findElements(await hideSelectors[selector]);
+            hideElements[selector] = await action.findElements(hideSelectors[selector]);
+            await browser.pause(500);
         };
+        //console.log(hideElements[1].length)
         var excludeElements = [];
         // find all the elements to be hide while taking screenshots
         let codemod_placeholder_2646 = Object.keys(excludeSelectors);
