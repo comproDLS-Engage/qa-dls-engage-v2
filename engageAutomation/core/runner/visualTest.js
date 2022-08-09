@@ -2,11 +2,15 @@
 var rootDir = process.cwd();
 var mergeImg = require(path.join(rootDir, '/core/utils/mergeImage.js'));
 var hideSelectors = [
-    'h4[data-tid="title-analyticsbox-0-1"]',
-    '[data-tid=text-versionInfo]'];
+    '[data-tid=text-versionInfo]',
+    '[data-tid*=text-time-recent]',
+    '[data-tid=text-time-recent-0]',
+    '[data-tid=text-time-recent-1]'
+];
 var excludeSelectors = [
     '[id=input-startDate]',
-    '[id=input-endDate]'];
+    '[id=input-endDate]'
+];
 const { Eyes, Target, ClassicRunner, By, Configuration, BatchInfo } = require('@applitools/eyes-webdriverio');
 var eyes = new Eyes();
 var action = require(rootDir + '/core/actionLibrary/baseActionLibrary');
