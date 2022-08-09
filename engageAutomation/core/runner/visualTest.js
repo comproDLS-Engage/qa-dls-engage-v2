@@ -4,13 +4,10 @@ var mergeImg = require(path.join(rootDir, '/core/utils/mergeImage.js'));
 var hideSelectors = [
     '[data-tid=text-versionInfo]',
     '[data-tid*=text-time-recent]',
-    '[data-tid=text-time-recent-0]',
-    '[data-tid=text-time-recent-1]'
-];
-var excludeSelectors = [
     '[id=input-startDate]',
     '[id=input-endDate]'
 ];
+var excludeSelectors = [];
 const { Eyes, Target, ClassicRunner, By, Configuration, BatchInfo } = require('@applitools/eyes-webdriverio');
 var eyes = new Eyes();
 var action = require(rootDir + '/core/actionLibrary/baseActionLibrary');
@@ -79,7 +76,7 @@ module.exports = {
         let codemod_placeholder_6971 = Object.keys(hideSelectors);
 
         for (const selector of codemod_placeholder_6971) {
-            hideElements[selector] = await action.findElements(hideSelectors[selector]);
+            hideElements[selector] = await action.findElements(await hideSelectors[selector]);
         };
         var excludeElements = [];
         // find all the elements to be hide while taking screenshots
@@ -154,12 +151,12 @@ module.exports = {
     //setting params to initiate Applitools
     initiateApplitools: async function () {
         console.log("applitools Initiated..")
-        await eyes.setConfiguration(browser.config.eyes);
-        await eyes.setMatchLevel(browser.config.eyes.matchLevel)
-        await eyes.setStitchMode(browser.config.eyes.stitchMode);
-        await eyes.setBatch(browser.config.eyes.batch);
+        eyes.setConfiguration(browser.config.eyes);
+        eyes.setMatchLevel(browser.config.eyes.matchLevel)
+        eyes.setStitchMode(browser.config.eyes.stitchMode);
+        eyes.setBatch(browser.config.eyes.batch);
         //eyes.setBaselineEnvName('MasterEnv');
-        await eyes.setApiKey(browser.config.eyes.apiKey);
+        eyes.setApiKey(browser.config.eyes.apiKey);
     },
 
     //open Applitools eyes
