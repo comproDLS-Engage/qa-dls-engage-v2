@@ -213,6 +213,7 @@
                 "applyBtn_txt": "Apply",
                 "cancelBtn_txt": "Cancel",
                 "archivedTab": "Archived",
+                "archivedlbl": "Archived",
                 "viewClassText": "View Class",
                 "editMsgBar_txt": "Class Updated!",
                 "inboxOption_txt": "Inbox",
@@ -300,7 +301,9 @@
                 "resources": "Resources",
                 "reviewBox_Title": "Review and grade student submissions",
                 "reviewBox_SubTitle": "When students in your class submit activities from assigments or class textbooks, you'll see them here to review grade.",
-                "assignmentCardActivityText": "submitted an activity"
+                "assignmentCardActivityText": "submitted an activity",
+                "archivedlbl": "Archived",
+                "archivedMsg":"This class is archived because the end date has passed. The class will be limited to read only mode. You can extend the class end date and activate the class again."
             },
             "bookViewTOC": {
                 "addToMyBooks": "Add to My Books",

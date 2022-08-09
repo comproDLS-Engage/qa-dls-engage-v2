@@ -221,7 +221,7 @@
                 "classSubHeading": "[data-tid='text-pageSubTitle']",
                 "activeTab": "[data-tid='button-product-0']",
                 "archivedTab": "[data-tid='button-product-1']",
-                "archivedlbl": "[data-tid='text-archive']>span:nth-child(1)",
+                "archivedlbl": "[data-tid=text-pill-0-0]",
                 "addClassBtn": "[data-tid='button-add']",
                 "notStarted_btn": "[data-tid*=button-notStarted-",
                 "menuOptionBtn": "[data-tid*=button-classSubmenu-",
@@ -396,7 +396,9 @@
                 "assignmentCardActivityText": "[data-tid*=text-submitActivity-",
                 "assignmentCardActivityDate": "[data-tid*=text-submitDate-",
                 "assignmentCardActivityName": "[data-tid*=text-activityName-",
-                "assignmentCardUnitName": "[data-tid*=text-unitPath-"
+                "assignmentCardUnitName": "[data-tid*=text-unitPath-",
+                "archivedlbl":"[data-tid=chip-pill]",
+                "archivedMsg":"[data-tid=text-archiveMessage]"
             },
             "itemPlayer": {
                 "activeQues": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) ",

@@ -250,6 +250,10 @@
                         {
                             "key": "Cw32-FLZ7",
                             "name": "Archive Class"
+                        },
+                        {
+                            "key": "",
+                            "name": "Archive Class Check"
                         }
                     ],
                     "info": {}

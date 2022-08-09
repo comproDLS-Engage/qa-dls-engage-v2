@@ -51,6 +51,7 @@ module.exports = {
     search_NoResult_subTitle: selectorFile.css.ComproEngage.browse.search_NoResult_subTitle,
     searchPill: selectorFile.css.ComproEngage.browse.searchPill,
     closeSearchPill: selectorFile.css.ComproEngage.browse.closeSearchPill,
+	archivedlbl:selectorFile.css.ComproEngage.myClassPage.archivedlbl,
 
 	isInitialized: async function () {
 		await logger.logInto(await stackTrace.get());
@@ -72,7 +73,7 @@ module.exports = {
 			addClassBtn: (await action.getElementCount(this.addClassBtn)) > 0 ? await action.getText(this.addClassBtn) : null,
 			activeTab: (await action.getElementCount(this.activeTab)) > 0 ? await action.getText(this.activeTab) : null,
 			archivedTab: (await action.getElementCount(this.archivedTab)) > 0 ? await action.getText(this.archivedTab) : null,
-			//archivedlbl: action.getElementCount(this.archivedlbl) > 0 ? action.getText(this.archivedlbl) : null,
+			archivedlbl: (await action.getElementCount(this.archivedlbl))> 0 ? await action.getText(this.archivedlbl) : null,
 			isActiveTabSelected: (await action.getElementCount(this.activeTab)) > 0 ? await action.getAttribute(this.activeTab, "aria-selected") : null,
 			isArchievedTabSelected: (await action.getElementCount(this.archivedTab)) > 0 ? await action.getAttribute(this.archivedTab, "aria-selected") : null,
 			noClassTitle: (await action.getElementCount(this.noClassPageTitle)) > 0 ? await action.getText(this.noClassPageTitle) : null,

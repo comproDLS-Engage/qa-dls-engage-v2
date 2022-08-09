@@ -424,7 +424,7 @@
         },
         {
           "id": "ENG_INS_CLASS_TC_3",
-          "description": "Validate the content (in english) of the Archive Page",
+          "description": "Validate the content (in english) of the Archive Page (blank page)",
           "tags": "P2",
           "visualTest": true
         },
@@ -737,6 +737,16 @@
         {
           "id": "ENG_INS_CLASS_TC_120",
           "description": "Validate the Click on Activity Card  on inbox tab of dashboard",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_121",
+          "description": "Validate the Click on Activity Card  on inbox tab of dashboard",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_122",
+          "description": "Validate that Content of Archived class details page ",
           "tags": "P1"
         }
       ]
