@@ -349,7 +349,7 @@ module.exports = {
 		res = await action.click(this.placeHolderIns_txt);
 		res = await action.clearValueDefault(this.placeHolderIns_txt)
 		res = await action.addValue(this.placeHolderIns_txt, testdata)
-		await browser.pause(2000)
+		await browser.pause(1000)
 		if (res == true) {
 			await logger.logInto(stackTrace.get(), " -- text added");
 		}
@@ -360,7 +360,7 @@ module.exports = {
 		await logger.logInto(stackTrace.get());
 		res = await action.clearValueDefault(this.placeHolderIns_txt)
 		res = await action.addValue(this.placeHolderIns_txt, testdata)
-		await browser.pause(2000)
+		await browser.pause(1000)
 		if (res == true) {
 			await logger.logInto(stackTrace.get(), " -- Add Pair Button is clicked");
 		}

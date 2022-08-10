@@ -279,7 +279,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
-						"jsonPath": "editor.questions.MultipleResponse[0].subQues[0]"
+						"jsonPath": "editor.questions.MCQSR[0].subQues[0]"
 					}
 				]
 			},
@@ -894,7 +894,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
-						"jsonPath": "editor.questions.MultipleResponse[0].type"
+						"jsonPath": "editor.questions.MultipleResponse[0].type1"
 					}
 				]
 			},
@@ -1202,18 +1202,6 @@
 				]
 			},
 			{
-				"id": "ASE_COM_TC_1064",
-				"description": "",
-				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": []
-			},
-			{
-				"id": "ASE_COM_TC_1036",
-				"description": "",
-				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": []
-			},
-			{
 				"id": "ASE_COM_TC_1014",
 				"description": "",
 				"testFile": "./test/assessmentEditor/editor.test.js",
@@ -1445,18 +1433,6 @@
 						"jsonPath": "editor.questions.DragDropOnImage[0].quesTitle"
 					}
 				]
-			},
-			{
-				"id": "ASE_COM_TC_1064",
-				"description": "",
-				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": []
-			},
-			{
-				"id": "ASE_COM_TC_1036",
-				"description": "",
-				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": []
 			},
 			{
 				"id": "ASE_COM_TC_1014",

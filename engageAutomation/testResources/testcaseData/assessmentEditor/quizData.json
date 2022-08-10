@@ -20,7 +20,8 @@
       "MultipleResponse": [
         {
           "number": 4,
-          "type": "multipleresponse",
+          "type": "multipleresponsequestionset",
+          "type1": "mutipleresponse",
           "score":"3",
           "quesTitle": "Multiple Choice Multiple Response Question",
           "instructionText": "Select more that one options for the following question",
@@ -218,6 +219,7 @@
       {
           "number": 1,
           "type": "multiplechoicequestionset",
+          "type1":"mutiplechoice",
           "quesTitle": "MCSR Question with Multiple Sub-Questions",
           "score":"1",
           "instructionText": "Choose the correct answer for the following questions",
