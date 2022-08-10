@@ -219,14 +219,13 @@
                 "id": "ENG_DIF_TC_19",
                 "description": "Classes page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.05,
+                "visualTolerance": 0.01,
                 "testData": []
             },
             {
                 "id": "ENG_DIF_TC_20",
                 "description": "Create Class page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.02,
                 "testData": []
             },
             {
@@ -245,7 +244,7 @@
                 "id": "ENG_DIF_TC_23",
                 "description": "Cancel and go back to Classes page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.05,
+                "visualTolerance": 0.01,
                 "testData": []
             },
             {
@@ -398,7 +397,7 @@
                 "id": "ENG_DIF_TC_19",
                 "description": "Classes page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.05,
+                "visualTolerance": 0.01,
                 "testData": []
             },
             {
@@ -528,7 +527,7 @@
                 "id": "ENG_DIF_TC_24",
                 "description": "Student view class page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.05,
+                "visualTolerance": 0.01,
                 "testData": []
             },
             {
@@ -711,7 +710,7 @@
                 "id": "ENG_DIF_TC_19",
                 "description": "Classes page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.05,
+                "visualTolerance": 0.01,
                 "testData": []
             },
             {
