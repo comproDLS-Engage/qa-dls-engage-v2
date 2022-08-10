@@ -1100,7 +1100,6 @@
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": []
 			},
-			
 			{
 				"id": "ASE_COM_TC_1065",
 				"description": "",
@@ -1129,8 +1128,6 @@
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": []
 			},
-			
-			
 			{
 				"id": "ASE_COM_TC_1098",
 				"description": "",
@@ -1371,7 +1368,6 @@
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": []
 			},
-			
 			{
 				"id": "ASE_COM_TC_1098",
 				"description": "",
@@ -1422,7 +1418,6 @@
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": []
 			},
-			
 			{
 				"id": "ASE_COM_TC_1015",
 				"description": "",
@@ -1552,8 +1547,6 @@
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": []
 			},
-			
-			
 			{
 				"id": "ASE_COM_TC_1098",
 				"description": "",
@@ -1772,7 +1765,6 @@
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": []
 			},
-			
 			{
 				"id": "ASE_COM_TC_1098",
 				"description": "",
@@ -1915,8 +1907,6 @@
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": []
 			},
-			
-			
 			{
 				"id": "ASE_COM_TC_1065",
 				"description": "",
@@ -1945,7 +1935,6 @@
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": []
 			},
-			
 			{
 				"id": "ASE_COM_TC_1065",
 				"description": "",
@@ -2052,7 +2041,6 @@
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": []
 			},
-			
 			{
 				"id": "ASE_COM_TC_1099",
 				"description": "",
@@ -3068,30 +3056,6 @@
 				"testData": []
 			},
 			{
-				"id": "ASE_MAT_TC_13",
-				"description": "Set Click Add Pair Button",
-				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": []
-			},
-			{
-				"id": "ASE_MAT_TC_13",
-				"description": "Set Click Add Pair Button",
-				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": []
-			},
-			{
-				"id": "ASE_MAT_TC_13",
-				"description": "Set Click Add Pair Button",
-				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": []
-			},
-			{
-				"id": "ASE_MAT_TC_13",
-				"description": "Set Click Add Pair Button",
-				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": []
-			},
-			{
 				"id": "ASE_MAT_TC_14",
 				"description": "Set Matching - Items",
 				"testFile": "./test/assessmentEditor/editor.test.js",
@@ -3103,15 +3067,340 @@
 				]
 			},
 			{
-				"id": "ASE_MAT_TC_15",
-				"description": "Set Matching - Right Items",
+				"id": "ASE_MAT_TC_16",
+				"description": "Set Matching - Items",
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
-						"jsonPath": "editor.questions.Matching[0].matchedItems"
+						"jsonPath": "editor.questions.Matching[0].items[0]"
 					}
 				]
+			},
+			{
+				"id": "ASE_COM_TC_1002",
+				"description": "Click on Editor tab",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.Matching[0].items[0][1]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1014",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_MAT_TC_16",
+				"description": "Set Matching - Items",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.Matching[0].items[1]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1002",
+				"description": "Click on Editor tab",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.Matching[0].items[1][1]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1014",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_MAT_TC_16",
+				"description": "Set Matching - Items",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.Matching[0].items[2]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1002",
+				"description": "Click on Editor tab",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.Matching[0].items[2][1]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1014",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_MAT_TC_16",
+				"description": "Set Matching - Items",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.Matching[0].items[3]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1002",
+				"description": "Click on Editor tab",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.Matching[0].items[3][1]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1014",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_MAT_TC_16",
+				"description": "Set Matching - Items",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.Matching[0].items[4]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1002",
+				"description": "Click on Editor tab",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.Matching[0].items[4][1]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1014",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_MAT_TC_16",
+				"description": "Set Matching - Items",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.Matching[0].items[5]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1002",
+				"description": "Click on Editor tab",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.Matching[0].items[5][1]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1014",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_MAT_TC_15",
+				"description": "Set Matching - Items",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.Matching[0].matchedItems[0]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1002",
+				"description": "Click on Editor tab",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.Matching[0].matchedItems[0][1]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1014",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_MAT_TC_15",
+				"description": "Set Matching - Items",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.Matching[0].matchedItems[1]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1002",
+				"description": "Click on Editor tab",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.Matching[0].matchedItems[1][1]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1014",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_MAT_TC_15",
+				"description": "Set Matching - Items",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.Matching[0].matchedItems[2]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1002",
+				"description": "Click on Editor tab",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.Matching[0].matchedItems[2][1]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1014",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_MAT_TC_15",
+				"description": "Set Matching - Items",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.Matching[0].matchedItems[3]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1002",
+				"description": "Click on Editor tab",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.Matching[0].matchedItems[3][1]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1014",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_MAT_TC_15",
+				"description": "Set Matching - Items",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.Matching[0].matchedItems[4]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1002",
+				"description": "Click on Editor tab",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.Matching[0].matchedItems[4][1]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1014",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_MAT_TC_15",
+				"description": "Set Matching - Items",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.Matching[0].matchedItems[5]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1002",
+				"description": "Click on Editor tab",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"jsonPath": "editor.questions.Matching[0].matchedItems[5][1]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1014",
+				"description": "",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
 			},
 			{
 				"id": "ASE_COM_TC_1012",
