@@ -740,14 +740,76 @@
           "tags": "P1"
         },
         {
+          "id": "ENG_INS_CLASS_TC_122",
+          "description": "Validate that teacher is able to view notification bar on launching Archive class",
+          "tags": "P1",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_123",
+          "description": "Validate teacher is not able to create new Assignment",
+          "tags": "P1",
+          "visualTest": false
+        },
+        {
           "id": "ENG_INS_CLASS_TC_121",
-          "description": "Validate the Click on Activity Card  on inbox tab of dashboard",
-          "tags": "P1"
+          "description": "Validate default launch of Archive class tab when a class is present",
+          "tags": "P1",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_125",
+          "description": "Validate default launch of Archive class tab when no class is present",
+          "tags": "P1",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_126",
+          "description": "Teacher login - Validate the data when user on More options on Archive class",
+          "tags": "P1",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_127",
+          "description": "Teacher login - Validate Inbox page is launched on clicking Inbox option from More options",
+          "tags": "P1",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_128",
+          "description": "Teacher login - Validate Assignments page is launched on clicking Assignments option from More options",
+          "tags": "P1",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_129",
+          "description": "Teacher login - Validate Students page is launched on clicking Students option from More options",
+          "tags": "P1",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_130",
+          "description": "Teacher login - Validate Gradebook page is launched on clicking Gradebook option from More options",
+          "tags": "P1",
+          "visualTest": false
         },
         {
           "id": "ENG_INS_CLASS_TC_122",
-          "description": "Validate that Content of Archived class details page ",
-          "tags": "P1"
+          "description": "Validate the content on Archive Class details page",
+          "tags": "P1",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_131",
+          "description": "Teacher login - Validate snackbar message is displayed on clicking Materials option from More options",
+          "tags": "P1",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_124",
+          "description": "Teacher Login - Validate that archive label is removed on clicking cross icon",
+          "tags": "P1",
+          "visualTest": false
         }
       ]
     },
@@ -892,6 +954,11 @@
         {
           "id": "ENG_STU_CLASS_TC_24",
           "description": "Validate the Content of Assignment Data",
+          "tags": "P1"
+        },
+        {
+          "id": "ENG_STU_CLASS_TC_26",
+          "description": "Validate archive tag in Archived class",
           "tags": "P1"
         }
       ]

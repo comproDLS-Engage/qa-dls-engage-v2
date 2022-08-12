@@ -62,6 +62,7 @@ module.exports = {
     assignmentCardUnitName: selectorFile.css.ComproEngage.teacherViewClassPage.assignmentCardUnitName,
     archivedlbl:selectorFile.css.ComproEngage.teacherViewClassPage.archivedlbl,
     archivedMsg:selectorFile.css.ComproEngage.teacherViewClassPage.archivedMsg,
+    
     isInitialized: async function () {
         await logger.logInto(await stackTrace.get());
         await action.waitForDocumentLoad();
@@ -105,6 +106,7 @@ module.exports = {
             archivedMsg:((await action.getElementCount(this.archivedMsg)) > 0) ? await action.getText(this.archivedMsg) : null,
             productList: null, //for the tabs (inbox, Assignments, Students)
             bookComponentList: null, //for book components in the right pane
+            
         }
 
         let productData = [], productSelector, isProductSelected, i;
