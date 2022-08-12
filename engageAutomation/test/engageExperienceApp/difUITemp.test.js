@@ -336,6 +336,8 @@ module.exports = {
 		res = await action.waitForDisplayed("[id=page],[id=container-non-lo");
 		console.log(res)
 		await browser.pause(5000);
+		res = await action.moveTo("button[class*=ytp-large-play-button-red-bg]");
+		console.log(res)
 		//res = action.switchToParentFrame();
 	},
 
