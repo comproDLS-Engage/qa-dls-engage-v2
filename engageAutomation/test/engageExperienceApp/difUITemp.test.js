@@ -331,14 +331,18 @@ module.exports = {
 		// res = action.waitForDisplayed("iframe");
 		// console.log(res)
 		// res = action.findElements("iframe");
-		// res = action.switchToFrame(res[0]);
-		// console.log(res)
+		
 		res = await action.waitForDisplayed("[id=page],[id=container-non-lo");
 		console.log(res)
-		await browser.pause(5000);
-		res = await action.moveTo("button[class*=ytp-large-play-button-red-bg]");
+		//await browser.pause(5000);
+		res = await action.waitForDisplayed("iframe[id*=iframe], iframe");
 		console.log(res)
-		//res = action.switchToParentFrame();
+		res = await action.switchToFrame(0);
+		console.log(res)
+		res = await action.moveTo("button[class*=ytp-large-play-button]");
+		console.log(res)
+		res = await action.switchToParentFrame();
+		console.log(res)
 	},
 
 	// Join Class page
