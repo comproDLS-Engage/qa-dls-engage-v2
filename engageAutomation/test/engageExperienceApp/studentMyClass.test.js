@@ -339,7 +339,7 @@ module.exports = {
 		if ((typeof (sts)) === "object") {
 			await assertion.assertEqual(sts[0].dueDaysChip, testdata[1].dueDaysChip, "dueDaysChip is mismatched: " + (await JSON.stringify(sts)))
 			await assertion.assertEqual(sts[0].assignmentTitle, testdata[0].assignmentName, "assignmentTitle mismatched: " + (await JSON.stringify(sts)))
-			await assertion.assertEqual(sts[0].assignmentActivities, testdata[0].assignmentActivities+" "+testdata[1].activities, "assignmentTitle mismatched: " + (await JSON.stringify(sts)))
+			await assertion.assertEqual(sts[0].assignmentActivities, testdata[0].assignmentActivities + " " + testdata[1].activities, "assignmentTitle mismatched: " + (await JSON.stringify(sts)))
 			await assertion.assertEqual(sts[0].dueNumberChip, testdata[0].dueNumberChip, "assignmentTitle mismatched: " + (await JSON.stringify(sts)))
 		}
 	},
@@ -351,7 +351,18 @@ module.exports = {
 		if ((typeof (sts)) === "object") {
 			await assertion.assertEqual(sts[0].bookMaterial_lbl, testdata.bookMaterial_lbl, "bookMaterial_lbl is mismatched: " + (await JSON.stringify(sts)))
 			await assertion.assertEqual(sts[0].completionValue, testdata.completionValue, "completionValue mismatched: " + (await JSON.stringify(sts)))
-			await assertion.assertEqual(sts[0].progressbar, testdata.progressbar+ "progressbar mismatched: " + (await JSON.stringify(sts)))
+			await assertion.assertEqual(sts[0].progressbar, testdata.progressbar + "progressbar mismatched: " + (await JSON.stringify(sts)))
 		}
-	}
+	},
+
+	//Validate that Archive Tag is displayed when user launch an archive Class Dashboard
+	ENG_STU_CLASS_TC_26: async function (testdata) {
+		sts = await classDashboardPage.click_ClassCard(testdata[0].name)
+		await assertion.assertEqual(sts, true, "Class Card is not clicked" + (await JSON.stringify(sts)))
+		sts = await studentClassDetailsPage.isInitialized();
+		await assertion.assertEqual(sts.pageStatus, true, "Class Deatails page is not launched" + (await JSON.stringify(sts.pageStatus)));
+		sts = await studentClassDetailsPage.classstudent_Data();
+		await assertion.assertEqual(sts.archiveTagLbl, testdata[1].archiveTagLbl, "tag mismatched " + (await JSON.stringify(sts)))
+
+	},
 };

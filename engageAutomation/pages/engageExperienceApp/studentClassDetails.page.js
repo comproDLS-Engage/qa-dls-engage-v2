@@ -46,6 +46,8 @@ module.exports = {
     bookMaterial_lbl: selectorFile.css.ComproEngage.myClassPage.bookMaterial_lbl,
     completionValue: selectorFile.css.ComproEngage.myClassPage.completionValue,
     bookMaterial_lbl: selectorFile.css.ComproEngage.myClassPage.bookMaterial_lbl,
+    archiveTagLbl: selectorFile.css.ComproEngage.classDetailsStudent.archiveTagLbl,
+
     isInitialized: async function () {
         await logger.logInto(await stackTrace.get());
         await action.waitForDocumentLoad();
@@ -66,6 +68,7 @@ module.exports = {
             instrutorName: ((await action.getElementCount(this.instrutorName)) > 0) ? await action.getText(this.instrutorName) : null,
             classDatesLabel: ((await action.getElementCount(this.classDatesLabel)) > 0) ? await action.getText(this.classDatesLabel) : null,
             instructorLabel: ((await action.getElementCount(this.instructorLabel)) > 0) ? await action.getText(this.instructorLabel) : null,
+            archiveTagLbl: ((await action.getElementCount(this.archiveTagLbl)) > 0) ? await action.getText(this.archiveTagLbl) : null
         }
         return obj
     },
@@ -95,7 +98,7 @@ module.exports = {
                         assignmentTitle: ((await action.getElementCount(this.assignmentTitle + i)) > 0) ? await action.getText(this.assignmentTitle + i) : null,
                         assignmentActivities: ((await action.getElementCount(this.assignmentActivities + i + "]")) > 0) ? await action.getText(this.assignmentActivities + i + "]") : null,
                         dueDaysChip: ((await action.getElementCount(this.dueDaysChip + i + "]")) > 0) ? await action.getText(this.dueDaysChip + i + "]") : null,
-                        dueNumberChip:((await action.getElementCount(this.dueNumberChip)) > 0) ? await action.getText(this.dueNumberChip) : null,
+                        dueNumberChip: ((await action.getElementCount(this.dueNumberChip)) > 0) ? await action.getText(this.dueNumberChip) : null,
                     }
                     break;
                 }
@@ -108,7 +111,7 @@ module.exports = {
                     assignmentTitle: ((await action.getElementCount(this.assignmentTitle + i + "]")) > 0) ? await action.getText(this.assignmentTitle + i + "]") : null,
                     assignmentActivities: ((await action.getElementCount(this.assignmentActivities + i + "]")) > 0) ? await action.getText(this.assignmentActivities + i + "]") : null,
                     dueDaysChip: ((await action.getElementCount(this.dueDaysChip + i + "]")) > 0) ? await action.getText(this.dueDaysChip + i + "]") : null,
-                    dueNumberChip:((await action.getElementCount(this.dueNumberChip)) > 0) ? await action.getText(this.dueNumberChip) : null,
+                    dueNumberChip: ((await action.getElementCount(this.dueNumberChip)) > 0) ? await action.getText(this.dueNumberChip) : null,
                 }
             }
         }
@@ -184,7 +187,7 @@ module.exports = {
             obj[i] = {
                 bookMaterial_lbl: ((await action.getElementCount(this.bookMaterial_lbl + i + "]")) > 0) ? await action.getText(this.bookMaterial_lbl + i + "]") : null,
                 completionValue: ((await action.getElementCount(this.completionValue + i + "]")) > 0) ? await action.getText(this.completionValue + i + "]") : null,
-                progressbar: ((await action.getElementCount(this.progressbar + i + "]")) > 0) ? await action.getAttribute(this.dueDaysChip + i + "]","aria-valuenow") : null,
+                progressbar: ((await action.getElementCount(this.progressbar + i + "]")) > 0) ? await action.getAttribute(this.dueDaysChip + i + "]", "aria-valuenow") : null,
             }
         }
 

@@ -124,7 +124,7 @@ module.exports = {
                         assignmentScore: ((await action.getElementCount(this.assignmentScore + list[i])) > 0) ? await action.getText(this.assignmentScore + list[i]) : null,
                         assignmentMoreOption: ((await action.getElementCount(this.assignmentMoreOption + list[i])) > 0) ? await action.getText(this.assignmentMoreOption + list[i]) : null,
                         dueDatepill: ((await action.getElementCount(this.dueDatepill + list[i])) > 0) ? await action.getText(this.dueDatepill + list[i]) : null,
-                         }
+                    }
                     break;
                 }
             }
@@ -139,7 +139,7 @@ module.exports = {
                     assignmentScore: ((await action.getElementCount(this.assignmentScore + list[i])) > 0) ? await action.getText(this.assignmentScore + list[i]) : null,
                     assignmentMoreOption: ((await action.getElementCount(this.assignmentMoreOption + list[i])) > 0) ? await action.getText(this.assignmentMoreOption + list[i]) : null,
                     dueDatepill: ((await action.getElementCount(this.dueDatepill + list[i])) > 0) ? await action.getText(this.dueDatepill + list[i]) : null,
-                    }
+                }
             }
         }
         return obj;
@@ -310,11 +310,11 @@ module.exports = {
 
     click_assignmentMoreOption: async function (assignmentNameName) {
         await logger.logInto(await stackTrace.get());
-        var i, list, res,list1;
+        var i, list, res, list1;
         list = await action.findElements(this.assignmentMoreOption);
         list1 = await action.findElements(this.assignmentName);
         for (i = 0; i < list.length; i++) {
-           
+
             if (((await action.getText(list1[i]))) == assignmentNameName) {
                 res = await action.click(list[i]);
                 break;
@@ -457,6 +457,21 @@ module.exports = {
             }
         }
         return rIndex;
-    }
+    },
+
+    click_createAssignments_ArchiveClass: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click("//*[@id=\"scroolbarDiv\"]/div/div/div[2]/main/div/div/div[1]/div[2]/div/div/div/button");
+        if (true == res) {
+
+            await logger.logInto(await stackTrace.get(), res, 'error');
+        }
+        else {
+            res = res + " -- createAssignment button is NOT clicked";
+            await logger.logInto(await stackTrace.get(), res, 'error');
+        }
+        return res;
+    },
 }
 

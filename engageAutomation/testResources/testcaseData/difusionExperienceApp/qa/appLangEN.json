@@ -247,7 +247,8 @@
                 "joinclassPopUpbtn": "Join Class",
                 "helpJoiningClass": "Help Joining Classes",
                 "titleErrorMsg": "You are already enrolled in this class.",
-                "alreadyExistErrorMessage": "You are already enrolled in this class."
+                "alreadyExistErrorMessage": "You are already enrolled in this class.",
+                "archiveTagLbl" : "Archived"
             },
             "classDrawerPane": {
                 "classHeading": "Dashboard",

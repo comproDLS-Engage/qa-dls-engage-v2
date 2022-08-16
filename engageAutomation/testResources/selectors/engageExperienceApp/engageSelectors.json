@@ -255,7 +255,8 @@
                 "joinclassPopUpbtn": "[data-tid=button-joinClass]",
                 "helpJoiningClass": "[data-tid=anchor-skip]",
                 "closebtn": "[data-tid=button-joincourseclose]",
-                "viewProgress_btn": "[data-tid=button-view-progress]"
+                "viewProgress_btn": "[data-tid=button-view-progress]",
+                "archiveLblCrossButton" : "[data-tid=button-close]"
             },
             "createClassPage": {
                 "pageTitle": "[data-tid='text-pageTitle']",
@@ -343,7 +344,8 @@
                 "noCompleted_subtitle": "[data-tid=text-noAssignments-description]",
                 "bookMaterial_lbl": "[data-tid=text-bookMaterial-label-",
                 "completionValue": "[data-tid=text-progress-completion-",
-                "progressbar": "[data-tid=progressbar-"
+                "progressbar": "[data-tid=progressbar-",
+                "archiveTagLbl":"//*[@id=\"scroolbarDiv\"]/div/div/div[2]/main/div/div/div[1]/div[2]/div[1]/div"
             },
             "teacherViewClassPage": {
                 "pageTitle": "[data-tid=text-pageTitle]",

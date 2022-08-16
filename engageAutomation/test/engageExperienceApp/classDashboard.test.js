@@ -6,6 +6,7 @@ const dashboardPage = require('../../pages/engageExperienceApp/dashboard.page.js
 var calender = require('../../pages/engageExperienceApp/calender.page.js');
 var classDrawerpage = require('../../pages/engageExperienceApp/classDrawer.page.js');
 var gradeBookPage = require('../../pages/engageExperienceApp/gradeBook.page.js');
+var assignmentPage = require('../../pages/engageExperienceApp/assignmentListTeacher.page.js');
 const teacherViewClassPage = require('../../pages/engageExperienceApp/teacherViewClass.page.js');
 const { confirmPassword_input } = require('../../pages/engageExperienceApp/settings.page.js');
 var sts;
@@ -163,7 +164,7 @@ module.exports = {
 	//Validate that clicking on inbox option from Class Menu launches class details page with inbox tab selected
 	ENG_INS_CLASS_TC_10: async function (testdata) {
 		sts = await classDashboardPage.click_inboxOption();
-		console.log(sts)
+		//console.log(sts)
 		if ((typeof (sts)) === "object") {
 			await assertion.assert(sts.selectedProduct.includes(testdata.inboxOption_txt), "Inbox Page is not displayed: " + (await JSON.stringify(sts.pageStatus)))
 		} else {
@@ -677,15 +678,15 @@ module.exports = {
 		if ((typeof (sts)) === "object") {
 			for (var i = 0; i < sts.bookComponentList.length - 1; i++) {
 				await assertion.assertEqual(sts.bookComponentList[i].bookComponentData, testdata[0].component[i].name.EN, "Name is not mismatched " + JSON.stringify(sts))
-			console.log(testdata[0].component[i].type)
+				console.log(testdata[0].component[i].type)
 				if ((testdata[0].component[i].type) === 'LP1') {
 					await assertion.assertEqual(sts.bookComponentList[i].bookComponentUnits, testdata[0].component[i].unit.length + " " + testdata[1].bookComponentUnits, "bookComponentUnits is not mismatched " + JSON.stringify(sts))
 					await assertion.assertEqual(sts.bookComponentList[i].bookComponentActivities, testdata[0].component[i].activityCount + " " + testdata[1].bookComponentActivities, "bookComponentActivities is not mismatched " + JSON.stringify(sts))
 				}
-			/*	else {
-
-					await assertion.assertEqual(sts.bookComponentList[i].bookComponentUnits, testdata[0].component[i].activityCount + " " + testdata[1].resources, "bookComponentActivities is not mismatched " + JSON.stringify(sts))
-				}*/
+				/*	else {
+	
+						await assertion.assertEqual(sts.bookComponentList[i].bookComponentUnits, testdata[0].component[i].activityCount + " " + testdata[1].resources, "bookComponentActivities is not mismatched " + JSON.stringify(sts))
+					}*/
 			}
 		} else {
 			await assertion.assertFail(sts);
@@ -797,23 +798,23 @@ module.exports = {
 			await assertion.assertFail(sts);
 		}
 	},
-		//Validate the student card on inbox tab of dashboard
-		ENG_INS_CLASS_TC_118: async function (testdata) {
-			sts = await teacherViewClassPage.getData_activityGradeCard(testdata[0].activityName)
-			console.log(sts)
-			console.log(testdata[0])
-			console.log(testdata[0].studentName)
-			if ((typeof (sts)) === "object") {
-				await assertion.assertEqual(sts[0].assignmentCardStudentName, testdata[0].studentName, "assignmentCardStudentName is not mismatched " + JSON.stringify(sts))
-				await assertion.assertEqual(sts[0].assignmentCardActivityText, testdata[1].assignmentCardActivityText, "assignmentCardActivityText Status is not mismatched " + JSON.stringify(sts))
-				await assertion.assertEqual(sts[0].assignmentCardActivityDate, testdata[0].time, "assignmentCardActivityDate is not mismatched " + JSON.stringify(sts))
-				await assertion.assertEqual(sts[0].assignmentCardActivityName, testdata[0].activityName, "assignmentCardActivityName Status is not mismatched " + JSON.stringify(sts))
-				await assertion.assertEqual(sts[0].assignmentCardUnitName, testdata[0].unitName, "assignmentCardUnitName Status is not mismatched " + JSON.stringify(sts))
+	//Validate the student card on inbox tab of dashboard
+	ENG_INS_CLASS_TC_118: async function (testdata) {
+		sts = await teacherViewClassPage.getData_activityGradeCard(testdata[0].activityName)
+		console.log(sts)
+		console.log(testdata[0])
+		console.log(testdata[0].studentName)
+		if ((typeof (sts)) === "object") {
+			await assertion.assertEqual(sts[0].assignmentCardStudentName, testdata[0].studentName, "assignmentCardStudentName is not mismatched " + JSON.stringify(sts))
+			await assertion.assertEqual(sts[0].assignmentCardActivityText, testdata[1].assignmentCardActivityText, "assignmentCardActivityText Status is not mismatched " + JSON.stringify(sts))
+			await assertion.assertEqual(sts[0].assignmentCardActivityDate, testdata[0].time, "assignmentCardActivityDate is not mismatched " + JSON.stringify(sts))
+			await assertion.assertEqual(sts[0].assignmentCardActivityName, testdata[0].activityName, "assignmentCardActivityName Status is not mismatched " + JSON.stringify(sts))
+			await assertion.assertEqual(sts[0].assignmentCardUnitName, testdata[0].unitName, "assignmentCardUnitName Status is not mismatched " + JSON.stringify(sts))
 
-			} else {
-				await assertion.assertFail(sts);
-			}
-		},
+		} else {
+			await assertion.assertFail(sts);
+		}
+	},
 
 	//Validate the Review Pane cancel button  on inbox tab of dashboard
 	ENG_INS_CLASS_TC_119: async function (testdata) {
@@ -835,24 +836,24 @@ module.exports = {
 			await assertion.assertFail(sts);
 		}
 	},
-		//Validate that My Archied tab class details option
-		ENG_INS_CLASS_TC_121: async function (testdata) {
-			sts = await classDashboardPage.isInitialized()
-			//console.log(sts)
-			if ((typeof (sts)) === "object") {
-				await assertion.assertEqual(sts.isActiveTabSelected, 'false', "Myclass Tab is not selected: " + (await JSON.stringify(sts)))
-				await assertion.assertEqual(sts.isArchievedTabSelected, 'true', "Archived Tab is selected: " + (await JSON.stringify(sts)))
-				await assertion.assertEqual(sts.archivedlbl, testdata[1].archivedlbl, "Archived Tab is selected: " + (await JSON.stringify(sts)))
-				await assertion.assertEqual(sts.classList[0].className, testdata[0].name, "Class Name is mismatched: " + (await JSON.stringify(sts)))
-				await assertion.assertEqual(sts.classList[0].bookName, testdata[0].bookName, "Book Name is mismatched: " + (await JSON.stringify(sts)))
-				await assertion.assertEqual(sts.classList[0].classDuration, testdata[0].classDuration, "Class Duration is mismatched: " + (await JSON.stringify(sts)))
+	//Validate default launch of Archive class tab when a class is present
+	ENG_INS_CLASS_TC_121: async function (testdata) {
+		sts = await classDashboardPage.isInitialized()
+		// console.log(sts)
+		if ((typeof (sts)) === "object") {
+			await assertion.assertEqual(sts.isActiveTabSelected, 'false', "Myclass Tab is not selected: " + (await JSON.stringify(sts)))
+			await assertion.assertEqual(sts.isArchievedTabSelected, 'true', "Archived Tab is selected: " + (await JSON.stringify(sts)))
+			await assertion.assertEqual(sts.archivedlbl, testdata[1].archivedlbl, "Archived Tab is selected: " + (await JSON.stringify(sts)))
+			await assertion.assertEqual(sts.classList[1].className, testdata[0].name, "Class Name is mismatched: " + (await JSON.stringify(sts)))
+			await assertion.assertEqual(sts.classList[1].bookName, testdata[0].bookName, "Book Name is mismatched: " + (await JSON.stringify(sts)))
+			await assertion.assertEqual(sts.classList[1].classDuration, testdata[0].classDuration, "Class Duration is mismatched: " + (await JSON.stringify(sts)))
 
-	
-			} else {
-				await assertion.assertFail(sts);
-			}
-		},
-		//Validate that Content of Archived class details page 
+
+		} else {
+			await assertion.assertFail(sts);
+		}
+	},
+	//Validate that Content of Archived class details page 
 	ENG_INS_CLASS_TC_122: async function (testdata) {
 		//console.log(testdata)
 		sts = await teacherViewClassPage.getViewClassPageData()
@@ -864,7 +865,6 @@ module.exports = {
 			await assertion.assertEqual(sts.archivedMsg, testdata[1].archivedMsg, "gradebookBtn is not mismatched " + JSON.stringify(sts))
 			await assertion.assertEqual(sts.bookCoverImg, true, "bookCoverImg is not mismatched " + JSON.stringify(sts))
 			await assertion.assertEqual(sts.classOptionsBtn_exists, true, "classOptionsBtn_exists is not mismatched " + JSON.stringify(sts))
-			await assertion.assertEqual(sts.gradebookBtn, testdata[1].gradebookBtn, "gradebookBtn is not mismatched " + JSON.stringify(sts))
 			await assertion.assertEqual(sts.bookTitleTxt, testdata[0].bookName, "bookTitleTxt is not mismatched " + JSON.stringify(sts))
 			//await assertion.assertEqual(sts.bookSubtitleTxt, testdata[0].bookSubtitleTxt, "bookSubtitleTxt is not mismatched " + JSON.stringify(sts))
 			await assertion.assertEqual(sts.viewBookBtn, testdata[1].viewBookBtn, "classDuration is not mismatched " + JSON.stringify(sts))
@@ -875,6 +875,68 @@ module.exports = {
 		} else {
 			await assertion.assertFail(sts);
 		}
-
 	},
+
+	// Validate snackbar message is displayed on clicking Create Assignment btton
+	ENG_INS_CLASS_TC_123: async function (testdata) {
+		sts = await assignmentPage.click_createAssignments_ArchiveClass();
+		await assertion.assertEqual(sts, true, "create Assignment is clicked");
+		sts = await require('../../test/engageExperienceApp/common.test.js').get_Snackbar_Message_Text();
+		await assertion.assert(sts, testdata, "Snackbar message mismatch: " + sts); //ENG_INS_CLASS_TC_111
+	},
+
+	//Validate that archive label is removed on clicking cross icon
+	ENG_INS_CLASS_TC_124: async function () {
+		//console.log(testdata)
+		sts = await classDashboardPage.click_archiveLblCrossButton()
+		if ((typeof (sts)) === "object") {
+			await assertion.assertEqual(sts.archivedlbl, null, "archive label status mismatched " + JSON.stringify(sts))
+		} else {
+			await assertion.assertFail(sts);
+		}
+	},
+	//Validate default launch of Archive class tab when no class is present
+	ENG_INS_CLASS_TC_125: async function (testdata) {
+		sts = await classDashboardPage.get_MyClasses_Data();
+		if ((typeof (sts)) === "object") {
+			await assertion.assertEqual(sts.isActiveTabSelected, 'false', "Myclass Tab is selected: " + (await JSON.stringify(sts)))
+			await assertion.assertEqual(sts.isArchievedTabSelected, 'true', "Archived Tab is not selected: " + (await JSON.stringify(sts)))
+			await assertion.assertEqual(sts.pageTitleNoClassArchived, testdata.pageTitleNoClassArchived, "Page title Not Displayed: " + (await JSON.stringify(sts)))
+			await assertion.assertEqual(sts.pageSubTitleNoClassArchived, testdata.pageSubTitleNoClassArchived, "Page Subtitle Not Displayed: " + (await JSON.stringify(sts)))
+			await assertion.assertEqual(sts.pageIconNoClassArchived, true, "Page Icon Not Displayed: " + (await JSON.stringify(sts)))
+		}
+		else {
+			await assertion.assertFail(sts);
+		}
+	},
+
+	//Teacher login - Validate the data when user on More options on Archive class
+	ENG_INS_CLASS_TC_126: async function (testdata) {
+		await this.ENG_INS_CLASS_TC_8(testdata);
+	},
+	//Teacher login - Validate Inbox page is launched on clicking Inbox option from More options
+	ENG_INS_CLASS_TC_127: async function (testdata) {
+		await this.ENG_INS_CLASS_TC_10(testdata);
+	},
+
+	//Teacher login - Validate Assignments page is launched on clicking Assignments option from More options
+	ENG_INS_CLASS_TC_128: async function (testdata) {
+		await this.ENG_INS_CLASS_TC_12(testdata);
+	},
+
+	//Teacher login - Validate Students page is launched on clicking Students option from More options
+	ENG_INS_CLASS_TC_129: async function (testdata) {
+		await this.ENG_INS_CLASS_TC_11(testdata);
+	},
+
+	//Teacher login - Validate Gradebook page is launched on clicking Gradebook option from More options
+	ENG_INS_CLASS_TC_130: async function (testdata) {
+		await this.ENG_INS_CLASS_TC_110(testdata);
+	},
+
+	//Teacher login - Validate snackbar message is displayed on clicking Materials option from More options
+	ENG_INS_CLASS_TC_131: async function (testdata) {
+		await this.ENG_INS_CLASS_TC_111(testdata);
+	}
+
 };
