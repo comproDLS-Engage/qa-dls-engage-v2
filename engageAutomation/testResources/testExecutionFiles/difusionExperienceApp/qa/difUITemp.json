@@ -305,13 +305,10 @@
                 "description": "Login Page",
                 "testFile": "./test/engageExperienceApp/landing.test.js",
                 "testData": []
-            }
-        ],
-        "BeforeEach": [],
-        "Test": [
+            },
             {
                 "id": "ENG_IDEN_TC_7",
-                "description": "Dashboard Page",
+                "description": "Successful login",
                 "testFile": "./test/engageExperienceApp/login.test.js",
                 "visualTest": true,
                 "testData": [
@@ -320,6 +317,15 @@
                         "jsonPath": "engage.login.user.validInstructorUser2"
                     }
                 ]
+            }
+        ],
+        "BeforeEach": [],
+        "Test": [
+            {
+                "id": "ENG_DIF_TC_61",
+                "description": "Dashboard Page",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "testData": []
             },
             {
                 "id": "ENG_DIF_TC_27",
@@ -446,22 +452,21 @@
                 "description": "Login Page",
                 "testFile": "./test/engageExperienceApp/landing.test.js",
                 "testData": []
-            }
-        ],
-        "BeforeEach": [],
-        "Test": [
+            },
             {
                 "id": "ENG_IDEN_TC_7",
                 "description": "Successful login",
                 "testFile": "./test/engageExperienceApp/login.test.js",
-                "visualTest": false,
                 "testData": [
                     {
                         "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
                         "jsonPath": "engage.login.user.uiStudent"
                     }
                 ]
-            },
+            }
+        ],
+        "BeforeEach": [],
+        "Test": [
             {
                 "id": "ENG_DIF_TC_61",
                 "description": "Dashboard Page",
@@ -624,21 +629,26 @@
                 "description": "Login Page",
                 "testFile": "./test/engageExperienceApp/landing.test.js",
                 "testData": []
-            }
-        ],
-        "BeforeEach": [],
-        "Test": [
+            },
             {
                 "id": "ENG_IDEN_TC_7",
-                "description": "Dashboard Page",
+                "description": "Successful login",
                 "testFile": "./test/engageExperienceApp/login.test.js",
-                "visualTest": true,
                 "testData": [
                     {
                         "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
                         "jsonPath": "engage.login.user.validStudent2"
                     }
                 ]
+            }
+        ],
+        "BeforeEach": [],
+        "Test": [
+            {
+                "id": "ENG_DIF_TC_61",
+                "description": "Dashboard Page",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "testData": []
             },
             {
                 "id": "ENG_DIF_TC_27",
