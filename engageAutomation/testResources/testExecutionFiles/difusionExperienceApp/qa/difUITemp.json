@@ -30,15 +30,21 @@
             },
             {
                 "id": "ENG_IDEN_TC_7",
-                "description": "Dashboard Page",
+                "description": "Successful login",
                 "testFile": "./test/engageExperienceApp/login.test.js",
-                "visualTest": true,
+                "visualTest": false,
                 "testData": [
                     {
                         "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
                         "jsonPath": "engage.login.user.uiTeacher"
                     }
                 ]
+            },
+            {
+                "id": "ENG_DIF_TC_61",
+                "description": "Dashboard Page",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "testData": []
             },
             {
                 "id": "ENG_DIF_TC_52",
@@ -446,15 +452,21 @@
         "Test": [
             {
                 "id": "ENG_IDEN_TC_7",
-                "description": "Dashboard Page",
+                "description": "Successful login",
                 "testFile": "./test/engageExperienceApp/login.test.js",
-                "visualTest": true,
+                "visualTest": false,
                 "testData": [
                     {
                         "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
                         "jsonPath": "engage.login.user.uiStudent"
                     }
                 ]
+            },
+            {
+                "id": "ENG_DIF_TC_61",
+                "description": "Dashboard Page",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "testData": []
             },
             {
                 "id": "ENG_DIF_TC_52",

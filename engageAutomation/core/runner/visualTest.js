@@ -72,14 +72,21 @@ module.exports = {
         global.tcNumber = parseInt(testIndex) + 1;
         global.tcId = testObj.id;
         var hideElements = [];
+
         // find all the elements to be hide while taking screenshots
         let codemod_placeholder_6971 = Object.keys(hideSelectors);
-
-        for (const selector of codemod_placeholder_6971) {
+        /*for (const selector of codemod_placeholder_6971) {
             hideElements[selector] = await action.findElements(hideSelectors[selector]);
-            await browser.pause(500);
-        };
-        //console.log(hideElements[1].length)
+            console.log(hideSelectors[selector])
+            console.log(hideElements[selector].length)
+        };*/
+
+        await Promise.all(codemod_placeholder_6971.map(async (selector) => {
+            hideElements[selector] = await action.findElements(hideSelectors[selector]);
+            //console.log(hideSelectors[selector])
+            //console.log(hideElements[selector].length)
+        }))
+
         var excludeElements = [];
         // find all the elements to be hide while taking screenshots
         let codemod_placeholder_2646 = Object.keys(excludeSelectors);
