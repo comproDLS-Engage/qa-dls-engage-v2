@@ -75,18 +75,16 @@ module.exports = {
 
         // find all the elements to be hide while taking screenshots
         let codemod_placeholder_6971 = Object.keys(hideSelectors);
-        for (const selector of codemod_placeholder_6971) {
+        /*for (const selector of codemod_placeholder_6971) {
             hideElements[selector] = await action.findElements(hideSelectors[selector]);
-            await browser.pause(500);
-            //console.log(hideSelectors[selector])
-            //console.log(hideElements[selector].length)
-        };
+            console.log(hideSelectors[selector])
+            console.log(hideElements[selector].length)
+        };*/
 
         await Promise.all(codemod_placeholder_6971.map(async (selector) => {
             hideElements[selector] = await action.findElements(hideSelectors[selector]);
-            //await browser.pause(1000);
-            console.log(hideSelectors[selector])
-            console.log(hideElements[selector].length)
+            //console.log(hideSelectors[selector])
+            //console.log(hideElements[selector].length)
         }))
 
         var excludeElements = [];

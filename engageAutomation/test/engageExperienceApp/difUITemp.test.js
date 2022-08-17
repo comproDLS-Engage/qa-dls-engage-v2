@@ -704,6 +704,11 @@ module.exports = {
 		console.log(res)
 	},
 
+	// Dashboard page
+	ENG_DIF_TC_61: async function () {
+		res = await action.waitForDisplayed("[data-tid*=text-time-recent]");
+		console.log(res)
+	},
 
 /*
 	// Click Create Assignment button and launch activities page
