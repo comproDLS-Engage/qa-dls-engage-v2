@@ -74,7 +74,7 @@ module.exports = {
 	editSubQuestion_btn: selectorFile.css.editorTab.editSubQuestion_btn,
 	subOptionIndex: selectorFile.css.editorTab.subOptionIndex,
 	subOptionCheckBoxIndex: selectorFile.css.editorTab.subOptionCheckBoxIndex,
-	subOptionRadioIndex:selectorFile.css.editorTab.subOptionRadioIndex,
+	subOptionRadioIndex: selectorFile.css.editorTab.subOptionRadioIndex,
 	subOptionValue: selectorFile.css.editorTab.subOptionValue,
 	subOptiontext: selectorFile.css.editorTab.subOptiontext,
 	topsbottomOption: selectorFile.css.editorTab.topsbottomOption,
@@ -161,8 +161,63 @@ module.exports = {
 	imagePlacement_btn: selectorFile.css.editorTab.DND_image.imagePlacement_btn,
 	leftRight_btn: selectorFile.css.editorTab.DND_image.leftRight_btn,
 	topBottom_btn: selectorFile.css.editorTab.DND_image.topBottom_btn,
-	editMatchingItem:selectorFile.css.editorTab.matching.editMatchingItem,
-
+	editMatchingItem: selectorFile.css.editorTab.matching.editMatchingItem,
+	numberFormatiingbtn: selectorFile.css.editorTab.editorSettings.numberFormatiingbtn,
+	numbertype1: selectorFile.css.editorTab.editorSettings.numbertype1,
+	numbertype2: selectorFile.css.editorTab.editorSettings.numbertype2,
+	numbertype3: selectorFile.css.editorTab.editorSettings.numbertype3,
+	selectPositionRadiobtn: selectorFile.css.editorTab.editorSettings.selectPositionRadiobtn,
+	insideImagebtn: selectorFile.css.editorTab.editorSettings.insideImagebtn,
+	outsideImagebtn: selectorFile.css.editorTab.editorSettings.outsideImagebtn,
+	selectPositionAnswerOptionbtn: selectorFile.css.editorTab.editorSettings.selectPositionAnswerOptionbtn,
+	verticallybtn: selectorFile.css.editorTab.editorSettings.verticallybtn,
+	horizontallybtn: selectorFile.css.editorTab.editorSettings.horizontallybtn,
+	verticalLayoutbtn: selectorFile.css.editorTab.editorSettings.verticalLayoutbtn,
+	sideBySideLayoutbtn: selectorFile.css.editorTab.editorSettings.sideBySideLayoutbtn,
+	imagePlacementbtn: selectorFile.css.editorTab.editorSettings.imagePlacementbtn,
+	leftRightbtn: selectorFile.css.editorTab.editorSettings.leftRightbtn,
+	topBottombtn: selectorFile.css.editorTab.editorSettings.topBottombtn,
+	responseAreaAlignmentbtn: selectorFile.css.editorTab.editorSettings.responseAreaAlignmentbtn,
+	responseAreaCenterAlignmentbtn: selectorFile.css.editorTab.editorSettings.responseAreaCenterAlignmentbtn,
+	responseAreaLeftAlignmentbtn: selectorFile.css.editorTab.editorSettings.responseAreaLeftAlignmentbtn,
+	answerOptionPlacementbtn: selectorFile.css.editorTab.editorSettings.answerOptionPlacementbtn,
+	answerOptionBottomPlacementbtn: selectorFile.css.editorTab.editorSettings.answerOptionBottomPlacementbtn,
+	answerOptionTopPlacementbtn: selectorFile.css.editorTab.editorSettings.answerOptionTopPlacementbtn,
+	answerOptionRightPlacementbtn: selectorFile.css.editorTab.editorSettings.answerOptionRightPlacementbtn,
+	responseInputTypebtn: selectorFile.css.editorTab.editorSettings.responseInputTypebtn,
+	responseInputWordTypebtn: selectorFile.css.editorTab.editorSettings.responseInputWordTypebtn,
+	responseInputCharacterTypebtn: selectorFile.css.editorTab.editorSettings.responseInputCharacterTypebtn,
+	responseTextAlignmentbtn: selectorFile.css.editorTab.editorSettings.responseTextAlignmentbtn,
+	responseTextCenterAlignmentbtn: selectorFile.css.editorTab.editorSettings.responseTextCenterAlignmentbtn,
+	responseTextLeftAlignmentbtn: selectorFile.css.editorTab.editorSettings.responseTextLeftAlignmentbtn,
+	dropdownWidthbtn: selectorFile.css.editorTab.editorSettings.dropdownWidthbtn,
+	dropdownWidthfittoresponsebtn: selectorFile.css.editorTab.editorSettings.dropdownWidthfittoresponsebtn,
+	dropdownWidthlongestresponsebtn: selectorFile.css.editorTab.editorSettings.dropdownWidthlongestresponsebtn,
+	matchingDirectionbtn: selectorFile.css.editorTab.editorSettings.matchingDirectionbtn,
+	matchingUniDirectionbtn: selectorFile.css.editorTab.editorSettings.matchingUniDirectionbtn,
+	matchingBiDirectionbtn: selectorFile.css.editorTab.editorSettings.matchingBiDirectionbtn,
+	allowcasedifferencesCheckBox: selectorFile.css.editorTab.textOption.allowcasedifferencesCheckBox,
+	allowspellingmismatchCheckBox: selectorFile.css.editorTab.textOption.allowspellingmismatchCheckBox,
+	allowextraspacesCheckBox: selectorFile.css.editorTab.textOption.allowextraspacesCheckBox,
+	allowspacesCheckBox: selectorFile.css.editorTab.textOption.allowspacesCheckBox,
+	allowpunctuationsCheckBox: selectorFile.css.editorTab.textOption.allowpunctuationsCheckBox,
+	questionAreaLabel: selectorFile.css.editorTab.editorSettings.questionAreaLabel,
+	titleAreaLabel: selectorFile.css.editorTab.editorSettings.titleAreaLabel,
+	instructionsAreaLabel: selectorFile.css.editorTab.editorSettings.instructionsAreaLabel,
+	promptAreaLabel: selectorFile.css.editorTab.editorSettings.promptAreaLabel,
+	questionItemAreaLabel: selectorFile.css.editorTab.editorSettings.questionItemAreaLabel,
+	answerOptionAreaLabel: selectorFile.css.editorTab.editorSettings.answerOptionAreaLabel,
+	inThisActivityScreenLabel: selectorFile.css.editorTab.editorSettings.inThisActivityScreenLabel,
+	selectOneScreenLabel: selectorFile.css.editorTab.editorSettings.selectOneScreenLabel,
+	zoombuttonScreenLabel: selectorFile.css.editorTab.editorSettings.zoombuttonScreenLabel,
+	tapActionScreenLabel: selectorFile.css.editorTab.editorSettings.tapActionScreenLabel,
+	clearSelectionScreenLabel: selectorFile.css.editorTab.editorSettings.clearSelectionScreenLabel,
+	selectFromDropdownScreenLabel: selectorFile.css.editorTab.editorSettings.selectFromDropdownScreenLabel,
+	selectFromOptionMatchScreenLabel: selectorFile.css.editorTab.editorSettings.selectFromOptionMatchScreenLabel,
+	matchingLeftScreenLabel: selectorFile.css.editorTab.editorSettings.matchingLeftScreenLabel,
+	matchingRightScreenLabel: selectorFile.css.editorTab.editorSettings.matchingRightScreenLabel,
+	selectGroupScreenLabel: selectorFile.css.editorTab.editorSettings.selectGroupScreenLabel,
+	clearScreenLabel: selectorFile.css.editorTab.editorSettings.clearScreenLabel,
 
 	//--MULTIPLE RESPONSE
 	isInitialized1: async function (testdata) {
@@ -414,9 +469,9 @@ module.exports = {
 	},
 	setOptionCheckbox: async function (testdata) {
 		await logger.logInto(stackTrace.get());
-		res= await action.click((this.subOptionCheckBoxIndex + testdata[0] + this.subOptionValue + testdata[1]) +"] input " )
+		res = await action.click((this.subOptionCheckBoxIndex + testdata[0] + this.subOptionValue + testdata[1]) + "] input ")
 		console.log(res)
-			await browser.pause(2000)
+		await browser.pause(2000)
 		if (res == true) {
 			await logger.logInto(stackTrace.get(), " -- Add Pair Button is clicked");
 		}
@@ -424,15 +479,15 @@ module.exports = {
 	},
 	setOptionRadio: async function (testdata) {
 		await logger.logInto(stackTrace.get());
-		res= await action.click((this.subOptionRadioIndex + testdata[0] + this.subOptionValue + testdata[1]) +"] input " )
+		res = await action.click((this.subOptionRadioIndex + testdata[0] + this.subOptionValue + testdata[1]) + "] input ")
 		console.log(res)
-			await browser.pause(2000)
+		await browser.pause(2000)
 		if (res == true) {
 			await logger.logInto(stackTrace.get(), " -- Add Pair Button is clicked");
 		}
 		return res;
 	},
-	
+
 	clickeditSubQuestionbtn: async function (testdata) {
 		await logger.logInto(stackTrace.get());
 		res = await action.waitForClickable(this.editSubQuestion_btn + testdata + "]>span:nth-child(1)");
@@ -668,29 +723,29 @@ module.exports = {
 	},
 
 	//--MATCHING
-/*old	setItems: async function (items) {
-		await logger.logInto(stackTrace.get());
-		var countLabel = items.length;
-		console.log(countLabel)
-		var optionlength = await action.findElements("[data-tid*=input-item")
-		console.log(optionlength.length)
-		//if (items.length > optionlength.length) {
-		countLabel = (items.length - optionlength.length)
-		console.log(countLabel)
-		//}
-		for (var i = 0; i < (countLabel); i++) {
-			res = await action.click("[data-tid=button-add]");
-		}
-		var itemsArr = [];
-		let getValueArray = []
-		for (var i = 1; i <= items.length; i++) {
-			var optionSelector = this.inputItem + i + "] textarea";
-			var optionValue = items[i - 1];
-			itemsArr[i - 1] = await action.setValue(optionSelector, optionValue);
-			getValueArray[i - 1] = await action.getValue(optionSelector)
-		}
-		return getValueArray
-	},*/
+	/*old	setItems: async function (items) {
+			await logger.logInto(stackTrace.get());
+			var countLabel = items.length;
+			console.log(countLabel)
+			var optionlength = await action.findElements("[data-tid*=input-item")
+			console.log(optionlength.length)
+			//if (items.length > optionlength.length) {
+			countLabel = (items.length - optionlength.length)
+			console.log(countLabel)
+			//}
+			for (var i = 0; i < (countLabel); i++) {
+				res = await action.click("[data-tid=button-add]");
+			}
+			var itemsArr = [];
+			let getValueArray = []
+			for (var i = 1; i <= items.length; i++) {
+				var optionSelector = this.inputItem + i + "] textarea";
+				var optionValue = items[i - 1];
+				itemsArr[i - 1] = await action.setValue(optionSelector, optionValue);
+				getValueArray[i - 1] = await action.getValue(optionSelector)
+			}
+			return getValueArray
+		},*/
 	addOption: async function (items) {
 		await logger.logInto(stackTrace.get());
 		var countLabel = items.length;
@@ -706,7 +761,6 @@ module.exports = {
 		await logger.logInto(stackTrace.get());
 		console.log(this.editMatchingItem + testdata[0])
 		res = await action.click(this.editMatchingItem + testdata[0]);
-		console.log("selector:",this.editMatchingItem + testdata[0])
 		if (res == true) {
 			action.waitForDisplayed(this.placeHolderIns_txt)
 			await logger.logInto(stackTrace.get(), " -- Edit Button is clicked");
@@ -722,7 +776,6 @@ module.exports = {
 		await logger.logInto(stackTrace.get());
 		console.log(this.inputMatchedItem + testdata[0])
 		res = await action.click(this.inputMatchedItem + testdata[0]);
-		console.log("selector:",this.inputMatchedItem + testdata[0])
 		if (res == true) {
 			action.waitForDisplayed(this.placeHolderIns_txt)
 			await logger.logInto(stackTrace.get(), " -- Edit Button is clicked");
@@ -2339,4 +2392,712 @@ module.exports = {
 		}
 		return res;
 	},
+	click_numberFormatingbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.numberFormatiingbtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " numberFormatiingbtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "numberFormatiingbtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_numbertype1Optionbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.numbertype1);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " numbertype1 is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "numbertype1 is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_numbertype2Optionbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.numbertype2);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " numbertype2 is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "numbertype2 is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_numbertype3Optionbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.numbertype3);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " numbertype3 is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "numbertype3 is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_selectPositionRadiobtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.selectPositionRadiobtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " selectPositionRadiobtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "selectPositionRadiobtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_insideImageOptionbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.insideImagebtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " insideImagebtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "insideImagebtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_outsideImageOptionbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.outsideImagebtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " outsideImagebtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "outsideImagebtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_selectPositionAnswerOptionbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.selectPositionAnswerOptionbtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " selectPositionAnswerOptionbtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "selectPositionAnswerOptionbtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_verticallyOptionbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.verticallybtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " verticallybtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "verticallybtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_horizontallyOptionbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.horizontallybtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " horizontallybtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "horizontallybtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_verticalLayoutbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.verticalLayoutbtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " verticalLayoutbtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "verticalLayoutbtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_sideBySideLayoutbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.sideBySideLayoutbtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " sideBySideLayoutbtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "sideBySideLayoutbtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_imagePlacementbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.imagePlacementbtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " imagePlacementbtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "imagePlacementbtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_leftRightOptionbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.leftRightbtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " leftRightbtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "leftRightbtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_topBottomOptionbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.topBottombtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " topBottombtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "topBottombtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_responseAreaAlignmentbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.responseAreaAlignmentbtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " responseAreaAlignmentbtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "responseAreaAlignmentbtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_responseAreaCenterAlignmentOptionbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.responseAreaCenterAlignmentbtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " responseAreaCenterAlignmentbtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "responseAreaCenterAlignmentbtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_responseAreaLeftAlignmentOptionbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.responseAreaLeftAlignmentbtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " responseAreaLeftAlignmentbtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "responseAreaLeftAlignmentbtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_answerOptionPlacementbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.answerOptionPlacementbtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " answerOptionPlacementbtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "answerOptionPlacementbtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_answerOptionBottomPlacementOptionbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.answerOptionBottomPlacementbtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " answerOptionBottomPlacementbtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "answerOptionBottomPlacementbtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_answerOptionTopPlacementOptionbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.answerOptionTopPlacementbtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " answerOptionTopPlacementbtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "answerOptionTopPlacementbtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_answerOptionRightPlacementOptionbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.answerOptionRightPlacementbtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " answerOptionRightPlacementbtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "answerOptionRightPlacementbtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_responseInputTypebtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.responseInputTypebtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " responseInputTypebtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "responseInputTypebtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_responseInputWordTypeOptionbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.responseInputWordTypebtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " responseInputWordTypebtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "responseInputWordTypebtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_responseInputCharacterTypeOptionbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.responseInputCharacterTypebtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " responseInputCharacterTypebtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "responseInputCharacterTypebtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_responseTextAlignmentbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.responseTextAlignmentbtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " responseTextAlignmentbtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "responseTextAlignmentbtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_responseTextCenterAlignmentOptionbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.responseTextCenterAlignmentbtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " responseTextCenterAlignmentbtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "responseTextCenterAlignmentbtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_responseTextLeftAlignmentOptionbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.responseTextLeftAlignmentbtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " responseTextLeftAlignmentbtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "responseTextLeftAlignmentbtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_dropdownWidthbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.dropdownWidthbtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " dropdownWidthbtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "dropdownWidthbtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_dropdownWidthfittoresponseOptionbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.dropdownWidthfittoresponsebtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " dropdownWidthfittoresponsebtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "dropdownWidthfittoresponsebtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_dropdownWidthlongestresponseOptionbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.dropdownWidthlongestresponsebtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " dropdownWidthlongestresponsebtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "dropdownWidthlongestresponsebtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_matchingDirectionbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.matchingDirectionbtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " matchingDirectionbtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "matchingDirectionbtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_matchingUniDirectionOptionbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.matchingUniDirectionbtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " matchingUniDirectionbtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "matchingUniDirectionbtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_matchingBiDirectionOptionbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.matchingBiDirectionbtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " matchingBiDirectionbtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "matchingBiDirectionbtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+	click_allowcasedifferencesCheckBox: async function (testdata) {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.allowcasedifferencesCheckBox + testdata + "] input");
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " allowcasedifferencesCheckBox is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "allowcasedifferencesCheckBox is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_allowspellingmismatchCheckBox: async function (testdata) {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.allowspellingmismatchCheckBox + testdata + "] input");
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " allowspellingmismatchCheckBox is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "allowspellingmismatchCheckBox is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_allowextraspacesCheckBox: async function (testdata) {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.allowextraspacesCheckBox + testdata + "] input");
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " allowextraspacesCheckBox is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "allowextraspacesCheckBox is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_allowspacesCheckBox: async function (testdata) {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.allowspacesCheckBox + testdata + "] input");
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " allowspacesCheckBox is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "allowspacesCheckBox is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_allowpunctuationsCheckBox: async function (testdata) {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.allowpunctuationsCheckBox + testdata + "] input");
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " allowpunctuationsCheckBox is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "allowpunctuationsCheckBox is NOT clicked", 'error');
+		}
+		return res;
+	},
+	set_questionAreaLabel: async function (value) {
+        var res;
+        await logger.logInto(await stackTrace.get());
+        res = await action.setValue(this.questionAreaLabel, value);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), "Value is entered in questionAreaLabel");
+        } else {
+            await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in questionAreaLabel", 'error');
+        }
+        return res;
+    },
+
+    set_titleAreaLabel: async function (value) {
+        var res;
+        await logger.logInto(await stackTrace.get());
+        res = await action.setValue(this.titleAreaLabel, value);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), "Value is entered in titleAreaLabel");
+        } else {
+            await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in titleAreaLabel", 'error');
+        }
+        return res;
+    },
+
+    set_instructionsAreaLabel: async function (value) {
+        var res;
+        await logger.logInto(await stackTrace.get());
+        res = await action.setValue(this.instructionsAreaLabel, value);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), "Value is entered in instructionsAreaLabel");
+        } else {
+            await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in instructionsAreaLabel", 'error');
+        }
+        return res;
+    },
+
+    set_promptAreaLabel: async function (value) {
+        var res;
+        await logger.logInto(await stackTrace.get());
+        res = await action.setValue(this.promptAreaLabel, value);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), "Value is entered in promptAreaLabel");
+        } else {
+            await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in promptAreaLabel", 'error');
+        }
+        return res;
+    },
+
+    set_questionItemAreaLabel: async function (value) {
+        var res;
+        await logger.logInto(await stackTrace.get());
+        res = await action.setValue(this.questionItemAreaLabel, value);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), "Value is entered in questionItemAreaLabel");
+        } else {
+            await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in questionItemAreaLabel", 'error');
+        }
+        return res;
+    },
+
+    set_answerOptionAreaLabel: async function (value) {
+        var res;
+        await logger.logInto(await stackTrace.get());
+        res = await action.setValue(this.answerOptionAreaLabel, value);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), "Value is entered in answerOptionAreaLabel");
+        } else {
+            await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in answerOptionAreaLabel", 'error');
+        }
+        return res;
+    },
+
+    set_inThisActivityScreenLabel: async function (value) {
+        var res;
+        await logger.logInto(await stackTrace.get());
+        res = await action.setValue(this.inThisActivityScreenLabel, value);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), "Value is entered in inThisActivityScreenLabel");
+        } else {
+            await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in inThisActivityScreenLabel", 'error');
+        }
+        return res;
+    },
+
+    set_selectOneScreenLabel: async function (value) {
+        var res;
+        await logger.logInto(await stackTrace.get());
+        res = await action.setValue(this.selectOneScreenLabel, value);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), "Value is entered in selectOneScreenLabel");
+        } else {
+            await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in selectOneScreenLabel", 'error');
+        }
+        return res;
+    },
+
+    set_zoombuttonScreenLabel: async function (value) {
+        var res;
+        await logger.logInto(await stackTrace.get());
+        res = await action.setValue(this.zoombuttonScreenLabel, value);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), "Value is entered in zoombuttonScreenLabel");
+        } else {
+            await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in zoombuttonScreenLabel", 'error');
+        }
+        return res;
+    },
+
+    set_tapActionScreenLabel: async function (value) {
+        var res;
+        await logger.logInto(await stackTrace.get());
+        res = await action.setValue(this.tapActionScreenLabel, value);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), "Value is entered in tapActionScreenLabel");
+        } else {
+            await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in tapActionScreenLabel", 'error');
+        }
+        return res;
+    },
+
+    set_clearSelectionScreenLabel: async function (value) {
+        var res;
+        await logger.logInto(await stackTrace.get());
+        res = await action.setValue(this.clearSelectionScreenLabel, value);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), "Value is entered in clearSelectionScreenLabel");
+        } else {
+            await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in clearSelectionScreenLabel", 'error');
+        }
+        return res;
+    },
+
+    set_selectFromDropdownScreenLabel: async function (value) {
+        var res;
+        await logger.logInto(await stackTrace.get());
+        res = await action.setValue(this.selectFromDropdownScreenLabel, value);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), "Value is entered in selectFromDropdownScreenLabel");
+        } else {
+            await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in selectFromDropdownScreenLabel", 'error');
+        }
+        return res;
+    },
+
+    set_selectFromOptionMatchScreenLabel: async function (value) {
+        var res;
+        await logger.logInto(await stackTrace.get());
+        res = await action.setValue(this.selectFromOptionMatchScreenLabel, value);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), "Value is entered in selectFromOptionMatchScreenLabel");
+        } else {
+            await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in selectFromOptionMatchScreenLabel", 'error');
+        }
+        return res;
+    },
+
+    set_matchingLeftScreenLabel: async function (value) {
+        var res;
+        await logger.logInto(await stackTrace.get());
+        res = await action.setValue(this.matchingLeftScreenLabel, value);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), "Value is entered in matchingLeftScreenLabel");
+        } else {
+            await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in matchingLeftScreenLabel", 'error');
+        }
+        return res;
+    },
+
+    set_matchingRightScreenLabel: async function (value) {
+        var res;
+        await logger.logInto(await stackTrace.get());
+        res = await action.setValue(this.matchingRightScreenLabel, value);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), "Value is entered in matchingRightScreenLabel");
+        } else {
+            await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in matchingRightScreenLabel", 'error');
+        }
+        return res;
+    },
+
+    set_selectGroupScreenLabel: async function (value) {
+        var res;
+        await logger.logInto(await stackTrace.get());
+        res = await action.setValue(this.selectGroupScreenLabel, value);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), "Value is entered in selectGroupScreenLabel");
+        } else {
+            await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in selectGroupScreenLabel", 'error');
+        }
+        return res;
+    },
+
+    set_clearScreenLabel: async function (value) {
+        var res;
+        await logger.logInto(await stackTrace.get());
+        res = await action.setValue(this.clearScreenLabel, value);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), "Value is entered in input-clearScreenLabel");
+        } else {
+            await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in input-clearScreenLabel", 'error');
+        }
+        return res;
+    },
 }
