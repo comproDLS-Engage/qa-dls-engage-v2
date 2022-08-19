@@ -95,12 +95,6 @@
                 "testData": []
             },
             {
-                "id": "ENG_DIF_TC_42",
-                "description": "View index",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "testData": []
-            },
-            {
                 "id": "ENG_DIF_TC_31",
                 "description": "info popup on the Activity page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
@@ -518,12 +512,6 @@
             {
                 "id": "ENG_DIF_TC_25",
                 "description": "Move to next activity",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_42",
-                "description": "View index",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
                 "testData": []
             },
