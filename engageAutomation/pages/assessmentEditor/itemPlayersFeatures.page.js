@@ -79,6 +79,7 @@ module.exports = {
 	subOptiontext: selectorFile.css.editorTab.subOptiontext,
 	topsbottomOption: selectorFile.css.editorTab.topsbottomOption,
 	leftRightOption: selectorFile.css.editorTab.leftRightOption,
+	addMoreButton: selectorFile.css.editorTab.addMoreButton,
 	scoreInputBox: selectorFile.css.editorTab.scoreInputBox,
 	addSubqun_btn: selectorFile.css.editorTab.addSubqun_btn,
 	uniqueOption: selectorFile.css.editorTab.fibdropdown.uniqueOption,
@@ -218,6 +219,15 @@ module.exports = {
 	matchingRightScreenLabel: selectorFile.css.editorTab.editorSettings.matchingRightScreenLabel,
 	selectGroupScreenLabel: selectorFile.css.editorTab.editorSettings.selectGroupScreenLabel,
 	clearScreenLabel: selectorFile.css.editorTab.editorSettings.clearScreenLabel,
+	alignAnswerOptiondropDown: selectorFile.css.editorTab.editorSettings.alignAnswerOptiondropDown,
+	alignAnswerLeftOptionbtn: selectorFile.css.editorTab.editorSettings.alignAnswerLeftOptionbtn,
+	alignAnswerRightOptionbtn: selectorFile.css.editorTab.editorSettings.alignAnswerRightOptionbtn,
+	selectoptionImageAspectRatiobtn: selectorFile.css.editorTab.editorSettings.selectoptionImageAspectRatiobtn,
+	selectoptionImageScaledtoFixedSizebtn: selectorFile.css.editorTab.editorSettings.selectoptionImageScaledtoFixedSizebtn,
+	selectoptionImageScaledtoRelativeSizebtn: selectorFile.css.editorTab.editorSettings.selectoptionImageScaledtoRelativeSizebtn,
+	alignAnswerOptionsbtn: selectorFile.css.editorTab.editorSettings.alignAnswerOptionsbtn,
+	alignAnswerLeftOptionsbtn: selectorFile.css.editorTab.editorSettings.alignAnswerLeftOptionsbtn,
+	alignAnswerCenterOptionsbtn: selectorFile.css.editorTab.editorSettings.alignAnswerCenterOptionsbtn,
 
 	//--MULTIPLE RESPONSE
 	isInitialized1: async function (testdata) {
@@ -2603,6 +2613,7 @@ module.exports = {
 	click_responseAreaCenterAlignmentOptionbtn: async function () {
 		await logger.logInto(await stackTrace.get());
 		var res;
+		await action.waitForDisplayed(this.responseAreaCenterAlignmentbtn);
 		res = await action.click(this.responseAreaCenterAlignmentbtn);
 		if (true == res) {
 			await logger.logInto(await stackTrace.get(), " responseAreaCenterAlignmentbtn is clicked");
@@ -2616,6 +2627,7 @@ module.exports = {
 	click_responseAreaLeftAlignmentOptionbtn: async function () {
 		await logger.logInto(await stackTrace.get());
 		var res;
+		await action.waitForDisplayed(this.responseAreaLeftAlignmentbtn);
 		res = await action.click(this.responseAreaLeftAlignmentbtn);
 		if (true == res) {
 			await logger.logInto(await stackTrace.get(), " responseAreaLeftAlignmentbtn is clicked");
@@ -2898,206 +2910,342 @@ module.exports = {
 		return res;
 	},
 	set_questionAreaLabel: async function (value) {
-        var res;
-        await logger.logInto(await stackTrace.get());
-        res = await action.setValue(this.questionAreaLabel, value);
-        if (true == res) {
-            await logger.logInto(await stackTrace.get(), "Value is entered in questionAreaLabel");
-        } else {
-            await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in questionAreaLabel", 'error');
-        }
-        return res;
-    },
+		var res;
+		await logger.logInto(await stackTrace.get());
+		res = await action.setValue(this.questionAreaLabel, value);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), "Value is entered in questionAreaLabel");
+		} else {
+			await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in questionAreaLabel", 'error');
+		}
+		return res;
+	},
 
-    set_titleAreaLabel: async function (value) {
-        var res;
-        await logger.logInto(await stackTrace.get());
-        res = await action.setValue(this.titleAreaLabel, value);
-        if (true == res) {
-            await logger.logInto(await stackTrace.get(), "Value is entered in titleAreaLabel");
-        } else {
-            await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in titleAreaLabel", 'error');
-        }
-        return res;
-    },
+	set_titleAreaLabel: async function (value) {
+		var res;
+		await logger.logInto(await stackTrace.get());
+		res = await action.setValue(this.titleAreaLabel, value);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), "Value is entered in titleAreaLabel");
+		} else {
+			await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in titleAreaLabel", 'error');
+		}
+		return res;
+	},
 
-    set_instructionsAreaLabel: async function (value) {
-        var res;
-        await logger.logInto(await stackTrace.get());
-        res = await action.setValue(this.instructionsAreaLabel, value);
-        if (true == res) {
-            await logger.logInto(await stackTrace.get(), "Value is entered in instructionsAreaLabel");
-        } else {
-            await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in instructionsAreaLabel", 'error');
-        }
-        return res;
-    },
+	set_instructionsAreaLabel: async function (value) {
+		var res;
+		await logger.logInto(await stackTrace.get());
+		res = await action.setValue(this.instructionsAreaLabel, value);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), "Value is entered in instructionsAreaLabel");
+		} else {
+			await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in instructionsAreaLabel", 'error');
+		}
+		return res;
+	},
 
-    set_promptAreaLabel: async function (value) {
-        var res;
-        await logger.logInto(await stackTrace.get());
-        res = await action.setValue(this.promptAreaLabel, value);
-        if (true == res) {
-            await logger.logInto(await stackTrace.get(), "Value is entered in promptAreaLabel");
-        } else {
-            await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in promptAreaLabel", 'error');
-        }
-        return res;
-    },
+	set_promptAreaLabel: async function (value) {
+		var res;
+		await logger.logInto(await stackTrace.get());
+		res = await action.setValue(this.promptAreaLabel, value);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), "Value is entered in promptAreaLabel");
+		} else {
+			await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in promptAreaLabel", 'error');
+		}
+		return res;
+	},
 
-    set_questionItemAreaLabel: async function (value) {
-        var res;
-        await logger.logInto(await stackTrace.get());
-        res = await action.setValue(this.questionItemAreaLabel, value);
-        if (true == res) {
-            await logger.logInto(await stackTrace.get(), "Value is entered in questionItemAreaLabel");
-        } else {
-            await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in questionItemAreaLabel", 'error');
-        }
-        return res;
-    },
+	set_questionItemAreaLabel: async function (value) {
+		var res;
+		await logger.logInto(await stackTrace.get());
+		res = await action.setValue(this.questionItemAreaLabel, value);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), "Value is entered in questionItemAreaLabel");
+		} else {
+			await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in questionItemAreaLabel", 'error');
+		}
+		return res;
+	},
 
-    set_answerOptionAreaLabel: async function (value) {
-        var res;
-        await logger.logInto(await stackTrace.get());
-        res = await action.setValue(this.answerOptionAreaLabel, value);
-        if (true == res) {
-            await logger.logInto(await stackTrace.get(), "Value is entered in answerOptionAreaLabel");
-        } else {
-            await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in answerOptionAreaLabel", 'error');
-        }
-        return res;
-    },
+	set_answerOptionAreaLabel: async function (value) {
+		var res;
+		await logger.logInto(await stackTrace.get());
+		res = await action.setValue(this.answerOptionAreaLabel, value);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), "Value is entered in answerOptionAreaLabel");
+		} else {
+			await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in answerOptionAreaLabel", 'error');
+		}
+		return res;
+	},
 
-    set_inThisActivityScreenLabel: async function (value) {
-        var res;
-        await logger.logInto(await stackTrace.get());
-        res = await action.setValue(this.inThisActivityScreenLabel, value);
-        if (true == res) {
-            await logger.logInto(await stackTrace.get(), "Value is entered in inThisActivityScreenLabel");
-        } else {
-            await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in inThisActivityScreenLabel", 'error');
-        }
-        return res;
-    },
+	set_inThisActivityScreenLabel: async function (value) {
+		var res;
+		await logger.logInto(await stackTrace.get());
+		res = await action.setValue(this.inThisActivityScreenLabel, value);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), "Value is entered in inThisActivityScreenLabel");
+		} else {
+			await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in inThisActivityScreenLabel", 'error');
+		}
+		return res;
+	},
 
-    set_selectOneScreenLabel: async function (value) {
-        var res;
-        await logger.logInto(await stackTrace.get());
-        res = await action.setValue(this.selectOneScreenLabel, value);
-        if (true == res) {
-            await logger.logInto(await stackTrace.get(), "Value is entered in selectOneScreenLabel");
-        } else {
-            await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in selectOneScreenLabel", 'error');
-        }
-        return res;
-    },
+	set_selectOneScreenLabel: async function (value) {
+		var res;
+		await logger.logInto(await stackTrace.get());
+		res = await action.setValue(this.selectOneScreenLabel, value);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), "Value is entered in selectOneScreenLabel");
+		} else {
+			await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in selectOneScreenLabel", 'error');
+		}
+		return res;
+	},
 
-    set_zoombuttonScreenLabel: async function (value) {
-        var res;
-        await logger.logInto(await stackTrace.get());
-        res = await action.setValue(this.zoombuttonScreenLabel, value);
-        if (true == res) {
-            await logger.logInto(await stackTrace.get(), "Value is entered in zoombuttonScreenLabel");
-        } else {
-            await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in zoombuttonScreenLabel", 'error');
-        }
-        return res;
-    },
+	set_zoombuttonScreenLabel: async function (value) {
+		var res;
+		await logger.logInto(await stackTrace.get());
+		res = await action.setValue(this.zoombuttonScreenLabel, value);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), "Value is entered in zoombuttonScreenLabel");
+		} else {
+			await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in zoombuttonScreenLabel", 'error');
+		}
+		return res;
+	},
 
-    set_tapActionScreenLabel: async function (value) {
-        var res;
-        await logger.logInto(await stackTrace.get());
-        res = await action.setValue(this.tapActionScreenLabel, value);
-        if (true == res) {
-            await logger.logInto(await stackTrace.get(), "Value is entered in tapActionScreenLabel");
-        } else {
-            await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in tapActionScreenLabel", 'error');
-        }
-        return res;
-    },
+	set_tapActionScreenLabel: async function (value) {
+		var res;
+		await logger.logInto(await stackTrace.get());
+		res = await action.setValue(this.tapActionScreenLabel, value);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), "Value is entered in tapActionScreenLabel");
+		} else {
+			await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in tapActionScreenLabel", 'error');
+		}
+		return res;
+	},
 
-    set_clearSelectionScreenLabel: async function (value) {
-        var res;
-        await logger.logInto(await stackTrace.get());
-        res = await action.setValue(this.clearSelectionScreenLabel, value);
-        if (true == res) {
-            await logger.logInto(await stackTrace.get(), "Value is entered in clearSelectionScreenLabel");
-        } else {
-            await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in clearSelectionScreenLabel", 'error');
-        }
-        return res;
-    },
+	set_clearSelectionScreenLabel: async function (value) {
+		var res;
+		await logger.logInto(await stackTrace.get());
+		res = await action.setValue(this.clearSelectionScreenLabel, value);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), "Value is entered in clearSelectionScreenLabel");
+		} else {
+			await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in clearSelectionScreenLabel", 'error');
+		}
+		return res;
+	},
 
-    set_selectFromDropdownScreenLabel: async function (value) {
-        var res;
-        await logger.logInto(await stackTrace.get());
-        res = await action.setValue(this.selectFromDropdownScreenLabel, value);
-        if (true == res) {
-            await logger.logInto(await stackTrace.get(), "Value is entered in selectFromDropdownScreenLabel");
-        } else {
-            await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in selectFromDropdownScreenLabel", 'error');
-        }
-        return res;
-    },
+	set_selectFromDropdownScreenLabel: async function (value) {
+		var res;
+		await logger.logInto(await stackTrace.get());
+		res = await action.setValue(this.selectFromDropdownScreenLabel, value);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), "Value is entered in selectFromDropdownScreenLabel");
+		} else {
+			await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in selectFromDropdownScreenLabel", 'error');
+		}
+		return res;
+	},
 
-    set_selectFromOptionMatchScreenLabel: async function (value) {
-        var res;
-        await logger.logInto(await stackTrace.get());
-        res = await action.setValue(this.selectFromOptionMatchScreenLabel, value);
-        if (true == res) {
-            await logger.logInto(await stackTrace.get(), "Value is entered in selectFromOptionMatchScreenLabel");
-        } else {
-            await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in selectFromOptionMatchScreenLabel", 'error');
-        }
-        return res;
-    },
+	set_selectFromOptionMatchScreenLabel: async function (value) {
+		var res;
+		await logger.logInto(await stackTrace.get());
+		res = await action.setValue(this.selectFromOptionMatchScreenLabel, value);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), "Value is entered in selectFromOptionMatchScreenLabel");
+		} else {
+			await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in selectFromOptionMatchScreenLabel", 'error');
+		}
+		return res;
+	},
 
-    set_matchingLeftScreenLabel: async function (value) {
-        var res;
-        await logger.logInto(await stackTrace.get());
-        res = await action.setValue(this.matchingLeftScreenLabel, value);
-        if (true == res) {
-            await logger.logInto(await stackTrace.get(), "Value is entered in matchingLeftScreenLabel");
-        } else {
-            await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in matchingLeftScreenLabel", 'error');
-        }
-        return res;
-    },
+	set_matchingLeftScreenLabel: async function (value) {
+		var res;
+		await logger.logInto(await stackTrace.get());
+		res = await action.setValue(this.matchingLeftScreenLabel, value);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), "Value is entered in matchingLeftScreenLabel");
+		} else {
+			await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in matchingLeftScreenLabel", 'error');
+		}
+		return res;
+	},
 
-    set_matchingRightScreenLabel: async function (value) {
-        var res;
-        await logger.logInto(await stackTrace.get());
-        res = await action.setValue(this.matchingRightScreenLabel, value);
-        if (true == res) {
-            await logger.logInto(await stackTrace.get(), "Value is entered in matchingRightScreenLabel");
-        } else {
-            await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in matchingRightScreenLabel", 'error');
-        }
-        return res;
-    },
+	set_matchingRightScreenLabel: async function (value) {
+		var res;
+		await logger.logInto(await stackTrace.get());
+		res = await action.setValue(this.matchingRightScreenLabel, value);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), "Value is entered in matchingRightScreenLabel");
+		} else {
+			await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in matchingRightScreenLabel", 'error');
+		}
+		return res;
+	},
 
-    set_selectGroupScreenLabel: async function (value) {
-        var res;
-        await logger.logInto(await stackTrace.get());
-        res = await action.setValue(this.selectGroupScreenLabel, value);
-        if (true == res) {
-            await logger.logInto(await stackTrace.get(), "Value is entered in selectGroupScreenLabel");
-        } else {
-            await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in selectGroupScreenLabel", 'error');
-        }
-        return res;
-    },
+	set_selectGroupScreenLabel: async function (value) {
+		var res;
+		await logger.logInto(await stackTrace.get());
+		res = await action.setValue(this.selectGroupScreenLabel, value);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), "Value is entered in selectGroupScreenLabel");
+		} else {
+			await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in selectGroupScreenLabel", 'error');
+		}
+		return res;
+	},
 
-    set_clearScreenLabel: async function (value) {
-        var res;
-        await logger.logInto(await stackTrace.get());
-        res = await action.setValue(this.clearScreenLabel, value);
-        if (true == res) {
-            await logger.logInto(await stackTrace.get(), "Value is entered in input-clearScreenLabel");
-        } else {
-            await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in input-clearScreenLabel", 'error');
-        }
-        return res;
-    },
+	set_clearScreenLabel: async function (value) {
+		var res;
+		await logger.logInto(await stackTrace.get());
+		res = await action.setValue(this.clearScreenLabel, value);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), "Value is entered in input-clearScreenLabel");
+		} else {
+			await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in input-clearScreenLabel", 'error');
+		}
+		return res;
+	},
+	click_alignAnswerOptiondropDown: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.alignAnswerOptiondropDown);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " alignAnswerOptiondropDown is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "alignAnswerOptiondropDown is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_alignAnswerLeftOptionbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		await action.waitForDisplayed(this.alignAnswerLeftOptionbtn);
+		res = await action.click(this.alignAnswerLeftOptionbtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " alignAnswerLeftOptionbtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "alignAnswerLeftOptionbtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_alignAnswerCenterOptionbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		await action.waitForDisplayed(this.alignAnswerRightOptionbtn);
+		res = await action.click(this.alignAnswerRightOptionbtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " alignAnswerRightOptionbtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "alignAnswerRightOptionbtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_selectoptionImageAspectRatiobtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.selectoptionImageAspectRatiobtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " selectoptionImageAspectRatiobtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "selectoptionImageAspectRatiobtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_selectoptionImageScaledtoFixedSizebtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		await action.waitForDisplayed(this.selectoptionImageScaledtoFixedSizebtn);
+		res = await action.click(this.selectoptionImageScaledtoFixedSizebtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " selectoptionImageScaledtoFixedSizebtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "selectoptionImageScaledtoFixedSizebtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_selectoptionImageScaledtoRelativeSizebtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		await action.waitForDisplayed(this.selectoptionImageScaledtoRelativeSizebtn);
+		res = await action.click(this.selectoptionImageScaledtoRelativeSizebtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " selectoptionImageScaledtoRelativeSizebtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "selectoptionImageScaledtoRelativeSizebtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_alignAnswerOptionsbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.alignAnswerOptionsbtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " alignAnswerOptionsbtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "alignAnswerOptionsbtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_alignAnswerLeftOptionsbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.alignAnswerLeftOptionsbtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " alignAnswerLeftOptionsbtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "alignAnswerLeftOptionsbtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_alignAnswerCenterOptionsbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.alignAnswerCenterOptionsbtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " alignAnswerCenterOptionsbtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "alignAnswerCenterOptionsbtn is NOT clicked", 'error');
+		}
+		return res;
+	},
+	clickaddMoreButton: async function (testdata) {
+		console.log(testdata)
+		await logger.logInto(stackTrace.get());
+		res = await action.waitForDisplayed(this.addMoreButton + testdata);
+		if (res == true) {
+			res = await action.click(this.addMoreButton + testdata);
+			if (res == true) {
+				await logger.logInto(stackTrace.get(), res);
+			}
+		}
+		else {
+			res = res + " -- done button is not clickable";
+			await logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
 }

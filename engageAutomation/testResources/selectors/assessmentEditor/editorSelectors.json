@@ -81,6 +81,7 @@
 			"responseTextArea": "[data-tid=input-ck-texteditor] [role=textbox]",
 			"textAreabtn": "button:nth-child(9) > svg , button:nth-child(10)",
 			"shufflingCheckBox": "[data-tid=checkbox-shuffleoptions]",
+			"addMoreButton":"[data-tid=button-addresponse-",
 			"multipleResponse": {
 				"checkboxOption_input": "[data-tid=checkbox-option-"
 			},
@@ -204,8 +205,8 @@
 			},
 			"editorSettings": {
 				"numberFormatiingbtn": "[data-tid=select-numberingformat]",
-				"numbertype1": "[data-value=1]",
-				"numbertype2": "[data-value=A]",
+				"numbertype1": "[data-value=\"1\"]",
+				"numbertype2": "[data-value=\"A\"]",
 				"numbertype3": "[data-value=\"none\"]",
 				"selectPositionRadiobtn": "[data-tid=select-positionRadio]",
 				"insideImagebtn": "[data-value=inside-image]",
@@ -253,7 +254,16 @@
 				"matchingLeftScreenLabel": "[data-tid=input-matchingLeftLabel] input",
 				"matchingRightScreenLabel": "[data-tid=input-matchingRightLabel] input",
 				"selectGroupScreenLabel": "[data-tid=input-selectLabel] input",
-				"clearScreenLabel": "[data-tid=input-clearLabel] input"
+				"clearScreenLabel": "[data-tid=input-clearLabel] input",
+				"alignAnswerOptiondropDown": "[data-tid=\"select-alignAnswerOptions\"]",
+				"alignAnswerLeftOptionbtn": "[data-value=left]",
+				"alignAnswerRightOptionbtn": "[data-value=center]",
+				"selectoptionImageAspectRatiobtn": "[data-tid=select-optionImageAspectRatio]",
+				"selectoptionImageScaledtoFixedSizebtn": "[data-value=1on1]",
+				"selectoptionImageScaledtoRelativeSizebtn": "[data-value=automatic]",
+				"alignAnswerOptionsbtn": "[data-tid=select-alignAnswerOptions]",
+				"alignAnswerLeftOptionsbtn": "[data-value=left]",
+				"alignAnswerCenterOptionsbtn": "[data-value=center]"
 			},
 			"textOption": {
 				"allowcasedifferencesCheckBox": "[data-tid=checkbox-allowcasedifferences-",

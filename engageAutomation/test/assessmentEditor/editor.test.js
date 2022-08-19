@@ -1,7 +1,6 @@
 "use strict";
 var testbench = require('../../pages/assessmentEditor/TestBench.page.js');
 var EditorPlayer = require('../../pages/assessmentEditor/itemPlayersFeatures.page.js');
-const { click_prompt_numberListmenudropdownbtn } = require('../../pages/assessmentEditor/itemPlayersFeatures.page.js');
 
 var sts, i;
 
@@ -86,7 +85,11 @@ module.exports = {
 			await assertion.assertEqual(sts[i], testdata[1][i], "option" + i + " is not set correctly");
 		}
 	},
-
+	//Click on add more option
+	ASE_FIB_TC_2: async function (testdata) {
+		sts = await EditorPlayer.clickaddMoreButton(testdata);
+		await assertion.assertEqual(sts, true, "Add more btn is not clicked");
+	},
 	//  Validate that Option is added in  questions
 	ASE_MCQ_TC_14: async function (testdata) {
 		sts = await EditorPlayer.setOptions(testdata);
@@ -847,12 +850,12 @@ module.exports = {
 		sts = await EditorPlayer.click_leftRightOptionbtn()
 		await assertion.assertEqual(sts, true, "leftRight btn is not  clicked");
 	},
-	ASE_COM_TC_1098: async function () {
+	ASE_COM_TC_1143: async function () {
 		sts = await EditorPlayer.click_topBottomOptionbtn()
 		await assertion.assertEqual(sts, true, "topBottom btn is not  clicked");
 	},
 
-	ASE_COM_TC_1099: async function () {
+	ASE_COM_TC_1144: async function () {
 		sts = await EditorPlayer.click_responseAreaAlignmentbtn()
 		await assertion.assertEqual(sts, true, "responseAreaAlignment button not clicked");
 	},
@@ -1019,4 +1022,40 @@ module.exports = {
 		sts = await EditorPlayer.set_clearScreenLabel(testdata)
 		await assertion.assertEqual(sts, true, "clearScreenLabel Values are not set");
 	},
+	ASE_COM_TC_1141: async function () {
+		sts = await EditorPlayer.click_alignAnswerOptiondropDown()
+		await assertion.assertEqual(sts, true, "alignAnswerOptiondropDown is not clicked");
+	},
+	ASE_COM_TC_1142: async function () {
+		sts = await EditorPlayer.click_alignAnswerLeftOptionbtn()
+		await assertion.assertEqual(sts, true, "alignAnswerLeftOptionbtn is not clicked");
+	},
+	ASE_COM_TC_1150: async function () {
+		sts = await EditorPlayer.click_alignAnswerCenterOptionbtn()
+		await assertion.assertEqual(sts, true, "alignAnswerRightOptionbtn is not clicked");
+	},
+	ASE_COM_TC_1151: async function () {
+		sts = await EditorPlayer.click_selectoptionImageAspectRatiobtn()
+		await assertion.assertEqual(sts, true, "selectoptionImageAspectRatiobtn is not clicked");
+	},
+	ASE_COM_TC_1145: async function () {
+		sts = await EditorPlayer.click_selectoptionImageScaledtoFixedSizebtn()
+		await assertion.assertEqual(sts, true, "selectoptionImageScaledtoFixedSizebtn is not clicked");
+	},
+	ASE_COM_TC_1146: async function () {
+		sts = await EditorPlayer.click_selectoptionImageScaledtoRelativeSizebtn()
+		await assertion.assertEqual(sts, true, "selectoptionImageScaledtoRelativeSizebtn is not clicked");
+	},
+	ASE_COM_TC_1147: async function () {
+		sts = await EditorPlayer.click_alignAnswerOptionsbtn()
+		await assertion.assertEqual(sts, true, "alignAnswerOptionsbtn is not clicked");
+	},
+	ASE_COM_TC_1148: async function () {
+		sts = await EditorPlayer.click_alignAnswerLeftOptionsbtn()
+		await assertion.assertEqual(sts, true, "alignAnswerLeftOptionsbtn Values are not set");
+	},
+	ASE_COM_TC_1149: async function () {
+		sts = await EditorPlayer.click_alignAnswerCenterOptionsbtn()
+		await assertion.assertEqual(sts, true, "alignAnswerCenterOptionsbtn is not clicked");
+	}
 }
