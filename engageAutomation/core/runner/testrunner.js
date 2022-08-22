@@ -3,9 +3,9 @@ var testObj, execJsonData, prevtestFile, getName, hookFuncData, tcProp;
 var testDataArr = [];
 var Arr = [];
 var rootDir = process.cwd();
-const { convertPackageHashToObject } = require('@wdio/cli/build/utils');
-var async = require('async');
+
 class specRunner {
+
     //instantiate class
     constructor(testExecFile) {
         if (argv.visual) {
@@ -136,12 +136,8 @@ class specRunner {
                             await that.identifyTest(execJsonData[suiteIndex].Test[testIndex].testFile, execJsonData[suiteIndex].Test[testIndex].id, testDataArr[suiteIndex][testIndex]);
                             if (argv.visual == 'novus' && Arr[count].tests[testIndex].visual == "yes") {
                                 Arr[count] = await that.visualTest.generateScreenshotsAndLogs(execJsonData[suiteIndex].Test[testIndex], suiteIndex, testIndex, Arr, count);
-
-
-
                             } else if (argv.visual == 'applitools')
                                 await that.visualTest.generateScreenshotsApplitools(execJsonData[suiteIndex].Test[testIndex]);
-
                             console.log(" Testcase    :   End " + execJsonData[suiteIndex].Test[testIndex].id);
                         })
                     })
@@ -265,7 +261,7 @@ class specRunner {
         await this.identifyTest(obj.testFile, obj.id, hookFuncData)
     }
 
-    //function to identify if a testcase in testRepo has a visual tag
+    //function to identify if a testcase is present in the testRepo and get some attributes
     getTCPropertiesFromTCRepo(tcRepo, moduleTestFile, tcId, tcDescription) {
         let repoKey, moduleKey, tcKey, testObj, obj = {};
         let repository = [];

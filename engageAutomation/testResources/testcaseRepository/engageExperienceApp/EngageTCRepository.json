@@ -413,7 +413,7 @@
     },
     {
       "modulename": "MyClass - Teacher",
-      "moduledetails": "",
+      "moduleId": "ENG_INS_CLASS",
       "testFile": "./test/engageExperienceApp/classDashboard.test.js",
       "testcase": [
         {
@@ -821,7 +821,7 @@
     },
     {
       "modulename": "MyClass - Student",
-      "moduledetails": "",
+      "moduleId": "ENG_STU_CLASS",
       "testFile": "./test/engageExperienceApp/studentMyClass.test.js",
       "testcase": [
         {
@@ -971,7 +971,7 @@
     },
     {
       "modulename": "AppShell",
-      "moduledetails": "",
+      "moduleId": "ENG_SHELL",
       "testFile": "./test/engageExperienceApp/appShell.test.js",
       "testcase": [
         {
@@ -1074,7 +1074,7 @@
     },
     {
       "modulename": "Add Book",
-      "moduledetails": "",
+      "moduleId": "ENG_ADDB",
       "testFile": "./test/engageExperienceApp/addBook.test.js",
       "testcase": [
         {
@@ -1135,7 +1135,7 @@
     },
     {
       "modulename": "View Book",
-      "moduledetails": "",
+      "moduleId": "ENG_BOOK",
       "testFile": "./test/engageExperienceApp/viewBook.test.js",
       "testcase": [
         {
@@ -1220,7 +1220,7 @@
     },
     {
       "modulename": "View Unit",
-      "moduledetails": "",
+      "moduleId": "",
       "testFile": "./test/engageExperienceApp/viewUnit.test.js",
       "testcase": [
         {
@@ -1267,7 +1267,7 @@
     },
     {
       "modulename": "Item Player - DND into Text",
-      "moduledetails": "",
+      "moduleId": "",
       "testFile": "./test/engageExperienceApp/dndInText.test.js",
       "testcase": [
         {
@@ -1298,7 +1298,7 @@
     },
     {
       "modulename": "Item Player - Order List",
-      "moduledetails": "",
+      "moduleId": "",
       "testFile": "./test/engageExperienceApp/orderlist.test.js",
       "testcase": [
         {
@@ -1323,7 +1323,7 @@
     },
     {
       "modulename": "Item Player - Classify",
-      "moduledetails": "",
+      "moduleId": "",
       "testFile": "./test/engageExperienceApp/classify.test.js",
       "testcase": [
         {
@@ -1348,7 +1348,7 @@
     },
     {
       "modulename": "Item Player - Matching",
-      "moduledetails": "",
+      "moduleId": "",
       "testFile": "./test/engageExperienceApp/matching.test.js",
       "testcase": [
         {
@@ -1373,7 +1373,7 @@
     },
     {
       "modulename": "Item Player - MCSR",
-      "moduledetails": "",
+      "moduleId": "",
       "testFile": "./test/engageExperienceApp/multimcq.test.js",
       "testcase": [
         {
@@ -1398,7 +1398,7 @@
     },
     {
       "modulename": "Item Player - FIB Select",
-      "moduledetails": "",
+      "moduleId": "",
       "testFile": "./test/engageExperienceApp/fibselect.test.js",
       "testcase": [
         {
@@ -1423,7 +1423,7 @@
     },
     {
       "modulename": "Base TestPlayer",
-      "moduledetails": "",
+      "moduleId": "",
       "testFile": "./test/engageExperienceApp/basePlayer.test.js",
       "testcase": [
         {
@@ -1484,7 +1484,7 @@
     },
     {
       "modulename": "Activity Player",
-      "moduledetails": "",
+      "moduleId": "",
       "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
       "testcase": [
         {
@@ -1653,7 +1653,7 @@
     },
     {
       "modulename": "Onboarding>Onboarding New User",
-      "moduledetails": "",
+      "moduleId": "",
       "testFile": "./test/engageExperienceApp/userOnboarding.test.js",
       "testcase": [
         {
@@ -1720,7 +1720,7 @@
     },
     {
       "modulename": "Dashboard",
-      "moduledetails": "",
+      "moduleId": "",
       "testFile": "./test/engageExperienceApp/dashboard.test.js",
       "testcase": [
         {
@@ -1877,7 +1877,7 @@
     },
     {
       "modulename": "Item Player - Multiple Choice",
-      "moduledetails": "",
+      "moduleId": "",
       "testFile": "./test/engageExperienceApp/mcqBlock.test.js",
       "testcase": [
         {
@@ -1902,7 +1902,7 @@
     },
     {
       "modulename": "Item Player - FIB Text",
-      "moduledetails": "",
+      "moduleId": "",
       "testFile": "./test/engageExperienceApp/fibtext.test.js",
       "testcase": [
         {
@@ -1927,7 +1927,7 @@
     },
     {
       "modulename": "Item Player - DND Onto Image",
-      "moduledetails": "",
+      "moduleId": "",
       "testFile": "./test/engageExperienceApp/dndOnImage.test.js",
       "testcase": [
         {
@@ -1958,7 +1958,7 @@
     },
     {
       "modulename": "Item Player - MCMR",
-      "moduledetails": "",
+      "moduleId": "",
       "testFile": "./test/engageExperienceApp/mcmr.test.js",
       "testcase": [
         {
@@ -1983,7 +1983,7 @@
     },
     {
       "modulename": "Landing",
-      "moduledetails": "",
+      "moduleId": "",
       "testFile": "./test/engageExperienceApp/landing.test.js",
       "testcase": [
         {
@@ -2020,7 +2020,7 @@
     },
     {
       "modulename": "Login",
-      "moduledetails": "",
+      "moduleId": "",
       "testFile": "./test/engageExperienceApp/login.test.js",
       "testcase": [
         {
@@ -2104,7 +2104,7 @@
     },
     {
       "modulename": "Settings",
-      "moduledetails": "",
+      "moduleId": "",
       "testFile": "./test/engageExperienceApp/settings.test.js",
       "testcase": [
         {
@@ -2327,7 +2327,7 @@
     },
     {
       "modulename": "Flipbook",
-      "moduledetails": "",
+      "moduleId": "",
       "testFile": "./test/engageExperienceApp/flipbook.test.js",
       "testcase": [
         {
@@ -2478,7 +2478,7 @@
     },
     {
       "modulename": "Browse",
-      "moduledetails": "",
+      "moduleId": "",
       "testFile": "./test/engageExperienceApp/browse.test.js",
       "testcase": [
         {
@@ -2707,7 +2707,7 @@
     },
     {
       "modulename": "Playlist",
-      "moduledetails": "",
+      "moduleId": "ENG_PLIS",
       "testFile": "./test/engageExperienceApp/playlist.test.js",
       "testcase": [
         {
@@ -2792,7 +2792,7 @@
     },
     {
       "modulename": "Writing Player",
-      "moduledetails": "",
+      "moduleId": "",
       "testFile": "./test/engageExperienceApp/writingPlayer.test.js",
       "testcase": [
         {
@@ -2841,7 +2841,7 @@
     },
     {
       "modulename": "Download Player",
-      "moduledetails": "",
+      "moduleId": "",
       "testFile": "./test/engageExperienceApp/downloadPlayer.test.js",
       "testcase": [
         {
@@ -2878,7 +2878,7 @@
     },
     {
       "modulename": "Content Player",
-      "moduledetails": "",
+      "moduleId": "",
       "testFile": "./test/engageExperienceApp/contentPlayer.test.js",
       "testcase": [
         {
@@ -2927,7 +2927,7 @@
     },
     {
       "modulename": "Assignment - Teacher",
-      "moduledetails": "",
+      "moduleId": "",
       "testFile": "./test/engageExperienceApp/assignmentListTeacher.test.js",
       "testcase": [
         {
@@ -3000,7 +3000,7 @@
     },
     {
       "modulename": "Assignment - Teacher",
-      "moduledetails": "",
+      "moduleId": "",
       "testFile": "./test/engageExperienceApp/selectActivity.test.js",
       "testcase": [
         {
@@ -3031,7 +3031,7 @@
     },
     {
       "modulename": "Assignment - Teacher",
-      "moduledetails": "",
+      "moduleId": "",
       "testFile": "./test/engageExperienceApp/createAssignment.test.js",
       "testcase": [
         {
@@ -3074,7 +3074,7 @@
     },
     {
       "modulename": "Assignment - Teacher",
-      "moduledetails": "",
+      "moduleId": "",
       "testFile": "./test/engageExperienceApp/assignmentDetails.test.js",
       "testcase": [
         {
@@ -3165,7 +3165,7 @@
     },
     {
       "modulename": "Assignment - Teacher",
-      "moduledetails": "",
+      "moduleId": "",
       "testFile": "./test/engageExperienceApp/assignmentListDetails.test.js",
       "testcase": [
         {
@@ -3244,7 +3244,7 @@
     },
     {
       "modulename": "Assignment - Student",
-      "moduledetails": "",
+      "moduleId": "",
       "testFile": "./test/engageExperienceApp/assignmentStudentList.test.js",
       "testcase": [
         {
@@ -3317,7 +3317,7 @@
     },
     {
       "modulename": "GradeBook",
-      "moduledetails": "",
+      "moduleId": "",
       "testFile": "./test/engageExperienceApp/gradeBook.test.js",
       "testcase": [
         {
@@ -3426,7 +3426,7 @@
     },
     {
       "modulename": "GradeBook-student",
-      "moduledetails": "",
+      "moduleId": "",
       "testFile": "./test/engageExperienceApp/gradeBookStudent.test.js",
       "testcase": [
         {
@@ -3481,7 +3481,7 @@
     },
     {
       "modulename": "Open Activity Player",
-      "moduledetails": "",
+      "moduleId": "",
       "testFile": "./test/engageExperienceApp/openActivityPlayer.test.js",
       "testcase": [
         {
