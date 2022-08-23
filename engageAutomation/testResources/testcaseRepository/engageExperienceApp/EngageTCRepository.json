@@ -1720,14 +1720,15 @@
     },
     {
       "modulename": "Dashboard",
-      "moduleId": "",
+      "moduleId": "ENG_DASH",
       "testFile": "./test/engageExperienceApp/dashboard.test.js",
       "testcase": [
         {
           "id": "ENG_DASH_TC_1",
           "description": "Validate the content of the blank Dashboard page in English Language",
           "tags": "P2",
-          "visualTest": true
+          "visualTest": true,
+          "skip": false
         },
         {
           "id": "ENG_DASH_TC_7",
@@ -1823,13 +1824,15 @@
           "id": "ENG_DASH_TC_25",
           "description": "Validate that playlist page is launched on clicking the playlist card",
           "tags": "P1",
-          "visualTest": true
+          "visualTest": true,
+          "skip": true
         },
         {
           "id": "ENG_DASH_TC_26",
           "description": "Validate that clicking on 'Create Playlist' button on Dashboard launches the Playlist Pop Up",
           "tags": "P1",
-          "visualTest": true
+          "visualTest": true,
+          "skip": true
         },
         {
           "id": "ENG_DASH_TC_27",

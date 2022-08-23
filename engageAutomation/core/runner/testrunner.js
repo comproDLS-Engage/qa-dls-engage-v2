@@ -34,11 +34,10 @@ class specRunner {
                 describe(suiteIndex + " - " + execJsonData[suiteIndex].Name, () => {
                     //this.retries(1);
                     //This is before hook of Mocha runner
-                    before(async () => {
+                    before(async function () {
                         if (count != 0) {
                             await browser.reloadSession();
                         }
-
                         if (global.maximizeWindow == true && global.view == 'desktop') { //this will cause browser to maximize on the client screen resolution
                             await browser.maximizeWindow();
                             global.resolution = await browser.getWindowSize();
@@ -57,26 +56,30 @@ class specRunner {
                         let beforeGroup = Object.keys(execJsonData[suiteIndex].Before);
 
                         for (const key of beforeGroup) {
-                            await console.log(" Before      : Start " + execJsonData[suiteIndex].Before[key].id);
+                            console.log(" Before      : Start " + execJsonData[suiteIndex].Before[key].id);
                             await logger.logInto(stackTrace.get(), "BEFORE HOOK:" + JSON.stringify(execJsonData[suiteIndex].Before[key]));
-                            global.selectorDir = await that.getTCPropertiesFromTCRepo(execJsonData[suiteIndex].TestCaseRepo, execJsonData[suiteIndex].Before[key].testFile, execJsonData[suiteIndex].Before[key].id).selectorDir;
-                            await that.jsonHookObjParser(execJsonData[suiteIndex].Before[key]);
-                            await console.log(" Before      :   End " + execJsonData[suiteIndex].Before[key].id);
-
+                            let prop = that.getTCPropertiesFromTCRepo(execJsonData[suiteIndex].TestCaseRepo, execJsonData[suiteIndex].Before[key].testFile, execJsonData[suiteIndex].Before[key].id);
+                            global.selectorDir = prop.selectorDir;
+                            if (prop.skipTC)
+                                console.log("               Skipped ");
+                            else
+                                await that.jsonHookObjParser(execJsonData[suiteIndex].Before[key]);
+                            console.log(" Before      :   End " + execJsonData[suiteIndex].Before[key].id);
                         }
                     });
                     //This is beforeEach hook of Mocha runner
-                    beforeEach(async () => {
-
+                    beforeEach(async function () {
                         let beforeEachGroup = Object.keys(execJsonData[suiteIndex].BeforeEach);
-
                         for (const key of beforeEachGroup) {
-                            await console.log(" Before each : Start " + execJsonData[suiteIndex].BeforeEach[key].id);
+                            console.log(" Before each : Start " + execJsonData[suiteIndex].BeforeEach[key].id);
                             await logger.logInto(stackTrace.get(), "BEFORE EACH HOOK: " + JSON.stringify(execJsonData[suiteIndex].BeforeEach[key]));
-                            global.selectorDir = await that.getTCPropertiesFromTCRepo(execJsonData[suiteIndex].TestCaseRepo, execJsonData[suiteIndex].BeforeEach[key].testFile, execJsonData[suiteIndex].BeforeEach[key].id).selectorDir;
-                            await that.jsonHookObjParser(execJsonData[suiteIndex].BeforeEach[key]);
-                            await console.log(" Before each :   End " + execJsonData[suiteIndex].BeforeEach[key].id);
-
+                            let prop = that.getTCPropertiesFromTCRepo(execJsonData[suiteIndex].TestCaseRepo, execJsonData[suiteIndex].BeforeEach[key].testFile, execJsonData[suiteIndex].BeforeEach[key].id);
+                            global.selectorDir = prop.selectorDir;
+                            if (prop.skipTC)
+                                console.log("               Skipped ");
+                            else
+                                await that.jsonHookObjParser(execJsonData[suiteIndex].BeforeEach[key]);
+                            console.log(" Before each :   End " + execJsonData[suiteIndex].BeforeEach[key].id);
                         }
                     })
                     //processing Test node in the execution json (pre-steps for mocha it)
@@ -129,15 +132,22 @@ class specRunner {
                         Arr[count].tests[testIndex].title = getName;
 
                         //This is test hook of Mocha runner
-                        it(getName, async () => {
-                            await console.log(" Testcase    : Start " + execJsonData[suiteIndex].Test[testIndex].id);
+                        it(getName, async function () {
+                            console.log(" Testcase    : Start " + execJsonData[suiteIndex].Test[testIndex].id);
                             logger.logInto(stackTrace.get(), "Executing testCase:" + execJsonData[suiteIndex].Test[testIndex].id);
-                            global.selectorDir = await that.getTCPropertiesFromTCRepo(execJsonData[suiteIndex].TestCaseRepo, execJsonData[suiteIndex].Test[testIndex].testFile, execJsonData[suiteIndex].Test[testIndex].id).selectorDir;
-                            await that.identifyTest(execJsonData[suiteIndex].Test[testIndex].testFile, execJsonData[suiteIndex].Test[testIndex].id, testDataArr[suiteIndex][testIndex]);
-                            if (argv.visual == 'novus' && Arr[count].tests[testIndex].visual == "yes") {
-                                Arr[count] = await that.visualTest.generateScreenshotsAndLogs(execJsonData[suiteIndex].Test[testIndex], suiteIndex, testIndex, Arr, count);
-                            } else if (argv.visual == 'applitools')
-                                await that.visualTest.generateScreenshotsApplitools(execJsonData[suiteIndex].Test[testIndex]);
+                            tcProp = that.getTCPropertiesFromTCRepo(execJsonData[suiteIndex].TestCaseRepo, execJsonData[suiteIndex].Test[testIndex].testFile, execJsonData[suiteIndex].Test[testIndex].id);
+                            global.selectorDir = tcProp.selectorDir;
+                            if (tcProp.skipTC) {
+                                console.log("               Skipped ");
+                                this.skip();
+                            }
+                            else {
+                                await that.identifyTest(execJsonData[suiteIndex].Test[testIndex].testFile, execJsonData[suiteIndex].Test[testIndex].id, testDataArr[suiteIndex][testIndex]);
+                                if (argv.visual == 'novus' && Arr[count].tests[testIndex].visual == "yes") {
+                                    Arr[count] = await that.visualTest.generateScreenshotsAndLogs(execJsonData[suiteIndex].Test[testIndex], suiteIndex, testIndex, Arr, count);
+                                } else if (argv.visual == 'applitools')
+                                    await that.visualTest.generateScreenshotsApplitools(execJsonData[suiteIndex].Test[testIndex]);
+                            }
                             console.log(" Testcase    :   End " + execJsonData[suiteIndex].Test[testIndex].id);
                         })
                     })
@@ -145,27 +155,31 @@ class specRunner {
                     //This is afterEach hook of Mocha runner
                     afterEach(async function () {
                         let afterEachGroup = Object.keys(execJsonData[suiteIndex].AfterEach);
-
                         for (const key of afterEachGroup) {
-                            await console.log(" After each  : Start " + execJsonData[suiteIndex].AfterEach[key].id);
+                            console.log(" After each  : Start " + execJsonData[suiteIndex].AfterEach[key].id);
                             logger.logInto(stackTrace.get(), "AFTER EACH HOOK: " + JSON.stringify((execJsonData[suiteIndex].AfterEach[key])));
-                            global.selectorDir = await that.getTCPropertiesFromTCRepo(execJsonData[suiteIndex].TestCaseRepo, execJsonData[suiteIndex].AfterEach[key].testFile, execJsonData[suiteIndex].AfterEach[key].id).selectorDir;
-                            await that.jsonHookObjParser(execJsonData[suiteIndex].AfterEach[key]);
-                            //   await that.identifyTest(execJsonData[suiteIndex].Test[testIndex].testFile, execJsonData[suiteIndex].Test[testIndex].id, testDataArr[suiteIndex][testIndex]);
-                            await console.log(" After each  :   End " + execJsonData[suiteIndex].AfterEach[key].id);
+                            let prop = that.getTCPropertiesFromTCRepo(execJsonData[suiteIndex].TestCaseRepo, execJsonData[suiteIndex].AfterEach[key].testFile, execJsonData[suiteIndex].AfterEach[key].id);
+                            global.selectorDir = prop.selectorDir;
+                            if (prop.skipTC)
+                                console.log("               Skipped ");
+                            else
+                                await that.jsonHookObjParser(execJsonData[suiteIndex].AfterEach[key]);
+                            console.log(" After each  :   End " + execJsonData[suiteIndex].AfterEach[key].id);
                         };
                     });
 
                     //This is after hook of Mocha runner
                     after(async function () {
                         let afterGroup = Object.keys(execJsonData[suiteIndex].After);
-
                         for (const key of afterGroup) {
                             console.log(" After       : Start " + execJsonData[suiteIndex].After[key].id);
                             logger.logInto(stackTrace.get(), "AFTER HOOK: " + (JSON.stringify((execJsonData[suiteIndex].After[key]))));
-                            global.selectorDir = (await that.getTCPropertiesFromTCRepo(execJsonData[suiteIndex].TestCaseRepo, execJsonData[suiteIndex].After[key].testFile, execJsonData[suiteIndex].After[key].id)).selectorDir;
-                            await that.jsonHookObjParser(execJsonData[suiteIndex].After[key]);
-                            //await that.identifyTest(execJsonData[suiteIndex].After[key].testFile, execJsonData[suiteIndex].After[key].id, testDataArr[suiteIndex][key]);
+                            let prop = that.getTCPropertiesFromTCRepo(execJsonData[suiteIndex].TestCaseRepo, execJsonData[suiteIndex].After[key].testFile, execJsonData[suiteIndex].After[key].id);
+                            global.selectorDir = prop.selectorDir;
+                            if (prop.skipTC)
+                                console.log("               Skipped ");
+                            else
+                                await that.jsonHookObjParser(execJsonData[suiteIndex].After[key]);
                             console.log(" After       :   End " + execJsonData[suiteIndex].After[key].id);
                         };
                         if (argv.visual == 'applitools')
@@ -255,8 +269,6 @@ class specRunner {
             }
         }
 
-
-
         if (hookFuncData.length == 1) { hookFuncData = hookFuncData[0] }
         await this.identifyTest(obj.testFile, obj.id, hookFuncData)
     }
@@ -280,6 +292,9 @@ class specRunner {
                             obj.tcName = testObj.id + " " + ((tcDescription == "") ? testObj.description : tcDescription) + " - (" + testObj.tags + ")";
                             obj.visualTag = testObj.visualTest;
                             obj.selectorDir = path.resolve(rootDir, repository[repoKey].selectorFile);
+                            obj.skipTC = false;
+                            if (modules[repository[repoKey].modules[moduleKey].moduleId])
+                                obj.skipTC = true;
                             break;
                         }
                     }
