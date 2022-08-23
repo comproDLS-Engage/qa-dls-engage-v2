@@ -5,7 +5,6 @@ var Arr = [];
 var rootDir = process.cwd();
 
 class specRunner {
-
     //instantiate class
     constructor(testExecFile) {
         if (argv.visual) {
@@ -293,7 +292,7 @@ class specRunner {
                             obj.visualTag = testObj.visualTest;
                             obj.selectorDir = path.resolve(rootDir, repository[repoKey].selectorFile);
                             obj.skipTC = false;
-                            if (modules[repository[repoKey].modules[moduleKey].moduleId])
+                            if (moduleOff[repository[repoKey].modules[moduleKey].moduleId])
                                 obj.skipTC = true;
                             break;
                         }
