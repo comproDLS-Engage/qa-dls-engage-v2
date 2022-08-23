@@ -31,7 +31,7 @@
 		"proceedBtn": "[data-tid=button-item-type-launch]",
 		"buttonLoader": "[class*=button__spinner]",
 		"emptyStateBtn": "[class*=c-empty-state-button]",
-		"publishBtn": "[data-tid=button-publish-book-component]",
+		"publishBtn": "button[data-tid=button-publish-book-component]",
 		"seeMoreLessBtn": "[data-tid=button-see-more-less]",
 		"appVersion": "[class*=version]"
 	},
@@ -134,7 +134,7 @@
 	},
 	"addFolderPage": {
 		"nameTxtbox": "[id=folder-title]",
-		"addBtn": "[class*=c-form] button[class*=action-button-padding]",
+		"addBtn": "button[data-tid=button-add-folder],button[data-tid=button-modify-folder]",
 		"targetRoleDropdown": "[id=target-role]",
 		"targetRoleList": "[class*=mdc-menu-surface--open] [class*=mdc-list-item__text]",
 		"assignableDropdown": "[id=assignable]",
@@ -157,7 +157,7 @@
 	},
 	"publishComponentPage": {
 		"snapshotBtn": "[data-tid*='button-Create New Snapshot']",
-		"previewBtn": ".//*[contains(@data-tid,'button-Create New Snapshot')]//..//..//*[@class='c-secondary-action']/button",
+		"previewBtn": "button[data-tid*=button-Preview]",
 		"publishBtn": "button[data-tid*='button-Publish']",
 		"lastPublishedVer": "div:nth-child(1)[class=c-publish-component-page__component__attribute] [class=c-publish-component-page__component__attribute_value__version]",
 		"lastSnapshotVer": "div:nth-child(2)[class=c-publish-component-page__component__attribute] [class=c-publish-component-page__component__attribute_value__version]"
