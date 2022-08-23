@@ -454,6 +454,22 @@
                         }
                     ],
                     "info": {}
+                },
+                "onboardingTeacher": {
+                    "email": "onboardTeacher2@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "teacher",
+                    "name": "général d’expressions",
+                    "class": [],
+                    "info": {}
+                },
+                "onboardingStudent": {
+                    "email": "onboardStudent6@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "student",
+                    "name": "Onboard Student6",
+                    "class": [],
+                    "info": {}
                 }
             }
         },

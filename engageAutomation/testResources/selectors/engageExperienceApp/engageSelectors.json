@@ -256,7 +256,7 @@
                 "helpJoiningClass": "[data-tid=anchor-skip]",
                 "closebtn": "[data-tid=button-joincourseclose]",
                 "viewProgress_btn": "[data-tid=button-view-progress]",
-                "archiveLblCrossButton" : "[data-tid=button-close]"
+                "archiveLblCrossButton": "[data-tid=button-close]"
             },
             "createClassPage": {
                 "pageTitle": "[data-tid='text-pageTitle']",
@@ -345,7 +345,7 @@
                 "bookMaterial_lbl": "[data-tid=text-bookMaterial-label-",
                 "completionValue": "[data-tid=text-progress-completion-",
                 "progressbar": "[data-tid=progressbar-",
-                "archiveTagLbl":"//*[@id=\"scroolbarDiv\"]/div/div/div[2]/main/div/div/div[1]/div[2]/div[1]/div"
+                "archiveTagLbl": "//*[@id=\"scroolbarDiv\"]/div/div/div[2]/main/div/div/div[1]/div[2]/div[1]/div"
             },
             "teacherViewClassPage": {
                 "pageTitle": "[data-tid=text-pageTitle]",
@@ -399,8 +399,8 @@
                 "assignmentCardActivityDate": "[data-tid*=text-submitDate-",
                 "assignmentCardActivityName": "[data-tid*=text-activityName-",
                 "assignmentCardUnitName": "[data-tid*=text-unitPath-",
-                "archivedlbl":"[data-tid=chip-pill]",
-                "archivedMsg":"[data-tid=text-archiveMessage]"
+                "archivedlbl": "[data-tid=chip-pill]",
+                "archivedMsg": "[data-tid=text-archiveMessage]"
             },
             "itemPlayer": {
                 "activeQues": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) ",
@@ -465,7 +465,7 @@
                 "left": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-tid*=input-left-item-",
                 "right": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-tid*=input-right-item-"
             },
-            "classify":{
+            "classify": {
                 "droppedOption": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-tid*=dropped-option-",
                 "textPlaceholder": "] [data-tid=text-placeholder]"
             },
@@ -1291,6 +1291,40 @@
                 "submitActivityDialogSubtitle": "[data-tid=text-subTitle-submit-activity]",
                 "submitActivityDialogCancelBtn": "[data-tid=button-secondary-submit-activity]",
                 "submitActivityDialogConfirmBtn": "[data-tid=button-primary-submit-activity]"
+            },
+            "onboarding": {
+                "welcomeTxt": "[data-tid='text-welcome']",
+                "welcomeSubtitleTxt": "[data-tid='text-welcomeSubtitle']",
+                "completeStepsTitleTxt": "[data-tid='text-completeSteps']",
+                "completeStepsSubtitleTxt": "[data-tid='text-completeStepsTitle']",
+                "joinSchoolTxt": "[data-tid='text-joinSchool-1']",
+                "activateMaterialsTxt": "[data-tid='text-activeMaterial-2'], [data-tid='text-activeMaterial-1']",
+                "accessEngageTxt": "[data-tid='text-accessEngage-3'], [data-tid='text-accessEngage-2']",
+                "teacherGetStartedBtn": "[data-tid='button-getStarted']",
+                "studentGetStartedBtn": "[data-tid='button-getStarted']",
+                "logoutBtn": "[data-tid='button-onboardinglogout']",
+                "joinYourSchoolTitleTxt": "[data-tid='text-joinYourSchoolTitle']",
+                "joinYourSchoolSubTitleTxt": "[data-tid='text-joinYourSchoolSubtitle']",
+                "verifyBtn" :"[data-tid='text-verifyKey']",     
+                "schoolKeyLbl": "label[data-tid='text-schoolKeyLabel']",
+                "schoolKeyTextbox": "#main-focus-area",
+                "schoolKeySubLbl": "[data-tid='text-schoolKeyHelperText']",
+                "joinSchoolHelperTxt": "[data-tid='text-HelperTextTitle']",
+                "continueBtn": "[data-tid='button-continue']",
+                "joinSchoolBackBtn": "[data-tid='button-onboardingback']",
+                "schoolNameTxt": "[data-tid='text-schoolName']",
+                "addressTxt": "[data-tid='text-schoolAddress-0']",
+                "schoolKeyErrorTxt": "#main-focus-area-helper-text",
+                "activateMaterialsTitleTxt": "[data-tid='text-activateyourclassTitle']",
+                "activateMaterialsSubTitleTxt": "[data-tid='text-activateyourclassSubtitle']",
+                "accessKeyLbl": "[data-tid='text-enteraccesskey']",
+                "accessKeyTextbox": "#main-focus-area",
+                "accessKeySubLbl": "[data-tid='text-accessKeyHelperText']",
+                "activateMaterialHelperTxt": "[data-tid='text-HelperTextTitle']",
+                "activateMaterialsBtn": "[data-tid='button-activateClass']",
+                "activateErrorTxt": "#main-focus-area-helper-text",
+                "teacherActivateMaterialsBackBtn": "[data-tid='button-onboardingback']",
+                "studentActivateMaterialsBackBtn": "[data-tid='button-onboardingback']"
             }
         }
     }
