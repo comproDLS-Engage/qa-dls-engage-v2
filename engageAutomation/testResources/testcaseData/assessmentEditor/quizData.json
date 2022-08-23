@@ -7,14 +7,14 @@
           "number": 3,
           "type": "truefalsequestionset",
           "score":"1",
-          "quesTitle": "True and False Question with Multiple Sub-Questions",
+          "quesTitle": "True and False Question with Multiple Sub-Questions with Answer Options as Horizontal and Left aligned",
           "instructionText": "Are the following sentences true (T) or false (F)?",
           "promptImg": "./testResources/testcaseData/assessmentEditor/media/secretgarden.png",
           "subQues":
-          [["1", "Mary Lennox’s Indian nanny met her in London and they took the train to Yorkshire."],
-          [ "2","Mrs Medlock didn’t like Mary because she was bad-­‐tempered."],
-          ["3","Mr Craven locked up his wife’s garden and kept the key in his pocket."],
-          ["4","Martha worked as a housemaid at Misselthwaite Manor, but she lived on the moor with her family."]]
+          [["1", "2", "Mary Lennox’s Indian nanny met her in London and they took the train to Yorkshire."],
+          [ "2", "1", "Mrs Medlock didn’t like Mary because she was bad-­‐tempered."],
+          ["3","2", "Mr Craven locked up his wife’s garden and kept the key in his pocket."],
+          ["4", "1", "Martha worked as a housemaid at Misselthwaite Manor, but she lived on the moor with her family."]]
         }
       ],
       "MultipleResponse": [
@@ -23,7 +23,7 @@
           "type": "multipleresponsequestionset",
           "type1": "mutipleresponse",
           "score":"3",
-          "quesTitle": "Multiple Choice Multiple Response Question",
+          "quesTitle": "MCMR Question with Single Sub-Question with Answer Options as Vertically aligned",
           "instructionText": "Select more that one options for the following question",
           "bulletType":"1",
           "imagePath": "./testResources/testcaseData/assessmentEditor/media/secretgarden.jpg",
@@ -31,12 +31,16 @@
           "imageCredit": "Plant Diagram",
           "questionText": "Identify the parts of the plants in the given options:",
           "subQues":
-          [["1", "Which of the following laws do not belong to Gestalt Phycology"]],
+          [["1", "Which of the following laws do not belong to Gestalt Phycology"],
+          ["2", "Sub Question with Image Settings"]],
           "answerKey": 
-          [["1" ,"1","Kurt Lewin Law", "checked"],
-          ["1" ,"2","Pragnanz Law",""],
-          ["1" ,"3","Proximity Law",""],
-          ["1" ,"4","Wolfgang Kholer Law","checked"]],
+          [["1" ,"1","Kurt Lewin Law", "checked",""],
+          ["1" ,"2","Pragnanz Law","",""],
+          ["1" ,"3","Proximity Law","",""],
+          ["1" ,"4","Wolfgang Kholer Law","checked",""],
+          ["2" ,"1","Option A", "checked","./testResources/testcaseData/assessmentEditor/media/option1.png"],
+          ["2" ,"2","Option B","","./testResources/testcaseData/assessmentEditor/media/option4.jpg"],
+          ["2" ,"3","Option C","","./testResources/testcaseData/assessmentEditor/media/option3.png"]],
           "correctanswerKey": [
             1,
             4
@@ -47,7 +51,26 @@
         {
           "number": 5,
           "type": "draganddropontoimage",
-          "quesTitle": "DND Onto Image Question",
+          "quesTitle": "DND Onto Image Question With Image at left and Options at right",
+          "score":"5",
+          "instructionText": "Drag and drop the textual descriptions to their correct locations within the model",
+          "imagePath": "./testResources/testcaseData/assessmentEditor/media/face-recog-transparent.png",
+          "labelOptions": [
+            "Expression analysis", 
+            "Facial speech analysis", 
+            "Direct visual processing", 
+            "Viewed-centered descriptions",
+            "Expression-independent descriptions",
+            "Face recognition units", 
+            "Person identity nodes",
+            "Name generation",
+            "Cognitive system"
+          ]
+        },
+        {
+          "number": 5,
+          "type": "draganddropontoimage",
+          "quesTitle": "DND Onto Image Question With Image at top and Options at bottom",
           "score":"5",
           "instructionText": "Drag and drop the textual descriptions to their correct locations within the model",
           "imagePath": "./testResources/testcaseData/assessmentEditor/media/face-recog-transparent.png",
@@ -68,9 +91,41 @@
         {
           "number": 6,
           "type": "draganddropintotext",
-          "quesTitle": "DND Into Text Question",
+          "quesTitle": "DND Into Text Question with Bottom Answer Option Placement and Center Alignment",
           "score":"3",
           "instructionText": "Drag and drop the text to the correct location",
+          "promptText":"Mary is a spoilt, unpleasant girl with a bad temper. When Mary meets Ben Weatherstaff, another unpleasant person, she tells him, ‘I’ve never had any friends.’ And Ben answers, ‘Neither have I.’",
+           "questionText": 
+            " 1. Colin thought he had a {{Blank:A}} back. \n When Mary lived in India, she was a {{Blank:B}} little girl. \n‘Colin isn’t feeling well because he had another {{Blank:C}} ,’ said Martha.\n Misselthwaite Manor was on the English {{Blank:D}}",
+          "options": [
+            "crooked", 
+            "spoilt",
+            "tantrum",
+            "moor"
+          ]
+        },
+        {
+          "number": 6,
+          "type": "draganddropintotext",
+          "quesTitle": "DND Into Text Question with Top Answer Option Placement and Left Alignment",
+          "score":"3",
+          "instructionText": "DND Into Text Question with Bottom Answer Option Placement and Center Alignment",
+          "promptText":"Mary is a spoilt, unpleasant girl with a bad temper. When Mary meets Ben Weatherstaff, another unpleasant person, she tells him, ‘I’ve never had any friends.’ And Ben answers, ‘Neither have I.’",
+           "questionText": 
+            " 1. Colin thought he had a {{Blank:A}} back. \n When Mary lived in India, she was a {{Blank:B}} little girl. \n‘Colin isn’t feeling well because he had another {{Blank:C}} ,’ said Martha.\n Misselthwaite Manor was on the English {{Blank:D}}",
+          "options": [
+            "crooked", 
+            "spoilt",
+            "tantrum",
+            "moor"
+          ]
+        },
+        {
+          "number": 6,
+          "type": "draganddropintotext",
+          "quesTitle": "DND Into Text Question with Right Answer Option Placement and Left Alignment",
+          "score":"3",
+          "instructionText": "DND Into Text Question with Bottom Answer Option Placement and Center Alignment",
           "promptText":"Mary is a spoilt, unpleasant girl with a bad temper. When Mary meets Ben Weatherstaff, another unpleasant person, she tells him, ‘I’ve never had any friends.’ And Ben answers, ‘Neither have I.’",
            "questionText": 
             " 1. Colin thought he had a {{Blank:A}} back. \n When Mary lived in India, she was a {{Blank:B}} little girl. \n‘Colin isn’t feeling well because he had another {{Blank:C}} ,’ said Martha.\n Misselthwaite Manor was on the English {{Blank:D}}",
@@ -86,7 +141,7 @@
         {
           "number": 7,
           "type": "fillintheblanks",
-          "quesTitle": "FIB Text Question",
+          "quesTitle": "FIB Text Question With Response Type as Text, Input Type as Word, Response Text Alignment as Center with Overall Center Alignment",
           "score":"5",
           "instructionText": "Read the description and write the correct word.",
           "questionText": " Six letter word for 'Dark and sad' :{{Blank:A}} \nFour letter word for 'Large open land' :{{Blank:B}}\nSeven letter word for 'Not straight' :{{Blank:C}}\nSix letter word for 'This person always gets everything he/she wants' :{{Blank:D}}\nSeven letter word for 'Sudden explosion of anger' :{{Blank:E}}",
@@ -99,6 +154,52 @@
             "Spoilt",
             "Tantrum"
           ]
+        },
+        {
+          "number": 7,
+          "type": "fillintheblanks",
+          "quesTitle": "FIB Text Question With Response Type as Text, Input Type as Character, Response Text Alignment as Left with Overall Left Alignment",
+          "score":"5",
+          "instructionText": "Read the description and write the correct word.",
+          "questionText": " Six letter word for 'Dark and sad' :{{Blank:A}} \nFour letter word for 'Large open land' :{{Blank:B}}\nSeven letter word for 'Not straight' :{{Blank:C}}\nSix letter word for 'This person always gets everything he/she wants' :{{Blank:D}}\nSeven letter word for 'Sudden explosion of anger' :{{Blank:E}}",
+          "promptText": "",
+          "options": ["A1","B1","C1","D1","E1"],
+          "optionValue":[
+            "Gloomy", 
+            "Moor",
+            "Crooked",
+            "Spoilt",
+            "Tantrum"
+          ]
+        },
+        
+        {
+          "number": 7,
+          "type": "fillintheblanks",
+          "quesTitle": "FIB Text Question With Response Type as Number Range, Response Text Alignment as Left with Overall Center Alignment",
+          "score":"5",
+          "instructionText": "Read the description and write the correct word.",
+          "questionText": " Enter a Prime number in between 3 and 7 :{{Blank:A}}",
+          "promptText": "",
+          "options": ["A1"],
+          "optionValue":[
+            "5"
+          ]
+        },
+        {
+          "number": 7,
+          "type": "fillintheblanks",
+          "quesTitle": "FIB Text Question With Response Type as Number, Response Text Alignment as Center with Overall Center Alignment",
+          "score":"5",
+          "instructionText": "Read the description and write the correct word.",
+          "questionText": " Enter a Prime number in between 1 and 4 : {{Blank:A}}",
+          "promptText": "",
+          "options": ["A1","A2"],
+          "optionValue":[
+            "2",
+            "3"
+          ],
+          "addMoreOption":["A"]        
         }
       ],
       "FIBDropdown": [
@@ -106,7 +207,7 @@
           "question1": {
           "number": 7,
           "type": "fibdropdown",
-          "quesTitle": "FIB Select Question with Unique Options",
+          "quesTitle": "FIB Select Question with Unique Options - Dropdown Width as Fit to Response and Center Alignment",
           "score":"5",
           "instructionText": "Read the first part of each sentence and match it with a conclusion.",
            "questionText": "  1. Mary entered the room slowly and put her {{Blank:A}} down on a table. \n 2. he hates the garden because she fell off the {{Blank:B}} of the tree and died.",
@@ -120,7 +221,7 @@
       "question2": {
         "number": 7,
           "type": "fibdropdown",
-          "quesTitle": "FIB Select Question with Common Options",
+          "quesTitle": "FIB Select Question with Common Options - Dropdown Width as Longest Option and Left Alignment",
           "score":"5",
           "instructionText": "Read the part of each sentence and match it with a conclusion.",
           "questionText": " 1. Mary Lennox’s parents {{Blank:A}} \n2. Mary was a spoilt girl with a bad temper, {{Blank:B}}\n3. One morning Mary discovered {{Blank:C}}\n4. Mary had to leave India {{Blank:D}} \n5. Mrs Medlock, her uncle’s housekeeper,  {{Blank:E}}",
@@ -146,7 +247,30 @@
           "number": 9,
           "type": "matching",
           "score":"3",
-          "quesTitle": "Matching Question",
+          "quesTitle": "Matching Question with Unidirectional Matching connection",
+          "instructionText": "Match the statements below with the correct answer.",
+          "items": [
+           ["A", "I can’t swim."],
+           ["B","We’re not from London."],
+           ["C", "I’ve got a cat."],
+           ["D", "We go to church every Sunday."],
+           ["E","My best friend calls me every day."],
+           ["F","I don’t know the answer."]
+          ],
+          "matchedItems": [
+           ["A","Neither can I."],
+           ["B", "Neither are we."],
+           ["C", "So have I."],
+           ["D", "So do we."],
+           ["E","So does mine."],
+           ["F", "Neither do I"]
+          ]
+        },
+        {
+          "number": 9,
+          "type": "matching",
+          "score":"3",
+          "quesTitle": "Matching Question with Bidirectional Matching connection",
           "instructionText": "Match the statements below with the correct answer.",
           "items": [
            ["A", "I can’t swim."],
@@ -220,7 +344,7 @@
           "number": 1,
           "type": "multiplechoicequestionset",
           "type1":"mutiplechoice",
-          "quesTitle": "MCSR Question with Multiple Sub-Questions",
+          "quesTitle": "MCSR Question with Multiple Sub-Questions with Answer Option as Horizontal and center aligned",
           "score":"1",
           "instructionText": "Choose the correct answer for the following questions",
           "promptText":"There are twelve of us and my father doesn’t earn much money. It’s hard for my mother to feed them all. The fresh air on the moor makes them strong and healthy. Dickon is twelve and he’s always out on the moor. He loves animals.",
@@ -228,23 +352,27 @@
                             [["1", "When the wind blew the ivy to one side"],
                             [ "2","As soon as Mary met Dickon"],
                             ["3","Mr Craven returned home to Misselthwaite Manor"],
-                            ["4","Colin felt that the secret garden"]],
-            "answerKey": [["1" ,"1","Mary found the door to the secret garden.","correct"],
-                        ["1" ,"2","Mary saw Ben Weatherstaff looking at her.",""],
-                        ["1" ,"3","Mary saw the little robin.",""],
-                        ["1" ,"4","Mary found the key to the secret garden.",""],
-                        ["2" ,"1","she didn’t want to talk to him. ",""],
-                        ["2" ,"2","they started to play ball together.",""],
-                        ["2" ,"3","she liked him and trusted him.","correct"],
-                        ["2" ,"4","she was afraid of him and ran away.",""],
-                        ["3" ,"1","because Mrs Medlock wrote him a letter.",""],
-                        ["3" ,"2","but he was unhappy there.",""],
-                        ["3" ,"3","because he dreamt about his wife’s garden.","correct"],
-                        ["3" ,"4","because he had to talk to Ben Weatherstaff.",""],
-                        ["4" ,"1","was a sad place.",""],
-                        ["4" ,"2","should be locked forever.",""],
-                        ["4" ,"3","was a boring place.",""],
-                        ["4" ,"4","could help him grow strong and healthy.","correct"]],
+                            ["4","Colin felt that the secret garden"],
+                            ["5","Answer Options With Image"]],
+            "answerKey": [["1" ,"1","Mary saw the little robin.","",""],
+                        ["1" ,"2","Mary found the door to the secret garden.","correct",""],
+                        ["1" ,"3","Mary found the key to the secret garden.","",""],
+                        ["1" ,"4","Mary saw Ben Weatherstaff looking at her.","",""],
+                        ["2" ,"1","she didn’t want to talk to him. ","",""],
+                        ["2" ,"2","she was afraid of him and ran away.","",""],
+                        ["2" ,"3","they started to play ball together.","",""],
+                        ["2" ,"4","she liked him and trusted him.","correct",""],
+                        ["3" ,"1","because he had to talk to Ben Weatherstaff.","",""],
+                        ["3" ,"2","because Mrs Medlock wrote him a letter.","",""],
+                        ["3" ,"3","because he dreamt about his wife’s garden.","correct",""],
+                        ["3" ,"4","but he was unhappy there.","",""],
+                        ["4" ,"1","was a sad place.","",""],
+                        ["4" ,"2","was a boring place.","",""],
+                        ["4" ,"3","should be locked forever.","",""],
+                        ["4" ,"4","could help him grow strong and healthy.","correct",""],
+                        ["5" ,"1","Option A","correct","./testResources/testcaseData/assessmentEditor/media/option1.png"],
+                        ["5" ,"2","Option B","","./testResources/testcaseData/assessmentEditor/media/option2.jpg"],
+                        ["5" ,"3","Option C","","./testResources/testcaseData/assessmentEditor/media/option3.png"]],
          
           "optionStyle": "2"
       

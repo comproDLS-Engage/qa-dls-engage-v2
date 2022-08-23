@@ -63,7 +63,6 @@
                     "description": "Validate the editor is selected in question pane and displayed.",
                     "tags": "P1"
                 },
-                
                 {
                     "id": "ASE_QUN_TC_9",
                     "description": "Validate that the Question can be added using Add Question button.",
@@ -89,7 +88,6 @@
                     "description": "Validate tthe pair is added in player",
                     "tags": "P1"
                 },
-
                 {
                     "id": "ASE_MAT_TC_15",
                     "description": "Validate the text is added in matched itmes",
@@ -173,6 +171,11 @@
                 {
                     "id": "ASE_FIB_TC_1",
                     "description": "Enter the Answer in FIB Value",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_FIB_TC_2",
+                    "description": "Click the Add More option ",
                     "tags": "P1"
                 },
                 {
@@ -285,7 +288,7 @@
                     "description": "Click Shuffling Checkbox button",
                     "tags": "P1"
                 },
-                 {
+                {
                     "id": "ASE_COM_TC_1017",
                     "description": "Click Add blank in ck editor",
                     "tags": "P1"
@@ -746,12 +749,12 @@
                     "tags": "P1"
                 },
                 {
-                    "id": "ASE_COM_TC_1098",
+                    "id": "ASE_COM_TC_1143",
                     "description": "Click topBottom Option  button in ck editor",
                     "tags": "P1"
                 },
                 {
-                    "id": "ASE_COM_TC_1099",
+                    "id": "ASE_COM_TC_1144",
                     "description": "Click responseAreaAlignmen button in ck editor",
                     "tags": "P1"
                 },
@@ -872,87 +875,217 @@
                 },
                 {
                     "id": "ASE_COM_TC_1024",
-                    "description": "Set questionAreaLabel value is not updated",
+                    "description": "Set questionAreaLabel value in editor player",
                     "tags": "P1"
                 },
                 {
                     "id": "ASE_COM_TC_1025",
-                    "description": "Set titleAreaLabel value is not updated",
+                    "description": "Set titleAreaLabel value in editor player",
                     "tags": "P1"
                 },
                 {
                     "id": "ASE_COM_TC_1026",
-                    "description": "Set instructionsAreaLabel value is not updated",
+                    "description": "Set instructionsAreaLabel value in editor player",
                     "tags": "P1"
                 },
                 {
                     "id": "ASE_COM_TC_1027",
-                    "description": "Set promptAreaLabel value is not updated",
+                    "description": "Set promptAreaLabel value in editor player",
                     "tags": "P1"
                 },
                 {
                     "id": "ASE_COM_TC_1028",
-                    "description": "Set questionItemAreaLabel value is not updated",
+                    "description": "Set questionItemAreaLabel value in editor player",
                     "tags": "P1"
                 },
                 {
                     "id": "ASE_COM_TC_1029",
-                    "description": "Set answerOptionAreaLabel value is not updated",
+                    "description": "Set answerOptionAreaLabel value in editor player",
                     "tags": "P1"
                 },
                 {
                     "id": "ASE_COM_TC_1030",
-                    "description": "Set inThisActivityScreenLabel value is not updated",
+                    "description": "Set inThisActivityScreenLabel value in editor player",
                     "tags": "P1"
                 },
                 {
                     "id": "ASE_COM_TC_1031",
-                    "description": "Set selectOneScreenLabel value is not updated",
+                    "description": "Set selectOneScreenLabel value in editor player",
                     "tags": "P1"
                 },
                 {
                     "id": "ASE_COM_TC_1032",
-                    "description": "Set zoombuttonScreenLabel value is not updated",
+                    "description": "Set zoombuttonScreenLabel value in editor player",
                     "tags": "P1"
                 },
                 {
                     "id": "ASE_COM_TC_1033",
-                    "description": "Set tapActionScreenLabel value is not updated",
+                    "description": "Set tapActionScreenLabel value in editor player",
                     "tags": "P1"
                 },
                 {
                     "id": "ASE_COM_TC_1034",
-                    "description": "Set clearSelectionScreenLabel value is not updated",
+                    "description": "Set clearSelectionScreenLabel value in editor player",
                     "tags": "P1"
                 },
                 {
                     "id": "ASE_COM_TC_1035",
-                    "description": "Set selectFromDropdownScreenLabel value is not updated",
+                    "description": "Set selectFromDropdownScreenLabel value in editor player",
                     "tags": "P1"
                 },
                 {
                     "id": "ASE_COM_TC_1036",
-                    "description": "Set selectFromOptionMatchScreenLabel value is not updated",
+                    "description": "Set selectFromOptionMatchScreenLabel value in editor player",
                     "tags": "P1"
                 },
                 {
                     "id": "ASE_COM_TC_1037",
-                    "description": "Set matchingLeftScreenLabel value is not updated",
+                    "description": "Set matchingLeftScreenLabel value in editor player",
                     "tags": "P1"
                 },
                 {
                     "id": "ASE_COM_TC_1038",
-                    "description": "Set matchingRightScreenLabel value is not updated",
+                    "description": "Set matchingRightScreenLabel value in editor player",
                     "tags": "P1"
                 },
                 {
                     "id": "ASE_COM_TC_1039",
-                    "description": "Set selectGroupScreenLabel value is not updated",
+                    "description": "Set selectGroupScreenLabel value in editor player",
                     "tags": "P1"
                 },
                 {
                     "id": "ASE_COM_TC_1040",
-                    "description": "Set clearScreenLabel value is not updated",
+                    "description": "Set clearScreenLabel value in editor player",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1124",
+                    "description": "Set questionAreaLabel value in editor player",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1125",
+                    "description": "Set titleAreaLabel value in editor player",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1126",
+                    "description": "Set instructionsAreaLabel value in editor player",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1127",
+                    "description": "Set promptAreaLabel value in editor player",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1128",
+                    "description": "Set questionItemAreaLabel value in editor player",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1129",
+                    "description": "Set answerOptionAreaLabel value in editor player",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1130",
+                    "description": "Set inThisActivityScreenLabel value in editor player",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1131",
+                    "description": "Set selectOneScreenLabel value in editor player",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1132",
+                    "description": "Set zoombuttonScreenLabel value in editor player",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1133",
+                    "description": "Set tapActionScreenLabel value in editor player",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1134",
+                    "description": "Set clearSelectionScreenLabel value in editor player",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1135",
+                    "description": "Set selectFromDropdownScreenLabel value in editor player",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1136",
+                    "description": "Set selectFromOptionMatchScreenLabel value in editor player",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1137",
+                    "description": "Set matchingLeftScreenLabel value in editor player",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1138",
+                    "description": "Set matchingRightScreenLabel value in editor player",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1139",
+                    "description": "Set selectGroupScreenLabel value in editor player",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1140",
+                    "description": "Set clearScreenLabel value in editor player",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1141",
+                    "description": "Click alignAnswerOptiondropDown button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1142",
+                    "description": "Click alignAnswerLeftOptionbtn Option  button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1150",
+                    "description": "Click alignAnswerCenterOptionbtn option button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1151",
+                    "description": "Click selectoptionImageAspectRatiobtn button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1145",
+                    "description": "Click selectoptionImageScaledtoFixedSizebtn Option button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1146",
+                    "description": "Click selectoptionImageScaledtoRelativeSizebtn Option button in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1147",
+                    "description": "Click alignAnswerOptionsbtn  in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1148",
+                    "description": "Click alignAnswerLeftOptionsbtn Option in ck editor",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1149",
+                    "description": "Click alignAnswerCenterOptionsbtn Option in ck editor",
                     "tags": "P1"
                 }
             ]

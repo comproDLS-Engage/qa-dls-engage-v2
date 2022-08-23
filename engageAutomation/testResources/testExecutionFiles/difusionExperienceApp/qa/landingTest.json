@@ -19,6 +19,70 @@
                 "description": "",
                 "testFile": "./test/engageExperienceApp/landing.test.js",
                 "testData": []
+            },
+            {
+                "id": "ENG_LAND_TC_5",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/landing.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                        "jsonPath": "engage.appContent.landing"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_LAND_TC_2",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/landing.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_LAND_TC_3",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/landing.test.js",
+                "testData": []
+            }
+        ],
+        "AfterEach": [],
+        "After": []
+    },
+    "Suite2": {
+        "Name": "Validation of Landing Page Features and Content (Spanish)",
+        "TestCaseRepo": [
+            "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
+        ],
+        "Before": [
+            {
+                "id": "launchUrl",
+                "description": "",
+                "testFile": "./engageAutomation/core/runner/launchUrl.js",
+                "testData": []
+            }
+        ],
+        "BeforeEach": [],
+        "Test": [
+            {
+                "id": "ENG_LAND_TC_4",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/landing.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangES.json",
+                        "jsonPath": "engage.appContent.language"
+                    }
+                ]
+            },
+            {
+                "id": "ENG_LAND_TC_5",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/landing.test.js",
+                "testData": [
+                    {
+                        "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangES.json",
+                        "jsonPath": "engage.appContent.landing"
+                    }
+                ]
             }
         ],
         "AfterEach": [],
