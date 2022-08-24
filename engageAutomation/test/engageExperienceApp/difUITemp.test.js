@@ -188,7 +188,7 @@ module.exports = {
 		console.log(res);
 		res = await action.click("[data-tid=breadcrumb-viewbook]");
 		console.log(res)
-		if (await action.isDisplayed("[data-tid=band-moreOptions]")) {
+		if (!await action.isDisplayed("[data-tid*=ookClasses]")) {
 			res = await action.click("[data-tid=band-moreOptions]");
 			console.log(res)
 		}
