@@ -124,8 +124,9 @@ module.exports = {
 	ENG_GLOB_TC_22: async function (testdata) {
 		sts = await browsePage.click_moreOptionsBtn(testdata[0]);
 		await assertion.assertEqual(sts.viewOption, testdata[1].viewOption, "viewOption Text Mismatch");
-		//await assertion.assertEqual(sts.addToPlaylistOption, testdata[1].addToPlaylistOption, "addToPlaylistOption Text Mismatch");
 		await assertion.assertEqual(sts.shareOption, testdata[1].shareOption, "shareOption Text Mismatch");
+		if (!moduleOff.ENG_PLIS)
+			await assertion.assertEqual(sts.addToPlaylistOption, testdata[1].addToPlaylistOption, "addToPlaylistOption Text Mismatch");
 	},
 
 	//Validate clicking on View on 3 dot options launches the resource.
@@ -394,16 +395,16 @@ module.exports = {
 	},
 
 	/********************************************************************************************************/
-	
-    //Validate that searching a text lists maximum 5 suggestions matching the search text
-    ENG_GLOB_TC_70: async function (testdata) {
+
+	//Validate that searching a text lists maximum 5 suggestions matching the search text
+	ENG_GLOB_TC_70: async function (testdata) {
 		sts = await browsePage.set_searchBox(testdata.search_txt);
 		await assertion.assertEqual(sts, true, "set_searchBox status Mismatch");
 
-        sts = await browsePage.getData_searchList();
-        await assertion.assert(sts.searchList.length <= 6, "Search List Count Mismatch: expected " + sts.searchList.length + " to <= 6");
+		sts = await browsePage.getData_searchList();
+		await assertion.assert(sts.searchList.length <= 6, "Search List Count Mismatch: expected " + sts.searchList.length + " to <= 6");
 
-        sts = await browsePage.click_clearSearch();
+		sts = await browsePage.click_clearSearch();
 		await assertion.assertEqual(sts.searchPill, null, "searchPill status Mismatch");
-    },
+	},
 }
