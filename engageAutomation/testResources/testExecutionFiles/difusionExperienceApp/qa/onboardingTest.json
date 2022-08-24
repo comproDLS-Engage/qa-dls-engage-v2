@@ -42,7 +42,7 @@
             ]
          },
          {
-            "id": "ENG_ONBO_58",
+            "id": "ENG_ONBO_TC_58",
             "description": "",
             "testFile": "./test/engageExperienceApp/onboarding.test.js",
             "testData": [
@@ -57,13 +57,13 @@
             ]
          },
          {
-            "id": "ENG_ONBO_60",
+            "id": "ENG_ONBO_TC_60",
             "description": "",
             "testFile": "./test/engageExperienceApp/onboarding.test.js",
             "testData": []
          },
          {
-            "id": "ENG_ONBO_63",
+            "id": "ENG_ONBO_TC_63",
             "description": "",
             "testFile": "./test/engageExperienceApp/onboarding.test.js",
             "testData": [
@@ -74,7 +74,7 @@
             ]
          },
          {
-            "id": "ENG_ONBO_64",
+            "id": "ENG_ONBO_TC_64",
             "description": "",
             "testFile": "./test/engageExperienceApp/onboarding.test.js",
             "testData": [
@@ -85,7 +85,7 @@
             ]
          },
          {
-            "id": "ENG_ONBO_65",
+            "id": "ENG_ONBO_TC_65",
             "description": "",
             "testFile": "./test/engageExperienceApp/onboarding.test.js",
             "testData": [
@@ -100,39 +100,28 @@
             ]
          },
          {
-            "id": "ENG_ONBO_67",
+            "id": "ENG_ONBO_TC_67",
             "description": "",
             "testFile": "./test/engageExperienceApp/onboarding.test.js",
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/onboardingData.json",
                   "jsonPath": "onboarding.schoolKey"
-               }
-            ]
-         },
-         {
-            "id": "ENG_ONBO_68",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/onboarding.test.js",
-            "testData": [
+               },
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
                   "jsonPath": "engage.appContent.onboarding.teacher"
-               },
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/onboardingData.json",
-                  "jsonPath": "onboarding.schoolKey"
                }
             ]
          },
          {
-            "id": "ENG_ONBO_69",
+            "id": "ENG_ONBO_TC_69",
             "description": "",
             "testFile": "./test/engageExperienceApp/onboarding.test.js",
             "testData": []
          },
          {
-            "id": "ENG_ONBO_74",
+            "id": "ENG_ONBO_TC_74",
             "description": "",
             "testFile": "./test/engageExperienceApp/onboarding.test.js",
             "testData": [
@@ -143,7 +132,7 @@
             ]
          },
          {
-            "id": "ENG_ONBO_78",
+            "id": "ENG_ONBO_TC_78",
             "description": "",
             "testFile": "./test/engageExperienceApp/onboarding.test.js",
             "testData": [
@@ -154,22 +143,7 @@
             ]
          },
          {
-            "id": "ENG_ONBO_75",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/onboarding.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/onboardingData.json",
-                  "jsonPath": "onboarding.accessKey"
-               },
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath": "engage.appContent.onboarding.teacher"
-               }
-            ]
-         },
-         {
-            "id": "ENG_ONBO_76",
+            "id": "ENG_ONBO_TC_75",
             "description": "",
             "testFile": "./test/engageExperienceApp/onboarding.test.js",
             "testData": [
@@ -184,7 +158,7 @@
             ]
          },
          {
-            "id": "ENG_ONBO_77",
+            "id": "ENG_ONBO_TC_76",
             "description": "",
             "testFile": "./test/engageExperienceApp/onboarding.test.js",
             "testData": [
@@ -199,7 +173,22 @@
             ]
          },
          {
-            "id": "ENG_ONBO_80",
+            "id": "ENG_ONBO_TC_77",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/onboarding.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/onboardingData.json",
+                  "jsonPath": "onboarding.accessKey"
+               },
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.onboarding.teacher"
+               }
+            ]
+         },
+         {
+            "id": "ENG_ONBO_TC_80",
             "description": "",
             "testFile": "./test/engageExperienceApp/onboarding.test.js",
             "testData": [
@@ -214,7 +203,7 @@
             ]
          },
          {
-            "id": "ENG_ONBO_70",
+            "id": "ENG_ONBO_TC_70",
             "description": "",
             "testFile": "./test/engageExperienceApp/onboarding.test.js",
             "testData": [
@@ -225,7 +214,7 @@
             ]
          },
          {
-            "id": "ENG_ONBO_61",
+            "id": "ENG_ONBO_TC_61",
             "description": "",
             "testFile": "./test/engageExperienceApp/onboarding.test.js",
             "testData": []
@@ -277,7 +266,7 @@
             ]
          },
          {
-            "id": "ENG_ONBO_59",
+            "id": "ENG_ONBO_TC_59",
             "description": "",
             "testFile": "./test/engageExperienceApp/onboarding.test.js",
             "testData": [
@@ -292,13 +281,13 @@
             ]
          },
          {
-            "id": "ENG_ONBO_93",
+            "id": "ENG_ONBO_TC_93",
             "description": "",
             "testFile": "./test/engageExperienceApp/onboarding.test.js",
             "testData": []
          },
          {
-            "id": "ENG_ONBO_94",
+            "id": "ENG_ONBO_TC_94",
             "description": "",
             "testFile": "./test/engageExperienceApp/onboarding.test.js",
             "testData": [
@@ -309,7 +298,7 @@
             ]
          },
          {
-            "id": "ENG_ONBO_100",
+            "id": "ENG_ONBO_TC_100",
             "description": "",
             "testFile": "./test/engageExperienceApp/onboarding.test.js",
             "testData": [
@@ -320,22 +309,7 @@
             ]
          },
          {
-            "id": "ENG_ONBO_98",
-            "description": "",
-            "testFile": "./test/engageExperienceApp/onboarding.test.js",
-            "testData": [
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/onboardingData.json",
-                  "jsonPath": "onboarding.accessKey"
-               },
-               {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath": "engage.appContent.onboarding.student"
-               }
-            ]
-         },
-         {
-            "id": "ENG_ONBO_103",
+            "id": "ENG_ONBO_TC_98",
             "description": "",
             "testFile": "./test/engageExperienceApp/onboarding.test.js",
             "testData": [
@@ -350,7 +324,7 @@
             ]
          },
          {
-            "id": "ENG_ONBO_102",
+            "id": "ENG_ONBO_TC_103",
             "description": "",
             "testFile": "./test/engageExperienceApp/onboarding.test.js",
             "testData": [
@@ -365,7 +339,22 @@
             ]
          },
          {
-            "id": "ENG_ONBO_106",
+            "id": "ENG_ONBO_TC_102",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/onboarding.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/onboardingData.json",
+                  "jsonPath": "onboarding.accessKey"
+               },
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.onboarding.student"
+               }
+            ]
+         },
+         {
+            "id": "ENG_ONBO_TC_106",
             "description": "",
             "testFile": "./test/engageExperienceApp/onboarding.test.js",
             "testData": [
@@ -376,7 +365,7 @@
             ]
          },
          {
-            "id": "ENG_ONBO_95",
+            "id": "ENG_ONBO_TC_95",
             "description": "",
             "testFile": "./test/engageExperienceApp/onboarding.test.js",
             "testData": []

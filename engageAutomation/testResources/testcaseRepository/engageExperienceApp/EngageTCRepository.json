@@ -1657,151 +1657,145 @@
       "testFile": "./test/engageExperienceApp/onboarding.test.js",
       "testcase": [
         {
-          "id": "ENG_ONBO_58",
+          "id": "ENG_ONBO_TC_58",
           "description": "Validate the content of  'Welcome' Page after selecting the teacher role",
           "tags": "",
           "visualTest": "-"
         },
         {
-          "id": "ENG_ONBO_59",
+          "id": "ENG_ONBO_TC_59",
           "description": "Validate the content of  'Welcome' Page after selecting the Student role",
           "tags": "",
           "visualTest": "-"
         },
         {
-          "id": "ENG_ONBO_60",
+          "id": "ENG_ONBO_TC_60",
           "description": "Teacher Onboarding - Validate the click on Get Started button on Welcome Page",
           "tags": "",
           "visualTest": "-"
         },
         {
-          "id": "ENG_ONBO_61",
+          "id": "ENG_ONBO_TC_61",
           "description": "Teacher Onboarding - Validate the click on Logout  button on Welcome Page",
           "tags": "",
           "visualTest": "-"
         },
         {
-          "id": "ENG_ONBO_63",
+          "id": "ENG_ONBO_TC_63",
           "description": "Teacher Onboarding - Validate the content of 'Join Your School' Page",
           "tags": "",
           "visualTest": "-"
         },
         {
-          "id": "ENG_ONBO_64",
+          "id": "ENG_ONBO_TC_64",
           "description": "Teacher Onboarding - Validate that error message when no school key is entered",
           "tags": "",
           "visualTest": "-"
         },
         {
-          "id": "ENG_ONBO_65",
+          "id": "ENG_ONBO_TC_65",
           "description": "Teacher Onboarding - Validate the error message appears on entering invalid or wrong school Key",
           "tags": "",
           "visualTest": "-"
         },
         {
-          "id": "ENG_ONBO_67",
+          "id": "ENG_ONBO_TC_67",
           "description": "Teacher Onboarding - Validate the click on Verify button with correct School key on Join Your School  page",
           "tags": "",
           "visualTest": "-"
         },
         {
-          "id": "ENG_ONBO_68",
-          "description": "Teacher Onboarding - Validate the updated content of 'Join Your School' Page",
-          "tags": "",
-          "visualTest": "-"
-        },
-        {
-          "id": "ENG_ONBO_69",
+          "id": "ENG_ONBO_TC_69",
           "description": "Teacher Onboarding - Validate that click on continue button Join Your School  page",
           "tags": "",
           "visualTest": "-"
         },
         {
-          "id": "ENG_ONBO_70",
+          "id": "ENG_ONBO_TC_70",
           "description": "Teacher Onboarding- Validate that on clicking 'Back to start' Button on Join Your School  page",
           "tags": "",
           "visualTest": "-"
         },
         {
-          "id": "ENG_ONBO_74",
+          "id": "ENG_ONBO_TC_74",
           "description": "Teacher Onboarding - Validate the content of 'Activate your materials' Page",
           "tags": "",
           "visualTest": "-"
         },
         {
-          "id": "ENG_ONBO_75",
+          "id": "ENG_ONBO_TC_75",
           "description": "Teacher Onboarding - Validate the error message appears on entering invalid or wrong access Key",
           "tags": "",
           "visualTest": "-"
         },
         {
-          "id": "ENG_ONBO_76",
+          "id": "ENG_ONBO_TC_76",
           "description": "Teacher Onboarding - Validate the error message appears on entering used access Key",
           "tags": "",
           "visualTest": "-"
         },
         {
-          "id": "ENG_ONBO_77",
+          "id": "ENG_ONBO_TC_77",
           "description": "Teacher Onboarding - Validate the error message appears on entering expired access Key",
           "tags": "",
           "visualTest": "-"
         },
         {
-          "id": "ENG_ONBO_78",
+          "id": "ENG_ONBO_TC_78",
           "description": "Teacher Onboarding - Validate that error message when no access key is entered on Access Key page",
           "tags": "",
           "visualTest": "-"
         },
         {
-          "id": "ENG_ONBO_80",
+          "id": "ENG_ONBO_TC_80",
           "description": "Teacher Onboarding- Validate that on clicking Back Button on Activate your materials Page",
           "tags": "",
           "visualTest": "-"
         },
         {
-          "id": "ENG_ONBO_93",
+          "id": "ENG_ONBO_TC_93",
           "description": "Student Onboarding - Validate the click on Get Started button on Welcome Page",
           "tags": "",
           "visualTest": "-"
         },
         {
-          "id": "ENG_ONBO_94",
+          "id": "ENG_ONBO_TC_94",
           "description": "Student Onboarding - Validate that content of  'Activate Your Mayerials' Page",
           "tags": "",
           "visualTest": "-"
         },
         {
-          "id": "ENG_ONBO_95",
+          "id": "ENG_ONBO_TC_95",
           "description": "Student Onboarding - Validate that on Logout  button on Welcome Page",
           "tags": "",
           "visualTest": "-"
         },
         {
-          "id": "ENG_ONBO_98",
+          "id": "ENG_ONBO_TC_98",
           "description": "Student Onboarding - Validate the error message appears on entering invalid or wrong access Key on Activate your materials",
           "tags": "",
           "visualTest": "-"
         },
         {
-          "id": "ENG_ONBO_100",
+          "id": "ENG_ONBO_TC_100",
           "description": "Student Onboarding - Validate that error message when no access key is entered on Activate your materials",
           "tags": "",
           "visualTest": "-"
         },
         {
-          "id": "ENG_ONBO_102",
+          "id": "ENG_ONBO_TC_102",
           "description": "Student Onboarding - Validate that error message when expired access key is entered",
           "tags": "",
           "visualTest": "-"
         },
         {
-          "id": "ENG_ONBO_103",
+          "id": "ENG_ONBO_TC_103",
           "description": "Student Onboarding - Validate that error message when already used access key is entered",
           "tags": "",
           "visualTest": "-"
         },
         {
-          "id": "ENG_ONBO_106",
+          "id": "ENG_ONBO_TC_106",
           "description": "Student Onboarding- Validate that on clicking Back to start Button on Activate your materials",
           "tags": "",
           "visualTest": "-"
