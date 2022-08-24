@@ -188,7 +188,7 @@ module.exports = {
 		console.log(res);
 		res = await action.click("[data-tid=breadcrumb-viewbook]");
 		console.log(res)
-		if (await action.isDisplayed("[data-tid=band-moreOptions]")) {
+		if (!await action.isDisplayed("[data-tid*=ookClasses]")) {
 			res = await action.click("[data-tid=band-moreOptions]");
 			console.log(res)
 		}
@@ -336,12 +336,13 @@ module.exports = {
 		console.log(res)
 		res = await action.waitForDisplayed("iframe[id*=iframe], iframe");
 		console.log(res)
-		res = await action.switchToFrame(0);
-		console.log(res)
-		res = await action.moveTo("button[class*=ytp-large-play-button]");
-		console.log(res)
-		res = await action.switchToParentFrame();
-		console.log(res)
+		// res = await action.switchToFrame(0);
+		// console.log(res)
+		await browser.pause(3000);
+		//res = await action.moveTo("button[data-tid=button-share]");
+		//console.log(res)
+		// res = await action.switchToParentFrame();
+		// console.log(res)
 	},
 
 	// Join Class page

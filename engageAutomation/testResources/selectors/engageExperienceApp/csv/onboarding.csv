@@ -1,0 +1,33 @@
+Label,cssSelector,tagName,group,relation,extraInfo,returnValue,teacherAppLangEN,studentAppLangEN
+welcomeTxt,[data-tid='text-welcome'],h2,welcomePage,,,,"""Welcome général d’expressions!""","""Welcome général d’expressions!"""
+welcomeSubtitleTxt,[data-tid='text-welcomeSubtitle'],h6,welcomePage,,,,"""You have successfully created your account.""","""You have successfully created your account."""
+completeStepsTitleTxt,[data-tid='text-completeSteps'],h4,welcomePage,,,,"""Getting started on Engage""","""Getting started on Engage"""
+completeStepsSubtitleTxt,[data-tid='text-completeStepsTitle'],p,welcomePage,,,,"""Complete these simple steps and get instant access to courses and activities.""","""Complete these simple steps and get instant access to courses and activities."""
+joinSchoolTxt,[data-tid='text-joinSchool-1'],p,welcomePage,,,,"""Join your school""",null
+activateMaterialsTxt,"[data-tid='text-activeMaterial-2'], [data-tid='text-activeMaterial-1']",p,welcomePage,,,,"""Activate your materials""","""Activate your materials"""
+accessEngageTxt,"[data-tid='text-accessEngage-3'], [data-tid='text-accessEngage-2']",p,welcomePage,,,,"""Access Engage""","""Access Engage"""
+teacherGetStartedBtn,[data-tid='button-getStarted'],button,welcomePage,,,"waitForDisplayed, verifyBtn","""Get Started""","""Get Started"""
+studentGetStartedBtn,[data-tid='button-getStarted'],button,welcomePage,,,"waitForDisplayed, activateMaterialsBtn","""Get Started""","""Get Started"""
+logoutBtn,[data-tid='button-onboardinglogout'],button,welcomePage,,,login.page,"""Logout""","""Logout"""
+joinYourSchoolTitleTxt,[data-tid='text-joinYourSchoolTitle'],h2,joinYourSchoolPage,,,,"""Join Your School""",null
+joinYourSchoolSubTitleTxt,[data-tid='text-joinYourSchoolSubtitle'],h6,joinYourSchoolPage,,,,"""Enter the school key provided by your school to join as a teacher.""",null
+schoolKeyLbl,label[data-tid='text-schoolKeyLabel'],label,joinYourSchoolPage,,,,"""School Key""",null
+schoolKeyTextbox,#main-focus-area,input,joinYourSchoolPage,,,,,null
+schoolKeySubLbl,[data-tid='text-schoolKeyHelperText'],p,joinYourSchoolPage,,,,"""School key should look like: ABC-DEF-GHI.""",null
+joinSchoolHelperTxt,[data-tid='text-HelperTextTitle'],p,joinYourSchoolPage,,,,"""Please contact your school admin if you don't have the school key.""",null
+verifyBtn,[data-tid='text-verifyKey'],button,joinYourSchoolPage,,,"waitForDisplayed, schoolNameTxt","""Verify Key""",null
+continueBtn,[data-tid='button-continue'],button,joinYourSchoolPage,,,"waitForDisplayed, activateMaterialsBtn","""Continue""",null
+joinSchoolBackBtn,[data-tid='button-onboardingback'],button,joinYourSchoolPage,,,welcomePage,"""Back to start""",null
+schoolNameTxt,[data-tid='text-schoolName'],h6,joinYourSchoolPage,,,,"""Richmond High School""",null
+addressTxt,[data-tid='text-schoolAddress-0'],p,joinYourSchoolPage,,,,"""7 Lsc uday park, Allahabad bank building, Delhi, Delhi, India, 110049""",null
+schoolKeyErrorTxt,#main-focus-area-helper-text,p,joinYourSchoolPage,,,,"[""School Key is required"",""This school key is invalid. Please contact your school admin.""]",null
+activateMaterialsTitleTxt,[data-tid='text-activateyourclassTitle'],h2,activateMaterialsPage,,,,"""Activate your materials""","""Activate your materials"""
+activateMaterialsSubTitleTxt,[data-tid='text-activateyourclassSubtitle'],h6,activateMaterialsPage,,,,"""Enter the access key from your book to get access to digital materials.""","""Enter the access key from your book to get access to digital materials."""
+accessKeyLbl,[data-tid='text-enteraccesskey'],p,activateMaterialsPage,,,,"""Access Key""","""Access Key"""
+accessKeyTextbox,#main-focus-area,input,activateMaterialsPage,,,,,
+accessKeySubLbl,[data-tid='text-accessKeyHelperText'],p,activateMaterialsPage,,,,"""Access key should look like: 7HRA-7UHW-QFER-H4TF.""","""Access key should look like: 7HRA-7UHW-QFER-H4TF."""
+activateMaterialHelperTxt,[data-tid='text-HelperTextTitle'],p,activateMaterialsPage,,,,"""You can find your key inside the textbook you have purchased.""","""You can find your key inside the textbook you have purchased."""
+activateMaterialsBtn,[data-tid='button-activateClass'],button,activateMaterialsPage,,,,"""Activate Materials""","""Activate Materials"""
+activateErrorTxt,#main-focus-area-helper-text,p,activateMaterialsPage,,,,"[""Access key is required"",""This access key is invalid."",""This access key has already been used."",""This access key has expired.""]","[""Access key is required"",""This access key is invalid."",""This access key has already been used."",""This access key has expired.""]"
+teacherActivateMaterialsBackBtn,[data-tid='button-onboardingback'],button,activateMaterialsPage,,,joinYourSchoolPage,"""Back (Enter a different school key)""",null
+studentActivateMaterialsBackBtn,[data-tid='button-onboardingback'],button,activateMaterialsPage,,,welcomePage,null,"""Back to start"""

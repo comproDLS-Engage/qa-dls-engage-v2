@@ -248,7 +248,7 @@
                 "helpJoiningClass": "Help Joining Classes",
                 "titleErrorMsg": "You are already enrolled in this class.",
                 "alreadyExistErrorMessage": "You are already enrolled in this class.",
-                "archiveTagLbl" : "Archived"
+                "archiveTagLbl": "Archived"
             },
             "classDrawerPane": {
                 "classHeading": "Dashboard",
@@ -304,7 +304,7 @@
                 "reviewBox_SubTitle": "When students in your class submit activities from assigments or class textbooks, you'll see them here to review grade.",
                 "assignmentCardActivityText": "submitted an activity",
                 "archivedlbl": "Archived",
-                "archivedMsg":"This class is archived because the end date has passed. The class will be limited to read only mode. You can extend the class end date and activate the class again."
+                "archivedMsg": "This class is archived because the end date has passed. The class will be limited to read only mode. You can extend the class end date and activate the class again."
             },
             "bookViewTOC": {
                 "addToMyBooks": "Add to My Books",
@@ -405,7 +405,7 @@
                 "correct_txt": "Well done",
                 "incorrect_txt": "Oops! Not quite correct."
             },
-            "onboarding": {
+            "onboardingOld": {
                 "welcomePage": {
                     "pageHeading": "Welcome, ",
                     "message": "Let's get started. Select the role that best describes you.",
@@ -1306,6 +1306,86 @@
                     "submitActivityDialogSubtitle": "Your answers will be sent to your teacher to review and grade. Once you submit you won't be able to change your answers.",
                     "submitActivityDialogCancelBtn": "Cancel",
                     "submitActivityDialogConfirmBtn": "Confirm & Submit"
+                }
+            },
+            "onboarding": {
+                "teacher": {
+                    "welcomeTxt": "Welcome général d’expressions!",
+                    "welcomeSubtitleTxt": "You have successfully created your account.",
+                    "completeStepsTitleTxt": "Getting started on Engage",
+                    "completeStepsSubtitleTxt": "Complete these simple steps and get instant access to courses and activities.",
+                    "joinSchoolTxt": "Join your school",
+                    "activateMaterialsTxt": "Activate your materials",
+                    "accessEngageTxt": "Access Engage",
+                    "teacherGetStartedBtn": "Get Started",
+                    "studentGetStartedBtn": "Get Started",
+                    "logoutBtn": "Logout",
+                    "joinYourSchoolTitleTxt": "Join Your School",
+                    "joinYourSchoolSubTitleTxt": "Enter the school key provided by your school to join as a teacher.",
+                    "schoolKeyLbl": "School Key",
+                    "schoolKeySubLbl": "School key should look like: ABC-DEF-GHI.",
+                    "joinSchoolHelperTxt": "Please contact your school admin if you don't have the school key.",
+                    "verifyBtn": "Verify Key",
+                    "continueBtn": "Continue",
+                    "joinSchoolBackBtn": "Back to start",
+                    "schoolNameTxt": "Richmond High School",
+                    "addressTxt": "7 Lsc uday park, Allahabad bank building, Delhi, Delhi, India, 110049",
+                    "schoolKeyErrorTxt": [
+                        "School Key is required",
+                        "This school key is invalid. Please contact your school admin."
+                    ],
+                    "activateMaterialsTitleTxt": "Activate your materials",
+                    "activateMaterialsSubTitleTxt": "Enter the access key from your book to get access to digital materials.",
+                    "accessKeyLbl": "Access Key",
+                    "accessKeySubLbl": "Access key should look like: 7HRA-7UHW-QFER-H4TF.",
+                    "activateMaterialHelperTxt": "You can find your key inside the textbook you have purchased.",
+                    "activateMaterialsBtn": "Activate Materials",
+                    "activateErrorTxt": [
+                        "Access key is required",
+                        "This access key is invalid.",
+                        "This access key has already been used.",
+                        "This access key has expired."
+                    ],
+                    "teacherActivateMaterialsBackBtn": "Back (Enter a different school key)",
+                    "studentActivateMaterialsBackBtn": null
+                },
+                "student": {
+                    "welcomeTxt": "Welcome Onboard Student6!",
+                    "welcomeSubtitleTxt": "You have successfully created your account.",
+                    "completeStepsTitleTxt": "Getting started on Engage",
+                    "completeStepsSubtitleTxt": "Complete this simple step and get instant access to courses and activities.",
+                    "joinSchoolTxt": null,
+                    "activateMaterialsTxt": "Activate your materials",
+                    "accessEngageTxt": "Access Engage",
+                    "teacherGetStartedBtn": "Get Started",
+                    "studentGetStartedBtn": "Get Started",
+                    "logoutBtn": "Logout",
+                    "joinYourSchoolTitleTxt": null,
+                    "joinYourSchoolSubTitleTxt": null,
+                    "schoolKeyLbl": null,
+                    "schoolKeyTextbox": null,
+                    "schoolKeySubLbl": null,
+                    "joinSchoolHelperTxt": null,
+                    "verifyBtn": null,
+                    "continueBtn": null,
+                    "joinSchoolBackBtn": null,
+                    "schoolNameTxt": null,
+                    "addressTxt": null,
+                    "schoolKeyErrorTxt": null,
+                    "activateMaterialsTitleTxt": "Activate your materials",
+                    "activateMaterialsSubTitleTxt": "Enter the access key from your book to get access to digital materials.",
+                    "accessKeyLbl": "Access Key",
+                    "accessKeySubLbl": "Access key should look like: 7HRA-7UHW-QFER-H4TF.",
+                    "activateMaterialHelperTxt": "You can find your key inside the textbook you have purchased.",
+                    "activateMaterialsBtn": "Activate Materials",
+                    "activateErrorTxt": [
+                        "Access key is required",
+                        "This access key is invalid.",
+                        "This access key has already been used.",
+                        "This access key has expired."
+                    ],
+                    "teacherActivateMaterialsBackBtn": null,
+                    "studentActivateMaterialsBackBtn": "Back to start"
                 }
             }
         }

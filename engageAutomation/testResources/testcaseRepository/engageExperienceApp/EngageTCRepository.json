@@ -1653,7 +1653,7 @@
     },
     {
       "modulename": "Onboarding>Onboarding New User",
-      "moduleId": "",
+      "moduledetails": "",
       "testFile": "./test/engageExperienceApp/userOnboarding.test.js",
       "testcase": [
         {
