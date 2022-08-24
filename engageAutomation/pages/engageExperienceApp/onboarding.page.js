@@ -156,6 +156,7 @@ module.exports = {
         res = await action.click(this.verifyBtn);
         if (true == res) {
             await logger.logInto(await stackTrace.get(), " verifyBtn is clicked");
+            await browser.pause(1000);
             res = await action.waitForDisplayed(this.progressBar, undefined, true);
         }
         else {
@@ -198,6 +199,7 @@ module.exports = {
         res = await action.click(this.activateMaterialsBtn);
         if (true == res) {
             await logger.logInto(await stackTrace.get(), " activateMaterialsBtn is clicked");
+            await browser.pause(1000);
             res = await action.waitForDisplayed(this.progressBar, undefined, true);
         }
         else {
