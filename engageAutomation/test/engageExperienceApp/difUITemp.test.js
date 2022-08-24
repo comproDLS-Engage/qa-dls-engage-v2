@@ -336,12 +336,13 @@ module.exports = {
 		console.log(res)
 		res = await action.waitForDisplayed("iframe[id*=iframe], iframe");
 		console.log(res)
-		res = await action.switchToFrame(0);
-		console.log(res)
-		res = await action.moveTo("button[class*=ytp-large-play-button]");
-		console.log(res)
-		res = await action.switchToParentFrame();
-		console.log(res)
+		// res = await action.switchToFrame(0);
+		// console.log(res)
+		await browser.pause(3000);
+		//res = await action.moveTo("button[data-tid=button-share]");
+		//console.log(res)
+		// res = await action.switchToParentFrame();
+		// console.log(res)
 	},
 
 	// Join Class page
