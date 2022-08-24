@@ -1653,68 +1653,158 @@
     },
     {
       "modulename": "Onboarding>Onboarding New User",
-      "moduledetails": "",
-      "testFile": "./test/engageExperienceApp/userOnboarding.test.js",
+      "moduleId": "",
+      "testFile": "./test/engageExperienceApp/onboarding.test.js",
       "testcase": [
         {
-          "id": "ENG_ONBO_TC_18",
-          "description": "Teacher Onboarding - Validate that selecting on 'Enter School Key' option Enter your school key Screen is launched.",
-          "tags": "P1",
-          "visualTest": true
+          "id": "ENG_ONBO_58",
+          "description": "Validate the content of  'Welcome' Page after selecting the teacher role",
+          "tags": "",
+          "visualTest": "-"
         },
         {
-          "id": "ENG_ONBO_TC_24",
-          "description": "Validate the visual verification of the Welcome Screen",
-          "tags": "P2",
-          "visualTest": true
+          "id": "ENG_ONBO_59",
+          "description": "Validate the content of  'Welcome' Page after selecting the Student role",
+          "tags": "",
+          "visualTest": "-"
         },
         {
-          "id": "ENG_ONBO_TC_40",
-          "description": "Teacher Onboarding -Validate that on clicking Continue button on the success screen, user navigates to the Course Dashboard",
-          "tags": "P1",
-          "visualTest": true
+          "id": "ENG_ONBO_60",
+          "description": "Teacher Onboarding - Validate the click on Get Started button on Welcome Page",
+          "tags": "",
+          "visualTest": "-"
         },
         {
-          "id": "ENG_ONBO_TC_75",
-          "description": "Validate that on selecting 'Student' role, user is directed to Class Key Screen",
-          "tags": "P1",
-          "visualTest": true
+          "id": "ENG_ONBO_61",
+          "description": "Teacher Onboarding - Validate the click on Logout  button on Welcome Page",
+          "tags": "",
+          "visualTest": "-"
         },
         {
-          "id": "ENG_ONBO_TC_76",
-          "description": "Validate that clicking on \"Skip for Now\" , for role Student ,user is directed to Success Screen.",
-          "tags": "P1",
-          "visualTest": true
+          "id": "ENG_ONBO_63",
+          "description": "Teacher Onboarding - Validate the content of 'Join Your School' Page",
+          "tags": "",
+          "visualTest": "-"
         },
         {
-          "id": "ENG_ONBO_TC_78",
-          "description": "Validate that clicking on Continue on Class Key user is directed to Success Screen",
-          "tags": "P1",
-          "visualTest": true
+          "id": "ENG_ONBO_64",
+          "description": "Teacher Onboarding - Validate that error message when no school key is entered",
+          "tags": "",
+          "visualTest": "-"
         },
         {
-          "id": "ENG_ONBO_TC_79",
-          "description": "Validate that on selecting 'Teacher' role, user is directed to School Key Screen",
-          "tags": "P1",
-          "visualTest": true
+          "id": "ENG_ONBO_65",
+          "description": "Teacher Onboarding - Validate the error message appears on entering invalid or wrong school Key",
+          "tags": "",
+          "visualTest": "-"
         },
         {
-          "id": "ENG_ONBO_TC_1",
-          "description": "Validate Welcome Screen when new user sign in into application for onboarding",
-          "tags": "P2",
-          "visualTest": true
+          "id": "ENG_ONBO_67",
+          "description": "Teacher Onboarding - Validate the click on Verify button with correct School key on Join Your School  page",
+          "tags": "",
+          "visualTest": "-"
         },
         {
-          "id": "ENG_ONBO_TC_4",
-          "description": "Validate that on selecting 'Student' role, user is directed to Student Options screen_OLD",
-          "tags": "P1",
-          "visualTest": true
+          "id": "ENG_ONBO_68",
+          "description": "Teacher Onboarding - Validate the updated content of 'Join Your School' Page",
+          "tags": "",
+          "visualTest": "-"
         },
         {
-          "id": "ENG_ONBO_TC_11",
-          "description": "Validate that on Clicking Continue on Success Screen the user navigates to Dashboard",
-          "tags": "P1",
-          "visualTest": true
+          "id": "ENG_ONBO_69",
+          "description": "Teacher Onboarding - Validate that click on continue button Join Your School  page",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ONBO_70",
+          "description": "Teacher Onboarding- Validate that on clicking 'Back to start' Button on Join Your School  page",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ONBO_74",
+          "description": "Teacher Onboarding - Validate the content of 'Activate your materials' Page",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ONBO_75",
+          "description": "Teacher Onboarding - Validate the error message appears on entering invalid or wrong access Key",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ONBO_76",
+          "description": "Teacher Onboarding - Validate the error message appears on entering used access Key",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ONBO_77",
+          "description": "Teacher Onboarding - Validate the error message appears on entering expired access Key",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ONBO_78",
+          "description": "Teacher Onboarding - Validate that error message when no access key is entered on Access Key page",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ONBO_80",
+          "description": "Teacher Onboarding- Validate that on clicking Back Button on Activate your materials Page",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ONBO_93",
+          "description": "Student Onboarding - Validate the click on Get Started button on Welcome Page",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ONBO_94",
+          "description": "Student Onboarding - Validate that content of  'Activate Your Mayerials' Page",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ONBO_95",
+          "description": "Student Onboarding - Validate that on Logout  button on Welcome Page",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ONBO_98",
+          "description": "Student Onboarding - Validate the error message appears on entering invalid or wrong access Key on Activate your materials",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ONBO_100",
+          "description": "Student Onboarding - Validate that error message when no access key is entered on Activate your materials",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ONBO_102",
+          "description": "Student Onboarding - Validate that error message when expired access key is entered",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ONBO_103",
+          "description": "Student Onboarding - Validate that error message when already used access key is entered",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ONBO_106",
+          "description": "Student Onboarding- Validate that on clicking Back to start Button on Activate your materials",
+          "tags": "",
+          "visualTest": "-"
         }
       ]
     },
