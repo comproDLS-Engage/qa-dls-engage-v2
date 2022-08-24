@@ -117,6 +117,7 @@
                 "id": "ENG_DIF_TC_15",
                 "description": "Teacher view class page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.01,
                 "testData": []
             },
             {
