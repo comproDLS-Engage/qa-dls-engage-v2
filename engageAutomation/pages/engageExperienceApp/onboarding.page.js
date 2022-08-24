@@ -36,6 +36,7 @@ module.exports = {
     activateErrorTxt: selectorFile.css.ComproEngage.onboarding.activateErrorTxt,
     teacherActivateMaterialsBackBtn: selectorFile.css.ComproEngage.onboarding.teacherActivateMaterialsBackBtn,
     studentActivateMaterialsBackBtn: selectorFile.css.ComproEngage.onboarding.studentActivateMaterialsBackBtn,
+    progressBar: selectorFile.css.ComproEngage.onboarding.progressBar,
 
 
     isInitialized: async function () {
@@ -155,8 +156,7 @@ module.exports = {
         res = await action.click(this.verifyBtn);
         if (true == res) {
             await logger.logInto(await stackTrace.get(), " verifyBtn is clicked");
-            await browser.pause(2000);
-            res = ((await action.getElementCount(this.schoolKeyErrorTxt)) > 0) ? await action.waitForDisplayed(this.schoolKeyErrorTxt) : await action.waitForDisplayed(this.schoolNameTxt)
+            res = await action.waitForDisplayed(this.progressBar, undefined, true);
         }
         else {
             await logger.logInto(await stackTrace.get(), res + "verifyBtn is NOT clicked", 'error');
@@ -198,7 +198,7 @@ module.exports = {
         res = await action.click(this.activateMaterialsBtn);
         if (true == res) {
             await logger.logInto(await stackTrace.get(), " activateMaterialsBtn is clicked");
-            await browser.pause(3000);
+            res = await action.waitForDisplayed(this.progressBar, undefined, true);
         }
         else {
             await logger.logInto(await stackTrace.get(), res + "activateMaterialsBtn is NOT clicked", 'error');

@@ -29,7 +29,7 @@ module.exports = {
     },
 
     //Validate that the user is able to change the language on the login page
-    ENG_IDEN_TC_4:async function (testdata) {
+    ENG_IDEN_TC_4: async function (testdata) {
         sts = await landingPage.select_Language_from_dropdown(testdata)
         await assertion.assertEqual(sts, true, "Language not selected");
         sts = await loginPage.login_PageData();
@@ -37,7 +37,7 @@ module.exports = {
     },
 
     //Validate that the login button is disabled if email is left blank
-    ENG_IDEN_TC_5:async function () {
+    ENG_IDEN_TC_5: async function () {
         sts = await loginPage.set_UserName("")
         await assertion.assertEqual(sts, true, "Email Not Entered");
         sts = await loginPage.login_PageData();
@@ -46,7 +46,7 @@ module.exports = {
     },
 
     //Validate that the login button is disabled if password is left blank
-    ENG_IDEN_TC_6:async function () {
+    ENG_IDEN_TC_6: async function () {
         sts = await loginPage.set_Password("")
         await assertion.assertEqual(sts, true, "Password Not Entered");
         sts = await loginPage.login_PageData();
@@ -55,7 +55,7 @@ module.exports = {
     },
 
     //Validate that the user is able to login successfully with an existing account
-    ENG_IDEN_TC_7:async function (testdata) {
+    ENG_IDEN_TC_7: async function (testdata) {
         sts = await loginPage.set_UserName(testdata.email)
         await assertion.assertEqual(sts, true, "Username Not Entered");
         sts = await loginPage.set_Password(testdata.password)
@@ -67,8 +67,10 @@ module.exports = {
         //there should be some other assertion as well to validate successfull login - akhil
     },
 
+    //
+
     //Validate that the user is able to mask/unmask the password by clicking eye icon
-    ENG_IDEN_TC_9:async function (testdata) {
+    ENG_IDEN_TC_9: async function (testdata) {
         sts = await loginPage.set_Password(testdata.password)
         await assertion.assertEqual(sts, true, "Password Not Entered");
         sts = await loginPage.toggle_Password_Eye();
@@ -78,7 +80,7 @@ module.exports = {
     },
 
     //Validate login with valid Email ID (Entered in UPPERCASE) & password
-    ENG_IDEN_TC_10:async function (testdata) {
+    ENG_IDEN_TC_10: async function (testdata) {
         sts = await loginPage.set_UserName(testdata.email.toUpperCase())
         await assertion.assertEqual(sts, true, "Username Not Entered");
         sts = await loginPage.set_Password(testdata.password)
@@ -91,7 +93,7 @@ module.exports = {
     },
 
     //Validate user is not able to login with invalid Email ID/format
-    ENG_IDEN_TC_11:async function (testdata) {
+    ENG_IDEN_TC_11: async function (testdata) {
         sts = await loginPage.set_UserName(testdata[0].email)
         await assertion.assertEqual(sts, true, "Username Not Entered");
         sts = await loginPage.set_Password(testdata[0].password)
@@ -103,7 +105,7 @@ module.exports = {
     },
 
     //Validate message If user enter non-existing/unregistered Email ID while login
-    ENG_IDEN_TC_12:async function (testdata) {
+    ENG_IDEN_TC_12: async function (testdata) {
         sts = await loginPage.set_UserName(testdata[0].email)
         await assertion.assertEqual(sts, true, "Username Not Entered");
         sts = await loginPage.set_Password(testdata[0].password)
@@ -122,12 +124,12 @@ module.exports = {
         await assertion.assertEqual(sts, true, "Password Not Entered");
         sts = await loginPage.click_Login_Button()
         await assertion.assertEqual(sts, true, "Login Button Not Clicked");
-        sts =await require('./common.test.js').get_Snackbar_Message_Text();
+        sts = await require('./common.test.js').get_Snackbar_Message_Text();
         await assertion.assertEqual(sts, testdata[1].notRegisterUser_alert, "Invalid Email/Password Alert Mismatch")
     },
 
     //Validate that user is able to log on entering leading and trailing spaces in the email id
-    ENG_IDEN_TC_14:async function (testdata) {
+    ENG_IDEN_TC_14: async function (testdata) {
         sts = await loginPage.set_UserName("  " + testdata.email + "  ")
         await assertion.assertEqual(sts, true, "Username Not Entered");
         sts = await loginPage.set_Password(testdata.password)
@@ -140,7 +142,7 @@ module.exports = {
     },
 
     //Validate that the login button is clicked on pressing "ENTER" key on the login page
-    ENG_IDEN_TC_15:async function (testdata) {
+    ENG_IDEN_TC_15: async function (testdata) {
         sts = await loginPage.set_UserName(testdata.email)
         await assertion.assertEqual(sts, true, "Username Not Entered");
         sts = await loginPage.set_Password(testdata.password)
@@ -151,10 +153,24 @@ module.exports = {
     },
 
     //Validate that Reset Password page is launched on clicking 'Forgot Password' button
-    ENG_IDEN_TC_16:async function () {
+    ENG_IDEN_TC_16: async function () {
         sts = await loginPage.click_ForgotPassword_Button()
         await assertion.assertEqual(sts.pageStatus, true, "Reset Password Page UserName Textbox Not Displayed")
         await assertion.assertEqual(sts.brandLogo_img_exists, true, "Reset Password Page Brand Logo Not Displayed")
+    },
+
+
+    //Validate Onboarding Welcome page appears for a user who is signed up but not onboarded
+    ENG_IDEN_TC_23: async function (testdata) {
+        sts = await loginPage.set_UserName(testdata.email)
+        await assertion.assertEqual(sts, true, "Username Not Entered");
+        sts = await loginPage.set_Password(testdata.password)
+        await assertion.assertEqual(sts, true, "Password Not Entered");
+        sts = await loginPage.click_Login_Button()
+        await assertion.assertEqual(sts, true, "Login Button Not Clicked");
+
+        sts = await require('../../pages/engageExperienceApp/onboarding.page.js').isInitialized();
+        await assertion.assertEqual(sts.pageStatus, true, "page status mismatch");
     }
 
 

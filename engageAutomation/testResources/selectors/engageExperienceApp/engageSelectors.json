@@ -1267,7 +1267,8 @@
                 "activateMaterialsBtn": "[data-tid='button-activateClass']",
                 "activateErrorTxt": "#main-focus-area-helper-text",
                 "teacherActivateMaterialsBackBtn": "[data-tid='button-onboardingback']",
-                "studentActivateMaterialsBackBtn": "[data-tid='button-onboardingback']"
+                "studentActivateMaterialsBackBtn": "[data-tid='button-onboardingback']",
+                "progressBar":"[style*='opacity: 1'] [role=progressbar]"
             }
         }
     }

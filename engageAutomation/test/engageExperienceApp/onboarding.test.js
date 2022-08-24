@@ -7,19 +7,7 @@ module.exports = {
 
     //Teacher Onboarding - Validate the content of  "Welcome" Page
     ENG_ONBO_58: async function (testdata) {
-
-        sts = await loginScreen.set_UserName(testdata[0].email)
-        await assertion.assertEqual(sts, true, "Username Not Entered");
-        sts = await loginScreen.set_Password(testdata[0].password)
-        await assertion.assertEqual(sts, true, "Password Not Entered");
-        sts = await loginScreen.click_Login_Button()
-        await assertion.assertEqual(sts, true, "Login Button Not Clicked");
-
-        sts = await onboardingPage.isInitialized();
-        await assertion.assertEqual(sts.pageStatus, true, "page status mismatch");
-
         sts = await onboardingPage.getData_welcomePage();
-
         await assertion.assertEqual(sts.welcomeTxt, testdata[1].welcomeTxt, "Welcome Text mismatch");
         await assertion.assertEqual(sts.welcomeSubtitleTxt, testdata[1].welcomeSubtitleTxt, "welcomeSubtitleTxt mismatch");
         await assertion.assertEqual(sts.completeStepsTitleTxt, testdata[1].completeStepsTitleTxt, "completeStepsTitleTxt mismatch");
@@ -71,7 +59,9 @@ module.exports = {
     //Teacher Onboarding - Validate the error message appears on entering invalid or wrong school Key
     ENG_ONBO_65: async function (testdata) {
         sts = await onboardingPage.set_schoolKeyTextbox(testdata[0].invalidKey);
+        await assertion.assertEqual(sts, true, "value not entered in Textbox");
         sts = await onboardingPage.click_verifyBtn();
+        await assertion.assertEqual(sts, true, "Page status Mismatch");
         sts = await onboardingPage.getData_joinYourSchoolPage();
         await assertion.assertEqual(sts.schoolKeyErrorTxt, testdata[1].schoolKeyErrorTxt[1], "schoolKeyErrorTxt mismatch")
     },
@@ -79,6 +69,7 @@ module.exports = {
     //Teacher Onboarding - Validate the click on Verify button with correct School key on Join Your School  page
     ENG_ONBO_67: async function (testdata) {
         sts = await onboardingPage.set_schoolKeyTextbox(testdata.validKey);
+        await assertion.assertEqual(sts, true, "value not entered in Textbox");
         sts = await onboardingPage.click_verifyBtn();
         await assertion.assertEqual(sts, true, "Page status Mismatch");
     },
@@ -136,30 +127,37 @@ module.exports = {
     //Teacher Onboarding - Validate that error message when no access key is entered on Access Key page
     ENG_ONBO_78: async function (testdata) {
         sts = await onboardingPage.click_activateMaterialsBtn();
+        await assertion.assertEqual(sts, true, "Page status Mismatch");
         sts = await onboardingPage.getData_activateMaterialsPage();
         await assertion.assertEqual(sts.activateErrorTxt, testdata.activateErrorTxt[0], "activateErrorTxt mismatch");
     },
 
     //Teacher Onboarding - Validate the error message appears on entering invalid or wrong access Key
     ENG_ONBO_75: async function (testdata) {
-        sts = await onboardingPage.set_accessKeyTextbox(testdata[0].invalidKey)
+        sts = await onboardingPage.set_accessKeyTextbox(testdata[0].invalidKey);
+        await assertion.assertEqual(sts, true, "value not entered in Textbox");
         sts = await onboardingPage.click_activateMaterialsBtn();
+        await assertion.assertEqual(sts, true, "Page status Mismatch");
         sts = await onboardingPage.getData_activateMaterialsPage();
         await assertion.assertEqual(sts.activateErrorTxt, testdata[1].activateErrorTxt[1], "activateErrorTxt mismatch");
     },
 
     //Teacher Onboarding - Validate the error message appears on entering used access Key
     ENG_ONBO_76: async function (testdata) {
-        sts = await onboardingPage.set_accessKeyTextbox(testdata[0].usedKey)
+        sts = await onboardingPage.set_accessKeyTextbox(testdata[0].usedKey);
+        await assertion.assertEqual(sts, true, "value not entered in Textbox");
         sts = await onboardingPage.click_activateMaterialsBtn();
+        await assertion.assertEqual(sts, true, "Page status Mismatch");
         sts = await onboardingPage.getData_activateMaterialsPage();
         await assertion.assertEqual(sts.activateErrorTxt, testdata[1].activateErrorTxt[2], "activateErrorTxt mismatch");
     },
 
     //Teacher Onboarding - Validate the error message appears on entering expired access Key
     ENG_ONBO_77: async function (testdata) {
-        sts = await onboardingPage.set_accessKeyTextbox(testdata[0].expiredKey)
+        sts = await onboardingPage.set_accessKeyTextbox(testdata[0].expiredKey);
+        await assertion.assertEqual(sts, true, "value not entered in Textbox");
         sts = await onboardingPage.click_activateMaterialsBtn();
+        await assertion.assertEqual(sts, true, "Page status Mismatch");
         sts = await onboardingPage.getData_activateMaterialsPage();
         await assertion.assertEqual(sts.activateErrorTxt, testdata[1].activateErrorTxt[3], "activateErrorTxt mismatch");
     },
@@ -183,16 +181,6 @@ module.exports = {
 
     //Validate the content of  "Welcome" Page after selecting the Student role
     ENG_ONBO_59: async function (testdata) {
-        sts = await loginScreen.set_UserName(testdata[0].email)
-        await assertion.assertEqual(sts, true, "Username Not Entered");
-        sts = await loginScreen.set_Password(testdata[0].password)
-        await assertion.assertEqual(sts, true, "Password Not Entered");
-        sts = await loginScreen.click_Login_Button()
-        await assertion.assertEqual(sts, true, "Login Button Not Clicked");
-
-        sts = await onboardingPage.isInitialized();
-        await assertion.assertEqual(sts.pageStatus, true, "page status mismatch");
-
         sts = await onboardingPage.getData_welcomePage();
         await assertion.assertEqual(sts.welcomeTxt, testdata[1].welcomeTxt, "Welcome Text mismatch");
         await assertion.assertEqual(sts.welcomeSubtitleTxt, testdata[1].welcomeSubtitleTxt, "welcomeSubtitleTxt mismatch");
@@ -233,30 +221,37 @@ module.exports = {
     //Student Onboarding - Validate that error message when no access key is entered on Activate your materials
     ENG_ONBO_100: async function (testdata) {
         sts = await onboardingPage.click_activateMaterialsBtn();
+        await assertion.assertEqual(sts, true, "Page status Mismatch");
         sts = await onboardingPage.getData_activateMaterialsPage();
         await assertion.assertEqual(sts.activateErrorTxt, testdata.activateErrorTxt[0], "activateErrorTxt mismatch");
     },
 
     //Student Onboarding - Validate the error message appears on entering invalid or wrong access Key on Activate your materials
     ENG_ONBO_98: async function (testdata) {
-        sts = await onboardingPage.set_accessKeyTextbox(testdata[0].invalidKey)
+        sts = await onboardingPage.set_accessKeyTextbox(testdata[0].invalidKey);
+        await assertion.assertEqual(sts, true, "value not entered in Textbox");
         sts = await onboardingPage.click_activateMaterialsBtn();
+        await assertion.assertEqual(sts, true, "Page status Mismatch");
         sts = await onboardingPage.getData_activateMaterialsPage();
         await assertion.assertEqual(sts.activateErrorTxt, testdata[1].activateErrorTxt[1], "activateErrorTxt mismatch");
     },
 
     //Student Onboarding - Validate that error message when already used access key is entered
     ENG_ONBO_103: async function (testdata) {
-        sts = await onboardingPage.set_accessKeyTextbox(testdata[0].usedKey)
+        sts = await onboardingPage.set_accessKeyTextbox(testdata[0].usedKey);
+        await assertion.assertEqual(sts, true, "value not entered in Textbox");
         sts = await onboardingPage.click_activateMaterialsBtn();
+        await assertion.assertEqual(sts, true, "Page status Mismatch");
         sts = await onboardingPage.getData_activateMaterialsPage();
         await assertion.assertEqual(sts.activateErrorTxt, testdata[1].activateErrorTxt[2], "activateErrorTxt mismatch");
     },
 
     //Student Onboarding - Validate that error message when expired access key is entered
     ENG_ONBO_102: async function (testdata) {
-        sts = await onboardingPage.set_accessKeyTextbox(testdata[0].expiredKey)
+        sts = await onboardingPage.set_accessKeyTextbox(testdata[0].expiredKey);
+        await assertion.assertEqual(sts, true, "value not entered in Textbox");
         sts = await onboardingPage.click_activateMaterialsBtn();
+        await assertion.assertEqual(sts, true, "Page status Mismatch");
         sts = await onboardingPage.getData_activateMaterialsPage();
         await assertion.assertEqual(sts.activateErrorTxt, testdata[1].activateErrorTxt[3], "activateErrorTxt mismatch");
     },

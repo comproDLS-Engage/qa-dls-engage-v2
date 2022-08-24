@@ -31,6 +31,17 @@
       "BeforeEach": [],
       "Test": [
          {
+            "id": "ENG_IDEN_TC_23",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/login.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+                  "jsonPath": "engage.login.user.onboardingTeacher"
+               }
+            ]
+         },
+         {
             "id": "ENG_ONBO_58",
             "description": "",
             "testFile": "./test/engageExperienceApp/onboarding.test.js",
@@ -254,6 +265,17 @@
       ],
       "BeforeEach": [],
       "Test": [
+         {
+            "id": "ENG_IDEN_TC_23",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/login.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+                  "jsonPath": "engage.login.user.onboardingStudent"
+               }
+            ]
+         },
          {
             "id": "ENG_ONBO_59",
             "description": "",

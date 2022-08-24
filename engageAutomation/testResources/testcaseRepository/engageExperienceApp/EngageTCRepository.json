@@ -2102,6 +2102,12 @@
           "description": "Validate that the user is able to change the language on the login page",
           "tags": "P1",
           "visualTest": true
+        },
+        {
+          "id": "ENG_IDEN_TC_23",
+          "description": "Validate Onboarding Welcome page appears for a user who is signed up but not onboarded",
+          "tags": "P1",
+          "visualTest": true
         }
       ]
     },
