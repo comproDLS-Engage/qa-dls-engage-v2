@@ -97,6 +97,8 @@ module.exports = {
         //console.log(" Mismatch Percentage for " + execJsonData[suiteIndex].Test[testIndex].id + " = " + result[0].misMatchPercentage);
         var result = await browser.checkDocument({ exclude: excludeElements, hide: hideElements, misMatchTolerance: testObj.visualTolerance, fuzzLevel: testObj.visualTolerance });
 
+        await this.disableFullPageScrolling();
+
         await browser.call(() =>
             mergeImg.combineImages(
                 [path.join(rootDir, labelsDir, '/baselineLbl.png'),
@@ -183,8 +185,17 @@ module.exports = {
     enableFullPageScrolling: async function () {
         await browser.execute(() => {
             var elem = document.getElementById("scroolbarDiv");
-            elem.setAttribute("style", "overflow-y: visible !important");
-            //console.log(elem.getAttribute("style"));
+            elem.classList.add("overflow-y-visible");
+            //console.log(elem.getAttribute("class"));
+        });
+    },
+
+    //change scroolbarDiv property
+    disableFullPageScrolling: async function () {
+        await browser.execute(() => {
+            var elem = document.getElementById("scroolbarDiv");
+            elem.classList.remove("overflow-y-visible");
+            //console.log(elem.getAttribute("class"));
         });
     }
 }

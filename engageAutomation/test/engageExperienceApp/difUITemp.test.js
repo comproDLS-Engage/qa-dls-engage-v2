@@ -332,9 +332,7 @@ module.exports = {
 	ENG_DIF_TC_25: async function () {
 		res = await action.click("[data-tid*=button-next]");
 		console.log(res)
-		res = await action.waitForDisplayed("[id=page],[id=container-non-lo");
-		console.log(res)
-		res = await action.waitForDisplayed("iframe[id*=iframe], iframe");
+		res = await action.waitForDisplayed("iframe[id*=iframe],[id=page],[id=container-non-lo");
 		console.log(res)
 		// res = await action.switchToFrame(0);
 		// console.log(res)
