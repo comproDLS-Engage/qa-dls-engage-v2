@@ -177,7 +177,6 @@ module.exports = {
     //On Login page, click Sign up button
     ENG_IDEN_TC_24: async function () {
         sts = await loginPage.click_SignUP_Button();
-        console.log(sts);
         await assertion.assertEqual(sts.pageStatus, true, "page status mismatch");
     }
 

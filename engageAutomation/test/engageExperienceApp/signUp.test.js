@@ -1,6 +1,4 @@
 "use strict";
-const { actionCardBtns } = require('../../pages/engageExperienceApp/dashboard.page.js');
-const { getData_policyPopUpPage } = require('../../pages/engageExperienceApp/signUp.page.js');
 const signUpPage = require('../../pages/engageExperienceApp/signUp.page.js');
 var sts;
 
@@ -8,7 +6,6 @@ module.exports = {
     //Validate the content of signup page, where user enter the email details
     ENG_SNUP_TC_1: async function (testdata) {
         sts = await signUpPage.getData_createAccountPage();
-        console.log(sts);
         await assertion.assertEqual(sts.createAccountTitleTxt, testdata.createAccountTitleTxt, "createAccountTitleTxt mismatch");
         await assertion.assertEqual(sts.createAccountSubTitleTxt, testdata.createAccountSubTitleTxt, "createAccountSubTitleTxt mismatch");
         await assertion.assertEqual(sts.emailLbl, testdata.emailLbl, "emailLbl mismatch");
@@ -27,7 +24,6 @@ module.exports = {
         sts = await signUpPage.click_signUpBtn();
         await assertion.assertEqual(sts, true, "page status mismatch");
         sts = await signUpPage.getData_createAccountPage();
-        console.log(sts);
         await assertion.assert(sts.emailErrorTxt, testdata.emailErrorTxt, "emailErrorTxt mismatch");
     },
 
@@ -38,7 +34,6 @@ module.exports = {
         sts = await signUpPage.click_signUpBtn();
         await assertion.assertEqual(sts, true, "page status mismatch");
         sts = await signUpPage.getData_createAccountPage();
-        console.log(sts);
         await assertion.assert(sts.emailErrorTxt, testdata.emailErrorTxt, "emailErrorTxt mismatch");
     },
 
@@ -47,30 +42,24 @@ module.exports = {
         sts = await signUpPage.set_emailTextbox(testdata[0].email);
         await assertion.assertEqual(sts, true, "email is not entered in textbox");
         sts = await signUpPage.click_signUpBtn();
-        console.log(sts);
         await assertion.assertEqual(sts, true, "page status mismatch");
         sts = await require('../../test/engageExperienceApp/common.test.js').get_Snackbar_Message_Text();
-        console.log(sts);
         await assertion.assert(sts, testdata[1].userExistSnackBar, "Snackbar message mismatch: " + sts);
     },
 
     //Validate clicking on "Signup with Email" button with valid Email address
     ENG_SNUP_TC_5: async function (testdata) {
         sts = await signUpPage.set_emailTextbox(testdata.email);
-        console.log(sts);
         await assertion.assertEqual(sts, true, "email is not entered in textbox");
         sts = await signUpPage.click_signUpBtn();
-        console.log(sts);
         await assertion.assertEqual(sts, true, "page status mismatch");
     },
 
     //Validate clicking on "Google" button for signup
     ENG_SNUP_TC_6: async function (testdata) {
         sts = await signUpPage.click_googleBtn();
-        console.log(sts);
         await assertion.assertEqual(sts, true, "page status mismatch");
         sts = await signUpPage.getData_googlePage();
-        console.log(sts);
         await assertion.assertEqual(sts.googlePageHeadingTxt, testdata.googlePageHeadingTxt, "googlePageHeadingTxt mimatch");
         await assertion.assertEqual(sts.googlePageSubHeadingTxt, testdata.googlePageSubHeadingTxt, "googlePageSubHeadingTxt mismatch");
 
@@ -79,10 +68,8 @@ module.exports = {
     //Validate clicking on "facebook" button for signup
     ENG_SNUP_TC_7: async function (testdata) {
         sts = await signUpPage.click_facebookBtn();
-        console.log(sts);
         await assertion.assertEqual(sts, true, "page status mismatch");
         sts = await signUpPage.getData_facebookPage();
-        console.log(sts);
         await assertion.assertEqual(sts.facebookPageHeadingTxt, testdata.facebookPageHeadingTxt, "facebookPageHeadingTxt mismatch");
     },
 
@@ -95,7 +82,6 @@ module.exports = {
     //Validate the content of Role Selection page
     ENG_SNUP_TC_54: async function (testdata) {
         sts = await signUpPage.getData_roleSelectionPage();
-        console.log(sts);
         await assertion.assertEqual(sts.roleSelectionTitleTxt, testdata.roleSelectionTitleTxt, "roleSelectionTitleTxt mismatch");
         await assertion.assertEqual(sts.selectRoleTxt, testdata.selectRoleTxt, "selectRoleTxt mismatch");
         await assertion.assertEqual(sts.studentRoleBtn, testdata.studentRoleBtn, "studentRoleBtn text mismatch");
@@ -107,52 +93,44 @@ module.exports = {
     //Validate the  selecting "I'm teacher" on Role Selection Page
     ENG_SNUP_TC_10: async function () {
         sts = await signUpPage.click_teacherRoleBtn();
-        console.log(sts);
         await assertion.assertEqual(sts, true, "teacher role button not clicked");
     },
 
     //Validate the selecting "I'm Student" on Role Selection Page
     ENG_SNUP_TC_11: async function () {
         sts = await signUpPage.click_studentRoleBtn();
-        console.log(sts);
         await assertion.assertEqual(sts, true, "student role button not clicked");
     },
 
     //Validate the click of continue button after selecting teacher on Role Selection Page
     ENG_SNUP_TC_12: async function () {
         sts = await signUpPage.click_continueBtn();
-        console.log(sts);
         await assertion.assertEqual(sts, true, "continue button not clicked");
     },
 
     //Validate the click of continue button after selecting student on Role Selection Page
     ENG_SNUP_TC_13: async function () {
         sts = await signUpPage.click_continueBtn();
-        console.log(sts);
         await assertion.assertEqual(sts, true, "continue button not clicked");
     },
 
     //Validate the error message without selecting any teacher/student
     ENG_SNUP_TC_14: async function (testdata) {
         sts = await signUpPage.click_continueBtn();
-        console.log(sts);
         await assertion.assertEqual(sts, true, "continue button not clicked");
         sts = await signUpPage.getData_roleSelectionPage();
-        console.log(sts);
         await assertion.assertEqual(sts.roleSelectionErrorTxt, testdata.roleSelectionErrorTxt, "roleSelectionErrorTxt mismatch")
     },
 
     //Validate the Click on "Back to Sign in" on Role Selection Page
     ENG_SNUP_TC_16: async function () {
         sts = await signUpPage.click_backToSignInBtn();
-        console.log(sts);
         await assertion.assertEqual(sts, true, "Back button not clicked");
     },
 
     //Validate the application content of "Account Details" page
     ENG_SNUP_TC_17: async function (testdata) {
         sts = await signUpPage.getData_accountDetailsPage();
-        console.log(sts);
         await assertion.assertEqual(sts.accountDetailsTitleTxt, testdata.accountDetailsTitleTxt, "accountDetailsTitleTxt mismatch");
         await assertion.assertEqual(sts.passwordHelperTxt, testdata.passwordHelperTxt, "passwordHelperTxt mismatch");
         await assertion.assertEqual(sts.passwordLbl, testdata.passwordLbl, "passwordLbl mismatch");
@@ -170,17 +148,14 @@ module.exports = {
     //Validate the email id on "Account Details" page
     ENG_SNUP_TC_19: async function (testdata) {
         sts = await signUpPage.getData_accountDetailsPage();
-        console.log(sts);
         await assertion.assertEqual(sts.emailTxt, testdata.email, "emailTxt mismatch")
     },
 
     //Validate the error message of each textbox on Account details page when each textbox is blank
     ENG_SNUP_TC_24: async function (testdata) {
         sts = await signUpPage.click_createAccountBtn();
-        console.log(sts);
         await assertion.assertEqual(sts, true, "create button not clicked");
         sts = await signUpPage.getData_accountDetailsPage();
-        console.log(sts);
         await assertion.assertEqual(sts.passwordErrorTxt, testdata.passwordErrorTxt, "passwordErrorTxt mismatch");
         await assertion.assertEqual(sts.confirmPasswordErrorTxt, testdata.confirmPasswordErrorTxt, "confirmPasswordErrorTxt mismatch");
         await assertion.assertEqual(sts.firstNameErrorTxt, testdata.firstNameErrorTxt, "firstNameErrorTxt mismatch");
@@ -199,7 +174,6 @@ module.exports = {
         sts = await signUpPage.click_createAccountBtn();
         await assertion.assertEqual(sts, true, "create Account button not clicked");
         sts = await signUpPage.getData_accountDetailsPage();
-        console.log(sts);
         await assertion.assertEqual(sts.passwordErrorTxt, testdata[1].passwordErrorTxt, "passwordErrorTxt mismatch");
         await assertion.assertEqual(sts.confirmPasswordErrorTxt, null, "confirmPasswordErrorTxt mismatch");
 
@@ -214,7 +188,6 @@ module.exports = {
         sts = await signUpPage.click_createAccountBtn();
         await assertion.assertEqual(sts, true, "create Account button not clicked");
         sts = await signUpPage.getData_accountDetailsPage();
-        console.log(sts);
         await assertion.assertEqual(sts.passwordErrorTxt, testdata[1].passwordErrorTxt, "passwordErrorTxt mismatch");
         await assertion.assertEqual(sts.confirmPasswordErrorTxt, null, "confirmPasswordErrorTxt mismatch");
 
@@ -230,7 +203,6 @@ module.exports = {
         sts = await signUpPage.click_createAccountBtn();
         await assertion.assertEqual(sts, true, "create Account button not clicked");
         sts = await signUpPage.getData_accountDetailsPage();
-        console.log(sts);
         await assertion.assertEqual(sts.passwordErrorTxt, testdata[1].passwordErrorTxt, "passwordErrorTxt mismatch");
         await assertion.assertEqual(sts.confirmPasswordErrorTxt, null, "confirmPasswordErrorTxt mismatch");
     },
@@ -244,7 +216,6 @@ module.exports = {
         sts = await signUpPage.click_createAccountBtn();
         await assertion.assertEqual(sts, true, "create Account button not clicked");
         sts = await signUpPage.getData_accountDetailsPage();
-        console.log(sts);
         await assertion.assertEqual(sts.passwordErrorTxt, testdata[1].passwordErrorTxt, "passwordErrorTxt mismatch");
         await assertion.assertEqual(sts.confirmPasswordErrorTxt, null, "confirmPasswordErrorTxt mismatch");
     },
@@ -258,7 +229,6 @@ module.exports = {
         sts = await signUpPage.click_createAccountBtn();
         await assertion.assertEqual(sts, true, "create Account button not clicked");
         sts = await signUpPage.getData_accountDetailsPage();
-        console.log(sts);
         await assertion.assertEqual(sts.passwordErrorTxt, null, "passwordErrorTxt mismatch");
         await assertion.assertEqual(sts.confirmPasswordErrorTxt, testdata[2].confirmPasswordErrorTxt, "passwordErrorTxt mismatch");
 
@@ -269,14 +239,12 @@ module.exports = {
         sts = await signUpPage.set_passwordTextbox(testdata.password);
         await assertion.assertEqual(sts, true, "data not entered in textbox");
         sts = await signUpPage.click_passwordToggleBtn();
-        console.log(sts);
         await assertion.assertEqual(sts, 'text', "password type mismatch");
     },
 
     //Validate the click on eye button of Confirm password before entering the password
     ENG_SNUP_TC_32: async function (testdata) {
         sts = await signUpPage.click_confirmPasswordToggleBtn();
-        console.log(sts);
         await assertion.assertEqual(sts, 'text', "password type mismatch");
         sts = await signUpPage.set_confirmPasswordTextbox(testdata.password);
         await assertion.assertEqual(sts, true, "data not entered in textbox");
@@ -285,13 +253,10 @@ module.exports = {
     //Validate the country is selected from dropdown
     ENG_SNUP_TC_37: async function (testdata) {
         sts = await signUpPage.set_countryTextbox(testdata.countryName);
-        console.log(sts);
         await assertion.assertEqual(sts, true, "data not entered in textbox");
         sts = await signUpPage.click_countryName(testdata.countryName);
-        console.log(sts);
         await assertion.assertEqual(sts, true, "country not clicked");
         sts = await signUpPage.getData_accountDetailsPage();
-        console.log(sts);
         await assertion.assertEqual(sts.countryTextbox, testdata.countryName, "countryName mismatch");
 
     },
@@ -299,45 +264,38 @@ module.exports = {
     //Validate the click on "back Role Selection" on Account Details Page
     ENG_SNUP_TC_39: async function () {
         sts = await signUpPage.click_backToRoleSelectionBtn();
-        console.log(sts);
         await assertion.assertEqual(sts, true, "Back button not clicked");
     },
 
     //Validate clicking on Privacy Policy link launch the pop up with Privacy Policy tab selected
     ENG_SNUP_TC_55: async function () {
         sts = await signUpPage.click_privacyPoliceLink();
-        console.log(sts);
         await assertion.assertEqual(sts, 'true', "privacy tab not selected");
     },
 
     //Validate clicking on Terms of use link launch the pop up with Privacy Policy tab selected
     ENG_SNUP_TC_56: async function () {
         sts = await signUpPage.click_termsOfUseLink();
-        console.log(sts);
         await assertion.assertEqual(sts, 'true', "terms of use tab not selected");
     },
 
     //Validate clicking on I Agree button on policy page select the policy checkbox on Account Details page
     ENG_SNUP_TC_57: async function () {
         sts = await signUpPage.click_policyAgreeBtn();
-        console.log(sts);
         await assertion.assertEqual(sts, true, "button not clicked");
         sts = await signUpPage.click_createAccountBtn();
         await assertion.assertEqual(sts, true, "create Account button not clicked");
         sts = await signUpPage.getData_accountDetailsPage();
-        console.log(sts);
         await assertion.assertEqual(sts.policyLineErrorTxt, null, 'policyLineErrorTxt mismatch');
     },
 
     //Validate clicking on Cancel button on policy page do not select the policy checkbox on Account Details page
     ENG_SNUP_TC_58: async function (testdata) {
         sts = await signUpPage.click_policyCancelBtn();
-        console.log(sts);
         await assertion.assertEqual(sts, true, "button not clicked");
         sts = await signUpPage.click_createAccountBtn();
         await assertion.assertEqual(sts, true, "create Account button not clicked");
         sts = await signUpPage.getData_accountDetailsPage();
-        console.log(sts);
         await assertion.assertEqual(sts.policyLineErrorTxt, testdata.policyLineErrorTxt, 'policyLineErrorTxt mismatch');
     },
 
