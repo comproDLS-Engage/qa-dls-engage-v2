@@ -97,7 +97,7 @@ module.exports = {
         //console.log(" Mismatch Percentage for " + execJsonData[suiteIndex].Test[testIndex].id + " = " + result[0].misMatchPercentage);
         var result = await browser.checkDocument({ exclude: excludeElements, hide: hideElements, misMatchTolerance: testObj.visualTolerance, fuzzLevel: testObj.visualTolerance });
 
-        await this.disableFullPageScrolling();
+        //await this.disableFullPageScrolling();
 
         await browser.call(() =>
             mergeImg.combineImages(
