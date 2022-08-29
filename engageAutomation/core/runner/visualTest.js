@@ -185,7 +185,8 @@ module.exports = {
     enableFullPageScrolling: async function () {
         await browser.execute(() => {
             var elem = document.getElementById("scroolbarDiv");
-            elem.classList.add("overflow-y-visible");
+            elem.setAttribute("style", "overflow-y: visible !important")
+            //elem.classList.add("overflow-y-visible");
             //console.log(elem.getAttribute("class"));
         });
     },
