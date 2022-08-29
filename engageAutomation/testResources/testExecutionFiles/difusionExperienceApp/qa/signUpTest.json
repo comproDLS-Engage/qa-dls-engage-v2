@@ -1,6 +1,6 @@
 {
    "Suite1": {
-      "Name": "Validate Teacher Onboarding Scenarios",
+      "Name": "Validate SignUp Negative Scenarios",
       "TestCaseRepo": [
          "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
       ],
