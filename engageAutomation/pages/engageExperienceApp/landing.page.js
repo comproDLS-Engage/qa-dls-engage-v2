@@ -53,8 +53,8 @@ module.exports = {
 		await logger.logInto(await stackTrace.get());
 		res = await action.click(this.signupBtn);
 		if (true == res) {
-			let signupPage = require('./signup.page.js');
-			res = await signupPage.isInitializedSetEmailPage();
+			let signupPage = require('./signUp.page.js');
+			res = await signupPage.isInitialized();
 		}
 		else {
 			res = res + " -- Error in clicking signupBtn";

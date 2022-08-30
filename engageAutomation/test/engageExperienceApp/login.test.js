@@ -1,4 +1,5 @@
 "use strict";
+const { actionCardBtns } = require('../../pages/engageExperienceApp/dashboard.page.js');
 const landingPage = require('../../pages/engageExperienceApp/landing.page.js');
 var loginPage = require('../../pages/engageExperienceApp/login.page.js');
 var sts;
@@ -171,7 +172,12 @@ module.exports = {
 
         sts = await require('../../pages/engageExperienceApp/onboarding.page.js').isInitialized();
         await assertion.assertEqual(sts.pageStatus, true, "page status mismatch");
-    }
+    },
 
+    //On Login page, click Sign up button
+    ENG_IDEN_TC_24: async function () {
+        sts = await loginPage.click_SignUP_Button();
+        await assertion.assertEqual(sts.pageStatus, true, "page status mismatch");
+    }
 
 };

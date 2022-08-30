@@ -717,7 +717,7 @@
         },
         {
           "id": "ENG_INS_CLASS_TC_115",
-          "description": "Validate that clicking on \"More search results for ..xyz\" lists the resources based on search text.",
+          "description": "Validate that clicking on 'More search results for ..xyz' lists the resources based on search text.",
           "tags": "P1"
         },
         {
@@ -1870,37 +1870,37 @@
         },
         {
           "id": "ENG_DASH_TC_19",
-          "description": "Validate on clicking \"Interactive Activities\" resource in Explore menu, same tab is launched on Browse",
+          "description": "Validate on clicking 'Interactive Activities' resource in Explore menu, same tab is launched on Browse",
           "tags": "P1",
           "visualTest": true
         },
         {
           "id": "ENG_DASH_TC_20",
-          "description": "Validate on clicking \"Videos\" resource in Explore menu, same tab is launched on Browse",
+          "description": "Validate on clicking 'Videos' resource in Explore menu, same tab is launched on Browse",
           "tags": "P1",
           "visualTest": true
         },
         {
           "id": "ENG_DASH_TC_21",
-          "description": "Validate on clicking \"Online Classes\" resource in Explore menu, same tab is launched on Browse",
+          "description": "Validate on clicking 'Online Classes' resource in Explore menu, same tab is launched on Browse",
           "tags": "P1",
           "visualTest": true
         },
         {
           "id": "ENG_DASH_TC_22",
-          "description": "Validate on clicking \"Teacher Training\" resource in Explore menu, same tab is launched on Browse",
+          "description": "Validate on clicking 'Teacher Training' resource in Explore menu, same tab is launched on Browse",
           "tags": "P1",
           "visualTest": true
         },
         {
           "id": "ENG_DASH_TC_23",
-          "description": "Validate on clicking \"Today in Class\" resource in Explore menu, same tab is launched on Browse",
+          "description": "Validate on clicking 'Today in Class' resource in Explore menu, same tab is launched on Browse",
           "tags": "P1",
           "visualTest": true
         },
         {
           "id": "ENG_DASH_TC_24",
-          "description": "Validate on clicking \"Projectable\" resource in Explore menu, same tab is launched on Browse",
+          "description": "Validate on clicking 'Projectable' resource in Explore menu, same tab is launched on Browse",
           "tags": "P1",
           "visualTest": true
         },
@@ -2081,13 +2081,13 @@
         },
         {
           "id": "ENG_LAND_TC_2",
-          "description": "Validate that the sign up page is launched on clicking the \"Sign Up & Start Learning Today\" button",
+          "description": "Validate that the sign up page is launched on clicking the 'Sign Up & Start Learning Today' button",
           "tags": "P1",
           "visualTest": true
         },
         {
           "id": "ENG_LAND_TC_3",
-          "description": "Validate that the sign in page is launched on clicking the \"Log in\" button",
+          "description": "Validate that the sign in page is launched on clicking the 'Log in' button",
           "tags": "P1",
           "visualTest": true
         },
@@ -2171,7 +2171,7 @@
         },
         {
           "id": "ENG_IDEN_TC_15",
-          "description": "Validate that the login button is clicked on pressing \"ENTER\" key on the login page",
+          "description": "Validate that the login button is clicked on pressing 'ENTER' key on the login page",
           "tags": "P1",
           "visualTest": true
         },
@@ -2190,6 +2190,12 @@
         {
           "id": "ENG_IDEN_TC_23",
           "description": "Validate Onboarding Welcome page appears for a user who is signed up but not onboarded",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_IDEN_TC_24",
+          "description": "On Login page, click the Sign Up button",
           "tags": "P1",
           "visualTest": true
         }
@@ -3636,6 +3642,199 @@
           "description": "Validate that clicking on cancel button does not complete the grading of the activity",
           "tags": "P1",
           "visualTest": true
+        }
+      ]
+    },
+    {
+      "modulename": "SignUp",
+      "moduleId": "",
+      "testFile": "./test/engageExperienceApp/signUp.test.js",
+      "testcase": [
+        {
+          "id": "ENG_SNUP_TC_1",
+          "description": "Validate the content of signup page, where user enter the email details",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SNUP_TC_2",
+          "description": "Validate the error message when no email is entered",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SNUP_TC_3",
+          "description": "Validate the error message when wrong email format is added",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SNUP_TC_4",
+          "description": "Validate the error message when existing user email id is entered",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SNUP_TC_5",
+          "description": "Validate clicking on 'Signup with Email' button",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SNUP_TC_6",
+          "description": "Validate clicking on 'Google' button for signup",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SNUP_TC_7",
+          "description": "Validate clicking on 'facebook' button for signup",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SNUP_TC_9",
+          "description": "On signup page, Validate clicking on 'logIn' button",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SNUP_TC_10",
+          "description": "Validate the  selecting 'I'm teacher' on Role Selection Page",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SNUP_TC_11",
+          "description": "Validate the selecting 'I'm Student' on Role Selection Page",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SNUP_TC_12",
+          "description": "Validate the click of continue button after selecting teacher on Role Selection Page",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SNUP_TC_13",
+          "description": "Validate the click of continue button after selecting student on Role Selection Page",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SNUP_TC_14",
+          "description": "Validate the error message without selecting any teacher/student",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SNUP_TC_16",
+          "description": "Validate the Click on 'Back to Sign in' on Role Selection Page",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SNUP_TC_17",
+          "description": "Validate the application content of 'Account Details' page",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SNUP_TC_19",
+          "description": "Validate the email id on 'Account Details' page",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SNUP_TC_20",
+          "description": "Validate the error message of password, When Password have less than 8 character (other condition fulfill)",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SNUP_TC_21",
+          "description": "Validate the error message of password, When Password have all upper case character (other condition fulfill)",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SNUP_TC_22",
+          "description": "Validate the error message of password, When Password have all lower case character (other condition fulfill)",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SNUP_TC_23",
+          "description": "Validate the error message of password, When Password have not any special character (other condition fulfill)",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SNUP_TC_24",
+          "description": "Validate the error message of each textbox on Account details page when each textbox is blank",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SNUP_TC_25",
+          "description": "Validate the error message when password  is not same with confirm passord",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SNUP_TC_31",
+          "description": "Validate the click on eye button of password after entering the password",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SNUP_TC_32",
+          "description": "Validate the click on eye button of Confirm password before entering the password",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SNUP_TC_37",
+          "description": "Validate the country is selected from dropdown",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SNUP_TC_39",
+          "description": "Validate the click on 'back Role Selection' on Account Details Page",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SNUP_TC_54",
+          "description": "Validate the content of Role selection page",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SNUP_TC_55",
+          "description": "Validate clicking on Privacy Policy link launch the pop up with Privacy Policy tab selected",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SNUP_TC_56",
+          "description": "Validate clicking on Terms of use link launch the pop up with Privacy Policy tab selected",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SNUP_TC_57",
+          "description": "Validate clicking on I Agree button on policy page select the policy checkbox on Account Details page",
+          "tags": "",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_SNUP_TC_58",
+          "description": "Validate clicking on Cancel button on policy page do not select the policy checkbox on Account Details page",
+          "tags": "",
+          "visualTest": "-"
         }
       ]
     }

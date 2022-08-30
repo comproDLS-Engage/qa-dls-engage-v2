@@ -346,8 +346,7 @@ module.exports = {
         await logger.logInto(await stackTrace.get());
         res = await action.click(this.signup);
         if (res == true) {
-            //TBD Sign Up Page to be implemented - ENG_IDEN_TC_17
-            //res = require('./signup.page.js').isInitialized()
+            res = require('./signUp.page.js').isInitialized()
             await logger.logInto(await stackTrace.get(), " -- Sign Up Clicked");
         }
         else
