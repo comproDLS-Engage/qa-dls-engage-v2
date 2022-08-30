@@ -7,16 +7,30 @@ module.exports = {
     batchName: selectorFile.viewAccessCodesPage.batchName,
     startDate: selectorFile.viewAccessCodesPage.startDate,
     endDate: selectorFile.viewAccessCodesPage.endDate,
+    duration: selectorFile.viewAccessCodesPage.duration,
     totalAccessCodes: selectorFile.viewAccessCodesPage.totalAccessCodes,
     consumedAccessCodes: selectorFile.viewAccessCodesPage.consumedAccessCodes,
     batchStatus: selectorFile.viewAccessCodesPage.batchStatus,
+    accessCodeSearch: selectorFile.viewAccessCodesPage.accessCodeSearch,
+    searchBtn: selectorFile.viewAccessCodesPage.searchBtn,
+    prevPageBtn: selectorFile.viewAccessCodesPage.prevPageBtn,
+    nextPageBtn: selectorFile.viewAccessCodesPage.nextPageBtn,
+    sortBtn: selectorFile.viewAccessCodesPage.sortBtn,
+    sortByStatus: selectorFile.viewAccessCodesPage.sortByStatus,
+    sortByCode: selectorFile.viewAccessCodesPage.sortByCode,
+    revokeBtn: selectorFile.viewAccessCodesPage.revokeBtn,
+    historyBtn: selectorFile.viewAccessCodesPage.historyBtn,
     accessCodes: selectorFile.viewAccessCodesPage.accessCodes,
     accessCodeStatus: selectorFile.viewAccessCodesPage.accessCodeStatus,
     modifyBtn: selectorFile.viewAccessCodesPage.modifyBtn,
     deactivateBtn: selectorFile.viewAccessCodesPage.deactivateBtn,
     redeemBtn: selectorFile.viewAccessCodesPage.redeemBtn,
+    csvBtn: selectorFile.viewAccessCodesPage.csvBtn,
+    printBtn: selectorFile.viewAccessCodesPage.printBtn,
     loadingContainer: selectorFile.common.loadingContainer,
     dialogContent: selectorFile.common.dialogContent,
+    cancelDialog: selectorFile.common.cancelDialog,
+    confirmDialog: selectorFile.common.confirmDialog,
 
     isInitialized: async function () {
         await logger.logInto((await stackTrace.get()));
@@ -27,6 +41,7 @@ module.exports = {
             batchName: await action.getText(this.batchName),
             startDate: await action.getText(this.startDate),
             endDate: await action.getText(this.endDate),
+            duration: await action.getText(this.duration),
             totalAccessCodes: await action.getText(this.totalAccessCodes),
             consumedAccessCodes: await action.getText(this.consumedAccessCodes),
             batchStatus: await action.getText(this.batchStatus),
@@ -47,6 +62,20 @@ module.exports = {
             res[i].accessCode = await action.getText(list1[i]);
             res[i].accessCodeStatus = await action.getText(list2[i])
         }
+        return res;
+    },
+
+    search_Access_Code: async function (text) {
+        await logger.logInto((await stackTrace.get()));
+        res = await action.click(this.accessCodeSearch);
+        if (res == true) {
+            await action.setValue(this.accessCodeSearch, text);
+            res = await action.click(this.searchBtn);
+            if (res == true) {
+                res = await action.get_ListofAccessCodes();
+            }
+        }
+        await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
