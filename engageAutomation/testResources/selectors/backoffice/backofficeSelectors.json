@@ -167,9 +167,9 @@
 		"bookList": "[class*=mdc-menu-surface--open] [class*=mdc-list-item__text]",
 		"batchNameTxtbox": "[data-tid=input-batch-name-for-generate-codes] input",
 		"startDate": "[data-tid=input-start-date-for-generate-codes] input",
-		"endDate": "[data-tid=input-end-date-for-generate-codes] input",
+		"duration": "[data-tid=input-duration-for-generate-codes] input",
 		"codeLimitTxtbox": "[data-tid=input-code-limit-for-generate-codes] input",
-		"generateBtn": "[class=c-form-section] button"
+		"generateBtn": "button[data-tid=button-generate-codes],button[class*=c-action-button_modify]"
 	},
 	"assessmentAuthorApp": {
 		"saveAndReturnBtn": "[data-tid=button-saveandreturn]",
@@ -191,11 +191,16 @@
 		"sortByStatus": "li[data-tid=button-status]",
 		"sortByCode": "li[data-tid=button-code]",
 		"revokeBtn": "[class=c-activate]",
+		"resumeBtn": "div:nth-child(1)[class=c-activate]",
 		"historyBtn": "[class=c-view-history]",
+		"historyRecords": "[class*=mdc-dialog--open] [class*=c-history-records]",
 		"accessCodes": "[class=c-list-item__primary-text]",
 		"accessCodeStatus": "[class=mdc-list-item__secondary-text]",
+		"copyIcon": "[class*=c-access-code__graphic] [title=Copy]",
+		"generateBtn": "[data-tid=button-generate-access-codes]",
 		"modifyBtn": "[data-tid=button-modify-access-codes] span",
 		"deactivateBtn": "[data-tid=button-deactivate-license] span",
+		"activateBtn": "[data-tid=button-activate-license] span",
 		"redeemBtn": "[data-tid=button-redeem-access-code] span",
 		"csvBtn": "[data-tid=button-export-codes-in-csv] span",
 		"printBtn": "[data-tid=button-export-codes-in-print] span"

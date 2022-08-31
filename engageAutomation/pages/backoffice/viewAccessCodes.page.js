@@ -19,19 +19,22 @@ module.exports = {
     sortByStatus: selectorFile.viewAccessCodesPage.sortByStatus,
     sortByCode: selectorFile.viewAccessCodesPage.sortByCode,
     revokeBtn: selectorFile.viewAccessCodesPage.revokeBtn,
+    resumeBtn: selectorFile.viewAccessCodesPage.resumeBtn,
     historyBtn: selectorFile.viewAccessCodesPage.historyBtn,
+    historyRecords: selectorFile.viewAccessCodesPage.historyRecords,
     accessCodes: selectorFile.viewAccessCodesPage.accessCodes,
     accessCodeStatus: selectorFile.viewAccessCodesPage.accessCodeStatus,
+    copyIcon: selectorFile.viewAccessCodesPage.copyIcon,
+    generateBtn: selectorFile.viewAccessCodesPage.generateBtn,
     modifyBtn: selectorFile.viewAccessCodesPage.modifyBtn,
     deactivateBtn: selectorFile.viewAccessCodesPage.deactivateBtn,
+    activateBtn: selectorFile.viewAccessCodesPage.activateBtn,
     redeemBtn: selectorFile.viewAccessCodesPage.redeemBtn,
     csvBtn: selectorFile.viewAccessCodesPage.csvBtn,
     printBtn: selectorFile.viewAccessCodesPage.printBtn,
     loadingContainer: selectorFile.common.loadingContainer,
     dialogContent: selectorFile.common.dialogContent,
-    cancelDialog: selectorFile.common.cancelDialog,
-    confirmDialog: selectorFile.common.confirmDialog,
-
+  
     isInitialized: async function () {
         await logger.logInto((await stackTrace.get()));
         //action.waitForDocumentLoad();
@@ -65,15 +68,115 @@ module.exports = {
         return res;
     },
 
-    search_Access_Code: async function (text) {
+    search_AccessCode: async function (text) {
         await logger.logInto((await stackTrace.get()));
         res = await action.click(this.accessCodeSearch);
         if (res == true) {
             await action.setValue(this.accessCodeSearch, text);
             res = await action.click(this.searchBtn);
             if (res == true) {
-                res = await action.get_ListofAccessCodes();
+                res = await this.get_ListofAccessCodes();
             }
+        }
+        await logger.logInto((await stackTrace.get()), res);
+        return res;
+    },
+
+    sort_AccessCode_By_Status: async function () {
+        await logger.logInto((await stackTrace.get()));
+        res = await action.click(this.sortBtn);
+        if (res == true) {
+            res = await action.click(this.sortByStatus);
+            if (res == true) {
+                res = await this.get_ListofAccessCodes();
+            }
+        }
+        await logger.logInto((await stackTrace.get()), res);
+        return res;
+    },
+
+    sort_AccessCode_By_Code: async function () {
+        await logger.logInto((await stackTrace.get()));
+        res = await action.click(this.sortBtn);
+        if (res == true) {
+            res = await action.click(this.sortByCode);
+            if (res == true) {
+                res = await this.get_ListofAccessCodes();
+            }
+        }
+        await logger.logInto((await stackTrace.get()), res);
+        return res;
+    },
+
+    click_Copy_AccessCode_Icon: async function () {
+        await logger.logInto((await stackTrace.get()));
+        res = await action.click(this.copyIcon);
+        if (res == true) {
+            await action.waitForDisplayed(this.snackbarLbl);
+            res = await action.getText(this.snackbarLbl);
+            await action.click(this.snackbarBtn);
+        }
+        await logger.logInto((await stackTrace.get()), res);
+        return res;
+    },
+
+    click_Prevpage_Button: async function () {
+        await logger.logInto((await stackTrace.get()));
+        res = await action.click(this.prevPageBtn);
+        if (res == true) {
+            res = await this.get_ListofAccessCodes();
+        }
+        await logger.logInto((await stackTrace.get()), res);
+        return res;
+    },
+
+    click_Nextpage_Button: async function () {
+        await logger.logInto((await stackTrace.get()));
+        res = await action.click(this.nextPageBtn);
+        if (res == true) {
+            res = await this.get_ListofAccessCodes();
+        }
+        await logger.logInto((await stackTrace.get()), res);
+        return res;
+    },
+
+    click_History_Button: async function () {
+        await logger.logInto((await stackTrace.get()));
+        res = await action.click(this.historyBtn);
+        if (res == true) {
+            res = await action.waitForDisplayed(this.historyRecords);
+        }
+        await logger.logInto((await stackTrace.get()), res);
+        return res;
+    },
+
+    click_Revoke_Button: async function () {
+        await logger.logInto((await stackTrace.get()));
+        res = await action.click(this.revokeBtn);
+        if (res == true) {
+            await action.waitForDisplayed(this.dialogContent);
+            res = await action.getText(this.dialogContent);
+        }
+        await logger.logInto((await stackTrace.get()), res);
+        return res;
+    },
+
+    click_Resume_Button: async function () {
+        await logger.logInto((await stackTrace.get()));
+        res = await action.click(this.resumeBtn);
+        if (res == true) {
+            await action.waitForDisplayed(this.dialogContent);
+            res = await action.getText(this.dialogContent);
+        }
+        await logger.logInto((await stackTrace.get()), res);
+        return res;
+    },
+
+    click_Generate_Button: async function () {
+        await logger.logInto((await stackTrace.get()));
+        res = await action.click(this.generateBtn);
+        if (res == true) {
+            res = await require('./generateCodes.page.js').isInitialized();
         }
         await logger.logInto((await stackTrace.get()), res);
         return res;
@@ -89,28 +192,20 @@ module.exports = {
         return res;
     },
 
-    /*click_Book: async function (name) {
-        logger.logInto((await stackTrace.get()));
-        res = null;
-        let i, list;
-        list = action.findElements(this.bookList);
-        for (i = 0; i < list.length; i++) {
-            if (action.getText(list[i]) == name) {
-                res = action.click(list[i]);
-                if (res == true) {
-                    res = await require('./componentList.page.js').isInitialized();
-                }
-                break;
-            }
-            res = "book not found ";
-        }
-        logger.logInto((await stackTrace.get()), res);
-        return res;
-    },*/
-
     click_Deactivate_Button: async function () {
         await logger.logInto((await stackTrace.get()));
         res = await action.click(this.deactivateBtn);
+        if (res == true) {
+            await action.waitForDisplayed(this.dialogContent);
+            res = await action.getText(this.dialogContent);
+        }
+        await logger.logInto((await stackTrace.get()), res);
+        return res;
+    },
+
+    click_Activate_Button: async function () {
+        await logger.logInto((await stackTrace.get()));
+        res = await action.click(this.activateBtn);
         if (res == true) {
             await action.waitForDisplayed(this.dialogContent);
             res = await action.getText(this.dialogContent);

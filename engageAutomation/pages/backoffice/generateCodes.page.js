@@ -9,7 +9,7 @@ module.exports = {
     bookList: selectorFile.generateCodesPage.bookList,
     batchNameTxtbox: selectorFile.generateCodesPage.batchNameTxtbox,
     startDate: selectorFile.generateCodesPage.startDate,
-    endDate: selectorFile.generateCodesPage.endDate,
+    duration: selectorFile.generateCodesPage.duration,
     codeLimitTxtbox: selectorFile.generateCodesPage.codeLimitTxtbox,
     generateBtn: selectorFile.generateCodesPage.generateBtn,
     snackbarLbl: selectorFile.common.snackbarLbl,
@@ -41,7 +41,6 @@ module.exports = {
         return res;
     },
 
-
     set_BatchName: async function (name) {
         await logger.logInto((await stackTrace.get()));
         res = await action.setValue(this.batchNameTxtbox, name);
@@ -56,16 +55,16 @@ module.exports = {
         return res;
     },
 
-    set_EndDate: async function (date) {
+    set_Duration: async function (num) {
         await logger.logInto((await stackTrace.get()));
-        res = await action.setValue(this.endDate, date);
+        res = await action.setValue(this.duration, num);
         await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
-    set_CodeLimit: async function (number) {
+    set_CodeLimit: async function (num) {
         await logger.logInto((await stackTrace.get()));
-        res = await action.setValue(this.codeLimitTxtbox, number);
+        res = await action.setValue(this.codeLimitTxtbox, num);
         await logger.logInto((await stackTrace.get()), res);
         return res;
     },
