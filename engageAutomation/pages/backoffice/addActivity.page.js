@@ -7,6 +7,7 @@ module.exports = {
 
     buttonLoader: selectorFile.common.buttonLoader,
     nameTxtbox: selectorFile.addActivityPage.nameTxtbox,
+    addBtn: selectorFile.addActivityPage.addBtn,
     completionCheckBox: selectorFile.addActivityPage.completionCheckBox,
     scoreCheckBox: selectorFile.addActivityPage.scoreCheckBox,
     targetRoleDropdown: selectorFile.addActivityPage.targetRoleDropdown,
@@ -17,7 +18,10 @@ module.exports = {
     progressBarClosed: selectorFile.addActivityPage.progressBarClosed,
 
     isInitialized: async function () {
-        return addFolderPage.isInitialized();
+        await logger.logInto((await stackTrace.get()));
+        let res;
+        res = await action.waitForDisplayed(this.addBtn);
+        return res;
     },
 
     set_Name: async function (text) {
@@ -31,10 +35,10 @@ module.exports = {
     click_Add_Button: async function () {
         await logger.logInto((await stackTrace.get()));
         let res;
-        res = await action.waitForClickable(addFolderPage.addBtn);
+        res = await action.waitForClickable(this.addBtn);
         await action.waitForDisplayed(this.buttonLoader, undefined, true)
         if (res == true) {
-            res = await action.click(addFolderPage.addBtn);
+            res = await action.click(this.addBtn);
             if (res == true) {
                 await browser.pause(5000);
             }
