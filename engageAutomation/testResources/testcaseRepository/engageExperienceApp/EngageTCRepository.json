@@ -2801,6 +2801,42 @@
           "description": "Validate that searching a text lists maximum 5 suggestions matching the search text",
           "tags": "P1, Desktop",
           "visualTest": true
+        },
+        {
+          "id": "ENG_GLOB_TC_71",
+          "description": "Validate Book added in the Family is available in correct Family on browse page",
+          "tags": "",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_GLOB_TC_72",
+          "description": "Validate the book which is not added in Family in available in Other Books",
+          "tags": "",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_GLOB_TC_73",
+          "description": "Validate that clicking on View All button shows all books of a family",
+          "tags": "",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_GLOB_TC_75",
+          "description": "Validate on Book tab, user is able to search book family name and clicking on it launch the book family page",
+          "tags": "",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_GLOB_TC_76",
+          "description": "Validate that on Book tab, in search results, Family name is displayed below book name and description",
+          "tags": "",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_GLOB_TC_77",
+          "description": "Validate that on Book tab, Clicking Show More Books button loads the more books in 'Other book' section",
+          "tags": "",
+          "visualTest": true
         }
       ]
     },
