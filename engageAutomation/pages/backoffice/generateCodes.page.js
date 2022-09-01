@@ -25,15 +25,19 @@ module.exports = {
 
     select_Book: async function (name) {
         await logger.logInto((await stackTrace.get()));
-        res = await action.click(this.bookDropdown);
-        await action.waitForDisplayed(this.bookList);
-        if (res == true) {
-            let i, list;
-            list = await action.findElements(this.bookList);
-            for (i = 0; i < list.length; i++) {
-                if ((await action.getText(list[i])) == name) {
-                    res = await action.click((await action.parentElement(list[i])));
-                    break;
+        if (name == "" || name == undefined)
+            res = true;
+        else {
+            res = await action.click(this.bookDropdown);
+            await action.waitForDisplayed(this.bookList);
+            if (res == true) {
+                let i, list;
+                list = await action.findElements(this.bookList);
+                for (i = 0; i < list.length; i++) {
+                    if ((await action.getText(list[i])) == name) {
+                        res = await action.click((await action.parentElement(list[i])));
+                        break;
+                    }
                 }
             }
         }
@@ -43,32 +47,48 @@ module.exports = {
 
     set_BatchName: async function (name) {
         await logger.logInto((await stackTrace.get()));
-        res = await action.setValue(this.batchNameTxtbox, name);
+        if (name == "" || name == undefined)
+            res = true;
+        else {
+            res = await action.setValue(this.batchNameTxtbox, name);
+        }
         await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     set_StartDate: async function (date) {
         await logger.logInto((await stackTrace.get()));
-        res = await action.setValue(this.startDate, date);
+        if (date == "" || date == undefined)
+            res = true;
+        else {
+            res = await action.setValue(this.startDate, date);
+        }
         await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     set_Duration: async function (num) {
         await logger.logInto((await stackTrace.get()));
-        res = await action.setValue(this.duration, num);
+        if (num == "" || num == undefined)
+            res = true;
+        else {
+            res = await action.setValue(this.duration, num);
+        }
         await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     set_CodeLimit: async function (num) {
         await logger.logInto((await stackTrace.get()));
-        res = await action.setValue(this.codeLimitTxtbox, num);
+        if (num == "" || num == undefined)
+            res = true;
+        else {
+            res = await action.setValue(this.codeLimitTxtbox, num);
+        }
         await logger.logInto((await stackTrace.get()), res);
         return res;
     },
-    
+
     click_Generate_Button: async function () {
         await logger.logInto((await stackTrace.get()));
         res = await action.waitForClickable(this.generateBtn);

@@ -179,11 +179,11 @@
         ],
         "accessCodeBatch": [
             {
-                "batchName": "QA automation test batch1",
-                "startDate": "01/01/2023",
+                "batchName": "",
+                "startDate": "11/01/2022",
                 "duration": 30,
-                "codeLimit": 50,
-                "status": "Active"
+                "codeLimit": "",
+                "status": ""
             }
         ]
     },
@@ -367,7 +367,7 @@
         ],
         "accessCodeBatch": [
             {
-                "bookName": "",
+                "bookName": "QA Test Automation Book [DO NOT PUBLISH]",
                 "batchName": "QA automation test batch1",
                 "startDate": "01/01/2023",
                 "duration": 20,
