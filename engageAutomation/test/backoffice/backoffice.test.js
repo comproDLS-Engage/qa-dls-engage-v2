@@ -574,7 +574,7 @@ module.exports = {
 		sts = await redeemAccessCodePage.set_Email(testdata[0].email);
 		await assertion.assertEqual(sts, true, "set_Email status mismatch");
 		sts = await redeemAccessCodePage.click_Redeem_Button();
-		await assertion.assert((typeof sts === "string" && sts.includes(testdata[1])), "Banner messsage mismatch. " + sts);
+		await assertion.assert((typeof sts === "string" && sts.includes("Access Code '" + testdata[0].accessCode + "' is redeemed.")), "Snackbar messsage mismatch. " + sts);
 	},
 
 	//Validate that the view access code page is launched on clicking the check a code button on the home page
