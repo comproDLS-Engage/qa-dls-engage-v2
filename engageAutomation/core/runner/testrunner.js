@@ -292,7 +292,7 @@ class specRunner {
                             obj.visualTag = testObj.visualTest;
                             obj.selectorDir = path.resolve(rootDir, repository[repoKey].selectorFile);
                             obj.skipTC = false;
-                            if (moduleOff[repository[repoKey].modules[moduleKey].moduleId])
+                            if (moduleOff != undefined && moduleOff[repository[repoKey].modules[moduleKey].moduleId])
                                 obj.skipTC = true;
                             break;
                         }
