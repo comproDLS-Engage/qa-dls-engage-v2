@@ -3,7 +3,7 @@ require('./env.conf.js');
 //let QaTouchReporter = require('wdio-qatouch-reporter/lib/index');
 const novusVisualCompare = require('wdio-novus-visual-regression-service/compare');
 const { TimelineService } = require('wdio-timeline-reporter/timeline-service');
-const specGenerator = require(( process.cwd()) + '/core/runner/specGenerator.js')
+const specGenerator = require((process.cwd()) + '/core/runner/specGenerator.js')
 const visualTimelineReportService = require('./core/utils/visual-report-utility/report-service').TimelineService;
 var visualReportService = new visualTimelineReportService();
 var retryTimes = 0;
@@ -30,24 +30,24 @@ var NovusService = [
     'novus-visual-regression',
     {
         compare: new novusVisualCompare.LocalCompare({
-            referenceName:  getScreenshotName(path.join( process.cwd(), global.baseScreenshotDir)),
-            screenshotName:  getScreenshotName(path.join( process.cwd(), global.testScreenshotDir)),
-            diffName:  getScreenshotName(path.join( process.cwd(), global.diffScreenshotDir)),
+            referenceName: getScreenshotName(path.join(process.cwd(), global.baseScreenshotDir)),
+            screenshotName: getScreenshotName(path.join(process.cwd(), global.testScreenshotDir)),
+            diffName: getScreenshotName(path.join(process.cwd(), global.diffScreenshotDir)),
             misMatchTolerance: 0,
             ignoreComparison: 'nothing'
         })
     }
 ];
 
- function getScreenshotName(basePath) {
+function getScreenshotName(basePath) {
     return function (context) {
         if (context.test.file.indexOf("/") >= 0)
-            global.testFileName =  context.test.file.split('tempRunner/')[1].replace('.js', "");
+            global.testFileName = context.test.file.split('tempRunner/')[1].replace('.js', "");
         else
-            global.testFileName =  context.test.file.split('tempRunner\\')[1].replace('.js', "");
+            global.testFileName = context.test.file.split('tempRunner\\')[1].replace('.js', "");
 
         global.screenshotName = global.suiteKey + "-" + ((global.tcNumber.toString().length == 1) ? "0" + global.tcNumber : global.tcNumber) + "-" + global.tcId + '.png';
-        return  (path.join(basePath, global.testFileName, global.screenshotName));
+        return (path.join(basePath, global.testFileName, global.screenshotName));
     }
 };
 exports.config = {
@@ -351,7 +351,7 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {Array.<String>} specs List of spec file paths that ran
      */
-    afterSession:async  function (config, capabilities, specs) {
+    afterSession: async function (config, capabilities, specs) {
         require('./core/utils/reportUpdater.js').updateFunctionalObj();
     },
     /**
@@ -363,12 +363,12 @@ exports.config = {
      * @param {<Object>} results object containing test results
      */
     onComplete: async function (exitCode, config, capabilities, results) {
-       /* if (argv.tesultsToken) {
+        if (argv.tesultsToken) {
             const tesults = require('tesults');
             const util = require('util');
             const tesultsResults = util.promisify(tesults.results);
             const jsonString = fs.readFileSync(process.cwd() + '/' + global.reportOutputDir + "/wdio-0-0-timeline-reporter.log", 'utf-8');
-            const logData = JSON.parse(jsonString);
+            const logData = await JSON.parse(jsonString);
             var tesultsCases = [];
             let testCase = {};
             testCase.name = "Test Run Summary"
@@ -415,7 +415,7 @@ exports.config = {
                 console.log(response)
             }
         }
-*/
+
         //require('./core/utils/reportUpdater.js').indexFileUpdate();
         await specGenerator.removingTempSpecs();
         if (argv.visual) {
