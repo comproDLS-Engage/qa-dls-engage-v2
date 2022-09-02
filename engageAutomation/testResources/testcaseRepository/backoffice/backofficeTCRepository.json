@@ -388,6 +388,12 @@
                 },
                 {
                     "id": "BK_TC_64",
+                    "description": "Validate that view access code page is launched on closing the redeem access code page",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "BK_TC_65",
                     "description": "Validate that the view access code page is launched on clicking the check a code button on the home page",
                     "tags": "P1",
                     "visualTest": true

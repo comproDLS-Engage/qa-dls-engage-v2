@@ -34,7 +34,9 @@ module.exports = {
     printBtn: selectorFile.viewAccessCodesPage.printBtn,
     loadingContainer: selectorFile.common.loadingContainer,
     dialogContent: selectorFile.common.dialogContent,
-  
+    snackbarLbl: selectorFile.common.snackbarLbl,
+    snackbarBtn: selectorFile.common.snackbarBtn,
+
     isInitialized: async function () {
         await logger.logInto((await stackTrace.get()));
         //action.waitForDocumentLoad();
@@ -54,23 +56,22 @@ module.exports = {
 
     get_ListofAccessCodes: async function () {
         await logger.logInto((await stackTrace.get()));
-        res = [{
-            accessCode: null,
-            accessCodeStatus: null
-        }];
+        let res = [];
         let i, list1, list2;
         list1 = await action.findElements(this.accessCodes);
         list2 = await action.findElements(this.accessCodeStatus);
         for (i = 0; i < list1.length; i++) {
-            res[i].accessCode = await action.getText(list1[i]);
-            res[i].accessCodeStatus = await action.getText(list2[i])
+            res[i] = {
+                accessCode: await action.getText(list1[i]),
+                accessCodeStatus: await action.getText(list2[i])
+            }
         }
         return res;
     },
 
     search_AccessCode: async function (text) {
         await logger.logInto((await stackTrace.get()));
-        res = await action.click(this.accessCodeSearch);
+        let res = await action.click(this.accessCodeSearch);
         if (res == true) {
             await action.setValue(this.accessCodeSearch, text);
             res = await action.click(this.searchBtn);
@@ -84,7 +85,7 @@ module.exports = {
 
     sort_AccessCode_By_Status: async function () {
         await logger.logInto((await stackTrace.get()));
-        res = await action.click(this.sortBtn);
+        let res = await action.click(this.sortBtn);
         if (res == true) {
             res = await action.click(this.sortByStatus);
             if (res == true) {
@@ -97,7 +98,7 @@ module.exports = {
 
     sort_AccessCode_By_Code: async function () {
         await logger.logInto((await stackTrace.get()));
-        res = await action.click(this.sortBtn);
+        let res = await action.click(this.sortBtn);
         if (res == true) {
             res = await action.click(this.sortByCode);
             if (res == true) {
@@ -110,7 +111,7 @@ module.exports = {
 
     click_Copy_AccessCode_Icon: async function () {
         await logger.logInto((await stackTrace.get()));
-        res = await action.click(this.copyIcon);
+        let res = await action.click(this.copyIcon);
         if (res == true) {
             await action.waitForDisplayed(this.snackbarLbl);
             res = await action.getText(this.snackbarLbl);
@@ -122,7 +123,7 @@ module.exports = {
 
     click_Prevpage_Button: async function () {
         await logger.logInto((await stackTrace.get()));
-        res = await action.click(this.prevPageBtn);
+        let res = await action.click(this.prevPageBtn);
         if (res == true) {
             res = await this.get_ListofAccessCodes();
         }
@@ -132,7 +133,7 @@ module.exports = {
 
     click_Nextpage_Button: async function () {
         await logger.logInto((await stackTrace.get()));
-        res = await action.click(this.nextPageBtn);
+        let res = await action.click(this.nextPageBtn);
         if (res == true) {
             res = await this.get_ListofAccessCodes();
         }
@@ -142,7 +143,7 @@ module.exports = {
 
     click_History_Button: async function () {
         await logger.logInto((await stackTrace.get()));
-        res = await action.click(this.historyBtn);
+        let res = await action.click(this.historyBtn);
         if (res == true) {
             res = await action.waitForDisplayed(this.historyRecords);
         }
@@ -152,7 +153,7 @@ module.exports = {
 
     click_Revoke_Button: async function () {
         await logger.logInto((await stackTrace.get()));
-        res = await action.click(this.revokeBtn);
+        let res = await action.click(this.revokeBtn);
         if (res == true) {
             await action.waitForDisplayed(this.dialogContent);
             res = await action.getText(this.dialogContent);
@@ -163,7 +164,7 @@ module.exports = {
 
     click_Resume_Button: async function () {
         await logger.logInto((await stackTrace.get()));
-        res = await action.click(this.resumeBtn);
+        let res = await action.click(this.resumeBtn);
         if (res == true) {
             await action.waitForDisplayed(this.dialogContent);
             res = await action.getText(this.dialogContent);
@@ -174,7 +175,7 @@ module.exports = {
 
     click_Generate_Button: async function () {
         await logger.logInto((await stackTrace.get()));
-        res = await action.click(this.generateBtn);
+        let res = await action.click(this.generateBtn);
         if (res == true) {
             res = await require('./generateCodes.page.js').isInitialized();
         }
@@ -184,7 +185,7 @@ module.exports = {
 
     click_Modify_Button: async function () {
         await logger.logInto((await stackTrace.get()));
-        res = await action.click(this.modifyBtn);
+        let res = await action.click(this.modifyBtn);
         if (res == true) {
             res = await require('./generateCodes.page.js').isInitialized();
         }
@@ -194,7 +195,7 @@ module.exports = {
 
     click_Deactivate_Button: async function () {
         await logger.logInto((await stackTrace.get()));
-        res = await action.click(this.deactivateBtn);
+        let res = await action.click(this.deactivateBtn);
         if (res == true) {
             await action.waitForDisplayed(this.dialogContent);
             res = await action.getText(this.dialogContent);
@@ -205,7 +206,7 @@ module.exports = {
 
     click_Activate_Button: async function () {
         await logger.logInto((await stackTrace.get()));
-        res = await action.click(this.activateBtn);
+        let res = await action.click(this.activateBtn);
         if (res == true) {
             await action.waitForDisplayed(this.dialogContent);
             res = await action.getText(this.dialogContent);
@@ -216,7 +217,7 @@ module.exports = {
 
     click_Redeem_Button: async function () {
         await logger.logInto((await stackTrace.get()));
-        res = await action.click(this.redeemBtn);
+        let res = await action.click(this.redeemBtn);
         if (res == true) {
             res = await require('./redeemAccessCode.page.js').isInitialized();
         }

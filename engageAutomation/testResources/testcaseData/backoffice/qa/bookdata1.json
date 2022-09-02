@@ -114,11 +114,27 @@
         ],
         "accessCodeBatch": [
             {
+                "bookName": "QA Test Automation Book [DO NOT MODIFY]",
                 "batchName": "batch1",
-                "startDate": "01/01/2022",
-                "endDate": "01/31/2022",
-                "codeLimit": 50,
-                "status": "Active"
+                "startDate": "06/13/2022",
+                "duration": 364,
+                "codeLimit": 300,
+                "status": "Active",
+                "accessCodes": [
+                    {
+                        "code": "22W7-AGG7-9QTE-7YAG",
+                        "status": ""
+                    },
+                    {
+                        "code": "",
+                        "status": "NOT USED"
+                    },
+                    {
+                        "code": "4GU3-RU9Y-UEUT-FWEE",
+                        "status": "REDEEMED",
+                        "email": "abcd@yopmail.com"
+                    }
+                ]
             }
         ]
     }
