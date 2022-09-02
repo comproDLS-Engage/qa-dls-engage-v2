@@ -191,6 +191,7 @@
 		"sortBtn": "[class=c-sortby-container] button",
 		"sortByStatus": "li[data-tid=button-status]",
 		"sortByCode": "li[data-tid=button-code]",
+		"redeemedBtn": "[class=c-view-subscription]",
 		"revokeBtn": "[class=c-activate-revoke]",
 		"resumeBtn": "[class=c-activate-resume]",
 		"historyBtn": "[class=c-view-history]",

@@ -18,6 +18,7 @@ module.exports = {
     sortBtn: selectorFile.viewAccessCodesPage.sortBtn,
     sortByStatus: selectorFile.viewAccessCodesPage.sortByStatus,
     sortByCode: selectorFile.viewAccessCodesPage.sortByCode,
+    redeemedBtn: selectorFile.viewAccessCodesPage.redeemedBtn,
     revokeBtn: selectorFile.viewAccessCodesPage.revokeBtn,
     resumeBtn: selectorFile.viewAccessCodesPage.resumeBtn,
     historyBtn: selectorFile.viewAccessCodesPage.historyBtn,
@@ -40,7 +41,7 @@ module.exports = {
     isInitialized: async function () {
         await logger.logInto((await stackTrace.get()));
         //action.waitForDocumentLoad();
-        await action.waitForDisplayed(this.loadingContainer);
+        //await action.waitForDisplayed(this.loadingContainer);
         await action.waitForDisplayed(this.loadingContainer, undefined, true);
         let res = {
             batchName: await action.getText(this.batchName),
@@ -146,6 +147,16 @@ module.exports = {
         let res = await action.click(this.historyBtn);
         if (res == true) {
             res = await action.waitForDisplayed(this.historyRecords);
+        }
+        await logger.logInto((await stackTrace.get()), res);
+        return res;
+    },
+
+    click_Redeemed_Button: async function () {
+        await logger.logInto((await stackTrace.get()));
+        let res = await action.click(this.redeemedBtn);
+        if (res == true) {
+            //return user details page
         }
         await logger.logInto((await stackTrace.get()), res);
         return res;

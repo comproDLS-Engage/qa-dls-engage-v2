@@ -399,6 +399,24 @@
                     "visualTest": true
                 },
                 {
+                    "id": "BK_TC_66",
+                    "description": "Validate that user details page is launched on clicking the redeemed status of an access code",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "BK_TC_67",
+                    "description": "Validate that clicking on next button loads max. of 20 access codes",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "BK_TC_68",
+                    "description": "Validate that clicking on previous button loads max. of 20 access codes",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
                     "id": "BK_TC_999",
                     "description": "launch url and republish native LO",
                     "tags": "P1",

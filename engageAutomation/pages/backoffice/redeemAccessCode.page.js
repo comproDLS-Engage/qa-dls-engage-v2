@@ -9,6 +9,8 @@ module.exports = {
     emailInput: selectorFile.redeemCodePage.emailInput,
     cancelBtn: selectorFile.redeemCodePage.cancelBtn,
     redeemBtn: selectorFile.redeemCodePage.redeemBtn,
+    snackbarLbl: selectorFile.common.snackbarLbl,
+    snackbarBtn: selectorFile.common.snackbarBtn,
     
     isInitialized: async function () {
         await logger.logInto((await stackTrace.get()));
