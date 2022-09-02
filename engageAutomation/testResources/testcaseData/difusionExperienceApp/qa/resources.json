@@ -8,5 +8,14 @@
     ],
     "teacherTraining": [
         "El matamoscas"
+    ],
+    "bookFamily": [
+        "DEV1 QA Books"
+    ],
+    "bookName": [
+        "QA Test Automation Book [DO NOT MODIFY]"
+    ],
+    "otherBook": [
+        "Access code test"
     ]
 }

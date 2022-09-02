@@ -198,7 +198,7 @@
                 "noResultListItemTitle": "[data-tid=text-title-no-search-result-found]",
                 "noResultListItemSubtitle": "[data-tid=text-subtitle-no-search-result-found]",
                 "clearSearch": "[data-tid=icon-close-serach]",
-                "searchCount": "[data-tid=label-search-result]",
+                "searchCount": "[data-tid=label-search-result], [data-tid=label-result]",
                 "search_NoResult_img": "[data-tid=icon-nostudent]",
                 "search_NoResult_title": "[data-tid=text-noResultFound]",
                 "search_NoResult_subTitle": "[data-tid=text-noResultFoundBilinear]",
@@ -209,7 +209,14 @@
                 "filterMenuCloseBtn": "[data-tid=filtermenu-button-cancel]",
                 "filterMenuFilterCount": "[data-tid=filtermenu-text-applied-filter-count]",
                 "filterMenuClearAllBtn": "[data-tid=btn-filtermenu-label-clearall]",
-                "filterMenuApplyBtn": "[data-tid=button-apply-filter]"
+                "filterMenuApplyBtn": "[data-tid=button-apply-filter]",
+                "bookFamily": "[data-tid*=text-familyTitle-",
+                "partOfFamily": "[data-tid*=text-partOf-familyTitle-",
+                "bookFamilySection": "[data-tid*=section-",
+                "otherBooksSection": "[data-tid=section-OtherBooks]",
+                "otherBooksTxt": "[data-tid=text-otherBooksTitle]",
+                "showMoreBooksTxt": "[data-tid=text-showMoreBooks]",
+                "showMoreBooksBtn": "[data-tid=button-showMoreBooks]"
             },
             "myClassPage": {
                 "pageTitle": "main h1",

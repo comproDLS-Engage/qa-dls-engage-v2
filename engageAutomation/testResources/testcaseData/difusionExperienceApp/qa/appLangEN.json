@@ -723,7 +723,11 @@
                     "filterMenuCloseBtn": "",
                     "filterMenuFilterCount": " filters added",
                     "filterMenuClearAllBtn": "Clear All",
-                    "filterMenuApplyBtn": "Apply Filters"
+                    "filterMenuApplyBtn": "Apply Filters",
+                    "viewAllSearchCount": "results:",
+                    "partOfText": "Part of: ",
+                    "otherBooks": "Other Books",
+                    "showMoreBooks": "Show More Books"
                 },
                 "student": {
                     "pageTitle": [
@@ -767,7 +771,11 @@
                     "filterMenuCloseBtn": "",
                     "filterMenuFilterCount": " filters added",
                     "filterMenuClearAllBtn": "Clear All",
-                    "filterMenuApplyBtn": "Apply Filters"
+                    "filterMenuApplyBtn": "Apply Filters",
+                    "viewAllSearchCount": "results:",
+                    "partOfText": "Part of: ",
+                    "otherBooks": "Other Books",
+                    "showMoreBooks": "Show More Books"
                 }
             },
             "playlist": {
