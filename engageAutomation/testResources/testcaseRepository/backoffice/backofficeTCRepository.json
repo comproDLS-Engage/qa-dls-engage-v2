@@ -5,7 +5,7 @@
     "modules": [
         {
             "modulename": "",
-            "moduledetails": "",
+            "moduleId": "BK",
             "testFile": "./test/backoffice/backoffice.test.js",
             "testcase": [
                 {
@@ -281,6 +281,138 @@
                 {
                     "id": "BK_TC_46",
                     "description": "Validate that edit activity page opens on selecting the modify options in the menu",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "BK_TC_47",
+                    "description": "Validate that access codes are sorted by code",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "BK_TC_48",
+                    "description": "Validate that access codes are sorted by status",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "BK_TC_49",
+                    "description": "Validate that access code can be searched using search box",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "BK_TC_50",
+                    "description": "Validate that snackbar message appears on clicking copy access code icon",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "BK_TC_51",
+                    "description": "Validate that clicking on revoke opens the dialog to revoke or deactivate an access code",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "BK_TC_52",
+                    "description": "Validate that clicking on deactivate suspends the access code temporarily",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "BK_TC_53",
+                    "description": "Validate that clicking on resume opens the dialog to resume the access code",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "BK_TC_54",
+                    "description": "Validate that clicking on resume in the dialog, activates the access code",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "BK_TC_55",
+                    "description": "Validate that clicking on history opens the dialog with logs",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "BK_TC_56",
+                    "description": "Validate that clicking on OK button in the dialog, closed the dialog",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "BK_TC_57",
+                    "description": "Validate that modify access code page is launched on clicking modify",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "BK_TC_58",
+                    "description": "Validate that clicking on deactivate opens the dialog to deactivate the batch",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "BK_TC_59",
+                    "description": "Validate that clicking on deactivate makes the batch inactive",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "BK_TC_60",
+                    "description": "Validate that clicking on activate opens the dialog to activate the batch",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "BK_TC_61",
+                    "description": "Validate that clicking on activate makes the batch active",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "BK_TC_62",
+                    "description": "Validate that clicking on redeem launches the redeem code page",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "BK_TC_63",
+                    "description": "Validate that access code is redeemed on entering required details on the redeem code page",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "BK_TC_64",
+                    "description": "Validate that view access code page is launched on closing the redeem access code page",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "BK_TC_65",
+                    "description": "Validate that the view access code page is launched on clicking the check a code button on the home page",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "BK_TC_66",
+                    "description": "Validate that user details page is launched on clicking the redeemed status of an access code",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "BK_TC_67",
+                    "description": "Validate that clicking on next button loads max. of 20 access codes",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "BK_TC_68",
+                    "description": "Validate that clicking on previous button loads max. of 20 access codes",
                     "tags": "P1",
                     "visualTest": true
                 },

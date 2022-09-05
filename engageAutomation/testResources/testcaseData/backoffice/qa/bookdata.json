@@ -179,11 +179,11 @@
         ],
         "accessCodeBatch": [
             {
-                "batchName": "QA automation test batch1",
-                "startDate": "01/01/2022",
-                "endDate": "01/31/2022",
-                "codeLimit": 50,
-                "status": "Active"
+                "batchName": "",
+                "startDate": "02/01/2023",
+                "duration": 30,
+                "codeLimit": "",
+                "status": ""
             }
         ]
     },
@@ -363,6 +363,22 @@
                 "targetRole": "All",
                 "assignable": "True",
                 "activityTheme": "Illustrative"
+            }
+        ],
+        "accessCodeBatch": [
+            {
+                "bookName": "QA Test Automation Book [DO NOT PUBLISH]",
+                "batchName": "QA automation test batch2",
+                "startDate": "01/01/2023",
+                "duration": 20,
+                "codeLimit": 50,
+                "status": "Active",
+                "accessCodes": [
+                    {
+                        "code": "",
+                        "status": ""
+                    }
+                ]
             }
         ]
     }

@@ -10,9 +10,12 @@ const addFolderPage = require('../../pages/backoffice/addFolder.page.js');
 const addActivityPage = require('../../pages/backoffice/addActivity.page.js');
 const commonPage = require('../../pages/backoffice/common.page.js');
 const viewLearningPathPage = require('../../pages/backoffice/viewLearningPath.page.js');
-const generateCodesPage = require('../../pages/backoffice/generateCodes.page.js');
 const libraryPage = require('../../pages/backoffice/linkFromLibrary.page.js');
 const publishComponentPage = require('../../pages/backoffice/publishComponent.page.js');
+const generateCodesPage = require('../../pages/backoffice/generateCodes.page.js');
+const viewAccessCodesPage = require('../../pages/backoffice/viewAccessCodes.page.js');
+const redeemAccessCodePage = require('../../pages/backoffice/redeemAccessCode.page.js');
+
 var sts;
 
 module.exports = {
@@ -301,32 +304,33 @@ module.exports = {
 
 	// Validate that access code batch is created on entering required details on the generate codes page
 	BK_TC_28: async function (testdata) {
-		sts = await generateCodesPage.select_Book(testdata[0].name);
+		sts = await generateCodesPage.select_Book(testdata[0].bookName);
 		await assertion.assertEqual(sts, true, "Error in selecting book name");
-		sts = await generateCodesPage.set_BatchName(testdata[1].batchName);
+		sts = await generateCodesPage.set_BatchName(testdata[0].batchName);
 		await assertion.assertEqual(sts, true, "Error in setting batch name");
-		sts = await generateCodesPage.set_StartDate(testdata[1].startDate);
+		sts = await generateCodesPage.set_StartDate(testdata[0].startDate);
 		await assertion.assertEqual(sts, true, "Error in setting start date");
-		sts = await generateCodesPage.set_EndDate(testdata[1].endDate);
-		await assertion.assertEqual(sts, true, "Error in setting end date");
-		sts = await generateCodesPage.set_CodeLimit(testdata[1].codeLimit);
+		sts = await generateCodesPage.set_Duration(testdata[0].duration);
+		await assertion.assertEqual(sts, true, "Error in setting duration");
+		sts = await generateCodesPage.set_CodeLimit(testdata[0].codeLimit);
 		await assertion.assertEqual(sts, true, "Error in setting code limit");
 		sts = await generateCodesPage.click_Generate_Button();
-		await assertion.assert((typeof sts === "string" && sts.includes("Access Batch and its Codes are generated successfully.")), "Snackbar messsage mismatch. " + sts);
+		await assertion.assert((typeof sts === "string" && sts.includes(testdata[1])), "Snackbar messsage mismatch. " + sts);
 	},
 
 	// Validate that the view access code page is launched on clicking the view codes button on the home page
 	BK_TC_29: async function (testdata) {
 		sts = await homePage.click_ViewCodes_Button();
 		await assertion.assertEqual(sts, true, "Error in clicking view codes button");
-		sts = await homePage.select_Book_in_ViewCode_Launcher(testdata[0].name);
+		sts = await homePage.select_Book_in_ViewCode_Launcher(testdata.bookName);
 		await assertion.assertEqual(sts, true, "Error in selecting book");
-		sts = await homePage.select_Batch_in_ViewCode_Launcher(testdata[1].batchName);
+		sts = await homePage.select_Batch_in_ViewCode_Launcher(testdata.batchName);
 		await assertion.assertEqual(sts, true, "Error in selecting batch");
 		sts = await homePage.click_Proceed_Button_in_ViewCode_Launcher();
-		await assertion.assertEqual(sts.batchName, testdata[1].batchName, "Batch name mismatch");
-		await assertion.assertEqual(sts.totalAccessCodes, testdata[1].codeLimit, "Total access codes mismatch");
-		await assertion.assertEqual(sts.batchStatus, testdata[1].status, "Batch status mismatch");
+		await assertion.assertEqual(sts.batchName, testdata.batchName, "Batch name mismatch");
+		await assertion.assertEqual(sts.batchStatus, testdata.status, "Batch status mismatch");
+		await assertion.assertEqual(sts.duration, testdata.duration, "duration mismatch");
+		await assertion.assertEqual(sts.totalAccessCodes, testdata.codeLimit, "totalAccessCodes mismatch");
 	},
 
 	// Validate that the assessment author app is launched on clicking activity author button in the activity menu
@@ -389,7 +393,7 @@ module.exports = {
 			await assertion.assertEqual(sts, true, "file upload status mismatch");
 		}
 		sts = await addActivityPage.click_Add_Button();
-		await assertion.assertEqual(sts, true, "Add button status mismatch");			
+		await assertion.assertEqual(sts, true, "Add button status mismatch");
 	},
 
 	//Click Preview and Publish button on Component viewer Page
@@ -455,6 +459,167 @@ module.exports = {
 		sts = await viewLearningPathPage.click_Modify_Button_in_ActivityMenu(testdata.name);
 		await assertion.assertEqual(sts, true, "Edit activity page status mismatch");
 	},
+
+	//Validate that access codes are sorted by code
+	BK_TC_47: async function (testdata) {
+		sts = await viewAccessCodesPage.sort_AccessCode_By_Code();
+		await assertion.assertEqual(sts[0].accessCode, testdata.code, "access code mismatch");
+	},
+
+	//Validate that access codes are sorted by status
+	BK_TC_48: async function (testdata) {
+		sts = await viewAccessCodesPage.sort_AccessCode_By_Status();
+		await assertion.assertEqual(sts[0].accessCodeStatus, testdata.status, "access code status mismatch");
+	},
+
+	//Validate that access code can be searched using search box
+	BK_TC_49: async function (testdata) {
+		sts = await viewAccessCodesPage.search_AccessCode(testdata.code);
+		await assertion.assertEqual(sts[0].accessCode, testdata.code, "access code mismatch");
+		await assertion.assertEqual(sts[0].accessCodeStatus, testdata.status, "access code status mismatch");
+	},
+
+	//Validate that snackbar message appears on clicking copy access code icon
+	BK_TC_50: async function (testdata) {
+		sts = await viewAccessCodesPage.click_Copy_AccessCode_Icon();
+		await assertion.assert((typeof sts === "string" && sts.includes(testdata)), "Snackbar messsage mismatch. " + sts);
+	},
+
+	//Validate that clicking on revoke opens the dialog to revoke or deactivate an access code
+	BK_TC_51: async function () {
+		sts = await viewAccessCodesPage.click_Revoke_Button();
+		await assertion.assert((typeof sts === "string" && sts.includes("Are you sure you want to revoke this Access Code?")), "Dialog text mismatch. " + sts);
+	},
+
+	//Validate that clicking on deactivate suspends the access code temporarily
+	BK_TC_52: async function (testdata) {
+		sts = await common.click_confirmDialog_Button();
+		await assertion.assert((typeof sts === "string" && sts.includes(testdata)), "Snackbar messsage mismatch. " + sts);
+		sts = await viewAccessCodesPage.get_ListofAccessCodes();
+		await assertion.assertEqual(sts[0].accessCodeStatus, "DEACTIVATED", "access code status mismatch");
+	},
+
+	//Validate that clicking on resume opens the dialog to resume the access code
+	BK_TC_53: async function () {
+		sts = await viewAccessCodesPage.click_Resume_Button();
+		await assertion.assert((typeof sts === "string" && sts.includes("Are you sure you want to resume this Access Code?")), "Dialog text mismatch. " + sts);
+	},
+
+	//Validate that clicking on resume in the dialog, activates the access code
+	BK_TC_54: async function (testdata) {
+		sts = await common.click_confirmDialog_Button();
+		await assertion.assert((typeof sts === "string" && sts.includes(testdata)), "Snackbar messsage mismatch. " + sts);
+		sts = await viewAccessCodesPage.get_ListofAccessCodes();
+		await assertion.assertEqual(sts[0].accessCodeStatus, "REDEEMED", "access code status mismatch");
+	},
+
+	//Validate that clicking on history opens the dialog with logs
+	BK_TC_55: async function () {
+		sts = await viewAccessCodesPage.click_History_Button();
+		await assertion.assertEqual(sts, true, "History status mismatch");
+	},
+
+	//Validate that clicking on OK button in the dialog, closed the dialog
+	BK_TC_56: async function () {
+		sts = await common.click_CancelDialog_Button();
+		await assertion.assertEqual(sts, true, "History status mismatch");
+	},
+
+	//Validate that modify access code page is launched on clicking modify
+	BK_TC_57: async function () {
+		sts = await viewAccessCodesPage.click_Modify_Button();
+		await assertion.assertEqual(sts, true, "Generate codes page status mismatch");
+	},
+
+	//Validate that clicking on deactivate opens the dialog to deactivate the batch
+	BK_TC_58: async function () {
+		sts = await viewAccessCodesPage.click_Deactivate_Button();
+		await assertion.assert((typeof sts === "string" && sts.includes("Are you sure you want to deactivate this Batch?")), "Dialog text mismatch. " + sts);
+	},
+
+	//Validate that clicking on deactivate makes the batch inactive
+	BK_TC_59: async function (testdata) {
+		sts = await common.click_confirmDialog_Button();
+		await assertion.assert((typeof sts === "string" && sts.includes(testdata)), "Snackbar messsage mismatch. " + sts);
+		sts = await viewAccessCodesPage.isInitialized();
+		await assertion.assertEqual(sts.batchStatus, "Inactive", "Batch status mismatch");
+	},
+
+	//Validate that clicking on activate opens the dialog to activate the batch
+	BK_TC_60: async function () {
+		sts = await viewAccessCodesPage.click_Activate_Button();
+		await assertion.assert((typeof sts === "string" && sts.includes("Are you sure you want to activate this Batch?")), "Dialog text mismatch. " + sts);
+	},
+
+	//Validate that clicking on activate makes the batch active
+	BK_TC_61: async function (testdata) {
+		sts = await common.click_confirmDialog_Button();
+		await assertion.assert((typeof sts === "string" && sts.includes(testdata)), "Snackbar messsage mismatch. " + sts);
+		sts = await viewAccessCodesPage.isInitialized();
+		await assertion.assertEqual(sts.batchStatus, "Active", "Batch status mismatch");
+	},
+
+	//Validate that clicking on redeem launches the redeem code page
+	BK_TC_62: async function () {
+		sts = await viewAccessCodesPage.click_Redeem_Button();
+		await assertion.assertEqual(sts, true, "Redeem code page status mismatch");
+	},
+
+	//Validate that access code is redeemed on entering required details on the redeem code page
+	BK_TC_63: async function (testdata) {
+		sts = await redeemAccessCodePage.set_AccessCode(testdata[0].code);
+		await assertion.assertEqual(sts, true, "set_AccessCode status mismatch");
+		sts = await redeemAccessCodePage.set_Email(testdata[0].email);
+		await assertion.assertEqual(sts, true, "set_Email status mismatch");
+		sts = await redeemAccessCodePage.click_Redeem_Button();
+		await assertion.assert((typeof sts === "string" && sts.includes(testdata[1])), "Snackbar messsage mismatch. " + sts);
+	},
+
+	//Validate that view access code page is launched on closing the redeem access code page
+	BK_TC_64: async function () {
+		sts = await common.click_Close_Button();
+		await assertion.assertEqual(sts, true, "view access code page status mismatch");
+		sts = await viewAccessCodesPage.isInitialized();
+		await assertion.assertEqual(sts.batchStatus, "Active", "Batch status mismatch");
+	},
+
+	//Validate that the view access code page is launched on clicking the check a code button on the home page
+	BK_TC_65: async function (testdata) {
+		sts = await homePage.click_CheckACode_Button();
+		await assertion.assertEqual(sts, true, "click_CheckACode_Button status mismatch");
+		sts = await homePage.enter_AccessCode_in_CheckACode_Launcher(testdata[0].code);
+		await assertion.assertEqual(sts, true, "enter_AccessCode_in_CheckACode_Launcher status mismatch");
+		sts = await homePage.click_Proceed_Button_in_CheckACode_Launcher();
+		await assertion.assertEqual(sts.batchName, testdata[1].batchName, "Batch name mismatch");
+		sts = await viewAccessCodesPage.get_ListofAccessCodes();
+		await assertion.assertEqual(sts[0].accessCode, testdata[0].code, "access code mismatch");
+		await assertion.assertEqual(sts[0].accessCodeStatus, testdata[0].status, "access code status mismatch");
+	},
+
+	//Validate that user details page is launched on clicking the redeemed status of an access code
+	BK_TC_66: async function () {
+		sts = await viewAccessCodesPage.click_Redeemed_Button();
+		await assertion.assertEqual(sts, true, "Redeem code page status mismatch");
+		//assertion to be added for user details page
+	},
+
+	//Validate that clicking on next button loads max. of 20 access codes
+	BK_TC_67: async function () {
+		let sts2 = await viewAccessCodesPage.get_ListofAccessCodes();
+		sts = await viewAccessCodesPage.click_Nextpage_Button();
+		await assertion.assertNotEqual(sts[0].accessCode, sts2[0].accessCode, "access code mismatch");
+	},
+
+	//Validate that clicking on previous button loads max. of 20 access codes
+	BK_TC_68: async function () {
+		let sts2 = await viewAccessCodesPage.get_ListofAccessCodes();
+		sts = await viewAccessCodesPage.click_Prevpage_Button();
+		await assertion.assertNotEqual(sts[0].accessCode, sts2[0].accessCode, "access code mismatch");
+	},
+
+	// launch csv export code page
+	// launch print export code page
+
 
 	// launch url and republish native LO
 	BK_TC_999: async function (testdata) {

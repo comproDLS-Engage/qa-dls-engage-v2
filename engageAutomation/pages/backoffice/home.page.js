@@ -203,7 +203,7 @@ module.exports = {
         await logger.logInto((await stackTrace.get()));
         res = await action.click(this.checkCodeProceedBtn);
         if (res == true) {
-            //res = await require('./viewCode.page.js').isInitialized();
+            res = await require('./viewAccessCodes.page.js').isInitialized();
         }
         await logger.logInto((await stackTrace.get()), res);
         return res;
