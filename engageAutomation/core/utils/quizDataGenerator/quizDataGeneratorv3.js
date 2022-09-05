@@ -112,7 +112,7 @@ function getQuesdetail(qJson, obj) {
     //obj.maxOptions = quesOptions.length;
     var quesValidations = qJson.data.itemBody.validations;
 
-    if (obj.quesType == 'multi-mcqsr-itemplayer' || obj.quesType == 'mcqmr-itemplayer') {
+    if (obj.quesType == 'multi-mcqsr-itemplayer' || obj.quesType == 'mcqmr-itemplayer' || obj.quesType == 'kids-mcqsr-itemplayer') {
         Object.keys(qJson.data.itemBody.questions).forEach(function (i) {
             let quesOptions = [];
             let answerKey = [];
@@ -143,7 +143,7 @@ function getQuesdetail(qJson, obj) {
                             answerKey[j][3] = "correct";
                         }
                     }
-                    else if (obj.quesType == 'multi-mcqsr-itemplayer') {
+                    else if (obj.quesType == 'multi-mcqsr-itemplayer' || 'kids-mcqsr-itemplayer') {
                         if (qJson.data.itemBody.questions[i].id == quesValidations[key].responseContainer && quesValidations[key].correctResponse == answerKey[j][0]) {
                             answerKey[j][2] = "select";
                             answerKey[j][3] = "correct";
