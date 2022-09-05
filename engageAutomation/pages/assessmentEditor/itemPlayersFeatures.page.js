@@ -1176,32 +1176,29 @@ module.exports = {
 	},
 	//
 	setQuestionTextinwriting: async function (questionTitle) {
-		console.log(questionTitle)
-
+		// console.log(questionTitle)
 		await logger.logInto(stackTrace.get());
-		await browser.pause(2000)
+		// await browser.pause(2000)
 		await action.click(this.responseEdit)
 		await action.clearValueDefault(this.responseTextArea)
-		await browser.pause(2000)
-		await action.keyPress("\uE014")
-		await action.click(this.responseTextArea)
+		// await browser.pause(2000)
+		// await action.keyPress("\uE014")
+		// await action.click(this.responseTextArea)
 		res = await action.setValue(this.responseTextArea, questionTitle);
-		await browser.pause(2000)
-		//await action.keyPress("\uE008a\uE00F")
+		// await browser.pause(2000)
+		// //await action.keyPress("\uE008a\uE00F")
 		await action.keyPress(['\uE008', '\uE00F'])
-		await browser.pause(2000)
+		await browser.pause(1000)
 		await action.keyPress("\uE017")
 		if (res == true) {
-
 			await logger.logInto(stackTrace.get(), " -- Question Title is entered");
 			//action.click(this.textAreabtn)
-
 		}
 		else {
 			res = res + " -- Question Title is NOT entered";
 			await logger.logInto(stackTrace.get(), res, 'error');
 		}
-		await browser.pause(10000)
+		await browser.pause(2000);
 		return res;
 	},
 	clickAddBlankCKEditor: async function () {
