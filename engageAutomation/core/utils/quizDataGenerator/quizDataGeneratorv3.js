@@ -170,7 +170,7 @@ function getQuesdetail(qJson, obj) {
         })
     }
 
-    else if (obj.quesType == 'fibdropdown-itemplayer') {
+    else if (obj.quesType == 'fibdropdown-itemplayer' || 'kids-fibdropdown-itemplayer') {
         quesRC = qJson.data.itemBody.responseContainer;
         quesOptions = qJson.data.itemBody.options;
         Object.keys(quesRC).forEach(function (j) {
