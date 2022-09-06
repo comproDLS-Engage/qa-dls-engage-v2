@@ -2,6 +2,7 @@
 var action = require('../../core/actionLibrary/baseActionLibrary.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
 const path = require('path');
+
 var res, obj;
 
 // rename this file to itemEditor.page.js - akhil
@@ -451,11 +452,10 @@ module.exports = {
 	clickOptionEditbutton: async function (testdata) {
 		await logger.logInto(stackTrace.get());
 		console.log(this.editSubQuestion_btn + testdata[0] + this.subOptionValue + testdata[1] + "] ")
-		await browser.pause(2000)
+		// await browser.pause(2000);
 		res = await action.click((this.editSubQuestion_btn + testdata[0] + this.subOptionValue + testdata[1] + "] "))
-
 		//res = await action.setValue((this.subOptionIndex + testdata[0] + "\"] " + this.subOptionValue + testdata[1] + "] " + this.subOptiontext), testdata[2])
-		await browser.pause(2000)
+		await action.waitForDisplayed(this.done_btn);
 		if (res == true) {
 			await logger.logInto(stackTrace.get(), " -- Add Pair Button is clicked");
 		}
