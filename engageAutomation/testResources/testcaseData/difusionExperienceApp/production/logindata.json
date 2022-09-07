@@ -127,6 +127,19 @@
                         }
                     ]
                 },
+                "insightsDemoUser": {
+                    "email": "pn.teacher1@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "teacher",
+                    "name": "Natasha Brown",
+                    "class": [
+                        {
+                            "key": "MmMo-qvWC",
+                            "name": "Spanish Grade 6"
+                        }
+                    ],
+                    "info": {}
+                },
                 "acceptanceteacher": {
                     "email": "dev2-autoteacher1@yopmail.com",
                     "password": "Compro@1234",

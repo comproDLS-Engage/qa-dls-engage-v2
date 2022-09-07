@@ -412,6 +412,48 @@
       ]
     },
     {
+      "modulename": "Insights UI",
+      "testFile": "./test/engageExperienceApp/insightsUI.test.js",
+      "testcase": [
+        {
+          "id": "ENG_INUI_TC_1",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_INUI_TC_2",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_INUI_TC_3",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_INUI_TC_4",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_INUI_TC_5",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_INUI_TC_6",
+          "description": "",
+          "tags": "P1",
+          "visualTest": true
+        }
+      ]
+    },
+    {
       "modulename": "MyClass - Teacher",
       "moduleId": "ENG_INS_CLASS",
       "testFile": "./test/engageExperienceApp/classDashboard.test.js",
