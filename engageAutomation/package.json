@@ -69,7 +69,7 @@
     "rimraf": "^3.0.2",
     "selenium-webdriver": "^4.0.0",
     "tesults": "^1.1.1",
-    "wdio": "^6.0.1",
+    "create-wdio": "^7.1.1",
     "wdio-chromedriver-service": "^7.3.2",
     "wdio-novus-visual-regression-service": "^1.2.5",
     "wdio-timeline-reporter": "^5.1.4",
