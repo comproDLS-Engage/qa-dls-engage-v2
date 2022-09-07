@@ -2,6 +2,7 @@
 var action = require('../../core/actionLibrary/baseActionLibrary.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
 const path = require('path');
+
 var res, obj;
 
 // rename this file to itemEditor.page.js - akhil
@@ -352,11 +353,11 @@ module.exports = {
 		await logger.logInto(stackTrace.get());
 		res = await action.waitForClickable(this.editPrompt_btn);
 		if (res == true) {
-			await browser.pause(2000)
+			await browser.pause(1000)
 			res = await action.click(this.editPrompt_btn);
 			if (res == true) {
 				//res = action.waitForDisplayed("[role=progressbar]", undefined, true);
-				await browser.pause(5000)
+				await browser.pause(2000);
 			}
 		}
 		else {
@@ -383,9 +384,9 @@ module.exports = {
 	setHeaderTextinPlaceHolder: async function (testdata) {
 		await logger.logInto(stackTrace.get());
 		if (res == true) {
-			await browser.pause(5000)
+			await browser.pause(1000)
 			res = await action.setValue(this.placeHolderHeader_txt, testdata)
-			await browser.pause(2000)
+			await browser.pause(1000)
 			await logger.logInto(stackTrace.get(), " -- Value is added");
 		}
 		else {
@@ -409,7 +410,7 @@ module.exports = {
 
 	setInsTextinPlaceHolder: async function (testdata) {
 		await logger.logInto(stackTrace.get());
-		await browser.pause(5000)
+		await browser.pause(1000)
 		//res = await action.clearValueDefault(this.placeHolderIns_txt)
 		res = await action.click(this.placeHolderIns_txt);
 		res = await action.clearValueDefault(this.placeHolderIns_txt)
@@ -423,7 +424,7 @@ module.exports = {
 	},
 	setPromptTextPlaceHolder: async function (testdata) {
 		await logger.logInto(stackTrace.get());
-		res = await action.clearValueDefault(this.placeHolderIns_txt)
+		// res = await action.clearValueDefault(this.placeHolderIns_txt)
 		res = await action.addValue(this.placeHolderIns_txt, testdata)
 		await browser.pause(1000)
 		if (res == true) {
@@ -439,7 +440,7 @@ module.exports = {
 		await logger.logInto(stackTrace.get());
 		await action.clearValueDefault(this.placeHolderIns_txt)
 		res = await action.addValue(this.placeHolderIns_txt, testdata)
-		await browser.pause(2000)
+		await browser.pause(1000)
 		if (res == true) {
 			await logger.logInto(stackTrace.get(), " -- sub question text added");
 		}
@@ -451,11 +452,10 @@ module.exports = {
 	clickOptionEditbutton: async function (testdata) {
 		await logger.logInto(stackTrace.get());
 		console.log(this.editSubQuestion_btn + testdata[0] + this.subOptionValue + testdata[1] + "] ")
-		await browser.pause(2000)
+		// await browser.pause(2000);
 		res = await action.click((this.editSubQuestion_btn + testdata[0] + this.subOptionValue + testdata[1] + "] "))
-
 		//res = await action.setValue((this.subOptionIndex + testdata[0] + "\"] " + this.subOptionValue + testdata[1] + "] " + this.subOptiontext), testdata[2])
-		await browser.pause(2000)
+		await action.waitForDisplayed(this.done_btn);
 		if (res == true) {
 			await logger.logInto(stackTrace.get(), " -- Add Pair Button is clicked");
 		}
@@ -582,7 +582,7 @@ module.exports = {
 			await browser.pause(5000)
 			res = await action.click("div:nth-child(2) [data-tid=button-saveandreturn]");
 			if (res == true) {
-				//res = action.waitForDisplayed("[role=progressbar]", undefined, true);
+				// res = action.waitForDisplayed("[role=progressbar]", undefined, true);
 				await browser.pause(40000)
 			}
 		}
@@ -1308,7 +1308,8 @@ module.exports = {
 		let remoteFilePath = await browser.uploadFile(imagePath);
 		// set file path value in the input field
 		res = await action.addValue(this.media_input, remoteFilePath);
-		await action.waitForDisplayed(this.uploadedImage);
+		// await action.waitForDisplayed(this.uploadedImage);
+		await browser.pause(2000);
 		return res;
 	},
 
