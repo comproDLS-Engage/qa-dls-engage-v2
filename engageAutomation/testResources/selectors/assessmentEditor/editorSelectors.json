@@ -47,7 +47,7 @@
 			"videoCredit_input": "[data-tid=input-videocredit] input",
 			"media_input": "[type=file]",
 			"addImage_btn": "[data-tid=button-addimage]",
-			"uploadedImage": "[data-tid=image-preview-container] img",
+			"uploadedImage": ".image-preview-container > img",
 			"imageCredit_input": "[data-tid=input-imagecredit] input",
 			"addAudio_btn": "[data-tid=button-addaudio]",
 			"uploadedAudio": "[data-tid=sliderContainer]",
@@ -81,7 +81,12 @@
 			"responseTextArea": "[data-tid=input-ck-texteditor] [role=textbox]",
 			"textAreabtn": "button:nth-child(9) > svg , button:nth-child(10)",
 			"shufflingCheckBox": "[data-tid=checkbox-shuffleoptions]",
-			"addMoreButton":"[data-tid=button-addresponse-",
+			"addMoreButton": "[data-tid=button-addresponse-",
+			"deleteSubQuestion": "[data-tid*=button-deletesubquestion-",
+			"deleteResponse": "[data-tid*=button-deleteResponse-",
+			"deleteOption": "[data-tid*=button-deleteoption-",
+			"confirmDialogBox": "[role = 'dialog']",
+			"confirmYes": "[role = 'dialog'] >div > button:nth-child(2)",
 			"multipleResponse": {
 				"checkboxOption_input": "[data-tid=checkbox-option-"
 			},
@@ -92,7 +97,9 @@
 				"container_labelB": "[data-tid=container-label-B]",
 				"container_labelC": "[data-tid=container-label-C]",
 				"container_labelD": "[data-tid=container-label-D]",
-				"container_labelE": "[data-tid=container-label-E]"
+				"container_labelE": "[data-tid=container-label-E]",
+				"dndLabel": "[data-tid*=container-label-",
+				"deleteLabel": "[data-tid=icon-deletelabel] > div:nth-child(2)"
 			},
 			"DND_image": {
 				"addBlank_btn": "[data-tid=button-addblank]",
@@ -104,7 +111,7 @@
 			"matching": {
 				"inputItem": "[data-tid=input-item-",
 				"inputMatchedItem": "[data-tid=button-preview-matched-item-",
-				"addPair": "[data-tid=button-add]",
+				"addPair": "[data-tid=button-add]:nth-child(2)",
 				"editMatchingItem": "[data-tid*=button-preview-item-"
 			},
 			"classify": {
