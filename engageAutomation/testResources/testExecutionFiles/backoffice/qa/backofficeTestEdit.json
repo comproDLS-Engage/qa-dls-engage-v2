@@ -5556,7 +5556,7 @@
 				"testData": []
 			},
 			{
-				"id": "ASE_COM_TC_1150",
+				"id": "ASE_COM_TC_1155",
 				"description": "Click Delete SubQuestion",
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": [

@@ -1059,7 +1059,7 @@ module.exports = {
 		await assertion.assertEqual(sts, true, "alignAnswerCenterOptionsbtn is not clicked");
 	},
 
-	ASE_COM_TC_1150: async function (testdata) {
+	ASE_COM_TC_1155: async function (testdata) {
 		sts = await EditorPlayer.click_deleteSubQuestion(testdata);
 		await assertion.assertEqual(sts, true, "deleteSubQuestion are not Clicked");
 	},
