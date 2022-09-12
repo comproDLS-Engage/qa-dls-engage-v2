@@ -364,6 +364,7 @@ exports.config = {
      */
     onComplete: async function (exitCode, config, capabilities, results) {
         if (argv.tesultsToken) {
+            var envData = JSON.parse(fs.readFileSync(process.cwd() + '/env.json'));
             const tesults = require('tesults');
             const util = require('util');
             const tesultsResults = util.promisify(tesults.results);
@@ -371,7 +372,7 @@ exports.config = {
             const logData = await JSON.parse(jsonString);
             var tesultsCases = [];
             let testCase = {};
-            testCase.name = "Test Run Summary"
+            testCase.name = "Consolidation test"
             testCase.result = (logData.state.failed > 0) ? "fail" : "pass";
             testCase.duration = logData.duration;
             testCase.suite = "[build]";
@@ -380,7 +381,7 @@ exports.config = {
             //testCase._Skipped = logData.state.skipped;
             testCase._Environment = logData.capabilities.platformName.toUpperCase() + '\n' + logData.capabilities.browserName.toUpperCase() + " " + logData.capabilities.browserVersion + "\n" + logData.capabilities.screenResolution.width + "x" + logData.capabilities.screenResolution.height;
             testCase._TestFile = logData.specs[0];
-            testCase._ReportURL = "https://d29cns2xkhqbb2.cloudfront.net/" + argv.appType + "/" + argv.testEnv + "/" + argv.reportdir + "/index.html";
+            testCase._ReportURL = envData[argv.appType].environments[argv.testEnv].reportDirRepo + argv.appType + "/" + argv.testEnv + "/" + argv.reportdir + "/index.html";
             testCase._AppURL = global.appUrl;
             testCase._AppVersion = logData.appVersion;
             console.log(testCase)
