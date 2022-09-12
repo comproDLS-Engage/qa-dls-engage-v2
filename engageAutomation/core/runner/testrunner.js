@@ -207,10 +207,7 @@ class specRunner {
             testObj = null;
             prevtestFile = testFile
             try {
-                if (testFile.includes("launchUrl.js"))
-                    testFilepath = await path.resolve(rootDir, '../', testFile);
-                else
-                    testFilepath = await path.resolve(rootDir, testFile);
+                testFilepath = await path.resolve(rootDir, testFile);
                 testObj = await require(testFilepath);
             } catch (e) {
                 //logger.logInto(stackTrace.get(), "ERROR!! " + rootDir + '/test/' + testJsDir + testFile + " NOT found.");
