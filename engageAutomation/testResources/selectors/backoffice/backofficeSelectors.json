@@ -117,7 +117,7 @@
 		"activityTypeList": "[data-tid*=input-category-] > span",
 		"activityMenuBtn": "[data-tid=button-display-activity-menu]",
 		"activityMenuDeleteBtn": "[class*=mdc-menu-surface--open] [data-tid=button-Delete]",
-		"activityMenuActivityAuthorBtn": "[class*=mdc-menu-surface--open] [data-tid*=button-Activity]",
+		"activityMenuActivityAuthorBtn": "[class*=mdc-menu-surface--open] [data-tid*=button-edit]",
 		"activityMenuModifyBtn": "[class*=mdc-menu-surface--open] [data-tid*=button-modify]",
 		"itemCheckboxes": "[data-tid*=button-folder-details] > div > div",
 		"deleteItemBtn": "[data-tid=button-deleteSelectedItem]",

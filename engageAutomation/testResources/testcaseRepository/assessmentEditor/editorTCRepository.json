@@ -1087,6 +1087,41 @@
                     "id": "ASE_COM_TC_1149",
                     "description": "Click alignAnswerCenterOptionsbtn Option in ck editor",
                     "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1150",
+                    "description": "Delete SubQuestion",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1154",
+                    "description": "Delete Response",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1152",
+                    "description": "Delete option",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_COM_TC_1153",
+                    "description": "Confirm yes in Delete confirmation box",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_DND_TC_33",
+                    "description": "Click DND Label",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_DND_TC_34",
+                    "description": "Delete DND Label",
+                    "tags": "P1"
+                },
+                {
+                    "id": "ASE_MAT_TC_13",
+                    "description": "",
+                    "tags": "P1"
                 }
             ]
         }

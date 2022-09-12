@@ -229,6 +229,13 @@ module.exports = {
 	alignAnswerOptionsbtn: selectorFile.css.editorTab.editorSettings.alignAnswerOptionsbtn,
 	alignAnswerLeftOptionsbtn: selectorFile.css.editorTab.editorSettings.alignAnswerLeftOptionsbtn,
 	alignAnswerCenterOptionsbtn: selectorFile.css.editorTab.editorSettings.alignAnswerCenterOptionsbtn,
+	deleteSubQuestion: selectorFile.css.editorTab.deleteSubQuestion,
+	dndLabel: selectorFile.css.editorTab.DND.dndLabel,
+	deleteLabel: selectorFile.css.editorTab.DND.deleteLabel,
+	deleteResponse: selectorFile.css.editorTab.deleteResponse,
+	deleteOption: selectorFile.css.editorTab.deleteOption,
+	confirmDialogBox: selectorFile.css.editorTab.confirmDialogBox,
+	confirmYes: selectorFile.css.editorTab.confirmYes,
 
 	//--MULTIPLE RESPONSE
 	isInitialized1: async function (testdata) {
@@ -276,11 +283,11 @@ module.exports = {
 		await logger.logInto(stackTrace.get());
 		res = await action.waitForClickable(this.nextqun_btn);
 		if (res == true) {
-			await browser.pause(2000)
+			// await browser.pause(2000)
 			res = await action.click(this.nextqun_btn);
 			if (res == true) {
 				//res = action.waitForDisplayed("[role=progressbar]", undefined, true);
-				await browser.pause(5000)
+				await browser.pause(2000)
 			}
 		}
 		else {
@@ -950,7 +957,6 @@ module.exports = {
 	clickEditorTab: async function () {
 		await logger.logInto(stackTrace.get());
 		res = await action.waitForEnabled(this.editor_tab);
-		//	res = true;
 		if (res == true) {
 			await logger.logInto(stackTrace.get(), res + " -- Editor Tab is clicked");
 			res = await action.click(this.editor_tab);
@@ -1384,7 +1390,7 @@ module.exports = {
 		await logger.logInto(stackTrace.get());
 		//action.clearValue(this.questionInputField)
 		//action.clearValueDefault(this.questionInputField)
-		res = await action.addValue(this.questionInputField, questionText);
+		res = await action.setValue(this.questionInputField, questionText);
 		if (res == true) {
 			await logger.logInto(stackTrace.get(), " -- Question Text is entered");
 		} else {
@@ -3243,6 +3249,87 @@ module.exports = {
 		else {
 			res = res + " -- done button is not clickable";
 			await logger.logInto(stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
+
+
+	click_deleteSubQuestion: async function (testdata) {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.deleteSubQuestion + testdata + "]");
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " deleteSubQuestion is clicked");
+			res = await action.waitForDisplayed(this.confirmDialogBox);
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "deleteSubQuestion is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_dndLabel: async function (testdata) {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.dndLabel + testdata + "]");
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " dndLabel is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "dndLabel is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_deleteLabel: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.deleteLabel);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " deleteLabel is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "deleteLabel is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_deleteResponse: async function (testdata) {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.deleteResponse + testdata + "]");
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " deleteResponse is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "deleteResponse is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_deleteOption: async function (testdata) {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		console.log(this.deleteOption + testdata + "]");
+		res = await action.click(this.deleteOption + testdata + "]");
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " deleteOption is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "deleteOption is NOT clicked", 'error');
+		}
+		return res;
+	},
+
+	click_confirmYes: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.confirmYes);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " confirmYes is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "confirmYes is NOT clicked", 'error');
 		}
 		return res;
 	},

@@ -1057,5 +1057,35 @@ module.exports = {
 	ASE_COM_TC_1149: async function () {
 		sts = await EditorPlayer.click_alignAnswerCenterOptionsbtn()
 		await assertion.assertEqual(sts, true, "alignAnswerCenterOptionsbtn is not clicked");
-	}
+	},
+
+	ASE_COM_TC_1150: async function (testdata) {
+		sts = await EditorPlayer.click_deleteSubQuestion(testdata);
+		await assertion.assertEqual(sts, true, "deleteSubQuestion are not Clicked");
+	},
+
+	ASE_DND_TC_33: async function (testdata) {
+		sts = await EditorPlayer.click_dndLabel(testdata);
+		await assertion.assertEqual(sts, true, "dndLabel are not Clicked");
+	},
+
+	ASE_DND_TC_34: async function () {
+		sts = await EditorPlayer.click_deleteLabel();
+		await assertion.assertEqual(sts, true, "deleteLabel are not Clicked");
+	},
+
+	ASE_COM_TC_1154: async function (testdata) {
+		sts = await EditorPlayer.click_deleteResponse(testdata);
+		await assertion.assertEqual(sts, true, "deleteResponse are not Clicked");
+	},
+
+	ASE_COM_TC_1152: async function (testdata) {
+		sts = await EditorPlayer.click_deleteOption(testdata);
+		await assertion.assertEqual(sts, true, "deleteOption are not Clicked");
+	},
+
+	ASE_COM_TC_1153: async function () {
+		sts = await EditorPlayer.click_confirmYes();
+		await assertion.assertEqual(sts, true, "confirmYes are not Clicked");
+	},
 }
