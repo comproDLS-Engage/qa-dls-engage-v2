@@ -372,7 +372,7 @@ exports.config = {
             const logData = await JSON.parse(jsonString);
             var tesultsCases = [];
             let testCase = {};
-            testCase.name = "Consolidation test"
+            testCase.name = "Test Run Summary"
             testCase.result = (logData.state.failed > 0) ? "fail" : "pass";
             testCase.duration = logData.duration;
             testCase.suite = "[build]";
@@ -381,7 +381,7 @@ exports.config = {
             //testCase._Skipped = logData.state.skipped;
             testCase._Environment = logData.capabilities.platformName.toUpperCase() + '\n' + logData.capabilities.browserName.toUpperCase() + " " + logData.capabilities.browserVersion + "\n" + logData.capabilities.screenResolution.width + "x" + logData.capabilities.screenResolution.height;
             testCase._TestFile = logData.specs[0];
-            testCase._ReportURL = envData[argv.appType].environments[argv.testEnv].reportDirRepo + argv.appType + "/" + argv.testEnv + "/" + argv.reportdir + "/index.html";
+            testCase._ReportURL = envData[argv.appType].environments[argv.testEnv].reportDirRepo + "/" + argv.appType + "/" + argv.testEnv + "/" + argv.reportdir + "/index.html";
             testCase._AppURL = global.appUrl;
             testCase._AppVersion = logData.appVersion;
             console.log(testCase)
