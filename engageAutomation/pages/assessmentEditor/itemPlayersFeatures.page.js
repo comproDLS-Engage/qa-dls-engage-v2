@@ -243,7 +243,7 @@ module.exports = {
 			for (var j = 0; j < testdata[i].length; j++) {
 				var test = testdata[i][j]
 				res = await action.waitForExist(this.editorsel[test])
-				console.log(testdata[i][j] + ":" + res)
+				//console.log(testdata[i][j] + ":" + res)
 			}
 		}
 	},
@@ -458,7 +458,7 @@ module.exports = {
 	},
 	clickOptionEditbutton: async function (testdata) {
 		await logger.logInto(stackTrace.get());
-		console.log(this.editSubQuestion_btn + testdata[0] + this.subOptionValue + testdata[1] + "] ")
+		// console.log(this.editSubQuestion_btn + testdata[0] + this.subOptionValue + testdata[1] + "] ")
 		// await browser.pause(2000);
 		res = await action.click((this.editSubQuestion_btn + testdata[0] + this.subOptionValue + testdata[1] + "] "))
 		//res = await action.setValue((this.subOptionIndex + testdata[0] + "\"] " + this.subOptionValue + testdata[1] + "] " + this.subOptiontext), testdata[2])
@@ -469,9 +469,9 @@ module.exports = {
 		return res;
 	},
 	setOptiontxt: async function (testdata) {
-		console.log(testdata[2])
+		// console.log(testdata[2])
 		await logger.logInto(stackTrace.get());
-		console.log(this.subOptionIndex + testdata[0] + this.subOptionValue + testdata[1] + "] " + this.subOptiontext)
+		// console.log(this.subOptionIndex + testdata[0] + this.subOptionValue + testdata[1] + "] " + this.subOptiontext)
 		await action.click(this.subOptionIndex + testdata[0] + this.subOptionValue + testdata[1] + "] " + this.subOptiontext)
 		res = await action.clearValue((this.subOptionIndex + testdata[0] + this.subOptionValue + testdata[1] + "] " + this.subOptiontext))
 		await browser.pause(2000)
@@ -487,7 +487,7 @@ module.exports = {
 	setOptionCheckbox: async function (testdata) {
 		await logger.logInto(stackTrace.get());
 		res = await action.click((this.subOptionCheckBoxIndex + testdata[0] + this.subOptionValue + testdata[1]) + "] input ")
-		console.log(res)
+		// console.log(res)
 		await browser.pause(2000)
 		if (res == true) {
 			await logger.logInto(stackTrace.get(), " -- Add Pair Button is clicked");
@@ -497,7 +497,7 @@ module.exports = {
 	setOptionRadio: async function (testdata) {
 		await logger.logInto(stackTrace.get());
 		res = await action.click((this.subOptionRadioIndex + testdata[0] + this.subOptionValue + testdata[1]) + "] input ")
-		console.log(res)
+		// console.log(res)
 		await browser.pause(2000)
 		if (res == true) {
 			await logger.logInto(stackTrace.get(), " -- Add Pair Button is clicked");
@@ -633,13 +633,13 @@ module.exports = {
 	clickAddLabelBtn: async function (labelOptions) { //why do we need the list of options, need to discuss - akhil
 		await logger.logInto(stackTrace.get());
 		var countLabel = labelOptions.length;
-		console.log(countLabel)
+		// console.log(countLabel)
 		var optionlength = await action.findElements("[data-tid*=container-label")
-		console.log(optionlength.length)
+		// console.log(optionlength.length)
 		if (labelOptions.length > optionlength.length) {
 			countLabel = (labelOptions.length - optionlength.length)
 		}
-		console.log(countLabel)
+		// console.log(countLabel)
 		for (var i = 0; i < countLabel; i++) {
 			await action.waitForEnabled(this.addLabel_btn);
 			await action.waitForClickable(this.addLabel_btn);
@@ -669,11 +669,11 @@ module.exports = {
 	//--DRAG AND DRAG ONTO IMAGE
 	dragAndDrop_cordinates: async function (draggable, left, top) {  //need to discuss - akhil
 		var location = await action.getLocation(draggable);
-		console.log("location of element:", location);
-		console.log("left passed - ", left);
-		console.log("top passed - ", top);
-		console.log("new x", location.x + left);
-		console.log("new y:", location.y + top);
+		// console.log("location of element:", location);
+		// console.log("left passed - ", left);
+		// console.log("top passed - ", top);
+		// console.log("new x", location.x + left);
+		// console.log("new y:", location.y + top);
 
 		await logger.logInto(stackTrace.get());
 		var message = "draggable:" + draggable + " left:" + left + "top:" + top;
@@ -776,7 +776,7 @@ module.exports = {
 	},
 	clickItems: async function (testdata) {
 		await logger.logInto(stackTrace.get());
-		console.log(this.editMatchingItem + testdata[0])
+		// console.log(this.editMatchingItem + testdata[0])
 		res = await action.click(this.editMatchingItem + testdata[0]);
 		if (res == true) {
 			action.waitForDisplayed(this.placeHolderIns_txt)
@@ -791,7 +791,7 @@ module.exports = {
 	//--MATCHING
 	clickMatchedItems: async function (testdata) {
 		await logger.logInto(stackTrace.get());
-		console.log(this.inputMatchedItem + testdata[0])
+		// console.log(this.inputMatchedItem + testdata[0])
 		res = await action.click(this.inputMatchedItem + testdata[0]);
 		if (res == true) {
 			action.waitForDisplayed(this.placeHolderIns_txt)
@@ -815,7 +815,7 @@ module.exports = {
 	clickAddGroupBtn: async function () {
 		await logger.logInto(stackTrace.get());
 		res = await action.click(this.addGroup_btn);
-		console.log("selector:", this.addGroup_btn)
+		// console.log("selector:", this.addGroup_btn)
 		if (res == true) {
 			await logger.logInto(stackTrace.get(), " -- Add Group Button is clicked");
 		}
@@ -853,7 +853,7 @@ module.exports = {
 		for (var i = 1; i <= groups.length; i++) {
 			var optionSelector = this.group_input + i + "] input";
 			var optionValue = groups[i - 1];
-			console.log(optionValue)
+			// console.log(optionValue)
 			itemsArr[i - 1] = await action.setValue(optionSelector, optionValue);
 			getValueArray[i - 1] = await action.getValue(optionSelector)
 		}
@@ -1026,7 +1026,7 @@ module.exports = {
 		await logger.logInto(stackTrace.get());
 		var itemPlayerSelected = this.itemPlayer_btn + itemPlayer + "]";
 		res = await action.waitForDisplayed(itemPlayerSelected)
-		console.log(itemPlayerSelected)
+		// console.log(itemPlayerSelected)
 		res = await action.click(itemPlayerSelected);
 		if (res == true) {
 			await logger.logInto(stackTrace.get(), " -- Selected Question is clicked");
@@ -1119,7 +1119,7 @@ module.exports = {
 			res = res + " -- Error in clicking Add Instruction button";
 			await logger.logInto(stackTrace.get(), res, 'error');
 		}
-		console.log("rm")
+		// console.log("rm")
 		return res;
 	},
 
@@ -1226,7 +1226,7 @@ module.exports = {
 		await logger.logInto(stackTrace.get());
 		await action.waitForClickable(this.addImage_btn)
 		res = await action.click(this.addImage_btn);
-		console.log(res)
+		// console.log(res)
 		await action.waitForDisplayed("[data-tid='button-browseimage']")
 		if (res == true) {
 			await logger.logInto(stackTrace.get(), " -- Add Image Button is clicked");
@@ -1239,7 +1239,7 @@ module.exports = {
 	},
 	//----- textArea configuration Writing Player
 	setRowsNumber: async function (i, rowNumber) {
-		console.log(rowNumber)
+		// console.log(rowNumber)
 
 		await logger.logInto(stackTrace.get());
 		res = await action.clearValue(this.rowNumber + i + "] input");
@@ -1374,7 +1374,7 @@ module.exports = {
 		await action.waitForEnabled(this.audioCredit_input)
 
 		res = await action.setValue(this.audioCredit_input, audioCredit); // use setValue instead of addValue - akhil
-		console.log(res)
+		// console.log(res)
 		if (res == true) {
 			await logger.logInto(stackTrace.get(), " -- Audio Credit is entered");
 		}
@@ -1605,7 +1605,7 @@ module.exports = {
 	click_instruction_numbermenuItem: async function (testdata) {
 		await logger.logInto(await stackTrace.get());
 		var res;
-		console.log(this.instruction_numbermenuItem + testdata)
+		// console.log(this.instruction_numbermenuItem + testdata)
 		res = await action.click(this.instruction_numbermenuItem + testdata);
 		if (true == res) {
 			await logger.logInto(await stackTrace.get(), " instruction_numbermenuItem is clicked");
@@ -3237,7 +3237,7 @@ module.exports = {
 		return res;
 	},
 	clickaddMoreButton: async function (testdata) {
-		console.log(testdata)
+		// console.log(testdata)
 		await logger.logInto(stackTrace.get());
 		res = await action.waitForDisplayed(this.addMoreButton + testdata);
 		if (res == true) {
@@ -3310,7 +3310,7 @@ module.exports = {
 	click_deleteOption: async function (testdata) {
 		await logger.logInto(await stackTrace.get());
 		var res;
-		console.log(this.deleteOption + testdata + "]");
+		// console.log(this.deleteOption + testdata + "]");
 		res = await action.click(this.deleteOption + testdata + "]");
 		if (true == res) {
 			await logger.logInto(await stackTrace.get(), " deleteOption is clicked");
