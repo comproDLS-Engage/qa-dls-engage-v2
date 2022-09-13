@@ -1390,7 +1390,7 @@ module.exports = {
 		await logger.logInto(stackTrace.get());
 		//action.clearValue(this.questionInputField)
 		//action.clearValueDefault(this.questionInputField)
-		res = await action.setValue(this.questionInputField, questionText);
+		res = await action.addValue(this.questionInputField, questionText);
 		if (res == true) {
 			await logger.logInto(stackTrace.get(), " -- Question Text is entered");
 		} else {
