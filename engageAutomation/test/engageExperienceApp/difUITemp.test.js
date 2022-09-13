@@ -225,6 +225,14 @@ module.exports = {
 
 	// Edit class page
 	ENG_DIF_TC_17: async function () {
+		res = await action.click("//span[text()='Cancel']/..");
+		console.log(res)
+		res = await action.waitForDisplayed("//span[text()='Cancel']/..", undefined, true);
+		console.log(res)
+		res = await action.click("div[role=presentation]");
+		console.log(res)
+		res = await action.waitForDisplayed("[data-tid=button-inviteEmail]", undefined, true);
+		console.log(res)
 		res = await action.click("[data-tid=button-classOptions]");
 		console.log(res)
 		res = await action.click("[data-tid=button-editClass]");
@@ -723,6 +731,26 @@ module.exports = {
 	// Dashboard page
 	ENG_DIF_TC_61: async function () {
 		res = await action.waitForDisplayed("[data-tid*=text-time-recent]");
+		console.log(res)
+	},
+
+	// Class Invitation page
+	ENG_DIF_TC_62: async function () {
+		res = await action.click("//*[contains(text(),'Invite')]/../../..");
+		console.log(res)
+		res = await action.waitForDisplayed("[data-tid=button-inviteEmail]");
+		console.log(res)
+		res = await action.click("[data-tid=button-inviteEmail]");
+		console.log(res)
+		res = await action.waitForDisplayed("//div[text()='Copy Invitation']/../..");
+		console.log(res)
+	},
+
+	// Class Invitation page after copying the invitation
+	ENG_DIF_TC_63: async function () {
+		res = await action.click("//div[text()='Copy Invitation']/../..");
+		console.log(res)
+		res = await action.waitForDisplayed("//div[text()='Invitation copied to clipboard!']/../..");
 		console.log(res)
 	},
 
