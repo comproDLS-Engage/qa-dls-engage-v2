@@ -128,6 +128,20 @@
                 "testData": []
             },
             {
+                "id": "ENG_DIF_TC_62",
+                "description": "Class Invitation page",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.01,
+                "testData": []
+            },
+            {
+                "id": "ENG_DIF_TC_63",
+                "description": "Class Invitation page after copying the invitation",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.01,
+                "testData": []
+            },
+            {
                 "id": "ENG_DIF_TC_17",
                 "description": "Edit class page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
