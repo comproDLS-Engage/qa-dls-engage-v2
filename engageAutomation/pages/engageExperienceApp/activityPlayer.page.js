@@ -35,6 +35,8 @@ module.exports = {
     infoTocHeading: selectorFile.css.ComproEngage.activityPlayer.infoTocHeading,
     feedbackText: selectorFile.css.ComproEngage.activityPlayer.feedbackText,
     closeAssignmentBtn: selectorFile.css.ComproEngage.activityPlayer.closeAssignmentBtn,
+    kidsFeedbackTitle: selectorFile.css.ComproEngage.activityPlayer.kidsFeedbackTitle,
+    kidsFeedbackSubtitle: selectorFile.css.ComproEngage.activityPlayer.kidsFeedbackSubtitle,
 
     isInitialized: async function () {
         var res;
@@ -71,6 +73,8 @@ module.exports = {
             detailsPanelHidden: ((await action.getElementCount(this.detailsPanel)) > 0) ? await action.getAttribute(this.detailsPanel, "aria-hidden") : null,
             feedbackText: ((await action.getElementCount(this.feedbackText)) > 0) ? await action.getText(this.feedbackText) : null,
             closeAssignmentBtn: ((await action.getElementCount(this.closeAssignmentBtn)) > 0) ? await action.getText(this.closeAssignmentBtn) : null,
+            kidsFeedbackTitle: ((await action.getElementCount(this.kidsFeedbackTitle)) > 0) ? await action.getText(this.kidsFeedbackTitle) : null,
+            kidsFeedbackSubtitle: ((await action.getElementCount(this.kidsFeedbackSubtitle)) > 0) ? await action.getText(this.kidsFeedbackSubtitle) : null
         }
         return obj;
     },

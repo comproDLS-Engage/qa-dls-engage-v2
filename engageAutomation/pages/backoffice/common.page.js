@@ -28,9 +28,9 @@ module.exports = {
             res = await action.waitForDisplayed(this.snackbarLbl);
             if (res == true) {
                 res = await action.getText(this.snackbarLbl);
-                await action.click(this.snackbarBtn);
+                //await action.click(this.snackbarBtn);
             }
-            await browser.pause(5000);
+            await browser.pause(25000);
         }
         await logger.logInto((await stackTrace.get()), res);
         return res;
