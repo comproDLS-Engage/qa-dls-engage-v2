@@ -733,6 +733,4 @@ module.exports = {
             await logger.logInto(await stackTrace.get(), " --resourseData NOT clicked", "error")
         return res;
     },
-
-
 }
