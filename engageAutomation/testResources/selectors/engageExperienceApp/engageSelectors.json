@@ -513,7 +513,9 @@
                 "closeInfoBtn": "[data-tid=button-closeinfotoc]",
                 "infoTocHeading": "[data-tid=text-infotocheading]",
                 "feedbackText": "[data-tid=text-feedbackmessage]",
-                "closeAssignmentBtn": "[data-tid=button-closeAssignment]"
+                "closeAssignmentBtn": "[data-tid=button-closeAssignment]",
+                "kidsFeedbackTitle": "[data-tid=title-feedback]",
+                "kidsFeedbackSubtitle": "[data-tid=subtitle-feedback]"
             },
             "activitiyPlayer": {
                 "feedback_txt": "[data-tid=text-feedbackmessage]",
