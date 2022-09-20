@@ -397,4 +397,4 @@ module.exports = {
 			await logger.logInto(await stackTrace.get(), res + " -- Error in clicking Settings Button", 'error');
 		return res;
 	}
-};
+}
