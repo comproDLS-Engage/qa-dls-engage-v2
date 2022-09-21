@@ -1123,6 +1123,71 @@
           "description": "Mobile: Validate that on launching the application the appshell (left navigation pane and header) appears",
           "tags": "P1",
           "visualTest": true
+        },
+        {
+          "id": "ENG_SHELL_TC_21",
+          "description": "Validate the click on index button",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_SHELL_TC_22",
+          "description": "Validate the click on close button",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_SHELL_TC_23",
+          "description": "Validate the click on product button",
+          "tags": "P1",
+          "visualTest": true
+        },  {
+          "id": "ENG_SHELL_TC_24",
+          "description": "Validate the click on section item",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_SHELL_TC_25",
+          "description": "Validate the click on resourse Items",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_SHELL_TC_26",
+          "description": "Validate the click on material button",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_SHELL_TC_27",
+          "description": "Validate the click on Product Items",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_SHELL_TC_28",
+          "description": "Validate the click on info btn",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_SHELL_TC_29",
+          "description": "Validate the info data",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_SHELL_TC_30",
+          "description": "Validate the click on resourse of info btn",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_SHELL_TC_31",
+          "description": "Validate the click on info Close btn",
+          "tags": "P1",
+          "visualTest": true
         }
       ]
     },
