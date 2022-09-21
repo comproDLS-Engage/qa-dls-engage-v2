@@ -1702,6 +1702,18 @@
           "description": "Validate the attempted state of a non scorable activity when launched from assignment",
           "tags": "",
           "visualTest": true
+        },
+        {
+          "id": "ENG_PLAY_TC_28",
+          "description": "Validate the feedback text of a scorable activity for default layout",
+          "tags": "",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_PLAY_TC_29",
+          "description": "Validate the feedback text of a scorable activity for kids layout",
+          "tags": "",
+          "visualTest": true
         }
       ]
     },

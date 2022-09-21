@@ -360,6 +360,14 @@
                         "Correct",
                         "Oops! Not quite correct.",
                         "Not Correct"
+                    ],
+                    "kidsFeedbackTitle": [
+                        "Not quite right.", 
+                        "Nice Job"
+                    ],
+                    "kidsFeedbackSubtitle": [
+                        "You can try this again later.",
+                        "You selected the correct response."
                     ]
                 },
                 "student": {
@@ -398,7 +406,15 @@
                         "Oops! Not quite correct.",
                         "Not Correct"
                     ],
-                    "closeAssignmentBtn": "Close Assignment"
+                    "closeAssignmentBtn": "Close Assignment",
+                    "kidsFeedbackTitle": [
+                        "Not quite right.", 
+                        "Nice Job"
+                    ],
+                    "kidsFeedbackSubtitle": [
+                        "You can try this again later.",
+                        "You selected the correct response."
+                    ]
                 }
             },
             "activityPlayerPage": {

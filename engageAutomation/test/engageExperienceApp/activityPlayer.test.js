@@ -578,4 +578,18 @@ module.exports = {
 			await assertion.assertEqual(sts.closeAssignmentBtn, null, "closeAssignmentBtn status mismatch");
 		}
 	},
+
+	//Validate the feedback text of a scorable activity for default layout
+	ENG_PLAY_TC_28: async function (testdata) {
+		sts = await activityPlayerPage.getData_activityPlayer();
+		await assertion.assertEqual(sts.feedbackText, testdata, "feedbackText status mismatch");		
+	},
+
+	//Validate the feedback text of a scorable activity for kids layout
+	ENG_PLAY_TC_29: async function (testdata) {
+		sts = await activityPlayerPage.getData_activityPlayer();
+		await assertion.assertEqual(sts.kidsFeedbackTitle, testdata[0], "kidsFeedbackTitle status mismatch");
+		await assertion.assertEqual(sts.kidsFeedbackSubtitle, testdata[1], "kidsFeedbackSubtitle status mismatch");
+	},
+	
 }
