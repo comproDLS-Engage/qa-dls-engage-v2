@@ -1175,6 +1175,27 @@
                 "removeDialogNoBtn": "[class*=mdc-dialog--open] [data-tid=button-close]",
                 "removeDialogYesBtn": "[class*=mdc-dialog--open] [data-tid=button-agree]"
             },
+            "indexMenu": {
+                "indexbtn": "[data-tid=button-indextoc]",
+                "tocPanelHeader": "h4[data-tid=text-chaptertitle]",
+                "closetocbtn": "[data-tid=button-closeinfotoc]",
+                "producHeadertbtn": "[data-tid=tab-selectedproduct]",
+                "sectiongroup": "[data-tid*=text-sectiontitle-",
+                "resoursebtn": "[data-tid*=button-resource-",
+                "materialbtn": "[data-tid=tab-materials]",
+                "indexproductbtn": "[data-tid*=listitem-product-",
+                "currentlbl": "[data-tid=text-currentproduct]"
+            },
+            "tocMenu": {
+                "infoBtn": "[data-tid='button-openinfotoc']",
+                "infoTocHeading": "[data-tid=text-infotocheading]",
+                "closeInfoBtn": "[data-tid=button-closeinfotoc]",
+                "chapterTitle": "h6[data-tid=text-chaptertitle]",
+                "productbtn": "[aria-label=breadcrumb] button",
+                "bookName": "[data-tid=text-bundletitle]",
+                "bookIcon": "[data-tid=image-bundlecover]",
+                "resourseData": "[data-tid*=button-resource-"
+            },
             "openActivityPlayer": {
                 "showDetailsBtn": "[data-tid=button-activityinfopanelswitcher]",
                 "infoBtn": "[data-tid='button-openinfotoc']",

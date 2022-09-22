@@ -1200,6 +1200,13 @@
                     "removeDialogYesBtn": "Yes"
                 }
             },
+            "indexMenu": {
+                "teacher": {
+                    "tocPanelHeader": "Jump to Section",
+                    "currentlbl": "Curent",
+                    "materialbtn":"Materials"
+                }
+            },
             "openActivityPlayer": {
                 "teacher": {
                     "showDetailsBtn": [
