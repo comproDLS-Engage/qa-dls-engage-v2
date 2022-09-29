@@ -34,6 +34,15 @@ module.exports = {
     bookIcon: selectorFile.homePage.bookIcon,
     globalResourceIcon: selectorFile.homePage.globalResourceIcon,
     appVersion: selectorFile.common.appVersion,
+    findUserBtn: selectorFile.homePage.findUserBtn,
+    findUserTxtbox: selectorFile.homePage.findUserTxtbox,
+    entitleUserBtn: selectorFile.homePage.entitleUserBtn,
+    entitleUserTxtbox: selectorFile.homePage.entitleUserTxtbox,
+    findInstitutionBtn: selectorFile.homePage.findInstitutionBtn,
+    findInstitutionTxtbox: selectorFile.homePage.findInstitutionTxtbox,
+    findClassBtn: selectorFile.homePage.findClassBtn,
+    findClassTxtbox: selectorFile.homePage.findClassTxtbox,
+    proceedBtn: selectorFile.homePage.proceedBtn,
 
     isInitialized: async function () {
         await logger.logInto((await stackTrace.get()));
@@ -265,7 +274,46 @@ module.exports = {
         }
         await logger.logInto((await stackTrace.get()), res);
         return res;
-    }
+    },
 
+    search_user: async function () {
+        
+    },
+
+    entitle_user: async function () {
+        
+    },
+    
+    search_institution: async function (val) {
+        await logger.logInto((await stackTrace.get()));
+        res = await action.click(this.findInstitutionBtn);
+        if (res == true) {
+            res = await action.setValue(this.findInstitutionTxtbox, val);
+            if (res == true) {
+                res = await action.click(this.proceedBtn);
+                if (res == true) {
+                    //call isInitialize of find institute page
+                }
+            }
+        }
+        await logger.logInto((await stackTrace.get()), res);
+        return res;
+    },
+
+    search_class: async function (val) {
+        await logger.logInto((await stackTrace.get()));
+        res = await action.click(this.findClassBtn);
+        if (res == true) {
+            res = await action.setValue(this.findClassTxtbox, val);
+            if (res == true) {
+                res = await action.click(this.proceedBtn);
+                if (res == true) {
+                    //call isInitialize of find class page
+                }
+            }
+        }
+        await logger.logInto((await stackTrace.get()), res);
+        return res;
+    },
 
 }

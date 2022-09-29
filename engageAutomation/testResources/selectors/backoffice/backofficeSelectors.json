@@ -9,7 +9,7 @@
 		"appLoader": "[class='c-app-loader js-app-loader']",
 		"menuBtn": "[data-tid=button-profile-menu]",
 		"signOutBtn": "[data-tid='button-sign-out']",
-		"pageTitle": "[class*=c-page-header__title]",
+		"pageTitle": "[class*=c-page-header__title],[data-tid='text-page-header-title']",
 		"pageSubtitle": "[class*=c-page-header__sub-title]",
 		"pageHeaderImg": "[class*=c-page-header__icon] img",
 		"loadingContainer": "[class=c-progressbar-container]",
@@ -59,7 +59,16 @@
 		"searchTxtbox": "[data-tid=input-searchbyenter]",
 		"searchBtn": "[data-tid=button-clearsearch]",
 		"bookIcon": "[data-tid*=button-book-detail]:not([style='display: none;']) [class=c-book-mode-icon]",
-		"globalResourceIcon": "[data-tid*=button-book-detail]:not([style='display: none;']) [class*=c-book-mode-icon-gr]"
+		"globalResourceIcon": "[data-tid*=button-book-detail]:not([style='display: none;']) [class*=c-book-mode-icon-gr]",
+		"findUserBtn": "[data-tid=button-find-user]",
+		"findUserTxtbox": "input[id='Email']",
+		"entitleUserBtn": "[data-tid=button-entitle-user]",
+		"entitleUserTxtbox": "input[id='Email']",
+		"findInstitutionBtn": "[data-tid=button-find-an-institution]",
+		"findInstitutionTxtbox": "input[id='Find Institution']",
+		"findClassBtn": "[data-tid=button-pending-approvals]",
+		"findClassTxtbox": "input[id='Find Class']",
+		"proceedBtn": "[class*=c-launch-button]"
 	},
 	"viewBookPage": {
 		"componentList": "[data-tid*=button-component-detail] [class*=c-card__title]",
@@ -219,5 +228,22 @@
 		"nextBtn": "div[class=c-library-info] button",
 		"resourceNameList": "[class=c-resource-name]",
 		"filteredChips": "div[class=c-filtered-chips]"
+	},
+	"findInstitutionPage": {
+		"searchbox" : "[data-tid=input-institution-search]",
+		"institutionList": "[data-tid*=button-institution-",
+		"moreOptionsBtn": "[data-tid=button-institution-actions]",
+		"changeNameOption":	"[data-tid='button-change-institution-name']",
+		"changeKeyOption":	"[data-tid='button-change-institution-key']",
+		"loginAsAdminOption": "[data-tid='button-login-as-institution-admin']",
+		"dialogChangeBtn": "",
+		"dialogCancelBtn": ""
+	},
+	"findClassPage": {
+		"classKey" : "[data-tid=container-listItem-1] [data-tid=text-subline]",
+		"bookName": "[data-tid=container-listItem-2] [data-tid=text-subline]",
+		"institutionName": "[data-tid=container-listItem-3] [data-tid=text-subline]",
+		"viewClassAsTeacherBtn": "[data-tid=button-view-class-as-teacher]",
+		"findAnotherClassBtn": "[data-tid=button-findAction]"
 	}
 }
