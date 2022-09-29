@@ -65,6 +65,16 @@ module.exports = {
         return res;
     },
 
+    click_DialogCancel_Button: async function () {
+        await logger.logInto((await stackTrace.get()));
+        let res = await action.click(this.dialogCancelBtn);
+        if (res == true) {
+            res = await action.waitForDisplayed(this.dialogChangeBtn, undefined, true);
+        }
+        await logger.logInto((await stackTrace.get()), res);
+        return res;
+    },
+
     change_Institution_Name: async function () {
 
     }
