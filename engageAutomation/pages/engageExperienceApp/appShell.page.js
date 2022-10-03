@@ -1,6 +1,5 @@
 "use strict";
 var action = require('../../core/actionLibrary/baseActionLibrary.js');
-const { confirmPasswordError_text } = require('./settings.page.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
 var res;
 
