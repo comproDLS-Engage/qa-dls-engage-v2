@@ -188,11 +188,23 @@
                                     "Download pdf",
                                     "Download xls",
                                     "Etext",
-                                    "Html webbook"
+                                    "Html webbook",
+                                    "Video with subtitles",
+                                    "Audio with subtitles"
                                 ]
                             }
                         ]
                     }
+                ]
+            },
+            {
+                "index": 5,
+                "name": {
+                    "EN": "Flipbook",
+                    "ES": "Flipbook"
+                },
+                "unit": [
+                   
                 ]
             }
         ]
