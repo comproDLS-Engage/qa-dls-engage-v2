@@ -17,5 +17,16 @@
             "Folder modified successfully."
         ],
         "activity": []
+    },
+    "snackbar": {
+        "accessCodes": [
+            "Access Batch and its Codes are generated successfully.",
+            "Access Codes details modified successfully.",
+            "Access Code copied to clipboard.",
+            "Access Code status updated.",
+            "All Access Codes in this Batch have been deactivated.",
+            "All Access Codes in this Batch have been activated.",
+            "Access code is already consumed by other user."
+        ]
     }
 }

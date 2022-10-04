@@ -205,6 +205,36 @@
 				"status": "Active",
 				"studentCount": 0,
 				"info": "Existing Active Course"
+			},
+			"archivecClass": {
+				"name": "Archive Class Check",
+				"key": "vQ9n-qhQ8",
+				"classDuration": "Aug 08 - Aug 08, 2022",
+				"instructor": {
+					"name": "",
+					"email": ""
+				},
+				"bookName": "QA Test Automation Book [DO NOT MODIFY]",
+				"bookIndex":"0",
+				"schoolName": "",
+				"status": "",
+				"studentCount": 0,
+				"info": ""
+			},
+			"studentArchiveClass":{
+				"name": "Archive class with Student",
+				"key": "vQ9n-qhQ8",
+				"classDuration": "Aug 08 - Aug 08, 2022",
+				"instructor": {
+					"name": "",
+					"email": ""
+				},
+				"bookName": "QA Test Automation Book [DO NOT MODIFY]",
+				"bookIndex":"0",
+				"schoolName": "",
+				"status": "",
+				"studentCount": 0,
+				"info": ""
 			}
 		}
 	}

@@ -39,18 +39,20 @@ module.exports = {
 	progressOption: selectorFile.css.ComproEngage.myClassPage.progressOption,
 	viewProgress_btn: selectorFile.css.ComproEngage.myClassPage.viewProgress_btn,
 	searchBox: selectorFile.css.ComproEngage.browse.searchBox,
-    searchIcon: selectorFile.css.ComproEngage.browse.searchIcon,
+	searchIcon: selectorFile.css.ComproEngage.browse.searchIcon,
 	searchList: selectorFile.css.ComproEngage.browse.searchList,
-    showMoreResults: selectorFile.css.ComproEngage.browse.showMoreResults,
-    noResultListItemTitle: selectorFile.css.ComproEngage.browse.noResultListItemTitle,
-    noResultListItemSubtitle: selectorFile.css.ComproEngage.browse.noResultListItemSubtitle,
-    clearSearch: selectorFile.css.ComproEngage.browse.clearSearch,
-    searchCount: selectorFile.css.ComproEngage.browse.searchCount,
-    search_NoResult_img: selectorFile.css.ComproEngage.browse.search_NoResult_img,
-    search_NoResult_title: selectorFile.css.ComproEngage.browse.search_NoResult_title,
-    search_NoResult_subTitle: selectorFile.css.ComproEngage.browse.search_NoResult_subTitle,
-    searchPill: selectorFile.css.ComproEngage.browse.searchPill,
-    closeSearchPill: selectorFile.css.ComproEngage.browse.closeSearchPill,
+	showMoreResults: selectorFile.css.ComproEngage.browse.showMoreResults,
+	noResultListItemTitle: selectorFile.css.ComproEngage.browse.noResultListItemTitle,
+	noResultListItemSubtitle: selectorFile.css.ComproEngage.browse.noResultListItemSubtitle,
+	clearSearch: selectorFile.css.ComproEngage.browse.clearSearch,
+	searchCount: selectorFile.css.ComproEngage.browse.searchCount,
+	search_NoResult_img: selectorFile.css.ComproEngage.browse.search_NoResult_img,
+	search_NoResult_title: selectorFile.css.ComproEngage.browse.search_NoResult_title,
+	search_NoResult_subTitle: selectorFile.css.ComproEngage.browse.search_NoResult_subTitle,
+	searchPill: selectorFile.css.ComproEngage.browse.searchPill,
+	closeSearchPill: selectorFile.css.ComproEngage.browse.closeSearchPill,
+	archivedlbl: selectorFile.css.ComproEngage.myClassPage.archivedlbl,
+	archiveLblCrossButton: selectorFile.css.ComproEngage.myClassPage.archiveLblCrossButton,
 
 	isInitialized: async function () {
 		await logger.logInto(await stackTrace.get());
@@ -72,18 +74,18 @@ module.exports = {
 			addClassBtn: (await action.getElementCount(this.addClassBtn)) > 0 ? await action.getText(this.addClassBtn) : null,
 			activeTab: (await action.getElementCount(this.activeTab)) > 0 ? await action.getText(this.activeTab) : null,
 			archivedTab: (await action.getElementCount(this.archivedTab)) > 0 ? await action.getText(this.archivedTab) : null,
-			//archivedlbl: action.getElementCount(this.archivedlbl) > 0 ? action.getText(this.archivedlbl) : null,
+			archivedlbl: (await action.getElementCount(this.archivedlbl)) > 0 ? await action.getText(this.archivedlbl) : null,
 			isActiveTabSelected: (await action.getElementCount(this.activeTab)) > 0 ? await action.getAttribute(this.activeTab, "aria-selected") : null,
 			isArchievedTabSelected: (await action.getElementCount(this.archivedTab)) > 0 ? await action.getAttribute(this.archivedTab, "aria-selected") : null,
 			noClassTitle: (await action.getElementCount(this.noClassPageTitle)) > 0 ? await action.getText(this.noClassPageTitle) : null,
 			noClassSubtitle: (await action.getElementCount(this.noClassPageTitle)) > 0 ? await action.getText(this.noClassPageSubTitle) : null,
 			noClassFound_icon: (await action.getElementCount(this.noClassFound_icon)) > 0 ? true : false,
 			searchBox: ((await action.getElementCount(this.searchBox)) > 0) ? await action.getText(this.searchBox) : null,
-            searchIcon: ((await action.getElementCount(this.searchIcon)) > 0) ? await action.waitForDisplayed(this.searchIcon) : false,
-            clearSearch: ((await action.getElementCount(this.clearSearch)) > 0) ? await action.getText(this.clearSearch) : null,
-            searchCount: ((await action.getElementCount(this.searchCount)) > 0) ? await action.getText(this.searchCount) : null,
-            searchPill: ((await action.getElementCount(this.searchPill)) > 0) ? await action.getText(this.searchPill) : null,
-    
+			searchIcon: ((await action.getElementCount(this.searchIcon)) > 0) ? await action.waitForDisplayed(this.searchIcon) : false,
+			clearSearch: ((await action.getElementCount(this.clearSearch)) > 0) ? await action.getText(this.clearSearch) : null,
+			searchCount: ((await action.getElementCount(this.searchCount)) > 0) ? await action.getText(this.searchCount) : null,
+			searchPill: ((await action.getElementCount(this.searchPill)) > 0) ? await action.getText(this.searchPill) : null,
+
 			classList: [],
 			footer: {}
 		};
@@ -276,7 +278,7 @@ module.exports = {
 		await logger.logInto(await stackTrace.get());
 		res = await action.click(this.assignmentsOption);
 		if (res == true) {
-			var	assignmentStudentList = require('./assignmentStudentList.page.js');
+			var assignmentStudentList = require('./assignmentStudentList.page.js');
 			res = await assignmentStudentList.isInitialized();
 		}
 		else {
@@ -327,8 +329,8 @@ module.exports = {
 	click_materialsOption: async function () {
 		await logger.logInto(await stackTrace.get());
 		res = await action.click(this.materialsOption);
-		if (res == true) { 
-			
+		if (res == true) {
+
 			await logger.logInto(await stackTrace.get(), res, 'error');
 		}
 		else {
@@ -363,120 +365,136 @@ module.exports = {
 		return res;
 	},
 	getData_searchList: async function () {
-        await logger.logInto(await stackTrace.get());
-        var obj;
-        obj = {
-            searchList: await this.searchList_Data(),
-            showMoreResults: ((await action.getElementCount(this.showMoreResults)) > 0) ? await action.getText(this.showMoreResults) : null,
-            noResultListItemTitle: ((await action.getElementCount(this.noResultListItemTitle)) > 0) ? await action.getText(this.noResultListItemTitle) : null,
-            noResultListItemSubtitle: ((await action.getElementCount(this.noResultListItemSubtitle)) > 0) ? await action.getText(this.noResultListItemSubtitle) : null,
-        }
-        return obj;
-    },
+		await logger.logInto(await stackTrace.get());
+		var obj;
+		obj = {
+			searchList: await this.searchList_Data(),
+			showMoreResults: ((await action.getElementCount(this.showMoreResults)) > 0) ? await action.getText(this.showMoreResults) : null,
+			noResultListItemTitle: ((await action.getElementCount(this.noResultListItemTitle)) > 0) ? await action.getText(this.noResultListItemTitle) : null,
+			noResultListItemSubtitle: ((await action.getElementCount(this.noResultListItemSubtitle)) > 0) ? await action.getText(this.noResultListItemSubtitle) : null,
+		}
+		return obj;
+	},
 
-    searchList_Data: async function () {
-        await logger.logInto(await stackTrace.get());
-        var i, list;
-        var searchList_Arr = [];
-        list = await action.findElements(this.searchList);
-        for (i = 0; i < list.length; i++) {
-            searchList_Arr[i] = await action.getText(list[i])
-        }
-        await logger.logInto(await stackTrace.get(), searchList_Arr);
-        return searchList_Arr;
-    },
+	searchList_Data: async function () {
+		await logger.logInto(await stackTrace.get());
+		var i, list;
+		var searchList_Arr = [];
+		list = await action.findElements(this.searchList);
+		for (i = 0; i < list.length; i++) {
+			searchList_Arr[i] = await action.getText(list[i])
+		}
+		await logger.logInto(await stackTrace.get(), searchList_Arr);
+		return searchList_Arr;
+	},
 
-    getData_searchNoResults: async function () {
-        await logger.logInto(await stackTrace.get());
-        var obj;
-        obj = {
-            search_NoResult_img: ((await action.getElementCount(this.search_NoResult_img)) > 0) ? await action.waitForDisplayed(this.search_NoResult_img) : false,
-            search_NoResult_title: ((await action.getElementCount(this.search_NoResult_title)) > 0) ? await action.getText(this.search_NoResult_title) : null,
-            search_NoResult_subTitle: ((await action.getElementCount(this.search_NoResult_subTitle)) > 0) ? await action.getText(this.search_NoResult_subTitle) : null,
-        }
-        return obj;
-    },
+	getData_searchNoResults: async function () {
+		await logger.logInto(await stackTrace.get());
+		var obj;
+		obj = {
+			search_NoResult_img: ((await action.getElementCount(this.search_NoResult_img)) > 0) ? await action.waitForDisplayed(this.search_NoResult_img) : false,
+			search_NoResult_title: ((await action.getElementCount(this.search_NoResult_title)) > 0) ? await action.getText(this.search_NoResult_title) : null,
+			search_NoResult_subTitle: ((await action.getElementCount(this.search_NoResult_subTitle)) > 0) ? await action.getText(this.search_NoResult_subTitle) : null,
+		}
+		return obj;
+	},
 	pressEnter: async function () { //manual edit
-        await logger.logInto(await stackTrace.get());
-        var res = await action.keyPress('Enter')
-        if (res == true) {
-            await logger.logInto(await stackTrace.get(), " -- Enter key pressed");
-            res = await this.get_MyClasses_Data();
-        } else
-            await logger.logInto(await stackTrace.get(), res + " -- Enter key not pressed");
-        return res;
+		await logger.logInto(await stackTrace.get());
+		var res = await action.keyPress('Enter')
+		if (res == true) {
+			await logger.logInto(await stackTrace.get(), " -- Enter key pressed");
+			res = await this.get_MyClasses_Data();
+		} else
+			await logger.logInto(await stackTrace.get(), res + " -- Enter key not pressed");
+		return res;
 
-    },
+	},
 	click_searchList: async function (searchListName) {
-        await logger.logInto(await stackTrace.get());
-        var i, list, res;
-        list = await action.findElements(this.searchList);
-        for (i = 0; i < list.length; i++) {
-            if (((await action.getText(list[i]))) == searchListName) {
-                res = await action.click(list[i]);
-                break;
-            }
-        }
-        if (res == true) {
-            await logger.logInto(await stackTrace.get(), " --searchList clicked");
-            res = await action.waitForDocumentLoad();
-        }
-        else
-            await logger.logInto(await stackTrace.get(), " --searchList NOT clicked", "error")
-        return res;
-    },
+		await logger.logInto(await stackTrace.get());
+		var i, list, res;
+		list = await action.findElements(this.searchList);
+		for (i = 0; i < list.length; i++) {
+			if (((await action.getText(list[i]))) == searchListName) {
+				res = await action.click(list[i]);
+				break;
+			}
+		}
+		if (res == true) {
+			await logger.logInto(await stackTrace.get(), " --searchList clicked");
+			res = await action.waitForDocumentLoad();
+		}
+		else
+			await logger.logInto(await stackTrace.get(), " --searchList NOT clicked", "error")
+		return res;
+	},
 
-    click_showMoreResults: async function () {
-        await logger.logInto(await stackTrace.get());
-        var res;
-        res = await action.click(this.showMoreResults);
-        if (true == res) {
-            await logger.logInto(await stackTrace.get(), " showMoreResults is clicked");
-            res = await this.getData_browsePage();
-        }
-        else {
-            await logger.logInto(await stackTrace.get(), res + "showMoreResults is NOT clicked", 'error');
-        }
-        return res;
-    },
+	click_showMoreResults: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.showMoreResults);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " showMoreResults is clicked");
+			res = await this.getData_browsePage();
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "showMoreResults is NOT clicked", 'error');
+		}
+		return res;
+	},
 
-    click_clearSearch: async function () {
-        await logger.logInto(await stackTrace.get());
-        var res;
-        res = await action.click(this.clearSearch);
-        if (true == res) {
-            await logger.logInto(await stackTrace.get(), " clearSearch is clicked");
-            res = await this.get_MyClasses_Data();
-        }
-        else {
-            await logger.logInto(await stackTrace.get(), res + "clearSearch is NOT clicked", 'error');
-        }
-        return res;
-    },
+	click_clearSearch: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.clearSearch);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " clearSearch is clicked");
+			res = await this.get_MyClasses_Data();
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "clearSearch is NOT clicked", 'error');
+		}
+		return res;
+	},
 
-    click_closeSearchPill: async function () {
-        await logger.logInto(await stackTrace.get());
-        var res;
-        res = await action.click(this.closeSearchPill);
-        if (true == res) {
-            await logger.logInto(await stackTrace.get(), " closeSearchPill is clicked");
-            res = await this.getData_browsePage();
-        }
-        else {
-            await logger.logInto(await stackTrace.get(), res + "closeSearchPill is NOT clicked", 'error');
-        }
-        return res;
-    },
+	click_closeSearchPill: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.closeSearchPill);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " closeSearchPill is clicked");
+			res = await this.getData_browsePage();
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "closeSearchPill is NOT clicked", 'error');
+		}
+		return res;
+	},
 	set_searchBox: async function (value) {
-        var res;
+		var res;
 		action.waitForDisplayed(this.searchBox)
-        await logger.logInto(await stackTrace.get());
-        res = await action.setValue(this.searchBox, value);
-        if (true == res) {
-            await logger.logInto(await stackTrace.get(), "Value is entered in searchBox");
-        } else {
-            await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in searchBox", 'error');
-        }
-        return res;
-    },
+		await logger.logInto(await stackTrace.get());
+		res = await action.setValue(this.searchBox, value);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), "Value is entered in searchBox");
+		} else {
+			await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in searchBox", 'error');
+		}
+		return res;
+	},
+
+	click_archiveLblCrossButton: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.archiveLblCrossButton);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " close button is clicked");
+			res = await this.get_MyClasses_Data();
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "close button is NOT clicked", 'error');
+		}
+		return res;
+	}
+
+
 }

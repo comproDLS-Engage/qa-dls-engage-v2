@@ -250,6 +250,14 @@
                         {
                             "key": "Cw32-FLZ7",
                             "name": "Archive Class"
+                        },
+                        {
+                            "key": "",
+                            "name": "Archive Class Check"
+                        },
+                        {
+                            "key": "RjaY-4LRn",
+                            "name": "Archive class with Student"
                         }
                     ],
                     "info": {}
@@ -445,6 +453,47 @@
                             "name": "class1"
                         }
                     ],
+                    "info": {}
+                },
+                "onboardingTeacher": {
+                    "email": "onboardTeacher8@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "teacher",
+                    "name": "général d’expressions",
+                    "class": [],
+                    "info": {}
+                },
+                "onboardingStudent": {
+                    "email": "onboardStudent6@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "student",
+                    "name": "Onboard Student6",
+                    "class": [],
+                    "info": {}
+                },
+                "signUpUser": {
+                    "email": "newUser@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "student",
+                    "name": "New User",
+                    "class": [],
+                    "info": {
+                        "partialPassword": "Com@123",
+                        "upperCasePassword": "COMPRO@1234",
+                        "lowercasePassword": "compro@1234",
+                        "incorrectConfirmPassword": "Compro@123456",
+                        "withoutSpecialCharacterPassword": "Compro1234",
+                        "firstName": "New",
+                        "lastName": "User",
+                        "countryName": "India"
+                    }
+                },
+                "itemUser": {
+                    "email": "megha1@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "student",
+                    "name": "Megha Teacher1",
+                    "class": [],
                     "info": {}
                 }
             }

@@ -27,6 +27,7 @@ module.exports = {
     enableTrackingDropdown: selectorFile.addComponentPage.enableTrackingDropdown,
     enableTrackingList: selectorFile.addComponentPage.enableTrackingList,
     snackbarLbl: selectorFile.common.snackbarLbl,
+    snackbarBtn: selectorFile.common.snackbarBtn,
 
     isInitialized: async function () {
         await logger.logInto((await stackTrace.get()));
@@ -104,18 +105,23 @@ module.exports = {
 
     click_Add_Button: async function () {
         await logger.logInto((await stackTrace.get()));
-        await browser.pause(5000)
+        await browser.pause(2000)
         res = await action.waitForClickable(this.addBtn + "," + this.modifyBtn);
         await action.waitForDisplayed(this.buttonLoader, undefined, true)
         if (res == true) {
             res = await action.click(this.addBtn + "," + this.modifyBtn);
             if (res == true) {
                 await action.waitForDisplayed(this.bannerText + "," + this.snackbarLbl);
-                //action.click(this.bannerCloseBtn);
                 res = await action.getText(this.bannerText + "," + this.snackbarLbl);
+                let flag = await action.isClickable(this.snackbarBtn);
                 await require("./common.page").click_Close_Button();
-                //action.waitForDisplayed(this.bannerText + "," + this.snackbarLbl, 60000, true);
-                await browser.pause(10000)
+
+                if (!flag) {
+                    await action.waitForDisplayed(this.bannerText + "," + this.snackbarLbl);
+                    await require("./common.page").click_Close_Button();
+                }
+
+                await browser.pause(5000)
             }
         }
         await logger.logInto((await stackTrace.get()), res);

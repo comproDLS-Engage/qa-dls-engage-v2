@@ -8,7 +8,7 @@
             {
                 "id": "launchUrl",
                 "description": "",
-                "testFile": "./engageAutomation/core/runner/launchUrl.js",
+                "testFile": "./core/runner/launchUrl.js",
                 "testData": []
             }
         ],
@@ -30,15 +30,21 @@
             },
             {
                 "id": "ENG_IDEN_TC_7",
-                "description": "Dashboard Page",
+                "description": "Successful login",
                 "testFile": "./test/engageExperienceApp/login.test.js",
-                "visualTest": true,
+                "visualTest": false,
                 "testData": [
                     {
                         "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
                         "jsonPath": "engage.login.user.uiTeacher"
                     }
                 ]
+            },
+            {
+                "id": "ENG_DIF_TC_61",
+                "description": "Dashboard Page",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "testData": []
             },
             {
                 "id": "ENG_DIF_TC_52",
@@ -104,24 +110,42 @@
                 "id": "ENG_DIF_TC_14",
                 "description": "Open classes sidebar on the view book page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.01,
                 "testData": []
             },
             {
                 "id": "ENG_DIF_TC_15",
                 "description": "Teacher view class page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.01,
                 "testData": []
             },
             {
                 "id": "ENG_DIF_TC_32",
                 "description": "Assignment tab on teacher view class page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.01,
                 "testData": []
             },
             {
                 "id": "ENG_DIF_TC_16",
                 "description": "Student tab on teacher view class page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.01,
+                "testData": []
+            },
+            {
+                "id": "ENG_DIF_TC_62",
+                "description": "Class Invitation page",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.01,
+                "testData": []
+            },
+            {
+                "id": "ENG_DIF_TC_63",
+                "description": "Class Invitation page after copying the invitation",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.01,
                 "testData": []
             },
             {
@@ -135,6 +159,7 @@
                 "id": "ENG_DIF_TC_18",
                 "description": "Edit and save class changes",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.01,
                 "testData": []
             },
             {
@@ -215,14 +240,13 @@
                 "id": "ENG_DIF_TC_19",
                 "description": "Classes page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.05,
+                "visualTolerance": 0.01,
                 "testData": []
             },
             {
                 "id": "ENG_DIF_TC_20",
                 "description": "Create Class page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.02,
                 "testData": []
             },
             {
@@ -241,7 +265,7 @@
                 "id": "ENG_DIF_TC_23",
                 "description": "Cancel and go back to Classes page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.05,
+                "visualTolerance": 0.01,
                 "testData": []
             },
             {
@@ -282,7 +306,7 @@
             {
                 "id": "launchUrl",
                 "description": "",
-                "testFile": "./engageAutomation/core/runner/launchUrl.js",
+                "testFile": "./core/runner/launchUrl.js",
                 "testData": []
             },
             {
@@ -296,13 +320,10 @@
                 "description": "Login Page",
                 "testFile": "./test/engageExperienceApp/landing.test.js",
                 "testData": []
-            }
-        ],
-        "BeforeEach": [],
-        "Test": [
+            },
             {
                 "id": "ENG_IDEN_TC_7",
-                "description": "Dashboard Page",
+                "description": "Successful login",
                 "testFile": "./test/engageExperienceApp/login.test.js",
                 "visualTest": true,
                 "testData": [
@@ -311,6 +332,15 @@
                         "jsonPath": "engage.login.user.validInstructorUser2"
                     }
                 ]
+            }
+        ],
+        "BeforeEach": [],
+        "Test": [
+            {
+                "id": "ENG_DIF_TC_61",
+                "description": "Dashboard Page",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "testData": []
             },
             {
                 "id": "ENG_DIF_TC_27",
@@ -394,7 +424,7 @@
                 "id": "ENG_DIF_TC_19",
                 "description": "Classes page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.05,
+                "visualTolerance": 0.01,
                 "testData": []
             },
             {
@@ -423,7 +453,7 @@
             {
                 "id": "launchUrl",
                 "description": "",
-                "testFile": "./engageAutomation/core/runner/launchUrl.js",
+                "testFile": "./core/runner/launchUrl.js",
                 "testData": []
             },
             {
@@ -437,21 +467,26 @@
                 "description": "Login Page",
                 "testFile": "./test/engageExperienceApp/landing.test.js",
                 "testData": []
-            }
-        ],
-        "BeforeEach": [],
-        "Test": [
+            },
             {
                 "id": "ENG_IDEN_TC_7",
-                "description": "Dashboard Page",
+                "description": "Successful login",
                 "testFile": "./test/engageExperienceApp/login.test.js",
-                "visualTest": true,
                 "testData": [
                     {
                         "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
                         "jsonPath": "engage.login.user.uiStudent"
                     }
                 ]
+            }
+        ],
+        "BeforeEach": [],
+        "Test": [
+            {
+                "id": "ENG_DIF_TC_61",
+                "description": "Dashboard Page",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "testData": []
             },
             {
                 "id": "ENG_DIF_TC_52",
@@ -517,13 +552,14 @@
                 "id": "ENG_DIF_TC_14",
                 "description": "Open classes sidebar on the view book page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "visualTolerance": 0.01,
                 "testData": []
             },
             {
                 "id": "ENG_DIF_TC_24",
                 "description": "Student view class page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.05,
+                "visualTolerance": 0.01,
                 "testData": []
             },
             {
@@ -594,7 +630,7 @@
             {
                 "id": "launchUrl",
                 "description": "",
-                "testFile": "./engageAutomation/core/runner/launchUrl.js",
+                "testFile": "./core/runner/launchUrl.js",
                 "testData": []
             },
             {
@@ -608,21 +644,26 @@
                 "description": "Login Page",
                 "testFile": "./test/engageExperienceApp/landing.test.js",
                 "testData": []
-            }
-        ],
-        "BeforeEach": [],
-        "Test": [
+            },
             {
                 "id": "ENG_IDEN_TC_7",
-                "description": "Dashboard Page",
+                "description": "Successful login",
                 "testFile": "./test/engageExperienceApp/login.test.js",
-                "visualTest": true,
                 "testData": [
                     {
                         "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
                         "jsonPath": "engage.login.user.validStudent2"
                     }
                 ]
+            }
+        ],
+        "BeforeEach": [],
+        "Test": [
+            {
+                "id": "ENG_DIF_TC_61",
+                "description": "Dashboard Page",
+                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
+                "testData": []
             },
             {
                 "id": "ENG_DIF_TC_27",
@@ -706,7 +747,7 @@
                 "id": "ENG_DIF_TC_19",
                 "description": "Classes page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.05,
+                "visualTolerance": 0.01,
                 "testData": []
             },
             {

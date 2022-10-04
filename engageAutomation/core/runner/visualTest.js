@@ -2,11 +2,12 @@
 var rootDir = process.cwd();
 var mergeImg = require(path.join(rootDir, '/core/utils/mergeImage.js'));
 var hideSelectors = [
-    'h4[data-tid="title-analyticsbox-0-1"]',
-    '[data-tid=text-versionInfo]'];
-var excludeSelectors = [
-    '[id=input-startDate]',
-    '[id=input-endDate]'];
+    '[data-tid=text-versionInfo]',
+    '[data-tid*=text-time-recent]',
+    'input[id=startDate]',
+    'input[id=endDate]'
+];
+var excludeSelectors = [];
 const { Eyes, Target, ClassicRunner, By, Configuration, BatchInfo } = require('@applitools/eyes-webdriverio');
 var eyes = new Eyes();
 var action = require(rootDir + '/core/actionLibrary/baseActionLibrary');
@@ -71,12 +72,21 @@ module.exports = {
         global.tcNumber = parseInt(testIndex) + 1;
         global.tcId = testObj.id;
         var hideElements = [];
+
         // find all the elements to be hide while taking screenshots
         let codemod_placeholder_6971 = Object.keys(hideSelectors);
-
-        for (const selector of codemod_placeholder_6971) {
+        /*for (const selector of codemod_placeholder_6971) {
             hideElements[selector] = await action.findElements(hideSelectors[selector]);
-        };
+            console.log(hideSelectors[selector])
+            console.log(hideElements[selector].length)
+        };*/
+
+        await Promise.all(codemod_placeholder_6971.map(async (selector) => {
+            hideElements[selector] = await action.findElements(hideSelectors[selector]);
+            //console.log(hideSelectors[selector])
+            //console.log(hideElements[selector].length)
+        }))
+
         var excludeElements = [];
         // find all the elements to be hide while taking screenshots
         let codemod_placeholder_2646 = Object.keys(excludeSelectors);
@@ -86,6 +96,8 @@ module.exports = {
         };
         //console.log(" Mismatch Percentage for " + execJsonData[suiteIndex].Test[testIndex].id + " = " + result[0].misMatchPercentage);
         var result = await browser.checkDocument({ exclude: excludeElements, hide: hideElements, misMatchTolerance: testObj.visualTolerance, fuzzLevel: testObj.visualTolerance });
+
+        //await this.disableFullPageScrolling();
 
         await browser.call(() =>
             mergeImg.combineImages(
@@ -150,12 +162,12 @@ module.exports = {
     //setting params to initiate Applitools
     initiateApplitools: async function () {
         console.log("applitools Initiated..")
-        await eyes.setConfiguration(browser.config.eyes);
-        await eyes.setMatchLevel(browser.config.eyes.matchLevel)
-        await eyes.setStitchMode(browser.config.eyes.stitchMode);
-        await eyes.setBatch(browser.config.eyes.batch);
+        eyes.setConfiguration(browser.config.eyes);
+        eyes.setMatchLevel(browser.config.eyes.matchLevel)
+        eyes.setStitchMode(browser.config.eyes.stitchMode);
+        eyes.setBatch(browser.config.eyes.batch);
         //eyes.setBaselineEnvName('MasterEnv');
-        await eyes.setApiKey(browser.config.eyes.apiKey);
+        eyes.setApiKey(browser.config.eyes.apiKey);
     },
 
     //open Applitools eyes
@@ -173,8 +185,18 @@ module.exports = {
     enableFullPageScrolling: async function () {
         await browser.execute(() => {
             var elem = document.getElementById("scroolbarDiv");
-            elem.setAttribute("style", "overflow-y: visible !important");
-            //console.log(elem.getAttribute("style"));
+            elem.setAttribute("style", "overflow-y: visible !important")
+            //elem.classList.add("overflow-y-visible");
+            //console.log(elem.getAttribute("class"));
+        });
+    },
+
+    //change scroolbarDiv property
+    disableFullPageScrolling: async function () {
+        await browser.execute(() => {
+            var elem = document.getElementById("scroolbarDiv");
+            elem.classList.remove("overflow-y-visible");
+            //console.log(elem.getAttribute("class"));
         });
     }
 }

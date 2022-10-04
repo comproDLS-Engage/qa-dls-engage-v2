@@ -1,0 +1,13 @@
+{
+    "onboarding": {
+        "schoolKey": {
+            "validKey": "BGE-JCT-WPZ",
+            "invalidKey": "NGL-FUW-XV"
+        },
+        "accessKey": {
+            "invalidKey": "XGAR-2EW6-2D2U",
+            "usedKey": "AADQ-F9G9-4G2X-TW7T",
+            "expiredKey": "XGAR-2EW6-2D2U-X3EA"
+        }
+    }
+}

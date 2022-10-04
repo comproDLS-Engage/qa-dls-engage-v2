@@ -1,0 +1,45 @@
+{
+   "Suite1": {
+      "Name": "Engage Login Feature Validation | Successful Scenarios",
+      "TestCaseRepo": [
+         "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
+      ],
+      "Before": [],
+      "BeforeEach": [
+         {
+            "id": "launchUrl",
+            "description": "",
+            "testFile": "./core/runner/launchUrl.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_LAND_TC_3",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/landing.test.js",
+            "testData": []
+         }
+      ],
+      "Test": [
+         {
+            "id": "ENG_IDEN_TC_7",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/login.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+                  "jsonPath": "engage.login.user.validStudent1"
+               }
+            ]
+         }
+      ],
+      "AfterEach": [
+         {
+            "id": "logout_from_app",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/common.test.js",
+            "testData": []
+         }
+      ],
+      "After": []
+   }
+}

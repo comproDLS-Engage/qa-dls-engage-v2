@@ -1,6 +1,6 @@
 "use strict";
 var action = require('../../core/actionLibrary/baseActionLibrary.js')
-var selectorFile =  jsonParserUtil.jsonParser(selectorDir)
+var selectorFile = jsonParserUtil.jsonParser(selectorDir)
 var appShellPage = require('./appShell.page.js')
 
 module.exports = {
@@ -54,6 +54,14 @@ module.exports = {
     filterMenuFilterCount: selectorFile.css.ComproEngage.browse.filterMenuFilterCount,
     filterMenuClearAllBtn: selectorFile.css.ComproEngage.browse.filterMenuClearAllBtn,
     filterMenuApplyBtn: selectorFile.css.ComproEngage.browse.filterMenuApplyBtn,
+    bookFamily: selectorFile.css.ComproEngage.browse.bookFamily,
+    partOfFamily: selectorFile.css.ComproEngage.browse.partOfFamily,
+    bookFamilySection: selectorFile.css.ComproEngage.browse.bookFamilySection,
+    otherBooksSection: selectorFile.css.ComproEngage.browse.otherBooksSection,
+    otherBooksTxt: selectorFile.css.ComproEngage.browse.otherBooksTxt,
+    showMoreBooksTxt: selectorFile.css.ComproEngage.browse.showMoreBooksTxt,
+    showMoreBooksBtn: selectorFile.css.ComproEngage.browse.showMoreBooksBtn,
+
 
     isInitialized: async function () {
         var res;
@@ -66,7 +74,7 @@ module.exports = {
         return res;
     },
 
-        getData_browsePage: async function () {
+    getData_browsePage: async function () {
         await logger.logInto(await stackTrace.get());
         await action.waitForDisplayed(this.cardSkeleton, undefined, true); //manually edited
         var obj;
@@ -82,6 +90,9 @@ module.exports = {
             clearSearch: ((await action.getElementCount(this.clearSearch)) > 0) ? await action.getText(this.clearSearch) : null,
             searchCount: ((await action.getElementCount(this.searchCount)) > 0) ? await action.getText(this.searchCount) : null,
             searchPill: ((await action.getElementCount(this.searchPill)) > 0) ? await action.getText(this.searchPill) : null,
+            otherBooks: ((await action.getElementCount(this.otherBooksTxt)) > 0) ? await action.getText(this.otherBooksTxt) : null,
+            showMoreBooks: ((await action.getElementCount(this.showMoreBooksTxt)) > 0) ? await action.getText(this.showMoreBooksTxt) : null,
+            showMoreBooksBtn: ((await action.getElementCount(this.showMoreBooksBtn)) > 0) ? await action.waitForDisplayed(this.showMoreBooksBtn) : false,
             tabInfo: await appShellPage.getTabsListData() //manually edited
         }
         return obj;
@@ -90,13 +101,13 @@ module.exports = {
     getData_resourceCategory: async function (resourceCategoryName) {
         await logger.logInto(await stackTrace.get());
         var obj = [];
-        await action.waitForDisplayed(this.resourceCategory);
-        var list = await action.findElements(this.resourceCategory);
+        await action.waitForDisplayed(this.resourceCategory + "]," + this.bookFamily + "]");
+        var list = await action.findElements(this.resourceCategory + "]," + this.bookFamily + "]");
         if (resourceCategoryName) {
             for (var i = 0; i < list.length; i++) {
-                if ((await action.getText(this.resourceCategory + i)) == resourceCategoryName) {
+                if ((await action.getText(this.resourceCategory + i + "]," + this.bookFamily + i + "]")) == resourceCategoryName) {
                     obj[0] = {
-                        resourceCategory: ((await action.getElementCount(this.resourceCategory + i + "]")) > 0) ? await action.getText(this.resourceCategory + i + "]") : null,
+                        resourceCategory: ((await action.getElementCount(this.resourceCategory + i + "]," + this.bookFamily + i + "]")) > 0) ? await action.getText(this.resourceCategory + i + "]," + this.bookFamily + i + "]") : null,
                         viewAllBtn: ((await action.getElementCount(this.viewAllBtn + i + "]")) > 0) ? await action.getText(this.viewAllBtn + i + "]") : null,
                     }
                     break;
@@ -105,7 +116,7 @@ module.exports = {
         } else {
             for (var i = 0; i < list.length; i++) {
                 obj[i] = {
-                    resourceCategory: ((await action.getElementCount(this.resourceCategory + i + "]")) > 0) ? await action.getText(this.resourceCategory + i + "]") : null,
+                    resourceCategory: ((await action.getElementCount(this.resourceCategory + i + "]," + this.bookFamily + i + "]")) > 0) ? await action.getText(this.resourceCategory + i + "]," + this.bookFamily + i + "]") : null,
                     viewAllBtn: ((await action.getElementCount(this.viewAllBtn + i + "]")) > 0) ? await action.getText(this.viewAllBtn + i + "]") : null,
                 }
             }
@@ -171,6 +182,7 @@ module.exports = {
                         viewBtn: ((await action.getElementCount(this.viewBtn + i + "]")) > 0) ? await action.getText(this.viewBtn + i + "]") : null,
                         addBookBtn: ((await action.getElementCount(this.addBookBtn + i + "]")) > 0) ? await action.getText(this.addBookBtn + i + "]") : null,
                         bookMoreOptionsBtn: ((await action.getElementCount(this.bookMoreOptionsBtn + i + "]")) > 0) ? await action.getText(this.bookMoreOptionsBtn + i + "]") : null,
+                        bookFamilyName: ((await action.getElementCount(this.partOfFamily + i + "]")) > 0) ? await action.getText(this.partOfFamily + i + "]") : null,
                     }
                     break;
                 }
@@ -184,6 +196,7 @@ module.exports = {
                     viewBtn: ((await action.getElementCount(this.viewBtn + i + "]")) > 0) ? await action.getText(this.viewBtn + i + "]") : null,
                     addBookBtn: ((await action.getElementCount(this.addBookBtn + i + "]")) > 0) ? await action.getText(this.addBookBtn + i + "]") : null,
                     bookMoreOptionsBtn: ((await action.getElementCount(this.bookMoreOptionsBtn + i + "]")) > 0) ? await action.getText(this.bookMoreOptionsBtn + i + "]") : null,
+                    bookFamilyName: ((await action.getElementCount(this.partOfFamily + i + "]")) > 0) ? await action.getText(this.partOfFamily + i + "]") : null,
                 }
             }
         }
@@ -318,17 +331,15 @@ module.exports = {
     click_viewAllBtn: async function (resourceCategoryName) {
         await logger.logInto(await stackTrace.get());
         var i, res;
-        var resourceCategory = await action.findElements(this.resourceCategory);
-        var viewAllBtn = await action.findElements(this.viewAllBtn);
+        var resourceCategory = await action.findElements(this.resourceCategory + "]," + this.bookFamily + "]");
         for (i = 0; i < resourceCategory.length; i++) {
             if (((await action.getText(resourceCategory[i]))) == resourceCategoryName) {
-                res = await action.click(viewAllBtn[i]);
+                res = await action.click(this.viewAllBtn + i);
                 break;
             }
         }
         if (res == true) {
             await logger.logInto(await stackTrace.get(), " --viewAllBtn clicked");
-            res = await this.getData_resourceCategory();
         }
         else
             await logger.logInto(await stackTrace.get(), " --viewAllBtn NOT clicked", "error")
@@ -710,12 +721,12 @@ module.exports = {
     click_removeBook_cancelBtn: async function () { //manual edit
         await logger.logInto(await stackTrace.get());
         return await require('./dashboard.page').click_removeBook_cancelBtn();
-      },
-    
-      click_removeBook_removeBtn: async function () { //manual edit
+    },
+
+    click_removeBook_removeBtn: async function () { //manual edit
         await logger.logInto(await stackTrace.get());
         return await require('./dashboard.page').click_removeBook_removeBtn();
-      },
+    },
 
     pressEnter: async function () { //manual edit
         await logger.logInto(await stackTrace.get());
@@ -741,5 +752,35 @@ module.exports = {
             }
         }
         return rIndex;
+    },
+
+    getData_otherBooksList: async function () {
+        await logger.logInto(await stackTrace.get());
+        var obj = [];
+        var list = await action.findElements(this.otherBooksSection + " " + this.bookTitle);
+        for (var i = 0; i < list.length; i++) {
+            obj[i] = {
+                bookTitle: ((await action.getElementCount(this.otherBooksSection + " " + this.bookTitle + i + "]")) > 0) ? await action.getText(this.otherBooksSection + " " + this.bookTitle + i + "]") : null,
+                bookSubTitle: ((await action.getElementCount(this.otherBooksSection + " " + this.bookSubTitle + i + "]")) > 0) ? await action.getText(this.otherBooksSection + " " + this.bookSubTitle + i + "]") : null,
+                bookImage: ((await action.getElementCount(this.otherBooksSection + " " + this.bookImage + i + "]")) > 0) ? await action.waitForDisplayed(this.otherBooksSection + " " + this.bookImage + i + "]") : null,
+                viewBtn: ((await action.getElementCount(this.otherBooksSection + " " + this.viewBtn + i + "]")) > 0) ? await action.getText(this.otherBooksSection + " " + this.viewBtn + i + "]") : null,
+                addBookBtn: ((await action.getElementCount(this.otherBooksSection + " " + this.addBookBtn + i + "]")) > 0) ? await action.getText(this.otherBooksSection + " " + this.addBookBtn + i + "]") : null,
+                bookMoreOptionsBtn: ((await action.getElementCount(this.otherBooksSection + " " + this.bookMoreOptionsBtn + i + "]")) > 0) ? await action.getText(this.otherBooksSection + " " + this.bookMoreOptionsBtn + i + "]") : null,
+            }
+        }
+        return obj;
+    },
+
+    click_showMoreBooksBtn: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.showMoreBooksBtn);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " showMoreBooksBtn is clicked");
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "showMoreBooksBtn is NOT clicked", 'error');
+        }
+        return res;
     }
 }

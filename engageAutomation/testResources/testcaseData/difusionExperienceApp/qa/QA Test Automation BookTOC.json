@@ -178,7 +178,8 @@
                                     "Open Ended Native",
                                     "Close Ended Native (OLD)",
                                     "Item Player Test Question",
-                                    "Acceptance Quiz"
+                                    "Acceptance Quiz",
+                                    "Acceptance Quiz (Kids)"
                                 ]
                             }
                         ]
@@ -209,6 +210,16 @@
                             }
                         ]
                     }
+                ]
+            },
+            {
+                "index": 5,
+                "name": {
+                    "EN": "Flipbook",
+                    "ES": "Flipbook"
+                },
+                "unit": [
+                   
                 ]
             }
         ]

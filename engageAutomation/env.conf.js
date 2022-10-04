@@ -32,7 +32,7 @@ global.capabilities = undefined;
 global.maximizeWindow - undefined;
 global.capabilitiesFile = global.jsonParserUtil.jsonParser(path.join(process.cwd() + '/capabilities.json'));
 global.appVersion = undefined;
-
+global.moduleOff = undefined;
 
 // ====================================
 // Check for mandatory input parameters
@@ -53,6 +53,7 @@ else {
     // global.tcDataDir = envData[argv.appType].environments[argv.testEnv].tcDataDir;
     // global.selectorDir = envData[argv.appType].selectorDir;
     global.appUrl = envData[argv.appType].environments[argv.testEnv].url;
+    global.moduleOff = envData[argv.appType].environments[argv.testEnv].moduleOff;
 
     if (!global.appUrl || !global.testExecDir) {
         console.log("!!!!! ERROR: One or more environment parameters are missing in the env.json !!!!!");

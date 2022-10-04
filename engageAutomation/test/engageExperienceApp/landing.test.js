@@ -15,7 +15,7 @@ module.exports = {
 
 	ENG_LAND_TC_2: async function () {
 		sts = await landing.click_Signup_Button();
-		await assertion.assertEqual(sts, true, "Sign up page status mismatch");
+		await assertion.assertEqual(sts.pageStatus, true, "Sign up page status mismatch");
 	},
 
 	ENG_LAND_TC_3: async function () {

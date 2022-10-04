@@ -1,10 +1,12 @@
 "use strict";
 var appShell = require('../../pages/engageExperienceApp/appShell.page');
 var browsePage = require('../../pages/engageExperienceApp/browse.page');
+const { bookName } = require('../../pages/engageExperienceApp/openActivityPlayer.page');
 var common = require('./common.test');
 var sts;
 
 module.exports = {
+
 
 	//Validate that the resources are displayed on clicking the Interactive Activities tab
 	ENG_GLOB_TC_10: async function (testdata) {
@@ -28,6 +30,7 @@ module.exports = {
 		await assertion.assertEqual(sts.nextPageArrow, null, "nextPageArrow mismatch");
 		await assertion.assertEqual(sts.tabInfo.selected, testdata.tabList[2], "Tab Name mismatch");
 		await assertion.assertEqual(sts.filtersBtn, testdata.filtersBtn, "filtersBtn mismatch");
+		sts = await browsePage.getData_resourceCategory();
 		sts = await browsePage.getData_resourceList();
 		await assertion.assert(sts.length > 0, "no resource found: " + sts.length);
 	},
@@ -91,6 +94,7 @@ module.exports = {
 		await assertion.assertEqual(sts.pageSubTitle, testdata.pageSubTitle[0], "pageSubTitle mismatch");
 		await assertion.assertEqual(sts.searchBox, "", "searchBox Text Mismatch");
 		await assertion.assertEqual(sts.searchIcon, true, "searchIcon status mismatch");
+		await assertion.assertEqual(sts.otherBooks, testdata.otherBooks, "other books text mismatch");
 	},
 
 	//Validate that clicking on a page number in a non categorized view displays the next list of resources.
@@ -124,8 +128,9 @@ module.exports = {
 	ENG_GLOB_TC_22: async function (testdata) {
 		sts = await browsePage.click_moreOptionsBtn(testdata[0]);
 		await assertion.assertEqual(sts.viewOption, testdata[1].viewOption, "viewOption Text Mismatch");
-		//await assertion.assertEqual(sts.addToPlaylistOption, testdata[1].addToPlaylistOption, "addToPlaylistOption Text Mismatch");
 		await assertion.assertEqual(sts.shareOption, testdata[1].shareOption, "shareOption Text Mismatch");
+		if (!moduleOff.ENG_PLIS)
+			await assertion.assertEqual(sts.addToPlaylistOption, testdata[1].addToPlaylistOption, "addToPlaylistOption Text Mismatch");
 	},
 
 	//Validate clicking on View on 3 dot options launches the resource.
@@ -394,16 +399,89 @@ module.exports = {
 	},
 
 	/********************************************************************************************************/
-	
-    //Validate that searching a text lists maximum 5 suggestions matching the search text
-    ENG_GLOB_TC_70: async function (testdata) {
+
+	//Validate that searching a text lists maximum 5 suggestions matching the search text
+	ENG_GLOB_TC_70: async function (testdata) {
 		sts = await browsePage.set_searchBox(testdata.search_txt);
 		await assertion.assertEqual(sts, true, "set_searchBox status Mismatch");
 
-        sts = await browsePage.getData_searchList();
-        await assertion.assert(sts.searchList.length <= 6, "Search List Count Mismatch: expected " + sts.searchList.length + " to <= 6");
+		sts = await browsePage.getData_searchList();
+		await assertion.assert(sts.searchList.length <= 6, "Search List Count Mismatch: expected " + sts.searchList.length + " to <= 6");
 
-        sts = await browsePage.click_clearSearch();
+		sts = await browsePage.click_clearSearch();
 		await assertion.assertEqual(sts.searchPill, null, "searchPill status Mismatch");
-    },
+	},
+
+	/****************************************Book Family***************************************************************/
+		//Validate Book added in the Family is available in correct Family on browse page
+		ENG_GLOB_TC_71: async function (testdata) {
+			sts = await browsePage.click_viewAllBtn(testdata[0]);
+			assertion.assertEqual(sts, true, "View All button clicked");
+			sts = await browsePage.getData_bookList();
+			for (var i = 0; i < sts.length; i++) {
+				if (sts[i].bookTitle == testdata[1]) {
+					var res = true;
+					break;
+				}
+				assertion.assertEqual(res, true, "book not found");
+			}
+		},
+	
+		//Validate the book which is not added in Family in available in Other Books
+		ENG_GLOB_TC_72: async function (testdata) {
+			sts = await browsePage.getData_otherBooksList();
+			for (var i = 0; i < sts.length; i++) {
+				if (sts[i].bookTitle == testdata) {
+					var res = true;
+					break;
+				}
+				assertion.assertEqual(res, true, "book not found");
+			}
+		},
+	
+		//Validate that clicking on View All button shows all books of a family
+		ENG_GLOB_TC_73: async function (testdata) {
+			sts = await browsePage.click_viewAllBtn(testdata[0]);
+			assertion.assertEqual(sts, true, "View All button clicked");
+			sts = await browsePage.getData_browsePage();
+			assertion.assertEqual(sts.pageTitle, testdata[1], "page title mismatch");
+			assertion.assertEqual(sts.pageSubTitle, null, "page subtitle mismatch");
+			assertion.assertEqual(sts.searchIcon, true, "search ison not present");
+			assertion.assert(sts.searchCount.includes(testdata[2].viewAllSearchCount, "Search result text not present"));
+			sts = await browsePage.getData_bookList();
+			assertion.assert(sts.length > 0, "no book found");
+		},
+	
+		//Validate on Book tab, user is able to search book family name and clicking on it launch the book family page
+		ENG_GLOB_TC_75: async function (testdata) {
+			sts = await browsePage.set_searchBox(testdata[0])
+			assertion.assertEqual(sts, true, "set_searchBox status Mismatch");
+			sts = await browsePage.click_searchList(testdata[0]);
+			assertion.assertEqual(sts, true, "click searchlist status Mismatch");
+			sts = await browsePage.getData_browsePage();
+			assertion.assertEqual(sts.pageTitle, testdata[1], "page title mismatch");
+			assertion.assertEqual(sts.pageSubTitle, null, "page subtitle mismatch");
+		},
+	
+		//Validate that on Book tab, in search results, Family name is displayed below book name and description
+		ENG_GLOB_TC_76: async function (testdata) {
+			sts = await browsePage.set_searchBox(testdata[0].search_txt)
+			assertion.assertEqual(sts, true, "set_searchBox status Mismatch");
+			sts = await browsePage.pressEnter();
+			assertion.assertEqual(sts, true, "enter status Mismatch");
+			sts = await browsePage.getData_bookList();
+			assertion.assertEqual(sts[0].bookFamilyName, testdata[1].partOfText + testdata[2], "family name mismatch");
+		},
+	
+		//Validate that on Book tab, Clicking Show More Books button loads the more books in "Other book" section
+		ENG_GLOB_TC_77: async function () {
+			sts = await browsePage.getData_otherBooksList();
+			var oldCount = sts.length;
+			sts = await browsePage.click_showMoreBooksBtn();
+			assertion.assertEqual(sts, true, "enter status Mismatch");
+			sts = await browsePage.getData_bookList();
+			var newCount = sts.length;
+			assertion.assert(newCount > oldCount, "more books not loaded");
+		},
+	
 }

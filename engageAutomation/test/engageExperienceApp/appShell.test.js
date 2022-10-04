@@ -72,7 +72,7 @@ module.exports = {
 	},
 
 	//Validate that clicking on the profile dropdown launches the dropdown of profile and other options
-   ENG_SHELL_TC_8:async function (testdata) {
+	ENG_SHELL_TC_8: async function (testdata) {
 		sts = await appShell.clickProfileButton();
 		if (testdata[0] != undefined) {
 			await assertion.assertEqual(sts.userName, testdata[1].name, "User Name Text mismatch");
@@ -137,7 +137,7 @@ module.exports = {
 	},
 
 	//Validate that the list of the tabs is correct
-	ENG_SHELL_TC_16: async function (testdata) {
+	ENG_SHELL_TC_16: async function () {
 		sts = await appShell.getTabsListData();
 	},
 
@@ -158,26 +158,96 @@ module.exports = {
 	ENG_SHELL_TC_19: async function (testdata) {
 		sts = await appShell.clickProfileButton();
 		if (testdata[0] != undefined) {
-		await	assertion.assertEqual(sts.userName, testdata[1].name, "User Name Text mismatch");
-		await	assertion.assertEqual(sts.emailID, testdata[1].email, "email ID Text mismatch");
-		await	assertion.assertEqual(sts.userProfileHelpBtn, testdata[0].userProfileHelpBtn, "Help Text mismatch");
-		await	assertion.assertEqual(sts.userProfileSettingsBtn, testdata[0].userProfileSettingsBtn, "Settings Text mismatch");
-		await	assertion.assertEqual(sts.userProfileLogoutBtn, testdata[0].userProfileLogoutBtn, "Logout Text mismatch");
-		await	assertion.assertEqual(sts.notificationTxt, testdata[0].notificationHeader, "Notification Header Text mismatch");
-		await	assertion.assertEqual(sts.notificationBtn_exists, true, "Notification Button does not exist");
-		await	assertion.assertEqual(sts.selectedLanguage, testdata[0].selectedLanguage, "Language Button does not exist");
+			await assertion.assertEqual(sts.userName, testdata[1].name, "User Name Text mismatch");
+			await assertion.assertEqual(sts.emailID, testdata[1].email, "email ID Text mismatch");
+			await assertion.assertEqual(sts.userProfileHelpBtn, testdata[0].userProfileHelpBtn, "Help Text mismatch");
+			await assertion.assertEqual(sts.userProfileSettingsBtn, testdata[0].userProfileSettingsBtn, "Settings Text mismatch");
+			await assertion.assertEqual(sts.userProfileLogoutBtn, testdata[0].userProfileLogoutBtn, "Logout Text mismatch");
+			await assertion.assertEqual(sts.notificationTxt, testdata[0].notificationHeader, "Notification Header Text mismatch");
+			await assertion.assertEqual(sts.notificationBtn_exists, true, "Notification Button does not exist");
+			await assertion.assertEqual(sts.selectedLanguage, testdata[0].selectedLanguage, "Language Button does not exist");
 		}
 	},
 	//Validate content of the appShell is launched (Desktop)
 	ENG_SHELL_TC_20: async function (testdata) {
 		sts = await appShell.getAppShellLeftPaneData();
-          await assertion.assertEqual(sts.dashboardBtn, testdata.dashboardTxt, "Dashboard text mismatch");
-	await	assertion.assertEqual(sts.browseBtn, testdata.browseTxt, "Browser text mismatch");
-        await	assertion.assertEqual(sts.classesBtn, testdata.classesTxt, "Classes text mismatch");
-	await	assertion.assertEqual(sts.helpBtn, testdata.helpTxt, "Help text mismatch");
+		await assertion.assertEqual(sts.dashboardBtn, testdata.dashboardTxt, "Dashboard text mismatch");
+		await assertion.assertEqual(sts.browseBtn, testdata.browseTxt, "Browser text mismatch");
+		await assertion.assertEqual(sts.classesBtn, testdata.classesTxt, "Classes text mismatch");
+		await assertion.assertEqual(sts.helpBtn, testdata.helpTxt, "Help text mismatch");
 		sts = await appShell.getAppShellHeaderData();
-	await	assertion.assertEqual(sts.notificationBtn_exists, true, "Notification Button does not exist");
-	//	assertion.assertEqual(sts.selectedLanguage, testdata.selectedLanguage, "Language Button does not exist");
-	await	assertion.assertEqual(sts.userProfileBtn_exists, true, "User Profile Button does not exist");
+		await assertion.assertEqual(sts.notificationBtn_exists, true, "Notification Button does not exist");
+		//	assertion.assertEqual(sts.selectedLanguage, testdata.selectedLanguage, "Language Button does not exist");
+		await assertion.assertEqual(sts.userProfileBtn_exists, true, "User Profile Button does not exist");
+	},
+	//Validate the click on index button
+	ENG_SHELL_TC_21: async function (testdata) {
+		sts = await appShell.click_indexbtn();
+		await assertion.assertEqual(sts.closetocbtn, true, "closetocbtn mismatch");
+		await assertion.assertEqual(sts.producHeadertbtn, true, "producHeadertbtn mismatch");
+		await assertion.assertEqual(sts.tocPanelHeader, testdata[1].tocPanelHeader, "tocPanelHeader text mismatch");
+		await assertion.assertEqual(sts.materialbtn, testdata[1].materialbtn, "materialbtn text mismatch");
+	},
+	//Validate the click on close button
+	ENG_SHELL_TC_22: async function () {
+		sts = await appShell.click_closetocbtn();
+		await assertion.assertEqual(sts.pageStatus, true, "Page status mismatch");
+	},
+	//Validate the click on product button
+	ENG_SHELL_TC_23: async function (testdata) {
+		sts = await appShell.click_producHeadertbtn();
+		for (var i = 0; i < sts.length; i++) {
+			await assertion.assertEqual(sts[i].sectiongroup, testdata[i].title, "Page status mismatch");
+		}
+	},
+	//Validate the click on section Items
+	ENG_SHELL_TC_24: async function (testdata) {
+		sts = await appShell.click_sectiongroup(testdata[0]);
+		for (var i = 0; i < sts.length; i++) {
+			await assertion.assertEqual(sts[i].resoursebtn, testdata[1][i], "Page status mismatch");
+		}
+	},
+	//Validate the click on resourse Items
+	ENG_SHELL_TC_25: async function (testdata) {
+		sts = await appShell.click_resoursebtn(testdata[0], testdata[1]);
+		await assertion.assertEqual(sts, true, "resourse is clicked")
+	},
+	//Validate the click on material button
+	ENG_SHELL_TC_26: async function (testdata) {
+		sts = await appShell.click_materialbtn();
+
+		for (var i = 0; i < sts.length; i++) {
+			await assertion.assertEqual(sts[i].indexproductbtn, testdata[i].name.EN, "Page status mismatch");
+		}
+	},
+	//Validate the click on Product Items
+	ENG_SHELL_TC_27: async function (testdata) {
+		sts = await appShell.click_indexproductbtn(testdata);
+		await assertion.assertEqual(sts, true, "Product is clicked")
+		sts = await appShell.getData_sectionPanel()
+		await assertion.assertEqual(sts[0].sectiongroup, "1. Unit 1", "Product is clicked")
+	},
+
+	ENG_SHELL_TC_28: async function (testdata) {
+		sts = await appShell.click_infoBtn()
+		await assertion.assertEqual(sts.infoTocHeading, testdata.infoTocHeading, "infoTocHeading mismatch");
+		await assertion.assertEqual(sts.closeInfoBtn, true, "closeInfoBtn mismatch");
+	},
+	ENG_SHELL_TC_29: async function (testdata) {
+		sts = await appShell.getData_infoData()
+		await assertion.assertEqual(sts.infoTocHeading, testdata[2].infoTocHeading, "infoTocHeading mismatch");
+		await assertion.assertEqual(sts.closeInfoBtn, true, "closeInfoBtn mismatch");
+		await assertion.assertEqual(sts.chapterTitle, testdata[1], "chapterTitle text mismatch");
+		await assertion.assertEqual(sts.productbtn, testdata[0], "productbtn text mismatch");
+		await assertion.assertEqual(sts.bookIcon, true, "bookIcon mismatch");
+		await assertion.assertEqual(sts.bookName, testdata[3].name, "bookName text mismatch");
+	},
+	ENG_SHELL_TC_30: async function (testdata) {
+		sts = await appShell.click_resourseData(testdata)
+		await assertion.assertEqual(sts, true, "Resourse is not launched. ");
+	},
+	ENG_SHELL_TC_31: async function (testdata) {
+		sts = await appShell.click_closeInfoBtn(testdata)
+		await assertion.assertEqual(sts, true, "Close btn is not clicked");
 	},
 }

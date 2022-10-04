@@ -2,172 +2,888 @@
   "editor": {
     "title": "Automation Quiz",
     "questions": {
-      "MCQ": [
-        {
-          "question1": {
-            "questionIndex": 1,
-            "buttonName": "mutiplechoice",
-            "questionTitle": "Question 1",
-            "questionInstruction": "See the image carefully and answer the question",
-            "videoURL": "https://www.youtube.com/watch?v=mxbodI60OT4",
-            "videoCredit": "mcq video #1",
-            "imagePath": "./testResources/testcaseData/assessmentEditor/media/Cell1.png",
-            "questionText": "Which organelle is called powerhouse of the cell?",
-            "options": ["Mitochondria","Nucleus","Golgi Bodies","Ribosomes"],
-            "optionStyle": "2"
-          }
-        }
-      ],
-      "writing": [
-        {
-          "questionIndex": 3,
-          "buttonName": "writing",
-          "questionTitle": "Give the Answer after watching Vedio",
-          "questionInstruction": "Listen to the Video carefully and enter the text on placeholder",
-          "videoURL": "https://youtu.be/bUxd3jqCr94",
-          "questionText": "Vuelve a escuchar los diálogos en español. ¿Qué crees que dicen? Toma notas.{{TextArea:A}}"
-        }
-      ],
       "TrueFalse": [
         {
-          "questionIndex": 3,
-          "buttonName": "trueorfalse",
-          "questionTitle": "Question 3",
-          "questionInstruction": "Listen to the audio carefully and choose the correct option of the given below question",
-          "audioPath": "./testResources/testcaseData/assessmentEditor/media/Xiaomi.mp3",
-          "audioCredit": "Audio",
-          "questionText": "Is this an Mi original ringtone?"
+          "number": 3,
+          "type": "truefalsequestionset",
+          "score": "1",
+          "quesTitle": "True and False Question with Multiple Sub-Questions with Answer Options as Horizontal and Left aligned Version 2",
+          "promptText": "Mary is a spoilt, unpleasant girl with a bad temper Version 2",
+          "instructionText": "Are the following sentences true (T) or false (F)?",
+          "promptImg": "./testResources/testcaseData/assessmentEditor/media/Plant.jpg",
+          "subQues": [
+            [
+              "1",
+              "2",
+              "Mary Lennox’s Indian nanny met her in London and they took the train to Yorkshire."
+            ],
+            [
+              "2",
+              "1",
+              "Mrs Medlock didn’t like Mary because she was bad-­‐tempered."
+            ],
+            [
+              "3",
+              "2",
+              "Mr Craven locked up his wife’s garden and kept the key in his pocket."
+            ],
+            [
+              "4",
+              "1",
+              "Martha worked as a housemaid at Misselthwaite Manor, but she lived on the moor with her family."
+            ]
+          ]
         }
       ],
       "MultipleResponse": [
         {
-          "questionIndex": 4,
-          "buttonName": "multipleresponse",
-          "questionTitle": "Question 4",
-          "questionInstruction": "See the image carefully and choose the correct option(s)",
-          "imagePath": "./testResources/testcaseData/assessmentEditor/media/Plant.jpg",
+          "number": 4,
+          "type": "multipleresponsequestionset",
+          "type1": "mutipleresponse",
+          "score": "3",
+          "quesTitle": "MCMR Question with Single Sub-Question with Answer Options as Vertically aligned Version 2",
+          "instructionText": "Select more that one options for the following question Version 2",
+          "bulletType": "1",
+          "subQuestionImg": "./testResources/testcaseData/assessmentEditor/media/secretgarden.png",
+          "promptText": "Gestalt Psychology states that the whole is different from the sum of its parts. How does the term gestalt relate to the psychological study of perception? Gestalt psychology was popular in the 20th century, but it has been replaced by psycholinguistics.",
           "imageCredit": "Plant Diagram",
-          "questionText": " Choose the correct one",
-          "options": [
-            "Roots",
-            "Soil",
-            "Stem",
-            "Leaves"
+          "questionText": "Identify the parts of the plants in the given options:",
+          "subQues": [
+            [
+              "1",
+              "Which of the following laws do not belong to Gestalt Phycology"
+            ],
+            [
+              "2",
+              "Sub Question with Image Settings"
+            ]
           ],
-          "correctOptions": [
+          "answerKey": [
+            [
+              "1",
+              "1",
+              "Kurt Lewin Law",
+              "checked",
+              ""
+            ],
+            [
+              "1",
+              "2",
+              "Pragnanz Law",
+              "",
+              ""
+            ],
+            [
+              "1",
+              "3",
+              "Proximity Law",
+              "",
+              ""
+            ],
+            [
+              "1",
+              "4",
+              "Wolfgang Kholer Law",
+              "checked",
+              ""
+            ],
+            [
+              "2",
+              "1",
+              "Option A",
+              "checked",
+              "./testResources/testcaseData/assessmentEditor/media/option1.png"
+            ],
+            [
+              "2",
+              "2",
+              "Option B",
+              "",
+              "./testResources/testcaseData/assessmentEditor/media/option4.jpg"
+            ],
+            [
+              "2",
+              "3",
+              "Option C",
+              "",
+              "./testResources/testcaseData/assessmentEditor/media/option3.png"
+            ]
+          ],
+          "correctanswerKey": [
             1,
-            3,
             4
           ]
         }
       ],
       "DragDropOnImage": [
         {
-          "questionIndex": 5,
-          "buttonName": "draganddropontoimage",
-          "questionTitle": "Question 5",
-          "questionText": "Drag the continents at their correct places o the provided Image",
-          "questionInstruction": "Drop the continents in correct places",
-          "imagePath": "./testResources/testcaseData/assessmentEditor/media/WorldMap.jpg",
+          "number": 5,
+          "type": "draganddropontoimage",
+          "quesTitle": "DND Onto Image Question With Image at left and Options at right Version 2",
+          "score": "5",
+          "instructionText": "Drag and drop the textual descriptions to their correct locations within the model",
+          "imagePath": "./testResources/testcaseData/assessmentEditor/media/face-recog-transparent.png",
           "labelOptions": [
-            "Asia", 
-            "Africa", 
-            "Europe", 
-            "North America",
-            "South America",
-            "Australia"
+            "Expression analysis",
+            "Facial speech analysis",
+            "Direct visual processing",
+            "Viewed-centered descriptions",
+            "Expression-independent descriptions",
+            "Face recognition units",
+            "Person identity nodes",
+            "Name generation",
+            "Cognitive system",
+            "Version 2"
           ]
+        },
+        {
+          "number": 5,
+          "type": "draganddropontoimage",
+          "quesTitle": "DND Onto Image Question With Image at top and Options at bottom Version 2",
+          "score": "5",
+          "instructionText": "Drag and drop the textual descriptions to their correct locations within the model",
+          "imagePath": "./testResources/testcaseData/assessmentEditor/media/face-recog-transparent.png",
+          "labelOptions": [
+            "Expression analysis",
+            "Facial speech analysis",
+            "Direct visual processing",
+            "Viewed-centered descriptions",
+            "Expression-independent descriptions",
+            "Face recognition units",
+            "Person identity nodes",
+            "Name generation",
+            "Cognitive system"
+          ],
+          "deleteLabel": "A"
         }
       ],
       "DragDropIntoText": [
         {
-          "questionIndex": 6,
-          "buttonName": "draganddropintotext",
-          "questionTitle": "Question 6",
-          "questionInstruction": "Drag the pills at their correct places in the sentence.",
-          "videoURL": "./testResources/testcaseData/assessmentEditor/media/abc.mp4",
-          "videoCredit": "Thirsty Crow",
-          "questionText": 
-            "Once there was a,{{Blank:A}}. He was very,{{Blank:B}}.He flew here and there in search of,{{Blank:C}}.He saw a pot"
-          ,
+          "number": 6,
+          "type": "draganddropintotext",
+          "quesTitle": "DND Into Text Question with Bottom Answer Option Placement and Center Alignment Version 2",
+          "score": "3",
+          "instructionText": "Drag and drop the text to the correct location",
+          "promptText": "Mary is a spoilt, unpleasant girl with a bad temper. When Mary meets Ben Weatherstaff, another unpleasant person, she tells him, ‘I’ve never had any friends.’ And Ben answers, ‘Neither have I.’",
+          "questionText": " 1. Colin thought he had a {{Blank:A}} back. \n When Mary lived in India, she was a {{Blank:B}} little girl. \n‘Colin isn’t feeling well because he had another {{Blank:C}} ,’ said Martha.\n Misselthwaite Manor was on the English {{Blank:D}}.\n Update text for Version 2 {{Blank:E}}",
           "options": [
-            "crow", 
-            "thirsty",
-            "water"
+            "crooked",
+            "spoilt",
+            "tantrum",
+            "moor",
+            "version 2"
+          ]
+        },
+        {
+          "number": 6,
+          "type": "draganddropintotext",
+          "quesTitle": "DND Into Text Question with Top Answer Option Placement and Left Alignment Version 2",
+          "score": "3",
+          "instructionText": "DND Into Text Question with Bottom Answer Option Placement and Center Alignment",
+          "promptText": "Mary is a spoilt, unpleasant girl with a bad temper. When Mary meets Ben Weatherstaff, another unpleasant person, she tells him, ‘I’ve never had any friends.’ And Ben answers, ‘Neither have I.’",
+          "questionText": " 1. Colin thought he had a {{Blank:A}} back. \n When Mary lived in India, she was a {{Blank:B}} little girl. \n‘Colin isn’t feeling well because he had another {{Blank:C}} ,’ said Martha.\n Misselthwaite Manor was on the English {{Blank:D}}",
+          "options": [
+            "crooked version 2",
+            "spoilt version 2",
+            "tantrum version 2",
+            "moor version 2"
+          ]
+        },
+        {
+          "number": 6,
+          "type": "draganddropintotext",
+          "quesTitle": "DND Into Text Question with Right Answer Option Placement and Left Alignment Version 2",
+          "score": "3",
+          "instructionText": "DND Into Text Question with Bottom Answer Option Placement and Center Alignment",
+          "promptText": "Mary is a spoilt, unpleasant girl with a bad temper. When Mary meets Ben Weatherstaff, another unpleasant person, she tells him, ‘I’ve never had any friends.’ And Ben answers, ‘Neither have I.’",
+          "questionText": " 1. Colin thought he had a {{Blank:A}} back. \n When Mary lived in India, she was a {{Blank:B}} little girl. \n‘Colin isn’t feeling well because he had another {{Blank:C}} ,’ said Martha.\n Misselthwaite Manor was on the English {{Blank:D}}",
+          "options": [
+            "crooked",
+            "spoilt",
+            "tantrum",
+            "moor"
           ]
         }
       ],
       "FIB": [
         {
-          "questionIndex": 7,
-          "buttonName": "fillintheblanks",
-          "questionTitle": "Question 7",
-          "questionInstruction": "Fill the blanks with the correct options. Type the correct text",
-          "questionText": " I can’t swim.{{Blank:A}}\nWe’re not from London. {{Blank:B}}\nI’ve got a cat. {{Blank:C}}\n We go to church every Sunday. {{Blank:D}} \n My best friend calls me every day. {{Blank:E}}\n don’t know the answer. {{Blank:F}},",
-          "options": ["A1","B1","C1","D1","E1","F1"],
-          "optionValue":[
-            "Neither can I.", 
-            "Neither are we.",
-            "So have I.",
-            "So do we.",
-            "So does mine.",
-            "Neither do I.",
-            "Nothing"
+          "number": 7,
+          "type": "fillintheblanks",
+          "quesTitle": "FIB Text Question With Response Type as Text, Input Type as Word, Response Text Alignment as Center with Overall Center Alignment Version 2",
+          "score": "5",
+          "instructionText": "Read the description and write the correct word.",
+          "questionText": " Six letter word for 'Dark and sad' :{{Blank:A}} \nFour letter word for 'Large open land' :{{Blank:B}}\nSeven letter word for 'Not straight' :{{Blank:C}}\nSix letter word for 'This person always gets everything he/she wants' :{{Blank:D}}\nSeven letter word for 'Sudden explosion of anger' :{{Blank:E}}",
+          "promptText": "",
+          "audioPath": "./testResources/testcaseData/assessmentEditor/media/Ringtone.mp3",
+          "options": [
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "E1"
+          ],
+          "optionValue": [
+            "Gloomy",
+            "Moor",
+            "Crooked",
+            "Spoilt",
+            "Tantrum"
+          ]
+        },
+        {
+          "number": 7,
+          "type": "fillintheblanks",
+          "quesTitle": "FIB Text Question With Response Type as Text, Input Type as Character, Response Text Alignment as Left with Overall Left Alignment Version 2",
+          "score": "5",
+          "instructionText": "Read the description and write the correct word.",
+          "questionText": " Six letter word for 'Dark and sad' :{{Blank:A}} \nFour letter word for 'Large open land' :{{Blank:B}}\nSeven letter word for 'Not straight' :{{Blank:C}}\nSix letter word for 'This person always gets everything he/she wants' :{{Blank:D}}\nSeven letter word for 'Sudden explosion of anger' :{{Blank:E}}",
+          "promptText": "",
+          "videoPath": "./testResources/testcaseData/assessmentEditor/media/abc.mp4",
+          "options": [
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "E1"
+          ],
+          "optionValue": [
+            "Gloomy",
+            "Moor",
+            "Crooked",
+            "Spoilt",
+            "Tantrum"
+          ]
+        },
+        {
+          "number": 7,
+          "type": "fillintheblanks",
+          "quesTitle": "FIB Text Question With Response Type as Number Range, Response Text Alignment as Left with Overall Center Alignment Version 2",
+          "score": "5",
+          "instructionText": "Read the description and write the correct word.",
+          "questionText": " Enter a Prime number in between 3 and 7 :{{Blank:A}}",
+          "promptText": "",
+          "options": [
+            "A1"
+          ],
+          "optionValue": [
+            "5"
+          ]
+        },
+        {
+          "number": 7,
+          "type": "fillintheblanks",
+          "quesTitle": "FIB Text Question With Response Type as Number, Response Text Alignment as Center with Overall Center Alignment Version 2",
+          "score": "5",
+          "instructionText": "Read the description and write the correct word.",
+          "questionText": " Enter a Prime number in between 1 and 4 : {{Blank:A}}",
+          "promptText": "",
+          "options": [
+            "A1",
+            "A2"
+          ],
+          "optionValue": [
+            "2",
+            "3"
+          ],
+          "addMoreOption": [
+            "A"
+          ]
+        }
+      ],
+      "FIBDropdown": [
+        {
+          "question1": {
+            "number": 7,
+            "type": "fibdropdown",
+            "quesTitle": "FIB Select Question with Unique Options - Dropdown Width as Fit to Response and Center Alignment Version 2",
+            "score": "5",
+            "instructionText": "Read the first part of each sentence and match it with a conclusion.",
+            "questionText": "  1. Mary entered the room slowly and put her {{Blank:A}} down on a table. \n 2. he hates the garden because she fell off the {{Blank:B}} of the tree and died.",
+            "options": [
+              [
+                "A-O1",
+                "cushion"
+              ],
+              [
+                "A-O2",
+                "candle"
+              ],
+              [
+                "B-O3",
+                "branch"
+              ],
+              [
+                "B-O4",
+                "bed"
+              ]
+            ]
+          },
+          "question2": {
+            "number": 7,
+            "type": "fibdropdown",
+            "quesTitle": "FIB Select Question with Common Options - Dropdown Width as Longest Option and Left Alignment Version 2",
+            "score": "5",
+            "instructionText": "Read the part of each sentence and match it with a conclusion.",
+            "questionText": " 1. Mary Lennox’s parents {{Blank:A}} \n2. Mary was a spoilt girl with a bad temper, {{Blank:B}}\n3. One morning Mary discovered {{Blank:C}}\n4. Mary had to leave India {{Blank:D}} \n5. Mrs Medlock, her uncle’s housekeeper,  {{Blank:E}}",
+            "options": [
+              [
+                "O1",
+                "met Mary in London and took her to Misselthwaite Manor."
+              ],
+              [
+                "O2",
+                "didn't have any time for their daughter."
+              ],
+              [
+                "O3",
+                "because her Indian nanny let her do anything she wanted."
+              ],
+              [
+                "O4",
+                "that her parents were dead."
+              ],
+              [
+                "O5",
+                "and go to live with her uncle in England."
+              ]
+            ],
+            "response": [
+              [
+                "A",
+                "O2"
+              ],
+              [
+                "B",
+                "O3"
+              ],
+              [
+                "C",
+                "O4"
+              ],
+              [
+                "D",
+                "O3"
+              ],
+              [
+                "E",
+                "O1"
+              ]
+            ]
+          }
+        }
+      ],
+      "Matching": [
+        {
+          "number": 9,
+          "type": "matching",
+          "score": "3",
+          "quesTitle": "Matching Question with Unidirectional Matching connection Version 2",
+          "instructionText": "Match the statements below with the correct answer.",
+          "items": [
+            [
+              "A",
+              "I can’t swim."
+            ],
+            [
+              "B",
+              "We’re not from London."
+            ],
+            [
+              "C",
+              "I’ve got a cat."
+            ],
+            [
+              "D",
+              "We go to church every Sunday."
+            ],
+            [
+              "E",
+              "My best friend calls me every day."
+            ],
+            [
+              "F",
+              "I don’t know the answer."
+            ]
+          ],
+          "matchedItems": [
+            [
+              "A",
+              "Neither can I."
+            ],
+            [
+              "B",
+              "Neither are we."
+            ],
+            [
+              "C",
+              "So have I."
+            ],
+            [
+              "D",
+              "So do we."
+            ],
+            [
+              "E",
+              "So does mine."
+            ],
+            [
+              "F",
+              "Neither do I"
+            ]
+          ]
+        },
+        {
+          "number": 9,
+          "type": "matching",
+          "score": "3",
+          "quesTitle": "Matching Question with Bidirectional Matching connection Version 2",
+          "instructionText": "Match the statements below with the correct answer.",
+          "deleteResponse": "1",
+          "items": [
+            [
+              "A",
+              "I can’t swim."
+            ],
+            [
+              "B",
+              "We’re not from London."
+            ],
+            [
+              "C",
+              "I’ve got a cat."
+            ],
+            [
+              "D",
+              "We go to church every Sunday."
+            ],
+            [
+              "E",
+              "My best friend calls me every day."
+            ],
+            [
+              "F",
+              "I don’t know the answer."
+            ]
+          ],
+          "matchedItems": [
+            [
+              "A",
+              "Neither can I."
+            ],
+            [
+              "B",
+              "Neither are we."
+            ],
+            [
+              "C",
+              "So have I."
+            ],
+            [
+              "D",
+              "So do we."
+            ],
+            [
+              "E",
+              "So does mine."
+            ],
+            [
+              "F",
+              "Neither do I"
+            ]
           ]
         }
       ],
       "Ordering": [
         {
-          "questionIndex": 8,
-          "buttonName": "ordering",
-          "questionTitle": "Question 8",
-          "imagePath": "./testResources/testcaseData/assessmentEditor/media/Mughal.jpg",
-          "questionInstruction": "See the image and reorder the options in correct sequence.",
-          "questionText": "Arrange the incidents in sequence",
+          "number": 8,
+          "type": "ordering",
+          "score": "4",
+          "quesTitle": "Orderlist",
+          "instructionText": "Arrange the options in the correct order Version 2",
+          "questionText": " Version 2",
           "options": [
-            "Babur’s attack on India",
-            "Akbar’s birth",
-            "Construction of the Taj Mahal",
-            "Aurangzeb’s death"
-          ]
-        }
-      ],
-      "Matching": [
-        {
-          "questionIndex": 9,
-          "buttonName": "matching",
-          "questionTitle": "Question 9",
-          "questionInstruction": "See the image and match the suitable word",
-          "questionText": "Match the following countries with their corresponding capitals",
-          "items": [
-            "China",
-            "Japan",
-            "New Zealand",
-            "Which is not capital of any country"
-
-          ],
-          "matchedItems": [
-            "Beijing",
-            "Tokyo",
-            "Wellington",
-            "Mumbai"
+            "From",
+            "Russia",
+            "With",
+            "Love"
           ]
         }
       ],
       "Classify": [
         {
-          "questionIndex": 10,
-          "buttonName": "classify",
-          "questionTitle": "Question 10",
-          "questionInstruction": "View the video and place the items in the correct categories.",
+          "number": 10,
+          "type": "classify",
+          "quesTitle": "Classify Question Version 2",
+          "score": "6",
+          "instructionText": "Clasifica estas expresiones según si sirven para saludar o para despedirse",
           "videoURL": "https://www.youtube.com/watch?v=Vk461NU7wbg",
-          "audioPath": "./testResources/testcaseData/assessmentEditor/media/Xiaomi.mp3",
-          "audioCredit": "Audio",
           "questionText": "Classify in to categories",
-          "groups": ["herbivores","carnivores","omnivores"],
-          "options": ["cow","human","tiger","sheep","cat","bear"],
-          "groupsIcon": ["O1","O2","O3","O4","O5","O6"],
-          "setGroups": ["A","C","B","A","C","A"]
+          "deleteOption": "1",
+          "groups": [
+            "SALUDAR",
+            "DESPSEDERSE"
+          ],
+          "options": [
+            "¿Qué tal?",
+            "¡Hasta el lunes!",
+            "¿Cómo andas?",
+            "Buenas tardes",
+            "Buenas noches",
+            "¡Hasta mañana!"
+          ],
+          "groupsIcon": [
+            "O1",
+            "O2",
+            "O3",
+            "O4",
+            "O5",
+            "O6"
+          ],
+          "setGroups": [
+            "A",
+            "B",
+            "A",
+            "A",
+            "B",
+            "B"
+          ]
+        }
+      ],
+      "MCQ": [
+        {
+          "question1": {
+            "questionIndex": 1,
+            "buttonName": "mutiplechoice",
+            "quesTitle": "Multiple Choice Question",
+            "score": "1",
+            "instructionText": "See the image carefully and answer the question",
+            "videoURL": "https://www.youtube.com/watch?v=mxbodI60OT4",
+            "videoCredit": "mcq video #1",
+            "imagePath": "./testResources/testcaseData/assessmentEditor/media/Cell.png",
+            "questionText": "Which organelle is called powerhouse of the cell?",
+            "options": [
+              "Mitochondria",
+              "Nucleus",
+              "Golgi Bodies",
+              "Ribosomes"
+            ],
+            "optionStyle": "2"
+          }
+        }
+      ],
+      "MCQSR": [
+        {
+          "number": 1,
+          "type": "multiplechoicequestionset",
+          "type1": "mutiplechoice",
+          "quesTitle": "MCSR Question with Multiple Sub-Questions with Answer Option as Horizontal and center aligned Version 2",
+          "score": "1",
+          "instructionText": "Choose the correct answer for the following questions",
+          "promptText": "There are twelve of us and my father doesn’t earn much money. It’s hard for my mother to feed them all. The fresh air on the moor makes them strong and healthy. Dickon is twelve and he’s always out on the moor. He loves animals.",
+          "subQues": [
+            [
+              "1",
+              "When the wind blew the ivy to one side"
+            ],
+            [
+              "2",
+              "As soon as Mary met Dickon"
+            ],
+            [
+              "3",
+              "Mr Craven returned home to Misselthwaite Manor"
+            ],
+            [
+              "4",
+              "Colin felt that the secret garden"
+            ],
+            [
+              "5",
+              "Answer Options With Image"
+            ]
+          ],
+          "answerKey": [
+            [
+              "1",
+              "1",
+              "Mary saw the little robin.",
+              "",
+              ""
+            ],
+            [
+              "1",
+              "2",
+              "Mary found the door to the secret garden.",
+              "correct",
+              ""
+            ],
+            [
+              "1",
+              "3",
+              "Mary found the key to the secret garden.",
+              "",
+              ""
+            ],
+            [
+              "1",
+              "4",
+              "Mary saw Ben Weatherstaff looking at her.",
+              "",
+              ""
+            ],
+            [
+              "2",
+              "1",
+              "she didn’t want to talk to him. ",
+              "",
+              ""
+            ],
+            [
+              "2",
+              "2",
+              "she was afraid of him and ran away.",
+              "",
+              ""
+            ],
+            [
+              "2",
+              "3",
+              "they started to play ball together.",
+              "",
+              ""
+            ],
+            [
+              "2",
+              "4",
+              "she liked him and trusted him.",
+              "correct",
+              ""
+            ],
+            [
+              "3",
+              "1",
+              "because he had to talk to Ben Weatherstaff.",
+              "",
+              ""
+            ],
+            [
+              "3",
+              "2",
+              "because Mrs Medlock wrote him a letter.",
+              "",
+              ""
+            ],
+            [
+              "3",
+              "3",
+              "because he dreamt about his wife’s garden.",
+              "correct",
+              ""
+            ],
+            [
+              "3",
+              "4",
+              "but he was unhappy there.",
+              "",
+              ""
+            ],
+            [
+              "4",
+              "1",
+              "was a sad place.",
+              "",
+              ""
+            ],
+            [
+              "4",
+              "2",
+              "was a boring place.",
+              "",
+              ""
+            ],
+            [
+              "4",
+              "3",
+              "should be locked forever.",
+              "",
+              ""
+            ],
+            [
+              "4",
+              "4",
+              "could help him grow strong and healthy.",
+              "correct",
+              ""
+            ],
+            [
+              "5",
+              "1",
+              "Option A",
+              "correct",
+              "./testResources/testcaseData/assessmentEditor/media/option1.png"
+            ],
+            [
+              "5",
+              "2",
+              "Option B",
+              "",
+              "./testResources/testcaseData/assessmentEditor/media/option2.jpg"
+            ],
+            [
+              "5",
+              "3",
+              "Option C",
+              "",
+              "./testResources/testcaseData/assessmentEditor/media/option3.png"
+            ]
+          ],
+          "optionStyle": "2"
+        }
+      ],
+      "writing": [
+        {
+          "questionIndex": 3,
+          "score": "1",
+          "buttonName": "writing",
+          "questionTitle": "Short Essay About Uttar Pradesh with 500 words. See description in Instruction",
+          "questionInstruction": "Write Essay about Uttar Pradesh. provide details about districts, Religion, Famous Places, Area, Politics. Should be not ore than 500 words. Key points: Modern human hunter-gatherers have been in Uttar Pradesh[15][16][17] since between around[18] 85,000 and 72,000 years ago.",
+          "videoURL": "https://www.youtube.com/watch?v=fe6x2n274Fg",
+          "questionText": " Please Write the Essay.",
+          "textAreaConf": [
+            [
+              "1",
+              "4",
+              "1024",
+              "Write Here"
+            ],
+            [
+              "2",
+              "5",
+              "100",
+              "placeHolder Text2"
+            ]
+          ]
+        }
+      ]
+    },
+    "kidsQuestion": {
+      "MCQSR": [
+        {
+          "questionIndex": 1,
+          "buttonName": "multiplechoicequestionset",
+          "questionTitle": "Look at the following figure and count number.",
+          "score": "1",
+          "questionInstruction": "Look the picture and choose the option",
+          "videoURL": "",
+          "videoCredit": "",
+          "audioPath": "",
+          "audioCredit": "",
+          "imagePath": "",
+          "promptImagePath": "./testResources/testcaseData/assessmentEditor/media/kids2.png",
+          "promptText": "",
+          "questionText": "Look at the following figure and count number.",
+          "subQuestionText": [
+            [
+              "1",
+              "How many rectangles are there ?"
+            ],
+            [
+              "2",
+              "How many triangles are there ?"
+            ],
+            [
+              "3",
+              "How many Squares are there ?"
+            ]
+          ],
+          "options": [
+            [
+              "1",
+              "1",
+              "1 "
+            ],
+            [
+              "1",
+              "2",
+              "2"
+            ],
+            [
+              "1",
+              "3",
+              "3"
+            ],
+            [
+              "2",
+              "1",
+              "1"
+            ],
+            [
+              "2",
+              "2",
+              "2"
+            ],
+            [
+              "2",
+              "3",
+              "5"
+            ],
+            [
+              "3",
+              "1",
+              "3"
+            ],
+            [
+              "3",
+              "2",
+              "2"
+            ],
+            [
+              "3",
+              "3",
+              "5"
+            ]
+          ],
+          "optionStyle": "2"
+        }
+      ],
+      "FIBDropdown": [
+        {
+          "questionIndex": 7,
+          "buttonName": "fibdropdown",
+          "questionTitle": "Look the picture and choose the option",
+          "score": "5",
+          "promptImagePath": "./testResources/testcaseData/assessmentEditor/media/kids1.png",
+          "questionInstruction": "Fill the blanks with the correct options.",
+          "questionInstructionEdit": "Check the Picture and update the field",
+          "questionText": "In the Image {{Blank:A}} Trinagles, {{Blank:B}} Circle , {{Blank:C}} Rectangle",
+          "options": [
+            [
+              "A-O1",
+              "3"
+            ],
+            [
+              "A-O2",
+              "2"
+            ],
+            [
+              "B-O3",
+              "1"
+            ]
+          ],
+          "response": [
+            [
+              "A",
+              "O2"
+            ],
+            [
+              "B",
+              "O1"
+            ],
+            [
+              "C",
+              "O3"
+            ]
+          ]
         }
       ]
     }
