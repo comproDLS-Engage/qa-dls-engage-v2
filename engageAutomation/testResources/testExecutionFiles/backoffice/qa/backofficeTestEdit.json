@@ -6302,6 +6302,7 @@
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": []
 			},
+			
 			{
 				"id": "ASE_COM_TC_1001",
 				"description": "Set Header title text",
@@ -6619,6 +6620,12 @@
 				"testData": []
 			},
 			{
+				"id": "ASE_COM_TC_1033",
+				"description": "Click on Edit Header button",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
 				"id": "ASE_COM_TC_1001",
 				"description": "Click on Editor tab",
 				"testFile": "./test/assessmentEditor/editor.test.js",
@@ -6630,6 +6637,18 @@
 				]
 			},
 			{
+				"id": "ASE_COM_TC_1014",
+				"description": "Click Done Button",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_COM_TC_1032",
+				"description": "Click on Edit Instruction button",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
 				"id": "ASE_COM_TC_1002",
 				"description": "Click on Editor tab",
 				"testFile": "./test/assessmentEditor/editor.test.js",
@@ -6639,6 +6658,12 @@
 						"jsonPath": "editor.questions.writing[0].questionInstruction"
 					}
 				]
+			},
+			{
+				"id": "ASE_COM_TC_1014",
+				"description": "Click Done Button",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
 			},
 			{
 				"id": "ASE_COM_TC_15",
