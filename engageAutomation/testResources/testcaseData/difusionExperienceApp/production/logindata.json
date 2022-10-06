@@ -364,6 +364,39 @@
                         }
                     ],
                     "info": {}
+                },
+                "onboardingTeacher": {
+                    "email": "dev2TeacherOnboard1@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "teacher",
+                    "name": "général d’expressions",
+                    "class": [],
+                    "info": {}
+                },
+                "onboardingStudent": {
+                    "email": "dev2StudentOnboard@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "student",
+                    "name": "Onboard Student6",
+                    "class": [],
+                    "info": {}
+                },
+                "signUpUser": {
+                    "email": "newUser@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "student",
+                    "name": "New User",
+                    "class": [],
+                    "info": {
+                        "partialPassword": "Com@123",
+                        "upperCasePassword": "COMPRO@1234",
+                        "lowercasePassword": "compro@1234",
+                        "incorrectConfirmPassword": "Compro@123456",
+                        "withoutSpecialCharacterPassword": "Compro1234",
+                        "firstName": "New",
+                        "lastName": "User",
+                        "countryName": "India"
+                    }
                 }
             }
         },

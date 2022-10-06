@@ -213,6 +213,7 @@
                 "applyBtn_txt": "Apply",
                 "cancelBtn_txt": "Cancel",
                 "archivedTab": "Archived",
+                "archivedlbl": "Archived",
                 "viewClassText": "View Class",
                 "editMsgBar_txt": "Class Updated!",
                 "inboxOption_txt": "Inbox",
@@ -246,7 +247,8 @@
                 "joinclassPopUpbtn": "Join Class",
                 "helpJoiningClass": "Help Joining Classes",
                 "titleErrorMsg": "You are already enrolled in this class.",
-                "alreadyExistErrorMessage": "You are already enrolled in this class."
+                "alreadyExistErrorMessage": "You are already enrolled in this class.",
+                "archiveTagLbl": "Archived"
             },
             "classDrawerPane": {
                 "classHeading": "Dashboard",
@@ -300,7 +302,9 @@
                 "resources": "Resources",
                 "reviewBox_Title": "Review and grade student submissions",
                 "reviewBox_SubTitle": "When students in your class submit activities from assigments or class textbooks, you'll see them here to review grade.",
-                "assignmentCardActivityText": "submitted an activity"
+                "assignmentCardActivityText": "submitted an activity",
+                "archivedlbl": "Archived",
+                "archivedMsg": "This class is archived because the end date has passed. The class will be limited to read only mode. You can extend the class end date and activate the class again."
             },
             "bookViewTOC": {
                 "addToMyBooks": "Add to My Books",
@@ -356,6 +360,14 @@
                         "Correct",
                         "Oops! Not quite correct.",
                         "Not Correct"
+                    ],
+                    "kidsFeedbackTitle": [
+                        "Not quite right.", 
+                        "Nice Job"
+                    ],
+                    "kidsFeedbackSubtitle": [
+                        "You can try this again later.",
+                        "You selected the correct response."
                     ]
                 },
                 "student": {
@@ -394,14 +406,22 @@
                         "Oops! Not quite correct.",
                         "Not Correct"
                     ],
-                    "closeAssignmentBtn": "Close Assignment"
+                    "closeAssignmentBtn": "Close Assignment",
+                    "kidsFeedbackTitle": [
+                        "Not quite right.", 
+                        "Nice Job"
+                    ],
+                    "kidsFeedbackSubtitle": [
+                        "You can try this again later.",
+                        "You selected the correct response."
+                    ]
                 }
             },
             "activityPlayerPage": {
                 "correct_txt": "Well done",
                 "incorrect_txt": "Oops! Not quite correct."
             },
-            "onboarding": {
+            "onboardingOld": {
                 "welcomePage": {
                     "pageHeading": "Welcome, ",
                     "message": "Let's get started. Select the role that best describes you.",
@@ -719,7 +739,11 @@
                     "filterMenuCloseBtn": "",
                     "filterMenuFilterCount": " filters added",
                     "filterMenuClearAllBtn": "Clear All",
-                    "filterMenuApplyBtn": "Apply Filters"
+                    "filterMenuApplyBtn": "Apply Filters",
+                    "viewAllSearchCount": "results:",
+                    "partOfText": "Part of: ",
+                    "otherBooks": "Other Books",
+                    "showMoreBooks": "Show More Books"
                 },
                 "student": {
                     "pageTitle": [
@@ -763,7 +787,11 @@
                     "filterMenuCloseBtn": "",
                     "filterMenuFilterCount": " filters added",
                     "filterMenuClearAllBtn": "Clear All",
-                    "filterMenuApplyBtn": "Apply Filters"
+                    "filterMenuApplyBtn": "Apply Filters",
+                    "viewAllSearchCount": "results:",
+                    "partOfText": "Part of: ",
+                    "otherBooks": "Other Books",
+                    "showMoreBooks": "Show More Books"
                 }
             },
             "playlist": {
@@ -1102,12 +1130,12 @@
                     "copiedlassCode_btn": "Class Code Copied!",
                     "inviteEmail_btn": "Copy Invitation",
                     "inviteStudents_lbl": "Invite Your Students",
-                    "inviteStudentsByline_lbl": "Send your class code (msLz-9NZA) or invite through email."
+                    "inviteStudentsByline_lbl": "Send your class code (8aQY-M826) or invite through email."
                 }
             },
             "gradeBookStudent": {
                 "teacher": {
-                    "pageTitle": "dev1 student100",
+                    "pageTitle": "dev2 28aprilstudent",
                     "pageSubTitle": "Last Active: ",
                     "download_btn": "Download",
                     "sendtoemail_btn": "Send to email",
@@ -1170,6 +1198,13 @@
                     "removeDialogSubtitle": "Are you sure you want to remove the attachment?",
                     "removeDialogNoBtn": "No",
                     "removeDialogYesBtn": "Yes"
+                }
+            },
+            "indexMenu": {
+                "teacher": {
+                    "tocPanelHeader": "Jump to Section",
+                    "currentlbl": "Curent",
+                    "materialbtn":"Materials"
                 }
             },
             "openActivityPlayer": {
@@ -1303,6 +1338,131 @@
                     "submitActivityDialogCancelBtn": "Cancel",
                     "submitActivityDialogConfirmBtn": "Confirm & Submit"
                 }
+            },
+            "onboarding": {
+                "teacher": {
+                    "welcomeTxt": "Welcome général d’expressions!",
+                    "welcomeSubtitleTxt": "You have successfully created your account.",
+                    "completeStepsTitleTxt": "Getting started on Engage",
+                    "completeStepsSubtitleTxt": "Complete these simple steps and get instant access to courses and activities.",
+                    "joinSchoolTxt": "Join your school",
+                    "activateMaterialsTxt": "Activate your materials",
+                    "accessEngageTxt": "Access Engage",
+                    "teacherGetStartedBtn": "Get Started",
+                    "studentGetStartedBtn": "Get Started",
+                    "logoutBtn": "Logout",
+                    "joinYourSchoolTitleTxt": "Join Your School",
+                    "joinYourSchoolSubTitleTxt": "Enter the school key provided by your school to join as a teacher.",
+                    "schoolKeyLbl": "School Key",
+                    "schoolKeySubLbl": "School key should look like: ABC-DEF-GHI.",
+                    "joinSchoolHelperTxt": "Please contact your school admin if you don't have the school key.",
+                    "verifyBtn": "Verify Key",
+                    "continueBtn": "Continue",
+                    "joinSchoolBackBtn": "Back to start",
+                    "schoolNameTxt": "Richmond High School",
+                    "addressTxt": "7 Lsc uday park, Allahabad bank building, Delhi, Delhi, India, 110049",
+                    "schoolKeyErrorTxt": [
+                        "School Key is required",
+                        "This school key is invalid. Please contact your school admin."
+                    ],
+                    "activateMaterialsTitleTxt": "Activate your materials",
+                    "activateMaterialsSubTitleTxt": "Enter the access key from your book to get access to digital materials.",
+                    "accessKeyLbl": "Access Key",
+                    "accessKeySubLbl": "Access key should look like: 7HRA-7UHW-QFER-H4TF.",
+                    "activateMaterialHelperTxt": "You can find your key inside the textbook you have purchased.",
+                    "activateMaterialsBtn": "Activate Materials",
+                    "activateErrorTxt": [
+                        "Access key is required",
+                        "This access key is invalid.",
+                        "This access key has already been used.",
+                        "This access key has expired."
+                    ],
+                    "teacherActivateMaterialsBackBtn": "Back (Enter a different school key)",
+                    "studentActivateMaterialsBackBtn": null
+                },
+                "student": {
+                    "welcomeTxt": "Welcome Onboard Student6!",
+                    "welcomeSubtitleTxt": "You have successfully created your account.",
+                    "completeStepsTitleTxt": "Getting started on Engage",
+                    "completeStepsSubtitleTxt": "Complete this simple step and get instant access to courses and activities.",
+                    "joinSchoolTxt": null,
+                    "activateMaterialsTxt": "Activate your materials",
+                    "accessEngageTxt": "Access Engage",
+                    "teacherGetStartedBtn": "Get Started",
+                    "studentGetStartedBtn": "Get Started",
+                    "logoutBtn": "Logout",
+                    "joinYourSchoolTitleTxt": null,
+                    "joinYourSchoolSubTitleTxt": null,
+                    "schoolKeyLbl": null,
+                    "schoolKeyTextbox": null,
+                    "schoolKeySubLbl": null,
+                    "joinSchoolHelperTxt": null,
+                    "verifyBtn": null,
+                    "continueBtn": null,
+                    "joinSchoolBackBtn": null,
+                    "schoolNameTxt": null,
+                    "addressTxt": null,
+                    "schoolKeyErrorTxt": null,
+                    "activateMaterialsTitleTxt": "Activate your materials",
+                    "activateMaterialsSubTitleTxt": "Enter the access key from your book to get access to digital materials.",
+                    "accessKeyLbl": "Access Key",
+                    "accessKeySubLbl": "Access key should look like: 7HRA-7UHW-QFER-H4TF.",
+                    "activateMaterialHelperTxt": "You can find your key inside the textbook you have purchased.",
+                    "activateMaterialsBtn": "Activate Materials",
+                    "activateErrorTxt": [
+                        "Access key is required",
+                        "This access key is invalid.",
+                        "This access key has already been used.",
+                        "This access key has expired."
+                    ],
+                    "teacherActivateMaterialsBackBtn": null,
+                    "studentActivateMaterialsBackBtn": "Back to start"
+                }
+            },
+            "signUp": {
+                "createAccountTitleTxt": "Create an account",
+                "createAccountSubTitleTxt": "Create your account using your email or a social login.",
+                "emailLbl": "Email",
+                "signUpBtn": "Sign Up with Email",
+                "continueWithTxt": "Or continue with:",
+                "googleBtn": "Google",
+                "facebookBtn": "Facebook",
+                "haveAnAccountTxt": "Have an account?",
+                "logInBtn": " Log in",
+                "emailErrorTxt": "Please enter a valid email address (for example, name@example.com)",
+                "roleSelectionTitleTxt": "Which role describes you best?",
+                "selectRoleTxt": "Select your role",
+                "studentRoleBtn": "I'm a student",
+                "teacherRoleBtn": "I'm a teacher",
+                "continueBtn": "Continue",
+                "backToSignInBtn": "Back to Sign in",
+                "roleSelectionErrorTxt": "Please select a role",
+                "accountDetailsTitleTxt": "Enter account details",
+                "passwordLbl": "Password",
+                "passwordHelperTxt": "Must have a min of 8 characters and contain: 1 uppercase, 1 lowercase, 1 number, and 1 special character.",
+                "confirmPasswordLbl": "Confirm Password",
+                "firstNameLbl": "First Name",
+                "lastNameLbl": "Last Name",
+                "countryLbl": "Country",
+                "policyLineTxt": "I accept the Privacy notice and Terms of use.",
+                "createAccountBtn": "Create Account",
+                "backToRoleSelectionBtn": "Back to Role selection",
+                "passwordErrorTxt": "Must have a min of 8 characters and contain: 1 uppercase, 1 lowercase, 1 number, and 1 special character.",
+                "confirmPasswordErrorTxt": "Password and Confirm password must match",
+                "firstNameErrorTxt": "First name is required",
+                "lastNameErrorTxt": "Last name is required",
+                "countryErrorTxt": "Country is required",
+                "policyLineErrorTxt": "Please accept Terms & Policy",
+                "privacyPoliceLink": "Privacy notice",
+                "termsOfUseLink": "Terms of use",
+                "privacyPolicyTab": "Privacy Policy",
+                "termsOfUseTab": "Terms of Use",
+                "policyCancelBtn": "Cancel",
+                "policyAgreeBtn": "I Agree",
+                "googlePageHeadingTxt": "Sign in",
+                "googlePageSubHeadingTxt": "to continue to amazoncognito.com",
+                "facebookPageHeadingTxt": "Log in to Facebook",
+                "userExistSnackBar": "User with this email ID exists"
             }
         }
     }

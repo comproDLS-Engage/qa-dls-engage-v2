@@ -1,0 +1,225 @@
+{
+  "quizName": {
+    "type": "Native Engage Learning Object",
+    "name": "Acceptance Quiz (Kids)",
+    "question": [
+      {
+        "number": 1,
+        "quesType": "kids-mcqsr-item-player",
+        "quesTitle": "MCSR in Kids Layout",
+        "instructionText": "Look at the following figure and answer the questions",
+        "promptText": null,
+        "viewLabels": {
+          "instructionHeading": "In this activity",
+          "selectOneLabel": "Select one",
+          "selectOneOrMoreLabel": null,
+          "selectFromDropdownLabel": null,
+          "matchingLeftLabel": null,
+          "matchingRightLabel": null,
+          "zoomLabel": null,
+          "selectLabel": null,
+          "noneLabel": null,
+          "clearLabel": null
+        },
+        "mediaType": "image",
+        "subQues": [
+          [
+            "1",
+            "How many rectangles are there ?",
+            null
+          ],
+          [
+            "2",
+            "How many triangles are there ?",
+            null
+          ],
+          [
+            "3",
+            "How many squares are there ?",
+            null
+          ]
+        ],
+        "answerKey": [
+          [
+            "1-O1",
+            "2",
+            null,
+            null,
+            null
+          ],
+          [
+            "1-O2",
+            "1",
+            "select",
+            "correct",
+            null
+          ],
+          [
+            "1-O3",
+            "3",
+            null,
+            null,
+            null
+          ],
+          [
+            "2-O1",
+            "2",
+            "select",
+            "correct",
+            null
+          ],
+          [
+            "2-O2",
+            "1",
+            null,
+            null,
+            null
+          ],
+          [
+            "2-O3",
+            "5",
+            null,
+            null,
+            null
+          ],
+          [
+            "3-O1",
+            "2",
+            null,
+            null,
+            null
+          ],
+          [
+            "3-O2",
+            "3",
+            "select",
+            "correct",
+            null
+          ],
+          [
+            "3-O3",
+            "5",
+            null,
+            null,
+            null
+          ]
+        ],
+        "scenario1": [
+          [
+            "1-O1",
+            "2",
+            "select",
+            "incorrect",
+            null
+          ],
+          [
+            "1-O2",
+            "1",
+            null,
+            "correct",
+            null
+          ],
+          [
+            "1-O3",
+            "3",
+            null,
+            null,
+            null
+          ],
+          [
+            "2-O1",
+            "2",
+            "select",
+            "correct",
+            null
+          ],
+          [
+            "2-O2",
+            "1",
+            null,
+            null,
+            null
+          ],
+          [
+            "2-O3",
+            "5",
+            null,
+            null,
+            null
+          ],
+          [
+            "3-O1",
+            "2",
+            null,
+            null,
+            null
+          ],
+          [
+            "3-O2",
+            "3",
+            "select",
+            "correct",
+            null
+          ],
+          [
+            "3-O3",
+            "5",
+            null,
+            null,
+            null
+          ]
+        ],
+        "scenario2": []
+      },
+      {
+        "number": 2,
+        "quesType": "kids-fibdropdown-item-player",
+        "quesTitle": "FIB Select in Kids Layout",
+        "instructionText": "Look at the pictures. Read the sentences and select the correct option.",
+        "promptText": null,
+        "viewLabels": {
+          "instructionHeading": "In this activity",
+          "selectOneLabel": null,
+          "selectOneOrMoreLabel": null,
+          "selectFromDropdownLabel": "Select from dropdown",
+          "matchingLeftLabel": null,
+          "matchingRightLabel": null,
+          "zoomLabel": null,
+          "selectLabel": null,
+          "noneLabel": null,
+          "clearLabel": null
+        },
+        "mediaType": null,
+        "subQues": [],
+        "answerKey": [
+          [
+            "A",
+            "O4",
+            "D",
+            "correct"
+          ],
+          [
+            "B",
+            "O1",
+            "A",
+            "correct"
+          ],
+          [
+            "C",
+            "O3",
+            "C",
+            "correct"
+          ],
+          [
+            "D",
+            "O2",
+            "B",
+            "correct"
+          ]
+        ],
+        "scenario1": [],
+        "scenario2": []
+      }
+    ]
+  }
+}

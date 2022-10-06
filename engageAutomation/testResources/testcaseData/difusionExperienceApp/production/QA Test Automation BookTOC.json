@@ -163,7 +163,8 @@
                                     "Open Ended Native",
                                     "Close Ended Native (OLD)",
                                     "Item Player Test Question",
-                                    "Acceptance Quiz"
+                                    "Acceptance Quiz",
+                                    "Acceptance Quiz (Kids)"
                                 ]
                             }
                         ]
@@ -187,11 +188,23 @@
                                     "Download pdf",
                                     "Download xls",
                                     "Etext",
-                                    "Html webbook"
+                                    "Html webbook",
+                                    "Video with subtitles",
+                                    "Audio with subtitles"
                                 ]
                             }
                         ]
                     }
+                ]
+            },
+            {
+                "index": 5,
+                "name": {
+                    "EN": "Flipbook",
+                    "ES": "Flipbook"
+                },
+                "unit": [
+                   
                 ]
             }
         ]

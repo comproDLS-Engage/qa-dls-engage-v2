@@ -2,7 +2,6 @@
 var appShell = require('../../pages/engageExperienceApp/appShell.page.js');
 var createClassPage = require('../../pages/engageExperienceApp/createClass.page.js');
 var classDashboardPage = require('../../pages/engageExperienceApp/classDashboard.page.js');
-const { confirmPasswordError_text } = require('../../pages/engageExperienceApp/settings.page.js');
 var sts;
 
 module.exports = {
@@ -138,7 +137,7 @@ module.exports = {
 	},
 
 	//Validate that the list of the tabs is correct
-	ENG_SHELL_TC_16: async function (testdata) {
+	ENG_SHELL_TC_16: async function () {
 		sts = await appShell.getTabsListData();
 	},
 

@@ -456,7 +456,7 @@
                     "info": {}
                 },
                 "onboardingTeacher": {
-                    "email": "onboardTeacher2@yopmail.com",
+                    "email": "onboardTeacher8@yopmail.com",
                     "password": "Compro@1234",
                     "role": "teacher",
                     "name": "général d’expressions",
@@ -482,11 +482,19 @@
                         "upperCasePassword": "COMPRO@1234",
                         "lowercasePassword": "compro@1234",
                         "incorrectConfirmPassword": "Compro@123456",
-                        "withoutSpecialCharacterPassword" :"Compro1234",
+                        "withoutSpecialCharacterPassword": "Compro1234",
                         "firstName": "New",
                         "lastName": "User",
                         "countryName": "India"
                     }
+                },
+                "itemUser": {
+                    "email": "megha1@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "student",
+                    "name": "Megha Teacher1",
+                    "class": [],
+                    "info": {}
                 }
             }
         },
