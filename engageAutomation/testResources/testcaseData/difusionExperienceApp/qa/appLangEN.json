@@ -1463,6 +1463,16 @@
                 "googlePageSubHeadingTxt": "to continue to amazoncognito.com",
                 "facebookPageHeadingTxt": "Log in to Facebook",
                 "userExistSnackBar": "User with this email ID exists"
+            },
+            "invitePage": {
+                "teacher": {
+                    "invitePageHeader": "Invite Student",
+                    "invitePageSubHeader": "Copy the email template below and use it to send an invite to your students to join this class.",
+                    "cancelInvitebtn": "Cancel",
+                    "copyInvitationbtn": "Copy Invitation",
+                    "copiedInvitation":"Invitation copied to clipboard!"
+                },
+                "student": {}
             }
         }
     }

@@ -1,4 +1,5 @@
 {
+  
    "Suite1": {
       "Name": "Student tab Content Validation of a non-anchor book class",
       "TestCaseRepo": [
@@ -32,10 +33,12 @@
             "id": "ENG_SHELL_TC_4",
             "description": "",
             "testFile": "./test/engageExperienceApp/appShell.test.js",
-            "testData": [  {
-               "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-               "jsonPath": "engage.appContent.myClassPage"
-            }]
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.myClassPage"
+               }
+            ]
          },
          {
             "id": "ENG_INS_CLASS_TC_7",
@@ -136,10 +139,12 @@
             "id": "ENG_SHELL_TC_4",
             "description": "",
             "testFile": "./test/engageExperienceApp/appShell.test.js",
-            "testData": [  {
-               "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-               "jsonPath": "engage.appContent.myClassPage"
-            }]
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.myClassPage"
+               }
+            ]
          },
          {
             "id": "ENG_INS_CLASS_TC_7",
@@ -240,12 +245,13 @@
             "id": "ENG_SHELL_TC_4",
             "description": "",
             "testFile": "./test/engageExperienceApp/appShell.test.js",
-            "testData": [{
-               "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-               "jsonPath": "engage.appContent.myClassPage"
-            }]
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.myClassPage"
+               }
+            ]
          }
-         
       ],
       "BeforeEach": [],
       "Test": [
@@ -267,7 +273,7 @@
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/classData.json",
-                  "jsonPath":  "engage.courses.nonStudentClass"
+                  "jsonPath": "engage.courses.nonStudentClass"
                },
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
@@ -282,7 +288,7 @@
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/bookDetails.json",
-                  "jsonPath":  "book"
+                  "jsonPath": "book"
                },
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
@@ -312,7 +318,6 @@
                }
             ]
          }
-        
       ],
       "AfterEach": [],
       "After": [
@@ -337,6 +342,111 @@
             "testFile": "./test/engageExperienceApp/appShell.test.js",
             "testData": []
          }
+      ]
+   },
+   "Suite4": {
+      "Name": "Valiate the Invite student Page Scenarios",
+      "TestCaseRepo": [
+         "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
+      ],
+      "Before": [
+         {
+            "id": "launchUrl",
+            "description": "",
+            "testFile": "./core/runner/launchUrl.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_LAND_TC_3",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/landing.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_IDEN_TC_7",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/login.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+                  "jsonPath": "engage.login.user.classInstructorUser8"
+               }
+            ]
+         },
+         {
+            "id": "ENG_SHELL_TC_4",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/appShell.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.myClassPage"
+               }
+            ]
+         },
+         {
+            "id": "ENG_INS_CLASS_TC_7",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/classDashboard.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+                  "jsonPath": "engage.login.user.classInstructorUser8.class[0].name"
+               }
+            ]
+         }
+      ],
+      "BeforeEach": [],
+      "Test": [
+         {
+            "id": "ENG_INS_CLASS_TC_132",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/classDashboard.test.js",
+            "testData": []
+         },
+         {
+            "id": "ENG_GRADEBOOK_TC_17",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/gradeBook.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.appShell.featureNotAvailable_alert"
+               }
+            ]
+         },
+         {
+            "id": "ENG_INVI_TC_3",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/classDashboard.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.invitePage.teacher"
+               }
+            ]
+         },
+         {
+            "id": "ENG_INVI_TC_2",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/classDashboard.test.js",
+            "testData": [
+               {
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                  "jsonPath": "engage.appContent.invitePage.teacher"
+               }
+            ]
+         },
+         {
+            "id": "ENG_INVI_TC_1",
+            "description": "",
+            "testFile": "./test/engageExperienceApp/classDashboard.test.js",
+            "testData": [
+            ]
+         }
+      ],
+      "AfterEach": [],
+      "After": [
       ]
    }
 }
