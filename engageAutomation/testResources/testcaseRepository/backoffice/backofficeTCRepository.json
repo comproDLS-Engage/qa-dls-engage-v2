@@ -423,6 +423,37 @@
                     "visualTest": true
                 }
             ]
+        },
+        {
+            "modulename": "",
+            "moduleId": "ADMN",
+            "testFile": "./test/backoffice/admintool.test.js",
+            "testcase": [
+                {
+                    "id": "ADMN_TC_1",
+                    "description": "Validate that user is able to search the class using correct class code on the home page",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ADMN_TC_2",
+                    "description": "Validate that no result is displayed if user search partial class code on the home page",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ADMN_TC_3",
+                    "description": "Validate that no result is displayed if user search incorrect class code on the home page",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ADMN_TC_4",
+                    "description": "Validate that user is able to search another class by using find another class feature",
+                    "tags": "P1",
+                    "visualTest": true
+                }
+            ]
         }
     ]
 }

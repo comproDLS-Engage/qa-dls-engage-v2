@@ -36,6 +36,10 @@ module.exports = {
     appVersion: selectorFile.common.appVersion,
     findUserBtn: selectorFile.homePage.findUserBtn,
     findUserTxtbox: selectorFile.homePage.findUserTxtbox,
+    emailOption: selectorFile.homePage.emailOption,
+    firstNameOption: selectorFile.homePage.firstNameOption,
+    lastNameOption: selectorFile.homePage.lastNameOption,
+    userIdOption: selectorFile.homePage.userIdOption,
     entitleUserBtn: selectorFile.homePage.entitleUserBtn,
     entitleUserTxtbox: selectorFile.homePage.entitleUserTxtbox,
     findInstitutionBtn: selectorFile.homePage.findInstitutionBtn,
@@ -43,6 +47,7 @@ module.exports = {
     findClassBtn: selectorFile.homePage.findClassBtn,
     findClassTxtbox: selectorFile.homePage.findClassTxtbox,
     proceedBtn: selectorFile.homePage.proceedBtn,
+    loadingContainer: selectorFile.common.loadingContainer,
 
     isInitialized: async function () {
         await logger.logInto((await stackTrace.get()));
@@ -276,23 +281,16 @@ module.exports = {
         return res;
     },
 
-    search_user: async function () {
-        
-    },
-
-    entitle_user: async function () {
-        
-    },
-    
-    search_institution: async function (val) {
+    search_User_ByEmail: async function (val) {
         await logger.logInto((await stackTrace.get()));
-        res = await action.click(this.findInstitutionBtn);
+        res = await action.click(this.findUserBtn);
         if (res == true) {
-            res = await action.setValue(this.findInstitutionTxtbox, val);
+            res = await action.setValue(this.findUserTxtbox, val);
             if (res == true) {
+                await action.click(this.emailOption);
                 res = await action.click(this.proceedBtn);
                 if (res == true) {
-                    //call isInitialize of find institute page
+                    res = await require('./userDetails.page.js').isInitialized();
                 }
             }
         }
@@ -300,7 +298,78 @@ module.exports = {
         return res;
     },
 
-    search_class: async function (val) {
+    search_User_ByFirstName: async function (val) {
+        await logger.logInto((await stackTrace.get()));
+        res = await action.click(this.findUserBtn);
+        if (res == true) {
+            res = await action.setValue(this.findUserTxtbox, val);
+            if (res == true) {
+                await action.click(this.firstNameOption);
+                res = await action.click(this.proceedBtn);
+                if (res == true) {
+                    res = await require('./findUser.page.js').isInitialized();
+                }
+            }
+        }
+        await logger.logInto((await stackTrace.get()), res);
+        return res;
+    },
+
+    search_User_ByLastName: async function (val) {
+        await logger.logInto((await stackTrace.get()));
+        res = await action.click(this.findUserBtn);
+        if (res == true) {
+            res = await action.setValue(this.findUserTxtbox, val);
+            if (res == true) {
+                await action.click(this.lastNameOption);
+                res = await action.click(this.proceedBtn);
+                if (res == true) {
+                    res = await require('./findUser.page.js').isInitialized();
+                }
+            }
+        }
+        await logger.logInto((await stackTrace.get()), res);
+        return res;
+    },
+
+    search_User_ByUserId: async function (val) {
+        await logger.logInto((await stackTrace.get()));
+        res = await action.click(this.findUserBtn);
+        if (res == true) {
+            res = await action.setValue(this.findUserTxtbox, val);
+            if (res == true) {
+                await action.click(this.userIdOption);
+                res = await action.click(this.proceedBtn);
+                if (res == true) {
+                    res = await require('./userDetails.page.js').isInitialized();
+                }
+            }
+        }
+        await logger.logInto((await stackTrace.get()), res);
+        return res;
+    },
+
+    entitle_User: async function () {
+        
+    },
+    
+    search_Institution: async function (val) {
+        await logger.logInto((await stackTrace.get()));
+        res = await action.click(this.findInstitutionBtn);
+        if (res == true) {
+            res = await action.setValue(this.findInstitutionTxtbox, val);
+            if (res == true) {
+                res = await action.click(this.proceedBtn);
+                if (res == true) {
+                    res = await require('./findInstitution.page.js').isInitialized();
+                }
+            }
+        }
+        await logger.logInto((await stackTrace.get()), res);
+        return res;
+    },
+
+    search_Class: async function (val) {
         await logger.logInto((await stackTrace.get()));
         res = await action.click(this.findClassBtn);
         if (res == true) {
@@ -308,7 +377,7 @@ module.exports = {
             if (res == true) {
                 res = await action.click(this.proceedBtn);
                 if (res == true) {
-                    //call isInitialize of find class page
+                    res = await require('./findClass.page.js').isInitialized();
                 }
             }
         }

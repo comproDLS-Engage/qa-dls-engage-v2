@@ -5,15 +5,19 @@ var res;
 
 module.exports = {
 
-    searchbox: selectorFile.findInstitutionPage.searchbox,
+    instituteSearchInput: selectorFile.findInstitutionPage.instituteSearchInput,
+    searchIconBtn: selectorFile.findInstitutionPage.searchIconBtn,
     institutionList: selectorFile.findInstitutionPage.institutionList,
     componentTypeList: selectorFile.findInstitutionPage.componentTypeList,
     moreOptionsBtn: selectorFile.findInstitutionPage.moreOptionsBtn,
     changeNameOption: selectorFile.findInstitutionPage.changeNameOption,
     changeKeyOption: selectorFile.findInstitutionPage.changeKeyOption,
     loginAsAdminOption: selectorFile.findInstitutionPage.loginAsAdminOption,
-    dialogChangeBtn: dialogChangeBtn,
-    dialogCancelBtn: this.dialogCancelBtn,
+    changeBtn: selectorFile.findInstitutionPage.changeBtn,
+    cancelBtn: selectorFile.findInstitutionPage.cancelBtn,
+    institutionNameInput: selectorFile.findInstitutionPage.institutionNameInput,
+    snackbarLbl: selectorFile.common.snackbarLbl,
+    snackbarBtn: selectorFile.common.snackbarBtn,
 
     isInitialized: async function () {
         await logger.logInto((await stackTrace.get()));
@@ -26,7 +30,20 @@ module.exports = {
     getInstitutionList: async function () {
         await logger.logInto((await stackTrace.get()));
         res = await action.getElementCount(this.institutionList);
-		return res;
+        return res;
+    },
+
+    search_Institution: async function (val) {
+        await logger.logInto((await stackTrace.get()));
+        res = await action.setValue(this.instituteSearchInput, val);
+        if (res == true) {
+            res = await action.click(this.searchIconBtn);
+            if (res == true) {
+                res = await this.isInitialized();
+            }
+        }
+        await logger.logInto((await stackTrace.get()), res);
+        return res;
     },
 
     click_ChangeName_Option: async function () {
@@ -35,7 +52,7 @@ module.exports = {
         if (res == true) {
             res = await action.click(this.changeNameOption);
             if (res == true) {
-                // call change name 
+                res = await action.waitForClickable(this.changeBtn);
             }
         }
         await logger.logInto((await stackTrace.get()), res);
@@ -48,7 +65,7 @@ module.exports = {
         if (res == true) {
             res = await action.click(this.changeKeyOption);
             if (res == true) {
-                res = await action.waitForDisplayed(this.dialogChangeBtn);
+                res = await action.waitForDisplayed(this.changeBtn);
             }
         }
         await logger.logInto((await stackTrace.get()), res);
@@ -57,9 +74,11 @@ module.exports = {
 
     click_DialogChangeKey_Button: async function () {
         await logger.logInto((await stackTrace.get()));
-        let res = await action.click(this.dialogChangeBtn);
+        let res = await action.click(this.changeBtn);
         if (res == true) {
-            res = await require('./addTitle.page.js').isInitialized();
+            await action.waitForDisplayed(this.snackbarLbl);
+            res = await action.getText(this.snackbarLbl);
+            await action.click(this.snackbarBtn);
         }
         await logger.logInto((await stackTrace.get()), res);
         return res;
@@ -67,16 +86,26 @@ module.exports = {
 
     click_DialogCancel_Button: async function () {
         await logger.logInto((await stackTrace.get()));
-        let res = await action.click(this.dialogCancelBtn);
+        let res = await action.click(this.cancelBtn);
         if (res == true) {
-            res = await action.waitForDisplayed(this.dialogChangeBtn, undefined, true);
+            res = await action.waitForDisplayed(this.changeBtn, undefined, true);
         }
         await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
-    change_Institution_Name: async function () {
-
+    change_Institution_Name: async function (name) {
+        await logger.logInto((await stackTrace.get()));
+        let res = await action.setValue(this.institutionNameInput, name);
+        if (res == true) {
+            let res = await action.click(this.changeBtn);
+            if (res == true) {
+                res = await action.waitForDisplayed(this.changeBtn, undefined, true);
+                //should call for snackbar message - bug in app
+            }
+        }
+        await logger.logInto((await stackTrace.get()), res);
+        return res;
     }
 
 }
