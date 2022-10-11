@@ -25,6 +25,7 @@ module.exports = {
         await action.waitForDisplayed(this.loadingContainer);
         await action.waitForDisplayed(this.loadingContainer, undefined, true);
         res = await action.waitForDisplayed(this.pageTitle);
+        await browser.pause(3000);
         return res;
     },
 
