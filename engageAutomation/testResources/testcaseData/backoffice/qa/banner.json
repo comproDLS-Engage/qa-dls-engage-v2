@@ -27,6 +27,9 @@
             "All Access Codes in this Batch have been deactivated.",
             "All Access Codes in this Batch have been activated.",
             "Access code is already consumed by other user."
+        ],
+        "findInstitution": [
+            "Institution key is successfully updated for"
         ]
     }
 }

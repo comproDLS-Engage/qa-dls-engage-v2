@@ -19,16 +19,24 @@
     },
     "findInstitution": {
         "institute1": {
-            "name": "",
-            "count": ""
+            "name": "QA Test [DO NOT MODIFY]",
+            "count": 1
         },
         "institute2": {
-            "name": "",
-            "count": ""
+            "name": "gräs",
+            "count": 1
         },
         "institute3": {
+            "name": "روضة الأطفال",
+            "count": 1
+        },
+        "institute4": {
+            "name": "qwerty",
+            "count": 0
+        },
+        "institute5": {
             "name": "",
-            "count": ""
+            "count": 35
         }
     }
 }

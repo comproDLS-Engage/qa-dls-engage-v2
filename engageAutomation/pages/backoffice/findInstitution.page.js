@@ -5,6 +5,7 @@ var res;
 
 module.exports = {
 
+    pageTitle: selectorFile.common.pageTitle,
     instituteSearchInput: selectorFile.findInstitutionPage.instituteSearchInput,
     searchIconBtn: selectorFile.findInstitutionPage.searchIconBtn,
     institutionList: selectorFile.findInstitutionPage.institutionList,
@@ -23,7 +24,7 @@ module.exports = {
         await logger.logInto((await stackTrace.get()));
         await action.waitForDisplayed(this.loadingContainer);
         await action.waitForDisplayed(this.loadingContainer, undefined, true);
-        res = await action.getText(selectorFile.common.pageTitle);
+        res = await action.waitForDisplayed(this.pageTitle);
         return res;
     },
 

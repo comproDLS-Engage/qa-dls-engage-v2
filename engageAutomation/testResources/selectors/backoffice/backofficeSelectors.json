@@ -68,7 +68,7 @@
 		"userIdOption": "li[data-value=userId]",
 		"entitleUserBtn": "[data-tid=button-entitle-user]",
 		"entitleUserTxtbox": "input[id='Email']",
-		"findInstitutionBtn": "[data-tid=button-find-an-institution]",
+		"findInstitutionBtn": "[data-tid=button-find-an-institution] span",
 		"findInstitutionTxtbox": "input[id='Find Institution']",
 		"findClassBtn": "[data-tid=button-pending-approvals]",
 		"findClassTxtbox": "input[id='Find Class']",
@@ -241,8 +241,8 @@
 		"changeNameOption": "[data-tid='button-change-institution-name']",
 		"changeKeyOption": "[data-tid='button-change-institution-key']",
 		"loginAsAdminOption": "[data-tid='button-login-as-institution-admin']",
-		"changeBtn": "[data-tid=button-success]",
-		"cancelBtn": "[data-tid=button-cancel]",
+		"changeBtn": "[role=dialog] [data-tid=button-success]",
+		"cancelBtn": "[role=dialog] [data-tid=button-cancel]",
 		"institutionNameInput": "[data-tid=input-name-for-update-institution-name] input"
 	},
 	"findClassPage": {
@@ -269,10 +269,10 @@
 	"userDetailsPage": {
 		"userDetailsSection": "[data-tid=container-userDetails]",
 		"disableUserBtn": "[data-tid=button-disable-enable-user]",
-		"dialogDisableBtn": "",
+		"dialogDisableBtn": "[data-tid=button-success]",
 		"entitlementMoreOptions": "[data-tid=button-entitlement-actions]",
 		"removeEntitlementBtn": "[data-tid=button-remove-entitlement]",
-		"dialogYesBtn": "",
+		"dialogYesBtn": "[data-tid=button-success]",
 		"loginAsThisUserBtn": "[data-tid=button-login-as-this-user]",
 		"entitleUserBtn": "[data-tid=button-entitle-user-with-passkey]"
 	},

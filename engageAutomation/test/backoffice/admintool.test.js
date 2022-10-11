@@ -67,7 +67,7 @@ module.exports = {
 	ADMN_TC_5: async function (testdata) {
 		sts = await homePage.search_Institution(testdata.name);
 		await assertion.assertEqual(sts, true, "Find institution page status mismatch");
-		sts = await findClassPage.getInstitutionList();
+		sts = await findInstitutionPage.getInstitutionList();
 		await assertion.assertEqual(sts, testdata.count, "institution count mismatch");
 	},
 
@@ -90,8 +90,8 @@ module.exports = {
 	ADMN_TC_9: async function (testdata) {
 		sts = await findInstitutionPage.search_Institution(testdata.name);
 		await assertion.assertEqual(sts, true, "Find institution page status mismatch");
-		sts = await findClassPage.getInstitutionList();
-		await assertion.assertEqual(sts, testdata.count, "institution count mismatch");
+		sts = await findInstitutionPage.getInstitutionList();
+		await assertion.assert(sts >= testdata.count, "institution count mismatch");
 	},
 
 	// Validate that confirmation dialog opens on changing the key for an institute
