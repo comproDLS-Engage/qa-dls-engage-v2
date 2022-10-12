@@ -11,7 +11,7 @@ module.exports = {
 		sts = await writingPlayerPage.isInitialized();
 		await assertion.assertEqual(sts, true, "writing player status mismatch");
 		sts = await writingPlayerPage.getData_writingPlayer(testdata[0]);
-		await assertion.assertEqual(sts[0][2], null, "Activity submission status mismatch");
+		await assertion.assertEqual(sts[0][2], "true", "Activity submission status mismatch");
 
 		sts = await openActivityPlayerPage.getData_openActivityPlayer();
 		await assertion.assertEqual(sts.showDetailsBtn, testdata[1].showDetailsBtn[0], "showDetailsBtn status mismatch");
@@ -72,7 +72,7 @@ module.exports = {
 		sts = await writingPlayerPage.isInitialized();
 		await assertion.assertEqual(sts, true, "writing player status mismatch");
 		sts = await writingPlayerPage.getData_writingPlayer(testdata[0]);
-		await assertion.assertEqual(sts[0][2], "true", "Activity submission status mismatch");
+		await assertion.assertEqual(sts[0][2], null, "Activity submission status mismatch");
 
 		sts = await openActivityPlayerPage.getData_openActivityPlayer();
 		await assertion.assertEqual(sts.showDetailsBtn, testdata[1].showDetailsBtn[0], "showDetailsBtn status mismatch");
@@ -133,7 +133,7 @@ module.exports = {
 		sts = await writingPlayerPage.isInitialized();
 		await assertion.assertEqual(sts, true, "writing player status mismatch");
 		sts = await writingPlayerPage.getData_writingPlayer(testdata[0]);
-		await assertion.assertEqual(sts[0][2], "true", "Activity submission status mismatch");
+		await assertion.assertEqual(sts[0][2], null, "Activity submission status mismatch");
 
 		sts = await openActivityPlayerPage.getData_openActivityPlayer();
 		await assertion.assertEqual(sts.showDetailsBtn, testdata[1].showDetailsBtn[0], "showDetailsBtn status mismatch");
@@ -228,7 +228,7 @@ module.exports = {
 		sts = await writingPlayerPage.isInitialized();
 		await assertion.assertEqual(sts, true, "writing player status mismatch");
 		sts = await writingPlayerPage.getData_writingPlayer(testdata[0]);
-		await assertion.assertEqual(sts[0][2], 'true', "Activity submission status mismatch");
+		await assertion.assertEqual(sts[0][2], null, "Activity submission status mismatch");
 
 		sts = await openActivityPlayerPage.getData_openActivityPlayer();
 		//await assertion.assertEqual(sts.showDetailsBtn, testdata[1].showDetailsBtn[1], "showDetailsBtn status mismatch");

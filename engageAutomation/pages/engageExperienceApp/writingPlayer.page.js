@@ -46,7 +46,7 @@ module.exports = {
                 arr[i] = [
                     writingData[i][0],
                     await action.getText(textboxSel),
-                    await action.getAttribute(textboxSel, "readonly"),
+                    await action.getAttribute(textboxSel, "contenteditable"),
                     ((await action.getElementCount(attachedFileSel)) > 0) ? await action.getText(attachedFileSel) : null
                 ]
         }
