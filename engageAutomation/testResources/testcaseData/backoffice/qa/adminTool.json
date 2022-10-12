@@ -38,5 +38,21 @@
             "name": "",
             "count": 20
         }
+    },
+    "findUser": {
+        "user1": {
+            "name": "",
+            "email": "",
+            "role": ""
+        },
+        "user2": {
+            "name": "",
+            "email": "",
+            "role": ""
+        }
+    },
+    "entitleUser": {
+        "productCode": "",
+        "passKey": ""
     }
 }

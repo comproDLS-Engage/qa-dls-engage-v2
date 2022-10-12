@@ -281,16 +281,19 @@ module.exports = {
         return res;
     },
 
-    search_User_ByEmail: async function (val) {
+    search_User_ByEmail: async function (val, sel) {
         await logger.logInto((await stackTrace.get()));
         res = await action.click(this.findUserBtn);
         if (res == true) {
             res = await action.setValue(this.findUserTxtbox, val);
             if (res == true) {
-                await action.click(this.emailOption);
+                if (sel == undefined)
+                    await action.click(this.emailOption);
+                else
+                    await action.click(sel);
                 res = await action.click(this.proceedBtn);
                 if (res == true) {
-                    res = await require('./userDetails.page.js').isInitialized();
+                    res = await require('./findUser.page.js').isInitialized();
                 }
             }
         }
@@ -300,57 +303,39 @@ module.exports = {
 
     search_User_ByFirstName: async function (val) {
         await logger.logInto((await stackTrace.get()));
-        res = await action.click(this.findUserBtn);
-        if (res == true) {
-            res = await action.setValue(this.findUserTxtbox, val);
-            if (res == true) {
-                await action.click(this.firstNameOption);
-                res = await action.click(this.proceedBtn);
-                if (res == true) {
-                    res = await require('./findUser.page.js').isInitialized();
-                }
-            }
-        }
+        res = await this.search_User_ByEmail(val,this.firstNameOption);
         await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     search_User_ByLastName: async function (val) {
         await logger.logInto((await stackTrace.get()));
-        res = await action.click(this.findUserBtn);
-        if (res == true) {
-            res = await action.setValue(this.findUserTxtbox, val);
-            if (res == true) {
-                await action.click(this.lastNameOption);
-                res = await action.click(this.proceedBtn);
-                if (res == true) {
-                    res = await require('./findUser.page.js').isInitialized();
-                }
-            }
-        }
+        res = await this.search_User_ByEmail(val,this.lastNameOption);
         await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     search_User_ByUserId: async function (val) {
         await logger.logInto((await stackTrace.get()));
-        res = await action.click(this.findUserBtn);
-        if (res == true) {
-            res = await action.setValue(this.findUserTxtbox, val);
-            if (res == true) {
-                await action.click(this.userIdOption);
-                res = await action.click(this.proceedBtn);
-                if (res == true) {
-                    res = await require('./userDetails.page.js').isInitialized();
-                }
-            }
-        }
+        res = await this.search_User_ByEmail(val,this.userIdOption);
         await logger.logInto((await stackTrace.get()), res);
         return res;
     },
 
     entitle_User: async function () {
-        
+        await logger.logInto((await stackTrace.get()));
+        res = await action.click(this.entitleUserBtn);
+        if (res == true) {
+            res = await action.setValue(this.entitleUserTxtbox, val);
+            if (res == true) {
+                res = await action.click(this.proceedBtn);
+                if (res == true) {
+                    res = await require('./entitleUser.page.js').isInitialized();
+                }
+            }
+        }
+        await logger.logInto((await stackTrace.get()), res);
+        return res;
     },
     
     search_Institution: async function (val) {

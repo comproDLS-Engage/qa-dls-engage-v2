@@ -259,22 +259,23 @@
 	"findUserPage": {
 		"userSearchInput": "[data-tid=input-user-search] input",
 		"searchIconBtn": "[data-tid=button-searchIcon]",
-		"userList": "[data-tid*=button-user-]",
-		"findAnotherUserBtn": "[data-tid=button-find-another-user]",
+		"userList": "tr[data-tid*=button-user-]",
 		"emailOption": "li[id*=option-0]",
 		"firstNameOption": "li[id*=option-1]",
 		"lastNameOption": "li[id*=option-2]",
-		"userIdOption": "li[id*=option-3]"
-	},
-	"userDetailsPage": {
+		"userIdOption": "li[id*=option-3]",
 		"userDetailsSection": "[data-tid=container-userDetails]",
-		"disableUserBtn": "[data-tid=button-disable-enable-user]",
-		"dialogDisableBtn": "[data-tid=button-success]",
+		"disableEnableUserBtn": "[data-tid=button-disable-enable-user]",
+		"dialogConfirmBtn": "[data-tid=button-success]",
 		"entitlementMoreOptions": "[data-tid=button-entitlement-actions]",
 		"removeEntitlementBtn": "[data-tid=button-remove-entitlement]",
-		"dialogYesBtn": "[data-tid=button-success]",
 		"loginAsThisUserBtn": "[data-tid=button-login-as-this-user]",
-		"entitleUserBtn": "[data-tid=button-entitle-user-with-passkey]"
+		"redeemAccessCodeBtn": "[data-tid=button-undefined]",
+		"entitleUserBtn": "[data-tid=button-entitle-user-with-passkey]",
+		"findAnotherUserBtn": "[data-tid=button-find-another-user]",
+		"name": "[data-tid=container-listItem-1] [data-tid=text-subline]",
+		"email": "[data-tid=container-listItem-2] [data-tid=text-subline]",
+		"role": "[data-tid=container-listItem-3] [data-tid=text-subline]"
 	},
 	"entitleUserPage": {
 		"emailInput": "[data-tid=input-email-for-entitle-user] input",
