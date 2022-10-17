@@ -8,7 +8,6 @@ var classDrawerpage = require('../../pages/engageExperienceApp/classDrawer.page.
 var gradeBookPage = require('../../pages/engageExperienceApp/gradeBook.page.js');
 var assignmentPage = require('../../pages/engageExperienceApp/assignmentListTeacher.page.js');
 const teacherViewClassPage = require('../../pages/engageExperienceApp/teacherViewClass.page.js');
-const { confirmPassword_input } = require('../../pages/engageExperienceApp/settings.page.js');
 var sts;
 module.exports = {
 
@@ -937,6 +936,28 @@ module.exports = {
 	//Teacher login - Validate snackbar message is displayed on clicking Materials option from More options
 	ENG_INS_CLASS_TC_131: async function (testdata) {
 		await this.ENG_INS_CLASS_TC_111(testdata);
-	}
+	},
+	//Validate the click on invite button
+	ENG_INS_CLASS_TC_132: async function (testdata) {
+		sts = await teacherViewClassPage.clickInviteStudentsButton();
+		await assertion.assertEqual(sts, true, "Class Deatails page is not launched" + (await JSON.stringify(sts.pageStatus)))
+	},
+	ENG_INVI_TC_1: async function (testdata) {
+		sts = await teacherViewClassPage.click_cancelInvitebtn();
+		await assertion.assertEqual(sts, true, "cancelInvitebtn are not Clicked");
+	},
 
+	ENG_INVI_TC_2: async function (testdata) {
+		sts = await teacherViewClassPage.click_copyInvitationbtn(testdata);
+		await assertion.assertEqual(sts, testdata.copiedInvitation, "copyInvitationbtn Values is not as expected.");
+	},
+
+	ENG_INVI_TC_3: async function (testdata) {
+		sts = await teacherViewClassPage.getData_invitePage(testdata);
+		await assertion.assertEqual(sts.invitePageHeader, testdata.invitePageHeader, "invitePageHeader Values is not as expected.");
+		await assertion.assertEqual(sts.invitePageSubHeader, testdata.invitePageSubHeader, "invitePageSubHeader Values is not as expected.");
+		await assertion.assertEqual(sts.cancelInvitebtn, testdata.cancelInvitebtn, "cancelInvitebtn Values is not as expected.");
+		await assertion.assertEqual(sts.copyInvitationbtn, testdata.copyInvitationbtn, "copyInvitationbtn Values is not as expected.");
+		await assertion.assertEqual(sts.inviteImgLogo, true, "inviteImgLogo Values is not as expected.");
+	},
 };

@@ -138,6 +138,7 @@ module.exports = {
   click_inviteEmail_btn: async function () {
     await logger.logInto(await stackTrace.get());
     var res;
+    await action.waitForDisplayed(this.inviteEmail_btn)
     res = await action.click(this.inviteEmail_btn);
     if (true == res) {
       await logger.logInto(await stackTrace.get(), " inviteEmail_btn is clicked");
