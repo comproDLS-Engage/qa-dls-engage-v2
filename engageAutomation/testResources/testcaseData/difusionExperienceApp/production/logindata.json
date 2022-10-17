@@ -99,6 +99,19 @@
                     ],
                     "info": {}
                 },
+                "classInstructorUser8": {
+                    "email": "dev2_teacher17oct@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "instructor",
+                    "name": "qa teacher",
+                    "class": [
+                        {
+                            "key": "TFbA-6AP7",
+                            "name": "Automation"
+                        }
+                    ],
+                    "info": {}
+                },
                 "assignmentStudent1": {
                     "email": "dev2_28aprilStudent@yopmail.com",
                     "password": "Compro@1234",
