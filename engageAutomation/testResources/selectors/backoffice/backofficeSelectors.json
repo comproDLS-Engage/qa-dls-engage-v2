@@ -70,7 +70,7 @@
 		"entitleUserTxtbox": "input[id='Email']",
 		"findInstitutionBtn": "[data-tid=button-find-an-institution] span",
 		"findInstitutionTxtbox": "input[id='Find Institution']",
-		"findClassBtn": "[data-tid=button-pending-approvals]",
+		"findClassBtn": "[data-tid=button-find-a-class] span",
 		"findClassTxtbox": "input[id='Find Class']",
 		"proceedBtn": "[class*=c-launch-button]"
 	},
@@ -253,7 +253,7 @@
 		"endDate": "[data-tid=container-listItem-5] [data-tid=text-subline]",
 		"viewClassAsTeacherBtn": "[data-tid=button-view-class-as-teacher]",
 		"findAnotherClassBtn": "[data-tid=button-find-another-class]",
-		"classKeyInput": "[data-tid=input-class-key]",
+		"classKeyInput": "[data-tid=input-class-key] input",
 		"searchClassBtn": "[data-tid=button-search-class]"
 	},
 	"findUserPage": {
@@ -287,19 +287,34 @@
 		"confirmBtn": "[data-tid=button-success]"
 	},
 	"institutionRequestPage": {
-			"createNewBtn": "[data-tid=button-create-new-institution]",
-			"pendingTab": "[data-tid=button-product-0]",
-			"acceptedTab": "[data-tid=button-product-1]",
-			"precessingTab": "[data-tid=button-product-2]",
-			"completedTab": "[data-tid=button-product-3]",
-			"rejectedTab": "[data-tid=button-product-4]",
-			"rejectBtn": "[data-tid=button-reject]",
-			"acceptBtn": "[data-tid=button-accept]",
-			"processBtn": "[data-tid=button-process]",
-			"completeBtn": "[data-tid=button-complete]",
-			"instituteName": ""
+		"createNewBtn": "[data-tid=button-create-new-institution]",
+		"pendingTab": "[data-tid=button-product-0]",
+		"acceptedTab": "[data-tid=button-product-1]",
+		"precessingTab": "[data-tid=button-product-2]",
+		"completedTab": "[data-tid=button-product-3]",
+		"rejectedTab": "[data-tid=button-product-4]",
+		"rejectBtn": "[data-tid=button-reject]",
+		"acceptBtn": "[data-tid=button-accept]",
+		"processBtn": "[data-tid=button-process]",
+		"completeBtn": "[data-tid=button-complete]",
+		"instituteName": "",
+		"confirmDialog": "",
+		"cancelDialog": "",
+		"reasonInput": ""
 	},
 	"createInstitutionPage": {
-		
+		"name": "[id=institutionName]",
+		"countryDropdown": "[id=country-select]",
+		"countryList": "[id*=country-select-option-]",
+		"apartment": "[id=houseNo]",
+		"street": "[id=address]",
+		"city": "[id=city]",
+		"state": "[id=state]",
+		"zip": "[id=zip]",
+		"telephone": "[id=telephoneNo]",
+		"website": "[]",
+		"email": "[id=email]",
+		"nextBtn": "[]",
+		"previousBtn": "[]"
 	}
 }

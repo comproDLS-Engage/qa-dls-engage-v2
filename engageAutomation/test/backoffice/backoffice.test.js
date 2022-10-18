@@ -93,7 +93,7 @@ module.exports = {
 
 	// Validate that user is able to logout of the back office application
 	BK_TC_7: async function () {
-		await browser.switchWindow(global.appUrl);
+		//await browser.switchWindow(global.appUrl);
 		sts = await commonPage.signout_from_app();
 		await assertion.assertEqual(sts, true, "Login page status mismatch");
 	},
