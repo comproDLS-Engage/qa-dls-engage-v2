@@ -224,25 +224,17 @@ module.exports = {
 	},
 
 	// Edit class page
-	ENG_DIF_TC_17: async function () {
-		res = await action.click("[data-tid=button-cancelInvite]");
-		console.log(res)
-		res = await action.waitForDisplayed("[data-tid=button-cancelInvite]", undefined, true);
-		console.log(res)
-		res = await action.click("div[role=presentation]", {x: 5, y: -30});
-		console.log(res)
-		res = await action.waitForDisplayed("[data-tid=button-inviteEmail]", undefined, true);
-		console.log(res)
+	/*ENG_DIF_TC_17: async function () {
 		res = await action.click("[data-tid=button-classOptions]");
 		console.log(res)
 		res = await action.click("[data-tid=button-editClass]");
 		console.log(res)
 		res = await action.waitForDisplayed("[data-tid=image-bookCover]");
 		console.log(res)
-	},
+	},*/
 
 	// Edit and save class changes
-	ENG_DIF_TC_18: async function () {
+	/*ENG_DIF_TC_18: async function () {
 		res = await action.getValue("[data-tid=input-title]");
 		if (res == "class0") {
 			res = await action.setValue("[data-tid=input-title]", "class1");
@@ -257,7 +249,7 @@ module.exports = {
 		console.log(res)
 		res = await action.waitForDisplayed("img[src*=Compro]", 30000);
 		console.log(res)
-	},
+	},*/
 
 	// Classes page
 	ENG_DIF_TC_19: async function () {
@@ -714,6 +706,14 @@ module.exports = {
 
 	// Teacher gradebook page
 	ENG_DIF_TC_59: async function () {
+		res = await action.click("[data-tid=button-cancelInvite]");
+		console.log(res)
+		res = await action.waitForDisplayed("[data-tid=button-cancelInvite]", undefined, true);
+		console.log(res)
+		res = await action.click("div[role=presentation]", {x: 5, y: -30});
+		console.log(res)
+		res = await action.waitForDisplayed("[data-tid=button-inviteEmail]", undefined, true);
+		console.log(res)
 		res = await action.click("[data-tid=button-gradebook]");
 		console.log(res)
 		res = await action.waitForDisplayed("[data-tid=list-0],[class*=MuiCard] > button > div");
@@ -754,101 +754,6 @@ module.exports = {
 		console.log(res)
 	},
 
-	/*
-		// Click Create Assignment button and launch activities page
-		ENG_DIF_TC_59: async function () {
-			res = action.click("[data-tid=button-createAssignment]");
-			console.log(res)
-			res = action.click("[data-tid=button-2]");
-			console.log(res)
-			res = action.waitForDisplayed("[data-tid=text-selectedActivityCount]");
-			console.log(res)
-		},
-	
-		// Create Assignment page
-		ENG_DIF_TC_58: async function () {
-			res = action.click("[data-tid=checkbox-resourcetitle-0-0]");
-			console.log(res)
-			res = action.click("[data-tid=button-ProceedButton]");
-			console.log(res)
-			res = action.waitForDisplayed("[data-tid=button-assignAssignment]");
-			console.log(res)
-		},
-	
-		// Create assignment confirmation dialog
-		ENG_DIF_TC_58: async function () {
-			res = action.setValue("[data-tid=input-assignmentName]", "Test automation assignment");
-			console.log(res)
-			res = action.click("[data-tid=button-assignAssignment]");
-			console.log(res)
-			res = action.waitForDisplayed("[data-tid=button-primary-assignment-submit-dialog]");
-			console.log(res)
-		},
-	
-		// Assignment tab on Teacher view class page after adding assignment
-		ENG_DIF_TC_58: async function () {
-			res = action.click("[data-tid=button-primary-assignment-submit-dialog]");
-			console.log(res)
-			res = action.waitForDisplayed("[data-tid=button-assignmentCard-00]");
-			console.log(res)
-		},
-	
-		// View Assignment page for Teacher
-		ENG_DIF_TC_58: async function () {
-			res = action.click("[data-tid=button-assignmentCard-00]");
-			console.log(res)
-			res = action.waitForDisplayed("[data-tid=button-studentView]");
-			console.log(res)
-		},
-	
-		// View Assignment as Student
-		ENG_DIF_TC_58: async function () {
-			res = action.click("[data-tid=button-studentView]");
-			console.log(res)
-			res = action.waitForDisplayed("[id=viewAsStudentBannerContainer]");
-			console.log(res)
-			res = action.waitForDisplayed("iframe");
-			console.log(res)
-			res = action.findElements("iframe");
-			res = action.switchToFrame(res[0]);
-			console.log(res)
-			res = action.waitForDisplayed("[id=page]");
-			console.log(res)
-			action.waitForDocumentLoad();
-			res = action.switchToParentFrame();
-			console.log(res)
-		},
-		
-		// Delete assignment dialog
-		ENG_DIF_TC_58: async function () {
-			res = action.click("[data-tid=button-closestudentview]");
-			console.log(res)
-			res = action.click("[data-tid=button-assignmentOptions]");
-			console.log(res)
-			res = action.click("[data-tid=button-deleteAssignment]");
-			console.log(res)
-			res = action.waitForDisplayed("[data-tid=button-primary-removeAssignment]");
-			console.log(res)
-		},
-	
-		// Assignment tab on Teacher view class page after delete assignment
-		ENG_DIF_TC_58: async function () {
-			res = action.click("[data-tid=button-primary-removeAssignment]");
-			console.log(res)
-			res = action.waitForDisplayed("[data-tid=image-no-assignments]");
-			console.log(res)
-		},
-	
-		
-	
-		// Download Player page
-		ENG_DIF_TC_58: async function () {
-			res = action.click("[data-tid=list-0]");
-			console.log(res)
-			res = action.waitForDisplayed("[id*=doughnutCanvas-card]");
-			console.log(res)
-		},
-	*/
 	// --------------------------------- Test cases for Native LO and Avallain LO --------------------------------- //
 	// ------------------------------------------------------------------------------------------------------------ //
 	// Launch native LO
