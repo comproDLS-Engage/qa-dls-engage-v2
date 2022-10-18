@@ -285,5 +285,21 @@
 		"okBtn": "[class*=MuiButton-textPrimary]:not([xpath='1'])",
 		"passkeyInput": "[data-tid=input-passkey-for-entitle-user]",
 		"confirmBtn": "[data-tid=button-success]"
+	},
+	"institutionRequestPage": {
+			"createNewBtn": "[data-tid=button-create-new-institution]",
+			"pendingTab": "[data-tid=button-product-0]",
+			"acceptedTab": "[data-tid=button-product-1]",
+			"precessingTab": "[data-tid=button-product-2]",
+			"completedTab": "[data-tid=button-product-3]",
+			"rejectedTab": "[data-tid=button-product-4]",
+			"rejectBtn": "[data-tid=button-reject]",
+			"acceptBtn": "[data-tid=button-accept]",
+			"processBtn": "[data-tid=button-process]",
+			"completeBtn": "[data-tid=button-complete]",
+			"instituteName": ""
+	},
+	"createInstitutionPage": {
+		
 	}
 }
