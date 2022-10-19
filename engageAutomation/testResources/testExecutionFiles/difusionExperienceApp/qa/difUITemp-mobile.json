@@ -104,7 +104,6 @@
                 "id": "ENG_DIF_TC_14",
                 "description": "Open classes sidebar on the view book page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.01,
                 "testData": []
             },
             {
@@ -117,42 +116,24 @@
                 "id": "ENG_DIF_TC_32",
                 "description": "Assignment tab on teacher view class page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.01,
                 "testData": []
             },
             {
                 "id": "ENG_DIF_TC_16",
                 "description": "Student tab on teacher view class page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.01,
                 "testData": []
             },
             {
                 "id": "ENG_DIF_TC_62",
                 "description": "Class Invitation page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.01,
                 "testData": []
             },
             {
                 "id": "ENG_DIF_TC_63",
                 "description": "Class Invitation page after copying the invitation",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.01,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_17",
-                "description": "Edit class page",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.01,
-                "testData": []
-            },
-            {
-                "id": "ENG_DIF_TC_18",
-                "description": "Edit and save class changes",
-                "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.01,
                 "testData": []
             },
             {
@@ -233,7 +214,6 @@
                 "id": "ENG_DIF_TC_19",
                 "description": "Classes page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.01,
                 "testData": []
             },
             {
@@ -258,7 +238,6 @@
                 "id": "ENG_DIF_TC_23",
                 "description": "Cancel and go back to Classes page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.01,
                 "testData": []
             },
             {
@@ -417,7 +396,6 @@
                 "id": "ENG_DIF_TC_19",
                 "description": "Classes page",
                 "testFile": "./test/engageExperienceApp/difUITemp.test.js",
-                "visualTolerance": 0.01,
                 "testData": []
             },
             {
