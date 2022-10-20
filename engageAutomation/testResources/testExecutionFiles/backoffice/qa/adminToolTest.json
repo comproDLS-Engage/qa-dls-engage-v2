@@ -26,7 +26,7 @@
 		"BeforeEach": [],
 		"Test": [
 			{
-				"id": "ADMN_TC_1",
+				"id": "ADMN_FCLS_TC_1",
 				"description": "",
 				"testFile": "./test/backoffice/admintool.test.js",
 				"testData": [
@@ -43,7 +43,7 @@
 				"testData": []
 			},
 			{
-				"id": "ADMN_TC_2",
+				"id": "ADMN_FCLS_TC_2",
 				"description": "",
 				"testFile": "./test/backoffice/admintool.test.js",
 				"testData": [
@@ -60,7 +60,7 @@
 				"testData": []
 			},
 			{
-				"id": "ADMN_TC_3",
+				"id": "ADMN_FCLS_TC_3",
 				"description": "",
 				"testFile": "./test/backoffice/admintool.test.js",
 				"testData": [
@@ -71,7 +71,7 @@
 				]
 			},
 			{
-				"id": "ADMN_TC_4",
+				"id": "ADMN_FCLS_TC_4",
 				"description": "",
 				"testFile": "./test/backoffice/admintool.test.js",
 				"testData": [
@@ -119,7 +119,7 @@
 		"BeforeEach": [],
 		"Test": [
 			{
-				"id": "ADMN_TC_8",
+				"id": "ADMN_FINS_TC_4",
 				"description": "",
 				"testFile": "./test/backoffice/admintool.test.js",
 				"testData": [
@@ -130,7 +130,7 @@
 				]
 			},
 			{
-				"id": "ADMN_TC_9",
+				"id": "ADMN_FINS_TC_5",
 				"description": "",
 				"testFile": "./test/backoffice/admintool.test.js",
 				"testData": [
@@ -147,7 +147,7 @@
 				"testData": []
 			},
 			{
-				"id": "ADMN_TC_6",
+				"id": "ADMN_FINS_TC_2",
 				"description": "",
 				"testFile": "./test/backoffice/admintool.test.js",
 				"testData": [
@@ -164,7 +164,7 @@
 				"testData": []
 			},
 			{
-				"id": "ADMN_TC_7",
+				"id": "ADMN_FINS_TC_3",
 				"description": "",
 				"testFile": "./test/backoffice/admintool.test.js",
 				"testData": [
@@ -181,7 +181,7 @@
 				"testData": []
 			},
 			{
-				"id": "ADMN_TC_5",
+				"id": "ADMN_FINS_TC_1",
 				"description": "",
 				"testFile": "./test/backoffice/admintool.test.js",
 				"testData": [
@@ -192,13 +192,13 @@
 				]
 			},
 			{
-				"id": "ADMN_TC_10",
+				"id": "ADMN_FINS_TC_10",
 				"description": "",
 				"testFile": "./test/backoffice/admintool.test.js",
 				"testData": []
 			},
 			{
-				"id": "ADMN_TC_11",
+				"id": "ADMN_FINS_TC_11",
 				"description": "",
 				"testFile": "./test/backoffice/admintool.test.js",
 				"testData": [

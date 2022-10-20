@@ -270,7 +270,7 @@
 		"entitlementMoreOptions": "[data-tid=button-entitlement-actions]",
 		"removeEntitlementBtn": "[data-tid=button-remove-entitlement]",
 		"loginAsThisUserBtn": "[data-tid=button-login-as-this-user]",
-		"redeemAccessCodeBtn": "[data-tid=button-undefined]",
+		"redeemAccessCodeBtn": "[data-tid=button-redeem-access-code]",
 		"entitleUserBtn": "[data-tid=button-entitle-user-with-passkey]",
 		"findAnotherUserBtn": "[data-tid=button-find-another-user]",
 		"name": "[data-tid=container-listItem-1] [data-tid=text-subline]",
@@ -297,7 +297,7 @@
 		"acceptBtn": "[data-tid=button-accept]",
 		"processBtn": "[data-tid=button-process]",
 		"completeBtn": "[data-tid=button-complete]",
-		"instituteName": "",
+		"instituteName": "[data-tid=text-institutionName]",
 		"confirmDialog": "",
 		"cancelDialog": "",
 		"reasonInput": ""
@@ -312,9 +312,9 @@
 		"state": "[id=state]",
 		"zip": "[id=zip]",
 		"telephone": "[id=telephoneNo]",
-		"website": "[]",
+		"website": "[data-tid=website]",
 		"email": "[id=email]",
-		"nextBtn": "[]",
-		"previousBtn": "[]"
+		"nextBtn": "[data-tid=button-success]",
+		"previousBtn": "[data-tid=button-previous]"
 	}
 }

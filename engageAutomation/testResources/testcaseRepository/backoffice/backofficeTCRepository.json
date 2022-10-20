@@ -430,67 +430,67 @@
             "testFile": "./test/backoffice/admintool.test.js",
             "testcase": [
                 {
-                    "id": "ADMN_TC_1",
+                    "id": "ADMN_FCLS_TC_1",
                     "description": "Validate that user is able to search the class using correct class code on the home page",
                     "tags": "P1",
                     "visualTest": true
                 },
                 {
-                    "id": "ADMN_TC_2",
+                    "id": "ADMN_FCLS_TC_2",
                     "description": "Validate that no result is displayed if user search partial class code on the home page",
                     "tags": "P1",
                     "visualTest": true
                 },
                 {
-                    "id": "ADMN_TC_3",
+                    "id": "ADMN_FCLS_TC_3",
                     "description": "Validate that no result is displayed if user search incorrect class code on the home page",
                     "tags": "P1",
                     "visualTest": true
                 },
                 {
-                    "id": "ADMN_TC_4",
+                    "id": "ADMN_FCLS_TC_4",
                     "description": "Validate that user is able to search another class by using find another class feature",
                     "tags": "P1",
                     "visualTest": true
                 },
                 {
-                    "id": "ADMN_TC_5",
+                    "id": "ADMN_FINS_TC_1",
                     "description": "Validate that user is able to search full name in find an institution on the home page",
                     "tags": "P1",
                     "visualTest": true
                 },
                 {
-                    "id": "ADMN_TC_6",
+                    "id": "ADMN_FINS_TC_2",
                     "description": "Validate that user is able to search partial name in find an institution on the home page",
                     "tags": "P1",
                     "visualTest": true
                 },
                 {
-                    "id": "ADMN_TC_7",
+                    "id": "ADMN_FINS_TC_3",
                     "description": "Validate that user is able to search with special characters in find an institution on the home page",
                     "tags": "P1",
                     "visualTest": true
                 },
                 {
-                    "id": "ADMN_TC_8",
+                    "id": "ADMN_FINS_TC_4",
                     "description": "Validate that no result is displayed on searching an incorrect name in find an institution on the home page",
                     "tags": "P1",
                     "visualTest": true
                 },
                 {
-                    "id": "ADMN_TC_9",
+                    "id": "ADMN_FINS_TC_5",
                     "description": "Validate that user is able to do empty search on find an institute page",
                     "tags": "P1",
                     "visualTest": true
                 },
                 {
-                    "id": "ADMN_TC_10",
+                    "id": "ADMN_FINS_TC_10",
                     "description": "Validate that confirmation dialog opens on changing the key for an institute",
                     "tags": "P1",
                     "visualTest": true
                 },
                 {
-                    "id": "ADMN_TC_11",
+                    "id": "ADMN_FINS_TC_11",
                     "description": "Validate that institute key is changed on confirming the dialog",
                     "tags": "P1",
                     "visualTest": true
