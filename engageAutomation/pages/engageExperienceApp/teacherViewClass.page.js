@@ -1,6 +1,7 @@
 "use strict";
 var action = require('../../core/actionLibrary/baseActionLibrary.js');
 const createClassPage = require('./createClass.page.js');
+
 const bookDetailsPage = require('./viewBook.page.js');
 var gradeBookPage = require('./gradeBook.page.js');
 const { confirmPassword_input } = require('./settings.page.js');
@@ -62,7 +63,12 @@ module.exports = {
     assignmentCardUnitName: selectorFile.css.ComproEngage.teacherViewClassPage.assignmentCardUnitName,
     archivedlbl:selectorFile.css.ComproEngage.teacherViewClassPage.archivedlbl,
     archivedMsg:selectorFile.css.ComproEngage.teacherViewClassPage.archivedMsg,
-    
+    invitePageHeader: selectorFile.css.ComproEngage.invitePage.invitePageHeader,
+    invitePageSubHeader: selectorFile.css.ComproEngage.invitePage.invitePageSubHeader,
+    cancelInvitebtn: selectorFile.css.ComproEngage.invitePage.cancelInvitebtn,
+    copyInvitationbtn: selectorFile.css.ComproEngage.invitePage.copyInvitationbtn,
+    inviteImgLogo: selectorFile.css.ComproEngage.invitePage.inviteImgLogo,
+    inviteEmail_btn: selectorFile.css.ComproEngage.gradeBook.inviteEmail,
     isInitialized: async function () {
         await logger.logInto(await stackTrace.get());
         await action.waitForDocumentLoad();
@@ -331,7 +337,7 @@ module.exports = {
         res = await action.click(this.inviteStudentsdropDown_btn);
         if (res == true) {
             await logger.logInto(await stackTrace.get(), "-- Invite Students button is clicked");
-            res = await require('../../test/engageExperienceApp/common.test.js').get_Snackbar_Message_Text();
+            res = await action.waitForDisplayed(this.inviteEmail_btn)
 
             /*res = action.waitForDisplayed(this.snackbarInfo_txt);
             if (res == true) {
@@ -433,7 +439,58 @@ module.exports = {
         obj.pageData = pageData;
         obj.studentData = studentData;
         return obj;
-    }
+    },
+
+    isInitializedInvitePOPUP: async function () {
+        var res;
+        await logger.logInto(await stackTrace.get());
+        await action.waitForDocumentLoad();
+        res = {
+            pageStatus: await action.waitForDisplayed(this.inviteImgLogo)
+        };
+        return res;
+    },
+
+    getData_invitePage: async function () {
+        await logger.logInto(await stackTrace.get());
+        var obj;
+        obj = {
+            invitePageHeader: ((await action.getElementCount(this.invitePageHeader)) > 0) ? await action.getText(this.invitePageHeader) : null,
+            invitePageSubHeader: ((await action.getElementCount(this.invitePageSubHeader)) > 0) ? await action.getText(this.invitePageSubHeader) : null,
+            cancelInvitebtn: ((await action.getElementCount(this.cancelInvitebtn)) > 0) ? await action.getText(this.cancelInvitebtn) : null,
+            copyInvitationbtn: ((await action.getElementCount(this.copyInvitationbtn)) > 0) ? await action.getText(this.copyInvitationbtn) : null,
+            inviteImgLogo: ((await action.getElementCount(this.inviteImgLogo)) > 0) ? await action.waitForDisplayed(this.inviteImgLogo) : false,
+        }
+        return obj;
+    },
+
+
+    click_cancelInvitebtn: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.cancelInvitebtn);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " cancelInvitebtn is clicked");
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "cancelInvitebtn is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_copyInvitationbtn: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.copyInvitationbtn);
+        if (true == res) {
+            res= await action.getText(this.copyInvitationbtn);
+            await logger.logInto(await stackTrace.get(), " copyInvitationbtn is clicked");
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "copyInvitationbtn is NOT clicked", 'error');
+        }
+        return res;
+    },
 
 }
 

@@ -1357,6 +1357,13 @@
                 "facebookPageHeadingTxt": "#header_block",
                 "countryList": "[role=presentation] li li",
                 "countryItem": "[role=presentation] li"
+            },
+            "invitePage": {
+                "invitePageHeader": "[data-tid=title-inviteStudent]",
+                "invitePageSubHeader": "[data-tid=subtitle-inviteStudent]",
+                "cancelInvitebtn": "[data-tid=button-cancelInvite]",
+                "copyInvitationbtn": "[data-tid=button-copyInvitation]",
+                "inviteImgLogo": "[data-tid=image-logo]"
             }
         }
     }

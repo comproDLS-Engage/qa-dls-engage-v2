@@ -3,6 +3,7 @@ var gradeBookPage = require('../../pages/engageExperienceApp/gradeBook.page.js')
 var appShell = require('../../pages/engageExperienceApp/appShell.page');
 var viewAsStudentAssignmentPage = require('../../pages/engageExperienceApp/viewAsStudentAssignment.page.js');
 var studentGradeBookPage=require('../../pages/engageExperienceApp/gradeBookStudent.page.js');
+const teacherViewClassPage = require('../../pages/engageExperienceApp/teacherViewClass.page.js');
 const { confirmPassword_input, confirmPassword_label } = require('../../pages/engageExperienceApp/settings.page.js');
 var sts;
 
@@ -180,7 +181,7 @@ module.exports = {
    ENG_GRADEBOOK_TC_17: async function (testdata) {
       sts = await gradeBookPage.click_inviteEmail_btn();
       await assertion.assertEqual(sts, true, "sendtoemail button is clicked");
-      sts = await require('../../test/engageExperienceApp/common.test.js').get_Snackbar_Message_Text();
-      await assertion.assertEqual(sts, testdata, "Snackbar message mismatch: " + sts);
+      sts = await teacherViewClassPage.isInitializedInvitePOPUP();
+      await assertion.assertEqual(sts.pageStatus, true, "Invite Student Page is opened");
    }
 }

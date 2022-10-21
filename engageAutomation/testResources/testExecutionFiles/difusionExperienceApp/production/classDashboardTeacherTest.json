@@ -1,4 +1,398 @@
 {
+  "Suite18": {
+    "Name": "Validation Archived tab Workflow",
+    "TestCaseRepo": [
+      "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
+    ],
+    "Before": [
+      {
+        "id": "launchUrl",
+        "description": "",
+        "testFile": "./core/runner/launchUrl.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_LAND_TC_3",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/landing.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_IDEN_TC_7",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/login.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
+            "jsonPath": "engage.login.user.classInstructorUser3"
+          }
+        ]
+      },
+      {
+        "id": "ENG_SHELL_TC_4",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/appShell.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+            "jsonPath": "engage.appContent.myClassPage"
+          }
+        ]
+      }
+    ],
+    "BeforeEach": [],
+    "Test": [
+      {
+        "id": "ENG_INS_CLASS_TC_5",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_CLASS_TC_3",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+            "jsonPath": "engage.appContent.myClassPage"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_CLASS_TC_121",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/classData.json",
+            "jsonPath": "engage.courses.studentArchiveClass"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+            "jsonPath": "engage.appContent.myClassPage"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_CLASS_TC_7",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
+            "jsonPath": "engage.login.user.classInstructorUser3.class[6].name"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_CLASS_TC_122",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/classData.json",
+            "jsonPath": "engage.courses.studentArchiveClass"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+            "jsonPath": "engage.appContent.teacherViewClass"
+          }
+        ]
+      },
+	  {
+        "id": "ENG_INS_CLASS_TC_124",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
+        "testData": [
+  
+        ]
+      },
+      {
+        "id": "ENG_SHELL_TC_11",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/appShell.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_CLASS_TC_126",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
+            "jsonPath": "engage.login.user.classInstructorUser3.class[6]"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+            "jsonPath": "engage.appContent.myClassPage"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_CLASS_TC_127",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+            "jsonPath": "engage.appContent.myClassPage"
+          }
+        ]
+      },
+      {
+        "id": "ENG_SHELL_TC_11",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/appShell.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_CLASS_TC_126",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
+            "jsonPath": "engage.login.user.classInstructorUser3.class[6]"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+            "jsonPath": "engage.appContent.myClassPage"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_CLASS_TC_128",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+            "jsonPath": "engage.appContent.myClassPage"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_CLASS_TC_123",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+            "jsonPath": "engage.appContent.appShell.featureNotAvailable_alert"
+          }
+        ]
+      },
+      {
+        "id": "ENG_SHELL_TC_11",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/appShell.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_CLASS_TC_126",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
+            "jsonPath": "engage.login.user.classInstructorUser3.class[6]"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+            "jsonPath": "engage.appContent.myClassPage"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_CLASS_TC_129",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+            "jsonPath": "engage.appContent.myClassPage"
+          }
+        ]
+      },
+      {
+        "id": "ENG_SHELL_TC_11",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/appShell.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_CLASS_TC_126",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
+            "jsonPath": "engage.login.user.classInstructorUser3.class[6]"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+            "jsonPath": "engage.appContent.myClassPage"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_CLASS_TC_130",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_SHELL_TC_11",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/appShell.test.js",
+        "testData": []
+      },
+	  {
+        "id": "ENG_SHELL_TC_11",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/appShell.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_CLASS_TC_126",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
+            "jsonPath": "engage.login.user.classInstructorUser3.class[6]"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+            "jsonPath": "engage.appContent.myClassPage"
+          }
+        ]
+      },
+      {
+        "id": "ENG_INS_CLASS_TC_131",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+            "jsonPath": "engage.appContent.appShell.featureNotAvailable_alert"
+          }
+        ]
+      }
+    ],
+    "AfterEach": [],
+    "After": [
+      {
+        "id": "ENG_SHELL_TC_8",
+        "description": "Validate that clicking on the profile dropdown launches the dropdown of profile and other options",
+        "testFile": "./test/engageExperienceApp/appShell.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+            "jsonPath": "engage.appContent.appShell"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
+            "jsonPath": "engage.login.user.classInstructorUser3"
+          }
+        ]
+      },
+      {
+        "id": "ENG_SHELL_TC_9",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/appShell.test.js",
+        "testData": []
+      }
+    ]
+  },
+  "Suite19": {
+    "Name": "Validation Archived tab page when no class is added",
+    "TestCaseRepo": [
+      "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
+    ],
+    "Before": [
+      {
+        "id": "launchUrl",
+        "description": "",
+        "testFile": "./core/runner/launchUrl.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_LAND_TC_3",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/landing.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_IDEN_TC_7",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/login.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
+            "jsonPath": "engage.login.user.NoClassInstructor"
+          }
+        ]
+      },
+      {
+        "id": "ENG_SHELL_TC_4",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/appShell.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+            "jsonPath": "engage.appContent.myClassPage"
+          }
+        ]
+      }
+    ],
+    "BeforeEach": [],
+    "Test": [
+      {
+        "id": "ENG_INS_CLASS_TC_5",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_INS_CLASS_TC_125",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+            "jsonPath": "engage.appContent.myClassPage"
+          }
+        ]
+      }
+    ],
+    "AfterEach": [],
+    "After": [
+      {
+        "id": "ENG_SHELL_TC_8",
+        "description": "Validate that clicking on the profile dropdown launches the dropdown of profile and other options",
+        "testFile": "./test/engageExperienceApp/appShell.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+            "jsonPath": "engage.appContent.appShell"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
+            "jsonPath": "engage.login.user.NoClassInstructor"
+          }
+        ]
+      },
+      {
+        "id": "ENG_SHELL_TC_9",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/appShell.test.js",
+        "testData": []
+      }
+    ]
+  },
+  
   "Suite1": {
     "Name": "Create and Edit Workflow of Class",
     "TestCaseRepo": [
@@ -287,7 +681,7 @@
         "testFile": "./test/engageExperienceApp/appShell.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
             "jsonPath": "engage.appContent.myClassPage"
           }
         ]
@@ -367,7 +761,7 @@
         "testFile": "./test/engageExperienceApp/appShell.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
             "jsonPath": "engage.appContent.myClassPage"
           }
         ]
@@ -479,7 +873,7 @@
         "testFile": "./test/engageExperienceApp/appShell.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
             "jsonPath": "engage.appContent.myClassPage"
           }
         ]
@@ -593,7 +987,7 @@
         "testFile": "./test/engageExperienceApp/appShell.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
             "jsonPath": "engage.appContent.myClassPage"
           }
         ]

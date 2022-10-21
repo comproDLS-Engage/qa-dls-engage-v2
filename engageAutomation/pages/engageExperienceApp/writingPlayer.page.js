@@ -45,9 +45,9 @@ module.exports = {
             if (res == 1)
                 arr[i] = [
                     writingData[i][0],
-                    await action.getValue(textboxSel),
-                    await action.getAttribute(textboxSel, "readonly"),
-                    ((await action.getElementCount(this.attachedFileSel)) > 0) ? await action.getText(this.attachedFileSel) : null
+                    await action.getText(textboxSel),
+                    await action.getAttribute(textboxSel, "contenteditable"),
+                    ((await action.getElementCount(attachedFileSel)) > 0) ? await action.getText(attachedFileSel) : null
                 ]
         }
         await action.switchToParentFrame();

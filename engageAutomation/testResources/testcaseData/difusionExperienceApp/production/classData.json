@@ -6,7 +6,7 @@
 				"key": "vQ9n-qhQ8",
 				"classDuration": "Jul 19, 2021 - Aug 05, 2024",
 				"instructor": {
-					"name": "vengqains5_new",
+					"name": "qa Teacher001",
 					"email": "vengqains5_new@yopmail.com"
 				},
 				"bookName": "PROYECTOS",
@@ -19,9 +19,9 @@
 			"class2": {
 				"name": "Archived Class",
 				"key": "k2Rv-t974",
-				"classDuration": "Aug 05, 2022 - Sep 29, 2024",
+				"classDuration": "Oct 17, 2022 - Oct 20, 2024",
 				"instructor": {
-					"name": "qa teacher",
+					"name": "class instructor1",
 					"email": "vengqains5_new@yopmail.com"
 				},
 				"bookName": "PROYECTOS",
@@ -33,7 +33,7 @@
 			"class3": {
 				"name": "future Class1",
 				"key": "k2Rv-t974",
-				"classDuration": "Aug 19,2021 - Aug 05, 2024",
+				"classDuration": "Aug 16,2021 - Aug 05, 2024",
 				"instructor": {
 					"name": "qa Teacher001",
 					"email": "kulujaco-1294@yopmail.com"
@@ -178,7 +178,7 @@
 			"activeclass": {
 				"name": "Qa automation",
 				"key": "vQ9n-qhQ8",
-				"classDuration": "Feb 14, 2022 - Feb 13, 2023",
+				"classDuration": "Jul 19, 2021 - Aug 05, 2024",
 				"instructor": {
 					"name": "qa teacher",
 					"email": "vengqains5_new@yopmail.com"
@@ -189,6 +189,36 @@
 				"status": "Active",
 				"studentCount": 0,
 				"info": "Existing Active Course"
+			},
+			"archivecClass": {
+				"name": "Archive Class Check",
+				"key": "rJ8e-whcH",
+				"classDuration": "Oct 19 - Oct 19, 2022",
+				"instructor": {
+					"name": "",
+					"email": ""
+				},
+				"bookName": "QA Test Automation Book [DO NOT MODIFY]",
+				"bookIndex":"0",
+				"schoolName": "",
+				"status": "",
+				"studentCount": 0,
+				"info": ""
+			},
+			"studentArchiveClass":{
+				"name": "Archive class with Student",
+				"key": "MNVC-AgX7",
+				"classDuration": "Oct 19 - Oct 19, 2022",
+				"instructor": {
+					"name": "",
+					"email": ""
+				},
+				"bookName": "QA Test Automation Book [DO NOT MODIFY]",
+				"bookIndex":"0",
+				"schoolName": "",
+				"status": "",
+				"studentCount": 0,
+				"info": ""
 			}
 		}
 	}

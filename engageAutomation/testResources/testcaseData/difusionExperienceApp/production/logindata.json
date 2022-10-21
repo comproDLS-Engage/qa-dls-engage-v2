@@ -99,6 +99,19 @@
                     ],
                     "info": {}
                 },
+                "classInstructorUser8": {
+                    "email": "dev2_teacher17oct@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "instructor",
+                    "name": "qa teacher",
+                    "class": [
+                        {
+                            "key": "TFbA-6AP7",
+                            "name": "Automation"
+                        }
+                    ],
+                    "info": {}
+                },
                 "assignmentStudent1": {
                     "email": "dev2_28aprilStudent@yopmail.com",
                     "password": "Compro@1234",
@@ -223,7 +236,7 @@
                     "email": "dev2_teacher17Jan@yopmail.com",
                     "password": "Compro@1234",
                     "role": "instructor",
-                    "name": "dev2 teacher17Jan",
+                    "name": "dev2 teacher17jan",
                     "class": [
                         {
                             "key": "TFbA-6AP7",
@@ -245,6 +258,14 @@
                         {
                             "key": "8aQY-M826",
                             "name": "class3_new"
+                        },
+                        {
+                            "key": "",
+                            "name": "Archive Class Check"
+                        },
+                        {
+                            "key": "RjaY-4LRn",
+                            "name": "Archive class with Student"
                         }
                     ],
                     "info": {}
