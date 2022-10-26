@@ -47,6 +47,7 @@ module.exports = {
     findClassBtn: selectorFile.homePage.findClassBtn,
     findClassTxtbox: selectorFile.homePage.findClassTxtbox,
     proceedBtn: selectorFile.homePage.proceedBtn,
+    institutionRequestsBtn: selectorFile.homePage.institutionRequestsBtn,
     loadingContainer: selectorFile.common.loadingContainer,
 
     isInitialized: async function () {
@@ -369,5 +370,15 @@ module.exports = {
         await logger.logInto((await stackTrace.get()), res);
         return res;
     },
+
+    click_InstitutionRequests_Button: async function () {
+        await logger.logInto((await stackTrace.get()));
+        res = await action.click(this.institutionRequestsBtn);
+        if (res == true) {
+            res = await require('./institutionRequests.page.js').isInitialized();
+        }
+        await logger.logInto((await stackTrace.get()), res);
+        return res;
+    }
 
 }

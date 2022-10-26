@@ -5,6 +5,8 @@ const findInstitutionPage = require('../../pages/backoffice/findInstitution.page
 //const userDetailsPage = require('../../pages/backoffice/userDetails.page.js');
 const common = require('../../pages/backoffice/common.page.js');
 const homePage = require('../../pages/backoffice/home.page.js');
+const instituionReqPage = require('../../pages/backoffice/institutionRequests.page.js');
+const createInstitutionPage = require('../../pages/backoffice/createNewInstitution.page.js');
 var sts;
 
 module.exports = {
@@ -105,18 +107,113 @@ module.exports = {
 		sts = await findInstitutionPage.click_DialogChangeKey_Button();
 		await assertion.assert((typeof sts === "string" && sts.includes(testdata)), "Banner messsage mismatch. " + sts);
 	},
+	
+	// ---------------------------------------------------------------------------- //
 
-	// Validate that change institute name page is launched on clicking change name for any institute
-	ADMN_FINS_TC_12: async function () {
-		sts = await findInstitutionPage.click_ChangeName_Option();
-		await assertion.assertEqual(sts, true, "Change name page status mismatch");
+
+	// --------------------------- Institution Requests Test Cases ----------------------------- //
+
+	// Validate that institution requests page is launched on clicking Institution Requests button on the home page
+	ADMN_IREQ_TC_1: async function () {
+		sts = await homePage.click_InstitutionRequests_Button();
+		await assertion.assertEqual(sts, true, "Institution Requests page status mismatch");
 	},
 
-	// Validate that user is able to change the name of the institute
-	ADMN_FINS_TC_13: async function (testdata) {
-		sts = await findInstitutionPage.change_Institution_Name(testdata);
-		await assertion.assertEqual(sts, true, "Change name status mismatch");
-		//assertion should be updated for snackbar message
+	// Validate that create new institution page is launched on clicking create new institution button
+	ADMN_IREQ_TC_3: async function () {
+		sts = await instituionReqPage.click_CreateNewInstitution_Button();
+		await assertion.assertEqual(sts, true, "Create New Institution page status mismatch");
+	},
+
+	// Validate that all the fields except website are mandatory for institution creation
+	ADMN_IREQ_TC_4: async function (testdata) {
+		sts = await createInstitutionPage.set_Name(testdata.name);
+		await assertion.assertEqual(sts, true, "set_Name status mismatch");
+		sts = await createInstitutionPage.select_Country(testdata.country);
+		await assertion.assertEqual(sts, true, "set_Name status mismatch");
+		sts = await createInstitutionPage.set_Apartment(testdata.apartment);
+		await assertion.assertEqual(sts, true, "set_Name status mismatch");
+		sts = await createInstitutionPage.set_Street(testdata.street);
+		await assertion.assertEqual(sts, true, "set_Name status mismatch");
+		sts = await createInstitutionPage.set_City(testdata.city);
+		await assertion.assertEqual(sts, true, "set_Name status mismatch");
+		sts = await createInstitutionPage.set_State(testdata.state);
+		await assertion.assertEqual(sts, true, "set_Name status mismatch");
+		sts = await createInstitutionPage.set_Zip(testdata.zip);
+		await assertion.assertEqual(sts, true, "set_Name status mismatch");
+		sts = await createInstitutionPage.set_Telephone(testdata.telephone);
+		await assertion.assertEqual(sts, true, "set_Name status mismatch");
+		sts = await createInstitutionPage.get_Next_Button_Status();
+		await assertion.assertEqual(sts, false, "get_Next_Button_Status status mismatch");
+		sts = await createInstitutionPage.set_Email(testdata.email);
+		await assertion.assertEqual(sts, true, "set_Name status mismatch");
+		sts = await createInstitutionPage.get_Next_Button_Status();
+		await assertion.assertEqual(sts, true, "get_Next_Button_Status status mismatch");
+		sts = await createInstitutionPage.set_Website(testdata.website);
+		await assertion.assertEqual(sts, true, "set_Name status mismatch");
+	},
+
+	// Validate that clicking on next button after entering all the details shows summary page
+	ADMN_IREQ_TC_5: async function () {
+		sts = await createInstitutionPage.click_Next_Button();
+		await assertion.assertEqual(sts.isSummary, true, "isSummary status mismatch");
+		await assertion.assertEqual(sts.isSuccess, false, "isSuccess status mismatch");
+		await assertion.assertEqual(sts.isFailure, false, "isFailure status mismatch");
+		await assertion.assertEqual(sts.isMatching, false, "isMatching status mismatch");
+	},
+
+	// Validate that clicking on create button creates the institution and request recieved page is displayed
+	ADMN_IREQ_TC_6: async function () {
+		sts = await createInstitutionPage.click_Next_Button();
+		await assertion.assertEqual(sts.isSummary, false, "isSummary status mismatch");
+		await assertion.assertEqual(sts.isSuccess, true, "isSuccess status mismatch");
+		await assertion.assertEqual(sts.isFailure, false, "isFailure status mismatch");
+		await assertion.assertEqual(sts.isMatching, false, "isMatching status mismatch");
+	},
+
+	// Validate that rejection page is displayed if all the details of the institution are duplicate
+	ADMN_IREQ_TC_7: async function () {
+		sts = await createInstitutionPage.click_Next_Button();
+		await assertion.assertEqual(sts.isSummary, false, "isSummary status mismatch");
+		await assertion.assertEqual(sts.isSuccess, false, "isSuccess status mismatch");
+		await assertion.assertEqual(sts.isFailure, true, "isFailure status mismatch");
+		await assertion.assertEqual(sts.isMatching, false, "isMatching status mismatch");
+	},
+
+	// Validate that matching record found page is displayed if city, state and coutry are same and name is similar to an existing institution
+	ADMN_IREQ_TC_8: async function () {
+		sts = await createInstitutionPage.click_Next_Button();
+		await assertion.assertEqual(sts.isSummary, false, "isSummary status mismatch");
+		await assertion.assertEqual(sts.isSuccess, false, "isSuccess status mismatch");
+		await assertion.assertEqual(sts.isFailure, false, "isFailure status mismatch");
+		await assertion.assertEqual(sts.isMatching, true, "isMatching status mismatch");
+	},
+
+	// Validate that summary page is displayed on clicking Previous button on the matching record found page
+	ADMN_IREQ_TC_10: async function () {
+		sts = await createInstitutionPage.click_Previous_Button();
+		await assertion.assertEqual(sts.isSummary, true, "isSummary status mismatch");
+		await assertion.assertEqual(sts.isSuccess, false, "isSuccess status mismatch");
+		await assertion.assertEqual(sts.isFailure, false, "isFailure status mismatch");
+		await assertion.assertEqual(sts.isMatching, false, "isMatching status mismatch");
+	},
+
+	// Validate that user exits the create workflow on clicking cross button during the workflow
+	ADMN_IREQ_TC_12: async function () {
+		sts = await createInstitutionPage.click_Close_Button();
+		await assertion.assertEqual(sts, true, "click_Close_Button status mismatch");
+	},
+
+	// Validate that dialog box open on clicking accepted button for an institution in the pending list
+	ADMN_IREQ_TC_13: async function () {
+		sts = await instituionReqPage.click_Accept_Button();
+		await assertion.assertEqual(sts, true, "click_Close_Button status mismatch");
+	},
+
+	// Validate that user exits the create workflow on clicking cross button during the workflow
+	ADMN_IREQ_TC_14: async function () {
+		sts = await createInstitutionPage.click_Close_Button();
+		await assertion.assertEqual(sts, true, "click_Close_Button status mismatch");
 	},
 
 }
