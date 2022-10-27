@@ -127,12 +127,10 @@ module.exports = {
 
 	// Validate that all the fields except website are mandatory for institution creation
 	ADMN_IREQ_TC_4: async function (testdata) {
-
 		if (testdata.name == "") {
-			testdata.name = Math.random().toString(36).substring(2, 9);
+			testdata.name = Math.random().toString(36).substring(2, 10);
 			console.log(testdata.name);
 		}
-
 		sts = await createInstitutionPage.set_Name(testdata.name);
 		await assertion.assertEqual(sts, true, "set_Name status mismatch");
 		sts = await createInstitutionPage.select_Country(testdata.country);
