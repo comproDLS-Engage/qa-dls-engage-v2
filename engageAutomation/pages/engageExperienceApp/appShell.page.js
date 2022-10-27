@@ -1,5 +1,6 @@
 "use strict";
 var action = require('../../core/actionLibrary/baseActionLibrary.js');
+const { actionCardTitles } = require('./dashboard.page.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
 var res;
 
@@ -10,6 +11,7 @@ module.exports = {
 	//Left Pane
 	custLogo: selectorFile.css.ComproEngage.appShell.custLogo,
 	dashboardBtn: selectorFile.css.ComproEngage.appShell.dashboardBtn,
+	libraryBtn:selectorFile.css.ComproEngage.appShell.libraryBtn,
 	browseBtn: selectorFile.css.ComproEngage.appShell.browseBtn,
 	classesBtn: selectorFile.css.ComproEngage.appShell.classesBtn,
 	helpBtn: selectorFile.css.ComproEngage.appShell.helpBtn,
@@ -117,7 +119,22 @@ module.exports = {
 		}
 		return res;
 	},
-
+	clickLibraryButton: async function () {
+		await logger.logInto(await stackTrace.get());
+		res = await action.click(this.libraryBtn);
+		if (true == res) {
+			// * Need to update when page created. 
+			//let libraryPage = await require('./library.page.js');
+			//res = await libraryPage.isInitialized();
+			action.waitForDisplayed("[data-tid=button-blankQuiz]")
+			action.click("[data-tid=button-blankQuiz]")
+		}
+		else {
+			res = res + " -- Error in clicking Dashboard Button";
+			await logger.logInto(await stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
 	clickBrowseButton: async function () {
 		await logger.logInto(await stackTrace.get());
 		res = await action.click(this.browseBtn);
