@@ -218,5 +218,190 @@
 				"testData": []
 			}
 		]
+	},
+	"Suite3": {
+		"Name": "Institution Requests and Create Institution",
+		"TestCaseRepo": [
+			"./testResources/testcaseRepository/backoffice/backofficeTCRepository.json"
+		],
+		"Before": [
+			{
+				"id": "launchUrl",
+				"description": "",
+				"testFile": "./core/runner/launchUrl.js",
+				"testData": []
+			},
+			{
+				"id": "BK_TC_1",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/logindata.json",
+						"jsonPath": "backoffice.user.validUser1"
+					}
+				]
+			}
+		],
+		"BeforeEach": [],
+		"Test": [
+			{
+				"id": "ADMN_IREQ_TC_1",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": []
+			},
+			{
+				"id": "ADMN_IREQ_TC_3",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": []
+			},
+			{
+				"id": "ADMN_IREQ_TC_4",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/adminTool.json",
+						"jsonPath": "createNewInstitution.institution1"
+					}
+				]
+			},
+			{
+				"id": "ADMN_IREQ_TC_5",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": []
+			}
+		],
+		"AfterEach": [],
+		"After": [
+			{
+				"id": "BK_TC_7",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			}
+		]
+	},
+	"Suite44": {
+		"Name": "Institution Requests and Create Institution",
+		"TestCaseRepo": [
+			"./testResources/testcaseRepository/backoffice/backofficeTCRepository.json"
+		],
+		"Before": [
+			{
+				"id": "launchUrl",
+				"description": "",
+				"testFile": "./core/runner/launchUrl.js",
+				"testData": []
+			},
+			{
+				"id": "BK_TC_1",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/logindata.json",
+						"jsonPath": "backoffice.user.validUser1"
+					}
+				]
+			}
+		],
+		"BeforeEach": [],
+		"Test": [
+			{
+				"id": "ADMN_IREQ_TC_1",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": []
+			},
+			{
+				"id": "ADMN_IREQ_TC_3",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": []
+			},
+			{
+				"id": "ADMN_IREQ_TC_4",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/adminTool.json",
+						"jsonPath": "createNewInstitution.institution1"
+					}
+				]
+			},
+			{
+				"id": "ADMN_IREQ_TC_5",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": []
+			},
+			{
+				"id": "ADMN_IREQ_TC_7",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": []
+			},
+			{
+				"id": "ADMN_IREQ_TC_12",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": []
+			},
+			{
+				"id": "ADMN_IREQ_TC_3",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": []
+			},
+			{
+				"id": "ADMN_IREQ_TC_4",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/adminTool.json",
+						"jsonPath": "createNewInstitution.institution2"
+					}
+				]
+			},
+			{
+				"id": "ADMN_IREQ_TC_5",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": []
+			},
+			{
+				"id": "ADMN_IREQ_TC_8",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": []
+			},
+			{
+				"id": "ADMN_IREQ_TC_10",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": []
+			},
+			{
+				"id": "ADMN_IREQ_TC_12",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": []
+			}
+		],
+		"AfterEach": [],
+		"After": [
+			{
+				"id": "BK_TC_7",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			}
+		]
 	}
 }

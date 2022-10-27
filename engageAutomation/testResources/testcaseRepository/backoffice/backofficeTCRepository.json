@@ -494,6 +494,120 @@
                     "description": "Validate that institute key is changed on confirming the dialog",
                     "tags": "P1",
                     "visualTest": true
+                },
+                {
+                    "id": "ADMN_IREQ_TC_1",
+                    "description": "Validate that institution requests page is launched on clicking Institution Requests button on the home page",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ADMN_IREQ_TC_3",
+                    "description": "Validate that create new institution page is launched on clicking create new institution button",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ADMN_IREQ_TC_4",
+                    "description": "Validate that all the fields except website are mandatory for institution creation",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ADMN_IREQ_TC_5",
+                    "description": "Validate that clicking on next button after entering all the details shows summary page",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ADMN_IREQ_TC_6",
+                    "description": "Validate that clicking on create button creates the institution and request recieved page is displayed",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ADMN_IREQ_TC_7",
+                    "description": "Validate that rejection page is displayed if all the details of the institution are duplicate",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ADMN_IREQ_TC_8",
+                    "description": "Validate that matching record found page is displayed if city, state and coutry are same and name is similar to an existing institution",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ADMN_IREQ_TC_10",
+                    "description": "Validate that summary page is displayed on clicking Previous button on the matching record found page",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ADMN_IREQ_TC_12",
+                    "description": "Validate that user exits the create workflow on clicking cross button during the workflow",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ADMN_IREQ_TC_13",
+                    "description": "Validate that dialog box open on clicking accepted button for an institution in the pending list",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ADMN_IREQ_TC_14",
+                    "description": "Validate that institution moves to accepted list when the accept button is clicked in the dialog",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ADMN_IREQ_TC_15",
+                    "description": "Validate that dialog box open on clicking process button for an institution in the accepted list",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ADMN_IREQ_TC_16",
+                    "description": "Validate that institution moves to processing list when the process button is clicked in the dialog",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ADMN_IREQ_TC_17",
+                    "description": "Validate that dialog box open on clicking complete button for an institution in the processing list",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ADMN_IREQ_TC_18",
+                    "description": "Validate that institution moves to completed list when the complete button is clicked in the dialog",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ADMN_IREQ_TC_19",
+                    "description": "Validate that dialog box open on clicking logs button for an institution in the processing list",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ADMN_IREQ_TC_20",
+                    "description": "Validate that logs dialog is closed on clicking close button",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ADMN_IREQ_TC_21",
+                    "description": "Validate that dialog box open on clicking reject button for an institution",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ADMN_IREQ_TC_22",
+                    "description": "Validate that institution moves to rejected list when the reject button is clicked after entering reject reason in the dialog",
+                    "tags": "P1",
+                    "visualTest": true
                 }
             ]
         }

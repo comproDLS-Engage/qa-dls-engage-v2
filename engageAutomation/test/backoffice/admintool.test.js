@@ -5,7 +5,7 @@ const findInstitutionPage = require('../../pages/backoffice/findInstitution.page
 //const userDetailsPage = require('../../pages/backoffice/userDetails.page.js');
 const common = require('../../pages/backoffice/common.page.js');
 const homePage = require('../../pages/backoffice/home.page.js');
-const instituionReqPage = require('../../pages/backoffice/institutionRequests.page.js');
+const institutionReqPage = require('../../pages/backoffice/institutionRequests.page.js');
 const createInstitutionPage = require('../../pages/backoffice/createNewInstitution.page.js');
 var sts;
 
@@ -107,7 +107,7 @@ module.exports = {
 		sts = await findInstitutionPage.click_DialogChangeKey_Button();
 		await assertion.assert((typeof sts === "string" && sts.includes(testdata)), "Banner messsage mismatch. " + sts);
 	},
-	
+
 	// ---------------------------------------------------------------------------- //
 
 
@@ -121,36 +121,42 @@ module.exports = {
 
 	// Validate that create new institution page is launched on clicking create new institution button
 	ADMN_IREQ_TC_3: async function () {
-		sts = await instituionReqPage.click_CreateNewInstitution_Button();
+		sts = await institutionReqPage.click_CreateNewInstitution_Button();
 		await assertion.assertEqual(sts, true, "Create New Institution page status mismatch");
 	},
 
 	// Validate that all the fields except website are mandatory for institution creation
 	ADMN_IREQ_TC_4: async function (testdata) {
+
+		if (testdata.name == "") {
+			testdata.name = Math.random().toString(36).substring(2, 9);
+			console.log(testdata.name);
+		}
+
 		sts = await createInstitutionPage.set_Name(testdata.name);
 		await assertion.assertEqual(sts, true, "set_Name status mismatch");
 		sts = await createInstitutionPage.select_Country(testdata.country);
-		await assertion.assertEqual(sts, true, "set_Name status mismatch");
+		await assertion.assertEqual(sts, true, "select_Country status mismatch");
 		sts = await createInstitutionPage.set_Apartment(testdata.apartment);
-		await assertion.assertEqual(sts, true, "set_Name status mismatch");
+		await assertion.assertEqual(sts, true, "set_Apartment status mismatch");
 		sts = await createInstitutionPage.set_Street(testdata.street);
-		await assertion.assertEqual(sts, true, "set_Name status mismatch");
+		await assertion.assertEqual(sts, true, "set_Street status mismatch");
 		sts = await createInstitutionPage.set_City(testdata.city);
-		await assertion.assertEqual(sts, true, "set_Name status mismatch");
+		await assertion.assertEqual(sts, true, "set_City status mismatch");
 		sts = await createInstitutionPage.set_State(testdata.state);
-		await assertion.assertEqual(sts, true, "set_Name status mismatch");
+		await assertion.assertEqual(sts, true, "set_State status mismatch");
 		sts = await createInstitutionPage.set_Zip(testdata.zip);
-		await assertion.assertEqual(sts, true, "set_Name status mismatch");
+		await assertion.assertEqual(sts, true, "set_Zip status mismatch");
 		sts = await createInstitutionPage.set_Telephone(testdata.telephone);
-		await assertion.assertEqual(sts, true, "set_Name status mismatch");
+		await assertion.assertEqual(sts, true, "set_Telephone status mismatch");
 		sts = await createInstitutionPage.get_Next_Button_Status();
 		await assertion.assertEqual(sts, false, "get_Next_Button_Status status mismatch");
 		sts = await createInstitutionPage.set_Email(testdata.email);
-		await assertion.assertEqual(sts, true, "set_Name status mismatch");
+		await assertion.assertEqual(sts, true, "set_Email status mismatch");
 		sts = await createInstitutionPage.get_Next_Button_Status();
 		await assertion.assertEqual(sts, true, "get_Next_Button_Status status mismatch");
 		sts = await createInstitutionPage.set_Website(testdata.website);
-		await assertion.assertEqual(sts, true, "set_Name status mismatch");
+		await assertion.assertEqual(sts, true, "set_Website status mismatch");
 	},
 
 	// Validate that clicking on next button after entering all the details shows summary page
@@ -206,14 +212,72 @@ module.exports = {
 
 	// Validate that dialog box open on clicking accepted button for an institution in the pending list
 	ADMN_IREQ_TC_13: async function () {
-		sts = await instituionReqPage.click_Accept_Button();
-		await assertion.assertEqual(sts, true, "click_Close_Button status mismatch");
+		sts = await institutionReqPage.click_Accept_Button();
+		await assertion.assertEqual(sts, true, "click_Accept_Button status mismatch");
 	},
 
-	// Validate that user exits the create workflow on clicking cross button during the workflow
-	ADMN_IREQ_TC_14: async function () {
-		sts = await createInstitutionPage.click_Close_Button();
-		await assertion.assertEqual(sts, true, "click_Close_Button status mismatch");
+	// Validate that institution moves to accepted list when the accept button is clicked in the dialog
+	ADMN_IREQ_TC_14: async function (testdata) {
+		sts = await institutionReqPage.click_ConfirmDialog_Button();
+		await assertion.assertEqual(sts, true, "click_ConfirmDialog_Button status mismatch");
+		sts = await institutionReqPage.click_AcceptedTab();
+		await assertion.assertEqual(sts[0], testdata, "Institution did not move to Accepted tab");
+	},
+
+	// Validate that dialog box open on clicking process button for an institution in the accepted list
+	ADMN_IREQ_TC_15: async function () {
+		sts = await institutionReqPage.click_Process_Button();
+		await assertion.assertEqual(sts, true, "click_Process_Button status mismatch");
+	},
+
+	// Validate that institution moves to processing list when the process button is clicked in the dialog
+	ADMN_IREQ_TC_16: async function (testdata) {
+		sts = await institutionReqPage.click_ConfirmDialog_Button();
+		await assertion.assertEqual(sts, true, "click_ConfirmDialog_Button status mismatch");
+		sts = await institutionReqPage.click_ProcessingTab();
+		await assertion.assertEqual(sts[0], testdata, "Institution did not move to Processing tab");
+	},
+
+	// Validate that dialog box open on clicking complete button for an institution in the processing list
+	ADMN_IREQ_TC_17: async function () {
+		sts = await institutionReqPage.click_Complete_Button();
+		await assertion.assertEqual(sts, true, "click_Complete_Button status mismatch");
+	},
+
+	// Validate that institution moves to completed list when the complete button is clicked in the dialog
+	ADMN_IREQ_TC_18: async function (testdata) {
+		sts = await institutionReqPage.click_ConfirmDialog_Button();
+		await assertion.assertEqual(sts, true, "click_ConfirmDialog_Button status mismatch");
+		sts = await institutionReqPage.click_CompletedTab();
+		await assertion.assertEqual(sts[0], testdata, "Institution did not move to Completed tab");
+	},
+
+	// Validate that dialog box open on clicking logs button for an institution in the processing list
+	ADMN_IREQ_TC_19: async function () {
+		sts = await institutionReqPage.click_Logs_Button();
+		await assertion.assertEqual(sts, true, "click_Logs_Button status mismatch");
+	},
+
+	// Validate that logs dialog is closed on clicking close button
+	ADMN_IREQ_TC_20: async function () {
+		sts = await institutionReqPage.click_ConfirmDialog_Button();
+		await assertion.assertEqual(sts, true, "click_ConfirmDialog_Button status mismatch");
+	},
+
+	// Validate that dialog box open on clicking reject button for an institution
+	ADMN_IREQ_TC_21: async function () {
+		sts = await institutionReqPage.click_Reject_Button();
+		await assertion.assertEqual(sts, false, "click_Reject_Button status mismatch");
+	},
+
+	// Validate that institution moves to rejected list when the reject button is clicked after entering reject reason in the dialog
+	ADMN_IREQ_TC_22: async function (testdata) {
+		sts = await institutionReqPage.set_Reject_Reason(testdata[0]);
+		await assertion.assertEqual(sts, true, "Reject button is not clickable");
+		sts = await institutionReqPage.click_ConfirmDialog_Button();
+		await assertion.assertEqual(sts, true, "click_ConfirmDialog_Button status mismatch");
+		sts = await institutionReqPage.click_RejectedTab();
+		await assertion.assertEqual(sts[0], testdata[1], "Institution did not move to Rejected tab");
 	},
 
 }

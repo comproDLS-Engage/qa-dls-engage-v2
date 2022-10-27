@@ -73,7 +73,7 @@
 		"findClassBtn": "[data-tid=button-find-a-class] span",
 		"findClassTxtbox": "input[id='Find Class']",
 		"proceedBtn": "[class*=c-launch-button]",
-		"institutionRequestsBtn": "[data-tid=button-institution-requests]"
+		"institutionRequestsBtn": "[data-tid=button-institution-requests] span"
 	},
 	"viewBookPage": {
 		"componentList": "[data-tid*=button-component-detail] [class*=c-card__title]",
@@ -314,14 +314,14 @@
 		"state": "[id=state]",
 		"zip": "[id=zip]",
 		"telephone": "[id=telephoneNo]",
-		"website": "[data-tid=website]",
+		"website": "[data-tid=website] input",
 		"email": "[id=email]",
 		"nextBtn": "[data-tid=button-success]",
 		"previousBtn": "[data-tid=button-previous]",
 		"summaryListItems": "[data-tid*=container-listItem-]",
-		"successSvg": "",
-		"failureSvg": "",
-		"matchingRecord": "",
+		"successSvg": "[data-tid=icon-success]",
+		"failureSvg": "[data-tid=icon-error]",
+		"matchingRecord": "[data-tid=container-current-institution-request]",
 		"closeBtn": "[data-tid=button-close]"
 	}
 }

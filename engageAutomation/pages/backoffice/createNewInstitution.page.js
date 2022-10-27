@@ -53,7 +53,7 @@ module.exports = {
             list = await action.findElements(this.countryList);
             res = false;
             for (var i = 0; i < list.length; i++) {
-                if (await action.getText(list[i]) == countryName) {
+                if (await action.getText(list[i]) == text) {
                     res = await action.click(list[i]);
                     break;
                 }

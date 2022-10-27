@@ -160,6 +160,17 @@ module.exports = {
         return res;
     },
 
+    click_Reject_Button: async function () {
+        await logger.logInto((await stackTrace.get()));
+        res = await action.click(this.rejectBtn);
+        if (res == true) {
+            await action.waitForDisplayed(this.confirmDialog);
+            res = await action.isClickable(this.confirmDialog);
+        }
+        await logger.logInto((await stackTrace.get()), res);
+        return res;
+    },
+
     click_ConfirmDialog_Button: async function () {
         await logger.logInto((await stackTrace.get()));
         res = await action.click(this.confirmDialog);

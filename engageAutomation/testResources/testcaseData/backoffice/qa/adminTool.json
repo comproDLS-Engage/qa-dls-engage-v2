@@ -54,5 +54,43 @@
     "entitleUser": {
         "productCode": "",
         "passKey": ""
+    },
+    "createNewInstitution": {
+        "institution1": {
+            "name": "",
+            "country": "India",
+            "apartment": "1234 test",
+            "street": "qa test",
+            "city": "Delhi",
+            "state": "Delhi",
+            "zip": "999999",
+            "telephone": "1234567890",
+            "email": "dev1teacher1@yopmail.com",
+            "website": "https://www.comprotechnologies.com/"
+        },
+        "institution2": {
+            "name": "institute for logs",
+            "country": "Cote d'Ivoire",
+            "apartment": "1234",
+            "street": "1234",
+            "city": "ghost town",
+            "state": "forest",
+            "zip": "112233",
+            "telephone": "1234-567890",
+            "email": "dev1teacher1@yopmail.com",
+            "website": ""
+        },
+        "institution3": {
+            "name": "institute for logs22",
+            "country": "Cote d'Ivoire",
+            "apartment": "1234",
+            "street": "1234",
+            "city": "ghost town",
+            "state": "forest",
+            "zip": "112233",
+            "telephone": "1234-567890",
+            "email": "dev1teacher1@yopmail.com",
+            "website": ""
+        }
     }
 }
