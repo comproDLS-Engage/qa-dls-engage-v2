@@ -91,7 +91,8 @@
                 "newPlaylistOption": "[data-tid=button-newPlaylistOption]",
                 "component": "[data-tid*=button-product-",
                 "assignBtn": "[data-tid=button-assign]",
-                "shareBtn": "[data-tid=button-share]"
+                "shareBtn": "[data-tid=button-share]",
+                "libraryBtn": "[data-tid=button-library]"
             },
             "dashboard": {
                 "pageTitle": "[data-tid=text-pageTitle]",
@@ -352,7 +353,7 @@
                 "bookMaterial_lbl": "[data-tid=text-bookMaterial-label-",
                 "completionValue": "[data-tid=text-progress-completion-",
                 "progressbar": "[data-tid=progressbar-",
-                "archiveTagLbl": "//*[@id=\"scroolbarDiv\"]/div/div/div[2]/main/div/div/div[1]/div[2]/div[1]/div"
+                "archiveTagLbl": "[data-tid=tag-archived]"
             },
             "teacherViewClassPage": {
                 "pageTitle": "[data-tid=text-pageTitle]",
@@ -1364,6 +1365,56 @@
                 "cancelInvitebtn": "[data-tid=button-cancelInvite]",
                 "copyInvitationbtn": "[data-tid=button-copyInvitation]",
                 "inviteImgLogo": "[data-tid=image-logo]"
+            },
+            "library": {
+                "libraryTitleTxt": "[data-tid='text-pageTitle']",
+                "librarySubtitleTxt": "[data-tid='text-pageSubTitle']",
+                "createMaterialsTxt": "[data-tid='text-recentMaterialTitle']",
+                "blankQuizBtn": "[data-tid='button-blankQuiz']",
+                "BlankSurveyBtn": "[data-tid='button-blankSurvey']",
+                "newResourceBtn": "[data-tid='button-newResource']",
+                "recentMaterialsTxt": "[data-tid='text-recentMaterialTitle']",
+                "pastDaysTxt": "[data-tid='text-pastDaysInfo']",
+                "viewAllBtn": "[data-tid='button-viewMaterials']",
+                "materialCard": "[data-tid*='button-materialCard-",
+                "quizTitleTxt": "[data-tid*='text-classTitle-",
+                "quizTypeTxt": "[data-tid*='text-classTitle-",
+                "draftPillTxt": "[data-tid*='chip-pill",
+                "editDraftBtn": "[data-tid*='button-editDraft-",
+                "contextMenuBtn": "[data-tid*='button-material-",
+                "addToClassBtn": "[data-tid*='button-publish-",
+                "bookImg": "[data-tid*='image-book-",
+                "previewBtn": "[data-tid*='button-preview-",
+                "duplicateBtn": "[data-tid*='button-duplicate-",
+                "deleteBtn": "[data-tid*='button-delete-",
+                "editBtn": "[data-tid*='button-edit-",
+                "myMaterialsTxt": "[data-tid='text-assignmentTitle']",
+                "addNewMaterialBtn": "[data-tid='button-addNewMaterial']",
+                "createNewTxt": "[data-tid='text-header'] strong",
+                "allTab": "[data-tid='button-product-0']",
+                "draftsTab": "[data-tid='button-product-1']",
+                "publishedTab": "[data-tid='button-product-2']",
+                "searchResult": "[data-tid='label-result']",
+                "searchResultSubCount": "[data-tid='label-result']",
+                "materialLabel": "[data-tid='value-text-heading-materialTitle']",
+                "typeLabel": "[data-tid='value-text-heading-typeTitle']",
+                "modifiedLabel": "[data-tid='value-text-heading-modifiedTitle']",
+                "quizRow": "[data-tid*='list-",
+                "materialsQuizTitleTxt": "[data-tid*='text-material-title-",
+                "materialsDraftPillTxt": "[data-tid*='chip-pill",
+                "materialsQuizTypeTxt": "[data-tid*='text-type-",
+                "modifiedTime": "[data-tid*='text-modified-",
+                "materialsContextMenuBtn": "[data-tid*='button-materialOptions-",
+                "searchTextBox": "[data-tid='input-autocomplete-searchtextbox']",
+                "materialsPreviewBtn": "[data-tid='button-preview']",
+                "materialsDeleteBtn": "[data-tid='button-delete']",
+                "noMaterialTitleTxt": "[data-tid='text-title-noMaterial']",
+                "noMaterialSubtitleTxt": "[data-tid='text-subtitle-noMaterial']",
+                "materialsNoMaterialTitleTxt": "[data-tid='text-title-noMaterial']",
+                "materialsNoMaterialSubtitleTxt": "[data-tid='text-subtitle-noMaterial']",
+                "materialsBlankQuizBtn": "[data-tid='button-blankQuiz']",
+                "materialsBlankSurveyBtn": "[data-tid='button-blankSurvey']",
+                "materialsNewResourceBtn": "[data-tid='button-newResource']"
             }
         }
     }
