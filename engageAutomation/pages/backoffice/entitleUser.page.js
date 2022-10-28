@@ -7,11 +7,13 @@ module.exports = {
     emailInput: selectorFile.entitleUserPage.emailInput,
     productCodeInput: selectorFile.entitleUserPage.productCodeInput,
     startDate: selectorFile.entitleUserPage.startDate,
-    snackbarBtn: selectorFile.entitleUserPage.snackbarBtn,
     endDate: selectorFile.entitleUserPage.endDate,
     okBtn: selectorFile.entitleUserPage.okBtn,
     passkeyInput: selectorFile.entitleUserPage.passkeyInput,
     confirmBtn: selectorFile.entitleUserPage.confirmBtn,
+    snackbarLbl: selectorFile.common.snackbarLbl,
+    snackbarBtn: selectorFile.common.snackbarBtn,
+    closeBtn: selectorFile.entitleUserPage.closeBtn,
 
     isInitialized: async function () {
         await logger.logInto((await stackTrace.get()));
@@ -86,5 +88,12 @@ module.exports = {
         await logger.logInto((await stackTrace.get()), res);
         return res;
     },
+
+    click_Close_Button: async function () {
+        await logger.logInto((await stackTrace.get()));
+        res = await action.click(this.closeBtn);
+        await logger.logInto((await stackTrace.get()), res);
+        return res;
+    }
 
 }

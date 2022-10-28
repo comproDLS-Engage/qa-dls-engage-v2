@@ -1,8 +1,8 @@
 "use strict";
 const findClassPage = require('../../pages/backoffice/findClass.page.js');
 const findInstitutionPage = require('../../pages/backoffice/findInstitution.page.js');
-//const findUserPage = require('../../pages/backoffice/findUser.page.js');
-//const userDetailsPage = require('../../pages/backoffice/userDetails.page.js');
+const findUserPage = require('../../pages/backoffice/findUser.page.js');
+const entitleUserPage = require('../../pages/backoffice/userDetails.page.js');
 const common = require('../../pages/backoffice/common.page.js');
 const homePage = require('../../pages/backoffice/home.page.js');
 const institutionReqPage = require('../../pages/backoffice/institutionRequests.page.js');
@@ -276,6 +276,128 @@ module.exports = {
 		await assertion.assertEqual(sts, true, "click_ConfirmDialog_Button status mismatch");
 		sts = await institutionReqPage.click_RejectedTab();
 		await assertion.assertEqual(sts[0], testdata[1], "Institution did not move to Rejected tab");
+	},
+
+	// ---------------------------------------------------------------------------- //
+
+	// --------------------------- Find a User Test Cases ----------------------------- //
+
+	// Validate that user is able to Search by Email
+	ADMN_FUSR_TC_1: async function (testdata) {
+		sts = await homePage.search_User_ByEmail(testdata);
+		await assertion.assertEqual(sts, true, "search_User_ByEmail status mismatch");
+		sts = await findUserPage.get_User_Details();
+		await assertion.assertEqual(sts.email, testdata, "get_User_Details status mismatch");
+	},
+
+	// Validate that user is able to Search with spanish word in FirstName
+	ADMN_FUSR_TC_2: async function (testdata) {
+		sts = await homePage.search_User_ByFirstName(testdata);
+		await assertion.assertEqual(sts, true, "search_User_ByEmail status mismatch");
+		sts = await findUserPage.getUserList();
+		if (sts == 0) {
+			sts = await findUserPage.get_User_Details();
+			await assertion.assert(sts.name.includes(testdata), "get_User_Details status mismatch");
+		}
+	},
+
+	// Validate that user is able to Search with special character in lastName
+	ADMN_FUSR_TC_3: async function (testdata) {
+		sts = await homePage.search_User_ByLastName(testdata);
+		await assertion.assertEqual(sts, true, "search_User_ByEmail status mismatch");
+		sts = await findUserPage.getUserList();
+		if (sts == 0) {
+			sts = await findUserPage.get_User_Details();
+			await assertion.assert(sts.name.includes(testdata), "get_User_Details status mismatch");
+		}
+	},
+
+	// Validate the scenario for incorrect Email ID
+	ADMN_FUSR_TC_4: async function (testdata) {
+		sts = await homePage.search_User_ByEmail(testdata);
+		await assertion.assertEqual(sts, true, "search_User_ByEmail status mismatch");
+		sts = await findUserPage.get_User_Details();
+		await assertion.assertEqual(sts.email, null, "get_User_Details status mismatch");
+	},
+
+	// Validate user is able to search with UserID on User search page
+	ADMN_FUSR_TC_5: async function (testdata) {
+		sts = await homePage.search_User_ByEmail(testdata);
+		await assertion.assertEqual(sts, true, "search_User_ByEmail status mismatch");
+		sts = await findUserPage.get_User_Details();
+		await assertion.assertEqual(sts.userId, testdata, "get_User_Details status mismatch");
+	},
+
+	// Validate clicking on a row in the search list launch User details page
+	ADMN_FUSR_TC_6: async function () {
+		sts = await findUserPage.click_User_in_List();
+		await assertion.assertEqual(sts, true, "click_User_in_List status mismatch");
+	},
+
+	// ---------------------------------------------------------------------------- //
+
+	// --------------------------- User Details Page Test Cases ----------------------------- //
+
+	// Validate Entitlements card shows the list of entitled components of a book
+	ADMN_USRD_TC_1: async function () {
+		sts = await findUserPage.remove_Entitlement();
+		await assertion.assertEqual(sts, true, "remove_Entitlement status mismatch");
+	},
+
+	// Validate the scenario of Disable a User
+	ADMN_USRD_TC_2: async function (testdata) {
+		sts = await findUserPage.click_DisableEnableUser_Button();
+		await assertion.assertEqual(sts, true, "click_DisableEnableUser_Button status mismatch");
+		sts = await findUserPage.click_DialogConfirm_Button();
+		await assertion.assert((typeof sts === "string" && sts.includes(testdata)), "Snackbar messsage mismatch. " + sts);
+	},
+
+	// Validate the scenario of Enable a User
+	ADMN_USRD_TC_3: async function (testdata) {
+		sts = await findUserPage.click_DisableEnableUser_Button();
+		await assertion.assertEqual(sts, true, "click_DisableEnableUser_Button status mismatch");
+		sts = await findUserPage.click_DialogConfirm_Button();
+		await assertion.assert((typeof sts === "string" && sts.includes(testdata)), "Snackbar messsage mismatch. " + sts);
+	},
+
+	// ---------------------------------------------------------------------------- //
+
+	// --------------------------- Entitle User Test Cases ----------------------------- //
+
+	// Validate clicking on 'Entitle User With Pass Key' from User details page
+	ADMN_EUSR_TC_1: async function (testdata) {
+		sts = await findUserPage.click_EntitleUser_Button();
+		await assertion.assertEqual(sts, true, "click_EntitleUser_Button status mismatch");
+	},
+
+	// Validate the scenario if user is successfully Entitled with Passkey
+	ADMN_EUSR_TC_2: async function (testdata) {
+		//sts = await entitleUserPage.set_Email(testdata.email);
+		//await assertion.assertEqual(sts, true, "set_Email status mismatch");
+		sts = await entitleUserPage.set_ProductCode(testdata.productCode);
+		await assertion.assertEqual(sts, true, "set_ProductCode status mismatch");
+		sts = await entitleUserPage.select_StartDate(testdata.startDate);
+		await assertion.assertEqual(sts, true, "select_StartDate status mismatch");
+		sts = await entitleUserPage.select_EndDate(testdata.endDate);
+		await assertion.assertEqual(sts, true, "select_EndDate status mismatch");
+		sts = await entitleUserPage.set_PassKey(testdata.passKey);
+		await assertion.assertEqual(sts, true, "set_PassKey status mismatch");
+		sts = await findUserPage.click_Entitle_Button();
+		await assertion.assert((typeof sts === "string" && sts.includes(testdata)), "Snackbar messsage mismatch. " + sts);
+	},
+
+	// Validate that entitle user page is launched on clicking on 'Entitle User With Pass Key' from Home page and user enter Email and click Proceed button
+	ADMN_EUSR_TC_3: async function (testdata) {
+		sts = await homePage.entitle_User(testdata);
+		await assertion.assertEqual(sts, true, "click_EntitleUser_Button status mismatch");
+	},
+
+	// Validate the scenario in Entitle User with pass Key from Dashboard, when user click Cross icon
+	ADMN_EUSR_TC_4: async function () {
+		sts = await entitleUserPage.click_Close_Button();
+		await assertion.assertEqual(sts, true, "click_Close_Button status mismatch");
+		sts = await homePage.isInitialized();
+		await assertion.assertEqual(sts, true, "Home page status mismatch");
 	},
 
 }

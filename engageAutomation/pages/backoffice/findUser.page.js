@@ -26,6 +26,9 @@ module.exports = {
     name: selectorFile.findUserPage.name,
     email: selectorFile.findUserPage.email,
     role: selectorFile.findUserPage.role,
+    userId: selectorFile.findUserPage.userId,
+    redeemBtn: selectorFile.findUserPage.redeemBtn,
+    accessCodeInput: selectorFile.findUserPage.accessCodeInput,
 
     isInitialized: async function () {
         await logger.logInto((await stackTrace.get()));
@@ -57,7 +60,8 @@ module.exports = {
         var obj = {
             name: ((await action.getElementCount(this.name)) > 0) ? await action.getText(this.name) : null,
             email: ((await action.getElementCount(this.email)) > 0) ? await action.getText(this.email) : null,
-            role: ((await action.getElementCount(this.role)) > 0) ? await action.getText(this.role) : null
+            role: ((await action.getElementCount(this.role)) > 0) ? await action.getText(this.role) : null,
+            userId: ((await action.getElementCount(this.userId)) > 0) ? await action.getText(this.userId) : null
         };
         return obj;
     },
@@ -106,6 +110,30 @@ module.exports = {
                 }
             }
         }*/
+        await logger.logInto((await stackTrace.get()), res);
+        return res;
+    },
+
+    click_RedeemAccessCode_Button: async function () {
+        await logger.logInto((await stackTrace.get()));
+        res = await action.click(this.entitleUserBtn);
+        if (res == true) {
+            await action.waitForDisplayed(this.redeemBtn);
+            res = await action.isClickable(this.redeemBtn);
+        }
+        await logger.logInto((await stackTrace.get()), res);
+        return res;
+    },
+
+    remove_Entitlement: async function () {
+        await logger.logInto((await stackTrace.get()));
+        res = await action.click(this.entitlementMoreOptions);
+        if (res == true) {
+            res = await action.click(this.removeEntitlementBtn);
+            if (res == true) {
+                res = await action.click(this.dialogConfirmBtn);
+            }
+        }
         await logger.logInto((await stackTrace.get()), res);
         return res;
     }

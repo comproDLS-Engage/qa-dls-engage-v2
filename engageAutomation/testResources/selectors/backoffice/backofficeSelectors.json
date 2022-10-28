@@ -267,16 +267,19 @@
 		"userIdOption": "li[id*=option-3]",
 		"userDetailsSection": "[data-tid=container-userDetails]",
 		"disableEnableUserBtn": "[data-tid=button-disable-enable-user]",
-		"dialogConfirmBtn": "[data-tid=button-success]",
+		"dialogConfirmBtn": "[role=dialog] [data-tid=button-success]",
 		"entitlementMoreOptions": "[data-tid=button-entitlement-actions]",
 		"removeEntitlementBtn": "[data-tid=button-remove-entitlement]",
-		"loginAsThisUserBtn": "[data-tid=button-login-as-this-user]",
-		"redeemAccessCodeBtn": "[data-tid=button-redeem-access-code]",
-		"entitleUserBtn": "[data-tid=button-entitle-user-with-passkey]",
+		"loginAsThisUserBtn": "[data-tid=button-login-as-this-user] span",
+		"redeemAccessCodeBtn": "[data-tid=button-redeem-access-code] span",
+		"entitleUserBtn": "[data-tid=button-entitle-user-with-passkey] span",
 		"findAnotherUserBtn": "[data-tid=button-find-another-user]",
 		"name": "[data-tid=container-listItem-1] [data-tid=text-subline]",
 		"email": "[data-tid=container-listItem-2] [data-tid=text-subline]",
-		"role": "[data-tid=container-listItem-3] [data-tid=text-subline]"
+		"role": "[data-tid=container-listItem-3] [data-tid=text-subline]",
+		"userId": "[data-tid=container-listItem-4] [data-tid=text-subline]",
+		"redeemBtn": "[data-tid=button-success]",
+		"accessCodeInput": "[data-tid=input-access-code-for-redeem-access-code] input"
 	},
 	"entitleUserPage": {
 		"emailInput": "[data-tid=input-email-for-entitle-user] input",
@@ -285,7 +288,8 @@
 		"endDate": "[data-tid=input-end-date-for-entitle-user]",
 		"okBtn": "[class*=MuiButton-textPrimary]:not([xpath='1'])",
 		"passkeyInput": "[data-tid=input-passkey-for-entitle-user]",
-		"confirmBtn": "[data-tid=button-success]"
+		"confirmBtn": "[data-tid=button-success]",
+		"closeBtn": "[data-tid=button-close]"
 	},
 	"institutionRequestPage": {
 		"createNewBtn": "[data-tid=button-create-new-institution]",

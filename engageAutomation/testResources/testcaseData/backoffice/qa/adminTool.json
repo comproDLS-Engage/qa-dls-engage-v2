@@ -41,19 +41,34 @@
     },
     "findUser": {
         "user1": {
-            "name": "",
-            "email": "",
-            "role": ""
+            "name": "dev1 teacher3",
+            "email": "dev1teacher3@yopmail.com",
+            "role": "teacher",
+            "userId": "e3a2d5cf-4ce2-4bda-81af-325a83209ff9"
         },
         "user2": {
+            "name": "Français général",
+            "email": "spanish@yopmail.com",
+            "role": "student",
+            "userId": "0529e8f4-ac88-440b-a1fe-3063d0fc3d74"
+        },
+        "user3": {
+            "name": "Megha hello!@#$%^&*()_+{}|:\"<>?",
+            "email": "megha.student8@yopmail.com",
+            "role": "student",
+            "userId": "718d2018-262c-4c59-add8-f224b744020e"
+        },
+        "user4": {
             "name": "",
-            "email": "",
-            "role": ""
+            "email": "abcd@abcd.com",
+            "role": "",
+            "userId": ""
         }
     },
     "entitleUser": {
-        "productCode": "",
-        "passKey": ""
+        "email": "megha.teacher6@yopmail.com",
+        "productCode": "qaautomationtestbookdonotmodify1626779052239",
+        "passKey": "d33d71e1-6d75-4267-b468-7ecd6afd0779"
     },
     "createNewInstitution": {
         "institution1": {

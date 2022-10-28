@@ -323,7 +323,7 @@ module.exports = {
         return res;
     },
 
-    entitle_User: async function () {
+    entitle_User: async function (val) {
         await logger.logInto((await stackTrace.get()));
         res = await action.click(this.entitleUserBtn);
         if (res == true) {
