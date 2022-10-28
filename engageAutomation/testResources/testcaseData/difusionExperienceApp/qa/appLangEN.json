@@ -1473,6 +1473,50 @@
                     "copiedInvitation":"Invitation copied to clipboard!"
                 },
                 "student": {}
+            },
+            "libraryEditorPage": {
+                "teacher": {
+                    "savedtoLibrarylbl": "Saved to my Library",
+                    "draftlbl": "Draft",
+                    "pageHeader": "New Question",
+                    "pageSubHeader": "Select a question type to get started:",
+                    "questionNumber": "Question",
+                    "multipleChoicelbl": "Multiple Choice",
+                    "textChoicelbl": "Text",
+                    "questiontextbox": "Question Title",
+                    "inthisActivity": "In this activity",
+                    "addmediabtn": "Add Media",
+                    "addtextbtn": "Add Text",
+                    "Imagebtn": "Image",
+                    "audiobtn": "Audio",
+                    "vediobtn": "Video",
+                    "medialbl": "Media",
+                    "browsebtn": "Browse",
+                    "selectonelbl": "Select one",
+                    "addsubquestionbtn": "Add Subquestion",
+                    "addOptionbtn": "Add Option",
+                    "drawerTitle": "Details",
+                    "tagsHeading": "Tags",
+                    "tagsSubHeading": "Use tags such as keywords that help you easily find this content and keep track of what students are learning.",
+                    "addTagslbl": "Add tags",
+                    "bookTagsHeading": "Book Tag",
+                    "bookTagsSubHeading": "Tag a book with this quiz to help organize and find this item in your library.",
+                    "booklbl": "Book",
+                    "newQuestionbtn": "New Question",
+                    "multipleChoicebtn": "Multiple Choice",
+                    "textbtn": "Text",
+                    "longAnswerbtn": "Long Answer",
+                    "fileUploadbtn": "File Upload",
+                    "finishdialogiueheader": "Finish Quiz | ",
+                    "questionlblfinishDialogue": "Questions",
+                    "medialblfinishDialogue": "Media",
+                    "questionMediafinishDialogue": "Media",
+                    "declarationboxtext1": "Before you complete, confirm the following:",
+                    "declarationboxtext2": "I declare that this content conforms to Engage instructor content guidelines and I have the right to share it with my class.",
+                    "ConfirmFinishbtn": "Confirm Finish",
+                    "linkinstructionhyperlink": "Instructor content guidelines"
+                },
+                "student": {}
             }
         }
     }
