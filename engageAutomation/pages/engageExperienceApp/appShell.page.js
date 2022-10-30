@@ -123,11 +123,10 @@ module.exports = {
 		await logger.logInto(await stackTrace.get());
 		res = await action.click(this.libraryBtn);
 		if (true == res) {
-			// * Need to update when page created. 
-			//let libraryPage = await require('./library.page.js');
-			//res = await libraryPage.isInitialized();
-			action.waitForDisplayed("[data-tid=button-blankQuiz]")
-			action.click("[data-tid=button-blankQuiz]")
+			let libraryPage = await require('./library.page.js');
+			res = await libraryPage.isInitialized();
+			// action.waitForDisplayed("[data-tid=button-blankQuiz]")
+			// action.click("[data-tid=button-blankQuiz]")
 		}
 		else {
 			res = res + " -- Error in clicking Dashboard Button";

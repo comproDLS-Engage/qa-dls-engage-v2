@@ -362,7 +362,7 @@
                         "Not Correct"
                     ],
                     "kidsFeedbackTitle": [
-                        "Not quite right.", 
+                        "Not quite right.",
                         "Nice Job"
                     ],
                     "kidsFeedbackSubtitle": [
@@ -408,7 +408,7 @@
                     ],
                     "closeAssignmentBtn": "Close Assignment",
                     "kidsFeedbackTitle": [
-                        "Not quite right.", 
+                        "Not quite right.",
                         "Nice Job"
                     ],
                     "kidsFeedbackSubtitle": [
@@ -1204,7 +1204,7 @@
                 "teacher": {
                     "tocPanelHeader": "Jump to Section",
                     "currentlbl": "Curent",
-                    "materialbtn":"Materials"
+                    "materialbtn": "Materials"
                 }
             },
             "openActivityPlayer": {
@@ -1470,7 +1470,7 @@
                     "invitePageSubHeader": "Copy the email template below and use it to send an invite to your students to join this class.",
                     "cancelInvitebtn": "Cancel",
                     "copyInvitationbtn": "Copy Invitation",
-                    "copiedInvitation":"Invitation copied to clipboard!"
+                    "copiedInvitation": "Invitation copied to clipboard!"
                 },
                 "student": {}
             },
@@ -1517,6 +1517,53 @@
                     "linkinstructionhyperlink": "Instructor content guidelines"
                 },
                 "student": {}
+            },
+            "library": {
+                "teacher": {
+                    "libraryTitleTxt": "Library",
+                    "librarySubtitleTxt": "Create custom materials, upload additional documents, link videos, and more to use with your class.",
+                    "createMaterialsTxt": "Create Materials",
+                    "blankQuizBtn": "Blank Quiz",
+                    "blankSurveyBtn": "Blank Survey",
+                    "newResourceBtn": "New Resource",
+                    "recentMaterialsTxt": "Recent Materials",
+                    "pastDaysTxt": "Past 30 days",
+                    "viewAllBtn": "View All Materials",
+                    "draftPillTxt": "Draft",
+                    "editDraftBtn": "Edit Draft",
+                    "addToClassBtn": "Add to Class",
+                    "previewBtn": "Preview",
+                    "duplicateBtn": "Duplicate",
+                    "deleteBtn": "Delete",
+                    "editBtn": "Edit",
+                    "myMaterialsTxt": "My Materials",
+                    "addNewMaterialBtn": "Add New Material",
+                    "createNewTxt": "Create New",
+                    "allTab": "All",
+                    "draftsTab": "Drafts",
+                    "publishedTab": "Published",
+                    "materialLabel": "Materials",
+                    "typeLabel": "Type",
+                    "modifiedLabel": "Last Modified",
+                    "materialsDraftPillTxt": "Drafts",
+                    "materialsPreviewBtn": "Preview",
+                    "materialsDeleteBtn": "Delete",
+                    "noMaterialTitleTxt": "No Materials created yet",
+                    "noMaterialSubtitleTxt": "Any materials you create or modify will be shown here for you to view and assign to your class",
+                    "materialsNoMaterialTitleTxt": [
+                        "No Materials created yet",
+                        "No materials in draft mode",
+                        "No materials published yet"
+                    ],
+                    "materialsNoMaterialSubtitleTxt": [
+                        "Any materials you create or modify will be shown here for you to view and assign to your class",
+                        "Any in-process materials will be shown here for you to view and manage.",
+                        "Any published materials will be shown here to view and assign to your class."
+                    ],
+                    "materialsBlankQuizBtn": "Blank Quiz",
+                    "materialsBlankSurveyBtn": "Blank Survey",
+                    "materialsNewResourceBtn": "New Resource"
+                }
             }
         }
     }

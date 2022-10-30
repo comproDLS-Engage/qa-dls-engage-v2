@@ -1165,7 +1165,8 @@
           "description": "Validate the click on product button",
           "tags": "P1",
           "visualTest": true
-        },  {
+        },
+        {
           "id": "ENG_SHELL_TC_24",
           "description": "Validate the click on section item",
           "tags": "P1",
@@ -4207,6 +4208,31 @@
           "description": "Validate clicking on Cancel button on policy page do not select the policy checkbox on Account Details page",
           "tags": "",
           "visualTest": "-"
+        }
+      ]
+    },
+    {
+      "modulename": "Library",
+      "moduleId": "",
+      "testFile": "./test/engageExperienceApp/library.test.js",
+      "testcase": [
+        {
+          "id": "ENG_ICC_TC_22",
+          "description": "Validate clicking on Blank Quiz button on Library page",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICC_TC_26",
+          "description": "Validate clicking on Blank Survey button on Library page",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICC_TC_27",
+          "description": "Validate clicking on New Resource button on Library Page",
+          "tags": "P1",
+          "visualTest": true
         }
       ]
     }
