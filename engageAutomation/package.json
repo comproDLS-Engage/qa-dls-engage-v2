@@ -28,6 +28,7 @@
     "settingsTest": "wdio run ./wdio.conf.js --reportdir='%date:~-4%-%date:~7,2%-%date:~10,2%-%time:~0,2%-%time:~3,2%-%time:~6,2%' --appType=difusionExperienceApp --testEnv=qa --browserCapability=desktop-chrome-1920 --testExecFile=settingsTest.json --noCompressImage",
     "signUpTest": "wdio run ./wdio.conf.js --reportdir='%date:~-4%-%date:~7,2%-%date:~10,2%-%time:~0,2%-%time:~3,2%-%time:~6,2%' --appType=difusionExperienceApp --testEnv=production --browserCapability=desktop-chrome-1920 --testExecFile=signUptest.json --noCompressImage",
     "applitoolsTest": "wdio run ./wdio.conf.js --appType=difusionExperienceApp --testEnv=qa --testExecFile='landingTest.json' --browserCapability=applitools-chrome-1920 --windowWidth=1280 --windowHeight=600 --visual=applitools --skipAssertion=true",
+    "libraryTest": "wdio run ./wdio.conf.js --reportdir='%date:~-4%-%date:~7,2%-%date:~10,2%-%time:~0,2%-%time:~3,2%-%time:~6,2%' --appType=difusionExperienceApp --testEnv=qa --browserCapability=desktop-chrome-1920 --testExecFile=libraryTest.json --noCompressImage",
     "bo": "wdio run ./wdio.conf.js --appType=assessmentEditor --testEnv=qa --testExecFile='editor.json' --windowWidth=1600 --windowHeight=900"
   },
   "keywords": [],

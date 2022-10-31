@@ -1528,42 +1528,51 @@
                     "newResourceBtn": "New Resource",
                     "recentMaterialsTxt": "Recent Materials",
                     "pastDaysTxt": "Past 30 days",
-                    "viewAllBtn": "View All Materials",
+                    "viewAllMaterialsBtn": "View All Materials",
+                    "noMaterialTitleTxt": "No Materials created yet",
+                    "noMaterialSubtitleTxt": "Any materials you create or modify will be shown here for you to view and assign to your class",
                     "draftPillTxt": "Draft",
                     "editDraftBtn": "Edit Draft",
                     "addToClassBtn": "Add to Class",
                     "previewBtn": "Preview",
                     "duplicateBtn": "Duplicate",
                     "deleteBtn": "Delete",
-                    "editBtn": "Edit",
+                    "editBtn": "Edit"
+                },
+                "student": {}
+            },
+            "myMaterials": {
+                "teacher": {
                     "myMaterialsTxt": "My Materials",
                     "addNewMaterialBtn": "Add New Material",
-                    "createNewTxt": "Create New",
                     "allTab": "All",
                     "draftsTab": "Drafts",
                     "publishedTab": "Published",
                     "materialLabel": "Materials",
                     "typeLabel": "Type",
                     "modifiedLabel": "Last Modified",
-                    "materialsDraftPillTxt": "Drafts",
-                    "materialsPreviewBtn": "Preview",
-                    "materialsDeleteBtn": "Delete",
-                    "noMaterialTitleTxt": "No Materials created yet",
-                    "noMaterialSubtitleTxt": "Any materials you create or modify will be shown here for you to view and assign to your class",
-                    "materialsNoMaterialTitleTxt": [
+                    "noMaterialTitleTxt": [
                         "No Materials created yet",
                         "No materials in draft mode",
                         "No materials published yet"
                     ],
-                    "materialsNoMaterialSubtitleTxt": [
+                    "noMaterialSubtitleTxt": [
                         "Any materials you create or modify will be shown here for you to view and assign to your class",
                         "Any in-process materials will be shown here for you to view and manage.",
                         "Any published materials will be shown here to view and assign to your class."
                     ],
-                    "materialsBlankQuizBtn": "Blank Quiz",
-                    "materialsBlankSurveyBtn": "Blank Survey",
-                    "materialsNewResourceBtn": "New Resource"
-                }
+                    "blankQuizBtn": "Blank Quiz",
+                    "blankSurveyBtn": "Blank Survey",
+                    "newResourceBtn": "New Resource",
+                    "materialsDraftPillTxt": "Drafts",
+                    "createNewTxt": "Create New",
+                    "menuBlankQuizBtn": "Blank Quiz",
+                    "menuBlankSurveyBtn": "Blank Survey",
+                    "menuNewResourceBtn": "New Resource",
+                    "previewBtn": "Preview",
+                    "deleteBtn": "Delete"
+                },
+                "student": {}
             }
         }
     }

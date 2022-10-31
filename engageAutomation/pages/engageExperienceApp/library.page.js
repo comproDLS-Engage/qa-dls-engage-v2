@@ -12,9 +12,7 @@ module.exports = {
     newResourceBtn: selectorFile.css.ComproEngage.library.newResourceBtn,
     recentMaterialsTxt: selectorFile.css.ComproEngage.library.recentMaterialsTxt,
     pastDaysTxt: selectorFile.css.ComproEngage.library.pastDaysTxt,
-    viewAllBtn: selectorFile.css.ComproEngage.library.viewAllBtn,
-    materialsPreviewBtn: selectorFile.css.ComproEngage.library.materialsPreviewBtn,
-    materialsDeleteBtn: selectorFile.css.ComproEngage.library.materialsDeleteBtn,
+    viewAllMaterialsBtn: selectorFile.css.ComproEngage.library.viewAllMaterialsBtn,
     noMaterialTitleTxt: selectorFile.css.ComproEngage.library.noMaterialTitleTxt,
     noMaterialSubtitleTxt: selectorFile.css.ComproEngage.library.noMaterialSubtitleTxt,
     materialCard: selectorFile.css.ComproEngage.library.materialCard,
@@ -29,29 +27,6 @@ module.exports = {
     duplicateBtn: selectorFile.css.ComproEngage.library.duplicateBtn,
     deleteBtn: selectorFile.css.ComproEngage.library.deleteBtn,
     editBtn: selectorFile.css.ComproEngage.library.editBtn,
-    myMaterialsTxt: selectorFile.css.ComproEngage.library.myMaterialsTxt,
-    addNewMaterialBtn: selectorFile.css.ComproEngage.library.addNewMaterialBtn,
-    createNewTxt: selectorFile.css.ComproEngage.library.createNewTxt,
-    allTab: selectorFile.css.ComproEngage.library.allTab,
-    draftsTab: selectorFile.css.ComproEngage.library.draftsTab,
-    publishedTab: selectorFile.css.ComproEngage.library.publishedTab,
-    searchResult: selectorFile.css.ComproEngage.library.searchResult,
-    searchResultSubCount: selectorFile.css.ComproEngage.library.searchResultSubCount,
-    materialLabel: selectorFile.css.ComproEngage.library.materialLabel,
-    typeLabel: selectorFile.css.ComproEngage.library.typeLabel,
-    modifiedLabel: selectorFile.css.ComproEngage.library.modifiedLabel,
-    quizRow: selectorFile.css.ComproEngage.library.quizRow,
-    materialsQuizTitleTxt: selectorFile.css.ComproEngage.library.materialsQuizTitleTxt,
-    materialsDraftPillTxt: selectorFile.css.ComproEngage.library.materialsDraftPillTxt,
-    materialsQuizTypeTxt: selectorFile.css.ComproEngage.library.materialsQuizTypeTxt,
-    modifiedTime: selectorFile.css.ComproEngage.library.modifiedTime,
-    materialsContextMenuBtn: selectorFile.css.ComproEngage.library.materialsContextMenuBtn,
-    searchTextBox: selectorFile.css.ComproEngage.library.searchTextBox,
-    materialsNoMaterialTitleTxt: selectorFile.css.ComproEngage.library.materialsNoMaterialTitleTxt,
-    materialsNoMaterialSubtitleTxt: selectorFile.css.ComproEngage.library.materialsNoMaterialSubtitleTxt,
-    materialsBlankQuizBtn: selectorFile.css.ComproEngage.library.materialsBlankQuizBtn,
-    materialsBlankSurveyBtn: selectorFile.css.ComproEngage.library.materialsBlankSurveyBtn,
-    materialsNewResourceBtn: selectorFile.css.ComproEngage.library.materialsNewResourceBtn,
 
 
     isInitialized: async function () {
@@ -59,7 +34,7 @@ module.exports = {
         await logger.logInto(await stackTrace.get());
         await action.waitForDocumentLoad();
         res = {
-            pageStatus: await action.waitForDisplayed(this.blankQuizBtn),
+            pageStatus: await action.waitForDisplayed(this.libraryTitleTxt),
             appShellPage: await appShellPage.isInitialized()
         };
         return res;
@@ -77,19 +52,9 @@ module.exports = {
             newResourceBtn: ((await action.getElementCount(this.newResourceBtn)) > 0) ? await action.getText(this.newResourceBtn) : null,
             recentMaterialsTxt: ((await action.getElementCount(this.recentMaterialsTxt)) > 0) ? await action.getText(this.recentMaterialsTxt) : null,
             pastDaysTxt: ((await action.getElementCount(this.pastDaysTxt)) > 0) ? await action.getText(this.pastDaysTxt) : null,
-            viewAllBtn: ((await action.getElementCount(this.viewAllBtn)) > 0) ? await action.getText(this.viewAllBtn) : null,
+            viewAllMaterialsBtn: ((await action.getElementCount(this.viewAllMaterialsBtn)) > 0) ? await action.getText(this.viewAllMaterialsBtn) : null,
             noMaterialTitleTxt: ((await action.getElementCount(this.noMaterialTitleTxt)) > 0) ? await action.getText(this.noMaterialTitleTxt) : null,
             noMaterialSubtitleTxt: ((await action.getElementCount(this.noMaterialSubtitleTxt)) > 0) ? await action.getText(this.noMaterialSubtitleTxt) : null,
-        }
-        return obj;
-    },
-
-    getData_myMaterialsContextMenu: async function () {
-        await logger.logInto(await stackTrace.get());
-        var obj;
-        obj = {
-            materialsPreviewBtn: ((await action.getElementCount(this.materialsPreviewBtn)) > 0) ? await action.getText(this.materialsPreviewBtn) : null,
-            materialsDeleteBtn: ((await action.getElementCount(this.materialsDeleteBtn)) > 0) ? await action.getText(this.materialsDeleteBtn) : null,
         }
         return obj;
     },
@@ -144,73 +109,6 @@ module.exports = {
         return obj;
     },
 
-    getData_myMaterialsPage: async function () {
-        await logger.logInto(await stackTrace.get());
-        var obj;
-        obj = {
-            myMaterialsTxt: ((await action.getElementCount(this.myMaterialsTxt)) > 0) ? await action.getText(this.myMaterialsTxt) : null,
-            addNewMaterialBtn: ((await action.getElementCount(this.addNewMaterialBtn)) > 0) ? await action.getText(this.addNewMaterialBtn) : null,
-            allTab: ((await action.getElementCount(this.allTab)) > 0) ? await action.getText(this.allTab) : null,
-            draftsTab: ((await action.getElementCount(this.draftsTab)) > 0) ? await action.getText(this.draftsTab) : null,
-            publishedTab: ((await action.getElementCount(this.publishedTab)) > 0) ? await action.getText(this.publishedTab) : null,
-            searchResult: ((await action.getElementCount(this.searchResult)) > 0) ? await action.getText(this.searchResult) : null,
-            searchResultSubCount: ((await action.getElementCount(this.searchResultSubCount)) > 0) ? await action.getText(this.searchResultSubCount) : null,
-            materialLabel: ((await action.getElementCount(this.materialLabel)) > 0) ? await action.getText(this.materialLabel) : null,
-            typeLabel: ((await action.getElementCount(this.typeLabel)) > 0) ? await action.getText(this.typeLabel) : null,
-            modifiedLabel: ((await action.getElementCount(this.modifiedLabel)) > 0) ? await action.getText(this.modifiedLabel) : null,
-            searchTextBox: ((await action.getElementCount(this.searchTextBox)) > 0) ? await action.getText(this.searchTextBox) : null,
-            materialsNoMaterialTitleTxt: ((await action.getElementCount(this.materialsNoMaterialTitleTxt)) > 0) ? await action.getText(this.materialsNoMaterialTitleTxt) : null,
-            materialsNoMaterialSubtitleTxt: ((await action.getElementCount(this.materialsNoMaterialSubtitleTxt)) > 0) ? await action.getText(this.materialsNoMaterialSubtitleTxt) : null,
-        }
-        return obj;
-    },
-
-    getData_addMaterialContextMenu: async function () {
-        await logger.logInto(await stackTrace.get());
-        var obj;
-        obj = {
-            createNewTxt: ((await action.getElementCount(this.createNewTxt)) > 0) ? await action.getText(this.createNewTxt) : null,
-            materialsBlankQuizBtn: ((await action.getElementCount(this.materialsBlankQuizBtn)) > 0) ? await action.getText(this.materialsBlankQuizBtn) : null,
-            materialsBlankSurveyBtn: ((await action.getElementCount(this.materialsBlankSurveyBtn)) > 0) ? await action.getText(this.materialsBlankSurveyBtn) : null,
-            materialsNewResourceBtn: ((await action.getElementCount(this.materialsNewResourceBtn)) > 0) ? await action.getText(this.materialsNewResourceBtn) : null,
-        }
-        return obj;
-    },
-
-    getData_quizRow: async function (quizRowName) {
-        await logger.logInto(await stackTrace.get());
-        var obj = [];
-        await action.waitForDisplayed(this.quizRow);
-        var list = await action.findElements(this.quizRow);
-        if (quizRowName) {
-            for (var i = 0; i < list.length; i++) {
-                if ((await action.getText(this.quizRow + i)) == quizRowName) {
-                    obj[0] = {
-                        quizRow: ((await action.getElementCount(this.quizRow + i + "]")) > 0) ? await action.getText(this.quizRow + i + "]") : null,
-                        materialsQuizTitleTxt: ((await action.getElementCount(this.materialsQuizTitleTxt + i + "]")) > 0) ? await action.getText(this.materialsQuizTitleTxt + i + "]") : null,
-                        materialsDraftPillTxt: ((await action.getElementCount(this.materialsDraftPillTxt + i + "]")) > 0) ? await action.getText(this.materialsDraftPillTxt + i + "]") : null,
-                        materialsQuizTypeTxt: ((await action.getElementCount(this.materialsQuizTypeTxt + i + "]")) > 0) ? await action.getText(this.materialsQuizTypeTxt + i + "]") : null,
-                        modifiedTime: ((await action.getElementCount(this.modifiedTime + i + "]")) > 0) ? await action.getText(this.modifiedTime + i + "]") : null,
-                        materialsContextMenuBtn: ((await action.getElementCount(this.materialsContextMenuBtn + i + "]")) > 0) ? await action.getText(this.materialsContextMenuBtn + i + "]") : null,
-                    }
-                    break;
-                }
-            }
-        } else {
-            for (var i = 0; i < list.length; i++) {
-                obj[i] = {
-                    quizRow: ((await action.getElementCount(this.quizRow + i + "]")) > 0) ? await action.getText(this.quizRow + i + "]") : null,
-                    materialsQuizTitleTxt: ((await action.getElementCount(this.materialsQuizTitleTxt + i + "]")) > 0) ? await action.getText(this.materialsQuizTitleTxt + i + "]") : null,
-                    materialsDraftPillTxt: ((await action.getElementCount(this.materialsDraftPillTxt + i + "]")) > 0) ? await action.getText(this.materialsDraftPillTxt + i + "]") : null,
-                    materialsQuizTypeTxt: ((await action.getElementCount(this.materialsQuizTypeTxt + i + "]")) > 0) ? await action.getText(this.materialsQuizTypeTxt + i + "]") : null,
-                    modifiedTime: ((await action.getElementCount(this.modifiedTime + i + "]")) > 0) ? await action.getText(this.modifiedTime + i + "]") : null,
-                    materialsContextMenuBtn: ((await action.getElementCount(this.materialsContextMenuBtn + i + "]")) > 0) ? await action.getText(this.materialsContextMenuBtn + i + "]") : null,
-                }
-            }
-        }
-        return obj;
-    },
-
 
     click_blankQuizBtn: async function () {
         await logger.logInto(await stackTrace.get());
@@ -252,42 +150,16 @@ module.exports = {
         return res;
     },
 
-    click_viewAllBtn: async function () {
+    click_viewAllMaterialsBtn: async function () {
         await logger.logInto(await stackTrace.get());
         var res;
-        res = await action.click(this.viewAllBtn);
+        res = await action.click(this.viewAllMaterialsBtn);
         if (true == res) {
-            await logger.logInto(await stackTrace.get(), " viewAllBtn is clicked");
-            res = await this.getData_myMaterialsPage();
+            await logger.logInto(await stackTrace.get(), " viewAllMaterialsBtn is clicked");
+            res = await require('./myMaterialsPage.page').isInitialized();
         }
         else {
-            await logger.logInto(await stackTrace.get(), res + "viewAllBtn is NOT clicked", 'error');
-        }
-        return res;
-    },
-
-    click_materialsPreviewBtn: async function () {
-        await logger.logInto(await stackTrace.get());
-        var res;
-        res = await action.click(this.materialsPreviewBtn);
-        if (true == res) {
-            await logger.logInto(await stackTrace.get(), " materialsPreviewBtn is clicked");
-        }
-        else {
-            await logger.logInto(await stackTrace.get(), res + "materialsPreviewBtn is NOT clicked", 'error');
-        }
-        return res;
-    },
-
-    click_materialsDeleteBtn: async function () {
-        await logger.logInto(await stackTrace.get());
-        var res;
-        res = await action.click(this.materialsDeleteBtn);
-        if (true == res) {
-            await logger.logInto(await stackTrace.get(), " materialsDeleteBtn is clicked");
-        }
-        else {
-            await logger.logInto(await stackTrace.get(), res + "materialsDeleteBtn is NOT clicked", 'error');
+            await logger.logInto(await stackTrace.get(), res + "viewAllMaterialsBtn is NOT clicked", 'error');
         }
         return res;
     },
@@ -412,146 +284,6 @@ module.exports = {
         }
         else {
             await logger.logInto(await stackTrace.get(), res + "editBtn is NOT clicked", 'error');
-        }
-        return res;
-    },
-
-    click_addNewMaterialBtn: async function () {
-        await logger.logInto(await stackTrace.get());
-        var res;
-        res = await action.click(this.addNewMaterialBtn);
-        if (true == res) {
-            await logger.logInto(await stackTrace.get(), " addNewMaterialBtn is clicked");
-        }
-        else {
-            await logger.logInto(await stackTrace.get(), res + "addNewMaterialBtn is NOT clicked", 'error');
-        }
-        return res;
-    },
-
-    click_allTab: async function () {
-        await logger.logInto(await stackTrace.get());
-        var res;
-        res = await action.click(this.allTab);
-        if (true == res) {
-            await logger.logInto(await stackTrace.get(), " allTab is clicked");
-        }
-        else {
-            await logger.logInto(await stackTrace.get(), res + "allTab is NOT clicked", 'error');
-        }
-        return res;
-    },
-
-    click_draftsTab: async function () {
-        await logger.logInto(await stackTrace.get());
-        var res;
-        res = await action.click(this.draftsTab);
-        if (true == res) {
-            await logger.logInto(await stackTrace.get(), " draftsTab is clicked");
-        }
-        else {
-            await logger.logInto(await stackTrace.get(), res + "draftsTab is NOT clicked", 'error');
-        }
-        return res;
-    },
-
-    click_publishedTab: async function () {
-        await logger.logInto(await stackTrace.get());
-        var res;
-        res = await action.click(this.publishedTab);
-        if (true == res) {
-            await logger.logInto(await stackTrace.get(), " publishedTab is clicked");
-        }
-        else {
-            await logger.logInto(await stackTrace.get(), res + "publishedTab is NOT clicked", 'error');
-        }
-        return res;
-    },
-
-    click_quizRow: async function (quizRowName) {
-        await logger.logInto(await stackTrace.get());
-        var i, list, res;
-        list = await action.findElements(this.quizRow);
-        for (i = 0; i < list.length; i++) {
-            if (((await action.getText(this.quizRow + i + "]"))) == quizRowName) {
-                res = await action.click(list[i]);
-                break;
-            }
-        }
-        if (res == true) {
-            await logger.logInto(await stackTrace.get(), " --quizRow clicked");
-        }
-        else
-            await logger.logInto(await stackTrace.get(), " --quizRow NOT clicked", "error")
-        return res;
-    },
-
-    click_materialsContextMenuBtn: async function (quizRowName) {
-        await logger.logInto(await stackTrace.get());
-        var i, list, res;
-        list = await action.findElements(this.materialsContextMenuBtn);
-        for (i = 0; i < list.length; i++) {
-            if (((await action.getText(this.quizRow + i + "]"))) == quizRowName) {
-                res = await action.click(list[i]);
-                break;
-            }
-        }
-        if (res == true) {
-            await logger.logInto(await stackTrace.get(), " --materialsContextMenuBtn clicked");
-        }
-        else
-            await logger.logInto(await stackTrace.get(), " --materialsContextMenuBtn NOT clicked", "error")
-        return res;
-    },
-
-    click_materialsBlankQuizBtn: async function () {
-        await logger.logInto(await stackTrace.get());
-        var res;
-        res = await action.click(this.materialsBlankQuizBtn);
-        if (true == res) {
-            await logger.logInto(await stackTrace.get(), " materialsBlankQuizBtn is clicked");
-            res = await require('./libraryEditorPage.page').isInitialized();
-        }
-        else {
-            await logger.logInto(await stackTrace.get(), res + "materialsBlankQuizBtn is NOT clicked", 'error');
-        }
-        return res;
-    },
-
-    click_materialsBlankSurveyBtn: async function () {
-        await logger.logInto(await stackTrace.get());
-        var res;
-        res = await action.click(this.materialsBlankSurveyBtn);
-        if (true == res) {
-            await logger.logInto(await stackTrace.get(), " materialsBlankSurveyBtn is clicked");
-        }
-        else {
-            await logger.logInto(await stackTrace.get(), res + "materialsBlankSurveyBtn is NOT clicked", 'error');
-        }
-        return res;
-    },
-
-    click_materialsNewResourceBtn: async function () {
-        await logger.logInto(await stackTrace.get());
-        var res;
-        res = await action.click(this.materialsNewResourceBtn);
-        if (true == res) {
-            await logger.logInto(await stackTrace.get(), " materialsNewResourceBtn is clicked");
-        }
-        else {
-            await logger.logInto(await stackTrace.get(), res + "materialsNewResourceBtn is NOT clicked", 'error');
-        }
-        return res;
-    },
-
-    set_searchTextBox: async function (value) {
-        var res;
-        await logger.logInto(await stackTrace.get());
-        res = await action.setValue(this.searchTextBox, value);
-        if (true == res) {
-            await logger.logInto(await stackTrace.get(), "Value is entered in searchTextBox");
-        } else {
-            await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in searchTextBox", 'error');
         }
         return res;
     },
