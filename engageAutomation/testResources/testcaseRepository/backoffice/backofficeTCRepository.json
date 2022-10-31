@@ -608,6 +608,54 @@
                     "description": "Validate that institution moves to rejected list when the reject button is clicked after entering reject reason in the dialog",
                     "tags": "P1",
                     "visualTest": true
+                },
+                {
+                    "id": "ADMN_FUSR_TC_1",
+                    "description": "Validate that user is able to Search by Email",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ADMN_FUSR_TC_2",
+                    "description": "Validate that user is able to Search with spanish word in FirstName",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ADMN_FUSR_TC_3",
+                    "description": "Validate that user is able to Search with special character in lastName",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ADMN_FUSR_TC_4",
+                    "description": "Validate the scenario for incorrect Email ID",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ADMN_FUSR_TC_5",
+                    "description": "Validate user is able to search with UserID on User search page",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ADMN_FUSR_TC_6",
+                    "description": "Validate clicking on a row in the search list launch User details page",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ADMN_FUSR_TC_7",
+                    "description": "Validate that search page is launched on clicking on Find Another User button",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
+                    "id": "ADMN_FUSR_TC_8",
+                    "description": "Find Another User - Validate user is able to search by entering data in search box ",
+                    "tags": "P1",
+                    "visualTest": true
                 }
             ]
         }

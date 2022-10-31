@@ -406,18 +406,7 @@
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/adminTool.json",
-						"jsonPath": "findUser.user1"
-					}
-				]
-			},
-			{
-				"id": "ADMN_FINS_TC_5",
-				"description": "",
-				"testFile": "./test/backoffice/admintool.test.js",
-				"testData": [
-					{
-						"dataFile": "./testResources/testcaseData/backoffice/qa/adminTool.json",
-						"jsonPath": "findInstitution.institute5"
+						"jsonPath": "findUser.user1.email"
 					}
 				]
 			},
@@ -428,13 +417,13 @@
 				"testData": []
 			},
 			{
-				"id": "ADMN_FINS_TC_2",
+				"id": "ADMN_FUSR_TC_2",
 				"description": "",
 				"testFile": "./test/backoffice/admintool.test.js",
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/adminTool.json",
-						"jsonPath": "findInstitution.institute2"
+						"jsonPath": "findUser.user2.firstName"
 					}
 				]
 			},
@@ -445,13 +434,13 @@
 				"testData": []
 			},
 			{
-				"id": "ADMN_FINS_TC_3",
+				"id": "ADMN_FUSR_TC_3",
 				"description": "",
 				"testFile": "./test/backoffice/admintool.test.js",
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/adminTool.json",
-						"jsonPath": "findInstitution.institute3"
+						"jsonPath": "findUser.user3.lastName"
 					}
 				]
 			},
@@ -462,30 +451,52 @@
 				"testData": []
 			},
 			{
-				"id": "ADMN_FINS_TC_1",
+				"id": "ADMN_FUSR_TC_4",
 				"description": "",
 				"testFile": "./test/backoffice/admintool.test.js",
 				"testData": [
 					{
 						"dataFile": "./testResources/testcaseData/backoffice/qa/adminTool.json",
-						"jsonPath": "findInstitution.institute1"
+						"jsonPath": "findUser.user4.email"
 					}
 				]
 			},
 			{
-				"id": "ADMN_FINS_TC_10",
+				"id": "ADMN_FUSR_TC_5",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/adminTool.json",
+						"jsonPath": "findUser.user1.userId"
+					}
+				]
+			},
+			{
+				"id": "ADMN_FUSR_TC_7",
 				"description": "",
 				"testFile": "./test/backoffice/admintool.test.js",
 				"testData": []
 			},
 			{
-				"id": "ADMN_FINS_TC_11",
+				"id": "ADMN_FUSR_TC_8",
 				"description": "",
 				"testFile": "./test/backoffice/admintool.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/backoffice/qa/banner.json",
-						"jsonPath": "snackbar.findInstitution[0]"
+						"dataFile": "./testResources/testcaseData/backoffice/qa/adminTool.json",
+						"jsonPath": "findUser.user5.firstName"
+					}
+				]
+			},
+			{
+				"id": "ADMN_FUSR_TC_6",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/adminTool.json",
+						"jsonPath": "findUser.user5.firstName"
 					}
 				]
 			}

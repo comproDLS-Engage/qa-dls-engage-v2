@@ -60,7 +60,7 @@
 		"searchBtn": "[data-tid=button-clearsearch]",
 		"bookIcon": "[data-tid*=button-book-detail]:not([style='display: none;']) [class=c-book-mode-icon]",
 		"globalResourceIcon": "[data-tid*=button-book-detail]:not([style='display: none;']) [class*=c-book-mode-icon-gr]",
-		"findUserBtn": "[data-tid=button-find-user]",
+		"findUserBtn": "[data-tid=button-find-user] span",
 		"findUserTxtbox": "input[id='Find a user']",
 		"emailOption": "li[data-value=email]",
 		"firstNameOption": "li[data-value=firstName]",

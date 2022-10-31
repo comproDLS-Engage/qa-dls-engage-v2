@@ -2,7 +2,7 @@
 const findClassPage = require('../../pages/backoffice/findClass.page.js');
 const findInstitutionPage = require('../../pages/backoffice/findInstitution.page.js');
 const findUserPage = require('../../pages/backoffice/findUser.page.js');
-const entitleUserPage = require('../../pages/backoffice/userDetails.page.js');
+const entitleUserPage = require('../../pages/backoffice/entitleUser.page.js');
 const common = require('../../pages/backoffice/common.page.js');
 const homePage = require('../../pages/backoffice/home.page.js');
 const institutionReqPage = require('../../pages/backoffice/institutionRequests.page.js');
@@ -322,16 +322,30 @@ module.exports = {
 
 	// Validate user is able to search with UserID on User search page
 	ADMN_FUSR_TC_5: async function (testdata) {
-		sts = await homePage.search_User_ByEmail(testdata);
-		await assertion.assertEqual(sts, true, "search_User_ByEmail status mismatch");
+		sts = await findUserPage.search_User_ByUserId(testdata);
+		await assertion.assertEqual(sts, true, "search_User_ByUserId status mismatch");
 		sts = await findUserPage.get_User_Details();
 		await assertion.assertEqual(sts.userId, testdata, "get_User_Details status mismatch");
 	},
 
 	// Validate clicking on a row in the search list launch User details page
-	ADMN_FUSR_TC_6: async function () {
+	ADMN_FUSR_TC_6: async function (testdata) {
 		sts = await findUserPage.click_User_in_List();
 		await assertion.assertEqual(sts, true, "click_User_in_List status mismatch");
+		sts = await findUserPage.get_User_Details();
+		await assertion.assert(sts.name.includes(testdata), "get_User_Details status mismatch");
+	},
+
+	// Validate that search page is launched on clicking on Find Another User button
+	ADMN_FUSR_TC_7: async function () {
+		sts = await findUserPage.find_Another_User();
+		await assertion.assertEqual(sts, true, "find_Another_User status mismatch");
+	},
+
+	// Find Another User - Validate user is able to search by entering data in search box 
+	ADMN_FUSR_TC_8: async function (testdata) {
+		sts = await findUserPage.search_User_ByFirstName(testdata);
+		await assertion.assertEqual(sts, true, "search_User_ByFirstName status mismatch");
 	},
 
 	// ---------------------------------------------------------------------------- //

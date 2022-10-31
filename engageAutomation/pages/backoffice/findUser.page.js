@@ -12,6 +12,7 @@ module.exports = {
     emailOption: selectorFile.findUserPage.emailOption,
     firstNameOption: selectorFile.findUserPage.firstNameOption,
     lastNameOption: selectorFile.findUserPage.lastNameOption,
+    userIdOption: selectorFile.findUserPage.userIdOption,
     userDetailsSection: selectorFile.findUserPage.userDetailsSection,
     disableEnableUserBtn: selectorFile.findUserPage.disableEnableUserBtn,
     dialogConfirmBtn: selectorFile.findUserPage.dialogConfirmBtn,
@@ -57,6 +58,9 @@ module.exports = {
 
     get_User_Details: async function () {
         await logger.logInto((await stackTrace.get()));
+        if (await action.isDisplayed(this.userDetailsSection)) {
+            res = await action.click(this.userDetailsSection);
+        }
         var obj = {
             name: ((await action.getElementCount(this.name)) > 0) ? await action.getText(this.name) : null,
             email: ((await action.getElementCount(this.email)) > 0) ? await action.getText(this.email) : null,
@@ -101,15 +105,9 @@ module.exports = {
     find_Another_User: async function (val) {
         await logger.logInto((await stackTrace.get()));
         let res = await action.click(this.findAnotherUserBtn);
-        /*if (res == true) {
-            res = await action.setValue(this.,val);
-            if (res == true) {
-                res = await action.click(this.);
-                if (res == true) {
-                    res = await this.isInitialized();
-                }
-            }
-        }*/
+        if (res == true) {
+            res = await action.waitForDisplayed(this.userSearchInput);
+        }
         await logger.logInto((await stackTrace.get()), res);
         return res;
     },
@@ -136,5 +134,42 @@ module.exports = {
         }
         await logger.logInto((await stackTrace.get()), res);
         return res;
-    }
+    },
+
+    search_User_ByEmail: async function (val, sel) {
+        await logger.logInto((await stackTrace.get()));
+        res = await action.setValue(this.userSearchInput, val);
+        if (res == true) {
+            if (sel == undefined)
+                await action.click(this.emailOption);
+            else
+                await action.click(sel);
+            if (res == true) {
+                res = await require('./findUser.page.js').isInitialized();
+            }
+        }
+        await logger.logInto((await stackTrace.get()), res);
+        return res;
+    },
+
+    search_User_ByFirstName: async function (val) {
+        await logger.logInto((await stackTrace.get()));
+        res = await this.search_User_ByEmail(val, this.firstNameOption);
+        await logger.logInto((await stackTrace.get()), res);
+        return res;
+    },
+
+    search_User_ByLastName: async function (val) {
+        await logger.logInto((await stackTrace.get()));
+        res = await this.search_User_ByEmail(val, this.lastNameOption);
+        await logger.logInto((await stackTrace.get()), res);
+        return res;
+    },
+
+    search_User_ByUserId: async function (val) {
+        await logger.logInto((await stackTrace.get()));
+        res = await this.search_User_ByEmail(val, this.userIdOption);
+        await logger.logInto((await stackTrace.get()), res);
+        return res;
+    },
 }
