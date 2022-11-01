@@ -125,8 +125,6 @@ module.exports = {
 		if (true == res) {
 			let libraryPage = await require('./library.page.js');
 			res = await libraryPage.isInitialized();
-			// action.waitForDisplayed("[data-tid=button-blankQuiz]")
-			// action.click("[data-tid=button-blankQuiz]")
 		}
 		else {
 			res = res + " -- Error in clicking Dashboard Button";

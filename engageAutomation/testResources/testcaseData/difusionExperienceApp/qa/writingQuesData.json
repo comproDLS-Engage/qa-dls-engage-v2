@@ -17,5 +17,21 @@
         ]
       }
     ]
-  }
+  },
+  "writing": 
+    {
+      "quizName": "Writing Quiz",
+      "questionIndex": 3,
+      "score":"1",
+      "buttonName": "writing",
+      "questionTitle": "Short Essay About Uttar Pradesh with 500 words. See description in Instruction",
+      "questionInstruction": "Write Essay about Uttar Pradesh. provide details about districts, Religion, Famous Places, Area, Politics. Should be not ore than 500 words. Key points: Modern human hunter-gatherers have been in Uttar Pradesh[15][16][17] since between around[18] 85,000 and 72,000 years ago.",
+      "imagePath": "./testResources/testcaseData/assessmentEditor/media/Mughal.jpg",
+      "questionText":  " Please Write the Essay.",
+      "textAreaConf":[
+       ["1", "4", "1024","Write Here"],
+       ["2","5","100","placeHolder Text2"]
+      ]
+    }
+    
 }
