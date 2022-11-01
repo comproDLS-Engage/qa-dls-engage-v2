@@ -30,6 +30,9 @@
         ],
         "findInstitution": [
             "Institution Key is successfully updated for"
+        ],
+        "entitleUser": [
+            "User has been entitled successfully"
         ]
     }
 }

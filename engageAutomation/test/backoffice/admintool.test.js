@@ -361,7 +361,7 @@ module.exports = {
 	// Validate the scenario of Disable a User
 	ADMN_USRD_TC_2: async function (testdata) {
 		sts = await findUserPage.click_DisableEnableUser_Button();
-		await assertion.assertEqual(sts, true, "click_DisableEnableUser_Button status mismatch");
+		await assertion.assertEqual(sts, "Disable", "click_DisableEnableUser_Button status mismatch");
 		sts = await findUserPage.click_DialogConfirm_Button();
 		await assertion.assert((typeof sts === "string" && sts.includes(testdata)), "Snackbar messsage mismatch. " + sts);
 	},
@@ -369,7 +369,7 @@ module.exports = {
 	// Validate the scenario of Enable a User
 	ADMN_USRD_TC_3: async function (testdata) {
 		sts = await findUserPage.click_DisableEnableUser_Button();
-		await assertion.assertEqual(sts, true, "click_DisableEnableUser_Button status mismatch");
+		await assertion.assertEqual(sts, "Enable", "click_DisableEnableUser_Button status mismatch");
 		sts = await findUserPage.click_DialogConfirm_Button();
 		await assertion.assert((typeof sts === "string" && sts.includes(testdata)), "Snackbar messsage mismatch. " + sts);
 	},
@@ -379,25 +379,25 @@ module.exports = {
 	// --------------------------- Entitle User Test Cases ----------------------------- //
 
 	// Validate clicking on 'Entitle User With Pass Key' from User details page
-	ADMN_EUSR_TC_1: async function (testdata) {
+	ADMN_EUSR_TC_1: async function () {
 		sts = await findUserPage.click_EntitleUser_Button();
 		await assertion.assertEqual(sts, true, "click_EntitleUser_Button status mismatch");
 	},
 
 	// Validate the scenario if user is successfully Entitled with Passkey
 	ADMN_EUSR_TC_2: async function (testdata) {
-		//sts = await entitleUserPage.set_Email(testdata.email);
+		//sts = await entitleUserPage.set_Email(testdata[0].email);
 		//await assertion.assertEqual(sts, true, "set_Email status mismatch");
-		sts = await entitleUserPage.set_ProductCode(testdata.productCode);
+		sts = await entitleUserPage.set_ProductCode(testdata[0].productCode);
 		await assertion.assertEqual(sts, true, "set_ProductCode status mismatch");
-		sts = await entitleUserPage.select_StartDate(testdata.startDate);
+		sts = await entitleUserPage.select_StartDate();
 		await assertion.assertEqual(sts, true, "select_StartDate status mismatch");
-		sts = await entitleUserPage.select_EndDate(testdata.endDate);
+		sts = await entitleUserPage.select_EndDate();
 		await assertion.assertEqual(sts, true, "select_EndDate status mismatch");
-		sts = await entitleUserPage.set_PassKey(testdata.passKey);
+		sts = await entitleUserPage.set_PassKey(testdata[0].passKey);
 		await assertion.assertEqual(sts, true, "set_PassKey status mismatch");
 		sts = await findUserPage.click_Entitle_Button();
-		await assertion.assert((typeof sts === "string" && sts.includes(testdata)), "Snackbar messsage mismatch. " + sts);
+		await assertion.assert((typeof sts === "string" && sts.includes(testdata[1])), "Snackbar messsage mismatch. " + sts);
 	},
 
 	// Validate that entitle user page is launched on clicking on 'Entitle User With Pass Key' from Home page and user enter Email and click Proceed button

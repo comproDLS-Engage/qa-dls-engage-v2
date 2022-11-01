@@ -510,5 +510,92 @@
 				"testData": []
 			}
 		]
+	},
+	"Suite5": {
+		"Name": "Entitle a User",
+		"TestCaseRepo": [
+			"./testResources/testcaseRepository/backoffice/backofficeTCRepository.json"
+		],
+		"Before": [
+			{
+				"id": "launchUrl",
+				"description": "",
+				"testFile": "./core/runner/launchUrl.js",
+				"testData": []
+			},
+			{
+				"id": "BK_TC_1",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/logindata.json",
+						"jsonPath": "backoffice.user.validUser1"
+					}
+				]
+			},
+			{
+				"id": "ADMN_FUSR_TC_1",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/adminTool.json",
+						"jsonPath": "entitleUser.email"
+					}
+				]
+			}
+		],
+		"BeforeEach": [],
+		"Test": [
+			{
+				"id": "ADMN_USRD_TC_2",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": []
+			},
+			{
+				"id": "ADMN_USRD_TC_3",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": []
+			},
+			{
+				"id": "ADMN_EUSR_TC_1",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": []
+			},
+			{
+				"id": "ADMN_EUSR_TC_2",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/adminTool.json",
+						"jsonPath": "entitleUser"
+					},
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/qa/banner.json",
+						"jsonPath": "snackbar.entitleUser"
+					}
+				]
+			},
+			{
+				"id": "ADMN_USRD_TC_1",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": []
+			}
+		],
+		"AfterEach": [],
+		"After": [
+			{
+				"id": "BK_TC_7",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			}
+		]
 	}
 }

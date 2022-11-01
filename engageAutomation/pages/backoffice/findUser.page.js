@@ -74,7 +74,8 @@ module.exports = {
         await logger.logInto((await stackTrace.get()));
         res = await action.click(this.disableEnableUserBtn);
         if (res == true) {
-            res = await action.waitForDisplayed(this.dialogConfirmBtn);
+            await action.waitForDisplayed(this.dialogConfirmBtn);
+            res = await action.getText(this.dialogConfirmBtn);
         }
         await logger.logInto((await stackTrace.get()), res);
         return res;
