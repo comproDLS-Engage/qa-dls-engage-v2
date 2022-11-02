@@ -64,7 +64,7 @@ module.exports = {
 	// Validate that the view book page is launched on clicking the book card on the home page
 	BK_TC_4: async function (testdata) {
 		sts = await homePage.click_Book(testdata.name);
-		await assertion.assert(sts.includes(testdata.name), "Book title mismatch. " + sts);
+		await assertion.assertEqual(sts, true, "Book title mismatch. ");
 		sts = await viewBookPage.getBookParamDetails();
 		if (testdata.type == "BOOK") {
 			await assertion.assertEqual(sts.description, testdata.description, "book description mismatch");
