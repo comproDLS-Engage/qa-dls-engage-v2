@@ -2,7 +2,6 @@
 var action = require('../../core/actionLibrary/baseActionLibrary.js')
 var selectorFile = jsonParserUtil.jsonParser(selectorDir)
 var appShellPage = require('./appShell.page.js');
-const { confirmPasswordErrorTxt } = require('./signUp.page.js');
 
 module.exports = {
     quizHeaderIcon: selectorFile.css.ComproEngage.libraryEditorPage.quizHeaderIcon,
@@ -11,6 +10,8 @@ module.exports = {
     draftlbl: selectorFile.css.ComproEngage.libraryEditorPage.draftlbl,
     pageHeader: selectorFile.css.ComproEngage.libraryEditorPage.pageHeader,
     pageSubHeader: selectorFile.css.ComproEngage.libraryEditorPage.pageSubHeader,
+    multipleChoicetabIcon: selectorFile.css.ComproEngage.libraryEditorPage.multipleChoicetabIcon,
+    texttabIcon: selectorFile.css.ComproEngage.libraryEditorPage.texttabIcon,
     multipleChoicetab: selectorFile.css.ComproEngage.libraryEditorPage.multipleChoicetab,
     texttab: selectorFile.css.ComproEngage.libraryEditorPage.texttab,
     finishQuiz: selectorFile.css.ComproEngage.libraryEditorPage.finishQuiz,
@@ -55,6 +56,7 @@ module.exports = {
     addOptionbtn: selectorFile.css.ComproEngage.libraryEditorPage.addOptionbtn,
     correctIcon: selectorFile.css.ComproEngage.libraryEditorPage.correctIcon,
     leftArrow: selectorFile.css.ComproEngage.libraryEditorPage.leftArrow,
+    closeDrawerArrow: selectorFile.css.ComproEngage.libraryEditorPage.closeDrawerArrow,
     drawerTitle: selectorFile.css.ComproEngage.libraryEditorPage.drawerTitle,
     tagsHeading: selectorFile.css.ComproEngage.libraryEditorPage.tagsHeading,
     tagsSubHeading: selectorFile.css.ComproEngage.libraryEditorPage.tagsSubHeading,
@@ -91,6 +93,16 @@ module.exports = {
     linkinstructionhyperlink: selectorFile.css.ComproEngage.libraryEditorPage.linkinstructionhyperlink,
     quizHeaderPlaceHolder: selectorFile.css.ComproEngage.libraryEditorPage.quizHeaderPlaceHolder,
     headertickIcon: selectorFile.css.ComproEngage.libraryEditorPage.headertickIcon,
+    previewbtn: selectorFile.css.ComproEngage.libraryEditorPage.previewbtn,
+    morebtn: selectorFile.css.ComproEngage.libraryEditorPage.morebtn,
+    deleteMoreOptionbtn: selectorFile.css.ComproEngage.libraryEditorPage.deleteMoreOptionbtn,
+    duplicateMoreOptionbtn: selectorFile.css.ComproEngage.libraryEditorPage.duplicateMoreOptionbtn,
+    previewcontainer: selectorFile.css.ComproEngage.libraryEditorPage.previewcontainer,
+    eyeIcon: selectorFile.css.ComproEngage.libraryEditorPage.eyeIcon,
+    previeCloseIcon: selectorFile.css.ComproEngage.libraryEditorPage.previeCloseIcon,
+    iconBreadCrumbBack_btn:selectorFile.css.ComproEngage.libraryEditorPage.iconBreadCrumbBack_btn,
+
+
     isInitialized: async function () {
         var res;
         await logger.logInto(await stackTrace.get());
@@ -112,9 +124,12 @@ module.exports = {
             draftlbl: ((await action.getElementCount(this.draftlbl)) > 0) ? await action.getText(this.draftlbl) : null,
             pageHeader: ((await action.getElementCount(this.pageHeader)) > 0) ? await action.getText(this.pageHeader) : null,
             pageSubHeader: ((await action.getElementCount(this.pageSubHeader)) > 0) ? await action.getText(this.pageSubHeader) : null,
-            multipleChoicetab: ((await action.getElementCount(this.multipleChoicebtn)) > 0) ? await action.getText(this.multipleChoicetab) : null,
-            texttab: ((await action.getElementCount(this.textbtn)) > 0) ? await action.getText(this.texttab) : null,
+            multipleChoicetab: ((await action.getElementCount(this.multipleChoicetab)) > 0) ? await action.getText(this.multipleChoicetab) : null,
+            texttab: ((await action.getElementCount(this.texttab)) > 0) ? await action.getText(this.texttab) : null,
             finishQuiz: ((await action.getElementCount(this.finishQuiz)) > 0) ? await action.getText(this.finishQuiz) : null,
+            multipleChoicetabIcon: ((await action.getElementCount(this.multipleChoicetabIcon)) > 0) ? await action.waitForDisplayed(this.multipleChoicetabIcon) : null,
+            texttabIcon: ((await action.getElementCount(this.texttabIcon)) > 0) ? await action.waitForDisplayed(this.texttabIcon) : null,
+
         }
         return obj;
     },
@@ -153,6 +168,8 @@ module.exports = {
             studentWillAnswerHere: ((await action.getElementCount(this.studentWillAnswerHere)) > 0) ? await action.getText(this.studentWillAnswerHere) : null,
             longAnswerbtn: ((await action.getElementCount(this.longAnswerbtn)) > 0) ? await action.getText(this.longAnswerbtn) : null,
             fileUploadbtn: ((await action.getElementCount(this.fileUploadbtn)) > 0) ? await action.getText(this.fileUploadbtn) : null,
+            previewbtn: ((await action.getElementCount(this.previewbtn)) > 0) ? await action.getText(this.previewbtn) : null,
+            morebtn: ((await action.getElementCount(this.morebtn)) > 0) ? await action.waitForDisplayed(this.morebtn) : null,
         }
         return obj;
     },
@@ -250,7 +267,39 @@ module.exports = {
         }
         return obj;
     },
+    getData_moreOptionList: async function () {
+        await logger.logInto(await stackTrace.get());
+        var obj;
+        obj = {
+            duplicatebtn: ((await action.getElementCount(this.duplicatebtn)) > 0) ? await action.getText(this.duplicatebtn) : null,
+            deletebtn: ((await action.getElementCount(this.deletebtn)) > 0) ? await action.getText(this.deletebtn) : null,
+        }
+        return obj;
+    },
 
+    getData_previewPage: async function () {
+        await logger.logInto(await stackTrace.get());
+        var obj;
+        obj = {
+            previewcontainer: ((await action.getElementCount(this.previewcontainer)) > 0) ? await action.getText(this.previewcontainer) : null,
+            eyeIcon: ((await action.getElementCount(this.eyeIcon)) > 0) ? await action.waitForDisplayed(this.eyeIcon) : false,
+            previeCloseIcon: ((await action.getElementCount(this.previeCloseIcon)) > 0) ? await action.waitForDisplayed(this.previeCloseIcon) : null,
+        }
+        return obj;
+    },
+
+    click_iconBreadCrumbBack_btn: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.iconBreadCrumbBack_btn);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " iconBreadCrumbBack_btn is clicked");
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "iconBreadCrumbBack_btn is NOT clicked", 'error');
+        }
+        return res;
+    },
 
     click_quizHeaderName: async function () {
         await logger.logInto(await stackTrace.get());
@@ -658,6 +707,19 @@ module.exports = {
         }
         return res;
     },
+    click_closeDrawerArrow: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.closeDrawerArrow);
+        if (true == res) {
+            res= await action.waitForDisplayed(this.leftArrow)
+            await logger.logInto(await stackTrace.get(), " closeDrawerArrow is clicked");
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "closeDrawerArrow is NOT clicked", 'error');
+        }
+        return res;
+    },
 
     click_selectBook: async function () {
         await logger.logInto(await stackTrace.get());
@@ -830,6 +892,72 @@ module.exports = {
         }
         else {
             await logger.logInto(await stackTrace.get(), res + "linkinstructionhyperlink is NOT clicked", 'error');
+        }
+        return res;
+    },
+    click_previewbtn: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.previewbtn);
+        if (true == res) {
+            res= await this.getData_previewPage();
+            await logger.logInto(await stackTrace.get(), " previewbtn is clicked");
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "previewbtn is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_morebtn: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.morebtn);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " morebtn is clicked");
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "morebtn is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_duplicateMoreOptionbtn: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.duplicateMoreOptionbtn);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " duplicateMoreOptionbtn is clicked");
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "duplicateMoreOptionbtn is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_deleteMoreOptionbtn: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.deleteMoreOptionbtn);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " deleteMoreOptionbtn is clicked");
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "deleteMoreOptionbtn is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_previeCloseIcon: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.previeCloseIcon);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " previeCloseIcon is clicked");
+            res = await this.getData_editorPage();
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "previeCloseIcon is NOT clicked", 'error');
         }
         return res;
     },

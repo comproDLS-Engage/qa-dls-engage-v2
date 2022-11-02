@@ -1479,8 +1479,10 @@
                     "savedtoLibrarylbl": "Saved to my Library",
                     "draftlbl": "Draft",
                     "pageHeader": "New Question",
+                    "quizHeaderName": "Untitled Quiz",
                     "pageSubHeader": "Select a question type to get started:",
                     "questionNumber": "Question",
+                    "finishQuiz": "Finish Quiz",
                     "multipleChoicelbl": "Multiple Choice",
                     "textChoicelbl": "Text",
                     "questiontextbox": "Question Title",
@@ -1514,7 +1516,11 @@
                     "declarationboxtext1": "Before you complete, confirm the following:",
                     "declarationboxtext2": "I declare that this content conforms to Engage instructor content guidelines and I have the right to share it with my class.",
                     "ConfirmFinishbtn": "Confirm Finish",
-                    "linkinstructionhyperlink": "Instructor content guidelines"
+                    "linkinstructionhyperlink": "Instructor content guidelines",
+                    "previewbtn": "Preview",
+                    "duplicatebtn": "Duplicate",
+                    "deletebtn": "Delete",
+                    "previewcontainer": "Preview"
                 },
                 "student": {}
             },

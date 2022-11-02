@@ -3957,6 +3957,12 @@
           "visualTest": true
         },
         {
+          "id": "ENG_ICCE_TC_37",
+          "description": "Validate user is able to click on Left Arrow button",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
           "id": "ENG_ICCE_TC_40",
           "description": "Validate the click on New Questioon button in Footer",
           "tags": "P1",
@@ -4011,8 +4017,56 @@
           "visualTest": true
         },
         {
+          "id": "ENG_ICCE_TC_52",
+          "description": "Validate the Editor Quiz Selection Page",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
           "id": "ENG_ICCE_TC_60",
           "description": "Validate user is able to edit Quiz name on New Question Get Started page",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_67",
+          "description": "Validate the Click on Preview Option",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_68",
+          "description": "Validate the Click on Submenu Option",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_69",
+          "description": "Validate the Click on duplicate Option in submenu list",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_70",
+          "description": "Validate the Click on delete Option in submenu list",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_71",
+          "description": "Validate the Click on Preview Close button",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_72",
+          "description": "Validate the Click on close left drawer",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_73",
+          "description": "Validate the Click on Bread Crumb Back button",
           "tags": "P1",
           "visualTest": true
         }
