@@ -12,7 +12,10 @@ module.exports = {
         sts = await libraryEditorPage.set_quizHeaderName(testdata);
         await assertion.assertEqual(sts, true, "quizHeaderName are not Clicked");
     },
-
+    ENG_ICCE_TC_73: async function (testdata) {
+        sts = await libraryEditorPage.click_iconBreadCrumbBack_btn(testdata);
+        await assertion.assertEqual(sts, true, "quizHeaderName are not Clicked");
+    },
     ENG_ICCE_TC_2: async function (testdata) {
         sts = await libraryEditorPage.click_multipleChoicetab();
         await assertion.assert(sts.questionNumber.includes(testdata.questionNumber), "questionNumber text mismatch");
@@ -223,16 +226,14 @@ module.exports = {
 
     ENG_ICCE_TC_37: async function (testdata) {
         sts = await libraryEditorPage.click_leftArrow();
+        console.log(sts)
         await assertion.assertEqual(sts.drawerTitle, testdata.drawerTitle, "drawerTitle text mismatch");
         await assertion.assertEqual(sts.tagsHeading, testdata.tagsHeading, "tagsHeading text mismatch");
         await assertion.assertEqual(sts.tagsSubHeading, testdata.tagsSubHeading, "tagsSubHeading text mismatch");
         await assertion.assertEqual(sts.addTagslbl, testdata.addTagslbl, "addTagslbl text mismatch");
-        await assertion.assertEqual(sts.inputlbl, testdata.inputlbl, "inputlbl text mismatch");
-        await assertion.assertEqual(sts.tagChip, testdata.tagChip, "tagChip text mismatch");
         await assertion.assertEqual(sts.bookTagsHeading, testdata.bookTagsHeading, "bookTagsHeading text mismatch");
         await assertion.assertEqual(sts.bookTagsSubHeading, testdata.bookTagsSubHeading, "bookTagsSubHeading text mismatch");
         await assertion.assertEqual(sts.booklbl, testdata.booklbl, "booklbl text mismatch");
-        await assertion.assertEqual(sts.selectBook, testdata.selectBook, "selectBook text mismatch");
     },
 
     ENG_ICCE_TC_38: async function (testdata) {
@@ -323,7 +324,44 @@ module.exports = {
         sts = await libraryEditorPage.click_linkinstructionhyperlink();
         await assertion.assertEqual(sts, true, "linkinstructionhyperlink are not Clicked");
     },
+    ENG_ICCE_TC_67: async function (testdata) {
+        sts = await libraryEditorPage.click_previewbtn();
+        console.log(sts)
+        await assertion.assertEqual(sts.previewcontainer, testdata.previewcontainer, "previewcontainer Values is not as expected.");
+        await assertion.assertEqual(sts.eyeIcon, true, "eyeIcon Values is not as expected.");
+        await assertion.assertEqual(sts.previeCloseIcon, true, "previeCloseIcon is not as expected.");
 
+    },
+
+    ENG_ICCE_TC_68: async function (testdata) {
+        sts = await libraryEditorPage.click_morebtn();
+        await assertion.assertEqual(sts, true, "morebtn are not Clicked");
+    },
+
+    ENG_ICCE_TC_69: async function (testdata) {
+        sts = await libraryEditorPage.click_duplicateMoreOptionbtn();
+        await assertion.assertEqual(sts, true, "duplicatebtn are not Clicked");
+    },
+
+    ENG_ICCE_TC_70: async function (testdata) {
+        sts = await libraryEditorPage.click_deleteMoreOptionbtn();
+        await assertion.assertEqual(sts, true, "deletebtn are not Clicked");
+    },
+    ENG_ICCE_TC_71: async function (testdata) {
+        sts = await libraryEditorPage.click_previeCloseIcon();
+        console.log(sts)
+        await assertion.assert(sts.questionNumber.includes(testdata.questionNumber), "questionNumber text mismatch");
+        await assertion.assertEqual(sts.dupicatebtn, true, "dupicatebtn text mismatch");
+        await assertion.assertEqual(sts.deletebtn, true, "deletebtn text mismatch");
+        await assertion.assertEqual(sts.questiontextbox, testdata.questiontextbox, "questiontextbox text mismatch");
+        await assertion.assertEqual(sts.inthisActivity, testdata.inthisActivity, "inthisActivity text mismatch");
+        await assertion.assertEqual(sts.inthisActivityIcon, true, "inthisActivityIcon text mismatch");
+        await assertion.assertEqual(sts.selectonelbl, testdata.selectonelbl, "txtpromptscelton text mismatch");
+    },
+    ENG_ICCE_TC_72: async function (testdata) {
+        sts = await libraryEditorPage.click_closeDrawerArrow();
+        await assertion.assertEqual(sts, true, "deletebtn are not Clicked");
+    },
     ENG_ICCE_TC_52: async function (testdata) {
         sts = await libraryEditorPage.getData_blankQuizPage(testdata);
         await assertion.assertEqual(sts.quizHeaderIcon, true, "quizHeaderIcon Values is not as expected.");
@@ -332,8 +370,8 @@ module.exports = {
         await assertion.assertEqual(sts.draftlbl, testdata.draftlbl, "draftlbl Values is not as expected.");
         await assertion.assertEqual(sts.pageHeader, testdata.pageHeader, "pageHeader Values is not as expected.");
         await assertion.assertEqual(sts.pageSubHeader, testdata.pageSubHeader, "pageSubHeader Values is not as expected.");
-        await assertion.assertEqual(sts.multipleChoicebtn, testdata.multipleChoicebtn, "multipleChoicebtn Values is not as expected.");
-        await assertion.assertEqual(sts.textbtn, testdata.textbtn, "textbtn Values is not as expected.");
+        await assertion.assertEqual(sts.multipleChoicetab, testdata.multipleChoicelbl, "multipleChoicebtn Values is not as expected.");
+        await assertion.assertEqual(sts.texttab, testdata.textChoicelbl, "textbtn Values is not as expected.");
         await assertion.assertEqual(sts.finishQuiz, testdata.finishQuiz, "finishQuiz Values is not as expected.");
     },
 
@@ -439,5 +477,16 @@ module.exports = {
         await assertion.assertEqual(sts.ConfirmFinishbtn, testdata.ConfirmFinishbtn, "ConfirmFinishbtn Values is not as expected.");
         await assertion.assertEqual(sts.linkinstructionhyperlink, testdata.linkinstructionhyperlink, "linkinstructionhyperlink Values is not as expected.");
     },
+    ENG_ICCE_TC_65: async function (testdata) {
+        sts = await libraryEditorPage.getData_moreOptionList(testdata);
+        await assertion.assertEqual(sts.duplicatebtn, testdata.duplicatebtn, "duplicatebtn Values is not as expected.");
+        await assertion.assertEqual(sts.deletebtn, testdata.deletebtn, "deletebtn Values is not as expected.");
+    },
 
+    ENG_ICCE_TC_66: async function (testdata) {
+        sts = await libraryEditorPage.getData_previewPage(testdata);
+        await assertion.assertEqual(sts.previewcontainer, testdata.previewcontainer, "previewcontainer Values is not as expected.");
+        await assertion.assertEqual(sts.eyeIcon, true, "eyeIcon Values is not as expected.");
+        await assertion.assertEqual(sts.previeCloseIcon, testdata.previeCloseIcon, "previeCloseIcon Values is not as expected.");
+    },
 }

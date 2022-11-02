@@ -1,7 +1,6 @@
 "use strict";
-const { actionCardBtns } = require('../../pages/engageExperienceApp/dashboard.page.js');
 const landingPage = require('../../pages/engageExperienceApp/landing.page.js');
-var loginPage = require('../../pages/engageExperienceApp/login.page.js');
+const loginPage = require('../../pages/engageExperienceApp/login.page.js');
 var sts;
 
 module.exports = {

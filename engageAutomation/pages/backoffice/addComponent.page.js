@@ -105,7 +105,6 @@ module.exports = {
 
     click_Add_Button: async function () {
         await logger.logInto((await stackTrace.get()));
-        await browser.pause(2000)
         res = await action.waitForClickable(this.addBtn + "," + this.modifyBtn);
         await action.waitForDisplayed(this.buttonLoader, undefined, true)
         if (res == true) {
@@ -114,14 +113,13 @@ module.exports = {
                 await action.waitForDisplayed(this.bannerText + "," + this.snackbarLbl);
                 res = await action.getText(this.bannerText + "," + this.snackbarLbl);
                 let flag = await action.isClickable(this.snackbarBtn);
-                await require("./common.page").click_Close_Button();
-
+                const commonPage = require("./common.page");
+                await commonPage.click_Close_Button();
                 if (!flag) {
                     await action.waitForDisplayed(this.bannerText + "," + this.snackbarLbl);
-                    await require("./common.page").click_Close_Button();
+                    //await commonPage.click_Close_Button();
                 }
-
-                await browser.pause(5000)
+                await browser.pause(3000)
             }
         }
         await logger.logInto((await stackTrace.get()), res);
