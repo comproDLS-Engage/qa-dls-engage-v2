@@ -24,7 +24,7 @@ module.exports = {
         //action.waitForDocumentLoad();
         await action.waitForDisplayed(this.loadingContainer);
         await action.waitForDisplayed(this.loadingContainer, undefined, true);
-        res = await action.getText(selectorFile.common.pageTitle);
+        res = await action.waitForDisplayed(this.addComponentBtn);
         return res;
     },
 

@@ -250,4 +250,9 @@ module.exports = {
 		sts = await appShell.click_closeInfoBtn(testdata)
 		await assertion.assertEqual(sts, true, "Close btn is not clicked");
 	},
+	//Validate that clicking on the Library button in left Navigation pane launches Library page 
+	ENG_SHELL_TC_32: async function () {
+		sts = await appShell.clickLibraryButton();
+		await assertion.assertEqual(sts.pageStatus, true, "Button is clicked.");
+	},
 }

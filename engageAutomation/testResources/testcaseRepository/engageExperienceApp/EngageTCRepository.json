@@ -1165,7 +1165,8 @@
           "description": "Validate the click on product button",
           "tags": "P1",
           "visualTest": true
-        },  {
+        },
+        {
           "id": "ENG_SHELL_TC_24",
           "description": "Validate the click on section item",
           "tags": "P1",
@@ -1210,6 +1211,12 @@
         {
           "id": "ENG_SHELL_TC_31",
           "description": "Validate the click on info Close btn",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_SHELL_TC_32",
+          "description": "Validate that clicking on the Library button in left Navigation pane launches Library page",
           "tags": "P1",
           "visualTest": true
         }
@@ -3837,6 +3844,235 @@
       ]
     },
     {
+      "modulename": "Library",
+      "moduleId": "",
+      "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+      "testcase": [
+        {
+          "id": "ENG_ICCE_TC_1",
+          "description": "Validate the click on Quiz Header",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_2",
+          "description": "Validate the click on Multiple Choice button on the Question selection page",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_3",
+          "description": "Validate the click on text button on the Question selection page",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_4",
+          "description": "Validate clicking on Finish button in Quiz",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_5",
+          "description": "Validate clicking on Duplicate Question button",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_9",
+          "description": "Validate the add the text in question title",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_11",
+          "description": "Validate user is able to add In this Activity text",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_12",
+          "description": "Validate the click on Add Media button",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_13",
+          "description": "Validate the click on add prompt text button",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_14",
+          "description": "Validate clicking on Image button in Prompt media",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_17",
+          "description": "Validate user is able to add image in Prompt image using Browse button",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_21",
+          "description": "Validate the add the text in prompt text box",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_31",
+          "description": "Validate the click on Sub question skeleton",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_32",
+          "description": "Validate user is able to add subquestion title text",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_33",
+          "description": "Validate user is able to update option text",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_34",
+          "description": "Validate the click on Sub Question button",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_35",
+          "description": "Validate the click on add option",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_36",
+          "description": "Validate user is able to make any answer option correct using Mark Correct button",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_37",
+          "description": "Validate user is able to click on Left Arrow button",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_40",
+          "description": "Validate the click on New Questioon button in Footer",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_41",
+          "description": "Validate the click on Multiple Question button in Footer",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_42",
+          "description": "Validate the click on text Question button in Footer",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_45",
+          "description": "Validate the click student will answer here sceleton",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_46",
+          "description": "Validate the click on Long Answer button",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_47",
+          "description": "Validate the click on File Upload button",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_48",
+          "description": "Validate clicking on Done button on \"close\"  icon in Add to Class dialog",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_49",
+          "description": "Validate clicking on I agree checkbox in Finish quiz dialog",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_50",
+          "description": "Validate the click on confirm Finish Button",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_52",
+          "description": "Validate the Editor Quiz Selection Page",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_60",
+          "description": "Validate user is able to edit Quiz name on New Question Get Started page",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_67",
+          "description": "Validate the Click on Preview Option",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_68",
+          "description": "Validate the Click on Submenu Option",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_69",
+          "description": "Validate the Click on duplicate Option in submenu list",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_70",
+          "description": "Validate the Click on delete Option in submenu list",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_71",
+          "description": "Validate the Click on Preview Close button",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_72",
+          "description": "Validate the Click on close left drawer",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_73",
+          "description": "Validate the Click on Bread Crumb Back button",
+          "tags": "P1",
+          "visualTest": true
+        }
+      ]
+    },
+    {
       "modulename": "SignUp",
       "moduleId": "",
       "testFile": "./test/engageExperienceApp/signUp.test.js",
@@ -4026,6 +4262,31 @@
           "description": "Validate clicking on Cancel button on policy page do not select the policy checkbox on Account Details page",
           "tags": "",
           "visualTest": "-"
+        }
+      ]
+    },
+    {
+      "modulename": "Library",
+      "moduleId": "",
+      "testFile": "./test/engageExperienceApp/library.test.js",
+      "testcase": [
+        {
+          "id": "ENG_ICCL_TC_1",
+          "description": "Validate clicking on Blank Quiz button on Library page",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCL_TC_2",
+          "description": "Validate clicking on Blank Survey button on Library page",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCL_TC_3",
+          "description": "Validate clicking on New Resource button on Library Page",
+          "tags": "P1",
+          "visualTest": true
         }
       ]
     }

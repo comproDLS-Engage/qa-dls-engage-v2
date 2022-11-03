@@ -79,7 +79,7 @@
 		"componentList": "[data-tid*=button-component-detail] [class*=c-card__title]",
 		"addComponentBtn": "[data-tid='button-ADD COMPONENT'], [data-tid=button-add-component]",
 		"componentTypeList": "[data-tid*=input-select] [class*=c-list-item__primary-text]",
-		"deleteBookBtn": "[data-tid=button-book_delete],[data-tid*=button-delete-]",
+		"deleteBookBtn": "[data-tid*=button-delete-],[class=c-side-content] [data-tid=button-book_delete]",
 		"modifyBookBtn": "button[data-tid=button-modify_book_options],button[data-tid=button-modify-component-options]",
 		"description": "[data-tid=text-content-details-value-0]",
 		"bookDesign": "[data-tid=text-content-details-value-1]",
