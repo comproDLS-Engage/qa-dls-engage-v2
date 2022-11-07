@@ -53,6 +53,9 @@ module.exports = {
     ENG_ICCE_TC_5: async function (testdata) {
         sts = await libraryEditorPage.click_dupicatebtn();
         await assertion.assertEqual(sts, true, "dupicatebtn are not Clicked");
+        sts = await require('../../test/engageExperienceApp/common.test.js').get_Snackbar_Message_Text();
+        await assertion.assert(sts, testdata.duplicate_msg, "Snackbar message mismatch: " + sts);
+  
     },
 
     ENG_ICCE_TC_6: async function (testdata) {
@@ -264,6 +267,11 @@ module.exports = {
         await assertion.assertEqual(sts.addmediabtn, testdata.addmediabtn, "addmediabtn text mismatch");
         await assertion.assertEqual(sts.addtextbtn, testdata.addtextbtn, "addtextbtn text mismatch");
         await assertion.assertEqual(sts.selectonelbl, testdata.selectonelbl, "txtpromptscelton text mismatch");
+        sts = await require('../../test/engageExperienceApp/common.test.js').get_Snackbar_Message_Text();
+        console.log(sts)
+        console.log(testdata.duplicate_msg)
+        await assertion.assertEqual(sts, testdata.added_msg, "Snackbar message mismatch: " + sts);
+  
     },
 
     ENG_ICCE_TC_42: async function (testdata) {
@@ -278,6 +286,9 @@ module.exports = {
         await assertion.assertEqual(sts.addmediabtn, testdata.addmediabtn, "addmediabtn text mismatch");
         await assertion.assertEqual(sts.addtextbtn, testdata.addtextbtn, "addtextbtn text mismatch");
         await assertion.assertEqual(sts.selectonelbl, null, "selectonelbl text mismatch")
+        sts = await require('../../test/engageExperienceApp/common.test.js').get_Snackbar_Message_Text();
+        await assertion.assertEqual(sts, testdata.added_msg, "Snackbar message mismatch: " + sts);
+  
     },
 
     ENG_ICCE_TC_43: async function (testdata) {
@@ -353,7 +364,6 @@ module.exports = {
         await assertion.assert(sts.questionNumber.includes(testdata.questionNumber), "questionNumber text mismatch");
         await assertion.assertEqual(sts.dupicatebtn, true, "dupicatebtn text mismatch");
         await assertion.assertEqual(sts.deletebtn, true, "deletebtn text mismatch");
-        await assertion.assertEqual(sts.questiontextbox, testdata.questiontextbox, "questiontextbox text mismatch");
         await assertion.assertEqual(sts.inthisActivity, testdata.inthisActivity, "inthisActivity text mismatch");
         await assertion.assertEqual(sts.inthisActivityIcon, true, "inthisActivityIcon text mismatch");
         await assertion.assertEqual(sts.selectonelbl, testdata.selectonelbl, "txtpromptscelton text mismatch");

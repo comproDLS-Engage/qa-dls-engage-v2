@@ -100,7 +100,7 @@ module.exports = {
     previewcontainer: selectorFile.css.ComproEngage.libraryEditorPage.previewcontainer,
     eyeIcon: selectorFile.css.ComproEngage.libraryEditorPage.eyeIcon,
     previeCloseIcon: selectorFile.css.ComproEngage.libraryEditorPage.previeCloseIcon,
-    iconBreadCrumbBack_btn:selectorFile.css.ComproEngage.libraryEditorPage.iconBreadCrumbBack_btn,
+    iconBreadCrumbBack_btn: selectorFile.css.ComproEngage.libraryEditorPage.iconBreadCrumbBack_btn,
 
 
     isInitialized: async function () {
@@ -280,6 +280,7 @@ module.exports = {
     getData_previewPage: async function () {
         await logger.logInto(await stackTrace.get());
         var obj;
+        await action.waitForDocumentLoad();
         obj = {
             previewcontainer: ((await action.getElementCount(this.previewcontainer)) > 0) ? await action.getText(this.previewcontainer) : null,
             eyeIcon: ((await action.getElementCount(this.eyeIcon)) > 0) ? await action.waitForDisplayed(this.eyeIcon) : false,
@@ -506,7 +507,7 @@ module.exports = {
         let remoteFilePath = await browser.uploadFile(imagePath);
         // set file path value in the input field
         res = await action.addValue(this.browsebtn, remoteFilePath);
-        res = await action.waitForEnabled("[data-tid=checkbox-lockaspectRatio]")
+        res = await action.waitForDisplayed("[data-tid=input-mediaheight]")
         browser.pause(2000)
         await logger.logInto(await stackTrace.get(), " browsebtn is clicked");
         return res;
@@ -712,7 +713,7 @@ module.exports = {
         var res;
         res = await action.click(this.closeDrawerArrow);
         if (true == res) {
-            res= await action.waitForDisplayed(this.leftArrow)
+            res = await action.waitForDisplayed(this.leftArrow)
             await logger.logInto(await stackTrace.get(), " closeDrawerArrow is clicked");
         }
         else {
@@ -900,7 +901,7 @@ module.exports = {
         var res;
         res = await action.click(this.previewbtn);
         if (true == res) {
-            res= await this.getData_previewPage();
+            res = await this.getData_previewPage();
             await logger.logInto(await stackTrace.get(), " previewbtn is clicked");
         }
         else {
@@ -965,7 +966,8 @@ module.exports = {
     set_questiontextbox: async function (value) {
         var res;
         await logger.logInto(await stackTrace.get());
-        // res = await action.clearValueDefault(this.questiontextbox);
+        await action.waitForClickable(this.questiontextbox);
+        await action.clearValue(this.questiontextbox);
         res = await action.setValue(this.questiontextbox, value);
         if (true == res) {
             await logger.logInto(await stackTrace.get(), "Value is entered in questiontextbox");
