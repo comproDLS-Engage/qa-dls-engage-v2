@@ -35,7 +35,7 @@ module.exports = {
         await action.waitForDocumentLoad();
         res = {
             pageStatus: await action.waitForDisplayed(this.blankQuizBtn),
-            appShellPage: await appShellPage.isInitialized()
+            // appShellPage: await appShellPage.isInitialized()
         };
         return res;
     },
@@ -60,7 +60,6 @@ module.exports = {
     },
 
     getData_quizCard: async function (quizTitleTxtName) {
-        await action.click("[data-tid=icon-breadcrumb-back]")
         await logger.logInto(await stackTrace.get());
         var obj = [];
         await action.waitForDisplayed(this.quizTitleTxt);
@@ -84,13 +83,12 @@ module.exports = {
         } else {
             for (var i = 0; i < list.length; i++) {
                 obj[i] = {
-                    value: console.log((this.quizTitleTxt + i + "]")),
                     quizTitleTxt: ((await action.getElementCount(this.quizTitleTxt + i + "]")) > 0) ? await action.getText(this.quizTitleTxt + i + "]") : null,
                     quizTypeTxt: ((await action.getElementCount(this.quizTypeTxt + i + "]")) > 0) ? await action.getText(this.quizTypeTxt + i + "]") : null,
                     quizTime: ((await action.getElementCount(this.quizTime + i + "]")) > 0) ? await action.getText(this.quizTime + i + "]") : null,
                     draftPillTxt: ((await action.getElementCount(this.draftPillTxt + i + "]")) > 0) ? await action.getText(this.draftPillTxt + i + "]") : null,
                     editDraftBtn: ((await action.getElementCount(this.editDraftBtn + i + "]")) > 0) ? await action.getText(this.editDraftBtn + i + "]") : null,
-                    contextMenuBtn: ((await action.getElementCount(this.contextMenuBtn + i + "]")) > 0) ? await action.getText(this.contextMenuBtn + i + "]") : null,
+                    contextMenuBtn: ((await action.getElementCount(this.contextMenuBtn + i + "]")) > 0) ? await action.waitForExist(this.contextMenuBtn + i + "]") : null,
                     addToClassBtn: ((await action.getElementCount(this.addToClassBtn + i + "]")) > 0) ? await action.getText(this.addToClassBtn + i + "]") : null,
                     bookImg: ((await action.getElementCount(this.bookImg + i + "]")) > 0) ? await action.waitForDisplayed(this.bookImg + i + "]") : false,
                 }

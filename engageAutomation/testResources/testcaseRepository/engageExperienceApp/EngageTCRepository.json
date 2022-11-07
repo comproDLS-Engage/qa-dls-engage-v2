@@ -4335,6 +4335,30 @@
           "description": "Validate clicking on View All Materials launch the My Materials page",
           "tags": "P1",
           "visualTest": true
+        },
+        {
+          "id": "ENG_ICCL_TC_16",
+          "description": "Validate clicking on View All Materials launch the My Materials page",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCL_TC_17",
+          "description": "Validate clicking on View All Materials launch the My Materials page",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCL_TC_27",
+          "description": "Validate clicking on View All Materials launch the My Materials page",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCL_TC_28",
+          "description": "Validate clicking on View All Materials launch the My Materials page",
+          "tags": "P1",
+          "visualTest": true
         }
       ]
     }

@@ -21,6 +21,7 @@ module.exports = {
         sts = await library.click_newResourceBtn();
         await assertion.assertEqual(sts, true, "newResourceBtn are not Clicked");
         sts = await require('../../test/engageExperienceApp/common.test.js').get_Snackbar_Message_Text();
+        console.log(sts);
         await assertion.assert(sts, testdata.featureNotAvailable_alert, "Snackbar message mismatch: " + sts);
     },
 
@@ -28,6 +29,7 @@ module.exports = {
     ENG_ICCL_TC_4: async function (testdata) {
         sts = await library.getData_libraryPage(testdata);
         console.log(sts);
+        
         await assertion.assertEqual(sts.libraryTitleTxt, testdata.libraryTitleTxt, "libraryTitleTxt Values is not as expected.");
         await assertion.assertEqual(sts.librarySubtitleTxt, testdata.librarySubtitleTxt, "librarySubtitleTxt Values is not as expected.");
         await assertion.assertEqual(sts.createMaterialsTxt, testdata.createMaterialsTxt, "createMaterialsTxt Values is not as expected.");
@@ -49,24 +51,25 @@ module.exports = {
 
     //Validate the card for Draft Material
     ENG_ICCL_TC_11: async function (testdata) {
-        sts = await library.getData_quizCard(testdata[0]);
-        await assertion.assertEqual(sts.quizTitleTxt, testdata[0].quizTitleTxt, "quizTitleTxt Values is not as expected.");
-        await assertion.assertEqual(sts.quizTypeTxt, testdata[1].quizTypeTxt, "quizTypeTxt Values is not as expected.");
-        await assertion.assertEqual(sts.draftPillTxt, testdata[1].draftPillTxt, "draftPillTxt Values is not as expected.");
-        await assertion.assertEqual(sts.editDraftBtn, testdata[1].editDraftBtn, "editDraftBtn Values is not as expected.");
-        await assertion.assertEqual(sts.contextMenuBtn, true, "contextMenuBtn Values is not as expected.");
-        await assertion.assertEqual(sts.bookImg, false, "bookImg Values is not as expected.");
+        sts = await library.getData_quizCard();
+        await assertion.assertEqual(sts[0].quizTitleTxt, testdata[0], "quizTitleTxt Values is not as expected.");
+        await assertion.assertEqual(sts[0].quizTypeTxt, testdata[1].quizTypeTxt, "quizTypeTxt Values is not as expected.");
+        await assertion.assertEqual(sts[0].draftPillTxt, testdata[1].draftPillTxt, "draftPillTxt Values is not as expected.");
+        await assertion.assertEqual(sts[0].editDraftBtn, testdata[1].editDraftBtn, "editDraftBtn Values is not as expected.");
+        await assertion.assertEqual(sts[0].contextMenuBtn, true, "contextMenuBtn Values is not as expected.");
+        await assertion.assertEqual(sts[0].bookImg, false, "bookImg Values is not as expected.");
+        await assertion.assert(sts[0].quizTime.includes(testdata[1].modifiedTxt, "modifiedTxt values is not as expected"));
     },
 
     //Validate the card for Finalized Material
     ENG_ICCL_TC_12: async function (testdata) {
         sts = await library.getData_quizCard();
-        console.log(sts);
-        await assertion.assertEqual(sts[0].quizTitleTxt, testdata[0].quizTitleTxt, "quizTitleTxt Values is not as expected.");
+        await assertion.assertEqual(sts[0].quizTitleTxt, testdata[0], "quizTitleTxt Values is not as expected.");
         await assertion.assertEqual(sts[0].quizTypeTxt, testdata[1].quizTypeTxt, "quizTypeTxt Values is not as expected.");
         await assertion.assertEqual(sts[0].addToClassBtn, testdata[1].addToClassBtn, "addToClassBtn Values is not as expected.");
         await assertion.assertEqual(sts[0].contextMenuBtn, true, "contextMenuBtn Values is not as expected.");
         await assertion.assertEqual(sts[0].bookImg, false, "bookImg Values is not as expected.");
+        await assertion.assert(sts[0].quizTime.includes(testdata[1].modifiedTxt, "modifiedTxt values is not as expected"));
     },
 
     //Validate clicking on Draft Material Card
@@ -131,11 +134,18 @@ module.exports = {
     ENG_ICCL_TC_27: async function (testdata) {
         sts = await library.click_duplicateBtn();
         await assertion.assertEqual(sts, true, "duplicateBtn are not Clicked");
+        sts = await require('../../test/engageExperienceApp/common.test.js').get_Snackbar_Message_Text();
+        console.log(sts);
+        await assertion.assert(sts, testdata.featureNotAvailable_alert, "Snackbar message mismatch: " + sts);
     },
+
     //Validate clicking on Duplicate button in Ellipses for Draft quiz on Library page
     ENG_ICCL_TC_28: async function (testdata) {
         sts = await library.click_duplicateBtn();
         await assertion.assertEqual(sts, true, "duplicateBtn are not Clicked");
+        sts = await require('../../test/engageExperienceApp/common.test.js').get_Snackbar_Message_Text();
+        console.log(sts);
+        await assertion.assert(sts, testdata.featureNotAvailable_alert, "Snackbar message mismatch: " + sts);
     },
 
 

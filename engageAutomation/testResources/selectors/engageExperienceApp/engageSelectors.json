@@ -1482,7 +1482,7 @@
                 "quizTitleTxt": "[data-tid*=text-classTitle-",
                 "quizTypeTxt": "[data-tid*=text-classType-",
                 "quizTime":"[data-tid*=text-modified-",
-                "draftPillTxt": "[data-tid*=chip-pill",
+                "draftPillTxt": "[data-tid*=chip-pill-",
                 "editDraftBtn": "[data-tid*=button-editDraft-",
                 "contextMenuBtn": "[data-tid*=button-material-",
                 "addToClassBtn": "[data-tid*=button-publish-",
