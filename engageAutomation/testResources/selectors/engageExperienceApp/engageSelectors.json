@@ -1460,8 +1460,8 @@
                 "linkinstructionhyperlink": "[data-tid=link-instructorGuidelines]",
                 "previewbtn": "[data-tid=button-preview]",
                 "morebtn": "[data-tid=button-materialSubmenu]",
-                "duplicateMoreOptionbtn": "[data-tid=button-duplicateMaterial]",
-                "deleteMoreOptionbtn": "[data-tid=button-deleteMaterial]",
+                "duplicateMoreOptionbtn": "[data-tid=button-duplicateQuiz-submenuItem]",
+                "deleteMoreOptionbtn": "[data-tid=button-deleteQuiz-submenuItem]",
                 "previewcontainer": "[id=\"PreviewQuizContainer\"]",
                 "eyeIcon": "[id=\"eye-show_svg__Group\"]",
                 "previeCloseIcon": "[data-tid=button-closestudentview]"

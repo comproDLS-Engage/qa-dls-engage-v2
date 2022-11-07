@@ -1520,7 +1520,9 @@
                     "previewbtn": "Preview",
                     "duplicatebtn": "Duplicate",
                     "deletebtn": "Delete",
-                    "previewcontainer": "Preview"
+                    "previewcontainer": "Preview",
+                    "duplicate_msg": "Question has been successfully copied.",
+                    "added_msg": "Question has been successfully added."
                 },
                 "student": {}
             },
