@@ -34,6 +34,21 @@ module.exports = {
     bookIcon: selectorFile.homePage.bookIcon,
     globalResourceIcon: selectorFile.homePage.globalResourceIcon,
     appVersion: selectorFile.common.appVersion,
+    findUserBtn: selectorFile.homePage.findUserBtn,
+    findUserTxtbox: selectorFile.homePage.findUserTxtbox,
+    emailOption: selectorFile.homePage.emailOption,
+    firstNameOption: selectorFile.homePage.firstNameOption,
+    lastNameOption: selectorFile.homePage.lastNameOption,
+    userIdOption: selectorFile.homePage.userIdOption,
+    entitleUserBtn: selectorFile.homePage.entitleUserBtn,
+    entitleUserTxtbox: selectorFile.homePage.entitleUserTxtbox,
+    findInstitutionBtn: selectorFile.homePage.findInstitutionBtn,
+    findInstitutionTxtbox: selectorFile.homePage.findInstitutionTxtbox,
+    findClassBtn: selectorFile.homePage.findClassBtn,
+    findClassTxtbox: selectorFile.homePage.findClassTxtbox,
+    proceedBtn: selectorFile.homePage.proceedBtn,
+    institutionRequestsBtn: selectorFile.homePage.institutionRequestsBtn,
+    loadingContainer: selectorFile.common.loadingContainer,
 
     isInitialized: async function () {
         await logger.logInto((await stackTrace.get()));
@@ -265,7 +280,105 @@ module.exports = {
         }
         await logger.logInto((await stackTrace.get()), res);
         return res;
-    }
+    },
 
+    search_User_ByEmail: async function (val, sel) {
+        await logger.logInto((await stackTrace.get()));
+        res = await action.click(this.findUserBtn);
+        if (res == true) {
+            res = await action.setValue(this.findUserTxtbox, val);
+            if (res == true) {
+                if (sel == undefined)
+                    await action.click(this.emailOption);
+                else
+                    await action.click(sel);
+                res = await action.click(this.proceedBtn);
+                if (res == true) {
+                    res = await require('./findUser.page.js').isInitialized();
+                }
+            }
+        }
+        await logger.logInto((await stackTrace.get()), res);
+        return res;
+    },
+
+    search_User_ByFirstName: async function (val) {
+        await logger.logInto((await stackTrace.get()));
+        res = await this.search_User_ByEmail(val,this.firstNameOption);
+        await logger.logInto((await stackTrace.get()), res);
+        return res;
+    },
+
+    search_User_ByLastName: async function (val) {
+        await logger.logInto((await stackTrace.get()));
+        res = await this.search_User_ByEmail(val,this.lastNameOption);
+        await logger.logInto((await stackTrace.get()), res);
+        return res;
+    },
+
+    search_User_ByUserId: async function (val) {
+        await logger.logInto((await stackTrace.get()));
+        res = await this.search_User_ByEmail(val,this.userIdOption);
+        await logger.logInto((await stackTrace.get()), res);
+        return res;
+    },
+
+    entitle_User: async function (val) {
+        await logger.logInto((await stackTrace.get()));
+        res = await action.click(this.entitleUserBtn);
+        if (res == true) {
+            res = await action.setValue(this.entitleUserTxtbox, val);
+            if (res == true) {
+                res = await action.click(this.proceedBtn);
+                if (res == true) {
+                    res = await require('./entitleUser.page.js').isInitialized();
+                }
+            }
+        }
+        await logger.logInto((await stackTrace.get()), res);
+        return res;
+    },
+    
+    search_Institution: async function (val) {
+        await logger.logInto((await stackTrace.get()));
+        res = await action.click(this.findInstitutionBtn);
+        if (res == true) {
+            res = await action.setValue(this.findInstitutionTxtbox, val);
+            if (res == true) {
+                res = await action.click(this.proceedBtn);
+                if (res == true) {
+                    res = await require('./findInstitution.page.js').isInitialized();
+                }
+            }
+        }
+        await logger.logInto((await stackTrace.get()), res);
+        return res;
+    },
+
+    search_Class: async function (val) {
+        await logger.logInto((await stackTrace.get()));
+        res = await action.click(this.findClassBtn);
+        if (res == true) {
+            res = await action.setValue(this.findClassTxtbox, val);
+            if (res == true) {
+                res = await action.click(this.proceedBtn);
+                if (res == true) {
+                    res = await require('./findClass.page.js').isInitialized();
+                }
+            }
+        }
+        await logger.logInto((await stackTrace.get()), res);
+        return res;
+    },
+
+    click_InstitutionRequests_Button: async function () {
+        await logger.logInto((await stackTrace.get()));
+        res = await action.click(this.institutionRequestsBtn);
+        if (res == true) {
+            res = await require('./institutionRequests.page.js').isInitialized();
+        }
+        await logger.logInto((await stackTrace.get()), res);
+        return res;
+    }
 
 }

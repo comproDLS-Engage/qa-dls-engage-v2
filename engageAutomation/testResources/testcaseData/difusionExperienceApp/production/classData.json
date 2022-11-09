@@ -191,9 +191,9 @@
 				"info": "Existing Active Course"
 			},
 			"archivecClass": {
-				"name": "create Class for testing purpose",
-				"key": "vQ9n-qhQ8",
-				"classDuration": "Aug 16, 2021 - Aug 30, 2022",
+				"name": "Archive Class Check",
+				"key": "rJ8e-whcH",
+				"classDuration": "Oct 19 - Oct 19, 2022",
 				"instructor": {
 					"name": "",
 					"email": ""
@@ -206,9 +206,9 @@
 				"info": ""
 			},
 			"studentArchiveClass":{
-				"name": "class1",
-				"key": "vQ9n-qhQ8",
-				"classDuration": "un 16, 2021 - Jun 15, 2022",
+				"name": "Archive class with Student",
+				"key": "MNVC-AgX7",
+				"classDuration": "Oct 19 - Oct 19, 2022",
 				"instructor": {
 					"name": "",
 					"email": ""
