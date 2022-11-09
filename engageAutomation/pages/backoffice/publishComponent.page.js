@@ -6,6 +6,7 @@ var res;
 module.exports = {
 
     snapshotBtn: selectorFile.publishComponentPage.snapshotBtn,
+    refreshBtn: selectorFile.publishComponentPage.refreshBtn,
     previewBtn: selectorFile.publishComponentPage.previewBtn,
     publishBtn: selectorFile.publishComponentPage.publishBtn,
     lastPublishedVer: selectorFile.publishComponentPage.lastPublishedVer,
@@ -19,7 +20,7 @@ module.exports = {
         res = {
             lastPublishedVer: await action.getText(this.lastPublishedVer),
             lastSnapshotVer: await action.getText(this.lastSnapshotVer),
-            snapshotBtn_isEnabled: await action.isEnabled(this.snapshotBtn),
+            snapshotBtn_isEnabled: await this.refresh_Snapshot(),
             publishBtn_isEnabled: await action.isEnabled(this.publishBtn),
         }
         return res;
@@ -27,12 +28,11 @@ module.exports = {
 
     click_CreateSnapshot_Button: async function () {
         await logger.logInto((await stackTrace.get()));
-        res = await action.isEnabled(this.snapshotBtn);
+        res = await this.refresh_Snapshot();
         if (res == true) {
             res = await action.click(this.snapshotBtn);
             if (res == true) {
                 res = await action.waitForClickable(this.publishBtn, 120000);
-                // res = action.isEnabled(this.publishBtn);
             }
             await logger.logInto((await stackTrace.get()), res);
         }
@@ -77,6 +77,19 @@ module.exports = {
         return res;
     },
 
-
+    refresh_Snapshot: async function () {
+        await logger.logInto((await stackTrace.get()));
+        res = await action.isEnabled(this.snapshotBtn);
+        if (res == false) {
+            await browser.pause(5000);
+            let res2 = await action.click(this.refreshBtn);
+            if (res2 == true) {
+                await action.waitForDisplayed(this.loadingContainer);
+                await action.waitForDisplayed(this.loadingContainer, 120000, true);
+                res = await action.isEnabled(this.snapshotBtn);
+            }
+        }
+        return res;
+    }
 
 }

@@ -131,8 +131,8 @@
         ],
         "answerKey": [
           ["1-O1","Kurt Lewin Law","select","correct",null],
-          ["1-O2","Pragnanz Law",null,"correct",null],
-          ["1-O3","Proximity Law",null,"correct",null],
+          ["1-O2","Pragnanz Law",null,null,null],
+          ["1-O3","Proximity Law",null,null,null],
           ["1-O4","Wolfgang Kholer Law","select","correct",null]
       ],
         "scenario1": []
