@@ -967,7 +967,6 @@ module.exports = {
         var res;
         await logger.logInto(await stackTrace.get());
         await action.waitForClickable(this.questiontextbox);
-        await action.clearValue(this.questiontextbox);
         res = await action.setValue(this.questiontextbox, value);
         if (true == res) {
             await logger.logInto(await stackTrace.get(), "Value is entered in questiontextbox");

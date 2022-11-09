@@ -1,5 +1,5 @@
 "use strict";
-var libraryEditorPage = require('../../pages/engageExperienceApp/libraryEditorPage.page.js');
+var libraryEditorPage = require('../../pages/engageExperienceApp/libraryEditor.page.js');
 var appShell = require('../../pages/engageExperienceApp/appShell.page');
 var sts;
 
