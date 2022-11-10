@@ -30,6 +30,9 @@ module.exports = {
 	isInitialized: async function () {
 		await logger.logInto(await stackTrace.get());
 		res = await action.waitForDisplayed("iframe[id*=iframe], iframe");
+		await action.switchToFrame(0);
+		await action.waitForDocumentLoad();
+		await action.switchToParentFrame();
 		if (res == true) {
 			res = await this.getItemplayerInfo();
 		}
