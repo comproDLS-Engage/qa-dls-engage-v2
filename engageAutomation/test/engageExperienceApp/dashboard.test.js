@@ -250,4 +250,25 @@ module.exports = {
             await assertion.assertEqual(sts[i].actionCardBtns, testdata.actionCardBtns[i], "Action Card button text mismatch");
         }
     },
+
+    //Validate that Library page is launched on clicking Recent Materials button
+    ENG_DASH_TC_34: async function () {
+        sts = await dashboardPage.click_recentMaterialsBtn();
+        await assertion.assertEqual(sts.pageStatus, true, "Library page status mismatch");
+        await assertion.assertEqual(sts.appShellPage.header, true, "Library page header status mismatch");
+    },
+
+    //Validate that Materials page is launched on clicking the View All Materials button
+    ENG_DASH_TC_35: async function () {
+        sts = await dashboardPage.click_viewAllMaterialBtn();
+        await assertion.assertEqual(sts.pageStatus, true, "My material page status mismatch");
+        await assertion.assertEqual(sts.appShellPage.header, true, "My material page header status mismatch");
+    },
+
+    //Validate that create options menu is displaued on clicking "Add New Material" button
+    ENG_DASH_TC_36: async function () {
+        sts = await dashboardPage.click_addNewMaterialBtn();
+        await assertion.assertEqual(sts.pageStatus, true, "Library page status mismatch");
+        await assertion.assertEqual(sts.appShellPage.header, true, "Library page header status mismatch");
+    },
 };
