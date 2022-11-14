@@ -172,6 +172,7 @@
 	},
 	"publishComponentPage": {
 		"snapshotBtn": "[data-tid*='button-Create New Snapshot']",
+		"refreshBtn": "[class=c-refresh] > button",
 		"previewBtn": "button[data-tid*=button-Preview]",
 		"publishBtn": "button[data-tid*='button-Publish']",
 		"lastPublishedVer": "div:nth-child(1)[class=c-publish-component-page__component__attribute] [class=c-publish-component-page__component__attribute_value__version]",

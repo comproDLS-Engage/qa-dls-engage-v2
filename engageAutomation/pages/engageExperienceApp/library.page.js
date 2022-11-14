@@ -116,7 +116,7 @@ module.exports = {
         res = await action.click(this.blankQuizBtn);
         if (true == res) {
             await logger.logInto(await stackTrace.get(), " blankQuizBtn is clicked");
-            res = await require('./libraryEditorPage.page').isInitialized();
+            res = await require('./libraryEditor.page').isInitialized();
         }
         else {
             await logger.logInto(await stackTrace.get(), res + "blankQuizBtn is NOT clicked", 'error');
