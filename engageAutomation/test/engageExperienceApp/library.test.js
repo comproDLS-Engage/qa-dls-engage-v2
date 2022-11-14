@@ -28,8 +28,6 @@ module.exports = {
     //Validate the scenario when no material is added in the Library for new user
     ENG_ICCL_TC_4: async function (testdata) {
         sts = await library.getData_libraryPage(testdata);
-        console.log(sts);
-        
         await assertion.assertEqual(sts.libraryTitleTxt, testdata.libraryTitleTxt, "libraryTitleTxt Values is not as expected.");
         await assertion.assertEqual(sts.librarySubtitleTxt, testdata.librarySubtitleTxt, "librarySubtitleTxt Values is not as expected.");
         await assertion.assertEqual(sts.createMaterialsTxt, testdata.createMaterialsTxt, "createMaterialsTxt Values is not as expected.");

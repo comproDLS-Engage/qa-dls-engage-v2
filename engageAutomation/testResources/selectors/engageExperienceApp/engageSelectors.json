@@ -1479,7 +1479,7 @@
                 "noMaterialTitleTxt": "[data-tid=text-title-noMaterial]",
                 "noMaterialSubtitleTxt": "[data-tid=text-subtitle-noMaterial]",
                 "materialCard": "[data-tid*=button-materialCard-",
-                "quizTitleTxt": "[data-tid*=text-classTitle-",
+                "quizTitleTxt": "[data-tid*=text-materialTitle-",
                 "quizTypeTxt": "[data-tid*=text-classType-",
                 "quizTime":"[data-tid*=text-modified-",
                 "draftPillTxt": "[data-tid*=chip-pill-",
