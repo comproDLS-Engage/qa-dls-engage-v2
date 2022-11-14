@@ -1,0 +1,601 @@
+{
+	"Suite1": {
+		"Name": "Find a Class",
+		"TestCaseRepo": [
+			"./testResources/testcaseRepository/backoffice/backofficeTCRepository.json"
+		],
+		"Before": [
+			{
+				"id": "launchUrl",
+				"description": "",
+				"testFile": "./core/runner/launchUrl.js",
+				"testData": []
+			},
+			{
+				"id": "BK_TC_1",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/production/logindata.json",
+						"jsonPath": "backoffice.user.validUser1"
+					}
+				]
+			}
+		],
+		"BeforeEach": [],
+		"Test": [
+			{
+				"id": "ADMN_FCLS_TC_1",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/production/adminTool.json",
+						"jsonPath": "findClass.class1"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_24",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			},
+			{
+				"id": "ADMN_FCLS_TC_2",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/production/adminTool.json",
+						"jsonPath": "findClass.partialkey"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_24",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			},
+			{
+				"id": "ADMN_FCLS_TC_3",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/production/adminTool.json",
+						"jsonPath": "findClass.incorrectkey"
+					}
+				]
+			},
+			{
+				"id": "ADMN_FCLS_TC_4",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/production/adminTool.json",
+						"jsonPath": "findClass.class2"
+					}
+				]
+			}
+		],
+		"AfterEach": [],
+		"After": [
+			{
+				"id": "BK_TC_7",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			}
+		]
+	},
+	"Suite2": {
+		"Name": "Find an Institution",
+		"TestCaseRepo": [
+			"./testResources/testcaseRepository/backoffice/backofficeTCRepository.json"
+		],
+		"Before": [
+			{
+				"id": "launchUrl",
+				"description": "",
+				"testFile": "./core/runner/launchUrl.js",
+				"testData": []
+			},
+			{
+				"id": "BK_TC_1",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/production/logindata.json",
+						"jsonPath": "backoffice.user.validUser1"
+					}
+				]
+			}
+		],
+		"BeforeEach": [],
+		"Test": [
+			{
+				"id": "ADMN_FINS_TC_4",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/production/adminTool.json",
+						"jsonPath": "findInstitution.institute4"
+					}
+				]
+			},
+			{
+				"id": "ADMN_FINS_TC_5",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/production/adminTool.json",
+						"jsonPath": "findInstitution.institute5"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_24",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			},
+			{
+				"id": "ADMN_FINS_TC_2",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/production/adminTool.json",
+						"jsonPath": "findInstitution.institute2"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_24",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			},
+			{
+				"id": "ADMN_FINS_TC_3",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/production/adminTool.json",
+						"jsonPath": "findInstitution.institute3"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_24",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			},
+			{
+				"id": "ADMN_FINS_TC_1",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/production/adminTool.json",
+						"jsonPath": "findInstitution.institute1"
+					}
+				]
+			},
+			{
+				"id": "ADMN_FINS_TC_10",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": []
+			},
+			{
+				"id": "ADMN_FINS_TC_11",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/production/banner.json",
+						"jsonPath": "snackbar.findInstitution[0]"
+					}
+				]
+			}
+		],
+		"AfterEach": [],
+		"After": [
+			{
+				"id": "BK_TC_7",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			}
+		]
+	},
+	"Suite3": {
+		"Name": "Create Institution",
+		"TestCaseRepo": [
+			"./testResources/testcaseRepository/backoffice/backofficeTCRepository.json"
+		],
+		"Before": [
+			{
+				"id": "launchUrl",
+				"description": "",
+				"testFile": "./core/runner/launchUrl.js",
+				"testData": []
+			},
+			{
+				"id": "BK_TC_1",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/production/logindata.json",
+						"jsonPath": "backoffice.user.validUser1"
+					}
+				]
+			}
+		],
+		"BeforeEach": [],
+		"Test": [
+			{
+				"id": "ADMN_IREQ_TC_1",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": []
+			},
+			{
+				"id": "ADMN_IREQ_TC_3",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": []
+			},
+			{
+				"id": "ADMN_IREQ_TC_4",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/production/adminTool.json",
+						"jsonPath": "createNewInstitution.institution1"
+					}
+				]
+			},
+			{
+				"id": "ADMN_IREQ_TC_5",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": []
+			},
+			{
+				"id": "ADMN_IREQ_TC_6",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": []
+			},
+			{
+				"id": "ADMN_IREQ_TC_12",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": []
+			},
+			{
+				"id": "ADMN_IREQ_TC_3",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": []
+			},
+			{
+				"id": "ADMN_IREQ_TC_4",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/production/adminTool.json",
+						"jsonPath": "createNewInstitution.institution2"
+					}
+				]
+			},
+			{
+				"id": "ADMN_IREQ_TC_5",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": []
+			},
+			{
+				"id": "ADMN_IREQ_TC_7",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": []
+			},
+			{
+				"id": "ADMN_IREQ_TC_12",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": []
+			},
+			{
+				"id": "ADMN_IREQ_TC_3",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": []
+			},
+			{
+				"id": "ADMN_IREQ_TC_4",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/production/adminTool.json",
+						"jsonPath": "createNewInstitution.institution3"
+					}
+				]
+			},
+			{
+				"id": "ADMN_IREQ_TC_5",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": []
+			},
+			{
+				"id": "ADMN_IREQ_TC_8",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": []
+			},
+			{
+				"id": "ADMN_IREQ_TC_10",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": []
+			},
+			{
+				"id": "ADMN_IREQ_TC_12",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": []
+			}
+		],
+		"AfterEach": [],
+		"After": [
+			{
+				"id": "BK_TC_7",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			}
+		]
+	},
+	"Suite4": {
+		"Name": "Find a User",
+		"TestCaseRepo": [
+			"./testResources/testcaseRepository/backoffice/backofficeTCRepository.json"
+		],
+		"Before": [
+			{
+				"id": "launchUrl",
+				"description": "",
+				"testFile": "./core/runner/launchUrl.js",
+				"testData": []
+			},
+			{
+				"id": "BK_TC_1",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/production/logindata.json",
+						"jsonPath": "backoffice.user.validUser1"
+					}
+				]
+			}
+		],
+		"BeforeEach": [],
+		"Test": [
+			{
+				"id": "ADMN_FUSR_TC_1",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/production/adminTool.json",
+						"jsonPath": "findUser.user1.email"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_24",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			},
+			{
+				"id": "ADMN_FUSR_TC_2",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/production/adminTool.json",
+						"jsonPath": "findUser.user2.firstName"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_24",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			},
+			{
+				"id": "ADMN_FUSR_TC_3",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/production/adminTool.json",
+						"jsonPath": "findUser.user3.lastName"
+					}
+				]
+			},
+			{
+				"id": "BK_TC_24",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			},
+			{
+				"id": "ADMN_FUSR_TC_4",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/production/adminTool.json",
+						"jsonPath": "findUser.user4.email"
+					}
+				]
+			},
+			{
+				"id": "ADMN_FUSR_TC_5",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/production/adminTool.json",
+						"jsonPath": "findUser.user1.userId"
+					}
+				]
+			},
+			{
+				"id": "ADMN_FUSR_TC_7",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": []
+			},
+			{
+				"id": "ADMN_FUSR_TC_8",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/production/adminTool.json",
+						"jsonPath": "findUser.user5.firstName"
+					}
+				]
+			},
+			{
+				"id": "ADMN_FUSR_TC_6",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/production/adminTool.json",
+						"jsonPath": "findUser.user5.firstName"
+					}
+				]
+			}
+		],
+		"AfterEach": [],
+		"After": [
+			{
+				"id": "BK_TC_7",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			}
+		]
+	},
+	"Suite5": {
+		"Name": "Entitle a User",
+		"TestCaseRepo": [
+			"./testResources/testcaseRepository/backoffice/backofficeTCRepository.json"
+		],
+		"Before": [
+			{
+				"id": "launchUrl",
+				"description": "",
+				"testFile": "./core/runner/launchUrl.js",
+				"testData": []
+			},
+			{
+				"id": "BK_TC_1",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/production/logindata.json",
+						"jsonPath": "backoffice.user.validUser1"
+					}
+				]
+			},
+			{
+				"id": "ADMN_FUSR_TC_1",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/production/adminTool.json",
+						"jsonPath": "entitleUser.email"
+					}
+				]
+			}
+		],
+		"BeforeEach": [],
+		"Test": [
+			{
+				"id": "ADMN_USRD_TC_2",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": []
+			},
+			{
+				"id": "ADMN_USRD_TC_3",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": []
+			},
+			{
+				"id": "ADMN_EUSR_TC_1",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": []
+			},
+			{
+				"id": "ADMN_EUSR_TC_2",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/production/adminTool.json",
+						"jsonPath": "entitleUser"
+					},
+					{
+						"dataFile": "./testResources/testcaseData/backoffice/production/banner.json",
+						"jsonPath": "snackbar.entitleUser"
+					}
+				]
+			},
+			{
+				"id": "ADMN_USRD_TC_1",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": []
+			}
+		],
+		"AfterEach": [],
+		"After": [
+			{
+				"id": "BK_TC_7",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
+			}
+		]
+	}
+}

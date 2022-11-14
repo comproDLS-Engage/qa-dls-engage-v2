@@ -966,8 +966,9 @@ module.exports = {
     set_questiontextbox: async function (value) {
         var res;
         await logger.logInto(await stackTrace.get());
-        await action.waitForClickable(this.questiontextbox);
+        await action.waitForDisplayed(this.questiontextbox);
         res = await action.setValue(this.questiontextbox, value);
+        browser.pause(1000)
         if (true == res) {
             await logger.logInto(await stackTrace.get(), "Value is entered in questiontextbox");
         } else {
