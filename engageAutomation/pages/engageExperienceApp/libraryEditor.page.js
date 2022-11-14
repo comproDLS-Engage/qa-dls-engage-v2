@@ -968,6 +968,7 @@ module.exports = {
         await logger.logInto(await stackTrace.get());
         await action.waitForClickable(this.questiontextbox);
         res = await action.setValue(this.questiontextbox, value);
+        browser.pause(1000)
         if (true == res) {
             await logger.logInto(await stackTrace.get(), "Value is entered in questiontextbox");
         } else {
