@@ -495,14 +495,6 @@
                     "name": "Megha Teacher1",
                     "class": [],
                     "info": {}
-                },
-                "testUser": {
-                    "email": "megha.teacher13@yopmail.com",
-                    "password": "Compro@1234",
-                    "role": "student",
-                    "name": "Megha Teacher13",
-                    "class": [],
-                    "info": {}
                 }
             }
         },
