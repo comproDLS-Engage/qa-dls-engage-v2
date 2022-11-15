@@ -361,7 +361,7 @@ module.exports = {
 	// Validate the scenario of Disable a User
 	ADMN_USRD_TC_2: async function (testdata) {
 		sts = await findUserPage.click_DisableEnableUser_Button();
-		await assertion.assertEqual(sts, "Disable", "click_DisableEnableUser_Button status mismatch");
+		await assertion.assertEqual(sts, "DISABLE", "click_DisableEnableUser_Button status mismatch");
 		sts = await findUserPage.click_DialogConfirm_Button();
 		await assertion.assert((typeof sts === "string" && sts.includes(testdata)), "Snackbar messsage mismatch. " + sts);
 	},
@@ -369,7 +369,7 @@ module.exports = {
 	// Validate the scenario of Enable a User
 	ADMN_USRD_TC_3: async function (testdata) {
 		sts = await findUserPage.click_DisableEnableUser_Button();
-		await assertion.assertEqual(sts, "Enable", "click_DisableEnableUser_Button status mismatch");
+		await assertion.assertEqual(sts, "ENABLE", "click_DisableEnableUser_Button status mismatch");
 		sts = await findUserPage.click_DialogConfirm_Button();
 		await assertion.assert((typeof sts === "string" && sts.includes(testdata)), "Snackbar messsage mismatch. " + sts);
 	},

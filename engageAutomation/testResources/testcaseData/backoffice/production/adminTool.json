@@ -91,7 +91,7 @@
             "state": "Delhi",
             "zip": "999999",
             "telephone": "1234567890",
-            "email": "dev1teacher1@yopmail.com",
+            "email": "dev2teacher1@yopmail.com",
             "website": "https://www.comprotechnologies.com/"
         },
         "institution2": {
@@ -103,7 +103,7 @@
             "state": "forest",
             "zip": "112233",
             "telephone": "1234-567890",
-            "email": "dev1teacher1@yopmail.com",
+            "email": "dev2teacher1@yopmail.com",
             "website": ""
         },
         "institution3": {
@@ -115,7 +115,7 @@
             "state": "forest",
             "zip": "112233",
             "telephone": "1234-567890",
-            "email": "dev1teacher1@yopmail.com",
+            "email": "dev2teacher1@yopmail.com",
             "website": ""
         }
     }

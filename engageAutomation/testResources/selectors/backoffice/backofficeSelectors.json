@@ -268,7 +268,7 @@
 		"userIdOption": "li[id*=option-3]",
 		"userDetailsSection": "[data-tid=container-userDetails]",
 		"disableEnableUserBtn": "[data-tid=button-disable-enable-user] p",
-		"dialogConfirmBtn": "[role=dialog] [data-tid=button-success]",
+		"dialogConfirmBtn": "[role=dialog] [data-tid=button-enable-disable-user]",
 		"entitlementMoreOptions": "[data-tid=button-entitlement-actions]",
 		"removeEntitlementBtn": "[data-tid=button-remove-entitlement]",
 		"loginAsThisUserBtn": "[data-tid=button-login-as-this-user] p",
