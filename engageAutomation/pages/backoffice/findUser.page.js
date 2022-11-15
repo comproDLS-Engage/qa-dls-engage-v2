@@ -30,6 +30,8 @@ module.exports = {
     userId: selectorFile.findUserPage.userId,
     redeemBtn: selectorFile.findUserPage.redeemBtn,
     accessCodeInput: selectorFile.findUserPage.accessCodeInput,
+    snackbarLbl: selectorFile.common.snackbarLbl,
+    snackbarBtn: selectorFile.common.snackbarBtn,
 
     isInitialized: async function () {
         await logger.logInto((await stackTrace.get()));

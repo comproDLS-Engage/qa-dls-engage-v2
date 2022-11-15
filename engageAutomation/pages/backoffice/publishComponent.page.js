@@ -46,7 +46,7 @@ module.exports = {
         await logger.logInto((await stackTrace.get()));
         res = await action.click(this.previewBtn);
         if (res == true) {
-            await browser.switchWindow('engage-difusion');
+            await browser.switchWindow('engage-');
             res = await action.waitForDocumentLoad();
             res = await action.waitForDisplayed("[data-tid=text-bookTitle]");
         }

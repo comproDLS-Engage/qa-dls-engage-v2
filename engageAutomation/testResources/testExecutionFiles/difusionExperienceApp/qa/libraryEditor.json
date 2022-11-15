@@ -51,7 +51,7 @@
       {
         "id": "ENG_ICCE_TC_52",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
@@ -62,13 +62,13 @@
       {
         "id": "ENG_ICCE_TC_1",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": []
       },
       {
         "id": "ENG_ICCE_TC_60",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/acceptanceQuiz.json",
@@ -79,7 +79,7 @@
       {
         "id": "ENG_ICCE_TC_2",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
@@ -90,32 +90,20 @@
       {
         "id": "ENG_ICCE_TC_68",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": []
       },
       {
         "id": "ENG_ICCE_TC_69",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
-        "testData": []
-      },
-      {
-        "id": "ENG_ICCE_TC_68",
-        "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
-        "testData": []
-      },
-      {
-        "id": "ENG_ICCE_TC_70",
-        "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": []
       },
       
       {
         "id": "ENG_ICCE_TC_37",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
@@ -126,7 +114,7 @@
       {
         "id": "ENG_ICCE_TC_72",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
@@ -137,7 +125,7 @@
       {
         "id": "ENG_ICCE_TC_9",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/acceptanceQuiz.json",
@@ -148,7 +136,7 @@
       {
         "id": "ENG_ICCE_TC_11",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/acceptanceQuiz.json",
@@ -159,13 +147,13 @@
       {
         "id": "ENG_ICCE_TC_13",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": []
       },
       {
         "id": "ENG_ICCE_TC_21",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/acceptanceQuiz.json",
@@ -176,13 +164,13 @@
       {
         "id": "ENG_ICCE_TC_31",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": []
       },
       {
         "id": "ENG_ICCE_TC_32",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/acceptanceQuiz.json",
@@ -193,7 +181,7 @@
       {
         "id": "ENG_ICCE_TC_33",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/acceptanceQuiz.json",
@@ -204,7 +192,7 @@
       {
         "id": "ENG_ICCE_TC_33",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/acceptanceQuiz.json",
@@ -215,7 +203,7 @@
       {
         "id": "ENG_ICCE_TC_35",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/acceptanceQuiz.json",
@@ -226,7 +214,7 @@
       {
         "id": "ENG_ICCE_TC_33",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/acceptanceQuiz.json",
@@ -237,7 +225,7 @@
       {
         "id": "ENG_ICCE_TC_35",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/acceptanceQuiz.json",
@@ -248,7 +236,7 @@
       {
         "id": "ENG_ICCE_TC_33",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/acceptanceQuiz.json",
@@ -259,13 +247,13 @@
       {
         "id": "ENG_ICCE_TC_34",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": []
       },
       {
         "id": "ENG_ICCE_TC_32",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/acceptanceQuiz.json",
@@ -276,7 +264,7 @@
       {
         "id": "ENG_ICCE_TC_33",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/acceptanceQuiz.json",
@@ -287,7 +275,7 @@
       {
         "id": "ENG_ICCE_TC_33",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/acceptanceQuiz.json",
@@ -298,7 +286,7 @@
       {
         "id": "ENG_ICCE_TC_35",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/acceptanceQuiz.json",
@@ -309,7 +297,7 @@
       {
         "id": "ENG_ICCE_TC_33",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/acceptanceQuiz.json",
@@ -320,7 +308,7 @@
       {
         "id": "ENG_ICCE_TC_35",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/acceptanceQuiz.json",
@@ -331,7 +319,7 @@
       {
         "id": "ENG_ICCE_TC_33",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/acceptanceQuiz.json",
@@ -342,13 +330,13 @@
       {
         "id": "ENG_ICCE_TC_34",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": []
       },
       {
         "id": "ENG_ICCE_TC_32",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/acceptanceQuiz.json",
@@ -359,7 +347,7 @@
       {
         "id": "ENG_ICCE_TC_33",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/acceptanceQuiz.json",
@@ -370,7 +358,7 @@
       {
         "id": "ENG_ICCE_TC_33",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/acceptanceQuiz.json",
@@ -381,7 +369,7 @@
       {
         "id": "ENG_ICCE_TC_35",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/acceptanceQuiz.json",
@@ -392,7 +380,7 @@
       {
         "id": "ENG_ICCE_TC_33",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/acceptanceQuiz.json",
@@ -403,7 +391,7 @@
       {
         "id": "ENG_ICCE_TC_35",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/acceptanceQuiz.json",
@@ -414,7 +402,7 @@
       {
         "id": "ENG_ICCE_TC_33",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/acceptanceQuiz.json",
@@ -425,13 +413,13 @@
       {
         "id": "ENG_ICCE_TC_34",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": []
       },
       {
         "id": "ENG_ICCE_TC_32",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/acceptanceQuiz.json",
@@ -442,7 +430,7 @@
       {
         "id": "ENG_ICCE_TC_33",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/acceptanceQuiz.json",
@@ -453,7 +441,7 @@
       {
         "id": "ENG_ICCE_TC_33",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/acceptanceQuiz.json",
@@ -464,7 +452,7 @@
       {
         "id": "ENG_ICCE_TC_35",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/acceptanceQuiz.json",
@@ -475,7 +463,7 @@
       {
         "id": "ENG_ICCE_TC_33",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/acceptanceQuiz.json",
@@ -486,7 +474,7 @@
       {
         "id": "ENG_ICCE_TC_35",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/acceptanceQuiz.json",
@@ -497,7 +485,7 @@
       {
         "id": "ENG_ICCE_TC_33",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/acceptanceQuiz.json",
@@ -508,7 +496,7 @@
       {
         "id": "ENG_ICCE_TC_36",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/acceptanceQuiz.json",
@@ -519,7 +507,7 @@
       {
         "id": "ENG_ICCE_TC_36",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/acceptanceQuiz.json",
@@ -530,7 +518,7 @@
       {
         "id": "ENG_ICCE_TC_36",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/acceptanceQuiz.json",
@@ -541,7 +529,7 @@
       {
         "id": "ENG_ICCE_TC_36",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/acceptanceQuiz.json",
@@ -552,7 +540,7 @@
       {
         "id": "ENG_ICCE_TC_67",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
@@ -563,7 +551,7 @@
      {
         "id": "ENG_ICCE_TC_71",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
@@ -574,7 +562,7 @@
       {
         "id": "ENG_ICCE_TC_5",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
@@ -585,7 +573,7 @@
       {
         "id": "ENG_ICCE_TC_40",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
@@ -596,7 +584,7 @@
       {
         "id": "ENG_ICCE_TC_41",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
@@ -609,25 +597,25 @@
       {
         "id": "ENG_ICCE_TC_4",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": []
       },
       {
         "id": "ENG_ICCE_TC_49",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": []
       },
       {
         "id": "ENG_ICCE_TC_50",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": []
       },
       {
         "id": "ENG_ICCE_TC_48",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": []
       }
     ],
@@ -686,13 +674,13 @@
       {
         "id": "ENG_ICCE_TC_1",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": []
       },
       {
         "id": "ENG_ICCE_TC_60",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/writingQuesData.json",
@@ -703,7 +691,7 @@
       {
         "id": "ENG_ICCE_TC_3",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
@@ -714,7 +702,7 @@
       {
         "id": "ENG_ICCE_TC_9",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/writingQuesData.json",
@@ -725,7 +713,7 @@
       {
         "id": "ENG_ICCE_TC_11",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/writingQuesData.json",
@@ -736,7 +724,7 @@
       {
         "id": "ENG_ICCE_TC_12",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
@@ -747,7 +735,7 @@
       {
         "id": "ENG_ICCE_TC_14",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
@@ -758,7 +746,7 @@
       {
         "id": "ENG_ICCE_TC_17",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/writingQuesData.json",
@@ -769,19 +757,19 @@
       {
         "id": "ENG_ICCE_TC_45",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": []
       },
       {
         "id": "ENG_ICCE_TC_34",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": []
       },
       {
         "id": "ENG_ICCE_TC_21",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/writingQuesData.json",
@@ -792,37 +780,37 @@
       {
         "id": "ENG_ICCE_TC_46",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": []
       },
       {
         "id": "ENG_ICCE_TC_47",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": []
       },
       {
         "id": "ENG_ICCE_TC_4",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": []
       },
       {
         "id": "ENG_ICCE_TC_49",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": []
       },
       {
         "id": "ENG_ICCE_TC_50",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": []
       },
       {
         "id": "ENG_ICCE_TC_48",
         "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": []
       }
     ],

@@ -3846,7 +3846,7 @@
     {
       "modulename": "Library",
       "moduleId": "",
-      "testFile": "./test/engageExperienceApp/libraryEditorPage.test.js",
+      "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
       "testcase": [
         {
           "id": "ENG_ICCE_TC_1",
@@ -4285,6 +4285,78 @@
         {
           "id": "ENG_ICCL_TC_3",
           "description": "Validate clicking on New Resource button on Library Page",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCL_TC_4",
+          "description": "Validate the scenario when no material is added in the Library for new user",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCL_TC_6",
+          "description": "Validate clicking on View All Materials launch the My Materials page",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCL_TC_7",
+          "description": "Validate clicking on View All Materials launch the My Materials page",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCL_TC_8",
+          "description": "Validate clicking on View All Materials launch the My Materials page",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCL_TC_9",
+          "description": "Validate clicking on View All Materials launch the My Materials page",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCL_TC_10",
+          "description": "Validate clicking on View All Materials launch the My Materials page",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCL_TC_11",
+          "description": "Validate clicking on View All Materials launch the My Materials page",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCL_TC_12",
+          "description": "Validate clicking on View All Materials launch the My Materials page",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCL_TC_16",
+          "description": "Validate clicking on View All Materials launch the My Materials page",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCL_TC_17",
+          "description": "Validate clicking on View All Materials launch the My Materials page",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCL_TC_27",
+          "description": "Validate clicking on View All Materials launch the My Materials page",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCL_TC_28",
+          "description": "Validate clicking on View All Materials launch the My Materials page",
           "tags": "P1",
           "visualTest": true
         }

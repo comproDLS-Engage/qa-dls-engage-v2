@@ -15,9 +15,9 @@ module.exports = {
     viewAllMaterialsBtn: selectorFile.css.ComproEngage.library.viewAllMaterialsBtn,
     noMaterialTitleTxt: selectorFile.css.ComproEngage.library.noMaterialTitleTxt,
     noMaterialSubtitleTxt: selectorFile.css.ComproEngage.library.noMaterialSubtitleTxt,
-    materialCard: selectorFile.css.ComproEngage.library.materialCard,
     quizTitleTxt: selectorFile.css.ComproEngage.library.quizTitleTxt,
     quizTypeTxt: selectorFile.css.ComproEngage.library.quizTypeTxt,
+    quizTime: selectorFile.css.ComproEngage.library.quizTime,
     draftPillTxt: selectorFile.css.ComproEngage.library.draftPillTxt,
     editDraftBtn: selectorFile.css.ComproEngage.library.editDraftBtn,
     contextMenuBtn: selectorFile.css.ComproEngage.library.contextMenuBtn,
@@ -34,8 +34,8 @@ module.exports = {
         await logger.logInto(await stackTrace.get());
         await action.waitForDocumentLoad();
         res = {
-            pageStatus: await action.waitForDisplayed(this.libraryTitleTxt),
-            appShellPage: await appShellPage.isInitialized()
+            pageStatus: await action.waitForDisplayed(this.blankQuizBtn),
+            // appShellPage: await appShellPage.isInitialized()
         };
         return res;
     },
@@ -59,21 +59,21 @@ module.exports = {
         return obj;
     },
 
-    getData_quizCard: async function (materialCardName) {
+    getData_quizCard: async function (quizTitleTxtName) {
         await logger.logInto(await stackTrace.get());
         var obj = [];
-        await action.waitForDisplayed(this.materialCard);
-        var list = await action.findElements(this.materialCard);
-        if (materialCardName) {
+        await action.waitForDisplayed(this.quizTitleTxt);
+        var list = await action.findElements(this.quizTitleTxt);
+        if (quizTitleTxtName) {
             for (var i = 0; i < list.length; i++) {
-                if ((await action.getText(this.materialCard + i)) == materialCardName) {
+                if ((await action.getText(this.quizTitleTxt + i)) == quizTitleTxtName) {
                     obj[0] = {
-                        materialCard: ((await action.getElementCount(this.materialCard + i + "]")) > 0) ? await action.getText(this.materialCard + i + "]") : null,
                         quizTitleTxt: ((await action.getElementCount(this.quizTitleTxt + i + "]")) > 0) ? await action.getText(this.quizTitleTxt + i + "]") : null,
                         quizTypeTxt: ((await action.getElementCount(this.quizTypeTxt + i + "]")) > 0) ? await action.getText(this.quizTypeTxt + i + "]") : null,
+                        quizTime: ((await action.getElementCount(this.quizTime + i + "]")) > 0) ? await action.getText(this.quizTime + i + "]") : null,
                         draftPillTxt: ((await action.getElementCount(this.draftPillTxt + i + "]")) > 0) ? await action.getText(this.draftPillTxt + i + "]") : null,
                         editDraftBtn: ((await action.getElementCount(this.editDraftBtn + i + "]")) > 0) ? await action.getText(this.editDraftBtn + i + "]") : null,
-                        contextMenuBtn: ((await action.getElementCount(this.contextMenuBtn + i + "]")) > 0) ? await action.getText(this.contextMenuBtn + i + "]") : null,
+                        contextMenuBtn: ((await action.getElementCount(this.contextMenuBtn + i + "]")) > 0) ? await action.waitForExist(this.contextMenuBtn + i + "]") : null,
                         addToClassBtn: ((await action.getElementCount(this.addToClassBtn + i + "]")) > 0) ? await action.getText(this.addToClassBtn + i + "]") : null,
                         bookImg: ((await action.getElementCount(this.bookImg + i + "]")) > 0) ? await action.waitForDisplayed(this.bookImg + i + "]") : false,
                     }
@@ -83,12 +83,12 @@ module.exports = {
         } else {
             for (var i = 0; i < list.length; i++) {
                 obj[i] = {
-                    materialCard: ((await action.getElementCount(this.materialCard + i + "]")) > 0) ? await action.getText(this.materialCard + i + "]") : null,
                     quizTitleTxt: ((await action.getElementCount(this.quizTitleTxt + i + "]")) > 0) ? await action.getText(this.quizTitleTxt + i + "]") : null,
                     quizTypeTxt: ((await action.getElementCount(this.quizTypeTxt + i + "]")) > 0) ? await action.getText(this.quizTypeTxt + i + "]") : null,
+                    quizTime: ((await action.getElementCount(this.quizTime + i + "]")) > 0) ? await action.getText(this.quizTime + i + "]") : null,
                     draftPillTxt: ((await action.getElementCount(this.draftPillTxt + i + "]")) > 0) ? await action.getText(this.draftPillTxt + i + "]") : null,
                     editDraftBtn: ((await action.getElementCount(this.editDraftBtn + i + "]")) > 0) ? await action.getText(this.editDraftBtn + i + "]") : null,
-                    contextMenuBtn: ((await action.getElementCount(this.contextMenuBtn + i + "]")) > 0) ? await action.getText(this.contextMenuBtn + i + "]") : null,
+                    contextMenuBtn: ((await action.getElementCount(this.contextMenuBtn + i + "]")) > 0) ? await action.waitForExist(this.contextMenuBtn + i + "]") : null,
                     addToClassBtn: ((await action.getElementCount(this.addToClassBtn + i + "]")) > 0) ? await action.getText(this.addToClassBtn + i + "]") : null,
                     bookImg: ((await action.getElementCount(this.bookImg + i + "]")) > 0) ? await action.waitForDisplayed(this.bookImg + i + "]") : false,
                 }
@@ -116,7 +116,7 @@ module.exports = {
         res = await action.click(this.blankQuizBtn);
         if (true == res) {
             await logger.logInto(await stackTrace.get(), " blankQuizBtn is clicked");
-            res = await require('./libraryEditorPage.page').isInitialized();
+            res = await require('./libraryEditor.page').isInitialized();
         }
         else {
             await logger.logInto(await stackTrace.get(), res + "blankQuizBtn is NOT clicked", 'error');
@@ -156,7 +156,7 @@ module.exports = {
         res = await action.click(this.viewAllMaterialsBtn);
         if (true == res) {
             await logger.logInto(await stackTrace.get(), " viewAllMaterialsBtn is clicked");
-            res = await require('./myMaterialsPage.page').isInitialized();
+            res = await require('./myMaterials.page').isInitialized();
         }
         else {
             await logger.logInto(await stackTrace.get(), res + "viewAllMaterialsBtn is NOT clicked", 'error');
@@ -164,30 +164,12 @@ module.exports = {
         return res;
     },
 
-    click_materialCard: async function (materialCardName) {
-        await logger.logInto(await stackTrace.get());
-        var i, list, res;
-        list = await action.findElements(this.materialCard);
-        for (i = 0; i < list.length; i++) {
-            if (((await action.getText(this.materialCard + i + "]"))) == materialCardName) {
-                res = await action.click(list[i]);
-                break;
-            }
-        }
-        if (res == true) {
-            await logger.logInto(await stackTrace.get(), " --materialCard clicked");
-        }
-        else
-            await logger.logInto(await stackTrace.get(), " --materialCard NOT clicked", "error")
-        return res;
-    },
-
-    click_editDraftBtn: async function (materialCardName) {
+    click_editDraftBtn: async function (quizTitleTxtName) {
         await logger.logInto(await stackTrace.get());
         var i, list, res;
         list = await action.findElements(this.editDraftBtn);
         for (i = 0; i < list.length; i++) {
-            if (((await action.getText(this.materialCard + i + "]"))) == materialCardName) {
+            if (((await action.getText(this.quizTitleTxt + i + "]"))) == quizTitleTxtName) {
                 res = await action.click(list[i]);
                 break;
             }
@@ -200,12 +182,12 @@ module.exports = {
         return res;
     },
 
-    click_contextMenuBtn: async function (materialCardName) {
+    click_contextMenuBtn: async function (quizTitleTxtName) {
         await logger.logInto(await stackTrace.get());
         var i, list, res;
         list = await action.findElements(this.contextMenuBtn);
         for (i = 0; i < list.length; i++) {
-            if (((await action.getText(this.materialCard + i + "]"))) == materialCardName) {
+            if (((await action.getText(this.quizTitleTxt + i + "]"))) == quizTitleTxtName) {
                 res = await action.click(list[i]);
                 break;
             }
@@ -218,12 +200,12 @@ module.exports = {
         return res;
     },
 
-    click_addToClassBtn: async function (materialCardName) {
+    click_addToClassBtn: async function (quizTitleTxtName) {
         await logger.logInto(await stackTrace.get());
         var i, list, res;
         list = await action.findElements(this.addToClassBtn);
         for (i = 0; i < list.length; i++) {
-            if (((await action.getText(this.materialCard + i + "]"))) == materialCardName) {
+            if (((await action.getText(this.quizTitleTxt + i + "]"))) == quizTitleTxtName) {
                 res = await action.click(list[i]);
                 break;
             }
