@@ -265,10 +265,76 @@ module.exports = {
         await assertion.assertEqual(sts.appShellPage.header, true, "My material page header status mismatch");
     },
 
-    //Validate that create options menu is displaued on clicking "Add New Material" button
+    //Validate that create new menu is displayed on clicking "Add New Material" button
     ENG_DASH_TC_36: async function () {
         sts = await dashboardPage.click_addNewMaterialBtn();
-        await assertion.assertEqual(sts.pageStatus, true, "Library page status mismatch");
-        await assertion.assertEqual(sts.appShellPage.header, true, "Library page header status mismatch");
+        await assertion.assertEqual(sts.createNewLabel, testdata.createNewLabel, "createNewLabel status mismatch");
+        await assertion.assertEqual(sts.blankQuizOption, testdata.blankQuizOption, "blankQuizOption status mismatch");
+        await assertion.assertEqual(sts.blankSurveyOption, testdata.blankSurveyOption, "blankSurveyOption status mismatch");
+        await assertion.assertEqual(sts.newResourceOption, testdata.newResourceOption, "newResourceOption status mismatch");
     },
+
+    //Validate that editor is launched on clicking "Blank Quiz" option
+    ENG_DASH_TC_37: async function () {
+        sts = await dashboardPage.click_blankQuizOption();
+        await assertion.assertEqual(sts.pageStatus, true, "Library editor page status mismatch");
+        await assertion.assertEqual(sts.appShellPage.header, true, "Library editor header status mismatch");
+    },
+
+    //Validate that material preview is launched on clicking the material card on dashboard for published material
+    ENG_DASH_TC_39: async function () {
+        sts = await dashboardPage.click_materialTitleBtn(testdata[0]);
+        await assertion.assertEqual(sts, true, "click_materialTitleBtn status mismatch");
+        sts = await require("../../pages/engageExperienceApp/libraryEditor.page").getData_previewPage();
+        await assertion.assertEqual(sts.previewcontainer, testdata[1].previewcontainer, "previewcontainer status mismatch");
+        await assertion.assertEqual(sts.eyeIcon, testdata.eyeIcon[1], "eyeIcon status mismatch");
+        await assertion.assertEqual(sts.previeCloseIcon, testdata.previeCloseIcon[1], "previeCloseIcon status mismatch");
+    },
+
+    //Validate that editor is launched on clicking the material card on dashboard for unpublished material
+    ENG_DASH_TC_40: async function () {
+        sts = await dashboardPage.click_materialTitleBtn(testdata[0]);
+        await assertion.assertEqual(sts, true, "click_materialTitleBtn status mismatch");
+        sts = await require("../../pages/engageExperienceApp/libraryEditor.page").getData_blankQuizPage();
+        await assertion.assertEqual(sts.quizHeaderIcon, true);
+        await assertion.assertEqual(sts.quizHeaderName, testdata[1].quizHeaderName);
+        await assertion.assertEqual(sts.savedtoLibrarylbl, testdata[1].savedtoLibrarylbl);
+        await assertion.assertEqual(sts.draftlbl, testdata[1].draftlbl);
+        await assertion.assertEqual(sts.pageHeader, testdata[1].pageHeader);
+        await assertion.assertEqual(sts.pageSubHeader, testdata[1].pageSubHeader);
+        await assertion.assertEqual(sts.multipleChoicetab, testdata[1].multipleChoicelbl);
+        await assertion.assertEqual(sts.texttab, testdata[1].textChoicelbl);
+        await assertion.assertEqual(sts.finishQuiz, testdata[1].finishQuiz);
+    },
+
+    //Validate that options menu is displayed on clicking 3 dot button of the material card
+    ENG_DASH_TC_41: async function () {
+        sts = await dashboardPage.click_materialOptionsBtn();
+        await assertion.assertEqual(sts.previewMaterialOption, testdata.previewMaterialOption, "previewMaterialOption status mismatch");
+        await assertion.assertEqual(sts.deleteMaterialOption, testdata.deleteMaterialOption, "deleteMaterialOption status mismatch");
+    },
+
+    //Validate that preview is launched on clicking Preview option
+    ENG_DASH_TC_42: async function () {
+        sts = await dashboardPage.click_previewMaterialOption();
+        await assertion.assertEqual(sts.pageStatus, true, "Library editor page status mismatch");
+        await assertion.assertEqual(sts.appShellPage.header, true, "Library editor header status mismatch");
+    },
+
+    //Validate that delete confirmation dialog is launched on clicking Delete option
+    ENG_DASH_TC_43: async function () {
+        sts = await dashboardPage.click_deleteMaterialOption();
+        await assertion.assertEqual(sts.deleteMaterialDialogTitle, deleteMaterialDialogTitle, "deleteMaterialDialogTitle status mismatch");
+        await assertion.assertEqual(sts.deleteMaterialDialogSubtitle, deleteMaterialDialogSubtitle, "deleteMaterialDialogSubtitle status mismatch");
+        await assertion.assertEqual(sts.deleteMaterialDialogWarning, deleteMaterialDialogWarning, "deleteMaterialDialogWarning status mismatch");
+        await assertion.assertEqual(sts.deleteMaterialDialogCancelBtn, deleteMaterialDialogCancelBtn, "deleteMaterialDialogCancelBtn status mismatch");
+        await assertion.assertEqual(sts.deleteMaterialDialogDeleteBtn, deleteMaterialDialogDeleteBtn, "deleteMaterialDialogDeleteBtn status mismatch");
+    },
+
+    //Validate material is deleted on clicking Delete button in the dialog
+    ENG_DASH_TC_44: async function () {
+        sts = await dashboardPage.click_deleteMaterialDialogDeleteBtn();
+        await assertion.assertEqual(sts, true, "click_deleteMaterialDialogDeleteBtn status mismatch");
+    },
+
 };

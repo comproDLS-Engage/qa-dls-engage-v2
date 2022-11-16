@@ -53,15 +53,25 @@ module.exports = {
   noMaterialTitle: selectorFile.css.ComproEngage.dashboard.noMaterialTitle,
   noMaterialSubtitle: selectorFile.css.ComproEngage.dashboard.noMaterialSubtitle,
   viewAllMaterialBtn: selectorFile.css.ComproEngage.dashboard.viewAllMaterialBtn,
+  createNewLabel: selectorFile.css.ComproEngage.dashboard.createNewLabel,
+  blankQuizOption: selectorFile.css.ComproEngage.dashboard.blankQuizOption,
+  blankSurveyOption: selectorFile.css.ComproEngage.dashboard.blankSurveyOption,
+  newResourceOption: selectorFile.css.ComproEngage.dashboard.newResourceOption,
   materialTitleBtn: selectorFile.css.ComproEngage.dashboard.materialTitleBtn,
   materialOptionsBtn: selectorFile.css.ComproEngage.dashboard.materialOptionsBtn,
   previewMaterialOption: selectorFile.css.ComproEngage.dashboard.previewMaterialOption,
+  editMaterialOption: selectorFile.css.ComproEngage.dashboard.editMaterialOption,
+  duplicateMaterialOption: selectorFile.css.ComproEngage.dashboard.duplicateMaterialOption,
   deleteMaterialOption: selectorFile.css.ComproEngage.dashboard.deleteMaterialOption,
   deleteMaterialDialogTitle: selectorFile.css.ComproEngage.dashboard.deleteMaterialDialogTitle,
   deleteMaterialDialogSubtitle: selectorFile.css.ComproEngage.dashboard.deleteMaterialDialogSubtitle,
   deleteMaterialDialogWarning: selectorFile.css.ComproEngage.dashboard.deleteMaterialDialogWarning,
   deleteMaterialDialogCancelBtn: selectorFile.css.ComproEngage.dashboard.deleteMaterialDialogCancelBtn,
   deleteMaterialDialogDeleteBtn: selectorFile.css.ComproEngage.dashboard.deleteMaterialDialogDeleteBtn,
+  editMaterialDialogTitle: selectorFile.css.ComproEngage.dashboard.editMaterialDialogTitle,
+  editMaterialDialogSubtitle: selectorFile.css.ComproEngage.dashboard.editMaterialDialogSubtitle,
+  editMaterialDialogEditBtn: selectorFile.css.ComproEngage.dashboard.editMaterialDialogEditBtn,
+  editMaterialDialogCancelBtn: selectorFile.css.ComproEngage.dashboard.editMaterialDialogCancelBtn,
   addNew_btn: selectorFile.css.ComproEngage.dashboard.addNew_btn,
   rightPanelOpen_btn: selectorFile.css.ComproEngage.dashboard.rightPanelOpen_btn,
   rightPanelClose_btn: selectorFile.css.ComproEngage.dashboard.rightPanelClose_btn,
@@ -278,6 +288,18 @@ module.exports = {
     return recentlyViewed_activities_Arr;
   },
 
+  getData_addNewMaterialMenu: async function () {
+    await logger.logInto(await stackTrace.get());
+    var obj;
+    obj = {
+      createNewLabel: ((await action.getElementCount(this.createNewLabel)) > 0) ? await action.getText(this.createNewLabel) : null,
+      blankQuizOption: ((await action.getElementCount(this.blankQuizOption)) > 0) ? await action.getText(this.blankQuizOption) : null,
+      blankSurveyOption: ((await action.getElementCount(this.blankSurveyOption)) > 0) ? await action.getText(this.blankSurveyOption) : null,
+      newResourceOption: ((await action.getElementCount(this.newResourceOption)) > 0) ? await action.getText(this.newResourceOption) : null,
+    }
+    return obj;
+  },
+
   getData_materials: async function (materialTitleBtnName) {
     await logger.logInto(await stackTrace.get());
     var obj = [];
@@ -309,6 +331,8 @@ module.exports = {
     var obj;
     obj = {
       previewMaterialOption: ((await action.getElementCount(this.previewMaterialOption)) > 0) ? await action.getText(this.previewMaterialOption) : null,
+      editMaterialOption: ((await action.getElementCount(this.editMaterialOption)) > 0) ? await action.getText(this.editMaterialOption) : null,
+      duplicateMaterialOption: ((await action.getElementCount(this.duplicateMaterialOption)) > 0) ? await action.getText(this.duplicateMaterialOption) : null,
       deleteMaterialOption: ((await action.getElementCount(this.deleteMaterialOption)) > 0) ? await action.getText(this.deleteMaterialOption) : null,
     }
     return obj;
@@ -323,6 +347,18 @@ module.exports = {
       deleteMaterialDialogWarning: ((await action.getElementCount(this.deleteMaterialDialogWarning)) > 0) ? await action.getText(this.deleteMaterialDialogWarning) : null,
       deleteMaterialDialogCancelBtn: ((await action.getElementCount(this.deleteMaterialDialogCancelBtn)) > 0) ? await action.getText(this.deleteMaterialDialogCancelBtn) : null,
       deleteMaterialDialogDeleteBtn: ((await action.getElementCount(this.deleteMaterialDialogDeleteBtn)) > 0) ? await action.getText(this.deleteMaterialDialogDeleteBtn) : null,
+    }
+    return obj;
+  },
+
+  getData_editMaterialDialog: async function () {
+    await logger.logInto(await stackTrace.get());
+    var obj;
+    obj = {
+      editMaterialDialogTitle: ((await action.getElementCount(this.editMaterialDialogTitle)) > 0) ? await action.getText(this.editMaterialDialogTitle) : null,
+      editMaterialDialogSubtitle: ((await action.getElementCount(this.editMaterialDialogSubtitle)) > 0) ? await action.getText(this.editMaterialDialogSubtitle) : null,
+      editMaterialDialogEditBtn: ((await action.getElementCount(this.editMaterialDialogEditBtn)) > 0) ? await action.getText(this.editMaterialDialogEditBtn) : null,
+      editMaterialDialogCancelBtn: ((await action.getElementCount(this.editMaterialDialogCancelBtn)) > 0) ? await action.getText(this.editMaterialDialogCancelBtn) : null,
     }
     return obj;
   },
@@ -699,7 +735,7 @@ module.exports = {
     res = await action.click(this.addNewMaterialBtn);
     if (true == res) {
       await logger.logInto(await stackTrace.get(), " addNewMaterialBtn is clicked");
-      res = await require('./libraryEditor.page').isInitialized();
+      res = await this.getData_addNewMaterialMenu();
     }
     else {
       await logger.logInto(await stackTrace.get(), res + "addNewMaterialBtn is NOT clicked", 'error');
@@ -721,6 +757,38 @@ module.exports = {
     return res;
   },
 
+  click_blankQuizOption: async function () {
+    await logger.logInto(await stackTrace.get());
+    var res;
+    res = await action.click(this.blankQuizOption);
+    if (true == res) {
+      await logger.logInto(await stackTrace.get(), " blankQuizOption is clicked");
+      res = await require('./libraryEditor.page').isInitialized();
+    }
+    else {
+      await logger.logInto(await stackTrace.get(), res + "blankQuizOption is NOT clicked", 'error');
+    }
+    return res;
+  },
+
+  click_materialTitleBtn: async function (materialTitleBtnName) {
+    await logger.logInto(await stackTrace.get());
+    var i, list, res;
+    list = await action.findElements(this.materialTitleBtn);
+    for (i = 0; i < list.length; i++) {
+      if (((await action.getText(this.materialTitleBtn + i + "]"))) == materialTitleBtnName) {
+        res = await action.click(list[i]);
+        break;
+      }
+    }
+    if (res == true) {
+      await logger.logInto(await stackTrace.get(), " --materialTitleBtn clicked");
+    }
+    else
+      await logger.logInto(await stackTrace.get(), " --materialTitleBtn NOT clicked", "error")
+    return res;
+  },
+  
   click_materialOptionsBtn: async function (materialTitleBtnName) {
     await logger.logInto(await stackTrace.get());
     var i, list, res;
@@ -749,6 +817,33 @@ module.exports = {
     }
     else {
       await logger.logInto(await stackTrace.get(), res + "previewMaterialOption is NOT clicked", 'error');
+    }
+    return res;
+  },
+
+  click_editMaterialOption: async function () {
+    await logger.logInto(await stackTrace.get());
+    var res;
+    res = await action.click(this.editMaterialOption);
+    if (true == res) {
+      await logger.logInto(await stackTrace.get(), " editMaterialOption is clicked");
+      res = await this.getData_editMaterialDialog();
+    }
+    else {
+      await logger.logInto(await stackTrace.get(), res + "editMaterialOption is NOT clicked", 'error');
+    }
+    return res;
+  },
+
+  click_duplicateMaterialOption: async function () {
+    await logger.logInto(await stackTrace.get());
+    var res;
+    res = await action.click(this.duplicateMaterialOption);
+    if (true == res) {
+      await logger.logInto(await stackTrace.get(), " duplicateMaterialOption is clicked");
+    }
+    else {
+      await logger.logInto(await stackTrace.get(), res + "duplicateMaterialOption is NOT clicked", 'error');
     }
     return res;
   },
@@ -791,6 +886,33 @@ module.exports = {
     }
     else {
       await logger.logInto(await stackTrace.get(), res + "deleteMaterialDialogDeleteBtn is NOT clicked", 'error');
+    }
+    return res;
+  },
+
+  click_editMaterialDialogEditBtn: async function () {
+    await logger.logInto(await stackTrace.get());
+    var res;
+    res = await action.click(this.editMaterialDialogEditBtn);
+    if (true == res) {
+      await logger.logInto(await stackTrace.get(), " editMaterialDialogEditBtn is clicked");
+    }
+    else {
+      await logger.logInto(await stackTrace.get(), res + "editMaterialDialogEditBtn is NOT clicked", 'error');
+    }
+    return res;
+  },
+
+  click_editMaterialDialogCancelBtn: async function () {
+    await logger.logInto(await stackTrace.get());
+    var res;
+    res = await action.click(this.editMaterialDialogCancelBtn);
+    if (true == res) {
+      await logger.logInto(await stackTrace.get(), " editMaterialDialogCancelBtn is clicked");
+      res = await action.waitForDisplayed(this.deleteMaterialDialogCancelBtn, undefined, true);
+    }
+    else {
+      await logger.logInto(await stackTrace.get(), res + "editMaterialDialogCancelBtn is NOT clicked", 'error');
     }
     return res;
   },
