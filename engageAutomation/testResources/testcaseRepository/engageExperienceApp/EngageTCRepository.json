@@ -2121,6 +2121,66 @@
           "description": "Mobile: Validate the content of the blank Dashboard page in English Language",
           "tags": "P2",
           "visualTest": true
+        },
+        {
+          "id": "ENG_DASH_TC_34",
+          "description": "Validate that Library page is launched on clicking Recent Materials button",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DASH_TC_35",
+          "description": "Validate that Materials page is launched on clicking the View All Materials button",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DASH_TC_36",
+          "description": "Validate that create new menu is displayed on clicking Add New Material button",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DASH_TC_37",
+          "description": "Validate that editor is launched on clicking Blank Quiz option",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DASH_TC_39",
+          "description": "Validate that material preview is launched on clicking the material card on dashboard for published material",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DASH_TC_40",
+          "description": "Validate that editor is launched on clicking the material card on dashboard for unpublished material",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DASH_TC_41",
+          "description": "Validate that options menu is displayed on clicking 3 dot button of the material card",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DASH_TC_42",
+          "description": "Validate that preview is launched on clicking Preview option",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DASH_TC_43",
+          "description": "Validate that delete confirmation dialog is launched on clicking Delete option",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DASH_TC_44",
+          "description": "Validate material is deleted on clicking Delete button in the dialog",
+          "tags": "P1",
+          "visualTest": true
         }
       ]
     },
