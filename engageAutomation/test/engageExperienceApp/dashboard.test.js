@@ -276,7 +276,7 @@ module.exports = {
     },
 
     //Validate that create new menu is displayed on clicking "Add New Material" button
-    ENG_DASH_TC_36: async function () {
+    ENG_DASH_TC_36: async function (testdata) {
         sts = await dashboardPage.click_addNewMaterialBtn();
         await assertion.assertEqual(sts.createNewLabel, testdata.createNewLabel, "createNewLabel status mismatch");
         await assertion.assertEqual(sts.blankQuizOption, testdata.blankQuizOption, "blankQuizOption status mismatch");
@@ -292,7 +292,7 @@ module.exports = {
     },
 
     //Validate that material preview is launched on clicking the material card on dashboard for published material
-    ENG_DASH_TC_39: async function () {
+    ENG_DASH_TC_39: async function (testdata) {
         sts = await dashboardPage.click_materialTitleBtn(testdata[0]);
         await assertion.assertEqual(sts, true, "click_materialTitleBtn status mismatch");
         sts = await require("../../pages/engageExperienceApp/libraryEditor.page").getData_previewPage();
@@ -302,12 +302,12 @@ module.exports = {
     },
 
     //Validate that editor is launched on clicking the material card on dashboard for unpublished material
-    ENG_DASH_TC_40: async function () {
+    ENG_DASH_TC_40: async function (testdata) {
         sts = await dashboardPage.click_materialTitleBtn(testdata[0]);
         await assertion.assertEqual(sts, true, "click_materialTitleBtn status mismatch");
         sts = await require("../../pages/engageExperienceApp/libraryEditor.page").getData_blankQuizPage();
         await assertion.assertEqual(sts.quizHeaderIcon, true);
-        await assertion.assertEqual(sts.quizHeaderName, testdata[1].quizHeaderName);
+        await assertion.assertEqual(sts.quizHeaderName, testdata[0]);
         await assertion.assertEqual(sts.savedtoLibrarylbl, testdata[1].savedtoLibrarylbl);
         await assertion.assertEqual(sts.draftlbl, testdata[1].draftlbl);
         await assertion.assertEqual(sts.pageHeader, testdata[1].pageHeader);
@@ -318,27 +318,30 @@ module.exports = {
     },
 
     //Validate that options menu is displayed on clicking 3 dot button of the material card
-    ENG_DASH_TC_41: async function () {
-        sts = await dashboardPage.click_materialOptionsBtn();
-        await assertion.assertEqual(sts.previewMaterialOption, testdata.previewMaterialOption, "previewMaterialOption status mismatch");
-        await assertion.assertEqual(sts.deleteMaterialOption, testdata.deleteMaterialOption, "deleteMaterialOption status mismatch");
+    ENG_DASH_TC_41: async function (testdata) {
+        sts = await dashboardPage.click_materialOptionsBtn(testdata[0]);
+        await assertion.assertEqual(sts.previewMaterialOption, testdata[1].previewMaterialOption, "previewMaterialOption status mismatch");
+        await assertion.assertEqual(sts.deleteMaterialOption, testdata[1].deleteMaterialOption, "deleteMaterialOption status mismatch");
     },
 
     //Validate that preview is launched on clicking Preview option
     ENG_DASH_TC_42: async function () {
         sts = await dashboardPage.click_previewMaterialOption();
-        await assertion.assertEqual(sts.pageStatus, true, "Library editor page status mismatch");
-        await assertion.assertEqual(sts.appShellPage.header, true, "Library editor header status mismatch");
+        await assertion.assertEqual(sts, true, "click_previewMaterialOption status mismatch");
+        sts = await require("../../pages/engageExperienceApp/libraryEditor.page").getData_previewPage();
+        await assertion.assertEqual(sts.previewcontainer, null, "previewcontainer status mismatch");
+        await assertion.assertEqual(sts.eyeIcon, false, "eyeIcon status mismatch");
+        await assertion.assertEqual(sts.previeCloseIcon, null, "previeCloseIcon status mismatch");
     },
 
     //Validate that delete confirmation dialog is launched on clicking Delete option
-    ENG_DASH_TC_43: async function () {
+    ENG_DASH_TC_43: async function (testdata) {
         sts = await dashboardPage.click_deleteMaterialOption();
-        await assertion.assertEqual(sts.deleteMaterialDialogTitle, deleteMaterialDialogTitle, "deleteMaterialDialogTitle status mismatch");
-        await assertion.assertEqual(sts.deleteMaterialDialogSubtitle, deleteMaterialDialogSubtitle, "deleteMaterialDialogSubtitle status mismatch");
-        await assertion.assertEqual(sts.deleteMaterialDialogWarning, deleteMaterialDialogWarning, "deleteMaterialDialogWarning status mismatch");
-        await assertion.assertEqual(sts.deleteMaterialDialogCancelBtn, deleteMaterialDialogCancelBtn, "deleteMaterialDialogCancelBtn status mismatch");
-        await assertion.assertEqual(sts.deleteMaterialDialogDeleteBtn, deleteMaterialDialogDeleteBtn, "deleteMaterialDialogDeleteBtn status mismatch");
+        await assertion.assertEqual(sts.deleteMaterialDialogTitle, testdata.deleteMaterialDialogTitle, "deleteMaterialDialogTitle status mismatch");
+        await assertion.assertEqual(sts.deleteMaterialDialogSubtitle, testdata.deleteMaterialDialogSubtitle, "deleteMaterialDialogSubtitle status mismatch");
+        await assertion.assertEqual(sts.deleteMaterialDialogWarning, testdata.deleteMaterialDialogWarning, "deleteMaterialDialogWarning status mismatch");
+        await assertion.assertEqual(sts.deleteMaterialDialogCancelBtn, testdata.deleteMaterialDialogCancelBtn, "deleteMaterialDialogCancelBtn status mismatch");
+        await assertion.assertEqual(sts.deleteMaterialDialogDeleteBtn, testdata.deleteMaterialDialogDeleteBtn, "deleteMaterialDialogDeleteBtn status mismatch");
     },
 
     //Validate material is deleted on clicking Delete button in the dialog

@@ -129,7 +129,7 @@
                     "duplicateMaterialOption": "Duplicate",
                     "deleteMaterialOption": "Delete",
                     "deleteMaterialDialogTitle": "Delete Material?",
-                    "deleteMaterialDialogSubtitle": "This will remove the material \"Untitled Quiz\" from your library",
+                    "deleteMaterialDialogSubtitle": "This will remove the material \"Acceptance Quiz\" from your library",
                     "deleteMaterialDialogWarning": "This process is unrecoverable and your data will be lost forever.",
                     "deleteMaterialDialogCancelBtn": "Cancel",
                     "deleteMaterialDialogDeleteBtn": "Delete",
