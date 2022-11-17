@@ -113,6 +113,18 @@
                         "jsonPath": "engage.appContent.dashboard.teacher.resourceTitle[5]"
                     }
                 ]
+            },
+            {
+                "id": "ENG_DASH_TC_34",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/dashboard.test.js",
+                "testData": []
+            },
+            {
+                "id": "ENG_DASH_TC_35",
+                "description": "",
+                "testFile": "./test/engageExperienceApp/dashboard.test.js",
+                "testData": []
             }
         ],
         "AfterEach": [
