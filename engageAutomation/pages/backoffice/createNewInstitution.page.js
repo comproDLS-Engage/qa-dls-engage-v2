@@ -48,13 +48,14 @@ module.exports = {
         await logger.logInto(await stackTrace.get());
         let res;
         res = await action.click(this.countryDropdown);
+        await browser.pause(1000);
         if (res == true) {
             var list = [];
             list = await action.findElements(this.countryList);
             res = false;
             for (var i = 0; i < list.length; i++) {
                 if ((await action.getText(list[i])) == text) {
-                    await action.scrollIntoView(list[i]);
+                    //await action.scrollIntoView(list[i]);
                     res = await action.click(list[i]);
                     break;
                 }

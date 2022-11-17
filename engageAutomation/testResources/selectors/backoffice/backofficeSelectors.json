@@ -285,12 +285,12 @@
 	"entitleUserPage": {
 		"emailInput": "[data-tid=input-email-for-entitle-user] input",
 		"productCodeInput": "[data-tid=input-product-code-for-entitle-user] input",
-		"startDate": "[data-tid=input-start-date-for-entitle-user]",
-		"endDate": "[data-tid=input-end-date-for-entitle-user]",
-		"okBtn": "[class*=MuiButton-textPrimary]:not([xpath='1'])",
-		"passkeyInput": "[data-tid=input-passkey-for-entitle-user]",
-		"confirmBtn": "[data-tid=button-success]",
-		"closeBtn": "[data-tid=button-close]"
+		"startDate": "[data-tid=input-start-date-for-entitle-user] div > div",
+		"endDate": "[data-tid=input-end-date-for-entitle-user] div > div",
+		"okBtn": "[class*=MuiDialogActions] button:nth-child(2)",
+		"passkeyInput": "[data-tid=input-passkey-for-entitle-user] input",
+		"confirmBtn": "[data-tid=button-successentitleUser]",
+		"closeBtn": "[data-tid=button-closeentitleUser]"
 	},
 	"institutionRequestPage": {
 		"createNewBtn": "[data-tid=button-create-new-institution]",
@@ -321,12 +321,12 @@
 		"telephone": "[id=telephoneNo]",
 		"website": "[data-tid=website] input",
 		"email": "[id=email]",
-		"nextBtn": "[data-tid=button-success]",
-		"previousBtn": "[data-tid=button-previous]",
+		"nextBtn": "[data-tid=button-successnewInstitution]",
+		"previousBtn": "[data-tid=button-previousnewInstitution]",
 		"summaryListItems": "[data-tid*=container-listItem-]",
 		"successSvg": "[data-tid=icon-success]",
 		"failureSvg": "[data-tid=icon-error]",
 		"matchingRecord": "[data-tid=container-current-institution-request]",
-		"closeBtn": "[data-tid=button-close]"
+		"closeBtn": "[data-tid=button-closenewInstitution]"
 	}
 }
