@@ -285,8 +285,15 @@ module.exports = {
 
     click_ModifyCompOptions_Button: async function () {
         await logger.logInto((await stackTrace.get()));
-        let res;
+        let res, res2;
         res = await action.click(this.modifyCompOptionsBtn);
+        res2 = await action.isDisplayed(this.snackbarLbl);
+        if (res2 == true) {
+            await browser.refresh();
+            await action.waitForDisplayed(this.modifyCompOptionsBtn);
+            await browser.pause(5000);
+            res = await action.click(this.modifyCompOptionsBtn);
+        }
         if (res == true) {
             res = await require('./addComponent.page.js').isInitialized();
             await browser.pause(5000);

@@ -60,7 +60,7 @@ module.exports = {
                 res = await action.click(list[i]);
                 if (res == true) {
                     res = await require('./viewLearningPath.page.js').isInitialized();
-                    await browser.pause(5000);
+                    await browser.pause(10000);
                 }
                 break;
             }
