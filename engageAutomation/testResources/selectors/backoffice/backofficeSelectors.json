@@ -253,7 +253,7 @@
 		"institutionName": "[data-tid=container-listItem-3] [data-tid=text-subline]",
 		"startDate": "[data-tid=container-listItem-4] [data-tid=text-subline]",
 		"endDate": "[data-tid=container-listItem-5] [data-tid=text-subline]",
-		"viewClassAsTeacherBtn": "[data-tid=button-view-class-as-teacher]",
+		"viewClassAsTeacherBtn": "[data-tid=button-viewclassasteacher]",
 		"findAnotherClassBtn": "[data-tid=button-find-another-class]",
 		"classKeyInput": "[data-tid=input-class-key] input",
 		"searchClassBtn": "[data-tid=button-search-class]"

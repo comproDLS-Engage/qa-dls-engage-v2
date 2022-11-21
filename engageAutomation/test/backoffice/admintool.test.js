@@ -60,6 +60,12 @@ module.exports = {
 		await assertion.assertEqual(sts.startDate, testdata.startDate, "startDate mismatch");
 		await assertion.assertEqual(sts.endDate, testdata.endDate, "endDate mismatch");
 	},
+
+	// Validate that Engage app is launched on clicking view class as teacher
+	ADMN_FCLS_TC_5: async function () {
+		sts = await findClassPage.click_ViewClassAsTeacher_Button();
+		await assertion.assertEqual(sts, true, "click_ViewClassAsTeacher_Button status mismatch");
+	},
 	// ---------------------------------------------------------------------------- //
 
 
