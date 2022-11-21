@@ -80,6 +80,18 @@
 						"jsonPath": "findClass.class2"
 					}
 				]
+			},
+			{
+				"id": "ADMN_FCLS_TC_5",
+				"description": "",
+				"testFile": "./test/backoffice/admintool.test.js",
+				"testData": []
+			},
+			{
+				"id": "BK_TC_41",
+				"description": "",
+				"testFile": "./test/backoffice/backoffice.test.js",
+				"testData": []
 			}
 		],
 		"AfterEach": [],

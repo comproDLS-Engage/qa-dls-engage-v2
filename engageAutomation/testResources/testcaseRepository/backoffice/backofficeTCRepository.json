@@ -454,6 +454,12 @@
                     "visualTest": true
                 },
                 {
+                    "id": "ADMN_FCLS_TC_5",
+                    "description": "Validate that Engage app is launched on clicking view class as teacher",
+                    "tags": "P1",
+                    "visualTest": true
+                },
+                {
                     "id": "ADMN_FINS_TC_1",
                     "description": "Validate that user is able to search full name in find an institution on the home page",
                     "tags": "P1",

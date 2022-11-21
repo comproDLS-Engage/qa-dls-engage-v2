@@ -427,7 +427,7 @@ module.exports = {
 	//Close Preview window
 	BK_TC_41: async function () {
 		await browser.closeWindow();
-		await browser.switchWindow(global.appUrl);
+		await browser.switchWindow("https://backoffice");
 	},
 
 	//Validate that edit folder page opens on clicking the modify options button
