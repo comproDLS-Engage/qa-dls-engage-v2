@@ -1,5 +1,5 @@
 'use strict';
-const dndPlayer = require('./DNDonImage.itemPlayer.page.js');
+const dndPlayer = require('./dndOnImage.itemPlayer.page.js');
 //var selectorFile = jsonParserUtil.jsonParser(selectorDir);
 
 module.exports = {

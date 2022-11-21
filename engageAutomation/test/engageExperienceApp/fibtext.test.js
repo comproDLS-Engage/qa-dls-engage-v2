@@ -1,5 +1,5 @@
 'use strict';
-var fibtext = require('../../pages/engageExperienceApp/fibtext.itemplayer.page.js');
+var fibtext = require('../../pages/engageExperienceApp/FIBText.ItemPlayer.page.js');
 var sts;
 
 module.exports = {
@@ -11,8 +11,8 @@ module.exports = {
 		sts = await fibtext.getData_responses(testdata);
 		if ((typeof (sts)) === "object") {
 			for (var i = 0; i < sts.length; i++) {
-				await assertion.assertEqual(sts[i][1], "", "Response text for index " + i);
-				await assertion.assertEqual(sts[i][2], null, "Response status for index " + i);
+				await assertion.assertEqual(sts[i][1], "", "Response text for index" + i);
+				await assertion.assertEqual(sts[i][2], null, "Response status for index" + i);
 			}
 		}
 		else await assertion.assertFail(sts);

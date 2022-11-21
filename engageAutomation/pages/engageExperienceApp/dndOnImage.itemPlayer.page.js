@@ -67,7 +67,7 @@ module.exports = {
             srcPath = this.source + dndQuesData[i][0];
             targetPath = this.target + dndQuesData[i][2];
             if (dndQuesData[i][3] !== "") {
-                res = await action.dragAndDrop2(srcPath, targetPath); //performing drag and drop action
+                res = await action.dragAndDrop2(srcPath, targetPath);//performing drag and drop action
             }
         }
         await action.switchToParentFrame();
