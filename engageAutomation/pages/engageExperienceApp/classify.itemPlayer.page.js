@@ -1,6 +1,6 @@
 'use strict';
 const action = require('../../core/actionLibrary/baseActionLibrary.js');
-const dndOnImagePage = require('./dndOnImage.itemplayer.page.js');
+const dndOnImagePage = require('./dndOnImage.itemPlayer.page.js');
 const itemplayer = require('./itemPlayer.page.js');
 var selectorFile = jsonParserUtil.jsonParser(selectorDir);
 

@@ -1,5 +1,5 @@
 'use strict';
-var fibtext = require('../../pages/engageExperienceApp/fibtext.itemplayer.page.js');
+var fibtext = require('../../pages/engageExperienceApp/FIBText.ItemPlayer.page.js');
 var sts;
 
 module.exports = {
