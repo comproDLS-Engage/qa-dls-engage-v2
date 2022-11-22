@@ -77,7 +77,7 @@
 	},
 	"viewBookPage": {
 		"componentList": "[data-tid*=button-component-detail] [class*=c-card__title]",
-		"addComponentBtn": "[data-tid='button-ADD COMPONENT'], [data-tid=button-add-component]",
+		"addComponentBtn": "[data-tid='button-ADD COMPONENT'],[data-tid=button-add-component],[data-tid=button-add-resources]",
 		"componentTypeList": "[data-tid*=input-select] [class*=c-list-item__primary-text]",
 		"deleteBookBtn": "[data-tid*=button-delete-],[class=c-side-content] [data-tid=button-book_delete]",
 		"modifyBookBtn": "button[data-tid=button-modify_book_options],button[data-tid=button-modify-component-options]",
