@@ -647,7 +647,7 @@
     ]
   },
   "Suite2": {
-    "Name": "Classes - Class features of an Instructor when no class has been created (English)",
+    "Name": "Classes - Validate Blank Class Page Test Cases for an Instructor",
     "TestCaseRepo": [
       "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
     ],
@@ -744,7 +744,7 @@
     ]
   },
   "Suite3": {
-    "Name": "Content Validation of Active tab and Archived tab",
+    "Name": "Classes - Content Validation of Active and Archived tab",
     "TestCaseRepo": [
       "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
     ],
@@ -856,7 +856,7 @@
     ]
   },
   "Suite4": {
-    "Name": "Class Card more options and Inbox page.",
+    "Name": "Classes - Class Card more options and Inbox page.",
     "TestCaseRepo": [
       "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
     ],
@@ -970,7 +970,7 @@
     "After": []
   },
   "Suite5": {
-    "Name": "Content Validation of create class",
+    "Name": "Classes - Content Validation of create Class Page",
     "TestCaseRepo": [
       "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
     ],
@@ -1041,7 +1041,7 @@
     "After": []
   },
   "Suite6": {
-    "Name": "Content Validation of Edit Class Page.",
+    "Name": "Classes - Content Validation of Edit Class Page.",
     "TestCaseRepo": [
       "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
     ],
@@ -1142,7 +1142,7 @@
     "After": []
   },
   "Suite7": {
-    "Name": "Create Class Workflow from Left Pane ( + Button)",
+    "Name": "Classes - Create Class Workflow from Left Pane ( + Button)",
     "TestCaseRepo": [
       "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
     ],
@@ -1264,7 +1264,7 @@
     "After": []
   },
   "Suite8": {
-    "Name": "Class creation workflow from Dashboard (MY Books)",
+    "Name": "Classes - Class creation workflow from Dashboard (MY Books)",
     "TestCaseRepo": [
       "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
     ],
@@ -1403,7 +1403,7 @@
     "After": []
   },
   "Suite9": {
-    "Name": "Create Class Workflow from class pane in dashaboard page",
+    "Name": "Classes - Validate Create Class Workflow from class pane (Available on Dashaboard Page)",
     "TestCaseRepo": [
       "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
     ],
@@ -1530,7 +1530,7 @@
     "After": []
   },
   "Suite10": {
-    "Name": "Class Card more options and Student Tab on class details Page.",
+    "Name": "Classes - Class Card more options and Student Tab on Class Details Page.",
     "TestCaseRepo": [
       "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
     ],
@@ -1618,7 +1618,7 @@
     "After": []
   },
   "Suite11": {
-    "Name": "Class Card more options and Assignment Tab on class details Page.",
+    "Name": "Classes - Class Card more options and Assignment Tab on Class Details Page.",
     "TestCaseRepo": [
       "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
     ],
@@ -1706,7 +1706,7 @@
     "After": []
   },
   "Suite12": {
-    "Name": "Class Pane (Dashboard Page) Content Validation (when no class added)",
+    "Name": "Classes - Class Pane (Dashboard Page) Content Validation (when no class added)",
     "TestCaseRepo": [
       "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
     ],
@@ -1789,7 +1789,7 @@
     "After": []
   },
   "Suite13": {
-    "Name": "Class Pane (Dashboard Page) Content Validation (when class added)",
+    "Name": "Classes - Class Pane (Dashboard Page) Content Validation (when class added)",
     "TestCaseRepo": [
       "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
     ],
@@ -1872,7 +1872,7 @@
     "After": []
   },
   "Suite14": {
-    "Name": "Search of a class on class dashboard Page",
+    "Name": "Classes - Search a class from Class Dashboard Page",
     "TestCaseRepo": [
       "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
     ],
@@ -2021,7 +2021,7 @@
     ]
   },
   "Suite15": {
-    "Name": "More option validation of a class on the class drawer (Dashboard Page) ",
+    "Name": "Classes - More option validation of a class on the class drawer (Dashboard Page) ",
     "TestCaseRepo": [
       "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
     ],
@@ -2177,7 +2177,7 @@
     ]
   },
   "Suite16": {
-    "Name": "Validate the Inbox tab on class details Page",
+    "Name": "Classes - Validate the Inbox tab under class details Page",
     "TestCaseRepo": [
       "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
     ],
