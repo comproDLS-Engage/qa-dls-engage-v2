@@ -2181,6 +2181,30 @@
           "description": "Validate material is deleted on clicking Delete button in the dialog",
           "tags": "P1",
           "visualTest": true
+        },
+        {
+          "id": "ENG_DASH_TC_46",
+          "description": "Validate that add to class dialog is displayed on clicking add to class button on the material card",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DASH_TC_47",
+          "description": "Validate that add to class dialog is closed on clicking close button",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DASH_TC_49",
+          "description": "Validate that Edit dialog is launched on clicking Edit option for published quiz",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_DASH_TC_51",
+          "description": "Validate that dialog is closed on clicking Cancel button",
+          "tags": "P1",
+          "visualTest": true
         }
       ]
     },

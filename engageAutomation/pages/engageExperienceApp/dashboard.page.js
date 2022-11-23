@@ -59,6 +59,7 @@ module.exports = {
   newResourceOption: selectorFile.css.ComproEngage.dashboard.newResourceOption,
   materialTitleBtn: selectorFile.css.ComproEngage.dashboard.materialTitleBtn,
   materialOptionsBtn: selectorFile.css.ComproEngage.dashboard.materialOptionsBtn,
+  addToClassBtn: selectorFile.css.ComproEngage.dashboard.addToClassBtn,
   previewMaterialOption: selectorFile.css.ComproEngage.dashboard.previewMaterialOption,
   editMaterialOption: selectorFile.css.ComproEngage.dashboard.editMaterialOption,
   duplicateMaterialOption: selectorFile.css.ComproEngage.dashboard.duplicateMaterialOption,
@@ -72,6 +73,9 @@ module.exports = {
   editMaterialDialogSubtitle: selectorFile.css.ComproEngage.dashboard.editMaterialDialogSubtitle,
   editMaterialDialogEditBtn: selectorFile.css.ComproEngage.dashboard.editMaterialDialogEditBtn,
   editMaterialDialogCancelBtn: selectorFile.css.ComproEngage.dashboard.editMaterialDialogCancelBtn,
+  addToClassDialogTitle: selectorFile.css.ComproEngage.dashboard.addToClassDialogTitle,
+  addToClassDialogSubtitle: selectorFile.css.ComproEngage.dashboard.addToClassDialogSubtitle,
+  addToClassMenuCloseBtn: selectorFile.css.ComproEngage.dashboard.addToClassMenuCloseBtn,
   addNew_btn: selectorFile.css.ComproEngage.dashboard.addNew_btn,
   rightPanelOpen_btn: selectorFile.css.ComproEngage.dashboard.rightPanelOpen_btn,
   rightPanelClose_btn: selectorFile.css.ComproEngage.dashboard.rightPanelClose_btn,
@@ -311,6 +315,7 @@ module.exports = {
           obj[0] = {
             materialTitleBtn: ((await action.getElementCount(this.materialTitleBtn + i + "]")) > 0) ? await action.getText(this.materialTitleBtn + i + "]") : null,
             materialOptionsBtn: ((await action.getElementCount(this.materialOptionsBtn + i + "]")) > 0) ? await action.getText(this.materialOptionsBtn + i + "]") : null,
+            addToClassBtn: ((await action.getElementCount(this.addToClassBtn + i + "]")) > 0) ? await action.getText(this.addToClassBtn + i + "]") : null,
           }
           break;
         }
@@ -320,6 +325,7 @@ module.exports = {
         obj[i] = {
           materialTitleBtn: ((await action.getElementCount(this.materialTitleBtn + i + "]")) > 0) ? await action.getText(this.materialTitleBtn + i + "]") : null,
           materialOptionsBtn: ((await action.getElementCount(this.materialOptionsBtn + i + "]")) > 0) ? await action.getText(this.materialOptionsBtn + i + "]") : null,
+          addToClassBtn: ((await action.getElementCount(this.addToClassBtn + i + "]")) > 0) ? await action.getText(this.addToClassBtn + i + "]") : null,
         }
       }
     }
@@ -359,6 +365,18 @@ module.exports = {
       editMaterialDialogSubtitle: ((await action.getElementCount(this.editMaterialDialogSubtitle)) > 0) ? await action.getText(this.editMaterialDialogSubtitle) : null,
       editMaterialDialogEditBtn: ((await action.getElementCount(this.editMaterialDialogEditBtn)) > 0) ? await action.getText(this.editMaterialDialogEditBtn) : null,
       editMaterialDialogCancelBtn: ((await action.getElementCount(this.editMaterialDialogCancelBtn)) > 0) ? await action.getText(this.editMaterialDialogCancelBtn) : null,
+    }
+    return obj;
+  },
+
+  getData_addToClassDialog: async function () {
+    await logger.logInto(await stackTrace.get());
+    await action.waitForDocumentLoad();
+    var obj;
+    obj = {
+      addToClassDialogTitle: ((await action.getElementCount(this.addToClassDialogTitle)) > 0) ? await action.getText(this.addToClassDialogTitle) : null,
+      addToClassDialogSubtitle: ((await action.getElementCount(this.addToClassDialogSubtitle)) > 0) ? await action.getText(this.addToClassDialogSubtitle) : null,
+      addToClassMenuCloseBtn: ((await action.getElementCount(this.addToClassMenuCloseBtn)) > 0) ? await action.getText(this.addToClassMenuCloseBtn) : null,
     }
     return obj;
   },
@@ -808,6 +826,25 @@ module.exports = {
     return res;
   },
 
+  click_addToClassBtn: async function (materialTitleBtnName) {
+    await logger.logInto(await stackTrace.get());
+    var i, list, res;
+    list = await action.findElements(this.addToClassBtn);
+    for (i = 0; i < list.length; i++) {
+      if (((await action.getText(this.materialTitleBtn + i + "]"))) == materialTitleBtnName) {
+        res = await action.click(list[i]);
+        break;
+      }
+    }
+    if (res == true) {
+      await logger.logInto(await stackTrace.get(), " --addToClassBtn clicked");
+      res = await this.getData_addToClassDialog();
+    }
+    else
+      await logger.logInto(await stackTrace.get(), " --addToClassBtn NOT clicked", "error")
+    return res;
+  },
+
   click_previewMaterialOption: async function () {
     await logger.logInto(await stackTrace.get());
     var res;
@@ -896,6 +933,7 @@ module.exports = {
     res = await action.click(this.editMaterialDialogEditBtn);
     if (true == res) {
       await logger.logInto(await stackTrace.get(), " editMaterialDialogEditBtn is clicked");
+      res = await require('./libraryEditor.page').isInitialized();
     }
     else {
       await logger.logInto(await stackTrace.get(), res + "editMaterialDialogEditBtn is NOT clicked", 'error');
@@ -917,5 +955,19 @@ module.exports = {
     return res;
   },
 
+  click_addToClassMenuCloseBtn: async function () {
+    await logger.logInto(await stackTrace.get());
+    var res;
+    res = await action.click(this.addToClassMenuCloseBtn);
+    if (true == res) {
+      await logger.logInto(await stackTrace.get(), " addToClassMenuCloseBtn is clicked");
+      res = await action.waitForDisplayed(this.addToClassMenuCloseBtn, undefined, true);
+    }
+    else {
+      await logger.logInto(await stackTrace.get(), res + "addToClassMenuCloseBtn is NOT clicked", 'error');
+    }
+    return res;
+  },
+  
 }
 

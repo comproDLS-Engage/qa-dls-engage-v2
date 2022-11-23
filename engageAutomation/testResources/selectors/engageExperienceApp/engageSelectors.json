@@ -149,6 +149,7 @@
                 "newResourceOption": "[data-tid=button-newResource]",
                 "materialTitleBtn": "[data-tid*=text-materialTitle-",
                 "materialOptionsBtn": "[data-tid*=button-material-",
+                "addToClassBtn": "[data-tid*=button-publish-",
                 "previewMaterialOption": "[data-tid*=button-preview-]",
                 "editMaterialOption": "[data-tid*=button-edit-]",
                 "duplicateMaterialOption": "[data-tid*=button-duplicate-]",
@@ -161,7 +162,10 @@
                 "editMaterialDialogTitle": "[data-tid=text-title-re-editMaterial]",
                 "editMaterialDialogSubtitle": "[data-tid=text-subTitle-re-editMaterial]",
                 "editMaterialDialogEditBtn": "[data-tid=button-primary-re-editMaterial]",
-                "editMaterialDialogCancelBtn": "[data-tid=button-secondary-re-editMaterial]"
+                "editMaterialDialogCancelBtn": "[data-tid=button-secondary-re-editMaterial]",
+                "addToClassDialogTitle": "[data-tid=selectClasses-title]",
+                "addToClassDialogSubtitle": "[data-tid=selectClasses-bilinear]",
+                "addToClassMenuCloseBtn": "[data-tid=button-close]"
             },
             "classDrawer": {
                 "classDrawerHeader": "[data-tid=text-drawerHeaderTitle]",
