@@ -320,8 +320,12 @@ module.exports = {
     //Validate that options menu is displayed on clicking 3 dot button of the material card
     ENG_DASH_TC_41: async function (testdata) {
         sts = await dashboardPage.click_materialOptionsBtn(testdata[0]);
-        await assertion.assertEqual(sts.previewMaterialOption, testdata[1].previewMaterialOption, "previewMaterialOption status mismatch");
+        await assertion.assertEqual(sts.duplicateMaterialOption, testdata[1].duplicateMaterialOption, "duplicateMaterialOption status mismatch");
         await assertion.assertEqual(sts.deleteMaterialOption, testdata[1].deleteMaterialOption, "deleteMaterialOption status mismatch");
+        if (sts.previewMaterialOption == null)
+            await assertion.assertEqual(sts.editMaterialOption, testdata[1].editMaterialOption, "editMaterialOption status mismatch");
+        else
+            await assertion.assertEqual(sts.previewMaterialOption, testdata[1].previewMaterialOption, "previewMaterialOption status mismatch");
     },
 
     //Validate that preview is launched on clicking Preview option
@@ -350,4 +354,32 @@ module.exports = {
         await assertion.assertEqual(sts, true, "click_deleteMaterialDialogDeleteBtn status mismatch");
     },
 
+    //Validate that add to class dialog is displayed on clicking add to class button on the material card
+    ENG_DASH_TC_46: async function (testdata) {
+        sts = await dashboardPage.click_addToClassBtn(testdata[0]);
+        await assertion.assertEqual(sts.addToClassDialogTitle, testdata[1].addToClassDialogTitle, "addToClassDialogTitle status mismatch");
+        await assertion.assertEqual(sts.addToClassDialogSubtitle, testdata[1].addToClassDialogSubtitle, "addToClassDialogSubtitle status mismatch");
+        await assertion.assertEqual(sts.addToClassMenuCloseBtn, testdata[1].addToClassMenuCloseBtn, "addToClassMenuCloseBtn status mismatch");
+    },
+
+    //Validate that add to class dialog is closed on clicking close button
+    ENG_DASH_TC_47: async function () {
+        sts = await dashboardPage.click_addToClassMenuCloseBtn();
+        await assertion.assertEqual(sts, true, "click_addToClassMenuCloseBtn status mismatch");
+    },
+
+    //Validate that Edit dialog is launched on clicking Edit option for published quiz
+    ENG_DASH_TC_49: async function (testdata) {
+        sts = await dashboardPage.click_editMaterialOption();
+        await assertion.assert((sts.editMaterialDialogTitle).includes(testdata.editMaterialDialogTitle), "editMaterialDialogTitle status mismatch");
+        await assertion.assertEqual(sts.editMaterialDialogSubtitle, testdata.editMaterialDialogSubtitle, "editMaterialDialogSubtitle status mismatch");
+        await assertion.assertEqual(sts.editMaterialDialogEditBtn, testdata.editMaterialDialogEditBtn, "editMaterialDialogEditBtn status mismatch");
+        await assertion.assertEqual(sts.editMaterialDialogCancelBtn, testdata.editMaterialDialogCancelBtn, "editMaterialDialogCancelBtn status mismatch");
+    },
+
+    //Validate that dialog is closed on clicking Cancel button
+    ENG_DASH_TC_51: async function () {
+        sts = await dashboardPage.click_editMaterialDialogCancelBtn();
+        await assertion.assertEqual(sts, true, "click_editMaterialDialogCancelBtn status mismatch");
+    },
 };

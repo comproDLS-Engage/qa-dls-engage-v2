@@ -459,5 +459,9 @@
         "scenario1": []
       }
     ]
+  },
+  "libraryMaterial": {
+    "type": "",
+    "name": "Quiz for Dashboard Automation"
   }
 }

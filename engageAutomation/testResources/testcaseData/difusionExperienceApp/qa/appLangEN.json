@@ -117,8 +117,14 @@
                     "recentlyViewedHeading": "Recently Viewed",
                     "recentMaterialsBtn": "Recent Materials",
                     "addNewMaterialBtn": "Add New Material",
-                    "noMaterialTitle": "No Materials created yet",
-                    "noMaterialSubtitle": "Any materials you create or modify will be shown here for you to view and assign to your class",
+                    "noMaterialTitle": [
+                        "No Materials created yet",
+                        "No recent materials"
+                    ],
+                    "noMaterialSubtitle": [
+                        "Any materials you create or modify will be shown here for you to view and assign to your class",
+                        "Any materials you create or modify in the last 30 days will be shown here for you to view and assign to your class."
+                    ],
                     "viewAllMaterialBtn": "View All Materials",
                     "createNewLabel": "Create New",
                     "blankQuizOption": "Blank Quiz",
@@ -136,7 +142,10 @@
                     "editMaterialDialogTitle": "Edit Quiz",
                     "editMaterialDialogSubtitle": "Editing this quiz will create a new version and will not impact the classes where it is already added.",
                     "editMaterialDialogEditBtn": "Continue to Edit",
-                    "editMaterialDialogCancelBtn": "Cancel"
+                    "editMaterialDialogCancelBtn": "Cancel",
+                    "addToClassDialogTitle": "New Access",
+                    "addToClassDialogSubtitle": "Add this quiz to your class to make it assignable in that class.",
+                    "addToClassMenuCloseBtn": ""
                 },
                 "student": {
                     "pageTitle": "Dashboard",
