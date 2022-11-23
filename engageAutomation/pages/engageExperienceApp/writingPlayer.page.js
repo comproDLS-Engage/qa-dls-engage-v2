@@ -39,7 +39,7 @@ module.exports = {
         var arr = [];
         var res, textboxSel, attachedFileSel;
         for (let i = 0; i < writingData.length; i++) {
-            textboxSel = this.writingTextbox + writingData[i][0] + "]";
+            textboxSel = this.writingTextbox + writingData[i][0] + "] [contenteditable]";
             attachedFileSel = this.attachedFile + writingData[i][0] + "]";
             res = await action.getElementCount(textboxSel);
             if (res == 1)
@@ -85,6 +85,7 @@ module.exports = {
     getData_removeDialog: async function () {
         await logger.logInto(await stackTrace.get());
         await action.switchToFrame(0);
+        await action.waitForDocumentLoad();
         var obj;
         obj = {
             removeDialogTitle: ((await action.getElementCount(this.removeDialogTitle)) > 0) ? await action.getText(this.removeDialogTitle) : null,
@@ -212,7 +213,7 @@ module.exports = {
         var res;
         await logger.logInto(await stackTrace.get());
         await action.switchToFrame(0);
-        res = await action.setValue(this.writingTextbox + writingData[0] + "]", writingData[1]);
+        res = await action.setValue(this.writingTextbox + writingData[0] + "] [role=textbox]", writingData[1]);
         if (true == res) {
             await logger.logInto(await stackTrace.get(), "Value is entered in writingTextbox");
         } else {
