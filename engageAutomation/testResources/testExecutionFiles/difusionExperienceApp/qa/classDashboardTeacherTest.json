@@ -1,6 +1,6 @@
 {
   "Suite18": {
-    "Name": "Validation Archived tab Workflow",
+    "Name": "Classes - Validate Archived Tab Test Cases",
     "TestCaseRepo": [
       "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
     ],
@@ -307,7 +307,7 @@
     ]
   },
   "Suite19": {
-    "Name": "Validation Archived tab page when no class is added",
+    "Name": "Classes - Validate Archived Tab When No Archived Class Present",
     "TestCaseRepo": [
       "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
     ],
@@ -394,7 +394,7 @@
   },
   
   "Suite1": {
-    "Name": "Create and Edit Workflow of Class",
+    "Name": "Classes - Create and Edit Workflow Test Cases",
     "TestCaseRepo": [
       "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
     ],
@@ -647,7 +647,7 @@
     ]
   },
   "Suite2": {
-    "Name": "Class features of an Instructor when no class has been created (English)",
+    "Name": "Classes - Class features of an Instructor when no class has been created (English)",
     "TestCaseRepo": [
       "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
     ],
