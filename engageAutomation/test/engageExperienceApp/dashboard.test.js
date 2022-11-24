@@ -31,9 +31,11 @@ module.exports = {
         await assertion.assertEqual(sts.recentlyViewedHeading, testdata.recentlyViewedHeading, "Recently Viewed heading text mismatch");
         await assertion.assertEqual(sts.recentMaterialsBtn, testdata.recentMaterialsBtn, "recentMaterialsBtn text mismatch");
         await assertion.assertEqual(sts.addNewMaterialBtn, testdata.addNewMaterialBtn, "addNewMaterialBtn text mismatch");
-        await assertion.assertEqual(sts.noMaterialTitle, testdata.noMaterialTitle, "noMaterialTitle text mismatch");
-        await assertion.assertEqual(sts.noMaterialSubtitle, testdata.noMaterialSubtitle, "noMaterialSubtitle text mismatch");
         await assertion.assertEqual(sts.viewAllMaterialBtn, testdata.viewAllMaterialBtn, "viewAllMaterialBtn text mismatch");
+        if (testdata.noMaterialTitle != null) {
+            await assertion.assertEqual(sts.noMaterialTitle, testdata.noMaterialTitle[0], "noMaterialTitle text mismatch");
+            await assertion.assertEqual(sts.noMaterialSubtitle, testdata.noMaterialSubtitle[0], "noMaterialSubtitle text mismatch");
+        }
         sts = await dashboardPage.getData_actionCards();
         for (let i = 0; i < sts.length; i++) { //sts.length has been used instead of testdata.actionCard.length to support smaller resolutions
             await assertion.assertEqual(sts[i].actionCardTitles, testdata.actionCardTitles[i], "Action Card title text mismatch");
@@ -250,9 +252,11 @@ module.exports = {
         await assertion.assertEqual(sts.recentlyViewedHeading, testdata.recentlyViewedHeading, "Recently Viewed heading text mismatch");
         await assertion.assertEqual(sts.recentMaterialsBtn, testdata.recentMaterialsBtn, "recentMaterialsBtn text mismatch");
         await assertion.assertEqual(sts.addNewMaterialBtn, testdata.addNewMaterialBtn, "addNewMaterialBtn text mismatch");
-        await assertion.assertEqual(sts.noMaterialTitle, testdata.noMaterialTitle, "noMaterialTitle text mismatch");
-        await assertion.assertEqual(sts.noMaterialSubtitle, testdata.noMaterialSubtitle, "noMaterialSubtitle text mismatch");
         await assertion.assertEqual(sts.viewAllMaterialBtn, testdata.viewAllMaterialBtn, "viewAllMaterialBtn text mismatch");
+        if (testdata.noMaterialTitle != null) {
+            await assertion.assertEqual(sts.noMaterialTitle, testdata.noMaterialTitle[0], "noMaterialTitle text mismatch");
+            await assertion.assertEqual(sts.noMaterialSubtitle, testdata.noMaterialSubtitle[0], "noMaterialSubtitle text mismatch");
+        }
         sts = await dashboardPage.getData_actionCards();
         for (let i = 0; i < sts.length; i++) { //sts.length has been used instead of testdata.actionCard.length to support smaller resolutions
             await assertion.assertEqual(sts[i].actionCardTitles, testdata.actionCardTitles[i], "Action Card title text mismatch");
