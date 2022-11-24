@@ -4112,6 +4112,7 @@
           "tags": "P1",
           "visualTest": true
         },
+      
         {
           "id": "ENG_ICCE_TC_67",
           "description": "Validate the Click on Preview Option",
@@ -4151,6 +4152,12 @@
         {
           "id": "ENG_ICCE_TC_73",
           "description": "Validate the Click on Bread Crumb Back button",
+          "tags": "P1",
+          "visualTest": true
+        },
+       {
+          "id": "ENG_ICCE_TC_74",
+          "description": "Validate the Click on Editor Dismiss button",
           "tags": "P1",
           "visualTest": true
         }

@@ -2,6 +2,7 @@
 var action = require('../../core/actionLibrary/baseActionLibrary.js')
 var selectorFile = jsonParserUtil.jsonParser(selectorDir)
 var appShellPage = require('./appShell.page.js');
+const { activeHotlink } = require('./flipbook.page.js');
 
 module.exports = {
     quizHeaderIcon: selectorFile.css.ComproEngage.libraryEditorPage.quizHeaderIcon,
@@ -101,6 +102,7 @@ module.exports = {
     eyeIcon: selectorFile.css.ComproEngage.libraryEditorPage.eyeIcon,
     previeCloseIcon: selectorFile.css.ComproEngage.libraryEditorPage.previeCloseIcon,
     iconBreadCrumbBack_btn: selectorFile.css.ComproEngage.libraryEditorPage.iconBreadCrumbBack_btn,
+    editorTourDismiss:selectorFile.css.ComproEngage.libraryEditorPage.editorTourDismiss,
 
 
     isInitialized: async function () {
@@ -500,7 +502,18 @@ module.exports = {
         }
         return res;
     },
-
+    click_editorTourDismiss: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.editorTourDismiss);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " editorTourDismiss is clicked");
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "editorTourDismiss is NOT clicked", 'error');
+        }
+        return res;
+    },
     click_uploadImage: async function (imagePath) {
         await logger.logInto(await stackTrace.get());
         var res;
@@ -508,7 +521,7 @@ module.exports = {
         // set file path value in the input field
         res = await action.addValue(this.browsebtn, remoteFilePath);
         res = await action.waitForDisplayed("[data-tid=input-mediaheight]")
-        browser.pause(2000)
+        await browser.pause(2000)
         await logger.logInto(await stackTrace.get(), " browsebtn is clicked");
         return res;
     },
@@ -966,9 +979,9 @@ module.exports = {
     set_questiontextbox: async function (value) {
         var res;
         await logger.logInto(await stackTrace.get());
-        await action.waitForDisplayed(this.questiontextbox);
+        await action.waitForClickable(this.questiontextbox);
         res = await action.setValue(this.questiontextbox, value);
-        browser.pause(1000)
+        await browser.pause(10000)
         if (true == res) {
             await logger.logInto(await stackTrace.get(), "Value is entered in questiontextbox");
         } else {
@@ -1047,7 +1060,7 @@ module.exports = {
         await action.waitForDisplayed(this.option + id + "] input")
         res = await action.setValue(this.option + id + "] input", value);
         if (true == res) {
-            browser.pause(500)
+            await browser.pause(5000)
             await action.getValue(this.option + id + "] input")
             await logger.logInto(await stackTrace.get(), "Value is entered in option");
         } else {
