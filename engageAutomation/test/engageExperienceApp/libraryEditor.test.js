@@ -12,9 +12,13 @@ module.exports = {
         sts = await libraryEditorPage.set_quizHeaderName(testdata);
         await assertion.assertEqual(sts, true, "quizHeaderName are not Clicked");
     },
+    ENG_ICCE_TC_74: async function (testdata) {
+        sts = await libraryEditorPage.click_editorTourDismiss(testdata);
+        await assertion.assertEqual(sts, true, "editorTourDismiss are not Clicked");
+    },
     ENG_ICCE_TC_73: async function (testdata) {
         sts = await libraryEditorPage.click_iconBreadCrumbBack_btn(testdata);
-        await assertion.assertEqual(sts, true, "quizHeaderName are not Clicked");
+        await assertion.assertEqual(sts, true, "iconBreadCrumbBack_btn are not Clicked");
     },
     ENG_ICCE_TC_2: async function (testdata) {
         sts = await libraryEditorPage.click_multipleChoicetab();
@@ -229,7 +233,6 @@ module.exports = {
 
     ENG_ICCE_TC_37: async function (testdata) {
         sts = await libraryEditorPage.click_leftArrow();
-        console.log(sts)
         await assertion.assertEqual(sts.drawerTitle, testdata.drawerTitle, "drawerTitle text mismatch");
         await assertion.assertEqual(sts.tagsHeading, testdata.tagsHeading, "tagsHeading text mismatch");
         await assertion.assertEqual(sts.tagsSubHeading, testdata.tagsSubHeading, "tagsSubHeading text mismatch");

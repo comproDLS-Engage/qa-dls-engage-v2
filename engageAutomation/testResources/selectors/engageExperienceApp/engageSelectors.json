@@ -1464,7 +1464,7 @@
                 "textbtn": "[data-tid=button-text]",
                 "leftactivityArrow": "[data-tid=button-previous]",
                 "rightactivityArrow": "[data-tid=button-next]",
-                "questionnumber": "",
+                "questionnumber": "#currentQuestionCount > div > div > button",
                 "studentWillAnswerHere": "input[placeholder*=\"Student will answer here...\"]",
                 "longAnswerbtn": "[data-tid=input-toggle-longAnswers]",
                 "fileUploadbtn": "[data-tid=input-toggle-fileUpload]",
@@ -1489,7 +1489,8 @@
                 "deleteMoreOptionbtn": "[data-tid=button-deleteQuiz-submenuItem]",
                 "previewcontainer": "[id=\"PreviewQuizContainer\"]",
                 "eyeIcon": "[id=\"eye-show_svg__Group\"]",
-                "previeCloseIcon": "[data-tid=button-closestudentview]"
+                "previeCloseIcon": "[data-tid=button-closestudentview]",
+                "editorTourDismiss":"[data-action=skip]"
             },
             "library": {
                 "libraryTitleTxt": "[data-tid=text-pageTitle]",
