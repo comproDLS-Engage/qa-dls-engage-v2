@@ -1254,6 +1254,7 @@
                     "gradedOn": null,
                     "closeBtn": "Close",
                     "submitActivityBtn": null,
+                    "saveAnswersBtn": null,
                     "submitGradeBtn": "Submit Grade",
                     "retakeOpenActivityBtn": null,
                     "snackbarMsg": [
@@ -1319,9 +1320,13 @@
                     "gradedOn": "Graded on",
                     "closeBtn": "Close",
                     "submitActivityBtn": "Submit Answers",
+                    "saveAnswersBtn": "Save Answers",
                     "submitGradeBtn": null,
                     "retakeOpenActivityBtn": "Retake Activity",
-                    "snackbarMsg": "Activity has been submitted! You'll get a notification as soon as your teacher posts your grade.",
+                    "snackbarMsg": [
+                        "Activity has been submitted! You'll get a notification as soon as your teacher posts your grade.",
+                        "Your answers have been saved."
+                    ],
                     "gradingSubtitle": "submitted",
                     "statusPill": [
                         "Grade Pending",
@@ -1330,7 +1335,10 @@
                     ],
                     "cardTitle": "Scores & Progress",
                     "cardSubtitle": "Not yet submitted",
-                    "cardText": "This activity hasn’t been submitted yet. Once submitted, your grade and any feedback from your teacher will be shown here.",
+                    "cardText": [
+                        "This activity hasn’t been submitted yet. Once submitted, your grade and any feedback from your teacher will be shown here.",
+                        "Since this is an Archived class, you can save your answers, however teacher will not be able to posts the grade or any feedback."
+                    ],
                     "attempt1Label": "Attempt 1",
                     "attempt2Label": "Attempt 2",
                     "attempt3Label": "Attempt 3",

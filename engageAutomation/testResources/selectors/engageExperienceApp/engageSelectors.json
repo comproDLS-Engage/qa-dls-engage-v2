@@ -1233,6 +1233,7 @@
                 "gradedOn": "[data-tid=button-gradedOn]",
                 "closeBtn": "[data-tid=button-close]",
                 "submitActivityBtn": "[data-tid=button-submitActivity]",
+                "saveAnswersBtn": "[data-tid='button-saveAnswers']",
                 "submitGradeBtn": "[data-tid=button-submitGrade]",
                 "retakeOpenActivityBtn": "[data-tid='button-retakeActivity']",
                 "snackbarMsg": "[data-tid=text-error], [data-tid=text-info], [data-tid=text-success]",

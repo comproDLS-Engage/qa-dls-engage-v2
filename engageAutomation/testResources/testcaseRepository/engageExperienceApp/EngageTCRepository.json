@@ -3924,6 +3924,12 @@
           "description": "Validate that clicking on cancel button does not complete the grading of the activity",
           "tags": "P1",
           "visualTest": true
+        },
+        {
+          "id": "ENG_OPEN_TC_23",
+          "description": "Validate that snackbar message appears on clicking Save Answers button",
+          "tags": "P1",
+          "visualTest": true
         }
       ]
     },
