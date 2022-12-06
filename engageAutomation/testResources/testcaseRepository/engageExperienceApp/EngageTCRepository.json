@@ -1816,6 +1816,12 @@
           "description": "Validate the feedback text of a scorable activity for kids layout",
           "tags": "",
           "visualTest": true
+        },
+        {
+          "id": "ENG_PLAY_TC_30",
+          "description": "Validate the feedback text of a scorable activity for kids layout",
+          "tags": "",
+          "visualTest": true
         }
       ]
     },
@@ -3930,6 +3936,12 @@
           "description": "Validate that clicking on cancel button does not complete the grading of the activity",
           "tags": "P1",
           "visualTest": true
+        },
+        {
+          "id": "ENG_OPEN_TC_23",
+          "description": "Validate that snackbar message appears on clicking Save Answers button",
+          "tags": "P1",
+          "visualTest": true
         }
       ]
     },
@@ -3965,6 +3977,24 @@
         {
           "id": "ENG_ICCE_TC_5",
           "description": "Validate clicking on Duplicate Question button",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_6",
+          "description": "Validate clicking on Delete  button on the delete question dialogue button",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_7",
+          "description": "Validate clicking on Cancel  button on the delete question dialogue button",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_8",
+          "description": "Validate clicking on Delete Question button",
           "tags": "P1",
           "visualTest": true
         },
@@ -4107,6 +4137,12 @@
           "visualTest": true
         },
         {
+          "id": "ENG_ICCE_TC_54",
+          "description": "Validate the Content of delete question dialogue",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
           "id": "ENG_ICCE_TC_52",
           "description": "Validate the Editor Quiz Selection Page",
           "tags": "P1",
@@ -4163,6 +4199,65 @@
         {
           "id": "ENG_ICCE_TC_74",
           "description": "Validate the Click on Editor Dismiss button",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_75",
+          "description": "Validate the Click on delete button on the quiz delete dialogue box",
+          "tags": "P1",
+          "visualTest": true
+        },   {
+          "id": "ENG_ICCE_TC_75",
+          "description": "Validate the Click on delete button on the quiz delete dialogue box",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_76",
+          "description": "Validate the Click on Cancel button on the quiz delete dialogue box",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_77",
+          "description": "Validate the Click on Add To Class button on the Published Quiz Page",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_78",
+          "description": "Validate the Click on Edit button on the Published Quiz Page",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_79",
+          "description": "Validate the Click on View As Student button on the Published Quiz Page",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_80",
+          "description": "Validate the Click on close Icon on View As Student Page",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_81",
+          "description": "Validate the Click on close Icon on Edit Material Dialogue button",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_82",
+          "description": "Validate the Click on close Icon on New Access Dialogue  button",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_83",
+          "description": "Validate the Click on Continue to Edit button Edit Quiz Dialogue",
           "tags": "P1",
           "visualTest": true
         }

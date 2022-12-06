@@ -250,6 +250,21 @@
 				"status": "",
 				"studentCount": 0,
 				"info": ""
+			},
+			"studentArchiveClass2":{
+				"name": "class1",
+				"key": "",
+				"classDuration": "Nov 24 - Nov 24, 2022",
+				"instructor": {
+					"name": "",
+					"email": ""
+				},
+				"bookName": "QA Test Automation Book [DO NOT MODIFY]",
+				"bookIndex":"0",
+				"schoolName": "",
+				"status": "",
+				"studentCount": 1,
+				"info": ""
 			}
 		}
 	}

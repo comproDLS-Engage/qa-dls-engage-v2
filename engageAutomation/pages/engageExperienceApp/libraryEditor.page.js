@@ -9,6 +9,9 @@ module.exports = {
     quizHeaderName: selectorFile.css.ComproEngage.libraryEditorPage.quizHeaderName,
     savedtoLibrarylbl: selectorFile.css.ComproEngage.libraryEditorPage.savedtoLibrarylbl,
     draftlbl: selectorFile.css.ComproEngage.libraryEditorPage.draftlbl,
+    addtoClass_btn: selectorFile.css.ComproEngage.libraryEditorPage.addtoClass_btn,
+    edit_btn: selectorFile.css.ComproEngage.libraryEditorPage.edit_btn,
+    viewAsStudent: selectorFile.css.ComproEngage.libraryEditorPage.viewAsStudent,
     pageHeader: selectorFile.css.ComproEngage.libraryEditorPage.pageHeader,
     pageSubHeader: selectorFile.css.ComproEngage.libraryEditorPage.pageSubHeader,
     multipleChoicetabIcon: selectorFile.css.ComproEngage.libraryEditorPage.multipleChoicetabIcon,
@@ -102,8 +105,83 @@ module.exports = {
     eyeIcon: selectorFile.css.ComproEngage.libraryEditorPage.eyeIcon,
     previeCloseIcon: selectorFile.css.ComproEngage.libraryEditorPage.previeCloseIcon,
     iconBreadCrumbBack_btn: selectorFile.css.ComproEngage.libraryEditorPage.iconBreadCrumbBack_btn,
+<<<<<<< .mine
     editorTourDismiss: selectorFile.css.ComproEngage.libraryEditorPage.editorTourDismiss,
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=======
+    editorTourDismiss: selectorFile.css.ComproEngage.libraryEditorPage.editorTourDismiss,
+    deleteTitle: selectorFile.css.ComproEngage.libraryEditorPage.deleteTitle,
+    deleteSubTitle: selectorFile.css.ComproEngage.libraryEditorPage.deleteSubTitle,
+    deleteSubTitleMaterial: selectorFile.css.ComproEngage.libraryEditorPage.deleteSubTitleMaterial,
+    cancel_btn: selectorFile.css.ComproEngage.libraryEditorPage.cancel_btn,
+    delete_btn: selectorFile.css.ComproEngage.libraryEditorPage.delete_btn,
+    manageAccess_Title: selectorFile.css.ComproEngage.libraryEditorPage.manageAccess_Title,
+    manageAccess_SubTitle: selectorFile.css.ComproEngage.libraryEditorPage.manageAccess_SubTitle,
+    close_btn: selectorFile.css.ComproEngage.libraryEditorPage.close_btn,
+    newAccess_btn: selectorFile.css.ComproEngage.libraryEditorPage.newAccess_btn,
+    pill_number: selectorFile.css.ComproEngage.libraryEditorPage.pill_number,
+    classAccessHeader: selectorFile.css.ComproEngage.libraryEditorPage.classAccessHeader,
+    done_btn: selectorFile.css.ComproEngage.libraryEditorPage.done_btn,
+    classIcon: selectorFile.css.ComproEngage.libraryEditorPage.classIcon,
+    selectClass: selectorFile.css.ComproEngage.libraryEditorPage.selectClass,
+    ClassName: selectorFile.css.ComproEngage.libraryEditorPage.ClassName,
+    bookName: selectorFile.css.ComproEngage.libraryEditorPage.bookName,
+    bookImage: selectorFile.css.ComproEngage.libraryEditorPage.bookImage,
+    dropDown_btn: selectorFile.css.ComproEngage.libraryEditorPage.dropDown_btn,
+    updateTo: selectorFile.css.ComproEngage.libraryEditorPage.updateTo,
+    removeAccess: selectorFile.css.ComproEngage.libraryEditorPage.removeAccess,
+    removeAccess_btn: selectorFile.css.ComproEngage.libraryEditorPage.removeAccess_btn,
+    newAccess_Title: selectorFile.css.ComproEngage.libraryEditorPage.newAccess_Title,
+    newAccess_SubTitle: selectorFile.css.ComproEngage.libraryEditorPage.newAccess_SubTitle,
+    noAccessClassIcon: selectorFile.css.ComproEngage.libraryEditorPage.noAccessClassIcon,
+    noClassRemaining: selectorFile.css.ComproEngage.libraryEditorPage.noClassRemaining,
+    addtoClassDescription: selectorFile.css.ComproEngage.libraryEditorPage.addtoClassDescription,
+    addnowbutton: selectorFile.css.ComproEngage.libraryEditorPage.addnowbutton,
+    accessClosebtn: selectorFile.css.ComproEngage.libraryEditorPage.accessClosebtn,
+    editMaterial_Title: selectorFile.css.ComproEngage.libraryEditorPage.editMaterial_Title,
+    editMaterial_SubTitle: selectorFile.css.ComproEngage.libraryEditorPage.editMaterial_SubTitle,
+    editMaterial_classIcon: selectorFile.css.ComproEngage.libraryEditorPage.editMaterial_classIcon,
+    editMaterial_ClassInfoBoxTitle: selectorFile.css.ComproEngage.libraryEditorPage.editMaterial_ClassInfoBoxTitle,
+    editMaterial_addedClasses_classInfoBox: selectorFile.css.ComproEngage.libraryEditorPage.editMaterial_addedClasses_classInfoBox,
+    editMaterial_Note: selectorFile.css.ComproEngage.libraryEditorPage.editMaterial_Note,
+    editMaterial_Cancel: selectorFile.css.ComproEngage.libraryEditorPage.editMaterial_Cancel,
+    editMaterial_ContinueToEdit: selectorFile.css.ComproEngage.libraryEditorPage.editMaterial_ContinueToEdit,
+>>>>>>> .theirs
 
     isInitialized: async function () {
         var res;
@@ -136,7 +214,20 @@ module.exports = {
         }
         return obj;
     },
-
+    getData_publishedQuizPage: async function () {
+        await logger.logInto(await stackTrace.get());
+        var obj;
+        obj = {
+            quizHeaderIcon: ((await action.getElementCount(this.quizHeaderIcon)) > 0) ? await action.waitForDisplayed(this.quizHeaderIcon) : false,
+            quizHeaderName: ((await action.getElementCount(this.quizHeaderName)) > 0) ? await action.getText(this.quizHeaderName) : null,
+            savedtoLibrarylbl: ((await action.getElementCount(this.savedtoLibrarylbl)) > 0) ? await action.getText(this.savedtoLibrarylbl) : null,
+            draftlbl: ((await action.getElementCount(this.draftlbl)) > 0) ? await action.getText(this.draftlbl) : null,
+            addtoClass_btn: ((await action.getElementCount(this.addtoClass_btn)) > 0) ? await action.getText(this.addtoClass_btn) : null,
+            edit_btn: ((await action.getElementCount(this.edit_btn)) > 0) ? await action.getText(this.edit_btn) : null,
+            viewAsStudent: ((await action.getElementCount(this.viewAsStudent)) > 0) ? await action.getText(this.viewAsStudent) : null,
+        }
+        return obj;
+    },
     getData_editorPage: async function () {
         await logger.logInto(await stackTrace.get());
         var obj;
@@ -291,7 +382,45 @@ module.exports = {
         }
         return obj;
     },
-
+    click_addtoClass_btn: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.addtoClass_btn);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " addtoClass_btn is clicked");
+            res= await this.getData_NewAccessPage();
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "addtoClass_btn is NOT clicked", 'error');
+        }
+        return res;
+    },
+    click_edit_btn: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.edit_btn);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " edit_btn is clicked");
+            res= await this.getData_editMaterial_Modal()
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "edit_btn is NOT clicked", 'error');
+        }
+        return res;
+    },
+    click_viewAsStudent: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.viewAsStudent);
+        if (true == res) {
+            res = await this.getData_previewPage();
+            await logger.logInto(await stackTrace.get(), " viewAsStudent is clicked");
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "viewAsStudent is NOT clicked", 'error');
+        }
+        return res;
+    },
     click_iconBreadCrumbBack_btn: async function () {
         await logger.logInto(await stackTrace.get());
         var res;
@@ -956,6 +1085,7 @@ module.exports = {
         res = await action.click(this.deleteMoreOptionbtn);
         if (true == res) {
             await logger.logInto(await stackTrace.get(), " deleteMoreOptionbtn is clicked");
+            await this.getData_deleteDialogue();
         }
         else {
             await logger.logInto(await stackTrace.get(), res + "deleteMoreOptionbtn is NOT clicked", 'error');
@@ -970,6 +1100,19 @@ module.exports = {
         if (true == res) {
             await logger.logInto(await stackTrace.get(), " previeCloseIcon is clicked");
             res = await this.getData_editorPage();
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "previeCloseIcon is NOT clicked", 'error');
+        }
+        return res;
+    },
+    click_viewAsStudentClosebtn: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.previeCloseIcon);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " previeCloseIcon is clicked");
+            res = await this.getData_publishedQuizPage();
         }
         else {
             await logger.logInto(await stackTrace.get(), res + "previeCloseIcon is NOT clicked", 'error');
@@ -1081,6 +1224,304 @@ module.exports = {
         }
         return res;
     },
+    getData_deleteDialogue: async function () {
+        await logger.logInto(await stackTrace.get());
+        var obj;
+        obj = {
+            deleteTitle: ((await action.getElementCount(this.deleteTitle)) > 0) ? await action.getText(this.deleteTitle) : null,
+            deleteSubTitle: ((await action.getElementCount(this.deleteSubTitle)) > 0) ? await action.getText(this.deleteSubTitle) : null,
+            deleteSubTitleMaterial: ((await action.getElementCount(this.deleteSubTitleMaterial)) > 0) ? await action.getText(this.deleteSubTitleMaterial) : null,
+            cancel_btn: ((await action.getElementCount(this.cancel_btn)) > 0) ? await action.getText(this.cancel_btn) : null,
+            delete_btn: ((await action.getElementCount(this.delete_btn)) > 0) ? await action.getText(this.delete_btn) : null,
+        }
+        return obj;
+    },
 
+    getData_manageAccessPage: async function () {
+        await logger.logInto(await stackTrace.get());
+        var obj;
+        obj = {
+            manageAccess_Title: ((await action.getElementCount(this.manageAccess_Title)) > 0) ? await action.getText(this.manageAccess_Title) : null,
+            manageAccess_SubTitle: ((await action.getElementCount(this.manageAccess_SubTitle)) > 0) ? await action.getText(this.manageAccess_SubTitle) : null,
+            close_btn: ((await action.getElementCount(this.close_btn)) > 0) ? await action.getText(this.close_btn) : null,
+            newAccess_btn: ((await action.getElementCount(this.newAccess_btn)) > 0) ? await action.getText(this.newAccess_btn) : null,
+            pill_number: ((await action.getElementCount(this.pill_number)) > 0) ? await action.getText(this.pill_number) : null,
+            classAccessHeader: ((await action.getElementCount(this.classAccessHeader)) > 0) ? await action.getText(this.classAccessHeader) : null,
+            done_btn: ((await action.getElementCount(this.done_btn)) > 0) ? await action.getText(this.done_btn) : null,
+        }
+        return obj;
+    },
+
+    getData_classPanePage: async function (ClassNameName) {
+        await logger.logInto(await stackTrace.get());
+        var obj = [];
+        await action.waitForDisplayed(this.ClassName);
+        var list = await action.findElements(this.ClassName);
+        if (ClassNameName) {
+            for (var i = 0; i < list.length; i++) {
+                if ((await action.getText(this.ClassName + i)) == ClassNameName) {
+                    obj[0] = {
+                        classIcon: ((await action.getElementCount(this.classIcon + i + "]")) > 0) ? await action.getText(this.classIcon + i + "]") : null,
+                        selectClass: ((await action.getElementCount(this.selectClass + i + "]")) > 0) ? await action.getText(this.selectClass + i + "]") : null,
+                        ClassName: ((await action.getElementCount(this.ClassName + i + "]")) > 0) ? await action.getText(this.ClassName + i + "]") : null,
+                        bookName: ((await action.getElementCount(this.bookName + i + "]")) > 0) ? await action.getText(this.bookName + i + "]") : null,
+                        bookImage: ((await action.getElementCount(this.bookImage + i + "]")) > 0) ? await action.getText(this.bookImage + i + "]") : null,
+                        dropDown_btn: ((await action.getElementCount(this.dropDown_btn + i + "]")) > 0) ? await action.getText(this.dropDown_btn + i + "]") : null,
+                    }
+                    break;
+                }
+            }
+            obj.removeAccess_btn = ((await action.getElementCount(this.removeAccess_btn)) > 0) ? await action.getText(this.removeAccess_btn) : null
+        } else {
+            for (var i = 0; i < list.length; i++) {
+                obj[i] = {
+                    classIcon: ((await action.getElementCount(this.classIcon + i + "]")) > 0) ? await action.getText(this.classIcon + i + "]") : null,
+                    selectClass: ((await action.getElementCount(this.selectClass + i + "]")) > 0) ? await action.getText(this.selectClass + i + "]") : null,
+                    ClassName: ((await action.getElementCount(this.ClassName + i + "]")) > 0) ? await action.getText(this.ClassName + i + "]") : null,
+                    bookName: ((await action.getElementCount(this.bookName + i + "]")) > 0) ? await action.getText(this.bookName + i + "]") : null,
+                    bookImage: ((await action.getElementCount(this.bookImage + i + "]")) > 0) ? await action.getText(this.bookImage + i + "]") : null,
+                    dropDown_btn: ((await action.getElementCount(this.dropDown_btn + i + "]")) > 0) ? await action.getText(this.dropDown_btn + i + "]") : null,
+                }
+            }
+            obj.removeAccess_btn = ((await action.getElementCount(this.removeAccess_btn)) > 0) ? await action.getText(this.removeAccess_btn) : null
+        }
+        return obj;
+    },
+
+    getData_updateDrownDownMenu: async function () {
+        await logger.logInto(await stackTrace.get());
+        var obj;
+        obj = {
+            updateTo: ((await action.getElementCount(this.updateTo)) > 0) ? await action.getText(this.updateTo) : null,
+            removeAccess: ((await action.getElementCount(this.removeAccess)) > 0) ? await action.getText(this.removeAccess) : null,
+        }
+        return obj;
+    },
+
+    getData_NewAccessPage: async function () {
+        await logger.logInto(await stackTrace.get());
+        var obj;
+        obj = {
+            newAccess_Title: ((await action.getElementCount(this.newAccess_Title)) > 0) ? await action.getText(this.newAccess_Title) : null,
+            newAccess_SubTitle: ((await action.getElementCount(this.newAccess_SubTitle)) > 0) ? await action.getText(this.newAccess_SubTitle) : null,
+            noAccessClassIcon: ((await action.getElementCount(this.noAccessClassIcon)) > 0) ? await action.getText(this.noAccessClassIcon) : null,
+            noClassRemaining: ((await action.getElementCount(this.noClassRemaining)) > 0) ? await action.getText(this.noClassRemaining) : null,
+            addtoClassDescription: ((await action.getElementCount(this.addtoClassDescription)) > 0) ? await action.getText(this.addtoClassDescription) : null,
+            addnowbutton: ((await action.getElementCount(this.addnowbutton)) > 0) ? await action.getText(this.addnowbutton) : null,
+            accessClosebtn: ((await action.getElementCount(this.accessClosebtn)) > 0) ? await action.waitForDisplayed(this.accessClosebtn) : null,
+        }
+        return obj;
+    },
+
+    getData_editMaterial_Modal: async function () {
+        await logger.logInto(await stackTrace.get());
+        var obj;
+        obj = {
+            editMaterial_Title: ((await action.getElementCount(this.editMaterial_Title)) > 0) ? await action.getText(this.editMaterial_Title) : null,
+            editMaterial_SubTitle: ((await action.getElementCount(this.editMaterial_SubTitle)) > 0) ? await action.getText(this.editMaterial_SubTitle) : null,
+            editMaterial_classIcon: ((await action.getElementCount(this.editMaterial_classIcon)) > 0) ? await action.waitForDisplayed(this.editMaterial_classIcon) : null,
+            editMaterial_ClassInfoBoxTitle: ((await action.getElementCount(this.editMaterial_ClassInfoBoxTitle)) > 0) ? await action.getText(this.editMaterial_ClassInfoBoxTitle) : null,
+            editMaterial_addedClasses_classInfoBox: ((await action.getElementCount(this.editMaterial_addedClasses_classInfoBox)) > 0) ? await action.getText(this.editMaterial_addedClasses_classInfoBox) : null,
+            editMaterial_Note: ((await action.getElementCount(this.editMaterial_Note)) > 0) ? await action.getText(this.editMaterial_Note) : null,
+            editMaterial_Cancel: ((await action.getElementCount(this.editMaterial_Cancel)) > 0) ? await action.getText(this.editMaterial_Cancel) : null,
+            editMaterial_ContinueToEdit: ((await action.getElementCount(this.editMaterial_ContinueToEdit)) > 0) ? await action.getText(this.editMaterial_ContinueToEdit) : null,
+        }
+        return obj;
+    },
+
+
+    click_cancel_btn: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.cancel_btn);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " cancel_btn is clicked");
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "cancel_btn is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_delete_btn: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.delete_btn);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " delete_btn is clicked");
+            res = await require('../../test/engageExperienceApp/common.test.js').get_Snackbar_Message_Text();
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "delete_btn is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_close_btn: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.close_btn);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " close_btn is clicked");
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "close_btn is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_newAccess_btn: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.newAccess_btn);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " newAccess_btn is clicked");
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "newAccess_btn is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_done_btn: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.done_btn);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " done_btn is clicked");
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "done_btn is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_selectClass: async function (ClassNameName) {
+        await logger.logInto(await stackTrace.get());
+        var i, list, res;
+        list = await action.findElements(this.selectClass);
+        for (i = 0; i < list.length; i++) {
+            if (((await action.getText(this.ClassName + i + "]"))) == ClassNameName) {
+                res = await action.click(list[i]);
+                break;
+            }
+        }
+        if (res == true) {
+            await logger.logInto(await stackTrace.get(), " --selectClass clicked");
+        }
+        else
+            await logger.logInto(await stackTrace.get(), " --selectClass NOT clicked", "error")
+        return res;
+    },
+
+    click_dropDown_btn: async function (ClassNameName) {
+        await logger.logInto(await stackTrace.get());
+        var i, list, res;
+        list = await action.findElements(this.dropDown_btn);
+        for (i = 0; i < list.length; i++) {
+            if (((await action.getText(this.ClassName + i + "]"))) == ClassNameName) {
+                res = await action.click(list[i]);
+                break;
+            }
+        }
+        if (res == true) {
+            await logger.logInto(await stackTrace.get(), " --dropDown_btn clicked");
+            res = await this.getData_updateDrownDownMenu();
+        }
+        else
+            await logger.logInto(await stackTrace.get(), " --dropDown_btn NOT clicked", "error")
+        return res;
+    },
+
+    click_updateTo: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.updateTo);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " updateTo is clicked");
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "updateTo is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_removeAccess: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.removeAccess);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " removeAccess is clicked");
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "removeAccess is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_removeAccess_btn: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.removeAccess_btn);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " removeAccess_btn is clicked");
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "removeAccess_btn is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_addnowbutton: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.addnowbutton);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " addnowbutton is clicked");
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "addnowbutton is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_accessClosebtn: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.accessClosebtn);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " accessClosebtn is clicked");
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "accessClosebtn is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_editMaterial_Cancel: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.editMaterial_Cancel);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " editMaterial_Cancel is clicked");
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "editMaterial_Cancel is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_editMaterial_ContinueToEdit: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.editMaterial_ContinueToEdit);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " editMaterial_ContinueToEdit is clicked");
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "editMaterial_ContinueToEdit is NOT clicked", 'error');
+        }
+        return res;
+    },
 }
 

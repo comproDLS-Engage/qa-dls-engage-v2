@@ -115,7 +115,38 @@
                         "See recent news to pair with lessons and activities.",
                         "Top activities to project in your classroom."
                     ],
-                    "recentlyViewedHeading": "Recently Viewed"
+                    "recentlyViewedHeading": "Recently Viewed",
+                    "recentMaterialsBtn": "Recent Materials",
+                    "addNewMaterialBtn": "Add New Material",
+                    "noMaterialTitle": [
+                        "No Materials created yet",
+                        "No recent materials"
+                    ],
+                    "noMaterialSubtitle": [
+                        "Any materials you create or modify will be shown here for you to view and assign to your class",
+                        "Any materials you create or modify in the last 30 days will be shown here for you to view and assign to your class."
+                    ],
+                    "viewAllMaterialBtn": "View All Materials",
+                    "createNewLabel": "Create New",
+                    "blankQuizOption": "Blank Quiz",
+                    "blankSurveyOption": "Blank Survey",
+                    "newResourceOption": "New Resource",
+                    "previewMaterialOption": "Preview",
+                    "editMaterialOption": "Edit",
+                    "duplicateMaterialOption": "Duplicate",
+                    "deleteMaterialOption": "Delete",
+                    "deleteMaterialDialogTitle": "Delete Material?",
+                    "deleteMaterialDialogSubtitle": "This will remove the material \"Acceptance Quiz\" from your library",
+                    "deleteMaterialDialogWarning": "This process is unrecoverable and your data will be lost forever.",
+                    "deleteMaterialDialogCancelBtn": "Cancel",
+                    "deleteMaterialDialogDeleteBtn": "Delete",
+                    "editMaterialDialogTitle": "Edit Quiz",
+                    "editMaterialDialogSubtitle": "Editing this quiz will create a new version and will not impact the classes where it is already added.",
+                    "editMaterialDialogEditBtn": "Continue to Edit",
+                    "editMaterialDialogCancelBtn": "Cancel",
+                    "addToClassDialogTitle": "New Access",
+                    "addToClassDialogSubtitle": "Add this quiz to your class to make it assignable in that class.",
+                    "addToClassMenuCloseBtn": ""
                 },
                 "student": {
                     "pageTitle": "Dashboard",
@@ -172,7 +203,12 @@
                         "Find here hundreds of interactive exercises to improve your vocabulary.",
                         "New & trending video resources to pair with your lessons."
                     ],
-                    "recentlyViewedHeading": "Recently Viewed"
+                    "recentlyViewedHeading": "Recently Viewed",
+                    "recentMaterialsBtn": null,
+                    "addNewMaterialBtn": null,
+                    "noMaterialTitle": null,
+                    "noMaterialSubtitle": null,
+                    "viewAllMaterialBtn": null
                 }
             },
             "createClassPage": {
@@ -362,7 +398,7 @@
                         "Not Correct"
                     ],
                     "kidsFeedbackTitle": [
-                        "Not quite right.", 
+                        "Not quite right.",
                         "Nice Job"
                     ],
                     "kidsFeedbackSubtitle": [
@@ -408,7 +444,7 @@
                     ],
                     "closeAssignmentBtn": "Close Assignment",
                     "kidsFeedbackTitle": [
-                        "Not quite right.", 
+                        "Not quite right.",
                         "Nice Job"
                     ],
                     "kidsFeedbackSubtitle": [
@@ -1204,7 +1240,7 @@
                 "teacher": {
                     "tocPanelHeader": "Jump to Section",
                     "currentlbl": "Curent",
-                    "materialbtn":"Materials"
+                    "materialbtn": "Materials"
                 }
             },
             "openActivityPlayer": {
@@ -1220,6 +1256,7 @@
                     "gradedOn": null,
                     "closeBtn": "Close",
                     "submitActivityBtn": null,
+                    "saveAnswersBtn": null,
                     "submitGradeBtn": "Submit Grade",
                     "retakeOpenActivityBtn": null,
                     "snackbarMsg": [
@@ -1285,9 +1322,13 @@
                     "gradedOn": "Graded on",
                     "closeBtn": "Close",
                     "submitActivityBtn": "Submit Answers",
+                    "saveAnswersBtn": "Save Answers",
                     "submitGradeBtn": null,
                     "retakeOpenActivityBtn": "Retake Activity",
-                    "snackbarMsg": "Activity has been submitted! You'll get a notification as soon as your teacher posts your grade.",
+                    "snackbarMsg": [
+                        "Activity has been submitted! You'll get a notification as soon as your teacher posts your grade.",
+                        "Your answers have been saved."
+                    ],
                     "gradingSubtitle": "submitted",
                     "statusPill": [
                         "Grade Pending",
@@ -1296,7 +1337,10 @@
                     ],
                     "cardTitle": "Scores & Progress",
                     "cardSubtitle": "Not yet submitted",
-                    "cardText": "This activity hasn’t been submitted yet. Once submitted, your grade and any feedback from your teacher will be shown here.",
+                    "cardText": [
+                        "This activity hasn’t been submitted yet. Once submitted, your grade and any feedback from your teacher will be shown here.",
+                        "Since this is an Archived class, you can save your answers, however teacher will not be able to posts the grade or any feedback."
+                    ],
                     "attempt1Label": "Attempt 1",
                     "attempt2Label": "Attempt 2",
                     "attempt3Label": "Attempt 3",
@@ -1470,7 +1514,7 @@
                     "invitePageSubHeader": "Copy the email template below and use it to send an invite to your students to join this class.",
                     "cancelInvitebtn": "Cancel",
                     "copyInvitationbtn": "Copy Invitation",
-                    "copiedInvitation":"Invitation copied to clipboard!"
+                    "copiedInvitation": "Invitation copied to clipboard!"
                 },
                 "student": {}
             },
@@ -1539,9 +1583,11 @@
                     "viewAllMaterialsBtn": "View All Materials",
                     "noMaterialTitleTxt": "No Materials created yet",
                     "noMaterialSubtitleTxt": "Any materials you create or modify will be shown here for you to view and assign to your class",
+                    "quizTypeTxt": "Quiz",
                     "draftPillTxt": "Draft",
                     "editDraftBtn": "Edit Draft",
                     "addToClassBtn": "Add to Class",
+                    "modifiedTxt": "Modified",
                     "previewBtn": "Preview",
                     "duplicateBtn": "Duplicate",
                     "deleteBtn": "Delete",

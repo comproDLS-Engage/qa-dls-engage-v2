@@ -9,9 +9,10 @@ submittedOn,[data-tid=button-submittedOn],p,openActivityPlayer,,,,null,"""Submit
 gradedOn,[data-tid=button-gradedOn],p,openActivityPlayer,,,,null,"""Graded on"""
 closeBtn,[data-tid=button-close],button,openActivityPlayer,,,"waitForDisplayed, closeBtn, undefined, true","""Close""","""Close"""
 submitActivityBtn,[data-tid=button-submitActivity],button,openActivityPlayer,,,submitActivityDialog,null,"""Submit Answers"""
+saveAnswersBtn,[data-tid='button-saveAnswers'],button,openActivityPlayer,,,"getText,snackbarMsg",null,"""Save Answers"""
 submitGradeBtn,[data-tid=button-submitGrade],button,openActivityPlayer,,,submitGradeDialog,"""Submit Grade""",null
 retakeOpenActivityBtn,[data-tid='button-retakeActivity'],button,openActivityPlayer,,,retakeOpenDialog,null,"""Retake Activity"""
-snackbarMsg,"[data-tid=text-error], [data-tid=text-info], [data-tid=text-success]",span,,,,,"[""Grade has been submitted! The student will be notified and can reattempt as requested."",""Grade has been submitted! The student will be notified.""]","""Activity has been submitted! You'll get a notification as soon as your teacher posts your grade."""
+snackbarMsg,"[data-tid=text-error], [data-tid=text-info], [data-tid=text-success]",span,,,,,"[""Grade has been submitted! The student will be notified and can reattempt as requested."",""Grade has been submitted! The student will be notified.""]","[""Activity has been submitted! You'll get a notification as soon as your teacher posts your grade."", ""Your answers have been saved.""]"
 gradingTitle,[data-tid=grading-text-title],p,openActivityLeftPanel,,,,,
 gradingSubtitle,[data-tid=grading-text-subTitle],p,openActivityLeftPanel,,,,"[""submitted for review on""]","""submitted"""
 statusPill,[data-tid=status-pill],p,openActivityLeftPanel,,,,"[""Grade Pending"",""Reattempt Requested"",""Final Grade""]","[""Grade Pending"",""Reattempt Requested"",""Final Grade""]"
@@ -19,7 +20,7 @@ bookName,[data-tid=text-subTitle],p,openActivityLeftPanel,,,,,
 activityName,[data-tid=text-title],p,openActivityLeftPanel,,,,,
 cardTitle,"[data-tid=text-card-viewA],[data-tid=text-score-progress-Infocard]",p,openActivityLeftPanel,,,,"""Grading & Feedback""","""Scores & Progress"""
 cardSubtitle,[data-tid=scores-progress-subtitle],p,openActivityLeftPanel,,,,null,"""Not yet submitted"""
-cardText,[data-tid=scores-progress-text],p,openActivityLeftPanel,,,,null,"""This activity hasn't been submitted yet. Once submitted, your grade and any feedback from your teacher will be shown here."""
+cardText,[data-tid=scores-progress-text],p,openActivityLeftPanel,,,,null,"[""This activity hasn't been submitted yet. Once submitted, your grade and any feedback from your teacher will be shown here."",""Since this is an Archived class, you can save your answers, however teacher will not be able to posts the grade or any feedback.""]"
 attempt1Label,"[data-tid='Attempt 1'],[data-tid=text-attempt-0]",p,openActivityLeftPanel,,,,"""Attempt 1""","""Attempt 1"""
 attempt2Label,"[data-tid='Attempt 2'],[data-tid=text-attempt-1]",p,openActivityLeftPanel,,,,"""Attempt 2""","""Attempt 2"""
 attempt3Label,"[data-tid='Attempt 3'],[data-tid=text-attempt-2]",p,openActivityLeftPanel,,,,"""Attempt 3""","""Attempt 3"""
