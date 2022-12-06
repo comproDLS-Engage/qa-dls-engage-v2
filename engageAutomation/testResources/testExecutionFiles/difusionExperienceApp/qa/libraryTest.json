@@ -1,6 +1,6 @@
 {
   "Suite2": {
-    "Name": "Validation the Creation Workflow of multiple choice question",
+    "Name": "Validation of Library Page features",
     "TestCaseRepo": [
       "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
     ],
@@ -324,6 +324,487 @@
         "id": "ENG_ICCL_TC_6",
         "description": "",
         "testFile": "./test/engageExperienceApp/library.test.js",
+        "testData": []
+      }
+    ],
+    "AfterEach": [],
+    "After": []
+  },
+  "Suite3": {
+    "Name": "Validation of My Material blank Page Features",
+    "TestCaseRepo": [
+      "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
+    ],
+    "Before": [
+      {
+        "id": "launchUrl",
+        "description": "",
+        "testFile": "./core/runner/launchUrl.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_LAND_TC_3",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/landing.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_IDEN_TC_7",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/login.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "jsonPath": "engage.login.user.validInstructorUser2"
+          }
+        ]
+      },
+      {
+        "id": "ENG_SHELL_TC_32",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/appShell.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_ICCL_TC_6",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/library.test.js",
+        "testData": []
+      }
+    ],
+    "BeforeEach": [],
+    "Test": [
+      {
+        "id": "ENG_ICCM_TC_2",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/myMaterials.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.myMaterials.teacher"
+          }
+        ]
+      },
+      {
+        "id": "ENG_ICCM_TC_5",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/myMaterials.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.libraryEditorPage.teacher"
+          }
+        ]
+      },
+      {
+        "id": "ENG_ICCE_TC_73",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_ICCM_TC_3",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/myMaterials.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.myMaterials.teacher"
+          }
+        ]
+      },
+      {
+        "id": "ENG_ICCM_TC_4",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/myMaterials.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.myMaterials.teacher"
+          }
+        ]
+      },
+      {
+        "id": "ENG_ICCM_TC_6",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/myMaterials.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.myMaterials.teacher"
+          }
+        ]
+      },
+      {
+        "id": "ENG_ICCM_TC_7",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/myMaterials.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.libraryEditorPage.teacher"
+          }
+        ]
+      },
+      {
+        "id": "ENG_ICCE_TC_73",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_ICCM_TC_6",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/myMaterials.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.myMaterials.teacher"
+          }
+        ]
+      },
+      {
+        "id": "ENG_ICCM_TC_8",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/myMaterials.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.appShell"
+          }
+        ]
+      },
+      {
+        "id": "ENG_ICCM_TC_6",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/myMaterials.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.myMaterials.teacher"
+          }
+        ]
+      },
+      {
+        "id": "ENG_ICCM_TC_9",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/myMaterials.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.appShell"
+          }
+        ]
+      }
+    ],
+    "AfterEach": [],
+    "After": []
+  },
+  "Suite4": {
+    "Name": "Validation of My Material Page Features",
+    "TestCaseRepo": [
+      "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
+    ],
+    "Before": [
+      {
+        "id": "launchUrl",
+        "description": "",
+        "testFile": "./core/runner/launchUrl.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_LAND_TC_3",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/landing.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_IDEN_TC_7",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/login.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "jsonPath": "engage.login.user.testUser"
+          }
+        ]
+      },
+      {
+        "id": "ENG_SHELL_TC_32",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/appShell.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_ICCL_TC_6",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/library.test.js",
+        "testData": []
+      }
+    ],
+    "BeforeEach": [],
+    "Test": [
+      {
+        "id": "ENG_ICCM_TC_10",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/myMaterials.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.myMaterials.teacher"
+          }
+        ]
+      },
+      {
+        "id": "ENG_ICCM_TC_11",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/myMaterials.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.myMaterials.teacher"
+          }
+        ]
+      },
+      {
+        "id": "ENG_ICCM_TC_18",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/myMaterials.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "jsonPath": "engage.login.user.testUser.info.draftQuiz"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.myMaterials.teacher"
+          }
+        ]
+      },
+      {
+        "id": "ENG_ICCM_TC_20",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/myMaterials.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.libraryEditorPage.teacher"
+          }
+        ]
+      },
+      {
+        "id": "ENG_ICCM_TC_18",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/myMaterials.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "jsonPath": "engage.login.user.testUser.info.draftBlankQuiz"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.myMaterials.teacher"
+          }
+        ]
+      },
+      {
+        "id": "ENG_ICCM_TC_21",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/myMaterials.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "jsonPath": "engage.login.user.testUser.info.draftBlankQuiz"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.libraryEditorPage.teacher"
+          }
+        ]
+      },
+      {
+        "id": "ENG_ICCE_TC_73",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_ICCM_TC_12",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/myMaterials.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.myMaterials.teacher"
+          }
+        ]
+      },
+      {
+        "id": "ENG_ICCM_TC_19",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/myMaterials.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.myMaterials.teacher"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.myMaterials.teacher"
+          }
+        ]
+      }
+    ],
+    "AfterEach": [],
+    "After": []
+  },
+  "Suite5": {
+    "Name": "Validation of Search scenarios on My Material Page",
+    "TestCaseRepo": [
+      "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
+    ],
+    "Before": [
+      {
+        "id": "launchUrl",
+        "description": "",
+        "testFile": "./core/runner/launchUrl.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_LAND_TC_3",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/landing.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_IDEN_TC_7",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/login.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "jsonPath": "engage.login.user.testUser"
+          }
+        ]
+      },
+      {
+        "id": "ENG_SHELL_TC_32",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/appShell.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_ICCL_TC_6",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/library.test.js",
+        "testData": []
+      }
+    ],
+    "BeforeEach": [],
+    "Test": [
+      {
+        "id": "ENG_ICCM_TC_26",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/myMaterials.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "jsonPath": "engage.login.user.testUser.info.searchNoResult"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.myMaterials.teacher"
+          }
+        ]
+      },
+      {
+        "id": "ENG_ICCM_TC_35",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/myMaterials.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_ICCM_TC_27",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/myMaterials.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "jsonPath": "engage.login.user.testUser.info.partialSearch"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.myMaterials.teacher"
+          }
+        ]
+      },
+      {
+        "id": "ENG_ICCM_TC_35",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/myMaterials.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_ICCM_TC_28",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/myMaterials.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "jsonPath": "engage.login.user.testUser.info.exactSearch"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.myMaterials.teacher"
+          }
+        ]
+      },
+      {
+        "id": "ENG_ICCM_TC_35",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/myMaterials.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_ICCM_TC_29",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/myMaterials.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "jsonPath": "engage.login.user.testUser.info.specialSearch"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.myMaterials.teacher"
+          }
+        ]
+      },
+      {
+        "id": "ENG_ICCM_TC_35",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/myMaterials.test.js",
+        "testData": []
+      },
+      {
+        "id": "ENG_ICCM_TC_30",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/myMaterials.test.js",
+        "testData": [
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "jsonPath": "engage.login.user.testUser.info.spanishSearch"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "jsonPath": "engage.appContent.myMaterials.teacher"
+          }
+        ]
+      },
+      {
+        "id": "ENG_ICCM_TC_35",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/myMaterials.test.js",
         "testData": []
       }
     ],

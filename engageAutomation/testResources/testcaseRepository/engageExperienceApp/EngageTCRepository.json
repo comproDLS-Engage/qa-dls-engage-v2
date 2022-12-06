@@ -1219,6 +1219,12 @@
           "description": "Validate that clicking on the Library button in left Navigation pane launches Library page",
           "tags": "P1",
           "visualTest": true
+        },
+        {
+          "id": "ENG_SHELL_TC_33",
+          "description": "Validate that clicking on the MyMaterials button in left Navigation pane launches My Materials page",
+          "tags": "P1",
+          "visualTest": true
         }
       ]
     },
@@ -4112,7 +4118,6 @@
           "tags": "P1",
           "visualTest": true
         },
-      
         {
           "id": "ENG_ICCE_TC_67",
           "description": "Validate the Click on Preview Option",
@@ -4155,7 +4160,7 @@
           "tags": "P1",
           "visualTest": true
         },
-       {
+        {
           "id": "ENG_ICCE_TC_74",
           "description": "Validate the Click on Editor Dismiss button",
           "tags": "P1",
@@ -4364,92 +4369,381 @@
         {
           "id": "ENG_ICCL_TC_1",
           "description": "Validate clicking on Blank Quiz button on Library page",
-          "tags": "P1",
-          "visualTest": true
+          "tags": "",
+          "visualTest": false
         },
         {
           "id": "ENG_ICCL_TC_2",
-          "description": "Validate clicking on Blank Survey button on Library page",
-          "tags": "P1",
-          "visualTest": true
+          "description": "Validate clicking on Blank survey button",
+          "tags": "",
+          "visualTest": false
         },
         {
           "id": "ENG_ICCL_TC_3",
-          "description": "Validate clicking on New Resource button on Library Page",
-          "tags": "P1",
-          "visualTest": true
+          "description": "Validate clicking on New Resource button",
+          "tags": "",
+          "visualTest": false
         },
         {
           "id": "ENG_ICCL_TC_4",
           "description": "Validate the scenario when no material is added in the Library for new user",
-          "tags": "P1",
-          "visualTest": true
+          "tags": "",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_ICCL_TC_5",
+          "description": "Validate the content for No material when recent material time has elapsed",
+          "tags": "",
+          "visualTest": false
         },
         {
           "id": "ENG_ICCL_TC_6",
           "description": "Validate clicking on View All Materials launch the My Materials page",
-          "tags": "P1",
-          "visualTest": true
+          "tags": "",
+          "visualTest": false
         },
         {
           "id": "ENG_ICCL_TC_7",
-          "description": "Validate clicking on View All Materials launch the My Materials page",
-          "tags": "P1",
-          "visualTest": true
+          "description": "Validate Material card are displayed based on Modified date on Library page",
+          "tags": "",
+          "visualTest": false
         },
         {
           "id": "ENG_ICCL_TC_8",
-          "description": "Validate clicking on View All Materials launch the My Materials page",
-          "tags": "P1",
-          "visualTest": true
+          "description": "Validate the lazy loading on Library page",
+          "tags": "",
+          "visualTest": false
         },
         {
           "id": "ENG_ICCL_TC_9",
-          "description": "Validate clicking on View All Materials launch the My Materials page",
-          "tags": "P1",
-          "visualTest": true
+          "description": "Validate Modified time is displayed on every Material card of present day on Library page",
+          "tags": "",
+          "visualTest": false
         },
         {
           "id": "ENG_ICCL_TC_10",
-          "description": "Validate clicking on View All Materials launch the My Materials page",
-          "tags": "P1",
-          "visualTest": true
+          "description": "Validate Modified date is displayed on Material card of old date",
+          "tags": "",
+          "visualTest": false
         },
         {
           "id": "ENG_ICCL_TC_11",
-          "description": "Validate clicking on View All Materials launch the My Materials page",
-          "tags": "P1",
-          "visualTest": true
+          "description": "Validate the card for Draft Material",
+          "tags": "",
+          "visualTest": false
         },
         {
           "id": "ENG_ICCL_TC_12",
-          "description": "Validate clicking on View All Materials launch the My Materials page",
-          "tags": "P1",
-          "visualTest": true
+          "description": "Validate the Card for Finalized Material",
+          "tags": "",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_ICCL_TC_13",
+          "description": "Validate clicking on Draft Material Card",
+          "tags": "",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_ICCL_TC_14",
+          "description": "Validate clicking on \"Edit Draft\" button",
+          "tags": "",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_ICCL_TC_15",
+          "description": "Validate clicking on Finalized Material Card",
+          "tags": "",
+          "visualTest": false
         },
         {
           "id": "ENG_ICCL_TC_16",
-          "description": "Validate clicking on View All Materials launch the My Materials page",
-          "tags": "P1",
-          "visualTest": true
+          "description": "Validate clicking on Ellipses on Draft Material card",
+          "tags": "",
+          "visualTest": false
         },
         {
           "id": "ENG_ICCL_TC_17",
-          "description": "Validate clicking on View All Materials launch the My Materials page",
-          "tags": "P1",
-          "visualTest": true
+          "description": "Validate clicking on Ellipses on Finalized Material card",
+          "tags": "",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_ICCL_TC_18",
+          "description": "Validate clicking on Preview button in Ellipses for Draft quiz on Library page",
+          "tags": "",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_ICCL_TC_19",
+          "description": "Validate clicking on Preview button in Ellipses for Blank Quiz on Library page",
+          "tags": "",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_ICCL_TC_20",
+          "description": "Validate clicking on Delete button in Ellipses on Library page",
+          "tags": "",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_ICCL_TC_21",
+          "description": "Validate clicking on Cancel button in Delete Materials Dialog on Library page",
+          "tags": "",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_ICCL_TC_22",
+          "description": "Validate clicking on Delete button in Delete Materials Dialog on Library page",
+          "tags": "",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_ICCL_TC_23",
+          "description": "Validate items are removed from Library page list after recent days count are elapsed",
+          "tags": "",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_ICCL_TC_24",
+          "description": "Validate clicking on Add to Class button on Material card from Library page",
+          "tags": "",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_ICCL_TC_25",
+          "description": "Validate the scenario of selecting a class and clicking on Add Now button in Add to Class dialog from Library page",
+          "tags": "",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_ICCL_TC_26",
+          "description": "Validate clicking on Edit button in Ellipses for Published quiz on Library page",
+          "tags": "",
+          "visualTest": false
         },
         {
           "id": "ENG_ICCL_TC_27",
-          "description": "Validate clicking on View All Materials launch the My Materials page",
-          "tags": "P1",
-          "visualTest": true
+          "description": "Validate clicking on Duplicate button in Ellipses for Published quiz on Library page",
+          "tags": "",
+          "visualTest": false
         },
         {
           "id": "ENG_ICCL_TC_28",
-          "description": "Validate clicking on View All Materials launch the My Materials page",
-          "tags": "P1",
-          "visualTest": true
+          "description": "Validate clicking on Duplicate button in Ellipses for Draft quiz on Library page",
+          "tags": "",
+          "visualTest": false
+        }
+      ]
+    },
+    {
+      "modulename": "Experience App > ICC > My Materials",
+      "moduledetails": "",
+      "testFile": "./test/engageExperienceApp/myMaterials.test.js",
+      "testcase": [
+        {
+          "id": "ENG_ICCM_TC_2",
+          "description": "Validate the All tabs when no material is present on My Materials page",
+          "tags": "",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_ICCM_TC_3",
+          "description": "Validate the Draft tabs when no material is present on My Materials page",
+          "tags": "",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_ICCM_TC_4",
+          "description": "Validate the Published tabs when no material is present on My Materials page",
+          "tags": "",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_ICCM_TC_5",
+          "description": "Validate clicking on \"Blank Quiz\" button when no item is present on My Material page",
+          "tags": "",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_ICCM_TC_6",
+          "description": "Validate clicking on \"Add New Material\" button on My Material page",
+          "tags": "",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_ICCM_TC_7",
+          "description": "Validate clicking on \"Blank Quiz\" button from dropdown menu on My Material page",
+          "tags": "",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_ICCM_TC_8",
+          "description": "Validate clicking on \"Blank Survey\" button from dropdown menu on My Material page",
+          "tags": "",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_ICCM_TC_9",
+          "description": "Validate clicking on \"New Resource\" button from dropdown menu on My Material page",
+          "tags": "",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_ICCM_TC_10",
+          "description": "Validate the tabs on My Materials page",
+          "tags": "",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_ICCM_TC_11",
+          "description": "Validate clicking on Drafts tab",
+          "tags": "",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_ICCM_TC_12",
+          "description": "Validate clicking on Published tab",
+          "tags": "",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_ICCM_TC_13",
+          "description": "Validate the lazy loading on My materials page",
+          "tags": "",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_ICCM_TC_14",
+          "description": "Validate the default sorting on My Materials page",
+          "tags": "",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_ICCM_TC_15",
+          "description": "Validate clicking on Materials sort arrow",
+          "tags": "",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_ICCM_TC_16",
+          "description": "Validate the scenario if user sort 10 visible result and then load other Materials",
+          "tags": "",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_ICCM_TC_17",
+          "description": "Validate clicking on Last Modified sort arrow",
+          "tags": "",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_ICCM_TC_18",
+          "description": "Validate clicking on ellipses with Draft Material on My Materials page",
+          "tags": "",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_ICCM_TC_19",
+          "description": "Validate clicking on ellipses with Published Material on My Materials page",
+          "tags": "",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_ICCM_TC_20",
+          "description": "Validate clicking on Preview button in Ellipses for Draft quiz on My Materials page",
+          "tags": "",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_ICCM_TC_21",
+          "description": "Validate clicking on Preview button in Ellipses for Blank Quiz on My Materials page",
+          "tags": "",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_ICCM_TC_22",
+          "description": "Validate clicking on Edit button in Ellipses for published quiz on My Materials page",
+          "tags": "",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_ICCM_TC_23",
+          "description": "Validate clicking on Delete button in Ellipses on My Materials page",
+          "tags": "",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_ICCM_TC_24",
+          "description": "Validate clicking on Cancel button in Delete Materials Dialog",
+          "tags": "",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_ICCM_TC_25",
+          "description": "Validate clicking on Delete button in Delete Materials Dialog",
+          "tags": "",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_ICCM_TC_26",
+          "description": "Validate the search scenario when no result is found",
+          "tags": "",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_ICCM_TC_27",
+          "description": "Validate the partial search on My Materials page",
+          "tags": "",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_ICCM_TC_28",
+          "description": "Validate the exact search on My Materials page",
+          "tags": "",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_ICCM_TC_29",
+          "description": "Validate search for special character - all keyboard characters",
+          "tags": "",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_ICCM_TC_30",
+          "description": "Validate search for spanish characters",
+          "tags": "",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_ICCM_TC_31",
+          "description": "Validate if search data is retained if user switch tabs",
+          "tags": "",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_ICCM_TC_32",
+          "description": "Validate search scenarios in Draft tab",
+          "tags": "",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_ICCM_TC_33",
+          "description": "Validate search scenarios in Published tab",
+          "tags": "",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_ICCM_TC_34",
+          "description": "Validate the scenario if user delete a material and then search it",
+          "tags": "",
+          "visualTest": false
+        },
+        {
+          "id": "ENG_ICCM_TC_35",
+          "description": "Validate clicking on cross icon clears the search results",
+          "tags": "",
+          "visualTest": false
         }
       ]
     }

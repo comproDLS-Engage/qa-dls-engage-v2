@@ -102,7 +102,7 @@ module.exports = {
     eyeIcon: selectorFile.css.ComproEngage.libraryEditorPage.eyeIcon,
     previeCloseIcon: selectorFile.css.ComproEngage.libraryEditorPage.previeCloseIcon,
     iconBreadCrumbBack_btn: selectorFile.css.ComproEngage.libraryEditorPage.iconBreadCrumbBack_btn,
-    editorTourDismiss:selectorFile.css.ComproEngage.libraryEditorPage.editorTourDismiss,
+    editorTourDismiss: selectorFile.css.ComproEngage.libraryEditorPage.editorTourDismiss,
 
 
     isInitialized: async function () {
@@ -119,6 +119,7 @@ module.exports = {
     getData_blankQuizPage: async function () {
         await logger.logInto(await stackTrace.get());
         var obj;
+        await action.waitForDisplayed(this.quizHeaderIcon);
         obj = {
             quizHeaderIcon: ((await action.getElementCount(this.quizHeaderIcon)) > 0) ? await action.waitForDisplayed(this.quizHeaderIcon) : false,
             quizHeaderName: ((await action.getElementCount(this.quizHeaderName)) > 0) ? await action.getText(this.quizHeaderName) : null,

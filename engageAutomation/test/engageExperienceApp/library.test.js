@@ -114,6 +114,10 @@ module.exports = {
     ENG_ICCL_TC_18: async function (testdata) {
         sts = await library.click_previewBtn();
         await assertion.assertEqual(sts, true, "previewBtn are not Clicked");
+        sts = await require("../../pages/engageExperienceApp/libraryEditor.page").getData_previewPage();
+        await assertion.assertEqual(sts.previewcontainer, null, "previewcontainer status mismatch");
+        await assertion.assertEqual(sts.eyeIcon, false, "eyeIcon status mismatch");
+        await assertion.assertEqual(sts.previeCloseIcon, null, "previeCloseIcon status mismatch");
     },
 
     //Validate clicking on Add to Class button on Material card from Library page
