@@ -375,7 +375,7 @@
             "testData": [
                {
                   "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-                  "jsonPath": "engage.appContent.myClassPage"
+                  "jsonPath": "engage.appContent.myClassPageStudent"
                }
             ]
          },
