@@ -255,4 +255,9 @@ module.exports = {
 		sts = await appShell.clickLibraryButton();
 		await assertion.assertEqual(sts.pageStatus, true, "Button is clicked.");
 	},
+
+	ENG_SHELL_TC_33: async function () {
+		sts = await appShell.clickMyMaterialsButton();
+		await assertion.assertEqual(sts.pageStatus, true, "Button is clicked.");
+	},
 }
