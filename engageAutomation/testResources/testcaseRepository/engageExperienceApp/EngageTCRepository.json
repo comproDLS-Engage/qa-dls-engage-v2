@@ -4029,6 +4029,18 @@
           "visualTest": true
         },
         {
+          "id": "ENG_ICCE_TC_18",
+          "description": "Validate enter textarea in the image on browser popup",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_19",
+          "description": "Validate enter alternative text in the image on browser popup",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
           "id": "ENG_ICCE_TC_21",
           "description": "Validate the add the text in prompt text box",
           "tags": "P1",
@@ -4130,15 +4142,16 @@
           "tags": "P1",
           "visualTest": true
         },
+        
         {
-          "id": "ENG_ICCE_TC_54",
-          "description": "Validate the Content of delete question dialogue",
+          "id": "ENG_ICCE_TC_52",
+          "description": "Validate the Editor Quiz Selection Page",
           "tags": "P1",
           "visualTest": true
         },
         {
-          "id": "ENG_ICCE_TC_52",
-          "description": "Validate the Editor Quiz Selection Page",
+          "id": "ENG_ICCE_TC_54",
+          "description": "Validate the Content of delete question dialogue",
           "tags": "P1",
           "visualTest": true
         },
@@ -4148,7 +4161,18 @@
           "tags": "P1",
           "visualTest": true
         },
-      
+        {
+          "id": "ENG_ICCE_TC_65",
+          "description": "Validate the Content of Sub menu data",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_66",
+          "description": "Validate the Header on Preview Page",
+          "tags": "P1",
+          "visualTest": true
+        },
         {
           "id": "ENG_ICCE_TC_67",
           "description": "Validate the Click on Preview Option",
@@ -4255,7 +4279,20 @@
           "description": "Validate the Click on Continue to Edit button Edit Quiz Dialogue",
           "tags": "P1",
           "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_84",
+          "description": "Validate the Content of Edit Quiz Dialogue",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_85",
+          "description": "Validate the Click on Cancel button Edit Quiz Dialogue",
+          "tags": "P1",
+          "visualTest": true
         }
+        
       ]
     },
     {

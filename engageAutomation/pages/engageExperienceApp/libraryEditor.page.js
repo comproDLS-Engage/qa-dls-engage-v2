@@ -1018,6 +1018,7 @@ module.exports = {
         res = await action.click(this.morebtn);
         if (true == res) {
             await logger.logInto(await stackTrace.get(), " morebtn is clicked");
+            await action.waitForDisplayed(this.deletebtn)
         }
         else {
             await logger.logInto(await stackTrace.get(), res + "morebtn is NOT clicked", 'error');
@@ -1308,6 +1309,7 @@ module.exports = {
         res = await action.click(this.delete_btn);
         if (true == res) {
             await logger.logInto(await stackTrace.get(), " delete_btn is clicked");
+            browser.pause(10000)
             res = await require('../../test/engageExperienceApp/common.test.js').get_Snackbar_Message_Text();
         }
         else {
