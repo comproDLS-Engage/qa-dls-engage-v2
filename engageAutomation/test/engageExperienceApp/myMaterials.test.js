@@ -115,7 +115,6 @@ module.exports = {
         sts = await myMaterials.click_allTab();
         await assertion.assertEqual(sts, true, "allTab are not Clicked");
         sts = await myMaterials.getData_myMaterialsPage();
-        console.log(sts);
         await assertion.assertEqual(sts.myMaterialsTxt, testdata.myMaterialsTxt, "myMaterialsTxt Values is not as expected.");
         await assertion.assertEqual(sts.addNewMaterialBtn, testdata.addNewMaterialBtn, "addNewMaterialBtn Values is not as expected.");
         await assertion.assertEqual(sts.allTab, testdata.allTab, "allTab Values is not as expected.");
@@ -128,7 +127,6 @@ module.exports = {
         await assertion.assertEqual(sts.modifiedLabel, testdata.modifiedLabel, "modifiedLabel Values is not as expected.");
         await assertion.assertEqual(sts.searchTextBox, "", "searchTextBox Values is not as expected.");
         sts = await myMaterials.getData_quizRow();
-        console.log(sts[0])
         await assertion.assertEqual(sts[0].materialsQuizTypeTxt, testdata.materialsQuizTypeTxt, "materialsQuizTypeTxt Values is not as expected.");
         await assertion.assertEqual(sts[0].materialsContextMenuBtn, true, "materialsContextMenuBtn Values is not as expected.");
 
@@ -180,7 +178,7 @@ module.exports = {
 
     //Validate clicking on ellipses with Published Material on My Materials page
     ENG_ICCM_TC_19: async function (testdata) {
-        sts = await myMaterials.click_materialsContextMenuBtn(/*testdata[0]*/"17-11 Quiz 2");
+        sts = await myMaterials.click_materialsContextMenuBtn(testdata[0]);
         await assertion.assertEqual(sts, true, "materialsContextMenuBtn are not Clicked");
         sts = await myMaterials.getData_myMaterialsContextMenu();
         await assertion.assertEqual(sts.deleteBtn, testdata[1].deleteBtn, "deleteBtn Values is not as expected.");
@@ -193,7 +191,6 @@ module.exports = {
         sts = await myMaterials.click_previewBtn();
         await assertion.assertEqual(sts, true, "previewBtn are not Clicked");
         sts = await libraryEditorPage.getData_previewPage();
-        console.log(sts);
         await assertion.assertEqual(sts.previewcontainer, testdata.previewcontainer, "previewcontainer Values is not as expected.");
         await assertion.assertEqual(sts.eyeIcon, true, "eyeIcon Values is not as expected.");
         await assertion.assertEqual(sts.previeCloseIcon, true, "previeCloseIcon is not as expected.");
@@ -205,7 +202,6 @@ module.exports = {
         sts = await myMaterials.click_previewBtn();
         await assertion.assertEqual(sts, true, "previewBtn are not Clicked");
         sts = await libraryEditorPage.getData_blankQuizPage();
-        console.log(sts);
         await assertion.assertEqual(sts.quizHeaderIcon, true);
         await assertion.assertEqual(sts.quizHeaderName, testdata[0]);
         await assertion.assertEqual(sts.savedtoLibrarylbl, testdata[1].savedtoLibrarylbl);
@@ -222,7 +218,6 @@ module.exports = {
         sts = await myMaterials.click_editBtn();
         await assertion.assertEqual(sts, true, "EditBtn are not Clicked");
         sts = await libraryEditorPage.getData_editorPage(); //need to be updated to check edit view header
-        console.log(sts);
     },
 
     //Validate clicking on Delete button in Ellipses on My Materials page
@@ -266,8 +261,6 @@ module.exports = {
         await assertion.assertEqual(sts, true, "searchTextBox values are not set");
 
         sts = await myMaterials.pressEnter();
-        console.log(sts.searchResultsLabel);
-        console.log("testdata:" + testdata[0].searchResultCount + testdata[1].searchCount);
         await assertion.assertEqual(sts.searchText, testdata[0].search_txt, "Search Pill Mismatch");
         await assertion.assert(sts.searchResultsLabel.includes(testdata[0].searchResultCount + testdata[1].searchCount), "Search count Mismatched");
 
@@ -281,8 +274,6 @@ module.exports = {
         await assertion.assertEqual(sts, true, "searchTextBox values are not set");
 
         sts = await myMaterials.pressEnter();
-        console.log(sts.searchText);
-        console.log("testdata:" + testdata[0].search_txt);
         await assertion.assertEqual(sts.searchText, testdata[0].search_txt, "Search Pill Mismatch");
         await assertion.assert(sts.searchResultsLabel.includes(testdata[0].searchResultCount + testdata[1].searchCount), "Search count Mismatched");
 
@@ -296,8 +287,6 @@ module.exports = {
         await assertion.assertEqual(sts, true, "searchTextBox values are not set");
 
         sts = await myMaterials.pressEnter();
-        console.log(sts.searchText);
-        console.log("testdata:" + testdata[0].search_txt);
         await assertion.assertEqual(sts.searchText, testdata[0].search_txt, "Search Pill Mismatch");
         await assertion.assert(sts.searchResultsLabel.includes(testdata[0].searchResultCount + testdata[1].searchCount), "Search count Mismatched");
 
@@ -311,8 +300,6 @@ module.exports = {
         await assertion.assertEqual(sts, true, "searchTextBox values are not set");
 
         sts = await myMaterials.pressEnter();
-        console.log(sts.searchText);
-        console.log("testdata:" + testdata[0].search_txt);
         await assertion.assertEqual(sts.searchText, testdata[0].search_txt, "Search Pill Mismatch");
         await assertion.assert(sts.searchResultsLabel.includes(testdata[0].searchResultCount + testdata[1].searchCount), "Search count Mismatched");
 

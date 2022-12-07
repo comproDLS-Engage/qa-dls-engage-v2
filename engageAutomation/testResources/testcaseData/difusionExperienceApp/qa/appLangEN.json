@@ -1660,7 +1660,7 @@
                     "duplicateBtn": "Duplicate",
                     "editBtn": "Edit",
                     "totalMaterialCount": "materials",
-                    "materialCountSubtitle": "activities, 0 resource",
+                    "materialCountSubtitle": "quizzes, 0 resource",
                     "search_NoResult_img": true,
                     "search_NoResult_title": "No result found",
                     "search_NoResult_subTitle": "We didn't find anything matching your search or filters. Try your search again, or change your filters to update the results here.",
