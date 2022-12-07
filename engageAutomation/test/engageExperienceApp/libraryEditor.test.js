@@ -507,8 +507,8 @@ module.exports = {
         sts = await libraryEditorPage.getData_moreOptionList(testdata);
         console.log(sts)
         console.log(testdata)
-        await assertion.assertEqual(sts.duplicatebtn, testdata.duplicatebtn, "duplicatebtn Values is not as expected.");
-        await assertion.assertEqual(sts.deletebtn, testdata.deletebtn, "deletebtn Values is not as expected.");
+        await assertion.assertEqual(sts.duplicateMoreOptionbtn, testdata.duplicatebtn, "duplicatebtn Values is not as expected.");
+        await assertion.assertEqual(sts.deleteMoreOptionbtn, testdata.deletebtn, "deletebtn Values is not as expected.");
     },
 
     ENG_ICCE_TC_66: async function (testdata) {
