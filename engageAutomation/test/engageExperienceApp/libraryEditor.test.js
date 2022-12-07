@@ -16,6 +16,8 @@ module.exports = {
         sts = await libraryEditorPage.click_editorTourDismiss(testdata);
         await assertion.assertEqual(sts, true, "editorTourDismiss are not Clicked");
     },
+
+    //check
     ENG_ICCE_TC_73: async function (testdata) {
         sts = await libraryEditorPage.click_iconBreadCrumbBack_btn(testdata);
         await assertion.assertEqual(sts, true, "iconBreadCrumbBack_btn are not Clicked");
@@ -117,11 +119,13 @@ module.exports = {
         //await assertion.assertEqual(sts.alternativetxt, testdata.alternativetxt, "alternativetxt text mismatch");
     },
 
+    //check
     ENG_ICCE_TC_15: async function (testdata) {
         sts = await libraryEditorPage.click_audiobtn();
         await assertion.assertEqual(sts, true, "audiobtn are not Clicked");
     },
 
+    //check
     ENG_ICCE_TC_16: async function (testdata) {
         sts = await libraryEditorPage.click_vediobtn();
         await assertion.assertEqual(sts, true, "vediobtn are not Clicked");
@@ -144,6 +148,7 @@ module.exports = {
 
     },
 
+    //check
     ENG_ICCE_TC_20: async function (testdata) {
         sts = await libraryEditorPage.click_txtpromptscelton();
         await assertion.assertEqual(sts, true, "txtpromptscelton are not Clicked");
@@ -154,7 +159,7 @@ module.exports = {
         await assertion.assertEqual(sts, true, "txtprompttxtbox values are not set");
 
     },
-
+    //check all text formating
     ENG_ICCE_TC_22: async function (testdata) {
         sts = await libraryEditorPage.click_deleteTextPromptbtn();
         await assertion.assertEqual(sts, true, "deleteTextPromptbtn are not Clicked");
@@ -242,9 +247,10 @@ module.exports = {
         await assertion.assertEqual(sts.bookTagsSubHeading, testdata.bookTagsSubHeading, "bookTagsSubHeading text mismatch");
         await assertion.assertEqual(sts.booklbl, testdata.booklbl, "booklbl text mismatch");
     },
-
+    //check book
     ENG_ICCE_TC_38: async function (testdata) {
-        sts = await libraryEditorPage.set_inputlbl(); await assertion.assertEqual(sts, true, "inputlbl values are not set");
+        sts = await libraryEditorPage.set_inputlbl();
+        await assertion.assertEqual(sts, true, "inputlbl values are not set");
 
     },
 
@@ -499,15 +505,17 @@ module.exports = {
     },
     ENG_ICCE_TC_65: async function (testdata) {
         sts = await libraryEditorPage.getData_moreOptionList(testdata);
-        await assertion.assertEqual(sts.duplicatebtn, testdata.duplicatebtn, "duplicatebtn Values is not as expected.");
-        await assertion.assertEqual(sts.deletebtn, testdata.deletebtn, "deletebtn Values is not as expected.");
+        console.log(sts)
+        console.log(testdata)
+        await assertion.assertEqual(sts.duplicateMoreOptionbtn, testdata.duplicatebtn, "duplicatebtn Values is not as expected.");
+        await assertion.assertEqual(sts.deleteMoreOptionbtn, testdata.deletebtn, "deletebtn Values is not as expected.");
     },
 
     ENG_ICCE_TC_66: async function (testdata) {
         sts = await libraryEditorPage.getData_previewPage(testdata);
         await assertion.assertEqual(sts.previewcontainer, testdata.previewcontainer, "previewcontainer Values is not as expected.");
         await assertion.assertEqual(sts.eyeIcon, true, "eyeIcon Values is not as expected.");
-        await assertion.assertEqual(sts.previeCloseIcon, testdata.previeCloseIcon, "previeCloseIcon Values is not as expected.");
+        await assertion.assertEqual(sts.previeCloseIcon, true, "previewCloseIcon Values is not as expected.");
     },
     ENG_ICCE_TC_76: async function (testdata) {
         sts = await libraryEditorPage.click_cancel_btn();
@@ -516,7 +524,7 @@ module.exports = {
     //Validate the Click on delete button on the quiz delete dialogue box
     ENG_ICCE_TC_75: async function (testdata) {
         sts = await libraryEditorPage.click_delete_btn();
-        await assertion.assertEqual(sts, testdata.Snackbar_DeleteMessage_Text, "delete_btn are not Clicked");
+        await assertion.assertEqual(sts, testdata.Snackbar_DeleteMessage_Text, "snackbar is not displayed");
 
     },
 
@@ -534,8 +542,8 @@ module.exports = {
         console.log(sts)
         await assertion.assert(sts.editMaterial_Title.includes(testdata.editMaterial_Title), "editMaterial_Title Values is not as expected.");
         await assertion.assertEqual(sts.editMaterial_SubTitle, testdata.editMaterial_SubTitle, "editMaterial_SubTitle Values is not as expected.");
-        await assertion.assertEqual(sts.editMaterial_classIcon,null , "editMaterial_classIcon Values is not as expected.");
-       await assertion.assertEqual(sts.editMaterial_ClassInfoBoxTitle, null, "editMaterial_ClassInfoBoxTitle Values is not as expected.");
+        await assertion.assertEqual(sts.editMaterial_classIcon, null, "editMaterial_classIcon Values is not as expected.");
+        await assertion.assertEqual(sts.editMaterial_ClassInfoBoxTitle, null, "editMaterial_ClassInfoBoxTitle Values is not as expected.");
         await assertion.assertEqual(sts.editMaterial_addedClasses_classInfoBox, null, "editMaterial_addedClasses-classInfoBox Values is not as expected.");
         await assertion.assertEqual(sts.editMaterial_Note, null, "editMaterial_Note Values is not as expected.");
         await assertion.assertEqual(sts.editMaterial_Cancel, testdata.editMaterial_Cancel, "editMaterial_Cancel Values is not as expected.");
@@ -556,13 +564,13 @@ module.exports = {
         await assertion.assertEqual(sts.addtoClass_btn, testdata.addtoClass_btn, "addtoClass_btn Values is not as expected.");
         await assertion.assertEqual(sts.edit_btn, testdata.edit_btn, "edit_btn Values is not as expected.");
         await assertion.assertEqual(sts.viewAsStudent, testdata.viewAsStudent, "edit_btn Values is not as expected.");
- 
+
     },
     ENG_ICCE_TC_81: async function (testdata) {
         sts = await libraryEditorPage.click_editMaterial_Cancel();
         await assertion.assertEqual(sts, true, "editMaterial_Cancel are not Clicked");
     },
-    
+
     ENG_ICCE_TC_82: async function (testdata) {
         sts = await libraryEditorPage.click_accessClosebtn();
         await assertion.assertEqual(sts, true, "accessClosebtn are not Clicked");
@@ -573,6 +581,22 @@ module.exports = {
         sts = await libraryEditorPage.click_editMaterial_ContinueToEdit();
         await assertion.assertEqual(sts, true, "editMaterial_ContinueToEdit are not Clicked");
     },
+    ENG_ICCE_TC_84: async function (testdata) {
+        sts = await libraryEditorPage.getData_editMaterial_Modal(testdata);
+        await assertion.assert(sts.editMaterial_Title.includes(testdata.editMaterial_Title), "editMaterial_Title Values is not as expected.");
+        await assertion.assertEqual(sts.editMaterial_SubTitle, testdata.editMaterial_SubTitle, "editMaterial_SubTitle Values is not as expected.");
+        await assertion.assertEqual(sts.editMaterial_classIcon, testdata.editMaterial_classIcon, "editMaterial_classIcon Values is not as expected.");
+        await assertion.assertEqual(sts.editMaterial_ClassInfoBoxTitle, null, "editMaterial_ClassInfoBoxTitle Values is not as expected.");
+        await assertion.assertEqual(sts.editMaterial_addedClasses_classInfoBox, null, "editMaterial_addedClasses-classInfoBox Values is not as expected.");
+        await assertion.assertEqual(sts.editMaterial_Note, null, "editMaterial_Note Values is not as expected.");
+        await assertion.assertEqual(sts.editMaterial_Cancel, testdata.editMaterial_Cancel, "editMaterial_Cancel Values is not as expected.");
+        await assertion.assertEqual(sts.editMaterial_ContinueToEdit, testdata.editMaterial_ContinueToEdit, "editMaterial_ContinueToEdit Values is not as expected.");
+    },
+    ENG_ICCE_TC_85: async function (testdata) {
+        sts = await libraryEditorPage.click_editMaterial_Cancel();
+        await assertion.assertEqual(sts, true, "editMaterial_Cancel are not Clicked");
+    },
+
 
     ENG_LIBR_TC_3: async function (testdata) {
         sts = await libraryEditorPage.click_close_btn();
@@ -630,10 +654,7 @@ module.exports = {
         await assertion.assertEqual(sts, true, "editMaterial_Cancel are not Clicked");
     },
 
-    ENG_LIBR_TC_14: async function (testdata) {
-        sts = await libraryEditor.click_editMaterial_ContinueToEdit();
-        await assertion.assertEqual(sts, true, "editMaterial_ContinueToEdit are not Clicked");
-    },
+
 
     ENG_LIBR_TC_15: async function (testdata) {
         sts = await libraryEditor.getData_deleteDialogue(testdata);

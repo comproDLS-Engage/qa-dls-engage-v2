@@ -365,8 +365,8 @@ module.exports = {
         await logger.logInto(await stackTrace.get());
         var obj;
         obj = {
-            duplicatebtn: ((await action.getElementCount(this.duplicatebtn)) > 0) ? await action.getText(this.duplicatebtn) : null,
-            deletebtn: ((await action.getElementCount(this.deletebtn)) > 0) ? await action.getText(this.deletebtn) : null,
+            duplicateMoreOptionbtn: ((await action.getElementCount(this.duplicateMoreOptionbtn)) > 0) ? await action.getText(this.duplicateMoreOptionbtn) : null,
+            deleteMoreOptionbtn: ((await action.getElementCount(this.deleteMoreOptionbtn)) > 0) ? await action.getText(this.deleteMoreOptionbtn) : null,
         }
         return obj;
     },
@@ -1059,6 +1059,7 @@ module.exports = {
         res = await action.click(this.morebtn);
         if (true == res) {
             await logger.logInto(await stackTrace.get(), " morebtn is clicked");
+            await action.waitForDisplayed(this.deletebtn)
         }
         else {
             await logger.logInto(await stackTrace.get(), res + "morebtn is NOT clicked", 'error');
@@ -1349,6 +1350,7 @@ module.exports = {
         res = await action.click(this.delete_btn);
         if (true == res) {
             await logger.logInto(await stackTrace.get(), " delete_btn is clicked");
+            browser.pause(10000)
             res = await require('../../test/engageExperienceApp/common.test.js').get_Snackbar_Message_Text();
         }
         else {
