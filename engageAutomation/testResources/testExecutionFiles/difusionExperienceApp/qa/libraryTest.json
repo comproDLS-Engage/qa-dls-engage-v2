@@ -78,9 +78,15 @@
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-            "jsonPath": "engage.appContent.libraryEditor.teacher"
+            "jsonPath": "engage.appContent.libraryEditorPage.teacher"
           }
         ]
+      },
+      {
+        "id": "ENG_ICCE_TC_74",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
+        "testData": []
       },
       {
         "id": "ENG_ICCE_TC_9",
@@ -194,7 +200,7 @@
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-            "jsonPath": "engage.appContent.libraryEditor.teacher"
+            "jsonPath": "engage.appContent.libraryEditorPage.teacher"
           }
         ]
       },
