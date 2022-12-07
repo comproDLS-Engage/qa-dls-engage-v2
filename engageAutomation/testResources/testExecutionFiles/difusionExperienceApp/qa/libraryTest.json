@@ -49,17 +49,6 @@
         ]
       },
       {
-        "id": "ENG_ICCL_TC_3",
-        "description": "",
-        "testFile": "./test/engageExperienceApp/library.test.js",
-        "testData": [
-          {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-            "jsonPath": "engage.appContent.appShell"
-          }
-        ]
-      },
-      {
         "id": "ENG_ICCL_TC_1",
         "description": "",
         "testFile": "./test/engageExperienceApp/library.test.js",
@@ -465,28 +454,6 @@
       },
       {
         "id": "ENG_ICCM_TC_8",
-        "description": "",
-        "testFile": "./test/engageExperienceApp/myMaterials.test.js",
-        "testData": [
-          {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-            "jsonPath": "engage.appContent.appShell"
-          }
-        ]
-      },
-      {
-        "id": "ENG_ICCM_TC_6",
-        "description": "",
-        "testFile": "./test/engageExperienceApp/myMaterials.test.js",
-        "testData": [
-          {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-            "jsonPath": "engage.appContent.myMaterials.teacher"
-          }
-        ]
-      },
-      {
-        "id": "ENG_ICCM_TC_9",
         "description": "",
         "testFile": "./test/engageExperienceApp/myMaterials.test.js",
         "testData": [

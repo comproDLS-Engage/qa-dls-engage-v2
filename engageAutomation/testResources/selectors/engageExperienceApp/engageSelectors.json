@@ -1529,11 +1529,9 @@
                 "editMaterial_Note": "[data-tid=note-classInfoBox]",
                 "editMaterial_Cancel": "[data-tid=button-secondary-re-editMaterial]",
                 "editMaterial_ContinueToEdit": "[data-tid=button-primary-re-editMaterial]",
-                "addtoClass_btn":"[data-tid=button-addToClass]",
-                "edit_btn":"[data-tid=button-edit]",
-                "viewAsStudent":"[data-tid=button-view-as-student]"
-
-                "editorTourDismiss": "[data-action=skip]"
+                "addtoClass_btn": "[data-tid=button-addToClass]",
+                "edit_btn": "[data-tid=button-edit]",
+                "viewAsStudent": "[data-tid=button-view-as-student]"
             },
             "library": {
                 "libraryTitleTxt": "[data-tid=text-pageTitle]",

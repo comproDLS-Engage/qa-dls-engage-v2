@@ -2,7 +2,6 @@
 var action = require('../../core/actionLibrary/baseActionLibrary.js')
 var selectorFile = jsonParserUtil.jsonParser(selectorDir)
 var appShellPage = require('./appShell.page.js');
-const { browseAllResourcesBtn } = require('./playlist.page.js');
 
 module.exports = {
     myMaterialsTxt: selectorFile.css.ComproEngage.myMaterials.myMaterialsTxt,
@@ -47,7 +46,7 @@ module.exports = {
         // await action.waitForDocumentLoad();
         res = {
             pageStatus: await action.waitForDisplayed(this.myMaterialsTxt),
-            // appShellPage: await appShellPage.isInitialized()
+            appShellPage: await appShellPage.isInitialized()
         };
         return res;
     },

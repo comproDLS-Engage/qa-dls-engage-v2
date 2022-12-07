@@ -7,7 +7,6 @@ module.exports = {
     ENG_ICCL_TC_1: async function () {
         sts = await library.click_blankQuizBtn();
         await assertion.assertEqual(sts.pageStatus, true, "Page is not launched. ");
-        // await assertion.assertEqual(sts.appShell.header, true, "Page header status mismatch");
     },
 
     ENG_ICCL_TC_2: async function (testdata) {

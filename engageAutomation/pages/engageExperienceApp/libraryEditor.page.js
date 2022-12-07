@@ -105,45 +105,6 @@ module.exports = {
     eyeIcon: selectorFile.css.ComproEngage.libraryEditorPage.eyeIcon,
     previeCloseIcon: selectorFile.css.ComproEngage.libraryEditorPage.previeCloseIcon,
     iconBreadCrumbBack_btn: selectorFile.css.ComproEngage.libraryEditorPage.iconBreadCrumbBack_btn,
-<<<<<<< .mine
-    editorTourDismiss: selectorFile.css.ComproEngage.libraryEditorPage.editorTourDismiss,
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
     editorTourDismiss: selectorFile.css.ComproEngage.libraryEditorPage.editorTourDismiss,
     deleteTitle: selectorFile.css.ComproEngage.libraryEditorPage.deleteTitle,
     deleteSubTitle: selectorFile.css.ComproEngage.libraryEditorPage.deleteSubTitle,
@@ -181,7 +142,6 @@ module.exports = {
     editMaterial_Note: selectorFile.css.ComproEngage.libraryEditorPage.editMaterial_Note,
     editMaterial_Cancel: selectorFile.css.ComproEngage.libraryEditorPage.editMaterial_Cancel,
     editMaterial_ContinueToEdit: selectorFile.css.ComproEngage.libraryEditorPage.editMaterial_ContinueToEdit,
->>>>>>> .theirs
 
     isInitialized: async function () {
         var res;
