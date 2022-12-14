@@ -10,7 +10,7 @@ module.exports = {
 	//Left Pane
 	custLogo: selectorFile.css.ComproEngage.appShell.custLogo,
 	dashboardBtn: selectorFile.css.ComproEngage.appShell.dashboardBtn,
-	libraryBtn:selectorFile.css.ComproEngage.appShell.libraryBtn,
+	libraryBtn: selectorFile.css.ComproEngage.appShell.libraryBtn,
 	browseBtn: selectorFile.css.ComproEngage.appShell.browseBtn,
 	classesBtn: selectorFile.css.ComproEngage.appShell.classesBtn,
 	helpBtn: selectorFile.css.ComproEngage.appShell.helpBtn,
@@ -19,6 +19,8 @@ module.exports = {
 	poweredbyTxt: selectorFile.css.ComproEngage.appShell.poweredbyTxt,
 	comproLogo: selectorFile.css.ComproEngage.appShell.comproLogo,
 	versionTxt: selectorFile.css.ComproEngage.appShell.versionTxt,
+	indexbtn: selectorFile.css.ComproEngage.indexMenu.indexbtn,
+
 	//Header
 	notificationBtn: selectorFile.css.ComproEngage.appShell.notificationBtn,
 	notificationCloseBtn: selectorFile.css.ComproEngage.appShell.notificationCloseBtn,
@@ -47,7 +49,6 @@ module.exports = {
 	tabList: selectorFile.css.ComproEngage.appShell.component,
 	assignBtn: selectorFile.css.ComproEngage.appShell.assignBtn,
 	shareBtn: selectorFile.css.ComproEngage.appShell.shareBtn,
-	indexbtn: selectorFile.css.ComproEngage.indexMenu.indexbtn,
 	tocPanelHeader: selectorFile.css.ComproEngage.indexMenu.tocPanelHeader,
 	closetocbtn: selectorFile.css.ComproEngage.indexMenu.closetocbtn,
 	producHeadertbtn: selectorFile.css.ComproEngage.indexMenu.producHeadertbtn,
@@ -64,6 +65,9 @@ module.exports = {
 	bookName: selectorFile.css.ComproEngage.tocMenu.bookName,
 	bookIcon: selectorFile.css.ComproEngage.tocMenu.bookIcon,
 	resourseData: selectorFile.css.ComproEngage.tocMenu.resourseData,
+	libraryDropdownBtn: selectorFile.css.ComproEngage.appShell.libraryDropdownBtn,
+	myMaterialBtn: selectorFile.css.ComproEngage.appShell.myMaterialBtn,
+
 
 	isInitialized: async function () {
 		await logger.logInto(await stackTrace.get());
@@ -131,6 +135,24 @@ module.exports = {
 		}
 		return res;
 	},
+
+	clickMyMaterialsButton: async function () {
+		await logger.logInto(await stackTrace.get());
+		res = await action.click(this.libraryDropdownBtn);
+		if (true == res) {
+			res = await action.click(this.myMaterialBtn);
+			if (true == res) {
+				let myMaterialsPage = await require('./myMaterials.page.js');
+				res = await myMaterialsPage.isInitialized();
+			}
+		}
+		else {
+			res = res + " -- Error in clicking MyMaterial Button";
+			await logger.logInto(await stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
+
 	clickBrowseButton: async function () {
 		await logger.logInto(await stackTrace.get());
 		res = await action.click(this.browseBtn);
@@ -648,104 +670,104 @@ module.exports = {
 			await logger.logInto(await stackTrace.get(), " --indexproductbtn NOT clicked", "error")
 		return res;
 	},
-	
+
 	getData_infoData: async function () {
-        await logger.logInto(await stackTrace.get());
-        var obj;
-        obj = {
-            infoTocHeading: ((await action.getElementCount(this.infoTocHeading)) > 0) ? await action.getText(this.infoTocHeading) : null,
-            closeInfoBtn: ((await action.getElementCount(this.closeInfoBtn)) > 0) ? await action.waitForDisplayed(this.closeInfoBtn) : null,
-            chapterTitle: ((await action.getElementCount(this.chapterTitle)) > 0) ? await action.getText(this.chapterTitle) : null,
-            productbtn: ((await action.getElementCount(this.productbtn)) > 0) ? await action.getText(this.productbtn) : null,
-            bookName: ((await action.getElementCount(this.bookName)) > 0) ? await action.getText(this.bookName) : null,
-            bookIcon: ((await action.getElementCount(this.bookIcon)) > 0) ? await action.waitForDisplayed(this.bookIcon) : false,
-        }
-        return obj;
-    },
+		await logger.logInto(await stackTrace.get());
+		var obj;
+		obj = {
+			infoTocHeading: ((await action.getElementCount(this.infoTocHeading)) > 0) ? await action.getText(this.infoTocHeading) : null,
+			closeInfoBtn: ((await action.getElementCount(this.closeInfoBtn)) > 0) ? await action.waitForDisplayed(this.closeInfoBtn) : null,
+			chapterTitle: ((await action.getElementCount(this.chapterTitle)) > 0) ? await action.getText(this.chapterTitle) : null,
+			productbtn: ((await action.getElementCount(this.productbtn)) > 0) ? await action.getText(this.productbtn) : null,
+			bookName: ((await action.getElementCount(this.bookName)) > 0) ? await action.getText(this.bookName) : null,
+			bookIcon: ((await action.getElementCount(this.bookIcon)) > 0) ? await action.waitForDisplayed(this.bookIcon) : false,
+		}
+		return obj;
+	},
 
-    getData_resourseData: async function (resourseDataName) {
-        await logger.logInto(await stackTrace.get());
-        var obj = [];
-        await action.waitForDisplayed(this.resourseData);
-        var list = await action.findElements(this.resourseData);
-        if (resourseDataName) {
-            for (var i = 0; i < list.length; i++) {
-                if ((await action.getText(this.resourseData + i)) == resourseDataName) {
-                    obj[0] = {
-                        resourseData: ((await action.getElementCount(this.resourseData + i + "]")) > 0) ? await action.getText(this.resourseData + i + "]") : null,
-                    }
-                    break;
-                }
-            }
-        } else {
-            for (var i = 0; i < list.length; i++) {
-                obj[i] = {
-                    resourseData: ((await action.getElementCount(this.resourseData + i + "]")) > 0) ? await action.getText(this.resourseData + i + "]") : null,
-                }
-            }
-        }
-        return obj;
-    },
+	getData_resourseData: async function (resourseDataName) {
+		await logger.logInto(await stackTrace.get());
+		var obj = [];
+		await action.waitForDisplayed(this.resourseData);
+		var list = await action.findElements(this.resourseData);
+		if (resourseDataName) {
+			for (var i = 0; i < list.length; i++) {
+				if ((await action.getText(this.resourseData + i)) == resourseDataName) {
+					obj[0] = {
+						resourseData: ((await action.getElementCount(this.resourseData + i + "]")) > 0) ? await action.getText(this.resourseData + i + "]") : null,
+					}
+					break;
+				}
+			}
+		} else {
+			for (var i = 0; i < list.length; i++) {
+				obj[i] = {
+					resourseData: ((await action.getElementCount(this.resourseData + i + "]")) > 0) ? await action.getText(this.resourseData + i + "]") : null,
+				}
+			}
+		}
+		return obj;
+	},
 
 
-    click_infoBtn: async function () {
-        await logger.logInto(await stackTrace.get());
-        var res;
-        res = await action.click(this.infoBtn);
-        if (true == res) {
-			res= this.getData_infoData()
-            await logger.logInto(await stackTrace.get(), " infoBtn is clicked");
-        }
-        else {
-            await logger.logInto(await stackTrace.get(), res + "infoBtn is NOT clicked", 'error');
-        }
-        return res;
-    },
+	click_infoBtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.infoBtn);
+		if (true == res) {
+			res = this.getData_infoData()
+			await logger.logInto(await stackTrace.get(), " infoBtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "infoBtn is NOT clicked", 'error');
+		}
+		return res;
+	},
 
-    click_closeInfoBtn: async function () {
-        await logger.logInto(await stackTrace.get());
-        var res;
-        res = await action.click(this.closeInfoBtn);
-        if (true == res) {
+	click_closeInfoBtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.closeInfoBtn);
+		if (true == res) {
 			res = await action.waitForDisplayed(this.closeInfoBtn, undefined, true);
-            await logger.logInto(await stackTrace.get(), " closeInfoBtn is clicked");
-        }
-        else {
-            await logger.logInto(await stackTrace.get(), res + "closeInfoBtn is NOT clicked", 'error');
-        }
-        return res;
-    },
+			await logger.logInto(await stackTrace.get(), " closeInfoBtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "closeInfoBtn is NOT clicked", 'error');
+		}
+		return res;
+	},
 
-    click_productbtn: async function () {
-        await logger.logInto(await stackTrace.get());
-        var res;
-        res = await action.click(this.productbtn);
-        if (true == res) {
-            await logger.logInto(await stackTrace.get(), " productbtn is clicked");
-        }
-        else {
-            await logger.logInto(await stackTrace.get(), res + "productbtn is NOT clicked", 'error');
-        }
-        return res;
-    },
+	click_productbtn: async function () {
+		await logger.logInto(await stackTrace.get());
+		var res;
+		res = await action.click(this.productbtn);
+		if (true == res) {
+			await logger.logInto(await stackTrace.get(), " productbtn is clicked");
+		}
+		else {
+			await logger.logInto(await stackTrace.get(), res + "productbtn is NOT clicked", 'error');
+		}
+		return res;
+	},
 
-    click_resourseData: async function (resourseDataName) {
-        await logger.logInto(await stackTrace.get());
-        var i, list, res;
-        list = await action.findElements(this.resourseData);
-        for (i = 0; i < list.length; i++) {
-            if (((await action.getText(this.resourseData + i + "]"))) == resourseDataName) {
-                res = await action.click(list[i]);
-                break;
-            }
-        }
-        if (res == true) {
-            await logger.logInto(await stackTrace.get(), " --resourseData clicked");
-        }
-        else
-            await logger.logInto(await stackTrace.get(), " --resourseData NOT clicked", "error")
-        return res;
-    },
+	click_resourseData: async function (resourseDataName) {
+		await logger.logInto(await stackTrace.get());
+		var i, list, res;
+		list = await action.findElements(this.resourseData);
+		for (i = 0; i < list.length; i++) {
+			if (((await action.getText(this.resourseData + i + "]"))) == resourseDataName) {
+				res = await action.click(list[i]);
+				break;
+			}
+		}
+		if (res == true) {
+			await logger.logInto(await stackTrace.get(), " --resourseData clicked");
+		}
+		else
+			await logger.logInto(await stackTrace.get(), " --resourseData NOT clicked", "error")
+		return res;
+	},
 
 
 };

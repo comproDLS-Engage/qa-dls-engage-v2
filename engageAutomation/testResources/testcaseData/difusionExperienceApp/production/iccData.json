@@ -1,0 +1,31 @@
+{
+    "engage": {
+        "quiz": {
+            "draftQuiz": "Quiz 1",
+            "draftBlankQuiz": "blank Quiz",
+            "publishedQuiz":"!@#$%^&*()"
+        },
+        "search": {
+            "searchNoResult": {
+                "search_txt": "user",
+                "searchResultCount": "0"
+            },
+            "partialSearch": {
+                "search_txt": "1",
+                "searchResultCount": "1"
+            },
+            "exactSearch": {
+                "search_txt": "\"Quiz 1\"",
+                "searchResultCount": "1"
+            },
+            "specialSearch": {
+                "search_txt": "@#$",
+                "searchResultCount": "1"
+            },
+            "spanishSearch": {
+                "search_txt": "íóúü",
+                "searchResultCount": "1"
+            }
+        }
+    }
+}

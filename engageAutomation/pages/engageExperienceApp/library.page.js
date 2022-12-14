@@ -32,10 +32,10 @@ module.exports = {
     isInitialized: async function () {
         var res;
         await logger.logInto(await stackTrace.get());
-        await action.waitForDocumentLoad();
+        // await action.waitForDocumentLoad();
         res = {
             pageStatus: await action.waitForDisplayed(this.blankQuizBtn),
-            // appShellPage: await appShellPage.isInitialized()
+            appShellPage: await appShellPage.isInitialized()
         };
         return res;
     },

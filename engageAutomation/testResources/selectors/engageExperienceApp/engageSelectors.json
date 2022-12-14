@@ -92,7 +92,9 @@
                 "newPlaylistOption": "[data-tid=button-newPlaylistOption]",
                 "component": "[data-tid*=button-product-",
                 "assignBtn": "[data-tid=button-assign]",
-                "shareBtn": "[data-tid=button-share]"
+                "shareBtn": "[data-tid=button-share]",
+                "libraryDropdownBtn": "[data-tid=library-dropdown]",
+                "myMaterialBtn": "[data-tid=button-materials]"
             },
             "dashboard": {
                 "pageTitle": "[data-tid=text-pageTitle]",
@@ -225,7 +227,7 @@
                 "noResultListItemSubtitle": "[data-tid=text-subtitle-no-search-result-found]",
                 "clearSearch": "[data-tid=icon-close-serach]",
                 "searchCount": "[data-tid=label-search-result], [data-tid=label-result]",
-                "search_NoResult_img": "[data-tid=icon-nostudent]",
+                "search_NoResult_img": "[data-tid=icon-nostudent], [data-tid=icon-noResult]",
                 "search_NoResult_title": "[data-tid=text-noResultFound]",
                 "search_NoResult_subTitle": "[data-tid=text-noResultFoundBilinear]",
                 "searchPill": "[data-tid=chip-search]",
@@ -1527,10 +1529,9 @@
                 "editMaterial_Note": "[data-tid=note-classInfoBox]",
                 "editMaterial_Cancel": "[data-tid=button-secondary-re-editMaterial]",
                 "editMaterial_ContinueToEdit": "[data-tid=button-primary-re-editMaterial]",
-                "addtoClass_btn":"[data-tid=button-addToClass]",
-                "edit_btn":"[data-tid=button-edit]",
-                "viewAsStudent":"[data-tid=button-view-as-student]"
-
+                "addtoClass_btn": "[data-tid=button-addToClass]",
+                "edit_btn": "[data-tid=button-edit]",
+                "viewAsStudent": "[data-tid=button-view-as-student]"
             },
             "library": {
                 "libraryTitleTxt": "[data-tid=text-pageTitle]",
@@ -1569,7 +1570,7 @@
                 "materialLabel": "[data-tid=value-text-heading-materialTitle]",
                 "typeLabel": "[data-tid=value-text-heading-typeTitle]",
                 "modifiedLabel": "[data-tid=value-text-heading-modifiedTitle]",
-                "searchTextBox": "[data-tid=input-autocomplete-searchtextbox]",
+                "searchTextBox": "input[type=text]",
                 "noMaterialTitleTxt": "[data-tid=text-title-noMaterial]",
                 "noMaterialSubtitleTxt": "[data-tid=text-subtitle-noMaterial]",
                 "blankQuizBtn": "[data-tid=button-blankQuiz]",
@@ -1577,7 +1578,7 @@
                 "newResourceBtn": "[data-tid=button-newResource]",
                 "quizRow": "[data-tid*=list-",
                 "materialsQuizTitleTxt": "[data-tid*=text-material-title-",
-                "materialsDraftPillTxt": "[data-tid*=chip-pill",
+                "materialsDraftPillTxt": "[data-tid*=chip-pill-",
                 "materialsQuizTypeTxt": "[data-tid*=text-type-",
                 "modifiedTime": "[data-tid*=text-modified-",
                 "materialsContextMenuBtn": "[data-tid*=button-materialOptions-",
@@ -1585,8 +1586,13 @@
                 "menuBlankQuizBtn": "[data-tid=button-blankQuiz]",
                 "menuBlankSurveyBtn": "[data-tid=button-blankSurvey]",
                 "menuNewResourceBtn": "[data-tid=button-newResource]",
-                "previewBtn": "[data-tid=button-preview]",
-                "deleteBtn": "[data-tid=button-delete]"
+                "previewBtn": "[data-tid*=button-preview]",
+                "deleteBtn": "[data-tid*=button-delete]",
+                "totalMaterialCount": "[data-tid=label-result]",
+                "materialCountSubtitle": "[data-tid=subTitle-label-result]",
+                "duplicateBtn": "[data-tid*=button-duplicate]",
+                "editBtn": "[data-tid*=button-edit]",
+                "clearSearch": "[data-tid=icon-close-serach]"
             }
         }
     }

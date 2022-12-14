@@ -157,6 +157,7 @@ module.exports = {
     getData_blankQuizPage: async function () {
         await logger.logInto(await stackTrace.get());
         var obj;
+        await action.waitForDisplayed(this.quizHeaderIcon);
         obj = {
             quizHeaderIcon: ((await action.getElementCount(this.quizHeaderIcon)) > 0) ? await action.waitForDisplayed(this.quizHeaderIcon) : false,
             quizHeaderName: ((await action.getElementCount(this.quizHeaderName)) > 0) ? await action.getText(this.quizHeaderName) : null,

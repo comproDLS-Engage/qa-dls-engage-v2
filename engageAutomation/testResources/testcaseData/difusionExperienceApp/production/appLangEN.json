@@ -145,7 +145,7 @@
                     "editMaterialDialogEditBtn": "Continue to Edit",
                     "editMaterialDialogCancelBtn": "Cancel",
                     "addToClassDialogTitle": "New Access",
-                    "addToClassDialogSubtitle": "Add this quiz to your class to make it assignable in that class.",
+                    "addToClassDialogSubtitle": "Add this material to your class to make it assignable in that class.",
                     "addToClassMenuCloseBtn": ""
                 },
                 "student": {
@@ -1651,13 +1651,23 @@
                     "blankQuizBtn": "Blank Quiz",
                     "blankSurveyBtn": "Blank Survey",
                     "newResourceBtn": "New Resource",
-                    "materialsDraftPillTxt": "Drafts",
+                    "materialsDraftPillTxt": "Draft",
+                    "materialsQuizTypeTxt": "Quiz",
                     "createNewTxt": "Create New",
                     "menuBlankQuizBtn": "Blank Quiz",
                     "menuBlankSurveyBtn": "Blank Survey",
                     "menuNewResourceBtn": "New Resource",
                     "previewBtn": "Preview",
-                    "deleteBtn": "Delete"
+                    "deleteBtn": "Delete",
+                    "duplicateBtn": "Duplicate",
+                    "editBtn": "Edit",
+                    "totalMaterialCount": "materials",
+                    "materialCountSubtitle": "quizzes, 0 resource",
+                    "search_NoResult_img": true,
+                    "search_NoResult_title": "No result found",
+                    "search_NoResult_subTitle": "We didn't find anything matching your search or filters. Try your search again, or change your filters to update the results here.",
+                    "searchCount": " result:",
+                    "noSearchCount": " results"
                 },
                 "student": {}
             }
