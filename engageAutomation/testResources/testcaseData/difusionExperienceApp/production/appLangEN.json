@@ -145,7 +145,7 @@
                     "editMaterialDialogEditBtn": "Continue to Edit",
                     "editMaterialDialogCancelBtn": "Cancel",
                     "addToClassDialogTitle": "New Access",
-                    "addToClassDialogSubtitle": "Add this quiz to your class to make it assignable in that class.",
+                    "addToClassDialogSubtitle": "Add this material to your class to make it assignable in that class.",
                     "addToClassMenuCloseBtn": ""
                 },
                 "student": {
