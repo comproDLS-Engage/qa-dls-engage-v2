@@ -527,13 +527,23 @@ module.exports = {
         await assertion.assertEqual(sts, testdata.Snackbar_DeleteMessage_Text, "snackbar is not displayed");
 
     },
-
+// Validate the Add to Class Page when no class is available
     ENG_ICCE_TC_77: async function (testdata) {
         sts = await libraryEditorPage.click_addtoClass_btn();
         console.log(sts)
         await assertion.assertEqual(sts.newAccess_Title, testdata.newAccess_Title, "newAccess_Title Values is not as expected.");
         await assertion.assertEqual(sts.newAccess_SubTitle, testdata.newAccess_SubTitle, "newAccess_SubTitle Values is not as expected.");
-        await assertion.assertEqual(sts.addnowbutton, testdata.addnowbutton, "addnowbutton Values is not as expected.");
+      // await assertion.assertEqual(sts.addnowbutton, testdata.addnowbutton, "addnowbutton Values is not as expected.");
+        await assertion.assertEqual(sts.accessClosebtn, true, "accessClosebtn Values is not as expected.");
+
+    },
+    // Validate the Add to Class Page when class is available
+    ENG_ICCE_TC_61: async function (testdata) {
+        sts = await libraryEditorPage.click_addtoClass_btn();
+        console.log(sts)
+        await assertion.assertEqual(sts.newAccess_Title, testdata.newAccess_Title, "newAccess_Title Values is not as expected.");
+        await assertion.assertEqual(sts.newAccess_SubTitle, testdata.newAccess_SubTitle, "newAccess_SubTitle Values is not as expected.");
+      // await assertion.assertEqual(sts.addnowbutton, testdata.addnowbutton, "addnowbutton Values is not as expected.");
         await assertion.assertEqual(sts.accessClosebtn, true, "accessClosebtn Values is not as expected.");
 
     },
