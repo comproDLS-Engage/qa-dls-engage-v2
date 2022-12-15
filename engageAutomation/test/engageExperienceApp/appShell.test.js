@@ -38,7 +38,7 @@ module.exports = {
 		await assertion.assertEqual(sts.pageStatus, true, "Browse page status mismatch");
 	},
 
-	//Validate that clicking on the Classes button in left Navigation pane launches Classes page for teacher
+	//Validate that clicking on the Classes button in left Navigation pane launches Classes page
 	ENG_SHELL_TC_4: async function (testdata) {
 		sts = await appShell.clickClassesButton();
 		await assertion.assertEqual(sts, true, "status mismatch");
@@ -46,7 +46,7 @@ module.exports = {
 		await assertion.assertEqual(sts.pageStatus, true, "Classes page status mismatch");
 		await assertion.assertEqual(sts.classHeading, testdata.classHeading, "classHeading text mismatch");
 		await assertion.assertEqual(sts.classSubHeading, testdata.classSubHeading, "classSubHeading text mismatch");
-		//assertion.assertEqual(sts.addClassBtn, testdata.addClassBtn, "addClassBtn text mismatch");
+		await assertion.assertEqual(sts.addClassBtn, testdata.addClassBtn, "addClassBtn text mismatch");
 		await assertion.assertEqual(sts.activeTab, testdata.activeTab, "activeTab text mismatch");
 		await assertion.assertEqual(sts.archivedTab, testdata.archivedTab, "archivedTab text mismatch");
 	},
@@ -253,6 +253,11 @@ module.exports = {
 	//Validate that clicking on the Library button in left Navigation pane launches Library page 
 	ENG_SHELL_TC_32: async function () {
 		sts = await appShell.clickLibraryButton();
+		await assertion.assertEqual(sts.pageStatus, true, "Button is clicked.");
+	},
+
+	ENG_SHELL_TC_33: async function () {
+		sts = await appShell.clickMyMaterialsButton();
 		await assertion.assertEqual(sts.pageStatus, true, "Button is clicked.");
 	},
 }

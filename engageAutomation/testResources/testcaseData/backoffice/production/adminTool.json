@@ -41,25 +41,25 @@
     },
     "findUser": {
         "user1": {
-            "firstName": "dev1",
+            "firstName": "dev2",
             "lastName": "teacher3",
-            "email": "dev1teacher3@yopmail.com",
+            "email": "dev2teacher3@yopmail.com",
             "role": "teacher",
-            "userId": "e3a2d5cf-4ce2-4bda-81af-325a83209ff9"
+            "userId": "030ab5a7-8d31-4733-ab44-7393f2823cd6"
         },
         "user2": {
             "firstName": "Français",
             "lastName": "général",
-            "email": "spanish@yopmail.com",
-            "role": "student",
-            "userId": "0529e8f4-ac88-440b-a1fe-3063d0fc3d74"
+            "email": "dev2.teacher2@yopmail.com",
+            "role": "teacher",
+            "userId": "8bd7625b-9c6e-43d4-b2d7-e0633fc5793d"
         },
         "user3": {
             "firstName": "hell!@#$%^&*()_+{}|:\"<>?",
             "lastName": "mc`void",
-            "email": "onboardStudent3@yopmail.com",
+            "email": "dev2.student5@yopmail.com",
             "role": "student",
-            "userId": "0f22615c-8c1f-4adf-a0fb-2e3d4ddf0e11"
+            "userId": "4ba7a0a8-f41c-4c80-8214-b9c91cff2a60"
         },
         "user4": {
             "firstName": "",
@@ -69,17 +69,17 @@
             "userId": ""
         },
         "user5": {
-            "firstName": "Megha",
-            "lastName": "teacher6",
-            "email": "megha.teacher6@yopmail.com",
+            "firstName": "Dev2",
+            "lastName": "Teacher3",
+            "email": "dev2.teacher3@yopmail.com",
             "role": "teacher",
-            "userId": "3cb3048b-c020-41ff-ad1e-d114c18b224a"
+            "userId": "f013d45b-a82a-4fac-9552-ffcdda9200e5"
         }
     },
     "entitleUser": {
-        "email": "megha.teacher6@yopmail.com",
-        "productCode": "qaautomationtestbookdonotmodify1626779052239",
-        "passKey": "d33d71e1-6d75-4267-b468-7ecd6afd0779"
+        "email": "dev2.teacher3@yopmail.com",
+        "productCode": "qatestautomationbook1627375680925",
+        "passKey": "a218d064-60e8-4711-8180-62a724435b94"
     },
     "createNewInstitution": {
         "institution1": {
@@ -91,7 +91,7 @@
             "state": "Delhi",
             "zip": "999999",
             "telephone": "1234567890",
-            "email": "dev1teacher1@yopmail.com",
+            "email": "dev2teacher1@yopmail.com",
             "website": "https://www.comprotechnologies.com/"
         },
         "institution2": {
@@ -103,7 +103,7 @@
             "state": "forest",
             "zip": "112233",
             "telephone": "1234-567890",
-            "email": "dev1teacher1@yopmail.com",
+            "email": "dev2teacher1@yopmail.com",
             "website": ""
         },
         "institution3": {
@@ -115,7 +115,7 @@
             "state": "forest",
             "zip": "112233",
             "telephone": "1234-567890",
-            "email": "dev1teacher1@yopmail.com",
+            "email": "dev2teacher1@yopmail.com",
             "website": ""
         }
     }

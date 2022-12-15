@@ -60,6 +60,12 @@ module.exports = {
 		await assertion.assertEqual(sts.startDate, testdata.startDate, "startDate mismatch");
 		await assertion.assertEqual(sts.endDate, testdata.endDate, "endDate mismatch");
 	},
+
+	// Validate that Engage app is launched on clicking view class as teacher
+	ADMN_FCLS_TC_5: async function () {
+		sts = await findClassPage.click_ViewClassAsTeacher_Button();
+		await assertion.assertEqual(sts, true, "click_ViewClassAsTeacher_Button status mismatch");
+	},
 	// ---------------------------------------------------------------------------- //
 
 
@@ -361,7 +367,7 @@ module.exports = {
 	// Validate the scenario of Disable a User
 	ADMN_USRD_TC_2: async function (testdata) {
 		sts = await findUserPage.click_DisableEnableUser_Button();
-		await assertion.assertEqual(sts, "Disable", "click_DisableEnableUser_Button status mismatch");
+		await assertion.assertEqual(sts, "DISABLE", "click_DisableEnableUser_Button status mismatch");
 		sts = await findUserPage.click_DialogConfirm_Button();
 		await assertion.assert((typeof sts === "string" && sts.includes(testdata)), "Snackbar messsage mismatch. " + sts);
 	},
@@ -369,7 +375,7 @@ module.exports = {
 	// Validate the scenario of Enable a User
 	ADMN_USRD_TC_3: async function (testdata) {
 		sts = await findUserPage.click_DisableEnableUser_Button();
-		await assertion.assertEqual(sts, "Enable", "click_DisableEnableUser_Button status mismatch");
+		await assertion.assertEqual(sts, "ENABLE", "click_DisableEnableUser_Button status mismatch");
 		sts = await findUserPage.click_DialogConfirm_Button();
 		await assertion.assert((typeof sts === "string" && sts.includes(testdata)), "Snackbar messsage mismatch. " + sts);
 	},

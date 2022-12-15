@@ -1,6 +1,6 @@
 "use strict";
 var action = require('../../core/actionLibrary/baseActionLibrary.js')
-var selectorFile =  jsonParserUtil.jsonParser(selectorDir)
+var selectorFile = jsonParserUtil.jsonParser(selectorDir)
 var appShellPage = require('./appShell.page.js')
 
 module.exports = {
@@ -48,9 +48,38 @@ module.exports = {
   resourceSubtitle: selectorFile.css.ComproEngage.dashboard.resourceSubtitle,
   recentlyViewedHeading: selectorFile.css.ComproEngage.dashboard.recentlyViewedHeading,
   recentlyViewed_activities: selectorFile.css.ComproEngage.dashboard.recentlyViewed_activities,
-  addNew_btn:selectorFile.css.ComproEngage.dashboard.addNew_btn,
-  rightPanelOpen_btn:selectorFile.css.ComproEngage.dashboard.rightPanelOpen_btn,
-  rightPanelClose_btn:selectorFile.css.ComproEngage.dashboard.rightPanelClose_btn,
+  recentMaterialsBtn: selectorFile.css.ComproEngage.dashboard.recentMaterialsBtn,
+  addNewMaterialBtn: selectorFile.css.ComproEngage.dashboard.addNewMaterialBtn,
+  noMaterialTitle: selectorFile.css.ComproEngage.dashboard.noMaterialTitle,
+  noMaterialSubtitle: selectorFile.css.ComproEngage.dashboard.noMaterialSubtitle,
+  viewAllMaterialBtn: selectorFile.css.ComproEngage.dashboard.viewAllMaterialBtn,
+  createNewLabel: selectorFile.css.ComproEngage.dashboard.createNewLabel,
+  blankQuizOption: selectorFile.css.ComproEngage.dashboard.blankQuizOption,
+  blankSurveyOption: selectorFile.css.ComproEngage.dashboard.blankSurveyOption,
+  newResourceOption: selectorFile.css.ComproEngage.dashboard.newResourceOption,
+  materialTitleBtn: selectorFile.css.ComproEngage.dashboard.materialTitleBtn,
+  materialOptionsBtn: selectorFile.css.ComproEngage.dashboard.materialOptionsBtn,
+  addToClassBtn: selectorFile.css.ComproEngage.dashboard.addToClassBtn,
+  previewMaterialOption: selectorFile.css.ComproEngage.dashboard.previewMaterialOption,
+  editMaterialOption: selectorFile.css.ComproEngage.dashboard.editMaterialOption,
+  duplicateMaterialOption: selectorFile.css.ComproEngage.dashboard.duplicateMaterialOption,
+  deleteMaterialOption: selectorFile.css.ComproEngage.dashboard.deleteMaterialOption,
+  deleteMaterialDialogTitle: selectorFile.css.ComproEngage.dashboard.deleteMaterialDialogTitle,
+  deleteMaterialDialogSubtitle: selectorFile.css.ComproEngage.dashboard.deleteMaterialDialogSubtitle,
+  deleteMaterialDialogWarning: selectorFile.css.ComproEngage.dashboard.deleteMaterialDialogWarning,
+  deleteMaterialDialogCancelBtn: selectorFile.css.ComproEngage.dashboard.deleteMaterialDialogCancelBtn,
+  deleteMaterialDialogDeleteBtn: selectorFile.css.ComproEngage.dashboard.deleteMaterialDialogDeleteBtn,
+  editMaterialDialogTitle: selectorFile.css.ComproEngage.dashboard.editMaterialDialogTitle,
+  editMaterialDialogSubtitle: selectorFile.css.ComproEngage.dashboard.editMaterialDialogSubtitle,
+  editMaterialDialogEditBtn: selectorFile.css.ComproEngage.dashboard.editMaterialDialogEditBtn,
+  editMaterialDialogCancelBtn: selectorFile.css.ComproEngage.dashboard.editMaterialDialogCancelBtn,
+  addToClassDialogTitle: selectorFile.css.ComproEngage.dashboard.addToClassDialogTitle,
+  addToClassDialogSubtitle: selectorFile.css.ComproEngage.dashboard.addToClassDialogSubtitle,
+  addToClassMenuCloseBtn: selectorFile.css.ComproEngage.dashboard.addToClassMenuCloseBtn,
+  addNew_btn: selectorFile.css.ComproEngage.dashboard.addNew_btn,
+  rightPanelOpen_btn: selectorFile.css.ComproEngage.dashboard.rightPanelOpen_btn,
+  rightPanelClose_btn: selectorFile.css.ComproEngage.dashboard.rightPanelClose_btn,
+
   isInitialized: async function () {
     var res;
     await logger.logInto(await stackTrace.get());
@@ -84,6 +113,11 @@ module.exports = {
       exploreHeading: ((await action.getElementCount(this.exploreHeading)) > 0) ? await action.getText(this.exploreHeading) : null,
       viewAllBtn: ((await action.getElementCount(this.viewAllBtn)) > 0) ? await action.getText(this.viewAllBtn) : null,
       recentlyViewedHeading: ((await action.getElementCount(this.recentlyViewedHeading)) > 0) ? await action.getText(this.recentlyViewedHeading) : null,
+      recentMaterialsBtn: ((await action.getElementCount(this.recentMaterialsBtn)) > 0) ? await action.getText(this.recentMaterialsBtn) : null,
+      addNewMaterialBtn: ((await action.getElementCount(this.addNewMaterialBtn)) > 0) ? await action.getText(this.addNewMaterialBtn) : null,
+      noMaterialTitle: ((await action.getElementCount(this.noMaterialTitle)) > 0) ? await action.getText(this.noMaterialTitle) : null,
+      noMaterialSubtitle: ((await action.getElementCount(this.noMaterialSubtitle)) > 0) ? await action.getText(this.noMaterialSubtitle) : null,
+      viewAllMaterialBtn: ((await action.getElementCount(this.viewAllMaterialBtn)) > 0) ? await action.getText(this.viewAllMaterialBtn) : null,
     }
     return obj;
   },
@@ -176,8 +210,8 @@ module.exports = {
 
   getData_bookMenu: async function () {
     await logger.logInto(await stackTrace.get());
-    var obj;
     await action.waitForDisplayed(this.bookMenu_viewClassOption)
+    var obj;
     obj = {
       bookMenu_viewClassOption: ((await action.getElementCount(this.bookMenu_viewClassOption)) > 0) ? await action.getText(this.bookMenu_viewClassOption) : null,
       bookMenu_createClassOption: ((await action.getElementCount(this.bookMenu_createClassOption)) > 0) ? await action.getText(this.bookMenu_createClassOption) : null,
@@ -229,8 +263,8 @@ module.exports = {
     } else {
       for (var i = 0; i <= resourceTitle.length; i++) {
         obj[i] = {
-          resourceTitle: ((await action.getElementCount(resourceTitle[i])) > 0) ? await action.getText(resourceTitle[i]) : null,
-          resourceSubtitle: ((await action.getElementCount(resourceSubtitle[i])) > 0) ? await action.getText(resourceSubtitle[i]) : null,
+          resourceTitle: ((await action.getElementCount(resourceTitle[i]) > 0)) ? await action.getText(resourceTitle[i]) : null,
+          resourceSubtitle: ((await action.getElementCount(resourceSubtitle[i]) > 0)) ? await action.getText(resourceSubtitle[i]) : null,
         }
       }
     }
@@ -256,6 +290,95 @@ module.exports = {
     }
     await logger.logInto(await stackTrace.get(), recentlyViewed_activities_Arr);
     return recentlyViewed_activities_Arr;
+  },
+
+  getData_addNewMaterialMenu: async function () {
+    await logger.logInto(await stackTrace.get());
+    var obj;
+    obj = {
+      createNewLabel: ((await action.getElementCount(this.createNewLabel)) > 0) ? await action.getText(this.createNewLabel) : null,
+      blankQuizOption: ((await action.getElementCount(this.blankQuizOption)) > 0) ? await action.getText(this.blankQuizOption) : null,
+      blankSurveyOption: ((await action.getElementCount(this.blankSurveyOption)) > 0) ? await action.getText(this.blankSurveyOption) : null,
+      newResourceOption: ((await action.getElementCount(this.newResourceOption)) > 0) ? await action.getText(this.newResourceOption) : null,
+    }
+    return obj;
+  },
+
+  getData_materials: async function (materialTitleBtnName) {
+    await logger.logInto(await stackTrace.get());
+    var obj = [];
+    await action.waitForDisplayed(this.materialTitleBtn);
+    var list = await action.findElements(this.materialTitleBtn);
+    if (materialTitleBtnName) {
+      for (var i = 0; i < list.length; i++) {
+        if ((await action.getText(this.materialTitleBtn + i)) == materialTitleBtnName) {
+          obj[0] = {
+            materialTitleBtn: ((await action.getElementCount(this.materialTitleBtn + i + "]")) > 0) ? await action.getText(this.materialTitleBtn + i + "]") : null,
+            materialOptionsBtn: ((await action.getElementCount(this.materialOptionsBtn + i + "]")) > 0) ? await action.getText(this.materialOptionsBtn + i + "]") : null,
+            addToClassBtn: ((await action.getElementCount(this.addToClassBtn + i + "]")) > 0) ? await action.getText(this.addToClassBtn + i + "]") : null,
+          }
+          break;
+        }
+      }
+    } else {
+      for (var i = 0; i < list.length; i++) {
+        obj[i] = {
+          materialTitleBtn: ((await action.getElementCount(this.materialTitleBtn + i + "]")) > 0) ? await action.getText(this.materialTitleBtn + i + "]") : null,
+          materialOptionsBtn: ((await action.getElementCount(this.materialOptionsBtn + i + "]")) > 0) ? await action.getText(this.materialOptionsBtn + i + "]") : null,
+          addToClassBtn: ((await action.getElementCount(this.addToClassBtn + i + "]")) > 0) ? await action.getText(this.addToClassBtn + i + "]") : null,
+        }
+      }
+    }
+    return obj;
+  },
+
+  getData_materialMenu: async function () {
+    await logger.logInto(await stackTrace.get());
+    var obj;
+    obj = {
+      previewMaterialOption: ((await action.getElementCount(this.previewMaterialOption)) > 0) ? await action.getText(this.previewMaterialOption) : null,
+      editMaterialOption: ((await action.getElementCount(this.editMaterialOption)) > 0) ? await action.getText(this.editMaterialOption) : null,
+      duplicateMaterialOption: ((await action.getElementCount(this.duplicateMaterialOption)) > 0) ? await action.getText(this.duplicateMaterialOption) : null,
+      deleteMaterialOption: ((await action.getElementCount(this.deleteMaterialOption)) > 0) ? await action.getText(this.deleteMaterialOption) : null,
+    }
+    return obj;
+  },
+
+  getData_deleteMaterialDialog: async function () {
+    await logger.logInto(await stackTrace.get());
+    var obj;
+    obj = {
+      deleteMaterialDialogTitle: ((await action.getElementCount(this.deleteMaterialDialogTitle)) > 0) ? await action.getText(this.deleteMaterialDialogTitle) : null,
+      deleteMaterialDialogSubtitle: ((await action.getElementCount(this.deleteMaterialDialogSubtitle)) > 0) ? await action.getText(this.deleteMaterialDialogSubtitle) : null,
+      deleteMaterialDialogWarning: ((await action.getElementCount(this.deleteMaterialDialogWarning)) > 0) ? await action.getText(this.deleteMaterialDialogWarning) : null,
+      deleteMaterialDialogCancelBtn: ((await action.getElementCount(this.deleteMaterialDialogCancelBtn)) > 0) ? await action.getText(this.deleteMaterialDialogCancelBtn) : null,
+      deleteMaterialDialogDeleteBtn: ((await action.getElementCount(this.deleteMaterialDialogDeleteBtn)) > 0) ? await action.getText(this.deleteMaterialDialogDeleteBtn) : null,
+    }
+    return obj;
+  },
+
+  getData_editMaterialDialog: async function () {
+    await logger.logInto(await stackTrace.get());
+    var obj;
+    obj = {
+      editMaterialDialogTitle: ((await action.getElementCount(this.editMaterialDialogTitle)) > 0) ? await action.getText(this.editMaterialDialogTitle) : null,
+      editMaterialDialogSubtitle: ((await action.getElementCount(this.editMaterialDialogSubtitle)) > 0) ? await action.getText(this.editMaterialDialogSubtitle) : null,
+      editMaterialDialogEditBtn: ((await action.getElementCount(this.editMaterialDialogEditBtn)) > 0) ? await action.getText(this.editMaterialDialogEditBtn) : null,
+      editMaterialDialogCancelBtn: ((await action.getElementCount(this.editMaterialDialogCancelBtn)) > 0) ? await action.getText(this.editMaterialDialogCancelBtn) : null,
+    }
+    return obj;
+  },
+
+  getData_addToClassDialog: async function () {
+    await logger.logInto(await stackTrace.get());
+    await action.waitForDocumentLoad();
+    var obj;
+    obj = {
+      addToClassDialogTitle: ((await action.getElementCount(this.addToClassDialogTitle)) > 0) ? await action.getText(this.addToClassDialogTitle) : null,
+      addToClassDialogSubtitle: ((await action.getElementCount(this.addToClassDialogSubtitle)) > 0) ? await action.getText(this.addToClassDialogSubtitle) : null,
+      addToClassMenuCloseBtn: ((await action.getElementCount(this.addToClassMenuCloseBtn)) > 0) ? await action.getText(this.addToClassMenuCloseBtn) : null,
+    }
+    return obj;
   },
 
   click_createPlaylistBtn: async function () {
@@ -409,7 +532,7 @@ module.exports = {
     }
     if (res == true) {
       await logger.logInto(await stackTrace.get(), " --viewBookBtn clicked");
-      res =  await require('./viewBook.page').isInitialized();
+      res = await require('./viewBook.page').isInitialized();
     }
     else
       await logger.logInto(await stackTrace.get(), " --viewBookBtn NOT clicked", "error")
@@ -428,7 +551,7 @@ module.exports = {
     }
     if (res == true) {
       await logger.logInto(await stackTrace.get(), " --bookCover clicked");
-      res =await require('./viewBook.page').isInitialized();
+      res = await require('./viewBook.page').isInitialized();
     }
     else
       await logger.logInto(await stackTrace.get(), " --bookCover NOT clicked", "error")
@@ -441,7 +564,7 @@ module.exports = {
     res = await action.click(this.bookMenu_viewClassOption);
     if (true == res) {
       await logger.logInto(await stackTrace.get(), " bookMenu_viewClassOption is clicked");
-      res =await require('./classDrawer.page').isInitialized();
+      res = await require('./classDrawer.page').isInitialized();
     }
     else {
       await logger.logInto(await stackTrace.get(), res + "bookMenu_viewClassOption is NOT clicked", 'error');
@@ -455,7 +578,7 @@ module.exports = {
     res = await action.click(this.bookMenu_createClassOption);
     if (true == res) {
       await logger.logInto(await stackTrace.get(), " bookMenu_createClassOption is clicked");
-      res =await require('./createClass.page').isInitialized();
+      res = await require('./createClass.page').isInitialized();
     }
     else {
       await logger.logInto(await stackTrace.get(), res + "bookMenu_createClassOption is NOT clicked", 'error');
@@ -483,7 +606,7 @@ module.exports = {
     res = await action.click(this.bookMenu_openFlipbookOption);
     if (true == res) {
       await logger.logInto(await stackTrace.get(), " bookMenu_openFlipbookOption is clicked");
-      res =await require('./flipbook.page').isInitialized();
+      res = await require('./flipbook.page').isInitialized();
     }
     else {
       await logger.logInto(await stackTrace.get(), res + "bookMenu_openFlipbookOption is NOT clicked", 'error');
@@ -573,7 +696,7 @@ module.exports = {
     }
     if (res == true) {
       await logger.logInto(await stackTrace.get(), " --resourceTitle clicked");
-      res = require('./browse.page').isInitialized();
+      res = await require('./browse.page').isInitialized();
     }
     else
       await logger.logInto(await stackTrace.get(), " --resourceTitle NOT clicked", "error")
@@ -609,46 +732,242 @@ module.exports = {
     }
     return res;
   },
-  clickAddNew_btn:async function () {
-    logger.logInto(stackTrace.get());
+
+  click_recentMaterialsBtn: async function () {
+    await logger.logInto(await stackTrace.get());
     var res;
-    res = await action.click(this.addNew_btn);
+    res = await action.click(this.recentMaterialsBtn);
     if (true == res) {
-      await action.waitForDisplayed(this.createPlaylistBtn)
-      await logger.logInto(stackTrace.get(), " AddNew_btn is clicked");
-      res = await this.getData_dashboardPage();
+      await logger.logInto(await stackTrace.get(), " recentMaterialsBtn is clicked");
+      res = await require('./library.page').isInitialized();
     }
     else {
-    await  logger.logInto(stackTrace.get(), res + "AddNew_btn is NOT clicked", 'error');
-    }
-    return res;
-  },
-  clickRightPanelOpen_btn:async function () {
-    logger.logInto(stackTrace.get());
-    var res;
-    res =await action.click(this.rightPanelOpen_btn);
-    if (true == res) {
-   await   logger.logInto(stackTrace.get(), " expand_Btn is clicked");
-    }
-    else {
-   await   logger.logInto(stackTrace.get(), res + "expand_Btn is NOT clicked", 'error');
-    }
-    return res;
-  },
-  clickRightPanelClose_btn:async function () {
-    logger.logInto(stackTrace.get());
-    var res;
-    await action.waitForDisplayed(this.rightPanelClose_btn)
-    res = await action.click(this.rightPanelClose_btn);
-    if (true == res) {
-    await  logger.logInto(stackTrace.get(), " Close_btn is clicked");
-      res = await this.isInitialized();
-    }
-    else {
-     await logger.logInto(stackTrace.get(), res + "Close_btn is NOT clicked", 'error');
+      await logger.logInto(await stackTrace.get(), res + "recentMaterialsBtn is NOT clicked", 'error');
     }
     return res;
   },
 
+  click_addNewMaterialBtn: async function () {
+    await logger.logInto(await stackTrace.get());
+    var res;
+    res = await action.click(this.addNewMaterialBtn);
+    if (true == res) {
+      await logger.logInto(await stackTrace.get(), " addNewMaterialBtn is clicked");
+      res = await this.getData_addNewMaterialMenu();
+    }
+    else {
+      await logger.logInto(await stackTrace.get(), res + "addNewMaterialBtn is NOT clicked", 'error');
+    }
+    return res;
+  },
+
+  click_viewAllMaterialBtn: async function () {
+    await logger.logInto(await stackTrace.get());
+    var res;
+    res = await action.click(this.viewAllMaterialBtn);
+    if (true == res) {
+      await logger.logInto(await stackTrace.get(), " viewAllMaterialBtn is clicked");
+      res = await require('./myMaterials.page').isInitialized();
+    }
+    else {
+      await logger.logInto(await stackTrace.get(), res + "viewAllMaterialBtn is NOT clicked", 'error');
+    }
+    return res;
+  },
+
+  click_blankQuizOption: async function () {
+    await logger.logInto(await stackTrace.get());
+    var res;
+    res = await action.click(this.blankQuizOption);
+    if (true == res) {
+      await logger.logInto(await stackTrace.get(), " blankQuizOption is clicked");
+      res = await require('./libraryEditor.page').isInitialized();
+    }
+    else {
+      await logger.logInto(await stackTrace.get(), res + "blankQuizOption is NOT clicked", 'error');
+    }
+    return res;
+  },
+
+  click_materialTitleBtn: async function (materialTitleBtnName) {
+    await logger.logInto(await stackTrace.get());
+    var i, list, res;
+    list = await action.findElements(this.materialTitleBtn);
+    for (i = 0; i < list.length; i++) {
+      if (((await action.getText(this.materialTitleBtn + i + "]"))) == materialTitleBtnName) {
+        res = await action.click(list[i]);
+        break;
+      }
+    }
+    if (res == true) {
+      await logger.logInto(await stackTrace.get(), " --materialTitleBtn clicked");
+    }
+    else
+      await logger.logInto(await stackTrace.get(), " --materialTitleBtn NOT clicked", "error")
+    return res;
+  },
+  
+  click_materialOptionsBtn: async function (materialTitleBtnName) {
+    await logger.logInto(await stackTrace.get());
+    var i, list, res;
+    list = await action.findElements(this.materialOptionsBtn);
+    for (i = 0; i < list.length; i++) {
+      if (((await action.getText(this.materialTitleBtn + i + "]"))) == materialTitleBtnName) {
+        res = await action.click(list[i]);
+        break;
+      }
+    }
+    if (res == true) {
+      await logger.logInto(await stackTrace.get(), " --materialOptionsBtn clicked");
+      res = await this.getData_materialMenu();
+    }
+    else
+      await logger.logInto(await stackTrace.get(), " --materialOptionsBtn NOT clicked", "error")
+    return res;
+  },
+
+  click_addToClassBtn: async function (materialTitleBtnName) {
+    await logger.logInto(await stackTrace.get());
+    var i, list, res;
+    list = await action.findElements(this.addToClassBtn);
+    for (i = 0; i < list.length; i++) {
+      if (((await action.getText(this.materialTitleBtn + i + "]"))) == materialTitleBtnName) {
+        res = await action.click(list[i]);
+        break;
+      }
+    }
+    if (res == true) {
+      await logger.logInto(await stackTrace.get(), " --addToClassBtn clicked");
+      res = await this.getData_addToClassDialog();
+    }
+    else
+      await logger.logInto(await stackTrace.get(), " --addToClassBtn NOT clicked", "error")
+    return res;
+  },
+
+  click_previewMaterialOption: async function () {
+    await logger.logInto(await stackTrace.get());
+    var res;
+    res = await action.click(this.previewMaterialOption);
+    if (true == res) {
+      await logger.logInto(await stackTrace.get(), " previewMaterialOption is clicked");
+    }
+    else {
+      await logger.logInto(await stackTrace.get(), res + "previewMaterialOption is NOT clicked", 'error');
+    }
+    return res;
+  },
+
+  click_editMaterialOption: async function () {
+    await logger.logInto(await stackTrace.get());
+    var res;
+    res = await action.click(this.editMaterialOption);
+    if (true == res) {
+      await logger.logInto(await stackTrace.get(), " editMaterialOption is clicked");
+      res = await this.getData_editMaterialDialog();
+    }
+    else {
+      await logger.logInto(await stackTrace.get(), res + "editMaterialOption is NOT clicked", 'error');
+    }
+    return res;
+  },
+
+  click_duplicateMaterialOption: async function () {
+    await logger.logInto(await stackTrace.get());
+    var res;
+    res = await action.click(this.duplicateMaterialOption);
+    if (true == res) {
+      await logger.logInto(await stackTrace.get(), " duplicateMaterialOption is clicked");
+    }
+    else {
+      await logger.logInto(await stackTrace.get(), res + "duplicateMaterialOption is NOT clicked", 'error');
+    }
+    return res;
+  },
+
+  click_deleteMaterialOption: async function () {
+    await logger.logInto(await stackTrace.get());
+    var res;
+    res = await action.click(this.deleteMaterialOption);
+    if (true == res) {
+      await logger.logInto(await stackTrace.get(), " deleteMaterialOption is clicked");
+      res = await this.getData_deleteMaterialDialog();
+    }
+    else {
+      await logger.logInto(await stackTrace.get(), res + "deleteMaterialOption is NOT clicked", 'error');
+    }
+    return res;
+  },
+
+  click_deleteMaterialDialogCancelBtn: async function () {
+    await logger.logInto(await stackTrace.get());
+    var res;
+    res = await action.click(this.deleteMaterialDialogCancelBtn);
+    if (true == res) {
+      await logger.logInto(await stackTrace.get(), " deleteMaterialDialogCancelBtn is clicked");
+      res = await action.waitForDisplayed(this.deleteMaterialDialogCancelBtn, undefined, true);
+    }
+    else {
+      await logger.logInto(await stackTrace.get(), res + "deleteMaterialDialogCancelBtn is NOT clicked", 'error');
+    }
+    return res;
+  },
+
+  click_deleteMaterialDialogDeleteBtn: async function () {
+    await logger.logInto(await stackTrace.get());
+    var res;
+    res = await action.click(this.deleteMaterialDialogDeleteBtn);
+    if (true == res) {
+      await logger.logInto(await stackTrace.get(), " deleteMaterialDialogDeleteBtn is clicked");
+      res = await action.waitForDisplayed(this.deleteMaterialDialogDeleteBtn, undefined, true);
+    }
+    else {
+      await logger.logInto(await stackTrace.get(), res + "deleteMaterialDialogDeleteBtn is NOT clicked", 'error');
+    }
+    return res;
+  },
+
+  click_editMaterialDialogEditBtn: async function () {
+    await logger.logInto(await stackTrace.get());
+    var res;
+    res = await action.click(this.editMaterialDialogEditBtn);
+    if (true == res) {
+      await logger.logInto(await stackTrace.get(), " editMaterialDialogEditBtn is clicked");
+      res = await require('./libraryEditor.page').isInitialized();
+    }
+    else {
+      await logger.logInto(await stackTrace.get(), res + "editMaterialDialogEditBtn is NOT clicked", 'error');
+    }
+    return res;
+  },
+
+  click_editMaterialDialogCancelBtn: async function () {
+    await logger.logInto(await stackTrace.get());
+    var res;
+    res = await action.click(this.editMaterialDialogCancelBtn);
+    if (true == res) {
+      await logger.logInto(await stackTrace.get(), " editMaterialDialogCancelBtn is clicked");
+      res = await action.waitForDisplayed(this.deleteMaterialDialogCancelBtn, undefined, true);
+    }
+    else {
+      await logger.logInto(await stackTrace.get(), res + "editMaterialDialogCancelBtn is NOT clicked", 'error');
+    }
+    return res;
+  },
+
+  click_addToClassMenuCloseBtn: async function () {
+    await logger.logInto(await stackTrace.get());
+    var res;
+    res = await action.click(this.addToClassMenuCloseBtn);
+    if (true == res) {
+      await logger.logInto(await stackTrace.get(), " addToClassMenuCloseBtn is clicked");
+      res = await action.waitForDisplayed(this.addToClassMenuCloseBtn, undefined, true);
+    }
+    else {
+      await logger.logInto(await stackTrace.get(), res + "addToClassMenuCloseBtn is NOT clicked", 'error');
+    }
+    return res;
+  },
+  
 }
 

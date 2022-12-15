@@ -77,7 +77,7 @@
 	},
 	"viewBookPage": {
 		"componentList": "[data-tid*=button-component-detail] [class*=c-card__title]",
-		"addComponentBtn": "[data-tid='button-ADD COMPONENT'], [data-tid=button-add-component]",
+		"addComponentBtn": "[data-tid='button-ADD COMPONENT'],[data-tid=button-add-component],[data-tid=button-add-resources]",
 		"componentTypeList": "[data-tid*=input-select] [class*=c-list-item__primary-text]",
 		"deleteBookBtn": "[data-tid*=button-delete-],[class=c-side-content] [data-tid=button-book_delete]",
 		"modifyBookBtn": "button[data-tid=button-modify_book_options],button[data-tid=button-modify-component-options]",
@@ -130,7 +130,7 @@
 		"activityCategoryList": "[class=c-list-primary-text]",
 		"activityTypeList": "[data-tid*=input-category-] > span",
 		"activityMenuBtn": "[data-tid=button-display-activity-menu]",
-		"activityMenuDeleteBtn": "[class*=mdc-menu-surface--open] [data-tid=button-Delete]",
+		"activityMenuDeleteBtn": "[class*=mdc-menu-surface--open] [data-tid=button-delete]",
 		"activityMenuActivityAuthorBtn": "[class*=mdc-menu-surface--open] [data-tid*=button-edit]",
 		"activityMenuModifyBtn": "[class*=mdc-menu-surface--open] [data-tid*=button-modify]",
 		"itemCheckboxes": "[data-tid*=button-folder-details] > div > div",
@@ -253,7 +253,7 @@
 		"institutionName": "[data-tid=container-listItem-3] [data-tid=text-subline]",
 		"startDate": "[data-tid=container-listItem-4] [data-tid=text-subline]",
 		"endDate": "[data-tid=container-listItem-5] [data-tid=text-subline]",
-		"viewClassAsTeacherBtn": "[data-tid=button-view-class-as-teacher]",
+		"viewClassAsTeacherBtn": "[data-tid=button-viewclassasteacher]",
 		"findAnotherClassBtn": "[data-tid=button-find-another-class]",
 		"classKeyInput": "[data-tid=input-class-key] input",
 		"searchClassBtn": "[data-tid=button-search-class]"
@@ -268,7 +268,7 @@
 		"userIdOption": "li[id*=option-3]",
 		"userDetailsSection": "[data-tid=container-userDetails]",
 		"disableEnableUserBtn": "[data-tid=button-disable-enable-user] p",
-		"dialogConfirmBtn": "[role=dialog] [data-tid=button-success]",
+		"dialogConfirmBtn": "[role=dialog] [data-tid=button-enable-disable-user]",
 		"entitlementMoreOptions": "[data-tid=button-entitlement-actions]",
 		"removeEntitlementBtn": "[data-tid=button-remove-entitlement]",
 		"loginAsThisUserBtn": "[data-tid=button-login-as-this-user] p",
@@ -285,12 +285,12 @@
 	"entitleUserPage": {
 		"emailInput": "[data-tid=input-email-for-entitle-user] input",
 		"productCodeInput": "[data-tid=input-product-code-for-entitle-user] input",
-		"startDate": "[data-tid=input-start-date-for-entitle-user]",
-		"endDate": "[data-tid=input-end-date-for-entitle-user]",
-		"okBtn": "[class*=MuiButton-textPrimary]:not([xpath='1'])",
-		"passkeyInput": "[data-tid=input-passkey-for-entitle-user]",
-		"confirmBtn": "[data-tid=button-success]",
-		"closeBtn": "[data-tid=button-close]"
+		"startDate": "[data-tid=input-start-date-for-entitle-user] div > div",
+		"endDate": "[data-tid=input-end-date-for-entitle-user] div > div",
+		"okBtn": "[class*=MuiDialogActions] button:nth-child(2)",
+		"passkeyInput": "[data-tid=input-passkey-for-entitle-user] input",
+		"confirmBtn": "[data-tid=button-successentitleUser]",
+		"closeBtn": "[data-tid=button-closeentitleUser]"
 	},
 	"institutionRequestPage": {
 		"createNewBtn": "[data-tid=button-create-new-institution]",
@@ -321,12 +321,12 @@
 		"telephone": "[id=telephoneNo]",
 		"website": "[data-tid=website] input",
 		"email": "[id=email]",
-		"nextBtn": "[data-tid=button-success]",
-		"previousBtn": "[data-tid=button-previous]",
+		"nextBtn": "[data-tid=button-successnewInstitution]",
+		"previousBtn": "[data-tid=button-previousnewInstitution]",
 		"summaryListItems": "[data-tid*=container-listItem-]",
 		"successSvg": "[data-tid=icon-success]",
 		"failureSvg": "[data-tid=icon-error]",
 		"matchingRecord": "[data-tid=container-current-institution-request]",
-		"closeBtn": "[data-tid=button-close]"
+		"closeBtn": "[data-tid=button-closenewInstitution]"
 	}
 }

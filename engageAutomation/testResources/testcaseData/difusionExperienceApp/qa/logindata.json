@@ -488,6 +488,15 @@
                         "countryName": "India"
                     }
                 },
+                "iccInstructorUser1": {
+                    "email": "dev1_libraryICCAutoTeacher@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "instructor",
+                    "name": "dev1 libraryICCAutoTeacher",
+                    "class": [
+                    ],
+                    "info": {}
+                },
                 "itemUser": {
                     "email": "megha1@yopmail.com",
                     "password": "Compro@1234",

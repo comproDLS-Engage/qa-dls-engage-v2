@@ -31,6 +31,8 @@ module.exports = {
     freelyAvailable: selectorFile.viewLearningPathPage.freelyAvailable,
     selectAllBtn: selectorFile.viewLearningPathPage.selectAllBtn,
     activityMenuModifyBtn: selectorFile.viewLearningPathPage.activityMenuModifyBtn,
+    snackbarLbl: selectorFile.common.snackbarLbl,
+    snackbarBtn: selectorFile.common.snackbarBtn,
 
     isInitialized: async function () {
         await logger.logInto((await stackTrace.get()));
@@ -285,8 +287,15 @@ module.exports = {
 
     click_ModifyCompOptions_Button: async function () {
         await logger.logInto((await stackTrace.get()));
-        let res;
+        let res, res2;
         res = await action.click(this.modifyCompOptionsBtn);
+        res2 = await action.waitForDisplayed(this.snackbarLbl, 3000);
+        if (res2 == true) {
+            await browser.refresh();
+            await action.waitForDisplayed(this.modifyCompOptionsBtn);
+            await browser.pause(5000);
+            res = await action.click(this.modifyCompOptionsBtn);
+        }
         if (res == true) {
             res = await require('./addComponent.page.js').isInitialized();
             await browser.pause(5000);

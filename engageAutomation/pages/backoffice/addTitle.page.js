@@ -90,7 +90,7 @@ module.exports = {
                 res = await action.getText(this.bannerText + "," + this.snackbarLbl);
                 //action.click(this.bannerCloseBtn);
                 await action.waitForDisplayed(this.bannerText + "," + this.snackbarLbl, 60000, true);
-                //browser.pause(30000)
+                await browser.pause(5000)
             }
         }
         await logger.logInto((await stackTrace.get()), res);

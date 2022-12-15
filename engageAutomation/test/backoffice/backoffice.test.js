@@ -81,7 +81,7 @@ module.exports = {
 	// Validate that the delete book dialog box opens on clicking delete button on the components page
 	BK_TC_5: async function (testdata) {
 		sts = await viewBookPage.click_DeleteBook_Button();
-		await assertion.assert((typeof sts === "string" && sts.includes("Are you sure, you want to delete the Umbrella Product")), "Dialog text mismatch. " + sts);
+		await assertion.assert((typeof sts === "string" && sts.includes("Are you sure you want to delete the Umbrella Product")), "Dialog text mismatch. " + sts);
 		await assertion.assert((typeof sts === "string" && sts.includes(testdata.name)), "Dialog text mismatch. " + sts);
 	},
 
@@ -427,7 +427,7 @@ module.exports = {
 	//Close Preview window
 	BK_TC_41: async function () {
 		await browser.closeWindow();
-		await browser.switchWindow(global.appUrl);
+		await browser.switchWindow("https://backoffice");
 	},
 
 	//Validate that edit folder page opens on clicking the modify options button

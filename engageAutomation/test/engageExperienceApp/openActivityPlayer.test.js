@@ -22,7 +22,12 @@ module.exports = {
 		await assertion.assertEqual(sts.feedbackBtn, null, "feedbackBtn status mismatch");
 		await assertion.assertEqual(sts.submittedOn, null, "submittedOn status mismatch");
 		await assertion.assertEqual(sts.gradedOn, null, "gradedOn status mismatch");
-		await assertion.assertEqual(sts.submitActivityBtn, testdata[1].submitActivityBtn, "submitActivityBtn status mismatch");
+		if (sts.submitActivityBtn == null) {
+			await assertion.assertEqual(sts.saveAnswersBtn, testdata[1].saveAnswersBtn, "saveAnswersBtn status mismatch");
+			var flag = true;
+		}
+		else
+			await assertion.assertEqual(sts.submitActivityBtn, testdata[1].submitActivityBtn, "submitActivityBtn status mismatch");
 		await assertion.assertEqual(sts.submitGradeBtn, testdata[1].submitGradeBtn, "submitGradeBtn status mismatch");
 		await assertion.assertEqual(sts.retakeOpenActivityBtn, null, "retakeOpenActivityBtn status mismatch");
 
@@ -36,7 +41,10 @@ module.exports = {
 		await assertion.assertEqual(sts.activityName, testdata[3], "activityName status mismatch");
 		await assertion.assertEqual(sts.cardTitle, testdata[1].cardTitle, "cardTitle status mismatch");
 		await assertion.assertEqual(sts.cardSubtitle, testdata[1].cardSubtitle, "cardSubtitle status mismatch");
-		await assertion.assertEqual(sts.cardText, testdata[1].cardText, "cardText status mismatch");
+		if (flag)
+			await assertion.assertEqual(sts.cardText, testdata[1].cardText[1], "cardText status mismatch");
+		else
+			await assertion.assertEqual(sts.cardText, testdata[1].cardText[0], "cardText status mismatch");
 		await assertion.assertEqual(sts.attempt1Label, null, "attempt1Label status mismatch");
 		await assertion.assertEqual(sts.attempt2Label, null, "attempt2Label status mismatch");
 		await assertion.assertEqual(sts.attempt3Label, null, "attempt3Label status mismatch");
@@ -72,7 +80,7 @@ module.exports = {
 		sts = await writingPlayerPage.isInitialized();
 		await assertion.assertEqual(sts, true, "writing player status mismatch");
 		sts = await writingPlayerPage.getData_writingPlayer(testdata[0]);
-		await assertion.assertEqual(sts[0][2], null, "Activity submission status mismatch");
+		await assertion.assertEqual(sts[0][2], "false", "Activity submission status mismatch");
 
 		sts = await openActivityPlayerPage.getData_openActivityPlayer();
 		await assertion.assertEqual(sts.showDetailsBtn, testdata[1].showDetailsBtn[0], "showDetailsBtn status mismatch");
@@ -133,7 +141,7 @@ module.exports = {
 		sts = await writingPlayerPage.isInitialized();
 		await assertion.assertEqual(sts, true, "writing player status mismatch");
 		sts = await writingPlayerPage.getData_writingPlayer(testdata[0]);
-		await assertion.assertEqual(sts[0][2], null, "Activity submission status mismatch");
+		await assertion.assertEqual(sts[0][2], "false", "Activity submission status mismatch");
 
 		sts = await openActivityPlayerPage.getData_openActivityPlayer();
 		await assertion.assertEqual(sts.showDetailsBtn, testdata[1].showDetailsBtn[0], "showDetailsBtn status mismatch");
@@ -228,7 +236,7 @@ module.exports = {
 		sts = await writingPlayerPage.isInitialized();
 		await assertion.assertEqual(sts, true, "writing player status mismatch");
 		sts = await writingPlayerPage.getData_writingPlayer(testdata[0]);
-		await assertion.assertEqual(sts[0][2], null, "Activity submission status mismatch");
+		await assertion.assertEqual(sts[0][2], "false", "Activity submission status mismatch");
 
 		sts = await openActivityPlayerPage.getData_openActivityPlayer();
 		//await assertion.assertEqual(sts.showDetailsBtn, testdata[1].showDetailsBtn[1], "showDetailsBtn status mismatch");
@@ -383,5 +391,11 @@ module.exports = {
 
 		sts = await openActivityPlayerPage.getData_openActivityLeftPanel();
 		await assertion.assertEqual(sts.statusPill, testdata.statusPill[0], "statusPill status mismatch");
+	},
+
+	//Validate that snackbar message appears on clicking Save Answers button
+	ENG_OPEN_TC_23: async function (testdata) {
+		sts = await openActivityPlayerPage.click_saveAnswersBtn();
+		await assertion.assertEqual(sts, testdata, "click_saveAnswersBtn status mismatch");
 	},
 }

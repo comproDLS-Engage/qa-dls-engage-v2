@@ -15,6 +15,7 @@ module.exports = {
     gradedOn: selectorFile.css.ComproEngage.openActivityPlayer.gradedOn,
     closeBtn: selectorFile.css.ComproEngage.openActivityPlayer.closeBtn,
     submitActivityBtn: selectorFile.css.ComproEngage.openActivityPlayer.submitActivityBtn,
+    saveAnswersBtn:  selectorFile.css.ComproEngage.openActivityPlayer.saveAnswersBtn,
     submitGradeBtn: selectorFile.css.ComproEngage.openActivityPlayer.submitGradeBtn,
     retakeOpenActivityBtn: selectorFile.css.ComproEngage.openActivityPlayer.retakeOpenActivityBtn,
     snackbarMsg: selectorFile.css.ComproEngage.openActivityPlayer.snackbarMsg,
@@ -72,6 +73,7 @@ module.exports = {
     submitActivityDialogSubtitle: selectorFile.css.ComproEngage.openActivityPlayer.submitActivityDialogSubtitle,
     submitActivityDialogCancelBtn: selectorFile.css.ComproEngage.openActivityPlayer.submitActivityDialogCancelBtn,
     submitActivityDialogConfirmBtn: selectorFile.css.ComproEngage.openActivityPlayer.submitActivityDialogConfirmBtn,
+    snackbarClose_btn: selectorFile.css.ComproEngage.appShell.snackbarClose_btn,
 
     isInitialized: async function () {
         var res;
@@ -98,6 +100,7 @@ module.exports = {
             gradedOn: ((await action.getElementCount(this.gradedOn)) > 0) ? await action.getText(this.gradedOn) : null,
             closeBtn: ((await action.getElementCount(this.closeBtn)) > 0) ? await action.getText(this.closeBtn) : null,
             submitActivityBtn: ((await action.getElementCount(this.submitActivityBtn)) > 0) ? await action.getText(this.submitActivityBtn) : null,
+            saveAnswersBtn: ((await action.getElementCount(this.saveAnswersBtn)) > 0) ? await action.getText(this.saveAnswersBtn) : null,
             submitGradeBtn: ((await action.getElementCount(this.submitGradeBtn)) > 0) ? await action.getText(this.submitGradeBtn) : null,
             retakeOpenActivityBtn: ((await action.getElementCount(this.retakeOpenActivityBtn)) > 0) ? await action.getText(this.retakeOpenActivityBtn) : null,
         }
@@ -256,6 +259,22 @@ module.exports = {
         }
         else {
             await logger.logInto(await stackTrace.get(), res + "submitActivityBtn is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_saveAnswersBtn: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.saveAnswersBtn);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " saveAnswersBtn is clicked");
+            await action.waitForDisplayed(this.snackbarMsg);
+            res = await action.getText(this.snackbarMsg);
+            await action.click(this.snackbarClose_btn);
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "saveAnswersBtn is NOT clicked", 'error');
         }
         return res;
     },
