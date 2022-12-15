@@ -417,10 +417,19 @@
                         "firstName": "New",
                         "lastName": "User",
                         "countryName": "India"
-                    }
+                    },
+                "iccInstructorUser1": {
+                    "email": "dev2_libraryICCAutoTeacher@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "instructor",
+                    "name": "dev2 libraryICCAutoTeacher",
+                    "class": [
+                    ],
+                    "info": {}
                 }
-            }
-        },
+                }
+        }
+    },
         "codesAndKeys": {
             "schoolName": "Mount Allison School",
             "invalid_OTP": [
