@@ -85,7 +85,7 @@ module.exports = {
 
     click_DialogConfirm_Button: async function () {
         await logger.logInto((await stackTrace.get()));
-        let res = await action.click(this.dialogConfirmBtn);
+        let res = await action.click(this.dialogConfirmBtn + "," + this.removeEntitlementBtn);
         if (res == true) {
             await action.waitForDisplayed(this.snackbarLbl);
             res = await action.getText(this.snackbarLbl);
@@ -132,7 +132,7 @@ module.exports = {
         if (res == true) {
             res = await action.click(this.removeEntitlementBtn);
             if (res == true) {
-                res = await action.click(this.dialogConfirmBtn);
+                res = await action.waitForDisplayed(this.removeEntitlementBtn);
             }
         }
         await logger.logInto((await stackTrace.get()), res);

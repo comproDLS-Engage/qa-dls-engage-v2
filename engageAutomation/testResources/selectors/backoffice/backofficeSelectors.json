@@ -290,7 +290,8 @@
 		"okBtn": "[class*=MuiDialogActions] button:nth-child(2)",
 		"passkeyInput": "[data-tid=input-passkey-for-entitle-user] input",
 		"confirmBtn": "[data-tid=button-successentitleUser]",
-		"closeBtn": "[data-tid=button-closeentitleUser]"
+		"closeBtn": "[data-tid=button-closeentitleUser]",
+		"viewEntitlements": "[data-tid=button-view-entitlements]"
 	},
 	"institutionRequestPage": {
 		"createNewBtn": "[data-tid=button-create-new-institution]",

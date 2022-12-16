@@ -4,7 +4,7 @@
             "Your new Umbrella Product is being setup.",
             "Umbrella Product options modified successfully."
         ],
-        "globalResources":[
+        "globalResources": [
             "Your new Umbrella Product is being setup.",
             "Options modified successfully."
         ],
@@ -33,6 +33,7 @@
         ],
         "entitleUser": [
             "User has been entitled successfully"
-        ]
+        ],
+        "removeEntitlement": "The Entitlement is successfully deleted."
     }
 }
