@@ -1,7 +1,8 @@
 "use strict";
 var action = require('../../core/actionLibrary/baseActionLibrary.js')
 var selectorFile = jsonParserUtil.jsonParser(selectorDir)
-var appShellPage = require('./appShell.page.js')
+var appShellPage = require('./appShell.page.js');
+const { browseAllResourcesBtn } = require('./playlist.page.js');
 
 module.exports = {
     libraryTitleTxt: selectorFile.css.ComproEngage.library.libraryTitleTxt,
@@ -15,6 +16,7 @@ module.exports = {
     viewAllMaterialsBtn: selectorFile.css.ComproEngage.library.viewAllMaterialsBtn,
     noMaterialTitleTxt: selectorFile.css.ComproEngage.library.noMaterialTitleTxt,
     noMaterialSubtitleTxt: selectorFile.css.ComproEngage.library.noMaterialSubtitleTxt,
+    materialCard: selectorFile.css.ComproEngage.library.materialCard,
     quizTitleTxt: selectorFile.css.ComproEngage.library.quizTitleTxt,
     quizTypeTxt: selectorFile.css.ComproEngage.library.quizTypeTxt,
     quizTime: selectorFile.css.ComproEngage.library.quizTime,
@@ -179,6 +181,24 @@ module.exports = {
         }
         else
             await logger.logInto(await stackTrace.get(), " --editDraftBtn NOT clicked", "error")
+        return res;
+    },
+
+    click_materialCard: async function (quizTitleTxtName) {
+        await logger.logInto(await stackTrace.get());
+        var i, list, res;
+        list = await action.findElements(this.materialCard);
+        for (i = 0; i < list.length; i++) {
+            if (((await action.getText(this.quizTitleTxt + i + "]"))) == quizTitleTxtName) {
+                res = await action.click(list[i]);
+                break;
+            }
+        }
+        if (res == true) {
+            await logger.logInto(await stackTrace.get(), " --materialCard clicked");
+        }
+        else
+            await logger.logInto(await stackTrace.get(), " --materialCard NOT clicked", "error")
         return res;
     },
 
