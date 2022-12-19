@@ -348,7 +348,7 @@ module.exports = {
         res = await action.click(this.addtoClass_btn);
         if (true == res) {
             await logger.logInto(await stackTrace.get(), " addtoClass_btn is clicked");
-            res= await this.getData_NewAccessPage();
+            res = await this.getData_NewAccessPage();
         }
         else {
             await logger.logInto(await stackTrace.get(), res + "addtoClass_btn is NOT clicked", 'error');
@@ -361,7 +361,7 @@ module.exports = {
         res = await action.click(this.edit_btn);
         if (true == res) {
             await logger.logInto(await stackTrace.get(), " edit_btn is clicked");
-            res= await this.getData_editMaterial_Modal()
+            res = await this.getData_editMaterial_Modal()
         }
         else {
             await logger.logInto(await stackTrace.get(), res + "edit_btn is NOT clicked", 'error');

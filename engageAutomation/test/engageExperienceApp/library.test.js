@@ -211,7 +211,7 @@ module.exports = {
     //Validate clicking on Delete button in Delete Materials Dialog on Library page
     ENG_ICCL_TC_22: async function (testdata) {
         sts = await require("../../pages/engageExperienceApp/libraryEditor.page").click_delete_btn();
-        await assertion.assertEqual(sts, testdata.Snackbar_DeleteMessage_Text, "cancelBtn are not Clicked");
+        await assertion.assertEqual(sts, testdata.Snackbar_DeleteMessage_Text, "deleteBtn are not Clicked");
 
     },
 }

@@ -1583,7 +1583,7 @@
                 "modifiedTime": "[data-tid*=text-modified-",
                 "materialsContextMenuBtn": "[data-tid*=button-materialOptions-",
                 "createNewTxt": "[data-tid=text-header] strong",
-                "menuBlankQuizBtn": "[data-tid=button-blankQuiz]",
+                "menuBlankQuizBtn": "[data-tid=button-blankQuiz] div",
                 "menuBlankSurveyBtn": "[data-tid=button-blankSurvey]",
                 "menuNewResourceBtn": "[data-tid=button-newResource]",
                 "previewBtn": "[data-tid*=button-preview]",
