@@ -359,9 +359,11 @@ module.exports = {
 	// --------------------------- User Details Page Test Cases ----------------------------- //
 
 	// Validate Entitlements card shows the list of entitled components of a book
-	ADMN_USRD_TC_1: async function () {
+	ADMN_USRD_TC_1: async function (testdata) {
 		sts = await findUserPage.remove_Entitlement();
 		await assertion.assertEqual(sts, true, "remove_Entitlement status mismatch");
+		sts = await findUserPage.click_DialogConfirm_Button();
+		await assertion.assert((typeof sts === "string" && sts.includes(testdata)), "Snackbar messsage mismatch. " + sts);
 	},
 
 	// Validate the scenario of Disable a User
@@ -402,8 +404,8 @@ module.exports = {
 		await assertion.assertEqual(sts, true, "select_EndDate status mismatch");
 		sts = await entitleUserPage.set_PassKey(testdata[0].passKey);
 		await assertion.assertEqual(sts, true, "set_PassKey status mismatch");
-		sts = await findUserPage.click_Entitle_Button();
-		await assertion.assert((typeof sts === "string" && sts.includes(testdata[1])), "Snackbar messsage mismatch. " + sts);
+		sts = await entitleUserPage.click_Entitle_Button();
+		await assertion.assertEqual(sts, true, "click_Entitle_Button status mismatch");
 	},
 
 	// Validate that entitle user page is launched on clicking on 'Entitle User With Pass Key' from Home page and user enter Email and click Proceed button
@@ -418,6 +420,12 @@ module.exports = {
 		await assertion.assertEqual(sts, true, "click_Close_Button status mismatch");
 		sts = await homePage.isInitialized();
 		await assertion.assertEqual(sts, true, "Home page status mismatch");
+	},
+
+	// Validate that user details page is launched on clicking View Entitlements button
+	ADMN_EUSR_TC_5: async function () {
+		sts = await entitleUserPage.click_ViewEntitlements_Button();
+		await assertion.assertEqual(sts, true, "click_ViewEntitlements_Button status mismatch");
 	},
 
 }

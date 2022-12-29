@@ -247,6 +247,7 @@ module.exports = {
     click_materialsContextMenuBtn: async function (quizRowName) {
         await logger.logInto(await stackTrace.get());
         var i, list, res;
+        await browser.pause(2000);
         res = await action.waitForDisplayed(this.materialsContextMenuBtn);
         list = await action.findElements(this.materialsContextMenuBtn);
         for (i = 0; i < list.length; i++) {

@@ -31,6 +31,8 @@ module.exports = {
     freelyAvailable: selectorFile.viewLearningPathPage.freelyAvailable,
     selectAllBtn: selectorFile.viewLearningPathPage.selectAllBtn,
     activityMenuModifyBtn: selectorFile.viewLearningPathPage.activityMenuModifyBtn,
+    snackbarLbl: selectorFile.common.snackbarLbl,
+    snackbarBtn: selectorFile.common.snackbarBtn,
 
     isInitialized: async function () {
         await logger.logInto((await stackTrace.get()));
@@ -287,7 +289,7 @@ module.exports = {
         await logger.logInto((await stackTrace.get()));
         let res, res2;
         res = await action.click(this.modifyCompOptionsBtn);
-        res2 = await action.isDisplayed(this.snackbarLbl);
+        res2 = await action.waitForDisplayed(this.snackbarLbl, 3000);
         if (res2 == true) {
             await browser.refresh();
             await action.waitForDisplayed(this.modifyCompOptionsBtn);

@@ -214,30 +214,41 @@ module.exports = {
     },
 
     //Validate clicking on Edit button in Ellipses for published quiz on My Materials page
-    ENG_ICCM_TC_22: async function () {
+    ENG_ICCM_TC_22: async function (testdata) {
         sts = await myMaterials.click_editBtn();
         await assertion.assertEqual(sts, true, "EditBtn are not Clicked");
-        sts = await libraryEditorPage.getData_editorPage(); //need to be updated to check edit view header
+        sts = await require("../../pages/engageExperienceApp/libraryEditor.page").getData_editMaterial_Modal();
+        await assertion.assertEqual(sts.editMaterial_Title,(testdata[1].editMaterial_Title + testdata[0]), "editMaterial_Title Values is not as expected.");
+        await assertion.assertEqual(sts.editMaterial_SubTitle, testdata[1].editMaterial_SubTitle, "editMaterial_SubTitle Values is not as expected.");
+        await assertion.assertEqual(sts.editMaterial_Cancel, testdata[1].editMaterial_Cancel, "editMaterial_Cancel Values is not as expected.");
+        await assertion.assertEqual(sts.editMaterial_ContinueToEdit, testdata[1].editMaterial_ContinueToEdit, "editMaterial_ContinueToEdit Values is not as expected.");
+        await assertion.assertEqual(sts.editMaterial_ClassInfoBoxTitle, null, "editMaterial_ClassInfoBoxTitle Values is not as expected.");
+        sts = await require("../../pages/engageExperienceApp/libraryEditor.page").click_editMaterial_Cancel();
+        await assertion.assertEqual(sts, true, "editMaterial_Cancel not Clicked");
     },
 
     //Validate clicking on Delete button in Ellipses on My Materials page
-    ENG_ICCM_TC_23: async function () {
+    ENG_ICCM_TC_23: async function (testdata) {
         sts = await myMaterials.click_deleteBtn();
         await assertion.assertEqual(sts, true, "deleteBtn are not Clicked");
-        //need to add delete dialog 
+        sts = await require("../../pages/engageExperienceApp/libraryEditor.page").getData_deleteDialogue(testdata);
+        await assertion.assertEqual(sts.deleteTitle, testdata.deleteTitle, "deleteTitle Values is not as expected.");
+        await assertion.assertEqual(sts.deleteSubTitle, testdata.deleteSubTitle, "deleteSubTitle Values is not as expected.");
+        await assertion.assertEqual(sts.deleteSubTitleMaterial, testdata.deleteSubTitleMaterial, "deleteSubTitleMaterial Values is not as expected.");
+        await assertion.assertEqual(sts.cancel_btn, testdata.cancel_btn, "cancel_btn Values is not as expected.");
+        await assertion.assertEqual(sts.delete_btn, testdata.delete_btn, "delete_btn Values is not as expected.");
     },
 
     //Validate clicking on Cancel button in Delete Materials Dialog
     ENG_ICCM_TC_24: async function () {
-        sts = await myMaterials.click_deleteBtn();//to be done
-        await assertion.assertEqual(sts, true, "deleteBtn are not Clicked");
-        //need to add delete dialog 
+        sts = await require("../../pages/engageExperienceApp/libraryEditor.page").click_cancel_btn();
+        await assertion.assertEqual(sts, true, "cancelBtn are not Clicked");
     },
+
     //Validate clicking on Delete button in Delete Materials Dialog
-    ENG_ICCM_TC_25: async function () {
-        sts = await myMaterials.click_deleteBtn(); //to be done
-        await assertion.assertEqual(sts, true, "deleteBtn are not Clicked");
-        //need to add delete dialog 
+    ENG_ICCM_TC_25: async function (testdata) {
+        sts = await require("../../pages/engageExperienceApp/libraryEditor.page").click_delete_btn();
+        await assertion.assertEqual(sts, testdata.Snackbar_DeleteMessage_Text, "deleteBtn are not Clicked");
     },
 
     //Validate the search scenario when no result is found
@@ -265,7 +276,7 @@ module.exports = {
         await assertion.assert(sts.searchResultsLabel.includes(testdata[0].searchResultCount + testdata[1].searchCount), "Search count Mismatched");
 
         sts = await myMaterials.getData_quizRow();
-        assertion.assertEqual(sts.length,testdata[0].searchResultCount,"Search Count mismatch");
+        assertion.assertEqual(sts.length, testdata[0].searchResultCount, "Search Count mismatch");
     },
 
     //Validate the exact search on My Materials page
@@ -278,7 +289,7 @@ module.exports = {
         await assertion.assert(sts.searchResultsLabel.includes(testdata[0].searchResultCount + testdata[1].searchCount), "Search count Mismatched");
 
         sts = await myMaterials.getData_quizRow();
-        assertion.assertEqual(sts.length,testdata[0].searchResultCount,"Search Count mismatch");
+        assertion.assertEqual(sts.length, testdata[0].searchResultCount, "Search Count mismatch");
     },
 
     //Validate search for special character - all keyboard characters
@@ -291,7 +302,7 @@ module.exports = {
         await assertion.assert(sts.searchResultsLabel.includes(testdata[0].searchResultCount + testdata[1].searchCount), "Search count Mismatched");
 
         sts = await myMaterials.getData_quizRow();
-        assertion.assertEqual(sts.length,testdata[0].searchResultCount,"Search Count mismatch");
+        assertion.assertEqual(sts.length, testdata[0].searchResultCount, "Search Count mismatch");
     },
 
     //Validate search for spanish characters
@@ -304,24 +315,28 @@ module.exports = {
         await assertion.assert(sts.searchResultsLabel.includes(testdata[0].searchResultCount + testdata[1].searchCount), "Search count Mismatched");
 
         sts = await myMaterials.getData_quizRow();
-        assertion.assertEqual(sts.length,testdata[0].searchResultCount,"Search Count mismatch");
+        assertion.assertEqual(sts.length, testdata[0].searchResultCount, "Search Count mismatch");
     },
 
     //Validate if search data is retained if user switch tabs
     ENG_ICCM_TC_31: async function (testdata) {
-        // sts = await myMaterials.set_searchTextBox(testdata[0]);
-        // await assertion.assertEqual(sts, true, "searchTextBox values are not set");
+        sts = await myMaterials.set_searchTextBox(testdata[0].search_txt);
+        await assertion.assertEqual(sts, true, "searchTextBox values are not set");
 
-        // sts = await myMaterials.pressEnter();
-        // await assertion.assertEqual(sts.searchText, testdata[0].search_txt, "Search Pill Mismatch");
-        // await assertion.assert(sts.searchResultsLabel.includes(testdata[0].searchResultCount + testdata[1].searchCount), "Search count Mismatched");
+        sts = await myMaterials.pressEnter();
+        await assertion.assertEqual(sts.searchText, testdata[0].search_txt, "Search Pill Mismatch");
+        await assertion.assert(sts.searchResultsLabel.includes(testdata[0].searchResultCount + testdata[1].searchCount), "Search Pill Mismatched");
 
-        // sts = await myMaterials.click_draftsTab();
-        // await assertion.assertEqual(sts, true, "draftsTab not clicked");
+        sts = await myMaterials.click_draftsTab();
+        await assertion.assertEqual(sts, true, "draftsTab not clicked");
 
-        // sts = await myMaterials.getData_myMaterialsPage();
-        // await assertion.assertEqual(sts.searchText, testdata[0].search_txt, "Search Pill Mismatch");
-        // await assertion.assert(sts.searchResultsLabel.includes(testdata[0].searchResultCount + testdata[1].searchCount), "Search count Mismatched");
+        sts = await myMaterials.click_allTab();
+        await assertion.assertEqual(sts, true, "draftsTab not clicked");
+
+
+        sts = await myMaterials.getData_myMaterialsPage();
+        await assertion.assertEqual(sts.searchText, testdata[0].search_txt, "Search Pill Mismatch");
+        await assertion.assert(sts.searchResultsLabel.includes(testdata[0].searchResultCount + testdata[1].searchCount), "Search Pill Mismatched");
     },
 
     //Validate clicking on cross icon clears the search results
