@@ -497,6 +497,23 @@
                     ],
                     "info": {}
                 },
+                "iccInstructorUser2": {
+                    "email": "dev1_libraryICCAutoTeacherWithClass@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "instructor",
+                    "name": "dev1 libraryICCAutoTeacherWithClass",
+                    "class": [
+                        {
+                            "key": "dNcW-6h9X",
+                            "name": "class1"
+                        },
+                        {
+                            "key": "dNcW-6h9X",
+                            "name": "class4"
+                        }
+                    ],
+                    "info": {}
+                },
                 "itemUser": {
                     "email": "megha1@yopmail.com",
                     "password": "Compro@1234",
