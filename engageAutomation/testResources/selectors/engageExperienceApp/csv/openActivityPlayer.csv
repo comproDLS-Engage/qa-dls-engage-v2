@@ -67,3 +67,5 @@ submitActivityDialogTitle,[data-tid=text-title-submit-activity],p,submitActivity
 submitActivityDialogSubtitle,[data-tid=text-subTitle-submit-activity],p,submitActivityDialog,,,,,"""Your answers will be sent to your teacher to review and grade. Once you submit you won't be able to change your answers."""
 submitActivityDialogCancelBtn,[data-tid=button-secondary-submit-activity],button,submitActivityDialog,,,"waitForDisplayed,submitActivityDialogCancelBtn,undefined,true",,"""Cancel"""
 submitActivityDialogConfirmBtn,[data-tid=button-primary-submit-activity],button,submitActivityDialog,,,"getText,snackbarMsg",,"""Confirm & Submit"""
+writingPlayer,div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-input-id*=ta-,img,activityStatus,,,,,
+voicePlayer,div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-input-id*=vb-,img,activityStatus,,,,,

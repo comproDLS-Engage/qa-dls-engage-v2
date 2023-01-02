@@ -1597,7 +1597,7 @@
                     "editMaterial_Note": "Note: You will have an option to push your updates after you finish editing.",
                     "editMaterial_Cancel": "Cancel",
                     "editMaterial_ContinueToEdit": "Continue to Edit",
-                    "Snackbar_DeleteMessage_Text":"Success \n1 library item has been successfully deleted."
+                    "Snackbar_DeleteMessage_Text": "Success \n1 library item has been successfully deleted."
                 },
                 "student": {}
             },
@@ -1668,6 +1668,46 @@
                     "noSearchCount": " results"
                 },
                 "student": {}
+            },
+            "voicePlayer": {
+                "teacher": {
+                    "recordTxt": "Press the button below to record your response.",
+                    "recordBtn": "Record",
+                    "recordingTxt": "Recording",
+                    "recordingBtn": "Recording",
+                    "pausedTxt": "Press Continue to resume recording.",
+                    "rerecordBtn": "Re-record",
+                    "doneBtn": "Done",
+                    "continueBtn": "Continue",
+                    "remainingTimeTxt": "secs remaining�",
+                    "previewTxt": "Listen to the recording below.",
+                    "limitInfoTxt": "Time Limit Reached!",
+                    "restartInfoTxt": "Click Done to save your recording or Re-record to start again.",
+                    "dialogHeading": "Re-record?",
+                    "dialogContent": "Are you sure you want to record again? You will lose your current recording.",
+                    "dialogCancelBtn": "No",
+                    "dialogAcceptBtn": "Yes",
+                    "snackbarTxt": "You have successfully recorded your answer."
+                },
+                "student": {
+                    "recordTxt": "Press the button below to record your response.",
+                    "recordBtn": "Record",
+                    "recordingTxt": "Recording",
+                    "recordingBtn": "Recording",
+                    "pausedTxt": "Press Continue to resume recording.",
+                    "rerecordBtn": "Re-record",
+                    "doneBtn": "Done",
+                    "continueBtn": "Continue",
+                    "remainingTimeTxt": "secs remaining�",
+                    "previewTxt": "Listen to the recording below.",
+                    "limitInfoTxt": "Time Limit Reached!",
+                    "restartInfoTxt": "Click Done to save your recording or Re-record to start again.",
+                    "dialogHeading": "Re-record?",
+                    "dialogContent": "Are you sure you want to record again? You will lose your current recording.",
+                    "dialogCancelBtn": "No",
+                    "dialogAcceptBtn": "Yes",
+                    "snackbarTxt": "You have successfully recorded your answer."
+                }
             }
         }
     }

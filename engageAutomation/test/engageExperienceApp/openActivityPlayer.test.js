@@ -1,6 +1,5 @@
 "use strict";
 const openActivityPlayerPage = require('../../pages/engageExperienceApp/openActivityPlayer.page');
-const writingPlayerPage = require('../../pages/engageExperienceApp/writingPlayer.page');
 const activityPlayerTest = require('../../test/engageExperienceApp/activityPlayer.test');
 var sts;
 
@@ -8,10 +7,8 @@ module.exports = {
 
 	//Validate the writing question in unattempted state for student
 	ENG_OPEN_TC_1: async function (testdata) {
-		sts = await writingPlayerPage.isInitialized();
-		await assertion.assertEqual(sts, true, "writing player status mismatch");
-		sts = await writingPlayerPage.getData_writingPlayer(testdata[0]);
-		await assertion.assertEqual(sts[0][2], "true", "Activity submission status mismatch");
+		sts = await openActivityPlayerPage.getData_activityStatus();
+		await assertion.assertEqual(sts.activityStatus, true, "Activity submission status mismatch");
 
 		sts = await openActivityPlayerPage.getData_openActivityPlayer();
 		await assertion.assertEqual(sts.showDetailsBtn, testdata[1].showDetailsBtn[0], "showDetailsBtn status mismatch");
@@ -77,10 +74,8 @@ module.exports = {
 
 	//Validate the writing question in attempted state (not graded) for student
 	ENG_OPEN_TC_2: async function (testdata) {
-		sts = await writingPlayerPage.isInitialized();
-		await assertion.assertEqual(sts, true, "writing player status mismatch");
-		sts = await writingPlayerPage.getData_writingPlayer(testdata[0]);
-		await assertion.assertEqual(sts[0][2], "false", "Activity submission status mismatch");
+		sts = await openActivityPlayerPage.getData_activityStatus();
+		await assertion.assertEqual(sts.activityStatus, false, "Activity submission status mismatch");
 
 		sts = await openActivityPlayerPage.getData_openActivityPlayer();
 		await assertion.assertEqual(sts.showDetailsBtn, testdata[1].showDetailsBtn[0], "showDetailsBtn status mismatch");
@@ -138,10 +133,8 @@ module.exports = {
 
 	//Validate the writing question in graded state for student
 	ENG_OPEN_TC_3: async function (testdata) {
-		sts = await writingPlayerPage.isInitialized();
-		await assertion.assertEqual(sts, true, "writing player status mismatch");
-		sts = await writingPlayerPage.getData_writingPlayer(testdata[0]);
-		await assertion.assertEqual(sts[0][2], "false", "Activity submission status mismatch");
+		sts = await openActivityPlayerPage.getData_activityStatus();
+		await assertion.assertEqual(sts.activityStatus, false, "Activity submission status mismatch");
 
 		sts = await openActivityPlayerPage.getData_openActivityPlayer();
 		await assertion.assertEqual(sts.showDetailsBtn, testdata[1].showDetailsBtn[0], "showDetailsBtn status mismatch");
@@ -233,10 +226,8 @@ module.exports = {
 
 	//Validate the writing question in grading state for teacher
 	ENG_OPEN_TC_11: async function (testdata) {
-		sts = await writingPlayerPage.isInitialized();
-		await assertion.assertEqual(sts, true, "writing player status mismatch");
-		sts = await writingPlayerPage.getData_writingPlayer(testdata[0]);
-		await assertion.assertEqual(sts[0][2], "false", "Activity submission status mismatch");
+		sts = await openActivityPlayerPage.getData_activityStatus();
+		await assertion.assertEqual(sts.activityStatus, false, "Activity submission status mismatch");
 
 		sts = await openActivityPlayerPage.getData_openActivityPlayer();
 		//await assertion.assertEqual(sts.showDetailsBtn, testdata[1].showDetailsBtn[1], "showDetailsBtn status mismatch");

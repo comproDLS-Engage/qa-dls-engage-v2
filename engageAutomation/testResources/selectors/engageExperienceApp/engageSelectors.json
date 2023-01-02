@@ -1292,7 +1292,9 @@
                 "submitActivityDialogTitle": "[data-tid=text-title-submit-activity]",
                 "submitActivityDialogSubtitle": "[data-tid=text-subTitle-submit-activity]",
                 "submitActivityDialogCancelBtn": "[data-tid=button-secondary-submit-activity]",
-                "submitActivityDialogConfirmBtn": "[data-tid=button-primary-submit-activity]"
+                "submitActivityDialogConfirmBtn": "[data-tid=button-primary-submit-activity]",
+                "writingPlayer": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-input-id*=ta-] [class*=content]",
+                "voicePlayer": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-input-id*=vb-"
             },
             "onboarding": {
                 "welcomeTxt": "[data-tid='text-welcome']",
@@ -1593,6 +1595,26 @@
                 "duplicateBtn": "[data-tid*=button-duplicate]",
                 "editBtn": "[data-tid*=button-edit]",
                 "clearSearch": "[data-tid=icon-close-serach]"
+            },
+            "voicePlayer": {
+                "recordTxt": "[data-tid=text-recordresponseinfo]",
+                "recordBtn": "[data-tid=button-record]",
+                "recordingTxt": "[data-tid='text-recordinginfo']",
+                "recordingBtn": "[data-tid=button-recording]",
+                "pausedTxt": "[data-tid=text-recordingpausedinfo]",
+                "rerecordBtn": "[data-tid='button-rerecord']",
+                "doneBtn": "[data-tid='button-done']",
+                "continueBtn": "[data-tid=button-continue]",
+                "remainingTimeTxt": "[color='error']",
+                "previewTxt": "[data-tid=text-previewinfo]",
+                "limitInfoTxt": "[data-tid='text-limitreachedinfo']",
+                "restartInfoTxt": "div[data-tid='text-restartinfo']",
+                "audioPlayerExists": "[class*=audio]",
+                "dialogHeading": "[data-tid=text-heading]",
+                "dialogContent": "[data-tid=text-content]",
+                "dialogCancelBtn": "[data-tid=button-close]",
+                "dialogAcceptBtn": "[data-tid=button-agree]",
+                "snackbarTxt": "[class*='mdc-snackbar--open'] [class='mdc-snackbar__label']"
             }
         }
     }
