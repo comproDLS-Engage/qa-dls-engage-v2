@@ -76,7 +76,7 @@ module.exports = {
     snackbarClose_btn: selectorFile.css.ComproEngage.appShell.snackbarClose_btn,
     writingPlayer: selectorFile.css.ComproEngage.openActivityPlayer.writingPlayer,
     voicePlayer: selectorFile.css.ComproEngage.openActivityPlayer.voicePlayer,
-    rerecordBtn: selectorFile.css.ComproEngage.voicePlayer.rerecordBtn,
+    recordBtn: selectorFile.css.ComproEngage.voicePlayer.recordBtn,
 
     isInitialized: async function () {
         var res;
@@ -210,7 +210,7 @@ module.exports = {
             obj.activityStatus = (await action.getAttribute(this.writingPlayer, "contenteditable") === 'true');
         }
         else {
-            obj.activityStatus = await action.waitForDisplayed(this.rerecordBtn, undefined, true);
+            obj.activityStatus = await action.isDisplayed(this.recordBtn);
         }
         await action.switchToParentFrame();
         return obj;

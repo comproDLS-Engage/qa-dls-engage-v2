@@ -1679,7 +1679,10 @@
                     "rerecordBtn": "Re-record",
                     "doneBtn": "Done",
                     "continueBtn": "Continue",
-                    "remainingTimeTxt": "secs remaining�",
+                    "remainingTimeTxt": [
+                        null,
+                        "secs remaining..."
+                    ],
                     "previewTxt": "Listen to the recording below.",
                     "limitInfoTxt": "Time Limit Reached!",
                     "restartInfoTxt": "Click Done to save your recording or Re-record to start again.",
@@ -1698,7 +1701,10 @@
                     "rerecordBtn": "Re-record",
                     "doneBtn": "Done",
                     "continueBtn": "Continue",
-                    "remainingTimeTxt": "secs remaining�",
+                    "remainingTimeTxt": [
+                        null,
+                        "secs remaining..."
+                    ],
                     "previewTxt": "Listen to the recording below.",
                     "limitInfoTxt": "Time Limit Reached!",
                     "restartInfoTxt": "Click Done to save your recording or Re-record to start again.",
