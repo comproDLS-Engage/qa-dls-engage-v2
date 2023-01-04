@@ -1533,7 +1533,7 @@
                 "addtoClass_btn": "[data-tid=button-addToClass]",
                 "edit_btn": "[data-tid=button-edit]",
                 "viewAsStudent": "[data-tid=button-view-as-student]",
-                "versionNumber": "[data-tid=pill-quizVersion]",
+                "versionNumber": "[data-tid=pill-materialVersion]",
                 "quizAddedsuccessfullyHeader": "[data-tid=ClassSuccessModal-title]",
                 "quizAddedsuccessfullySubHeader": "[data-tid=ClassSuccessModal-bilinear]",
                 "classIconModal": "[data-tid=ClassSuccessModal-icon-class]",
