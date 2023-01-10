@@ -126,6 +126,7 @@ module.exports = {
             await logger.logInto(await stackTrace.get(), " doneBtn is clicked");
             await action.waitForDisplayed(this.snackbarTxt);
             res = await action.getText(this.snackbarTxt);
+            await action.waitForDisplayed(this.audioPlayerExists);
         }
         else {
             await logger.logInto(await stackTrace.get(), res + "doneBtn is NOT clicked", 'error');
