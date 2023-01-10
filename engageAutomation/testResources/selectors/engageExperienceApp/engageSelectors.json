@@ -1664,6 +1664,29 @@
                 "dialogCancelBtn": "[data-tid=button-close]",
                 "dialogAcceptBtn": "[data-tid=button-agree]",
                 "snackbarTxt": "[class*='mdc-snackbar--open'] [class='mdc-snackbar__label']"
+            },
+            "editorTour": {
+                "tourContainer": "[class=react-joyride__overlay]",
+                "step0Title": "[data-tid='text-step-0-title']",
+                "step0Subtitle": "[data-tid=text-letsFillQuizContentSubtitle]",
+                "dontShowCheckbox": "div[role='alertdialog'] div div div label",
+                "dismissBtn": "button[data-tid='btn-editorTour-dismiss']",
+                "startTourBtn": "button[data-tid='btn-editorTour-start-tour']",
+                "exitBtn": "button[data-tid='btn-editorTour-exit']",
+                "nextBtn": "button[data-tid='btn-editorTour-next']",
+                "backBtn": "button[data-tid='btn-editorTour-back']",
+                "step1Title": "[data-tid='text-step-1-title']",
+                "step1Subtitle": "[data-tid='text-questionSubtitle']",
+                "step2Title": "[data-tid='text-step-2-title']",
+                "step2Subtitle": "[data-tid='text-inThisActivitySubtitle']",
+                "step3Title": "[data-tid='text-step-3-title']",
+                "step3Subtitle": "[data-tid='text-mediaSubtitle']",
+                "step4Title": "[data-tid='text-step-4-title']",
+                "step4Subtitle": "[data-tid='text-addPromptText']",
+                "step5Title": "[data-tid='text-step-5-title']",
+                "step5Subtitle": "[data-tid='text-answerOptionsSubtitle'],[data-tid=text-addSubQuestionTextSubtitle]",
+                "step6Title": "[data-tid='text-step-6-title']",
+                "step6Subtitle": "[data-tid='text-text-settingsSubtitle']"
             }
         }
     }

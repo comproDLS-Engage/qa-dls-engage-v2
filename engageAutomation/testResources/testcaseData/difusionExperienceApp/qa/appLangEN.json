@@ -1745,6 +1745,67 @@
                     "dialogAcceptBtn": "Yes",
                     "snackbarTxt": "You have successfully recorded your answer."
                 }
+            },
+            "editorTour": {
+                "teacher": {
+                    "step0Title": "Let's fill out the quiz content!",
+                    "step0Subtitle": "Use images, videos, audio, and text to enhance your teaching materials. Start the tour to see what you can use in your Engage quiz:",
+                    "dontShowCheckbox": "Don't show me this anymore",
+                    "dismissBtn": "Dismiss",
+                    "startTourBtn": "Start Tour",
+                    "exitBtn": "Exit",
+                    "nextBtn": "Next",
+                    "backBtn": "Back",
+                    "step1Title": [
+                        "Question",
+                        "Question"
+                    ],
+                    "step1Subtitle": [
+                        "All the pages of a quiz include a question that is the first thing students see on the page. You should enter a clear and direct question for your students.",
+                        "All the pages of a quiz include a question that is the first thing students see on the page. You should enter a clear and direct question for your students."
+                    ],
+                    "step2Title": [
+                        "In This Activity",
+                        "In This Activity"
+                    ],
+                    "step2Subtitle": [
+                        "Use this field to add a more detailed description when extra context is needed to understand the task students need to complete.",
+                        "Use this field to add a more detailed description when extra context is needed to understand the task students need to complete."
+                    ],
+                    "step3Title": [
+                        "Media",
+                        "Media"
+                    ],
+                    "step3Subtitle": [
+                        "Use media prompts to upload or link additional images, videos, or audio that are meaningful for this activity.",
+                        "Use media prompts to upload or link additional images, videos, or audio that are meaningful for this activity."
+                    ],
+                    "step4Title": [
+                        "Text",
+                        "Text"
+                    ],
+                    "step4Subtitle": [
+                        "Use text prompts to add longer text. You'll find editing options to format your text as needed.",
+                        "Use text prompts to add longer text. You'll find editing options to format your text as needed."
+                    ],
+                    "step5Title": [
+                        "Answer Options",
+                        "Subquestion"
+                    ],
+                    "step5Subtitle": [
+                        "Use answer options to add multiple options and mark the correct one by clicking or tapping the check mark symbol. Use the symbol to reorder the options.",
+                        "Add subquestion text to provide additional details to aid student response."
+                    ],
+                    "step6Title": [
+                        null,
+                        "Settings"
+                    ],
+                    "step6Subtitle": [
+                        null,
+                        "Use long answer toggle to allow long student responses. Use file upload toggle to allow students to attach files to their responses."
+                    ]
+                },
+                "student": {}
             }
         }
     }
