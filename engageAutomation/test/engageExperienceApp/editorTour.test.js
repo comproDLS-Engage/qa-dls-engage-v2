@@ -16,6 +16,17 @@ module.exports = {
         await assertion.assertEqual(sts, true, "dismissBtn status mismatch");
     },
 
+    //Validate that editor tour does not launch when user add another question of same type
+    ENG_ICCT_TC_3: async function () {
+        sts = await editorTour.isInitialized();
+        await assertion.assertEqual(sts.pageStatus, false, "isInitialized status mismatch");
+    },
+
+    //Validate that editor tour does not launch when user creates first question in another quiz in a login session
+    ENG_ICCT_TC_4: async function () {
+        await this.ENG_ICCT_TC_3();
+    },
+
     //Validate that first prompt appears on clicking Start Tour button
     ENG_ICCT_TC_5: async function () {
         sts = await editorTour.click_startTourBtn();
@@ -49,6 +60,11 @@ module.exports = {
     ENG_ICCT_TC_10: async function () {
         sts = await editorTour.click_dontShowCheckbox();
         await assertion.assertEqual(sts, true, "dontShowCheckbox status mismatch");
+    },
+
+    //Validate that editor tour does not launch when user creates first question in a quiz in a new login session if dont show checkbox is checked
+    ENG_ICCT_TC_11: async function () {
+        await this.ENG_ICCT_TC_3();
     },
 
     //Validate the content of the start tour dialog

@@ -5047,6 +5047,97 @@
           "visualTest": false
         }
       ]
+    },
+    {
+      "modulename": "Editor Tour",
+      "moduleId": "",
+      "testFile": "./test/engageExperienceApp/editorTour.test.js",
+      "testcase": [
+        {
+          "id": "ENG_ICCT_TC_1",
+          "description": "Validate that editor tour is launched when user creates first question in a quiz in a login session",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCT_TC_2",
+          "description": "Validate that editor tour is closed on clicking dismiss button",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCT_TC_3",
+          "description": "Validate that editor tour does not launch when user add another question of same type",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCT_TC_4",
+          "description": "Validate that editor tour does not launch when user creates first question in another quiz in a login session",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCT_TC_5",
+          "description": "Validate that first prompt appears on clicking Start Tour button",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCT_TC_6",
+          "description": "Validate that tour exits on clicking exit button in the first prompt",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCT_TC_7",
+          "description": "Validate that next prompt appears on clicking next button",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCT_TC_8",
+          "description": "Validate that previous prompt appears on clicking back button",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCT_TC_9",
+          "description": "Validate that tour exits on clicking exit button in the last prompt",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCT_TC_10",
+          "description": "Validate that dont show again checkbox is selected on clicking the checkbox",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCT_TC_11",
+          "description": "Validate that editor tour does not launch when user creates first question in a quiz in a new login session if dont show checkbox is checked",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCT_TC_12",
+          "description": "Validate the content of the start tour dialog",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCT_TC_13",
+          "description": "Validate the content of the mcq editor tour",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCT_TC_14",
+          "description": "Validate the content of the text editor tour",
+          "tags": "P1",
+          "visualTest": true
+        }
+      ]
     }
   ]
 }

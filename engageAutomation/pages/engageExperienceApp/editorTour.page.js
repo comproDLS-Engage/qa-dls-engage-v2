@@ -3,7 +3,7 @@ var action = require('../../core/actionLibrary/baseActionLibrary.js')
 var selectorFile = jsonParserUtil.jsonParser(selectorDir)
 
 module.exports = {
-    
+
     tourContainer: selectorFile.css.ComproEngage.editorTour.tourContainer,
     step0Title: selectorFile.css.ComproEngage.editorTour.step0Title,
     step0Subtitle: selectorFile.css.ComproEngage.editorTour.step0Subtitle,
@@ -31,7 +31,7 @@ module.exports = {
         await logger.logInto(await stackTrace.get());
         await action.waitForDocumentLoad();
         res = {
-            pageStatus: await action.waitForDisplayed(this.tourContainer),
+            pageStatus: await action.waitForDisplayed(this.tourContainer, 10000),
         };
         return res;
     },
