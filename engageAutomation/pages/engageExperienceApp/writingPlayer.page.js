@@ -213,7 +213,7 @@ module.exports = {
         var res;
         await logger.logInto(await stackTrace.get());
         await action.switchToFrame(0);
-        res = await action.setValue(this.writingTextbox + writingData[0] + "] [role=textbox]", writingData[1]);
+        res = await action.setValue(this.writingTextbox + writingData[0] + "] [contenteditable]", writingData[1]);
         if (true == res) {
             await logger.logInto(await stackTrace.get(), "Value is entered in writingTextbox");
         } else {

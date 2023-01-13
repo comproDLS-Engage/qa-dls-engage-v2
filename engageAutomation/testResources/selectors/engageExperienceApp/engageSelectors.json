@@ -1293,7 +1293,7 @@
                 "submitActivityDialogSubtitle": "[data-tid=text-subTitle-submit-activity]",
                 "submitActivityDialogCancelBtn": "[data-tid=button-secondary-submit-activity]",
                 "submitActivityDialogConfirmBtn": "[data-tid=button-primary-submit-activity]",
-                "writingPlayer": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-input-id*=ta-] [class*=content]",
+                "writingPlayer": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-input-id*=ta-] [contenteditable]",
                 "voicePlayer": "div[class*=item-player-container] > div:not([style='height: 100%; display: none;']) [data-input-id*=vb-"
             },
             "onboarding": {
