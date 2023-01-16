@@ -417,7 +417,8 @@
                         "firstName": "New",
                         "lastName": "User",
                         "countryName": "India"
-                    },
+                    }
+                },
                 "iccInstructorUser1": {
                     "email": "dev2_libraryICCAutoTeacher@yopmail.com",
                     "password": "Compro@1234",
@@ -426,7 +427,6 @@
                     "class": [
                     ],
                     "info": {}
-                }
                 }
         }
     },
