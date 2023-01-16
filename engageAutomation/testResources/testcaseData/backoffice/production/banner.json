@@ -33,6 +33,7 @@
         ],
         "entitleUser": [
             "User has been entitled successfully"
-        ]
+        ],
+        "removeEntitlement": "The Entitlement is successfully deleted."
     }
 }
