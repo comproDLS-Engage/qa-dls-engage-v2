@@ -934,7 +934,7 @@
         "testData": [
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
-            "jsonPath": "engage.login.user.iccInstructorUser1"
+            "jsonPath": "engage.login.user.iccInstructorUser2"
           }
         ]
       },
