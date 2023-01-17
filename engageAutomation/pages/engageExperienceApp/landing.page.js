@@ -88,6 +88,9 @@ module.exports = {
 				if (lang == (await action.getText(this.languageSelector_dropdown_list + ":nth-child(" + i + ")"))) {
 					res = await action.click(this.languageSelector_dropdown_list + ":nth-child(" + i + ")");
 					await logger.logInto(await stackTrace.get(), "Value " + lang + " selected from the drop down");
+					await action.waitForDocumentLoad();
+					if (true == res)
+						res = await action.waitForDisplayed(this.languageSelector_dropdown);
 					break;
 				}
 			}
