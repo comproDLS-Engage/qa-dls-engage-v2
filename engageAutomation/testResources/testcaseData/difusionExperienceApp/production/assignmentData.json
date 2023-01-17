@@ -66,7 +66,7 @@
                             "name": "1. Scorable",
                             "activityList": {
                                 "activity1": "Close Ended Native (OLD)",
-                                "activity2": "Open Ended Native",
+                                "activity2": "Open Ended Writing",
                                 "activity3": "Item Player Test Question",
                                 "activity4": "Acceptance Quiz"
                             }
@@ -175,7 +175,7 @@
         "className": "new automation class1",
         "activity": [
             {
-                "activityName": "Open Ended Native",
+                "activityName": "Open Ended Writing",
                 "unitName": "LP1 • 1. Scorable",
                 "studentName":"dev2 17octstudent1 ",
                 "time":"Oct 19, 2022 at 10:10 AM"
