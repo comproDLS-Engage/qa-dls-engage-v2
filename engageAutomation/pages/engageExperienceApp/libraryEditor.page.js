@@ -1342,7 +1342,7 @@ module.exports = {
         obj = {
             newAccess_Title: ((await action.getElementCount(this.newAccess_Title)) > 0) ? await action.getText(this.newAccess_Title) : null,
             newAccess_SubTitle: ((await action.getElementCount(this.newAccess_SubTitle)) > 0) ? await action.getText(this.newAccess_SubTitle) : null,
-            noAccessClassIcon: ((await action.getElementCount(this.noAccessClassIcon)) > 0) ? await action.getText(this.noAccessClassIcon) : null,
+            noAccessClassIcon: ((await action.getElementCount(this.noAccessClassIcon)) > 0) ? await action.waitForDisplayed(this.noAccessClassIcon) : null,
             noClassRemaining: ((await action.getElementCount(this.noClassRemaining)) > 0) ? await action.getText(this.noClassRemaining) : null,
             addtoClassDescription: ((await action.getElementCount(this.addtoClassDescription)) > 0) ? await action.getText(this.addtoClassDescription) : null,
             addnowbutton: ((await action.getElementCount(this.addnowbutton)) > 0) ? await action.getText(this.addnowbutton) : null,
