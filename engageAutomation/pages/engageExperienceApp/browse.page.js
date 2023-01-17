@@ -596,7 +596,7 @@ module.exports = {
         var i, list, res;
         list = await action.findElements(this.searchList);
         for (i = 0; i < list.length; i++) {
-            if (((await action.getText(list[i]))) == searchListName) {
+            if ((await action.getText(list[i])) == searchListName) {
                 res = await action.click(list[i]);
                 break;
             }
@@ -711,6 +711,7 @@ module.exports = {
         await logger.logInto(await stackTrace.get());
         res = await action.setValue(this.searchBox, value);
         if (true == res) {
+            res = await action.waitForDisplayed(this.searchList + "," + this.noResultListItemTitle);
             await logger.logInto(await stackTrace.get(), "Value is entered in searchBox");
         } else {
             await logger.logInto(await stackTrace.get(), res + "Value is NOT entered in searchBox", 'error');
