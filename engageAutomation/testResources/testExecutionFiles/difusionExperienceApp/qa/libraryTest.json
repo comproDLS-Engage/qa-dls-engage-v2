@@ -142,12 +142,6 @@
         ]
       },
       {
-        "id": "ENG_ICCE_TC_74",
-        "description": "",
-        "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
-        "testData": []
-      },
-      {
         "id": "ENG_ICCE_TC_9",
         "description": "",
         "testFile": "./test/engageExperienceApp/libraryEditor.test.js",

@@ -1608,7 +1608,11 @@
                     "returnToLibrarylDescriptioninFinishQuiz": "Go back to library to review and manage your materials.",
                     "addToClass_Title": "Add to Class",
                     "addToClass_SubTitle": "Manage which classes have access to this material.",
-                    "quesNumber": "3 of 3"
+                    "quesNumber": "3 of 3",
+                    "takeEditorTourbtn": "Take Editor Tour",
+                    "reportAProblembtn": "Report a Problem",
+                    "helpCenterbtn": "Help Center",
+                    "contentGuidelinesbtn": "Content Guidelines"
                 },
                 "student": {}
             },

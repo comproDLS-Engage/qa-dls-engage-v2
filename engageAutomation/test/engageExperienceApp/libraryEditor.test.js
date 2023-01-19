@@ -737,7 +737,41 @@ module.exports = {
         await assertion.assertEqual(sts.manageAccess_SubTitle, testdata.addToClass_SubTitle, "newAccess_SubTitle Values is not as expected.");
     },
   
-  
+    ENG_ICCE_TC_100 :   async function (testdata) { 
+        sts = await libraryEditorPage.click_helpbtn();
+        await assertion.assertEqual(sts.takeEditorTourbtn,testdata.takeEditorTourbtn,"takeEditorTourbtn text mismatch");
+        await assertion.assertEqual(sts.reportAProblembtn,testdata.reportAProblembtn,"reportAProblembtn text mismatch");
+        await assertion.assertEqual(sts.helpCenterbtn,testdata.helpCenterbtn,"helpCenterbtn text mismatch");
+        await assertion.assertEqual(sts.contentGuidelinesbtn,testdata.contentGuidelinesbtn,"contentGuidelinesbtn text mismatch");
+        },
+        
+        ENG_ICCE_TC_101 :   async function (testdata) { 
+        sts = await libraryEditorPage.click_takeEditorTourbtn();
+        await assertion.assertEqual(sts, true,"takeEditorTourbtn are not Clicked");
+        },
+        
+        ENG_LIBR_TC_3 :   async function (testdata) { 
+        sts = await libraryEditor.click_reportAProblembtn();
+        await assertion.assertEqual(sts, true,"reportAProblembtn are not Clicked");
+        },
+        
+        ENG_LIBR_TC_4 :   async function (testdata) { 
+        sts = await libraryEditor.click_helpCenterbtn();
+        await assertion.assertEqual(sts, true,"helpCenterbtn are not Clicked");
+        },
+        
+        ENG_LIBR_TC_5 :   async function (testdata) { 
+        sts = await libraryEditor.click_contentGuidelinesbtn();
+        await assertion.assertEqual(sts, true,"contentGuidelinesbtn are not Clicked");
+        },
+        
+        ENG_LIBR_TC_6 :   async function (testdata) { 
+        sts = await libraryEditor.getData_helpMenuList(testdata);
+        await assertion.assertEqual(sts.takeEditorTourbtn, testdata.takeEditorTourbtn,"takeEditorTourbtn Values is not as expected.");
+        await assertion.assertEqual(sts.reportAProblembtn, testdata.reportAProblembtn,"reportAProblembtn Values is not as expected.");
+        await assertion.assertEqual(sts.helpCenterbtn, testdata.helpCenterbtn,"helpCenterbtn Values is not as expected.");
+        await assertion.assertEqual(sts.contentGuidelinesbtn, testdata.contentGuidelinesbtn,"contentGuidelinesbtn Values is not as expected.");
+        },
   
   
   

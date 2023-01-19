@@ -33,6 +33,134 @@
 				"testData": []
 			},
 			{
+				"id": "ASE_COM_TC_1033",
+				"description": "Click on Edit Header button",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_COM_TC_1001",
+				"description": "Set Header title text",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizDataEdit.json",
+						"jsonPath": "editor.questions.MCQSR[0].quesTitle"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1014",
+				"description": "Click Done Button",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_COM_TC_1155",
+				"description": "Click Delete SubQuestion",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizDataEdit.json",
+						"jsonPath": "editor.questions.MCQSR[0].subQues[0][0]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1153",
+				"description": "Confirm Yes on Delete dialog box",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_COM_TC_1003",
+				"description": "Next Question Clicked",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			
+			{
+				"id": "ASE_COM_TC_1032",
+				"description": "Click on Edit Instruction button",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_COM_TC_1002",
+				"description": "Set Instruction text",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizDataEdit.json",
+						"jsonPath": "editor.questions.MultipleResponse[0].instructionText"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1014",
+				"description": "Click Done Button",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_COM_TC_1065",
+				"description": "Click Edit Option Button",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizDataEdit.json",
+						"jsonPath": "editor.questions.MultipleResponse[0].answerKey[4]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1004",
+				"description": "Click Delete Media",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_COM_TC_1014",
+				"description": "Click Done Button",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_COM_TC_1007",
+				"description": "Click Edit SubQuestion button",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizDataEdit.json",
+						"jsonPath": "editor.questions.MultipleResponse[0].subQues[0]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_75",
+				"description": "Add Image in SubQuestion",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizDataEdit.json",
+						"jsonPath": "editor.questions.MultipleResponse[0].subQuestionImg"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1014",
+				"description": "Click Done Button",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_COM_TC_1003",
+				"description": "Next Question Clicked",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			
+			{
 				"id": "ASE_COM_TC_1005",
 				"description": "Click on Edit Prompt button",
 				"testFile": "./test/assessmentEditor/editor.test.js",
@@ -40,65 +168,18 @@
 			},
 			{
 				"id": "ASE_COM_TC_1006",
-				"description": "Click on Editor tab",
+				"description": "Set Prompt Text",
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
-						"jsonPath": "editor.questions.MCQSR[0].promptText"
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizDataEdit.json",
+						"jsonPath": "editor.questions.TrueFalse[0].promptText"
 					}
 				]
-			},
-			{
-				"id": "ASE_COM_TC_1014",
-				"description": "",
-				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": []
-			},
-			{
-				"id": "ASE_COM_TC_1003",
-				"description": "Next Question Clicked",
-				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": []
-			},
-			{
-				"id": "ASE_COM_TC_1032",
-				"description": "Click on Edit Instruction tab",
-				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": []
-			},
-			{
-				"id": "ASE_COM_TC_1002",
-				"description": "Click on Editor tab",
-				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": [
-					{
-						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
-						"jsonPath": "editor.questions.MCQSR[0].instructionText"
-					}
-				]
-			},
-			{
-				"id": "ASE_COM_TC_1014",
-				"description": "",
-				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": []
-			},
-			{
-				"id": "ASE_COM_TC_1003",
-				"description": "Next Question Clicked",
-				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": []
-			},
-			{
-				"id": "ASE_COM_TC_1005",
-				"description": "Click on Edit Prompt button",
-				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": []
 			},
 			{
 				"id": "ASE_COM_TC_1004",
-				"description": "Delete Media button",
+				"description": "Click Delete Media",
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": []
 			},
@@ -108,14 +189,148 @@
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": [
 					{
-						"dataFile": "./testResources/testcaseData/assessmentEditor/quizData.json",
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizDataEdit.json",
 						"jsonPath": "editor.questions.TrueFalse[0].promptImg"
 					}
 				]
 			},
 			{
 				"id": "ASE_COM_TC_1014",
-				"description": "",
+				"description": "Click Done Button",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_COM_TC_1003",
+				"description": "Next Question Clicked",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			
+			{
+				"id": "ASE_DND_TC_9",
+				"description": "Validate that the user can add a label in the Response Template",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizDataEdit.json",
+						"jsonPath": "editor.questions.DragDropOnImage[0].labelOptions"
+					}
+				]
+			},
+			{
+				"id": "ASE_MCQ_TC_14",
+				"description": "Validate that Option is added in  questions",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizDataEdit.json",
+						"jsonPath": "editor.questions.DragDropOnImage[0].labelOptions"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1003",
+				"description": "Next Question Clicked",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+		
+			{
+				"id": "ASE_DND_TC_33",
+				"description": "Select a DND Label",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizDataEdit.json",
+						"jsonPath": "editor.questions.DragDropOnImage[1].deleteLabel"
+					}
+				]
+			},
+			{
+				"id": "ASE_DND_TC_34",
+				"description": "Delete DND Label",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_COM_TC_1003",
+				"description": "Next Question Clicked",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_COM_TC_1033",
+				"description": "Click on Edit Header button",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_COM_TC_1001",
+				"description": "Set Header title text",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizDataEdit.json",
+						"jsonPath": "editor.questions.DragDropIntoText[0].quesTitle"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1014",
+				"description": "Click Done Button",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_COM_TC_1000",
+				"description": "Enter the question text",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizDataEdit.json",
+						"jsonPath": "editor.questions.DragDropIntoText[0].questionText"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1014",
+				"description": "Click Done Button",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_MCQ_TC_14",
+				"description": "Set Answer Options",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizDataEdit.json",
+						"jsonPath": "editor.questions.DragDropIntoText[0].options"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1003",
+				"description": "Next Question Clicked",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			
+			{
+				"id": "ASE_MCQ_TC_14",
+				"description": "Set Answer Options",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizDataEdit.json",
+						"jsonPath": "editor.questions.DragDropIntoText[1].options"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1003",
+				"description": "Next Question Clicked",
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": []
 			},
@@ -126,9 +341,92 @@
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": []
 			},
+		
+			{
+				"id": "ASE_COM_TC_1005",
+				"description": "Click on Edit Prompt button",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_COM_TC_86",
+				"description": "Add Audio in Prompt",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizDataEdit.json",
+						"jsonPath": "editor.questions.FIB[0].audioPath"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1014",
+				"description": "Click Done Button",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
 			{
 				"id": "ASE_COM_TC_1003",
 				"description": "Next Question Clicked",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_COM_TC_1005",
+				"description": "Click on Edit Prompt button",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_COM_TC_87",
+				"description": "Add Video in Prompt",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizDataEdit.json",
+						"jsonPath": "editor.questions.FIB[1].videoPath"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1014",
+				"description": "Click Done Button",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_COM_TC_1003",
+				"description": "Next Question Clicked",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+		
+			{
+				"id": "ASE_COM_TC_1003",
+				"description": "Next Question Clicked",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_COM_TC_1033",
+				"description": "Click on Edit Header button",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_COM_TC_1001",
+				"description": "Set Header title text",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizDataEdit.json",
+						"jsonPath": "editor.questions.FIB[3].quesTitle"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1014",
+				"description": "Click Done Button",
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": []
 			},
@@ -144,9 +442,131 @@
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": []
 			},
+	
+			{
+				"id": "ASE_COM_TC_1152",
+				"description": "Delete an Option",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizDataEdit.json",
+						"jsonPath": "editor.questions.FIBDropdown[0].question2.options[4][0]"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1153",
+				"description": "Confirm Yes on Delete dialog box",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_FIBDROPDOWN_TC_1016",
+				"description": "Set the Response text of editor",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizDataEdit.json",
+						"jsonPath": "editor.questions.FIBDropdown[0].question2.response"
+					}
+				]
+			},
 			{
 				"id": "ASE_COM_TC_1003",
 				"description": "Next Question Clicked",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_COM_TC_1033",
+				"description": "Click on Edit Header button",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_COM_TC_1001",
+				"description": "Set Header title text",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizDataEdit.json",
+						"jsonPath": "editor.questions.Matching[0].quesTitle"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1014",
+				"description": "Click Done Button",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_MAT_TC_13",
+				"description": "Click Add Pair Button",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_COM_TC_1003",
+				"description": "Next Question Clicked",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+		
+			{
+				"id": "ASE_COM_TC_1154",
+				"description": "Delete a Pair Response",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizDataEdit.json",
+						"jsonPath": "editor.questions.Matching[1].deleteResponse"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1003",
+				"description": "Next Question Clicked",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_COM_TC_1033",
+				"description": "Click on Edit Header button",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_COM_TC_1001",
+				"description": "Set Header title text",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizDataEdit.json",
+						"jsonPath": "editor.questions.Classify[0].quesTitle"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1014",
+				"description": "Click Done Button",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": []
+			},
+			{
+				"id": "ASE_COM_TC_1152",
+				"description": "Set Header title text",
+				"testFile": "./test/assessmentEditor/editor.test.js",
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizDataEdit.json",
+						"jsonPath": "editor.questions.Classify[0].deleteOption"
+					}
+				]
+			},
+			{
+				"id": "ASE_COM_TC_1153",
+				"description": "Confirm Yes on Delete dialog box",
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": []
 			},
@@ -157,53 +577,29 @@
 				"testData": []
 			},
 			{
-				"id": "ASE_COM_TC_1003",
-				"description": "Next Question Clicked",
+				"id": "ASE_COM_TC_1005",
+				"description": "Click on Edit Prompt button",
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": []
 			},
 			{
-				"id": "ASE_COM_TC_1003",
-				"description": "Next Question Clicked",
+				"id": "ASE_COM_TC_1006",
+				"description": "Validate if alpha-numeric text is allowed in the Question Text",
 				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": []
+				"testData": [
+					{
+						"dataFile": "./testResources/testcaseData/assessmentEditor/quizDataEdit.json",
+						"jsonPath": "editor.questions.Ordering[0].questionText"
+					}
+				]
 			},
 			{
-				"id": "ASE_COM_TC_1003",
-				"description": "Next Question Clicked",
-				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": []
-			},
-			{
-				"id": "ASE_COM_TC_1003",
-				"description": "Next Question Clicked",
-				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": []
-			},
-			{
-				"id": "ASE_COM_TC_1003",
-				"description": "Next Question Clicked",
-				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": []
-			},
-			{
-				"id": "ASE_COM_TC_1003",
-				"description": "Next Question Clicked",
-				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": []
-			},
-			{
-				"id": "ASE_COM_TC_1003",
-				"description": "Next Question Clicked",
-				"testFile": "./test/assessmentEditor/editor.test.js",
-				"testData": []
-			},
-			{
-				"id": "ASE_COM_TC_1003",
-				"description": "Next Question Clicked",
+				"id": "ASE_COM_TC_1014",
+				"description": "Click Done Button",
 				"testFile": "./test/assessmentEditor/editor.test.js",
 				"testData": []
 			}
+		
 		],
 		"AfterEach": [],
 		"After": []

@@ -1578,7 +1578,12 @@
                 "returnToLibrarylIconinFinishQuiz": "",
                 "returnToLibrarylDescriptioninFinishQuiz": "",
                 "returnToLibrarylbtninFinishQuiz": "/html/body/div[2]/div[3]/div/div[2]/div/div[3]/div[3]/button",
-                "closebtninFinishQuiz": "[data-tid=button-close]"
+                "closebtninFinishQuiz": "[data-tid=button-close]",
+                "helpbtn": "[data-tid=button-helpSubmenu]",
+                "takeEditorTourbtn": "[data-tid=button-takeEditorTour]",
+                "reportAProblembtn": "[data-tid=button-reportProblem]",
+                "helpCenterbtn": "[data-tid=button-helpCenter]",
+                "contentGuidelinesbtn": "[data-tid=button-contentGuidelines]"
             },
             "library": {
                 "libraryTitleTxt": "[data-tid=text-pageTitle]",
