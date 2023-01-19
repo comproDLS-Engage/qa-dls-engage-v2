@@ -1911,6 +1911,7 @@ module.exports = {
         res = await action.click(this.takeEditorTourbtn);
         if (true == res) {
             await logger.logInto(await stackTrace.get(), " takeEditorTourbtn is clicked");
+            res = await require('./editorTour.page').isInitialized();
         }
         else {
             await logger.logInto(await stackTrace.get(), res + "takeEditorTourbtn is NOT clicked", 'error');
