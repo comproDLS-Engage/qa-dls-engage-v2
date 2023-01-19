@@ -1211,13 +1211,14 @@ module.exports = {
 
 		await logger.logInto(stackTrace.get());
 		await browser.pause(2000)
-		await action.waitForDisplayed(this.responseEdit)
-		await action.click(this.responseEdit)
-		await browser.pause(2000)
+	//	await action.waitForDisplayed(this.responseEdit)
+		//await action.click(this.responseEdit)
+	//	await browser.pause(2000)
 		await action.click(this.responseTextArea)
 		await action.keyPress("\uE008\uE00F")
 		await action.click(this.textAreabtn)
 		await action.keyPress("\uE014")
+		await action.keyPress("\uE015")
 		await browser.pause(2000)
 		return res;
 	},
@@ -1429,8 +1430,8 @@ module.exports = {
 	},
 	clickAddAnswerMCQSRBtn: async function (testdata) {
 		await logger.logInto(stackTrace.get());
-		await action.waitForDisplayed(this.addAnswer_btn + "-" + testdata);
-		res = await action.click(this.addAnswer_btn + "-" + testdata);
+		await action.waitForDisplayed(this.addAnswer_btn  + testdata);
+		res = await action.click(this.addAnswer_btn  + testdata);
 		if (res == true) {
 			await logger.logInto(stackTrace.get(), " -- Add Answer Button is clicked");
 		}

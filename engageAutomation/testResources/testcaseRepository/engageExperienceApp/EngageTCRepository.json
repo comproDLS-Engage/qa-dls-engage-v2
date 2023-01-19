@@ -3233,6 +3233,67 @@
       ]
     },
     {
+      "modulename": "Voice Player",
+      "moduleId": "",
+      "testFile": "./test/engageExperienceApp/voicePlayer.test.js",
+      "testcase": [
+        {
+          "id": "ENG_ITEM_VOICE_TC_1",
+          "description": "Validate clicking on Record button",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ITEM_VOICE_TC_2",
+          "description": "Validate clicking on Pause button",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ITEM_VOICE_TC_3",
+          "description": "Validate clicking on Continue button",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ITEM_VOICE_TC_4",
+          "description": "Validate the countdown starts for the last 15 seconds",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ITEM_VOICE_TC_5",
+          "description": "Validate the scenario when recording time limit is reached",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ITEM_VOICE_TC_7",
+          "description": "Validate clicking on Done button after time limit is reached",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ITEM_VOICE_TC_10",
+          "description": "Validate clicking on Re-record button",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ITEM_VOICE_TC_11",
+          "description": "Validate clicking on Re-record dialog 'No' button",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ITEM_VOICE_TC_12",
+          "description": "Validate clicking on Re-record dialog 'Yes' button",
+          "tags": "P1",
+          "visualTest": true
+        }
+      ]
+    },
+    {
       "modulename": "Download Player",
       "moduleId": "",
       "testFile": "./test/engageExperienceApp/downloadPlayer.test.js",
@@ -4173,6 +4234,24 @@
           "visualTest": true
         },
         {
+          "id": "ENG_ICCE_TC_62",
+          "description": "Validate the Page Header when click on Edit button",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_63",
+          "description": "Validate the Click on Add to Class button after Finish Quiz Dialogue",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_64",
+          "description": "Validate the Content of new Access Page",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
           "id": "ENG_ICCE_TC_65",
           "description": "Validate the Content of Sub menu data",
           "tags": "P1",
@@ -4301,6 +4380,102 @@
         {
           "id": "ENG_ICCE_TC_85",
           "description": "Validate the Click on Cancel button Edit Quiz Dialogue",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_86",
+          "description": "Validate the Selection of Class on New Access Page",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_87",
+          "description": "Validate the Click on Add Now button on New Access Page",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_88",
+          "description": "Validate the Content of Quiz Added Successfully Page",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_89",
+          "description": "Validate the Content of new Access Page when Class is avialable",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_90",
+          "description": "Validate the Content of new Access Page when Class is avialable",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_91",
+          "description": "Validate the Header of Published Quiz Page",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_92",
+          "description": "Validate the Edit Dialogue box when activity is already added in class",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_93",
+          "description": "Validate the Edit Dialogue box when activity is not  added in class",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_94",
+          "description": "Validate the Click on Remove Access of a class",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_95",
+          "description": "Validate the Content of Remove Access Dialogue",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_96",
+          "description": "Validate the Content of Removed Successfully Dialogue",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_97",
+          "description": "Validate the click on Remove anyway button on the Remove Access Dialogue",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_98",
+          "description": "Validate the click on Done button on the Remove Access Successfully Dialogue",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_99",
+          "description": "Validate the content of Add to Class Page after adding the quiz in a class",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_100",
+          "description": "Validate the click on help icon on editor Page",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_101",
+          "description": "Validate the click on take editor option in help submenu list",
           "tags": "P1",
           "visualTest": true
         }
@@ -4882,6 +5057,97 @@
           "description": "Validate clicking on cross icon clears the search results",
           "tags": "",
           "visualTest": false
+        }
+      ]
+    },
+    {
+      "modulename": "Editor Tour",
+      "moduleId": "",
+      "testFile": "./test/engageExperienceApp/editorTour.test.js",
+      "testcase": [
+        {
+          "id": "ENG_ICCT_TC_1",
+          "description": "Validate that editor tour is launched when user creates first question in a quiz in a login session",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCT_TC_2",
+          "description": "Validate that editor tour is closed on clicking dismiss button",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCT_TC_3",
+          "description": "Validate that editor tour does not launch when user add another question of same type",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCT_TC_4",
+          "description": "Validate that editor tour does not launch when user creates first question in another quiz in a login session",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCT_TC_5",
+          "description": "Validate that first prompt appears on clicking Start Tour button",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCT_TC_6",
+          "description": "Validate that tour exits on clicking exit button in the first prompt",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCT_TC_7",
+          "description": "Validate that next prompt appears on clicking next button",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCT_TC_8",
+          "description": "Validate that previous prompt appears on clicking back button",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCT_TC_9",
+          "description": "Validate that tour exits on clicking exit button in the last prompt",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCT_TC_10",
+          "description": "Validate that dont show again checkbox is selected on clicking the checkbox",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCT_TC_11",
+          "description": "Validate that editor tour does not launch when user creates first question in a quiz in a new login session if dont show checkbox is checked",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCT_TC_12",
+          "description": "Validate the content of the start tour dialog",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCT_TC_13",
+          "description": "Validate the content of the mcq editor tour",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCT_TC_14",
+          "description": "Validate the content of the text editor tour",
+          "tags": "P1",
+          "visualTest": true
         }
       ]
     }

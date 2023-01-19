@@ -179,7 +179,7 @@
                 },
                 "validInstructorUser1": {
                     "email": "culineziffa-4105@yopmail.com",
-                    "password": "Compro@1234",
+                    "password": "Compro@111",
                     "role": "instructor",
                     "name": "culineziffa-4105 teacher",
                     "courses": [
@@ -494,6 +494,23 @@
                     "role": "instructor",
                     "name": "dev1 libraryICCAutoTeacher",
                     "class": [
+                    ],
+                    "info": {}
+                },
+                "iccInstructorUser2": {
+                    "email": "dev1_libraryICCAutoTeacherWithClass@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "instructor",
+                    "name": "dev1 libraryICCAutoTeacherWithClass",
+                    "class": [
+                        {
+                            "key": "dNcW-6h9X",
+                            "name": "class1"
+                        },
+                        {
+                            "key": "dNcW-6h9X",
+                            "name": "class4"
+                        }
                     ],
                     "info": {}
                 },

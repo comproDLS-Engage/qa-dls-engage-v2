@@ -14,6 +14,7 @@ module.exports = {
     snackbarLbl: selectorFile.common.snackbarLbl,
     snackbarBtn: selectorFile.common.snackbarBtn,
     closeBtn: selectorFile.entitleUserPage.closeBtn,
+    viewEntitlements: selectorFile.entitleUserPage.viewEntitlements,
 
     isInitialized: async function () {
         await logger.logInto((await stackTrace.get()));
@@ -80,9 +81,9 @@ module.exports = {
         if (res == true) {
             res = await action.click(this.confirmBtn);
             if (res == true) {
-                await action.waitForDisplayed(this.snackbarLbl);
-                res = await action.getText(this.snackbarLbl);
-                await action.click(this.snackbarBtn);
+                await action.waitForDisplayed(this.viewEntitlements);
+                //res = await action.getText(this.snackbarLbl);
+                //await action.click(this.snackbarBtn);
             }
         }
         await logger.logInto((await stackTrace.get()), res);
@@ -92,6 +93,17 @@ module.exports = {
     click_Close_Button: async function () {
         await logger.logInto((await stackTrace.get()));
         res = await action.click(this.closeBtn);
+        await logger.logInto((await stackTrace.get()), res);
+        return res;
+    },
+
+    click_ViewEntitlements_Button: async function () {
+        await logger.logInto((await stackTrace.get()));
+        let res;
+        res = await action.click(this.viewEntitlements);
+        if (res == true) {
+            res = await require('./findUser.page.js').isInitialized();
+        }
         await logger.logInto((await stackTrace.get()), res);
         return res;
     }

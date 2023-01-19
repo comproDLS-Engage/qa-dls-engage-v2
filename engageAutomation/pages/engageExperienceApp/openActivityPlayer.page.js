@@ -15,7 +15,7 @@ module.exports = {
     gradedOn: selectorFile.css.ComproEngage.openActivityPlayer.gradedOn,
     closeBtn: selectorFile.css.ComproEngage.openActivityPlayer.closeBtn,
     submitActivityBtn: selectorFile.css.ComproEngage.openActivityPlayer.submitActivityBtn,
-    saveAnswersBtn:  selectorFile.css.ComproEngage.openActivityPlayer.saveAnswersBtn,
+    saveAnswersBtn: selectorFile.css.ComproEngage.openActivityPlayer.saveAnswersBtn,
     submitGradeBtn: selectorFile.css.ComproEngage.openActivityPlayer.submitGradeBtn,
     retakeOpenActivityBtn: selectorFile.css.ComproEngage.openActivityPlayer.retakeOpenActivityBtn,
     snackbarMsg: selectorFile.css.ComproEngage.openActivityPlayer.snackbarMsg,
@@ -74,6 +74,9 @@ module.exports = {
     submitActivityDialogCancelBtn: selectorFile.css.ComproEngage.openActivityPlayer.submitActivityDialogCancelBtn,
     submitActivityDialogConfirmBtn: selectorFile.css.ComproEngage.openActivityPlayer.submitActivityDialogConfirmBtn,
     snackbarClose_btn: selectorFile.css.ComproEngage.appShell.snackbarClose_btn,
+    writingPlayer: selectorFile.css.ComproEngage.openActivityPlayer.writingPlayer,
+    voicePlayer: selectorFile.css.ComproEngage.openActivityPlayer.voicePlayer,
+    recordBtn: selectorFile.css.ComproEngage.voicePlayer.recordBtn,
 
     isInitialized: async function () {
         var res;
@@ -190,6 +193,26 @@ module.exports = {
             submitActivityDialogCancelBtn: ((await action.getElementCount(this.submitActivityDialogCancelBtn)) > 0) ? await action.getText(this.submitActivityDialogCancelBtn) : null,
             submitActivityDialogConfirmBtn: ((await action.getElementCount(this.submitActivityDialogConfirmBtn)) > 0) ? await action.getText(this.submitActivityDialogConfirmBtn) : null,
         }
+        return obj;
+    },
+
+    getData_activityStatus: async function () {
+        await logger.logInto(await stackTrace.get());
+        await action.waitForDisplayed("iframe[id*=iframe], iframe");
+        await action.switchToFrame(0);
+        var obj;
+        obj = {
+            writingPlayerIsDisplayed: ((await action.getElementCount(this.writingPlayer)) > 0) ? await action.waitForDisplayed(this.writingPlayer) : null,
+            voicePlayerIsDisplayed: ((await action.getElementCount(this.voicePlayer)) > 0) ? await action.waitForDisplayed(this.voicePlayer) : null,
+            activityStatus: false
+        }
+        if (obj.writingPlayerIsDisplayed) {
+            obj.activityStatus = (await action.getAttribute(this.writingPlayer, "contenteditable") === 'true');
+        }
+        else {
+            obj.activityStatus = await action.isDisplayed(this.recordBtn);
+        }
+        await action.switchToParentFrame();
         return obj;
     },
 

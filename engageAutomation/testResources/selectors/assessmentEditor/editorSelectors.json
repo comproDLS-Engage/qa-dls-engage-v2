@@ -53,7 +53,7 @@
 			"uploadedAudio": "[data-tid=sliderContainer]",
 			"audioCredit_input": "[data-tid=input-audiocredit] input",
 			"questionInputField": "[class=DraftEditor-editorContainer] span span",
-			"addAnswer_btn": "[data-tid=button-addoption",
+			"addAnswer_btn": "div[role=region]>div>div>div>button[data-tid=button-addoption], [data-tid=button-addoption-",
 			"inputOptions": "[data-tid*=input-option-",
 			"optionStyle_radio": "[data-tid=radio-optionstyle-",
 			"preview_btn": "#root > div > div > div > button[data-tid=button-preview]",

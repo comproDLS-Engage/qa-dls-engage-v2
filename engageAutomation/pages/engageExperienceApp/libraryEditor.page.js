@@ -25,7 +25,7 @@ module.exports = {
     deletebtn: selectorFile.css.ComproEngage.libraryEditorPage.deletebtn,
     deleteQuestionHeader: selectorFile.css.ComproEngage.libraryEditorPage.deleteQuestionHeader,
     deleteQuestionSubHeader: selectorFile.css.ComproEngage.libraryEditorPage.deleteQuestionSubHeader,
-    cancelbtn: selectorFile.css.ComproEngage.libraryEditorPage.cancelbtn,
+    canceldeleteQuestionbtn: selectorFile.css.ComproEngage.libraryEditorPage.canceldeleteQuestionbtn,
     deleteQuestionbtn: selectorFile.css.ComproEngage.libraryEditorPage.deleteQuestionbtn,
     questiontextbox: selectorFile.css.ComproEngage.libraryEditorPage.questiontextbox,
     inthisActivity: selectorFile.css.ComproEngage.libraryEditorPage.inthisActivity,
@@ -121,6 +121,7 @@ module.exports = {
     classIcon: selectorFile.css.ComproEngage.libraryEditorPage.classIcon,
     selectClass: selectorFile.css.ComproEngage.libraryEditorPage.selectClass,
     ClassName: selectorFile.css.ComproEngage.libraryEditorPage.ClassName,
+    classRadiobtn: selectorFile.css.ComproEngage.libraryEditorPage.classRadiobtn,
     bookName: selectorFile.css.ComproEngage.libraryEditorPage.bookName,
     bookImage: selectorFile.css.ComproEngage.libraryEditorPage.bookImage,
     dropDown_btn: selectorFile.css.ComproEngage.libraryEditorPage.dropDown_btn,
@@ -142,6 +143,65 @@ module.exports = {
     editMaterial_Note: selectorFile.css.ComproEngage.libraryEditorPage.editMaterial_Note,
     editMaterial_Cancel: selectorFile.css.ComproEngage.libraryEditorPage.editMaterial_Cancel,
     editMaterial_ContinueToEdit: selectorFile.css.ComproEngage.libraryEditorPage.editMaterial_ContinueToEdit,
+    versionNumber: selectorFile.css.ComproEngage.libraryEditorPage.versionNumber,
+    quizAddedsuccessfullyHeader: selectorFile.css.ComproEngage.libraryEditorPage.quizAddedsuccessfullyHeader,
+    quizAddedsuccessfullySubHeader: selectorFile.css.ComproEngage.libraryEditorPage.quizAddedsuccessfullySubHeader,
+    classIconModal: selectorFile.css.ComproEngage.libraryEditorPage.classIconModal,
+    classNameModal: selectorFile.css.ComproEngage.libraryEditorPage.classNameModal,
+    bookNameModal: selectorFile.css.ComproEngage.libraryEditorPage.bookNameModal,
+    bookIconModal: selectorFile.css.ComproEngage.libraryEditorPage.bookIconModal,
+    addedIconModal: selectorFile.css.ComproEngage.libraryEditorPage.addedIconModal,
+    whatdoyouwantText: selectorFile.css.ComproEngage.libraryEditorPage.whatdoyouwantText,
+    assignlbl: selectorFile.css.ComproEngage.libraryEditorPage.assignlbl,
+    assignIcon: selectorFile.css.ComproEngage.libraryEditorPage.assignIcon,
+    assignDescription: selectorFile.css.ComproEngage.libraryEditorPage.assignDescription,
+    assignbtn: selectorFile.css.ComproEngage.libraryEditorPage.assignbtn,
+    addToAnotherClasslbl: selectorFile.css.ComproEngage.libraryEditorPage.addToAnotherClasslbl,
+    addToAnotherClassIcon: selectorFile.css.ComproEngage.libraryEditorPage.addToAnotherClassIcon,
+    addToAnotherClassDescription: selectorFile.css.ComproEngage.libraryEditorPage.addToAnotherClassDescription,
+    addToAnotherClassbtn: selectorFile.css.ComproEngage.libraryEditorPage.addToAnotherClassbtn,
+    returnToLibrarylbl: selectorFile.css.ComproEngage.libraryEditorPage.returnToLibrarylbl,
+    returnToLibrarylIcon: selectorFile.css.ComproEngage.libraryEditorPage.returnToLibrarylIcon,
+    returnToLibrarylDescription: selectorFile.css.ComproEngage.libraryEditorPage.returnToLibrarylDescription,
+    returnToLibrarylbtn: selectorFile.css.ComproEngage.libraryEditorPage.returnToLibrarylbtn,
+    removingFromClassHeader: selectorFile.css.ComproEngage.libraryEditorPage.removingFromClassHeader,
+    removingFromClassSubHeader: selectorFile.css.ComproEngage.libraryEditorPage.removingFromClassSubHeader,
+    removeClassPanel: selectorFile.css.ComproEngage.libraryEditorPage.removeClassPanel,
+    removeAnywaybtn: selectorFile.css.ComproEngage.libraryEditorPage.removeAnywaybtn,
+    cancelbtnRemoveDialogue: selectorFile.css.ComproEngage.libraryEditorPage.cancelbtnRemoveDialogue,
+    closebtnRemoveAccess: selectorFile.css.ComproEngage.libraryEditorPage.closebtnRemoveAccess,
+    quizRemovedSuccessfullyHeader: selectorFile.css.ComproEngage.libraryEditorPage.quizRemovedSuccessfullyHeader,
+    quizRemovedSuccessfullySubHeader: selectorFile.css.ComproEngage.libraryEditorPage.quizRemovedSuccessfullySubHeader,
+    classIconModal: selectorFile.css.ComproEngage.libraryEditorPage.classIconModal,
+    classNameModal: selectorFile.css.ComproEngage.libraryEditorPage.classNameModal,
+    bookNameModal: selectorFile.css.ComproEngage.libraryEditorPage.bookNameModal,
+    bookIconModal: selectorFile.css.ComproEngage.libraryEditorPage.bookIconModal,
+    removedIconModal: selectorFile.css.ComproEngage.libraryEditorPage.removedIconModal,
+    donebtn: selectorFile.css.ComproEngage.libraryEditorPage.donebtn,
+    closebtnRemoveModal: selectorFile.css.ComproEngage.libraryEditorPage.closebtnRemoveModal,
+    dialogueHeaderAfterFinish: selectorFile.css.ComproEngage.libraryEditorPage.dialogueHeaderAfterFinish,
+    dialogueSubheaderAfterFinish: selectorFile.css.ComproEngage.libraryEditorPage.dialogueSubheaderAfterFinish,
+    whatdoyouwantTextinFinishQuiz: selectorFile.css.ComproEngage.libraryEditorPage.whatdoyouwantTextinFinishQuiz,
+    pushupdateToClasslblinFinishQuiz: selectorFile.css.ComproEngage.libraryEditorPage.pushupdateToClasslblinFinishQuiz,
+    pushupdateToClassIconinFinishQuiz: selectorFile.css.ComproEngage.libraryEditorPage.pushupdateToClassIconinFinishQuiz,
+    pushupdateToClassDescriptioninFinishQuiz: selectorFile.css.ComproEngage.libraryEditorPage.pushupdateToClassDescriptioninFinishQuiz,
+    pushupdateToClassbtninFinishQuiz: selectorFile.css.ComproEngage.libraryEditorPage.pushupdateToClassbtninFinishQuiz,
+    addToClasslblinFinishQuiz: selectorFile.css.ComproEngage.libraryEditorPage.addToClasslblinFinishQuiz,
+    addToClassIconinFinishQuiz: selectorFile.css.ComproEngage.libraryEditorPage.addToClassIconinFinishQuiz,
+    addToClassDescriptioninFinishQuiz: selectorFile.css.ComproEngage.libraryEditorPage.addToClassDescriptioninFinishQuiz,
+    addToClassbtninFinishQuiz: selectorFile.css.ComproEngage.libraryEditorPage.addToClassbtninFinishQuiz,
+    returnToLibrarylblinFinishQuiz: selectorFile.css.ComproEngage.libraryEditorPage.returnToLibrarylblinFinishQuiz,
+    returnToLibrarylIconinFinishQuiz: selectorFile.css.ComproEngage.libraryEditorPage.returnToLibrarylIconinFinishQuiz,
+    returnToLibrarylDescriptioninFinishQuiz: selectorFile.css.ComproEngage.libraryEditorPage.returnToLibrarylDescriptioninFinishQuiz,
+    returnToLibrarylbtninFinishQuiz: selectorFile.css.ComproEngage.libraryEditorPage.returnToLibrarylbtninFinishQuiz,
+    closebtninFinishQuiz: selectorFile.css.ComproEngage.libraryEditorPage.closebtninFinishQuiz,
+    quesNumber: selectorFile.css.ComproEngage.activityPlayer.quesNumber,
+
+    helpbtn: selectorFile.css.ComproEngage.libraryEditorPage.helpbtn,
+    takeEditorTourbtn: selectorFile.css.ComproEngage.libraryEditorPage.takeEditorTourbtn,
+    reportAProblembtn: selectorFile.css.ComproEngage.libraryEditorPage.reportAProblembtn,
+    helpCenterbtn: selectorFile.css.ComproEngage.libraryEditorPage.helpCenterbtn,
+    contentGuidelinesbtn: selectorFile.css.ComproEngage.libraryEditorPage.contentGuidelinesbtn,
 
     isInitialized: async function () {
         var res;
@@ -177,6 +237,7 @@ module.exports = {
     getData_publishedQuizPage: async function () {
         await logger.logInto(await stackTrace.get());
         var obj;
+        await action.waitForDisplayed(this.quizHeaderIcon)
         obj = {
             quizHeaderIcon: ((await action.getElementCount(this.quizHeaderIcon)) > 0) ? await action.waitForDisplayed(this.quizHeaderIcon) : false,
             quizHeaderName: ((await action.getElementCount(this.quizHeaderName)) > 0) ? await action.getText(this.quizHeaderName) : null,
@@ -227,14 +288,31 @@ module.exports = {
         }
         return obj;
     },
+    getData_QuizPageHeader: async function () {
+        await logger.logInto(await stackTrace.get());
+        var obj;
+        await action.waitForDisplayed(this.savedtoLibrarylbl);
+        obj = {
+            quizHeaderIcon: ((await action.getElementCount(this.quizHeaderIcon)) > 0) ? await action.waitForDisplayed(this.quizHeaderIcon) : false,
+            quizHeaderName: ((await action.getElementCount(this.quizHeaderName)) > 0) ? await action.getText(this.quizHeaderName) : null,
+            savedtoLibrarylbl: ((await action.getElementCount(this.savedtoLibrarylbl)) > 0) ? await action.getText(this.savedtoLibrarylbl) : null,
+            draftlbl: ((await action.getElementCount(this.draftlbl)) > 0) ? await action.getText(this.draftlbl) : null,
+            pageHeader: ((await action.getElementCount(this.pageHeader)) > 0) ? await action.getText(this.pageHeader) : null,
+            pageSubHeader: ((await action.getElementCount(this.pageSubHeader)) > 0) ? await action.getText(this.pageSubHeader) : null,
+            finishQuiz: ((await action.getElementCount(this.finishQuiz)) > 0) ? await action.getText(this.finishQuiz) : null,
+            previewbtn: ((await action.getElementCount(this.previewbtn)) > 0) ? await action.getText(this.previewbtn) : null,
+            versionNumber: ((await action.getElementCount(this.versionNumber)) > 0) ? await action.waitForDisplayed(this.versionNumber) : null,
 
+        }
+        return obj;
+    },
     getData_deleteQunDialogue: async function () {
         await logger.logInto(await stackTrace.get());
         var obj;
         obj = {
             deleteQuestionHeader: ((await action.getElementCount(this.deleteQuestionHeader)) > 0) ? await action.getText(this.deleteQuestionHeader) : null,
             deleteQuestionSubHeader: ((await action.getElementCount(this.deleteQuestionSubHeader)) > 0) ? await action.getText(this.deleteQuestionSubHeader) : null,
-            cancelbtn: ((await action.getElementCount(this.cancelbtn)) > 0) ? await action.getText(this.cancelbtn) : null,
+            canceldeleteQuestionbtn: ((await action.getElementCount(this.canceldeleteQuestionbtn)) > 0) ? await action.getText(this.canceldeleteQuestionbtn) : null,
             deleteQuestionbtn: ((await action.getElementCount(this.deleteQuestionbtn)) > 0) ? await action.getText(this.deleteQuestionbtn) : null,
         }
         return obj;
@@ -335,20 +413,24 @@ module.exports = {
         await logger.logInto(await stackTrace.get());
         var obj;
         await action.waitForDocumentLoad();
+        await action.waitForDisplayed(this.quesNumber)
         obj = {
             previewcontainer: ((await action.getElementCount(this.previewcontainer)) > 0) ? await action.getText(this.previewcontainer) : null,
             eyeIcon: ((await action.getElementCount(this.eyeIcon)) > 0) ? await action.waitForDisplayed(this.eyeIcon) : false,
             previeCloseIcon: ((await action.getElementCount(this.previeCloseIcon)) > 0) ? await action.waitForDisplayed(this.previeCloseIcon) : null,
+            quesNumber: ((await action.getElementCount(this.quesNumber)) > 0) ? await action.getText(this.quesNumber) : null,
+
         }
         return obj;
     },
     click_addtoClass_btn: async function () {
         await logger.logInto(await stackTrace.get());
         var res;
+        await action.waitForDisplayed(this.addtoClass_btn + " p")
         res = await action.click(this.addtoClass_btn);
         if (true == res) {
             await logger.logInto(await stackTrace.get(), " addtoClass_btn is clicked");
-            res= await this.getData_NewAccessPage();
+            res = await this.getData_NewAccessPage();
         }
         else {
             await logger.logInto(await stackTrace.get(), res + "addtoClass_btn is NOT clicked", 'error');
@@ -361,7 +443,7 @@ module.exports = {
         res = await action.click(this.edit_btn);
         if (true == res) {
             await logger.logInto(await stackTrace.get(), " edit_btn is clicked");
-            res= await this.getData_editMaterial_Modal()
+            res = await this.getData_editMaterial_Modal()
         }
         else {
             await logger.logInto(await stackTrace.get(), res + "edit_btn is NOT clicked", 'error');
@@ -479,6 +561,7 @@ module.exports = {
         res = await action.click(this.deletebtn);
         if (true == res) {
             await logger.logInto(await stackTrace.get(), " deletebtn is clicked");
+            await this.getData_deleteDialogue();
         }
         else {
             await logger.logInto(await stackTrace.get(), res + "deletebtn is NOT clicked", 'error');
@@ -1223,28 +1306,27 @@ module.exports = {
                 if ((await action.getText(this.ClassName + i)) == ClassNameName) {
                     obj[0] = {
                         classIcon: ((await action.getElementCount(this.classIcon + i + "]")) > 0) ? await action.getText(this.classIcon + i + "]") : null,
-                        selectClass: ((await action.getElementCount(this.selectClass + i + "]")) > 0) ? await action.getText(this.selectClass + i + "]") : null,
                         ClassName: ((await action.getElementCount(this.ClassName + i + "]")) > 0) ? await action.getText(this.ClassName + i + "]") : null,
                         bookName: ((await action.getElementCount(this.bookName + i + "]")) > 0) ? await action.getText(this.bookName + i + "]") : null,
                         bookImage: ((await action.getElementCount(this.bookImage + i + "]")) > 0) ? await action.getText(this.bookImage + i + "]") : null,
                         dropDown_btn: ((await action.getElementCount(this.dropDown_btn + i + "]")) > 0) ? await action.getText(this.dropDown_btn + i + "]") : null,
+                        classRadiobtn: ((await action.getElementCount(this.classRadiobtn + i + "]")) > 0) ? await action.waitForDisplayed(this.classRadiobtn + i + "]") : null,
+
                     }
                     break;
                 }
             }
-            obj.removeAccess_btn = ((await action.getElementCount(this.removeAccess_btn)) > 0) ? await action.getText(this.removeAccess_btn) : null
         } else {
             for (var i = 0; i < list.length; i++) {
                 obj[i] = {
                     classIcon: ((await action.getElementCount(this.classIcon + i + "]")) > 0) ? await action.getText(this.classIcon + i + "]") : null,
-                    selectClass: ((await action.getElementCount(this.selectClass + i + "]")) > 0) ? await action.getText(this.selectClass + i + "]") : null,
                     ClassName: ((await action.getElementCount(this.ClassName + i + "]")) > 0) ? await action.getText(this.ClassName + i + "]") : null,
+                    classRadiobtn: ((await action.getElementCount(this.classRadiobtn + i + "]")) > 0) ? await action.waitForDisplayed(this.classRadiobtn + i + "]") : null,
                     bookName: ((await action.getElementCount(this.bookName + i + "]")) > 0) ? await action.getText(this.bookName + i + "]") : null,
                     bookImage: ((await action.getElementCount(this.bookImage + i + "]")) > 0) ? await action.getText(this.bookImage + i + "]") : null,
                     dropDown_btn: ((await action.getElementCount(this.dropDown_btn + i + "]")) > 0) ? await action.getText(this.dropDown_btn + i + "]") : null,
                 }
             }
-            obj.removeAccess_btn = ((await action.getElementCount(this.removeAccess_btn)) > 0) ? await action.getText(this.removeAccess_btn) : null
         }
         return obj;
     },
@@ -1262,21 +1344,32 @@ module.exports = {
     getData_NewAccessPage: async function () {
         await logger.logInto(await stackTrace.get());
         var obj;
+        await action.waitForDisplayed(this.newAccess_Title);
         obj = {
             newAccess_Title: ((await action.getElementCount(this.newAccess_Title)) > 0) ? await action.getText(this.newAccess_Title) : null,
             newAccess_SubTitle: ((await action.getElementCount(this.newAccess_SubTitle)) > 0) ? await action.getText(this.newAccess_SubTitle) : null,
-            noAccessClassIcon: ((await action.getElementCount(this.noAccessClassIcon)) > 0) ? await action.getText(this.noAccessClassIcon) : null,
+            noAccessClassIcon: ((await action.getElementCount(this.noAccessClassIcon)) > 0) ? await action.waitForDisplayed(this.noAccessClassIcon) : null,
             noClassRemaining: ((await action.getElementCount(this.noClassRemaining)) > 0) ? await action.getText(this.noClassRemaining) : null,
             addtoClassDescription: ((await action.getElementCount(this.addtoClassDescription)) > 0) ? await action.getText(this.addtoClassDescription) : null,
             addnowbutton: ((await action.getElementCount(this.addnowbutton)) > 0) ? await action.getText(this.addnowbutton) : null,
             accessClosebtn: ((await action.getElementCount(this.accessClosebtn)) > 0) ? await action.waitForDisplayed(this.accessClosebtn) : null,
+            classList: [],
+        }
+        var i, list, res;
+        list = await action.findElements(this.selectClass);
+        for (var i = 0; i < list.length; i++) {
+            obj.classList[i] = {
+                ClassName: ((await action.getElementCount(this.ClassName + i + "]")) > 0) ? await action.getText(this.ClassName + i + "]") : null,
+            }
         }
         return obj;
+
     },
 
     getData_editMaterial_Modal: async function () {
         await logger.logInto(await stackTrace.get());
         var obj;
+        await action.waitForDisplayed(this.editMaterial_Title)
         obj = {
             editMaterial_Title: ((await action.getElementCount(this.editMaterial_Title)) > 0) ? await action.getText(this.editMaterial_Title) : null,
             editMaterial_SubTitle: ((await action.getElementCount(this.editMaterial_SubTitle)) > 0) ? await action.getText(this.editMaterial_SubTitle) : null,
@@ -1360,6 +1453,7 @@ module.exports = {
 
     click_selectClass: async function (ClassNameName) {
         await logger.logInto(await stackTrace.get());
+
         var i, list, res;
         list = await action.findElements(this.selectClass);
         for (i = 0; i < list.length; i++) {
@@ -1369,6 +1463,7 @@ module.exports = {
             }
         }
         if (res == true) {
+            res = await action.waitForEnabled(this.addnowbutton)
             await logger.logInto(await stackTrace.get(), " --selectClass clicked");
         }
         else
@@ -1421,10 +1516,22 @@ module.exports = {
         return res;
     },
 
-    click_removeAccess_btn: async function () {
+    click_removeAccess_btn: async function (ClassNameName) {
         await logger.logInto(await stackTrace.get());
         var res;
-        res = await action.click(this.removeAccess_btn);
+        await logger.logInto(await stackTrace.get());
+        console.log(ClassNameName)
+        var i, list, res;
+        list = await action.findElements(this.ClassName);
+        console.log(list.length)
+        for (i = 0; i < list.length; i++) {
+            console.log(await action.getText(this.ClassName + i + "]"))
+            if (((await action.getText(this.ClassName + i + "]"))) == ClassNameName) {
+                console.log(this.removeAccess_btn + i + "]")
+                res = await action.click(this.removeAccess_btn + i + "]");
+                break;
+            }
+        }
         if (true == res) {
             await logger.logInto(await stackTrace.get(), " removeAccess_btn is clicked");
         }
@@ -1440,6 +1547,7 @@ module.exports = {
         res = await action.click(this.addnowbutton);
         if (true == res) {
             await logger.logInto(await stackTrace.get(), " addnowbutton is clicked");
+            await this.getData_quizAddedPage();
         }
         else {
             await logger.logInto(await stackTrace.get(), res + "addnowbutton is NOT clicked", 'error');
@@ -1452,6 +1560,7 @@ module.exports = {
         var res;
         res = await action.click(this.accessClosebtn);
         if (true == res) {
+            await action.waitForDisplayed(this.addtoClass_btn);
             await logger.logInto(await stackTrace.get(), " accessClosebtn is clicked");
         }
         else {
@@ -1485,5 +1594,370 @@ module.exports = {
         }
         return res;
     },
+    getData_quizAddedPage: async function () {
+        await logger.logInto(await stackTrace.get());
+        var obj;
+        await action.waitForDisplayed(this.classIconModal)
+        obj = {
+            quizAddedsuccessfullyHeader: ((await action.getElementCount(this.quizAddedsuccessfullyHeader)) > 0) ? await action.getText(this.quizAddedsuccessfullyHeader) : null,
+            quizAddedsuccessfullySubHeader: ((await action.getElementCount(this.quizAddedsuccessfullySubHeader)) > 0) ? await action.getText(this.quizAddedsuccessfullySubHeader) : null,
+            classIconModal: ((await action.getElementCount(this.classIconModal)) > 0) ? await action.waitForDisplayed(this.classIconModal) : false,
+            classNameModal: ((await action.getElementCount(this.classNameModal)) > 0) ? await action.getText(this.classNameModal) : null,
+            bookNameModal: ((await action.getElementCount(this.bookNameModal)) > 0) ? await action.getText(this.bookNameModal) : null,
+            bookIconModal: ((await action.getElementCount(this.bookIconModal)) > 0) ? await action.waitForDisplayed(this.bookIconModal) : false,
+            addedIconModal: ((await action.getElementCount(this.addedIconModal)) > 0) ? await action.getText(this.addedIconModal) : false,
+            whatdoyouwantText: ((await action.getElementCount(this.whatdoyouwantText)) > 0) ? await action.getText(this.whatdoyouwantText) : null,
+            assignlbl: ((await action.getElementCount(this.assignlbl)) > 0) ? await action.getText(this.assignlbl) : null,
+            assignIcon: ((await action.getElementCount(this.assignIcon)) > 0) ? await action.waitForDisplayed(this.assignIcon) : false,
+            assignDescription: ((await action.getElementCount(this.assignDescription)) > 0) ? await action.getText(this.assignDescription) : null,
+            assignbtn: ((await action.getElementCount(this.assignbtn)) > 0) ? await action.getText(this.assignbtn) : null,
+            addToAnotherClasslbl: ((await action.getElementCount(this.addToAnotherClasslbl)) > 0) ? await action.getText(this.addToAnotherClasslbl) : null,
+            addToAnotherClassIcon: ((await action.getElementCount(this.addToAnotherClassIcon)) > 0) ? await action.waitForDisplayed(this.addToAnotherClassIcon) : false,
+            addToAnotherClassDescription: ((await action.getElementCount(this.addToAnotherClassDescription)) > 0) ? await action.getText(this.addToAnotherClassDescription) : null,
+            addToAnotherClassbtn: ((await action.getElementCount(this.addToAnotherClassbtn)) > 0) ? await action.getText(this.addToAnotherClassbtn) : null,
+            returnToLibrarylbl: ((await action.getElementCount(this.returnToLibrarylbl)) > 0) ? await action.getText(this.returnToLibrarylbl) : null,
+            returnToLibrarylIcon: ((await action.getElementCount(this.returnToLibrarylIcon)) > 0) ? await action.waitForDisplayed(this.returnToLibrarylIcon) : false,
+            returnToLibrarylDescription: ((await action.getElementCount(this.returnToLibrarylDescription)) > 0) ? await action.getText(this.returnToLibrarylDescription) : null,
+            returnToLibrarylbtn: ((await action.getElementCount(this.returnToLibrarylbtn)) > 0) ? await action.getText(this.returnToLibrarylbtn) : null,
+        }
+        return obj;
+    },
+
+    getData_removeAccessDialogue: async function () {
+        await logger.logInto(await stackTrace.get());
+        var obj;
+        await action.waitForDisplayed(this.removingFromClassHeader)
+        obj = {
+            removingFromClassHeader: ((await action.getElementCount(this.removingFromClassHeader)) > 0) ? await action.getText(this.removingFromClassHeader) : null,
+            removingFromClassSubHeader: ((await action.getElementCount(this.removingFromClassSubHeader)) > 0) ? await action.getText(this.removingFromClassSubHeader) : null,
+            removeClassPanel: ((await action.getElementCount(this.removeClassPanel)) > 0) ? await action.getText(this.removeClassPanel) : null,
+            removeAnywaybtn: ((await action.getElementCount(this.removeAnywaybtn)) > 0) ? await action.getText(this.removeAnywaybtn) : null,
+            cancelbtnRemoveDialogue: ((await action.getElementCount(this.cancelbtnRemoveDialogue)) > 0) ? await action.getText(this.cancelbtnRemoveDialogue) : null,
+            closebtnRemoveAccess: ((await action.getElementCount(this.closebtnRemoveAccess)) > 0) ? await action.waitForDisplayed(this.closebtnRemoveAccess) : null,
+        }
+        return obj;
+    },
+
+    getData_quizRemovedAccessPanel: async function () {
+        await logger.logInto(await stackTrace.get());
+        var obj;
+        await action.waitForDisplayed(this.quizRemovedSuccessfullyHeader)
+        obj = {
+            quizRemovedSuccessfullyHeader: ((await action.getElementCount(this.quizRemovedSuccessfullyHeader)) > 0) ? await action.getText(this.quizRemovedSuccessfullyHeader) : null,
+            quizRemovedSuccessfullySubHeader: ((await action.getElementCount(this.quizRemovedSuccessfullySubHeader)) > 0) ? await action.getText(this.quizRemovedSuccessfullySubHeader) : null,
+            classIconModal: ((await action.getElementCount(this.classIconModal)) > 0) ? await action.waitForDisplayed(this.classIconModal) : null,
+            classNameModal: ((await action.getElementCount(this.classNameModal)) > 0) ? await action.getText(this.classNameModal) : null,
+            bookNameModal: ((await action.getElementCount(this.bookNameModal)) > 0) ? await action.getText(this.bookNameModal) : null,
+            bookIconModal: ((await action.getElementCount(this.bookIconModal)) > 0) ? await action.waitForDisplayed(this.bookIconModal) : null,
+            removedIconModal: ((await action.getElementCount(this.removedIconModal)) > 0) ? await action.waitForDisplayed(this.removedIconModal) : null,
+            donebtn: ((await action.getElementCount(this.donebtn)) > 0) ? await action.getText(this.donebtn) : null,
+            closebtnRemoveModal: ((await action.getElementCount(this.closebtnRemoveModal)) > 0) ? await action.waitForDisplayed(this.closebtnRemoveModal) : null,
+        }
+        return obj;
+    },
+
+    getData_AfterFinishQuizDialogue: async function () {
+        await logger.logInto(await stackTrace.get());
+        var obj;
+        obj = {
+            dialogueHeaderAfterFinish: ((await action.getElementCount(this.dialogueHeaderAfterFinish)) > 0) ? await action.getText(this.dialogueHeaderAfterFinish) : null,
+            dialogueSubheaderAfterFinish: ((await action.getElementCount(this.dialogueSubheaderAfterFinish)) > 0) ? await action.getText(this.dialogueSubheaderAfterFinish) : null,
+            whatdoyouwantTextinFinishQuiz: ((await action.getElementCount(this.whatdoyouwantTextinFinishQuiz)) > 0) ? await action.getText(this.whatdoyouwantTextinFinishQuiz) : null,
+            pushupdateToClasslblinFinishQuiz: ((await action.getElementCount(this.pushupdateToClasslblinFinishQuiz)) > 0) ? await action.getText(this.pushupdateToClasslblinFinishQuiz) : null,
+            pushupdateToClassIconinFinishQuiz: ((await action.getElementCount(this.pushupdateToClassIconinFinishQuiz)) > 0) ? await action.waitForDisplayed(this.pushupdateToClassIconinFinishQuiz) : false,
+            pushupdateToClassDescriptioninFinishQuiz: ((await action.getElementCount(this.pushupdateToClassDescriptioninFinishQuiz)) > 0) ? await action.getText(this.pushupdateToClassDescriptioninFinishQuiz) : null,
+            pushupdateToClassbtninFinishQuiz: ((await action.getElementCount(this.pushupdateToClassbtninFinishQuiz)) > 0) ? await action.getText(this.pushupdateToClassbtninFinishQuiz) : null,
+            addToClasslblinFinishQuiz: ((await action.getElementCount(this.addToClasslblinFinishQuiz)) > 0) ? await action.getText(this.addToClasslblinFinishQuiz) : null,
+            addToClassIconinFinishQuiz: ((await action.getElementCount(this.addToClassIconinFinishQuiz)) > 0) ? await action.waitForDisplayed(this.addToClassIconinFinishQuiz) : false,
+            addToClassDescriptioninFinishQuiz: ((await action.getElementCount(this.addToClassDescriptioninFinishQuiz)) > 0) ? await action.getText(this.addToClassDescriptioninFinishQuiz) : null,
+            addToClassbtninFinishQuiz: ((await action.getElementCount(this.addToClassbtninFinishQuiz)) > 0) ? await action.getText(this.addToClassbtninFinishQuiz) : null,
+            returnToLibrarylblinFinishQuiz: ((await action.getElementCount(this.returnToLibrarylblinFinishQuiz)) > 0) ? await action.getText(this.returnToLibrarylblinFinishQuiz) : null,
+            returnToLibrarylIconinFinishQuiz: ((await action.getElementCount(this.returnToLibrarylIconinFinishQuiz)) > 0) ? await action.waitForDisplayed(this.returnToLibrarylIconinFinishQuiz) : false,
+            returnToLibrarylDescriptioninFinishQuiz: ((await action.getElementCount(this.returnToLibrarylDescriptioninFinishQuiz)) > 0) ? await action.getText(this.returnToLibrarylDescriptioninFinishQuiz) : null,
+            returnToLibrarylbtninFinishQuiz: ((await action.getElementCount(this.returnToLibrarylbtninFinishQuiz)) > 0) ? await action.getText(this.returnToLibrarylbtninFinishQuiz) : null,
+            closebtninFinishQuiz: ((await action.getElementCount(this.closebtninFinishQuiz)) > 0) ? await action.getText(this.closebtninFinishQuiz) : null,
+        }
+        return obj;
+    },
+
+
+    click_assignbtn: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.assignbtn);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " assignbtn is clicked");
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "assignbtn is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_addToAnotherClassbtn: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.addToAnotherClassbtn);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " addToAnotherClassbtn is clicked");
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "addToAnotherClassbtn is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_returnToLibrarylbtn: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.returnToLibrarylbtn);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " returnToLibrarylbtn is clicked");
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "returnToLibrarylbtn is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_removeAnywaybtn: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.removeAnywaybtn);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " removeAnywaybtn is clicked");
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "removeAnywaybtn is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_canceldeleteQuestionbtn: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.canceldeleteQuestionbtn);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " cancelbtn is clicked");
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "cancelbtn is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_closebtnRemoveAccess: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.closebtnRemoveAccess);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " closebtnRemoveAccess is clicked");
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "closebtnRemoveAccess is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_donebtn: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.donebtn);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " donebtn is clicked");
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "donebtn is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_closebtnRemoveModal: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.closebtnRemoveModal);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " closebtnRemoveModal is clicked");
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "closebtnRemoveModal is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_pushupdateToClassbtninFinishQuiz: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.pushupdateToClassbtninFinishQuiz);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " pushupdateToClassbtninFinishQuiz is clicked");
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "pushupdateToClassbtninFinishQuiz is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_addToClassbtninFinishQuiz: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.addToClassbtninFinishQuiz);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " addToClassbtninFinishQuiz is clicked");
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "addToClassbtninFinishQuiz is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_returnToLibrarylbtninFinishQuiz: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.returnToLibrarylbtninFinishQuiz);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " returnToLibrarylbtninFinishQuiz is clicked");
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "returnToLibrarylbtninFinishQuiz is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_closebtninFinishQuiz: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.closebtninFinishQuiz);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " closebtninFinishQuiz is clicked");
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "closebtninFinishQuiz is NOT clicked", 'error');
+        }
+        return res;
+    },
+    getData_addToClassPage: async function (ClassNameName) {
+        await logger.logInto(await stackTrace.get());
+        var obj;
+        obj = {
+            manageAccess_Title: ((await action.getElementCount(this.manageAccess_Title)) > 0) ? await action.getText(this.manageAccess_Title) : null,
+            manageAccess_SubTitle: ((await action.getElementCount(this.manageAccess_SubTitle)) > 0) ? await action.getText(this.manageAccess_SubTitle) : null,
+            close_btn: ((await action.getElementCount(this.close_btn)) > 0) ? await action.getText(this.close_btn) : null,
+            newAccess_btn: ((await action.getElementCount(this.newAccess_btn)) > 0) ? await action.getText(this.newAccess_btn) : null,
+            pill_number: ((await action.getElementCount(this.pill_number)) > 0) ? await action.getText(this.pill_number) : null,
+            classAccessHeader: ((await action.getElementCount(this.classAccessHeader)) > 0) ? await action.getText(this.classAccessHeader) : null,
+            done_btn: ((await action.getElementCount(this.done_btn)) > 0) ? await action.getText(this.done_btn) : null,
+            classList: []
+        }
+        await action.waitForDisplayed(this.ClassName);
+        var list = await action.findElements(this.ClassName);
+        if (ClassNameName) {
+            for (var i = 0; i < list.length; i++) {
+                if ((await action.getText(this.ClassName + i)) == ClassNameName) {
+                    obj.classList[0] = {
+                        classIcon: ((await action.getElementCount(this.classIcon + i + "]")) > 0) ? await action.getText(this.classIcon + i + "]") : null,
+                        ClassName: ((await action.getElementCount(this.ClassName + i + "]")) > 0) ? await action.getText(this.ClassName + i + "]") : null,
+                        bookName: ((await action.getElementCount(this.bookName + i + "]")) > 0) ? await action.getText(this.bookName + i + "]") : null,
+                        bookImage: ((await action.getElementCount(this.bookImage + i + "]")) > 0) ? await action.getText(this.bookImage + i + "]") : null,
+                        removeAccess_btn: ((await action.getElementCount(this.removeAccess_btn + i + "]")) > 0) ? await action.getText(this.removeAccess_btn + i + "]") : null,
+                    }
+                    break;
+                }
+            }
+        } else {
+            for (var i = 0; i < list.length; i++) {
+                obj[i] = {
+                    classIcon: ((await action.getElementCount(this.classIcon + i + "]")) > 0) ? await action.getText(this.classIcon + i + "]") : null,
+                    ClassName: ((await action.getElementCount(this.ClassName + i + "]")) > 0) ? await action.getText(this.ClassName + i + "]") : null,
+                    classRadiobtn: ((await action.getElementCount(this.classRadiobtn + i + "]")) > 0) ? await action.waitForDisplayed(this.classRadiobtn + i + "]") : null,
+                    bookName: ((await action.getElementCount(this.bookName + i + "]")) > 0) ? await action.getText(this.bookName + i + "]") : null,
+                    bookImage: ((await action.getElementCount(this.bookImage + i + "]")) > 0) ? await action.getText(this.bookImage + i + "]") : null,
+                    dropDown_btn: ((await action.getElementCount(this.dropDown_btn + i + "]")) > 0) ? await action.getText(this.dropDown_btn + i + "]") : null,
+                }
+            }
+        }
+        return obj;
+    },
+    getData_helpMenuList: async function () {
+        await logger.logInto(await stackTrace.get());
+        var obj;
+        obj = {
+            takeEditorTourbtn: ((await action.getElementCount(this.takeEditorTourbtn)) > 0) ? await action.getText(this.takeEditorTourbtn) : null,
+            reportAProblembtn: ((await action.getElementCount(this.reportAProblembtn)) > 0) ? await action.getText(this.reportAProblembtn) : null,
+            helpCenterbtn: ((await action.getElementCount(this.helpCenterbtn)) > 0) ? await action.getText(this.helpCenterbtn) : null,
+            contentGuidelinesbtn: ((await action.getElementCount(this.contentGuidelinesbtn)) > 0) ? await action.getText(this.contentGuidelinesbtn) : null,
+        }
+        return obj;
+    },
+
+
+    click_helpbtn: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.helpbtn);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " helpbtn is clicked");
+            res = await this.getData_helpMenuList();
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "helpbtn is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_takeEditorTourbtn: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.takeEditorTourbtn);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " takeEditorTourbtn is clicked");
+            res = await require('./editorTour.page').isInitialized();
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "takeEditorTourbtn is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_reportAProblembtn: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.reportAProblembtn);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " reportAProblembtn is clicked");
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "reportAProblembtn is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_helpCenterbtn: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.helpCenterbtn);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " helpCenterbtn is clicked");
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "helpCenterbtn is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_contentGuidelinesbtn: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.contentGuidelinesbtn);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " contentGuidelinesbtn is clicked");
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "contentGuidelinesbtn is NOT clicked", 'error');
+        }
+        return res;
+    }
+
+
 }
 

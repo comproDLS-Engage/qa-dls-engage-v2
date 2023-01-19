@@ -234,6 +234,36 @@
 				"status": "",
 				"studentCount": 0,
 				"info": ""
+			},
+			"adminToolClass":{
+				"name": "free book class",
+				"key": "7gd4-WbHJ",
+				"classDuration": "Sep 17, 2021 - Sep 16, 2022",
+				"instructor": {
+					"name": "",
+					"email": ""
+				},
+				"bookName": "QA Book 13",
+				"bookIndex":"0",
+				"schoolName": "",
+				"status": "",
+				"studentCount": 0,
+				"info": ""
+			},
+			"studentArchiveClass2":{
+				"name": "Archive class with Student",
+				"key": "",
+				"classDuration": "Jun 16, 2021 - Nov 04, 2022",
+				"instructor": {
+					"name": "",
+					"email": ""
+				},
+				"bookName": "QA Test Automation Book [DO NOT MODIFY]",
+				"bookIndex":"0",
+				"schoolName": "",
+				"status": "",
+				"studentCount": 1,
+				"info": ""
 			}
 		}
 	}

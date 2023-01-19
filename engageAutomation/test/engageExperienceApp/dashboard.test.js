@@ -309,15 +309,13 @@ module.exports = {
     ENG_DASH_TC_40: async function (testdata) {
         sts = await dashboardPage.click_materialTitleBtn(testdata[0]);
         await assertion.assertEqual(sts, true, "click_materialTitleBtn status mismatch");
-        sts = await require("../../pages/engageExperienceApp/libraryEditor.page").getData_blankQuizPage();
+        sts = await require("../../pages/engageExperienceApp/libraryEditor.page").getData_QuizPageHeader();
         await assertion.assertEqual(sts.quizHeaderIcon, true);
         await assertion.assertEqual(sts.quizHeaderName, testdata[0]);
         await assertion.assertEqual(sts.savedtoLibrarylbl, testdata[1].savedtoLibrarylbl);
         await assertion.assertEqual(sts.draftlbl, testdata[1].draftlbl);
         await assertion.assertEqual(sts.pageHeader, testdata[1].pageHeader);
         await assertion.assertEqual(sts.pageSubHeader, testdata[1].pageSubHeader);
-        await assertion.assertEqual(sts.multipleChoicetab, testdata[1].multipleChoicelbl);
-        await assertion.assertEqual(sts.texttab, testdata[1].textChoicelbl);
         await assertion.assertEqual(sts.finishQuiz, testdata[1].finishQuiz);
     },
 

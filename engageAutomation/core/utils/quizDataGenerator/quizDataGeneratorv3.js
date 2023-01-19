@@ -111,7 +111,6 @@ function getQuesdetail(qJson, obj) {
     }*/
     //obj.maxOptions = quesOptions.length;
     var quesValidations = qJson.data.itemBody.validations;
-
     if (obj.quesType == 'multi-mcqsr-itemplayer' || obj.quesType == 'mcqmr-itemplayer' || obj.quesType == 'kids-mcqsr-itemplayer') {
         Object.keys(qJson.data.itemBody.questions).forEach(function (i) {
             let quesOptions = [];
@@ -170,9 +169,9 @@ function getQuesdetail(qJson, obj) {
         })
     }
 
-    else if (obj.quesType == 'fibdropdown-itemplayer' || 'kids-fibdropdown-itemplayer') {
-        quesRC = qJson.data.itemBody.responseContainer;
-        quesOptions = qJson.data.itemBody.options;
+    else if (obj.quesType == 'fibdropdown-itemplayer' || obj.quesType == 'kids-fibdropdown-itemplayer') {
+        var quesRC = qJson.data.itemBody.responseContainer;
+        var quesOptions = qJson.data.itemBody.options;
         Object.keys(quesRC).forEach(function (j) {
             obj.answerKey[j] = [];
             obj.answerKey[j][0] = quesRC[j].id;
@@ -218,6 +217,8 @@ function getQuesdetail(qJson, obj) {
             })
         })
     }*/
+
+
     else if (obj.quesType == 'orderlist-itemplayer') {
         Object.keys(quesOptions).forEach(function (j) {
             obj.answerKey[j] = [];

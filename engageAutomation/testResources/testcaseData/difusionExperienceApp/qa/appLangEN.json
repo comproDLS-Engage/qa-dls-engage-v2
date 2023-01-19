@@ -903,38 +903,18 @@
             },
             "downloadPlayer": {
                 "teacher": {
-                    "downPlayer_img": true,
-                    "downPlayer_title": "Download word",
-                    "resourceLabel": "Download Resource",
-                    "downPlayer_subtitle": "Download file to view this resource on your computer.",
-                    "downloadBtn": [
-                        "Download Document",
-                        "Download ZIP",
-                        "Download PDF",
-                        "Download Excel"
-                    ],
-                    "downInfoLabel": "Download Information",
-                    "fileLabel": "File",
-                    "typeLabel": "Type",
-                    "sizeLabel": "Size",
-                    "viewBtn": "View PDF"
+                    "downPlayerImg": true,
+                    "downResHeading": "Download Resource",
+                    "downResSubheading": "Download file to view this resource on your device",
+                    "openWithBrowserBtn": "Open with Browser",
+                    "downloadBtn": "Download"
                 },
                 "student": {
-                    "downPlayer_img": true,
-                    "downPlayer_title": "Download word",
-                    "resourceLabel": "Download Resource",
-                    "downPlayer_subtitle": "Download file to view this resource on your computer.",
-                    "downloadBtn": [
-                        "Download Document",
-                        "Download ZIP",
-                        "Download PDF",
-                        "Download Excel"
-                    ],
-                    "downInfoLabel": "Download Information",
-                    "fileLabel": "File",
-                    "typeLabel": "Type",
-                    "sizeLabel": "Size",
-                    "viewBtn": "View PDF"
+                    "downPlayerImg": true,
+                    "downResHeading": "Download Resource",
+                    "downResSubheading": "Download file to view this resource on your device",
+                    "openWithBrowserBtn": "Open with Browser",
+                    "downloadBtn": "Download"
                 }
             },
             "contentPlayer": {
@@ -1566,7 +1546,7 @@
                     "duplicate_msg": "Question has been successfully copied.",
                     "added_msg": "Question has been successfully added.",
                     "deleteQuestionHeader": "Are you sure you want to delete this question?",
-                    "deleteQuestionSubHeader": "This will remove the question \"Question Title\" from your \"Quiz\"",
+                    "deleteQuestionSubHeader": "This will remove the question ",
                     "cancelbtn": "Cancel",
                     "deleteQuestionbtn": "Delete Question",
                     "studentView": "Student View",
@@ -1597,7 +1577,42 @@
                     "editMaterial_Note": "Note: You will have an option to push your updates after you finish editing.",
                     "editMaterial_Cancel": "Cancel",
                     "editMaterial_ContinueToEdit": "Continue to Edit",
-                    "Snackbar_DeleteMessage_Text":"Success \n1 library item has been successfully deleted."
+                    "Snackbar_DeleteMessage_Text": "Success \n1 library item has been successfully deleted.",
+                    "quizAddedsuccessfullyHeader": "Quiz Added Successfully |",
+                    "quizAddedsuccessfullySubHeader": "This material has been added to",
+                    "addedIconModal": "Added",
+                    "whatdoyouwantText": "What do you want to do next?",
+                    "assignlbl": "Assign",
+                    "assignDescription": "Assign this material to the students of your class.",
+                    "addToAnotherClasslbl": "Add to Another Class",
+                    "addToAnotherClassDescription": "Add this material to your class to make it assignable in that class.",
+                    "returnToLibrarylbl": "Return to Library",
+                    "returnToLibrarylDescription": "Go back to library to review and manage your materials.",
+                    "removingFromClassHeader": "Removing from Class?",
+                    "removingFromClassSubHeader1": "Removing this material from ",
+                    "removingFromClassSubHeader2": " will restrict the student's access to this quiz in the class and assignment views.",
+                    "removeClassPanel": "This will erase any progress of students who have already completed this activity and exclude this activity from the assignments in this class.",
+                    "removeAnywaybtn": "Remove Anyway",
+                    "cancelbtnRemoveDialogue": "Cancel",
+                    "quizRemovedSuccessfullyHeader": "Quiz Removed Successfully | ",
+                    "quizRemovedSuccessfullySubHeader": "This material has been removed from ",
+                    "removedIconModal": "Removed",
+                    "donebtn": "Done",
+                    "dialogueSubheaderAfterFinish": "This material is now ready for use in your class.",
+                    "whatdoyouwantTextinFinishQuiz": "What do you want to do next?",
+                    "pushupdateToClasslblinFinishQuiz": "Push updates to Class",
+                    "pushupdateToClassDescriptioninFinishQuiz": "Update this quiz in the class where it's already added.",
+                    "addToClasslblinFinishQuiz": "Add to Class",
+                    "addToClassDescriptioninFinishQuiz": "Add this material to your class to make it assignable in that class.",
+                    "returnToLibrarylblinFinishQuiz": "Return to Library",
+                    "returnToLibrarylDescriptioninFinishQuiz": "Go back to library to review and manage your materials.",
+                    "addToClass_Title": "Add to Class",
+                    "addToClass_SubTitle": "Manage which classes have access to this material.",
+                    "quesNumber": "3 of 3",
+                    "takeEditorTourbtn": "Take Editor Tour",
+                    "reportAProblembtn": "Report a Problem",
+                    "helpCenterbtn": "Help Center",
+                    "contentGuidelinesbtn": "Content Guidelines"
                 },
                 "student": {}
             },
@@ -1666,6 +1681,113 @@
                     "search_NoResult_subTitle": "We didn't find anything matching your search or filters. Try your search again, or change your filters to update the results here.",
                     "searchCount": " result:",
                     "noSearchCount": " results"
+                },
+                "student": {}
+            },
+            "voicePlayer": {
+                "teacher": {
+                    "recordTxt": "Press the button below to record your response.",
+                    "recordBtn": "Record",
+                    "recordingTxt": "Recording",
+                    "recordingBtn": "Recording",
+                    "pausedTxt": "Press Continue to resume recording.",
+                    "rerecordBtn": "Re-record",
+                    "doneBtn": "Done",
+                    "continueBtn": "Continue",
+                    "remainingTimeTxt": [
+                        null,
+                        "secs remaining..."
+                    ],
+                    "previewTxt": "Listen to the recording below.",
+                    "limitInfoTxt": "Time Limit Reached!",
+                    "restartInfoTxt": "Click Done to save your recording or Re-record to start again.",
+                    "dialogHeading": "Re-record?",
+                    "dialogContent": "Are you sure you want to record again? You will lose your current recording.",
+                    "dialogCancelBtn": "No",
+                    "dialogAcceptBtn": "Yes",
+                    "snackbarTxt": "You have successfully recorded your answer."
+                },
+                "student": {
+                    "recordTxt": "Press the button below to record your response.",
+                    "recordBtn": "Record",
+                    "recordingTxt": "Recording",
+                    "recordingBtn": "Recording",
+                    "pausedTxt": "Press Continue to resume recording.",
+                    "rerecordBtn": "Re-record",
+                    "doneBtn": "Done",
+                    "continueBtn": "Continue",
+                    "remainingTimeTxt": [
+                        null,
+                        "secs remaining..."
+                    ],
+                    "previewTxt": "Listen to the recording below.",
+                    "limitInfoTxt": "Time Limit Reached!",
+                    "restartInfoTxt": "Click Done to save your recording or Re-record to start again.",
+                    "dialogHeading": "Re-record?",
+                    "dialogContent": "Are you sure you want to record again? You will lose your current recording.",
+                    "dialogCancelBtn": "No",
+                    "dialogAcceptBtn": "Yes",
+                    "snackbarTxt": "You have successfully recorded your answer."
+                }
+            },
+            "editorTour": {
+                "teacher": {
+                    "step0Title": "Let’s fill out the quiz content!",
+                    "step0Subtitle": "Use images, videos, audio, and text to enhance your teaching materials. Start the tour to see what you can use in your Engage quiz:",
+                    "dontShowCheckbox": "Don’t show me this anymore",
+                    "dismissBtn": "Dismiss",
+                    "startTourBtn": "Start Tour",
+                    "exitBtn": "Exit",
+                    "nextBtn": "Next",
+                    "backBtn": "Back",
+                    "step1Title": [
+                        "Question",
+                        "Question"
+                    ],
+                    "step1Subtitle": [
+                        "All the pages of a quiz include a question that is the first thing students see on the page. You should enter a clear and direct question for your students.",
+                        "All the pages of a quiz include a question that is the first thing students see on the page. You should enter a clear and direct question for your students."
+                    ],
+                    "step2Title": [
+                        "In This Activity",
+                        "In This Activity"
+                    ],
+                    "step2Subtitle": [
+                        "Use this field to add a more detailed description when extra context is needed to understand the task students need to complete.",
+                        "Use this field to add a more detailed description when extra context is needed to understand the task students need to complete."
+                    ],
+                    "step3Title": [
+                        "Media",
+                        "Media"
+                    ],
+                    "step3Subtitle": [
+                        "Use media prompts to upload or link additional images, videos, or audio that are meaningful for this activity.",
+                        "Use media prompts to upload or link additional images, videos, or audio that are meaningful for this activity."
+                    ],
+                    "step4Title": [
+                        "Text",
+                        "Text"
+                    ],
+                    "step4Subtitle": [
+                        "Use text prompts to add longer text. You'll find editing options to format your text as needed.",
+                        "Use text prompts to add longer text. You'll find editing options to format your text as needed."
+                    ],
+                    "step5Title": [
+                        "Answer Options",
+                        "Subquestion"
+                    ],
+                    "step5Subtitle": [
+                        "Use answer options to add multiple options and mark the correct one by clicking or tapping the check mark symbol . Use the symbol to reorder the options.",
+                        "Add subquestion text to provide additional details to aid student response."
+                    ],
+                    "step6Title": [
+                        null,
+                        "Settings"
+                    ],
+                    "step6Subtitle": [
+                        null,
+                        "Use long answer toggle to allow long student responses. Use file upload toggle to allow students to attach files to their responses."
+                    ]
                 },
                 "student": {}
             }

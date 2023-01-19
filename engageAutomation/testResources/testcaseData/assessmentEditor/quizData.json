@@ -297,7 +297,7 @@
           "score":"4",
           "quesTitle": "Orderlist",
           "instructionText": "Arrange the options in the correct order",
-          "questionText": "Make a Bond title by putting these four words in the correct order",
+          "promptText": "Make a Bond title by putting these four words in the correct order",
           "options": [
             "From",
             "Russia",
@@ -392,7 +392,17 @@
          ["2","5","100","placeHolder Text2"]
         ]
       }
-      ]
+      ],
+      "voiceRecorder": [
+        {
+          "questionIndex": 3,
+          "score":"10",
+          "buttonName": "speakingquestion",
+          "questionTitle": "Lorem Ipsum",
+          "questionInstruction": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac hendrerit lacus.",
+          "questionText":  " "
+        }
+        ]
     
   },  
     "kidsQuestion":{

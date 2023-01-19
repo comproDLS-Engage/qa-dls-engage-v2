@@ -5,26 +5,22 @@ var appShellPage = require('./appShell.page.js')
 
 module.exports = {
 
-    downPlayer_img: selectorFile.css.ComproEngage.downloadPlayer.downPlayer_img,
-    downPlayer_title: selectorFile.css.ComproEngage.downloadPlayer.downPlayer_title,
-    resourceLabel: selectorFile.css.ComproEngage.downloadPlayer.resourceLabel,
-    downPlayer_subtitle: selectorFile.css.ComproEngage.downloadPlayer.downPlayer_subtitle,
-    downloadBtn: selectorFile.css.ComproEngage.downloadPlayer.downloadBtn,
-    downInfoLabel: selectorFile.css.ComproEngage.downloadPlayer.downInfoLabel,
-    fileLabel: selectorFile.css.ComproEngage.downloadPlayer.fileLabel,
+    downPlayerImg: selectorFile.css.ComproEngage.downloadPlayer.downPlayerImg,
+    downPlayerTitle: selectorFile.css.ComproEngage.downloadPlayer.downPlayerTitle,
+    downPlayerSubtitle: selectorFile.css.ComproEngage.downloadPlayer.downPlayerSubtitle,
+    downResHeading: selectorFile.css.ComproEngage.downloadPlayer.downResHeading,
+    downResSubheading: selectorFile.css.ComproEngage.downloadPlayer.downResSubheading,
     fileName: selectorFile.css.ComproEngage.downloadPlayer.fileName,
-    typeLabel: selectorFile.css.ComproEngage.downloadPlayer.typeLabel,
-    fileType: selectorFile.css.ComproEngage.downloadPlayer.fileType,
-    sizeLabel: selectorFile.css.ComproEngage.downloadPlayer.sizeLabel,
     fileSize: selectorFile.css.ComproEngage.downloadPlayer.fileSize,
-    viewBtn: selectorFile.css.ComproEngage.downloadPlayer.viewBtn,
+    openWithBrowserBtn: selectorFile.css.ComproEngage.downloadPlayer.openWithBrowserBtn,
+    downloadBtn: selectorFile.css.ComproEngage.downloadPlayer.downloadBtn,
 
     isInitialized: async function () {
         var res;
         await logger.logInto(await stackTrace.get());
         await action.waitForDocumentLoad();
         res = {
-            pageStatus: await action.waitForDisplayed(this.downPlayer_img),
+            pageStatus: await action.waitForDisplayed(this.downPlayerImg),
             appShellPage: await appShellPage.isInitialized()
         };
         return res;
@@ -34,22 +30,31 @@ module.exports = {
         await logger.logInto(await stackTrace.get());
         var obj;
         obj = {
-            downPlayer_img: ((await action.getElementCount(this.downPlayer_img)) > 0) ? await action.waitForDisplayed(this.downPlayer_img) : false,
-            downPlayer_title: ((await action.getElementCount(this.downPlayer_title)) > 0) ? await action.getText(this.downPlayer_title) : null,
-            resourceLabel: ((await action.getElementCount(this.resourceLabel)) > 0) ? await action.getText(this.resourceLabel) : null,
-            downPlayer_subtitle: ((await action.getElementCount(this.downPlayer_subtitle)) > 0) ? await action.getText(this.downPlayer_subtitle) : null,
-            downloadBtn: ((await action.getElementCount(this.downloadBtn)) > 0) ? await action.getText(this.downloadBtn) : null,
-            downInfoLabel: ((await action.getElementCount(this.downInfoLabel)) > 0) ? await action.getText(this.downInfoLabel) : null,
-            fileLabel: ((await action.getElementCount(this.fileLabel)) > 0) ? await action.getText(this.fileLabel) : null,
+            downPlayerImg: ((await action.getElementCount(this.downPlayerImg)) > 0) ? await action.waitForDisplayed(this.downPlayerImg) : false,
+            downPlayerTitle: ((await action.getElementCount(this.downPlayerTitle)) > 0) ? await action.getText(this.downPlayerTitle) : null,
+            downPlayerSubtitle: ((await action.getElementCount(this.downPlayerSubtitle)) > 0) ? await action.getText(this.downPlayerSubtitle) : null,
+            downResHeading: ((await action.getElementCount(this.downResHeading)) > 0) ? await action.getText(this.downResHeading) : null,
+            downResSubheading: ((await action.getElementCount(this.downResSubheading)) > 0) ? await action.getText(this.downResSubheading) : null,
             fileName: ((await action.getElementCount(this.fileName)) > 0) ? await action.getText(this.fileName) : null,
-            typeLabel: ((await action.getElementCount(this.typeLabel)) > 0) ? await action.getText(this.typeLabel) : null,
-            fileType: ((await action.getElementCount(this.fileType)) > 0) ? await action.getText(this.fileType) : null,
-            sizeLabel: ((await action.getElementCount(this.sizeLabel)) > 0) ? await action.getText(this.sizeLabel) : null,
             fileSize: ((await action.getElementCount(this.fileSize)) > 0) ? await action.getText(this.fileSize) : null,
-            viewBtn: ((await action.getElementCount(this.viewBtn)) > 0) ? await action.getText(this.viewBtn) : null,
-            downloadBtn_isClickable: ((await action.getElementCount(this.downloadBtn)) > 0) ? await action.isClickable(this.downloadBtn) : null //manually added
+            openWithBrowserBtn: ((await action.getElementCount(this.openWithBrowserBtn)) > 0) ? await action.getText(this.openWithBrowserBtn) : null,
+            downloadBtn: ((await action.getElementCount(this.downloadBtn)) > 0) ? await action.getText(this.downloadBtn) : null
+            //downloadBtn_isClickable: ((await action.getElementCount(this.downloadBtn)) > 0) ? await action.isClickable(this.downloadBtn) : null //manually added
         }
         return obj;
+    },
+
+    click_openWithBrowserBtn: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.openWithBrowserBtn);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " openWithBrowserBtn is clicked");
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "openWithBrowserBtn is NOT clicked", 'error');
+        }
+        return res;
     },
 
     click_downloadBtn: async function () {
@@ -63,19 +68,6 @@ module.exports = {
             await logger.logInto(await stackTrace.get(), res + "downloadBtn is NOT clicked", 'error');
         }
         return res;
-    },
-
-    click_viewBtn: async function () {
-        await logger.logInto(await stackTrace.get());
-        var res;
-        res = await action.click(this.viewBtn);
-        if (true == res) {
-            await logger.logInto(await stackTrace.get(), " viewBtn is clicked");
-        }
-        else {
-            await logger.logInto(await stackTrace.get(), res + "viewBtn is NOT clicked", 'error');
-        }
-        return res;
-    },
+    }
     
 }
