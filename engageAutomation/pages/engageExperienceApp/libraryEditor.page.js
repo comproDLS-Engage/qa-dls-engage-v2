@@ -197,6 +197,12 @@ module.exports = {
     closebtninFinishQuiz: selectorFile.css.ComproEngage.libraryEditorPage.closebtninFinishQuiz,
     quesNumber: selectorFile.css.ComproEngage.activityPlayer.quesNumber,
 
+    helpbtn: selectorFile.css.ComproEngage.libraryEditorPage.helpbtn,
+    takeEditorTourbtn: selectorFile.css.ComproEngage.libraryEditorPage.takeEditorTourbtn,
+    reportAProblembtn: selectorFile.css.ComproEngage.libraryEditorPage.reportAProblembtn,
+    helpCenterbtn: selectorFile.css.ComproEngage.libraryEditorPage.helpCenterbtn,
+    contentGuidelinesbtn: selectorFile.css.ComproEngage.libraryEditorPage.contentGuidelinesbtn,
+
     isInitialized: async function () {
         var res;
         await logger.logInto(await stackTrace.get());
@@ -413,7 +419,7 @@ module.exports = {
             eyeIcon: ((await action.getElementCount(this.eyeIcon)) > 0) ? await action.waitForDisplayed(this.eyeIcon) : false,
             previeCloseIcon: ((await action.getElementCount(this.previeCloseIcon)) > 0) ? await action.waitForDisplayed(this.previeCloseIcon) : null,
             quesNumber: ((await action.getElementCount(this.quesNumber)) > 0) ? await action.getText(this.quesNumber) : null,
-  
+
         }
         return obj;
     },
@@ -1554,7 +1560,7 @@ module.exports = {
         var res;
         res = await action.click(this.accessClosebtn);
         if (true == res) {
-           await action.waitForDisplayed(this.addtoClass_btn);
+            await action.waitForDisplayed(this.addtoClass_btn);
             await logger.logInto(await stackTrace.get(), " accessClosebtn is clicked");
         }
         else {
@@ -1872,6 +1878,84 @@ module.exports = {
         }
         return obj;
     },
+    getData_helpMenuList: async function () {
+        await logger.logInto(await stackTrace.get());
+        var obj;
+        obj = {
+            takeEditorTourbtn: ((await action.getElementCount(this.takeEditorTourbtn)) > 0) ? await action.getText(this.takeEditorTourbtn) : null,
+            reportAProblembtn: ((await action.getElementCount(this.reportAProblembtn)) > 0) ? await action.getText(this.reportAProblembtn) : null,
+            helpCenterbtn: ((await action.getElementCount(this.helpCenterbtn)) > 0) ? await action.getText(this.helpCenterbtn) : null,
+            contentGuidelinesbtn: ((await action.getElementCount(this.contentGuidelinesbtn)) > 0) ? await action.getText(this.contentGuidelinesbtn) : null,
+        }
+        return obj;
+    },
+
+
+    click_helpbtn: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.helpbtn);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " helpbtn is clicked");
+            res = await this.getData_helpMenuList();
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "helpbtn is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_takeEditorTourbtn: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.takeEditorTourbtn);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " takeEditorTourbtn is clicked");
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "takeEditorTourbtn is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_reportAProblembtn: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.reportAProblembtn);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " reportAProblembtn is clicked");
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "reportAProblembtn is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_helpCenterbtn: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.helpCenterbtn);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " helpCenterbtn is clicked");
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "helpCenterbtn is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_contentGuidelinesbtn: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.contentGuidelinesbtn);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " contentGuidelinesbtn is clicked");
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "contentGuidelinesbtn is NOT clicked", 'error');
+        }
+        return res;
+    }
 
 
 }
