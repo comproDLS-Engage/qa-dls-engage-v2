@@ -903,38 +903,18 @@
             },
             "downloadPlayer": {
                 "teacher": {
-                    "downPlayer_img": true,
-                    "downPlayer_title": "Download word",
-                    "resourceLabel": "Download Resource",
-                    "downPlayer_subtitle": "Download file to view this resource on your computer.",
-                    "downloadBtn": [
-                        "Download Document",
-                        "Download ZIP",
-                        "Download PDF",
-                        "Download Excel"
-                    ],
-                    "downInfoLabel": "Download Information",
-                    "fileLabel": "File",
-                    "typeLabel": "Type",
-                    "sizeLabel": "Size",
-                    "viewBtn": "View PDF"
+                    "downPlayerImg": true,
+                    "downResHeading": "Download Resource",
+                    "downResSubheading": "Download file to view this resource on your device",
+                    "openWithBrowserBtn": "Open with Browser",
+                    "downloadBtn": "Download"
                 },
                 "student": {
-                    "downPlayer_img": true,
-                    "downPlayer_title": "Download word",
-                    "resourceLabel": "Download Resource",
-                    "downPlayer_subtitle": "Download file to view this resource on your computer.",
-                    "downloadBtn": [
-                        "Download Document",
-                        "Download ZIP",
-                        "Download PDF",
-                        "Download Excel"
-                    ],
-                    "downInfoLabel": "Download Information",
-                    "fileLabel": "File",
-                    "typeLabel": "Type",
-                    "sizeLabel": "Size",
-                    "viewBtn": "View PDF"
+                    "downPlayerImg": true,
+                    "downResHeading": "Download Resource",
+                    "downResSubheading": "Download file to view this resource on your device",
+                    "openWithBrowserBtn": "Open with Browser",
+                    "downloadBtn": "Download"
                 }
             },
             "contentPlayer": {

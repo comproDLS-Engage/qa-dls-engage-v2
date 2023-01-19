@@ -15,20 +15,15 @@ module.exports = {
 		sts = await downloadPlayer.isInitialized();
 		await assertion.assertEqual(sts.pageStatus, true, "pageStatus mismatch");
 		sts = await downloadPlayer.getData_downloadPlayer();
-		await assertion.assertEqual(sts.downPlayer_img, testdata[0].downPlayer_img, "downPlayer_img status mismatch");
-		await assertion.assertEqual(sts.resourceLabel, testdata[0].resourceLabel, "resourceLabel mismatch");
-		await assertion.assertEqual(sts.downPlayer_subtitle, testdata[0].downPlayer_subtitle, "downPlayer_subtitle mismatch");
-		await assertion.assertEqual(sts.downInfoLabel, testdata[0].downInfoLabel, "downInfoLabel mismatch");
-		await assertion.assertEqual(sts.fileLabel, testdata[0].fileLabel, "fileLabel mismatch");
-		await assertion.assertEqual(sts.typeLabel, testdata[0].typeLabel, "typeLabel mismatch");
-		await assertion.assertEqual(sts.sizeLabel, testdata[0].sizeLabel, "sizeLabel mismatch");
-		await assertion.assertEqual(sts.downloadBtn_isClickable, true, "downloadBtn_isClickable status mismatch");
-		await assertion.assertEqual(sts.downPlayer_title, testdata[1].pageTitle, "downPlayer_title mismatch");
-		await assertion.assertEqual(sts.downloadBtn, testdata[0].downloadBtn[0], "downloadBtn mismatch");
+		await assertion.assertEqual(sts.downPlayerImg, testdata[0].downPlayerImg, "downPlayerImg status mismatch");
+		await assertion.assertEqual(sts.downPlayerTitle, testdata[1].downPlayerTitle, "downPlayerTitle mismatch");
+		await assertion.assertEqual(sts.downPlayerSubtitle, testdata[1].downPlayerSubtitle, "downPlayerSubtitle mismatch");
+		await assertion.assertEqual(sts.downResHeading, testdata[0].downResHeading, "downResHeading mismatch");
+		await assertion.assertEqual(sts.downResSubheading, testdata[0].downResSubheading, "downResSubheading mismatch");
 		await assertion.assertEqual(sts.fileName, testdata[1].fileName, "fileName mismatch");
-		await assertion.assertEqual(sts.fileType, testdata[1].fileType, "fileType mismatch");
 		await assertion.assertEqual(sts.fileSize, testdata[1].fileSize, "fileSize mismatch");
-		await assertion.assertEqual(sts.viewBtn, null, "viewBtn mismatch");
+		await assertion.assertEqual(sts.openWithBrowserBtn, null, "openWithBrowserBtn mismatch");
+		await assertion.assertEqual(sts.downloadBtn, testdata[0].downloadBtn[0], "downloadBtn mismatch");
 	},
 
 	//Validate the content of download player for ZIP Resource
@@ -36,20 +31,15 @@ module.exports = {
 		sts = await downloadPlayer.isInitialized();
 		await assertion.assertEqual(sts.pageStatus, true, "pageStatus mismatch");
 		sts = await downloadPlayer.getData_downloadPlayer();
-		await assertion.assertEqual(sts.downPlayer_img, testdata[0].downPlayer_img, "downPlayer_img status mismatch");
-		await assertion.assertEqual(sts.resourceLabel, testdata[0].resourceLabel, "resourceLabel mismatch");
-		await assertion.assertEqual(sts.downPlayer_subtitle, testdata[0].downPlayer_subtitle, "downPlayer_subtitle mismatch");
-		await assertion.assertEqual(sts.downInfoLabel, testdata[0].downInfoLabel, "downInfoLabel mismatch");
-		await assertion.assertEqual(sts.fileLabel, testdata[0].fileLabel, "fileLabel mismatch");
-		await assertion.assertEqual(sts.typeLabel, testdata[0].typeLabel, "typeLabel mismatch");
-		await assertion.assertEqual(sts.sizeLabel, testdata[0].sizeLabel, "sizeLabel mismatch");
-		await assertion.assertEqual(sts.downloadBtn_isClickable, true, "downloadBtn_isClickable status mismatch");
-		await assertion.assertEqual(sts.downPlayer_title, testdata[1].pageTitle, "downPlayer_title mismatch");
-		await assertion.assertEqual(sts.downloadBtn, testdata[0].downloadBtn[1], "downloadBtn mismatch");
+		await assertion.assertEqual(sts.downPlayerImg, testdata[0].downPlayerImg, "downPlayerImg status mismatch");
+		await assertion.assertEqual(sts.downPlayerTitle, testdata[1].downPlayerTitle, "downPlayerTitle mismatch");
+		await assertion.assertEqual(sts.downPlayerSubtitle, testdata[1].downPlayerSubtitle, "downPlayerSubtitle mismatch");
+		await assertion.assertEqual(sts.downResHeading, testdata[0].downResHeading, "downResHeading mismatch");
+		await assertion.assertEqual(sts.downResSubheading, testdata[0].downResSubheading, "downResSubheading mismatch");
 		await assertion.assertEqual(sts.fileName, testdata[1].fileName, "fileName mismatch");
-		await assertion.assertEqual(sts.fileType, testdata[1].fileType, "fileType mismatch");
 		await assertion.assertEqual(sts.fileSize, testdata[1].fileSize, "fileSize mismatch");
-		await assertion.assertEqual(sts.viewBtn, null, "viewBtn mismatch");
+		await assertion.assertEqual(sts.openWithBrowserBtn, null, "openWithBrowserBtn mismatch");
+		await assertion.assertEqual(sts.downloadBtn, testdata[0].downloadBtn[0], "downloadBtn mismatch");
 	},
 
 	//Validate the content of download player for PDF Resource
@@ -57,20 +47,15 @@ module.exports = {
 		sts = await downloadPlayer.isInitialized();
 		await assertion.assertEqual(sts.pageStatus, true, "pageStatus mismatch");
 		sts = await downloadPlayer.getData_downloadPlayer();
-		await assertion.assertEqual(sts.downPlayer_img, testdata[0].downPlayer_img, "downPlayer_img status mismatch");
-		await assertion.assertEqual(sts.resourceLabel, testdata[0].resourceLabel, "resourceLabel mismatch");
-		await assertion.assertEqual(sts.downPlayer_subtitle, testdata[0].downPlayer_subtitle, "downPlayer_subtitle mismatch");
-		await assertion.assertEqual(sts.downInfoLabel, testdata[0].downInfoLabel, "downInfoLabel mismatch");
-		await assertion.assertEqual(sts.fileLabel, testdata[0].fileLabel, "fileLabel mismatch");
-		await assertion.assertEqual(sts.typeLabel, testdata[0].typeLabel, "typeLabel mismatch");
-		await assertion.assertEqual(sts.sizeLabel, testdata[0].sizeLabel, "sizeLabel mismatch");
-		await assertion.assertEqual(sts.downloadBtn_isClickable, true, "downloadBtn_isClickable status mismatch");
-		await assertion.assertEqual(sts.downPlayer_title, testdata[1].pageTitle, "downPlayer_title mismatch");
-		await assertion.assertEqual(sts.downloadBtn, testdata[0].downloadBtn[2], "downloadBtn mismatch");
+		await assertion.assertEqual(sts.downPlayerImg, testdata[0].downPlayerImg, "downPlayerImg status mismatch");
+		await assertion.assertEqual(sts.downPlayerTitle, testdata[1].downPlayerTitle, "downPlayerTitle mismatch");
+		await assertion.assertEqual(sts.downPlayerSubtitle, testdata[1].downPlayerSubtitle, "downPlayerSubtitle mismatch");
+		await assertion.assertEqual(sts.downResHeading, testdata[0].downResHeading, "downResHeading mismatch");
+		await assertion.assertEqual(sts.downResSubheading, testdata[0].downResSubheading, "downResSubheading mismatch");
 		await assertion.assertEqual(sts.fileName, testdata[1].fileName, "fileName mismatch");
-		await assertion.assertEqual(sts.fileType, testdata[1].fileType, "fileType mismatch");
 		await assertion.assertEqual(sts.fileSize, testdata[1].fileSize, "fileSize mismatch");
-		await assertion.assertEqual(sts.viewBtn, testdata[0].viewBtn, "viewBtn mismatch");
+		await assertion.assertEqual(sts.openWithBrowserBtn, testdata[0].openWithBrowserBtn, "openWithBrowserBtn mismatch");
+		await assertion.assertEqual(sts.downloadBtn, testdata[0].downloadBtn[0], "downloadBtn mismatch");
 	},
 
 	//Validate the content of download player for Spreadsheet Resource
@@ -78,20 +63,15 @@ module.exports = {
 		sts = await downloadPlayer.isInitialized();
 		await assertion.assertEqual(sts.pageStatus, true, "pageStatus mismatch");
 		sts = await downloadPlayer.getData_downloadPlayer();
-		await assertion.assertEqual(sts.downPlayer_img, testdata[0].downPlayer_img, "downPlayer_img status mismatch");
-		await assertion.assertEqual(sts.resourceLabel, testdata[0].resourceLabel, "resourceLabel mismatch");
-		await assertion.assertEqual(sts.downPlayer_subtitle, testdata[0].downPlayer_subtitle, "downPlayer_subtitle mismatch");
-		await assertion.assertEqual(sts.downInfoLabel, testdata[0].downInfoLabel, "downInfoLabel mismatch");
-		await assertion.assertEqual(sts.fileLabel, testdata[0].fileLabel, "fileLabel mismatch");
-		await assertion.assertEqual(sts.typeLabel, testdata[0].typeLabel, "typeLabel mismatch");
-		await assertion.assertEqual(sts.sizeLabel, testdata[0].sizeLabel, "sizeLabel mismatch");
-		await assertion.assertEqual(sts.downloadBtn_isClickable, true, "downloadBtn_isClickable status mismatch");
-		await assertion.assertEqual(sts.downPlayer_title, testdata[1].pageTitle, "downPlayer_title mismatch");
-		await assertion.assertEqual(sts.downloadBtn, testdata[0].downloadBtn[3], "downloadBtn mismatch");
+		await assertion.assertEqual(sts.downPlayerImg, testdata[0].downPlayerImg, "downPlayerImg status mismatch");
+		await assertion.assertEqual(sts.downPlayerTitle, testdata[1].downPlayerTitle, "downPlayerTitle mismatch");
+		await assertion.assertEqual(sts.downPlayerSubtitle, testdata[1].downPlayerSubtitle, "downPlayerSubtitle mismatch");
+		await assertion.assertEqual(sts.downResHeading, testdata[0].downResHeading, "downResHeading mismatch");
+		await assertion.assertEqual(sts.downResSubheading, testdata[0].downResSubheading, "downResSubheading mismatch");
 		await assertion.assertEqual(sts.fileName, testdata[1].fileName, "fileName mismatch");
-		await assertion.assertEqual(sts.fileType, testdata[1].fileType, "fileType mismatch");
 		await assertion.assertEqual(sts.fileSize, testdata[1].fileSize, "fileSize mismatch");
-		await assertion.assertEqual(sts.viewBtn, null, "viewBtn mismatch");
+		await assertion.assertEqual(sts.openWithBrowserBtn, null, "openWithBrowserBtn mismatch");
+		await assertion.assertEqual(sts.downloadBtn, testdata[0].downloadBtn[0], "downloadBtn mismatch");
 	}
 
 }

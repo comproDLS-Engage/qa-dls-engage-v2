@@ -1052,19 +1052,15 @@
                 "closeAssignment_btn": "[data-tid=button-closeAssignment]"
             },
             "downloadPlayer": {
-                "downPlayer_img": "[data-tid=image-resourceDownloader]",
-                "downPlayer_title": "[data-tid='resourcePlayer-title']",
-                "resourceLabel": "h6[data-tid='resourcePlayer-subtitle']",
-                "downPlayer_subtitle": "[data-tid='text-label-heading']",
-                "downloadBtn": "[data-tid='button-download']",
-                "downInfoLabel": "[data-tid='text-downloadInformation']",
-                "fileLabel": "[data-tid='label-name-0']",
-                "fileName": "[data-tid='text-value-0']",
-                "typeLabel": "[data-tid='label-name-1']",
-                "fileType": "[data-tid='text-value-1']",
-                "sizeLabel": "[data-tid='label-name-2']",
-                "fileSize": "[data-tid='text-value-2']",
-                "viewBtn": "[data-tid='button-view']"
+                "downPlayerImg": "[data-tid=icon-downloadresource]",
+                "downPlayerTitle": "[data-tid='resourcePlayer-title']",
+                "downPlayerSubtitle": "[data-tid='resourcePlayer-subtitle']",
+                "downResHeading": "[data-tid='text-label-heading']",
+                "downResSubheading": "[data-tid='text-label-subheading']",
+                "fileName": "[data-tid='text-filetitle']",
+                "fileSize": "[data-tid='text-filesize']",
+                "openWithBrowserBtn": "[data-tid='button-view']",
+                "downloadBtn": "[data-tid='button-download']"
             },
             "contentPlayer": {
                 "container": "[data-tid=container-productviewer],[data-tid=container-assignmentviewer]",
