@@ -4466,6 +4466,18 @@
           "description": "Validate the content of Add to Class Page after adding the quiz in a class",
           "tags": "P1",
           "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_100",
+          "description": "Validate the click on help icon on editor Page",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_101",
+          "description": "Validate the click on take editor option in help submenu list",
+          "tags": "P1",
+          "visualTest": true
         }
       ]
     },
