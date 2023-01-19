@@ -162,11 +162,11 @@
             "testFile": "./test/engageExperienceApp/downloadPlayer.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
                   "jsonPath": "engage.appContent.downloadPlayer.student"
                },
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/downloadPlayerData.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/downloadPlayerData.json",
                   "jsonPath": "engage.resources.pdf"
                }
             ]
@@ -276,11 +276,11 @@
             "testFile": "./test/engageExperienceApp/downloadPlayer.test.js",
             "testData": [
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
                   "jsonPath": "engage.appContent.downloadPlayer.student"
                },
                {
-                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/downloadPlayerData.json",
+                  "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/downloadPlayerData.json",
                   "jsonPath": "engage.resources.sheet"
                }
             ]
