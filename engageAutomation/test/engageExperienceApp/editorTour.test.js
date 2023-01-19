@@ -40,13 +40,13 @@ module.exports = {
     },
 
     //Validate that next prompt appears on clicking next button
-    ENG_EDIT_TC_7: async function () {
+    ENG_ICCT_TC_7: async function () {
         sts = await editorTour.click_nextBtn();
         await assertion.assertEqual(sts, true, "nextBtn status mismatch");
     },
 
     //Validate that previous prompt appears on clicking back button
-    ENG_EDIT_TC_8: async function () {
+    ENG_ICCT_TC_8: async function () {
         sts = await editorTour.click_backBtn();
         await assertion.assertEqual(sts, true, "backBtn status mismatch");
     },
@@ -105,8 +105,7 @@ module.exports = {
         await assertion.assertEqual(sts.backBtn, null, "backBtn status mismatch");
         await assertion.assertEqual(sts.step1Title, testdata.step1Title[0], "step1Title status mismatch");
         await assertion.assertEqual(sts.step1Subtitle, testdata.step1Subtitle[0], "step1Subtitle status mismatch");
-        sts = await editorTour.click_nextBtn();
-        await assertion.assertEqual(sts, true, "nextBtn status mismatch");
+        await this.ENG_ICCT_TC_7();
         sts = await editorTour.getData_editorTour(testdata);
         await assertion.assertEqual(sts.exitBtn, null, "exitBtn status mismatch");
         await assertion.assertEqual(sts.nextBtn, testdata.nextBtn, "nextBtn status mismatch");
@@ -115,8 +114,7 @@ module.exports = {
         await assertion.assertEqual(sts.step1Subtitle, null, "step1Subtitle status mismatch");
         await assertion.assertEqual(sts.step2Title, testdata.step2Title[0], "step2Title status mismatch");
         await assertion.assertEqual(sts.step2Subtitle, testdata.step2Subtitle[0], "step2Subtitle status mismatch");
-        sts = await editorTour.click_nextBtn();
-        await assertion.assertEqual(sts, true, "nextBtn status mismatch");
+        await this.ENG_ICCT_TC_7();
         sts = await editorTour.getData_editorTour(testdata);
         await assertion.assertEqual(sts.exitBtn, null, "exitBtn status mismatch");
         await assertion.assertEqual(sts.nextBtn, testdata.nextBtn, "nextBtn status mismatch");
@@ -125,8 +123,7 @@ module.exports = {
         await assertion.assertEqual(sts.step2Subtitle, null, "step2Subtitle status mismatch");
         await assertion.assertEqual(sts.step3Title, testdata.step3Title[0], "step3Title status mismatch");
         await assertion.assertEqual(sts.step3Subtitle, testdata.step3Subtitle[0], "step3Subtitle status mismatch");
-        sts = await editorTour.click_nextBtn();
-        await assertion.assertEqual(sts, true, "nextBtn status mismatch");
+        await this.ENG_ICCT_TC_7();
         sts = await editorTour.getData_editorTour(testdata);
         await assertion.assertEqual(sts.exitBtn, null, "exitBtn status mismatch");
         await assertion.assertEqual(sts.nextBtn, testdata.nextBtn, "nextBtn status mismatch");
@@ -135,8 +132,7 @@ module.exports = {
         await assertion.assertEqual(sts.step3Subtitle, null, "step3Subtitle status mismatch");
         await assertion.assertEqual(sts.step4Title, testdata.step4Title[0], "step4Title status mismatch");
         await assertion.assertEqual(sts.step4Subtitle, testdata.step4Subtitle[0], "step4Subtitle status mismatch");
-        sts = await editorTour.click_nextBtn();
-        await assertion.assertEqual(sts, true, "nextBtn status mismatch");
+        await this.ENG_ICCT_TC_7();
         sts = await editorTour.getData_editorTour(testdata);
         await assertion.assertEqual(sts.exitBtn, testdata.exitBtn, "exitBtn status mismatch");
         await assertion.assertEqual(sts.nextBtn, null, "nextBtn status mismatch");
@@ -160,8 +156,7 @@ module.exports = {
         await assertion.assertEqual(sts.backBtn, null, "backBtn status mismatch");
         await assertion.assertEqual(sts.step1Title, testdata.step1Title[1], "step1Title status mismatch");
         await assertion.assertEqual(sts.step1Subtitle, testdata.step1Subtitle[1], "step1Subtitle status mismatch");
-        sts = await editorTour.click_nextBtn();
-        await assertion.assertEqual(sts, true, "nextBtn status mismatch");
+        await this.ENG_ICCT_TC_7();
         sts = await editorTour.getData_editorTour(testdata);
         await assertion.assertEqual(sts.exitBtn, null, "exitBtn status mismatch");
         await assertion.assertEqual(sts.nextBtn, testdata.nextBtn, "nextBtn status mismatch");
@@ -170,8 +165,7 @@ module.exports = {
         await assertion.assertEqual(sts.step1Subtitle, null, "step1Subtitle status mismatch");
         await assertion.assertEqual(sts.step2Title, testdata.step2Title[1], "step2Title status mismatch");
         await assertion.assertEqual(sts.step2Subtitle, testdata.step2Subtitle[1], "step2Subtitle status mismatch");
-        sts = await editorTour.click_nextBtn();
-        await assertion.assertEqual(sts, true, "nextBtn status mismatch");
+        await this.ENG_ICCT_TC_7();
         sts = await editorTour.getData_editorTour(testdata);
         await assertion.assertEqual(sts.exitBtn, null, "exitBtn status mismatch");
         await assertion.assertEqual(sts.nextBtn, testdata.nextBtn, "nextBtn status mismatch");
@@ -180,8 +174,7 @@ module.exports = {
         await assertion.assertEqual(sts.step2Subtitle, null, "step2Subtitle status mismatch");
         await assertion.assertEqual(sts.step3Title, testdata.step3Title[1], "step3Title status mismatch");
         await assertion.assertEqual(sts.step3Subtitle, testdata.step3Subtitle[1], "step3Subtitle status mismatch");
-        sts = await editorTour.click_nextBtn();
-        await assertion.assertEqual(sts, true, "nextBtn status mismatch");
+        await this.ENG_ICCT_TC_7();
         sts = await editorTour.getData_editorTour(testdata);
         await assertion.assertEqual(sts.exitBtn, null, "exitBtn status mismatch");
         await assertion.assertEqual(sts.nextBtn, testdata.nextBtn, "nextBtn status mismatch");
@@ -190,8 +183,7 @@ module.exports = {
         await assertion.assertEqual(sts.step3Subtitle, null, "step3Subtitle status mismatch");
         await assertion.assertEqual(sts.step4Title, testdata.step4Title[1], "step4Title status mismatch");
         await assertion.assertEqual(sts.step4Subtitle, testdata.step4Subtitle[1], "step4Subtitle status mismatch");
-        sts = await editorTour.click_nextBtn();
-        await assertion.assertEqual(sts, true, "nextBtn status mismatch");
+        await this.ENG_ICCT_TC_7();
         sts = await editorTour.getData_editorTour(testdata);
         await assertion.assertEqual(sts.exitBtn, null, "exitBtn status mismatch");
         await assertion.assertEqual(sts.nextBtn, testdata.nextBtn, "nextBtn status mismatch");
@@ -200,8 +192,7 @@ module.exports = {
         await assertion.assertEqual(sts.step4Subtitle, null, "step4Subtitle status mismatch");
         await assertion.assertEqual(sts.step5Title, testdata.step5Title[1], "step5Title status mismatch");
         await assertion.assertEqual(sts.step5Subtitle, testdata.step5Subtitle[1], "step5Subtitle status mismatch");
-        sts = await editorTour.click_nextBtn();
-        await assertion.assertEqual(sts, true, "nextBtn status mismatch");
+        await this.ENG_ICCT_TC_7();
         sts = await editorTour.getData_editorTour(testdata);
         await assertion.assertEqual(sts.exitBtn, testdata.exitBtn, "exitBtn status mismatch");
         await assertion.assertEqual(sts.nextBtn, null, "nextBtn status mismatch");

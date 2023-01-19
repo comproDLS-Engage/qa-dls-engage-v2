@@ -1748,9 +1748,9 @@
             },
             "editorTour": {
                 "teacher": {
-                    "step0Title": "Let's fill out the quiz content!",
+                    "step0Title": "Let’s fill out the quiz content!",
                     "step0Subtitle": "Use images, videos, audio, and text to enhance your teaching materials. Start the tour to see what you can use in your Engage quiz:",
-                    "dontShowCheckbox": "Don't show me this anymore",
+                    "dontShowCheckbox": "Don’t show me this anymore",
                     "dismissBtn": "Dismiss",
                     "startTourBtn": "Start Tour",
                     "exitBtn": "Exit",
@@ -1793,7 +1793,7 @@
                         "Subquestion"
                     ],
                     "step5Subtitle": [
-                        "Use answer options to add multiple options and mark the correct one by clicking or tapping the check mark symbol. Use the symbol to reorder the options.",
+                        "Use answer options to add multiple options and mark the correct one by clicking or tapping the check mark symbol . Use the symbol to reorder the options.",
                         "Add subquestion text to provide additional details to aid student response."
                     ],
                     "step6Title": [

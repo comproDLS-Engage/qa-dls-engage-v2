@@ -31,7 +31,7 @@ module.exports = {
         await logger.logInto(await stackTrace.get());
         await action.waitForDocumentLoad();
         res = {
-            pageStatus: await action.waitForDisplayed(this.tourContainer, 10000),
+            pageStatus: await action.isDisplayed(this.tourContainer),
         };
         return res;
     },

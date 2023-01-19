@@ -1686,7 +1686,7 @@
                 "step5Title": "[data-tid='text-step-5-title']",
                 "step5Subtitle": "[data-tid='text-answerOptionsSubtitle'],[data-tid=text-addSubQuestionTextSubtitle]",
                 "step6Title": "[data-tid='text-step-6-title']",
-                "step6Subtitle": "[data-tid='text-text-settingsSubtitle']"
+                "step6Subtitle": "[data-tid='text-settingsSubtitle']"
             }
         }
     }
