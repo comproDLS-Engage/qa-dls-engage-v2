@@ -18,7 +18,7 @@
 		"confirmDialog": "[class*=mdc-dialog--open] button[data-mdc-dialog-action=yes]",
 		"cancelDialog": "[class*=mdc-dialog--open] button[data-mdc-dialog-action=close]",
 		"dialogContent": "[class*=mdc-dialog--open] [id=my-dialog-content] div,[class*=mdc-dialog--open] [id=my-dialog-content] p",
-		"snackbarLbl": "[class*='mdc-snackbar--open'] [class='mdc-snackbar__label'],[class*=SnackbarContent-message]",
+		"snackbarLbl": "[class*='mdc-snackbar--open'] [class*='mdc-snackbar__label'],[class*=SnackbarContent-message]",
 		"snackbarBtn": "[class*=mdc-snackbar--open] button,[class*=SnackbarContent-action] button",
 		"breadcrumbLevel1": "[class=c-page-header__bread-crumbs] div:nth-child(1)",
 		"breadcrumbLevel2": "[class=c-page-header__bread-crumbs] div:nth-child(2)",
