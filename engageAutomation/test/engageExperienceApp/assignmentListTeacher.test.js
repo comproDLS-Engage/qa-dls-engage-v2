@@ -20,11 +20,14 @@ module.exports = {
    //Click on Add New button on Assignment Page
    ENG_ASSLIST_TC_2: async function (testdata) {
       sts = await assignmentListPage.click_addNew_btn()
+      console.log(sts)
+      console.log(testdata)
       await assertion.assertEqual(sts.componentHeader, testdata[0].componentHeader, "Assignment page status mismatch");
-		await assertion.assertEqual(sts[0].componentList, testdata[1].componentList[0].componentname, "Component name is mismatch");
-      await assertion.assertEqual(sts[1].componentList, testdata[1].componentList[1].componentname, "Component name is  mismatch");
+      for (var i=0;i<sts.length;i++)
+		await assertion.assertEqual(sts[i].componentList, testdata[1].componentList[i].componentname, "Component name is mismatch");
+    /*  await assertion.assertEqual(sts[1].componentList, testdata[1].componentList[1].componentname, "Component name is  mismatch");
       await assertion.assertEqual(sts[2].componentList, testdata[1].componentList[2].componentname, "Component name is  mismatch");
-      await assertion.assertEqual(sts[3].componentList, testdata[1].componentList[3].componentname, "Component name is  mismatch");
+      await assertion.assertEqual(sts[3].componentList, testdata[1].componentList[3].componentname, "Component name is  mismatch");*/
    },
    //Click on the conmponent which is required
    ENG_ASSLIST_TC_3: async function (testdata) {
@@ -46,6 +49,7 @@ module.exports = {
    
    ENG_ASSLIST_TC_6: async function (testdata) {
       sts = await assignmentListPage.click_assignmentCard(testdata);
+      console.log(testdata)
       await assertion.assertEqual(sts.pageStatus, true, "Assignment Deatils page status mismatch");
    },
 
@@ -77,5 +81,9 @@ module.exports = {
    ENG_ASSLIST_TC_11: async function () {
       sts = await assignmentListPage.click_deletecancel_btn();
       await assertion.assertEqual(sts, true, "Cancel button status mismatch");
+   },
+   ENG_ASSLIST_TC_12: async function () {
+      sts = await assignmentListPage.click_devMaterial_btn();
+      await assertion.assertEqual(sts, true, "dev Material is not clickked status mismatch");
    },
 }

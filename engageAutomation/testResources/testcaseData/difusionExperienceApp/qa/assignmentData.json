@@ -42,7 +42,9 @@
             "name2": "Open Ended Assignment",
             "name3": "Non Scorable Assignment",
             "editName": "Automation Test Edit",
-            "cloneName": "Clone: Automation Test"
+            "cloneName": "Clone: Automation Test",
+            "resourceName":"Material Assignment",
+            "writingName":"writing Assignment"
         },
         "book": {
             "name": "QA Test Automation Book [DO NOT MODIFY]",
@@ -81,6 +83,29 @@
                                 "activity8": "Etext",
                                 "activity9": "Html webbook"
                             }
+                        }
+                    ]
+                }
+            ]
+        },
+        "book2": {
+            "name": "QA Test Automation Book [DO NOT MODIFY]",
+            "componentList": [
+                
+                    {
+                        "componentname": "Más Ejercicios"
+                    },
+                    {
+                        "componentname": "Textbook Activities"
+                    }
+                
+            ],
+            "devMaterial": [
+                {
+                    "className": "class3",
+                    "componentList": [
+                        {
+                            "componentname": "dev1's Materials"
                         }
                     ]
                 }
@@ -143,19 +168,15 @@
                         ]
                     }
                 ]
-                
             }
         },
-
         "classAssignment": [
             {
                 "assignmentName": "Assignemnt",
                 "assignmentActivities": "3",
-                "dueNumberChip":1,
+                "dueNumberChip": 1,
                 "activityList": [
-                    {
-                   
-                    }
+                    {}
                 ]
             }
         ]
@@ -166,8 +187,8 @@
             {
                 "activityName": "Open Ended Writing",
                 "unitName": "LP1 • 1. Scorable",
-                "studentName":"Difusionqa student3 ",
-                "time":"Jun 28, 2022 at 12:27 PM"
+                "studentName": "Difusionqa student3 ",
+                "time": "Jun 28, 2022 at 12:27 PM"
             }
         ]
     }
