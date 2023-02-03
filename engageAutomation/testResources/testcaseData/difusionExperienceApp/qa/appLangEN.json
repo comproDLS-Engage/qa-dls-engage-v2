@@ -1790,6 +1790,72 @@
                     ]
                 },
                 "student": {}
+            },
+            "resourceEditor": {
+                "teacher": {
+                    "newResourceTitle": [
+                        "New Resource",
+                        "Replace Link",
+                        "Replace PDF",
+                        "Replace Document",
+                        "Replace ZIP",
+                        "Replace Video",
+                        "Replace Audio"
+                    ],
+                    "cancelBtn": null,
+                    "pasteALinkTitle": "Paste a Link",
+                    "resourceLinkLbl": "Resource Link",
+                    "linksIncludeLbl": [
+                        "Link can include any online resource - audio, video, pdf, article etc.",
+                        "Link can only include external website links.",
+                        "Link can only include PDF resources.",
+                        "Link can only include Video resources.",
+                        "Link can only include Audio resources."
+                    ],
+                    "dropAreaTitle": "Drag and Drop File to Upload",
+                    "dropAreaSubtitle": "Your resource will be saved as a draft until you complete all the steps",
+                    "dropAreaOrLbl": "Or",
+                    "browseBtn": "Browse",
+                    "dropLimitLbl": [
+                        "Drop any pdf, word, ppt, excel, zip, mp4, mp3 | Up to 15 MB",
+                        "Upload any PDF resource (.pdf) to replace the current | Up to 15 MB.",
+                        "Upload any Word file (.docx) to replace the current | Up to 15 MB.",
+                        "Upload any PPT file (.pptx) to replace the current | Up to 15 MB.",
+                        "Upload any Excel file (.xlsx) to replace the current | Up to 15 MB.",
+                        "Upload any ZIP file (.zip) to replace the current | Up to 15 MB.",
+                        "Upload any Video resource (.mp4) to replace the current | Up to 15 MB.",
+                        "Upload any Audio resource (.mp3) to replace the current | Up to 15 MB."
+                    ],
+                    "enterBtn": "Enter",
+                    "invalidUrlTxt": "URL must be a valid URL",
+                    "sizeLbl": "size",
+                    "replaceBtn": [
+                        "Replace File",
+                        "Replace Link",
+                        "Replace PDF",
+                        "Replace Document",
+                        "Replace ZIP",
+                        "Replace Video",
+                        "Replace Audio"
+                    ],
+                    "resourceGuidelinesTxt": "By submitting your files to Engage, you acknowledge that your content conforms to Engage Instructor Content Guidelines and you have the right to share it with your class.",
+                    "createResourceBtn": [
+                        "Create Resource",
+                        "Update Resource"
+                    ],
+                    "titleLbl": "Title",
+                    "descriptionLbl": "Description",
+                    "descriptionInput": "Resource Description (optional)",
+                    "durationLbl": [
+                        "Duration",
+                        "Reading Time"
+                    ],
+                    "durationUnit": "min",
+                    "fluencyTxt": "The average reading fluency rate varies by grade level and age.",
+                    "learnMoreLink": "Learn More",
+                    "estTimeLink": "How to estimate reading time?"
+                },
+                "student": {}
             }
         }
     }

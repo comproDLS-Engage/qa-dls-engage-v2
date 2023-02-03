@@ -1,0 +1,42 @@
+{
+    "video": {
+        "resourceType": "Video",
+        "resourceName": "Lorem Ipsum.mp4",
+        "fileSize": "1 MB"
+    },
+    "audio": {
+        "resourceType": "Audio",
+        "resourceName": "Lorem Ipsum.mp3",
+        "fileSize": "1 MB"
+    },
+    "pdf": {
+        "resourceType": "PDF",
+        "resourceName": "Lorem Ipsum.pdf",
+        "fileSize": "62 KB"
+    },
+    "docx": {
+        "resourceType": "Document",
+        "resourceName": "Lorem Ipsum.docx",
+        "fileSize": "16 KB"
+    },
+    "xlsx": {
+        "resourceType": "Document",
+        "resourceName": "Lorem Ipsum.xlsx",
+        "fileSize": "8 KB"
+    },
+    "pptx": {
+        "resourceType": "Document",
+        "resourceName": "Lorem Ipsum.pptx",
+        "fileSize": "35 KB"
+    },
+    "zip": {
+        "resourceType": "ZIP",
+        "resourceName": "Lorem Ipsum.zip",
+        "fileSize": "70 KB"
+    },
+    "link": {
+        "resourceType": "Link",
+        "url": "https://www.w3.org/WAI/standards-guidelines/wcag/"
+    }
+
+}
