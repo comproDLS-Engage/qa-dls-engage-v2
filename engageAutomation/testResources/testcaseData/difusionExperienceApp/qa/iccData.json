@@ -3,7 +3,7 @@
         "quiz": {
             "draftQuiz": "Quiz 1",
             "draftBlankQuiz": "blank Quiz",
-            "publishedQuiz":"!@#$%^&*()"
+            "publishedQuiz": "!@#$%^&*()"
         },
         "search": {
             "searchNoResult": {
@@ -26,6 +26,34 @@
                 "search_txt": "íóúü",
                 "searchResultCount": "1"
             }
+        },
+        "material": {
+            "activityList": [
+                {
+                    "activityName": "Acceptance Quiz",
+                    "activityTypeStatus": "Public",
+                    "activityTypeName": "Quiz"
+                },
+                {
+                    "activityName": "Writing Quiz",
+                    "activityTypeStatus": "Public",
+                    "activityTypeName": "Quiz"
+                }
+            ],
+            "activityList1": [
+                {
+                    "activityName": "Acceptance Quiz",
+                    "activityTypeStatus": "Restricted",
+                    "activityTypeName": "Quiz"
+                },
+                {
+                    "activityName": "Writing Quiz",
+                    "activityTypeStatus": "Restricted",
+                    "activityTypeName": "Quiz"
+                }
+            ]
+            
+
         }
     }
 }

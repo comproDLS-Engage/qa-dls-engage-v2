@@ -586,8 +586,10 @@ module.exports = {
         await assertion.assertEqual(sts, true, "addnowbutton are not Clicked");
     },
     ENG_ICCE_TC_78: async function (testdata) {
+        console.log(testdata)
         sts = await libraryEditorPage.click_edit_btn();
-        await assertion.assert(sts.editMaterial_Title.includes(testdata.editMaterial_Title), "editMaterial_Title Values is not as expected.");
+        console.log(sts)
+        await assertion.assert((sts.editMaterial_Title).includes(testdata.editMaterial_Title), "editMaterial_Title Values is not as expected.");
         await assertion.assertEqual(sts.editMaterial_SubTitle, testdata.editMaterial_SubTitle, "editMaterial_SubTitle Values is not as expected.");
     },
     ENG_ICCE_TC_79: async function (testdata) {
@@ -749,6 +751,43 @@ module.exports = {
         sts = await libraryEditorPage.click_takeEditorTourbtn();
         await assertion.assertEqual(sts.pageStatus, true, "takeEditorTourbtn are not Clicked");
     },
+
+    ENG_ICCE_TC_102: async function (testdata) {
+        sts = await libraryEditorPage.click_showDetailsbtn();
+        await assertion.assertEqual(sts.detailsSubtitle, testdata.detailsSubtitle, "detailsSubtitle text mismatch");
+        await assertion.assertEqual(sts.detailsActivityIcon, true, "detailsActivityIcon text mismatch");
+        await assertion.assertEqual(sts.detailsPublichedChip, testdata.detailsPublichedChip, "detailsPublichedChip text mismatch");
+    },
+
+    ENG_ICCE_TC_103: async function (testdata) {
+        sts = await libraryEditorPage.getData_showDetailsPanel(testdata);
+        await assertion.assertEqual(sts.detailstitle, testdata.activityName, "detailstitle Values is not as expected.");
+        await assertion.assertEqual(sts.detailsActivityIcon, true, "detailsActivityIcon Values is not as expected.");
+        await assertion.assertEqual(sts.detailsActivityType, testdata.activityTypeName, "detailsActivityType Values is not as expected.");
+       },
+       ENG_ICCE_TC_104: async function (testdata) {
+        sts = await libraryEditorPage.click_hideDetailsbtn();
+        await assertion.assertEqual(sts.detailsSubtitle, null, "detailsSubtitle text mismatch");
+         //need to check data-tiid
+        await assertion.assertEqual(sts.detailsActivityIcon, null, "detailsActivityIcon text mismatch");
+        await assertion.assertEqual(sts.detailsPublichedChip, null, "detailsPublichedChip text mismatch");
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     ENG_LIBR_TC_3: async function (testdata) {
         sts = await libraryEditor.click_reportAProblembtn();

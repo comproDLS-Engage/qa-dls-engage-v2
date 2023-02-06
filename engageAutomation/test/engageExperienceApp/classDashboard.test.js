@@ -165,7 +165,7 @@ module.exports = {
 		sts = await classDashboardPage.click_inboxOption();
 		//console.log(sts)
 		if ((typeof (sts)) === "object") {
-			await assertion.assert(sts.selectedProduct.includes(testdata.inboxOption_txt), "Inbox Page is not displayed: " + (await JSON.stringify(sts.pageStatus)))
+			await assertion.assert(sts.selectedProduct.includes(testdata.inboxOption_txt), "Inbox Page is not displayed: " + (await JSON.stringify(sts.selectedProduct)))
 		} else {
 			await assertion.assertFail(sts);
 		}
@@ -704,9 +704,12 @@ module.exports = {
 	//Validate that clicking on Material option from Class Menu launches class details page with inbox tab selected
 	ENG_INS_CLASS_TC_111: async function (testdata) {
 		sts = await classDashboardPage.click_materialsOption();
-		await assertion.assertEqual(sts, true, "materialsOption is clicked");
-		sts = await require('../../test/engageExperienceApp/common.test.js').get_Snackbar_Message_Text();
-		await assertion.assert(sts, testdata, "Snackbar message mismatch: " + sts);
+		console.log(sts)
+		if ((typeof (sts)) === "object") {
+			await assertion.assert(sts.selectedProduct.includes(testdata.devMaterialTab), "Material Page is not displayed: " + (await JSON.stringify(sts.selectedProduct)))
+		} else {
+			await assertion.assertFail(sts);
+		}
 	},
 	//Validate that searching can be done on basis of Class name
 	ENG_INS_CLASS_TC_112: async function (testdata) {
@@ -942,6 +945,14 @@ module.exports = {
 		sts = await teacherViewClassPage.clickInviteStudentsButton();
 		await assertion.assertEqual(sts, true, "Class Deatails page is not launched" + (await JSON.stringify(sts.pageStatus)))
 	},
+		//Validate the click on dev Material button
+	ENG_INS_CLASS_TC_133: async function (testdata) {
+        sts = await classDashboardPage.click_devMaterialTab();
+		console.log(sts)
+        await assertion.assertEqual(sts.activitiesAndResourseHeading, testdata.activitiesAndResourseHeading, "activitiesAndResourseHeading text mismatch");
+       // await assertion.assertEqual(sts.activitieslbl, testdata.activitieslbl, "activitieslbl text mismatch");
+       // await assertion.assertEqual(sts.resourceslbl, testdata.resourceslbl, "resourceslbl text mismatch");
+    },
 	ENG_INVI_TC_1: async function (testdata) {
 		sts = await teacherViewClassPage.click_cancelInvitebtn();
 		await assertion.assertEqual(sts, true, "cancelInvitebtn are not Clicked");

@@ -389,6 +389,7 @@
                     "yourScoreLabel": null,
                     "closeInfoBtn": "",
                     "infoTocHeading": "Activities",
+                    "closeAssignmentBtn": "Close Assignment",
                     "feedbackText": [
                         "Well done",
                         "Correct",
@@ -1637,7 +1638,10 @@
                     "previewBtn": "Preview",
                     "duplicateBtn": "Duplicate",
                     "deleteBtn": "Delete",
-                    "editBtn": "Edit"
+                    "editBtn": "Edit",
+                    "showDetailsbtn": "Show Details",
+                    "detailsSubtitle": "My Library",
+                    "detailsPublichedChip": "Published"
                 },
                 "student": {}
             },
@@ -1856,6 +1860,45 @@
                     "estTimeLink": "How to estimate reading time?"
                 },
                 "student": {}
+            },
+            "iccAssignment": {
+                "teacher": {
+                    "devMaterialTab": "dev1's Materials",
+                    "activitiesAndResourseHeading": "Activities and Resources",
+                    "activitieslbl": "Activities",
+                    "resourceslbl": "Resources",
+                    "activityEditbtn": "Edit",
+                    "activityMakeRestrictedbtn": "Make ",
+                    "activityTypeStatus": [
+                        "pulic",
+                        "restricted"
+                    ],
+                    "activityTypeName": "Quiz",
+                    "activityAssignbtn": "Assign",
+                    "resourceEditbtn": "Edit",
+                    "resourceMakeRestrictedbtn": "Make Restricted",
+                    "resourceAssignbtn": "Assign",
+                    "createAssignmentSelectActivityHeader": "Create Assignment � Select Activities",
+                    "devMaterial": "dev1's Materials",
+                    "materialHeading": "materials",
+                    "whyCan'tIfindmyResources": "Why can't I find my resource?",
+                    "materialOptionLbl": "Materials",
+                    "TypeOptionLbl": "Type",
+                    "AddedonOptionLbl": "Added On",
+                    "previewOptionbtn": "Preview",
+                    "cancelSelectActivityPagebtn": "Cancel",
+                    "continueToDetailsbtn": "Continue to Details",
+                    "makeRestrictedTitle": [
+                        "Make Restricted |",
+                        "Make Public |"
+                    ],
+                    "makeRestrictedSubTitle": [
+                        "Making this activity restricted will hide it in the class materials. You can still assign it via assignments. Do you wish to continue?",
+                        "Making this activity public will allow your students to view this in the class. Do you wish to continue?"
+                    ],
+                    "yesbtn": "Yes",
+                    "Npbtn": "No"
+                }
             }
         }
     }

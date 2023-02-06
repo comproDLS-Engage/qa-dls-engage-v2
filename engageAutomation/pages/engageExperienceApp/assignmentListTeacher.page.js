@@ -57,6 +57,7 @@ module.exports = {
     deletedialoguesubHeader2: selectorFile.css.ComproEngage.assignmentList.deletedialoguesubHeader2,
     cancel_btn: selectorFile.css.ComproEngage.assignmentList.cancel_btn,
     delete_btn: selectorFile.css.ComproEngage.assignmentList.delete_btn,
+    devMaterialbtn:selectorFile.css.ComproEngage.assignmentListDetails.devMaterialbtn,
 
 
     isInitialized: async function () {
@@ -82,6 +83,7 @@ module.exports = {
     getData_assignmentListPage: async function () {
         await logger.logInto(await stackTrace.get());
         var obj;
+        await action.waitForDisplayed(this.blankAssignment_img)
         obj = {
             blankAssignment_img: ((await action.getElementCount(this.blankAssignment_img)) > 0) ? await action.waitForDisplayed(this.blankAssignment_img) : false,
             blankAssignment_title: ((await action.getElementCount(this.blankAssignment_title)) > 0) ? await action.getText(this.blankAssignment_title) : null,
@@ -166,8 +168,9 @@ module.exports = {
     getData_componentList: async function (componentListName) {
         await logger.logInto(await stackTrace.get());
         var obj = [];
-        await action.waitForDisplayed(this.componentHeader);
+        await action.waitForDisplayed(this.devMaterialbtn);
         var list = await action.findElements(this.componentList);
+        console.log(list.length)
         if (componentListName) {
             for (var i = 0; i < list.length; i++) {
                 if ((await action.getText(this.componentList + i)) == componentListName) {
@@ -181,6 +184,7 @@ module.exports = {
             obj.componentHeader = ((await action.getElementCount(this.componentHeader)) > 0) ? await action.getText(this.componentHeader) : null
         } else {
             for (var i = 0; i < list.length; i++) {
+                console.log(await (this.componentList + i + "]"))
                 obj[i] = {
                     componentTeacherOnlyIcon: ((await action.getElementCount(this.componentTeacherOnlyIcon + i + "]")) > 0) ? await action.waitForDisplayed(this.componentTeacherOnlyIcon + i + "]") : null,
                     componentList: ((await action.getElementCount(this.componentList + i + "]")) > 0) ? await action.getText(this.componentList + i + "]") : null,
@@ -430,7 +434,19 @@ module.exports = {
         }
         return res;
     },
-
+    click_devMaterial_btn: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        await action.waitForDisplayed(this.devMaterialbtn);
+        res = await action.click(this.devMaterialbtn);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " devMaterialbtn is clicked");
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "devMaterialbtn is NOT clicked", 'error');
+        }
+        return res;
+    },
     click_delete_btn: async function () {
         await logger.logInto(await stackTrace.get());
         var res;

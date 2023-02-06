@@ -389,4 +389,73 @@ module.exports = {
 		sts = await openActivityPlayerPage.click_saveAnswersBtn();
 		await assertion.assertEqual(sts, testdata, "click_saveAnswersBtn status mismatch");
 	},
+	//Validate the writing question in unattempted state for Assignment
+	ENG_OPEN_TC_24: async function (testdata) {
+		sts = await openActivityPlayerPage.getData_activityStatus();
+		await assertion.assertEqual(sts.activityStatus, true, "Activity submission status mismatch");
+
+		sts = await openActivityPlayerPage.getData_openActivityPlayer();
+		console.log(sts)
+		await assertion.assertEqual(sts.showDetailsBtn, testdata[0].showDetailsBtn[0], "showDetailsBtn status mismatch");
+		await assertion.assertEqual(sts.leftPanelHidden, true, "leftPanelHidden status mismatch");
+		await assertion.assertEqual(sts.yourScoreLabel, null, "yourScoreLabel status mismatch");
+		await assertion.assertEqual(sts.yourScoreValue, null, "yourScoreValue status mismatch");
+		await assertion.assertEqual(sts.feedbackBtn, null, "feedbackBtn status mismatch");
+		await assertion.assertEqual(sts.submittedOn, null, "submittedOn status mismatch");
+		await assertion.assertEqual(sts.gradedOn, null, "gradedOn status mismatch");
+		if (sts.submitActivityBtn == null) {
+			await assertion.assertEqual(sts.saveAnswersBtn, testdata[0].saveAnswersBtn, "saveAnswersBtn status mismatch");
+			var flag = true;
+		}
+		else
+			await assertion.assertEqual(sts.submitActivityBtn, testdata[0].submitActivityBtn, "submitActivityBtn status mismatch");
+		await assertion.assertEqual(sts.submitGradeBtn, testdata[0].submitGradeBtn, "submitGradeBtn status mismatch");
+		await assertion.assertEqual(sts.retakeOpenActivityBtn, null, "retakeOpenActivityBtn status mismatch");
+
+		if (sts.leftPanelHidden == true)
+			await activityPlayerTest.ENG_PLAY_TC_11();
+		sts = await openActivityPlayerPage.getData_openActivityLeftPanel();
+		console.log(sts)
+		console.log(testdata[1])
+		console.log(testdata[2])
+		await assertion.assertEqual(sts.gradingTitle, null, "gradingTitle status mismatch");
+		await assertion.assertEqual(sts.gradingSubtitle, null, "gradingSubtitle status mismatch");
+		await assertion.assertEqual(sts.statusPill, null, "statusPill status mismatch");
+		await assertion.assert(await sts.bookName.includes(testdata[1]), "bookName status mismatch");
+		await assertion.assertEqual(sts.activityName, testdata[2], "activityName status mismatch");
+		await assertion.assertEqual(sts.cardTitle, testdata[0].cardTitle, "cardTitle status mismatch");
+		await assertion.assertEqual(sts.cardSubtitle, testdata[0].cardSubtitle, "cardSubtitle status mismatch");
+		if (flag)
+			await assertion.assertEqual(sts.cardText, testdata[0].cardText[1], "cardText status mismatch");
+		else
+			await assertion.assertEqual(sts.cardText, testdata[0].cardText[0], "cardText status mismatch");
+		await assertion.assertEqual(sts.attempt1Label, null, "attempt1Label status mismatch");
+		await assertion.assertEqual(sts.attempt2Label, null, "attempt2Label status mismatch");
+		await assertion.assertEqual(sts.attempt3Label, null, "attempt3Label status mismatch");
+		await assertion.assertEqual(sts.attempt1ExpansionBtn, null, "attempt1ExpansionBtn status mismatch");
+		await assertion.assertEqual(sts.attempt1SubmittedTime, null, "attempt1SubmittedTime status mismatch");
+		await assertion.assertEqual(sts.attempt1GradedTime, null, "attempt1GradedTime status mismatch");
+		await assertion.assertEqual(sts.attempt1StatusPill, null, "attempt1StatusPill status mismatch");
+		await assertion.assertEqual(sts.attempt1GradeLabel, null, "attempt1GradeLabel status mismatch");
+		await assertion.assertEqual(sts.attempt1GradeValue, null, "attempt1GradeValue status mismatch");
+		await assertion.assertEqual(sts.attempt1FeedbackLabel, null, "attempt1FeedbackLabel status mismatch");
+		await assertion.assertEqual(sts.attempt1FeedbackValue, null, "attempt1FeedbackValue status mismatch");
+		await assertion.assertEqual(sts.attempt2ExpansionBtn, null, "attempt2ExpansionBtn status mismatch");
+		await assertion.assertEqual(sts.attempt2SubmittedTime, null, "attempt2SubmittedTime status mismatch");
+		await assertion.assertEqual(sts.attempt2GradedTime, null, "attempt2GradedTime status mismatch");
+		await assertion.assertEqual(sts.attempt2StatusPill, null, "attempt2StatusPill status mismatch");
+		await assertion.assertEqual(sts.attempt2GradeLabel, null, "attempt2GradeLabel status mismatch");
+		await assertion.assertEqual(sts.attempt2GradeValue, null, "attempt2GradeValue status mismatch");
+		await assertion.assertEqual(sts.attempt2FeedbackLabel, null, "attempt2FeedbackLabel status mismatch");
+		await assertion.assertEqual(sts.attempt2FeedbackValue, null, "attempt2FeedbackValue status mismatch");
+		await assertion.assertEqual(sts.scoreLabel, null, "scoreLabel status mismatch");
+		await assertion.assertEqual(sts.scoreInput, null, "scoreInput status mismatch");
+		await assertion.assertEqual(sts.feedbackLabel, null, "feedbackLabel status mismatch");
+		await assertion.assertEqual(sts.feedbackInput, null, "feedbackInput status mismatch");
+		await assertion.assertEqual(sts.reattemptLabel, null, "reattemptLabel status mismatch");
+		await assertion.assertEqual(sts.reattemptYesBtn, null, "reattemptYesBtn status mismatch");
+		await assertion.assertEqual(sts.reattemptNoBtn, null, "reattemptNoBtn status mismatch");
+		await assertion.assertEqual(sts.submitBtn, null, "submitBtn status mismatch");
+		await assertion.assertEqual(sts.scoreError, null, "scoreError status mismatch");
+	},
 }

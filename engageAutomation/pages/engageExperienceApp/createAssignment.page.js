@@ -408,6 +408,7 @@ module.exports = {
     set_assignment_txtbox: async function (value) {
         var res;
         await logger.logInto(await stackTrace.get());
+        await action.waitForDisplayed(this.assignment_txtbox)
         res = await action.setValue(this.assignment_txtbox, value);
         if (true == res) {
             await logger.logInto(await stackTrace.get(), "Value is entered in assignment_txtbox");
