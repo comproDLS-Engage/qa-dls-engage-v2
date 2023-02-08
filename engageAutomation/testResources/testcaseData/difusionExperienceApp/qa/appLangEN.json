@@ -345,7 +345,7 @@
                 "myBooks": "My Books",
                 "viewClasses": "View Classes",
                 "openFlipbook": "Open Flipbook",
-                "viewBookDetails": "View Book Details",
+                "viewBookDetails": null,
                 "removefromMyBooks": "Remove from My Books",
                 "unit_lbl": "Units",
                 "removeBook_title": "Remove from My Books?",
