@@ -36,7 +36,13 @@
     },
     "link": {
         "resourceType": "Link",
-        "url": "https://www.w3.org/WAI/standards-guidelines/wcag/"
+        "resourceName": "https://www.w3.org/WAI/standards-guidelines/wcag/",
+        "fileSize": null
+    },
+    "invalidLink": {
+        "resourceType": "Link",
+        "resourceName": "WAI/standards-guidelines/wcag/",
+        "fileSize": null
     }
 
 }

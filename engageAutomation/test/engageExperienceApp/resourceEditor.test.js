@@ -155,7 +155,7 @@ module.exports = {
     },
 
     //Validate clicking on Create Resource button
-    ENG_ICCR_TC_19: async function (testdata) {
+    ENG_ICCR_TC_19: async function () {
         sts = await resourceEditor.click_createResourceBtn();
         await assertion.assertEqual(sts, true, "createResourceBtn are not Clicked");
     },
@@ -210,7 +210,7 @@ module.exports = {
     },
 
     //Validate clicking on Replace Link button in Resource editor
-    ENG_ICCR_TC_24: async function () {
+    ENG_ICCR_TC_24: async function (testdata) {
         sts = await resourceEditor.click_replaceBtn();
         await assertion.assertEqual(sts.newResourceTitle, testdata.newResourceTitle[1], "newResourceTitle value mismatch");
         await assertion.assertEqual(sts.cancelBtn, testdata.cancelBtn, "cancelBtn value mismatch");

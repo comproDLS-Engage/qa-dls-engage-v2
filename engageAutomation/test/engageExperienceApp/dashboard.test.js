@@ -384,4 +384,11 @@ module.exports = {
         sts = await dashboardPage.click_editMaterialDialogCancelBtn();
         await assertion.assertEqual(sts, true, "click_editMaterialDialogCancelBtn status mismatch");
     },
+
+    //Validate that new resource dialog is launched on clicking "New Resource" option
+    ENG_DASH_TC_54: async function () {
+        sts = await dashboardPage.click_newResourceOption();
+        await assertion.assertEqual(sts.pageStatus, true, "Library editor page status mismatch");
+        await assertion.assertEqual(sts.appShellPage.header, true, "Library editor header status mismatch");
+    },
 };

@@ -789,6 +789,20 @@ module.exports = {
     return res;
   },
 
+  click_newResourceOption: async function () {
+    await logger.logInto(await stackTrace.get());
+    var res;
+    res = await action.click(this.newResourceOption);
+    if (true == res) {
+      await logger.logInto(await stackTrace.get(), " newResourceOption is clicked");
+      res = await require('./resourceEditor.page').isInitialized();
+    }
+    else {
+      await logger.logInto(await stackTrace.get(), res + "newResourceOption is NOT clicked", 'error');
+    }
+    return res;
+  },
+
   click_materialTitleBtn: async function (materialTitleBtnName) {
     await logger.logInto(await stackTrace.get());
     var i, list, res;

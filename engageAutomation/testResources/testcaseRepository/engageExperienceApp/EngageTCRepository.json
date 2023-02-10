@@ -2223,6 +2223,12 @@
           "description": "Validate that dialog is closed on clicking Cancel button",
           "tags": "P1",
           "visualTest": true
+        },
+        {
+          "id": "ENG_DASH_TC_54",
+          "description": "Validate that new resource dialog is launched on clicking 'New Resource' option",
+          "tags": "P1",
+          "visualTest": true
         }
       ]
     },
@@ -5255,6 +5261,169 @@
         {
           "id": "ENG_ICCT_TC_14",
           "description": "Validate the content of the text editor tour",
+          "tags": "P1",
+          "visualTest": true
+        }
+      ]
+    },
+    {
+      "modulename": "Resource Editor",
+      "moduleId": "",
+      "testFile": "./test/engageExperienceApp/resourceEditor.test.js",
+      "testcase": [
+        {
+          "id": "ENG_ICCR_TC_1",
+          "description": "Validate the content of New Resource dialog",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCR_TC_2",
+          "description": "Validate clicking on Cross icon in New Resource dialog",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCR_TC_3",
+          "description": "Validate user is able to paste a link (youtube, vimeo or other external links like pdf) in Resource Link textbox",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCR_TC_5",
+          "description": "Validate when user enter a valid link in Resource Link textbox and Click Enter button",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCR_TC_6",
+          "description": "Validate when user enter invalid link in Resource Link textbox and Click Enter button",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCR_TC_7",
+          "description": "Validate when user upload the pdf resource file from the local machine",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCR_TC_8",
+          "description": "Validate when user upload the word resource file from the local machine",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCR_TC_9",
+          "description": "Validate when user upload the ppt resource file from the local machine",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCR_TC_10",
+          "description": "Validate when user upload the excel resource file from the local machine",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCR_TC_11",
+          "description": "Validate when user upload the zip resource file from the local machine",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCR_TC_12",
+          "description": "Validate when user upload the mp4 resource file from the local machine",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCR_TC_13",
+          "description": "Validate when user upload the mp3 resource file from the local machine",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCR_TC_15",
+          "description": "Validate the content of New Resource dialog after pasting the link",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCR_TC_16",
+          "description": "Validate the content of New Resource dialog after uploading the file",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCR_TC_17",
+          "description": "Validate clicking on Replace button in New Resource dialog",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCR_TC_19",
+          "description": "Validate clicking on Create Resource button",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCR_TC_20",
+          "description": "Validate content of the Resource Editor page",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCR_TC_21",
+          "description": "Validate user is able to add title in Resource editor",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCR_TC_22",
+          "description": "Validate user is able to add description in Resource editor",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCR_TC_23",
+          "description": "Validate user is able to add duration or time in Resource editor",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCR_TC_24",
+          "description": "Validate clicking on Replace Link button in Resource editor",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCR_TC_25",
+          "description": "Validate clicking on Replace PDF button in Resource editor",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCR_TC_26",
+          "description": "Validate clicking on Replace Document button in Resource editor for word or ppt or xlsx",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCR_TC_27",
+          "description": "Validate clicking on Replace Zip button in Resource editor",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCR_TC_28",
+          "description": "Validate clicking on Replace Video button in Resource editor",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCR_TC_29",
+          "description": "Validate clicking on Replace Video button in Resource editor",
           "tags": "P1",
           "visualTest": true
         }
