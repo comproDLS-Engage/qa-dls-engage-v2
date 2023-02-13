@@ -23,7 +23,7 @@
         "testFile": "./test/engageExperienceApp/login.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
             "jsonPath": "engage.login.user.iccInstructorUser3"
           }
         ]
@@ -34,7 +34,7 @@
         "testFile": "./test/engageExperienceApp/appShell.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
             "jsonPath": "engage.appContent.myClassPage"
           }
         ]
@@ -48,7 +48,7 @@
         "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
             "jsonPath": "engage.login.user.iccInstructorUser3.class[0].name"
           }
         ]
@@ -59,7 +59,7 @@
         "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
             "jsonPath": "engage.appContent.iccAssignment.teacher"
           }
         ]
@@ -70,7 +70,7 @@
         "testFile": "./test/engageExperienceApp/iccAssignment.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/iccData.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/iccData.json",
             "jsonPath": "engage.material.activityList[0]"
           }
         ]
@@ -81,11 +81,11 @@
         "testFile": "./test/engageExperienceApp/iccAssignment.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/iccData.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/iccData.json",
             "jsonPath": "engage.material.activityList[0].activityName"
           },
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
             "jsonPath": "engage.appContent.iccAssignment.teacher"
           }
         ]
@@ -96,7 +96,7 @@
         "testFile": "./test/engageExperienceApp/iccAssignment.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
             "jsonPath": "engage.appContent.libraryEditorPage.teacher"
           }
         ]
@@ -107,7 +107,7 @@
         "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
             "jsonPath": "engage.appContent.libraryEditorPage.teacher"
           }
         ]
@@ -118,7 +118,7 @@
         "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
             "jsonPath": "engage.appContent.libraryEditorPage.teacher"
           }
         ]
@@ -135,11 +135,11 @@
         "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
             "jsonPath": "engage.appContent.libraryEditorPage.teacher"
           },
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/acceptanceQuiz.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/acceptanceQuiz.json",
             "jsonPath": "acceptanceQuiz.name"
           }
         ]
@@ -156,11 +156,11 @@
         "testFile": "./test/engageExperienceApp/iccAssignment.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/iccData.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/iccData.json",
             "jsonPath": "engage.material.activityList[0].activityName"
           },
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
             "jsonPath": "engage.appContent.iccAssignment.teacher"
           }
         ]
@@ -177,7 +177,7 @@
         "testFile": "./test/engageExperienceApp/iccAssignment.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
             "jsonPath": "engage.appContent.iccAssignment.teacher"
           }
         ]
@@ -194,7 +194,7 @@
         "testFile": "./test/engageExperienceApp/iccAssignment.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/iccData.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/iccData.json",
             "jsonPath": "engage.material.activityList1[0]"
           }
         ]
@@ -206,11 +206,11 @@
         "testFile": "./test/engageExperienceApp/iccAssignment.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/iccData.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/iccData.json",
             "jsonPath": "engage.material.activityList[0].activityName"
           },
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
             "jsonPath": "engage.appContent.iccAssignment.teacher"
           }
         ]
@@ -221,7 +221,7 @@
         "testFile": "./test/engageExperienceApp/iccAssignment.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
             "jsonPath": "engage.appContent.iccAssignment.teacher"
           }
         ]
@@ -238,7 +238,7 @@
         "testFile": "./test/engageExperienceApp/iccAssignment.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
             "jsonPath": "engage.appContent.iccAssignment.teacher"
           }
         ]
@@ -255,7 +255,7 @@
         "testFile": "./test/engageExperienceApp/iccAssignment.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/iccData.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/iccData.json",
             "jsonPath": "engage.material.activityList[0]"
           }
         ]
@@ -266,11 +266,11 @@
         "testFile": "./test/engageExperienceApp/iccAssignment.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/iccData.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/iccData.json",
             "jsonPath": "engage.material.activityList[0].activityName"
           },
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
             "jsonPath": "engage.appContent.iccAssignment.teacher"
           }
         ]
@@ -287,7 +287,7 @@
         "testFile": "./test/engageExperienceApp/createAssignment.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/assignmentData.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/assignmentData.json",
             "jsonPath": "engage.assignmentName.resourceName"
           }
         ]
@@ -298,7 +298,7 @@
         "testFile": "./test/engageExperienceApp/createAssignment.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
             "jsonPath": "engage.appContent.createAssignment.teacher"
           }
         ]
@@ -309,7 +309,7 @@
         "testFile": "./test/engageExperienceApp/createAssignment.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
             "jsonPath": "engage.appContent.createAssignment.teacher"
           }
         ]
@@ -326,7 +326,7 @@
         "testFile": "./test/engageExperienceApp/assignmentListTeacher.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/assignmentData.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/assignmentData.json",
             "jsonPath": "engage.assignmentName.resourceName"
           }
         ]
@@ -343,7 +343,7 @@
         "testFile": "./test/engageExperienceApp/assignmentDetails.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
             "jsonPath": "engage.appContent.viewAsStudentAssignment.teacher"
           }
         ]
@@ -354,11 +354,11 @@
         "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/acceptanceQuiz.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/acceptanceQuiz.json",
             "jsonPath": "acceptanceQuiz.question[0]"
           },
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
             "jsonPath": "engage.appContent.activityPlayer.teacher"
           }
         ]
@@ -369,7 +369,7 @@
         "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
             "jsonPath": "engage.appContent.libraryEditorPage.teacher"
           }
         ]
@@ -381,7 +381,7 @@
         "testData": [
           
             {
-              "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/iccData.json",
+              "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/iccData.json",
               "jsonPath": "engage.material.activityList[0]"
             }
           
@@ -406,7 +406,7 @@
         "testFile": "./test/engageExperienceApp/assignmentDetails.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
             "jsonPath": "engage.appContent.assignmentDetails.teacher"
           }
         ]
@@ -417,7 +417,7 @@
         "testFile": "./test/engageExperienceApp/assignmentDetails.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
             "jsonPath": "engage.appContent.assignmentList.teacher"
           }
         ]
@@ -428,7 +428,7 @@
         "testFile": "./test/engageExperienceApp/assignmentDetails.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
             "jsonPath": "engage.appContent.assignmentDetails.teacher"
           }
         ]
@@ -439,7 +439,7 @@
         "testFile": "./test/engageExperienceApp/assignmentListTeacher.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
             "jsonPath": "engage.appContent.assignmentList.teacher"
           }
         ]
@@ -472,7 +472,7 @@
         "testFile": "./test/engageExperienceApp/login.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
             "jsonPath": "engage.login.user.iccInstructorUser3"
           }
         ]
@@ -483,7 +483,7 @@
         "testFile": "./test/engageExperienceApp/appShell.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
             "jsonPath": "engage.appContent.myClassPage"
           }
         ]
@@ -497,11 +497,11 @@
         "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/logindata.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/logindata.json",
             "jsonPath": "engage.login.user.iccInstructorUser3.class[0]"
           },
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
             "jsonPath": "engage.appContent.myClassPage"
           }
         ]
@@ -512,7 +512,7 @@
         "testFile": "./test/engageExperienceApp/classDashboard.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
             "jsonPath": "engage.appContent.myClassPage"
           }
         ]
@@ -523,7 +523,7 @@
         "testFile": "./test/engageExperienceApp/assignmentListTeacher.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
             "jsonPath": "engage.appContent.assignmentList.teacher"
           }
         ]
@@ -534,11 +534,11 @@
         "testFile": "./test/engageExperienceApp/assignmentListTeacher.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
             "jsonPath": "engage.appContent.assignmentList.teacher"
           },
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/assignmentData.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/assignmentData.json",
             "jsonPath": "engage.book2"
           }
         ]
@@ -555,7 +555,7 @@
         "testFile": "./test/engageExperienceApp/iccAssignment.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/iccData.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/iccData.json",
             "jsonPath": "engage.material.activityList[0].activityName"
           }
         ]
@@ -572,7 +572,7 @@
         "testFile": "./test/engageExperienceApp/createAssignment.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/assignmentData.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/assignmentData.json",
             "jsonPath": "engage.assignmentName.resourceName"
           }
         ]
@@ -583,7 +583,7 @@
         "testFile": "./test/engageExperienceApp/createAssignment.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
             "jsonPath": "engage.appContent.createAssignment.teacher"
           }
         ]
@@ -594,7 +594,7 @@
         "testFile": "./test/engageExperienceApp/createAssignment.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
             "jsonPath": "engage.appContent.createAssignment.teacher"
           }
         ]
@@ -611,7 +611,7 @@
         "testFile": "./test/engageExperienceApp/assignmentListTeacher.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/assignmentData.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/assignmentData.json",
             "jsonPath": "engage.assignmentName.resourceName"
           }
         ]
@@ -628,7 +628,7 @@
         "testFile": "./test/engageExperienceApp/assignmentDetails.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
             "jsonPath": "engage.appContent.viewAsStudentAssignment.teacher"
           }
         ]
@@ -639,11 +639,11 @@
         "testFile": "./test/engageExperienceApp/activityPlayer.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/acceptanceQuiz.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/acceptanceQuiz.json",
             "jsonPath": "acceptanceQuiz.question[0]"
           },
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
             "jsonPath": "engage.appContent.activityPlayer.teacher"
           }
         ]
@@ -666,11 +666,11 @@
         "testFile": "./test/engageExperienceApp/assignmentListTeacher.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/assignmentData.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/assignmentData.json",
             "jsonPath": "engage.assignmentName.resourceName"
           },
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
             "jsonPath": "engage.appContent.assignmentList.teacher"
           }
         ]
@@ -681,7 +681,7 @@
         "testFile": "./test/engageExperienceApp/assignmentListTeacher.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
             "jsonPath": "engage.appContent.assignmentList.teacher"
           }
         ]
@@ -692,7 +692,7 @@
         "testFile": "./test/engageExperienceApp/assignmentDetails.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
             "jsonPath": "engage.appContent.assignmentDetails.teacher"
           }
         ]
@@ -703,11 +703,11 @@
         "testFile": "./test/engageExperienceApp/assignmentListTeacher.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
             "jsonPath": "engage.appContent.assignmentList.teacher"
           },
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/assignmentData.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/assignmentData.json",
             "jsonPath": "engage.book2"
           }
         ]
@@ -724,7 +724,7 @@
         "testFile": "./test/engageExperienceApp/iccAssignment.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/iccData.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/iccData.json",
             "jsonPath": "engage.material.activityList[1].activityName"
           }
         ]
@@ -741,7 +741,7 @@
         "testFile": "./test/engageExperienceApp/createAssignment.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/assignmentData.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/assignmentData.json",
             "jsonPath": "engage.assignmentName.writingName"
           }
         ]
@@ -752,7 +752,7 @@
         "testFile": "./test/engageExperienceApp/createAssignment.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
             "jsonPath": "engage.appContent.createAssignment.teacher"
           }
         ]
@@ -763,7 +763,7 @@
         "testFile": "./test/engageExperienceApp/createAssignment.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
             "jsonPath": "engage.appContent.createAssignment.teacher"
           }
         ]
@@ -780,7 +780,7 @@
         "testFile": "./test/engageExperienceApp/assignmentListTeacher.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/assignmentData.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/assignmentData.json",
             "jsonPath": "engage.assignmentName.writingName"
           }
         ]
@@ -797,7 +797,7 @@
         "testFile": "./test/engageExperienceApp/assignmentDetails.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
             "jsonPath": "engage.appContent.viewAsStudentAssignment.teacher"
           }
         ]
@@ -808,15 +808,15 @@
         "testFile": "./test/engageExperienceApp/openActivityPlayer.test.js",
         "testData": [
             {
-                "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+                "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
                 "jsonPath": "engage.appContent.openActivityPlayer.student"
             },
             {
-                "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/QA Test Automation BookTOC.json",
                 "jsonPath": "book2.name"
             },
             {
-                "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/QA Test Automation BookTOC.json",
+                "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/QA Test Automation BookTOC.json",
                 "jsonPath": "book2.component[0].unit[0].section[0].activity[0]"
             }
         ]
@@ -827,7 +827,7 @@
       "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
       "testData": [
         {
-          "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+          "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
           "jsonPath": "engage.appContent.libraryEditorPage.teacher"
         }
       ]
@@ -839,7 +839,7 @@
       "testData": [
         
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/iccData.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/iccData.json",
             "jsonPath": "engage.material.activityList[1]"
           }
         
@@ -870,11 +870,11 @@
         "testFile": "./test/engageExperienceApp/assignmentListTeacher.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/assignmentData.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/assignmentData.json",
             "jsonPath": "engage.assignmentName.writingName"
           },
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
             "jsonPath": "engage.appContent.assignmentList.teacher"
           }
         ]
@@ -885,7 +885,7 @@
         "testFile": "./test/engageExperienceApp/assignmentListTeacher.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
             "jsonPath": "engage.appContent.assignmentList.teacher"
           }
         ]
@@ -896,7 +896,7 @@
         "testFile": "./test/engageExperienceApp/assignmentDetails.test.js",
         "testData": [
           {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/production/appLangEN.json",
             "jsonPath": "engage.appContent.assignmentDetails.teacher"
           }
         ]
