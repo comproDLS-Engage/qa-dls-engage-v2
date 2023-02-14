@@ -894,6 +894,12 @@
           "description": "Validate the click on invite button",
           "tags": "P1",
           "visualTest": false
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_133",
+          "description": "Validate the click on dev's MaterialTab button",
+          "tags": "P1",
+          "visualTest": false
         }
       ]
     },
@@ -3449,6 +3455,12 @@
           "description": "Validate the click on cancel button of delete dialogue",
           "tags": "P2",
           "visualTest": true
+        },
+        {
+          "id": "ENG_ASSLIST_TC_12",
+          "description": "Validate the click on dev's Material btn from the component list",
+          "tags": "P2",
+          "visualTest": true
         }
       ]
     },
@@ -4003,6 +4015,12 @@
           "description": "Validate that snackbar message appears on clicking Save Answers button",
           "tags": "P1",
           "visualTest": true
+        },
+        {
+          "id": "ENG_OPEN_TC_24",
+          "description": "Validate the writing question in unattempted state for Assignment",
+          "tags": "P1",
+          "visualTest": true
         }
       ]
     },
@@ -4476,6 +4494,24 @@
         {
           "id": "ENG_ICCE_TC_101",
           "description": "Validate the click on take editor option in help submenu list",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_102",
+          "description": "Validate the click on show details button",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_103",
+          "description": "Validate the content of the show details page",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCE_TC_104",
+          "description": "Validate the click on hide details button",
           "tags": "P1",
           "visualTest": true
         }
@@ -5057,6 +5093,79 @@
           "description": "Validate clicking on cross icon clears the search results",
           "tags": "",
           "visualTest": false
+        }
+      ]
+    },
+    {
+      "modulename": "ICC Assignment and Class data",
+      "moduleId": "",
+      "testFile": "./test/engageExperienceApp/iccAssignment.test.js",
+      "testcase": [
+        {
+          "id": "ENG_ICCA_TC_3",
+          "description": "Validate the click on more option of activity name",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCA_TC_4",
+          "description": "Validate the click on the Edit button of activity more option list",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCA_TC_5",
+          "description": "Validate the click on the restricted/public button of activity more option list",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCA_TC_6",
+          "description": "Validate the click on the Assign button of activity more option list",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCA_TC_17",
+          "description": "Validate the click on the Material checkbox value.",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCA_TC_22",
+          "description": "Validate the continue details page on the select activity page.",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCA_TC_24",
+          "description": "Validate the Activities data on dev Material page",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCA_TC_25",
+          "description": "Validate the Activities data on dev Material page",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCA_TC_31",
+          "description": "Validate the click on yes button on make restricted/public popup",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCA_TC_33",
+          "description": "Validate the content on make restricted popup",
+          "tags": "P1",
+          "visualTest": true
+        },
+        {
+          "id": "ENG_ICCA_TC_34",
+          "description": "Validate the content on make public popup",
+          "tags": "P1",
+          "visualTest": true
         }
       ]
     },

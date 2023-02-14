@@ -202,6 +202,12 @@ module.exports = {
     reportAProblembtn: selectorFile.css.ComproEngage.libraryEditorPage.reportAProblembtn,
     helpCenterbtn: selectorFile.css.ComproEngage.libraryEditorPage.helpCenterbtn,
     contentGuidelinesbtn: selectorFile.css.ComproEngage.libraryEditorPage.contentGuidelinesbtn,
+    showDetailsbtn: selectorFile.css.ComproEngage.libraryEditorPage.showDetailsbtn,
+    detailsSubtitle: selectorFile.css.ComproEngage.libraryEditorPage.detailsSubtitle,
+    detailstitle: selectorFile.css.ComproEngage.libraryEditorPage.detailstitle,
+    detailsActivityIcon: selectorFile.css.ComproEngage.libraryEditorPage.detailsActivityIcon,
+    detailsActivityType: selectorFile.css.ComproEngage.libraryEditorPage.detailsActivityType,
+    detailsPublichedChip: selectorFile.css.ComproEngage.libraryEditorPage.detailsPublichedChip,
 
     isInitialized: async function () {
         var res;
@@ -1956,8 +1962,50 @@ module.exports = {
             await logger.logInto(await stackTrace.get(), res + "contentGuidelinesbtn is NOT clicked", 'error');
         }
         return res;
+    },
+    getData_showDetailsPanel: async function () {
+        await logger.logInto(await stackTrace.get());
+        var obj;
+        obj = {
+            detailsSubtitle: ((await action.getElementCount(this.detailsSubtitle)) > 0) ? await action.getText(this.detailsSubtitle) : null,
+            detailstitle: ((await action.getElementCount(this.detailstitle)) > 0) ? await action.getText(this.detailstitle) : null,
+            detailsActivityIcon: ((await action.getElementCount(this.detailsActivityIcon)) > 0) ? await action.waitForDisplayed(this.detailsActivityIcon) : null,
+            detailsActivityType: ((await action.getElementCount(this.detailsActivityType)) > 0) ? await action.getText(this.detailsActivityType) : null,
+            detailsPublichedChip: ((await action.getElementCount(this.detailsPublichedChip)) > 0) ? await action.getText(this.detailsPublichedChip) : null,
+        }
+        return obj;
+    },
+
+
+    click_showDetailsbtn: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        await action.waitForDisplayed(this.showDetailsbtn)
+        res = await action.click(this.showDetailsbtn);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " showDetailsbtn is clicked");
+            await action.waitForDisplayed(this.detailsSubtitle)
+            res = await this.getData_showDetailsPanel();
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "showDetailsbtn is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_hideDetailsbtn: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.showDetailsbtn);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " showDetailsbtn is clicked");
+            await action.waitForDisplayed(this.detailstitle,30,true)
+            res = await this.getData_showDetailsPanel();
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "showDetailsbtn is NOT clicked", 'error');
+        }
+        return res;
     }
-
-
 }
 

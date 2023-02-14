@@ -26,6 +26,7 @@ module.exports = {
 	bookTitle: selectorFile.css.ComproEngage.myClassPage.bookTitle,
 	bookIcon: selectorFile.css.ComproEngage.myClassPage.bookIcon,
 	inboxOption: selectorFile.css.ComproEngage.myClassPage.inboxOption,
+	devMaterialTab: selectorFile.css.ComproEngage.iccAssignment.devMaterialTab,
 	assignmentsOption: selectorFile.css.ComproEngage.myClassPage.assignmentsOption,
 	studentsOption: selectorFile.css.ComproEngage.myClassPage.studentsOption,
 	gradeBookOption: selectorFile.css.ComproEngage.myClassPage.gradeBookOption,
@@ -168,6 +169,7 @@ module.exports = {
 		await logger.logInto(await stackTrace.get());
 		let class_index = await this.getClassIndex(className);
 		if (typeof class_index != 'string') {
+			await action.waitForDisplayed(this.classCard + class_index + "]")
 			res = await action.click(this.classCard + class_index + "]");
 
 		}
@@ -287,6 +289,34 @@ module.exports = {
 		}
 		return res;
 	},
+	click_devMaterialOption: async function () {
+		await logger.logInto(await stackTrace.get());
+		res = await action.click(this.inboxOption);
+		if (res == true) {
+
+			//teacherViewClass = require('./teacherViewClass.page.js');
+			res = await teacherViewClassPage.getViewClassPageData();
+		}
+		else {
+			res = res + " -- inboxBtn is NOT clicked";
+			await logger.logInto(await stackTrace.get(), res, 'error');
+		}
+		return res;
+	},
+	click_devMaterialTab: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.devMaterialTab);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " devMaterialTab is clicked");
+			var devMaterialTabPage = require('./iccAssignment.page.js');
+            res = await devMaterialTabPage.getData_devMaterialPage();
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "devMaterialTab is NOT clicked", 'error');
+        }
+        return res;
+    },
 	click_progressOption: async function () {
 		await logger.logInto(await stackTrace.get());
 		res = await action.click(this.progressOption);
@@ -331,10 +361,11 @@ module.exports = {
 		res = await action.click(this.materialsOption);
 		if (res == true) {
 
-			await logger.logInto(await stackTrace.get(), res, 'error');
+			//teacherViewClass = require('./teacherViewClass.page.js');
+			res = await teacherViewClassPage.getViewClassPageData();
 		}
 		else {
-			res = res + " -- addStudentsOption button is NOT clicked";
+			res = res + " -- materialBtn is NOT clicked";
 			await logger.logInto(await stackTrace.get(), res, 'error');
 		}
 		return res;

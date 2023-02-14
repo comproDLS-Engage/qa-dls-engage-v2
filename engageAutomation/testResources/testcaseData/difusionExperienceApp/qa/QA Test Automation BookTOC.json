@@ -224,5 +224,37 @@
                 ]
             }
         ]
+    },
+    "book2": {
+        "name": "Aula Plus 1 (For DEV2)",
+        "description": "",
+        "component": [
+            {
+                "index": 0,
+                "name": {
+                    "EN": "dev's Material",
+                    "ES": "dev's Material"
+                },
+                "unit": [
+                    {
+                        "index": 0,
+                        "title": "",
+                        "activityCount": "",
+                        "folderCount": "",
+                        "flipbookPageNum": "",
+                        "section": [
+                            {
+                                "index": 0,
+                                "name": "Writing Quiz",
+                                "activity": [
+                                    "Writing Quiz"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
     }
+
 }

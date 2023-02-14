@@ -49,7 +49,7 @@
                 "category": "None",
                 "visibility": "True",
                 "targetRole": "All",
-                "freelyAvailable": "Both ( Teacher and Student)"
+                "freelyAvailable": "Both (Teacher and Student)"
             },
             {
                 "type": "Bank",

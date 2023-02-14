@@ -222,7 +222,7 @@ module.exports = {
 		sts = await addActivityPage.click_Add_Button();
 		await assertion.assertEqual(sts, true, "Add button status mismatch");
 		if (testdata.id == "category-0-option-0")
-			await browser.switchWindow('paint.backoffice.comprodls.com/');
+			await browser.switchWindow('paint.backoffice.comprodls.com');
 	},
 
 	// Validate that clicking on the Level 1 breadcrumb launches components page
