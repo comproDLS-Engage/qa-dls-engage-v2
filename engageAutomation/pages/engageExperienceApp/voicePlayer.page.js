@@ -108,6 +108,7 @@ module.exports = {
         res = await action.click(this.rerecordBtn);
         if (true == res) {
             await logger.logInto(await stackTrace.get(), " rerecordBtn is clicked");
+            await action.waitForDisplayed(this.dialogHeading);
             res = await this.getData_rerecordDialog();
         }
         else {
