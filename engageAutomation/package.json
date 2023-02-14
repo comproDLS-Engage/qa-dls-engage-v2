@@ -72,7 +72,7 @@
     "selenium-webdriver": "^4.0.0",
     "tesults": "^1.1.1",
     "create-wdio": "^7.1.1",
-    "wdio-chromedriver-service": "^8.0.0",
+    "wdio-chromedriver-service": "8.0.1",
     "wdio-novus-visual-regression-service": "^1.2.5",
     "wdio-timeline-reporter": "^5.1.4",
     "winston": "^3.2.1",
