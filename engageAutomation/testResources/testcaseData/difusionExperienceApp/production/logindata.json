@@ -133,10 +133,6 @@
                         {
                             "key": "v324-6vg7",
                             "name": "Gradebook"
-                        },
-                        {
-                            "key": "TFbA-6AP7",
-                            "name": "Class with no assignment"
                         }
                     ]
                 },
@@ -418,6 +414,19 @@
                         "lastName": "User",
                         "countryName": "India"
                     }
+                },
+                "iccInstructorUser3": {
+                    "email": "dev2_libraryICCAssignmentTeacher1@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "instructor",
+                    "name": "dev2 libraryICCAutoTeacher",
+                    "class": [
+                        {
+                            "key": "dNcW-6h9X",
+                            "name": "class3"
+                        }
+                    ],
+                    "info": {}
                 },
                 "iccInstructorUser1": {
                     "email": "dev2_libraryICCAutoTeacher@yopmail.com",
