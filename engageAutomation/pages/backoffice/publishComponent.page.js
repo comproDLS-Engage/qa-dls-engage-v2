@@ -11,12 +11,13 @@ module.exports = {
     publishBtn: selectorFile.publishComponentPage.publishBtn,
     lastPublishedVer: selectorFile.publishComponentPage.lastPublishedVer,
     lastSnapshotVer: selectorFile.publishComponentPage.lastSnapshotVer,
+    loadingContainer: selectorFile.common.loadingContainer,
 
     isInitialized: async function () {
         await logger.logInto((await stackTrace.get()));
-        //action.waitForDocumentLoad();
-        await action.waitForDisplayed(this.loadingContainer);
-        await action.waitForDisplayed(this.loadingContainer, 120000, true);
+        action.waitForDocumentLoad();
+        //await action.waitForDisplayed(this.loadingContainer);
+        //await action.waitForDisplayed(this.loadingContainer, 60000, true);
         res = {
             lastPublishedVer: await action.getText(this.lastPublishedVer),
             lastSnapshotVer: await action.getText(this.lastSnapshotVer),
@@ -61,18 +62,20 @@ module.exports = {
         if (res == true) {
             res = await action.click(this.publishBtn);
             if (res == true) {
-                await browser.waitUntil(
+                await action.waitForDisplayed(this.loadingContainer);
+                res = await action.waitForDisplayed(this.loadingContainer, 120000, true);
+                if (res == true) {
+                    res = await action.getText(this.lastPublishedVer) > prevVersion;
+                }
+                /*await browser.waitUntil(
                     async () => (await action.getText(this.lastPublishedVer)) > prevVersion,
                     {
                         timeout: undefined,
                         timeoutMsg: 'ERROR! Published version did not proceed'
                     }
-                );
+                );*/
             }
             await logger.logInto((await stackTrace.get()), res);
-        }
-        else {
-            res = res + " - publish button is not enabled"
         }
         return res;
     },
