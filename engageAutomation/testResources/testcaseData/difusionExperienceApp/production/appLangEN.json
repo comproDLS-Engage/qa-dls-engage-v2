@@ -347,7 +347,7 @@
                 "myBooks": "My Books",
                 "viewClasses": "View Classes",
                 "openFlipbook": "Open Flipbook",
-                "viewBookDetails": "View Book Details",
+                "viewBookDetails": null,
                 "removefromMyBooks": "Remove from My Books",
                 "unit_lbl": "Units",
                 "removeBook_title": "Remove from My Books?",
@@ -391,6 +391,7 @@
                     "yourScoreLabel": null,
                     "closeInfoBtn": "",
                     "infoTocHeading": "Activities",
+                    "closeAssignmentBtn": "Close Assignment",
                     "feedbackText": [
                         "Well done",
                         "Correct",
@@ -905,38 +906,18 @@
             },
             "downloadPlayer": {
                 "teacher": {
-                    "downPlayer_img": true,
-                    "downPlayer_title": "Download word",
-                    "resourceLabel": "Download Resource",
-                    "downPlayer_subtitle": "Download file to view this resource on your computer.",
-                    "downloadBtn": [
-                        "Download Document",
-                        "Download ZIP",
-                        "Download PDF",
-                        "Download Excel"
-                    ],
-                    "downInfoLabel": "Download Information",
-                    "fileLabel": "File",
-                    "typeLabel": "Type",
-                    "sizeLabel": "Size",
-                    "viewBtn": "View PDF"
+                    "downPlayerImg": true,
+                    "downResHeading": "Download Resource",
+                    "downResSubheading": "Download file to view this resource on your device",
+                    "openWithBrowserBtn": "Open with Browser",
+                    "downloadBtn": "Download"
                 },
                 "student": {
-                    "downPlayer_img": true,
-                    "downPlayer_title": "Download word",
-                    "resourceLabel": "Download Resource",
-                    "downPlayer_subtitle": "Download file to view this resource on your computer.",
-                    "downloadBtn": [
-                        "Download Document",
-                        "Download ZIP",
-                        "Download PDF",
-                        "Download Excel"
-                    ],
-                    "downInfoLabel": "Download Information",
-                    "fileLabel": "File",
-                    "typeLabel": "Type",
-                    "sizeLabel": "Size",
-                    "viewBtn": "View PDF"
+                    "downPlayerImg": true,
+                    "downResHeading": "Download Resource",
+                    "downResSubheading": "Download file to view this resource on your device",
+                    "openWithBrowserBtn": "Open with Browser",
+                    "downloadBtn": "Download"
                 }
             },
             "contentPlayer": {
@@ -1630,7 +1611,11 @@
                     "returnToLibrarylDescriptioninFinishQuiz": "Go back to library to review and manage your materials.",
                     "addToClass_Title": "Add to Class",
                     "addToClass_SubTitle": "Manage which classes have access to this material.",
-                    "quesNumber": "3 of 3"
+                    "quesNumber": "3 of 3",
+                    "takeEditorTourbtn": "Take Editor Tour",
+                    "reportAProblembtn": "Report a Problem",
+                    "helpCenterbtn": "Help Center",
+                    "contentGuidelinesbtn": "Content Guidelines"
                 },
                 "student": {}
             },
@@ -1655,7 +1640,10 @@
                     "previewBtn": "Preview",
                     "duplicateBtn": "Duplicate",
                     "deleteBtn": "Delete",
-                    "editBtn": "Edit"
+                    "editBtn": "Edit",
+                    "showDetailsbtn": "Show Details",
+                    "detailsSubtitle": "My Library",
+                    "detailsPublichedChip": "Published"
                 },
                 "student": {}
             },
@@ -1746,6 +1734,45 @@
                     "dialogCancelBtn": "No",
                     "dialogAcceptBtn": "Yes",
                     "snackbarTxt": "You have successfully recorded your answer."
+                }
+            },
+            "iccAssignment": {
+                "teacher": {
+                    "devMaterialTab": "dev1's Materials",
+                    "activitiesAndResourseHeading": "Activities and Resources",
+                    "activitieslbl": "Activities",
+                    "resourceslbl": "Resources",
+                    "activityEditbtn": "Edit",
+                    "activityMakeRestrictedbtn": "Make ",
+                    "activityTypeStatus": [
+                        "pulic",
+                        "restricted"
+                    ],
+                    "activityTypeName": "Quiz",
+                    "activityAssignbtn": "Assign",
+                    "resourceEditbtn": "Edit",
+                    "resourceMakeRestrictedbtn": "Make Restricted",
+                    "resourceAssignbtn": "Assign",
+                    "createAssignmentSelectActivityHeader": "Create Assignment � Select Activities",
+                    "devMaterial": "dev1's Materials",
+                    "materialHeading": "materials",
+                    "whyCan'tIfindmyResources": "Why can't I find my resource?",
+                    "materialOptionLbl": "Materials",
+                    "TypeOptionLbl": "Type",
+                    "AddedonOptionLbl": "Added On",
+                    "previewOptionbtn": "Preview",
+                    "cancelSelectActivityPagebtn": "Cancel",
+                    "continueToDetailsbtn": "Continue to Details",
+                    "makeRestrictedTitle": [
+                        "Make Restricted |",
+                        "Make Public |"
+                    ],
+                    "makeRestrictedSubTitle": [
+                        "Making this activity restricted will hide it in the class materials. You can still assign it via assignments. Do you wish to continue?",
+                        "Making this activity public will allow your students to view this in the class. Do you wish to continue?"
+                    ],
+                    "yesbtn": "Yes",
+                    "Npbtn": "No"
                 }
             }
         }

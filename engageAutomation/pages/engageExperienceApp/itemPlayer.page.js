@@ -32,6 +32,7 @@ module.exports = {
 		res = await action.waitForDisplayed("iframe[id*=iframe], iframe");
 		await action.switchToFrame(0);
 		await action.waitForDocumentLoad();
+		await browser.pause(1000);
 		await action.switchToParentFrame();
 		if (res == true) {
 			res = await this.getItemplayerInfo();

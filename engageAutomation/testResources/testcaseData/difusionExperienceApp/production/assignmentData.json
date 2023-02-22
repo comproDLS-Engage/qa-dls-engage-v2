@@ -45,7 +45,9 @@
             "name2": "Open Ended Assignment",
             "name3": "Non Scorable Assignment",
             "editName": "Automation Test Edit",
-            "cloneName": "Clone: Automation Test"
+            "cloneName": "Clone: Automation Test",
+            "resourceName":"Material Assignment",
+            "writingName":"writing Assignment"
         },
         "book": {
             "name": "QA Test Automation Book [DO NOT MODIFY]",
@@ -84,6 +86,29 @@
                                 "activity8": "Etext",
                                 "activity9": "Html webbook"
                             }
+                        }
+                    ]
+                }
+            ]
+        },
+        "book2": {
+            "name": "QA Test Automation Book [DO NOT MODIFY]",
+            "componentList": [
+                
+                    {
+                        "componentname": "Más Ejercicios"
+                    },
+                    {
+                        "componentname": "Textbook Activities"
+                    }
+                
+            ],
+            "devMaterial": [
+                {
+                    "className": "class3",
+                    "componentList": [
+                        {
+                            "componentname": "dev1's Materials"
                         }
                     ]
                 }
