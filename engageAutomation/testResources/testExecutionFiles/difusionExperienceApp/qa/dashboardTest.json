@@ -630,6 +630,10 @@
                     {
                         "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
                         "jsonPath": "engage.appContent.dashboard.teacher"
+                    },
+                    {
+                      "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/iccData.json",
+                      "jsonPath": "engage.material.activityList[0].activityName"
                     }
                 ]
             },

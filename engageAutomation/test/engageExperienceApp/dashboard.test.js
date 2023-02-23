@@ -343,11 +343,12 @@ module.exports = {
     //Validate that delete confirmation dialog is launched on clicking Delete option
     ENG_DASH_TC_43: async function (testdata) {
         sts = await dashboardPage.click_deleteMaterialOption();
-        await assertion.assertEqual(sts.deleteMaterialDialogTitle, testdata.deleteMaterialDialogTitle, "deleteMaterialDialogTitle status mismatch");
-        await assertion.assertEqual(sts.deleteMaterialDialogSubtitle, testdata.deleteMaterialDialogSubtitle, "deleteMaterialDialogSubtitle status mismatch");
-        await assertion.assertEqual(sts.deleteMaterialDialogWarning, testdata.deleteMaterialDialogWarning, "deleteMaterialDialogWarning status mismatch");
-        await assertion.assertEqual(sts.deleteMaterialDialogCancelBtn, testdata.deleteMaterialDialogCancelBtn, "deleteMaterialDialogCancelBtn status mismatch");
-        await assertion.assertEqual(sts.deleteMaterialDialogDeleteBtn, testdata.deleteMaterialDialogDeleteBtn, "deleteMaterialDialogDeleteBtn status mismatch");
+        await assertion.assertEqual(sts.deleteMaterialDialogTitle, testdata[0].deleteMaterialDialogTitle, "deleteMaterialDialogTitle status mismatch");
+        let subtitle = testdata[0].deleteMaterialDialogSubtitle[0] + testdata[1] + testdata[0].deleteMaterialDialogSubtitle[1];
+        await assertion.assertEqual(sts.deleteMaterialDialogSubtitle, subtitle, "deleteMaterialDialogSubtitle status mismatch");
+        await assertion.assertEqual(sts.deleteMaterialDialogWarning, testdata[0].deleteMaterialDialogWarning, "deleteMaterialDialogWarning status mismatch");
+        await assertion.assertEqual(sts.deleteMaterialDialogCancelBtn, testdata[0].deleteMaterialDialogCancelBtn, "deleteMaterialDialogCancelBtn status mismatch");
+        await assertion.assertEqual(sts.deleteMaterialDialogDeleteBtn, testdata[0].deleteMaterialDialogDeleteBtn, "deleteMaterialDialogDeleteBtn status mismatch");
     },
 
     //Validate material is deleted on clicking Delete button in the dialog

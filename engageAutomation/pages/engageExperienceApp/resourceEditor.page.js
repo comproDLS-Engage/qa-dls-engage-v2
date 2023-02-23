@@ -121,6 +121,7 @@ module.exports = {
         res = await action.click(this.enterBtn);
         if (true == res) {
             await logger.logInto(await stackTrace.get(), " enterBtn is clicked");
+            await action.waitForDocumentLoad();
         }
         else {
             await logger.logInto(await stackTrace.get(), res + "enterBtn is NOT clicked", 'error');
