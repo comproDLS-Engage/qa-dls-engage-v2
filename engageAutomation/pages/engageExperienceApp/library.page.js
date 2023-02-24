@@ -145,6 +145,7 @@ module.exports = {
         res = await action.click(this.newResourceBtn);
         if (true == res) {
             await logger.logInto(await stackTrace.get(), " newResourceBtn is clicked");
+            res = await require('./resourceEditor.page').isInitialized();
         }
         else {
             await logger.logInto(await stackTrace.get(), res + "newResourceBtn is NOT clicked", 'error');

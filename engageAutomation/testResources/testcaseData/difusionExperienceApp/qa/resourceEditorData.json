@@ -12,7 +12,13 @@
     "pdf": {
         "resourceType": "PDF",
         "resourceName": "Lorem Ipsum.pdf",
-        "fileSize": "62 KB"
+        "resourceValue": "./testResources/testcaseData/difusionExperienceApp/qa/Lorem Ipsum.pdf",
+        "title": "Lorem Ipsum",
+        "description": "",
+        "duration": "",
+        "fileSize": "62 KB",
+        "materialTitle": "Untitled Resource",
+        "newDescription": "test description"
     },
     "docx": {
         "resourceType": "Document",
@@ -38,6 +44,7 @@
         "resourceType": "Link",
         "resourceName": "WCAG 2 Overview",
         "resourceValue": "https://www.w3.org/WAI/standards-guidelines/wcag/",
+        "title": "WCAG 2 Overview",
         "description": "Introduces the Web Content Accessibility Guidelines (WCAG) international standard, including WCAG 2.0, WCAG 2.1, and WCAG 2.2. WCAG documents explain how to make web content more accessible to people with disabilities.",
         "duration": "",
         "fileSize": null,
@@ -46,6 +53,8 @@
     "invalidLink": {
         "resourceType": "Link",
         "resourceName": "WAI/standards-guidelines/wcag/",
+        "resourceValue": "WAI/standards-guidelines/wcag/",
+        "description": null,
         "fileSize": null
     }
 

@@ -37,6 +37,11 @@ module.exports = {
     fluencyTxt: selectorFile.css.ComproEngage.resourceEditor.fluencyTxt,
     learnMoreLink: selectorFile.css.ComproEngage.resourceEditor.learnMoreLink,
     estTimeLink: selectorFile.css.ComproEngage.resourceEditor.estTimeLink,
+    resourceTypeBand: selectorFile.css.ComproEngage.resourceEditor.resourceTypeBand,
+    resourceNameBand: selectorFile.css.ComproEngage.resourceEditor.resourceNameBand,
+    sizeLblBand: selectorFile.css.ComproEngage.resourceEditor.sizeLblBand,
+    fileSizeBand: selectorFile.css.ComproEngage.resourceEditor.fileSizeBand,
+    replaceBtnBand: selectorFile.css.ComproEngage.resourceEditor.replaceBtnBand,
 
     isInitialized: async function () {
         var res;
@@ -81,11 +86,11 @@ module.exports = {
         await logger.logInto(await stackTrace.get());
         var obj;
         obj = {
-            resourceType: ((await action.getElementCount(this.resourceType)) > 0) ? await action.getText(this.resourceType) : null,
-            resourceName: ((await action.getElementCount(this.resourceName)) > 0) ? await action.getText(this.resourceName) : null,
-            sizeLbl: ((await action.getElementCount(this.sizeLbl)) > 0) ? await action.getText(this.sizeLbl) : null,
-            fileSize: ((await action.getElementCount(this.fileSize)) > 0) ? await action.getText(this.fileSize) : null,
-            replaceBtn: ((await action.getElementCount(this.replaceBtn)) > 0) ? await action.getText(this.replaceBtn) : null,
+            resourceTypeBand: ((await action.getElementCount(this.resourceTypeBand)) > 0) ? await action.getText(this.resourceTypeBand) : null,
+            resourceNameBand: ((await action.getElementCount(this.resourceNameBand)) > 0) ? await action.getText(this.resourceNameBand) : null,
+            sizeLblBand: ((await action.getElementCount(this.sizeLblBand)) > 0) ? await action.getText(this.sizeLblBand) : null,
+            fileSizeBand: ((await action.getElementCount(this.fileSizeBand)) > 0) ? await action.getText(this.fileSizeBand) : null,
+            replaceBtnBand: ((await action.getElementCount(this.replaceBtnBand)) > 0) ? await action.getText(this.replaceBtnBand) : null,
             resourceTypeTitle: ((await action.getElementCount(this.resourceTypeTitle)) > 0) ? await action.getText(this.resourceTypeTitle) : null,
             titleLbl: ((await action.getElementCount(this.titleLbl)) > 0) ? await action.getText(this.titleLbl) : null,
             titleInput: ((await action.getElementCount(this.titleInput)) > 0) ? await action.getText(this.titleInput) : null,
@@ -163,10 +168,26 @@ module.exports = {
         res = await action.click(this.createResourceBtn);
         if (true == res) {
             await logger.logInto(await stackTrace.get(), " createResourceBtn is clicked");
+            await action.waitForDocumentLoad();
             res = await action.waitForDisplayed(this.titleInput);
         }
         else {
             await logger.logInto(await stackTrace.get(), res + "createResourceBtn is NOT clicked", 'error');
+        }
+        return res;
+    },
+
+    click_replaceBtnBand: async function () {
+        await logger.logInto(await stackTrace.get());
+        var res;
+        res = await action.click(this.replaceBtnBand);
+        if (true == res) {
+            await logger.logInto(await stackTrace.get(), " replaceBtnBand is clicked");
+            await action.waitForDisplayed(this.cancelBtn);
+            res = await this.getData_resourceDialog();
+        }
+        else {
+            await logger.logInto(await stackTrace.get(), res + "replaceBtn is NOT clicked", 'error');
         }
         return res;
     },
@@ -224,7 +245,7 @@ module.exports = {
         let res;
         res = await action.uploadFile(path);
         if ((typeof res) === 'string') {
-            res = await action.setValue(this.loUploadBtn, res);
+            res = await action.addValue(this.uploadResourceBtn, res);
             if (true == res) {
                 await logger.logInto(await stackTrace.get(), "File uploaded");
                 res = await action.waitForDisplayed(this.createResourceBtn);

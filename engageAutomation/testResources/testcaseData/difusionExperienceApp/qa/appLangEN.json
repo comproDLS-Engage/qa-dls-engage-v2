@@ -1558,7 +1558,10 @@
                     "viewAsStudent": "View As Student",
                     "addtoClass_btn": "Add to Class",
                     "deleteTitle": "Delete Material?",
-                    "deleteSubTitle": "This will remove the material \"Acceptance Quiz\" from your library",
+                    "deleteSubTitle": [
+                        "This will remove the material \"",
+                        "\" from your library"
+                    ],
                     "deleteSubTitleMaterial": "This process is unrecoverable and your data will be lost forever.",
                     "cancel_btn": "Cancel",
                     "delete_btn": "Delete",
@@ -1860,7 +1863,17 @@
                     "durationUnit": "min",
                     "fluencyTxt": "The average reading fluency rate varies by grade level and age.",
                     "learnMoreLink": "Learn More",
-                    "estTimeLink": "How to estimate reading time?"
+                    "estTimeLink": "How to estimate reading time?",
+                    "sizeLblBand": "size",
+                    "replaceBtnBand": [
+                        "Replace File",
+                        "Replace Link",
+                        "Replace PDF",
+                        "Replace Document",
+                        "Replace ZIP",
+                        "Replace Video",
+                        "Replace Audio"
+                    ]
                 },
                 "student": {}
             },

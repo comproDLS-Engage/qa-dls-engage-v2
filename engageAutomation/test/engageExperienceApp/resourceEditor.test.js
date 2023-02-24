@@ -143,7 +143,7 @@ module.exports = {
         await assertion.assertEqual(sts.resourceName, testdata[1].resourceName, "resourceName value mismatch");
         await assertion.assertEqual(sts.sizeLbl, testdata[0].sizeLbl, "sizeLbl value mismatch");
         await assertion.assertEqual(sts.fileSize, testdata[1].fileSize, "fileSize value mismatch");
-        await assertion.assertEqual(sts.replaceBtn, testdata.replaceBtn[0], "replaceBtn value mismatch");
+        await assertion.assertEqual(sts.replaceBtn, testdata[0].replaceBtn[0], "replaceBtn value mismatch");
         await assertion.assertEqual(sts.resourceGuidelinesTxt, testdata[0].resourceGuidelinesTxt, "resourceGuidelinesTxt value mismatch");
         await assertion.assertEqual(sts.createResourceBtn, testdata[0].createResourceBtn[0], "createResourceBtn value mismatch");
     },
@@ -163,31 +163,38 @@ module.exports = {
     //Validate content of the Resource Editor page
     ENG_ICCR_TC_20: async function (testdata) {
         sts = await resourceEditor.getData_resourceEditorPage();
-        await assertion.assertEqual(sts.resourceType, testdata[1].resourceType, "resourceType value mismatch");
-        await assertion.assertEqual(sts.resourceName, testdata[1].resourceName, "resourceName value mismatch");
-        await assertion.assertEqual(sts.fileSize, testdata[1].fileSize, "fileSize value mismatch");
-        //await assertion.assert(sts.replaceBtn.includes(testdata[0].replaceBtn[2]), "replaceBtn value mismatch");
-        await assertion.assertEqual(sts.resourceTypeTitle, testdata[1].resourceTypeTitle, "resourceTypeTitle value mismatch");
+        await assertion.assertEqual(sts.resourceTypeBand, testdata[1].resourceType, "resourceType value mismatch");
+        await assertion.assertEqual(sts.resourceNameBand, testdata[1].resourceName, "resourceName value mismatch");
+        await assertion.assertEqual(sts.fileSizeBand, testdata[1].fileSize, "fileSize value mismatch");
+        //await assertion.assert(sts.replaceBtnBand.includes(testdata[0].replaceBtn[2]), "replaceBtn value mismatch");
+        await assertion.assertEqual(sts.resourceTypeTitle, testdata[1].resourceType, "resourceTypeTitle value mismatch");
         await assertion.assertEqual(sts.titleLbl, testdata[0].titleLbl, "titleLbl value mismatch");
-        await assertion.assertEqual(sts.titleInput, testdata[1].resourceName, "titleInput value mismatch");
+        await assertion.assertEqual(sts.titleInput, testdata[1].title, "titleInput value mismatch");
         await assertion.assertEqual(sts.descriptionLbl, testdata[0].descriptionLbl, "descriptionLbl value mismatch");
         await assertion.assertEqual(sts.descriptionInput, testdata[1].description, "descriptionInput value mismatch");
         await assertion.assertEqual(sts.durationInput, testdata[1].duration, "durationInput value mismatch");
         await assertion.assertEqual(sts.durationUnit, testdata[0].durationUnit, "durationUnit value mismatch");
 
-        if (sts.resourceType == "Video" || sts.resourceType == "Audio") {
+        if (sts.resourceTypeBand == "Video" || sts.resourceTypeBand == "Audio") {
             await assertion.assertEqual(sts.durationLbl, testdata[0].durationLbl[0], "durationLbl value mismatch");
             await assertion.assertEqual(sts.fluencyTxt, null, "fluencyTxt value mismatch");
             await assertion.assertEqual(sts.learnMoreLink, null, "learnMoreLink value mismatch");
             await assertion.assertEqual(sts.estTimeLink, null, "estTimeLink value mismatch");
-            await assertion.assertEqual(sts.sizeLbl, testdata[0].sizeLbl, "sizeLbl value mismatch");
+            await assertion.assertEqual(sts.sizeLblBand, testdata[0].sizeLbl, "sizeLbl value mismatch");
+        }
+        if (sts.resourceTypeBand == "PDF") {
+            await assertion.assertEqual(sts.durationLbl, testdata[0].durationLbl[1], "durationLbl value mismatch");
+            await assertion.assertEqual(sts.fluencyTxt, testdata[0].fluencyTxt, "fluencyTxt value mismatch");
+            await assertion.assertEqual(sts.learnMoreLink, testdata[0].learnMoreLink, "learnMoreLink value mismatch");
+            await assertion.assertEqual(sts.estTimeLink, testdata[0].estTimeLink, "estTimeLink value mismatch");
+            await assertion.assertEqual(sts.sizeLblBand, testdata[0].sizeLbl, "sizeLbl value mismatch");
         }
         else {
             await assertion.assertEqual(sts.durationLbl, testdata[0].durationLbl[1], "durationLbl value mismatch");
             await assertion.assertEqual(sts.fluencyTxt, testdata[0].fluencyTxt, "fluencyTxt value mismatch");
             await assertion.assertEqual(sts.learnMoreLink, testdata[0].learnMoreLink, "learnMoreLink value mismatch");
             await assertion.assertEqual(sts.estTimeLink, testdata[0].estTimeLink, "estTimeLink value mismatch");
-            await assertion.assertEqual(sts.sizeLbl, null, "sizeLbl value mismatch");
+            await assertion.assertEqual(sts.sizeLblBand, null, "sizeLbl value mismatch");
         }
     },
 
@@ -211,12 +218,12 @@ module.exports = {
 
     //Validate clicking on Replace Link button in Resource editor
     ENG_ICCR_TC_24: async function (testdata) {
-        sts = await resourceEditor.click_replaceBtn();
+        sts = await resourceEditor.click_replaceBtnBand();
         await assertion.assertEqual(sts.newResourceTitle, testdata.newResourceTitle[1], "newResourceTitle value mismatch");
         await assertion.assertEqual(sts.cancelBtn, testdata.cancelBtn, "cancelBtn value mismatch");
         await assertion.assertEqual(sts.pasteALinkTitle, testdata.pasteALinkTitle, "pasteALinkTitle value mismatch");
         await assertion.assertEqual(sts.resourceLinkLbl, testdata.resourceLinkLbl, "resourceLinkLbl value mismatch");
-        await assertion.assertEqual(sts.pasteLinkInput, testdata.pasteLinkInput, "pasteLinkInput value mismatch");
+        await assertion.assertEqual(sts.pasteLinkInput, "", "pasteLinkInput value mismatch");
         await assertion.assertEqual(sts.linksIncludeLbl, testdata.linksIncludeLbl[1], "linksIncludeLbl value mismatch");
         await assertion.assertEqual(sts.dropAreaTitle, null, "dropAreaTitle value mismatch");
         await assertion.assertEqual(sts.dropAreaSubtitle, null, "dropAreaSubtitle value mismatch");
@@ -235,13 +242,13 @@ module.exports = {
     },
 
     //Validate clicking on Replace PDF button in Resource editor
-    ENG_ICCR_TC_25: async function () {
-        sts = await resourceEditor.click_replaceBtn();
+    ENG_ICCR_TC_25: async function (testdata) {
+        sts = await resourceEditor.click_replaceBtnBand();
         await assertion.assertEqual(sts.newResourceTitle, testdata.newResourceTitle[2], "newResourceTitle value mismatch");
         await assertion.assertEqual(sts.cancelBtn, testdata.cancelBtn, "cancelBtn value mismatch");
         await assertion.assertEqual(sts.pasteALinkTitle, testdata.pasteALinkTitle, "pasteALinkTitle value mismatch");
         await assertion.assertEqual(sts.resourceLinkLbl, testdata.resourceLinkLbl, "resourceLinkLbl value mismatch");
-        await assertion.assertEqual(sts.pasteLinkInput, testdata.pasteLinkInput, "pasteLinkInput value mismatch");
+        await assertion.assertEqual(sts.pasteLinkInput, "", "pasteLinkInput value mismatch");
         await assertion.assertEqual(sts.linksIncludeLbl, testdata.linksIncludeLbl[2], "linksIncludeLbl value mismatch");
         await assertion.assertEqual(sts.dropAreaTitle, testdata.dropAreaTitle, "dropAreaTitle value mismatch");
         await assertion.assertEqual(sts.dropAreaSubtitle, testdata.dropAreaSubtitle, "dropAreaSubtitle value mismatch");
@@ -261,7 +268,7 @@ module.exports = {
 
     //Validate clicking on Replace Document button in Resource editor for word or ppt or xlsx
     ENG_ICCR_TC_26: async function () {
-        sts = await resourceEditor.click_replaceBtn();
+        sts = await resourceEditor.click_replaceBtnBand();
         await assertion.assertEqual(sts.newResourceTitle, testdata[1], "newResourceTitle value mismatch");
         await assertion.assertEqual(sts.cancelBtn, testdata[0].cancelBtn, "cancelBtn value mismatch");
         await assertion.assertEqual(sts.pasteALinkTitle, null, "pasteALinkTitle value mismatch");
@@ -286,7 +293,7 @@ module.exports = {
 
     //Validate clicking on Replace Zip button in Resource editor
     ENG_ICCR_TC_27: async function () {
-        sts = await resourceEditor.click_replaceBtn();
+        sts = await resourceEditor.click_replaceBtnBand();
         await assertion.assertEqual(sts.newResourceTitle, testdata.newResourceTitle[4], "newResourceTitle value mismatch");
         await assertion.assertEqual(sts.cancelBtn, testdata.cancelBtn, "cancelBtn value mismatch");
         await assertion.assertEqual(sts.pasteALinkTitle, null, "pasteALinkTitle value mismatch");
@@ -311,7 +318,7 @@ module.exports = {
 
     //Validate clicking on Replace Video button in Resource editor
     ENG_ICCR_TC_28: async function () {
-        sts = await resourceEditor.click_replaceBtn();
+        sts = await resourceEditor.click_replaceBtnBand();
         await assertion.assertEqual(sts.newResourceTitle, testdata.newResourceTitle[5], "newResourceTitle value mismatch");
         await assertion.assertEqual(sts.cancelBtn, testdata.cancelBtn, "cancelBtn value mismatch");
         await assertion.assertEqual(sts.pasteALinkTitle, testdata.pasteALinkTitle, "pasteALinkTitle value mismatch");
@@ -334,9 +341,9 @@ module.exports = {
         await assertion.assertEqual(sts.createResourceBtn, null, "createResourceBtn value mismatch");
     },
 
-    //Validate clicking on Replace Video button in Resource editor
+    //Validate clicking on Replace Audio button in Resource editor
     ENG_ICCR_TC_29: async function () {
-        sts = await resourceEditor.click_replaceBtn();
+        sts = await resourceEditor.click_replaceBtnBand();
         await assertion.assertEqual(sts.newResourceTitle, testdata.newResourceTitle[6], "newResourceTitle value mismatch");
         await assertion.assertEqual(sts.cancelBtn, testdata.cancelBtn, "cancelBtn value mismatch");
         await assertion.assertEqual(sts.pasteALinkTitle, testdata.pasteALinkTitle, "pasteALinkTitle value mismatch");

@@ -308,6 +308,10 @@
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
             "jsonPath": "engage.appContent.libraryEditorPage.teacher"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/iccData.json",
+            "jsonPath": "engage.material.activityList[0].activityName"
           }
         ]
       },
@@ -345,6 +349,10 @@
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
             "jsonPath": "engage.appContent.libraryEditorPage.teacher"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/iccData.json",
+            "jsonPath": "engage.material.activityList[0].activityName"
           }
         ]
       },
@@ -542,6 +550,10 @@
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
             "jsonPath": "engage.appContent.libraryEditorPage.teacher"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/iccData.json",
+            "jsonPath": "engage.material.activityList[0].activityName"
           }
         ]
       },
@@ -655,6 +667,10 @@
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
             "jsonPath": "engage.appContent.libraryEditorPage.teacher"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/iccData.json",
+            "jsonPath": "engage.material.activityList[0].activityName"
           }
         ]
       },
@@ -910,6 +926,10 @@
           {
             "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
             "jsonPath": "engage.appContent.libraryEditorPage.teacher"
+          },
+          {
+            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/iccData.json",
+            "jsonPath": "engage.material.activityList[0].activityName"
           }
         ]
       },
