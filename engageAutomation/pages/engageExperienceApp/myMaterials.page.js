@@ -297,6 +297,7 @@ module.exports = {
         res = await action.click(this.menuNewResourceBtn);
         if (true == res) {
             await logger.logInto(await stackTrace.get(), " menuNewResourceBtn is clicked");
+            res = await require('./resourceEditor.page').isInitialized();
         }
         else {
             await logger.logInto(await stackTrace.get(), res + "menuNewResourceBtn is NOT clicked", 'error');

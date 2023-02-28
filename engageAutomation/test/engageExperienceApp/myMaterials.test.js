@@ -103,11 +103,10 @@ module.exports = {
     },
 
     //Validate clicking on "New Resource" button from dropdown menu on My Material page
-    ENG_ICCM_TC_9: async function (testdata) {
+    ENG_ICCM_TC_9: async function () {
         sts = await myMaterials.click_menuNewResourceBtn();
-        await assertion.assertEqual(sts, true, "menuNewResourceBtn are not Clicked");
-        sts = await require('../../test/engageExperienceApp/common.test.js').get_Snackbar_Message_Text();
-        await assertion.assert(sts, testdata.featureNotAvailable_alert, "Snackbar message mismatch: " + sts);
+        await assertion.assertEqual(sts.pageStatus, true, "Library editor page status mismatch");
+        await assertion.assertEqual(sts.appShellPage.header, true, "Library editor header status mismatch");
     },
 
     //Validate the MyMaterials page when materials are present on the page
@@ -232,11 +231,12 @@ module.exports = {
         sts = await myMaterials.click_deleteBtn();
         await assertion.assertEqual(sts, true, "deleteBtn are not Clicked");
         sts = await require("../../pages/engageExperienceApp/libraryEditor.page").getData_deleteDialogue(testdata);
-        await assertion.assertEqual(sts.deleteTitle, testdata.deleteTitle, "deleteTitle Values is not as expected.");
-        await assertion.assertEqual(sts.deleteSubTitle, testdata.deleteSubTitle, "deleteSubTitle Values is not as expected.");
-        await assertion.assertEqual(sts.deleteSubTitleMaterial, testdata.deleteSubTitleMaterial, "deleteSubTitleMaterial Values is not as expected.");
-        await assertion.assertEqual(sts.cancel_btn, testdata.cancel_btn, "cancel_btn Values is not as expected.");
-        await assertion.assertEqual(sts.delete_btn, testdata.delete_btn, "delete_btn Values is not as expected.");
+        await assertion.assertEqual(sts.deleteTitle, testdata[0].deleteTitle, "deleteTitle Values is not as expected.");
+        let subtitle = testdata[0].deleteSubTitle[0] + testdata[1] + testdata[0].deleteSubTitle[1];
+        await assertion.assertEqual(sts.deleteSubTitle, subtitle, "deleteSubTitle status mismatch");
+        await assertion.assertEqual(sts.deleteSubTitleMaterial, testdata[0].deleteSubTitleMaterial, "deleteSubTitleMaterial Values is not as expected.");
+        await assertion.assertEqual(sts.cancel_btn, testdata[0].cancel_btn, "cancel_btn Values is not as expected.");
+        await assertion.assertEqual(sts.delete_btn, testdata[0].delete_btn, "delete_btn Values is not as expected.");
     },
 
     //Validate clicking on Cancel button in Delete Materials Dialog

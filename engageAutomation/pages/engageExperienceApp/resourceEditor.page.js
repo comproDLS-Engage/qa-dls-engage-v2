@@ -84,6 +84,7 @@ module.exports = {
 
     getData_resourceEditorPage: async function () {
         await logger.logInto(await stackTrace.get());
+        await action.waitForDocumentLoad();
         var obj;
         obj = {
             resourceTypeBand: ((await action.getElementCount(this.resourceTypeBand)) > 0) ? await action.getText(this.resourceTypeBand) : null,

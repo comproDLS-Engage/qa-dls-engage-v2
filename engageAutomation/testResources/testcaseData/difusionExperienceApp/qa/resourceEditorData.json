@@ -23,7 +23,13 @@
     "docx": {
         "resourceType": "Document",
         "resourceName": "Lorem Ipsum.docx",
-        "fileSize": "16 KB"
+        "resourceValue": "./testResources/testcaseData/difusionExperienceApp/qa/Lorem Ipsum.docx",
+        "title": "Lorem Ipsum",
+        "description": "",
+        "duration": "",
+        "fileSize": "16 KB",
+        "materialTitle": "Untitled Resource",
+        "newDuration": "10"
     },
     "xlsx": {
         "resourceType": "Document",
@@ -38,7 +44,12 @@
     "zip": {
         "resourceType": "ZIP",
         "resourceName": "Lorem Ipsum.zip",
-        "fileSize": "70 KB"
+        "resourceValue": "./testResources/testcaseData/difusionExperienceApp/qa/Lorem Ipsum.zip",
+        "title": "Lorem Ipsum",
+        "description": "",
+        "duration": "",
+        "fileSize": "70 KB",
+        "materialTitle": "Untitled Resource"
     },
     "link": {
         "resourceType": "Link",
