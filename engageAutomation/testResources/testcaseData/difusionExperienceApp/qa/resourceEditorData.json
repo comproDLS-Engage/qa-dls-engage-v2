@@ -2,7 +2,13 @@
     "video": {
         "resourceType": "Video",
         "resourceName": "Lorem Ipsum.mp4",
-        "fileSize": "1 MB"
+        "resourceValue": "./testResources/testcaseData/difusionExperienceApp/qa/Lorem Ipsum.mp4",
+        "title": "Lorem Ipsum",
+        "description": "",
+        "duration": "0:15",
+        "fileSize": "1 MB",
+        "materialTitle": "Untitled Resource",
+        "newVideo": "test video"
     },
     "audio": {
         "resourceType": "Audio",

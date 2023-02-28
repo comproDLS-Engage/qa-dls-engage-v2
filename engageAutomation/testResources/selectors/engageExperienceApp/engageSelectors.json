@@ -1720,7 +1720,7 @@
                 "createResourceBtn": "[data-tid='btn-Create Resource'],[data-tid='btn-Update Resource']",
                 "resourceTypeTitle": "[data-tid='text-upload'],[data-tid=text-link]",
                 "titleLbl": "[data-tid='label-resourceTitle']",
-                "titleInput": "[data-tid=input-resourceTitle]",
+                "titleInput": "[data-tid=input-resourceTitle] textarea:not([style*='visibility: hidden;'])",
                 "descriptionLbl": "[data-tid='label-resourceDescription']",
                 "descriptionInput": "[data-tid=input-resourceDescription] textarea:not([style*='visibility: hidden;'])",
                 "durationLbl": "[data-tid='label-resourceDuration']",

@@ -174,7 +174,6 @@ module.exports = {
         await assertion.assertEqual(sts.descriptionInput, testdata[1].description, "descriptionInput value mismatch");
         await assertion.assertEqual(sts.durationInput, testdata[1].duration, "durationInput value mismatch");
         await assertion.assertEqual(sts.durationUnit, testdata[0].durationUnit, "durationUnit value mismatch");
-
         if (sts.resourceTypeBand == "Video" || sts.resourceTypeBand == "Audio") {
             await assertion.assertEqual(sts.durationLbl, testdata[0].durationLbl[0], "durationLbl value mismatch");
             await assertion.assertEqual(sts.fluencyTxt, null, "fluencyTxt value mismatch");
@@ -182,7 +181,7 @@ module.exports = {
             await assertion.assertEqual(sts.estTimeLink, null, "estTimeLink value mismatch");
             await assertion.assertEqual(sts.sizeLblBand, testdata[0].sizeLbl, "sizeLbl value mismatch");
         }
-        if (sts.resourceTypeBand == "PDF" || sts.resourceTypeBand == "Document" || sts.resourceTypeBand == "ZIP") {
+        else if (sts.resourceTypeBand == "PDF" || sts.resourceTypeBand == "Document" || sts.resourceTypeBand == "ZIP") {
             await assertion.assertEqual(sts.durationLbl, testdata[0].durationLbl[1], "durationLbl value mismatch");
             await assertion.assertEqual(sts.fluencyTxt, testdata[0].fluencyTxt, "fluencyTxt value mismatch");
             await assertion.assertEqual(sts.learnMoreLink, testdata[0].learnMoreLink, "learnMoreLink value mismatch");
@@ -323,7 +322,7 @@ module.exports = {
         await assertion.assertEqual(sts.cancelBtn, testdata.cancelBtn, "cancelBtn value mismatch");
         await assertion.assertEqual(sts.pasteALinkTitle, testdata.pasteALinkTitle, "pasteALinkTitle value mismatch");
         await assertion.assertEqual(sts.resourceLinkLbl, testdata.resourceLinkLbl, "resourceLinkLbl value mismatch");
-        await assertion.assertEqual(sts.pasteLinkInput, testdata.pasteLinkInput, "pasteLinkInput value mismatch");
+        await assertion.assertEqual(sts.pasteLinkInput, "", "pasteLinkInput value mismatch");
         await assertion.assertEqual(sts.linksIncludeLbl, testdata.linksIncludeLbl[3], "linksIncludeLbl value mismatch");
         await assertion.assertEqual(sts.dropAreaTitle, testdata.dropAreaTitle, "dropAreaTitle value mismatch");
         await assertion.assertEqual(sts.dropAreaSubtitle, testdata.dropAreaSubtitle, "dropAreaSubtitle value mismatch");

@@ -98,7 +98,7 @@ module.exports = {
             descriptionLbl: ((await action.getElementCount(this.descriptionLbl)) > 0) ? await action.getText(this.descriptionLbl) : null,
             descriptionInput: ((await action.getElementCount(this.descriptionInput)) > 0) ? await action.getText(this.descriptionInput) : null,
             durationLbl: ((await action.getElementCount(this.durationLbl)) > 0) ? await action.getText(this.durationLbl) : null,
-            durationInput: ((await action.getElementCount(this.durationInput)) > 0) ? await action.getText(this.durationInput) : null,
+            durationInput: ((await action.getElementCount(this.durationInput)) > 0) ? await action.getValue(this.durationInput) : null,
             durationUnit: ((await action.getElementCount(this.durationUnit)) > 0) ? await action.getText(this.durationUnit) : null,
             fluencyTxt: ((await action.getElementCount(this.fluencyTxt)) > 0) ? await action.getText(this.fluencyTxt) : null,
             learnMoreLink: ((await action.getElementCount(this.learnMoreLink)) > 0) ? await action.getText(this.learnMoreLink) : null,
