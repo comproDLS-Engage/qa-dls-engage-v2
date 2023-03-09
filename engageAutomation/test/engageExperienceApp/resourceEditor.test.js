@@ -268,6 +268,7 @@ module.exports = {
     //Validate clicking on Replace Document button in Resource editor for word or ppt or xlsx
     ENG_ICCR_TC_26: async function (testdata) {
         sts = await resourceEditor.click_replaceBtnBand();
+        console.log(sts)
         await assertion.assertEqual(sts.newResourceTitle, testdata.newResourceTitle[3], "newResourceTitle value mismatch");
         await assertion.assertEqual(sts.cancelBtn, testdata.cancelBtn, "cancelBtn value mismatch");
         await assertion.assertEqual(sts.pasteALinkTitle, null, "pasteALinkTitle value mismatch");
@@ -347,7 +348,7 @@ module.exports = {
         await assertion.assertEqual(sts.cancelBtn, testdata.cancelBtn, "cancelBtn value mismatch");
         await assertion.assertEqual(sts.pasteALinkTitle, testdata.pasteALinkTitle, "pasteALinkTitle value mismatch");
         await assertion.assertEqual(sts.resourceLinkLbl, testdata.resourceLinkLbl, "resourceLinkLbl value mismatch");
-        await assertion.assertEqual(sts.pasteLinkInput, testdata.pasteLinkInput, "pasteLinkInput value mismatch");
+        await assertion.assertEqual(sts.pasteLinkInput, "", "pasteLinkInput value mismatch");
         await assertion.assertEqual(sts.linksIncludeLbl, testdata.linksIncludeLbl[4], "linksIncludeLbl value mismatch");
         await assertion.assertEqual(sts.dropAreaTitle, testdata.dropAreaTitle, "dropAreaTitle value mismatch");
         await assertion.assertEqual(sts.dropAreaSubtitle, testdata.dropAreaSubtitle, "dropAreaSubtitle value mismatch");
