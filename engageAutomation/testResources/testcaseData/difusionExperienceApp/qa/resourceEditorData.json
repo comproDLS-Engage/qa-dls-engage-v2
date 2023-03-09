@@ -8,12 +8,17 @@
         "duration": "0:15",
         "fileSize": "1 MB",
         "materialTitle": "Untitled Resource",
-        "newVideo": "test video"
+        "newTitle": "test video"
     },
     "audio": {
         "resourceType": "Audio",
         "resourceName": "Lorem Ipsum.mp3",
-        "fileSize": "1 MB"
+        "resourceValue": "./testResources/testcaseData/difusionExperienceApp/qa/Lorem Ipsum.mp3",
+        "title": "Lorem Ipsum",
+        "description": "",
+        "duration": "2:41",
+        "fileSize": "1 MB",
+        "materialTitle": "Untitled Resource"
     },
     "pdf": {
         "resourceType": "PDF",
@@ -45,7 +50,12 @@
     "pptx": {
         "resourceType": "Document",
         "resourceName": "Lorem Ipsum.pptx",
-        "fileSize": "35 KB"
+        "resourceValue": "./testResources/testcaseData/difusionExperienceApp/qa/Lorem Ipsum.pptx",
+        "title": "Lorem Ipsum",
+        "description": "",
+        "duration": "",
+        "fileSize": "35 KB",
+        "materialTitle": "Untitled Resource"
     },
     "zip": {
         "resourceType": "ZIP",
