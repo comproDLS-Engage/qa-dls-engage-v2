@@ -642,41 +642,41 @@
                     "applySettingsBtn_color": "rgba(255,255,255,1)"
                 },
                 "appliedSettingsProps": {
-                    "pageHeading_font": "opendyslexicalta",
+                    "pageHeading_font": "opendyslexic",
                     "pageHeading_lineHeight_XL": "28px",
                     "pageHeading_fontSize_XL": "24px",
-                    "previewTextHeading_font": "opendyslexicalta",
+                    "previewTextHeading_font": "opendyslexic",
                     "previewTextHeading_lineHeight_XL": "28.8px",
                     "previewTextHeading_fontSize_XL": "22px",
-                    "previewTextPara_font": "opendyslexicalta",
+                    "previewTextPara_font": "opendyslexic",
                     "previewTextPara_lineHeight_XL": "28.8px",
                     "previewTextPara_fontSize_XL": "22px",
-                    "previewLinkText_font": "opendyslexicalta",
+                    "previewLinkText_font": "opendyslexic",
                     "previewLinkText_lineHeight_XL": "22.4px",
                     "previewLinkText_fontSize_XL": "18px",
                     "previewLinkText_textDecoration": "underline solid rgb(170, 84, 58)",
                     "previewLinkText_color": "rgba(86,82,82,1)",
-                    "button1_font": "opendyslexicalta",
+                    "button1_font": "opendyslexic",
                     "button1_lineHeight_XL": "25.6px",
                     "button1_fontSize_XL": "20px",
                     "button1_textDecoration": "underline solid rgb(41, 37, 36)",
                     "button1_color": "rgba(41,37,36,1)",
-                    "button2_font": "opendyslexicalta",
+                    "button2_font": "opendyslexic",
                     "button2_lineHeight_XL": "25.6px",
                     "button2_fontSize_XL": "20px",
                     "button2_textDecoration": "underline solid rgb(255, 255, 255)",
                     "button2_bgcolor": "rgba(0,0,0,1)",
-                    "moreDetailsBtn_font": "opendyslexicalta",
+                    "moreDetailsBtn_font": "opendyslexic",
                     "moreDetailsBtn_lineHeight_XL": "25.6px",
                     "moreDetailsBtn_fontSize_XL": "20px",
                     "moreDetailsBtn_textDecoration": "underline solid rgb(109, 109, 109)",
                     "moreDetailsBtn_color": "rgba(75,70,69,1)",
-                    "resetButton_font": "opendyslexicalta",
+                    "resetButton_font": "opendyslexic",
                     "resetButton_lineHeight_XL": "25.6px",
                     "resetButton_fontSize_XL": "20px",
                     "resetButton_textDecoration": "underline solid rgb(41, 37, 36)",
                     "resetButton_color": "rgba(41,37,36,1)",
-                    "applySettingsBtn_font": "opendyslexicalta",
+                    "applySettingsBtn_font": "opendyslexic",
                     "applySettingsBtn_lineHeight_XL": "25.6px",
                     "applySettingsBtn_fontSize_XL": "20px",
                     "applySettingsBtn_textDecoration": "underline solid rgb(255, 255, 255)",
@@ -1735,6 +1735,67 @@
                     "dialogAcceptBtn": "Yes",
                     "snackbarTxt": "You have successfully recorded your answer."
                 }
+            },
+            "editorTour": {
+                "teacher": {
+                    "step0Title": "Let’s fill out the quiz content!",
+                    "step0Subtitle": "Use images, videos, audio, and text to enhance your teaching materials. Start the tour to see what you can use in your Engage quiz:",
+                    "dontShowCheckbox": "Don’t show me this anymore",
+                    "dismissBtn": "Dismiss",
+                    "startTourBtn": "Start Tour",
+                    "exitBtn": "Exit",
+                    "nextBtn": "Next",
+                    "backBtn": "Back",
+                    "step1Title": [
+                        "Question",
+                        "Question"
+                    ],
+                    "step1Subtitle": [
+                        "All the pages of a quiz include a question that is the first thing students see on the page. You should enter a clear and direct question for your students.",
+                        "All the pages of a quiz include a question that is the first thing students see on the page. You should enter a clear and direct question for your students."
+                    ],
+                    "step2Title": [
+                        "In This Activity",
+                        "In This Activity"
+                    ],
+                    "step2Subtitle": [
+                        "Use this field to add a more detailed description when extra context is needed to understand the task students need to complete.",
+                        "Use this field to add a more detailed description when extra context is needed to understand the task students need to complete."
+                    ],
+                    "step3Title": [
+                        "Media",
+                        "Media"
+                    ],
+                    "step3Subtitle": [
+                        "Use media prompts to upload or link additional images, videos, or audio that are meaningful for this activity.",
+                        "Use media prompts to upload or link additional images, videos, or audio that are meaningful for this activity."
+                    ],
+                    "step4Title": [
+                        "Text",
+                        "Text"
+                    ],
+                    "step4Subtitle": [
+                        "Use text prompts to add longer text. You'll find editing options to format your text as needed.",
+                        "Use text prompts to add longer text. You'll find editing options to format your text as needed."
+                    ],
+                    "step5Title": [
+                        "Answer Options",
+                        "Subquestion"
+                    ],
+                    "step5Subtitle": [
+                        "Use answer options to add multiple options and mark the correct one by clicking or tapping the check mark symbol . Use the symbol to reorder the options.",
+                        "Add subquestion text to provide additional details to aid student response."
+                    ],
+                    "step6Title": [
+                        null,
+                        "Settings"
+                    ],
+                    "step6Subtitle": [
+                        null,
+                        "Use long answer toggle to allow long student responses. Use file upload toggle to allow students to attach files to their responses."
+                    ]
+                },
+                "student": {}
             },
             "iccAssignment": {
                 "teacher": {
