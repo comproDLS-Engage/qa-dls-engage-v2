@@ -1,5 +1,5 @@
 {
-  "Suite20": {
+  "Suite1": {
     "Name": "Asssignment Creation from dev's material tab",
     "TestCaseRepo": [
       "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
@@ -448,7 +448,7 @@
     "AfterEach": [],
     "After": []
   },
-  "Suite21": {
+  "Suite2": {
     "Name": "Assignment Creation workiflow for ICC Material",
     "TestCaseRepo": [
       "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
@@ -820,30 +820,6 @@
                 "jsonPath": "book2.component[0].unit[0].section[0].activity[0]"
             }
         ]
-    },
-    {
-      "id": "ENG_ICCE_TC_102",
-      "description": "",
-      "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
-      "testData": [
-        {
-          "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/appLangEN.json",
-          "jsonPath": "engage.appContent.libraryEditorPage.teacher"
-        }
-      ]
-    },
-    {
-      "id": "ENG_ICCE_TC_103",
-      "description": "",
-      "testFile": "./test/engageExperienceApp/libraryEditor.test.js",
-      "testData": [
-        
-          {
-            "dataFile": "./testResources/testcaseData/difusionExperienceApp/qa/iccData.json",
-            "jsonPath": "engage.material.activityList[1]"
-          }
-        
-      ]
     },
     {
       "id": "ENG_ICCE_TC_104",
