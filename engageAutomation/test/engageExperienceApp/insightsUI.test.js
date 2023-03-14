@@ -8,9 +8,9 @@ module.exports = {
 	ENG_INUI_TC_1: async function () {
 		res = await action.click("[data-tid=button-classes]");
 		console.log(res)
-		res = await action.waitForDisplayed("[data-tid=button-class-0]");
+		res = await action.waitForDisplayed("[data-tid=button-class-1]");
 		console.log(res)
-		res = await action.click("[data-tid=button-class-0]");
+		res = await action.click("[data-tid=button-class-1]");
 		console.log(res)
 		res = await action.waitForDisplayed("[data-tid=image-classBookCover]");
 		console.log(res)
