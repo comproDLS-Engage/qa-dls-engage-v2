@@ -208,6 +208,7 @@ module.exports = {
     detailsActivityIcon: selectorFile.css.ComproEngage.libraryEditorPage.detailsActivityIcon,
     detailsActivityType: selectorFile.css.ComproEngage.libraryEditorPage.detailsActivityType,
     detailsPublichedChip: selectorFile.css.ComproEngage.libraryEditorPage.detailsPublichedChip,
+    containerPanel: selectorFile.css.ComproEngage.libraryEditorPage.containerPanel,
 
     isInitialized: async function () {
         var res;
@@ -1980,12 +1981,16 @@ module.exports = {
     click_showDetailsbtn: async function () {
         await logger.logInto(await stackTrace.get());
         var res;
-        await action.waitForDisplayed(this.showDetailsbtn)
+        await action.waitForClickable(this.showDetailsbtn)
         res = await action.click(this.showDetailsbtn);
         if (true == res) {
             await logger.logInto(await stackTrace.get(), " showDetailsbtn is clicked");
             await action.waitForDisplayed(this.detailsSubtitle)
-            res = await this.getData_showDetailsPanel();
+            res = await action.getAttribute(this.containerPanel, "aria-hidden")
+            console.log(res)
+            if (res == "false") {
+                res = await this.getData_showDetailsPanel();
+            }
         }
         else {
             await logger.logInto(await stackTrace.get(), res + "showDetailsbtn is NOT clicked", 'error');
@@ -1997,10 +2002,14 @@ module.exports = {
         await logger.logInto(await stackTrace.get());
         var res;
         res = await action.click(this.showDetailsbtn);
+
         if (true == res) {
             await logger.logInto(await stackTrace.get(), " showDetailsbtn is clicked");
-            await action.waitForDisplayed(this.detailstitle,30,true)
-            res = await this.getData_showDetailsPanel();
+            res = await action.getAttribute(this.containerPanel, "aria-hidden")
+            console.log(res)
+            if (res == "true") {
+                res = await this.getData_showDetailsPanel();
+            }
         }
         else {
             await logger.logInto(await stackTrace.get(), res + "showDetailsbtn is NOT clicked", 'error');
