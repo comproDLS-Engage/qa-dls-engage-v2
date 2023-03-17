@@ -1,0 +1,358 @@
+.page6-7 {
+    display: flex;
+}
+
+.page6-7 * {
+    word-break: break-word;
+}
+
+.page6-7 h1,
+.page6-7 h2,
+.page6-7 h3,
+.page6-7 h4,
+.page6-7 h5,
+.page6-7 h6,
+.page6-7 p,
+.page6-7 span {
+    margin: 0;
+    padding: 0;
+}
+
+.page6 p,
+.page7 p {
+    font-weight: 500;
+}
+
+.page6 .left-page-content {
+    max-width: 100%;
+    padding: 30px 30px 30px 30px;
+}
+
+.page6 .narrative-section {
+    padding-top: 8px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+}
+
+.page6 .sec-heading-with-badge img {
+    width: 1.7rem;
+    height: 100%;
+    margin-left: -21px;
+    margin-right: 3px;
+    margin-top: 1px;
+    max-width: 32px;
+}
+
+.page6 .narrative-section .narrative-left-content {
+    padding: 8px;
+    flex-basis: 50%;
+    flex-grow: 1;
+}
+
+.page6 .narrative-section aside {
+    min-width: 13rem;
+    flex-grow: 1;
+    flex-basis: 20%;
+}
+
+.page6 .narrative-section .narrative-left-content * {
+    font-size: var(--font-12);
+    font-weight: 500;
+    padding-bottom: 7px;
+    line-height: 1.2;
+}
+
+.page6 .narrative-section .narrative-left-content strong.highlight {
+    background: #c0d74b;
+    padding: 0 !important;
+    margin: 0;
+    font-weight: bold !important;
+}
+
+.page6 .left-page-content ul {
+    margin: 0 13px;
+    padding: 3px 0;
+}
+
+.page6 .left-page-content ul li {
+    margin: 0;
+    padding: 0 0 4px;
+    font-size: var(--font-12);
+    font-weight: 500;
+}
+
+.page6 .left-page-content ul li::marker {
+    color: var(--dazzling-blue);
+}
+
+
+.page6 .informalfigure {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+}
+
+.page6 .informalfigure .caption {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.page6 .informalfigure img {
+    width: 85%;
+    max-width: 1024px;
+    margin: auto;
+    height: auto;
+}
+
+.page6 .footer-content {
+    padding: 16px 0 50px;
+    padding-right: 88px;
+}
+
+.page6 .footer-content img.bottom-img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    max-width: 35%;
+}
+
+.page6 .footer-content p {
+    padding-bottom: 7px;
+}
+
+.page6 .icon-heading-with-circleBadge img.mouse-icon {
+    width: 1.7rem;
+    height: 100%;
+    margin-left: -21px;
+    margin-right: 0px;
+    margin-top: 3px;
+    max-width: 32px;
+}
+
+
+/* right Section */
+.page7 .right-page-content {
+    max-width: 100%;
+    height: 100%;
+    padding: 0px 0px 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: var(--white);
+}
+
+.page7 .right-upper-section {
+    background-color: var(--sky-blue);
+    padding: 30px 0 0 30px;
+}
+
+.icon-heading-with-lrg-font span.highlight-clr {
+    color: var(--yellow-highlight);
+    text-shadow: 2px 1px 7px rgb(0 0 0);
+}
+
+.page7 .right-upper-section .author-row {
+    padding-top: 10px;
+    color: var(--header-blue-dark);
+}
+
+.page7 .right-upper-section .content-pnl {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.page7 .right-upper-section .content-pnl .left-side {
+    flex: 3;
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-bottom: 19px;
+}
+
+.page7 .right-upper-section .content-pnl .left-side p {
+    padding-top: 7px;
+    line-height: 1.5;
+    padding-left: 15px;
+}
+
+.page7 .right-upper-section .content-pnl .left-side p span.paranum {
+    padding: 0 25px 0 0;
+    margin-left: -15px;
+}
+
+.page7 .right-upper-section .content-pnl .right-side {
+    flex: 2;
+    background: #405965;
+    padding: 15px 0 0;
+    box-sizing: border-box;
+    height: auto;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.page7 .right-upper-section .content-pnl .right-side img {
+    width: 100%;
+    height: auto;
+}
+
+.page7 .right-upper-section .content-pnl .right-side .informalfigure {
+    display: flex;
+    flex-direction: column-reverse;
+    color: var(--white);
+    align-items: center;
+}
+
+.page7 .right-upper-section .content-pnl .right-side .informalfigure img {
+    margin-top: 8px;
+}
+
+.page7 .right-bottom-sec {
+    padding: 30px 0 25px 30px;
+}
+
+.page7 .right-bottom-sec ul {
+    margin: 0 0 0 16px;
+    padding: 7px 0;
+    padding-right: 250px;
+}
+
+.page7 .right-bottom-sec ul li {
+    font-size: var(--font-11);
+    font-weight: 500;
+}
+
+.page7 .right-bottom-sec .icon-heading-with-circleBadge .content {
+    position: relative;
+    padding-bottom: 45px;
+}
+
+.page7 .right-bottom-sec .icon-heading-with-circleBadge .content .oval-img {
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    height: auto;
+    max-width: 50%;
+    right: 0;
+}
+
+.page7 .icon-heading-with-circleBadge img.mouse-icon {
+    width: 1.7rem;
+    height: 100%;
+    margin-left: -21px;
+    margin-right: 0px;
+    margin-top: 3px;
+    max-width: 32px;
+}
+
+.page7 .icon-head img+img {
+    margin-left: 5px;
+}
+
+
+
+
+/* Mobile devices (576px and down) */
+@media only screen and (max-width: 576px) {
+    .page6 .left-page-content .form-container {
+        flex-direction: column;
+    }
+
+    .page6 .narrative-section {
+        flex-direction: column;
+    }
+
+    .page6 .footer-content img.bottom-img {
+        width: 25%;
+        height: auto;
+    }
+
+    .page6 .footer-content {
+        padding-right: 53px;
+    }
+
+    .page7 .right-upper-section .content-pnl {
+        flex-direction: column;
+        margin-left: -16px;
+    }
+
+    .page7 .right-bottom-sec ul {
+        padding-right: 0;
+    }
+
+    .page7 .right-bottom-sec .icon-heading-with-circleBadge .content .oval-img {
+        position: relative;
+        top: 0;
+        max-width: 100%;
+    }
+
+    .page7 .right-bottom-sec {
+        padding: 30px 0 25px 0px;
+    }
+
+    .arrowHeading-with-icon-box {
+        white-space: nowrap;
+    }
+}
+
+
+@media only screen and (min-width: 575px) and (max-width: 768px) {
+    .page7 .right-upper-section .content-pnl {
+        flex-direction: column;
+    }
+
+    .page7 .right-upper-section .content-pnl .right-side {
+        padding: 15px;
+        flex-direction: row;
+    }
+
+    .page7 .right-bottom-sec .icon-heading-with-circleBadge .content .oval-img {
+        position: relative;
+        top: 0;
+        right: 0;
+    }
+
+    .page6 .narrative-section aside {
+        min-width: 16rem;
+    }
+
+    .page7 .right-bottom-sec ul {
+        padding-right: 0;
+    }
+
+    .page6 .footer-content {
+        padding-right: 108px;
+    }
+}
+
+/* Ipad devices (above 769px and below 1152px) */
+@media only screen and (min-width: 769px) and (max-width:1152px) {
+    .page7 .right-bottom-sec .icon-heading-with-circleBadge .content .oval-img {
+        position: relative;
+    }
+
+    .page7 .right-bottom-sec .icon-heading-with-circleBadge .content {
+        flex-wrap: wrap;
+        display: flex;
+    }
+
+    .page7 .right-bottom-sec ul {
+        width: auto;
+        flex: 1;
+        white-space: nowrap;
+        padding: 0;
+    }
+
+    .page7 .right-bottom-sec .icon-heading-with-circleBadge .content .oval-img {
+        position: relative;
+        top: 0;
+    }
+}
+
+/* Desktop devices (992px and up) */
+@media only screen and (min-width: 993px) {}
