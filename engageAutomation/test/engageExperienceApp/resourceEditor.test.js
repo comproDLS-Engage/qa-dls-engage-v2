@@ -189,6 +189,7 @@ module.exports = {
             await assertion.assertEqual(sts.sizeLblBand, testdata[0].sizeLbl, "sizeLbl value mismatch");
         }
         else {
+            console.log("----reached inside else of ENG_ICCR_TC_20----")
             await assertion.assertEqual(sts.durationLbl, testdata[0].durationLbl[1], "durationLbl value mismatch");
             await assertion.assertEqual(sts.fluencyTxt, testdata[0].fluencyTxt, "fluencyTxt value mismatch");
             await assertion.assertEqual(sts.learnMoreLink, testdata[0].learnMoreLink, "learnMoreLink value mismatch");
@@ -268,20 +269,19 @@ module.exports = {
     //Validate clicking on Replace Document button in Resource editor for word or ppt or xlsx
     ENG_ICCR_TC_26: async function (testdata) {
         sts = await resourceEditor.click_replaceBtnBand();
-        console.log(sts)
-        await assertion.assertEqual(sts.newResourceTitle, testdata.newResourceTitle[3], "newResourceTitle value mismatch");
-        await assertion.assertEqual(sts.cancelBtn, testdata.cancelBtn, "cancelBtn value mismatch");
+        await assertion.assertEqual(sts.newResourceTitle, testdata[0].newResourceTitle[3], "newResourceTitle value mismatch");
+        await assertion.assertEqual(sts.cancelBtn, testdata[0].cancelBtn, "cancelBtn value mismatch");
         await assertion.assertEqual(sts.pasteALinkTitle, null, "pasteALinkTitle value mismatch");
         await assertion.assertEqual(sts.resourceLinkLbl, null, "resourceLinkLbl value mismatch");
         await assertion.assertEqual(sts.pasteLinkInput, null, "pasteLinkInput value mismatch");
         await assertion.assertEqual(sts.linksIncludeLbl, null, "linksIncludeLbl value mismatch");
-        await assertion.assertEqual(sts.dropAreaTitle, testdata.dropAreaTitle, "dropAreaTitle value mismatch");
-        await assertion.assertEqual(sts.dropAreaSubtitle, testdata.dropAreaSubtitle, "dropAreaSubtitle value mismatch");
-        await assertion.assertEqual(sts.dropAreaOrLbl, testdata.dropAreaOrLbl, "dropAreaOrLbl value mismatch");
+        await assertion.assertEqual(sts.dropAreaTitle, testdata[0].dropAreaTitle, "dropAreaTitle value mismatch");
+        await assertion.assertEqual(sts.dropAreaSubtitle, testdata[0].dropAreaSubtitle, "dropAreaSubtitle value mismatch");
+        await assertion.assertEqual(sts.dropAreaOrLbl, testdata[0].dropAreaOrLbl, "dropAreaOrLbl value mismatch");
         await assertion.assertEqual(sts.enterBtn, null, "enterBtn value mismatch");
         await assertion.assertEqual(sts.invalidUrlTxt, null, "invalidUrlTxt value mismatch");
-        await assertion.assertEqual(sts.browseBtn, testdata.browseBtn, "browseBtn value mismatch");
-        await assertion.assertEqual(sts.dropLimitLbl, testdata.dropLimitLbl[2], "dropLimitLbl value mismatch");
+        await assertion.assertEqual(sts.browseBtn, testdata[0].browseBtn, "browseBtn value mismatch");
+        await assertion.assertEqual(sts.dropLimitLbl, testdata[1], "dropLimitLbl value mismatch");
         await assertion.assertEqual(sts.resourceType, null, "resourceType value mismatch");
         await assertion.assertEqual(sts.resourceName, null, "resourceName value mismatch");
         await assertion.assertEqual(sts.sizeLbl, null, "sizeLbl value mismatch");

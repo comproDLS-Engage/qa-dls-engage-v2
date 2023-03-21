@@ -45,7 +45,12 @@
     "xlsx": {
         "resourceType": "Document",
         "resourceName": "Lorem Ipsum.xlsx",
-        "fileSize": "8 KB"
+        "resourceValue": "./testResources/testcaseData/difusionExperienceApp/qa/Lorem Ipsum.xlsx",
+        "title": "Lorem Ipsum",
+        "description": "",
+        "duration": "",
+        "fileSize": "8 KB",
+        "materialTitle": "Untitled Resource"
     },
     "pptx": {
         "resourceType": "Document",
