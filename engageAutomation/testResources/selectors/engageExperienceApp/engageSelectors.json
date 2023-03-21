@@ -1586,6 +1586,7 @@
                 "helpCenterbtn": "[data-tid=button-helpCenter]",
                 "contentGuidelinesbtn": "[data-tid=button-contentGuidelines]",
                 "showDetailsbtn": "[data-tid=button-activityinfopanelswitcher]",
+                "containerPanel":"[data-tid=container-preview-leftPanel], [data-tid=container-leftPanel]",
                 "detailsSubtitle": "[data-tid=text-preview-subTitle]",
                 "detailstitle": "[data-tid=text-preview-title], [data-tid=text-title]",
                 "detailsActivityIcon": "[data-tid=icon-preview-activitytype], [data-tid=icon-activitytype]",
