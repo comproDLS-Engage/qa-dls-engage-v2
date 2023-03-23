@@ -1,0 +1,231 @@
+{
+    "appname": "VHL",
+    "appdetails": "",
+    "selectorFile": "./testResources/selectors/vhl/vhlSelectors.json",
+    "modules": [
+        {
+            "modulename": "",
+            "moduleId": "VHL",
+            "testFile": "./test/vhl/vhl.test.js",
+            "testcase": [
+                {
+                    "id": "VHL_TC_1",
+                    "description": "Validate that user is able to login to the VHL application",
+                    "tags": "P1",
+                    "visualTest": false
+                },
+                {
+                    "id": "VHL_TC_2",
+                    "description": "Validate that user is able to click on show hotlink button",
+                    "tags": "P1",
+                    "visualTest": false
+                },
+                {
+                    "id": "VHL_TC_3",
+                    "description": "Validate that user is able to click on hide hotlink button",
+                    "tags": "P1",
+                    "visualTest": false
+                },
+                {
+                    "id": "VHL_TC_4",
+                    "description": "Validate that click on page hotlinks",
+                    "tags": "P1",
+                    "visualTest": false
+                },
+                {
+                    "id": "VHL_TC_5",
+                    "description": "Validate that click on done button page hotlinks",
+                    "tags": "P1",
+                    "visualTest": false
+                },
+                {
+                    "id": "VHL_TC_6",
+                    "description": "Validate that click on notes button from footer",
+                    "tags": "P1",
+                    "visualTest": false
+                },
+                {
+                    "id": "VHL_TC_7",
+                    "description": "Validate the Footer panel",
+                    "tags": "P1",
+                    "visualTest": false
+                },
+                {
+                    "id": "VHL_TC_8",
+                    "description": "Validate the click on add notes button",
+                    "tags": "P1",
+                    "visualTest": false
+                },
+                {
+                    "id": "VHL_TC_9",
+                    "description": "Set the text in the notes pane",
+                    "tags": "P1",
+                    "visualTest": false
+                },
+                {
+                    "id": "VHL_TC_10",
+                    "description": "Validate the click on save notes button on notes panel",
+                    "tags": "P1",
+                    "visualTest": false
+                },
+                {
+                    "id": "VHL_TC_11",
+                    "description": "Validate the click on cancel button on notes panel",
+                    "tags": "P1",
+                    "visualTest": false
+                },
+                {
+                    "id": "VHL_TC_12",
+                    "description": "validate the notes pane when notes added",
+                    "tags": "P1",
+                    "visualTest": false
+                },
+                {
+                    "id": "VHL_TC_13",
+                    "description": "validate the notes pane when no notes added",
+                    "tags": "P1",
+                    "visualTest": false
+                },
+                {
+                    "id": "VHL_TC_14",
+                    "description": "validate the notes delete button on the notes card in notes panel",
+                    "tags": "P1",
+                    "visualTest": false
+                },
+                {
+                    "id": "VHL_TC_15",
+                    "description": "validate the notes edit button on the notes card in notes panel",
+                    "tags": "P1",
+                    "visualTest": false
+                },
+                {
+                    "id": "VHL_TC_16",
+                    "description": "validate the data of delete notes pane",
+                    "tags": "P1",
+                    "visualTest": false
+                },
+                {
+                    "id": "VHL_TC_17",
+                    "description": "validate the click on the delete button on the notes pane",
+                    "tags": "P1",
+                    "visualTest": false
+                },
+                {
+                    "id": "VHL_TC_18",
+                    "description": "validate the click on the cancel button for closing the notes pane",
+                    "tags": "P1",
+                    "visualTest": false
+                },
+                {
+                    "id": "VHL_TC_19",
+                    "description": "validate the click on the bookmark button on the vhl footer panel",
+                    "tags": "P1",
+                    "visualTest": false
+                },
+                {
+                    "id": "VHL_TC_20",
+                    "description": "validate the bookmark pane when no bookmark added",
+                    "tags": "P1",
+                    "visualTest": false
+                },
+                {
+                    "id": "VHL_TC_21",
+                    "description": "validate the bookmark delete button on the bookmark card in bookmark panel",
+                    "tags": "P1",
+                    "visualTest": false
+                },
+                {
+                    "id": "VHL_TC_22",
+                    "description": "validate the bookmark this page button on the bookmark panel",
+                    "tags": "P1",
+                    "visualTest": false
+                },
+                {
+                    "id": "VHL_TC_23",
+                    "description": "Set the text on the bookmark panel textbox",
+                    "tags": "P1",
+                    "visualTest": false
+                },
+                {
+                    "id": "VHL_TC_24",
+                    "description": "validate the click on save button on bookmark panel",
+                    "tags": "P1",
+                    "visualTest": false
+                },
+                {
+                    "id": "VHL_TC_25",
+                    "description": "validate the bookmark pane when bookmark added",
+                    "tags": "P1",
+                    "visualTest": false
+                },
+                {
+                    "id": "VHL_TC_26",
+                    "description": "validate the close panel buttopn of bookmark pane",
+                    "tags": "P1",
+                    "visualTest": false
+                },
+                {
+                    "id": "VHL_TC_27",
+                    "description": "Set the text in the notes Edit pane textbox",
+                    "tags": "P1",
+                    "visualTest": false
+                },
+                {
+                    "id": "VHL_TC_28",
+                    "description": "validate the click on edit button on bookmark card on bookmark panel",
+                    "tags": "P1",
+                    "visualTest": false
+                },
+                {
+                    "id": "VHL_TC_29",
+                    "description": "validate the click on search button on vhl page footer panel",
+                    "tags": "P1",
+                    "visualTest": false
+                },
+                {
+                    "id": "VHL_TC_30",
+                    "description": "set the search text in search textbox in search panel",
+                    "tags": "P1",
+                    "visualTest": false
+                },
+                {
+                    "id": "VHL_TC_31",
+                    "description": "validate the click on the press enter to confirm button",
+                    "tags": "P1",
+                    "visualTest": false
+                },
+                {
+                    "id": "VHL_TC_32",
+                    "description": "validate the click on cancel button for close the search panel",
+                    "tags": "P1",
+                    "visualTest": false
+                },
+                {
+                    "id": "VHL_TC_33",
+                    "description": "validate the click on the clear button",
+                    "tags": "P1",
+                    "visualTest": false
+                },
+                {
+                    "id": "VHL_TC_34",
+                    "description": "validate the search pane when no result found",
+                    "tags": "P1",
+                    "visualTest": false
+                },
+                {
+                    "id": "VHL_TC_35",
+                    "description": "validate the search pane result",
+                    "tags": "P1",
+                    "visualTest": false
+                },
+                {
+                    "id": "VHL_TC_36",
+                    "description": "validate the click on dock button on the search panel",
+                    "tags": "P1",
+                    "visualTest": false
+                }
+
+            ]
+        }
+    ]
+}

@@ -1,0 +1,52 @@
+{
+    "vhl": {
+        "data": {
+            "notes": {
+                "notesHeader": "My Notes",
+                "noNotesMsg": "Looks like you haven't added any notes yet. Click \"Add Note\" button to add notes on the page.",
+                "addNotebtn": "Add Note",
+                "savebtn": "Save",
+                "cancelbtn": "Cancel",
+                "notesText": "Education is both the act of teaching knowledge",
+                "notesTextEdit": "Update the notes text",
+                "deleteNotespaneDeletebtn": "Delete",
+                "deleteNotespaneCancelbtn": "Cancel",
+                "deleteNotespaneHeader": "Delete Note?",
+                "deleteNotespaneSubHeader": "You won't be able to recover this note later.",
+                "deleteNotespanenotesData": "p. 4\nEducation is both the act of teaching knowledge",
+                "bookmarkheader": "Bookmarks",
+                "bookmarkText": "bookmark this page",
+                "bookmarkEditText": "Update bookmark this page",
+                "nobookmarkMsg": "Looks like you haven't added any bookmarks yet. Bookmark a page to save your spot for later.",
+                "bookmarkLabelText": "On Page:",
+                "addbookmarkheader": "Bookmark Name",
+                "bookmarkPanelSavebtn": "Save",
+                "bookmarkPanelCancelbtn": "Cancel"
+            },
+            "bookmark": {
+                "bookmarkheader": "Bookmarks",
+                "bookmarkText": "bookmark this page",
+                "nobookmarkMsg": "Looks like you haven't added any bookmarks yet. Bookmark a page to save your spot for later.",
+                "bookmarkLabelText": "On Page:",
+                "addbookmarkheader": "Bookmark Name",
+                "bookmarkPanelSavebtn": "Save",
+                "bookmarkPanelCancelbtn": "Cancel"
+            },
+            "search": {
+                "searchTitle": "Search",
+                "searchTipsHeader": "Search Tips",
+                "searchTipsSubHeadertext": "Open search faster with",
+                "searchtext": "papers ",
+                "searchtext1": "*",
+                "searchtext2": "thing?",
+                "searchtext3": "\"read the words\" ",
+                "searchtext4": "aaaaaaaasssddfsfsfdsdsfsfsfsfsffsf",
+                "searchTextbtn": "Press Enter to Confirm",
+                "searchTextbtn1": "Clear",
+                "nosearchTitle": "No result found",
+                "nosearchSubTitle": "We didn't find anything matching your input. Try your search again, or change your input to update the results here.",
+                "searchResult": "result"
+            }
+        }
+    }
+}

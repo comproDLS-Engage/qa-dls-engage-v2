@@ -1,0 +1,99 @@
+{
+	"loginPage": {
+		"login_title": "#login-head",
+		"email_tbox": "#user_session_username",
+		"password_tbox": "#user_session_password",
+		"login_btn": "input[type=submit]"
+	},
+	"homePage": {
+		"header": "[class=page-header]",
+		"hotlinkElement": "[class*=hotlink-element]"
+	},
+	"footer": {
+		"hotlinkbtn": "[data-tid=button-toolbar-item-0-1]",
+		"notesbtn": "[data-tid=button-toolbar-item-0-0]",
+		"zoominbtn": "[data-tid=button-toolbar-item-1-0]",
+		"zoomresetbtn": "[data-tid=button-toolbar-item-1-1]",
+		"zoomoutbtn": "[data-tid=button-toolbar-item-1-2]",
+		"fullPagebtn": "[data-tid=button-toolbar-item-1-3]",
+		"bookmarkbtn": "[data-tid=button-toolbar-item-2-0]",
+		"tocbtn": "[data-tid=button-toolbar-item-2-1]",
+		"prevActivityBtn": "[data-tid=button-toolbar-item-2-2]",
+		"nextActivityBtn": "[data-tid=button-toolbar-item-2-3]",
+		"searchbtn": "[data-tid=button-toolbar-item-2-4]"
+	},
+	"hotlinkPage": {
+		"hideBookbtn": "button[class*=MuiButton-disableElevation] #hide-book_svg__Layer_1",
+		"mediaPlayer": "[class=media-player-container]",
+		"donebtn": "button[class*=MuiButton-containedSecondary], [data-plyr=close_audio]",
+		"userName": "[title=\"Edit Account\"]",
+		"vhlHeader": "[class=masthead_home_link]"
+	},
+	"common": {
+		"loadingContainer": "[class=c-progressbar-container],[class*=MuiCircularProgress-indeterminate],[class=circular-progress]"
+	},
+	"notes": {
+		"notesHeader": "[data-tid=label-text-notes-header]",
+		"notesCancelbtn": "[data-tid=notebox-button-cancel]",
+		"undockbtn": "[data-tid=notebox-button-dock]",
+		"noNotesImg": "[data-tid=icon-no-note]",
+		"noNotesMsg": "[data-tid=text-no-note]",
+		"addNotebtn": "[data-tid=button-add-note]",
+		"notesTextBox": "#input-add-note",
+		"notesEditTextBox": "#input-edit-note , #input-add-note",
+		"savebtn": "[data-tid=button-save]",
+		"cancelbtn": "[data-tid=button-cancel]",
+		"notesCardLabel": "[data-tid*=note-list-item-label-",
+		"deletebtn": "[data-tid*=btn-delete-",
+		"editbtn": "[data-tid*=btn-edit-",
+		"notesText": "[data-tid*=text-note-list-",
+		"deleteNotespaneHeader": "[data-tid=text-title-deleteNote]",
+		"deleteNotespaneSubHeader": "[data-tid=text-subTitle-deleteNote]",
+		"deleteNotespanenotesData": "[data-tid*=note-list-item-delete-",
+		"deleteNotespaneDeletebtn": "[data-tid=button-primary-deleteNote]",
+		"deleteNotespaneCancelbtn": "[data-tid=button-secondary-deleteNote]"
+	},
+	"bookmark": {
+		"bookmarkheader": "[data-tid=label-text-bookmark-header]",
+		"bookmarkCancelbtn": "[data-tid=bookmarkbox-button-cancel]",
+		"undockbookmarkpanelbtn": "[data-tid=bookmarkbox-button-dock]",
+		"nobookmarkImg": "[data-tid=icon-no-bookmark]",
+		"nobookmarkMsg": "[data-tid=text-no-bookmark]",
+		"bookmarkthisPagebtn": "[data-tid=button-bookmark-this-page]",
+		"bookmarkTextbox": "[data-tid*=bookmark-list-item-name-",
+		"bookmarkcarddeletebtn": "[data-tid*=btn-delete-",
+		"bookmarkcardEditbtn": "[data-tid*=btn-edit-",
+		"bookmarkLabelText": "[data-tid=label-text-page-number]",
+		"addbookmarkheader": "[data-tid=text-label-edit-bookmark",
+		"bookmarkPanelTextbox": "#input-add-bookmark",
+		"bookmarkPanelSavebtn": "[data-tid=button-save]",
+		"bookmarkPanelCancelbtn": "[data-tid=button-cancel]",
+		"bookmarkoptionCheckbox1": "[data-tid*=option-0",
+		"bookmarkoptionTextCheckbox1": "[data-tid*=text-option-0",
+		"bookmarkoptionCheckbox2": "[data-tid*=option-1",
+		"bookmarkoptionTextCheckbox2": "[data-tid*=text-option-1"
+	},
+	"search": {
+		"nosearchIcon":"[data-tid=icon-nosearch]",
+		"nosearchTitle":"[data-tid=text-noResultFound]",
+		"nosearchSubTitle":"[data-tid=text-noResultFoundBilinear]",
+		"searchTitle": "[data-tid=text-drawerHeaderTitle-searchbox]",
+		"docksearchpanelbtn": "[data-tid=searchbox-button-dock]",
+		"searchCancelbtn": "[data-tid=searchbox-button-close]",
+		"searchTextbox": "#searchInputRef",
+		"searchTipsHeader": "[data-tid=text-tipstitle-searchbox]",
+		"searchTipsHeaderIcon": "[data-tid=icon-hint]",
+		"searchTipsSubHeadertext": "div[role=presentation] div:nth-child(2)>div:nth-child(2)>div>p",
+		"searchTextbtn": "div[class*=MuiInputAdornment-positionEnd]>button>span:nth-child(1)",
+		"searchList": "[data-tid*=search-list-item-",
+		"searchListIcon": "[data-tid*=search-list-item-0] img",
+		"searchListtext": "[data-tid=search-list-item-0] div>div:nth-child(2)",
+		"searchListheader": "[data-tid=search-list-item-0] div>div:nth-child(1)>div",
+		"searchpreviouspage_btn": "[aria-label=\"previous button\"]",
+		"searchnextpage_btn": "[aria-label=\"next button\"]",
+		"searchPageNumber": "//div[3]//div[5]/p",
+		"searchResult":"[data-tid=text-search-result-count]",
+		"searchSortbtn":"[data-tid=searchbox-sort-button]",
+		"docContainer":"#dock-container>div"
+	}
+}
