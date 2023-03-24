@@ -195,7 +195,7 @@ module.exports = {
 		sts = await homePage.click_searchTextbtn();
 		await assertion.assert(sts.searchResult.includes(testdata.searchResult), "searchResult text mismatch");
 		await assertion.assertEqual(sts.searchTextbtn, testdata.searchTextbtn1, "searchTextbox values are not set");
-	//	await assertion.assertEqual(sts[0].searchList, true, "searchList text mismatch");
+		//	await assertion.assertEqual(sts[0].searchList, true, "searchList text mismatch");
 		//await assertion.assertEqual(sts[0].searchListIcon, true ,"searchListIcon text mismatch");
 		/*await assertion.assertEqual(sts.searchListtext, testdata.searchListtext, "searchListtext text mismatch");
 		await assertion.assertEqual(sts.searchListheader, testdata.searchListheader, "searchListheader text mismatch");
@@ -234,7 +234,7 @@ module.exports = {
 	VHL_TC_35: async function (testdata) {
 		sts = await homePage.getData_searchResult();
 		await assertion.assertEqual(sts[0].searchList, true, "searchList text mismatch");
-		await assertion.assertEqual(sts[0].searchListIcon, true ,"searchListIcon text mismatch");
+		await assertion.assertEqual(sts[0].searchListIcon, true, "searchListIcon text mismatch");
 		//await assertion.assertEqual(sts.searchListtext, testdata.searchListtext, "searchListtext text mismatch");
 		//await assertion.assertEqual(sts.searchListheader, testdata.searchListheader, "searchListheader text mismatch");
 		await assertion.assertEqual(sts.searchpreviouspage_btn, true, "searchpreviouspage_btn text mismatch");
@@ -242,8 +242,13 @@ module.exports = {
 		await assertion.assert(sts.searchResult.includes(testdata.searchResult), "searchResult text mismatch");
 		await assertion.assertEqual(sts.searchSortbtn, true, "searchSortbtn text mismatch");
 	},
-	VHL_TC_36 :   async function (testdata) { 
-		sts = await vhl.click_docksearchpanelbtn();
-		await assertion.assertEqual(sts, true,"docksearchpanelbtn are not Clicked");
-		},
+	VHL_TC_36: async function (testdata) {
+		sts = await homePage.click_docksearchpanelbtn();
+		await assertion.assertEqual(sts, true, "docksearchpanelbtn are not Clicked");
+	},
+
+	VHL_TC_37: async function (testdata) {
+		sts = await homePage.click_searchList();
+		await assertion.assertEqual(sts, true, "searchList are not Clicked");
+	},
 }

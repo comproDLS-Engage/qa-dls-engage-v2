@@ -861,5 +861,22 @@ module.exports = {
         }
         return res;
         },
-
+        click_searchList: async function () {
+            await logger.logInto(await stackTrace.get());
+            var i, list, res;
+            list = await action.findElements(this.searchList);
+            res = await action.click(list[0]);
+       /*     for (i = 0; i < list.length; i++) {
+                if (((await action.getText(this.searchList + i + "]"))) == searchListName) {
+                    res = await action.click(list[i]);
+                    break;
+                }
+            }*/
+            if (res == true) {
+                await logger.logInto(await stackTrace.get(), " --searchList clicked");
+            }
+            else
+                await logger.logInto(await stackTrace.get(), " --searchList NOT clicked", "error")
+            return res;
+        },
 }
